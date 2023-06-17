@@ -5,6 +5,7 @@ const otUtils = require(".././objectTraversingUtils.js");
 const educatorUtils = require("./educatorUtils.js");
 const refObj = require(".././reference/referenceObjects.js");
 const fs = require("fs");
+const scUtils = require("../sentenceCreatingUtils.js");
 
 exports.checkOutputArrayForMissingUnits = (
   sentenceFormula,
@@ -34,33 +35,38 @@ exports.checkOutputArrayForMissingUnits = (
 };
 
 exports.getLemmaObjectsWithoutGivenSelectorKey = (
-  wordsBank,
+  envir,
+  useDummy,
+  currentLanguage,
   wordtype,
   selectorKey
 ) => {
-  return wordsBank[wordtype].filter((lObj) => !lObj[selectorKey]);
+  let words = scUtils.grabWordsByWordtype(
+    currentLanguage,
+    wordtype,
+    envir,
+    useDummy
+  );
+  return words.filter((lObj) => !lObj[selectorKey]);
 };
 
 exports.checkWords = (envir, currentLanguage) => {
   const langUtils = require(`../../source/all/${currentLanguage}/langUtils.js`);
 
-  const wordsBank = educatorUtils.getWordsBank(currentLanguage, envir);
-
-  Object.keys(wordsBank).forEach((wordsetKey) => {
-    let words = wordsBank[wordsetKey];
-    // langUtils.preprocessL emmaObjectsMinor(words);
-  });
-
   let nounPersonsWithoutGender =
     educatorUtils.getLemmaObjectsWithoutGivenSelectorKey(
-      wordsBank,
+      envir,
+      useDummy,
+      currentLanguage,
       "npe",
       "gender"
     );
 
   let nounCommonsWithoutGender =
     educatorUtils.getLemmaObjectsWithoutGivenSelectorKey(
-      wordsBank,
+      envir,
+      useDummy,
+      currentLanguage,
       "nco",
       "gender"
     );
@@ -92,22 +98,20 @@ exports.findHomographs = (envir, currentLanguage, homographType, ignore) => {
     throw "findHomographs fxn: I don't know what type of homograph you want me to find. I've logged above what you gave me.";
   }
 
-  const wordsBank = educatorUtils.getWordsBank(currentLanguage, envir);
-
   const langUtils = require(`../../source/all/${currentLanguage}/langUtils.js`);
 
   let recordOfTerminalValuesAndPaths = [];
-  let severallyAppearingTerminalValuesArr = [];
-  let temporaryArr = [];
-  let homographs = {};
 
-  Object.keys(wordsBank).forEach((wordsetKey) => {
-    let wordset = wordsBank[wordsetKey];
-    let wordtype = wordsetKey.slice(0, 3);
+  const wordsetCallback = (
+    wordsBank,
+    recordOfTerminalValuesAndPaths,
+    wordtype
+  ) => {
+    langUtils.expandLemmaObjects(wordsBank, wordtype, currentLanguage);
 
-    langUtils.expandLemmaObjects(wordset, wordtype, currentLanguage);
+    wordsBank.forEach((lObj) => {
+      scUtils.addWordInflections(lObj, envir);
 
-    wordset.forEach((lObj) => {
       let terminalValuesAndPathsArr =
         otUtils.giveRoutesAndTerminalValuesFromObject(lObj);
 
@@ -116,7 +120,20 @@ exports.findHomographs = (envir, currentLanguage, homographType, ignore) => {
         recordOfTerminalValuesAndPaths.push(terminalValuesAndPathsUnit);
       });
     });
-  });
+  };
+
+  scUtils.grabWordsFromAllWordtypes(
+    currentLanguage,
+    envir,
+    false,
+    recordOfTerminalValuesAndPaths,
+    null,
+    wordsetCallback
+  );
+
+  let severallyAppearingTerminalValuesArr = [];
+  let temporaryArr = [];
+  let homographs = {};
 
   consol.log("recordOfTerminalValuesAndPaths", recordOfTerminalValuesAndPaths);
 
@@ -185,14 +202,7 @@ exports.findHomographs = (envir, currentLanguage, homographType, ignore) => {
     ) {
       let isEveryAllohomAlreadyClarified = firstStepsOfRoute.every(
         (lemmaObjectId) => {
-          let lemmaObject = otUtils.findObjectInNestedObject(
-            wordsBank,
-            {
-              id: lemmaObjectId,
-            },
-            false,
-            true
-          );
+          let lemmaObject = scUtils.grabLemmaObjectById(lemmaObjectId, envir);
 
           if (!lemmaObject) {
             throw (
@@ -227,16 +237,20 @@ exports.findHomographs = (envir, currentLanguage, homographType, ignore) => {
 };
 
 exports.checkLemmaObjectIds = (envir, currentLanguage) => {
-  const wordsBank = educatorUtils.getWordsBank(currentLanguage, envir);
-
   let schematic = [];
-  Object.keys(wordsBank).forEach((wordsetKey) => {
-    let wordsOfAType = wordsBank[wordsetKey];
-    schematic = [
-      ...schematic,
-      ...wordsOfAType.map((lObj) => [lObj.id, lObj.lemma]),
-    ];
-  });
+
+  const wordsetCallback = (wordsBank, res, wordtype) => {
+    res.push(...wordsBank.map((lObj) => [lObj.id, lObj.lemma]));
+  };
+
+  grabWordsFromAllWordtypes(
+    currentLanguage,
+    envir,
+    false,
+    schematic,
+    null,
+    wordsetCallback
+  );
 
   let tempArr = [];
   let duplicateIds = [];
@@ -280,13 +294,6 @@ exports.checkSentenceFormulaIds = (envir, currentLanguage) => {
   let duplicateIds = findDuplicates(0);
 
   return { schematic, duplicateIds };
-};
-
-exports.getWordsBank = (currentLanguage, envir = "ref") => {
-  const {
-    wordsBank,
-  } = require(`../../source/${envir}/${currentLanguage}/words.js`);
-  return wordsBank;
 };
 
 exports.getSentenceFormulasBank = (currentLanguage, envir) => {

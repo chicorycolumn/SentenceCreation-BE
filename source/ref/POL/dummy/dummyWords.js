@@ -7,6 +7,7 @@ let nco = [
     },
     devHardcoded_tags: ["allohomTesting", "edible2"],
     //selectors
+    dummy: true,
     lemma: "orzech",
     id: "pol-nco-Dnut1",
     gender: "m3",
@@ -44,6 +45,7 @@ let nco = [
     },
     devHardcoded_tags: ["allohomTesting", "toolbox"],
     //selectors
+    dummy: true,
     lemma: "nakrętka",
     id: "pol-nco-Dnut2",
     gender: "f",
@@ -77,6 +79,7 @@ let nco = [
     },
     devHardcoded_tags: ["allohomTesting3", "sports"],
     //selectors
+    dummy: true,
     lemma: "remis",
     id: "pol-nco-Dtie2",
     gender: "m3",
@@ -110,6 +113,7 @@ let nco = [
     },
     devHardcoded_tags: ["allohomTesting3", "clothes"],
     //selectors
+    dummy: true,
     lemma: "krawat",
     id: "pol-nco-Dtie1",
     gender: "m3",
@@ -141,6 +145,7 @@ let nco = [
   },
   {
     id: "dummy-nco-001",
+    dummy: true,
     lemma: "foobar_loc_only",
     gender: "n",
     devHardcoded_tags: ["dummy"],
@@ -157,6 +162,7 @@ let nco = [
   },
   {
     id: "dummy-nco-002",
+    dummy: true,
     lemma: "foobar_ins_only",
     gender: "n",
     devHardcoded_tags: ["dummy"],
@@ -173,6 +179,7 @@ let nco = [
   },
   {
     id: "dummy-nco-003",
+    dummy: true,
     lemma: "foobar_sin_ins_plu_loc_only",
     gender: "n",
     devHardcoded_tags: ["dummy2"],
@@ -189,6 +196,7 @@ let nco = [
   },
   {
     id: "dummy-nco-004",
+    dummy: true,
     lemma: "foobar_sin_ins_plu_loc_only",
     gender: "n",
     devHardcoded_tags: ["dummy3"],
@@ -205,6 +213,7 @@ let nco = [
   },
   {
     id: "dummy-nco-005",
+    dummy: true,
     lemma: "foobar_sin_loc_plu_ins_only",
     gender: "n",
     devHardcoded_tags: ["dummy3"],
@@ -221,6 +230,7 @@ let nco = [
   },
   {
     id: "dummy-nco-006",
+    dummy: true,
     lemma: "foobar_none",
     gender: "n",
     devHardcoded_tags: ["dummy3"],
@@ -235,6 +245,7 @@ let nco = [
   },
   {
     id: "dummy-nco-007",
+    dummy: true,
     lemma: "foobar-A",
     gender: "n",
     devHardcoded_tags: ["foobar-A"],
@@ -248,6 +259,7 @@ let nco = [
   },
   {
     id: "dummy-nco-008",
+    dummy: true,
     lemma: "foobar-B",
     gender: "n",
     devHardcoded_tags: ["foobar-B"],
@@ -261,6 +273,7 @@ let nco = [
   },
   {
     id: "dummy-nco-009",
+    dummy: true,
     lemma: "foobar-C",
     gender: "n",
     devHardcoded_tags: ["foobar-C"],
@@ -274,6 +287,7 @@ let nco = [
   },
   {
     id: "dummy-nco-010",
+    dummy: true,
     lemma: "dummy-nco-010",
     gender: "n",
     devHardcoded_tags: ["dummy-nco-010"],
@@ -297,6 +311,7 @@ let nco = [
     },
     devHardcoded_tags: ["construction work"],
     //selectors
+    dummy: true,
     lemma: "dziura",
     id: "pol-nco-Ddziura",
     gender: "f",
@@ -330,6 +345,7 @@ let nco = [
     },
     devHardcoded_tags: ["construction work"],
     //selectors
+    dummy: true,
     lemma: "otwór",
     id: "pol-nco-Dotwór",
     gender: "m3",
@@ -365,6 +381,7 @@ let ver = [
     devHardcoded_translations: { ENG: ["eng-ver-Dtie"], POL: ["pol-ver-Dtie"] },
     devHardcoded_tags: ["allohomTesting3", "crafts"],
     //selectors
+    dummy: true,
     lemma: "wiązać",
     id: "pol-ver-Dtie",
     aspect: "imperfective",

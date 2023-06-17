@@ -168,36 +168,6 @@ exports.traitKeyShouldBeSpecified = (chunk, traitKey, allowOverwrite) => {
   );
 };
 
-exports.combineWordbanks = (wordbank1Input, wordbank2Input, shouldCopy) => {
-  let wordbank1 = shouldCopy
-    ? uUtils.copyWithoutReference(wordbank1Input)
-    : wordbank1Input;
-  let wordbank2 = shouldCopy
-    ? uUtils.copyWithoutReference(wordbank2Input)
-    : wordbank2Input;
-
-  let result = {};
-
-  Object.keys(wordbank1).forEach((key) => {
-    if (!wordbank2[key]) {
-      consol.log(
-        "[1;31m " +
-          `udhd gp:combineWordbanks #NB: wordbank2 does not have key "${key}" but wordbank1 does.` +
-          "[0m"
-      );
-    }
-    if (!Array.isArray(wordbank2[key])) {
-      consol.throw(
-        `#ERR cocq gp:combineWordbanks. wordbank2 key "${key}" holds non array value.`
-      );
-    }
-
-    result[key] = [...wordbank1[key], ...wordbank2[key]];
-  });
-
-  return result;
-};
-
 exports.explodeOutputArraysByHeadsAndDependents = (justOneOutputArray) => {
   consol.log(
     "mdpu explodeOutputArraysByHeadsAndDependents START. justOneOutputArray"

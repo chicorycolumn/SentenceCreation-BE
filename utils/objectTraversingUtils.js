@@ -6,13 +6,15 @@ const lfUtils = require("./lemmaFilteringUtils.js");
 const frUtils = require("./formattingResponseUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const otUtils = require("./objectTraversingUtils.js");
+const scUtils = require("./sentenceCreatingUtils.js");
 const allLangUtils = require("./allLangUtils.js");
 
 exports.findMatchingLemmaObjectThenWord = (
   dependenceType,
+  env,
+  useDummy,
   useDummyWords,
   structureChunk,
-  words,
   errorInSentenceCreation,
   currentLanguage,
   questionLanguage,
@@ -45,7 +47,12 @@ exports.findMatchingLemmaObjectThenWord = (
   }
 
   //STEP TWO: Filter lemmaObjects (by specificIds OR andTags and selectors).
-  let source = words[idUtils.getWordtypeStCh(structureChunk)];
+  let source = scUtils.grabWordsByWordtype(
+    currentLanguage,
+    idUtils.getWordtypeStCh(structureChunk),
+    env,
+    useDummy
+  );
 
   let shouldFilterBySelectors;
 
@@ -139,6 +146,10 @@ exports.findMatchingLemmaObjectThenWord = (
       );
     }
   }
+
+  matches.forEach((lObj) => {
+    scUtils.addWordInflections(lObj, env);
+  });
 
   langUtils.expandLemmaObjects(
     matches,

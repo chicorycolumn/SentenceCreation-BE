@@ -101,17 +101,13 @@ exports.fetchPalette = (req) => {
     return timeOutCheck;
   }
 
-  let { sentenceFormula, words } = scUtils.getMaterialsCopies(
+  let sentenceFormula = scUtils.grabFormulaCopy(
     env,
     questionLanguage,
     sentenceFormulaId,
     useDummy,
     sentenceFormulaFromEducator
   );
-
-  if (!words || !Object.keys(words).length) {
-    return finishAndSendErrorMessages("Error kpas: No words found.");
-  }
 
   let answerResponseObj;
   let firstAnswerSentenceFormula;
@@ -153,10 +149,11 @@ exports.fetchPalette = (req) => {
   );
 
   let questionSentenceData = scUtils.processSentenceFormula(
+    env,
+    useDummy,
     useDummyWords,
     { currentLanguage: questionLanguage },
     questionSentenceFormula,
-    words,
     maqModes,
     !!allCounterfactualResults
   );
@@ -412,15 +409,17 @@ exports.fetchPalette = (req) => {
     }
 
     equivalents.forEach((formulaIdOrFormula, index) => {
-      let { sentenceFormula, words } = scUtils.getMaterialsCopies(
-        env,
-        answerLanguage,
-        formulaIdOrFormula,
-        useDummy,
-        uUtils.isKeyValueTypeObject(formulaIdOrFormula)
-          ? formulaIdOrFormula
-          : null
-      );
+      let sentenceFormula;
+      if (uUtils.isKeyValueTypeObject(formulaIdOrFormula)) {
+        sentenceFormula = formulaIdOrFormula;
+      } else {
+        sentenceFormula = scUtils.grabFormulaCopy(
+          env,
+          answerLanguage,
+          formulaIdOrFormula,
+          useDummy
+        );
+      }
 
       let answerSentenceFormula = sentenceFormula;
 
@@ -466,13 +465,14 @@ exports.fetchPalette = (req) => {
 
       ///////////////////////////////////////////////kp Conform
       scUtils.conformAnswerStructureToQuestionStructure(
+        env,
+        useDummy,
         answerSentenceFormula,
         questionSentenceData.questionOutputArr,
         {
           answerLanguage,
           questionLanguage,
-        },
-        words
+        }
       );
 
       consol.log(
@@ -486,13 +486,14 @@ exports.fetchPalette = (req) => {
       }
 
       answerSentenceData = scUtils.processSentenceFormula(
+        env,
+        useDummy,
         useDummyWords,
         {
           currentLanguage: answerLanguage,
           previousQuestionLanguage: questionLanguage,
         },
         answerSentenceFormula,
-        words,
         maqModes,
         !!allCounterfactualResults,
         questionSentenceData.questionOutputArr

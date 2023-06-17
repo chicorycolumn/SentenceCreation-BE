@@ -4,6 +4,7 @@ const consol = require("../../utils/zerothOrder/consoleLoggingUtils.js");
 const gpUtils = require("../generalPurposeUtils.js");
 const idUtils = require("../identityUtils.js");
 const uUtils = require("../universalUtils.js");
+const scUtils = require("../sentenceCreatingUtils.js");
 
 exports.getLanguagesOfEquivalents = (sentenceFormulaId, env = "ref") => {
   let lang = sentenceFormulaId.split("-")[0];
@@ -140,8 +141,12 @@ exports.getTraductions = (
     exports.accumulateThisKeyFromLObjs(lObj, env, "traductions");
 
   if (getAllIds) {
-    const { wordsBank } = require(`../../source/${env}/${targetlang}/words.js`);
-    let bank = wordsBank[idUtils.getWordtypeLObj(lObj)];
+    let bank = scUtils.grabWordsByWordtype(
+      targetlang,
+      idUtils.getWordtypeLObj(lObj),
+      env,
+      false
+    );
 
     let resArr = [];
 
@@ -165,64 +170,82 @@ exports.checkAllLObjsArePresentInNexus = (env, lang) => {
   const nexusWordsBank =
     require(`../../source/${env}/NEXUS/words.js`).wordsBank;
 
-  const { wordsBank } = require(`../../source/${env}/${lang}/words.js`);
-
   console.log("\n", "[1;35m " + `${env} ${lang}` + "[0m");
-  Object.keys(wordsBank).forEach((wbKey) => {
-    console.log(wbKey, "has", wordsBank[wbKey].length, "lObjs.");
-  });
 
-  let howManyTimesIsEachLObjIdPresentInNexusWordsBank = {};
-  let problems = [];
+  scUtils.grabWordsFromAllWordtypes(
+    lang,
+    env,
+    false,
+    null,
+    null,
+    (lObjsForWordtype, res, wordtype) => {
+      console.log(wordtype, "has", lObjsForWordtype.length, "lObjs.");
+    }
+  );
+
+  let x = {
+    howManyTimesIsEachLObjIdPresentInNexusWordsBank: {},
+    problems: [],
+  };
 
   Object.values(nexusWordsBank).forEach((nexusWB) => {
     nexusWB.forEach((nex) => {
       nex.traductions[lang].forEach((trad) => {
-        if (
-          !Object.values(wordsBank).some((_wb) => {
-            return _wb.some((lObj) =>
+        let boolHolder = [];
+        scUtils.grabWordsFromAllWordtypes(
+          lang,
+          env,
+          false,
+          boolHolder,
+          (lObj, boolHolder, wordtype) => {
+            if (
+              !boolHolder.length &&
               allLangUtils.compareLObjStems(lObj.id, trad)
-            );
-          })
-        ) {
-          problems.push(`"${trad}" present in NEXUS but absent in ${lang}.`);
+            ) {
+              boolHolder.push(true);
+            }
+          }
+        );
+
+        if (!boolHolder.length) {
+          x.problems.push(`"${trad}" present in NEXUS but absent in ${lang}.`);
         }
       });
     });
   });
 
-  Object.keys(wordsBank).forEach((wbKey) => {
-    let wb = wordsBank[wbKey];
+  const lObjCallback = (lObj, x, wordtype) => {
+    id = lObj.id;
+    res = [];
 
-    wb.forEach((lObj) => {
-      id = lObj.id;
-      res = [];
-
-      Object.values(nexusWordsBank).forEach((nexusWB) => {
-        nexusWB.forEach((nex) => {
-          nex.traductions[lang].forEach((trad) => {
-            if (allLangUtils.compareLObjStems(trad, id)) {
-              res.push(nex.key);
-            }
-          });
+    Object.values(nexusWordsBank).forEach((nexusWB) => {
+      nexusWB.forEach((nex) => {
+        nex.traductions[lang].forEach((trad) => {
+          if (allLangUtils.compareLObjStems(trad, id)) {
+            res.push(nex.key);
+          }
         });
       });
-
-      if (!res.length) {
-        problems.push(`"${id}" present in ${lang} but absent in NEXUS.`);
-      }
-
-      howManyTimesIsEachLObjIdPresentInNexusWordsBank[id] = res.length;
     });
-  });
+
+    if (!res.length) {
+      x.problems.push(`"${id}" present in ${lang} but absent in NEXUS.`);
+    }
+
+    x.howManyTimesIsEachLObjIdPresentInNexusWordsBank[id] = res.length;
+  };
+
+  scUtils.grabWordsFromAllWordtypes(lang, env, false, x, lObjCallback);
 
   let interestingTally = {};
-  Object.keys(howManyTimesIsEachLObjIdPresentInNexusWordsBank).forEach((k) => {
-    let v = howManyTimesIsEachLObjIdPresentInNexusWordsBank[k];
-    if (v !== 1) {
-      interestingTally[k] = v;
+  Object.keys(x.howManyTimesIsEachLObjIdPresentInNexusWordsBank).forEach(
+    (k) => {
+      let v = x.howManyTimesIsEachLObjIdPresentInNexusWordsBank[k];
+      if (v !== 1) {
+        interestingTally[k] = v;
+      }
     }
-  });
+  );
 
   if (Object.keys(interestingTally).length) {
     console.log(
@@ -231,5 +254,5 @@ exports.checkAllLObjsArePresentInNexus = (env, lang) => {
     );
   }
 
-  return expect(problems).to.eql([]);
+  return expect(x.problems).to.eql([]);
 };

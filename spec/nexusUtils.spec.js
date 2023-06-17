@@ -10,13 +10,13 @@ const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 
 describe("/nexusUtils", function () {
   describe("checkAllLObjsArePresentInNexus", () => {
-    it("ENG", () => {
+    it("checkAllLObjsArePresentInNexus ENG", () => {
       return nexusUtils.checkAllLObjsArePresentInNexus("ref", "ENG");
     });
-    it("POL", () => {
+    it("checkAllLObjsArePresentInNexus POL", () => {
       return nexusUtils.checkAllLObjsArePresentInNexus("ref", "POL");
     });
-    it("SPA", () => {
+    it("checkAllLObjsArePresentInNexus SPA", () => {
       return nexusUtils.checkAllLObjsArePresentInNexus("ref", "SPA");
     });
   });

@@ -12,105 +12,179 @@ const refFxn = require("./reference/referenceFunctions.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 const nexusUtils = require("./secondOrder/nexusUtils.js");
 const eaUtils = require("./extraAttributeUtils.js");
+const ivUtils = require("./secondOrder/inputValidationUtils.js");
 const { HY } = refObj;
 
-exports.getWordsAndFormulas = (
-  currentLanguage,
-  envir = "ref",
-  wordsOnly,
-  formulasOnly
-) => {
-  if (formulasOnly) {
-    const {
-      sentenceFormulasBank,
-    } = require(`../source/${envir}/${currentLanguage}/sentenceFormulas.js`);
-    return { sentenceFormulasBank };
+exports.grabLemmaObjectById = (lObjId, envir = "ref") => {
+  let split = lObjId.split("-");
+  let lang = split[0].toUpperCase();
+  let wordtype = split[1].toUpperCase();
+
+  const lObjs = require(`../source/${envir}/${lang}/words/${wordtype}.json`);
+  let lObj = lObjs.find((l) => l.id === lObjId);
+
+  if (!lObj) {
+    consol.throw(`ecwt No lObj found for lObjId "${lObjId}".`);
   }
 
-  const {
-    wordsBank,
-  } = require(`../source/${envir}/${currentLanguage}/words.js`);
-
-  if (wordsOnly) {
-    return { wordsBank };
-  }
-
-  const {
-    dummyWordsBank,
-  } = require(`../source/${envir}/${currentLanguage}/dummy/dummyWords.js`);
-
-  const {
-    sentenceFormulasBank,
-  } = require(`../source/${envir}/${currentLanguage}/sentenceFormulas.js`);
-
-  const {
-    dummySentenceFormulasBank,
-  } = require(`../source/${envir}/${currentLanguage}/dummy/dummySentenceFormulas.js`);
-
-  return {
-    wordsBank,
-    dummyWordsBank,
-    sentenceFormulasBank,
-    dummySentenceFormulasBank,
-  };
+  return lObj;
 };
 
-exports.getMaterialsCopies = (
+exports.grabWordsFromAllWordtypes = (
+  lang,
+  env = "ref",
+  useDummy,
+  res,
+  lObjCallback,
+  wordsetCallback
+) => {
+  ivUtils.validateLang(lang, 13);
+
+  const fs = require("fs");
+  let files = fs.readdirSync(`source/${env}/${lang}/words`);
+  files
+    .filter((file) => file.split(".")[1] === "json")
+    .forEach((file) => {
+      let wordtype = file.split(".")[0];
+      let wordsBank = scUtils.grabWordsByWordtype(
+        lang,
+        wordtype,
+        env,
+        useDummy
+      );
+
+      if (wordsetCallback) {
+        wordsetCallback(wordsBank, res, wordtype);
+      } else {
+        wordsBank.forEach((lObj) => {
+          lObjCallback(lObj, res, wordtype);
+        });
+      }
+    });
+
+  return res;
+};
+
+exports.grabFormulas = (lang, useDummy, envir = "ref") => {
+  lang = lang.toUpperCase();
+
+  if (useDummy) {
+    const {
+      dummySentenceFormulasBank,
+    } = require(`../source/${envir}/${lang}/dummy/dummySentenceFormulas.js`);
+
+    return dummySentenceFormulasBank;
+  }
+
+  const {
+    sentenceFormulasBank,
+  } = require(`../source/${envir}/${lang}/sentenceFormulas.js`);
+
+  return sentenceFormulasBank;
+};
+
+exports.grabWordsByWordtype = (lang, wordtype, envir = "ref", useDummy) => {
+  lang = lang.toUpperCase();
+
+  const wordsBank = require(`../source/${envir}/${lang}/words/${wordtype}.json`);
+
+  if (!wordsBank) {
+    console.log(
+      `rhob Failed to find lemma object data for for lang="${lang}" wordtype="${wordtype}" envir="${envir}"`
+    );
+  }
+
+  if (useDummy) {
+    const {
+      dummyWordsBank,
+    } = require(`../source/${envir}/${lang}/dummy/dummyWords.js`);
+    let dummyWords = dummyWordsBank[wordtype];
+    return [...wordsBank, ...dummyWords];
+  }
+
+  return wordsBank;
+};
+
+exports.grabWordInflections = (lObjId, envir = "ref") => {
+  let data = scUtils._grabFurtherWordInfo(lObjId, envir);
+  return data.inflections;
+};
+
+exports.addWordInflections = (lObj, envir = "ref") => {
+  if (lObj.dummy) {
+    return;
+  }
+
+  let data = scUtils._grabFurtherWordInfo(lObj.id, envir);
+  lObj.inflections = data.inflections;
+};
+
+exports.addWordExtra = (lObj, envir = "ref") => {
+  if (lObj.dummy) {
+    return;
+  }
+
+  let data = scUtils._grabFurtherWordInfo(lObj.id, envir);
+  lObj.extra = data.extra;
+};
+
+exports._grabFurtherWordInfo = (lObjId, envir = "ref") => {
+  let split = lObjId.split("-");
+  let lang = split[0].toUpperCase();
+  let wordtype = split[1];
+  const data = require(`../source/${envir}/${lang}/words/${wordtype}/${lObjId}.json`);
+  if (!data) {
+    console.log(`rhoc Failed to find lemma object data for for ${lObjId}`);
+  }
+  return data;
+};
+
+exports.grabFormulaCopy = (
   env = "ref",
   currentLanguage,
   sentenceFormulaId,
   useDummy,
   sentenceFormulaFromEducator
 ) => {
+  if (sentenceFormulaFromEducator) {
+    return uUtils.copyWithoutReference(sentenceFormulaFromEducator);
+  }
+
   if (!sentenceFormulaId) {
     sentenceFormulaId = `${currentLanguage}-default`;
   }
 
-  //STEP ZERO (A): Get necessary source materials.
-  let wordsOnly = !!sentenceFormulaFromEducator;
+  const sentenceFormulasBank = scUtils.grabFormulas(
+    currentLanguage,
+    useDummy,
+    env
+  );
 
-  const {
-    wordsBank,
-    dummyWordsBank,
-    sentenceFormulasBank,
-    dummySentenceFormulasBank,
-  } = scUtils.getWordsAndFormulas(currentLanguage, env, wordsOnly);
-
-  if (wordsOnly) {
-    return {
-      words: wordsBank,
-      sentenceFormula: uUtils.copyWithoutReference(sentenceFormulaFromEducator),
-    };
+  if (!sentenceFormulasBank) {
+    consol.throw("sfft grabFormulaCopy found nothing, args were:", {
+      env,
+      currentLanguage,
+      sentenceFormulaId,
+      useDummy,
+      sentenceFormulaFromEducator,
+    });
   }
 
-  let sentenceFormula;
-  const langUtils = require(`../source/all/${currentLanguage}/langUtils.js`);
-
-  let words = useDummy
-    ? gpUtils.combineWordbanks(wordsBank, dummyWordsBank)
-    : wordsBank;
-
-  let sentenceFormulas = useDummy
-    ? dummySentenceFormulasBank
-    : sentenceFormulasBank;
-
-  sentenceFormula = sentenceFormulas.find(
+  let sentenceFormula = sentenceFormulasBank.find(
     (senFor) => senFor.sentenceFormulaId === sentenceFormulaId
   );
 
   if (!sentenceFormula) {
     consol.throw(
-      `#ERR quky sc:getMaterialsCopies. No sentenceFormula for this sentenceFormulaId "${sentenceFormulaId}".`
+      `#ERR quky sc:grabFormulaCopy. No sentenceFormula for this sentenceFormulaId "${sentenceFormulaId}".`
     );
   }
 
-  return {
-    sentenceFormula: uUtils.copyWithoutReference(sentenceFormula),
-    words,
-  };
+  return uUtils.copyWithoutReference(sentenceFormula);
 };
 
 exports.selectDependentChunkWordsAndAddToOutputArray = (
+  env,
   dependenceTypeToUpdate,
   explodedOutputArraysWithHeads,
   grandOutputArray,
@@ -118,8 +192,8 @@ exports.selectDependentChunkWordsAndAddToOutputArray = (
   dependentChunks,
   currentLanguage,
   isCounterfax,
+  useDummy,
   useDummyWords,
-  words,
   errorInSentenceCreation,
   previousQuestionLanguage,
   questionOutputArr,
@@ -175,9 +249,10 @@ exports.selectDependentChunkWordsAndAddToOutputArray = (
             let allPossOutputUnits_dependent =
               otUtils.findMatchingLemmaObjectThenWord(
                 "dependent",
+                env,
+                useDummy,
                 useDummyWords,
                 dependentChunk,
-                words,
                 errorInSentenceCreation,
                 currentLanguage,
                 previousQuestionLanguage,
@@ -271,10 +346,11 @@ exports.selectDependentChunkWordsAndAddToOutputArray = (
 };
 
 exports.processSentenceFormula = (
+  env = "ref",
+  useDummy,
   useDummyWords,
   languagesObj,
   sentenceFormula,
-  words,
   maqModes,
   isCounterfax,
   questionOutputArr
@@ -332,9 +408,10 @@ exports.processSentenceFormula = (
 
     let allPossOutputUnits_head = otUtils.findMatchingLemmaObjectThenWord(
       "head",
+      env,
+      useDummy,
       useDummyWords,
       headChunk,
-      words,
       errorInSentenceCreation,
       currentLanguage,
       previousQuestionLanguage,
@@ -403,6 +480,7 @@ exports.processSentenceFormula = (
     _dependentChunks
   ) => {
     return scUtils.selectDependentChunkWordsAndAddToOutputArray(
+      env,
       _dependenceTypeToUpdate,
       _explodedOutputArraysWithHeads,
       _grandOutputArray,
@@ -410,8 +488,8 @@ exports.processSentenceFormula = (
       _dependentChunks,
       currentLanguage,
       isCounterfax,
+      useDummy,
       useDummyWords,
-      words,
       errorInSentenceCreation,
       previousQuestionLanguage,
       questionOutputArr,
@@ -506,9 +584,10 @@ exports.processSentenceFormula = (
 
       let allPossOutputUnits_PHD = otUtils.findMatchingLemmaObjectThenWord(
         "PHD",
+        env,
+        useDummy,
         useDummyWords,
         postHocDependentChunk,
-        words,
         errorInSentenceCreation,
         currentLanguage,
         previousQuestionLanguage,
@@ -640,9 +719,10 @@ exports.processSentenceFormula = (
     consol.log(`weoi otherChunk "${otherChunk.chunkId}"`);
     let allPossOutputUnits_other = otUtils.findMatchingLemmaObjectThenWord(
       "other",
+      env,
+      useDummy,
       useDummyWords,
       otherChunk,
-      words,
       errorInSentenceCreation,
       currentLanguage,
       previousQuestionLanguage,
@@ -1578,10 +1658,11 @@ exports.selectWordVersions = (orderedOutputArr, currentLanguage, maqModes) => {
 };
 
 exports.conformAnswerStructureToQuestionStructure = (
+  env,
+  useDummy,
   sentenceFormula,
   questionOutputArr,
-  languagesObj,
-  words
+  languagesObj
 ) => {
   if ("logging") {
     consol.logSpecial(
@@ -1658,7 +1739,12 @@ exports.conformAnswerStructureToQuestionStructure = (
       false
     );
 
-    let source = words[idUtils.getWordtypeStCh(answerStructureChunk)];
+    let source = scUtils.grabWordsByWordtype(
+      answerLanguage,
+      idUtils.getWordtypeStCh(answerStructureChunk),
+      env,
+      useDummy
+    );
 
     matchingAnswerLemmaObjects = lfUtils.getLObjAndSiblings(
       source,

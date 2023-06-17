@@ -9,6 +9,7 @@ let nco = [
     allohomInfo: { singleWordtype: true, text: "food", emoji: "🥜" },
 
     //selectors
+    dummy: true,
     lemma: "nut",
     id: "eng-nco-Dnut1",
     gender: "n",
@@ -36,6 +37,7 @@ let nco = [
     allohomInfo: { singleWordtype: true, text: "metal", emoji: "🔩" },
 
     //selectors
+    dummy: true,
     lemma: "nut",
     id: "eng-nco-Dnut2",
     gender: "n",
@@ -68,6 +70,7 @@ let nco = [
     },
 
     //selectors
+    dummy: true,
     lemma: "tie",
     id: "eng-nco-Dtie2",
     gender: "n",
@@ -100,6 +103,7 @@ let nco = [
     },
 
     //selectors
+    dummy: true,
     lemma: "tie",
     id: "eng-nco-Dtie1",
     gender: "n",
@@ -126,6 +130,7 @@ let nco = [
     devHardcoded_tags: ["construction work"],
 
     //selectors
+    dummy: true,
     lemma: "hole",
     id: "eng-nco-Dhole",
     gender: "n",
@@ -152,6 +157,7 @@ let nco = [
     devHardcoded_tags: ["construction work"],
 
     //selectors
+    dummy: true,
     lemma: "pit",
     id: "eng-nco-Dpit",
     gender: "n",
@@ -185,6 +191,7 @@ let ver = [
       emoji: "🧵",
     },
     //selectors
+    dummy: true,
     lemma: "tie",
     id: "eng-ver-Dtie",
     //notes

@@ -56,11 +56,10 @@ exports.fetchFormulaIds = (req) => {
     env = "ref";
   }
 
-  let formulasBank = scUtils.getWordsAndFormulas(
+  let formulasBank = scUtils.grabFormulas(
     lang1,
-    env,
     false,
-    true
+    env
   ).sentenceFormulasBank;
 
   let formulaIds = formulasBank.map((formulaObject) => {

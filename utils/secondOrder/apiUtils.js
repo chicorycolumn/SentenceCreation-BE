@@ -18,21 +18,20 @@ const allLangUtils = require("../../utils/allLangUtils.js");
 const refFxn = require("../reference/referenceFunctions.js");
 const { fetchPalette } = require("../../models/palette.model.js");
 
-exports.getSentenceFormulas = (questionFormulaId, answerLanguage, env) => {
-  if (!env) {
-    env = "ref";
-  }
-
+exports.getSentenceFormulas = (
+  questionFormulaId,
+  answerLanguage,
+  env = "ref"
+) => {
   let questionLanguage = idUtils.getLanguageFromFormulaId(questionFormulaId);
   ivUtils.validateLang(questionLanguage, 14);
   ivUtils.validateLang(answerLanguage, 15);
 
-  let questionSentenceFormulasBank = scUtils.getWordsAndFormulas(
+  let questionSentenceFormulasBank = scUtils.grabFormulas(
     questionLanguage,
-    env,
     false,
-    true
-  ).sentenceFormulasBank;
+    env
+  );
 
   const getFormulaById = (bank, id, label) => {
     let formulas = bank.filter((el) => el.sentenceFormulaId === id);
@@ -57,12 +56,11 @@ exports.getSentenceFormulas = (questionFormulaId, answerLanguage, env) => {
     env
   );
 
-  let answerSentenceFormulasBank = scUtils.getWordsAndFormulas(
+  let answerSentenceFormulasBank = scUtils.grabFormulas(
     answerLanguage,
-    env,
     false,
-    true
-  ).sentenceFormulasBank;
+    env
+  );
 
   let answerSentenceFormulas = answerSentenceFormulaIds.map(
     (answerSentenceFormulaId) =>
@@ -81,58 +79,58 @@ exports.getSentenceFormulas = (questionFormulaId, answerLanguage, env) => {
 exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
   let envir = "ref";
 
-  ivUtils.validateLang(currentLanguage, 10);
+  let resObj = {};
 
-  const {
-    wordsBank,
-  } = require(`../../source/${envir}/${currentLanguage}/words.js`);
-
-  resObj = {};
-
-  criteria = {};
+  let criteria = {};
   Object.keys(criteriaFromHTTP).forEach((critKey) => {
     let critValue = criteriaFromHTTP[critKey];
     critValue = critValue.split(" ");
     criteria[critKey] = critValue;
   });
 
-  // console.log("nyfs getWordsByCriteria invoked with:", criteria);
+  const grabberCallback = (lObj, resObj, wordtype) => {
+    if (!resObj[wordtype]) {
+      resObj[wordtype] = [];
+    }
 
-  Object.keys(wordsBank).forEach((wordtype) => {
-    resObj[wordtype] = [];
-    let wordSet = wordsBank[wordtype];
-    wordSet.forEach((lObj) => {
-      if (
-        Object.keys(criteria).every((critKey) => {
-          let critValue = criteria[critKey];
+    if (
+      Object.keys(criteria).every((critKey) => {
+        let critValue = criteria[critKey];
 
-          if (critKey === "andTags") {
-            return uUtils.doStringsOrArraysMatch(
-              nexusUtils.getPapers(lObj),
-              critValue
-            );
-          } else if (critKey === "orTags") {
-            return uUtils.doStringsOrArraysMatch(
-              nexusUtils.getPapers(lObj),
-              critValue,
-              false
-            );
-          } else {
-            return (
-              lObj[critKey] &&
-              uUtils.doStringsOrArraysMatch(lObj[critKey], critValue)
-            );
-          }
-        })
-      ) {
-        resObj[wordtype].push({
-          lemma: lObj.lemma,
-          id: lObj.id,
-          tags: nexusUtils.getPapers(lObj),
-        });
-      }
-    });
-  });
+        if (critKey === "andTags") {
+          return uUtils.doStringsOrArraysMatch(
+            nexusUtils.getPapers(lObj),
+            critValue
+          );
+        } else if (critKey === "orTags") {
+          return uUtils.doStringsOrArraysMatch(
+            nexusUtils.getPapers(lObj),
+            critValue,
+            false
+          );
+        } else {
+          return (
+            lObj[critKey] &&
+            uUtils.doStringsOrArraysMatch(lObj[critKey], critValue)
+          );
+        }
+      })
+    ) {
+      resObj[wordtype].push({
+        lemma: lObj.lemma,
+        id: lObj.id,
+        tags: nexusUtils.getPapers(lObj),
+      });
+    }
+  };
+
+  scUtils.grabWordsFromAllWordtypes(
+    currentLanguage,
+    envir,
+    false,
+    resObj,
+    grabberCallback
+  );
 
   return resObj;
 };
@@ -545,21 +543,19 @@ exports.getEnChsForLemma = (lang, lemma, env = "ref") => {
 };
 
 exports.getLObjsForLemma = (lang, lemma, env = "ref") => {
-  ivUtils.validateLang(lang, 13);
+  let matches = [];
 
-  matches = [];
-  let { wordsBank } = scUtils.getWordsAndFormulas(lang, env, true);
-  Object.keys(wordsBank).forEach((wordtype) => {
-    wordSet = wordsBank[wordtype];
-    wordSet.forEach((lObj) => {
-      if (
-        lObj.lemma === lemma ||
-        uUtils.valueInObject(lObj.inflections, lemma)
-      ) {
-        matches.push(lObj);
-      }
-    });
-  });
+  const grabberCallback = (lObj, res) => {
+    if (
+      lObj.lemma === lemma ||
+      uUtils.valueInObject(scUtils.grabWordInflections(lObj.id, env), lemma)
+    ) {
+      res.push(lObj);
+    }
+  };
+
+  scUtils.grabWordsFromAllWordtypes(lang, env, false, matches, grabberCallback);
+
   return matches;
 };
 
