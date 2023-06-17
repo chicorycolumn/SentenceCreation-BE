@@ -5,7 +5,7 @@ const otUtils = require(".././objectTraversingUtils.js");
 const educatorUtils = require("./educatorUtils.js");
 const refObj = require(".././reference/referenceObjects.js");
 const fs = require("fs");
-const scUtils = require("../sentenceCreatingUtils.js");
+const gdUtils = require("../grabDataUtils.js");
 
 exports.checkOutputArrayForMissingUnits = (
   sentenceFormula,
@@ -41,7 +41,7 @@ exports.getLemmaObjectsWithoutGivenSelectorKey = (
   wordtype,
   selectorKey
 ) => {
-  let words = scUtils.grabWordsByWordtype(
+  let words = gdUtils.grabWordsByWordtype(
     currentLanguage,
     wordtype,
     envir,
@@ -110,7 +110,7 @@ exports.findHomographs = (envir, currentLanguage, homographType, ignore) => {
     langUtils.expandLemmaObjects(wordsBank, wordtype, currentLanguage);
 
     wordsBank.forEach((lObj) => {
-      scUtils.addWordInflections(lObj, envir);
+      gdUtils.addWordInflections(lObj, envir);
 
       let terminalValuesAndPathsArr =
         otUtils.giveRoutesAndTerminalValuesFromObject(lObj);
@@ -122,7 +122,7 @@ exports.findHomographs = (envir, currentLanguage, homographType, ignore) => {
     });
   };
 
-  scUtils.grabWordsFromAllWordtypes(
+  gdUtils.grabWordsFromAllWordtypes(
     currentLanguage,
     envir,
     false,
@@ -202,7 +202,7 @@ exports.findHomographs = (envir, currentLanguage, homographType, ignore) => {
     ) {
       let isEveryAllohomAlreadyClarified = firstStepsOfRoute.every(
         (lemmaObjectId) => {
-          let lemmaObject = scUtils.grabLemmaObjectById(lemmaObjectId, envir);
+          let lemmaObject = gdUtils.grabLemmaObjectById(lemmaObjectId, envir);
 
           if (!lemmaObject) {
             throw (

@@ -3,7 +3,7 @@ const idUtils = require("../utils/identityUtils.js");
 const uUtils = require("../utils/universalUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const edUtils = require("../utils/secondOrder/educatorUtils.js");
-const scUtils = require("../utils/sentenceCreatingUtils.js");
+const gdUtils = require("../utils/grabDataUtils.js");
 const aaUtils = require("../utils/auxiliaryAttributeUtils.js");
 const ivUtils = require("../utils/secondOrder/inputValidationUtils.js");
 const pvUtils = require("../utils/secondOrder/processValidationUtils.js");
@@ -56,7 +56,7 @@ exports.fetchFormulaIds = (req) => {
     env = "ref";
   }
 
-  let formulasBank = scUtils.grabFormulas(
+  let formulasBank = gdUtils.grabFormulas(
     lang1,
     false,
     env

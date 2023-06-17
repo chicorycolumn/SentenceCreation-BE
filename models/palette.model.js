@@ -5,6 +5,7 @@ const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const edUtils = require("../utils/secondOrder/educatorUtils.js");
 const efUtils = require("../utils/secondOrder/efficiencyUtils.js");
 const scUtils = require("../utils/sentenceCreatingUtils.js");
+const gdUtils = require("../utils/grabDataUtils.js");
 const aaUtils = require("../utils/auxiliaryAttributeUtils.js");
 const ivUtils = require("../utils/secondOrder/inputValidationUtils.js");
 const pvUtils = require("../utils/secondOrder/processValidationUtils.js");
@@ -101,7 +102,7 @@ exports.fetchPalette = (req) => {
     return timeOutCheck;
   }
 
-  let sentenceFormula = scUtils.grabFormulaCopy(
+  let sentenceFormula = gdUtils.grabFormulaCopy(
     env,
     questionLanguage,
     sentenceFormulaId,
@@ -413,7 +414,7 @@ exports.fetchPalette = (req) => {
       if (uUtils.isKeyValueTypeObject(formulaIdOrFormula)) {
         sentenceFormula = formulaIdOrFormula;
       } else {
-        sentenceFormula = scUtils.grabFormulaCopy(
+        sentenceFormula = gdUtils.grabFormulaCopy(
           env,
           answerLanguage,
           formulaIdOrFormula,

@@ -3,7 +3,7 @@ const idUtils = require("../../utils/identityUtils.js");
 const uUtils = require("../../utils/universalUtils.js");
 const consol = require("../../utils/zerothOrder/consoleLoggingUtils.js");
 const edUtils = require("../../utils/secondOrder/educatorUtils.js");
-const scUtils = require("../../utils/sentenceCreatingUtils.js");
+const gdUtils = require("../../utils/grabDataUtils.js");
 const lfUtils = require("../../utils/lemmaFilteringUtils.js");
 const aaUtils = require("../../utils/auxiliaryAttributeUtils.js");
 const otUtils = require("../../utils/objectTraversingUtils.js");
@@ -27,7 +27,7 @@ exports.getSentenceFormulas = (
   ivUtils.validateLang(questionLanguage, 14);
   ivUtils.validateLang(answerLanguage, 15);
 
-  let questionSentenceFormulasBank = scUtils.grabFormulas(
+  let questionSentenceFormulasBank = gdUtils.grabFormulas(
     questionLanguage,
     false,
     env
@@ -56,7 +56,7 @@ exports.getSentenceFormulas = (
     env
   );
 
-  let answerSentenceFormulasBank = scUtils.grabFormulas(
+  let answerSentenceFormulasBank = gdUtils.grabFormulas(
     answerLanguage,
     false,
     env
@@ -88,7 +88,7 @@ exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
     criteria[critKey] = critValue;
   });
 
-  const grabberCallback = (lObj, resObj, wordtype) => {
+  const lObjCallback = (lObj, resObj, wordtype) => {
     if (!resObj[wordtype]) {
       resObj[wordtype] = [];
     }
@@ -124,12 +124,12 @@ exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
     }
   };
 
-  scUtils.grabWordsFromAllWordtypes(
+  gdUtils.grabWordsFromAllWordtypes(
     currentLanguage,
     envir,
     false,
     resObj,
-    grabberCallback
+    lObjCallback
   );
 
   return resObj;
@@ -545,16 +545,16 @@ exports.getEnChsForLemma = (lang, lemma, env = "ref") => {
 exports.getLObjsForLemma = (lang, lemma, env = "ref") => {
   let matches = [];
 
-  const grabberCallback = (lObj, res) => {
+  const lObjCallback = (lObj, res) => {
     if (
       lObj.lemma === lemma ||
-      uUtils.valueInObject(scUtils.grabWordInflections(lObj.id, env), lemma)
+      uUtils.valueInObject(gdUtils.grabWordInflections(lObj.id, env), lemma)
     ) {
       res.push(lObj);
     }
   };
 
-  scUtils.grabWordsFromAllWordtypes(lang, env, false, matches, grabberCallback);
+  gdUtils.grabWordsFromAllWordtypes(lang, env, false, matches, lObjCallback);
 
   return matches;
 };

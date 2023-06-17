@@ -6,7 +6,7 @@ const lfUtils = require("./lemmaFilteringUtils.js");
 const frUtils = require("./formattingResponseUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const otUtils = require("./objectTraversingUtils.js");
-const scUtils = require("./sentenceCreatingUtils.js");
+const gdUtils = require("./grabDataUtils.js");
 const allLangUtils = require("./allLangUtils.js");
 
 exports.findMatchingLemmaObjectThenWord = (
@@ -47,7 +47,7 @@ exports.findMatchingLemmaObjectThenWord = (
   }
 
   //STEP TWO: Filter lemmaObjects (by specificIds OR andTags and selectors).
-  let source = scUtils.grabWordsByWordtype(
+  let source = gdUtils.grabWordsByWordtype(
     currentLanguage,
     idUtils.getWordtypeStCh(structureChunk),
     env,
@@ -148,7 +148,7 @@ exports.findMatchingLemmaObjectThenWord = (
   }
 
   matches.forEach((lObj) => {
-    scUtils.addWordInflections(lObj, env);
+    gdUtils.addWordInflections(lObj, env);
   });
 
   langUtils.expandLemmaObjects(

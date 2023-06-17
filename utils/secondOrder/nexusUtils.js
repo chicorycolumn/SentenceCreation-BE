@@ -4,7 +4,7 @@ const consol = require("../../utils/zerothOrder/consoleLoggingUtils.js");
 const gpUtils = require("../generalPurposeUtils.js");
 const idUtils = require("../identityUtils.js");
 const uUtils = require("../universalUtils.js");
-const scUtils = require("../sentenceCreatingUtils.js");
+const gdUtils = require("../grabDataUtils.js");
 
 exports.getLanguagesOfEquivalents = (sentenceFormulaId, env = "ref") => {
   let lang = sentenceFormulaId.split("-")[0];
@@ -141,7 +141,7 @@ exports.getTraductions = (
     exports.accumulateThisKeyFromLObjs(lObj, env, "traductions");
 
   if (getAllIds) {
-    let bank = scUtils.grabWordsByWordtype(
+    let bank = gdUtils.grabWordsByWordtype(
       targetlang,
       idUtils.getWordtypeLObj(lObj),
       env,
@@ -172,7 +172,7 @@ exports.checkAllLObjsArePresentInNexus = (env, lang) => {
 
   console.log("\n", "[1;35m " + `${env} ${lang}` + "[0m");
 
-  scUtils.grabWordsFromAllWordtypes(
+  gdUtils.grabWordsFromAllWordtypes(
     lang,
     env,
     false,
@@ -192,7 +192,7 @@ exports.checkAllLObjsArePresentInNexus = (env, lang) => {
     nexusWB.forEach((nex) => {
       nex.traductions[lang].forEach((trad) => {
         let boolHolder = [];
-        scUtils.grabWordsFromAllWordtypes(
+        gdUtils.grabWordsFromAllWordtypes(
           lang,
           env,
           false,
@@ -235,7 +235,7 @@ exports.checkAllLObjsArePresentInNexus = (env, lang) => {
     x.howManyTimesIsEachLObjIdPresentInNexusWordsBank[id] = res.length;
   };
 
-  scUtils.grabWordsFromAllWordtypes(lang, env, false, x, lObjCallback);
+  gdUtils.grabWordsFromAllWordtypes(lang, env, false, x, lObjCallback);
 
   let interestingTally = {};
   Object.keys(x.howManyTimesIsEachLObjIdPresentInNexusWordsBank).forEach(
