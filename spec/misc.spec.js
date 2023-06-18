@@ -5,6 +5,7 @@ const uUtils = require("../utils/universalUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const {
   splitLemmaObjectsAndWriteAsJson,
+  addGuideSentenceToFormulaAndWriteAsJson,
 } = require("../utils/secondOrder/educatorUtils.js");
 
 xdescribe("Sandbox.", () => {
@@ -13,9 +14,9 @@ xdescribe("Sandbox.", () => {
   });
 });
 
-xdescribe("Project Ophiucus: Bravo Wing: Task One.", () => {
-  it("", () => {
-    // Take lobjs from Old Way of storing them, and write as individual files with extra and inflections, plus skeletal lobjs arrays.
+describe("Project Ophiucus: Bravo Wing: Task One.", () => {
+  it("Take lobjs from Old Way of storing them", () => {
+    // write as individual files with extra and inflections, plus skeletal lobjs arrays.
     let envs = ["dev", "ref"];
     let langs = ["POL", "ENG", "SPA"];
 
@@ -25,6 +26,20 @@ xdescribe("Project Ophiucus: Bravo Wing: Task One.", () => {
           return;
         }
         splitLemmaObjectsAndWriteAsJson(e, l);
+      });
+    });
+  });
+  it.only("Take formulas from Old Way of storing them", () => {
+    // add guideSentence.
+    let envs = ["ref", "dev"];
+    let langs = ["POL", "ENG", "SPA"];
+
+    envs.forEach((e) => {
+      langs.forEach((l) => {
+        if (e === "dev" && l === "SPA") {
+          return;
+        }
+        addGuideSentenceToFormulaAndWriteAsJson(e, l);
       });
     });
   });

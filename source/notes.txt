@@ -1,3 +1,5 @@
+lObj notes:
+
 //If you mark a traitKey true, or give it a traitValue      it will be filled out by fillVerbInflections fxn.
 //If you mark a traitKey false, or omit it                   it will not be.
 
@@ -15,3 +17,16 @@ ENG: baby: gender: "_Genders", // Because baby can be neuter "Your baby is cryin
 
 SPA: m: "bueno", //Gamma, before nouns this is "buen" so need terminus obj here.
       superlative: true, // Gamma programmatically build this once gender is known.
+
+------------------------------------------------------------------------------------------------------------
+
+sentenceFormula notes:
+
+// ▲ Because here the educator knows that context makes this MGN's gender unambiguous.
+sentenceFormulaId: "ENG-116b"
+sentenceFormulaId: "ENG-116x"
+
+//Just for symmetry and so I know it doesn't break anything.
+sentenceFormulaId: "POL-116b"
+sentenceFormulaId: "POL-116a"
+sentenceFormulaId: "POL-116x"

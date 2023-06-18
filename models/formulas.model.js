@@ -63,15 +63,9 @@ exports.fetchFormulaIds = (req) => {
   ).sentenceFormulasBank;
 
   let formulaIds = formulasBank.map((formulaObject) => {
-    let guideSentence = formulaObject.sentenceStructure
-      .map((chunk) => apiUtils.getAestheticGuideword(chunk, formulaObject))
-      .join(" ");
-    guideSentence =
-      guideSentence[0].toUpperCase() + guideSentence.slice(1) + ".";
-
     return [
       formulaObject.sentenceFormulaId,
-      guideSentence,
+      formulaObject.guide,
       nexusUtils.getLanguagesOfEquivalents(
         formulaObject.sentenceFormulaId,
         env

@@ -2,7 +2,8 @@ const gpUtils = require(".././generalPurposeUtils.js");
 const uUtils = require(".././universalUtils.js");
 const consol = require(".././zerothOrder/consoleLoggingUtils.js");
 const otUtils = require(".././objectTraversingUtils.js");
-const educatorUtils = require("./educatorUtils.js");
+const edUtils = require("./educatorUtils.js");
+const apiUtils = require("./apiUtils.js");
 const refObj = require(".././reference/referenceObjects.js");
 const fs = require("fs");
 const gdUtils = require("../grabDataUtils.js");
@@ -53,23 +54,21 @@ exports.getLemmaObjectsWithoutGivenSelectorKey = (
 exports.checkWords = (envir, currentLanguage) => {
   const langUtils = require(`../../source/all/${currentLanguage}/langUtils.js`);
 
-  let nounPersonsWithoutGender =
-    educatorUtils.getLemmaObjectsWithoutGivenSelectorKey(
-      envir,
-      useDummy,
-      currentLanguage,
-      "npe",
-      "gender"
-    );
+  let nounPersonsWithoutGender = edUtils.getLemmaObjectsWithoutGivenSelectorKey(
+    envir,
+    useDummy,
+    currentLanguage,
+    "npe",
+    "gender"
+  );
 
-  let nounCommonsWithoutGender =
-    educatorUtils.getLemmaObjectsWithoutGivenSelectorKey(
-      envir,
-      useDummy,
-      currentLanguage,
-      "nco",
-      "gender"
-    );
+  let nounCommonsWithoutGender = edUtils.getLemmaObjectsWithoutGivenSelectorKey(
+    envir,
+    useDummy,
+    currentLanguage,
+    "nco",
+    "gender"
+  );
 
   let nounsWithoutGender = [
     ...nounPersonsWithoutGender,
@@ -260,7 +259,7 @@ exports.checkLemmaObjectIds = (envir, currentLanguage) => {
 };
 
 exports.checkSentenceFormulaIds = (envir, currentLanguage) => {
-  const sentenceFormulasBank = educatorUtils.getSentenceFormulasBank(
+  const sentenceFormulasBank = edUtils.getSentenceFormulasBank(
     currentLanguage,
     envir
   );
@@ -386,5 +385,33 @@ exports.splitLemmaObjectsAndWriteAsJson = (e, l) => {
         meatArr[1]
       );
     });
+  });
+};
+
+exports.addGuideSentenceToFormulaAndWriteAsJson = (e, l) => {
+  fs.mkdirSync(`source/${e}/${l}/formulas`);
+
+  const {
+    sentenceFormulasBank,
+  } = require(`../../source/${e}/${l}/sentenceFormulas.js`);
+
+  sentenceFormulasBank.forEach((formulaObject) => {
+    let guideSentence = formulaObject.sentenceStructure
+      .map((chunk) => apiUtils.getAestheticGuideword(chunk, formulaObject))
+      .join(" ");
+
+    if (!guideSentence || !guideSentence.length) {
+      console.log(formulaObject);
+    }
+
+    guideSentence =
+      guideSentence[0].toUpperCase() + guideSentence.slice(1) + ".";
+
+    formulaObject.guide = guideSentence;
+
+    uUtils.writeJSON(
+      `source/${e}/${l}/formulas/${formulaObject.sentenceFormulaId}.json`,
+      formulaObject
+    );
   });
 };

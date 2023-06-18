@@ -54,7 +54,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaId: "ENG-90-902a", // I'll read (pf fut)
+    sentenceFormulaId: "ENG-90-902a",
     equivalents: { POL: ["POL-90-902a"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
@@ -69,9 +69,18 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["fix-1", "ver-1"]], additional: [] },
   },
   {
-    sentenceFormulaId: "ENG-90-902a", // I'll read
+    sentenceFormulaId: "ENG-90-902a",
     equivalents: { POL: ["POL-90-902a"] },
-    sentenceStructure: [],
-    orders: { primary: [], additional: [] },
+    sentenceStructure: [
+      { chunkId: "fix-1", chunkValue: "I" },
+      {
+        chunkId: "ver-1",
+        andTags: ["basic2"],
+        tenseDescription: ["future"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+    ],
+    orders: { primary: [["fix-1", "ver-1"]], additional: [] },
   },
 ];
