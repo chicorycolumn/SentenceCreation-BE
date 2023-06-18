@@ -282,3 +282,50 @@ exports.pushSelectedWordToArray = (
     structureChunk
   );
 };
+
+exports.getAestheticGuideword = (chunk, formulaObject) => {
+  if (chunk.guideword && chunk.guideword.traitValue) {
+    let res = chunk.guideword.traitValue;
+    delete chunk.guideword;
+    return res;
+  }
+
+  let guideword =
+    typeof chunk.chunkId === "string"
+      ? chunk.chunkId.split("-").slice(-1)[0]
+      : chunk.chunkId.traitValue.split("-").slice(-1)[0];
+
+  if (/^\d+$/.test(guideword)) {
+    if (idUtils.getWordtypeStCh(chunk) === "fix") {
+      guideword =
+        typeof chunk.chunkValue === "string"
+          ? chunk.chunkValue
+          : chunk.chunkValue.traitValue;
+    } else if (
+      chunk.specificIds &&
+      chunk.specificIds.traitValue &&
+      chunk.specificIds.traitValue.length
+    ) {
+      guideword = chunk.specificIds.traitValue[0].split("-")[3];
+    } else if (chunk.specificIds && chunk.specificIds.length) {
+      guideword = chunk.specificIds[0].split("-")[3];
+    }
+  }
+
+  let isGhostChunk; // If chunk is ghost then aesthetically modify guideword, just for display in formulaId selector on FE.
+
+  if (formulaObject) {
+    let orders = [];
+    if (formulaObject.orders.primary) {
+      orders.push(...formulaObject.orders.primary);
+    }
+    if (formulaObject.orders.additional) {
+      orders.push(...formulaObject.orders.additional);
+    }
+    if (orders.length) {
+      isGhostChunk = !orders.some((order) => order.includes(chunk.chunkId));
+    }
+  }
+
+  return isGhostChunk ? `[${guideword}]` : guideword;
+};

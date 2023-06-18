@@ -56,25 +56,10 @@ exports.fetchFormulaIds = (req) => {
     env = "ref";
   }
 
-  let formulasBank = gdUtils.grabFormulas(
-    lang1,
-    false,
-    env
-  ).sentenceFormulasBank;
-
-  let formulaIds = formulasBank.map((formulaObject) => {
-    return [
-      formulaObject.sentenceFormulaId,
-      formulaObject.guide,
-      nexusUtils.getLanguagesOfEquivalents(
-        formulaObject.sentenceFormulaId,
-        env
-      ),
-    ];
-  });
+  let skeletonFormulas = gdUtils.grabSkeletonFormulas(lang1, env);
 
   let responseObject = {
-    formulaIds,
+    formulaIds: skeletonFormulas,
   };
 
   return Promise.all([responseObject]).then((array) => {

@@ -27,27 +27,11 @@ exports.getSentenceFormulas = (
   ivUtils.validateLang(questionLanguage, 14);
   ivUtils.validateLang(answerLanguage, 15);
 
-  let questionSentenceFormulasBank = gdUtils.grabFormulas(
-    questionLanguage,
-    false,
-    env
-  );
-
-  const getFormulaById = (bank, id, label) => {
-    let formulas = bank.filter((el) => el.sentenceFormulaId === id);
-    if (formulas.length !== 1) {
-      consol.throw(
-        `ygbz ${label} found ${formulas.length} but expected 1 for id: ${id}`
-      );
-    }
-
-    return formulas[0];
-  };
-
-  let questionSentenceFormula = getFormulaById(
-    questionSentenceFormulasBank,
+  let questionSentenceFormula = gdUtils.grabFormulaById(
     questionFormulaId,
-    "question"
+    false,
+    questionLanguage,
+    env
   );
 
   let answerSentenceFormulaIds = nexusUtils.getEquivalents(
@@ -56,18 +40,13 @@ exports.getSentenceFormulas = (
     env
   );
 
-  let answerSentenceFormulasBank = gdUtils.grabFormulas(
-    answerLanguage,
-    false,
-    env
-  );
-
   let answerSentenceFormulas = answerSentenceFormulaIds.map(
     (answerSentenceFormulaId) =>
-      getFormulaById(
-        answerSentenceFormulasBank,
+      gdUtils.grabFormulaById(
         answerSentenceFormulaId,
-        "answer"
+        false,
+        answerLanguage,
+        env
       )
   );
 
@@ -250,7 +229,7 @@ exports.getFemulaItem = (lang, wordtype, stCh) => {
   return {
     structureChunk: enCh,
     femulaItemId: null,
-    guideword: apiUtils.getAestheticGuideword(enCh),
+    guideword: frUtils.getAestheticGuideword(enCh),
   };
 };
 
@@ -293,7 +272,7 @@ exports.frontendifyFormula = (lang, formula) => {
     let guideword = stCh.chunkId.split("-").slice(-1)[0];
 
     if (!guideword || /^\d+$/.test(guideword)) {
-      guideword = apiUtils.getAestheticGuideword(stCh);
+      guideword = frUtils.getAestheticGuideword(stCh);
     }
 
     if (!guideword || /^\d+$/.test(guideword)) {
@@ -551,53 +530,6 @@ exports.getLObjsForLemma = (lang, lemma, env = "ref") => {
   gdUtils.readAllLObjs(lang, env, false, matches, lObjCallback);
 
   return matches;
-};
-
-exports.getAestheticGuideword = (chunk, formulaObject) => {
-  if (chunk.guideword && chunk.guideword.traitValue) {
-    let res = chunk.guideword.traitValue;
-    delete chunk.guideword;
-    return res;
-  }
-
-  let guideword =
-    typeof chunk.chunkId === "string"
-      ? chunk.chunkId.split("-").slice(-1)[0]
-      : chunk.chunkId.traitValue.split("-").slice(-1)[0];
-
-  if (/^\d+$/.test(guideword)) {
-    if (idUtils.getWordtypeStCh(chunk) === "fix") {
-      guideword =
-        typeof chunk.chunkValue === "string"
-          ? chunk.chunkValue
-          : chunk.chunkValue.traitValue;
-    } else if (
-      chunk.specificIds &&
-      chunk.specificIds.traitValue &&
-      chunk.specificIds.traitValue.length
-    ) {
-      guideword = chunk.specificIds.traitValue[0].split("-")[3];
-    } else if (chunk.specificIds && chunk.specificIds.length) {
-      guideword = chunk.specificIds[0].split("-")[3];
-    }
-  }
-
-  let isGhostChunk; // If chunk is ghost then aesthetically modify guideword, just for display in formulaId selector on FE.
-
-  if (formulaObject) {
-    let orders = [];
-    if (formulaObject.orders.primary) {
-      orders.push(...formulaObject.orders.primary);
-    }
-    if (formulaObject.orders.additional) {
-      orders.push(...formulaObject.orders.additional);
-    }
-    if (orders.length) {
-      isGhostChunk = !orders.some((order) => order.includes(chunk.chunkId));
-    }
-  }
-
-  return isGhostChunk ? `[${guideword}]` : guideword;
 };
 
 exports.prepareGetSentencesAsQuestionOnly = (

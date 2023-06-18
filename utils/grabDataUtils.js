@@ -52,11 +52,11 @@ exports.readAllLObjs = (
   ivUtils.validateLang(lang, 13);
 
   const fs = require("fs");
-  let files = fs.readdirSync(`source/${env}/${lang}/words`);
-  files
-    .filter((file) => file.split(".")[1] === "json")
-    .forEach((file) => {
-      let wordtype = file.split(".")[0];
+  let filenames = fs.readdirSync(`source/${env}/${lang}/words`);
+  filenames
+    .filter((filename) => filename.split(".")[1] === "json")
+    .forEach((filename) => {
+      let wordtype = filename.split(".")[0];
       let wordsBank = gdUtils.grabLObjsByWordtype(
         lang,
         wordtype,
@@ -76,6 +76,28 @@ exports.readAllLObjs = (
   return res;
 };
 
+exports.grabFormulaById = (formulaId, useDummy, lang, envir = "ref") => {
+  if (useDummy) {
+    const {
+      dummySentenceFormulasBank,
+    } = require(`../source/${envir}/${lang}/dummy/dummySentenceFormulas.js`);
+    return dummySentenceFormulasBank.find(
+      (sf) => sf.sentenceFormulaId === formulaId
+    );
+  }
+
+  let path = `../source/${envir}/${lang}/formulas/${formulaId}.json`;
+  const data = require(path);
+
+  if (!data) {
+    consol.throw(
+      `ftdc No formula found at path ${`../source/${envir}/${lang}/formulas/${formulaId}.json`}`
+    );
+  }
+
+  return data;
+};
+
 exports.grabFormula = (
   env = "ref",
   currentLanguage,
@@ -91,24 +113,11 @@ exports.grabFormula = (
     sentenceFormulaId = `${currentLanguage}-default`;
   }
 
-  const sentenceFormulasBank = gdUtils.grabFormulas(
-    currentLanguage,
+  let sentenceFormula = gdUtils.grabFormulaById(
+    sentenceFormulaId,
     useDummy,
+    currentLanguage,
     env
-  );
-
-  if (!sentenceFormulasBank) {
-    consol.throw("sfft grabFormula found nothing, args were:", {
-      env,
-      currentLanguage,
-      sentenceFormulaId,
-      useDummy,
-      sentenceFormulaFromEducator,
-    });
-  }
-
-  let sentenceFormula = sentenceFormulasBank.find(
-    (senFor) => senFor.sentenceFormulaId === sentenceFormulaId
   );
 
   if (!sentenceFormula) {
@@ -120,22 +129,28 @@ exports.grabFormula = (
   return uUtils.copyWithoutReference(sentenceFormula);
 };
 
-exports.grabFormulas = (lang, useDummy, envir = "ref") => {
+exports.grabSkeletonFormulas = (lang, envir = "ref") => {
   lang = lang.toUpperCase();
 
-  if (useDummy) {
-    const {
-      dummySentenceFormulasBank,
-    } = require(`../source/${envir}/${lang}/dummy/dummySentenceFormulas.js`);
+  const fs = require("fs");
+  let filenames = fs.readdirSync(`source/${envir}/${lang}/formulas`);
 
-    return dummySentenceFormulasBank;
-  }
+  filenames.map((filename) => {
+    filename = filename.split(".")[0];
 
-  const {
-    sentenceFormulasBank,
-  } = require(`../source/${envir}/${lang}/sentenceFormulas.js`);
+    let formulaObject = gdUtils.grabFormulaById(filename, false, lang, envir);
 
-  return sentenceFormulasBank;
+    return [
+      formulaObject.sentenceFormulaId,
+      formulaObject.guide,
+      nexusUtils.getLanguagesOfEquivalents(
+        formulaObject.sentenceFormulaId,
+        env
+      ),
+    ];
+  });
+
+  return res;
 };
 
 exports.grabInflections = (lObjId, envir = "ref") => {

@@ -3,7 +3,7 @@ const uUtils = require(".././universalUtils.js");
 const consol = require(".././zerothOrder/consoleLoggingUtils.js");
 const otUtils = require(".././objectTraversingUtils.js");
 const edUtils = require("./educatorUtils.js");
-const apiUtils = require("./apiUtils.js");
+const frUtils = require(".././formattingResponseUtils.js");
 const refObj = require(".././reference/referenceObjects.js");
 const fs = require("fs");
 const gdUtils = require("../grabDataUtils.js");
@@ -397,7 +397,7 @@ exports.addGuideSentenceToFormulaAndWriteAsJson = (e, l) => {
 
   sentenceFormulasBank.forEach((formulaObject) => {
     let guideSentence = formulaObject.sentenceStructure
-      .map((chunk) => apiUtils.getAestheticGuideword(chunk, formulaObject))
+      .map((chunk) => frUtils.getAestheticGuideword(chunk, formulaObject))
       .join(" ");
 
     if (!guideSentence || !guideSentence.length) {
@@ -407,11 +407,21 @@ exports.addGuideSentenceToFormulaAndWriteAsJson = (e, l) => {
     guideSentence =
       guideSentence[0].toUpperCase() + guideSentence.slice(1) + ".";
 
-    formulaObject.guide = guideSentence;
+    let newObj = {};
+
+    newObj.sentenceFormulaId = formulaObject.sentenceFormulaId;
+    newObj.guide = guideSentence;
+
+    Object.keys(formulaObject).forEach((k) => {
+      let v = formulaObject[k];
+      if (k !== "sentenceFormulaId") {
+        newObj[k] = v;
+      }
+    });
 
     uUtils.writeJSON(
       `source/${e}/${l}/formulas/${formulaObject.sentenceFormulaId}.json`,
-      formulaObject
+      newObj
     );
   });
 };

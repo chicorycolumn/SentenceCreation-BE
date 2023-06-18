@@ -14,7 +14,7 @@ xdescribe("Sandbox.", () => {
   });
 });
 
-describe("Project Ophiucus: Bravo Wing: Task One.", () => {
+xdescribe("Project Ophiucus: Bravo Wing: Task One.", () => {
   it("Take lobjs from Old Way of storing them", () => {
     // write as individual files with extra and inflections, plus skeletal lobjs arrays.
     let envs = ["dev", "ref"];
@@ -29,7 +29,7 @@ describe("Project Ophiucus: Bravo Wing: Task One.", () => {
       });
     });
   });
-  it.only("Take formulas from Old Way of storing them", () => {
+  it("Take formulas from Old Way of storing them", () => {
     // add guideSentence.
     let envs = ["ref", "dev"];
     let langs = ["POL", "ENG", "SPA"];
