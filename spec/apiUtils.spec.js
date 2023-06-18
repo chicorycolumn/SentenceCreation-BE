@@ -72,7 +72,7 @@ describe("/educator/sentences - Testing API.", () => {
     let numberString = Date.now();
 
     const sentenceFormulaFromEducator = {
-      sentenceFormulaId: `${questionLanguage}-${numberString}`,
+      id: `${questionLanguage}-${numberString}`,
       equivalents: {},
       sentenceStructure: [
         {
@@ -116,7 +116,7 @@ describe("/educator/sentences - Testing API.", () => {
     let numberString = Date.now();
 
     const sentenceFormulaFromEducator = {
-      sentenceFormulaId: `${questionLanguage}-${numberString}`,
+      id: `${questionLanguage}-${numberString}`,
       equivalents: {},
       sentenceStructure: [
         {
@@ -165,7 +165,7 @@ describe("/educator/sentences - Testing API.", () => {
     let numberString = Date.now();
 
     const sentenceFormulaFromEducator = {
-      sentenceFormulaId: `${questionLanguage}-${numberString}`,
+      id: `${questionLanguage}-${numberString}`,
       equivalents: {},
       orders: {},
       sentenceStructure: [

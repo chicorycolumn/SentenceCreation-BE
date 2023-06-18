@@ -1,5 +1,5 @@
 {
-  "sentenceFormulaId": "POL-57",
+  "id": "POL-57",
   "guide": "Mam 1.",
   "sentenceStructure": [
     {
@@ -8,24 +8,13 @@
     },
     {
       "chunkId": "nco-1",
-      "andTags": [
-        "edible"
-      ],
-      "gcase": [
-        "acc"
-      ],
-      "number": [
-        "singular"
-      ]
+      "andTags": ["edible"],
+      "gcase": ["acc"],
+      "number": ["singular"]
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "fix-1",
-        "nco-1"
-      ]
-    ],
+    "primary": [["fix-1", "nco-1"]],
     "additional": []
   }
 }

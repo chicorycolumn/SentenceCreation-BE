@@ -1,47 +1,28 @@
 {
-  "sentenceFormulaId": "POL-118c",
+  "id": "POL-118c",
   "guide": "[I] my onion.",
   "sentenceStructure": [
     {
       "chunkId": "pro-0-I",
-      "specificIds": [
-        "pol-pro-PERSONAL"
-      ],
-      "person": [
-        "1per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["pol-pro-PERSONAL"],
+      "person": ["1per"],
+      "number": ["singular"]
     },
     {
       "chunkId": "pro-1-my",
-      "form": [
-        "determiner"
-      ],
-      "specificIds": [
-        "pol-pro-POSSESSIVE"
-      ],
+      "form": ["determiner"],
+      "specificIds": ["pol-pro-POSSESSIVE"],
       "agreeWith": "pro-0-I",
       "agreeWith2": "nco-1-onion"
     },
     {
       "chunkId": "nco-1-onion",
-      "number": [
-        "singular"
-      ],
-      "specificIds": [
-        "pol-nco-012-cebula"
-      ]
+      "number": ["singular"],
+      "specificIds": ["pol-nco-012-cebula"]
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "pro-1-my",
-        "nco-1-onion"
-      ]
-    ],
+    "primary": [["pro-1-my", "nco-1-onion"]],
     "additional": []
   }
 }

@@ -1,56 +1,31 @@
 {
-  "sentenceFormulaId": "POL-110",
+  "id": "POL-110",
   "guide": "Kobieta czytać  książka.",
   "sentenceStructure": [
     {
       "chunkId": "npe-1",
-      "specificIds": [
-        "^pol-npe-011-kobieta"
-      ]
+      "specificIds": ["^pol-npe-011-kobieta"]
     },
     {
       "chunkId": "ver-1",
       "agreeWith": "npe-1",
-      "specificIds": [
-        "pol-ver-013-czytać"
-      ],
-      "tenseDescription": [
-        "past im"
-      ]
+      "specificIds": ["pol-ver-013-czytać"],
+      "tenseDescription": ["past im"]
     },
     {
       "chunkId": "pro-1",
-      "specificIds": [
-        "pol-pro-PERSONAL"
-      ],
-      "person": [
-        "1per"
-      ],
-      "gcase": [
-        "dat"
-      ]
+      "specificIds": ["pol-pro-PERSONAL"],
+      "person": ["1per"],
+      "gcase": ["dat"]
     },
     {
       "chunkId": "nco-2",
-      "specificIds": [
-        "pol-nco-016-książka"
-      ],
-      "gcase": [
-        "acc"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["pol-nco-016-książka"],
+      "gcase": ["acc"],
+      "number": ["singular"]
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "npe-1",
-        "ver-1",
-        "pro-1",
-        "nco-2"
-      ]
-    ]
+    "primary": [["npe-1", "ver-1", "pro-1", "nco-2"]]
   }
 }

@@ -264,9 +264,7 @@ exports.checkSentenceFormulaIds = (envir, currentLanguage) => {
     envir
   );
 
-  let schematic = sentenceFormulasBank.map((senFor) => [
-    senFor.sentenceFormulaId,
-  ]);
+  let schematic = sentenceFormulasBank.map((senFor) => [senFor.id]);
 
   function findDuplicates(index) {
     let tempArr = [];
@@ -409,18 +407,18 @@ exports.addGuideSentenceToFormulaAndWriteAsJson = (e, l) => {
 
     let newObj = {};
 
-    newObj.sentenceFormulaId = formulaObject.sentenceFormulaId;
+    newObj.id = formulaObject.id;
     newObj.guide = guideSentence;
 
     Object.keys(formulaObject).forEach((k) => {
       let v = formulaObject[k];
-      if (k !== "sentenceFormulaId") {
+      if (k !== "id") {
         newObj[k] = v;
       }
     });
 
     uUtils.writeJSON(
-      `source/${e}/${l}/formulas/${formulaObject.sentenceFormulaId}.json`,
+      `source/${e}/${l}/formulas/${formulaObject.id}.json`,
       newObj
     );
   });

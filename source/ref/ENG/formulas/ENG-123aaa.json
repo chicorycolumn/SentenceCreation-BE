@@ -1,31 +1,19 @@
 {
-  "sentenceFormulaId": "ENG-123aaa",
+  "id": "ENG-123aaa",
   "guide": "I am here.",
   "sentenceStructure": [
     {
       "chunkId": "pro-1-I",
-      "specificIds": [
-        "eng-pro-PERSONAL"
-      ],
-      "gender": [
-        "m"
-      ],
-      "person": [
-        "3per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["eng-pro-PERSONAL"],
+      "gender": ["m"],
+      "person": ["3per"],
+      "number": ["singular"]
     },
     {
       "chunkId": "ver-1-am",
-      "specificIds": [
-        "eng-ver-001-be-ß"
-      ],
+      "specificIds": ["eng-ver-001-be-ß"],
       "agreeWith": "pro-1-I",
-      "tenseDescription": [
-        "present simple"
-      ],
+      "tenseDescription": ["present simple"],
       "negative": true
     },
     {
@@ -34,12 +22,6 @@
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "pro-1-I",
-        "ver-1-am",
-        "fix-1-here"
-      ]
-    ]
+    "primary": [["pro-1-I", "ver-1-am", "fix-1-here"]]
   }
 }

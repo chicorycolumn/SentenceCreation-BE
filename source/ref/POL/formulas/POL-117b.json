@@ -1,28 +1,18 @@
 {
-  "sentenceFormulaId": "POL-117b",
+  "id": "POL-117b",
   "guide": "[I] was here.",
   "sentenceStructure": [
     {
       "chunkId": "pro-1-I",
-      "specificIds": [
-        "pol-pro-PERSONAL"
-      ],
-      "person": [
-        "1per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["pol-pro-PERSONAL"],
+      "person": ["1per"],
+      "number": ["singular"]
     },
     {
       "chunkId": "ver-1-was",
       "agreeWith": "pro-1-I",
-      "specificIds": [
-        "pol-ver-011-być"
-      ],
-      "tenseDescription": [
-        "past pf"
-      ]
+      "specificIds": ["pol-ver-011-być"],
+      "tenseDescription": ["past pf"]
     },
     {
       "chunkId": "fix-1-here",
@@ -30,12 +20,7 @@
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "ver-1-was",
-        "fix-1-here"
-      ]
-    ],
+    "primary": [["ver-1-was", "fix-1-here"]],
     "additional": []
   }
 }

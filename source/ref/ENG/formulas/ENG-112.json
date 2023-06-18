@@ -1,37 +1,23 @@
 {
-  "sentenceFormulaId": "ENG-112",
+  "id": "ENG-112",
   "guide": "1 give  book to.",
   "sentenceStructure": [
     {
       "chunkId": "npe-1",
-      "andTags": [
-        "family"
-      ],
-      "number": [
-        "singular"
-      ]
+      "andTags": ["family"],
+      "number": ["singular"]
     },
     {
       "chunkId": "ver-1",
       "agreeWith": "npe-1",
-      "specificIds": [
-        "eng-ver-006-give"
-      ],
-      "tenseDescription": [
-        "past simple"
-      ]
+      "specificIds": ["eng-ver-006-give"],
+      "tenseDescription": ["past simple"]
     },
     {
       "chunkId": "pro-1",
-      "specificIds": [
-        "eng-pro-PERSONAL"
-      ],
-      "person": [
-        "1per"
-      ],
-      "gcase": [
-        "dat"
-      ]
+      "specificIds": ["eng-pro-PERSONAL"],
+      "person": ["1per"],
+      "gcase": ["dat"]
     },
     {
       "chunkId": "nco-2",
@@ -41,9 +27,7 @@
         "eng-nco-004-apple",
         "eng-nco-002-onion"
       ],
-      "number": [
-        "plural"
-      ]
+      "number": ["plural"]
     },
     {
       "chunkId": "fix-3",
@@ -51,22 +35,7 @@
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "npe-1",
-        "ver-1",
-        "pro-1",
-        "nco-2"
-      ]
-    ],
-    "additional": [
-      [
-        "npe-1",
-        "ver-1",
-        "nco-2",
-        "fix-3",
-        "pro-1"
-      ]
-    ]
+    "primary": [["npe-1", "ver-1", "pro-1", "nco-2"]],
+    "additional": [["npe-1", "ver-1", "nco-2", "fix-3", "pro-1"]]
   }
 }

@@ -23,10 +23,10 @@ SPA: m: "bueno", //Gamma, before nouns this is "buen" so need terminus obj here.
 sentenceFormula notes:
 
 // ▲ Because here the educator knows that context makes this MGN's gender unambiguous.
-sentenceFormulaId: "ENG-116b"
-sentenceFormulaId: "ENG-116x"
+id: "ENG-116b"
+id: "ENG-116x"
 
 //Just for symmetry and so I know it doesn't break anything.
-sentenceFormulaId: "POL-116b"
-sentenceFormulaId: "POL-116a"
-sentenceFormulaId: "POL-116x"
+id: "POL-116b"
+id: "POL-116a"
+id: "POL-116x"

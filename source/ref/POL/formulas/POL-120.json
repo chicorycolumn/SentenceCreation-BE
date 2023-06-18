@@ -1,59 +1,33 @@
 {
-  "sentenceFormulaId": "POL-120",
+  "id": "POL-120",
   "guide": "[I] doctor see me.",
   "sentenceStructure": [
     {
       "chunkId": "pro-0-I",
-      "specificIds": [
-        "pol-pro-PERSONAL"
-      ],
-      "person": [
-        "1per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["pol-pro-PERSONAL"],
+      "person": ["1per"],
+      "number": ["singular"]
     },
     {
       "chunkId": "npe-1-doctor",
-      "specificIds": [
-        "pol-npe-015-lekarz"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["pol-npe-015-lekarz"],
+      "number": ["singular"]
     },
     {
       "chunkId": "ver-1-see",
-      "specificIds": [
-        "pol-ver-018-widzieć"
-      ],
+      "specificIds": ["pol-ver-018-widzieć"],
       "agreeWith": "npe-1-doctor",
-      "tenseDescription": [
-        "past pf"
-      ]
+      "tenseDescription": ["past pf"]
     },
     {
       "chunkId": "pro-1-me",
-      "specificIds": [
-        "pol-pro-PERSONAL"
-      ],
+      "specificIds": ["pol-pro-PERSONAL"],
       "agreeWith": "pro-0-I",
-      "gcase": [
-        "acc"
-      ],
-      "formulaImportantTraitKeys": [
-        "gcase"
-      ]
+      "gcase": ["acc"],
+      "formulaImportantTraitKeys": ["gcase"]
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "npe-1-doctor",
-        "pro-1-me",
-        "ver-1-see"
-      ]
-    ]
+    "primary": [["npe-1-doctor", "pro-1-me", "ver-1-see"]]
   }
 }

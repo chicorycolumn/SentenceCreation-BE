@@ -1,48 +1,29 @@
 {
-  "sentenceFormulaId": "POL-117aa",
+  "id": "POL-117aa",
   "guide": "[I] was doctor.",
   "sentenceStructure": [
     {
       "chunkId": "pro-1-I",
-      "specificIds": [
-        "pol-pro-PERSONAL"
-      ],
-      "person": [
-        "1per"
-      ]
+      "specificIds": ["pol-pro-PERSONAL"],
+      "person": ["1per"]
     },
     {
       "chunkId": "ver-1-was",
       "agreeWith": "pro-1-I",
-      "specificIds": [
-        "pol-ver-011-być"
-      ],
-      "tenseDescription": [
-        "past pf"
-      ]
+      "specificIds": ["pol-ver-011-być"],
+      "tenseDescription": ["past pf"]
     },
     {
       "chunkId": "npe-1-doctor",
-      "gcase": [
-        "ins"
-      ],
-      "formulaImportantTraitKeys": [
-        "gcase"
-      ],
-      "specificIds": [
-        "pol-npe-015-lekarz"
-      ],
+      "gcase": ["ins"],
+      "formulaImportantTraitKeys": ["gcase"],
+      "specificIds": ["pol-npe-015-lekarz"],
       "doNotUpdateSpecificIdsAsIsJustOneMGN": true,
       "agreeWith": "pro-1-I"
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "ver-1-was",
-        "npe-1-doctor"
-      ]
-    ],
+    "primary": [["ver-1-was", "npe-1-doctor"]],
     "additional": []
   }
 }

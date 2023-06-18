@@ -1,5 +1,5 @@
 {
-  "sentenceFormulaId": "POL-53",
+  "id": "POL-53",
   "guide": "Często noszę 1.",
   "sentenceStructure": [
     {
@@ -8,25 +8,13 @@
     },
     {
       "chunkId": "nco-1",
-      "andTags": [
-        "wearable"
-      ],
-      "gcase": [
-        "acc"
-      ],
-      "number": [
-        "singular",
-        "plural"
-      ]
+      "andTags": ["wearable"],
+      "gcase": ["acc"],
+      "number": ["singular", "plural"]
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "fix-1",
-        "nco-1"
-      ]
-    ],
+    "primary": [["fix-1", "nco-1"]],
     "additional": []
   }
 }

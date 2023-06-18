@@ -1,36 +1,22 @@
 {
-  "sentenceFormulaId": "POL-125a",
+  "id": "POL-125a",
   "guide": "[I] read.",
   "sentenceStructure": [
     {
       "chunkId": "pro-1-I",
-      "specificIds": [
-        "pol-pro-PERSONAL"
-      ],
-      "person": [
-        "1per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["pol-pro-PERSONAL"],
+      "person": ["1per"],
+      "number": ["singular"]
     },
     {
       "chunkId": "ver-1-read",
-      "specificIds": [
-        "pol-ver-013-czytać"
-      ],
+      "specificIds": ["pol-ver-013-czytać"],
       "agreeWith": "pro-1-I",
-      "tenseDescription": [
-        "future pf"
-      ],
+      "tenseDescription": ["future pf"],
       "negative": true
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "ver-1-read"
-      ]
-    ]
+    "primary": [["ver-1-read"]]
   }
 }

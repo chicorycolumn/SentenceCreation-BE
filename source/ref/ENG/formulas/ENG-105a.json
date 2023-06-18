@@ -1,5 +1,5 @@
 {
-  "sentenceFormulaId": "ENG-105a",
+  "id": "ENG-105a",
   "guide": "I 1.",
   "sentenceStructure": [
     {
@@ -8,27 +8,14 @@
     },
     {
       "chunkId": "ver-1",
-      "andTags": [
-        "basic3"
-      ],
-      "tenseDescription": [
-        "past continuous"
-      ],
-      "person": [
-        "1per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "andTags": ["basic3"],
+      "tenseDescription": ["past continuous"],
+      "person": ["1per"],
+      "number": ["singular"]
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "fix-1",
-        "ver-1"
-      ]
-    ],
+    "primary": [["fix-1", "ver-1"]],
     "additional": []
   }
 }

@@ -1,5 +1,5 @@
 {
-  "sentenceFormulaId": "ENG-109a",
+  "id": "ENG-109a",
   "guide": "The 1 write a prescription.",
   "sentenceStructure": [
     {
@@ -8,22 +8,14 @@
     },
     {
       "chunkId": "npe-1",
-      "number": [
-        "singular"
-      ],
-      "andTags": [
-        "job"
-      ]
+      "number": ["singular"],
+      "andTags": ["job"]
     },
     {
       "chunkId": "ver-1",
       "agreeWith": "npe-1",
-      "specificIds": [
-        "eng-ver-005-write"
-      ],
-      "tenseDescription": [
-        "past continuous"
-      ]
+      "specificIds": ["eng-ver-005-write"],
+      "tenseDescription": ["past continuous"]
     },
     {
       "chunkId": "fix-2",
@@ -35,14 +27,6 @@
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "fix-1",
-        "npe-1",
-        "ver-1",
-        "fix-2",
-        "fix-3"
-      ]
-    ]
+    "primary": [["fix-1", "npe-1", "ver-1", "fix-2", "fix-3"]]
   }
 }

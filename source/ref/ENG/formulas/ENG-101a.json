@@ -1,5 +1,5 @@
 {
-  "sentenceFormulaId": "ENG-101a",
+  "id": "ENG-101a",
   "guide": "The woman 1.",
   "sentenceStructure": [
     {
@@ -8,36 +8,19 @@
     },
     {
       "chunkId": "npe-1",
-      "andTags": [
-        "personTest1"
-      ],
-      "specificIds": [
-        "^eng-npe-001-woman"
-      ],
-      "number": [
-        "singular",
-        "plural"
-      ]
+      "andTags": ["personTest1"],
+      "specificIds": ["^eng-npe-001-woman"],
+      "number": ["singular", "plural"]
     },
     {
       "chunkId": "ver-1",
       "agreeWith": "npe-1",
-      "person": [
-        "3per"
-      ],
-      "andTags": [
-        "basic2"
-      ]
+      "person": ["3per"],
+      "andTags": ["basic2"]
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "fix-1",
-        "npe-1",
-        "ver-1"
-      ]
-    ],
+    "primary": [["fix-1", "npe-1", "ver-1"]],
     "additional": []
   }
 }

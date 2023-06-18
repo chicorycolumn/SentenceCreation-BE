@@ -1,24 +1,16 @@
 {
-  "sentenceFormulaId": "POL-121",
+  "id": "POL-121",
   "guide": "[I] read book.",
   "sentenceStructure": [
     {
       "chunkId": "pro-1-I",
-      "specificIds": [
-        "pol-pro-PERSONAL"
-      ],
-      "person": [
-        "1per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["pol-pro-PERSONAL"],
+      "person": ["1per"],
+      "number": ["singular"]
     },
     {
       "chunkId": "ver-1-read",
-      "specificIds": [
-        "pol-ver-013-czytać"
-      ],
+      "specificIds": ["pol-ver-013-czytać"],
       "agreeWith": "pro-1-I",
       "tenseDescription": [
         "past pf",
@@ -30,23 +22,12 @@
     },
     {
       "chunkId": "nco-1-book",
-      "specificIds": [
-        "pol-nco-016-książka"
-      ],
-      "number": [
-        "singular"
-      ],
-      "gcase": [
-        "acc"
-      ]
+      "specificIds": ["pol-nco-016-książka"],
+      "number": ["singular"],
+      "gcase": ["acc"]
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "ver-1-read",
-        "nco-1-book"
-      ]
-    ]
+    "primary": [["ver-1-read", "nco-1-book"]]
   }
 }

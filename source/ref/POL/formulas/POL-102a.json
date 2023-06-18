@@ -1,29 +1,17 @@
 {
-  "sentenceFormulaId": "POL-102a",
+  "id": "POL-102a",
   "guide": "1.",
   "sentenceStructure": [
     {
       "chunkId": "ver-1",
-      "andTags": [
-        "basic2"
-      ],
-      "tenseDescription": [
-        "future pf"
-      ],
-      "person": [
-        "1per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "andTags": ["basic2"],
+      "tenseDescription": ["future pf"],
+      "person": ["1per"],
+      "number": ["singular"]
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "ver-1"
-      ]
-    ],
+    "primary": [["ver-1"]],
     "additional": []
   }
 }

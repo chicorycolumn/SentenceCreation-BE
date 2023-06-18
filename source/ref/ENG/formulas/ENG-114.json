@@ -1,5 +1,5 @@
 {
-  "sentenceFormulaId": "ENG-114",
+  "id": "ENG-114",
   "guide": "1a 1b [I] Doctor Gave Me Her Book.",
   "sentenceStructure": [
     {
@@ -12,66 +12,38 @@
     },
     {
       "chunkId": "pro-1-I",
-      "specificIds": [
-        "eng-pro-PERSONAL"
-      ],
-      "person": [
-        "1per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["eng-pro-PERSONAL"],
+      "person": ["1per"],
+      "number": ["singular"]
     },
     {
       "chunkId": "npe-1-Doctor",
-      "specificIds": [
-        "eng-npe-005-doctor"
-      ]
+      "specificIds": ["eng-npe-005-doctor"]
     },
     {
       "chunkId": "ver-1-Gave",
       "agreeWith": "npe-1-Doctor",
-      "specificIds": [
-        "eng-ver-006-give"
-      ],
-      "tenseDescription": [
-        "past simple"
-      ]
+      "specificIds": ["eng-ver-006-give"],
+      "tenseDescription": ["past simple"]
     },
     {
       "chunkId": "pro-2-Me",
       "agreeWith": "pro-1-I",
-      "gcase": [
-        "dat"
-      ],
-      "formulaImportantTraitKeys": [
-        "gcase"
-      ],
-      "specificIds": [
-        "eng-pro-PERSONAL"
-      ]
+      "gcase": ["dat"],
+      "formulaImportantTraitKeys": ["gcase"],
+      "specificIds": ["eng-pro-PERSONAL"]
     },
     {
       "chunkId": "pro-3-Her",
-      "form": [
-        "determiner"
-      ],
-      "specificIds": [
-        "eng-pro-POSSESSIVE"
-      ],
+      "form": ["determiner"],
+      "specificIds": ["eng-pro-POSSESSIVE"],
       "agreeWith": "npe-1-Doctor"
     },
     {
       "chunkId": "nco-2-Book",
-      "specificIds": [
-        "eng-nco-006-book"
-      ],
-      "gcase": [
-        "acc"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["eng-nco-006-book"],
+      "gcase": ["acc"],
+      "number": ["singular"]
     }
   ],
   "orders": {

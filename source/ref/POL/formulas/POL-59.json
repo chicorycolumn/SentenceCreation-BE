@@ -1,44 +1,24 @@
 {
-  "sentenceFormulaId": "POL-59",
+  "id": "POL-59",
   "guide": "Kobieta 1.",
   "sentenceStructure": [
     {
       "chunkId": "npe-1",
-      "andTags": [
-        "personTest1"
-      ],
-      "specificIds": [
-        "^pol-npe-011-kobieta"
-      ],
-      "number": [
-        "singular",
-        "plural"
-      ],
-      "gender": [
-        "f"
-      ]
+      "andTags": ["personTest1"],
+      "specificIds": ["^pol-npe-011-kobieta"],
+      "number": ["singular", "plural"],
+      "gender": ["f"]
     },
     {
       "chunkId": "ver-1",
       "agreeWith": "npe-1",
-      "tenseDescription": [
-        "present im"
-      ],
-      "person": [
-        "3per"
-      ],
-      "andTags": [
-        "basic2"
-      ]
+      "tenseDescription": ["present im"],
+      "person": ["3per"],
+      "andTags": ["basic2"]
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "npe-1",
-        "ver-1"
-      ]
-    ],
+    "primary": [["npe-1", "ver-1"]],
     "additional": []
   }
 }

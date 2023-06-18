@@ -55,18 +55,16 @@ xdescribe("Check FE does not mutate BE sentenceFormulas.", () => {
     let beenThroughFEs = []; // Copypaste these yourself from Save Formula button in FE printing to console.
 
     beenThroughFEs.forEach((beenThroughFE, index) => {
-      let BE = BEs.find(
-        (sf) => sf.sentenceFormulaId === beenThroughFE.sentenceFormulaId
-      );
+      let BE = BEs.find((sf) => sf.id === beenThroughFE.id);
       if (!BE) {
-        console.log("No BE found for:", beenThroughFE.sentenceFormulaId);
+        console.log("No BE found for:", beenThroughFE.id);
         expect(true).to.equal(false);
       }
 
       if (!BE.orders.additional || !BE.orders.additional.length) {
         BE.orders.additional = [];
       }
-      it(`${index + 1}-${beenThroughFE.sentenceFormulaId}`, () => {
+      it(`${index + 1}-${beenThroughFE.id}`, () => {
         expect(beenThroughFE).to.eql(BE);
       });
     });
@@ -80,18 +78,16 @@ xdescribe("Check FE does not mutate BE sentenceFormulas.", () => {
     let beenThroughFEs = []; // Copypaste these yourself from Save Formula button in FE printing to console.
 
     beenThroughFEs.forEach((beenThroughFE, index) => {
-      let BE = BEs.find(
-        (sf) => sf.sentenceFormulaId === beenThroughFE.sentenceFormulaId
-      );
+      let BE = BEs.find((sf) => sf.id === beenThroughFE.id);
       if (!BE) {
-        console.log("No BE found for:", beenThroughFE.sentenceFormulaId);
+        console.log("No BE found for:", beenThroughFE.id);
         expect(true).to.equal(false);
       }
 
       if (!BE.orders.additional || !BE.orders.additional.length) {
         BE.orders.additional = [];
       }
-      it(`${index + 1}-${beenThroughFE.sentenceFormulaId}`, () => {
+      it(`${index + 1}-${beenThroughFE.id}`, () => {
         expect(beenThroughFE).to.eql(BE);
       });
     });

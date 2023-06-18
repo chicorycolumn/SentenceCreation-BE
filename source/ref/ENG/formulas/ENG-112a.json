@@ -1,37 +1,23 @@
 {
-  "sentenceFormulaId": "ENG-112a",
+  "id": "ENG-112a",
   "guide": "1 give  one book [to].",
   "sentenceStructure": [
     {
       "chunkId": "npe-1",
-      "andTags": [
-        "family"
-      ],
-      "number": [
-        "singular"
-      ]
+      "andTags": ["family"],
+      "number": ["singular"]
     },
     {
       "chunkId": "ver-1",
       "agreeWith": "npe-1",
-      "specificIds": [
-        "eng-ver-006-give"
-      ],
-      "tenseDescription": [
-        "past simple"
-      ]
+      "specificIds": ["eng-ver-006-give"],
+      "tenseDescription": ["past simple"]
     },
     {
       "chunkId": "pro-1",
-      "specificIds": [
-        "eng-pro-PERSONAL"
-      ],
-      "person": [
-        "1per"
-      ],
-      "gcase": [
-        "dat"
-      ]
+      "specificIds": ["eng-pro-PERSONAL"],
+      "person": ["1per"],
+      "gcase": ["dat"]
     },
     {
       "chunkId": "fix-1",
@@ -45,9 +31,7 @@
         "eng-nco-004-apple",
         "eng-nco-002-onion"
       ],
-      "number": [
-        "singular"
-      ]
+      "number": ["singular"]
     },
     {
       "chunkId": "fix-3",
@@ -55,14 +39,6 @@
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "npe-1",
-        "ver-1",
-        "pro-1",
-        "fix-1",
-        "nco-2"
-      ]
-    ]
+    "primary": [["npe-1", "ver-1", "pro-1", "fix-1", "nco-2"]]
   }
 }

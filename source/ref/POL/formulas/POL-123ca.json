@@ -1,45 +1,24 @@
 {
-  "sentenceFormulaId": "POL-123ca",
+  "id": "POL-123ca",
   "guide": "I am.",
   "sentenceStructure": [
     {
       "chunkId": "pro-1-I",
-      "specificIds": [
-        "pol-pro-PERSONAL"
-      ],
-      "person": [
-        "3per"
-      ],
-      "gender": [
-        "m1"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["pol-pro-PERSONAL"],
+      "person": ["3per"],
+      "gender": ["m1"],
+      "number": ["singular"]
     },
     {
       "chunkId": "ver-1-am",
-      "specificIds": [
-        "pol-ver-015-pisać"
-      ],
+      "specificIds": ["pol-ver-015-pisać"],
       "agreeWith": "pro-1-I",
-      "tenseDescription": [
-        "present im"
-      ],
+      "tenseDescription": ["present im"],
       "negative": true
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "ver-1-am"
-      ]
-    ],
-    "additional": [
-      [
-        "pro-1-I",
-        "ver-1-am"
-      ]
-    ]
+    "primary": [["ver-1-am"]],
+    "additional": [["pro-1-I", "ver-1-am"]]
   }
 }

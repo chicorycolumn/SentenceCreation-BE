@@ -1,52 +1,32 @@
 {
-  "sentenceFormulaId": "POL-115",
+  "id": "POL-115",
   "guide": "[I] see my doctor and his doctor.",
   "sentenceStructure": [
     {
       "chunkId": "pro-1-I",
-      "specificIds": [
-        "pol-pro-PERSONAL"
-      ],
-      "person": [
-        "1per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["pol-pro-PERSONAL"],
+      "person": ["1per"],
+      "number": ["singular"]
     },
     {
       "chunkId": "ver-1-see",
       "agreeWith": "pro-1-I",
-      "specificIds": [
-        "pol-ver-018-widzieć"
-      ],
-      "tenseDescription": [
-        "past pf"
-      ]
+      "specificIds": ["pol-ver-018-widzieć"],
+      "tenseDescription": ["past pf"]
     },
     {
       "chunkId": "pro-2-my",
-      "form": [
-        "determiner"
-      ],
-      "specificIds": [
-        "pol-pro-POSSESSIVE"
-      ],
+      "form": ["determiner"],
+      "specificIds": ["pol-pro-POSSESSIVE"],
       "agreeWith": "pro-1-I",
       "agreeWith2": "npe-1-doctor"
     },
     {
       "chunkId": "npe-1-doctor",
-      "number": [
-        "singular"
-      ],
-      "specificIds": [
-        "pol-npe-015-lekarz"
-      ],
+      "number": ["singular"],
+      "specificIds": ["pol-npe-015-lekarz"],
       "doNotUpdateSpecificIdsAsIsJustOneMGN": true,
-      "gcase": [
-        "acc"
-      ]
+      "gcase": ["acc"]
     },
     {
       "chunkId": "fix-1-and",
@@ -54,27 +34,17 @@
     },
     {
       "chunkId": "pro-3-his",
-      "form": [
-        "determiner"
-      ],
-      "specificIds": [
-        "pol-pro-POSSESSIVE"
-      ],
+      "form": ["determiner"],
+      "specificIds": ["pol-pro-POSSESSIVE"],
       "agreeWith": "npe-1-doctor",
       "agreeWith2": "npe-2-doctor"
     },
     {
       "chunkId": "npe-2-doctor",
-      "number": [
-        "singular"
-      ],
-      "specificIds": [
-        "pol-npe-015-lekarz"
-      ],
+      "number": ["singular"],
+      "specificIds": ["pol-npe-015-lekarz"],
       "doNotUpdateSpecificIdsAsIsJustOneMGN": true,
-      "gcase": [
-        "acc"
-      ]
+      "gcase": ["acc"]
     }
   ],
   "orders": {

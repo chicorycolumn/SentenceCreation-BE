@@ -1,35 +1,21 @@
 {
-  "sentenceFormulaId": "POL-55b",
+  "id": "POL-55b",
   "guide": "1 1.",
   "sentenceStructure": [
     {
       "chunkId": "adj-1",
       "agreeWith": "nco-1",
-      "form": [
-        "simple"
-      ],
-      "orTags": [
-        "colour",
-        "colour2"
-      ]
+      "form": ["simple"],
+      "orTags": ["colour", "colour2"]
     },
     {
       "chunkId": "nco-1",
-      "andTags": [
-        "edible"
-      ],
-      "number": [
-        "singular"
-      ]
+      "andTags": ["edible"],
+      "number": ["singular"]
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "adj-1",
-        "nco-1"
-      ]
-    ],
+    "primary": [["adj-1", "nco-1"]],
     "additional": []
   }
 }

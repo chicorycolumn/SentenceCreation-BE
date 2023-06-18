@@ -1,28 +1,18 @@
 {
-  "sentenceFormulaId": "POL-117c",
+  "id": "POL-117c",
   "guide": "[I] am here.",
   "sentenceStructure": [
     {
       "chunkId": "pro-1-I",
-      "specificIds": [
-        "pol-pro-PERSONAL"
-      ],
-      "person": [
-        "1per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["pol-pro-PERSONAL"],
+      "person": ["1per"],
+      "number": ["singular"]
     },
     {
       "chunkId": "ver-1-am",
       "agreeWith": "pro-1-I",
-      "specificIds": [
-        "pol-ver-011-być"
-      ],
-      "tenseDescription": [
-        "present im"
-      ]
+      "specificIds": ["pol-ver-011-być"],
+      "tenseDescription": ["present im"]
     },
     {
       "chunkId": "fix-1-here",
@@ -30,12 +20,7 @@
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "ver-1-am",
-        "fix-1-here"
-      ]
-    ],
+    "primary": [["ver-1-am", "fix-1-here"]],
     "additional": []
   }
 }

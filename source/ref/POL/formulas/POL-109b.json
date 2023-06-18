@@ -1,25 +1,17 @@
 {
-  "sentenceFormulaId": "POL-109b",
+  "id": "POL-109b",
   "guide": "1 pisać receptę.",
   "sentenceStructure": [
     {
       "chunkId": "npe-1",
-      "andTags": [
-        "job"
-      ],
-      "number": [
-        "plural"
-      ]
+      "andTags": ["job"],
+      "number": ["plural"]
     },
     {
       "chunkId": "ver-1",
       "agreeWith": "npe-1",
-      "specificIds": [
-        "pol-ver-015-pisać"
-      ],
-      "tenseDescription": [
-        "past pf"
-      ]
+      "specificIds": ["pol-ver-015-pisać"],
+      "tenseDescription": ["past pf"]
     },
     {
       "chunkId": "fix-1",
@@ -27,13 +19,7 @@
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "npe-1",
-        "ver-1",
-        "fix-1"
-      ]
-    ],
+    "primary": [["npe-1", "ver-1", "fix-1"]],
     "additional": []
   }
 }

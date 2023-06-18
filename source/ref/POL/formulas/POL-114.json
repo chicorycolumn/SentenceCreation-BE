@@ -1,82 +1,48 @@
 {
-  "sentenceFormulaId": "POL-114",
+  "id": "POL-114",
   "guide": "[I] Doctor Gave Me Her Book.",
   "sentenceStructure": [
     {
       "chunkId": "pro-1-I",
-      "specificIds": [
-        "pol-pro-PERSONAL"
-      ],
-      "person": [
-        "1per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["pol-pro-PERSONAL"],
+      "person": ["1per"],
+      "number": ["singular"]
     },
     {
       "chunkId": "npe-1-Doctor",
-      "specificIds": [
-        "pol-npe-015-lekarz"
-      ],
+      "specificIds": ["pol-npe-015-lekarz"],
       "doNotUpdateSpecificIdsAsIsJustOneMGN": true
     },
     {
       "chunkId": "ver-1-Gave",
       "agreeWith": "npe-1-Doctor",
-      "specificIds": [
-        "pol-ver-016-dać"
-      ],
-      "tenseDescription": [
-        "past pf"
-      ]
+      "specificIds": ["pol-ver-016-dać"],
+      "tenseDescription": ["past pf"]
     },
     {
       "chunkId": "pro-2-Me",
       "agreeWith": "pro-1-I",
-      "gcase": [
-        "dat"
-      ],
-      "formulaImportantTraitKeys": [
-        "gcase"
-      ],
-      "specificIds": [
-        "pol-pro-PERSONAL"
-      ]
+      "gcase": ["dat"],
+      "formulaImportantTraitKeys": ["gcase"],
+      "specificIds": ["pol-pro-PERSONAL"]
     },
     {
       "chunkId": "pro-3-Her",
-      "form": [
-        "determiner"
-      ],
-      "specificIds": [
-        "pol-pro-POSSESSIVE"
-      ],
+      "form": ["determiner"],
+      "specificIds": ["pol-pro-POSSESSIVE"],
       "agreeWith": "npe-1-Doctor",
       "agreeWith2": "nco-2-Book"
     },
     {
       "chunkId": "nco-2-Book",
-      "specificIds": [
-        "pol-nco-016-książka"
-      ],
-      "gcase": [
-        "acc"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["pol-nco-016-książka"],
+      "gcase": ["acc"],
+      "number": ["singular"]
     }
   ],
   "orders": {
     "primary": [
-      [
-        "npe-1-Doctor",
-        "ver-1-Gave",
-        "pro-2-Me",
-        "pro-3-Her",
-        "nco-2-Book"
-      ]
+      ["npe-1-Doctor", "ver-1-Gave", "pro-2-Me", "pro-3-Her", "nco-2-Book"]
     ]
   }
 }

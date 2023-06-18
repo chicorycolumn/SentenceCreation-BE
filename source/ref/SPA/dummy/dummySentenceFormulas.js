@@ -1,6 +1,6 @@
 exports.dummySentenceFormulasBank = [
   {
-    sentenceFormulaId: "SPA-dummy72a",
+    id: "SPA-dummy72a",
     equivalents: {
       ENG: ["ENG-dummy72a"],
       POL: ["POL-dummy72a"],
@@ -20,7 +20,7 @@ exports.dummySentenceFormulasBank = [
     orders: { primary: [["adj-1", "nco-1"]], additional: [] },
   },
   {
-    sentenceFormulaId: "SPA-dummy72b",
+    id: "SPA-dummy72b",
     equivalents: {
       ENG: ["ENG-dummy72b"],
       POL: ["POL-dummy72b"],
@@ -40,7 +40,7 @@ exports.dummySentenceFormulasBank = [
     orders: { primary: [["adj-1", "npe-1"]], additional: [] },
   },
   {
-    sentenceFormulaId: "SPA-dummy72c",
+    id: "SPA-dummy72c",
     equivalents: {
       ENG: ["ENG-dummy72c"],
       POL: ["POL-dummy72c"],

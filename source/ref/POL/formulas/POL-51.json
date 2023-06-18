@@ -1,15 +1,11 @@
 {
-  "sentenceFormulaId": "POL-51",
+  "id": "POL-51",
   "guide": "1 ma na sobie 2.",
   "sentenceStructure": [
     {
       "chunkId": "npe-1",
-      "andTags": [
-        "personTest1"
-      ],
-      "number": [
-        "singular"
-      ]
+      "andTags": ["personTest1"],
+      "number": ["singular"]
     },
     {
       "chunkId": "fix-1",
@@ -17,22 +13,12 @@
     },
     {
       "chunkId": "nco-2",
-      "andTags": [
-        "wearable"
-      ],
-      "gcase": [
-        "acc"
-      ]
+      "andTags": ["wearable"],
+      "gcase": ["acc"]
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "npe-1",
-        "fix-1",
-        "nco-2"
-      ]
-    ],
+    "primary": [["npe-1", "fix-1", "nco-2"]],
     "additional": []
   }
 }

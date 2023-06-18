@@ -843,7 +843,7 @@ exports.buildSentenceString = (
   ) {
     consol.log(
       "[1;31m " +
-        `npqq buildSentenceString No primaryOrders were specified for "${sentenceFormula.sentenceFormulaId}". Using default order that structureChunks were defined in.` +
+        `npqq buildSentenceString No primaryOrders were specified for "${sentenceFormula.id}". Using default order that structureChunks were defined in.` +
         "[0m"
     );
     consol.log("kfzo buildSentenceString c13 gonna push unorderedArr Clause 0");

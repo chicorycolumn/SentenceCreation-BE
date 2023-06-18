@@ -1,39 +1,24 @@
 {
-  "sentenceFormulaId": "ENG-122",
+  "id": "ENG-122",
   "guide": "1 doctor write.",
   "sentenceStructure": [
     {
       "chunkId": "art-1",
-      "form": [
-        "definite"
-      ],
+      "form": ["definite"],
       "agreeWith": "npe-1-doctor"
     },
     {
       "chunkId": "npe-1-doctor",
-      "specificIds": [
-        "eng-npe-005-doctor"
-      ]
+      "specificIds": ["eng-npe-005-doctor"]
     },
     {
       "chunkId": "ver-1-write",
-      "specificIds": [
-        "eng-ver-005-write"
-      ],
+      "specificIds": ["eng-ver-005-write"],
       "agreeWith": "npe-1-doctor",
-      "tenseDescription": [
-        "present simple",
-        "past simple"
-      ]
+      "tenseDescription": ["present simple", "past simple"]
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "art-1",
-        "npe-1-doctor",
-        "ver-1-write"
-      ]
-    ]
+    "primary": [["art-1", "npe-1-doctor", "ver-1-write"]]
   }
 }

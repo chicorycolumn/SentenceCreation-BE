@@ -81,9 +81,7 @@ exports.grabFormulaById = (formulaId, useDummy, lang, envir = "ref") => {
     const {
       dummySentenceFormulasBank,
     } = require(`../source/${envir}/${lang}/dummy/dummySentenceFormulas.js`);
-    return dummySentenceFormulasBank.find(
-      (sf) => sf.sentenceFormulaId === formulaId
-    );
+    return dummySentenceFormulasBank.find((sf) => sf.id === formulaId);
   }
 
   let path = `../source/${envir}/${lang}/formulas/${formulaId}.json`;
@@ -122,7 +120,7 @@ exports.grabFormula = (
 
   if (!sentenceFormula) {
     consol.throw(
-      `#ERR quky gd:grabFormula. No sentenceFormula for this sentenceFormulaId "${sentenceFormulaId}".`
+      `#ERR quky gd:grabFormula. No sentenceFormula for this id "${sentenceFormulaId}".`
     );
   }
 
@@ -141,12 +139,9 @@ exports.grabSkeletonFormulas = (lang, envir = "ref") => {
     let formulaObject = gdUtils.grabFormulaById(filename, false, lang, envir);
 
     return [
-      formulaObject.sentenceFormulaId,
+      formulaObject.id,
       formulaObject.guide,
-      nexusUtils.getLanguagesOfEquivalents(
-        formulaObject.sentenceFormulaId,
-        env
-      ),
+      nexusUtils.getLanguagesOfEquivalents(formulaObject.id, env),
     ];
   });
 

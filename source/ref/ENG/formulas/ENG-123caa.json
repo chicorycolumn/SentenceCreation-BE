@@ -1,41 +1,24 @@
 {
-  "sentenceFormulaId": "ENG-123caa",
+  "id": "ENG-123caa",
   "guide": "I am.",
   "sentenceStructure": [
     {
       "chunkId": "pro-1-I",
-      "specificIds": [
-        "eng-pro-PERSONAL"
-      ],
-      "gender": [
-        "m"
-      ],
-      "person": [
-        "3per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["eng-pro-PERSONAL"],
+      "gender": ["m"],
+      "person": ["3per"],
+      "number": ["singular"]
     },
     {
       "chunkId": "ver-1-am",
-      "specificIds": [
-        "eng-ver-005-write"
-      ],
+      "specificIds": ["eng-ver-005-write"],
       "agreeWith": "pro-1-I",
-      "tenseDescription": [
-        "present simple"
-      ],
+      "tenseDescription": ["present simple"],
       "negative": true,
       "stativeOverrideTrue": true
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "pro-1-I",
-        "ver-1-am"
-      ]
-    ]
+    "primary": [["pro-1-I", "ver-1-am"]]
   }
 }

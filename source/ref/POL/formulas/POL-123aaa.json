@@ -1,31 +1,19 @@
 {
-  "sentenceFormulaId": "POL-123aaa",
+  "id": "POL-123aaa",
   "guide": "I am here.",
   "sentenceStructure": [
     {
       "chunkId": "pro-1-I",
-      "specificIds": [
-        "pol-pro-PERSONAL"
-      ],
-      "person": [
-        "3per"
-      ],
-      "gender": [
-        "m1"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["pol-pro-PERSONAL"],
+      "person": ["3per"],
+      "gender": ["m1"],
+      "number": ["singular"]
     },
     {
       "chunkId": "ver-1-am",
-      "specificIds": [
-        "pol-ver-011-być"
-      ],
+      "specificIds": ["pol-ver-011-być"],
       "agreeWith": "pro-1-I",
-      "tenseDescription": [
-        "present im"
-      ],
+      "tenseDescription": ["present im"],
       "negative": true
     },
     {
@@ -34,18 +22,7 @@
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "ver-1-am",
-        "fix-1-here"
-      ]
-    ],
-    "additional": [
-      [
-        "pro-1-I",
-        "ver-1-am",
-        "fix-1-here"
-      ]
-    ]
+    "primary": [["ver-1-am", "fix-1-here"]],
+    "additional": [["pro-1-I", "ver-1-am", "fix-1-here"]]
   }
 }

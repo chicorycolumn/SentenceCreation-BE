@@ -1,62 +1,35 @@
 {
-  "sentenceFormulaId": "ENG-123g",
+  "id": "ENG-123g",
   "guide": "My onion is blue.",
   "sentenceStructure": [
     {
-      "form": [
-        "determiner"
-      ],
-      "specificIds": [
-        "eng-pro-POSSESSIVE"
-      ],
+      "form": ["determiner"],
+      "specificIds": ["eng-pro-POSSESSIVE"],
       "chunkId": "pro-1-my",
-      "person": [
-        "1per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "person": ["1per"],
+      "number": ["singular"]
     },
     {
-      "gcase": [
-        "nom"
-      ],
-      "specificIds": [
-        "eng-nco-002-onion"
-      ],
+      "gcase": ["nom"],
+      "specificIds": ["eng-nco-002-onion"],
       "chunkId": "nco-1-onion",
-      "number": [
-        "singular"
-      ]
+      "number": ["singular"]
     },
     {
       "negative": true,
-      "tenseDescription": [
-        "future simple"
-      ],
-      "specificIds": [
-        "eng-ver-001-be-ß"
-      ],
+      "tenseDescription": ["future simple"],
+      "specificIds": ["eng-ver-001-be-ß"],
       "chunkId": "ver-1-is",
       "agreeWith": "nco-1-onion"
     },
     {
-      "specificIds": [
-        "eng-adj-001-red"
-      ],
+      "specificIds": ["eng-adj-001-red"],
       "chunkId": "adj-1-blue",
       "agreeWith": "nco-1-onion"
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "pro-1-my",
-        "nco-1-onion",
-        "ver-1-is",
-        "adj-1-blue"
-      ]
-    ],
+    "primary": [["pro-1-my", "nco-1-onion", "ver-1-is", "adj-1-blue"]],
     "additional": []
   }
 }

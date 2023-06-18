@@ -1,57 +1,32 @@
 {
-  "sentenceFormulaId": "POL-61",
+  "id": "POL-61",
   "guide": "Kobieta mieć 1 2.",
   "sentenceStructure": [
     {
       "chunkId": "npe-1",
-      "andTags": [
-        "personTest1"
-      ],
-      "specificIds": [
-        "^pol-npe-011-kobieta"
-      ]
+      "andTags": ["personTest1"],
+      "specificIds": ["^pol-npe-011-kobieta"]
     },
     {
       "chunkId": "ver-1",
       "agreeWith": "npe-1",
-      "tenseDescription": [
-        "present im"
-      ],
-      "person": [
-        "3per"
-      ],
-      "specificIds": [
-        "pol-ver-012-mieć"
-      ]
+      "tenseDescription": ["present im"],
+      "person": ["3per"],
+      "specificIds": ["pol-ver-012-mieć"]
     },
     {
       "chunkId": "adj-1",
       "agreeWith": "nco-2",
-      "form": [
-        "simple"
-      ],
-      "andTags": [
-        "colour"
-      ]
+      "form": ["simple"],
+      "andTags": ["colour"]
     },
     {
       "chunkId": "nco-2",
-      "andTags": [
-        "edible"
-      ],
-      "gcase": [
-        "acc"
-      ]
+      "andTags": ["edible"],
+      "gcase": ["acc"]
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "npe-1",
-        "ver-1",
-        "adj-1",
-        "nco-2"
-      ]
-    ]
+    "primary": [["npe-1", "ver-1", "adj-1", "nco-2"]]
   }
 }

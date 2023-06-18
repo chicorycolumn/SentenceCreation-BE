@@ -1,43 +1,26 @@
 {
-  "sentenceFormulaId": "POL-118",
+  "id": "POL-118",
   "guide": "[I] my doctor and his book.",
   "sentenceStructure": [
     {
       "chunkId": "pro-0-I",
-      "specificIds": [
-        "pol-pro-PERSONAL"
-      ],
-      "person": [
-        "1per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["pol-pro-PERSONAL"],
+      "person": ["1per"],
+      "number": ["singular"]
     },
     {
       "chunkId": "pro-1-my",
-      "form": [
-        "determiner"
-      ],
-      "specificIds": [
-        "pol-pro-POSSESSIVE"
-      ],
+      "form": ["determiner"],
+      "specificIds": ["pol-pro-POSSESSIVE"],
       "agreeWith": "pro-0-I",
       "agreeWith2": "npe-1-doctor"
     },
     {
       "chunkId": "npe-1-doctor",
-      "number": [
-        "singular"
-      ],
-      "specificIds": [
-        "pol-npe-015-lekarz"
-      ],
+      "number": ["singular"],
+      "specificIds": ["pol-npe-015-lekarz"],
       "doNotUpdateSpecificIdsAsIsJustOneMGN": true,
-      "educatorBlocksAnnotationsForTheseTraitKeys": [
-        "gender",
-        "number"
-      ]
+      "educatorBlocksAnnotationsForTheseTraitKeys": ["gender", "number"]
     },
     {
       "chunkId": "fix-1-and",
@@ -45,34 +28,20 @@
     },
     {
       "chunkId": "pro-2-his",
-      "form": [
-        "determiner"
-      ],
-      "specificIds": [
-        "pol-pro-POSSESSIVE"
-      ],
+      "form": ["determiner"],
+      "specificIds": ["pol-pro-POSSESSIVE"],
       "agreeWith": "npe-1-doctor",
       "agreeWith2": "nco-2-book"
     },
     {
       "chunkId": "nco-2-book",
-      "number": [
-        "singular"
-      ],
-      "specificIds": [
-        "pol-nco-016-książka"
-      ]
+      "number": ["singular"],
+      "specificIds": ["pol-nco-016-książka"]
     }
   ],
   "orders": {
     "primary": [
-      [
-        "pro-1-my",
-        "npe-1-doctor",
-        "fix-1-and",
-        "pro-2-his",
-        "nco-2-book"
-      ]
+      ["pro-1-my", "npe-1-doctor", "fix-1-and", "pro-2-his", "nco-2-book"]
     ]
   }
 }

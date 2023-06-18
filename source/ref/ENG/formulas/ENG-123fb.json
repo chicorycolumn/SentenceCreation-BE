@@ -1,40 +1,23 @@
 {
-  "sentenceFormulaId": "ENG-123fb",
+  "id": "ENG-123fb",
   "guide": "I am.",
   "sentenceStructure": [
     {
       "chunkId": "pro-1-I",
-      "specificIds": [
-        "eng-pro-PERSONAL"
-      ],
-      "gender": [
-        "m"
-      ],
-      "person": [
-        "3per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["eng-pro-PERSONAL"],
+      "gender": ["m"],
+      "person": ["3per"],
+      "number": ["singular"]
     },
     {
       "chunkId": "ver-1-am",
-      "specificIds": [
-        "eng-ver-005-write"
-      ],
+      "specificIds": ["eng-ver-005-write"],
       "agreeWith": "pro-1-I",
-      "tenseDescription": [
-        "past perfect"
-      ],
+      "tenseDescription": ["past perfect"],
       "negative": true
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "pro-1-I",
-        "ver-1-am"
-      ]
-    ]
+    "primary": [["pro-1-I", "ver-1-am"]]
   }
 }

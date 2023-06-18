@@ -1,32 +1,19 @@
 {
-  "sentenceFormulaId": "POL-101b",
+  "id": "POL-101b",
   "guide": "Kobieta 1 szybko.",
   "sentenceStructure": [
     {
       "chunkId": "npe-1",
-      "andTags": [
-        "personTest1"
-      ],
-      "specificIds": [
-        "^pol-npe-011-kobieta"
-      ],
-      "number": [
-        "singular",
-        "plural"
-      ]
+      "andTags": ["personTest1"],
+      "specificIds": ["^pol-npe-011-kobieta"],
+      "number": ["singular", "plural"]
     },
     {
       "chunkId": "ver-1",
       "agreeWith": "npe-1",
-      "tenseDescription": [
-        "present im"
-      ],
-      "person": [
-        "3per"
-      ],
-      "andTags": [
-        "basic2"
-      ]
+      "tenseDescription": ["present im"],
+      "person": ["3per"],
+      "andTags": ["basic2"]
     },
     {
       "chunkId": "fix-1",
@@ -34,13 +21,7 @@
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "npe-1",
-        "fix-1",
-        "ver-1"
-      ]
-    ],
+    "primary": [["npe-1", "fix-1", "ver-1"]],
     "additional": []
   }
 }

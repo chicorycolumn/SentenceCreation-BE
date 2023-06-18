@@ -1,49 +1,30 @@
 {
-  "sentenceFormulaId": "ENG-117aa",
+  "id": "ENG-117aa",
   "guide": "I was a doctor.",
   "sentenceStructure": [
     {
       "chunkId": "pro-1-I",
-      "specificIds": [
-        "eng-pro-PERSONAL"
-      ],
-      "person": [
-        "1per"
-      ]
+      "specificIds": ["eng-pro-PERSONAL"],
+      "person": ["1per"]
     },
     {
       "chunkId": "ver-1-was",
       "agreeWith": "pro-1-I",
-      "specificIds": [
-        "eng-ver-001-be-ß"
-      ],
-      "tenseDescription": [
-        "past simple"
-      ]
+      "specificIds": ["eng-ver-001-be-ß"],
+      "tenseDescription": ["past simple"]
     },
     {
       "chunkId": "art-1-a",
-      "form": [
-        "indefinite"
-      ],
+      "form": ["indefinite"],
       "agreeWith": "pro-1-I"
     },
     {
       "chunkId": "npe-1-doctor",
-      "specificIds": [
-        "eng-npe-005-doctor"
-      ],
+      "specificIds": ["eng-npe-005-doctor"],
       "agreeWith": "pro-1-I"
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "pro-1-I",
-        "ver-1-was",
-        "art-1-a",
-        "npe-1-doctor"
-      ]
-    ]
+    "primary": [["pro-1-I", "ver-1-was", "art-1-a", "npe-1-doctor"]]
   }
 }

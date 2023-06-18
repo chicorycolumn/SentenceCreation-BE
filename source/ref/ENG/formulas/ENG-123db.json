@@ -1,48 +1,28 @@
 {
-  "sentenceFormulaId": "ENG-123db",
+  "id": "ENG-123db",
   "guide": "I am red.",
   "sentenceStructure": [
     {
       "chunkId": "pro-1-I",
-      "specificIds": [
-        "eng-pro-PERSONAL"
-      ],
-      "gender": [
-        "m"
-      ],
-      "person": [
-        "3per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["eng-pro-PERSONAL"],
+      "gender": ["m"],
+      "person": ["3per"],
+      "number": ["singular"]
     },
     {
       "chunkId": "ver-1-am",
-      "specificIds": [
-        "eng-ver-001-be-ß"
-      ],
+      "specificIds": ["eng-ver-001-be-ß"],
       "agreeWith": "pro-1-I",
-      "tenseDescription": [
-        "past perfect"
-      ],
+      "tenseDescription": ["past perfect"],
       "negative": true
     },
     {
       "chunkId": "adj-1-red",
-      "specificIds": [
-        "eng-adj-001-red"
-      ],
+      "specificIds": ["eng-adj-001-red"],
       "agreeWith": "pro-1-I"
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "pro-1-I",
-        "ver-1-am",
-        "adj-1-red"
-      ]
-    ]
+    "primary": [["pro-1-I", "ver-1-am", "adj-1-red"]]
   }
 }

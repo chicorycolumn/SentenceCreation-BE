@@ -1,41 +1,24 @@
 {
-  "sentenceFormulaId": "ENG-118",
+  "id": "ENG-118",
   "guide": "[I] my doctor and his book.",
   "sentenceStructure": [
     {
       "chunkId": "pro-0-I",
-      "specificIds": [
-        "eng-pro-PERSONAL"
-      ],
-      "person": [
-        "1per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["eng-pro-PERSONAL"],
+      "person": ["1per"],
+      "number": ["singular"]
     },
     {
       "chunkId": "pro-1-my",
-      "form": [
-        "determiner"
-      ],
-      "specificIds": [
-        "eng-pro-POSSESSIVE"
-      ],
+      "form": ["determiner"],
+      "specificIds": ["eng-pro-POSSESSIVE"],
       "agreeWith": "pro-0-I"
     },
     {
       "chunkId": "npe-1-doctor",
-      "number": [
-        "singular"
-      ],
-      "specificIds": [
-        "eng-npe-005-doctor"
-      ],
-      "educatorBlocksAnnotationsForTheseTraitKeys": [
-        "gender",
-        "number"
-      ]
+      "number": ["singular"],
+      "specificIds": ["eng-npe-005-doctor"],
+      "educatorBlocksAnnotationsForTheseTraitKeys": ["gender", "number"]
     },
     {
       "chunkId": "fix-1-and",
@@ -43,33 +26,19 @@
     },
     {
       "chunkId": "pro-2-his",
-      "form": [
-        "determiner"
-      ],
-      "specificIds": [
-        "eng-pro-POSSESSIVE"
-      ],
+      "form": ["determiner"],
+      "specificIds": ["eng-pro-POSSESSIVE"],
       "agreeWith": "npe-1-doctor"
     },
     {
       "chunkId": "nco-2-book",
-      "number": [
-        "singular"
-      ],
-      "specificIds": [
-        "eng-nco-006-book"
-      ]
+      "number": ["singular"],
+      "specificIds": ["eng-nco-006-book"]
     }
   ],
   "orders": {
     "primary": [
-      [
-        "pro-1-my",
-        "npe-1-doctor",
-        "fix-1-and",
-        "pro-2-his",
-        "nco-2-book"
-      ]
+      ["pro-1-my", "npe-1-doctor", "fix-1-and", "pro-2-his", "nco-2-book"]
     ]
   }
 }

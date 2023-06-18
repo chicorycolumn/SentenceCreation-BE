@@ -1,18 +1,12 @@
 {
-  "sentenceFormulaId": "POL-54",
+  "id": "POL-54",
   "guide": "1 są tutaj.",
   "sentenceStructure": [
     {
       "chunkId": "npe-1",
-      "andTags": [
-        "personTest1"
-      ],
-      "number": [
-        "plural"
-      ],
-      "gender": [
-        "m1"
-      ]
+      "andTags": ["personTest1"],
+      "number": ["plural"],
+      "gender": ["m1"]
     },
     {
       "chunkId": "fix-1",
@@ -20,12 +14,7 @@
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "npe-1",
-        "fix-1"
-      ]
-    ],
+    "primary": [["npe-1", "fix-1"]],
     "additional": []
   }
 }

@@ -288,7 +288,7 @@ exports.fetchPalette = (req) => {
         ];
     } else {
       equivalents = nexusUtils.getEquivalents(
-        questionSentenceData.sentenceFormula.sentenceFormulaId,
+        questionSentenceData.sentenceFormula.id,
         answerLanguage,
         env
       );

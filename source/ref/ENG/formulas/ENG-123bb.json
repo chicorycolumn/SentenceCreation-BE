@@ -1,50 +1,28 @@
 {
-  "sentenceFormulaId": "ENG-123bb",
+  "id": "ENG-123bb",
   "guide": "I am apple.",
   "sentenceStructure": [
     {
       "chunkId": "pro-1-I",
-      "specificIds": [
-        "eng-pro-PERSONAL"
-      ],
-      "gender": [
-        "m"
-      ],
-      "person": [
-        "3per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["eng-pro-PERSONAL"],
+      "gender": ["m"],
+      "person": ["3per"],
+      "number": ["singular"]
     },
     {
       "chunkId": "ver-1-am",
-      "specificIds": [
-        "eng-ver-002-have-ß"
-      ],
+      "specificIds": ["eng-ver-002-have-ß"],
       "agreeWith": "pro-1-I",
-      "tenseDescription": [
-        "past simple"
-      ],
+      "tenseDescription": ["past simple"],
       "negative": true
     },
     {
       "chunkId": "nco-1-apple",
-      "specificIds": [
-        "eng-nco-004-apple"
-      ],
-      "number": [
-        "plural"
-      ]
+      "specificIds": ["eng-nco-004-apple"],
+      "number": ["plural"]
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "pro-1-I",
-        "ver-1-am",
-        "nco-1-apple"
-      ]
-    ]
+    "primary": [["pro-1-I", "ver-1-am", "nco-1-apple"]]
   }
 }

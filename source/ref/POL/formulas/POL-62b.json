@@ -1,25 +1,17 @@
 {
-  "sentenceFormulaId": "POL-62b",
+  "id": "POL-62b",
   "guide": "0 kobieta nie mieć 1 2.",
   "sentenceStructure": [
     {
       "chunkId": "adj-0",
       "agreeWith": "npe-1",
-      "form": [
-        "simple"
-      ],
-      "andTags": [
-        "colour"
-      ]
+      "form": ["simple"],
+      "andTags": ["colour"]
     },
     {
       "chunkId": "npe-1",
-      "andTags": [
-        "personTest1"
-      ],
-      "specificIds": [
-        "^pol-npe-011-kobieta"
-      ]
+      "andTags": ["personTest1"],
+      "specificIds": ["^pol-npe-011-kobieta"]
     },
     {
       "chunkId": "fix-1",
@@ -28,46 +20,23 @@
     {
       "chunkId": "ver-1",
       "agreeWith": "npe-1",
-      "tenseDescription": [
-        "past im"
-      ],
-      "person": [
-        "3per"
-      ],
-      "specificIds": [
-        "pol-ver-012-mieć"
-      ]
+      "tenseDescription": ["past im"],
+      "person": ["3per"],
+      "specificIds": ["pol-ver-012-mieć"]
     },
     {
       "chunkId": "adj-1",
       "agreeWith": "nco-2",
-      "form": [
-        "simple"
-      ],
-      "andTags": [
-        "colour"
-      ]
+      "form": ["simple"],
+      "andTags": ["colour"]
     },
     {
       "chunkId": "nco-2",
-      "andTags": [
-        "edible"
-      ],
-      "gcase": [
-        "gen"
-      ]
+      "andTags": ["edible"],
+      "gcase": ["gen"]
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "adj-0",
-        "npe-1",
-        "fix-1",
-        "ver-1",
-        "adj-1",
-        "nco-2"
-      ]
-    ]
+    "primary": [["adj-0", "npe-1", "fix-1", "ver-1", "adj-1", "nco-2"]]
   }
 }

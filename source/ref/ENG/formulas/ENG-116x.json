@@ -1,53 +1,31 @@
 {
-  "sentenceFormulaId": "ENG-116x",
+  "id": "ENG-116x",
   "guide": "[I] my doctor was a woman.",
   "sentenceStructure": [
     {
       "chunkId": "pro-1-I",
-      "specificIds": [
-        "eng-pro-PERSONAL"
-      ],
-      "person": [
-        "1per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["eng-pro-PERSONAL"],
+      "person": ["1per"],
+      "number": ["singular"]
     },
     {
       "chunkId": "pro-2-my",
-      "form": [
-        "determiner"
-      ],
-      "specificIds": [
-        "eng-pro-POSSESSIVE"
-      ],
+      "form": ["determiner"],
+      "specificIds": ["eng-pro-POSSESSIVE"],
       "agreeWith": "pro-1-I"
     },
     {
       "chunkId": "npe-1-doctor",
-      "number": [
-        "singular"
-      ],
-      "specificIds": [
-        "eng-npe-005-doctor"
-      ],
-      "gender": [
-        "f"
-      ],
-      "educatorBlocksAnnotationsForTheseTraitKeys": [
-        "gender"
-      ]
+      "number": ["singular"],
+      "specificIds": ["eng-npe-005-doctor"],
+      "gender": ["f"],
+      "educatorBlocksAnnotationsForTheseTraitKeys": ["gender"]
     },
     {
       "chunkId": "ver-1-was",
       "agreeWith": "npe-1-doctor",
-      "specificIds": [
-        "eng-ver-001-be-ß"
-      ],
-      "tenseDescription": [
-        "past simple"
-      ]
+      "specificIds": ["eng-ver-001-be-ß"],
+      "tenseDescription": ["past simple"]
     },
     {
       "chunkId": "fix-1-a",
@@ -56,23 +34,13 @@
     {
       "chunkId": "npe-2-woman",
       "agreeWith": "npe-1-doctor",
-      "number": [
-        "singular"
-      ],
-      "specificIds": [
-        "^eng-npe-001-woman"
-      ]
+      "number": ["singular"],
+      "specificIds": ["^eng-npe-001-woman"]
     }
   ],
   "orders": {
     "primary": [
-      [
-        "pro-2-my",
-        "npe-1-doctor",
-        "ver-1-was",
-        "fix-1-a",
-        "npe-2-woman"
-      ]
+      ["pro-2-my", "npe-1-doctor", "ver-1-was", "fix-1-a", "npe-2-woman"]
     ]
   }
 }

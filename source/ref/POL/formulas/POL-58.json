@@ -1,28 +1,16 @@
 {
-  "sentenceFormulaId": "POL-58",
+  "id": "POL-58",
   "guide": "1.",
   "sentenceStructure": [
     {
       "chunkId": "ver-1",
-      "andTags": [
-        "basic2"
-      ],
-      "tenseDescription": [
-        "present im"
-      ],
-      "person": [
-        "1per",
-        "2per",
-        "3per"
-      ]
+      "andTags": ["basic2"],
+      "tenseDescription": ["present im"],
+      "person": ["1per", "2per", "3per"]
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "ver-1"
-      ]
-    ],
+    "primary": [["ver-1"]],
     "additional": []
   }
 }

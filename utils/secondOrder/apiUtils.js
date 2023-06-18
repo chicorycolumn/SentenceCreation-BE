@@ -35,7 +35,7 @@ exports.getSentenceFormulas = (
   );
 
   let answerSentenceFormulaIds = nexusUtils.getEquivalents(
-    questionSentenceFormula.sentenceFormulaId,
+    questionSentenceFormula.id,
     answerLanguage,
     env
   );
@@ -540,7 +540,7 @@ exports.prepareGetSentencesAsQuestionOnly = (
   let numberString = Date.now();
 
   sentenceFormula = uUtils.copyWithoutReference(sentenceFormula);
-  sentenceFormula.sentenceFormulaId = `${questionLanguage}-${numberString}`;
+  sentenceFormula.id = `${questionLanguage}-${numberString}`;
   sentenceFormula.equivalents = {};
 
   if (requestingSingleWordOnly) {
@@ -604,7 +604,7 @@ exports._makeFormula = (
 ) => {
   formula = uUtils.copyWithoutReference(formula);
 
-  formula.sentenceFormulaId = `${lang}-${numberString}`;
+  formula.id = `${lang}-${numberString}`;
 
   formula.equivalents = {};
 

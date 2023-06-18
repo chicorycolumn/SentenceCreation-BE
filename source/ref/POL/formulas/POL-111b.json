@@ -1,38 +1,21 @@
 {
-  "sentenceFormulaId": "POL-111b",
+  "id": "POL-111b",
   "guide": " być.",
   "sentenceStructure": [
     {
       "chunkId": "pro-1",
-      "specificIds": [
-        "pol-pro-PERSONAL"
-      ],
-      "person": [
-        "1per"
-      ]
+      "specificIds": ["pol-pro-PERSONAL"],
+      "person": ["1per"]
     },
     {
       "chunkId": "ver-1",
       "agreeWith": "pro-1",
-      "specificIds": [
-        "pol-ver-011-być"
-      ],
-      "tenseDescription": [
-        "past im"
-      ]
+      "specificIds": ["pol-ver-011-być"],
+      "tenseDescription": ["past im"]
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "ver-1"
-      ]
-    ],
-    "additional": [
-      [
-        "pro-1",
-        "ver-1"
-      ]
-    ]
+    "primary": [["ver-1"]],
+    "additional": [["pro-1", "ver-1"]]
   }
 }

@@ -1,61 +1,38 @@
 {
-  "sentenceFormulaId": "ENG-124b",
+  "id": "ENG-124b",
   "guide": "I am a good person.",
   "sentenceStructure": [
     {
       "chunkId": "pro-1-I",
-      "specificIds": [
-        "eng-pro-PERSONAL"
-      ],
-      "person": [
-        "1per"
-      ],
+      "specificIds": ["eng-pro-PERSONAL"],
+      "person": ["1per"],
       "agreeWith": "npe-1-person",
-      "giveMeTheseClarifiersOfMyHeadChunk": [
-        "gender",
-        "number"
-      ]
+      "giveMeTheseClarifiersOfMyHeadChunk": ["gender", "number"]
     },
     {
       "chunkId": "ver-1-am",
-      "specificIds": [
-        "eng-ver-001-be-ß"
-      ],
+      "specificIds": ["eng-ver-001-be-ß"],
       "agreeWith": "pro-1-I",
-      "tenseDescription": [
-        "past simple"
-      ]
+      "tenseDescription": ["past simple"]
     },
     {
       "chunkId": "art-1-a",
-      "form": [
-        "indefinite"
-      ],
+      "form": ["indefinite"],
       "agreeWith": "npe-1-person"
     },
     {
       "chunkId": "adj-1-good",
-      "specificIds": [
-        "eng-adj-004-good"
-      ],
+      "specificIds": ["eng-adj-004-good"],
       "agreeWith": "npe-1-person"
     },
     {
       "chunkId": "npe-1-person",
-      "specificIds": [
-        "^eng-npe-001-person-£"
-      ]
+      "specificIds": ["^eng-npe-001-person-£"]
     }
   ],
   "orders": {
     "primary": [
-      [
-        "pro-1-I",
-        "ver-1-am",
-        "art-1-a",
-        "adj-1-good",
-        "npe-1-person"
-      ]
+      ["pro-1-I", "ver-1-am", "art-1-a", "adj-1-good", "npe-1-person"]
     ]
   }
 }

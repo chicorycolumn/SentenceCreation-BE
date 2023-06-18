@@ -1,24 +1,16 @@
 {
-  "sentenceFormulaId": "ENG-121",
+  "id": "ENG-121",
   "guide": "I read 1 book.",
   "sentenceStructure": [
     {
       "chunkId": "pro-1-I",
-      "specificIds": [
-        "eng-pro-PERSONAL"
-      ],
-      "person": [
-        "1per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "specificIds": ["eng-pro-PERSONAL"],
+      "person": ["1per"],
+      "number": ["singular"]
     },
     {
       "chunkId": "ver-1-read",
-      "specificIds": [
-        "eng-ver-003-read"
-      ],
+      "specificIds": ["eng-ver-003-read"],
       "agreeWith": "pro-1-I",
       "tenseDescription": [
         "past simple",
@@ -31,32 +23,17 @@
     },
     {
       "chunkId": "art-1",
-      "form": [
-        "indefinite"
-      ],
+      "form": ["indefinite"],
       "agreeWith": "nco-1-book"
     },
     {
       "chunkId": "nco-1-book",
-      "specificIds": [
-        "eng-nco-006-book"
-      ],
-      "number": [
-        "singular"
-      ],
-      "gcase": [
-        "acc"
-      ]
+      "specificIds": ["eng-nco-006-book"],
+      "number": ["singular"],
+      "gcase": ["acc"]
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "pro-1-I",
-        "ver-1-read",
-        "art-1",
-        "nco-1-book"
-      ]
-    ]
+    "primary": [["pro-1-I", "ver-1-read", "art-1", "nco-1-book"]]
   }
 }

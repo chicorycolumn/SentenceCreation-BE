@@ -1,10 +1,8 @@
 {
-  "sentenceFormulaId": "ENG-90-902a",
+  "id": "ENG-90-902a",
   "guide": "I 1.",
   "equivalents": {
-    "POL": [
-      "POL-90-902a"
-    ]
+    "POL": ["POL-90-902a"]
   },
   "sentenceStructure": [
     {
@@ -13,27 +11,14 @@
     },
     {
       "chunkId": "ver-1",
-      "andTags": [
-        "basic2"
-      ],
-      "tenseDescription": [
-        "future"
-      ],
-      "person": [
-        "1per"
-      ],
-      "number": [
-        "singular"
-      ]
+      "andTags": ["basic2"],
+      "tenseDescription": ["future"],
+      "person": ["1per"],
+      "number": ["singular"]
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "fix-1",
-        "ver-1"
-      ]
-    ],
+    "primary": [["fix-1", "ver-1"]],
     "additional": []
   }
 }

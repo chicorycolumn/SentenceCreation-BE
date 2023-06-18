@@ -1,10 +1,8 @@
 {
-  "sentenceFormulaId": "ENG-90-901b",
+  "id": "ENG-90-901b",
   "guide": "The 1 1 quickly.",
   "equivalents": {
-    "POL": [
-      "POL-90-901b"
-    ]
+    "POL": ["POL-90-901b"]
   },
   "sentenceStructure": [
     {
@@ -13,26 +11,15 @@
     },
     {
       "chunkId": "npe-1",
-      "andTags": [
-        "personTest1"
-      ],
-      "number": [
-        "singular",
-        "plural"
-      ]
+      "andTags": ["personTest1"],
+      "number": ["singular", "plural"]
     },
     {
       "chunkId": "ver-1",
       "agreeWith": "npe-1",
-      "person": [
-        "3per"
-      ],
-      "tenseDescription": [
-        "present"
-      ],
-      "andTags": [
-        "basic2"
-      ]
+      "person": ["3per"],
+      "tenseDescription": ["present"],
+      "andTags": ["basic2"]
     },
     {
       "chunkId": "fix-2",
@@ -40,21 +27,7 @@
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "fix-1",
-        "npe-1",
-        "ver-1",
-        "fix-2"
-      ]
-    ],
-    "additional": [
-      [
-        "fix-2",
-        "fix-1",
-        "npe-1",
-        "ver-1"
-      ]
-    ]
+    "primary": [["fix-1", "npe-1", "ver-1", "fix-2"]],
+    "additional": [["fix-2", "fix-1", "npe-1", "ver-1"]]
   }
 }

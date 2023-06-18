@@ -1,37 +1,22 @@
 {
-  "sentenceFormulaId": "POL-63c",
+  "id": "POL-63c",
   "guide": "Kobieta 1.",
   "sentenceStructure": [
     {
       "chunkId": "npe-1",
-      "andTags": [
-        "personTest1"
-      ],
-      "specificIds": [
-        "^pol-npe-011-kobieta"
-      ]
+      "andTags": ["personTest1"],
+      "specificIds": ["^pol-npe-011-kobieta"]
     },
     {
       "chunkId": "ver-1",
       "agreeWith": "npe-1",
-      "andTags": [
-        "basic2"
-      ],
-      "person": [
-        "3per"
-      ],
-      "tenseDescription": [
-        "future im"
-      ]
+      "andTags": ["basic2"],
+      "person": ["3per"],
+      "tenseDescription": ["future im"]
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "npe-1",
-        "ver-1"
-      ]
-    ],
+    "primary": [["npe-1", "ver-1"]],
     "additional": []
   }
 }
