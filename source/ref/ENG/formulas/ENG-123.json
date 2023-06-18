@@ -1,0 +1,41 @@
+{
+  "sentenceFormulaId": "ENG-123",
+  "guide": "I am red.",
+  "sentenceStructure": [
+    {
+      "chunkId": "pro-1-I",
+      "specificIds": [
+        "eng-pro-PERSONAL"
+      ],
+      "person": [
+        "3per"
+      ]
+    },
+    {
+      "chunkId": "ver-1-am",
+      "specificIds": [
+        "eng-ver-001-be-ß"
+      ],
+      "agreeWith": "pro-1-I",
+      "tenseDescription": [
+        "present simple"
+      ]
+    },
+    {
+      "chunkId": "adj-1-red",
+      "specificIds": [
+        "eng-adj-001-red"
+      ],
+      "agreeWith": "pro-1-I"
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "pro-1-I",
+        "ver-1-am",
+        "adj-1-red"
+      ]
+    ]
+  }
+}

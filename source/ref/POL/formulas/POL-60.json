@@ -1,0 +1,37 @@
+{
+  "sentenceFormulaId": "POL-60",
+  "guide": "1 1.",
+  "sentenceStructure": [
+    {
+      "chunkId": "npe-1",
+      "andTags": [
+        "personTest1"
+      ],
+      "number": [
+        "plural"
+      ]
+    },
+    {
+      "chunkId": "ver-1",
+      "agreeWith": "npe-1",
+      "tenseDescription": [
+        "past im"
+      ],
+      "person": [
+        "3per"
+      ],
+      "andTags": [
+        "basic2"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "npe-1",
+        "ver-1"
+      ]
+    ],
+    "additional": []
+  }
+}

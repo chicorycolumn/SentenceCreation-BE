@@ -1,0 +1,81 @@
+{
+  "sentenceFormulaId": "POL-116b",
+  "guide": "[I] my doctor was woman.",
+  "sentenceStructure": [
+    {
+      "chunkId": "pro-1-I",
+      "specificIds": [
+        "pol-pro-PERSONAL"
+      ],
+      "person": [
+        "1per"
+      ],
+      "number": [
+        "singular"
+      ]
+    },
+    {
+      "chunkId": "pro-2-my",
+      "form": [
+        "determiner"
+      ],
+      "specificIds": [
+        "pol-pro-POSSESSIVE"
+      ],
+      "agreeWith": "pro-1-I",
+      "agreeWith2": "npe-1-doctor"
+    },
+    {
+      "chunkId": "npe-1-doctor",
+      "number": [
+        "singular"
+      ],
+      "specificIds": [
+        "pol-npe-015-lekarz"
+      ],
+      "doNotUpdateSpecificIdsAsIsJustOneMGN": true,
+      "gender": [
+        "f"
+      ],
+      "educatorBlocksAnnotationsForTheseTraitKeys": [
+        "gender"
+      ]
+    },
+    {
+      "chunkId": "ver-1-was",
+      "agreeWith": "npe-1-doctor",
+      "specificIds": [
+        "pol-ver-011-być"
+      ],
+      "tenseDescription": [
+        "past pf"
+      ]
+    },
+    {
+      "chunkId": "npe-2-woman",
+      "agreeWith": "npe-1-doctor",
+      "gcase": [
+        "ins"
+      ],
+      "formulaImportantTraitKeys": [
+        "gcase"
+      ],
+      "number": [
+        "singular"
+      ],
+      "specificIds": [
+        "^pol-npe-011-kobieta"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "pro-2-my",
+        "npe-1-doctor",
+        "ver-1-was",
+        "npe-2-woman"
+      ]
+    ]
+  }
+}

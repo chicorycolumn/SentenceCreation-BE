@@ -1,0 +1,48 @@
+{
+  "sentenceFormulaId": "POL-118b",
+  "guide": "[I] my doctor.",
+  "sentenceStructure": [
+    {
+      "chunkId": "pro-0-I",
+      "specificIds": [
+        "pol-pro-PERSONAL"
+      ],
+      "person": [
+        "1per"
+      ],
+      "number": [
+        "singular"
+      ]
+    },
+    {
+      "chunkId": "pro-1-my",
+      "form": [
+        "determiner"
+      ],
+      "specificIds": [
+        "pol-pro-POSSESSIVE"
+      ],
+      "agreeWith": "pro-0-I",
+      "agreeWith2": "npe-1-doctor"
+    },
+    {
+      "chunkId": "npe-1-doctor",
+      "number": [
+        "singular"
+      ],
+      "specificIds": [
+        "pol-npe-015-lekarz"
+      ],
+      "doNotUpdateSpecificIdsAsIsJustOneMGN": true
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "pro-1-my",
+        "npe-1-doctor"
+      ]
+    ],
+    "additional": []
+  }
+}

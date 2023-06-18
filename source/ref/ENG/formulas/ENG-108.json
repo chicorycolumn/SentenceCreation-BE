@@ -1,0 +1,34 @@
+{
+  "sentenceFormulaId": "ENG-108",
+  "guide": " be.",
+  "sentenceStructure": [
+    {
+      "chunkId": "pro-1",
+      "specificIds": [
+        "eng-pro-PERSONAL"
+      ],
+      "number": [
+        "singular"
+      ]
+    },
+    {
+      "chunkId": "ver-1",
+      "agreeWith": "pro-1",
+      "specificIds": [
+        "eng-ver-001-be-ß"
+      ],
+      "tenseDescription": [
+        "present simple"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "pro-1",
+        "ver-1"
+      ]
+    ],
+    "additional": []
+  }
+}

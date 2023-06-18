@@ -1,0 +1,64 @@
+{
+  "sentenceFormulaId": "ENG-120",
+  "guide": "[I] 1 doctor see me.",
+  "sentenceStructure": [
+    {
+      "chunkId": "pro-0-I",
+      "specificIds": [
+        "eng-pro-PERSONAL"
+      ],
+      "person": [
+        "1per"
+      ],
+      "number": [
+        "singular"
+      ]
+    },
+    {
+      "chunkId": "art-1",
+      "agreeWith": "npe-1-doctor"
+    },
+    {
+      "chunkId": "npe-1-doctor",
+      "specificIds": [
+        "eng-npe-005-doctor"
+      ],
+      "number": [
+        "singular"
+      ]
+    },
+    {
+      "chunkId": "ver-1-see",
+      "specificIds": [
+        "eng-ver-008-see-ß"
+      ],
+      "agreeWith": "npe-1-doctor",
+      "tenseDescription": [
+        "past simple"
+      ]
+    },
+    {
+      "chunkId": "pro-1-me",
+      "specificIds": [
+        "eng-pro-PERSONAL"
+      ],
+      "agreeWith": "pro-0-I",
+      "gcase": [
+        "acc"
+      ],
+      "formulaImportantTraitKeys": [
+        "gcase"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "art-1",
+        "npe-1-doctor",
+        "ver-1-see",
+        "pro-1-me"
+      ]
+    ]
+  }
+}

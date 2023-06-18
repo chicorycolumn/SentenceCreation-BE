@@ -1,0 +1,28 @@
+{
+  "sentenceFormulaId": "POL-107",
+  "guide": "1 drzwi.",
+  "sentenceStructure": [
+    {
+      "chunkId": "adj-1",
+      "agreeWith": "nco-1",
+      "andTags": [
+        "colour"
+      ]
+    },
+    {
+      "chunkId": "nco-1",
+      "specificIds": [
+        "pol-nco-017-drzwi"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "adj-1",
+        "nco-1"
+      ]
+    ],
+    "additional": []
+  }
+}

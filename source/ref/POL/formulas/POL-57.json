@@ -1,0 +1,31 @@
+{
+  "sentenceFormulaId": "POL-57",
+  "guide": "Mam 1.",
+  "sentenceStructure": [
+    {
+      "chunkId": "fix-1",
+      "chunkValue": "mam"
+    },
+    {
+      "chunkId": "nco-1",
+      "andTags": [
+        "edible"
+      ],
+      "gcase": [
+        "acc"
+      ],
+      "number": [
+        "singular"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "fix-1",
+        "nco-1"
+      ]
+    ],
+    "additional": []
+  }
+}

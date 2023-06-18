@@ -1,0 +1,32 @@
+{
+  "sentenceFormulaId": "POL-122",
+  "guide": "Doctor write.",
+  "sentenceStructure": [
+    {
+      "chunkId": "npe-1-doctor",
+      "specificIds": [
+        "pol-npe-015-lekarz"
+      ]
+    },
+    {
+      "chunkId": "ver-1-write",
+      "specificIds": [
+        "pol-ver-015-pisać"
+      ],
+      "agreeWith": "npe-1-doctor",
+      "tenseDescription": [
+        "present im",
+        "past pf"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "npe-1-doctor",
+        "ver-1-write"
+      ]
+    ],
+    "additional": []
+  }
+}

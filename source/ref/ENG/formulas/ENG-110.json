@@ -1,0 +1,78 @@
+{
+  "sentenceFormulaId": "ENG-110",
+  "guide": "The woman read  a book to.",
+  "sentenceStructure": [
+    {
+      "chunkId": "fix-1",
+      "chunkValue": "the"
+    },
+    {
+      "chunkId": "npe-1",
+      "specificIds": [
+        "^eng-npe-001-woman"
+      ]
+    },
+    {
+      "chunkId": "ver-1",
+      "agreeWith": "npe-1",
+      "specificIds": [
+        "eng-ver-003-read"
+      ],
+      "tenseDescription": [
+        "past continuous"
+      ]
+    },
+    {
+      "chunkId": "pro-1",
+      "specificIds": [
+        "eng-pro-PERSONAL"
+      ],
+      "person": [
+        "1per"
+      ],
+      "gcase": [
+        "dat"
+      ]
+    },
+    {
+      "chunkId": "fix-2",
+      "chunkValue": "a"
+    },
+    {
+      "chunkId": "nco-2",
+      "specificIds": [
+        "eng-nco-006-book"
+      ],
+      "number": [
+        "singular"
+      ]
+    },
+    {
+      "chunkId": "fix-3",
+      "chunkValue": "to"
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "fix-1",
+        "npe-1",
+        "ver-1",
+        "pro-1",
+        "fix-2",
+        "nco-2"
+      ]
+    ],
+    "additional": [
+      [
+        "fix-1",
+        "npe-1",
+        "ver-1",
+        "fix-2",
+        "nco-2",
+        "fix-3",
+        "pro-1"
+      ]
+    ]
+  }
+}

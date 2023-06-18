@@ -1,0 +1,62 @@
+{
+  "sentenceFormulaId": "POL-112",
+  "guide": "1 dać  jabłko.",
+  "sentenceStructure": [
+    {
+      "chunkId": "npe-1",
+      "andTags": [
+        "family"
+      ],
+      "number": [
+        "singular"
+      ]
+    },
+    {
+      "chunkId": "ver-1",
+      "agreeWith": "npe-1",
+      "specificIds": [
+        "pol-ver-016-dać"
+      ],
+      "tenseDescription": [
+        "past pf"
+      ]
+    },
+    {
+      "chunkId": "pro-1",
+      "specificIds": [
+        "pol-pro-PERSONAL"
+      ],
+      "person": [
+        "1per"
+      ],
+      "gcase": [
+        "dat"
+      ]
+    },
+    {
+      "chunkId": "nco-2",
+      "specificIds": [
+        "pol-nco-014-jabłko",
+        "pol-nco-012-cebula",
+        "pol-nco-015-lustro",
+        "pol-nco-016-książka"
+      ],
+      "gcase": [
+        "acc"
+      ],
+      "number": [
+        "plural"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "npe-1",
+        "ver-1",
+        "pro-1",
+        "nco-2"
+      ]
+    ]
+  }
+}

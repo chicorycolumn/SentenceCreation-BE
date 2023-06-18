@@ -1,0 +1,46 @@
+{
+  "sentenceFormulaId": "ENG-118c",
+  "guide": "[I] my onion.",
+  "sentenceStructure": [
+    {
+      "chunkId": "pro-0-I",
+      "specificIds": [
+        "eng-pro-PERSONAL"
+      ],
+      "person": [
+        "1per"
+      ],
+      "number": [
+        "singular"
+      ]
+    },
+    {
+      "chunkId": "pro-1-my",
+      "form": [
+        "determiner"
+      ],
+      "specificIds": [
+        "eng-pro-POSSESSIVE"
+      ],
+      "agreeWith": "pro-0-I"
+    },
+    {
+      "chunkId": "nco-1-onion",
+      "number": [
+        "singular"
+      ],
+      "specificIds": [
+        "eng-nco-002-onion"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "pro-1-my",
+        "nco-1-onion"
+      ]
+    ],
+    "additional": []
+  }
+}

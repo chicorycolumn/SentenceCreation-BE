@@ -1,0 +1,90 @@
+{
+  "sentenceFormulaId": "POL-113a",
+  "guide": "[We] Our Father Gave Us His Book.",
+  "sentenceStructure": [
+    {
+      "chunkId": "pro-1-We",
+      "specificIds": [
+        "pol-pro-PERSONAL"
+      ],
+      "person": [
+        "1per"
+      ]
+    },
+    {
+      "chunkId": "pro-2-Our",
+      "form": [
+        "determiner"
+      ],
+      "specificIds": [
+        "pol-pro-POSSESSIVE"
+      ],
+      "agreeWith": "pro-1-We",
+      "agreeWith2": "npe-1-Father"
+    },
+    {
+      "chunkId": "npe-1-Father",
+      "andTags": [
+        "family"
+      ]
+    },
+    {
+      "chunkId": "ver-1-Gave",
+      "agreeWith": "npe-1-Father",
+      "specificIds": [
+        "pol-ver-016-dać"
+      ],
+      "tenseDescription": [
+        "past pf"
+      ]
+    },
+    {
+      "chunkId": "pro-3-Us",
+      "agreeWith": "pro-1-We",
+      "gcase": [
+        "dat"
+      ],
+      "formulaImportantTraitKeys": [
+        "gcase"
+      ],
+      "specificIds": [
+        "pol-pro-PERSONAL"
+      ]
+    },
+    {
+      "chunkId": "pro-4-His",
+      "form": [
+        "determiner"
+      ],
+      "specificIds": [
+        "pol-pro-POSSESSIVE"
+      ],
+      "agreeWith": "npe-1-Father",
+      "agreeWith2": "nco-2-Book"
+    },
+    {
+      "chunkId": "nco-2-Book",
+      "specificIds": [
+        "pol-nco-016-książka"
+      ],
+      "gcase": [
+        "acc"
+      ],
+      "number": [
+        "singular"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "pro-2-Our",
+        "npe-1-Father",
+        "ver-1-Gave",
+        "pro-3-Us",
+        "pro-4-His",
+        "nco-2-Book"
+      ]
+    ]
+  }
+}

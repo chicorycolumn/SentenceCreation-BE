@@ -1,0 +1,48 @@
+{
+  "sentenceFormulaId": "ENG-109c",
+  "guide": "The 1 write a prescription.",
+  "sentenceStructure": [
+    {
+      "chunkId": "fix-1",
+      "chunkValue": "the"
+    },
+    {
+      "chunkId": "npe-1",
+      "number": [
+        "plural"
+      ],
+      "andTags": [
+        "job"
+      ]
+    },
+    {
+      "chunkId": "ver-1",
+      "agreeWith": "npe-1",
+      "specificIds": [
+        "eng-ver-005-write"
+      ],
+      "tenseDescription": [
+        "past continuous"
+      ]
+    },
+    {
+      "chunkId": "fix-2",
+      "chunkValue": "a"
+    },
+    {
+      "chunkId": "fix-3",
+      "chunkValue": "prescription"
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "fix-1",
+        "npe-1",
+        "ver-1",
+        "fix-2",
+        "fix-3"
+      ]
+    ]
+  }
+}

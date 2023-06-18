@@ -1,0 +1,31 @@
+{
+  "sentenceFormulaId": "POL-54",
+  "guide": "1 są tutaj.",
+  "sentenceStructure": [
+    {
+      "chunkId": "npe-1",
+      "andTags": [
+        "personTest1"
+      ],
+      "number": [
+        "plural"
+      ],
+      "gender": [
+        "m1"
+      ]
+    },
+    {
+      "chunkId": "fix-1",
+      "chunkValue": "są tutaj"
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "npe-1",
+        "fix-1"
+      ]
+    ],
+    "additional": []
+  }
+}

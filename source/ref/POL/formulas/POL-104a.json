@@ -1,0 +1,26 @@
+{
+  "sentenceFormulaId": "POL-104a",
+  "guide": "1.",
+  "sentenceStructure": [
+    {
+      "chunkId": "ver-1",
+      "andTags": [
+        "basic3"
+      ],
+      "person": [
+        "1per"
+      ],
+      "number": [
+        "singular"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "ver-1"
+      ]
+    ],
+    "additional": []
+  }
+}

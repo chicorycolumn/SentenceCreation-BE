@@ -1,0 +1,49 @@
+{
+  "sentenceFormulaId": "ENG-116y",
+  "guide": "[I] my doctor.",
+  "sentenceStructure": [
+    {
+      "chunkId": "pro-1-I",
+      "specificIds": [
+        "eng-pro-PERSONAL"
+      ],
+      "person": [
+        "1per"
+      ],
+      "number": [
+        "singular"
+      ]
+    },
+    {
+      "chunkId": "pro-2-my",
+      "form": [
+        "determiner"
+      ],
+      "specificIds": [
+        "eng-pro-POSSESSIVE"
+      ],
+      "agreeWith": "pro-1-I"
+    },
+    {
+      "chunkId": "npe-1-doctor",
+      "number": [
+        "singular"
+      ],
+      "specificIds": [
+        "eng-npe-005-doctor"
+      ],
+      "gender": [
+        "f"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "pro-2-my",
+        "npe-1-doctor"
+      ]
+    ],
+    "additional": []
+  }
+}

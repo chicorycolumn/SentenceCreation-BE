@@ -1,0 +1,74 @@
+{
+  "sentenceFormulaId": "POL-118a",
+  "guide": "[I] my doctor and my book.",
+  "sentenceStructure": [
+    {
+      "chunkId": "pro-0-I",
+      "specificIds": [
+        "pol-pro-PERSONAL"
+      ],
+      "person": [
+        "1per"
+      ],
+      "number": [
+        "singular"
+      ]
+    },
+    {
+      "chunkId": "pro-1-my",
+      "form": [
+        "determiner"
+      ],
+      "specificIds": [
+        "pol-pro-POSSESSIVE"
+      ],
+      "agreeWith": "pro-0-I",
+      "agreeWith2": "npe-1-doctor"
+    },
+    {
+      "chunkId": "npe-1-doctor",
+      "number": [
+        "singular"
+      ],
+      "specificIds": [
+        "pol-npe-015-lekarz"
+      ],
+      "doNotUpdateSpecificIdsAsIsJustOneMGN": true
+    },
+    {
+      "chunkId": "fix-1-and",
+      "chunkValue": "i"
+    },
+    {
+      "chunkId": "pro-2-my",
+      "form": [
+        "determiner"
+      ],
+      "specificIds": [
+        "pol-pro-POSSESSIVE"
+      ],
+      "agreeWith": "pro-0-I",
+      "agreeWith2": "nco-2-book"
+    },
+    {
+      "chunkId": "nco-2-book",
+      "number": [
+        "singular"
+      ],
+      "specificIds": [
+        "pol-nco-016-książka"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "pro-1-my",
+        "npe-1-doctor",
+        "fix-1-and",
+        "pro-2-my",
+        "nco-2-book"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "sentenceFormulaId": "ENG-default",
+  "guide": "1 eats 2.",
+  "sentenceStructure": [
+    {
+      "chunkId": "npe-1",
+      "andTags": [
+        "personTest3"
+      ],
+      "number": [
+        "singular"
+      ]
+    },
+    {
+      "chunkId": "fix-1",
+      "chunkValue": "eats"
+    },
+    {
+      "chunkId": "nco-2",
+      "andTags": [
+        "edible"
+      ],
+      "gcase": [
+        "acc"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "npe-1",
+        "fix-1",
+        "nco-2"
+      ]
+    ],
+    "additional": []
+  }
+}

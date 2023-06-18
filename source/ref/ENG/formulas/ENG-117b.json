@@ -1,0 +1,41 @@
+{
+  "sentenceFormulaId": "ENG-117b",
+  "guide": "I was here.",
+  "sentenceStructure": [
+    {
+      "chunkId": "pro-1-I",
+      "specificIds": [
+        "eng-pro-PERSONAL"
+      ],
+      "person": [
+        "1per"
+      ],
+      "number": [
+        "singular"
+      ]
+    },
+    {
+      "chunkId": "ver-1-was",
+      "agreeWith": "pro-1-I",
+      "specificIds": [
+        "eng-ver-001-be-ß"
+      ],
+      "tenseDescription": [
+        "past simple"
+      ]
+    },
+    {
+      "chunkId": "fix-1-here",
+      "chunkValue": "here"
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "pro-1-I",
+        "ver-1-was",
+        "fix-1-here"
+      ]
+    ]
+  }
+}

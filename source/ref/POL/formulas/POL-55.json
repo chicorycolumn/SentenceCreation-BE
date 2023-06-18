@@ -1,0 +1,34 @@
+{
+  "sentenceFormulaId": "POL-55",
+  "guide": "1 1.",
+  "sentenceStructure": [
+    {
+      "chunkId": "adj-1",
+      "agreeWith": "nco-1",
+      "form": [
+        "simple"
+      ],
+      "andTags": [
+        "colour"
+      ]
+    },
+    {
+      "chunkId": "nco-1",
+      "andTags": [
+        "edible"
+      ],
+      "number": [
+        "singular"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "adj-1",
+        "nco-1"
+      ]
+    ],
+    "additional": []
+  }
+}

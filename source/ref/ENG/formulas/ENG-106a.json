@@ -1,0 +1,90 @@
+{
+  "sentenceFormulaId": "ENG-106a",
+  "guide": "If you write a book , I research it.",
+  "sentenceStructure": [
+    {
+      "chunkId": "fix-1",
+      "chunkValue": "if"
+    },
+    {
+      "chunkId": "fix-2",
+      "chunkValue": "you"
+    },
+    {
+      "chunkId": "ver-1",
+      "specificIds": [
+        "eng-ver-005-write"
+      ],
+      "tenseDescription": [
+        "cond1 condition"
+      ],
+      "formulaImportantTraitKeys": [
+        "tenseDescription"
+      ],
+      "person": [
+        "2per"
+      ],
+      "number": [
+        "singular"
+      ]
+    },
+    {
+      "chunkId": "fix-3",
+      "chunkValue": "a"
+    },
+    {
+      "chunkId": "nco-1",
+      "specificIds": [
+        "eng-nco-006-book"
+      ],
+      "number": [
+        "singular"
+      ]
+    },
+    {
+      "chunkId": "fix-4",
+      "chunkValue": ","
+    },
+    {
+      "chunkId": "fix-5",
+      "chunkValue": "I"
+    },
+    {
+      "chunkId": "ver-2",
+      "specificIds": [
+        "eng-ver-004-research"
+      ],
+      "tenseDescription": [
+        "cond1 outcome"
+      ],
+      "formulaImportantTraitKeys": [
+        "tenseDescription"
+      ],
+      "person": [
+        "1per"
+      ],
+      "number": [
+        "singular"
+      ]
+    },
+    {
+      "chunkId": "fix-6",
+      "chunkValue": "it"
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "fix-1",
+        "fix-2",
+        "ver-1",
+        "fix-3",
+        "nco-1",
+        "fix-4",
+        "fix-5",
+        "ver-2",
+        "fix-6"
+      ]
+    ]
+  }
+}

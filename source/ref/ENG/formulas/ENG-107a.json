@@ -1,0 +1,31 @@
+{
+  "sentenceFormulaId": "ENG-107a",
+  "guide": "1 door.",
+  "sentenceStructure": [
+    {
+      "chunkId": "adj-1",
+      "agreeWith": "nco-1",
+      "andTags": [
+        "colour"
+      ]
+    },
+    {
+      "chunkId": "nco-1",
+      "specificIds": [
+        "eng-nco-007-door"
+      ],
+      "number": [
+        "singular"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "adj-1",
+        "nco-1"
+      ]
+    ],
+    "additional": []
+  }
+}

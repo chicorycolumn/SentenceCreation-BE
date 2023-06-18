@@ -1,0 +1,43 @@
+{
+  "sentenceFormulaId": "ENG-101c",
+  "guide": "The woman reads.",
+  "sentenceStructure": [
+    {
+      "chunkId": "fix-1-the",
+      "chunkValue": "the"
+    },
+    {
+      "chunkId": "npe-1-woman",
+      "andTags": [
+        "personTest1"
+      ],
+      "specificIds": [
+        "^eng-npe-001-woman"
+      ],
+      "number": [
+        "singular",
+        "plural"
+      ]
+    },
+    {
+      "chunkId": "ver-1-reads",
+      "agreeWith": "npe-1-woman",
+      "person": [
+        "3per"
+      ],
+      "andTags": [
+        "basic2"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "fix-1-the",
+        "npe-1-woman",
+        "ver-1-reads"
+      ]
+    ],
+    "additional": []
+  }
+}

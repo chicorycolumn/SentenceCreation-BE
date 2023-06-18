@@ -1,0 +1,62 @@
+{
+  "sentenceFormulaId": "POL-61b",
+  "guide": "Kobieta nie mieć 1 2.",
+  "sentenceStructure": [
+    {
+      "chunkId": "npe-1",
+      "andTags": [
+        "personTest1"
+      ],
+      "specificIds": [
+        "^pol-npe-011-kobieta"
+      ]
+    },
+    {
+      "chunkId": "fix-1",
+      "chunkValue": "nie"
+    },
+    {
+      "chunkId": "ver-1",
+      "agreeWith": "npe-1",
+      "tenseDescription": [
+        "past im"
+      ],
+      "person": [
+        "3per"
+      ],
+      "specificIds": [
+        "pol-ver-012-mieć"
+      ]
+    },
+    {
+      "chunkId": "adj-1",
+      "agreeWith": "nco-2",
+      "form": [
+        "simple"
+      ],
+      "andTags": [
+        "colour"
+      ]
+    },
+    {
+      "chunkId": "nco-2",
+      "andTags": [
+        "edible"
+      ],
+      "gcase": [
+        "gen"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "npe-1",
+        "fix-1",
+        "ver-1",
+        "adj-1",
+        "nco-2"
+      ]
+    ]
+  }
+}

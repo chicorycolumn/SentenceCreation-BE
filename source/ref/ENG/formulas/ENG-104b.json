@@ -1,0 +1,31 @@
+{
+  "sentenceFormulaId": "ENG-104b",
+  "guide": "I 1.",
+  "sentenceStructure": [
+    {
+      "chunkId": "fix-1",
+      "chunkValue": "I"
+    },
+    {
+      "chunkId": "ver-1",
+      "andTags": [
+        "basic3"
+      ],
+      "person": [
+        "1per"
+      ],
+      "number": [
+        "singular"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "fix-1",
+        "ver-1"
+      ]
+    ],
+    "additional": []
+  }
+}

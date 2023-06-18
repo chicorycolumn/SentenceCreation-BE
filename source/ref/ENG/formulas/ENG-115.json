@@ -1,0 +1,83 @@
+{
+  "sentenceFormulaId": "ENG-115",
+  "guide": "I see my doctor and his doctor.",
+  "sentenceStructure": [
+    {
+      "chunkId": "pro-1-I",
+      "specificIds": [
+        "eng-pro-PERSONAL"
+      ],
+      "person": [
+        "1per"
+      ],
+      "number": [
+        "singular"
+      ]
+    },
+    {
+      "chunkId": "ver-1-see",
+      "agreeWith": "pro-1-I",
+      "specificIds": [
+        "eng-ver-008-see-ß"
+      ],
+      "tenseDescription": [
+        "past simple"
+      ]
+    },
+    {
+      "chunkId": "pro-2-my",
+      "form": [
+        "determiner"
+      ],
+      "specificIds": [
+        "eng-pro-POSSESSIVE"
+      ],
+      "agreeWith": "pro-1-I"
+    },
+    {
+      "chunkId": "npe-1-doctor",
+      "number": [
+        "singular"
+      ],
+      "specificIds": [
+        "eng-npe-005-doctor"
+      ]
+    },
+    {
+      "chunkId": "fix-1-and",
+      "chunkValue": "and"
+    },
+    {
+      "chunkId": "pro-3-his",
+      "form": [
+        "determiner"
+      ],
+      "specificIds": [
+        "eng-pro-POSSESSIVE"
+      ],
+      "agreeWith": "npe-1-doctor"
+    },
+    {
+      "chunkId": "npe-2-doctor",
+      "number": [
+        "singular"
+      ],
+      "specificIds": [
+        "eng-npe-005-doctor"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "pro-1-I",
+        "ver-1-see",
+        "pro-2-my",
+        "npe-1-doctor",
+        "fix-1-and",
+        "pro-3-his",
+        "npe-2-doctor"
+      ]
+    ]
+  }
+}

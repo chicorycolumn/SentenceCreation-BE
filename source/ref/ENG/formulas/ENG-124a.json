@@ -1,0 +1,60 @@
+{
+  "sentenceFormulaId": "ENG-124a",
+  "guide": "I am a good person.",
+  "sentenceStructure": [
+    {
+      "chunkId": "pro-1-I",
+      "specificIds": [
+        "eng-pro-PERSONAL"
+      ],
+      "person": [
+        "1per"
+      ],
+      "agreeWith": "npe-1-person",
+      "formulaImportantTraitKeys": [
+        "person"
+      ]
+    },
+    {
+      "chunkId": "ver-1-am",
+      "specificIds": [
+        "eng-ver-001-be-ß"
+      ],
+      "agreeWith": "pro-1-I",
+      "tenseDescription": [
+        "past simple"
+      ]
+    },
+    {
+      "chunkId": "art-1-a",
+      "form": [
+        "indefinite"
+      ],
+      "agreeWith": "npe-1-person"
+    },
+    {
+      "chunkId": "adj-1-good",
+      "specificIds": [
+        "eng-adj-001-red"
+      ],
+      "agreeWith": "npe-1-person"
+    },
+    {
+      "chunkId": "npe-1-person",
+      "specificIds": [
+        "eng-npe-005-doctor"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "pro-1-I",
+        "ver-1-am",
+        "art-1-a",
+        "adj-1-good",
+        "npe-1-person"
+      ]
+    ]
+  }
+}

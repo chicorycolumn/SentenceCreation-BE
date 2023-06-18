@@ -1,0 +1,46 @@
+{
+  "sentenceFormulaId": "ENG-90-901a",
+  "guide": "The 1 1.",
+  "equivalents": {
+    "POL": [
+      "POL-90-901a"
+    ]
+  },
+  "sentenceStructure": [
+    {
+      "chunkId": "fix-1",
+      "chunkValue": "the"
+    },
+    {
+      "chunkId": "npe-1",
+      "andTags": [
+        "personTest1"
+      ],
+      "number": [
+        "singular",
+        "plural"
+      ],
+      "gender": []
+    },
+    {
+      "chunkId": "ver-1",
+      "agreeWith": "npe-1",
+      "person": [
+        "3per"
+      ],
+      "andTags": [
+        "basic2"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "fix-1",
+        "npe-1",
+        "ver-1"
+      ]
+    ],
+    "additional": []
+  }
+}

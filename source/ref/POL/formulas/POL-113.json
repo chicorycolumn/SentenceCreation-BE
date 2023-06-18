@@ -1,0 +1,82 @@
+{
+  "sentenceFormulaId": "POL-113",
+  "guide": "[I] my father gave me book.",
+  "sentenceStructure": [
+    {
+      "chunkId": "pro-1-I",
+      "specificIds": [
+        "pol-pro-PERSONAL"
+      ],
+      "person": [
+        "1per"
+      ]
+    },
+    {
+      "chunkId": "pro-2-my",
+      "form": [
+        "determiner"
+      ],
+      "specificIds": [
+        "pol-pro-POSSESSIVE"
+      ],
+      "agreeWith": "pro-1-I",
+      "agreeWith2": "npe-1-father"
+    },
+    {
+      "chunkId": "npe-1-father",
+      "andTags": [
+        "family"
+      ],
+      "number": [
+        "singular"
+      ]
+    },
+    {
+      "chunkId": "ver-1-gave",
+      "agreeWith": "npe-1-father",
+      "specificIds": [
+        "pol-ver-016-dać"
+      ],
+      "tenseDescription": [
+        "past pf"
+      ]
+    },
+    {
+      "chunkId": "pro-3-me",
+      "agreeWith": "pro-1-I",
+      "gcase": [
+        "dat"
+      ],
+      "formulaImportantTraitKeys": [
+        "gcase"
+      ],
+      "specificIds": [
+        "pol-pro-PERSONAL"
+      ]
+    },
+    {
+      "chunkId": "nco-2-book",
+      "specificIds": [
+        "pol-nco-016-książka"
+      ],
+      "gcase": [
+        "acc"
+      ],
+      "number": [
+        "singular"
+      ]
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "pro-2-my",
+        "npe-1-father",
+        "ver-1-gave",
+        "pro-3-me",
+        "nco-2-book"
+      ]
+    ],
+    "additional": []
+  }
+}
