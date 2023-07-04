@@ -111,7 +111,7 @@ exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
 exports.getTagsAndTopics = (currentLanguage) => {
   let envir = "ref";
 
-  const { wordsBank } = require(`../../source/${envir}/NEXUS/words.js`);
+  const wordsBank = nexusUtils.getNexusWithAllWordtypes(envir);
 
   allTags = gpUtils.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects(
     wordsBank,

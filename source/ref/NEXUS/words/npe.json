@@ -1,0 +1,63 @@
+[
+  {
+    "key": "npe-0000-woman",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-001-woman/manaroonie", "eng-npe-006-lady"],
+      "POL": ["pol-npe-011-kobieta/mezczyznaroonie"]
+    },
+    "papers": ["animate", "personTest1", "concrete"],
+    "topics": []
+  },
+  {
+    "key": "npe-0001-boy/girl/child",
+    "traductions": {
+      "SPA": ["spa-npe-003-chico/a", "spa-npe-004-niño/a"],
+      "ENG": ["eng-npe-002-boy/girl/child"],
+      "POL": ["pol-npe-012-chłop/dziew/dziecko"]
+    },
+    "papers": ["animate", "concrete", "personTest1"],
+    "topics": []
+  },
+  {
+    "key": "npe-0002-baby",
+    "traductions": {
+      "SPA": ["spa-npe-004-niño/a"],
+      "ENG": ["eng-npe-009-baby"],
+      "POL": ["^pol-npe-012-dziecko-£"]
+    },
+    "papers": ["animate", "concrete"],
+    "topics": []
+  },
+  {
+    "key": "npe-0003-father/mother/parent",
+    "traductions": {
+      "SPA": ["spa-npe-002-parentarooni"],
+      "ENG": ["eng-npe-003-parentarooni"],
+      "POL": ["pol-npe-013-parentarooni"]
+    },
+    "papers": ["animate", "family", "concrete", "personTest3"],
+    "topics": [],
+    "requiresHypernymyProportionAdjust": true
+  },
+  {
+    "key": "npe-0004-doctor",
+    "traductions": {
+      "SPA": ["spa-npe-001-medico"],
+      "ENG": ["eng-npe-005-doctor"],
+      "POL": ["pol-npe-015-lekarz"]
+    },
+    "papers": ["concrete", "animate", "personTest2", "job"],
+    "topics": []
+  },
+  {
+    "key": "npe-0006-brother/sister",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-008-brother"],
+      "POL": ["pol-npe-017-brat"]
+    },
+    "papers": [],
+    "topics": []
+  }
+]

@@ -5,6 +5,7 @@ const gpUtils = require("../generalPurposeUtils.js");
 const idUtils = require("../identityUtils.js");
 const uUtils = require("../universalUtils.js");
 const gdUtils = require("../grabDataUtils.js");
+const refObj = require("../../utils/reference/referenceObjects.js");
 
 exports.getLanguagesOfEquivalents = (sentenceFormulaId, env = "ref") => {
   let lang = sentenceFormulaId.split("-")[0];
@@ -43,12 +44,11 @@ exports.getEquivalents = (sentenceFormulaId, answerLanguage, env = "ref") => {
 exports.getNexusLemmaObjects = (lObj, env = "ref") => {
   let lang = idUtils.getLanguageFromLemmaObject(lObj);
 
-  const nexusWordsBank =
-    require(`../../source/${env}/NEXUS/words.js`).wordsBank;
-
   const wordtype = idUtils.getWordtypeLObj(lObj);
 
-  let resArr = nexusWordsBank[wordtype].filter((lemmaObject) =>
+  const nexusWordsBank = require(`../../source/${env}/NEXUS/words/${wordtype}.json`);
+
+  let resArr = nexusWordsBank.filter((lemmaObject) =>
     lemmaObject.traductions[lang].some((el) =>
       allLangUtils.compareLObjStems(el, lObj.id)
     )
@@ -167,8 +167,7 @@ exports.getTraductions = (
 };
 
 exports.checkAllLObjsArePresentInNexus = (env, lang) => {
-  const nexusWordsBank =
-    require(`../../source/${env}/NEXUS/words.js`).wordsBank;
+  const nexusWordsBank = exports.getNexusWithAllWordtypes(env);
 
   console.log("\n", "[1;35m " + `${env} ${lang}` + "[0m");
 
@@ -255,4 +254,20 @@ exports.checkAllLObjsArePresentInNexus = (env, lang) => {
   }
 
   return expect(x.problems).to.eql([]);
+};
+
+exports.getNexusWithAllWordtypes = (envir = "ref") => {
+  let wordtypes = refObj.wordtypes;
+
+  const wordsBank = {};
+
+  Object.keys(wordtypes).forEach((wordtype) => {
+    if (wordtype === "fix") {
+      return;
+    }
+    const words = require(`../../source/${envir}/NEXUS/words/${wordtype}.json`);
+    wordsBank[wordtype] = words;
+  });
+
+  return wordsBank;
 };

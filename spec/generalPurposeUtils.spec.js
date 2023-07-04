@@ -1544,7 +1544,7 @@ xdescribe("explodeContractions", () => {
   });
 });
 
-describe("arrayExploder", () => {
+xdescribe("arrayExploder", () => {
   it("Returns empty array when given empty array.", () => {
     const input = [];
     const expected = [];

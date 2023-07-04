@@ -1,0 +1,42 @@
+[
+  {
+    "key": "adj-0000-red",
+    "traductions": {
+      "SPA": ["spa-adj-001-rojo"],
+      "ENG": ["eng-adj-001-red"],
+      "POL": ["pol-adj-011-czerwony"]
+    },
+    "papers": ["colour"],
+    "topics": []
+  },
+  {
+    "key": "adj-0001-blue",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-adj-003-blue"],
+      "POL": ["pol-adj-013-niebieski"]
+    },
+    "papers": ["colour2"],
+    "topics": []
+  },
+  {
+    "key": "adj-0002-small",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-adj-002-small"],
+      "POL": ["pol-adj-012-mały"]
+    },
+    "papers": ["size"],
+    "topics": []
+  },
+  {
+    "key": "adj-0004-good",
+    "traductions": {
+      "SPA": ["spa-adj-002-bueno"],
+      "ENG": ["eng-adj-004-good"],
+      "POL": ["pol-adj-010-dobry"]
+    },
+    "papers": ["positive judgment"],
+    "topics": []
+  }
+]

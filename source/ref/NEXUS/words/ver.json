@@ -1,0 +1,82 @@
+[
+  {
+    "key": "ver-0000-be(essence)",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-ver-001-be"],
+      "POL": ["pol-ver-011-być"]
+    },
+    "papers": ["basic", "identity"],
+    "topics": []
+  },
+  {
+    "key": "ver-0002-have",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-ver-002-have"],
+      "POL": ["pol-ver-012-mieć"]
+    },
+    "papers": ["basic", "possession"],
+    "topics": []
+  },
+  {
+    "key": "ver-0003-read",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-ver-003-read"],
+      "POL": ["pol-ver-013-czytać"]
+    },
+    "papers": ["basic2"],
+    "topics": []
+  },
+  {
+    "key": "ver-0004-research",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-ver-004-research"],
+      "POL": ["pol-ver-014-badać"]
+    },
+    "papers": ["science"],
+    "topics": []
+  },
+  {
+    "key": "ver-0005-write",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-ver-005-write"],
+      "POL": ["pol-ver-015-pisać"]
+    },
+    "papers": ["basic3"],
+    "topics": []
+  },
+  {
+    "key": "ver-0006-give",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-ver-006-give"],
+      "POL": ["pol-ver-016-dać"]
+    },
+    "papers": [],
+    "topics": []
+  },
+  {
+    "key": "ver-0007-bear",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-ver-007-bear"],
+      "POL": ["pol-ver-017-znieść"]
+    },
+    "papers": ["allohomTesting2", "emotions"],
+    "topics": []
+  },
+  {
+    "key": "ver-0008-see",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-ver-008-see"],
+      "POL": ["pol-ver-018-widzieć"]
+    },
+    "papers": ["basic1"],
+    "topics": []
+  }
+]

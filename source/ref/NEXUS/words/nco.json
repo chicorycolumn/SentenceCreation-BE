@@ -1,0 +1,122 @@
+[
+  {
+    "key": "nco-0000-bear",
+    "traductions": {
+      "SPA": ["spa-nco-002-oso"],
+      "ENG": ["eng-nco-001-bear"],
+      "POL": ["pol-nco-011-niedźwiedź"]
+    },
+    "papers": ["allohomTesting2", "animal"],
+    "topics": []
+  },
+  {
+    "key": "nco-0001-onion",
+    "traductions": {
+      "SPA": ["spa-nco-001-cebolla"],
+      "ENG": ["eng-nco-002-onion"],
+      "POL": ["pol-nco-012-cebula"]
+    },
+    "papers": ["inanimate", "edible", "holdable", "concrete"],
+    "topics": []
+  },
+  {
+    "key": "nco-0002-tomato",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-003-tomato"],
+      "POL": ["pol-nco-013-pomidor"]
+    },
+    "papers": ["inanimate", "edible0", "holdable", "concrete"],
+    "topics": []
+  },
+  {
+    "key": "nco-0003-apple",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-004-apple"],
+      "POL": ["pol-nco-014-jabłko"]
+    },
+    "papers": ["inanimate", "edible", "holdable", "concrete"],
+    "topics": []
+  },
+  {
+    "key": "nco-0004-mirror",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-005-mirror"],
+      "POL": ["pol-nco-015-lustro", "pol-nco-004-zwierciadło"]
+    },
+    "papers": ["inanimate", "holdable", "concrete"],
+    "topics": []
+  },
+  {
+    "key": "nco-0005-book",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-006-book"],
+      "POL": ["pol-nco-016-książka"]
+    },
+    "papers": ["inanimate", "holdable", "concrete"],
+    "topics": []
+  },
+  {
+    "key": "nco-0006-door",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-007-door"],
+      "POL": ["pol-nco-017-drzwi"]
+    },
+    "papers": ["inanimate", "house", "concrete"],
+    "topics": []
+  },
+  {
+    "key": "nco-0007-sheep",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-008-sheep"],
+      "POL": ["pol-nco-018-owca"]
+    },
+    "papers": ["concrete", "animal0", "animate", "farmyard"],
+    "topics": []
+  },
+  {
+    "key": "nco-0008-dust",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-009-dust"],
+      "POL": ["pol-nco-019-pył"]
+    },
+    "papers": ["tantumTest1"],
+    "topics": []
+  },
+  {
+    "key": "nco-0009-underwear",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-010-underwear"],
+      "POL": ["pol-nco-010-majtki"]
+    },
+    "papers": ["inanimate", "holdable", "concrete", "wearable"],
+    "topics": []
+  },
+  {
+    "key": "nco-0010-rat",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-011-rat"],
+      "POL": ["pol-nco-001-szczur"]
+    },
+    "papers": ["concrete", "animal", "animate", "pet"],
+    "topics": []
+  },
+  {
+    "key": "nco-0011-tweezers",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-012-tweezers"],
+      "POL": ["pol-nco-002-pinceta"]
+    },
+    "papers": ["tantumTest1"],
+    "topics": []
+  }
+]

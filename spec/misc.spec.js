@@ -14,6 +14,20 @@ xdescribe("Sandbox.", () => {
   });
 });
 
+xdescribe("Sandbox.", () => {
+  it("Just write this json.", () => {
+    let d = [];
+
+    Object.keys(d).forEach((wordtype) => {
+      let data = d[wordtype];
+      // let path = `source/ref/NEXUS/words/${wordtype}.json`;
+      console.log(11, wordtype, data.length, path);
+      uUtils.writeJSON(path, data);
+      console.log("Done", wordtype);
+    });
+  });
+});
+
 xdescribe("Project Ophiucus: Bravo Wing: Task One.", () => {
   it("Take lobjs from Old Way of storing them", () => {
     // write as individual files with extra and inflections, plus skeletal lobjs arrays.
