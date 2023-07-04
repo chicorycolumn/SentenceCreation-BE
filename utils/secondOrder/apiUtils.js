@@ -387,7 +387,7 @@ exports.getEnChsForLemma = (lang, lemma, env = "ref") => {
 
   const langUtils = require(`../../source/all/${lang}/langUtils.js`);
 
-  let lObjs = apiUtils.getLObjsForLemma(lang, lemma, env);
+  let lObjs = apiUtils.getLObjsForLemma(lang, lemma, env, true);
 
   let enChs = lObjs.map((lObj) => {
     let wordtype = idUtils.getWordtypeLObj(lObj);
@@ -515,14 +515,16 @@ exports.getEnChsForLemma = (lang, lemma, env = "ref") => {
   return enChs;
 };
 
-exports.getLObjsForLemma = (lang, lemma, env = "ref") => {
+exports.getLObjsForLemma = (lang, lemma, env = "ref", addInflections) => {
   let matches = [];
 
   const lObjCallback = (lObj, res) => {
-    if (
-      lObj.lemma === lemma ||
-      uUtils.valueInObject(gdUtils.grabInflections(lObj.id, env), lemma)
-    ) {
+    let inflections = gdUtils.grabInflections(lObj.id, env);
+
+    if (lObj.lemma === lemma || uUtils.valueInObject(inflections, lemma)) {
+      if (addInflections) {
+        lObj.inflections = inflections;
+      }
       res.push(lObj);
     }
   };

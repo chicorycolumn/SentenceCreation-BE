@@ -1674,16 +1674,23 @@ exports.conformAnswerStructureToQuestionStructure = (
       );
     }
 
-    refObj.lemmaObjectTraitKeys[
-      answerLanguage
-    ].allowableTransfersFromQuestionStructure[
-      idUtils.getWordtypeStCh(answerStructureChunk)
-    ].forEach((traitKey) => {
+    let allowableTransfers =
+      refObj.lemmaObjectTraitKeys[answerLanguage]
+        .allowableTransfersFromQuestionStructure[
+        idUtils.getWordtypeStCh(answerStructureChunk)
+      ];
+
+    allowableTransfers.forEach((traitKey) => {
       //
       // STEP ONE: Update traits from list of allowable transfers.
       //
 
-      consol.logSpecial(5, ">>>>>>>>>>>>>>>>>", questionStructureChunk.chunkId);
+      consol.logSpecial(
+        5,
+        ">>>>>>>>>>>>>>>>>",
+        questionStructureChunk.chunkId,
+        traitKey
+      );
       consol.logSpecial(5, answerStructureChunk);
 
       //Step-T, dealing with hidden values.

@@ -3,6 +3,7 @@ const gpUtils = require("./generalPurposeUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const gdUtils = require("./grabDataUtils.js");
 const ivUtils = require("./secondOrder/inputValidationUtils.js");
+const nexusUtils = require("./secondOrder/nexusUtils.js");
 
 exports.grabLObjById = (lObjId, envir = "ref") => {
   let split = lObjId.split("-");
@@ -133,7 +134,7 @@ exports.grabSkeletonFormulas = (lang, envir = "ref") => {
   const fs = require("fs");
   let filenames = fs.readdirSync(`source/${envir}/${lang}/formulas`);
 
-  filenames.map((filename) => {
+  let res = filenames.map((filename) => {
     filename = filename.split(".")[0];
 
     let formulaObject = gdUtils.grabFormulaById(filename, false, lang, envir);
@@ -141,7 +142,7 @@ exports.grabSkeletonFormulas = (lang, envir = "ref") => {
     return [
       formulaObject.id,
       formulaObject.guide,
-      nexusUtils.getLanguagesOfEquivalents(formulaObject.id, env),
+      nexusUtils.getLanguagesOfEquivalents(formulaObject.id, envir),
     ];
   });
 

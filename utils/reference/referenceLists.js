@@ -386,7 +386,7 @@ exports.lemmaObjectTraitKeys = {
       nco: ["number"],
       npe: ["number", "semanticGender", "virilityDetail"],
       adj: ["form"],
-      ver: ["tenseDescription", "person", "number", "gender", "semanticGender"],
+      ver: ["tenseDescription", "person", "number"],
       pro: ["form", "person", "number", "gender", "semanticGender"],
       art: [],
       pre: [],
