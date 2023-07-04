@@ -3,8 +3,21 @@ const {
   fetchWordsByCriteria,
   fetchFormulaTopics,
 } = require("../models/tags.model");
+const { fetchAvailableNexusId } = require("../models/info.model");
 const { fetchChunks } = require("../models/chunks.model");
 const { fetchFormulas, fetchFormulaIds } = require("../models/formulas.model");
+
+exports.getAvailableNexusId = (req, res, next) => {
+  fetchAvailableNexusId(req)
+    .then((responseObj) => {
+      if (responseObj.info) {
+        res.status(200).send(responseObj);
+      } else {
+        //Beta else what?
+      }
+    })
+    .catch((err) => next(err));
+};
 
 exports.getChunks = (req, res, next) => {
   fetchChunks(req)

@@ -18,6 +18,25 @@ const allLangUtils = require("../../utils/allLangUtils.js");
 const refFxn = require("../reference/referenceFunctions.js");
 const { fetchPalette } = require("../../models/palette.model.js");
 
+exports.getAnAvailableNexusId = (env = "ref") => {
+  const existingNexusIds =
+    require(`../../source/${env}/NEXUS/sentenceFormulas.js`).sentenceFormulas.map(
+      (nex) => nex.key
+    );
+
+  let i = 1;
+  while (i <= 99999) {
+    let zeroFilled = "00000" + String(i);
+    let key = `SF-${zeroFilled.slice(-5)}`;
+    console.log(key);
+    if (!existingNexusIds.includes(key)) {
+      return key;
+    }
+    i++;
+  }
+  return "failed to find available nexus id";
+};
+
 exports.getSentenceFormulas = (
   questionFormulaId,
   answerLanguage,
