@@ -1,0 +1,24 @@
+{
+  "id": "POL-default",
+  "guide": "1 je 2.",
+  "sentenceStructure": [
+    {
+      "chunkId": "npe-1",
+      "andTags": ["personTest1"],
+      "number": ["singular"]
+    },
+    {
+      "chunkId": "fix-1",
+      "chunkValue": "je"
+    },
+    {
+      "chunkId": "nco-2",
+      "andTags": ["edible"],
+      "gcase": ["acc"]
+    }
+  ],
+  "orders": {
+    "primary": [["npe-1", "fix-1", "nco-2"]],
+    "additional": []
+  }
+}
