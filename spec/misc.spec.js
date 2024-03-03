@@ -4,7 +4,7 @@ const gpUtils = require("../utils/generalPurposeUtils.js");
 const uUtils = require("../utils/universalUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const {
-  splitLemmaObjectsAndWriteAsJson,
+  splitLemmaObjectsFromBigJsonToIndividualJsons,
   addGuideSentenceToFormulaAndWriteAsJson,
 } = require("../utils/secondOrder/educatorUtils.js");
 
@@ -28,20 +28,12 @@ xdescribe("Sandbox.", () => {
   });
 });
 
-xdescribe("Project Ophiucus: Bravo Wing: Task One.", () => {
-  it("Take lobjs from Old Way of storing them", () => {
-    // write as individual files with extra and inflections, plus skeletal lobjs arrays.
-    let envs = ["dev", "ref"];
-    let langs = ["POL", "ENG", "SPA"];
+describe("Project Ophiucus: Bravo Wing: Task One.", () => {
+  it.only("Take large json dicts of lobjs from Scraper and separate into individual files for BE", () => {
+    let [e, l, suffix] = ["prod", "ENG", "_batch_01_TGT"];
+    // let [e, l, suffix] = ['prod', 'POL', '_batch_01_SRC']
 
-    envs.forEach((e) => {
-      langs.forEach((l) => {
-        if (e === "dev" && l === "SPA") {
-          return;
-        }
-        splitLemmaObjectsAndWriteAsJson(e, l);
-      });
-    });
+    splitLemmaObjectsFromBigJsonToIndividualJsons(e, l, suffix);
   });
   it("Take formulas from Old Way of storing them", () => {
     // add guideSentence.

@@ -346,7 +346,50 @@ exports.markPlayerAnswer = (lang, correctArr, input) => {
   return bool;
 };
 
-exports.splitLemmaObjectsAndWriteAsJson = (e, l) => {
+exports.splitLemmaObjectsFromBigJsonToIndividualJsons = (e, l, suffix = "") => {
+  fs.mkdirSync(`source/${e}/${l}/words`);
+
+  ["adj", "art", "nco", "npe", "pre", "pro", "ver"].forEach((wordtype) => {
+    let inputPath = `source/${e}/${l}/raw/${wordtype}${suffix}.json`;
+    let outputPath = `source/${e}/${l}/raw/${wordtype}.json`;
+
+    if (fs.existsSync(inputPath)) {
+      const words = require("../../" + inputPath);
+      if (!words) {
+        return;
+      }
+
+      let skeletons = [];
+      let meats = [];
+
+      words.forEach((word) => {
+        let meat = {
+          inflections: word.inflections,
+        };
+        if (word.otherShapes) {
+          meat.extra = { otherShapes: word.otherShapes };
+        }
+        meats.push([word.id, meat]);
+
+        delete word.inflections;
+        delete word.otherShapes;
+
+        skeletons.push(word);
+      });
+
+      uUtils.writeJSON(outputPath, skeletons);
+      fs.mkdirSync(`source/${e}/${l}/words/${wordtype}`);
+      meats.forEach((meatArr) => {
+        uUtils.writeJSON(
+          `source/${e}/${l}/words/${wordtype}/${meatArr[0]}.json`,
+          meatArr[1]
+        );
+      });
+    }
+  });
+};
+
+exports.splitLemmaObjectsAndWriteAsJsonFromJsDict = (e, l) => {
   fs.mkdirSync(`source/${e}/${l}/words`);
 
   const { wordsBank } = require(`../../source/${e}/${l}/words.js`);
