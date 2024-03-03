@@ -1,0 +1,9423 @@
+[
+  {
+    "key": "ver-0001-be",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0001-be"
+      ],
+      "POL": [
+        "pol-ver-0001-być"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0002-have",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0002-have"
+      ],
+      "POL": [
+        "pol-ver-0003-mieć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "possession"
+    ]
+  },
+  {
+    "key": "ver-0003-create",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0010-create",
+        "eng-ver-0005-make(create)"
+      ],
+      "POL": [
+        "pol-ver-0006-robić(make)",
+        "pol-ver-0008-zrobić(make)",
+        "pol-ver-0959-stwarzać",
+        "pol-ver-0960-stworzyć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "hobbies"
+    ]
+  },
+  {
+    "key": "ver-0004-do(general)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0003-do(general)"
+      ],
+      "POL": [
+        "pol-ver-0005-robić(do)",
+        "pol-ver-0007-zrobić(do)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0005-do(perform)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0004-do(perform)",
+        "eng-ver-0006-make(perform)",
+        "eng-ver-0227-carryout",
+        "eng-ver-0700-perform(carry out)"
+      ],
+      "POL": [
+        "pol-ver-0258-dokonywać",
+        "pol-ver-0259-dokonać",
+        "pol-ver-0864-przeprowadzić(carry out)",
+        "pol-ver-0866-przeprowadzać(carry out)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "school",
+      "work",
+      "money"
+    ]
+  },
+  {
+    "key": "ver-0006-stand",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0011-stand(on your feet)"
+      ],
+      "POL": [
+        "pol-ver-0009-stać(stand)",
+        "pol-ver-0012-stanąć"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "key": "ver-0007-become",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0013-become"
+      ],
+      "POL": [
+        "pol-ver-0013-stawać",
+        "pol-ver-0010-stać(become)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0008-getup(out of bed)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0014-getup"
+      ],
+      "POL": [
+        "pol-ver-0014-wstać",
+        "pol-ver-0015-wstawać"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "key": "ver-0009-take",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0016-take(general)"
+      ],
+      "POL": [
+        "pol-ver-0016-brać",
+        "pol-ver-0017-wziąć"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "social glue"
+    ]
+  },
+  {
+    "key": "ver-0010-run(around)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0018-run(around)",
+        "eng-ver-0021-jog",
+        "eng-ver-0022-gojogging"
+      ],
+      "POL": [
+        "pol-ver-0018-biegać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "body",
+      "sport",
+      "locomotion"
+    ]
+  },
+  {
+    "key": "ver-0011-run(to)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0019-run(to)"
+      ],
+      "POL": [
+        "pol-ver-0019-pobiec",
+        "pol-ver-0020-biec"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "sport",
+      "locomotion"
+    ]
+  },
+  {
+    "key": "ver-0012-sitdown",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0023-sitdown",
+        "eng-ver-0024-sit"
+      ],
+      "POL": [
+        "pol-ver-0021-siąść",
+        "pol-ver-0022-siedzieć",
+        "pol-ver-0023-siadać",
+        "pol-ver-0024-usiąść"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "body",
+      "school"
+    ]
+  },
+  {
+    "key": "ver-0013-falldown",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0025-falldown",
+        "eng-ver-0026-fall(person)"
+      ],
+      "POL": [
+        "pol-ver-0025-upadać",
+        "pol-ver-0026-upaść"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "medicine"
+    ]
+  },
+  {
+    "key": "ver-0014-prepare",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0028-prepare"
+      ],
+      "POL": [
+        "pol-ver-0027-przygotować",
+        "pol-ver-0028-przygotowywać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "planning",
+      "inside",
+      "restaurant",
+      "kitchen"
+    ]
+  },
+  {
+    "key": "ver-0015-put",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0029-put"
+      ],
+      "POL": [
+        "pol-ver-0029-położyć",
+        "pol-ver-0030-kłaść",
+        "pol-ver-0789-postawić",
+        "pol-ver-0790-stawiać"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "geometry"
+    ]
+  },
+  {
+    "key": "ver-0016-putin",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0030-putin"
+      ],
+      "POL": [
+        "pol-ver-0031-wkładać",
+        "pol-ver-0032-włożyć"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "geometry"
+    ]
+  },
+  {
+    "key": "ver-0017-change",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0031-change(general)"
+      ],
+      "POL": [
+        "pol-ver-0033-zmienić",
+        "pol-ver-0034-zmieniać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "time",
+      "appearance"
+    ]
+  },
+  {
+    "key": "ver-0018-count(numbers)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0033-count(numbers)"
+      ],
+      "POL": [
+        "pol-ver-0035-policzyć",
+        "pol-ver-0036-liczyć(count)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "school",
+      "math"
+    ]
+  },
+  {
+    "key": "ver-0019-counton",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0035-counton"
+      ],
+      "POL": [
+        "pol-ver-0037-liczyć(count on)"
+      ]
+    },
+    "papers": [
+      "thought"
+    ],
+    "topics": [
+      "people",
+      "planning",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0020-count(matter)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0034-count(matter)",
+        "eng-ver-0036-matter"
+      ],
+      "POL": [
+        "pol-ver-0038-liczyć(matter)"
+      ]
+    },
+    "papers": [
+      "helper"
+    ],
+    "topics": [
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0021-give",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0037-give"
+      ],
+      "POL": [
+        "pol-ver-0039-dać(give)",
+        "pol-ver-0041-dawać(give)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "possession",
+      "social glue",
+      "request and permission"
+    ]
+  },
+  {
+    "key": "ver-0022-let",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0038-let",
+        "eng-ver-0039-allow",
+        "eng-ver-0040-permit"
+      ],
+      "POL": [
+        "pol-ver-0040-dać(let)",
+        "pol-ver-0042-dawać(let)",
+        "pol-ver-0246-dopuścić",
+        "pol-ver-0247-dopuszczać",
+        "pol-ver-0879-pozwalać",
+        "pol-ver-0880-pozwolić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "request and permission"
+    ]
+  },
+  {
+    "key": "ver-0023-return(travel)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0041-return(travel)",
+        "eng-ver-0043-comeback"
+      ],
+      "POL": [
+        "pol-ver-0043-wrócić",
+        "pol-ver-0044-wracać"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "travel"
+    ]
+  },
+  {
+    "key": "ver-0024-prefer",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0044-prefer"
+      ],
+      "POL": [
+        "pol-ver-0045-woleć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0025-happen",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0045-happen"
+      ],
+      "POL": [
+        "pol-ver-0046-dziać",
+        "pol-ver-0011-stać(happen)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "planning"
+    ]
+  },
+  {
+    "key": "ver-0026-takeplace",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0438-takeplace",
+        "eng-ver-0439-occur"
+      ],
+      "POL": [
+        "pol-ver-0500-nastąpić",
+        "pol-ver-0501-następować",
+        "pol-ver-0588-odbyć(occur)",
+        "pol-ver-0590-odbywać(occur)",
+        "pol-ver-0982-występować(occur)",
+        "pol-ver-0984-wystąpić(occur)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "time",
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0027-eat",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0046-eat"
+      ],
+      "POL": [
+        "pol-ver-0047-jeść",
+        "pol-ver-0048-zjeść"
+      ]
+    },
+    "papers": [
+      "food",
+      "holdable"
+    ],
+    "topics": [
+      "body",
+      "inside",
+      "restaurant",
+      "kitchen"
+    ]
+  },
+  {
+    "key": "ver-0028-eatup",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0047-eatup"
+      ],
+      "POL": [
+        "pol-ver-0049-zjadać"
+      ]
+    },
+    "papers": [
+      "food",
+      "holdable"
+    ],
+    "topics": [
+      "body",
+      "inside",
+      "restaurant",
+      "kitchen"
+    ]
+  },
+  {
+    "key": "ver-0029-can(able)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0048-can(able)",
+        "eng-ver-0051-beableto",
+        "eng-ver-0052-knowhow"
+      ],
+      "POL": [
+        "pol-ver-0051-umieć",
+        "pol-ver-0052-móc(can or be able to)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "hobbies"
+    ]
+  },
+  {
+    "key": "ver-0030-can(allowed)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0049-can(allowed)",
+        "eng-ver-0053-beallowed"
+      ],
+      "POL": [
+        "pol-ver-0053-móc(can or be allowed)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "request and permission"
+    ]
+  },
+  {
+    "key": "ver-0031-can(might)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0050-can(might)",
+        "eng-ver-0054-may",
+        "eng-ver-0055-might"
+      ],
+      "POL": [
+        "pol-ver-0054-móc(can may might)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "planning",
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0032-want",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0056-want"
+      ],
+      "POL": [
+        "pol-ver-0055-chcieć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0033-drinkup",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0057-drinkup"
+      ],
+      "POL": [
+        "pol-ver-0056-wypijać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "inside",
+      "restaurant",
+      "kitchen"
+    ]
+  },
+  {
+    "key": "ver-0034-drink",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0058-drink"
+      ],
+      "POL": [
+        "pol-ver-0057-wypić",
+        "pol-ver-0058-pić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "body",
+      "inside",
+      "restaurant",
+      "kitchen"
+    ]
+  },
+  {
+    "key": "ver-0035-cook",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0059-cook"
+      ],
+      "POL": [
+        "pol-ver-0059-ugotować(cook)",
+        "pol-ver-0061-gotować(cook)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "body",
+      "inside",
+      "restaurant",
+      "kitchen"
+    ]
+  },
+  {
+    "key": "ver-0036-boil",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0060-boil"
+      ],
+      "POL": [
+        "pol-ver-0060-ugotować(boil)",
+        "pol-ver-0062-gotować(boil)"
+      ]
+    },
+    "papers": [
+      "temperature",
+      "weather"
+    ],
+    "topics": [
+      "physics",
+      "outdoor",
+      "geography",
+      "science"
+    ]
+  },
+  {
+    "key": "ver-0037-need",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0061-need"
+      ],
+      "POL": [
+        "pol-ver-0063-potrzebować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "request and permission"
+    ]
+  },
+  {
+    "key": "ver-0038-must",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0062-must",
+        "eng-ver-0063-haveto",
+        "eng-ver-0064-needto"
+      ],
+      "POL": [
+        "pol-ver-0064-musieć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "request and permission"
+    ]
+  },
+  {
+    "key": "ver-0039-bring",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0065-bring"
+      ],
+      "POL": [
+        "pol-ver-0065-przynieść(bring)",
+        "pol-ver-0067-przynosić(bring)"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "social glue"
+    ]
+  },
+  {
+    "key": "ver-0040-fetch",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0066-fetch"
+      ],
+      "POL": [
+        "pol-ver-0066-przynieść(fetch)",
+        "pol-ver-0068-przynosić(fetch)"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "social glue"
+    ]
+  },
+  {
+    "key": "ver-0041-descend",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0067-descend",
+        "eng-ver-0068-godown"
+      ],
+      "POL": [
+        "pol-ver-0069-schodzić",
+        "pol-ver-0070-zejść"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "locomotion"
+    ]
+  },
+  {
+    "key": "ver-0042-arrive(foot)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0069-arrive(foot)",
+        "eng-ver-0071-come(foot)"
+      ],
+      "POL": [
+        "pol-ver-0071-przychodzić",
+        "pol-ver-0073-przyjść"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "travel"
+    ]
+  },
+  {
+    "key": "ver-0043-arrive(vehicle)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0070-arrive(vehicle)",
+        "eng-ver-0072-come(vehicle)"
+      ],
+      "POL": [
+        "pol-ver-0072-przyjechać",
+        "pol-ver-0074-przyjeżdżać",
+        "pol-ver-0272-dojechać",
+        "pol-ver-0273-dojeżdżać"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "locomotion"
+    ]
+  },
+  {
+    "key": "ver-0044-go(foot)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0074-go(foot)"
+      ],
+      "POL": [
+        "pol-ver-0075-iść(go)",
+        "pol-ver-0077-pójść(go)",
+        "pol-ver-0079-chodzić(go)"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "locomotion"
+    ]
+  },
+  {
+    "key": "ver-0045-walk",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0076-walk"
+      ],
+      "POL": [
+        "pol-ver-0076-iść(walk)",
+        "pol-ver-0078-pójść(walk)",
+        "pol-ver-0080-chodzić(walk)"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "locomotion"
+    ]
+  },
+  {
+    "key": "ver-0046-go(vehicle)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0075-go(vehicle)"
+      ],
+      "POL": [
+        "pol-ver-0081-jechać(go)",
+        "pol-ver-0083-pojechać(go)",
+        "pol-ver-0085-jeździć(go)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "key": "ver-0047-drive",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0077-drive(intransitive)"
+      ],
+      "POL": [
+        "pol-ver-0082-jechać(drive)",
+        "pol-ver-0084-pojechać(drive)",
+        "pol-ver-0086-jeździć(drive)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "key": "ver-0048-think",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0079-think"
+      ],
+      "POL": [
+        "pol-ver-0087-pomyśleć",
+        "pol-ver-0088-myśleć"
+      ]
+    },
+    "papers": [
+      "thought"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0049-turnoff",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0080-turnoff",
+        "eng-ver-0081-switchoff"
+      ],
+      "POL": [
+        "pol-ver-0089-wyłączać(turn off)",
+        "pol-ver-0091-wyłączyć(turn off)"
+      ]
+    },
+    "papers": [
+      "holdable",
+      "household object"
+    ],
+    "topics": [
+      "inside",
+      "home",
+      "tech"
+    ]
+  },
+  {
+    "key": "ver-0050-exclude",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0082-exclude"
+      ],
+      "POL": [
+        "pol-ver-0090-wyłączać(exclude)",
+        "pol-ver-0092-wyłączyć(exclude)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0051-open",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0083-open"
+      ],
+      "POL": [
+        "pol-ver-0093-otwierać",
+        "pol-ver-0094-otworzyć"
+      ]
+    },
+    "papers": [
+      "holdable",
+      "household object"
+    ],
+    "topics": [
+      "body",
+      "inside",
+      "home"
+    ]
+  },
+  {
+    "key": "ver-0052-tell",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0084-tell",
+        "eng-ver-0085-say"
+      ],
+      "POL": [
+        "pol-ver-0095-powiedzieć",
+        "pol-ver-0096-mówić(talk)",
+        "pol-ver-0166-opowiedzieć",
+        "pol-ver-0167-opowiadać",
+        "pol-ver-0752-oznajmić",
+        "pol-ver-0753-oznajmiać"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "body",
+      "language"
+    ]
+  },
+  {
+    "key": "ver-0053-speak(talk)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0086-speak(talk)",
+        "eng-ver-0088-talk",
+        "eng-ver-0089-converse",
+        "eng-ver-0090-chat"
+      ],
+      "POL": [
+        "pol-ver-0096-mówić(talk)",
+        "pol-ver-0098-porozmawiać",
+        "pol-ver-0099-rozmawiać",
+        "pol-ver-0390-gadać",
+        "pol-ver-0765-pogadać"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "body",
+      "language"
+    ]
+  },
+  {
+    "key": "ver-0054-end",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0091-end(intransitive)",
+        "eng-ver-0093-finish(intransitive)"
+      ],
+      "POL": [
+        "pol-ver-0100-kończyć",
+        "pol-ver-0101-skończyć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "time"
+    ]
+  },
+  {
+    "key": "ver-0055-sleep",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0095-sleep"
+      ],
+      "POL": [
+        "pol-ver-0102-spać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "key": "ver-0056-lose(possession)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0096-lose(possession)"
+      ],
+      "POL": [
+        "pol-ver-0103-tracić(lose)",
+        "pol-ver-0105-stracić(lose)",
+        "pol-ver-0107-utracić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "possession"
+    ]
+  },
+  {
+    "key": "ver-0057-waste",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0099-waste"
+      ],
+      "POL": [
+        "pol-ver-0104-tracić(waste)",
+        "pol-ver-0106-stracić(waste)",
+        "pol-ver-0556-marnować",
+        "pol-ver-0557-zmarnować"
+      ]
+    },
+    "papers": [
+      "money"
+    ],
+    "topics": [
+      "business",
+      "shopping",
+      "travel"
+    ]
+  },
+  {
+    "key": "ver-0058-sell",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0100-sell"
+      ],
+      "POL": [
+        "pol-ver-0108-sprzedawać",
+        "pol-ver-0109-sprzedać"
+      ]
+    },
+    "papers": [
+      "money"
+    ],
+    "topics": [
+      "business",
+      "shopping"
+    ]
+  },
+  {
+    "key": "ver-0059-pay",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0101-pay"
+      ],
+      "POL": [
+        "pol-ver-0110-zapłacić",
+        "pol-ver-0111-płacić"
+      ]
+    },
+    "papers": [
+      "money"
+    ],
+    "topics": [
+      "business",
+      "shopping"
+    ]
+  },
+  {
+    "key": "ver-0060-organise(general)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0102-organise(general)"
+      ],
+      "POL": [
+        "pol-ver-0113-organizować",
+        "pol-ver-0114-zorganizować"
+      ]
+    },
+    "papers": [
+      "frequency"
+    ],
+    "topics": [
+      "business"
+    ]
+  },
+  {
+    "key": "ver-0061-switchon",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0104-switchon",
+        "eng-ver-0105-turnon(device)"
+      ],
+      "POL": [
+        "pol-ver-0115-włączyć(switch on)",
+        "pol-ver-0117-włączać(switch on)"
+      ]
+    },
+    "papers": [
+      "holdable",
+      "household object"
+    ],
+    "topics": [
+      "inside",
+      "home",
+      "tech"
+    ]
+  },
+  {
+    "key": "ver-0062-include(include)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0107-include(include)"
+      ],
+      "POL": [
+        "pol-ver-0116-włączyć(include)",
+        "pol-ver-0118-włączać(include)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0063-enter",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0109-enter",
+        "eng-ver-0110-gointo"
+      ],
+      "POL": [
+        "pol-ver-0119-wejść",
+        "pol-ver-0120-wchodzić"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "locomotion"
+    ]
+  },
+  {
+    "key": "ver-0064-wash",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0111-wash",
+        "eng-ver-0112-clean(wash)"
+      ],
+      "POL": [
+        "pol-ver-0121-umyć",
+        "pol-ver-0122-myć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "body",
+      "daily routine"
+    ]
+  },
+  {
+    "key": "ver-0065-watch(film)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0114-watch(film)"
+      ],
+      "POL": [
+        "pol-ver-0123-oglądać",
+        "pol-ver-0124-obejrzeć"
+      ]
+    },
+    "papers": [
+      "perception"
+    ],
+    "topics": [
+      "sense and perception"
+    ]
+  },
+  {
+    "key": "ver-0066-use(use)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0116-use(use)"
+      ],
+      "POL": [
+        "pol-ver-0125-używać",
+        "pol-ver-0126-użyć",
+        "pol-ver-0198-korzystać(use)",
+        "pol-ver-0201-skorzystać(use)",
+        "pol-ver-0991-posługiwać"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "key": "ver-0067-lookfor",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0118-lookfor",
+        "eng-ver-0119-searchfor"
+      ],
+      "POL": [
+        "pol-ver-0127-szukać",
+        "pol-ver-0844-poszukiwać",
+        "pol-ver-0845-poszukać"
+      ]
+    },
+    "papers": [
+      "movement",
+      "perception"
+    ],
+    "topics": [
+      "body",
+      "sense and perception"
+    ]
+  },
+  {
+    "key": "ver-0068-clean(tidy)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0113-clean(tidy)",
+        "eng-ver-0120-cleanup(tidy)",
+        "eng-ver-0122-tidyup",
+        "eng-ver-0123-tidy"
+      ],
+      "POL": [
+        "pol-ver-0128-sprzątać",
+        "pol-ver-0232-posprzątać"
+      ]
+    },
+    "papers": [
+      "holdable",
+      "household object"
+    ],
+    "topics": [
+      "body",
+      "inside",
+      "daily routine",
+      "home"
+    ]
+  },
+  {
+    "key": "ver-0069-live(be alive)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0124-live(be alive)"
+      ],
+      "POL": [
+        "pol-ver-0129-żyć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "body",
+      "biology",
+      "medicine"
+    ]
+  },
+  {
+    "key": "ver-0070-askfor",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0126-askfor"
+      ],
+      "POL": [
+        "pol-ver-0130-poprosić",
+        "pol-ver-0131-prosić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "request and permission"
+    ]
+  },
+  {
+    "key": "ver-0071-get(receive)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0127-get(receive)",
+        "eng-ver-0129-receive"
+      ],
+      "POL": [
+        "pol-ver-0132-dostawać",
+        "pol-ver-0133-dostać",
+        "pol-ver-0738-otrzymywać",
+        "pol-ver-0739-otrzymać"
+      ]
+    },
+    "papers": [
+      "helper"
+    ],
+    "topics": [
+      "travel",
+      "possession"
+    ]
+  },
+  {
+    "key": "ver-0072-givebirth",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0130-givebirth",
+        "eng-ver-0131-beborn"
+      ],
+      "POL": [
+        "pol-ver-0134-urodzić",
+        "pol-ver-0135-rodzić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "body",
+      "time",
+      "biology",
+      "medicine"
+    ]
+  },
+  {
+    "key": "ver-0073-exit",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0132-exit",
+        "eng-ver-0133-goout",
+        "eng-ver-0134-leave(foot)"
+      ],
+      "POL": [
+        "pol-ver-0136-wyjść",
+        "pol-ver-0137-wychodzić"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "locomotion"
+    ]
+  },
+  {
+    "key": "ver-0074-like",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0139-like"
+      ],
+      "POL": [
+        "pol-ver-0138-lubić",
+        "pol-ver-0139-polubić",
+        "pol-ver-0207-*podobać",
+        "pol-ver-0208-*spodobać"
+      ]
+    },
+    "papers": [
+      "positive judgment"
+    ],
+    "topics": [
+      "mental",
+      "judgment"
+    ]
+  },
+  {
+    "key": "ver-0075-enjoy",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0220-enjoy"
+      ],
+      "POL": [
+        "pol-ver-0138-lubić",
+        "pol-ver-0139-polubić",
+        "pol-ver-0193-uwielbiać",
+        "pol-ver-0194-uwielbić",
+        "pol-ver-0248-*cieszyć",
+        "pol-ver-0249-*ucieszyć"
+      ]
+    },
+    "papers": [
+      "positive judgment"
+    ],
+    "topics": [
+      "mental",
+      "judgment"
+    ]
+  },
+  {
+    "key": "ver-0076-adore",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0186-adore",
+        "eng-ver-0187-love(adore)",
+        "eng-ver-0188-love(romantic)"
+      ],
+      "POL": [
+        "pol-ver-0193-uwielbiać",
+        "pol-ver-0194-uwielbić",
+        "pol-ver-0218-kochać",
+        "pol-ver-0219-pokochać"
+      ]
+    },
+    "papers": [
+      "positive judgment"
+    ],
+    "topics": [
+      "people",
+      "love",
+      "mental",
+      "judgment"
+    ]
+  },
+  {
+    "key": "ver-0077-fallinlove",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0195-fallinlove",
+        "eng-ver-0196-fallfor"
+      ],
+      "POL": [
+        "pol-ver-0220-zakochać"
+      ]
+    },
+    "papers": [
+      "positive judgment"
+    ],
+    "topics": [
+      "people",
+      "love",
+      "mental",
+      "judgment"
+    ]
+  },
+  {
+    "key": "ver-0078-send(send)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0140-send(send)"
+      ],
+      "POL": [
+        "pol-ver-0140-wysyłać(send)",
+        "pol-ver-0142-wysłać(send)",
+        "pol-ver-0947-przesłać",
+        "pol-ver-0948-przesyłać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "travel",
+      "communications"
+    ]
+  },
+  {
+    "key": "ver-0079-send(mail)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0141-send(mail)",
+        "eng-ver-0142-mail"
+      ],
+      "POL": [
+        "pol-ver-0141-wysyłać(mail)",
+        "pol-ver-0143-wysłać(mail)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "travel",
+      "communications"
+    ]
+  },
+  {
+    "key": "ver-0080-win",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0143-win"
+      ],
+      "POL": [
+        "pol-ver-0144-wygrywać",
+        "pol-ver-0145-wygrać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "sport"
+    ]
+  },
+  {
+    "key": "ver-0081-decide",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0144-decide"
+      ],
+      "POL": [
+        "pol-ver-0146-decydować",
+        "pol-ver-0147-zdecydować",
+        "pol-ver-0815-postanawiać",
+        "pol-ver-0816-postanowić"
+      ]
+    },
+    "papers": [
+      "thought"
+    ],
+    "topics": [
+      "planning",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0082-believe",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0145-believe",
+        "eng-ver-0146-trust"
+      ],
+      "POL": [
+        "pol-ver-0148-uwierzyć",
+        "pol-ver-0149-wierzyć"
+      ]
+    },
+    "papers": [
+      "thought"
+    ],
+    "topics": [
+      "religion",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0083-havefun",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0147-havefun",
+        "eng-ver-0148-play(have fun)"
+      ],
+      "POL": [
+        "pol-ver-0150-bawić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "hobbies"
+    ]
+  },
+  {
+    "key": "ver-0084-buy",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0152-buy",
+        "eng-ver-0153-purchase",
+        "eng-ver-0415-acquire"
+      ],
+      "POL": [
+        "pol-ver-0151-kupować",
+        "pol-ver-0152-kupić",
+        "pol-ver-0465-nabyć",
+        "pol-ver-0466-nabywać"
+      ]
+    },
+    "papers": [
+      "money"
+    ],
+    "topics": [
+      "business",
+      "shopping"
+    ]
+  },
+  {
+    "key": "ver-0085-die",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0154-die",
+        "eng-ver-0315-perish"
+      ],
+      "POL": [
+        "pol-ver-0153-umrzeć",
+        "pol-ver-0154-umierać",
+        "pol-ver-0353-ginąć",
+        "pol-ver-0354-zginąć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "religion",
+      "philosophy and ethics",
+      "biology"
+    ]
+  },
+  {
+    "key": "ver-0086-try(to)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0156-try(to)",
+        "eng-ver-0157-attempt"
+      ],
+      "POL": [
+        "pol-ver-0155-próbować(plus verb)",
+        "pol-ver-0157-spróbować(plus verb)",
+        "pol-ver-0804-postarać",
+        "pol-ver-0805-starać"
+      ]
+    },
+    "papers": [
+      "helper"
+    ],
+    "topics": [
+      "hobbies"
+    ]
+  },
+  {
+    "key": "ver-0087-try(plus noun)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0155-try(plus noun)"
+      ],
+      "POL": [
+        "pol-ver-0156-próbować(plus noun)",
+        "pol-ver-0158-spróbować(plus noun)"
+      ]
+    },
+    "papers": [
+      "helper"
+    ],
+    "topics": [
+      "hobbies"
+    ]
+  },
+  {
+    "key": "ver-0088-leave(behind)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0136-leave(behind)",
+        "eng-ver-0158-leavebehind"
+      ],
+      "POL": [
+        "pol-ver-0159-zostawiać",
+        "pol-ver-0160-zostawić"
+      ]
+    },
+    "papers": [
+      "helper"
+    ],
+    "topics": [
+      "possession"
+    ]
+  },
+  {
+    "key": "ver-0089-close",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0159-close",
+        "eng-ver-0160-shut"
+      ],
+      "POL": [
+        "pol-ver-0161-zamknąć(close)",
+        "pol-ver-0163-zamykać(close)"
+      ]
+    },
+    "papers": [
+      "holdable",
+      "household object"
+    ],
+    "topics": [
+      "inside",
+      "home"
+    ]
+  },
+  {
+    "key": "ver-0090-lock",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0161-lock"
+      ],
+      "POL": [
+        "pol-ver-0162-zamknąć(lock)",
+        "pol-ver-0164-zamykać(lock)"
+      ]
+    },
+    "papers": [
+      "holdable",
+      "household object"
+    ],
+    "topics": [
+      "inside",
+      "home"
+    ]
+  },
+  {
+    "key": "ver-0091-hate",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0162-hate",
+        "eng-ver-0163-detest",
+        "eng-ver-0164-despise"
+      ],
+      "POL": [
+        "pol-ver-0165-nienawidzić"
+      ]
+    },
+    "papers": [
+      "negative judgment"
+    ],
+    "topics": [
+      "mental",
+      "judgment"
+    ]
+  },
+  {
+    "key": "ver-0092-carry",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0165-carry"
+      ],
+      "POL": [
+        "pol-ver-0168-nieść",
+        "pol-ver-0169-nosić(carry)"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "travel"
+    ]
+  },
+  {
+    "key": "ver-0093-wear",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0166-wear"
+      ],
+      "POL": [
+        "pol-ver-0170-nosić(wear)",
+        "pol-ver-0968-miećnasobie",
+        "pol-ver-0969-założyć(wear)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "fashion"
+    ]
+  },
+  {
+    "key": "ver-0094-puton",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0509-puton(clothes)"
+      ],
+      "POL": [
+        "pol-ver-0975-zakładać(put on clothes)",
+        "pol-ver-0971-założyć(put on clothes)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "fashion"
+    ]
+  },
+  {
+    "key": "ver-0095-find",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0167-find"
+      ],
+      "POL": [
+        "pol-ver-0171-znaleźć",
+        "pol-ver-0172-znajdować",
+        "pol-ver-0640-odnaleźć",
+        "pol-ver-0641-odnajdywać"
+      ]
+    },
+    "papers": [
+      "perception"
+    ],
+    "topics": [
+      "spatial",
+      "sense and perception",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0096-wake",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0168-wake",
+        "eng-ver-0170-awake",
+        "eng-ver-0169-wakeup"
+      ],
+      "POL": [
+        "pol-ver-0173-obudzić",
+        "pol-ver-0174-budzić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "body",
+      "daily routine"
+    ]
+  },
+  {
+    "key": "ver-0097-thank",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0171-thank"
+      ],
+      "POL": [
+        "pol-ver-0175-podziękować",
+        "pol-ver-0176-dziękować"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental",
+      "social glue"
+    ]
+  },
+  {
+    "key": "ver-0098-lose(misplace)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0097-lose(misplace)",
+        "eng-ver-0172-mislay",
+        "eng-ver-0173-misplace"
+      ],
+      "POL": [
+        "pol-ver-0177-zgubić(lose)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "possession"
+    ]
+  },
+  {
+    "key": "ver-0099-getlost",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0174-getlost"
+      ],
+      "POL": [
+        "pol-ver-0178-zgubić(get lost)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "spatial"
+    ]
+  },
+  {
+    "key": "ver-0100-promise",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0175-promise"
+      ],
+      "POL": [
+        "pol-ver-0179-obiecywać",
+        "pol-ver-0180-obiecać"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental",
+      "social glue"
+    ]
+  },
+  {
+    "key": "ver-0101-hearout",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0176-hearout"
+      ],
+      "POL": [
+        "pol-ver-0181-wysłuchać",
+        "pol-ver-0182-wysłuchiwać"
+      ]
+    },
+    "papers": [
+      "speech",
+      "perception"
+    ],
+    "topics": [
+      "mental",
+      "social glue"
+    ]
+  },
+  {
+    "key": "ver-0102-repeat",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0177-repeat"
+      ],
+      "POL": [
+        "pol-ver-0183-powtórzyć",
+        "pol-ver-0184-powtarzać"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental",
+      "language"
+    ]
+  },
+  {
+    "key": "ver-0103-teach",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0178-teach"
+      ],
+      "POL": [
+        "pol-ver-0185-nauczyć(teach)",
+        "pol-ver-0187-nauczać(teach)",
+        "pol-ver-0204-uczyć(teach)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "school"
+    ]
+  },
+  {
+    "key": "ver-0104-learn",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0179-learn",
+        "eng-ver-0180-study(learn)"
+      ],
+      "POL": [
+        "pol-ver-0186-nauczyć(learn)",
+        "pol-ver-0188-nauczać(learn)",
+        "pol-ver-0205-uczyć(learn)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "school"
+    ]
+  },
+  {
+    "key": "ver-0105-train",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0182-train"
+      ],
+      "POL": [
+        "pol-ver-0993-szkolić",
+        "pol-ver-0994-wyszkolić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "business",
+      "school",
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0106-describe",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0183-describe"
+      ],
+      "POL": [
+        "pol-ver-0189-opisywać",
+        "pol-ver-0190-opisać"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0107-start",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0184-start",
+        "eng-ver-0185-begin"
+      ],
+      "POL": [
+        "pol-ver-0191-zaczynać",
+        "pol-ver-0192-zacząć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "hobbies",
+      "time"
+    ]
+  },
+  {
+    "key": "ver-0108-ask",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0189-ask"
+      ],
+      "POL": [
+        "pol-ver-0195-pytać",
+        "pol-ver-0196-zapytać",
+        "pol-ver-0197-spytać",
+        "pol-ver-0206-zapytywać"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental",
+      "social glue"
+    ]
+  },
+  {
+    "key": "ver-0109-benefit",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0190-benefit",
+        "eng-ver-0191-profit"
+      ],
+      "POL": [
+        "pol-ver-0199-korzystać(benefit)",
+        "pol-ver-0202-skorzystać(benefit)"
+      ]
+    },
+    "papers": [
+      "money"
+    ],
+    "topics": [
+      "business",
+      "shopping"
+    ]
+  },
+  {
+    "key": "ver-0110-use(takeadvantage)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0117-use(takeadvantage)",
+        "eng-ver-0192-takeadvantage"
+      ],
+      "POL": [
+        "pol-ver-0200-korzystać(take advantage)",
+        "pol-ver-0203-skorzystać(take advantage)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "love",
+      "violence"
+    ]
+  },
+  {
+    "key": "ver-0111-lose(game)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0098-lose(game)"
+      ],
+      "POL": [
+        "pol-ver-0209-przegrać",
+        "pol-ver-0210-przegrywać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "sport"
+    ]
+  },
+  {
+    "key": "ver-0112-listen",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0193-listen"
+      ],
+      "POL": [
+        "pol-ver-0211-słuchać",
+        "pol-ver-0212-posłuchać"
+      ]
+    },
+    "papers": [
+      "perception",
+      "speech"
+    ],
+    "topics": [
+      "sense and perception",
+      "mental",
+      "social glue"
+    ]
+  },
+  {
+    "key": "ver-0113-play(game)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0149-play(game)",
+        "eng-ver-0150-play(instrument)"
+      ],
+      "POL": [
+        "pol-ver-0213-grać",
+        "pol-ver-0214-zagrać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "sport",
+      "theatre",
+      "music"
+    ]
+  },
+  {
+    "key": "ver-0114-see",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0194-see"
+      ],
+      "POL": [
+        "pol-ver-0215-widzieć",
+        "pol-ver-0216-zobaczyć",
+        "pol-ver-0217-widywać"
+      ]
+    },
+    "papers": [
+      "perception"
+    ],
+    "topics": [
+      "sense and perception"
+    ]
+  },
+  {
+    "key": "ver-0115-lookat",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0197-lookat"
+      ],
+      "POL": [
+        "pol-ver-0221-patrzeć",
+        "pol-ver-0222-popatrzeć",
+        "pol-ver-1009-spojrzeć",
+        "pol-ver-1008-spoglądać"
+      ]
+    },
+    "papers": [
+      "perception"
+    ],
+    "topics": [
+      "sense and perception"
+    ]
+  },
+  {
+    "key": "ver-0116-live(reside)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0125-live(location)",
+        "eng-ver-0198-reside"
+      ],
+      "POL": [
+        "pol-ver-0223-mieszkać",
+        "pol-ver-0224-zamieszkać"
+      ]
+    },
+    "papers": [
+      "location"
+    ],
+    "topics": [
+      "spatial"
+    ]
+  },
+  {
+    "key": "ver-0117-reply",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0199-reply",
+        "eng-ver-0200-respond",
+        "eng-ver-0201-answer"
+      ],
+      "POL": [
+        "pol-ver-0225-odpowiedzieć(reply)",
+        "pol-ver-0227-odpowiadać(reply)",
+        "pol-ver-0647-odrzec",
+        "pol-ver-0648-odrzekać"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental",
+      "request and permission"
+    ]
+  },
+  {
+    "key": "ver-0118-answerfor",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0202-answerfor",
+        "eng-ver-0203-beaccountablefor",
+        "eng-ver-0204-beresponsiblefor"
+      ],
+      "POL": [
+        "pol-ver-0226-odpowiedzieć(answer for)",
+        "pol-ver-0228-odpowiadać(answer for)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "law",
+      "social glue"
+    ]
+  },
+  {
+    "key": "ver-0119-wait",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0205-wait"
+      ],
+      "POL": [
+        "pol-ver-0229-poczekać",
+        "pol-ver-0230-czekać",
+        "pol-ver-0231-zaczekać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "planning",
+      "time"
+    ]
+  },
+  {
+    "key": "ver-0120-complain",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0206-complain"
+      ],
+      "POL": [
+        "pol-ver-0233-narzekać"
+      ]
+    },
+    "papers": [
+      "negative judgment",
+      "speech"
+    ],
+    "topics": [
+      "mental",
+      "judgment"
+    ]
+  },
+  {
+    "key": "ver-0121-kiss",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0207-kiss"
+      ],
+      "POL": [
+        "pol-ver-0234-całować",
+        "pol-ver-0235-pocałować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "love"
+    ]
+  },
+  {
+    "key": "ver-0122-lurk",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0208-lurk",
+        "eng-ver-0209-skulk",
+        "eng-ver-0210-lieinwait"
+      ],
+      "POL": [
+        "pol-ver-0236-czaić"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "key": "ver-0123-getill",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0211-getill",
+        "eng-ver-0212-getsick"
+      ],
+      "POL": [
+        "pol-ver-0237-chorować",
+        "pol-ver-0238-zachorować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "disease",
+      "medicine"
+    ]
+  },
+  {
+    "key": "ver-0124-appreciate",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0213-appreciate"
+      ],
+      "POL": [
+        "pol-ver-0239-docenić",
+        "pol-ver-0240-doceniać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0125-annoy",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0214-annoy",
+        "eng-ver-0215-irritate"
+      ],
+      "POL": [
+        "pol-ver-0241-denerwować(annoy)",
+        "pol-ver-0243-zdenerwować(annoy)",
+        "pol-ver-0399-irytować",
+        "pol-ver-0400-zirytować"
+      ]
+    },
+    "papers": [
+      "emotion",
+      "negative judgment"
+    ],
+    "topics": [
+      "mental",
+      "judgment"
+    ]
+  },
+  {
+    "key": "ver-0126-benervous",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0216-benervous",
+        "eng-ver-0217-beirritated",
+        "eng-ver-0218-beannoyed"
+      ],
+      "POL": [
+        "pol-ver-0242-denerwować(be nervous)",
+        "pol-ver-0244-zdenerwować(be nervous)"
+      ]
+    },
+    "papers": [
+      "emotion"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0127-strive",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0219-strive"
+      ],
+      "POL": [
+        "pol-ver-0245-dążyć"
+      ]
+    },
+    "papers": [
+      "helper"
+    ],
+    "topics": [
+      "hobbies",
+      "school",
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0128-figureout",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0221-figureout",
+        "eng-ver-0222-workout"
+      ],
+      "POL": [
+        "pol-ver-0250-domyślić",
+        "pol-ver-0251-domyślać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0129-hide",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0223-hide",
+        "eng-ver-0224-conceal"
+      ],
+      "POL": [
+        "pol-ver-0252-chować",
+        "pol-ver-0253-schować",
+        "pol-ver-0411-kryć",
+        "pol-ver-0412-ukryć",
+        "pol-ver-0413-skryć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "sense and perception",
+      "knowledge and existence",
+      "appearance"
+    ]
+  },
+  {
+    "key": "ver-0130-ripen",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0225-ripen"
+      ],
+      "POL": [
+        "pol-ver-0254-dojrzeć(ripen)",
+        "pol-ver-0256-dojrzewać(ripen)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "restaurant",
+      "inside",
+      "agriculture",
+      "kitchen"
+    ]
+  },
+  {
+    "key": "ver-0131-mature",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0226-mature"
+      ],
+      "POL": [
+        "pol-ver-0255-dojrzeć(mature)",
+        "pol-ver-0257-dojrzewać(mature)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "body",
+      "time",
+      "medicine"
+    ]
+  },
+  {
+    "key": "ver-0132-hurl",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0228-hurl",
+        "eng-ver-0229-fling",
+        "eng-ver-0230-throw"
+      ],
+      "POL": [
+        "pol-ver-0260-cisnąć",
+        "pol-ver-0261-ciskać",
+        "pol-ver-0966-rzucić",
+        "pol-ver-0967-rzucać"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "sport"
+    ]
+  },
+  {
+    "key": "ver-0133-hurt",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0231-hurt",
+        "eng-ver-0232-ache"
+      ],
+      "POL": [
+        "pol-ver-0262-boleć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "disease",
+      "medicine"
+    ]
+  },
+  {
+    "key": "ver-0134-perceive(visually)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0233-perceive(visually)",
+        "eng-ver-0235-makeout",
+        "eng-ver-0236-spot",
+        "eng-ver-0237-spy"
+      ],
+      "POL": [
+        "pol-ver-0263-dostrzec",
+        "pol-ver-0264-dostrzegać"
+      ]
+    },
+    "papers": [
+      "perception"
+    ],
+    "topics": [
+      "sense and perception",
+      "appearance"
+    ]
+  },
+  {
+    "key": "ver-0135-grab",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0238-grab",
+        "eng-ver-0239-grasp(physically)"
+      ],
+      "POL": [
+        "pol-ver-0265-chwytać(grab)",
+        "pol-ver-0267-chwycić(grab)"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "key": "ver-0136-catch",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0241-catch"
+      ],
+      "POL": [
+        "pol-ver-0266-chwytać(catch)",
+        "pol-ver-0268-chwycić(catch)"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "school",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0137-adjust",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0242-adjust",
+        "eng-ver-0243-adapt"
+      ],
+      "POL": [
+        "pol-ver-0269-dostosować",
+        "pol-ver-0270-dostosowywać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0138-end",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0092-end(transitive)",
+        "eng-ver-0094-finish(transitive)",
+        "eng-ver-0244-complete"
+      ],
+      "POL": [
+        "pol-ver-0271-dokończyć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "school",
+      "time",
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0139-research",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0245-research",
+        "eng-ver-0181-study(research)",
+        "eng-ver-0246-investigate"
+      ],
+      "POL": [
+        "pol-ver-0274-badać(research)",
+        "pol-ver-0277-zbadać(research)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "biology",
+      "knowledge and existence",
+      "chemistry",
+      "science",
+      "school",
+      "physics"
+    ]
+  },
+  {
+    "key": "ver-0140-test",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0247-test"
+      ],
+      "POL": [
+        "pol-ver-0275-badać(test)",
+        "pol-ver-0278-zbadać(test)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "biology",
+      "knowledge and existence",
+      "chemistry",
+      "science",
+      "school",
+      "physics",
+      "medicine"
+    ]
+  },
+  {
+    "key": "ver-0141-explore",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0248-explore"
+      ],
+      "POL": [
+        "pol-ver-0276-badać(explore)",
+        "pol-ver-0279-zbadać(explore)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "holiday"
+    ]
+  },
+  {
+    "key": "ver-0142-getalongwith",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0249-getalongwith"
+      ],
+      "POL": [
+        "pol-ver-0280-dogadać",
+        "pol-ver-0281-dogadywać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people"
+    ]
+  },
+  {
+    "key": "ver-0143-feel(transitive)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0250-feel(transitive)"
+      ],
+      "POL": [
+        "pol-ver-0282-czuć(feel transitive)",
+        "pol-ver-0285-poczuć(feel transitive)"
+      ]
+    },
+    "papers": [
+      "perception"
+    ],
+    "topics": [
+      "sense and perception",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0144-smell(transitive)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0252-smell(transitive)"
+      ],
+      "POL": [
+        "pol-ver-0283-czuć(smell)",
+        "pol-ver-0286-poczuć(smell)"
+      ]
+    },
+    "papers": [
+      "perception"
+    ],
+    "topics": [
+      "sense and perception",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0145-feel(intransitive)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0251-feel(intransitive)"
+      ],
+      "POL": [
+        "pol-ver-0284-czuć(feel intransitive)",
+        "pol-ver-0287-poczuć(feel intransitive)"
+      ]
+    },
+    "papers": [
+      "perception"
+    ],
+    "topics": [
+      "sense and perception",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0146-attack",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0255-attack",
+        "eng-ver-0409-assault",
+        "eng-ver-0410-mug"
+      ],
+      "POL": [
+        "pol-ver-0288-atakować",
+        "pol-ver-0289-zaatakować",
+        "pol-ver-0459-napaść",
+        "pol-ver-0460-napadać"
+      ]
+    },
+    "papers": [
+      "movement",
+      "crime"
+    ],
+    "topics": [
+      "body",
+      "law",
+      "violence",
+      "crime"
+    ]
+  },
+  {
+    "key": "ver-0147-build",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0256-build",
+        "eng-ver-0257-construct"
+      ],
+      "POL": [
+        "pol-ver-0290-budować",
+        "pol-ver-0291-zbudować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "engineering"
+    ]
+  },
+  {
+    "key": "ver-0148-deliver",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0258-deliver"
+      ],
+      "POL": [
+        "pol-ver-0292-dostarczać",
+        "pol-ver-0293-dostarczyć"
+      ]
+    },
+    "papers": [
+      "money"
+    ],
+    "topics": [
+      "business",
+      "shopping",
+      "travel"
+    ]
+  },
+  {
+    "key": "ver-0149-grow",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0259-grow",
+        "eng-ver-0260-growup"
+      ],
+      "POL": [
+        "pol-ver-0294-dorastać",
+        "pol-ver-0295-dorosnąć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "body",
+      "time",
+      "medicine"
+    ]
+  },
+  {
+    "key": "ver-0150-exercise",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0261-exercise",
+        "eng-ver-0262-doexercise"
+      ],
+      "POL": [
+        "pol-ver-0296-ćwiczyć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "body",
+      "sport",
+      "medicine"
+    ]
+  },
+  {
+    "key": "ver-0151-add",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0263-add"
+      ],
+      "POL": [
+        "pol-ver-0297-dodać",
+        "pol-ver-0298-dodawać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "inside",
+      "restaurant",
+      "kitchen",
+      "math"
+    ]
+  },
+  {
+    "key": "ver-0152-subtract",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0761-subtract"
+      ],
+      "POL": [
+        "pol-ver-0999-odjąć",
+        "pol-ver-8888-odejmwać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "math"
+    ]
+  },
+  {
+    "key": "ver-0153-deduct",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0762-deduct"
+      ],
+      "POL": [
+        "pol-ver-0997-odliczyć",
+        "pol-ver-0998-odliczać",
+        "pol-ver-0829-potrącić(deduct)",
+        "pol-ver-0831-potrącać(deduct)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "math"
+    ]
+  },
+  {
+    "key": "ver-0154-cut",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0264-cut"
+      ],
+      "POL": [
+        "pol-ver-0299-ciąć",
+        "pol-ver-0300-pociąć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "hobbies",
+      "school",
+      "restaurant",
+      "inside",
+      "kitchen"
+    ]
+  },
+  {
+    "key": "ver-0155-praise",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0265-praise"
+      ],
+      "POL": [
+        "pol-ver-0301-chwalić(praise)",
+        "pol-ver-0303-pochwalić(praise)"
+      ]
+    },
+    "papers": [
+      "speech",
+      "positive judgment"
+    ],
+    "topics": [
+      "mental",
+      "judgment"
+    ]
+  },
+  {
+    "key": "ver-0156-boast",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0266-boast"
+      ],
+      "POL": [
+        "pol-ver-0302-chwalić(boast)",
+        "pol-ver-0304-pochwalić(boast)"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0157-value",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0267-value"
+      ],
+      "POL": [
+        "pol-ver-0305-cenić"
+      ]
+    },
+    "papers": [
+      "positive judgment"
+    ],
+    "topics": [
+      "mental",
+      "judgment"
+    ]
+  },
+  {
+    "key": "ver-0158-plead",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0268-plead",
+        "eng-ver-0269-beg"
+      ],
+      "POL": [
+        "pol-ver-0306-błagać"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental",
+      "request and permission"
+    ]
+  },
+  {
+    "key": "ver-0159-sound",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0270-sound"
+      ],
+      "POL": [
+        "pol-ver-0307-brzmieć",
+        "pol-ver-0308-zabrzmieć"
+      ]
+    },
+    "papers": [
+      "perception"
+    ],
+    "topics": [
+      "sense and perception"
+    ]
+  },
+  {
+    "key": "ver-0160-protect(general)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0273-protect(general)"
+      ],
+      "POL": [
+        "pol-ver-0313-chronić",
+        "pol-ver-0314-uchronić",
+        "pol-ver-0315-schronić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "law",
+      "violence",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0161-read",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0275-read"
+      ],
+      "POL": [
+        "pol-ver-0316-czytać",
+        "pol-ver-0317-czytywać",
+        "pol-ver-0318-przeczytać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "school"
+    ]
+  },
+  {
+    "key": "ver-0162-reach",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0276-reach",
+        "eng-ver-0069-arrive(foot)",
+        "eng-ver-0070-arrive(vehicle)",
+        "eng-ver-0301-get to(arrive)"
+      ],
+      "POL": [
+        "pol-ver-0319-docierać",
+        "pol-ver-0320-dotrzeć",
+        "pol-ver-0337-dojść",
+        "pol-ver-0338-dochodzić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "travel",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0163-beat(strike)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0277-beat(strike)"
+      ],
+      "POL": [
+        "pol-ver-0321-bić",
+        "pol-ver-0322-bijać"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "violence"
+    ]
+  },
+  {
+    "key": "ver-0164-pull",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0280-pull"
+      ],
+      "POL": [
+        "pol-ver-0324-ciągnąć",
+        "pol-ver-0670-pociągnąć",
+        "pol-ver-0671-pociągać"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "key": "ver-0165-attach",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0281-attach"
+      ],
+      "POL": [
+        "pol-ver-0325-dołączyć(attach)",
+        "pol-ver-0327-dołączać(attach)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "engineering"
+    ]
+  },
+  {
+    "key": "ver-0166-join",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0282-join",
+        "eng-ver-0283-joinin"
+      ],
+      "POL": [
+        "pol-ver-0326-dołączyć(join)",
+        "pol-ver-0328-dołączać(join)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "sociology"
+    ]
+  },
+  {
+    "key": "ver-0167-fear",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0284-fear",
+        "eng-ver-0285-beafraidof",
+        "eng-ver-0286-bescaredof"
+      ],
+      "POL": [
+        "pol-ver-0329-bać",
+        "pol-ver-0481-obawiać"
+      ]
+    },
+    "papers": [
+      "emotion"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0168-carefor",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0287-carefor",
+        "eng-ver-0288-takecareof",
+        "eng-ver-0289-lookafter"
+      ],
+      "POL": [
+        "pol-ver-0330-dbać",
+        "pol-ver-0331-zadbać",
+        "pol-ver-0766-opiekować",
+        "pol-ver-0767-zaopiekować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0169-catch up to",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0290-catch up with(in a race)",
+        "eng-ver-0292-catch up to"
+      ],
+      "POL": [
+        "pol-ver-0332-dogonić",
+        "pol-ver-0333-doganiać"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "travel"
+    ]
+  },
+  {
+    "key": "ver-0170-withdraw",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0293-withdraw",
+        "eng-ver-0294-backoff",
+        "eng-ver-0295-backdown"
+      ],
+      "POL": [
+        "pol-ver-0334-cofać",
+        "pol-ver-0335-cofnąć"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "politics"
+    ]
+  },
+  {
+    "key": "ver-0171-stayawake",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0296-stayawake"
+      ],
+      "POL": [
+        "pol-ver-0336-czuwać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "daily routine",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0172-touch",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0298-touch"
+      ],
+      "POL": [
+        "pol-ver-0339-dotknąć",
+        "pol-ver-0340-dotykać"
+      ]
+    },
+    "papers": [
+      "perception"
+    ],
+    "topics": [
+      "sense and perception"
+    ]
+  },
+  {
+    "key": "ver-0173-be angry",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0299-be angry",
+        "eng-ver-0300-get angry"
+      ],
+      "POL": [
+        "pol-ver-0341-gniewać",
+        "pol-ver-0342-rozgniewać",
+        "pol-ver-0990-złościć",
+        "pol-ver-0989-zezłościć"
+      ]
+    },
+    "papers": [
+      "emotion"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0174-demand",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0301-demand",
+        "eng-ver-0302-claim(compensation)"
+      ],
+      "POL": [
+        "pol-ver-0343-domagać"
+      ]
+    },
+    "papers": [
+      "helper",
+      "money"
+    ],
+    "topics": [
+      "business"
+    ]
+  },
+  {
+    "key": "ver-0175-share",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0306-share",
+        "eng-ver-0307-divide",
+        "eng-ver-0308-split"
+      ],
+      "POL": [
+        "pol-ver-0344-dzielić",
+        "pol-ver-0345-podzielić",
+        "pol-ver-0782-podzielać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "school",
+      "celebration"
+    ]
+  },
+  {
+    "key": "ver-0176-stare",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0309-stare",
+        "eng-ver-0310-gawk"
+      ],
+      "POL": [
+        "pol-ver-0346-gapić"
+      ]
+    },
+    "papers": [
+      "perception"
+    ],
+    "topics": [
+      "sense and perception"
+    ]
+  },
+  {
+    "key": "ver-0177-ring",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0311-ring",
+        "eng-ver-0312-call"
+      ],
+      "POL": [
+        "pol-ver-0347-dzwonić",
+        "pol-ver-0348-zadzwonić"
+      ]
+    },
+    "papers": [
+      "noise"
+    ],
+    "topics": [
+      "sense and perception",
+      "communications",
+      "tech"
+    ]
+  },
+  {
+    "key": "ver-0178-experience",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0313-experience"
+      ],
+      "POL": [
+        "pol-ver-0349-doświadczyć",
+        "pol-ver-0350-doświadczać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "time",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0179-accept",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0314-accept"
+      ],
+      "POL": [
+        "pol-ver-0351-akceptować",
+        "pol-ver-0352-zaakceptować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "law",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0180-findout",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0316-findout"
+      ],
+      "POL": [
+        "pol-ver-0355-dowiadywać",
+        "pol-ver-0356-dowiedzieć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0181-flash",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0317-flash"
+      ],
+      "POL": [
+        "pol-ver-0357-błysnąć",
+        "pol-ver-0358-błyskać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "sense and perception",
+      "appearance"
+    ]
+  },
+  {
+    "key": "ver-0182-run(lead)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0318-command(lead)",
+        "eng-ver-0320-lead",
+        "eng-ver-0020-run(lead)",
+        "eng-ver-0359-direct",
+        "eng-ver-0360-head",
+        "eng-ver-0361-manage"
+      ],
+      "POL": [
+        "pol-ver-0359-dowodzić",
+        "pol-ver-0391-kierować",
+        "pol-ver-0883-prowadzić(lead)",
+        "pol-ver-0885-prowadzać(lead)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0183-surprise",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0321-surprise"
+      ],
+      "POL": [
+        "pol-ver-0360-dziwić",
+        "pol-ver-0361-zdziwić"
+      ]
+    },
+    "papers": [
+      "emotion"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0184-concern",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0322-concern",
+        "eng-ver-0323-pertainto",
+        "eng-ver-0324-apply(abstract)"
+      ],
+      "POL": [
+        "pol-ver-0362-dotyczyć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "law",
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0185-keep(promise)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0326-keep(promise)"
+      ],
+      "POL": [
+        "pol-ver-0363-dotrzymać",
+        "pol-ver-0364-dotrzymywać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "law",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0186-torment",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0328-torment"
+      ],
+      "POL": [
+        "pol-ver-0365-dręczyć(torment)",
+        "pol-ver-0475-męczyć(torment)",
+        "pol-ver-0478-zmęczyć(torment)"
+      ]
+    },
+    "papers": [
+      "emotion",
+      "negative judgment"
+    ],
+    "topics": [
+      "mental",
+      "judgment"
+    ]
+  },
+  {
+    "key": "ver-0187-bother",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0329-bother",
+        "eng-ver-0330-trouble",
+        "eng-ver-0332-nag"
+      ],
+      "POL": [
+        "pol-ver-0366-dręczyć(bother)",
+        "pol-ver-0476-męczyć(nag)",
+        "pol-ver-0479-zmęczyć(nag)"
+      ]
+    },
+    "papers": [
+      "emotion",
+      "negative judgment"
+    ],
+    "topics": [
+      "mental",
+      "judgment"
+    ]
+  },
+  {
+    "key": "ver-0188-tremble",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0333-tremble",
+        "eng-ver-0334-shiver"
+      ],
+      "POL": [
+        "pol-ver-0367-drżeć",
+        "pol-ver-0368-zadrżeć"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "disease",
+      "medicine"
+    ]
+  },
+  {
+    "key": "ver-0189-block",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0335-block"
+      ],
+      "POL": [
+        "pol-ver-0369-blokować",
+        "pol-ver-0370-zablokować"
+      ]
+    },
+    "papers": [
+      "movement",
+      "helper"
+    ],
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "key": "ver-0190-suffocate",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0336-suffocate",
+        "eng-ver-0337-asphyxiate",
+        "eng-ver-0338-strangle",
+        "eng-ver-0339-choke"
+      ],
+      "POL": [
+        "pol-ver-0371-dusić",
+        "pol-ver-0372-udusić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "body",
+      "violence",
+      "disease",
+      "medicine"
+    ]
+  },
+  {
+    "key": "ver-0191-analyse",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0340-analyse"
+      ],
+      "POL": [
+        "pol-ver-0373-analizować",
+        "pol-ver-0374-przeanalizować"
+      ]
+    },
+    "papers": [
+      "thought"
+    ],
+    "topics": [
+      "school",
+      "mental",
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0192-work(device)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0341-work(device)",
+        "eng-ver-0343-function"
+      ],
+      "POL": [
+        "pol-ver-0375-działać",
+        "pol-ver-0376-zadziałać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "tech",
+      "computing",
+      "engineering"
+    ]
+  },
+  {
+    "key": "ver-0193-not be able to wait",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0344-not be able to wait"
+      ],
+      "POL": [
+        "pol-ver-0370-doczekać(negative only)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "planning",
+      "time"
+    ]
+  },
+  {
+    "key": "ver-0194-shine",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0345-shine",
+        "eng-ver-0346-glitter",
+        "eng-ver-0347-shimmer",
+        "eng-ver-0413-glisten"
+      ],
+      "POL": [
+        "pol-ver-0463-lśnić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "sense and perception",
+      "appearance"
+    ]
+  },
+  {
+    "key": "ver-0195-sparkle",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0345-shine",
+        "eng-ver-0346-glitter",
+        "eng-ver-0347-shimmer",
+        "eng-ver-0348-sparkle"
+      ],
+      "POL": [
+        "pol-ver-0378-błyszczeć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "sense and perception",
+      "appearance"
+    ]
+  },
+  {
+    "key": "ver-0196-stroke",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0349-stroke"
+      ],
+      "POL": [
+        "pol-ver-0379-głaskać",
+        "pol-ver-0380-pogłaskać"
+      ]
+    },
+    "papers": [
+      "movement",
+      "living",
+      "pet",
+      "animal"
+    ],
+    "topics": [
+      "body",
+      "people",
+      "love",
+      "home",
+      "inside"
+    ]
+  },
+  {
+    "key": "ver-0197-protect(military)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0274-protect(military)",
+        "eng-ver-0350-defend",
+        "eng-ver-0351-guard"
+      ],
+      "POL": [
+        "pol-ver-0381-bronić(defend)",
+        "pol-ver-0383-obronić(defend)",
+        "pol-ver-0777-pilnować(guard)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "sport",
+      "violence",
+      "war"
+    ]
+  },
+  {
+    "key": "ver-0198-fightback",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0352-fightback"
+      ],
+      "POL": [
+        "pol-ver-0382-bronić(fight back)",
+        "pol-ver-0384-obronić(fight back)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "sport",
+      "violence",
+      "war"
+    ]
+  },
+  {
+    "key": "ver-0199-tease",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0353-tease"
+      ],
+      "POL": [
+        "pol-ver-0385-drażnić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0200-chase",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0354-chase",
+        "eng-ver-0355-pursue"
+      ],
+      "POL": [
+        "pol-ver-0386-gonić"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "law",
+      "sport"
+    ]
+  },
+  {
+    "key": "ver-0201-preach",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0356-preach",
+        "eng-ver-0357-proclaim"
+      ],
+      "POL": [
+        "pol-ver-0387-głosić"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "religion",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0202-pant",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0358-pant"
+      ],
+      "POL": [
+        "pol-ver-0388-dyszeć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "sport"
+    ]
+  },
+  {
+    "key": "ver-0203-make(causative)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0007-make(causative)"
+      ],
+      "POL": [
+        "pol-ver-0389-uczynić",
+        "pol-ver-0958-czynić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0204-exist",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0362-exist"
+      ],
+      "POL": [
+        "pol-ver-0392-istnieć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "philosophy and ethics",
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0205-kick",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0363-kick"
+      ],
+      "POL": [
+        "pol-ver-0393-kopać(kick)",
+        "pol-ver-0395-kopnąć"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "violence",
+      "sport"
+    ]
+  },
+  {
+    "key": "ver-0206-dig",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0364-dig"
+      ],
+      "POL": [
+        "pol-ver-0394-kopać(dig)",
+        "pol-ver-0396-wykopać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "agriculture"
+    ]
+  },
+  {
+    "key": "ver-0207-shout",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0365-shout",
+        "eng-ver-0366-yell"
+      ],
+      "POL": [
+        "pol-ver-0397-krzyczeć",
+        "pol-ver-0398-krzyknąć"
+      ]
+    },
+    "papers": [
+      "noise"
+    ],
+    "topics": [
+      "school",
+      "sense and perception"
+    ]
+  },
+  {
+    "key": "ver-0208-associate",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0367-associate"
+      ],
+      "POL": [
+        "pol-ver-0401-kojarzyć",
+        "pol-ver-0402-skojarzyć"
+      ]
+    },
+    "papers": [
+      "thought"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0209-agree",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0368-agree"
+      ],
+      "POL": [
+        "pol-ver-0404-godzić",
+        "pol-ver-0403-zgodzić"
+      ]
+    },
+    "papers": [
+      "thought"
+    ],
+    "topics": [
+      "law",
+      "philosophy and ethics",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0210-tempt",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0369-tempt"
+      ],
+      "POL": [
+        "pol-ver-0405-kusić",
+        "pol-ver-0406-skusić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "religion",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0211-moan",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0370-moan"
+      ],
+      "POL": [
+        "pol-ver-0407-jęknąć",
+        "pol-ver-0408-jęczeć"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0212-nod",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0371-nod"
+      ],
+      "POL": [
+        "pol-ver-0409-kiwać",
+        "pol-ver-0410-kiwnąć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "key": "ver-0213-land",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0372-land"
+      ],
+      "POL": [
+        "pol-ver-0414-lądować",
+        "pol-ver-0415-wylądować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "key": "ver-0214-feed",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0373-feed"
+      ],
+      "POL": [
+        "pol-ver-0416-karmić",
+        "pol-ver-0417-nakarmić"
+      ]
+    },
+    "papers": [
+      "pet",
+      "living",
+      "animal"
+    ],
+    "topics": [
+      "daily routine",
+      "restaurant",
+      "home",
+      "inside",
+      "kitchen"
+    ]
+  },
+  {
+    "key": "ver-0215-circulate",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0374-circulate"
+      ],
+      "POL": [
+        "pol-ver-0418-krążyć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "body",
+      "astronomy",
+      "biology",
+      "science",
+      "medicine"
+    ]
+  },
+  {
+    "key": "ver-0216-discuss",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0375-discuss"
+      ],
+      "POL": [
+        "pol-ver-0419-dyskutować",
+        "pol-ver-0642-omówić",
+        "pol-ver-0643-omawiać"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "school",
+      "philosophy and ethics",
+      "mental",
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0217-continue",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0376-continue"
+      ],
+      "POL": [
+        "pol-ver-0420-kontynuować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "time"
+    ]
+  },
+  {
+    "key": "ver-0218-fly",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0377-fly"
+      ],
+      "POL": [
+        "pol-ver-0421-latać",
+        "pol-ver-0422-lecieć",
+        "pol-ver-0423-polecieć"
+      ]
+    },
+    "papers": [
+      "movement",
+      "insect",
+      "living",
+      "animal"
+    ],
+    "topics": [
+      "body",
+      "outside"
+    ]
+  },
+  {
+    "key": "ver-0219-guarantee",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0378-guarantee"
+      ],
+      "POL": [
+        "pol-ver-0424-gwarantować",
+        "pol-ver-0425-zagwarantować"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "law",
+      "mental",
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0220-invest",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0379-invest"
+      ],
+      "POL": [
+        "pol-ver-0426-inwestować",
+        "pol-ver-0427-zainwestować"
+      ]
+    },
+    "papers": [
+      "money"
+    ],
+    "topics": [
+      "business",
+      "shopping"
+    ]
+  },
+  {
+    "key": "ver-0221-form",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0380-form",
+        "eng-ver-0381-shape"
+      ],
+      "POL": [
+        "pol-ver-0428-kształtować",
+        "pol-ver-0429-ukształtować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "geometry",
+      "sense and perception",
+      "appearance"
+    ]
+  },
+  {
+    "key": "ver-0222-flourish",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0382-flourish",
+        "eng-ver-0383-thrive"
+      ],
+      "POL": [
+        "pol-ver-0430-kwitnąć(flourish)"
+      ]
+    },
+    "papers": [
+      "personality"
+    ],
+    "topics": [
+      "business",
+      "people",
+      "time"
+    ]
+  },
+  {
+    "key": "ver-0223-blossom",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0384-blossom",
+        "eng-ver-0385-bloom"
+      ],
+      "POL": [
+        "pol-ver-0431-kwitnąć(blossom)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "agriculture"
+    ]
+  },
+  {
+    "key": "ver-0224-gather",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0386-gather",
+        "eng-ver-0387-collect"
+      ],
+      "POL": [
+        "pol-ver-0432-gromadzić",
+        "pol-ver-0433-zgromadzić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "spatial",
+      "math"
+    ]
+  },
+  {
+    "key": "ver-0225-brake",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0388-brake"
+      ],
+      "POL": [
+        "pol-ver-0434-hamować(brake)",
+        "pol-ver-0436-zahamować(brake)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "travel",
+      "car"
+    ]
+  },
+  {
+    "key": "ver-0226-inhibit",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0389-inhibit",
+        "eng-ver-0390-suppress"
+      ],
+      "POL": [
+        "pol-ver-0435-hamować(inhibit)",
+        "pol-ver-0437-zahamować(inhibit)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0227-interest",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0391-interest"
+      ],
+      "POL": [
+        "pol-ver-0438-interesować",
+        "pol-ver-0439-zainteresować"
+      ]
+    },
+    "papers": [
+      "thought"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0228-steal",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0392-steal"
+      ],
+      "POL": [
+        "pol-ver-0440-kraść",
+        "pol-ver-0441-ukraść"
+      ]
+    },
+    "papers": [
+      "crime"
+    ],
+    "topics": [
+      "law",
+      "crime",
+      "possession"
+    ]
+  },
+  {
+    "key": "ver-0229-cost",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0393-cost"
+      ],
+      "POL": [
+        "pol-ver-0442-kosztować"
+      ]
+    },
+    "papers": [
+      "money"
+    ],
+    "topics": [
+      "business",
+      "shopping"
+    ]
+  },
+  {
+    "key": "ver-0230-threaten",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0394-threaten(speech)"
+      ],
+      "POL": [
+        "pol-ver-0443-grozić",
+        "pol-ver-0444-zagrozić(threaten)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "violence",
+      "disease",
+      "politics",
+      "medicine"
+    ]
+  },
+  {
+    "key": "ver-0231-endanger",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0396-endanger",
+        "eng-ver-0395-threaten(endanger)",
+        "eng-ver-0397-jeopardise",
+        "eng-ver-0424-put at risk",
+        "eng-ver-0426-put in danger",
+        "eng-ver-0425-risk"
+      ],
+      "POL": [
+        "pol-ver-0445-zagrozić(endanger)",
+        "pol-ver-0484-narażać na ryzyko",
+        "pol-ver-0485-narazić na ryzyko",
+        "pol-ver-0486-narażać na szwank",
+        "pol-ver-0487-narazić na szwank",
+        "pol-ver-0988-ryzykować",
+        "pol-ver-0987-zaryzykować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "violence",
+      "disease",
+      "politics",
+      "medicine"
+    ]
+  },
+  {
+    "key": "ver-0232-expose",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0758-expose"
+      ],
+      "POL": [
+        "pol-ver-0482-narażać",
+        "pol-ver-0483-narazić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "danger",
+      "disease",
+      "science",
+      "medicine"
+    ]
+  },
+  {
+    "key": "ver-0233-spin",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0398-spin"
+      ],
+      "POL": [
+        "pol-ver-0446-kręcić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "entertainment",
+      "tech",
+      "engineering"
+    ]
+  },
+  {
+    "key": "ver-0234-bite",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0399-bite"
+      ],
+      "POL": [
+        "pol-ver-0447-gryźć",
+        "pol-ver-0448-ugryźć"
+      ]
+    },
+    "papers": [
+      "bodypart animal"
+    ],
+    "topics": [
+      "entertainment",
+      "violence"
+    ]
+  },
+  {
+    "key": "ver-0235-ignore",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0400-ignore"
+      ],
+      "POL": [
+        "pol-ver-0449-ignorować",
+        "pol-ver-0450-zignorować"
+      ]
+    },
+    "papers": [
+      "thought"
+    ],
+    "topics": [
+      "school",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0236-lie(untruth)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0401-lie(untruth)"
+      ],
+      "POL": [
+        "pol-ver-0451-kłamać",
+        "pol-ver-0452-skłamać"
+      ]
+    },
+    "papers": [
+      "thought"
+    ],
+    "topics": [
+      "people",
+      "love",
+      "mental",
+      "social glue"
+    ]
+  },
+  {
+    "key": "ver-0237-rotate",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0403-rotate",
+        "eng-ver-0404-turn",
+        "eng-ver-0405-revolve"
+      ],
+      "POL": [
+        "pol-ver-0453-obracać",
+        "pol-ver-0454-obrócić"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "geometry"
+    ]
+  },
+  {
+    "key": "ver-0238-offend",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0406-offend",
+        "eng-ver-0407-upset"
+      ],
+      "POL": [
+        "pol-ver-0455-obrazić",
+        "pol-ver-0456-obrażać"
+      ]
+    },
+    "papers": [
+      "emotion",
+      "negative judgment"
+    ],
+    "topics": [
+      "mental",
+      "judgment"
+    ]
+  },
+  {
+    "key": "ver-0239-measure",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0408-measure"
+      ],
+      "POL": [
+        "pol-ver-0457-mierzyć",
+        "pol-ver-0458-zmierzyć"
+      ]
+    },
+    "papers": [
+      "dimension"
+    ],
+    "topics": [
+      "sense and perception",
+      "appearance"
+    ]
+  },
+  {
+    "key": "ver-0240-mutter",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0441-mumble",
+        "eng-ver-0411-mutter",
+        "eng-ver-0412-murmur"
+      ],
+      "POL": [
+        "pol-ver-0504-mruknąć",
+        "pol-ver-0505-mruczeć",
+        "pol-ver-0461-mamrotać",
+        "pol-ver-0462-wymamrotać"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0241-blink",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0414-blink"
+      ],
+      "POL": [
+        "pol-ver-0464-mrugać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "key": "ver-0242-mix",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0416-mix"
+      ],
+      "POL": [
+        "pol-ver-0467-zamieszać(mix)",
+        "pol-ver-0469-mieszać(mix)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "hobbies",
+      "inside",
+      "restaurant",
+      "kitchen"
+    ]
+  },
+  {
+    "key": "ver-0243-stir",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0417-stir"
+      ],
+      "POL": [
+        "pol-ver-0468-zamieszać(stir)",
+        "pol-ver-0470-mieszać(stir)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "hobbies",
+      "inside",
+      "restaurant",
+      "kitchen"
+    ]
+  },
+  {
+    "key": "ver-0244-decrease",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0418-decrease",
+        "eng-ver-0419-reduce",
+        "eng-ver-0420-lower"
+      ],
+      "POL": [
+        "pol-ver-0471-obniżać",
+        "pol-ver-0472-obniżyć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "math"
+    ]
+  },
+  {
+    "key": "ver-0245-include(comprise)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0108-include(comprise)",
+        "eng-ver-0421-encompass"
+      ],
+      "POL": [
+        "pol-ver-0473-objąć",
+        "pol-ver-0474-obejmować"
+      ]
+    },
+    "papers": [
+      "helper"
+    ],
+    "topics": [
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0246-tire",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0331-tire"
+      ],
+      "POL": [
+        "pol-ver-0477-męczyć(tire)",
+        "pol-ver-0480-zmęczyć(tire)"
+      ]
+    },
+    "papers": [
+      "emotion"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0247-apply(eg sunscreen)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0325-apply(eg sunscreen)"
+      ],
+      "POL": [
+        "pol-ver-0488-nakładać(eg sunscreen)",
+        "pol-ver-0490-nałożyć(eg sunscreen)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "daily routine"
+    ]
+  },
+  {
+    "key": "ver-0248-impose(sanctions)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0427-impose"
+      ],
+      "POL": [
+        "pol-ver-0489-nakładać(eg sanctions)",
+        "pol-ver-0491-nałożyć(eg sanctions)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "politics",
+      "art",
+      "engineering"
+    ]
+  },
+  {
+    "key": "ver-0249-becalled",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0428-becalled"
+      ],
+      "POL": [
+        "pol-ver-0492-nazwać",
+        "pol-ver-0493-nazywać"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "people",
+      "mental",
+      "social glue"
+    ]
+  },
+  {
+    "key": "ver-0250-destroy",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0429-destroy"
+      ],
+      "POL": [
+        "pol-ver-0494-niszczyć",
+        "pol-ver-0495-zniszczyć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "violence",
+      "engineering"
+    ]
+  },
+  {
+    "key": "ver-0251-keepquiet",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0430-keepquiet",
+        "eng-ver-0431-bequiet",
+        "eng-ver-0432-keepsilent",
+        "eng-ver-0433-besilent"
+      ],
+      "POL": [
+        "pol-ver-0496-milczeć"
+      ]
+    },
+    "papers": [
+      "speech",
+      "noise"
+    ],
+    "topics": [
+      "school",
+      "sense and perception",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0252-repair",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0434-repair",
+        "eng-ver-0435-mend",
+        "eng-ver-0436-fix"
+      ],
+      "POL": [
+        "pol-ver-0497-naprawić",
+        "pol-ver-0498-naprawiać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "hobbies",
+      "engineering"
+    ]
+  },
+  {
+    "key": "ver-0253-insist",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0437-insist"
+      ],
+      "POL": [
+        "pol-ver-0499-nalegać"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental",
+      "social glue"
+    ]
+  },
+  {
+    "key": "ver-0254-bebored",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0440-bebored"
+      ],
+      "POL": [
+        "pol-ver-0502-nudzić",
+        "pol-ver-0503-znudzić"
+      ]
+    },
+    "papers": [
+      "emotion"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0255-record",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0442-record"
+      ],
+      "POL": [
+        "pol-ver-0506-nagrywać",
+        "pol-ver-0507-nagrać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "entertainment",
+      "tech"
+    ]
+  },
+  {
+    "key": "ver-0256-wave",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0443-wave"
+      ],
+      "POL": [
+        "pol-ver-0508-machnąć",
+        "pol-ver-0509-machać",
+        "pol-ver-0532-pomachać"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "key": "ver-0257-belong",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0444-belong"
+      ],
+      "POL": [
+        "pol-ver-0510-należeć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0258-fit(into)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0445-fit(into)"
+      ],
+      "POL": [
+        "pol-ver-0511-mieścić",
+        "pol-ver-0512-zmieścić"
+      ]
+    },
+    "papers": [
+      "dimension"
+    ],
+    "topics": [
+      "spatial",
+      "fashion",
+      "sense and perception",
+      "appearance"
+    ]
+  },
+  {
+    "key": "ver-0259-murder",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0448-murder"
+      ],
+      "POL": [
+        "pol-ver-0513-mordować",
+        "pol-ver-0514-zamordować"
+      ]
+    },
+    "papers": [
+      "crime"
+    ],
+    "topics": [
+      "law",
+      "violence",
+      "crime"
+    ]
+  },
+  {
+    "key": "ver-0260-confuse",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0449-confuse",
+        "eng-ver-0450-mixup",
+        "eng-ver-0451-mistake"
+      ],
+      "POL": [
+        "pol-ver-0515-mylić",
+        "pol-ver-0516-pomylić"
+      ]
+    },
+    "papers": [
+      "thought"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0261-underestimate",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0452-underestimate",
+        "eng-ver-0453-disregard"
+      ],
+      "POL": [
+        "pol-ver-0517-lekceważyć",
+        "pol-ver-0518-zlekceważyć"
+      ]
+    },
+    "papers": [
+      "thought"
+    ],
+    "topics": [
+      "sense and perception",
+      "mental",
+      "appearance"
+    ]
+  },
+  {
+    "key": "ver-0262-press",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0454-press",
+        "eng-ver-0455-push(button)"
+      ],
+      "POL": [
+        "pol-ver-0519-nacisnąć",
+        "pol-ver-0520-naciskać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "tech"
+    ]
+  },
+  {
+    "key": "ver-0263-paint(wall)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0457-paint(wall)"
+      ],
+      "POL": [
+        "pol-ver-0521-malować(wall)",
+        "pol-ver-0523-pomalować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "art"
+    ]
+  },
+  {
+    "key": "ver-0264-paint(picture)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0458-paint(picture)"
+      ],
+      "POL": [
+        "pol-ver-0522-malować(picture)",
+        "pol-ver-0524-namalować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "art"
+    ]
+  },
+  {
+    "key": "ver-0265-lie(bodily)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0402-lie(bodily)"
+      ],
+      "POL": [
+        "pol-ver-0525-leżeć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "body",
+      "daily routine"
+    ]
+  },
+  {
+    "key": "ver-0266-command(order)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0319-command(order)",
+        "eng-ver-0459-order"
+      ],
+      "POL": [
+        "pol-ver-0526-nakazać",
+        "pol-ver-0527-nakazywać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "war",
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0267-worry",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0423-worry(emotion)"
+      ],
+      "POL": [
+        "pol-ver-0481-obawiać",
+        "pol-ver-0528-martwić(emotion)",
+        "pol-ver-0530-zmartwić(emotion)"
+      ]
+    },
+    "papers": [
+      "emotion"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0268-mind",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0422-worry(mind)",
+        "eng-ver-0693-mind"
+      ],
+      "POL": [
+        "pol-ver-0852-przejąć(mind)",
+        "pol-ver-0855-przejmować(mind)",
+        "pol-ver-0529-martwić(mind)",
+        "pol-ver-0531-zmartwić(mind)"
+      ]
+    },
+    "papers": [
+      "emotion"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0269-persuade",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0460-persuade",
+        "eng-ver-0461-encourage",
+        "eng-ver-0462-convince",
+        "eng-ver-0463-talkinto"
+      ],
+      "POL": [
+        "pol-ver-0533-namawiać",
+        "pol-ver-0534-namówić",
+        "pol-ver-0871-przekonywać",
+        "pol-ver-0872-przekonać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "sociology",
+      "mental",
+      "politics"
+    ]
+  },
+  {
+    "key": "ver-0270-passby",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0464-passby",
+        "eng-ver-0465-pass(travel)"
+      ],
+      "POL": [
+        "pol-ver-0535-mijać(pass by)",
+        "pol-ver-0537-minąć(pass by)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "key": "ver-0271-pass(time)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0466-pass(time)",
+        "eng-ver-0468-elapse"
+      ],
+      "POL": [
+        "pol-ver-0536-mijać(elapse)",
+        "pol-ver-0538-minąć(elapse)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "time"
+    ]
+  },
+  {
+    "key": "ver-0272-shoot(film)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0469-shoot(film)"
+      ],
+      "POL": [
+        "pol-ver-0539-nakręcić(film)",
+        "pol-ver-0541-nakręcać(film)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "entertainment"
+    ]
+  },
+  {
+    "key": "ver-0273-shoot(gun)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0470-shoot(gun)"
+      ],
+      "POL": [
+        "pol-ver-1003-strzelać",
+        "pol-ver-1004-strzelić",
+        "pol-ver-1005-postrzelić",
+        "pol-ver-1006-zastrzelić"
+      ]
+    },
+    "papers": [
+      "weapon"
+    ],
+    "topics": [
+      "violence"
+    ]
+  },
+  {
+    "key": "ver-0274-turnon(sexually)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0106-turnon(sexually)",
+        "eng-ver-0471-arouse"
+      ],
+      "POL": [
+        "pol-ver-0540-nakręcić(sexually)",
+        "pol-ver-0542-nakręcać(sexually)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "love"
+    ]
+  },
+  {
+    "key": "ver-0275-violate",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0472-violate",
+        "eng-ver-0473-contravene",
+        "eng-ver-0474-infringe"
+      ],
+      "POL": [
+        "pol-ver-0543-naruszać",
+        "pol-ver-0544-naruszyć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "law",
+      "politics"
+    ]
+  },
+  {
+    "key": "ver-0276-write",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0475-write"
+      ],
+      "POL": [
+        "pol-ver-0545-napisać",
+        "pol-ver-0546-pisać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "writing",
+      "school",
+      "communications"
+    ]
+  },
+  {
+    "key": "ver-0277-encounter",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0476-encounter",
+        "eng-ver-0477-comeacross",
+        "eng-ver-0478-runinto"
+      ],
+      "POL": [
+        "pol-ver-0547-napotkać",
+        "pol-ver-0548-napotykać",
+        "pol-ver-0549-natknąć",
+        "pol-ver-0550-natykać",
+        "pol-ver-0558-natrafić",
+        "pol-ver-0559-natrafiać"
+      ]
+    },
+    "papers": [
+      "perception"
+    ],
+    "topics": [
+      "sense and perception",
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0278-pray",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0479-pray"
+      ],
+      "POL": [
+        "pol-ver-0551-modlić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "religion"
+    ]
+  },
+  {
+    "key": "ver-0279-cure",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0480-cure",
+        "eng-ver-0481-heal",
+        "eng-ver-0482-treat(medical)"
+      ],
+      "POL": [
+        "pol-ver-0552-leczyć",
+        "pol-ver-0553-wyleczyć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "disease",
+      "medicine"
+    ]
+  },
+  {
+    "key": "ver-0280-pour",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0484-pour"
+      ],
+      "POL": [
+        "pol-ver-0554-nalać",
+        "pol-ver-0555-nalewać"
+      ]
+    },
+    "papers": [
+      "drink",
+      "holdable"
+    ],
+    "topics": [
+      "chemistry",
+      "science",
+      "restaurant",
+      "inside",
+      "kitchen"
+    ]
+  },
+  {
+    "key": "ver-0281-oversee",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0485-oversee",
+        "eng-ver-0486-supervise"
+      ],
+      "POL": [
+        "pol-ver-0560-nadzorować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0282-imitate",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0487-imitate",
+        "eng-ver-0488-mimic",
+        "eng-ver-0489-copy"
+      ],
+      "POL": [
+        "pol-ver-0561-naśladować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "theatre"
+    ]
+  },
+  {
+    "key": "ver-0283-breathe",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0490-breathe"
+      ],
+      "POL": [
+        "pol-ver-0562-odetchnąć",
+        "pol-ver-0563-oddychać"
+      ]
+    },
+    "papers": [
+      "bodypart"
+    ],
+    "topics": [
+      "body",
+      "medicine"
+    ]
+  },
+  {
+    "key": "ver-0284-restrict",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0491-restrict",
+        "eng-ver-0492-limit"
+      ],
+      "POL": [
+        "pol-ver-0564-ograniczyć",
+        "pol-ver-0565-ograniczać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "math"
+    ]
+  },
+  {
+    "key": "ver-0285-play(role)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0151-play(role)"
+      ],
+      "POL": [
+        "pol-ver-0566-odgrywać",
+        "pol-ver-0567-odegrać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "theatre"
+    ]
+  },
+  {
+    "key": "ver-0286-swimaway",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0493-swimaway",
+        "eng-ver-0494-swimoff"
+      ],
+      "POL": [
+        "pol-ver-0568-odpłynąć(swim away)",
+        "pol-ver-0570-odpływać(swim away)"
+      ]
+    },
+    "papers": [
+      "locomotion"
+    ],
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "key": "ver-0287-sailaway",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0495-sailaway",
+        "eng-ver-0496-sailoff"
+      ],
+      "POL": [
+        "pol-ver-0569-odpłynąć(sail away)",
+        "pol-ver-0571-odpływać(sail away)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "nautical",
+      "travel"
+    ]
+  },
+  {
+    "key": "ver-0288-cleanup(cleananobject)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0121-cleanup(cleananobject)"
+      ],
+      "POL": [
+        "pol-ver-0572-oczyścić(clean up)",
+        "pol-ver-0574-oczyszczać(clean up)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "engineering"
+    ]
+  },
+  {
+    "key": "ver-0289-purify",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0497-purify"
+      ],
+      "POL": [
+        "pol-ver-0573-oczyścić(purify)",
+        "pol-ver-0575-oczyszczać(purify)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "chemistry"
+    ]
+  },
+  {
+    "key": "ver-0290-miss",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0498-miss",
+        "eng-ver-0499-avoid"
+      ],
+      "POL": [
+        "pol-ver-0576-ominąć",
+        "pol-ver-0577-omijać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "planning",
+      "time"
+    ]
+  },
+  {
+    "key": "ver-0291-cancel",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0500-cancel"
+      ],
+      "POL": [
+        "pol-ver-0578-odwołać",
+        "pol-ver-0579-odwoływać",
+        "pol-ver-0964-anulować(pf)",
+        "pol-ver-0965-anulować(im)"
+      ]
+    },
+    "papers": [
+      "helper"
+    ],
+    "topics": [
+      "planning",
+      "law"
+    ]
+  },
+  {
+    "key": "ver-0292-refuse(plus noun)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0502-refuse(plus noun)"
+      ],
+      "POL": [
+        "pol-ver-0582-odmawiać(plus noun)",
+        "pol-ver-0586-odmówić(plus noun)"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental",
+      "social glue"
+    ]
+  },
+  {
+    "key": "ver-0293-refuse(intransitive)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0501-sayno",
+        "eng-ver-0504-refuse(intransitive)"
+      ],
+      "POL": [
+        "pol-ver-0583-odmawiać(intransitive)",
+        "pol-ver-0587-odmówić(intransitive)"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental",
+      "social glue"
+    ]
+  },
+  {
+    "key": "ver-0294-refuse(plus verb)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0503-refuse(plus verb)"
+      ],
+      "POL": [
+        "pol-ver-0581-odmawiać(plus verb)",
+        "pol-ver-0585-odmówić(plus verb)"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental",
+      "social glue"
+    ]
+  },
+  {
+    "key": "ver-0295-deny",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0505-deny"
+      ],
+      "POL": [
+        "pol-ver-0580-odmawiać(that or someone)",
+        "pol-ver-0584-odmówić(that or someone)"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental",
+      "social glue"
+    ]
+  },
+  {
+    "key": "ver-0296-organise(event)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0103-organise(event)",
+        "eng-ver-0506-hold(party)",
+        "eng-ver-0508-puton(event)"
+      ],
+      "POL": [
+        "pol-ver-0589-odbyć(hold)",
+        "pol-ver-0591-odbywać(hold)"
+      ]
+    },
+    "papers": [
+      "event"
+    ],
+    "topics": [
+      "planning",
+      "time"
+    ]
+  },
+  {
+    "key": "ver-0297-inherit",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0510-inherit"
+      ],
+      "POL": [
+        "pol-ver-0592-odziedziczyć",
+        "pol-ver-0593-dziedziczyć"
+      ]
+    },
+    "papers": [
+      "money"
+    ],
+    "topics": [
+      "business",
+      "law",
+      "shopping",
+      "possession"
+    ]
+  },
+  {
+    "key": "ver-0298-offer",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0511-offer",
+        "eng-ver-0512-propose",
+        "eng-ver-0690-suggest"
+      ],
+      "POL": [
+        "pol-ver-0594-oferować",
+        "pol-ver-0595-zaoferować",
+        "pol-ver-0848-proponować",
+        "pol-ver-0849-zaproponować",
+        "pol-ver-0985-sugerować",
+        "pol-ver-0986-zasugerować"
+      ]
+    },
+    "papers": [
+      "money"
+    ],
+    "topics": [
+      "business",
+      "shopping"
+    ]
+  },
+  {
+    "key": "ver-0299-flyaway",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0513-flyaway",
+        "eng-ver-0514-flyoff"
+      ],
+      "POL": [
+        "pol-ver-0596-odlecieć",
+        "pol-ver-0597-odlatywać"
+      ]
+    },
+    "papers": [
+      "locomotion"
+    ],
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "key": "ver-0300-postpone",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0515-postpone",
+        "eng-ver-0516-putoff",
+        "eng-ver-0517-defer"
+      ],
+      "POL": [
+        "pol-ver-0598-odłożyć",
+        "pol-ver-0599-odkładać",
+        "pol-ver-0933-przełożyć(postpone)",
+        "pol-ver-0935-przekładać(postpone)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "planning",
+      "time"
+    ]
+  },
+  {
+    "key": "ver-0301-giveback",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0518-giveback",
+        "eng-ver-0042-return(give back)"
+      ],
+      "POL": [
+        "pol-ver-0600-oddać(give back)",
+        "pol-ver-0602-oddawać(give back)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "possession",
+      "social glue",
+      "celebration"
+    ]
+  },
+  {
+    "key": "ver-0302-donate",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0519-donate"
+      ],
+      "POL": [
+        "pol-ver-0601-oddać(donate)",
+        "pol-ver-0603-oddawać(donate)"
+      ]
+    },
+    "papers": [
+      "money"
+    ],
+    "topics": [
+      "business",
+      "shopping",
+      "medicine"
+    ]
+  },
+  {
+    "key": "ver-0303-leave(exit)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0137-leave(exit)",
+        "eng-ver-0520-walkaway",
+        "eng-ver-0521-walkoff"
+      ],
+      "POL": [
+        "pol-ver-0604-odchodzić",
+        "pol-ver-0605-odejść"
+      ]
+    },
+    "papers": [
+      "locomotion"
+    ],
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "key": "ver-0304-discover",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0522-discover"
+      ],
+      "POL": [
+        "pol-ver-0606-odkrywać",
+        "pol-ver-0607-odkryć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "biology",
+      "chemistry",
+      "science",
+      "tech",
+      "physics"
+    ]
+  },
+  {
+    "key": "ver-0305-reject",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0523-reject"
+      ],
+      "POL": [
+        "pol-ver-0608-odrzucić",
+        "pol-ver-0609-odrzucać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "love",
+      "politics"
+    ]
+  },
+  {
+    "key": "ver-0306-takeback",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0524-takeback",
+        "eng-ver-0525-takeaway"
+      ],
+      "POL": [
+        "pol-ver-0610-odbierać",
+        "pol-ver-0611-odebrać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "possession"
+    ]
+  },
+  {
+    "key": "ver-0307-save(life)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0526-save(life)",
+        "eng-ver-0528-rescue"
+      ],
+      "POL": [
+        "pol-ver-0612-ocalić",
+        "pol-ver-0613-ocalać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "danger"
+    ]
+  },
+  {
+    "key": "ver-0308-rest",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0529-rest",
+        "eng-ver-0530-relax"
+      ],
+      "POL": [
+        "pol-ver-0614-odpocząć",
+        "pol-ver-0615-odpoczywać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "body",
+      "daily routine"
+    ]
+  },
+  {
+    "key": "ver-0309-announce",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0531-announce",
+        "eng-ver-0532-declare"
+      ],
+      "POL": [
+        "pol-ver-0616-ogłaszać",
+        "pol-ver-0617-ogłosić",
+        "pol-ver-0752-oznajmić",
+        "pol-ver-0753-oznajmiać"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "writing",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0310-turnout",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0533-turnout",
+        "eng-ver-0534-transpire"
+      ],
+      "POL": [
+        "pol-ver-0618-okazać",
+        "pol-ver-0619-okazywać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0311-stepback",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0535-stepback",
+        "eng-ver-0536-stepaside"
+      ],
+      "POL": [
+        "pol-ver-0620-odsunąć",
+        "pol-ver-0621-odsuwać"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "key": "ver-0312-reflect",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0537-reflect"
+      ],
+      "POL": [
+        "pol-ver-0622-odbić(reflect)",
+        "pol-ver-0624-odbijać(reflect)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "physics",
+      "science"
+    ]
+  },
+  {
+    "key": "ver-0313-bounce",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0538-bounce"
+      ],
+      "POL": [
+        "pol-ver-0623-odbić(bounce)",
+        "pol-ver-0625-odbijać(bounce)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "physics",
+      "science"
+    ]
+  },
+  {
+    "key": "ver-0314-leave(vehicle)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0135-leave(vehicle)",
+        "eng-ver-0539-depart",
+        "eng-ver-0540-driveoff",
+        "eng-ver-0541-driveaway"
+      ],
+      "POL": [
+        "pol-ver-0626-odjechać",
+        "pol-ver-0627-odjeżdżać"
+      ]
+    },
+    "papers": [
+      "locomotion"
+    ],
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "key": "ver-0315-letgo",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0542-letgo"
+      ],
+      "POL": [
+        "pol-ver-0628-odpuścić",
+        "pol-ver-0629-odpuszczać"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "key": "ver-0316-regain",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0543-regain",
+        "eng-ver-0544-recover",
+        "eng-ver-0545-retrieve",
+        "eng-ver-0546-getback"
+      ],
+      "POL": [
+        "pol-ver-0630-odzyskać",
+        "pol-ver-0631-odzyskiwać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "possession"
+    ]
+  },
+  {
+    "key": "ver-0317-reverse",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0547-reverse",
+        "eng-ver-0548-turnaround"
+      ],
+      "POL": [
+        "pol-ver-0632-odwracać",
+        "pol-ver-0633-odwrócić"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "key": "ver-0318-cutoff",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0549-cutoff"
+      ],
+      "POL": [
+        "pol-ver-0634-odciąć",
+        "pol-ver-0635-odcinać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "hobbies",
+      "engineering"
+    ]
+  },
+  {
+    "key": "ver-0319-visit",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0550-visit"
+      ],
+      "POL": [
+        "pol-ver-0636-odwiedzać",
+        "pol-ver-0637-odwiedzić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "key": "ver-0320-rate",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0551-rate",
+        "eng-ver-0552-evaluate",
+        "eng-ver-0553-mark",
+        "eng-ver-0554-grade",
+        "eng-ver-0555-assess"
+      ],
+      "POL": [
+        "pol-ver-0638-oceniać",
+        "pol-ver-0639-ocenić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0321-wipeaway",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0556-wipeaway",
+        "eng-ver-0557-wipe"
+      ],
+      "POL": [
+        "pol-ver-0644-ocierać",
+        "pol-ver-0645-otrzeć"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "daily routine"
+    ]
+  },
+  {
+    "key": "ver-0322-expect",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0558-expect"
+      ],
+      "POL": [
+        "pol-ver-0646-oczekiwać"
+      ]
+    },
+    "papers": [
+      "thought"
+    ],
+    "topics": [
+      "planning",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0323-show",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0559-show"
+      ],
+      "POL": [
+        "pol-ver-0649-pokazać",
+        "pol-ver-0650-pokazywać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0324-roast",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0560-roast",
+        "eng-ver-0561-bake"
+      ],
+      "POL": [
+        "pol-ver-0651-piec",
+        "pol-ver-0652-upiec"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "inside",
+      "restaurant",
+      "kitchen"
+    ]
+  },
+  {
+    "key": "ver-0325-cheat(deceive)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0562-cheat(deceive)",
+        "eng-ver-0564-deceive",
+        "eng-ver-0565-trick"
+      ],
+      "POL": [
+        "pol-ver-0653-oszukiwać(deceive)",
+        "pol-ver-0655-oszukać(deceive)"
+      ]
+    },
+    "papers": [
+      "money"
+    ],
+    "topics": [
+      "business",
+      "shopping"
+    ]
+  },
+  {
+    "key": "ver-0326-cheat(game)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0563-cheat(game)"
+      ],
+      "POL": [
+        "pol-ver-0654-oszukiwać(cheat in a game)",
+        "pol-ver-0656-oszukać(cheat in a game)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "game"
+    ]
+  },
+  {
+    "key": "ver-0327-payfor",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0566-payfor"
+      ],
+      "POL": [
+        "pol-ver-0657-opłacić",
+        "pol-ver-0658-opłacać"
+      ]
+    },
+    "papers": [
+      "money"
+    ],
+    "topics": [
+      "business",
+      "shopping"
+    ]
+  },
+  {
+    "key": "ver-0328-leanon",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0567-leanon"
+      ],
+      "POL": [
+        "pol-ver-0659-opierać",
+        "pol-ver-0660-oprzeć"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "key": "ver-0329-smell(intransitive)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0253-smell(intransitive)"
+      ],
+      "POL": [
+        "pol-ver-0661-pachnieć"
+      ]
+    },
+    "papers": [
+      "perception"
+    ],
+    "topics": [
+      "sense and perception"
+    ]
+  },
+  {
+    "key": "ver-0330-stink",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0254-stink"
+      ],
+      "POL": [
+        "pol-ver-0992-cuchnąć"
+      ]
+    },
+    "papers": [
+      "perception",
+      "negative judgment"
+    ],
+    "topics": [
+      "sense and perception"
+    ]
+  },
+  {
+    "key": "ver-0331-smoke(tobacco)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0568-smoke(tobacco)"
+      ],
+      "POL": [
+        "pol-ver-0662-palić(smoke)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "disease",
+      "medicine"
+    ]
+  },
+  {
+    "key": "ver-0332-smoke(on fire)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0569-smoke(on fire)"
+      ],
+      "POL": [
+        "pol-ver-1007-dymić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "physics",
+      "danger",
+      "science"
+    ]
+  },
+  {
+    "key": "ver-0333-burn(transitive)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0570-burn(transitive)"
+      ],
+      "POL": [
+        "pol-ver-0664-palić(burn transitive)",
+        "pol-ver-0666-spalić(burn transitive)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "physics",
+      "danger",
+      "science"
+    ]
+  },
+  {
+    "key": "ver-0334-burn(intransitive)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0571-burn(intransitive)",
+        "eng-ver-0588-beonfire"
+      ],
+      "POL": [
+        "pol-ver-0697-płonąć",
+        "pol-ver-0698-spłonąć",
+        "pol-ver-0663-palić(burn intransitive)",
+        "pol-ver-0665-spalić(burn intransitive)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "physics",
+      "danger",
+      "science"
+    ]
+  },
+  {
+    "key": "ver-0335-approach",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0572-approach(on foot)"
+      ],
+      "POL": [
+        "pol-ver-0667-podchodzić",
+        "pol-ver-0668-podejść"
+      ]
+    },
+    "papers": [
+      "locomotion"
+    ],
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "key": "ver-0336-come(origin)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0073-come(origin)"
+      ],
+      "POL": [
+        "pol-ver-0669-pochodzić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "geography",
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0337-surrender",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0574-surrender",
+        "eng-ver-0575-giveup"
+      ],
+      "POL": [
+        "pol-ver-0672-poddawać",
+        "pol-ver-0673-poddać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "hobbies",
+      "war"
+    ]
+  },
+  {
+    "key": "ver-0338-develop",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0576-develop"
+      ],
+      "POL": [
+        "pol-ver-0674-opracować",
+        "pol-ver-0675-opracowywać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "hobbies",
+      "school",
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0339-approach(vehicle)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0573-approach(vehicle)"
+      ],
+      "POL": [
+        "pol-ver-0676-podjechać",
+        "pol-ver-0677-podjeżdżać"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "travel"
+    ]
+  },
+  {
+    "key": "ver-0340-cover",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0577-cover"
+      ],
+      "POL": [
+        "pol-ver-0678-pokrywać",
+        "pol-ver-0679-pokryć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "spatial",
+      "engineering"
+    ]
+  },
+  {
+    "key": "ver-0341-save(money)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0527-save(money)"
+      ],
+      "POL": [
+        "pol-ver-0680-oszczędzać",
+        "pol-ver-0776-oszczędzić"
+      ]
+    },
+    "papers": [
+      "money"
+    ],
+    "topics": [
+      "business",
+      "shopping"
+    ]
+  },
+  {
+    "key": "ver-0342-pack",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0578-pack",
+        "eng-ver-0579-packup"
+      ],
+      "POL": [
+        "pol-ver-0681-pakować",
+        "pol-ver-0682-spakować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "travel",
+      "communications"
+    ]
+  },
+  {
+    "key": "ver-0343-push",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0456-push(general)",
+        "eng-ver-0580-shove"
+      ],
+      "POL": [
+        "pol-ver-0683-pchnąć",
+        "pol-ver-0684-pchać",
+        "pol-ver-0877-popchnąć",
+        "pol-ver-0878-popychać"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "key": "ver-0344-recommend",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0581-recommend"
+      ],
+      "POL": [
+        "pol-ver-0685-polecić",
+        "pol-ver-0686-polecać"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "travel",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0345-take(decision)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0017-take(decision)",
+        "eng-ver-0008-make(decision)"
+      ],
+      "POL": [
+        "pol-ver-0687-podjąć",
+        "pol-ver-0688-podejmować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "planning",
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0346-sign",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0582-sign"
+      ],
+      "POL": [
+        "pol-ver-0689-podpisywać",
+        "pol-ver-0690-podpisać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "entertainment",
+      "writing"
+    ]
+  },
+  {
+    "key": "ver-0347-gocrazy",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0583-gocrazy",
+        "eng-ver-0584-gomad",
+        "eng-ver-0585-gonuts"
+      ],
+      "POL": [
+        "pol-ver-0691-oszaleć",
+        "pol-ver-0692-szaleć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0348-dare",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0586-dare"
+      ],
+      "POL": [
+        "pol-ver-0693-ośmielić",
+        "pol-ver-0694-ośmielać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0349-leave(abandon)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0138-leave(abandon)",
+        "eng-ver-0587-abandon"
+      ],
+      "POL": [
+        "pol-ver-0695-opuścić",
+        "pol-ver-0696-opuszczać",
+        "pol-ver-0918-porzucić",
+        "pol-ver-0919-porzucać"
+      ]
+    },
+    "papers": [
+      "locomotion"
+    ],
+    "topics": [
+      "people",
+      "possession"
+    ]
+  },
+  {
+    "key": "ver-0350-achieve",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0589-achieve",
+        "eng-ver-0590-accomplish"
+      ],
+      "POL": [
+        "pol-ver-0699-osiągnąć",
+        "pol-ver-0700-osiągać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0351-download",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0591-download"
+      ],
+      "POL": [
+        "pol-ver-0701-pobierać",
+        "pol-ver-0702-pobrać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "computing"
+    ]
+  },
+  {
+    "key": "ver-0352-pass(salt)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0467-pass(salt)",
+        "eng-ver-0592-hand"
+      ],
+      "POL": [
+        "pol-ver-0703-podawać",
+        "pol-ver-0704-podać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "restaurant",
+      "social glue",
+      "inside",
+      "kitchen"
+    ]
+  },
+  {
+    "key": "ver-0353-burst",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0593-burst",
+        "eng-ver-0594-crack",
+        "eng-ver-0595-break(burst)"
+      ],
+      "POL": [
+        "pol-ver-0705-pęknąć",
+        "pol-ver-0706-pękać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "violence"
+    ]
+  },
+  {
+    "key": "ver-0354-swim",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0597-swim"
+      ],
+      "POL": [
+        "pol-ver-0707-pływać(swim)",
+        "pol-ver-0710-płynąć(swim)",
+        "pol-ver-0714-popłynąć(swim)"
+      ]
+    },
+    "papers": [
+      "locomotion"
+    ],
+    "topics": [
+      "sport"
+    ]
+  },
+  {
+    "key": "ver-0355-sail",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0598-sail"
+      ],
+      "POL": [
+        "pol-ver-0708-pływać(sail)",
+        "pol-ver-0711-płynąć(sail)",
+        "pol-ver-0715-popłynąć(sail)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "key": "ver-0356-float",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0599-float"
+      ],
+      "POL": [
+        "pol-ver-0709-pływać(float)",
+        "pol-ver-0712-płynąć(float)",
+        "pol-ver-0716-popłynąć(float)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "physics",
+      "science"
+    ]
+  },
+  {
+    "key": "ver-0357-flow",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0600-flow"
+      ],
+      "POL": [
+        "pol-ver-0717-popłynąć(flow)",
+        "pol-ver-0713-płynąć(flow)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "physics",
+      "science"
+    ]
+  },
+  {
+    "key": "ver-0358-accuse",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0601-accuse"
+      ],
+      "POL": [
+        "pol-ver-0718-oskarżyć",
+        "pol-ver-0719-oskarżać"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "law",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0359-surround",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0602-surround",
+        "eng-ver-0603-encircle"
+      ],
+      "POL": [
+        "pol-ver-0720-otaczać",
+        "pol-ver-0721-otoczyć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "spatial"
+    ]
+  },
+  {
+    "key": "ver-0360-fuck",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0604-fuck"
+      ],
+      "POL": [
+        "pol-ver-0722-pieprzyć(fuck)",
+        "pol-ver-0887-przelecieć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "love"
+    ]
+  },
+  {
+    "key": "ver-0361-fuckup",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0605-fuckup"
+      ],
+      "POL": [
+        "pol-ver-0723-pieprzyć(fuck up)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "hobbies"
+    ]
+  },
+  {
+    "key": "ver-0362-underline",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0606-underline"
+      ],
+      "POL": [
+        "pol-ver-0724-podkreślać(underline)",
+        "pol-ver-0726-podkreślić(underline)"
+      ]
+    },
+    "papers": [
+      "punctuation"
+    ],
+    "topics": [
+      "writing",
+      "language"
+    ]
+  },
+  {
+    "key": "ver-0363-emphasise",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0607-emphasise",
+        "eng-ver-0608-stress"
+      ],
+      "POL": [
+        "pol-ver-0725-podkreślać(emphasise)",
+        "pol-ver-0727-podkreślić(emphasise)"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0364-pickup(object)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0609-pickup(object)"
+      ],
+      "POL": [
+        "pol-ver-0728-podnieść(pick up)",
+        "pol-ver-0730-podnosić(pick up)"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "key": "ver-0365-raise",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0611-raise",
+        "eng-ver-0612-lift"
+      ],
+      "POL": [
+        "pol-ver-0729-podnieść(raise)",
+        "pol-ver-0731-podnosić(raise)"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "key": "ver-0366-wrap",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0613-wrap"
+      ],
+      "POL": [
+        "pol-ver-0732-owinąć",
+        "pol-ver-0733-owijać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "hobbies",
+      "engineering"
+    ]
+  },
+  {
+    "key": "ver-0367-pick up(romantic)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0610-pick up(romantic)",
+        "eng-ver-0614-hiton"
+      ],
+      "POL": [
+        "pol-ver-0734-poderwać",
+        "pol-ver-0735-podrywać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "love"
+    ]
+  },
+  {
+    "key": "ver-0368-appear",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0615-appear"
+      ],
+      "POL": [
+        "pol-ver-0736-pojawiać",
+        "pol-ver-0737-pojawić"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "sense and perception",
+      "appearance"
+    ]
+  },
+  {
+    "key": "ver-0369-cry",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0616-cry"
+      ],
+      "POL": [
+        "pol-ver-0740-płakać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0370-mean",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0617-mean",
+        "eng-ver-0618-signify"
+      ],
+      "POL": [
+        "pol-ver-0741-oznaczać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0371-absorb",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0619-absorb"
+      ],
+      "POL": [
+        "pol-ver-0742-pochłaniać",
+        "pol-ver-0743-pochłonąć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "physics",
+      "science"
+    ]
+  },
+  {
+    "key": "ver-0372-beat(defeat)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0278-beat(defeat)",
+        "eng-ver-0620-defeat"
+      ],
+      "POL": [
+        "pol-ver-0744-pokonywać",
+        "pol-ver-0745-pokonać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "game",
+      "war"
+    ]
+  },
+  {
+    "key": "ver-0373-remember",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0621-remember",
+        "eng-ver-0622-recall"
+      ],
+      "POL": [
+        "pol-ver-0746-pamiętać",
+        "pol-ver-0747-zapamiętać(remember)"
+      ]
+    },
+    "papers": [
+      "thought"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0374-memorise",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0753-memorise"
+      ],
+      "POL": [
+        "pol-ver-0748-zapamiętać(memorise)",
+        "pol-ver-0749-zapamiętywać"
+      ]
+    },
+    "papers": [
+      "thought"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0375-worsen",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0623-worsen",
+        "eng-ver-0624-makeworse",
+        "eng-ver-0625-getworse",
+        "eng-ver-0626-deteriorate"
+      ],
+      "POL": [
+        "pol-ver-0750-pogorszyć",
+        "pol-ver-0751-pogarszać"
+      ]
+    },
+    "papers": [
+      "negative judgment"
+    ],
+    "topics": [
+      "judgment"
+    ]
+  },
+  {
+    "key": "ver-0376-connect",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0627-connect"
+      ],
+      "POL": [
+        "pol-ver-0754-połączyć(connect)",
+        "pol-ver-0756-łączyć(connect)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "spatial",
+      "engineering"
+    ]
+  },
+  {
+    "key": "ver-0377-combine",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0628-combine"
+      ],
+      "POL": [
+        "pol-ver-0755-połączyć(combine)",
+        "pol-ver-0757-łączyć(combine)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "hobbies",
+      "inside",
+      "restaurant",
+      "kitchen"
+    ]
+  },
+  {
+    "key": "ver-0378-travel",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0629-travel"
+      ],
+      "POL": [
+        "pol-ver-0758-podróżować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "key": "ver-0379-suit",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0630-suit",
+        "eng-ver-0631-match",
+        "eng-ver-0446-fit(match)"
+      ],
+      "POL": [
+        "pol-ver-0759-pasować"
+      ]
+    },
+    "papers": [
+      "dimension"
+    ],
+    "topics": [
+      "fashion",
+      "sense and perception",
+      "appearance"
+    ]
+  },
+  {
+    "key": "ver-0380-suspect",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0632-suspect"
+      ],
+      "POL": [
+        "pol-ver-0760-podejrzewać"
+      ]
+    },
+    "papers": [
+      "thought"
+    ],
+    "topics": [
+      "law",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0381-beatup",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0633-beatup"
+      ],
+      "POL": [
+        "pol-ver-0761-pobić",
+        "pol-ver-0762-pobijać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "school",
+      "violence"
+    ]
+  },
+  {
+    "key": "ver-0382-get(understand)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0128-get(understand)",
+        "eng-ver-0240-grasp(mentally)",
+        "eng-ver-0634-understand",
+        "eng-ver-0635-comprehend"
+      ],
+      "POL": [
+        "pol-ver-0763-pojąć",
+        "pol-ver-0764-pojmować",
+        "pol-ver-0962-zrozumieć",
+        "pol-ver-0963-rozumieć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0383-estimate",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0636-estimate"
+      ],
+      "POL": [
+        "pol-ver-0768-oszacować",
+        "pol-ver-0769-szacować"
+      ]
+    },
+    "papers": [
+      "neutral judgment"
+    ],
+    "topics": [
+      "school",
+      "math",
+      "judgment",
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0384-warn",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0637-warn"
+      ],
+      "POL": [
+        "pol-ver-0770-ostrzec",
+        "pol-ver-0771-ostrzegać"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "danger",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0385-fall",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0027-fall(general)"
+      ],
+      "POL": [
+        "pol-ver-0772-paść",
+        "pol-ver-0773-padać"
+      ]
+    },
+    "papers": [
+      "movement",
+      "weather"
+    ],
+    "topics": [
+      "body",
+      "outdoor",
+      "danger",
+      "geography"
+    ]
+  },
+  {
+    "key": "ver-0386-proposeto",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0638-proposeto"
+      ],
+      "POL": [
+        "pol-ver-0774-oświadczyć",
+        "pol-ver-0775-oświadczać"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0387-watch(child)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0115-watch(child)",
+        "eng-ver-0639-keepaneyeon"
+      ],
+      "POL": [
+        "pol-ver-0778-pilnować(watch)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "daily routine"
+    ]
+  },
+  {
+    "key": "ver-0388-plan",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0640-plan"
+      ],
+      "POL": [
+        "pol-ver-0779-planować",
+        "pol-ver-0780-zaplanować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "planning"
+    ]
+  },
+  {
+    "key": "ver-0389-hunt",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0641-hunt"
+      ],
+      "POL": [
+        "pol-ver-0781-polować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "sport"
+    ]
+  },
+  {
+    "key": "ver-0390-dependon",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0642-dependon",
+        "eng-ver-0643-relyon"
+      ],
+      "POL": [
+        "pol-ver-0783-polegać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "social glue"
+    ]
+  },
+  {
+    "key": "ver-0391-admire",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0644-admire"
+      ],
+      "POL": [
+        "pol-ver-0784-podziwiać"
+      ]
+    },
+    "papers": [
+      "thought",
+      "positive judgment"
+    ],
+    "topics": [
+      "mental",
+      "judgment"
+    ]
+  },
+  {
+    "key": "ver-0392-pierce",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0645-pierce",
+        "eng-ver-0646-puncture",
+        "eng-ver-0647-penetrate(pierce)"
+      ],
+      "POL": [
+        "pol-ver-0785-przebijać",
+        "pol-ver-0786-przebić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "violence",
+      "engineering"
+    ]
+  },
+  {
+    "key": "ver-0393-keepfrom",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0649-keepfrom",
+        "eng-ver-0650-refrainfrom",
+        "eng-ver-0651-preventfrom",
+        "eng-ver-0652-stopfrom"
+      ],
+      "POL": [
+        "pol-ver-0787-powstrzymać",
+        "pol-ver-0788-powstrzymywać"
+      ]
+    },
+    "papers": [
+      "helper"
+    ],
+    "topics": [
+      "violence"
+    ]
+  },
+  {
+    "key": "ver-0394-cause",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0653-cause",
+        "eng-ver-0654-induce",
+        "eng-ver-0655-bring on"
+      ],
+      "POL": [
+        "pol-ver-0791-powodować",
+        "pol-ver-0792-spowodować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "time",
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0395-drag",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0656-drag"
+      ],
+      "POL": [
+        "pol-ver-0793-przeciągnąć",
+        "pol-ver-0794-przeciągać"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "communications"
+    ]
+  },
+  {
+    "key": "ver-0396-welcome",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0657-welcome",
+        "eng-ver-0658-greet"
+      ],
+      "POL": [
+        "pol-ver-0795-powitać",
+        "pol-ver-0796-witać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "holiday"
+    ]
+  },
+  {
+    "key": "ver-0397-compare",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0659-compare"
+      ],
+      "POL": [
+        "pol-ver-0797-porównywać",
+        "pol-ver-0798-porównać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0398-convey",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0660-convey",
+        "eng-ver-0661-transmit"
+      ],
+      "POL": [
+        "pol-ver-0799-przekazywać",
+        "pol-ver-0800-przekazać"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "communications",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0399-own",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0662-own",
+        "eng-ver-0663-possess"
+      ],
+      "POL": [
+        "pol-ver-0801-posiadać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "possession"
+    ]
+  },
+  {
+    "key": "ver-0400-enlarge",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0664-enlarge",
+        "eng-ver-0665-increase",
+        "eng-ver-0666-expand"
+      ],
+      "POL": [
+        "pol-ver-0802-powiększyć",
+        "pol-ver-0803-powiększać"
+      ]
+    },
+    "papers": [
+      "dimension"
+    ],
+    "topics": [
+      "sense and perception",
+      "appearance"
+    ]
+  },
+  {
+    "key": "ver-0401-produce",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0667-produce"
+      ],
+      "POL": [
+        "pol-ver-0806-produkować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "engineering"
+    ]
+  },
+  {
+    "key": "ver-0402-transform",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0668-transform"
+      ],
+      "POL": [
+        "pol-ver-0807-przekształcić",
+        "pol-ver-0808-przekształcać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "sense and perception",
+      "appearance"
+    ]
+  },
+  {
+    "key": "ver-0403-meet",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0669-meet",
+        "eng-ver-0670-get to know"
+      ],
+      "POL": [
+        "pol-ver-0809-poznawać(meet)",
+        "pol-ver-0811-poznać(meet)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0404-recognise",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0671-recognise"
+      ],
+      "POL": [
+        "pol-ver-0810-poznawać(recognise)",
+        "pol-ver-0812-poznać(recognise)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "sense and perception",
+      "mental",
+      "appearance"
+    ]
+  },
+  {
+    "key": "ver-0405-shake",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0672-shake"
+      ],
+      "POL": [
+        "pol-ver-0813-potrząsać",
+        "pol-ver-0814-potrząsnąć"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "key": "ver-0406-help",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0673-help"
+      ],
+      "POL": [
+        "pol-ver-0817-pomóc",
+        "pol-ver-0818-pomagać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people"
+    ]
+  },
+  {
+    "key": "ver-0407-omit",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0674-omit",
+        "eng-ver-0675-leaveout"
+      ],
+      "POL": [
+        "pol-ver-0819-pominąć(omit)",
+        "pol-ver-0821-pomijać(omit)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "writing",
+      "knowledge and existence"
+    ]
+  },
+  {
+    "key": "ver-0408-skip",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0676-skip"
+      ],
+      "POL": [
+        "pol-ver-0820-pominąć(skip)",
+        "pol-ver-0822-pomijać(skip)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "planning",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0409-change(clothes)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0032-change(clothes)",
+        "eng-ver-0677-getchanged"
+      ],
+      "POL": [
+        "pol-ver-0823-przebrać",
+        "pol-ver-0824-przebierać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "fashion",
+      "daily routine"
+    ]
+  },
+  {
+    "key": "ver-0410-gothrough",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0678-gothrough"
+      ],
+      "POL": [
+        "pol-ver-0825-przechodzić",
+        "pol-ver-0826-przejść"
+      ]
+    },
+    "papers": [
+      "locomotion"
+    ],
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "key": "ver-0411-run over",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0679-run over"
+      ],
+      "POL": [
+        "pol-ver-0827-przejechać",
+        "pol-ver-0828-potrącić(run over)",
+        "pol-ver-0830-potrącać(run over)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "travel",
+      "danger",
+      "car"
+    ]
+  },
+  {
+    "key": "ver-0412-remain",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0680-remain",
+        "eng-ver-0681-stay"
+      ],
+      "POL": [
+        "pol-ver-0832-pozostawać",
+        "pol-ver-0833-pozostać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "spatial"
+    ]
+  },
+  {
+    "key": "ver-0413-improve",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0682-improve",
+        "eng-ver-0683-correct"
+      ],
+      "POL": [
+        "pol-ver-0834-poprawiać",
+        "pol-ver-0835-poprawić"
+      ]
+    },
+    "papers": [
+      "positive judgment"
+    ],
+    "topics": [
+      "school",
+      "judgment",
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0414-extend",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0684-extend",
+        "eng-ver-0685-prolong"
+      ],
+      "POL": [
+        "pol-ver-0836-przedłużyć",
+        "pol-ver-0837-przedłużać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "spatial",
+      "time"
+    ]
+  },
+  {
+    "key": "ver-0415-succeed",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0686-succeed"
+      ],
+      "POL": [
+        "pol-ver-0838-powieść"
+      ]
+    },
+    "papers": [
+      "positive judgment"
+    ],
+    "topics": [
+      "school",
+      "judgment",
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0416-begoingwellfor",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0687-begoingwellfor"
+      ],
+      "POL": [
+        "pol-ver-0839-powodzić"
+      ]
+    },
+    "papers": [
+      "positive judgment"
+    ],
+    "topics": [
+      "school",
+      "judgment",
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0417-swallow",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0688-swallow"
+      ],
+      "POL": [
+        "pol-ver-0840-przełknąć",
+        "pol-ver-0841-przełykać",
+        "pol-ver-0842-połykać",
+        "pol-ver-0843-półknąć"
+      ]
+    },
+    "papers": [
+      "bodypart"
+    ],
+    "topics": [
+      "body",
+      "restaurant",
+      "inside",
+      "kitchen",
+      "medicine"
+    ]
+  },
+  {
+    "key": "ver-0418-speakalanguage(language)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0087-speakalanguage(language)"
+      ],
+      "POL": [
+        "pol-ver-0097-mówić(speak a language)"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "body",
+      "language"
+    ]
+  },
+  {
+    "key": "ver-0419-confirm",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0689-confirm"
+      ],
+      "POL": [
+        "pol-ver-0846-potwierdzać",
+        "pol-ver-0847-potwierdzić"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "law",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0420-takeover",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0691-takeover"
+      ],
+      "POL": [
+        "pol-ver-0850-przejąć(take)(take over)",
+        "pol-ver-0853-przejmować(take)(take over)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "business"
+    ]
+  },
+  {
+    "key": "ver-0421-seize",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0692-seize"
+      ],
+      "POL": [
+        "pol-ver-0851-przejąć(take)(seize)",
+        "pol-ver-0854-przejmować(take)(seize)"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "possession"
+    ]
+  },
+  {
+    "key": "ver-0422-standup",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0015-standup"
+      ],
+      "POL": [
+        "pol-ver-0856-powstać",
+        "pol-ver-0857-powstawać",
+        "pol-ver-0014-wstać",
+        "pol-ver-0015-wstawać"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "key": "ver-0423-swear",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0694-swear",
+        "eng-ver-0695-curse"
+      ],
+      "POL": [
+        "pol-ver-0858-przeklinać",
+        "pol-ver-0859-przekląć"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0424-notify",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0696-notify",
+        "eng-ver-0697-inform"
+      ],
+      "POL": [
+        "pol-ver-0860-powiadomić",
+        "pol-ver-0861-powiadamiać"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "business",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0425-treat(consider)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0483-treat(consider)",
+        "eng-ver-0698-consider(as)"
+      ],
+      "POL": [
+        "pol-ver-0862-potraktować",
+        "pol-ver-0863-traktować",
+        "pol-ver-0961-uważać"
+      ]
+    },
+    "papers": [
+      "thought"
+    ],
+    "topics": [
+      "people",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0426-consider(think about)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0699-consider(think about)"
+      ],
+      "POL": [
+        "pol-ver-8888-rozważyc",
+        "pol-ver-8888-rozważac"
+      ]
+    },
+    "papers": [
+      "thought"
+    ],
+    "topics": [
+      "people",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0427-move(house)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0702-move(house)"
+      ],
+      "POL": [
+        "pol-ver-0865-przeprowadzić(move)",
+        "pol-ver-0867-przeprowadzać(move)"
+      ]
+    },
+    "papers": [
+      "event"
+    ],
+    "topics": [
+      "travel",
+      "time"
+    ]
+  },
+  {
+    "key": "ver-0428-work(person)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0342-work(person)"
+      ],
+      "POL": [
+        "pol-ver-0868-pracować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0429-move(object)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0703-move(object)",
+        "eng-ver-0704-transfer"
+      ],
+      "POL": [
+        "pol-ver-0869-przenosić",
+        "pol-ver-0870-przenieść"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "travel",
+      "communications"
+    ]
+  },
+  {
+    "key": "ver-0430-trip",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0705-trip",
+        "eng-ver-0706-tripover",
+        "eng-ver-0707-stumble"
+      ],
+      "POL": [
+        "pol-ver-0873-potknąć",
+        "pol-ver-0874-potykać"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body",
+      "danger"
+    ]
+  },
+  {
+    "key": "ver-0431-plant",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0708-plant"
+      ],
+      "POL": [
+        "pol-ver-0875-posadzić",
+        "pol-ver-0876-sadzić"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "agriculture"
+    ]
+  },
+  {
+    "key": "ver-0432-commit(error)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0709-commit(error)",
+        "eng-ver-0009-make(a mistake)"
+      ],
+      "POL": [
+        "pol-ver-0881-popełnić",
+        "pol-ver-0882-popełniać"
+      ]
+    },
+    "papers": [
+      "negative judgment"
+    ],
+    "topics": [
+      "hobbies",
+      "judgment"
+    ]
+  },
+  {
+    "key": "ver-0433-commit(to)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0710-commit(to)"
+      ],
+      "POL": [
+        "pol-ver-0310-angażować(commit to)",
+        "pol-ver-0312-zaangażować(commit to)",
+        "pol-ver-1015-zobowiązywać",
+        "pol-ver-1014-zobowiązać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "hobbies",
+      "mental",
+      "work",
+      "politics"
+    ]
+  },
+  {
+    "key": "ver-0434-engage",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0271-engage",
+        "eng-ver-0272-getinvolved"
+      ],
+      "POL": [
+        "pol-ver-0309-angażować(get involved)",
+        "pol-ver-0311-zaangażować(get involved)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "hobbies",
+      "mental",
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0435-drive",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0078-drive(transitive)"
+      ],
+      "POL": [
+        "pol-ver-0884-prowadzić(drive)",
+        "pol-ver-0886-prowadzać(drive)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "travel",
+      "car"
+    ]
+  },
+  {
+    "key": "ver-0436-regret",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0711-regret"
+      ],
+      "POL": [
+        "pol-ver-0888-pożałować",
+        "pol-ver-0889-żałować"
+      ]
+    },
+    "papers": [
+      "emotion"
+    ],
+    "topics": [
+      "time",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0437-apologise",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0712-apologise",
+        "eng-ver-0713-besorry"
+      ],
+      "POL": [
+        "pol-ver-0890-przeprosić",
+        "pol-ver-0891-przepraszać"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental",
+      "social glue"
+    ]
+  },
+  {
+    "key": "ver-0438-startle",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0714-startle",
+        "eng-ver-0715-frighten",
+        "eng-ver-0716-scare"
+      ],
+      "POL": [
+        "pol-ver-0892-przestraszyć",
+        "pol-ver-0893-przestraszać",
+        "pol-ver-0898-przerażać(frighten)",
+        "pol-ver-0900-przerazić(frighten)"
+      ]
+    },
+    "papers": [
+      "emotion"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0439-exaggerate",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0717-exaggerate"
+      ],
+      "POL": [
+        "pol-ver-0894-przesadzać(exaggerate)",
+        "pol-ver-0896-przesadzić(exaggerate)"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0440-overdo",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0718-overdo"
+      ],
+      "POL": [
+        "pol-ver-0895-przesadzać(overdo)",
+        "pol-ver-0897-przesadzić(overdo)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "hobbies"
+    ]
+  },
+  {
+    "key": "ver-0441-horrify",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0719-horrify",
+        "eng-ver-0720-appall"
+      ],
+      "POL": [
+        "pol-ver-0899-przerażać(horrify)",
+        "pol-ver-0901-przerazić(horrify)"
+      ]
+    },
+    "papers": [
+      "negative judgment"
+    ],
+    "topics": [
+      "judgment"
+    ]
+  },
+  {
+    "key": "ver-0442-flip",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0721-flip"
+      ],
+      "POL": [
+        "pol-ver-0902-przerzucić",
+        "pol-ver-0903-przerzucać"
+      ]
+    },
+    "papers": [
+      "movement"
+    ],
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "key": "ver-0443-hold(storage)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0507-hold(storage)",
+        "eng-ver-0722-store",
+        "eng-ver-0327-keep(general)"
+      ],
+      "POL": [
+        "pol-ver-0904-przechowywać",
+        "pol-ver-0905-przechować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "communications"
+    ]
+  },
+  {
+    "key": "ver-0444-break(breaktime)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0596-break(breaktime)",
+        "eng-ver-0723-stop"
+      ],
+      "POL": [
+        "pol-ver-0906-przerwać(break)",
+        "pol-ver-0908-przerywać(break)",
+        "pol-ver-0910-przestawać",
+        "pol-ver-0911-przestać"
+      ]
+    },
+    "papers": [
+      "person",
+      "living"
+    ],
+    "topics": [
+      "people",
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0445-interrupt",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0724-interrupt"
+      ],
+      "POL": [
+        "pol-ver-0907-przerwać(interrupt)",
+        "pol-ver-0909-przerywać(interrupt)"
+      ]
+    },
+    "papers": [
+      "person",
+      "speech",
+      "living"
+    ],
+    "topics": [
+      "people",
+      "work"
+    ]
+  },
+  {
+    "key": "ver-0446-hang",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0725-hang"
+      ],
+      "POL": [
+        "pol-ver-0912-powiesić",
+        "pol-ver-0913-wieszać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "fashion",
+      "engineering"
+    ]
+  },
+  {
+    "key": "ver-0447-lookthrough(documents)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0726-lookthrough(documents)",
+        "eng-ver-0727-browse",
+        "eng-ver-0728-peruse"
+      ],
+      "POL": [
+        "pol-ver-0914-przeglądać",
+        "pol-ver-0915-przejrzeć"
+      ]
+    },
+    "papers": [
+      "money"
+    ],
+    "topics": [
+      "business",
+      "writing",
+      "shopping"
+    ]
+  },
+  {
+    "key": "ver-0448-getridof",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0729-getridof"
+      ],
+      "POL": [
+        "pol-ver-0916-pozbyć",
+        "pol-ver-0917-pozbywać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "knowledge and existence",
+      "possession"
+    ]
+  },
+  {
+    "key": "ver-0449-deprive",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0730-deprive"
+      ],
+      "POL": [
+        "pol-ver-0920-pozbawić",
+        "pol-ver-0921-pozbawiać"
+      ]
+    },
+    "papers": [
+      "crime"
+    ],
+    "topics": [
+      "law",
+      "crime",
+      "possession"
+    ]
+  },
+  {
+    "key": "ver-0450-advise",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0731-advise"
+      ],
+      "POL": [
+        "pol-ver-0922-poradzić",
+        "pol-ver-0923-radzić"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "people",
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0451-penetrate",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0648-penetrate(permeate)",
+        "eng-ver-0732-permeate"
+      ],
+      "POL": [
+        "pol-ver-0924-przenikać",
+        "pol-ver-0925-przeniknąć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "chemistry",
+      "sociology",
+      "science",
+      "engineering"
+    ]
+  },
+  {
+    "key": "ver-0452-perceive(generally)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0234-perceive(generally)"
+      ],
+      "POL": [
+        "pol-ver-0926-postrzegać",
+        "pol-ver-0927-postrzec"
+      ]
+    },
+    "papers": [
+      "perception"
+    ],
+    "topics": [
+      "sense and perception"
+    ]
+  },
+  {
+    "key": "ver-0453-introduce",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0733-introduce",
+        "eng-ver-0734-present"
+      ],
+      "POL": [
+        "pol-ver-0928-przedstawić",
+        "pol-ver-0929-przedstawiać"
+      ]
+    },
+    "papers": [
+      "event"
+    ],
+    "topics": [
+      "people",
+      "time"
+    ]
+  },
+  {
+    "key": "ver-0454-bidfarewell",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0735-bidfarewell",
+        "eng-ver-0736-bidgoodbye"
+      ],
+      "POL": [
+        "pol-ver-0930-pożegnać",
+        "pol-ver-0931-żegnać"
+      ]
+    },
+    "papers": [
+      "event"
+    ],
+    "topics": [
+      "people",
+      "time"
+    ]
+  },
+  {
+    "key": "ver-0455-movearound",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0737-movearound",
+        "eng-ver-0738-rearrange"
+      ],
+      "POL": [
+        "pol-ver-0932-przełożyć(move)",
+        "pol-ver-0934-przekładać(move)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "spatial"
+    ]
+  },
+  {
+    "key": "ver-0456-support",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0739-support",
+        "eng-ver-0740-back"
+      ],
+      "POL": [
+        "pol-ver-0936-poprzeć",
+        "pol-ver-0937-popierać"
+      ]
+    },
+    "papers": [
+      "positive judgment"
+    ],
+    "topics": [
+      "mental",
+      "judgment",
+      "politics"
+    ]
+  },
+  {
+    "key": "ver-0457-desire",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0741-desire",
+        "eng-ver-0742-longfor",
+        "eng-ver-0743-wishfor"
+      ],
+      "POL": [
+        "pol-ver-0938-pragnąć",
+        "pol-ver-0939-zapragnąć"
+      ]
+    },
+    "papers": [
+      "emotion"
+    ],
+    "topics": [
+      "mental",
+      "possession"
+    ]
+  },
+  {
+    "key": "ver-0458-accommodate",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0744-accommodate",
+        "eng-ver-0447-fit(accommodate)"
+      ],
+      "POL": [
+        "pol-ver-0940-pomieścić",
+        "pol-ver-0941-pomieszczać"
+      ]
+    },
+    "papers": [
+      "dimension"
+    ],
+    "topics": [
+      "spatial",
+      "sense and perception",
+      "appearance"
+    ]
+  },
+  {
+    "key": "ver-0459-marry",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0745-marry"
+      ],
+      "POL": [
+        "pol-ver-0942-poślubić",
+        "pol-ver-0943-poślubiać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "people",
+      "love",
+      "law",
+      "celebration"
+    ]
+  },
+  {
+    "key": "ver-0460-hurry",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0746-hurry"
+      ],
+      "POL": [
+        "pol-ver-0944-pospieszyć",
+        "pol-ver-0945-spieszyć",
+        "pol-ver-0946-śpieszyć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "time"
+    ]
+  },
+  {
+    "key": "ver-0461-protest",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0747-protest"
+      ],
+      "POL": [
+        "pol-ver-0949-protestować",
+        "pol-ver-0950-zaprotestować"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "politics"
+    ]
+  },
+  {
+    "key": "ver-0462-slippast",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0748-slippast",
+        "eng-ver-0749-sneakpast"
+      ],
+      "POL": [
+        "pol-ver-0951-przemknąć",
+        "pol-ver-0952-przemykać"
+      ]
+    },
+    "papers": [
+      "crime",
+      "locomotion"
+    ],
+    "topics": [
+      "law",
+      "crime"
+    ]
+  },
+  {
+    "key": "ver-0463-lend",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0750-lend"
+      ],
+      "POL": [
+        "pol-ver-0953-pożyczyć(lend)",
+        "pol-ver-0955-pożyczać(lend)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "school",
+      "possession"
+    ]
+  },
+  {
+    "key": "ver-0464-borrow",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0751-borrow"
+      ],
+      "POL": [
+        "pol-ver-0954-pożyczyć(borrow)",
+        "pol-ver-0956-pożyczać(borrow)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "school",
+      "possession"
+    ]
+  },
+  {
+    "key": "ver-0465-last",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0752-last"
+      ],
+      "POL": [
+        "pol-ver-0957-potrwać"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "inside",
+      "restaurant",
+      "kitchen",
+      "time"
+    ]
+  },
+  {
+    "key": "ver-0466-suppose",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0754-assume",
+        "eng-ver-0755-presume",
+        "eng-ver-0756-suppose"
+      ],
+      "POL": [
+        "pol-ver-0970-założyć(assume)",
+        "pol-ver-0973-zakładać(assume)",
+        "pol-ver-0976-przypuszczać",
+        "pol-ver-0977-przypuścić"
+      ]
+    },
+    "papers": [
+      "thought"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0467-bet",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0757-bet"
+      ],
+      "POL": [
+        "pol-ver-0972-założyć(bet)",
+        "pol-ver-0974-zakładać(bet)"
+      ]
+    },
+    "papers": [
+      "thought"
+    ],
+    "topics": [
+      "mental",
+      "game"
+    ]
+  },
+  {
+    "key": "ver-0468-claim(that)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0303-claim(that)"
+      ],
+      "POL": [
+        "pol-ver-0978-twierdzić",
+        "pol-ver-0979-stwierdzić(claim)"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0469-conclude",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0304-conclude(that)",
+        "eng-ver-0305-state"
+      ],
+      "POL": [
+        "pol-ver-0980-stwierdzić(conclude)"
+      ]
+    },
+    "papers": [
+      "speech"
+    ],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0470-perform(in a show)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0701-perform(in a show)"
+      ],
+      "POL": [
+        "pol-ver-0981-występować(perform)",
+        "pol-ver-0983-wystąpić(perform)"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "music",
+      "theatre"
+    ]
+  },
+  {
+    "key": "ver-0471-weigh",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0759-weigh"
+      ],
+      "POL": [
+        "pol-ver-0995-ważyć"
+      ]
+    },
+    "papers": [
+      "dimension"
+    ],
+    "topics": [
+      "sense and perception",
+      "appearance"
+    ]
+  },
+  {
+    "key": "ver-0472-dislocate",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0760-dislocate"
+      ],
+      "POL": [
+        "pol-ver-0996-zwichnąć"
+      ]
+    },
+    "papers": [
+      "disease"
+    ],
+    "topics": [
+      "disease",
+      "medicine"
+    ]
+  },
+  {
+    "key": "ver-0473-suffer",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0279-suffer"
+      ],
+      "POL": [
+        "pol-ver-0323-cierpieć"
+      ]
+    },
+    "papers": [],
+    "topics": [
+      "mental"
+    ]
+  },
+  {
+    "key": "ver-0474-tolerate",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0763-bear",
+        "eng-ver-0012-stand(tolerate)",
+        "eng-ver-0764-put up with",
+        "eng-ver-0765-tolerate",
+        "eng-ver-0766-endure"
+      ],
+      "POL": [
+        "pol-ver-1002-znosić",
+        "pol-ver-1001-znieść",
+        "pol-ver-8888-tolerować"
+      ]
+    },
+    "papers": [
+      "emotion",
+      "negative judgment"
+    ],
+    "topics": [
+      "mental",
+      "judgment"
+    ]
+  },
+  {
+    "key": "ver-0475-make up for",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-ver-0767-make up for"
+      ],
+      "POL": [
+        "pol-ver-1010-nadrobić",
+        "pol-ver-1011-nadrabiać"
+      ]
+    },
+    "papers": [
+      "money"
+    ],
+    "topics": [
+      "hobbies",
+      "time"
+    ]
+  }
+]

@@ -1,0 +1,5805 @@
+[
+  {
+    "lemma": "matka",
+    "id": "pol-npe-0001-matka",
+    "frequency": 1,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "derivedTerms": [
+        "awiomatka",
+        "matczyny",
+        "mateczny",
+        "matecznik",
+        "matula",
+        "matczyć",
+        "matkować"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "matka",
+        "gen": "matki",
+        "dat": "matce",
+        "acc": "matkę",
+        "ins": "matką",
+        "loc": "matce",
+        "voc": "matko"
+      },
+      "plural": {
+        "nom": "matki",
+        "gen": "matek",
+        "dat": "matkom",
+        "acc": "matki",
+        "ins": "matkami",
+        "loc": "matkach",
+        "voc": "matki"
+      }
+    }
+  },
+  {
+    "lemma": "ojciec",
+    "id": "pol-npe-0002-ojciec",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "abbreviation": [
+          "o."
+        ]
+      },
+      "synonyms": [
+        "ksiądz"
+      ],
+      "derivedTerms": [
+        "ojcobójczy",
+        "ojcowski",
+        "ojcowy",
+        "ojczysty",
+        "ojciec chrzestny",
+        "ojciec dyrektor",
+        "ojcobójca",
+        "ojcobójczyni",
+        "ojcobójstwo",
+        "ojcostwo",
+        "ojcowizna",
+        "ojczym",
+        "ojczyzna",
+        "jaki ojciec, taki syn"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "ojciec",
+        "gen": "ojca",
+        "dat": "ojcu",
+        "acc": "ojca",
+        "ins": "ojcem",
+        "loc": "ojcu",
+        "voc": "ojcze"
+      },
+      "plural": {
+        "nom": "ojcowie",
+        "gen": "ojców",
+        "dat": "ojcom",
+        "acc": "ojców",
+        "ins": "ojcami",
+        "loc": "ojcach",
+        "voc": "ojcowie"
+      }
+    }
+  },
+  {
+    "lemma": "brat",
+    "id": "pol-npe-0003-brat",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "braciszek"
+        ]
+      },
+      "derivedTerms": [
+        "bracki",
+        "braterski",
+        "bratni",
+        "pobratymczy",
+        "bratersko",
+        "po bratersku",
+        "brachol",
+        "bractwo",
+        "brać",
+        "brat łata",
+        "bratanek",
+        "bratanica",
+        "bratanka",
+        "bratowa",
+        "bratczyk",
+        "bratek",
+        "brateńko",
+        "bratul",
+        "bratunio",
+        "rozbrat",
+        "pobratymstwo",
+        "pobratymiec",
+        "pobratymca",
+        "półbrat",
+        "bratać",
+        "być za pan brat",
+        "rozbratać",
+        "zbratać"
+      ],
+      "usage": [
+        "A przechadzając się nad Morzem Galilejskim, zobaczył Szymona i Andrzeja, jego brata , zarzucających sieć w morze; byli bowiem rybakami. As Jesus was strolling beside the Sea of Galilee, he saw Simon and Andrew, his brother , casting a net into the sea; they were fishermen"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "brat",
+        "gen": "brata",
+        "dat": "bratu",
+        "acc": "brata",
+        "ins": "bratem",
+        "loc": "bracie",
+        "voc": "bracie"
+      },
+      "plural": {
+        "nom": "bracia",
+        "gen": "braci",
+        "dat": "braciom",
+        "acc": "braci",
+        "ins": "braćmi",
+        "loc": "braciach",
+        "voc": "bracia"
+      }
+    }
+  },
+  {
+    "lemma": "siostra",
+    "id": "pol-npe-0004-siostra",
+    "frequency": 1,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "siostrzyczka"
+        ]
+      },
+      "derivedTerms": [
+        "siostrzany",
+        "siostrunia",
+        "siostrzyca",
+        "siostrzyczka"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "siostra",
+        "gen": "siostry",
+        "dat": "siostrze",
+        "acc": "siostrę",
+        "ins": "siostrą",
+        "loc": "siostrze",
+        "voc": "siostro"
+      },
+      "plural": {
+        "nom": "siostry",
+        "gen": "sióstr",
+        "dat": "siostrom",
+        "acc": "siostry",
+        "ins": "siostrami",
+        "loc": "siostrach",
+        "voc": "siostry"
+      }
+    }
+  },
+  {
+    "lemma": "kobieta",
+    "id": "pol-npe-0005-kobieta",
+    "frequency": 1,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "kobietka"
+        ]
+      },
+      "antonyms": [
+        "mężczyzna"
+      ],
+      "derivedTerms": [
+        "kobiecy",
+        "(adjective)"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "kobieta",
+        "gen": "kobiety",
+        "dat": "kobiecie",
+        "acc": "kobietę",
+        "ins": "kobietą",
+        "loc": "kobiecie",
+        "voc": "kobieto"
+      },
+      "plural": {
+        "nom": "kobiety",
+        "gen": "kobiet",
+        "dat": "kobietom",
+        "acc": "kobiety",
+        "ins": "kobietami",
+        "loc": "kobietach",
+        "voc": "kobiety"
+      }
+    }
+  },
+  {
+    "lemma": "mężczyzna",
+    "id": "pol-npe-0006-mężczyzna",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "antonyms": [
+        "kobieta"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "mężczyzna",
+        "gen": "mężczyzny",
+        "dat": "mężczyźnie",
+        "acc": "mężczyznę",
+        "ins": "mężczyzną",
+        "loc": "mężczyźnie",
+        "voc": "mężczyzno"
+      },
+      "plural": {
+        "nom": "mężczyźni",
+        "gen": "mężczyzn",
+        "dat": "mężczyznom",
+        "acc": "mężczyzn",
+        "ins": "mężczyznami",
+        "loc": "mężczyznach",
+        "voc": "mężczyźni"
+      }
+    }
+  },
+  {
+    "lemma": "córka",
+    "id": "pol-npe-0007-córka",
+    "frequency": 1,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "córeczka"
+        ],
+        "augmentative": [
+          "córa"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "córka",
+        "gen": "córki",
+        "dat": "córce",
+        "acc": "córkę",
+        "ins": "córką",
+        "loc": "córce",
+        "voc": "córko"
+      },
+      "plural": {
+        "nom": "córki",
+        "gen": "córek",
+        "dat": "córkom",
+        "acc": "córki",
+        "ins": "córkami",
+        "loc": "córkach",
+        "voc": "córki"
+      }
+    }
+  },
+  {
+    "lemma": "syn",
+    "id": "pol-npe-0008-syn",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "synek"
+        ]
+      },
+      "derivedTerms": [
+        "syneczek",
+        "synek",
+        "syncio",
+        "synulek",
+        "synuś",
+        "synal",
+        "synalek"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "syn",
+        "gen": "syna",
+        "dat": "synowi",
+        "acc": "syna",
+        "ins": "synem",
+        "loc": "synu",
+        "voc": "synu"
+      },
+      "plural": {
+        "nom": "synowie",
+        "gen": "synów",
+        "dat": "synom",
+        "acc": "synów",
+        "ins": "synami",
+        "loc": "synach",
+        "voc": "synowie"
+      }
+    }
+  },
+  {
+    "lemma": "dziadek",
+    "id": "pol-npe-0009-dziadek",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "dziadziuś"
+        ],
+        "augmentative": [
+          "dziad"
+        ]
+      },
+      "derivedTerms": [
+        "gdyby babcia miała wąsy, toby była dziadkiem",
+        "dziadek do orzechów"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "dziadek",
+        "gen": "dziadka",
+        "dat": "dziadkowi",
+        "acc": "dziadka",
+        "ins": "dziadkiem",
+        "loc": "dziadku",
+        "voc": "dziadku"
+      },
+      "plural": {
+        "nom": "dziadkowie",
+        "gen": "dziadków",
+        "dat": "dziadkom",
+        "acc": "dziadków",
+        "ins": "dziadkami",
+        "loc": "dziadkach",
+        "voc": "dziadkowie"
+      }
+    }
+  },
+  {
+    "lemma": "babcia",
+    "id": "pol-npe-0010-babcia",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "babunia",
+          "babusia"
+        ]
+      },
+      "synonyms": [
+        "baba",
+        "babka",
+        "babunia",
+        "babina",
+        "starowina",
+        "staruszka"
+      ],
+      "derivedTerms": [
+        "babciny",
+        "babciowy",
+        "babcia klozetowa",
+        "gdyby babcia miała wąsy, toby była dziadkiem",
+        "skończyło się babci sranie"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "babcia",
+        "gen": "babci",
+        "dat": "babci",
+        "acc": "babcię",
+        "ins": "babcią",
+        "loc": "babci",
+        "voc": "babciu"
+      },
+      "plural": {
+        "nom": "babcie",
+        "gen": "babć",
+        "dat": "babciom",
+        "acc": "babcie",
+        "ins": "babciami",
+        "loc": "babciach",
+        "voc": "babcie"
+      }
+    }
+  },
+  {
+    "lemma": "mąż",
+    "id": "pol-npe-0011-mąż",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "derivedTerms": [
+        "mężowski",
+        "mężowy",
+        "mąż stanu",
+        "mężulek",
+        "mężuś",
+        "mężysko"
+      ],
+      "usage": [
+        "Usage notes [ edit ] The sense of \"male human being\" carries connotations of bravery honour or responsibility ; in other words, the stereotypical quality of \" manliness \"."
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "mąż",
+        "gen": "męża",
+        "dat": "mężowi",
+        "acc": "męża",
+        "ins": "mężem",
+        "loc": "mężu",
+        "voc": "mężu"
+      },
+      "plural": {
+        "nom": "mężowie",
+        "gen": "mężów",
+        "dat": "mężom",
+        "acc": "mężów",
+        "ins": "mężami",
+        "loc": "mężach",
+        "voc": "mężowie"
+      }
+    }
+  },
+  {
+    "lemma": "żona",
+    "id": "pol-npe-0012-żona",
+    "frequency": 1,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "derivedTerms": [
+        "bezżenny",
+        "nieżonaty",
+        "żonaty",
+        "żonin",
+        "żoniny",
+        "bezżennie",
+        "bezżeństwo",
+        "bezżenność",
+        "żoncia",
+        "żoneczka",
+        "żonisko",
+        "żonka",
+        "żonkoś",
+        "żonusia"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "żona",
+        "gen": "żony",
+        "dat": "żonie",
+        "acc": "żonę",
+        "ins": "żoną",
+        "loc": "żonie",
+        "voc": "żono"
+      },
+      "plural": {
+        "nom": "żony",
+        "gen": "żon",
+        "dat": "żonom",
+        "acc": "żony",
+        "ins": "żonami",
+        "loc": "żonach",
+        "voc": "żony"
+      }
+    }
+  },
+  {
+    "lemma": "wuj",
+    "id": "pol-npe-0013-wuj",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "synonyms": [
+        "wujek"
+      ],
+      "derivedTerms": [
+        "wujaszkowy",
+        "wujeczny",
+        "wujowski",
+        "wujowy",
+        "wujanka",
+        "wujaszek",
+        "wujek",
+        "wujenka",
+        "wujostwo",
+        "wujaszkować"
+      ],
+      "usage": [
+        "Coordinate term: stryj"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "wuj",
+        "gen": "wuja",
+        "dat": "wujowi",
+        "acc": "wuja",
+        "ins": "wujem",
+        "loc": "wuju",
+        "voc": "wuju"
+      },
+      "plural": {
+        "nom": "wujowie",
+        "gen": [
+          "wujów",
+          "wui"
+        ],
+        "dat": "wujom",
+        "acc": [
+          "wujów",
+          "wui"
+        ],
+        "ins": "wujami",
+        "loc": "wujach",
+        "voc": "wujowie"
+      }
+    }
+  },
+  {
+    "lemma": "wujek",
+    "id": "pol-npe-0014-wujek",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "wujcio",
+          "wujaszek"
+        ]
+      },
+      "synonyms": [
+        "wuj"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "wujek",
+        "gen": "wujka",
+        "dat": "wujkowi",
+        "acc": "wujka",
+        "ins": "wujkiem",
+        "loc": "wujku",
+        "voc": "wujku"
+      },
+      "plural": {
+        "nom": "wujkowie",
+        "gen": "wujków",
+        "dat": "wujkom",
+        "acc": "wujków",
+        "ins": "wujkami",
+        "loc": "wujkach",
+        "voc": "wujkowie"
+      }
+    }
+  },
+  {
+    "lemma": "ciocia",
+    "id": "pol-npe-0015-ciocia",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "synonyms": [
+        "ciotka"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "ciocia",
+        "gen": "cioci",
+        "dat": "cioci",
+        "acc": "ciocię",
+        "ins": "ciocią",
+        "loc": "cioci",
+        "voc": "ciociu"
+      },
+      "plural": {
+        "nom": "ciocie",
+        "gen": "cioć",
+        "dat": "ciociom",
+        "acc": "ciocie",
+        "ins": "ciociami",
+        "loc": "ciociach",
+        "voc": "ciocie"
+      }
+    }
+  },
+  {
+    "lemma": "kuzyn",
+    "id": "pol-npe-0016-kuzyn",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "kuzynka"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "kuzyn",
+        "gen": "kuzyna",
+        "dat": "kuzynowi",
+        "acc": "kuzyna",
+        "ins": "kuzynem",
+        "loc": "kuzynie",
+        "voc": "kuzynie"
+      },
+      "plural": {
+        "nom": "kuzyni",
+        "gen": "kuzynów",
+        "dat": "kuzynom",
+        "acc": "kuzynów",
+        "ins": "kuzynami",
+        "loc": "kuzynach",
+        "voc": "kuzyni"
+      }
+    }
+  },
+  {
+    "lemma": "siostrzenica",
+    "id": "pol-npe-0017-siostrzenica",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "inflections": {
+      "singular": {
+        "nom": "siostrzenica",
+        "gen": "siostrzenicy",
+        "dat": "siostrzenicy",
+        "acc": "siostrzenicę",
+        "ins": "siostrzenicą",
+        "loc": "siostrzenicy",
+        "voc": "siostrzenico"
+      },
+      "plural": {
+        "nom": "siostrzenice",
+        "gen": "siostrzenic",
+        "dat": "siostrzenicom",
+        "acc": "siostrzenice",
+        "ins": "siostrzenicami",
+        "loc": "siostrzenicach",
+        "voc": "siostrzenice"
+      }
+    }
+  },
+  {
+    "lemma": "bratanica",
+    "id": "pol-npe-0018-bratanica",
+    "frequency": 1,
+    "register": 0,
+    "gender": "f",
+    "inflections": {
+      "singular": {
+        "nom": "bratanica",
+        "gen": "bratanicy",
+        "dat": "bratanicy",
+        "acc": "bratanicę",
+        "ins": "bratanicą",
+        "loc": "bratanicy",
+        "voc": "bratanico"
+      },
+      "plural": {
+        "nom": "bratanice",
+        "gen": "bratanic",
+        "dat": "bratanicom",
+        "acc": "bratanice",
+        "ins": "bratanicami",
+        "loc": "bratanicach",
+        "voc": "bratanice"
+      }
+    }
+  },
+  {
+    "lemma": "siostrzeniec",
+    "id": "pol-npe-0019-siostrzeniec",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "inflections": {
+      "singular": {
+        "nom": "siostrzeniec",
+        "gen": "siostrzeńca",
+        "dat": "siostrzeńcowi",
+        "acc": "siostrzeńca",
+        "ins": "siostrzeńcem",
+        "loc": "siostrzeńcu",
+        "voc": [
+          "siostrzeńcu",
+          "siostrzeńcze"
+        ]
+      },
+      "plural": {
+        "nom": "siostrzeńcy",
+        "gen": "siostrzeńców",
+        "dat": "siostrzeńcom",
+        "acc": "siostrzeńców",
+        "ins": "siostrzeńcami",
+        "loc": "siostrzeńcach",
+        "voc": "siostrzeńcy"
+      }
+    }
+  },
+  {
+    "lemma": "bratanek",
+    "id": "pol-npe-0020-bratanek",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "synonyms": [
+        "brataniec",
+        "synowiec"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "bratanek",
+        "gen": "bratanka",
+        "dat": "bratankowi",
+        "acc": "bratanka",
+        "ins": "bratankiem",
+        "loc": "bratanku",
+        "voc": "bratanku"
+      },
+      "plural": {
+        "nom": [
+          "bratankowie",
+          "bratanki"
+        ],
+        "gen": "bratanków",
+        "dat": "bratankom",
+        "acc": "bratanków",
+        "ins": "bratankami",
+        "loc": "bratankach",
+        "voc": [
+          "bratankowie",
+          "bratanki"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "partner",
+    "id": "pol-npe-0021-partner",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "partnerka"
+        ]
+      },
+      "derivedTerms": [
+        "partnerski",
+        "partnerstwo",
+        "partnerować"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "partner",
+        "gen": "partnera",
+        "dat": "partnerowi",
+        "acc": "partnera",
+        "ins": "partnerem",
+        "loc": "partnerze",
+        "voc": "partnerze"
+      },
+      "plural": {
+        "nom": "partnerzy",
+        "gen": "partnerów",
+        "dat": "partnerom",
+        "acc": "partnerów",
+        "ins": "partnerami",
+        "loc": "partnerach",
+        "voc": "partnerzy"
+      }
+    }
+  },
+  {
+    "lemma": "partnerka",
+    "id": "pol-npe-0022-partnerka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "partner"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "partnerka",
+        "gen": "partnerki",
+        "dat": "partnerce",
+        "acc": "partnerkę",
+        "ins": "partnerką",
+        "loc": "partnerce",
+        "voc": "partnerko"
+      },
+      "plural": {
+        "nom": "partnerki",
+        "gen": "partnerek",
+        "dat": "partnerkom",
+        "acc": "partnerki",
+        "ins": "partnerkami",
+        "loc": "partnerkach",
+        "voc": "partnerki"
+      }
+    }
+  },
+  {
+    "lemma": "chłopak",
+    "id": "pol-npe-0023-chłopak(boy)",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "general",
+      "emoji": "🔲"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "chłopiec"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "chłopak",
+        "gen": "chłopaka",
+        "dat": "chłopakowi",
+        "acc": "chłopaka",
+        "ins": "chłopakiem",
+        "loc": "chłopaku",
+        "voc": "chłopaku"
+      },
+      "plural": {
+        "nom": [
+          "chłopacy",
+          "chłopaki"
+        ],
+        "gen": "chłopaków",
+        "dat": "chłopakom",
+        "acc": "chłopaków",
+        "ins": "chłopakami",
+        "loc": "chłopakach",
+        "voc": [
+          "chłopacy",
+          "chłopaki"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "chłopak",
+    "id": "pol-npe-0024-chłopak(boyfriend)",
+    "_inflectionsRoot": "pol-npe-0023-chłopak(boy)",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "romantic",
+      "emoji": "💕"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "chłopiec"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "chłopiec",
+    "id": "pol-npe-0025-chłopiec",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "chłopczyk"
+        ]
+      },
+      "synonyms": [
+        "chłopak",
+        "małolat",
+        "młodzieniec",
+        "młodzik",
+        "podrostek",
+        "chłopak",
+        "partner",
+        "dziewczyna",
+        "partnerka"
+      ],
+      "antonyms": [
+        "(",
+        "by",
+        "age",
+        ")",
+        "mężczyzna",
+        "(",
+        "by",
+        "gender",
+        ")",
+        "dziewczyna"
+      ],
+      "usage": [
+        "Usage notes [ edit ] The word chłopiec is usually used for people younger than chłopak ."
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "chłopiec",
+        "gen": "chłopca",
+        "dat": "chłopcu",
+        "acc": "chłopca",
+        "ins": "chłopcem",
+        "loc": "chłopcu",
+        "voc": "chłopcze"
+      },
+      "plural": {
+        "nom": "chłopcy",
+        "gen": "chłopców",
+        "dat": "chłopcom",
+        "acc": "chłopców",
+        "ins": "chłopcami",
+        "loc": "chłopcach",
+        "voc": "chłopcy"
+      }
+    }
+  },
+  {
+    "lemma": "dziewczyna",
+    "id": "pol-npe-0026-dziewczyna(girl)",
+    "frequency": 1,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "general",
+      "emoji": "🔲"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "dziewczynka"
+        ]
+      },
+      "synonyms": [
+        "dziewczę",
+        "dziewka"
+      ],
+      "antonyms": [
+        "chłopak"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "dziewczyna",
+        "gen": "dziewczyny",
+        "dat": "dziewczynie",
+        "acc": "dziewczynę",
+        "ins": "dziewczyną",
+        "loc": "dziewczynie",
+        "voc": "dziewczyno"
+      },
+      "plural": {
+        "nom": "dziewczyny",
+        "gen": "dziewczyn",
+        "dat": "dziewczynom",
+        "acc": "dziewczyny",
+        "ins": "dziewczynami",
+        "loc": "dziewczynach",
+        "voc": "dziewczyny"
+      }
+    }
+  },
+  {
+    "lemma": "dziewczyna",
+    "id": "pol-npe-0027-dziewczyna(girlfriend)",
+    "_inflectionsRoot": "pol-npe-0026-dziewczyna(girl)",
+    "frequency": 1,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "romantic",
+      "emoji": "💕"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "dziewczynka"
+        ]
+      },
+      "synonyms": [
+        "dziewczę",
+        "dziewka"
+      ],
+      "antonyms": [
+        "chłopak"
+      ]
+    }
+  },
+  {
+    "lemma": "nauczycielka",
+    "id": "pol-npe-0028-nauczycielka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "nauczyciel"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "nauczycielka",
+        "gen": "nauczycielki",
+        "dat": "nauczycielce",
+        "acc": "nauczycielkę",
+        "ins": "nauczycielką",
+        "loc": "nauczycielce",
+        "voc": "nauczycielko"
+      },
+      "plural": {
+        "nom": "nauczycielki",
+        "gen": "nauczycielek",
+        "dat": "nauczycielkom",
+        "acc": "nauczycielki",
+        "ins": "nauczycielkami",
+        "loc": "nauczycielkach",
+        "voc": "nauczycielki"
+      }
+    }
+  },
+  {
+    "lemma": "nauczyciel",
+    "id": "pol-npe-0029-nauczyciel",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "nauczycielka"
+        ]
+      },
+      "derivedTerms": [
+        "nauczycielski",
+        "nauczycielstwo"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "nauczyciel",
+        "gen": "nauczyciela",
+        "dat": "nauczycielowi",
+        "acc": "nauczyciela",
+        "ins": "nauczycielem",
+        "loc": "nauczycielu",
+        "voc": "nauczycielu"
+      },
+      "plural": {
+        "nom": "nauczyciele",
+        "gen": "nauczycieli",
+        "dat": "nauczycielom",
+        "acc": "nauczycieli",
+        "ins": "nauczycielami",
+        "loc": "nauczycielach",
+        "voc": "nauczyciele"
+      }
+    }
+  },
+  {
+    "lemma": "laska",
+    "id": "pol-npe-0030-laska(woman)",
+    "frequency": 4,
+    "register": 6,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": false,
+      "text": "person",
+      "emoji": "🏃"
+    },
+    "inflections": {
+      "singular": {
+        "nom": "laska",
+        "gen": "laski",
+        "dat": "lasce",
+        "acc": "laskę",
+        "ins": "laską",
+        "loc": "lasce",
+        "voc": "lasko"
+      },
+      "plural": {
+        "nom": "laski",
+        "gen": "lasek",
+        "dat": "laskom",
+        "acc": "laski",
+        "ins": "laskami",
+        "loc": "laskach",
+        "voc": "laski"
+      }
+    }
+  },
+  {
+    "lemma": "facet",
+    "id": "pol-npe-0031-facet",
+    "frequency": 1,
+    "register": 6,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "facecik"
+        ],
+        "feminine": [
+          "facetka"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "facet",
+        "gen": "faceta",
+        "dat": "facetowi",
+        "acc": "faceta",
+        "ins": "facetem",
+        "loc": "facecie",
+        "voc": "facecie"
+      },
+      "plural": {
+        "nom": "faceci",
+        "gen": "facetów",
+        "dat": "facetom",
+        "acc": "facetów",
+        "ins": "facetami",
+        "loc": "facetach",
+        "voc": "faceci"
+      }
+    }
+  },
+  {
+    "lemma": "ziom",
+    "id": "pol-npe-0032-ziom",
+    "frequency": 4,
+    "register": 6,
+    "gender": "m1",
+    "extra": {
+      "synonyms": [
+        "facet",
+        "kolo",
+        "typ",
+        "hiter"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "ziom",
+        "gen": "zioma",
+        "dat": "ziomowi",
+        "acc": "zioma",
+        "ins": "ziomem",
+        "loc": "ziomie",
+        "voc": "ziomie"
+      },
+      "plural": {
+        "nom": "ziomy",
+        "gen": "ziomów",
+        "dat": "ziomom",
+        "acc": "ziomów",
+        "ins": "ziomami",
+        "loc": "ziomach",
+        "voc": "ziomy"
+      }
+    }
+  },
+  {
+    "lemma": "aktorka",
+    "id": "pol-npe-0033-aktorka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "aktoreczka"
+        ],
+        "augmentative": [
+          "aktorzyca"
+        ],
+        "masculine": [
+          "aktor"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "aktorka",
+        "gen": "aktorki",
+        "dat": "aktorce",
+        "acc": "aktorkę",
+        "ins": "aktorką",
+        "loc": "aktorce",
+        "voc": "aktorko"
+      },
+      "plural": {
+        "nom": "aktorki",
+        "gen": "aktorek",
+        "dat": "aktorkom",
+        "acc": "aktorki",
+        "ins": "aktorkami",
+        "loc": "aktorkach",
+        "voc": "aktorki"
+      }
+    }
+  },
+  {
+    "lemma": "aktor",
+    "id": "pol-npe-0034-aktor",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "aktorzyk"
+        ],
+        "augmentative": [
+          "aktorzyna",
+          "aktorzysko"
+        ],
+        "feminine": [
+          "aktorka"
+        ]
+      },
+      "derivedTerms": [
+        "aktor charakterystyczny",
+        "aktoreczka",
+        "aktorstwo",
+        "aktorszczyzna",
+        "aktorzysko",
+        "teatr jednego aktora",
+        "aktorski",
+        "aktorsko",
+        "aktorować"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "aktor",
+        "gen": "aktora",
+        "dat": "aktorowi",
+        "acc": "aktora",
+        "ins": "aktorem",
+        "loc": "aktorze",
+        "voc": "aktorze"
+      },
+      "plural": {
+        "nom": "aktorzy",
+        "gen": "aktorów",
+        "dat": "aktorom",
+        "acc": "aktorów",
+        "ins": "aktorami",
+        "loc": "aktorach",
+        "voc": "aktorzy"
+      }
+    }
+  },
+  {
+    "lemma": "przyjaciółka",
+    "id": "pol-npe-0035-przyjaciółka",
+    "frequency": 1,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "przyjaciel"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "przyjaciółka",
+        "gen": "przyjaciółki",
+        "dat": "przyjaciółce",
+        "acc": "przyjaciółkę",
+        "ins": "przyjaciółką",
+        "loc": "przyjaciółce",
+        "voc": "przyjaciółko"
+      },
+      "plural": {
+        "nom": "przyjaciółki",
+        "gen": "przyjaciółek",
+        "dat": "przyjaciółkom",
+        "acc": "przyjaciółki",
+        "ins": "przyjaciółkami",
+        "loc": "przyjaciółkach",
+        "voc": "przyjaciółki"
+      }
+    }
+  },
+  {
+    "lemma": "przyjaciel",
+    "id": "pol-npe-0036-przyjaciel",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "przyjaciółka"
+        ]
+      },
+      "derivedTerms": [
+        "prawdziwych przyjaciół poznaje się w biedzie"
+      ],
+      "usage": [
+        "Usage notes [ edit ] Not used for casual relationships; znajomy or kolega is preferable for that."
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "przyjaciel",
+        "gen": "przyjaciela",
+        "dat": "przyjacielowi",
+        "acc": "przyjaciela",
+        "ins": "przyjacielem",
+        "loc": "przyjacielu",
+        "voc": "przyjacielu"
+      },
+      "plural": {
+        "nom": "przyjaciele",
+        "gen": "przyjaciół",
+        "dat": "przyjaciołom",
+        "acc": "przyjaciół",
+        "ins": "przyjaciółmi",
+        "loc": "przyjaciołach",
+        "voc": "przyjaciele"
+      }
+    }
+  },
+  {
+    "lemma": "kolega",
+    "id": "pol-npe-0037-kolega(friend)",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "more close",
+      "emoji": "🫂"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "koleżka"
+        ],
+        "feminine": [
+          "koleżanka"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "kolega",
+        "gen": "kolegi",
+        "dat": "koledze",
+        "acc": "kolegę",
+        "ins": "kolegą",
+        "loc": "koledze",
+        "voc": "kolego"
+      },
+      "plural": {
+        "nom": "koledzy",
+        "gen": "kolegów",
+        "dat": "kolegom",
+        "acc": "kolegów",
+        "ins": "kolegami",
+        "loc": "kolegach",
+        "voc": "koledzy"
+      }
+    }
+  },
+  {
+    "lemma": "kolega",
+    "id": "pol-npe-0038-kolega(colleague)",
+    "_inflectionsRoot": "pol-npe-0037-kolega(friend)",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "more distant",
+      "emoji": "👋"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "koleżka"
+        ],
+        "feminine": [
+          "koleżanka"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "koleżanka",
+    "id": "pol-npe-0039-koleżanka(friend)",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "more close",
+      "emoji": "🫂"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "koleżaneczka"
+        ],
+        "masculine": [
+          "kolega"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "koleżanka",
+        "gen": "koleżanki",
+        "dat": "koleżance",
+        "acc": "koleżankę",
+        "ins": "koleżanką",
+        "loc": "koleżance",
+        "voc": "koleżanko"
+      },
+      "plural": {
+        "nom": "koleżanki",
+        "gen": "koleżanek",
+        "dat": "koleżankom",
+        "acc": "koleżanki",
+        "ins": "koleżankami",
+        "loc": "koleżankach",
+        "voc": "koleżanki"
+      }
+    }
+  },
+  {
+    "lemma": "koleżanka",
+    "id": "pol-npe-0040-koleżanka(colleague)",
+    "_inflectionsRoot": "pol-npe-0039-koleżanka(friend)",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "more distant",
+      "emoji": "👋"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "koleżaneczka"
+        ],
+        "masculine": [
+          "kolega"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "kumpel",
+    "id": "pol-npe-0041-kumpel",
+    "frequency": 3,
+    "register": 6,
+    "gender": "m1",
+    "extra": {
+      "synonyms": [
+        "znajomy"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "kumpel",
+        "gen": "kumpla",
+        "dat": "kumplowi",
+        "acc": "kumpla",
+        "ins": "kumplem",
+        "loc": "kumplu",
+        "voc": "kumplu"
+      },
+      "plural": {
+        "nom": "kumple",
+        "gen": "kumpli",
+        "dat": "kumplom",
+        "acc": "kumpli",
+        "ins": "kumplami",
+        "loc": "kumplach",
+        "voc": "kumple"
+      }
+    }
+  },
+  {
+    "lemma": "kumpela",
+    "id": "pol-npe-0042-kumpela",
+    "frequency": 3,
+    "register": 6,
+    "gender": "f",
+    "extra": {
+      "synonyms": [
+        "znajoma"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "kumpela",
+        "gen": "kumpeli",
+        "dat": "kumpeli",
+        "acc": "kumpelę",
+        "ins": "kumpelą",
+        "loc": "kumpeli",
+        "voc": "kumpelo"
+      },
+      "plural": {
+        "nom": "kumpele",
+        "gen": "kumpel",
+        "dat": "kumpelom",
+        "acc": "kumpele",
+        "ins": "kumpelami",
+        "loc": "kumpelach",
+        "voc": "kumpele"
+      }
+    }
+  },
+  {
+    "lemma": "człowiek",
+    "id": "pol-npe-0043-człowiek",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "człowieczek"
+        ],
+        "augmentative": [
+          "człowieczysko"
+        ]
+      },
+      "derivedTerms": [
+        "człowieczy",
+        "jak człowiek",
+        "biały człowiek",
+        "człeczyna",
+        "człek",
+        "człowieczę",
+        "człowieczeństwo",
+        "człowieczość",
+        "człowieczyna",
+        "człowiek czynu",
+        "człowiek honoru",
+        "człowiek interesu",
+        "człowiek orkiestra",
+        "człowiekowate",
+        "człowiek pióra",
+        "człowiek renesansu",
+        "człowiek rozumny",
+        "człowiek śniegu",
+        "dusza człowiek",
+        "swój człowiek",
+        "odczłowieczać",
+        "odczłowieczyć",
+        "uczłowieczać",
+        "uczłowieczyć"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "człowiek",
+        "gen": "człowieka",
+        "dat": "człowiekowi",
+        "acc": "człowieka",
+        "ins": "człowiekiem",
+        "loc": "człowieku",
+        "voc": [
+          "człowiecze",
+          "człowieku"
+        ]
+      },
+      "plural": {
+        "nom": "ludzie",
+        "gen": "ludzi",
+        "dat": "ludziom",
+        "acc": "ludzi",
+        "ins": "ludźmi",
+        "loc": "ludziach",
+        "voc": "ludzie"
+      }
+    }
+  },
+  {
+    "lemma": "turysta",
+    "id": "pol-npe-0044-turysta",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "turystka"
+        ]
+      },
+      "derivedTerms": [
+        "agroturysta",
+        "agroturystka"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "turysta",
+        "gen": "turysty",
+        "dat": "turyście",
+        "acc": "turystę",
+        "ins": "turystą",
+        "loc": "turyście",
+        "voc": "turysto"
+      },
+      "plural": {
+        "nom": "turyści",
+        "gen": "turystów",
+        "dat": "turystom",
+        "acc": "turystów",
+        "ins": "turystami",
+        "loc": "turystach",
+        "voc": "turyści"
+      }
+    }
+  },
+  {
+    "lemma": "bohater",
+    "id": "pol-npe-0045-bohater(hero)",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "positive term",
+      "emoji": "👍"
+    },
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "bohaterka"
+        ]
+      },
+      "derivedTerms": [
+        "antybohaterski",
+        "bohaterski",
+        "antybohater",
+        "antybohaterka",
+        "bohater mojej bajki",
+        "bohaterskość",
+        "bohaterstwo",
+        "bohaterszczyzna"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "bohater",
+        "gen": "bohatera",
+        "dat": "bohaterowi",
+        "acc": "bohatera",
+        "ins": "bohaterem",
+        "loc": "bohaterze",
+        "voc": "bohaterze"
+      },
+      "plural": {
+        "nom": [
+          "bohaterowie",
+          "bohaterzy"
+        ],
+        "gen": "bohaterów",
+        "dat": "bohaterom",
+        "acc": "bohaterów",
+        "ins": "bohaterami",
+        "loc": "bohaterach",
+        "voc": [
+          "bohaterowie",
+          "bohaterzy"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "bohater",
+    "id": "pol-npe-0046-bohater(protagonist)",
+    "_inflectionsRoot": "pol-npe-0045-bohater(hero)",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "writing",
+      "emoji": "📖"
+    },
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "bohaterka"
+        ]
+      },
+      "synonyms": [
+        "heros"
+      ],
+      "derivedTerms": [
+        "antybohaterski",
+        "bohaterski",
+        "antybohater",
+        "antybohaterka",
+        "bohater mojej bajki",
+        "bohaterskość",
+        "bohaterstwo",
+        "bohaterszczyzna"
+      ],
+      "usage": [
+        "wojenny bohater ― a hero warrior",
+        "bohater narodowy ― a national hero",
+        "bohater powstania ― a hero of a uprising",
+        "bohater rewolucji ― a hero of a revolution",
+        "bohater wojny ― a war hero",
+        "bohaterowie pól bitewnych ― battlefield heroes",
+        "składać hołd bohaterom ― to honor heroes",
+        "bohater dnia ― the man of the hour/the hero of the day",
+        "antyczny bohater ― an antique hero",
+        "mitologiczny bohater ― a mythological hero",
+        "mityczny bohater ― a mythical hero",
+        "bohater liryczny ― Llyrical subject",
+        "główny bohater ― the main character",
+        "tytułowy bohater ― title character",
+        "filmowy bohater ― a film protagonist",
+        "bohater literacki ― a literary protagonist",
+        "bohater pierwszoplanowy bohater ― the lead protagonist",
+        "ekranowy bohater ― a screen protagonist",
+        "telewizyjny bohater bohater ― a television protagonist",
+        "bohater bajki/baśni ― the protagonist of a fairy tell",
+        "bohater dramatu ― the protagonist of a drama",
+        "bohater noweli ― the protagonist of a novel",
+        "bohater opowiadani/powieścia ― the protagonist of a story",
+        "bohater utworu ― the protagonist of a piece of work",
+        "bohater filmu ― the protagonist of a movie",
+        "bohater książki ― the protagonist of a book",
+        "bohater epopei/eposów ― the protagonist of epics",
+        "bohater seriali ― the protagonist of a series",
+        "dzieje bohatera ― the history of a protagonist",
+        "losy bohatera ― the fate of a protagonist",
+        "przygody bohatera ― the adventures of a protagonist",
+        "śledzić losy bohaterów ― to follow the fate of a protagonist"
+      ]
+    }
+  },
+  {
+    "lemma": "polityk",
+    "id": "pol-npe-0047-polityk",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "polityk",
+          "polityczka"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "polityk",
+        "gen": "polityka",
+        "dat": "politykowi",
+        "acc": "polityka",
+        "ins": "politykiem",
+        "loc": "polityku",
+        "voc": "polityku"
+      },
+      "plural": {
+        "nom": "politycy",
+        "gen": "polityków",
+        "dat": "politykom",
+        "acc": "polityków",
+        "ins": "politykami",
+        "loc": "politykach",
+        "voc": "politycy"
+      }
+    }
+  },
+  {
+    "lemma": "chirurg",
+    "id": "pol-npe-0048-chirurg",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "synonyms": [
+        "operator"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "chirurg",
+        "gen": "chirurga",
+        "dat": "chirurgowi",
+        "acc": "chirurga",
+        "ins": "chirurgiem",
+        "loc": "chirurgu",
+        "voc": "chirurgu"
+      },
+      "plural": {
+        "nom": "chirurdzy",
+        "gen": "chirurgów",
+        "dat": "chirurgom",
+        "acc": "chirurgów",
+        "ins": "chirurgami",
+        "loc": "chirurgach",
+        "voc": "chirurdzy"
+      }
+    }
+  },
+  {
+    "lemma": "sąsiad",
+    "id": "pol-npe-0049-sąsiad",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "derivedTerms": [
+        "sąsiadka",
+        "sąsiedni",
+        "sąsiedztwo"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "sąsiad",
+        "gen": "sąsiada",
+        "dat": "sąsiadowi",
+        "acc": "sąsiada",
+        "ins": "sąsiadem",
+        "loc": "sąsiedzie",
+        "voc": "sąsiedzie"
+      },
+      "plural": {
+        "nom": "sąsiedzi",
+        "gen": "sąsiadów",
+        "dat": "sąsiadom",
+        "acc": "sąsiadów",
+        "ins": "sąsiadami",
+        "loc": "sąsiadach",
+        "voc": "sąsiedzi"
+      }
+    }
+  },
+  {
+    "lemma": "sąsiadka",
+    "id": "pol-npe-0050-sąsiadka",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "inflections": {
+      "singular": {
+        "nom": "sąsiadka",
+        "gen": "sąsiadki",
+        "dat": "sąsiadce",
+        "acc": "sąsiadkę",
+        "ins": "sąsiadką",
+        "loc": "sąsiadce",
+        "voc": "sąsiadko"
+      },
+      "plural": {
+        "nom": "sąsiadki",
+        "gen": "sąsiadek",
+        "dat": "sąsiadkom",
+        "acc": "sąsiadki",
+        "ins": "sąsiadkami",
+        "loc": "sąsiadkach",
+        "voc": "sąsiadki"
+      }
+    }
+  },
+  {
+    "lemma": "tłumacz",
+    "id": "pol-npe-0051-tłumacz",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "tłumaczka"
+        ]
+      },
+      "derivedTerms": [
+        "tłumaczenie",
+        "tłumaczka",
+        "tłumaczyć",
+        "тлума́ч"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "tłumacz",
+        "gen": "tłumacza",
+        "dat": "tłumaczowi",
+        "acc": "tłumacza",
+        "ins": "tłumaczem",
+        "loc": "tłumaczu",
+        "voc": "tłumaczu"
+      },
+      "plural": {
+        "nom": "tłumacze",
+        "gen": "tłumaczy",
+        "dat": "tłumaczom",
+        "acc": "tłumaczy",
+        "ins": "tłumaczami",
+        "loc": "tłumaczach",
+        "voc": "tłumacze"
+      }
+    }
+  },
+  {
+    "lemma": "kierownik",
+    "id": "pol-npe-0052-kierownik",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "kierowniczka"
+        ]
+      },
+      "synonyms": [
+        "zarządca",
+        "dyrektor"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "kierownik",
+        "gen": "kierownika",
+        "dat": "kierownikowi",
+        "acc": "kierownika",
+        "ins": "kierownikiem",
+        "loc": "kierowniku",
+        "voc": "kierowniku"
+      },
+      "plural": {
+        "nom": "kierownicy",
+        "gen": "kierowników",
+        "dat": "kierownikom",
+        "acc": "kierowników",
+        "ins": "kierownikami",
+        "loc": "kierownikach",
+        "voc": "kierownicy"
+      }
+    }
+  },
+  {
+    "lemma": "rycerz",
+    "id": "pol-npe-0053-rycerz",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "rycerzyk"
+        ]
+      },
+      "derivedTerms": [
+        "rycerski",
+        "rycersko",
+        "błędny rycerz",
+        "rycerskość",
+        "rycerstwo"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "rycerz",
+        "gen": "rycerza",
+        "dat": "rycerzowi",
+        "acc": "rycerza",
+        "ins": "rycerzem",
+        "loc": "rycerzu",
+        "voc": "rycerzu"
+      },
+      "plural": {
+        "nom": "rycerze",
+        "gen": "rycerzy",
+        "dat": "rycerzom",
+        "acc": "rycerzy",
+        "ins": "rycerzami",
+        "loc": "rycerzach",
+        "voc": "rycerze"
+      }
+    }
+  },
+  {
+    "lemma": "osoba",
+    "id": "pol-npe-0054-osoba",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "inflections": {
+      "singular": {
+        "nom": "osoba",
+        "gen": "osoby",
+        "dat": "osobie",
+        "acc": "osobę",
+        "ins": "osobą",
+        "loc": "osobie",
+        "voc": "osobo"
+      },
+      "plural": {
+        "nom": "osoby",
+        "gen": "osób",
+        "dat": "osobom",
+        "acc": "osoby",
+        "ins": "osobami",
+        "loc": "osobach",
+        "voc": "osoby"
+      }
+    }
+  },
+  {
+    "lemma": "złodziej",
+    "id": "pol-npe-0055-złodziej",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "złodziejaszek"
+        ],
+        "feminine": [
+          "złodziejka"
+        ]
+      },
+      "synonyms": [
+        "złodziej"
+      ],
+      "derivedTerms": [
+        "złodziejski",
+        "złodziejstwo"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "złodziej",
+        "gen": "złodzieja",
+        "dat": "złodziejowi",
+        "acc": "złodzieja",
+        "ins": "złodziejem",
+        "loc": "złodzieju",
+        "voc": "złodzieju"
+      },
+      "plural": {
+        "nom": "złodzieje",
+        "gen": [
+          "złodziei",
+          "złodziejów"
+        ],
+        "dat": "złodziejom",
+        "acc": [
+          "złodziei",
+          "złodziejów"
+        ],
+        "ins": "złodziejami",
+        "loc": "złodziejach",
+        "voc": "złodzieje"
+      }
+    }
+  },
+  {
+    "lemma": "kelner",
+    "id": "pol-npe-0056-kelner",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "kelnerka"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "kelner",
+        "gen": "kelnera",
+        "dat": "kelnerowi",
+        "acc": "kelnera",
+        "ins": "kelnerem",
+        "loc": "kelnerze",
+        "voc": "kelnerze"
+      },
+      "plural": {
+        "nom": "kelnerzy",
+        "gen": "kelnerów",
+        "dat": "kelnerom",
+        "acc": "kelnerów",
+        "ins": "kelnerami",
+        "loc": "kelnerach",
+        "voc": "kelnerzy"
+      }
+    }
+  },
+  {
+    "lemma": "kelnerka",
+    "id": "pol-npe-0057-kelnerka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "inflections": {
+      "singular": {
+        "nom": "kelnerka",
+        "gen": "kelnerki",
+        "dat": "kelnerce",
+        "acc": "kelnerkę",
+        "ins": "kelnerką",
+        "loc": "kelnerce",
+        "voc": "kelnerko"
+      },
+      "plural": {
+        "nom": "kelnerki",
+        "gen": "kelnerek",
+        "dat": "kelnerkom",
+        "acc": "kelnerki",
+        "ins": "kelnerkami",
+        "loc": "kelnerkach",
+        "voc": "kelnerki"
+      }
+    }
+  },
+  {
+    "lemma": "inżynier",
+    "id": "pol-npe-0058-inżynier",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "abbreviation": [
+          "inż."
+        ]
+      },
+      "derivedTerms": [
+        "inżynierski",
+        "inżynierstwo"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "inżynier",
+        "gen": "inżyniera",
+        "dat": "inżynierowi",
+        "acc": "inżyniera",
+        "ins": "inżynierem",
+        "loc": "inżynierze",
+        "voc": "inżynierze"
+      },
+      "plural": {
+        "nom": [
+          "inżynierowie",
+          "inżynierzy"
+        ],
+        "gen": "inżynierów",
+        "dat": "inżynierom",
+        "acc": "inżynierów",
+        "ins": "inżynierami",
+        "loc": "inżynierach",
+        "voc": [
+          "inżynierowie",
+          "inżynierzy"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "papież",
+    "id": "pol-npe-0059-papież",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "papieżyca"
+        ]
+      },
+      "derivedTerms": [
+        "papieski",
+        "antypapież",
+        "papiestwo",
+        "papieżnica",
+        "papieżnik",
+        "papieżować"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "papież",
+        "gen": "papieża",
+        "dat": "papieżowi",
+        "acc": "papieża",
+        "ins": "papieżem",
+        "loc": "papieżu",
+        "voc": "papieżu"
+      },
+      "plural": {
+        "nom": "papieże",
+        "gen": [
+          "papieżów",
+          "papieży"
+        ],
+        "dat": "papieżom",
+        "acc": [
+          "papieżów",
+          "papieży"
+        ],
+        "ins": "papieżami",
+        "loc": "papieżach",
+        "voc": "papieże"
+      }
+    }
+  },
+  {
+    "lemma": "policja",
+    "id": "pol-npe-0060-policja",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "derivedTerms": [
+        "policyjny",
+        "policja dochodzeniowa",
+        "policja drogowa",
+        "policja obyczajowa",
+        "policja polityczna",
+        "policjant",
+        "policjantka"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "policja",
+        "gen": "policji",
+        "dat": "policji",
+        "acc": "policję",
+        "ins": "policją",
+        "loc": "policji",
+        "voc": "policjo"
+      },
+      "plural": {
+        "nom": "policje",
+        "gen": {
+          "isTerminus": true,
+          "normal": [
+            "policji"
+          ],
+          "additionalInfrequent": [
+            "policyj"
+          ]
+        },
+        "dat": "policjom",
+        "acc": "policje",
+        "ins": "policjami",
+        "loc": "policjach",
+        "voc": "policje"
+      }
+    }
+  },
+  {
+    "lemma": "obcy",
+    "id": "pol-npe-0061-obcy(alien)",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "animal",
+      "emoji": "🐕"
+    },
+    "extra": {
+      "synonyms": [
+        "kosmita",
+        "ufoludek",
+        "zielony"
+      ],
+      "derivedTerms": [
+        "obczyzna"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "obcy",
+        "gen": "obcego",
+        "dat": "obcemu",
+        "acc": "obcego",
+        "ins": "obcym",
+        "loc": "obcym",
+        "voc": "obcy"
+      },
+      "plural": {
+        "nom": "obcy",
+        "gen": "obcych",
+        "dat": "obcym",
+        "acc": "obcych",
+        "ins": "obcymi",
+        "loc": "obcych",
+        "voc": "obcy"
+      }
+    }
+  },
+  {
+    "lemma": "obcy",
+    "id": "pol-npe-0062-obcy(stranger)",
+    "_inflectionsRoot": "pol-npe-0061-obcy(alien)",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    },
+    "extra": {
+      "synonyms": [
+        "nieznajomy"
+      ],
+      "derivedTerms": [
+        "obczyzna"
+      ]
+    }
+  },
+  {
+    "lemma": "kierowca",
+    "id": "pol-npe-0063-kierowca",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "synonyms": [
+        "(",
+        "archaic",
+        ")",
+        "automobilista"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "kierowca",
+        "gen": "kierowcy",
+        "dat": "kierowcy",
+        "acc": "kierowcę",
+        "ins": "kierowcą",
+        "loc": "kierowcy",
+        "voc": "kierowco"
+      },
+      "plural": {
+        "nom": "kierowcy",
+        "gen": "kierowców",
+        "dat": "kierowcom",
+        "acc": "kierowców",
+        "ins": "kierowcami",
+        "loc": "kierowcach",
+        "voc": "kierowcy"
+      }
+    }
+  },
+  {
+    "lemma": "pułkownik",
+    "id": "pol-npe-0064-pułkownik",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "inflections": {
+      "singular": {
+        "nom": "pułkownik",
+        "gen": "pułkownika",
+        "dat": "pułkownikowi",
+        "acc": "pułkownika",
+        "ins": "pułkownikiem",
+        "loc": "pułkowniku",
+        "voc": "pułkowniku"
+      },
+      "plural": {
+        "nom": "pułkownicy",
+        "gen": "pułkowników",
+        "dat": "pułkownikom",
+        "acc": "pułkowników",
+        "ins": "pułkownikami",
+        "loc": "pułkownikach",
+        "voc": "pułkownicy"
+      }
+    }
+  },
+  {
+    "lemma": "przestępca",
+    "id": "pol-npe-0065-przestępca",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "przestępczyni"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "przestępca",
+        "gen": "przestępcy",
+        "dat": "przestępcy",
+        "acc": "przestępcę",
+        "ins": "przestępcą",
+        "loc": "przestępcy",
+        "voc": "przestępco"
+      },
+      "plural": {
+        "nom": "przestępcy",
+        "gen": "przestępców",
+        "dat": "przestępcom",
+        "acc": "przestępców",
+        "ins": "przestępcami",
+        "loc": "przestępcach",
+        "voc": "przestępcy"
+      }
+    }
+  },
+  {
+    "lemma": "teść",
+    "id": "pol-npe-0066-teść",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "teściowa"
+        ]
+      },
+      "derivedTerms": [
+        "teściowy",
+        "teściostwo"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "teść",
+        "gen": "teścia",
+        "dat": "teściowi",
+        "acc": "teścia",
+        "ins": "teściem",
+        "loc": "teściu",
+        "voc": "teściu"
+      },
+      "plural": {
+        "nom": "teściowie",
+        "gen": "teściów",
+        "dat": "teściom",
+        "acc": "teściów",
+        "ins": "teściami",
+        "loc": "teściach",
+        "voc": "teściowie"
+      }
+    }
+  },
+  {
+    "lemma": "bóg",
+    "id": "pol-npe-0067-bóg",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "bożek"
+        ],
+        "feminine": [
+          "bogini"
+        ]
+      },
+      "synonyms": [
+        "bóstwo"
+      ],
+      "derivedTerms": [
+        "bezbożniczy",
+        "bezbożny",
+        "bogobojny",
+        "bogoburczy",
+        "bogomyślny",
+        "bogoojczyźniany",
+        "boski",
+        "bożniczny",
+        "bożniczy",
+        "bożogrobski",
+        "bożonarodzeniowy",
+        "boży",
+        "nabożny",
+        "niebożny",
+        "nieboży",
+        "nienabożny",
+        "niepobożny",
+        "niezbożny",
+        "pobożny",
+        "bezbożnie",
+        "bogobojnie",
+        "bogoojczyźnianie",
+        "bosko",
+        "nabożnie",
+        "niepobożnie",
+        "za chińskiego boga",
+        "zemsta jest rozkoszą bogów",
+        "bezbożnica",
+        "bezbożnictwo",
+        "bezbożnik",
+        "bezbożność",
+        "bogini",
+        "boginka",
+        "bogobojność",
+        "bogoburstwo",
+        "bogomódlca",
+        "bogomyślność",
+        "bogożerca",
+        "boguwola",
+        "boskość",
+        "bożec",
+        "bożeczek",
+        "bożek",
+        "bożnica",
+        "bożniczka",
+        "bożnik",
+        "bożodajnia",
+        "bożodrzew",
+        "bożogrobiec",
+        "bożyszcze",
+        "bóstewko",
+        "bóstwo",
+        "nabożnica",
+        "nabożnik",
+        "nabożnisia",
+        "nabożnisiostwo",
+        "nabożniś",
+        "nabożność",
+        "niepobożność",
+        "niezbożnik",
+        "niezbożność",
+        "pobożnisia",
+        "pobożnisiostwo",
+        "pobożniś",
+        "pobożność",
+        "półbogini",
+        "półbożek",
+        "półbóg",
+        "współbóg",
+        "zbożność",
+        "bodaj",
+        "bodajby",
+        "bodajże",
+        "dalibóg",
+        "dlaboga",
+        "laboga",
+        "olaboga",
+        "przebóg",
+        "Bogarodzica",
+        "Boguchwał",
+        "Bogumił",
+        "Bogumiła",
+        "Bogun",
+        "Boguń",
+        "Bogurad",
+        "Bogurodzica",
+        "Bogusia",
+        "Bogusław",
+        "Bogusławski",
+        "Bogusz",
+        "Boguś",
+        "Boguta",
+        "Bohun",
+        "Bozia",
+        "Bożena",
+        "Bożenka",
+        "Bóg",
+        "Chwalibóg",
+        "Dadźbog",
+        "bóstwić",
+        "przebóstwiać",
+        "przebóstwić",
+        "ubóstwiać",
+        "ubóstwić"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "bóg",
+        "gen": "boga",
+        "dat": [
+          "bogu",
+          "bogowi"
+        ],
+        "acc": "boga",
+        "ins": "bogiem",
+        "loc": "bogu",
+        "voc": "boże"
+      },
+      "plural": {
+        "nom": "bogowie",
+        "gen": "bogów",
+        "dat": "bogom",
+        "acc": "bogów",
+        "ins": "bogami",
+        "loc": "bogach",
+        "voc": "bogowie"
+      }
+    }
+  },
+  {
+    "lemma": "strażak",
+    "id": "pol-npe-0068-strażak",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "strażaczek"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "strażak",
+        "gen": "strażaka",
+        "dat": "strażakowi",
+        "acc": "strażaka",
+        "ins": "strażakiem",
+        "loc": "strażaku",
+        "voc": "strażaku"
+      },
+      "plural": {
+        "nom": "strażacy",
+        "gen": "strażaków",
+        "dat": "strażakom",
+        "acc": "strażaków",
+        "ins": "strażakami",
+        "loc": "strażakach",
+        "voc": "strażacy"
+      }
+    }
+  },
+  {
+    "lemma": "adwokat",
+    "id": "pol-npe-0069-adwokat",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "adwokacik"
+        ],
+        "feminine": [
+          "adwokatka"
+        ]
+      },
+      "synonyms": [
+        "prawnik",
+        "rzecznik"
+      ],
+      "derivedTerms": [
+        "adwokacki",
+        "adwokacina",
+        "adwokacja",
+        "adwokat diabła",
+        "adwokatowa",
+        "adwokatura",
+        "adwokatować"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "adwokat",
+        "gen": "adwokata",
+        "dat": "adwokatowi",
+        "acc": "adwokata",
+        "ins": "adwokatem",
+        "loc": "adwokacie",
+        "voc": "adwokacie"
+      },
+      "plural": {
+        "nom": "adwokaci",
+        "gen": "adwokatów",
+        "dat": "adwokatom",
+        "acc": "adwokatów",
+        "ins": "adwokatami",
+        "loc": "adwokatach",
+        "voc": "adwokaci"
+      }
+    }
+  },
+  {
+    "lemma": "pracownik",
+    "id": "pol-npe-0070-pracownik",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "pracownica",
+          "pracowniczka"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "pracownik",
+        "gen": "pracownika",
+        "dat": "pracownikowi",
+        "acc": "pracownika",
+        "ins": "pracownikiem",
+        "loc": "pracowniku",
+        "voc": "pracowniku"
+      },
+      "plural": {
+        "nom": "pracownicy",
+        "gen": "pracowników",
+        "dat": "pracownikom",
+        "acc": "pracowników",
+        "ins": "pracownikami",
+        "loc": "pracownikach",
+        "voc": "pracownicy"
+      }
+    }
+  },
+  {
+    "lemma": "narzeczony",
+    "id": "pol-npe-0071-narzeczony",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "narzeczona"
+        ]
+      },
+      "usage": [
+        "Usage notes [ edit ] The plural of this masculine form is also used to refer to couples."
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "narzeczony",
+        "gen": "narzeczonego",
+        "dat": "narzeczonemu",
+        "acc": "narzeczonego",
+        "ins": "narzeczonym",
+        "loc": "narzeczonym",
+        "voc": "narzeczony"
+      },
+      "plural": {
+        "nom": "narzeczeni",
+        "gen": "narzeczonych",
+        "dat": "narzeczonym",
+        "acc": "narzeczonych",
+        "ins": "narzeczonymi",
+        "loc": "narzeczonych",
+        "voc": "narzeczeni"
+      }
+    }
+  },
+  {
+    "lemma": "narzeczona",
+    "id": "pol-npe-0072-narzeczona",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "narzeczony"
+        ]
+      },
+      "usage": [
+        "Usage notes [ edit ] The plural of this word refers to multiple female fiancées. The plural of the masculine form is used to refer to couples."
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "narzeczona",
+        "gen": "narzeczonej",
+        "dat": "narzeczonej",
+        "acc": "narzeczoną",
+        "ins": "narzeczoną",
+        "loc": "narzeczonej",
+        "voc": "narzeczona"
+      },
+      "plural": {
+        "nom": "narzeczone",
+        "gen": "narzeczonych",
+        "dat": "narzeczonym",
+        "acc": "narzeczone",
+        "ins": "narzeczonymi",
+        "loc": "narzeczonych",
+        "voc": "narzeczone"
+      }
+    }
+  },
+  {
+    "lemma": "ogrodnik",
+    "id": "pol-npe-0073-ogrodnik",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "ogrodniczka"
+        ]
+      },
+      "derivedTerms": [
+        "ogrodnictwo",
+        "ogrodniczki",
+        "ogrodniczy"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "ogrodnik",
+        "gen": "ogrodnika",
+        "dat": "ogrodnikowi",
+        "acc": "ogrodnika",
+        "ins": "ogrodnikiem",
+        "loc": "ogrodniku",
+        "voc": "ogrodniku"
+      },
+      "plural": {
+        "nom": "ogrodnicy",
+        "gen": "ogrodników",
+        "dat": "ogrodnikom",
+        "acc": "ogrodników",
+        "ins": "ogrodnikami",
+        "loc": "ogrodnikach",
+        "voc": "ogrodnicy"
+      }
+    }
+  },
+  {
+    "lemma": "nastolatek",
+    "id": "pol-npe-0074-nastolatek",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "nastolatka"
+        ]
+      },
+      "derivedTerms": [
+        "nastolatkowy",
+        "nastoletni",
+        "nastoletniość"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "nastolatek",
+        "gen": "nastolatka",
+        "dat": "nastolatkowi",
+        "acc": "nastolatka",
+        "ins": "nastolatkiem",
+        "loc": "nastolatku",
+        "voc": "nastolatku"
+      },
+      "plural": {
+        "nom": "nastolatki",
+        "gen": "nastolatków",
+        "dat": "nastolatkom",
+        "acc": "nastolatków",
+        "ins": "nastolatkami",
+        "loc": "nastolatkach",
+        "voc": "nastolatki"
+      }
+    }
+  },
+  {
+    "lemma": "nastolatka",
+    "id": "pol-npe-0075-nastolatka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "nastolatek"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "nastolatka",
+        "gen": "nastolatki",
+        "dat": "nastolatce",
+        "acc": "nastolatkę",
+        "ins": "nastolatką",
+        "loc": "nastolatce",
+        "voc": "nastolatko"
+      },
+      "plural": {
+        "nom": "nastolatki",
+        "gen": "nastolatek",
+        "dat": "nastolatkom",
+        "acc": "nastolatki",
+        "ins": "nastolatkami",
+        "loc": "nastolatkach",
+        "voc": "nastolatki"
+      }
+    }
+  },
+  {
+    "lemma": "student",
+    "id": "pol-npe-0076-student",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "studentka"
+        ]
+      },
+      "derivedTerms": [
+        "studencki"
+      ],
+      "usage": [
+        "Hypernyms: uczeń uczennica"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "student",
+        "gen": "studenta",
+        "dat": "studentowi",
+        "acc": "studenta",
+        "ins": "studentem",
+        "loc": "studencie",
+        "voc": "studencie"
+      },
+      "plural": {
+        "nom": "studenci",
+        "gen": "studentów",
+        "dat": "studentom",
+        "acc": "studentów",
+        "ins": "studentami",
+        "loc": "studentach",
+        "voc": "studenci"
+      }
+    }
+  },
+  {
+    "lemma": "studentka",
+    "id": "pol-npe-0077-studentka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "student"
+        ]
+      },
+      "usage": [
+        "Hypernym: uczennica"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "studentka",
+        "gen": "studentki",
+        "dat": "studentce",
+        "acc": "studentkę",
+        "ins": "studentką",
+        "loc": "studentce",
+        "voc": "studentko"
+      },
+      "plural": {
+        "nom": "studentki",
+        "gen": "studentek",
+        "dat": "studentkom",
+        "acc": "studentki",
+        "ins": "studentkami",
+        "loc": "studentkach",
+        "voc": "studentki"
+      }
+    }
+  },
+  {
+    "lemma": "optyk",
+    "id": "pol-npe-0078-optyk",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "derivedTerms": [
+        "optyka"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "optyk",
+        "gen": "optyka",
+        "dat": "optykowi",
+        "acc": "optyka",
+        "ins": "optykiem",
+        "loc": "optyku",
+        "voc": "optyku"
+      },
+      "plural": {
+        "nom": "optycy",
+        "gen": "optyków",
+        "dat": "optykom",
+        "acc": "optyków",
+        "ins": "optykami",
+        "loc": "optykach",
+        "voc": "optycy"
+      }
+    }
+  },
+  {
+    "lemma": "modelka",
+    "id": "pol-npe-0079-modelka",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "model"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "modelka",
+        "gen": "modelki",
+        "dat": "modelce",
+        "acc": "modelkę",
+        "ins": "modelką",
+        "loc": "modelce",
+        "voc": "modelko"
+      },
+      "plural": {
+        "nom": "modelki",
+        "gen": "modelek",
+        "dat": "modelkom",
+        "acc": "modelki",
+        "ins": "modelkami",
+        "loc": "modelkach",
+        "voc": "modelki"
+      }
+    }
+  },
+  {
+    "lemma": "książę",
+    "id": "pol-npe-0080-książę",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "księżna"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "książę",
+        "gen": "księcia",
+        "dat": "księciu",
+        "acc": "księcia",
+        "ins": "księciem",
+        "loc": "księciu",
+        "voc": "książę"
+      },
+      "plural": {
+        "nom": "książęta",
+        "gen": "książąt",
+        "dat": "książętom",
+        "acc": "książąt",
+        "ins": "książętami",
+        "loc": "książętach",
+        "voc": "książęta"
+      }
+    }
+  },
+  {
+    "lemma": "księżniczka",
+    "id": "pol-npe-0081-księżniczka",
+    "frequency": 4,
+    "register": 0,
+    "gender": "f",
+    "inflections": {
+      "singular": {
+        "nom": "księżniczka",
+        "gen": "księżniczki",
+        "dat": "księżniczce",
+        "acc": "księżniczkę",
+        "ins": "księżniczką",
+        "loc": "księżniczce",
+        "voc": "księżniczko"
+      },
+      "plural": {
+        "nom": "księżniczki",
+        "gen": "księżniczek",
+        "dat": "księżniczkom",
+        "acc": "księżniczki",
+        "ins": "księżniczkami",
+        "loc": "księżniczkach",
+        "voc": "księżniczki"
+      }
+    }
+  },
+  {
+    "lemma": "gość",
+    "id": "pol-npe-0082-gość(guest)",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "hospitality",
+      "emoji": "🏨"
+    },
+    "extra": {
+      "derivedTerms": [
+        "gościnny",
+        "w gości",
+        "gościna",
+        "gościniec",
+        "gość w dom, Bóg w dom",
+        "gościć"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "gość",
+        "gen": "gościa",
+        "dat": "gościowi",
+        "acc": "gościa",
+        "ins": "gościem",
+        "loc": "gościu",
+        "voc": "gościu"
+      },
+      "plural": {
+        "nom": "goście",
+        "gen": "gości",
+        "dat": "gościom",
+        "acc": "gości",
+        "ins": "gośćmi",
+        "loc": "gościach",
+        "voc": "goście"
+      }
+    }
+  },
+  {
+    "lemma": "gość",
+    "id": "pol-npe-0083-gość(guy)",
+    "_inflectionsRoot": "pol-npe-0082-gość(guest)",
+    "frequency": 2,
+    "register": 6,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    },
+    "extra": {
+      "derivedTerms": [
+        "gościnny",
+        "w gości",
+        "gościna",
+        "gościniec",
+        "gość w dom, Bóg w dom",
+        "gościć"
+      ]
+    }
+  },
+  {
+    "lemma": "wnuk",
+    "id": "pol-npe-0084-wnuk",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "wnuczek",
+          "wnuś"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "wnuk",
+        "gen": "wnuka",
+        "dat": "wnukowi",
+        "acc": "wnuka",
+        "ins": "wnukiem",
+        "loc": "wnuku",
+        "voc": "wnuku"
+      },
+      "plural": {
+        "nom": [
+          "wnukowie",
+          "wnuki"
+        ],
+        "gen": "wnuków",
+        "dat": "wnukom",
+        "acc": [
+          "wnuków",
+          "wnuki"
+        ],
+        "ins": "wnukami",
+        "loc": "wnukach",
+        "voc": [
+          "wnukowie",
+          "wnuki"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "wnuczka",
+    "id": "pol-npe-0085-wnuczka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "wnusia"
+        ],
+        "masculine": [
+          "wnuk"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "wnuczka",
+        "gen": "wnuczki",
+        "dat": "wnuczce",
+        "acc": "wnuczkę",
+        "ins": "wnuczką",
+        "loc": "wnuczce",
+        "voc": "wnuczko"
+      },
+      "plural": {
+        "nom": "wnuczki",
+        "gen": "wnuczek",
+        "dat": "wnuczkom",
+        "acc": "wnuczki",
+        "ins": "wnuczkami",
+        "loc": "wnuczkach",
+        "voc": "wnuczki"
+      }
+    }
+  },
+  {
+    "lemma": "kucharz",
+    "id": "pol-npe-0086-kucharz",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "kucharka"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "kucharz",
+        "gen": "kucharza",
+        "dat": "kucharzowi",
+        "acc": "kucharza",
+        "ins": "kucharzem",
+        "loc": "kucharzu",
+        "voc": "kucharzu"
+      },
+      "plural": {
+        "nom": "kucharze",
+        "gen": "kucharzy",
+        "dat": "kucharzom",
+        "acc": "kucharzy",
+        "ins": "kucharzami",
+        "loc": "kucharzach",
+        "voc": "kucharze"
+      }
+    }
+  },
+  {
+    "lemma": "przewodnik",
+    "id": "pol-npe-0087-przewodnik(person)",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": false,
+      "text": "person",
+      "emoji": "🏃"
+    },
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "przewodniczka"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "przewodnik",
+        "gen": "przewodnika",
+        "dat": "przewodnikowi",
+        "acc": "przewodnika",
+        "ins": "przewodnikiem",
+        "loc": "przewodniku",
+        "voc": "przewodniku"
+      },
+      "plural": {
+        "nom": "przewodnicy",
+        "gen": "przewodników",
+        "dat": "przewodnikom",
+        "acc": "przewodników",
+        "ins": "przewodnikami",
+        "loc": "przewodnikach",
+        "voc": "przewodnicy"
+      }
+    }
+  },
+  {
+    "lemma": "akuszerka",
+    "id": "pol-npe-0088-akuszerka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "akuszer"
+        ]
+      },
+      "synonyms": [
+        "położna"
+      ],
+      "usage": [
+        "wiejska akuszerka ― a rural/village accoucheuse",
+        "stara akuszerka ― an old accoucheuse",
+        "rola akuszerki ― the role of an accoucheuse"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "akuszerka",
+        "gen": "akuszerki",
+        "dat": "akuszerce",
+        "acc": "akuszerkę",
+        "ins": "akuszerką",
+        "loc": "akuszerce",
+        "voc": "akuszerko"
+      },
+      "plural": {
+        "nom": "akuszerki",
+        "gen": "akuszerek",
+        "dat": "akuszerkom",
+        "acc": "akuszerki",
+        "ins": "akuszerkami",
+        "loc": "akuszerkach",
+        "voc": "akuszerki"
+      }
+    }
+  },
+  {
+    "lemma": "kapłan",
+    "id": "pol-npe-0089-kapłan",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "kapłanka"
+        ]
+      },
+      "derivedTerms": [
+        "arcykapłański",
+        "kapłański",
+        "arcykapłan",
+        "arcykapłanka",
+        "kapłańskość",
+        "kapłaństwo"
+      ],
+      "usage": [
+        "Usage notes [ edit ] This term is neutral and can apply to a priest of any religion."
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "kapłan",
+        "gen": "kapłana",
+        "dat": "kapłanowi",
+        "acc": "kapłana",
+        "ins": "kapłanem",
+        "loc": "kapłanie",
+        "voc": "kapłanie"
+      },
+      "plural": {
+        "nom": "kapłani",
+        "gen": "kapłanów",
+        "dat": "kapłanom",
+        "acc": "kapłanów",
+        "ins": "kapłanami",
+        "loc": "kapłanach",
+        "voc": "kapłani"
+      }
+    }
+  },
+  {
+    "lemma": "wróg",
+    "id": "pol-npe-0090-wróg",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "synonyms": [
+        "nieprzyjaciel",
+        "przeciwnik"
+      ],
+      "derivedTerms": [
+        "wrogi",
+        "wrogość"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "wróg",
+        "gen": "wroga",
+        "dat": "wrogowi",
+        "acc": "wroga",
+        "ins": "wrogiem",
+        "loc": "wrogu",
+        "voc": "wrogu"
+      },
+      "plural": {
+        "nom": "wrogowie",
+        "gen": "wrogów",
+        "dat": "wrogom",
+        "acc": "wrogów",
+        "ins": "wrogami",
+        "loc": "wrogach",
+        "voc": "wrogowie"
+      }
+    }
+  },
+  {
+    "lemma": "pasażer",
+    "id": "pol-npe-0091-pasażer",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "pasażerka"
+        ]
+      },
+      "derivedTerms": [
+        "pasażerski"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "pasażer",
+        "gen": "pasażera",
+        "dat": "pasażerowi",
+        "acc": "pasażera",
+        "ins": "pasażerem",
+        "loc": "pasażerze",
+        "voc": "pasażerze"
+      },
+      "plural": {
+        "nom": "pasażerowie",
+        "gen": "pasażerów",
+        "dat": "pasażerom",
+        "acc": "pasażerów",
+        "ins": "pasażerami",
+        "loc": "pasażerach",
+        "voc": "pasażerowie"
+      }
+    }
+  },
+  {
+    "lemma": "żołnierz",
+    "id": "pol-npe-0092-żołnierz",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "żołnierzyk"
+        ],
+        "feminine": [
+          "żołnierka"
+        ]
+      },
+      "synonyms": [
+        "wojak",
+        "wojskowy"
+      ],
+      "derivedTerms": [
+        "żołnierski"
+      ],
+      "usage": [
+        "Hyponyms: najemnik najmita"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "żołnierz",
+        "gen": "żołnierza",
+        "dat": "żołnierzowi",
+        "acc": "żołnierza",
+        "ins": "żołnierzem",
+        "loc": "żołnierzu",
+        "voc": "żołnierzu"
+      },
+      "plural": {
+        "nom": "żołnierze",
+        "gen": "żołnierzy",
+        "dat": "żołnierzom",
+        "acc": "żołnierzy",
+        "ins": "żołnierzami",
+        "loc": "żołnierzach",
+        "voc": "żołnierze"
+      }
+    }
+  },
+  {
+    "lemma": "dentysta",
+    "id": "pol-npe-0093-dentysta",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "synonyms": [
+        "stomatolog"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "dentysta",
+        "gen": "dentysty",
+        "dat": "dentyście",
+        "acc": "dentystę",
+        "ins": "dentystą",
+        "loc": "dentyście",
+        "voc": "dentysto"
+      },
+      "plural": {
+        "nom": "dentyści",
+        "gen": "dentystów",
+        "dat": "dentystom",
+        "acc": "dentystów",
+        "ins": "dentystami",
+        "loc": "dentystach",
+        "voc": "dentyści"
+      }
+    }
+  },
+  {
+    "lemma": "rodzic",
+    "id": "pol-npe-0094-rodzic",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "inflections": {
+      "singular": {
+        "nom": "rodzic",
+        "gen": "rodzica",
+        "dat": "rodzicowi",
+        "acc": "rodzica",
+        "ins": "rodzicem",
+        "loc": "rodzicu",
+        "voc": "rodzicu"
+      },
+      "plural": {
+        "nom": "rodzice",
+        "gen": "rodziców",
+        "dat": "rodzicom",
+        "acc": "rodziców",
+        "ins": "rodzicami",
+        "loc": "rodzicach",
+        "voc": "rodzice"
+      }
+    }
+  },
+  {
+    "lemma": "dupek",
+    "id": "pol-npe-0095-dupek",
+    "frequency": 3,
+    "register": 7,
+    "gender": "m1",
+    "inflections": {
+      "singular": {
+        "nom": "dupek",
+        "gen": "dupka",
+        "dat": "dupkowi",
+        "acc": "dupka",
+        "ins": "dupkiem",
+        "loc": "dupku",
+        "voc": "dupku"
+      },
+      "plural": {
+        "nom": "dupki",
+        "gen": "dupków",
+        "dat": "dupkom",
+        "acc": "dupków",
+        "ins": "dupkami",
+        "loc": "dupkach",
+        "voc": "dupki"
+      }
+    }
+  },
+  {
+    "lemma": "uczeń",
+    "id": "pol-npe-0096-uczeń",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "uczennica"
+        ]
+      },
+      "usage": [
+        "Hyponyms: student studentka"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "uczeń",
+        "gen": "ucznia",
+        "dat": "uczniowi",
+        "acc": "ucznia",
+        "ins": "uczniem",
+        "loc": "uczniu",
+        "voc": "uczniu"
+      },
+      "plural": {
+        "nom": "uczniowie",
+        "gen": [
+          "uczniów",
+          "uczni"
+        ],
+        "dat": "uczniom",
+        "acc": [
+          "uczniów",
+          "uczni"
+        ],
+        "ins": "uczniami",
+        "loc": "uczniach",
+        "voc": "uczniowie"
+      }
+    }
+  },
+  {
+    "lemma": "właściciel",
+    "id": "pol-npe-0097-właściciel(owner)",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "of anything",
+      "emoji": "🔲"
+    },
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "właścicielka"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "właściciel",
+        "gen": "właściciela",
+        "dat": "właścicielowi",
+        "acc": "właściciela",
+        "ins": "właścicielem",
+        "loc": "właścicielu",
+        "voc": "właścicielu"
+      },
+      "plural": {
+        "nom": "właściciele",
+        "gen": "właścicieli",
+        "dat": "właścicielom",
+        "acc": "właścicieli",
+        "ins": "właścicielami",
+        "loc": "właścicielach",
+        "voc": "właściciele"
+      }
+    }
+  },
+  {
+    "lemma": "właściciel",
+    "id": "pol-npe-0098-właściciel(landlord)",
+    "_inflectionsRoot": "pol-npe-0097-właściciel(owner)",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "of a building",
+      "emoji": "🏠"
+    },
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "właścicielka"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "pisarz",
+    "id": "pol-npe-0099-pisarz",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "pisarka"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "pisarz",
+        "gen": "pisarza",
+        "dat": "pisarzowi",
+        "acc": "pisarza",
+        "ins": "pisarzem",
+        "loc": "pisarzu",
+        "voc": "pisarzu"
+      },
+      "plural": {
+        "nom": "pisarze",
+        "gen": "pisarzy",
+        "dat": "pisarzom",
+        "acc": "pisarzy",
+        "ins": "pisarzami",
+        "loc": "pisarzach",
+        "voc": "pisarze"
+      }
+    }
+  },
+  {
+    "lemma": "lekarz",
+    "id": "pol-npe-0100-lekarz",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "lekarka"
+        ]
+      },
+      "synonyms": [
+        "doktor",
+        "eskulap",
+        "medyk"
+      ],
+      "derivedTerms": [
+        "lekarski",
+        "lekarstwo"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "lekarz",
+        "gen": "lekarza",
+        "dat": "lekarzowi",
+        "acc": "lekarza",
+        "ins": "lekarzem",
+        "loc": "lekarzu",
+        "voc": "lekarzu"
+      },
+      "plural": {
+        "nom": "lekarze",
+        "gen": "lekarzy",
+        "dat": "lekarzom",
+        "acc": "lekarzy",
+        "ins": "lekarzami",
+        "loc": "lekarzach",
+        "voc": "lekarze"
+      }
+    }
+  },
+  {
+    "lemma": "lekarka",
+    "id": "pol-npe-0101-lekarka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "lekarz"
+        ]
+      },
+      "synonyms": [
+        "doktorka",
+        "medyczka"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "lekarka",
+        "gen": "lekarki",
+        "dat": "lekarce",
+        "acc": "lekarkę",
+        "ins": "lekarką",
+        "loc": "lekarce",
+        "voc": "lekarko"
+      },
+      "plural": {
+        "nom": "lekarki",
+        "gen": "lekarek",
+        "dat": "lekarkom",
+        "acc": "lekarki",
+        "ins": "lekarkami",
+        "loc": "lekarkach",
+        "voc": "lekarki"
+      }
+    }
+  },
+  {
+    "lemma": "sędzia",
+    "id": "pol-npe-0102-sędzia(judge)",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "law/justice",
+      "emoji": "⚖️"
+    },
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "sędzia",
+          "sędzina"
+        ]
+      },
+      "synonyms": [
+        "arbiter"
+      ],
+      "derivedTerms": [
+        "sędziowski"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "sędzia",
+        "gen": "sędziego",
+        "dat": "sędziemu",
+        "acc": "sędziego",
+        "ins": "sędzią",
+        "loc": "sędzi",
+        "voc": "sędzio"
+      },
+      "plural": {
+        "nom": "sędziowie",
+        "gen": "sędziów",
+        "dat": "sędziom",
+        "acc": "sędziów",
+        "ins": "sędziami",
+        "loc": "sędziach",
+        "voc": "sędziowie"
+      }
+    }
+  },
+  {
+    "lemma": "sędzia",
+    "id": "pol-npe-0103-sędzia(referee)",
+    "_inflectionsRoot": "pol-npe-0102-sędzia(judge)",
+    "frequency": 4,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "games/sports",
+      "emoji": "🎲"
+    },
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "sędzia"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "kochanie",
+    "id": "pol-npe-0104-kochanie",
+    "frequency": 4,
+    "register": 6,
+    "gender": "n",
+    "extra": {
+      "usage": [
+        "Moim dwóm największym kochaniom , temu dużemu i temu małemu. To my two most darling dear s, the big one and the little one.",
+        "Od tego kochania całkiem już straciła głowę. ― She almost went crazy from all this loving ."
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "kochanie",
+        "gen": "kochania",
+        "dat": "kochaniu",
+        "acc": "kochanie",
+        "ins": "kochaniem",
+        "loc": "kochaniu",
+        "voc": "kochanie"
+      },
+      "plural": {
+        "nom": "kochania",
+        "gen": "kochań",
+        "dat": "kochaniom",
+        "acc": "kochania",
+        "ins": "kochaniami",
+        "loc": "kochaniach",
+        "voc": "kochania"
+      }
+    }
+  },
+  {
+    "lemma": "turystka",
+    "id": "pol-npe-0105-turystka",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "turysta"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "turystka",
+        "gen": "turystki",
+        "dat": "turystce",
+        "acc": "turystkę",
+        "ins": "turystką",
+        "loc": "turystce",
+        "voc": "turystko"
+      },
+      "plural": {
+        "nom": "turystki",
+        "gen": "turystek",
+        "dat": "turystkom",
+        "acc": "turystki",
+        "ins": "turystkami",
+        "loc": "turystkach",
+        "voc": "turystki"
+      }
+    }
+  },
+  {
+    "lemma": "dziennikarz",
+    "id": "pol-npe-0106-dziennikarz",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "augmentative": [
+          "dziennikarzyna"
+        ],
+        "feminine": [
+          "dziennikarka"
+        ]
+      },
+      "synonyms": [
+        "żurnalista"
+      ],
+      "derivedTerms": [
+        "dziennikarski",
+        "dziennikarstwo"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "dziennikarz",
+        "gen": "dziennikarza",
+        "dat": "dziennikarzowi",
+        "acc": "dziennikarza",
+        "ins": "dziennikarzem",
+        "loc": "dziennikarzu",
+        "voc": "dziennikarzu"
+      },
+      "plural": {
+        "nom": "dziennikarze",
+        "gen": "dziennikarzy",
+        "dat": "dziennikarzom",
+        "acc": "dziennikarzy",
+        "ins": "dziennikarzami",
+        "loc": "dziennikarzach",
+        "voc": "dziennikarze"
+      }
+    }
+  },
+  {
+    "lemma": "celnik",
+    "id": "pol-npe-0107-celnik",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "celniczka"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "celnik",
+        "gen": "celnika",
+        "dat": "celnikowi",
+        "acc": "celnika",
+        "ins": "celnikiem",
+        "loc": "celniku",
+        "voc": "celniku"
+      },
+      "plural": {
+        "nom": "celnicy",
+        "gen": "celników",
+        "dat": "celnikom",
+        "acc": "celników",
+        "ins": "celnikami",
+        "loc": "celnikach",
+        "voc": "celnicy"
+      }
+    }
+  },
+  {
+    "lemma": "klient",
+    "id": "pol-npe-0108-klient",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "klientka"
+        ]
+      },
+      "synonyms": [
+        "delikwent",
+        "interesant",
+        "petent"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "klient",
+        "gen": "klienta",
+        "dat": "klientowi",
+        "acc": "klienta",
+        "ins": "klientem",
+        "loc": "kliencie",
+        "voc": "kliencie"
+      },
+      "plural": {
+        "nom": "klienci",
+        "gen": "klientów",
+        "dat": "klientom",
+        "acc": "klientów",
+        "ins": "klientami",
+        "loc": "klientach",
+        "voc": "klienci"
+      }
+    }
+  },
+  {
+    "lemma": "fryzjer",
+    "id": "pol-npe-0109-fryzjer",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "fryzjerka"
+        ]
+      },
+      "derivedTerms": [
+        "fryzjerski",
+        "fryzjerczyk",
+        "fryzjernia",
+        "fryzjerstwo"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "fryzjer",
+        "gen": "fryzjera",
+        "dat": "fryzjerowi",
+        "acc": "fryzjera",
+        "ins": "fryzjerem",
+        "loc": "fryzjerze",
+        "voc": "fryzjerze"
+      },
+      "plural": {
+        "nom": "fryzjerzy",
+        "gen": "fryzjerów",
+        "dat": "fryzjerom",
+        "acc": "fryzjerów",
+        "ins": "fryzjerami",
+        "loc": "fryzjerach",
+        "voc": "fryzjerzy"
+      }
+    }
+  },
+  {
+    "lemma": "śpiewak",
+    "id": "pol-npe-0110-śpiewak",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "śpiewaczka"
+        ]
+      },
+      "synonyms": [
+        "piosenkarz"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "śpiewak",
+        "gen": "śpiewaka",
+        "dat": "śpiewakowi",
+        "acc": "śpiewaka",
+        "ins": "śpiewakiem",
+        "loc": "śpiewaku",
+        "voc": "śpiewaku"
+      },
+      "plural": {
+        "nom": "śpiewacy",
+        "gen": "śpiewaków",
+        "dat": "śpiewakom",
+        "acc": "śpiewaków",
+        "ins": "śpiewakami",
+        "loc": "śpiewakach",
+        "voc": "śpiewacy"
+      }
+    }
+  },
+  {
+    "lemma": "morderca",
+    "id": "pol-npe-0111-morderca",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "morderczyni"
+        ]
+      },
+      "synonyms": [
+        "zabójca",
+        "rezun"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "morderca",
+        "gen": "mordercy",
+        "dat": "mordercy",
+        "acc": "mordercę",
+        "ins": "mordercą",
+        "loc": "mordercy",
+        "voc": "morderco"
+      },
+      "plural": {
+        "nom": "mordercy",
+        "gen": "morderców",
+        "dat": "mordercom",
+        "acc": "morderców",
+        "ins": "mordercami",
+        "loc": "mordercach",
+        "voc": "mordercy"
+      }
+    }
+  },
+  {
+    "lemma": "policjant",
+    "id": "pol-npe-0112-policjant",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "policjantka"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "policjant",
+        "gen": "policjanta",
+        "dat": "policjantowi",
+        "acc": "policjanta",
+        "ins": "policjantem",
+        "loc": "policjancie",
+        "voc": "policjancie"
+      },
+      "plural": {
+        "nom": "policjanci",
+        "gen": "policjantów",
+        "dat": "policjantom",
+        "acc": "policjantów",
+        "ins": "policjantami",
+        "loc": "policjantach",
+        "voc": "policjanci"
+      }
+    }
+  },
+  {
+    "lemma": "policjantka",
+    "id": "pol-npe-0113-policjantka",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "policjant"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "policjantka",
+        "gen": "policjantki",
+        "dat": "policjantce",
+        "acc": "policjantkę",
+        "ins": "policjantką",
+        "loc": "policjantce",
+        "voc": "policjantko"
+      },
+      "plural": {
+        "nom": "policjantki",
+        "gen": "policjantek",
+        "dat": "policjantkom",
+        "acc": "policjantki",
+        "ins": "policjantkami",
+        "loc": "policjantkach",
+        "voc": "policjantki"
+      }
+    }
+  },
+  {
+    "lemma": "pielęgniarka",
+    "id": "pol-npe-0114-pielęgniarka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "inflections": {
+      "singular": {
+        "nom": "pielęgniarka",
+        "gen": "pielęgniarki",
+        "dat": "pielęgniarce",
+        "acc": "pielęgniarkę",
+        "ins": "pielęgniarką",
+        "loc": "pielęgniarce",
+        "voc": "pielęgniarko"
+      },
+      "plural": {
+        "nom": "pielęgniarki",
+        "gen": "pielęgniarek",
+        "dat": "pielęgniarkom",
+        "acc": "pielęgniarki",
+        "ins": "pielęgniarkami",
+        "loc": "pielęgniarkach",
+        "voc": "pielęgniarki"
+      }
+    }
+  },
+  {
+    "lemma": "pielęgniarz",
+    "id": "pol-npe-0115-pielęgniarz",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "pielęgniarka"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "pielęgniarz",
+        "gen": "pielęgniarza",
+        "dat": "pielęgniarzowi",
+        "acc": "pielęgniarza",
+        "ins": "pielęgniarzem",
+        "loc": "pielęgniarzu",
+        "voc": "pielęgniarzu"
+      },
+      "plural": {
+        "nom": "pielęgniarze",
+        "gen": "pielęgniarzy",
+        "dat": "pielęgniarzom",
+        "acc": "pielęgniarzy",
+        "ins": "pielęgniarzami",
+        "loc": "pielęgniarzach",
+        "voc": "pielęgniarze"
+      }
+    }
+  },
+  {
+    "lemma": "obywatel",
+    "id": "pol-npe-0116-obywatel",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "obywatelka"
+        ]
+      },
+      "derivedTerms": [
+        "współobywatel"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "obywatel",
+        "gen": "obywatela",
+        "dat": "obywatelowi",
+        "acc": "obywatela",
+        "ins": "obywatelem",
+        "loc": "obywatelu",
+        "voc": "obywatelu"
+      },
+      "plural": {
+        "nom": "obywatele",
+        "gen": "obywateli",
+        "dat": "obywatelom",
+        "acc": "obywateli",
+        "ins": "obywatelami",
+        "loc": "obywatelach",
+        "voc": "obywatele"
+      }
+    }
+  },
+  {
+    "lemma": "strażnik",
+    "id": "pol-npe-0117-strażnik",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "strażniczka"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "strażnik",
+        "gen": "strażnika",
+        "dat": "strażnikowi",
+        "acc": "strażnika",
+        "ins": "strażnikiem",
+        "loc": "strażniku",
+        "voc": "strażniku"
+      },
+      "plural": {
+        "nom": "strażnicy",
+        "gen": "strażników",
+        "dat": "strażnikom",
+        "acc": "strażników",
+        "ins": "strażnikami",
+        "loc": "strażnikach",
+        "voc": "strażnicy"
+      }
+    }
+  },
+  {
+    "lemma": "naukowiec",
+    "id": "pol-npe-0118-naukowiec",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "inflections": {
+      "singular": {
+        "nom": "naukowiec",
+        "gen": "naukowca",
+        "dat": "naukowcowi",
+        "acc": "naukowca",
+        "ins": "naukowcem",
+        "loc": "naukowcu",
+        "voc": "naukowcze"
+      },
+      "plural": {
+        "nom": "naukowcy",
+        "gen": "naukowców",
+        "dat": "naukowcom",
+        "acc": "naukowców",
+        "ins": "naukowcami",
+        "loc": "naukowcach",
+        "voc": "naukowcy"
+      }
+    }
+  },
+  {
+    "lemma": "pacjent",
+    "id": "pol-npe-0119-pacjent",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "inflections": {
+      "singular": {
+        "nom": "pacjent",
+        "gen": "pacjenta",
+        "dat": "pacjentowi",
+        "acc": "pacjenta",
+        "ins": "pacjentem",
+        "loc": "pacjencie",
+        "voc": "pacjencie"
+      },
+      "plural": {
+        "nom": "pacjenci",
+        "gen": "pacjentów",
+        "dat": "pacjentom",
+        "acc": "pacjentów",
+        "ins": "pacjentami",
+        "loc": "pacjentach",
+        "voc": "pacjenci"
+      }
+    }
+  },
+  {
+    "lemma": "krewna",
+    "id": "pol-npe-0120-krewna",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "krewny"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "krewna",
+        "gen": "krewnej",
+        "dat": "krewnej",
+        "acc": "krewną",
+        "ins": "krewną",
+        "loc": "krewnej",
+        "voc": "krewna"
+      },
+      "plural": {
+        "nom": "krewne",
+        "gen": "krewnych",
+        "dat": "krewnym",
+        "acc": "krewne",
+        "ins": "krewnymi",
+        "loc": "krewnych",
+        "voc": "krewne"
+      }
+    }
+  },
+  {
+    "lemma": "krewny",
+    "id": "pol-npe-0121-krewny",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "krewna"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "krewny",
+        "gen": "krewnego",
+        "dat": "krewnemu",
+        "acc": "krewnego",
+        "ins": "krewnym",
+        "loc": "krewnym",
+        "voc": "krewny"
+      },
+      "plural": {
+        "nom": "krewni",
+        "gen": "krewnych",
+        "dat": "krewnym",
+        "acc": "krewnych",
+        "ins": "krewnymi",
+        "loc": "krewnych",
+        "voc": "krewni"
+      }
+    }
+  },
+  {
+    "lemma": "rolnik",
+    "id": "pol-npe-0122-rolnik",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "rolniczka"
+        ]
+      },
+      "synonyms": [
+        "farmer"
+      ],
+      "derivedTerms": [
+        "rolniczy",
+        "rolnictwo"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "rolnik",
+        "gen": "rolnika",
+        "dat": "rolnikowi",
+        "acc": "rolnika",
+        "ins": "rolnikiem",
+        "loc": "rolniku",
+        "voc": "rolniku"
+      },
+      "plural": {
+        "nom": "rolnicy",
+        "gen": "rolników",
+        "dat": "rolnikom",
+        "acc": "rolników",
+        "ins": "rolnikami",
+        "loc": "rolnikach",
+        "voc": "rolnicy"
+      }
+    }
+  },
+  {
+    "lemma": "ofiara",
+    "id": "pol-npe-0123-ofiara(victim)",
+    "frequency": 4,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": false,
+      "text": "person",
+      "emoji": "🏃"
+    },
+    "extra": {
+      "synonyms": [
+        "niezdara"
+      ],
+      "derivedTerms": [
+        "ofiarny",
+        "ofiarować"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "ofiara",
+        "gen": "ofiary",
+        "dat": "ofierze",
+        "acc": "ofiarę",
+        "ins": "ofiarą",
+        "loc": "ofierze",
+        "voc": "ofiaro"
+      },
+      "plural": {
+        "nom": "ofiary",
+        "gen": "ofiar",
+        "dat": "ofiarom",
+        "acc": "ofiary",
+        "ins": "ofiarami",
+        "loc": "ofiarach",
+        "voc": "ofiary"
+      }
+    }
+  },
+  {
+    "lemma": "detektyw",
+    "id": "pol-npe-0124-detektyw",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "synonyms": [
+        "śledczy"
+      ],
+      "derivedTerms": [
+        "detektywistyczny"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "detektyw",
+        "gen": "detektywa",
+        "dat": "detektywowi",
+        "acc": "detektywa",
+        "ins": "detektywem",
+        "loc": "detektywie",
+        "voc": "detektywie"
+      },
+      "plural": {
+        "nom": "detektywi",
+        "gen": "detektywów",
+        "dat": "detektywom",
+        "acc": "detektywów",
+        "ins": "detektywami",
+        "loc": "detektywach",
+        "voc": "detektywi"
+      }
+    }
+  },
+  {
+    "lemma": "mistrz",
+    "id": "pol-npe-0125-mistrz",
+    "frequency": 5,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "mistrzyni"
+        ]
+      },
+      "derivedTerms": [
+        "arcymistrzowski",
+        "baletmistrzowski",
+        "mistrzowski",
+        "arcymistrz",
+        "arcymistrzyni",
+        "baletmistrz",
+        "baletmistrzyni",
+        "mistrzostwo",
+        "zegarmistrz"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "mistrz",
+        "gen": "mistrza",
+        "dat": "mistrzowi",
+        "acc": "mistrza",
+        "ins": "mistrzem",
+        "loc": "mistrzu",
+        "voc": "mistrzu"
+      },
+      "plural": {
+        "nom": "mistrzowie",
+        "gen": "mistrzów",
+        "dat": "mistrzom",
+        "acc": "mistrzów",
+        "ins": "mistrzami",
+        "loc": "mistrzach",
+        "voc": "mistrzowie"
+      }
+    }
+  },
+  {
+    "lemma": "wegetarianin",
+    "id": "pol-npe-0126-wegetarianin",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "wegetarianka"
+        ]
+      },
+      "synonyms": [
+        "jarosz"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "wegetarianin",
+        "gen": "wegetarianina",
+        "dat": "wegetarianinowi",
+        "acc": "wegetarianina",
+        "ins": "wegetarianinem",
+        "loc": "wegetarianinie",
+        "voc": "wegetarianinie"
+      },
+      "plural": {
+        "nom": "wegetarianie",
+        "gen": [
+          "wegetarian",
+          "wegetarianów"
+        ],
+        "dat": "wegetarianom",
+        "acc": [
+          "wegetarian",
+          "wegetarianów"
+        ],
+        "ins": "wegetarianami",
+        "loc": "wegetarianach",
+        "voc": "wegetarianie"
+      }
+    }
+  },
+  {
+    "lemma": "sekretarz",
+    "id": "pol-npe-0127-sekretarz",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "sekretarka"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "sekretarz",
+        "gen": "sekretarza",
+        "dat": "sekretarzowi",
+        "acc": "sekretarza",
+        "ins": "sekretarzem",
+        "loc": "sekretarzu",
+        "voc": "sekretarzu"
+      },
+      "plural": {
+        "nom": "sekretarze",
+        "gen": "sekretarzy",
+        "dat": "sekretarzom",
+        "acc": "sekretarzy",
+        "ins": "sekretarzami",
+        "loc": "sekretarzach",
+        "voc": "sekretarze"
+      }
+    }
+  },
+  {
+    "lemma": "znajoma",
+    "id": "pol-npe-0128-znajoma",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "znajomy"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "znajoma",
+        "gen": "znajomej",
+        "dat": "znajomej",
+        "acc": "znajomą",
+        "ins": "znajomą",
+        "loc": "znajomej",
+        "voc": "znajoma"
+      },
+      "plural": {
+        "nom": "znajome",
+        "gen": "znajomych",
+        "dat": "znajomym",
+        "acc": "znajome",
+        "ins": "znajomymi",
+        "loc": "znajomych",
+        "voc": "znajome"
+      }
+    }
+  },
+  {
+    "lemma": "znajomy",
+    "id": "pol-npe-0129-znajomy",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "znajoma"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "znajomy",
+        "gen": "znajomego",
+        "dat": "znajomemu",
+        "acc": "znajomego",
+        "ins": "znajomym",
+        "loc": "znajomym",
+        "voc": "znajomy"
+      },
+      "plural": {
+        "nom": "znajomi",
+        "gen": "znajomych",
+        "dat": "znajomym",
+        "acc": "znajomych",
+        "ins": "znajomymi",
+        "loc": "znajomych",
+        "voc": "znajomi"
+      }
+    }
+  },
+  {
+    "lemma": "artysta",
+    "id": "pol-npe-0130-artysta",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "abbreviation": [
+          "art."
+        ],
+        "feminine": [
+          "artystka"
+        ]
+      },
+      "synonyms": [
+        "fachman",
+        "fachowiec",
+        "fachura",
+        "profesjonalista"
+      ],
+      "antonyms": [
+        "partacz"
+      ],
+      "derivedTerms": [
+        "antyartystyczny",
+        "artystowski",
+        "artystyczny",
+        "artystycznie",
+        "artystostwo",
+        "artystyczność",
+        "artyzm"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "artysta",
+        "gen": "artysty",
+        "dat": "artyście",
+        "acc": "artystę",
+        "ins": "artystą",
+        "loc": "artyście",
+        "voc": "artysto"
+      },
+      "plural": {
+        "nom": "artyści",
+        "gen": "artystów",
+        "dat": "artystom",
+        "acc": "artystów",
+        "ins": "artystami",
+        "loc": "artystach",
+        "voc": "artyści"
+      }
+    }
+  },
+  {
+    "lemma": "artystka",
+    "id": "pol-npe-0131-artystka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "artysta"
+        ]
+      },
+      "synonyms": [
+        "profesjonalistka",
+        "specjalistka"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "artystka",
+        "gen": "artystki",
+        "dat": "artystce",
+        "acc": "artystkę",
+        "ins": "artystką",
+        "loc": "artystce",
+        "voc": "artystko"
+      },
+      "plural": {
+        "nom": "artystki",
+        "gen": "artystek",
+        "dat": "artystkom",
+        "acc": "artystki",
+        "ins": "artystkami",
+        "loc": "artystkach",
+        "voc": "artystki"
+      }
+    }
+  },
+  {
+    "lemma": "kryminalista",
+    "id": "pol-npe-0132-kryminalista",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "synonyms": [
+        "przestępca"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "kryminalista",
+        "gen": "kryminalisty",
+        "dat": "kryminaliście",
+        "acc": "kryminalistę",
+        "ins": "kryminalistą",
+        "loc": "kryminaliście",
+        "voc": "kryminalisto"
+      },
+      "plural": {
+        "nom": "kryminaliści",
+        "gen": "kryminalistów",
+        "dat": "kryminalistom",
+        "acc": "kryminalistów",
+        "ins": "kryminalistami",
+        "loc": "kryminalistach",
+        "voc": "kryminaliści"
+      }
+    }
+  },
+  {
+    "lemma": "prezydent",
+    "id": "pol-npe-0133-prezydent",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "prezydentka"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "prezydent",
+        "gen": "prezydenta",
+        "dat": "prezydentowi",
+        "acc": "prezydenta",
+        "ins": "prezydentem",
+        "loc": "prezydencie",
+        "voc": "prezydencie"
+      },
+      "plural": {
+        "nom": "prezydenci",
+        "gen": "prezydentów",
+        "dat": "prezydentom",
+        "acc": "prezydentów",
+        "ins": "prezydentami",
+        "loc": "prezydentach",
+        "voc": "prezydenci"
+      }
+    }
+  },
+  {
+    "lemma": "więzień",
+    "id": "pol-npe-0134-więzień",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "więźniarka"
+        ]
+      }
+    },
+    "inflections": {
+      "singular": {
+        "nom": "więzień",
+        "gen": "więźnia",
+        "dat": "więźniowi",
+        "acc": "więźnia",
+        "ins": "więźniem",
+        "loc": "więźniu",
+        "voc": "więźniu"
+      },
+      "plural": {
+        "nom": "więźniowie",
+        "gen": "więźniów",
+        "dat": "więźniom",
+        "acc": "więźniów",
+        "ins": "więźniami",
+        "loc": "więźniach",
+        "voc": "więźniowie"
+      }
+    }
+  },
+  {
+    "lemma": "miliarder",
+    "id": "pol-npe-0135-miliarder",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "inflections": {
+      "singular": {
+        "nom": "miliarder",
+        "gen": "miliardera",
+        "dat": "miliarderowi",
+        "acc": "miliardera",
+        "ins": "miliarderem",
+        "loc": "miliarderze",
+        "voc": "miliarderze"
+      },
+      "plural": {
+        "nom": "miliarderzy",
+        "gen": "miliarderów",
+        "dat": "miliarderom",
+        "acc": "miliarderów",
+        "ins": "miliarderami",
+        "loc": "miliarderach",
+        "voc": "miliarderzy"
+      }
+    }
+  },
+  {
+    "lemma": "milioner",
+    "id": "pol-npe-0136-milioner",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "inflections": {
+      "singular": {
+        "nom": "milioner",
+        "gen": "milionera",
+        "dat": "milionerowi",
+        "acc": "milionera",
+        "ins": "milionerem",
+        "loc": "milionerze",
+        "voc": "milionerze"
+      },
+      "plural": {
+        "nom": "milionerzy",
+        "gen": "milionerów",
+        "dat": "milionerom",
+        "acc": "milionerów",
+        "ins": "milionerami",
+        "loc": "milionerach",
+        "voc": "milionerzy"
+      }
+    }
+  },
+  {
+    "lemma": "pieszy",
+    "id": "pol-npe-0137-pieszy",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "inflections": {
+      "singular": {
+        "nom": "pieszy",
+        "gen": "pieszego",
+        "dat": "pieszemu",
+        "acc": "pieszego",
+        "ins": "pieszym",
+        "loc": "pieszym",
+        "voc": "pieszy"
+      },
+      "plural": {
+        "nom": "piesi",
+        "gen": "pieszych",
+        "dat": "pieszym",
+        "acc": "pieszych",
+        "ins": "pieszymi",
+        "loc": "pieszych",
+        "voc": "piesi"
+      }
+    }
+  },
+  {
+    "lemma": "piesza",
+    "id": "pol-npe-0138-piesza",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "inflections": {
+      "singular": {
+        "nom": "piesza",
+        "gen": "pieszej",
+        "dat": "pieszej",
+        "acc": "pieszą",
+        "ins": "pieszą",
+        "loc": "pieszej",
+        "voc": "piesza"
+      },
+      "plural": {
+        "nom": "piesze",
+        "gen": "pieszych",
+        "dat": "pieszym",
+        "acc": "piesze",
+        "ins": "pieszymi",
+        "loc": "pieszych",
+        "voc": "piesze"
+      }
+    }
+  },
+  {
+    "lemma": "pan",
+    "id": "pol-npe-0139-pan(title)",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "title",
+      "emoji": "🙇"
+    },
+    "inflections": {
+      "singular": {
+        "nom": "pan",
+        "gen": "pana",
+        "dat": "panu",
+        "acc": "pana",
+        "ins": "panem",
+        "loc": "panu",
+        "voc": "panie"
+      },
+      "plural": {
+        "nom": "panowie",
+        "gen": "panów",
+        "dat": "panom",
+        "acc": "panów",
+        "ins": "panami",
+        "loc": "panach",
+        "voc": "panowie"
+      }
+    }
+  },
+  {
+    "lemma": "pan",
+    "id": "pol-npe-0140-pan(address)",
+    "_inflectionsRoot": "pol-npe-0139-pan(title)",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "form of address",
+      "emoji": "👋"
+    }
+  },
+  {
+    "lemma": "pan",
+    "id": "pol-npe-0141-pan(man)",
+    "_inflectionsRoot": "pol-npe-0139-pan(title)",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "a gender",
+      "emoji": "👫"
+    }
+  },
+  {
+    "lemma": "pani",
+    "id": "pol-npe-0142-pani(title)",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "title",
+      "emoji": "🙇"
+    },
+    "inflections": {
+      "singular": {
+        "nom": "pani",
+        "gen": "pani",
+        "dat": "pani",
+        "acc": "panią",
+        "ins": "panią",
+        "loc": "pani",
+        "voc": "pani"
+      },
+      "plural": {
+        "nom": "panie",
+        "gen": "pań",
+        "dat": "paniom",
+        "acc": "panie",
+        "ins": "paniami",
+        "loc": "paniach",
+        "voc": "panie"
+      }
+    }
+  },
+  {
+    "lemma": "pani",
+    "id": "pol-npe-0143-pani(address)",
+    "_inflectionsRoot": "pol-npe-0142-pani(title)",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "form of address",
+      "emoji": "👋"
+    }
+  },
+  {
+    "lemma": "pani",
+    "id": "pol-npe-0144-pani(woman)",
+    "_inflectionsRoot": "pol-npe-0142-pani(title)",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "a gender",
+      "emoji": "👫"
+    }
+  },
+  {
+    "lemma": "panna",
+    "id": "pol-npe-0145-panna",
+    "frequency": 1,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "panienka"
+        ],
+        "augmentative": [
+          "pannica",
+          "pannisko"
+        ]
+      },
+      "derivedTerms": [
+        "panieński",
+        "panieństwo",
+        "Panna"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "panna",
+        "gen": "panny",
+        "dat": "pannie",
+        "acc": "pannę",
+        "ins": "panną",
+        "loc": "pannie",
+        "voc": "panno"
+      },
+      "plural": {
+        "nom": "panny",
+        "gen": "panien",
+        "dat": "pannom",
+        "acc": "panny",
+        "ins": "pannami",
+        "loc": "pannach",
+        "voc": "panny"
+      }
+    }
+  },
+  {
+    "lemma": "pilot",
+    "id": "pol-npe-0146-pilot(pilot)",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": false,
+      "text": "a job",
+      "emoji": "✈️"
+    },
+    "inflections": {
+      "singular": {
+        "nom": "pilot",
+        "gen": "pilota",
+        "dat": "pilotowi",
+        "acc": "pilota",
+        "ins": "pilotem",
+        "loc": "pilocie",
+        "voc": "pilocie"
+      },
+      "plural": {
+        "nom": "piloci",
+        "gen": "pilotów",
+        "dat": "pilotom",
+        "acc": "pilotów",
+        "ins": "pilotami",
+        "loc": "pilotach",
+        "voc": "piloci"
+      }
+    }
+  },
+  {
+    "lemma": "lider",
+    "id": "pol-npe-0147-lider",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "liderka"
+        ]
+      },
+      "synonyms": [
+        "przywódca"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "lider",
+        "gen": "lidera",
+        "dat": "liderowi",
+        "acc": "lidera",
+        "ins": "liderem",
+        "loc": "liderze",
+        "voc": "liderze"
+      },
+      "plural": {
+        "nom": "liderzy",
+        "gen": "liderów",
+        "dat": "liderom",
+        "acc": "liderów",
+        "ins": "liderami",
+        "loc": "liderach",
+        "voc": "liderzy"
+      }
+    }
+  },
+  {
+    "lemma": "król",
+    "id": "pol-npe-0148-król",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "królewiątko"
+        ],
+        "feminine": [
+          "królowa"
+        ]
+      },
+      "derivedTerms": [
+        "bezkrólewie",
+        "Król",
+        "królestwo",
+        "królewiątko",
+        "królewiacki",
+        "królewiak",
+        "królewicz",
+        "królewna",
+        "królewski",
+        "królewskość",
+        "królewszczyzna",
+        "króliczek",
+        "królik",
+        "królowa",
+        "królować",
+        "królowanie",
+        "Trzej Królowie"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "król",
+        "gen": "króla",
+        "dat": "królowi",
+        "acc": "króla",
+        "ins": "królem",
+        "loc": "królu",
+        "voc": "królu"
+      },
+      "plural": {
+        "nom": "królowie",
+        "gen": "królów",
+        "dat": "królom",
+        "acc": "królów",
+        "ins": "królami",
+        "loc": "królach",
+        "voc": "królowie"
+      }
+    }
+  },
+  {
+    "lemma": "królowa",
+    "id": "pol-npe-0149-królowa",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "synonyms": [
+        "dama",
+        "hetman",
+        "królówka"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "królowa",
+        "gen": "królowej",
+        "dat": "królowej",
+        "acc": "królową",
+        "ins": "królową",
+        "loc": "królowej",
+        "voc": "królowo"
+      },
+      "plural": {
+        "nom": "królowe",
+        "gen": "królowych",
+        "dat": "królowym",
+        "acc": "królowe",
+        "ins": "królowymi",
+        "loc": "królowych",
+        "voc": "królowe"
+      }
+    }
+  },
+  {
+    "lemma": "dziecko",
+    "id": "pol-npe-0150-dziecko",
+    "frequency": 1,
+    "register": 0,
+    "gender": "n",
+    "extra": {
+      "synonyms": [
+        "dziecko"
+      ],
+      "derivedTerms": [
+        "bezdzietny",
+        "bezdzietnie",
+        "bezdzietność",
+        "wylać dziecko z kąpielą",
+        "wylewać dziecko z kąpielą"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "dziecko",
+        "gen": "dziecka",
+        "dat": "dziecku",
+        "acc": "dziecko",
+        "ins": "dzieckiem",
+        "loc": "dziecku",
+        "voc": "dziecko"
+      },
+      "plural": {
+        "nom": "dzieci",
+        "gen": "dzieci",
+        "dat": "dzieciom",
+        "acc": "dzieci",
+        "ins": "dziećmi",
+        "loc": "dzieciach",
+        "voc": "dzieci"
+      }
+    }
+  },
+  {
+    "lemma": "niemowlę",
+    "id": "pol-npe-0151-niemowlę",
+    "frequency": 1,
+    "register": 0,
+    "gender": "n",
+    "inflections": {
+      "singular": {
+        "nom": "niemowlę",
+        "gen": "niemowlęcia",
+        "dat": "niemowlęciu",
+        "acc": "niemowlę",
+        "ins": "niemowlęciem",
+        "loc": "niemowlęciu",
+        "voc": "niemowlę"
+      },
+      "plural": {
+        "nom": "niemowlęta",
+        "gen": "niemowląt",
+        "dat": "niemowlętom",
+        "acc": "niemowlęta",
+        "ins": "niemowlętami",
+        "loc": "niemowlętach",
+        "voc": "niemowlęta"
+      }
+    }
+  },
+  {
+    "lemma": "anioł",
+    "id": "pol-npe-0152-anioł",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m2",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "aniołek"
+        ],
+        "feminine": [
+          "anielica"
+        ]
+      },
+      "derivedTerms": [
+        "anieli",
+        "anielski",
+        "aniołkowaty",
+        "aniołowy",
+        "archanielski",
+        "anielsko",
+        "anielątko",
+        "anielę",
+        "anielica",
+        "anielskość",
+        "anielstwo",
+        "aniołeczek",
+        "anioł morski",
+        "Anioł Pański",
+        "Anioł Stróż",
+        "anioł stróż",
+        "archanioł",
+        "Miasto Aniołów",
+        "upadły anioł",
+        "anieleć",
+        "rozanielać",
+        "rozanielić"
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "anioł",
+        "gen": "anioła",
+        "dat": "aniołowi",
+        "acc": "anioła",
+        "ins": "aniołem",
+        "loc": "aniele",
+        "voc": "aniele"
+      },
+      "plural": {
+        "nom": [
+          "anioły",
+          "aniołowie",
+          "anieli"
+        ],
+        "gen": "aniołów",
+        "dat": "aniołom",
+        "acc": [
+          "anioły",
+          "aniołów"
+        ],
+        "ins": "aniołami",
+        "loc": "aniołach",
+        "voc": [
+          "anioły",
+          "aniołowie",
+          "anieli"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "ksiądz",
+    "id": "pol-npe-0153-ksiądz",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m3",
+    "extra": {
+      "otherShapes": {
+        "abbreviation": [
+          "ks."
+        ]
+      },
+      "synonyms": [
+        "ksiądz"
+      ],
+      "derivedTerms": [
+        "kto ma księdza w rodzie, tego bieda nie ubodzie"
+      ],
+      "usage": [
+        "Nasza szefowa, pani Magdalena, na zarzut księdza , że jej nieskromny dekolt wzbudza grzeszne myśli odpowiedziała, że on nie skusiłby jej, nawet gdyby stanął przed nią nago. Our boss, Ms. Magdalena, to the priest's objection that her immodest décolletage evokes sinful thoughts replied that he would not tempt her even if he stood naked in front of her."
+      ]
+    },
+    "inflections": {
+      "singular": {
+        "nom": "ksiądz",
+        "gen": "księdza",
+        "dat": "księdzu",
+        "acc": "księdza",
+        "ins": "księdzem",
+        "loc": "księdzu",
+        "voc": "księże"
+      },
+      "plural": {
+        "nom": "księża",
+        "gen": "księży",
+        "dat": "księżom",
+        "acc": "księży",
+        "ins": "księżmi",
+        "loc": "księżach",
+        "voc": "księża"
+      }
+    }
+  },
+  {
+    "lemma": "pierdolec",
+    "id": "pol-npe-0154-pierdolec",
+    "_lacking": true,
+    "frequency": 3,
+    "register": 7,
+    "gender": "m1",
+    "inflections": {
+      "singular": {
+        "nom": "pierdolec",
+        "gen": "pierdolca",
+        "dat": "pierdolcowi",
+        "acc": "pierdolca",
+        "ins": "pierdolcem",
+        "loc": "pierdolcu",
+        "voc": "pierdolcu"
+      },
+      "plural": {
+        "nom": "pierdolcy",
+        "gen": "pierdolców",
+        "dat": "pierdolcom",
+        "acc": "pierdolców",
+        "ins": "pierdolcami",
+        "loc": "pierdolcach",
+        "voc": "pierdolcy"
+      }
+    }
+  },
+  {
+    "lemma": "skurwiel",
+    "id": "pol-npe-0155-skurwiel",
+    "frequency": 3,
+    "register": 7,
+    "gender": "m2",
+    "inflections": {
+      "singular": {
+        "nom": "skurwiel",
+        "gen": "skurwiela",
+        "dat": "skurwielowi",
+        "acc": "skurwiela",
+        "ins": "skurwielem",
+        "loc": "skurwielu",
+        "voc": "skurwielu"
+      },
+      "plural": {
+        "nom": "skurwiele",
+        "gen": [
+          "skurwieli",
+          "skurwielów"
+        ],
+        "dat": "skurwielom",
+        "acc": [
+          "skurwieli",
+          "skurwielów"
+        ],
+        "ins": "skurwielami",
+        "loc": "skurwielach",
+        "voc": "skurwiele"
+      }
+    }
+  }
+]
