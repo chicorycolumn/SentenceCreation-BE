@@ -30,18 +30,16 @@ xdescribe("Sandbox.", () => {
 
 describe("Project Ophiucus: Bravo Wing: Task One.", () => {
   it.only("Take large json dicts of lobjs from Scraper and separate into individual files for BE", () => {
-    splitLemmaObjectsFromBigJsonToIndividualJsons(
-      "prod",
-      "ENG",
-      "_batch_01_TGT",
-      ["adj"]
-    );
-    // splitLemmaObjectsFromBigJsonToIndividualJsons(
-    //   "prod",
-    //   "POL",
-    //   "_batch_01_SRC",
-    //   ["adj"]
-    // );
+    let e = "prod";
+    let l = "POL";
+    let wordtypes = ["adj"];
+
+    const suffixRef = {
+      ENG: "TGT",
+      POL: "SRC",
+    };
+    let suffix = `_batch_01_${suffixRef[l]}`;
+    splitLemmaObjectsFromBigJsonToIndividualJsons(e, l, suffix, wordtypes);
   });
   it("Take formulas from Old Way of storing them", () => {
     // add guideSentence.

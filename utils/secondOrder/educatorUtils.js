@@ -356,7 +356,7 @@ exports.splitLemmaObjectsFromBigJsonToIndividualJsons = (
 
   wordtypes.forEach((wordtype) => {
     let inputPath = `source/${e}/${l}/raw/${wordtype}${suffix}.json`;
-    let outputPath = `source/${e}/${l}/raw/${wordtype}.json`;
+    let outputPath = `source/${e}/${l}/words/${wordtype}.json`;
 
     if (fs.existsSync(inputPath)) {
       const words = require("../../" + inputPath);
@@ -374,7 +374,19 @@ exports.splitLemmaObjectsFromBigJsonToIndividualJsons = (
         if (word.otherShapes) {
           meat.extra = { otherShapes: word.otherShapes };
         }
-        meats.push([word.id, meat]);
+
+        if (Object.keys(word).includes("_inflectionsRoot")) {
+          console.log("");
+          console.log(`SKIPPED because uses inflectionsRoot: ${word.id}`);
+          if (word.otherShapes) {
+            console.log(
+              "Dropping this data. Hopefully it is present in inflections parent:"
+            );
+            console.log(word.otherShapes);
+          }
+        } else {
+          meats.push([word.id, meat]);
+        }
 
         delete word.inflections;
         delete word.otherShapes;
