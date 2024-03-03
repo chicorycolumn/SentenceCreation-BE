@@ -74,9 +74,11 @@ exports.getSentenceFormulas = (
   return uUtils.copyWithoutReference(res);
 };
 
-exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
-  let envir = "ref";
-
+exports.getWordsByCriteria = (
+  envir = "ref",
+  currentLanguage,
+  criteriaFromHTTP
+) => {
   let resObj = {};
 
   let criteria = {};
@@ -127,9 +129,7 @@ exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
   return resObj;
 };
 
-exports.getTagsAndTopics = (currentLanguage) => {
-  let envir = "ref";
-
+exports.getTagsAndTopics = (envir = "ref", currentLanguage) => {
   const wordsBank = nexusUtils.getNexusWithAllWordtypes(envir);
 
   allTags = gpUtils.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects(
@@ -284,7 +284,7 @@ exports.frontendifyOrders = (orders) => {
   return newOrders;
 };
 
-exports.frontendifyFormula = (lang, formula) => {
+exports.frontendifyFormula = (env, lang, formula) => {
   // Frontendify-5: Fetch lObjId and guideword.
   let guideWordsToAdd = [];
   formula.sentenceStructure.forEach((stCh) => {
@@ -296,13 +296,13 @@ exports.frontendifyFormula = (lang, formula) => {
 
     if (!guideword || /^\d+$/.test(guideword)) {
       let data = apiUtils.prepareGetSentencesAsQuestionOnly(
+        env,
         lang,
         { sentenceStructure: [stCh] },
         true
       );
 
       data.body.returnDirectly = true;
-      data.body.startTime = Date.now();
 
       let fetchedSentence = fetchPalette(data);
 
@@ -554,6 +554,7 @@ exports.getLObjsForLemma = (lang, lemma, env = "ref", addInflections) => {
 };
 
 exports.prepareGetSentencesAsQuestionOnly = (
+  env,
   questionLanguage,
   sentenceFormula,
   requestingSingleWordOnly
@@ -572,6 +573,8 @@ exports.prepareGetSentencesAsQuestionOnly = (
 
   return {
     body: {
+      env,
+      startTime: Date.now(),
       sentenceFormulaFromEducator: sentenceFormula,
       questionLanguage,
       forceMultipleAndQuestionOnly: true,
@@ -581,6 +584,7 @@ exports.prepareGetSentencesAsQuestionOnly = (
 };
 
 exports.prepareGetDualSentences = (
+  env,
   questionLanguage,
   answerLanguage,
   questionFormula,
@@ -608,6 +612,8 @@ exports.prepareGetDualSentences = (
 
   return {
     body: {
+      env,
+      startTime: Date.now(),
       sentenceFormulaFromEducator: questionFormula,
       questionLanguage,
       answerLanguage,

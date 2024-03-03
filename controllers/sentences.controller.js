@@ -67,18 +67,22 @@ exports.getSentencesForEducator = (req, res, next) => {
     questionFormula,
     answerFormula,
     requestingSingleWordOnly,
+    env,
   } = req.body;
+
+  if (!env) {
+    env = "ref";
+  }
 
   if (answerFormula) {
     let data = apiUtils.prepareGetDualSentences(
+      env,
       questionLanguage,
       answerLanguage,
       questionFormula,
       answerFormula,
       requestingSingleWordOnly
     );
-
-    data.body.startTime = Date.now();
 
     fetchPalette(data)
       .then((responseObj) => {
@@ -104,12 +108,11 @@ exports.getSentencesForEducator = (req, res, next) => {
       .catch((err) => next(err));
   } else {
     let data = apiUtils.prepareGetSentencesAsQuestionOnly(
+      env,
       questionLanguage,
       sentenceFormula,
       requestingSingleWordOnly
     );
-
-    data.body.startTime = Date.now();
 
     fetchPalette(data)
       .then((responseObj) => {

@@ -20,7 +20,7 @@ exports.fetchAvailableNexusId = (req) => {
   if (!env) {
     env = "ref";
   }
-  responseObject.info = apiUtils.getAnAvailableNexusId();
+  responseObject.info = apiUtils.getAnAvailableNexusId(env);
 
   return Promise.all([responseObject]).then((array) => {
     return array[0];

@@ -376,7 +376,7 @@ exports.splitLemmaObjectsFromBigJsonToIndividualJsons = (
         }
 
         if (Object.keys(word).includes("_inflectionsRoot")) {
-          console.log(`SKIPPED because uses inflectionsRoot: ${word.id}`);
+          console.log(`SKIPPED because uses _inflectionsRoot: ${word.id}`);
           if (word.otherShapes) {
             console.log(
               "DROPPED this data. Hopefully it is present in inflections parent:"
