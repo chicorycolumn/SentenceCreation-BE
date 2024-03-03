@@ -346,10 +346,15 @@ exports.markPlayerAnswer = (lang, correctArr, input) => {
   return bool;
 };
 
-exports.splitLemmaObjectsFromBigJsonToIndividualJsons = (e, l, suffix = "") => {
+exports.splitLemmaObjectsFromBigJsonToIndividualJsons = (
+  e,
+  l,
+  suffix = "",
+  wordtypes = ["adj", "art", "nco", "npe", "pre", "pro", "ver"]
+) => {
   fs.mkdirSync(`source/${e}/${l}/words`);
 
-  ["adj", "art", "nco", "npe", "pre", "pro", "ver"].forEach((wordtype) => {
+  wordtypes.forEach((wordtype) => {
     let inputPath = `source/${e}/${l}/raw/${wordtype}${suffix}.json`;
     let outputPath = `source/${e}/${l}/raw/${wordtype}.json`;
 
