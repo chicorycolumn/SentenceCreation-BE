@@ -1,0 +1,30 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "okazja",
+      "gen": "okazji",
+      "dat": "okazji",
+      "acc": "okazję",
+      "ins": "okazją",
+      "loc": "okazji",
+      "voc": "okazjo"
+    },
+    "plural": {
+      "nom": "okazje",
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "okazji"
+        ],
+        "additionalInfrequent": [
+          "okazyj"
+        ]
+      },
+      "dat": "okazjom",
+      "acc": "okazje",
+      "ins": "okazjami",
+      "loc": "okazjach",
+      "voc": "okazje"
+    }
+  }
+}

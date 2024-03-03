@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gatunek",
+      "gen": "gatunku",
+      "dat": "gatunkowi",
+      "acc": "gatunek",
+      "ins": "gatunkiem",
+      "loc": "gatunku",
+      "voc": "gatunku"
+    },
+    "plural": {
+      "nom": "gatunki",
+      "gen": "gatunków",
+      "dat": "gatunkom",
+      "acc": "gatunki",
+      "ins": "gatunkami",
+      "loc": "gatunkach",
+      "voc": "gatunki"
+    }
+  }
+}

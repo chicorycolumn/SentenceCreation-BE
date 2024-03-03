@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pałac",
+      "gen": "pałacu",
+      "dat": "pałacowi",
+      "acc": "pałac",
+      "ins": "pałacem",
+      "loc": "pałacu",
+      "voc": "pałacu"
+    },
+    "plural": {
+      "nom": "pałace",
+      "gen": "pałaców",
+      "dat": "pałacom",
+      "acc": "pałace",
+      "ins": "pałacami",
+      "loc": "pałacach",
+      "voc": "pałace"
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "otyły",
+          "gen": "otyłego",
+          "dat": "otyłemu",
+          "acc": "otyłego",
+          "ins": "otyłym",
+          "loc": "otyłym"
+        },
+        "m3": {
+          "nom": "otyły",
+          "gen": "otyłego",
+          "dat": "otyłemu",
+          "acc": "otyły",
+          "ins": "otyłym",
+          "loc": "otyłym"
+        },
+        "f": {
+          "nom": "otyła",
+          "gen": "otyłej",
+          "dat": "otyłej",
+          "acc": "otyłą",
+          "ins": "otyłą",
+          "loc": "otyłej"
+        },
+        "n": {
+          "nom": "otyłe",
+          "gen": "otyłego",
+          "dat": "otyłemu",
+          "acc": "otyłe",
+          "ins": "otyłym",
+          "loc": "otyłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "otyli",
+          "gen": "otyłych",
+          "dat": "otyłym",
+          "acc": "otyłych",
+          "ins": "otyłymi",
+          "loc": "otyłych"
+        },
+        "nonvirile": {
+          "nom": "otyłe",
+          "gen": "otyłych",
+          "dat": "otyłym",
+          "acc": "otyłe",
+          "ins": "otyłymi",
+          "loc": "otyłych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej otyły",
+          "gen": "bardziej otyłego",
+          "dat": "bardziej otyłemu",
+          "acc": "bardziej otyłego",
+          "ins": "bardziej otyłym",
+          "loc": "bardziej otyłym"
+        },
+        "m3": {
+          "nom": "bardziej otyły",
+          "gen": "bardziej otyłego",
+          "dat": "bardziej otyłemu",
+          "acc": "bardziej otyły",
+          "ins": "bardziej otyłym",
+          "loc": "bardziej otyłym"
+        },
+        "f": {
+          "nom": "bardziej otyła",
+          "gen": "bardziej otyłej",
+          "dat": "bardziej otyłej",
+          "acc": "bardziej otyłą",
+          "ins": "bardziej otyłą",
+          "loc": "bardziej otyłej"
+        },
+        "n": {
+          "nom": "bardziej otyłe",
+          "gen": "bardziej otyłego",
+          "dat": "bardziej otyłemu",
+          "acc": "bardziej otyłe",
+          "ins": "bardziej otyłym",
+          "loc": "bardziej otyłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej otyli",
+          "gen": "bardziej otyłych",
+          "dat": "bardziej otyłym",
+          "acc": "bardziej otyłych",
+          "ins": "bardziej otyłymi",
+          "loc": "bardziej otyłych"
+        },
+        "nonvirile": {
+          "nom": "bardziej otyłe",
+          "gen": "bardziej otyłych",
+          "dat": "bardziej otyłym",
+          "acc": "bardziej otyłe",
+          "ins": "bardziej otyłymi",
+          "loc": "bardziej otyłych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej otyły",
+          "gen": "najbardziej otyłego",
+          "dat": "najbardziej otyłemu",
+          "acc": "najbardziej otyłego",
+          "ins": "najbardziej otyłym",
+          "loc": "najbardziej otyłym"
+        },
+        "m3": {
+          "nom": "najbardziej otyły",
+          "gen": "najbardziej otyłego",
+          "dat": "najbardziej otyłemu",
+          "acc": "najbardziej otyły",
+          "ins": "najbardziej otyłym",
+          "loc": "najbardziej otyłym"
+        },
+        "f": {
+          "nom": "najbardziej otyła",
+          "gen": "najbardziej otyłej",
+          "dat": "najbardziej otyłej",
+          "acc": "najbardziej otyłą",
+          "ins": "najbardziej otyłą",
+          "loc": "najbardziej otyłej"
+        },
+        "n": {
+          "nom": "najbardziej otyłe",
+          "gen": "najbardziej otyłego",
+          "dat": "najbardziej otyłemu",
+          "acc": "najbardziej otyłe",
+          "ins": "najbardziej otyłym",
+          "loc": "najbardziej otyłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej otyli",
+          "gen": "najbardziej otyłych",
+          "dat": "najbardziej otyłym",
+          "acc": "najbardziej otyłych",
+          "ins": "najbardziej otyłymi",
+          "loc": "najbardziej otyłych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej otyłe",
+          "gen": "najbardziej otyłych",
+          "dat": "najbardziej otyłym",
+          "acc": "najbardziej otyłe",
+          "ins": "najbardziej otyłymi",
+          "loc": "najbardziej otyłych"
+        }
+      }
+    }
+  }
+}

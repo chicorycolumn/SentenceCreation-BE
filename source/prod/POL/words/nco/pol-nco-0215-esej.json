@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "esej",
+      "gen": "eseju",
+      "dat": "esejowi",
+      "acc": "esej",
+      "ins": "esejem",
+      "loc": "eseju",
+      "voc": "eseju"
+    },
+    "plural": {
+      "nom": "eseje",
+      "gen": "esejów",
+      "dat": "esejom",
+      "acc": "eseje",
+      "ins": "esejami",
+      "loc": "esejach",
+      "voc": "eseje"
+    }
+  }
+}

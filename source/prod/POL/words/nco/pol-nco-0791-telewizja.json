@@ -1,0 +1,30 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "telewizja",
+      "gen": "telewizji",
+      "dat": "telewizji",
+      "acc": "telewizję",
+      "ins": "telewizją",
+      "loc": "telewizji",
+      "voc": "telewizjo"
+    },
+    "plural": {
+      "nom": "telewizje",
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "telewizji"
+        ],
+        "additionalInfrequent": [
+          "telewizyj"
+        ]
+      },
+      "dat": "telewizjom",
+      "acc": "telewizje",
+      "ins": "telewizjami",
+      "loc": "telewizjach",
+      "voc": "telewizje"
+    }
+  }
+}

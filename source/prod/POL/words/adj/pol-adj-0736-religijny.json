@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "religijnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "religijny",
+          "gen": "religijnego",
+          "dat": "religijnemu",
+          "acc": "religijnego",
+          "ins": "religijnym",
+          "loc": "religijnym"
+        },
+        "m3": {
+          "nom": "religijny",
+          "gen": "religijnego",
+          "dat": "religijnemu",
+          "acc": "religijny",
+          "ins": "religijnym",
+          "loc": "religijnym"
+        },
+        "f": {
+          "nom": "religijna",
+          "gen": "religijnej",
+          "dat": "religijnej",
+          "acc": "religijną",
+          "ins": "religijną",
+          "loc": "religijnej"
+        },
+        "n": {
+          "nom": "religijne",
+          "gen": "religijnego",
+          "dat": "religijnemu",
+          "acc": "religijne",
+          "ins": "religijnym",
+          "loc": "religijnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "religijni",
+          "gen": "religijnych",
+          "dat": "religijnym",
+          "acc": "religijnych",
+          "ins": "religijnymi",
+          "loc": "religijnych"
+        },
+        "nonvirile": {
+          "nom": "religijne",
+          "gen": "religijnych",
+          "dat": "religijnym",
+          "acc": "religijne",
+          "ins": "religijnymi",
+          "loc": "religijnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej religijny",
+          "gen": "bardziej religijnego",
+          "dat": "bardziej religijnemu",
+          "acc": "bardziej religijnego",
+          "ins": "bardziej religijnym",
+          "loc": "bardziej religijnym"
+        },
+        "m3": {
+          "nom": "bardziej religijny",
+          "gen": "bardziej religijnego",
+          "dat": "bardziej religijnemu",
+          "acc": "bardziej religijny",
+          "ins": "bardziej religijnym",
+          "loc": "bardziej religijnym"
+        },
+        "f": {
+          "nom": "bardziej religijna",
+          "gen": "bardziej religijnej",
+          "dat": "bardziej religijnej",
+          "acc": "bardziej religijną",
+          "ins": "bardziej religijną",
+          "loc": "bardziej religijnej"
+        },
+        "n": {
+          "nom": "bardziej religijne",
+          "gen": "bardziej religijnego",
+          "dat": "bardziej religijnemu",
+          "acc": "bardziej religijne",
+          "ins": "bardziej religijnym",
+          "loc": "bardziej religijnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej religijni",
+          "gen": "bardziej religijnych",
+          "dat": "bardziej religijnym",
+          "acc": "bardziej religijnych",
+          "ins": "bardziej religijnymi",
+          "loc": "bardziej religijnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej religijne",
+          "gen": "bardziej religijnych",
+          "dat": "bardziej religijnym",
+          "acc": "bardziej religijne",
+          "ins": "bardziej religijnymi",
+          "loc": "bardziej religijnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej religijny",
+          "gen": "najbardziej religijnego",
+          "dat": "najbardziej religijnemu",
+          "acc": "najbardziej religijnego",
+          "ins": "najbardziej religijnym",
+          "loc": "najbardziej religijnym"
+        },
+        "m3": {
+          "nom": "najbardziej religijny",
+          "gen": "najbardziej religijnego",
+          "dat": "najbardziej religijnemu",
+          "acc": "najbardziej religijny",
+          "ins": "najbardziej religijnym",
+          "loc": "najbardziej religijnym"
+        },
+        "f": {
+          "nom": "najbardziej religijna",
+          "gen": "najbardziej religijnej",
+          "dat": "najbardziej religijnej",
+          "acc": "najbardziej religijną",
+          "ins": "najbardziej religijną",
+          "loc": "najbardziej religijnej"
+        },
+        "n": {
+          "nom": "najbardziej religijne",
+          "gen": "najbardziej religijnego",
+          "dat": "najbardziej religijnemu",
+          "acc": "najbardziej religijne",
+          "ins": "najbardziej religijnym",
+          "loc": "najbardziej religijnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej religijni",
+          "gen": "najbardziej religijnych",
+          "dat": "najbardziej religijnym",
+          "acc": "najbardziej religijnych",
+          "ins": "najbardziej religijnymi",
+          "loc": "najbardziej religijnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej religijne",
+          "gen": "najbardziej religijnych",
+          "dat": "najbardziej religijnym",
+          "acc": "najbardziej religijne",
+          "ins": "najbardziej religijnymi",
+          "loc": "najbardziej religijnych"
+        }
+      }
+    }
+  }
+}

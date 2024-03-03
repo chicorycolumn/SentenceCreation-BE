@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "przezroczyście",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przezroczysty",
+          "gen": "przezroczystego",
+          "dat": "przezroczystemu",
+          "acc": "przezroczystego",
+          "ins": "przezroczystym",
+          "loc": "przezroczystym"
+        },
+        "m3": {
+          "nom": "przezroczysty",
+          "gen": "przezroczystego",
+          "dat": "przezroczystemu",
+          "acc": "przezroczysty",
+          "ins": "przezroczystym",
+          "loc": "przezroczystym"
+        },
+        "f": {
+          "nom": "przezroczysta",
+          "gen": "przezroczystej",
+          "dat": "przezroczystej",
+          "acc": "przezroczystą",
+          "ins": "przezroczystą",
+          "loc": "przezroczystej"
+        },
+        "n": {
+          "nom": "przezroczyste",
+          "gen": "przezroczystego",
+          "dat": "przezroczystemu",
+          "acc": "przezroczyste",
+          "ins": "przezroczystym",
+          "loc": "przezroczystym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przezroczyści",
+          "gen": "przezroczystych",
+          "dat": "przezroczystym",
+          "acc": "przezroczystych",
+          "ins": "przezroczystymi",
+          "loc": "przezroczystych"
+        },
+        "nonvirile": {
+          "nom": "przezroczyste",
+          "gen": "przezroczystych",
+          "dat": "przezroczystym",
+          "acc": "przezroczyste",
+          "ins": "przezroczystymi",
+          "loc": "przezroczystych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej przezroczysty",
+          "gen": "bardziej przezroczystego",
+          "dat": "bardziej przezroczystemu",
+          "acc": "bardziej przezroczystego",
+          "ins": "bardziej przezroczystym",
+          "loc": "bardziej przezroczystym"
+        },
+        "m3": {
+          "nom": "bardziej przezroczysty",
+          "gen": "bardziej przezroczystego",
+          "dat": "bardziej przezroczystemu",
+          "acc": "bardziej przezroczysty",
+          "ins": "bardziej przezroczystym",
+          "loc": "bardziej przezroczystym"
+        },
+        "f": {
+          "nom": "bardziej przezroczysta",
+          "gen": "bardziej przezroczystej",
+          "dat": "bardziej przezroczystej",
+          "acc": "bardziej przezroczystą",
+          "ins": "bardziej przezroczystą",
+          "loc": "bardziej przezroczystej"
+        },
+        "n": {
+          "nom": "bardziej przezroczyste",
+          "gen": "bardziej przezroczystego",
+          "dat": "bardziej przezroczystemu",
+          "acc": "bardziej przezroczyste",
+          "ins": "bardziej przezroczystym",
+          "loc": "bardziej przezroczystym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej przezroczyści",
+          "gen": "bardziej przezroczystych",
+          "dat": "bardziej przezroczystym",
+          "acc": "bardziej przezroczystych",
+          "ins": "bardziej przezroczystymi",
+          "loc": "bardziej przezroczystych"
+        },
+        "nonvirile": {
+          "nom": "bardziej przezroczyste",
+          "gen": "bardziej przezroczystych",
+          "dat": "bardziej przezroczystym",
+          "acc": "bardziej przezroczyste",
+          "ins": "bardziej przezroczystymi",
+          "loc": "bardziej przezroczystych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej przezroczysty",
+          "gen": "najbardziej przezroczystego",
+          "dat": "najbardziej przezroczystemu",
+          "acc": "najbardziej przezroczystego",
+          "ins": "najbardziej przezroczystym",
+          "loc": "najbardziej przezroczystym"
+        },
+        "m3": {
+          "nom": "najbardziej przezroczysty",
+          "gen": "najbardziej przezroczystego",
+          "dat": "najbardziej przezroczystemu",
+          "acc": "najbardziej przezroczysty",
+          "ins": "najbardziej przezroczystym",
+          "loc": "najbardziej przezroczystym"
+        },
+        "f": {
+          "nom": "najbardziej przezroczysta",
+          "gen": "najbardziej przezroczystej",
+          "dat": "najbardziej przezroczystej",
+          "acc": "najbardziej przezroczystą",
+          "ins": "najbardziej przezroczystą",
+          "loc": "najbardziej przezroczystej"
+        },
+        "n": {
+          "nom": "najbardziej przezroczyste",
+          "gen": "najbardziej przezroczystego",
+          "dat": "najbardziej przezroczystemu",
+          "acc": "najbardziej przezroczyste",
+          "ins": "najbardziej przezroczystym",
+          "loc": "najbardziej przezroczystym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej przezroczyści",
+          "gen": "najbardziej przezroczystych",
+          "dat": "najbardziej przezroczystym",
+          "acc": "najbardziej przezroczystych",
+          "ins": "najbardziej przezroczystymi",
+          "loc": "najbardziej przezroczystych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej przezroczyste",
+          "gen": "najbardziej przezroczystych",
+          "dat": "najbardziej przezroczystym",
+          "acc": "najbardziej przezroczyste",
+          "ins": "najbardziej przezroczystymi",
+          "loc": "najbardziej przezroczystych"
+        }
+      }
+    }
+  }
+}

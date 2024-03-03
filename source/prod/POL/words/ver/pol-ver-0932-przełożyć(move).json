@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przełożyć",
+    "verbalNoun": "przełożenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przełożony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przełożywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przełoży się"
+          },
+          "plural": {
+            "allPluralGenders": "przełoży się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przełożę"
+          },
+          "plural": {
+            "allPluralGenders": "przełożymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przełożysz"
+          },
+          "plural": {
+            "allPluralGenders": "przełożycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przełoży"
+          },
+          "plural": {
+            "allPluralGenders": "przełożą"
+          }
+        }
+      },
+      "imperative": "przełóż",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przełożono"
+          },
+          "plural": {
+            "allPluralGenders": "przełożono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przełożyłem",
+            "f": "przełożyłam"
+          },
+          "plural": {
+            "virile": "przełożyliśmy",
+            "nonvirile": "przełożyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przełożyłeś",
+            "f": "przełożyłaś"
+          },
+          "plural": {
+            "virile": "przełożyliście",
+            "nonvirile": "przełożyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przełożył",
+            "f": "przełożyła",
+            "n": "przełożyło"
+          },
+          "plural": {
+            "virile": "przełożyli",
+            "nonvirile": "przełożyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

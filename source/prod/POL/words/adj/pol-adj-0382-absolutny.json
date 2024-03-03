@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "absolutnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "absolutny",
+          "gen": "absolutnego",
+          "dat": "absolutnemu",
+          "acc": "absolutnego",
+          "ins": "absolutnym",
+          "loc": "absolutnym"
+        },
+        "m3": {
+          "nom": "absolutny",
+          "gen": "absolutnego",
+          "dat": "absolutnemu",
+          "acc": "absolutny",
+          "ins": "absolutnym",
+          "loc": "absolutnym"
+        },
+        "f": {
+          "nom": "absolutna",
+          "gen": "absolutnej",
+          "dat": "absolutnej",
+          "acc": "absolutną",
+          "ins": "absolutną",
+          "loc": "absolutnej"
+        },
+        "n": {
+          "nom": "absolutne",
+          "gen": "absolutnego",
+          "dat": "absolutnemu",
+          "acc": "absolutne",
+          "ins": "absolutnym",
+          "loc": "absolutnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "absolutni",
+          "gen": "absolutnych",
+          "dat": "absolutnym",
+          "acc": "absolutnych",
+          "ins": "absolutnymi",
+          "loc": "absolutnych"
+        },
+        "nonvirile": {
+          "nom": "absolutne",
+          "gen": "absolutnych",
+          "dat": "absolutnym",
+          "acc": "absolutne",
+          "ins": "absolutnymi",
+          "loc": "absolutnych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kwiat",
+      "gen": "kwiatu",
+      "dat": [
+        "kwiatowi",
+        "kwiatu"
+      ],
+      "acc": "kwiat",
+      "ins": "kwiatem",
+      "loc": "kwiecie",
+      "voc": "kwiecie"
+    },
+    "plural": {
+      "nom": "kwiaty",
+      "gen": "kwiatów",
+      "dat": "kwiatom",
+      "acc": "kwiaty",
+      "ins": "kwiatami",
+      "loc": "kwiatach",
+      "voc": "kwiaty"
+    }
+  }
+}

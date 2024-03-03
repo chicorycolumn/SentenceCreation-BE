@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kolor",
+      "gen": "koloru",
+      "dat": "kolorowi",
+      "acc": "kolor",
+      "ins": "kolorem",
+      "loc": "kolorze",
+      "voc": "kolorze"
+    },
+    "plural": {
+      "nom": "kolory",
+      "gen": "kolorów",
+      "dat": "kolorom",
+      "acc": "kolory",
+      "ins": "kolorami",
+      "loc": "kolorach",
+      "voc": "kolory"
+    }
+  }
+}

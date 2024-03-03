@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "afrykański",
+          "gen": "afrykańskiego",
+          "dat": "afrykańskiemu",
+          "acc": "afrykańskiego",
+          "ins": "afrykańskim",
+          "loc": "afrykańskim"
+        },
+        "m3": {
+          "nom": "afrykański",
+          "gen": "afrykańskiego",
+          "dat": "afrykańskiemu",
+          "acc": "afrykański",
+          "ins": "afrykańskim",
+          "loc": "afrykańskim"
+        },
+        "f": {
+          "nom": "afrykańska",
+          "gen": "afrykańskiej",
+          "dat": "afrykańskiej",
+          "acc": "afrykańską",
+          "ins": "afrykańską",
+          "loc": "afrykańskiej"
+        },
+        "n": {
+          "nom": "afrykańskie",
+          "gen": "afrykańskiego",
+          "dat": "afrykańskiemu",
+          "acc": "afrykańskie",
+          "ins": "afrykańskim",
+          "loc": "afrykańskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "afrykańscy",
+          "gen": "afrykańskich",
+          "dat": "afrykańskim",
+          "acc": "afrykańskich",
+          "ins": "afrykańskimi",
+          "loc": "afrykańskich"
+        },
+        "nonvirile": {
+          "nom": "afrykańskie",
+          "gen": "afrykańskich",
+          "dat": "afrykańskim",
+          "acc": "afrykańskie",
+          "ins": "afrykańskimi",
+          "loc": "afrykańskich"
+        }
+      }
+    }
+  }
+}

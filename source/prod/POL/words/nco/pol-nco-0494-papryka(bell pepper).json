@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "papryka",
+      "gen": "papryki",
+      "dat": "papryce",
+      "acc": "paprykę",
+      "ins": "papryką",
+      "loc": "papryce",
+      "voc": "papryko"
+    },
+    "plural": {
+      "nom": "papryki",
+      "gen": "papryk",
+      "dat": "paprykom",
+      "acc": "papryki",
+      "ins": "paprykami",
+      "loc": "paprykach",
+      "voc": "papryki"
+    }
+  }
+}

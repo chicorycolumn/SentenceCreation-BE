@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "malina",
+      "gen": "maliny",
+      "dat": "malinie",
+      "acc": "malinę",
+      "ins": "maliną",
+      "loc": "malinie",
+      "voc": "malino"
+    },
+    "plural": {
+      "nom": "maliny",
+      "gen": "malin",
+      "dat": "malinom",
+      "acc": "maliny",
+      "ins": "malinami",
+      "loc": "malinach",
+      "voc": "maliny"
+    }
+  }
+}

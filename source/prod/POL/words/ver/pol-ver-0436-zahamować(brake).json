@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zahamować",
+    "verbalNoun": "zahamowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zahamowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zahamowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zahamuje się"
+          },
+          "plural": {
+            "allPluralGenders": "zahamuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zahamuję"
+          },
+          "plural": {
+            "allPluralGenders": "zahamujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zahamujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zahamujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zahamuje"
+          },
+          "plural": {
+            "allPluralGenders": "zahamują"
+          }
+        }
+      },
+      "imperative": "zahamuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zahamowano"
+          },
+          "plural": {
+            "allPluralGenders": "zahamowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zahamowałem",
+            "f": "zahamowałam"
+          },
+          "plural": {
+            "virile": "zahamowaliśmy",
+            "nonvirile": "zahamowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zahamowałeś",
+            "f": "zahamowałaś"
+          },
+          "plural": {
+            "virile": "zahamowaliście",
+            "nonvirile": "zahamowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zahamował",
+            "f": "zahamowała",
+            "n": "zahamowało"
+          },
+          "plural": {
+            "virile": "zahamowali",
+            "nonvirile": "zahamowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

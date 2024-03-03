@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "masywnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "masywny",
+          "gen": "masywnego",
+          "dat": "masywnemu",
+          "acc": "masywnego",
+          "ins": "masywnym",
+          "loc": "masywnym"
+        },
+        "m3": {
+          "nom": "masywny",
+          "gen": "masywnego",
+          "dat": "masywnemu",
+          "acc": "masywny",
+          "ins": "masywnym",
+          "loc": "masywnym"
+        },
+        "f": {
+          "nom": "masywna",
+          "gen": "masywnej",
+          "dat": "masywnej",
+          "acc": "masywną",
+          "ins": "masywną",
+          "loc": "masywnej"
+        },
+        "n": {
+          "nom": "masywne",
+          "gen": "masywnego",
+          "dat": "masywnemu",
+          "acc": "masywne",
+          "ins": "masywnym",
+          "loc": "masywnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "masywni",
+          "gen": "masywnych",
+          "dat": "masywnym",
+          "acc": "masywnych",
+          "ins": "masywnymi",
+          "loc": "masywnych"
+        },
+        "nonvirile": {
+          "nom": "masywne",
+          "gen": "masywnych",
+          "dat": "masywnym",
+          "acc": "masywne",
+          "ins": "masywnymi",
+          "loc": "masywnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "masywniejszy",
+          "gen": "masywniejszego",
+          "dat": "masywniejszemu",
+          "acc": "masywniejszego",
+          "ins": "masywniejszym",
+          "loc": "masywniejszym"
+        },
+        "m3": {
+          "nom": "masywniejszy",
+          "gen": "masywniejszego",
+          "dat": "masywniejszemu",
+          "acc": "masywniejszy",
+          "ins": "masywniejszym",
+          "loc": "masywniejszym"
+        },
+        "f": {
+          "nom": "masywniejsza",
+          "gen": "masywniejszej",
+          "dat": "masywniejszej",
+          "acc": "masywniejszą",
+          "ins": "masywniejszą",
+          "loc": "masywniejszej"
+        },
+        "n": {
+          "nom": "masywniejsze",
+          "gen": "masywniejszego",
+          "dat": "masywniejszemu",
+          "acc": "masywniejsze",
+          "ins": "masywniejszym",
+          "loc": "masywniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "masywniejsi",
+          "gen": "masywniejszych",
+          "dat": "masywniejszym",
+          "acc": "masywniejszych",
+          "ins": "masywniejszymi",
+          "loc": "masywniejszych"
+        },
+        "nonvirile": {
+          "nom": "masywniejsze",
+          "gen": "masywniejszych",
+          "dat": "masywniejszym",
+          "acc": "masywniejsze",
+          "ins": "masywniejszymi",
+          "loc": "masywniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najmasywniejszy",
+          "gen": "najmasywniejszego",
+          "dat": "najmasywniejszemu",
+          "acc": "najmasywniejszego",
+          "ins": "najmasywniejszym",
+          "loc": "najmasywniejszym"
+        },
+        "m3": {
+          "nom": "najmasywniejszy",
+          "gen": "najmasywniejszego",
+          "dat": "najmasywniejszemu",
+          "acc": "najmasywniejszy",
+          "ins": "najmasywniejszym",
+          "loc": "najmasywniejszym"
+        },
+        "f": {
+          "nom": "najmasywniejsza",
+          "gen": "najmasywniejszej",
+          "dat": "najmasywniejszej",
+          "acc": "najmasywniejszą",
+          "ins": "najmasywniejszą",
+          "loc": "najmasywniejszej"
+        },
+        "n": {
+          "nom": "najmasywniejsze",
+          "gen": "najmasywniejszego",
+          "dat": "najmasywniejszemu",
+          "acc": "najmasywniejsze",
+          "ins": "najmasywniejszym",
+          "loc": "najmasywniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najmasywniejsi",
+          "gen": "najmasywniejszych",
+          "dat": "najmasywniejszym",
+          "acc": "najmasywniejszych",
+          "ins": "najmasywniejszymi",
+          "loc": "najmasywniejszych"
+        },
+        "nonvirile": {
+          "nom": "najmasywniejsze",
+          "gen": "najmasywniejszych",
+          "dat": "najmasywniejszym",
+          "acc": "najmasywniejsze",
+          "ins": "najmasywniejszymi",
+          "loc": "najmasywniejszych"
+        }
+      }
+    }
+  }
+}

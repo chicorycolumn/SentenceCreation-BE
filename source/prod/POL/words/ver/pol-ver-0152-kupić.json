@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "kupić",
+    "verbalNoun": "kupienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "kupiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "kupiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kupi się"
+          },
+          "plural": {
+            "allPluralGenders": "kupi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "kupię"
+          },
+          "plural": {
+            "allPluralGenders": "kupimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "kupisz"
+          },
+          "plural": {
+            "allPluralGenders": "kupicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "kupi"
+          },
+          "plural": {
+            "allPluralGenders": "kupią"
+          }
+        }
+      },
+      "imperative": "kup",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kupiono"
+          },
+          "plural": {
+            "allPluralGenders": "kupiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "kupiłem",
+            "f": "kupiłam"
+          },
+          "plural": {
+            "virile": "kupiliśmy",
+            "nonvirile": "kupiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "kupiłeś",
+            "f": "kupiłaś"
+          },
+          "plural": {
+            "virile": "kupiliście",
+            "nonvirile": "kupiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "kupił",
+            "f": "kupiła",
+            "n": "kupiło"
+          },
+          "plural": {
+            "virile": "kupili",
+            "nonvirile": "kupiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

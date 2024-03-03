@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "włączyć",
+    "verbalNoun": "włączenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "włączony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "włączywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "włączy się"
+          },
+          "plural": {
+            "allPluralGenders": "włączy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "włączę"
+          },
+          "plural": {
+            "allPluralGenders": "włączymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "włączysz"
+          },
+          "plural": {
+            "allPluralGenders": "włączycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "włączy"
+          },
+          "plural": {
+            "allPluralGenders": "włączą"
+          }
+        }
+      },
+      "imperative": "włącz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "włączono"
+          },
+          "plural": {
+            "allPluralGenders": "włączono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "włączyłem",
+            "f": "włączyłam"
+          },
+          "plural": {
+            "virile": "włączyliśmy",
+            "nonvirile": "włączyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "włączyłeś",
+            "f": "włączyłaś"
+          },
+          "plural": {
+            "virile": "włączyliście",
+            "nonvirile": "włączyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "włączył",
+            "f": "włączyła",
+            "n": "włączyło"
+          },
+          "plural": {
+            "virile": "włączyli",
+            "nonvirile": "włączyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

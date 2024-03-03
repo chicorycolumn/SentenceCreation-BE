@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "intensywnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "intensywny",
+          "gen": "intensywnego",
+          "dat": "intensywnemu",
+          "acc": "intensywnego",
+          "ins": "intensywnym",
+          "loc": "intensywnym"
+        },
+        "m3": {
+          "nom": "intensywny",
+          "gen": "intensywnego",
+          "dat": "intensywnemu",
+          "acc": "intensywny",
+          "ins": "intensywnym",
+          "loc": "intensywnym"
+        },
+        "f": {
+          "nom": "intensywna",
+          "gen": "intensywnej",
+          "dat": "intensywnej",
+          "acc": "intensywną",
+          "ins": "intensywną",
+          "loc": "intensywnej"
+        },
+        "n": {
+          "nom": "intensywne",
+          "gen": "intensywnego",
+          "dat": "intensywnemu",
+          "acc": "intensywne",
+          "ins": "intensywnym",
+          "loc": "intensywnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "intensywni",
+          "gen": "intensywnych",
+          "dat": "intensywnym",
+          "acc": "intensywnych",
+          "ins": "intensywnymi",
+          "loc": "intensywnych"
+        },
+        "nonvirile": {
+          "nom": "intensywne",
+          "gen": "intensywnych",
+          "dat": "intensywnym",
+          "acc": "intensywne",
+          "ins": "intensywnymi",
+          "loc": "intensywnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej intensywny",
+          "gen": "bardziej intensywnego",
+          "dat": "bardziej intensywnemu",
+          "acc": "bardziej intensywnego",
+          "ins": "bardziej intensywnym",
+          "loc": "bardziej intensywnym"
+        },
+        "m3": {
+          "nom": "bardziej intensywny",
+          "gen": "bardziej intensywnego",
+          "dat": "bardziej intensywnemu",
+          "acc": "bardziej intensywny",
+          "ins": "bardziej intensywnym",
+          "loc": "bardziej intensywnym"
+        },
+        "f": {
+          "nom": "bardziej intensywna",
+          "gen": "bardziej intensywnej",
+          "dat": "bardziej intensywnej",
+          "acc": "bardziej intensywną",
+          "ins": "bardziej intensywną",
+          "loc": "bardziej intensywnej"
+        },
+        "n": {
+          "nom": "bardziej intensywne",
+          "gen": "bardziej intensywnego",
+          "dat": "bardziej intensywnemu",
+          "acc": "bardziej intensywne",
+          "ins": "bardziej intensywnym",
+          "loc": "bardziej intensywnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej intensywni",
+          "gen": "bardziej intensywnych",
+          "dat": "bardziej intensywnym",
+          "acc": "bardziej intensywnych",
+          "ins": "bardziej intensywnymi",
+          "loc": "bardziej intensywnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej intensywne",
+          "gen": "bardziej intensywnych",
+          "dat": "bardziej intensywnym",
+          "acc": "bardziej intensywne",
+          "ins": "bardziej intensywnymi",
+          "loc": "bardziej intensywnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej intensywny",
+          "gen": "najbardziej intensywnego",
+          "dat": "najbardziej intensywnemu",
+          "acc": "najbardziej intensywnego",
+          "ins": "najbardziej intensywnym",
+          "loc": "najbardziej intensywnym"
+        },
+        "m3": {
+          "nom": "najbardziej intensywny",
+          "gen": "najbardziej intensywnego",
+          "dat": "najbardziej intensywnemu",
+          "acc": "najbardziej intensywny",
+          "ins": "najbardziej intensywnym",
+          "loc": "najbardziej intensywnym"
+        },
+        "f": {
+          "nom": "najbardziej intensywna",
+          "gen": "najbardziej intensywnej",
+          "dat": "najbardziej intensywnej",
+          "acc": "najbardziej intensywną",
+          "ins": "najbardziej intensywną",
+          "loc": "najbardziej intensywnej"
+        },
+        "n": {
+          "nom": "najbardziej intensywne",
+          "gen": "najbardziej intensywnego",
+          "dat": "najbardziej intensywnemu",
+          "acc": "najbardziej intensywne",
+          "ins": "najbardziej intensywnym",
+          "loc": "najbardziej intensywnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej intensywni",
+          "gen": "najbardziej intensywnych",
+          "dat": "najbardziej intensywnym",
+          "acc": "najbardziej intensywnych",
+          "ins": "najbardziej intensywnymi",
+          "loc": "najbardziej intensywnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej intensywne",
+          "gen": "najbardziej intensywnych",
+          "dat": "najbardziej intensywnym",
+          "acc": "najbardziej intensywne",
+          "ins": "najbardziej intensywnymi",
+          "loc": "najbardziej intensywnych"
+        }
+      }
+    }
+  }
+}

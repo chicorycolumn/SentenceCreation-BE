@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "hamować",
+    "verbalNoun": "hamowanie",
+    "activeAdjectival": "hamujący",
+    "passiveAdjectival": "hamowany",
+    "contemporaryAdverbial": "hamując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "hamuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "hamowano"
+          },
+          "plural": {
+            "allPluralGenders": "hamowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "hamowałem",
+            "f": "hamowałam"
+          },
+          "plural": {
+            "virile": "hamowaliśmy",
+            "nonvirile": "hamowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "hamowałeś",
+            "f": "hamowałaś"
+          },
+          "plural": {
+            "virile": "hamowaliście",
+            "nonvirile": "hamowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "hamował",
+            "f": "hamowała",
+            "n": "hamowało"
+          },
+          "plural": {
+            "virile": "hamowali",
+            "nonvirile": "hamowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "hamuje się"
+          },
+          "plural": {
+            "allPluralGenders": "hamuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "hamuję"
+          },
+          "plural": {
+            "allPluralGenders": "hamujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "hamujesz"
+          },
+          "plural": {
+            "allPluralGenders": "hamujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "hamuje"
+          },
+          "plural": {
+            "allPluralGenders": "hamują"
+          }
+        }
+      }
+    }
+  }
+}

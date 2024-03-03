@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "atrakcyjnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "atrakcyjny",
+          "gen": "atrakcyjnego",
+          "dat": "atrakcyjnemu",
+          "acc": "atrakcyjnego",
+          "ins": "atrakcyjnym",
+          "loc": "atrakcyjnym"
+        },
+        "m3": {
+          "nom": "atrakcyjny",
+          "gen": "atrakcyjnego",
+          "dat": "atrakcyjnemu",
+          "acc": "atrakcyjny",
+          "ins": "atrakcyjnym",
+          "loc": "atrakcyjnym"
+        },
+        "f": {
+          "nom": "atrakcyjna",
+          "gen": "atrakcyjnej",
+          "dat": "atrakcyjnej",
+          "acc": "atrakcyjną",
+          "ins": "atrakcyjną",
+          "loc": "atrakcyjnej"
+        },
+        "n": {
+          "nom": "atrakcyjne",
+          "gen": "atrakcyjnego",
+          "dat": "atrakcyjnemu",
+          "acc": "atrakcyjne",
+          "ins": "atrakcyjnym",
+          "loc": "atrakcyjnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "atrakcyjni",
+          "gen": "atrakcyjnych",
+          "dat": "atrakcyjnym",
+          "acc": "atrakcyjnych",
+          "ins": "atrakcyjnymi",
+          "loc": "atrakcyjnych"
+        },
+        "nonvirile": {
+          "nom": "atrakcyjne",
+          "gen": "atrakcyjnych",
+          "dat": "atrakcyjnym",
+          "acc": "atrakcyjne",
+          "ins": "atrakcyjnymi",
+          "loc": "atrakcyjnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszy",
+              "bardziej atrakcyjny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszego",
+              "bardziej atrakcyjnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszemu",
+              "bardziej atrakcyjnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszego",
+              "bardziej atrakcyjnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszym",
+              "bardziej atrakcyjnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszym",
+              "bardziej atrakcyjnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszy",
+              "bardziej atrakcyjny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszego",
+              "bardziej atrakcyjnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszemu",
+              "bardziej atrakcyjnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszy",
+              "bardziej atrakcyjny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszym",
+              "bardziej atrakcyjnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszym",
+              "bardziej atrakcyjnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejsza",
+              "bardziej atrakcyjna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszej",
+              "bardziej atrakcyjnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszej",
+              "bardziej atrakcyjnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszą",
+              "bardziej atrakcyjną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszą",
+              "bardziej atrakcyjną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszej",
+              "bardziej atrakcyjnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejsze",
+              "bardziej atrakcyjne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszego",
+              "bardziej atrakcyjnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszemu",
+              "bardziej atrakcyjnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejsze",
+              "bardziej atrakcyjne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszym",
+              "bardziej atrakcyjnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszym",
+              "bardziej atrakcyjnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejsi",
+              "bardziej atrakcyjni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszych",
+              "bardziej atrakcyjnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszym",
+              "bardziej atrakcyjnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszych",
+              "bardziej atrakcyjnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszymi",
+              "bardziej atrakcyjnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszych",
+              "bardziej atrakcyjnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejsze",
+              "bardziej atrakcyjne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszych",
+              "bardziej atrakcyjnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszym",
+              "bardziej atrakcyjnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejsze",
+              "bardziej atrakcyjne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszymi",
+              "bardziej atrakcyjnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "atrakcyjniejszych",
+              "bardziej atrakcyjnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszy",
+              "najbardziej atrakcyjny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszego",
+              "najbardziej atrakcyjnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszemu",
+              "najbardziej atrakcyjnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszego",
+              "najbardziej atrakcyjnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszym",
+              "najbardziej atrakcyjnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszym",
+              "najbardziej atrakcyjnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszy",
+              "najbardziej atrakcyjny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszego",
+              "najbardziej atrakcyjnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszemu",
+              "najbardziej atrakcyjnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszy",
+              "najbardziej atrakcyjny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszym",
+              "najbardziej atrakcyjnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszym",
+              "najbardziej atrakcyjnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejsza",
+              "najbardziej atrakcyjna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszej",
+              "najbardziej atrakcyjnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszej",
+              "najbardziej atrakcyjnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszą",
+              "najbardziej atrakcyjną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszą",
+              "najbardziej atrakcyjną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszej",
+              "najbardziej atrakcyjnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejsze",
+              "najbardziej atrakcyjne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszego",
+              "najbardziej atrakcyjnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszemu",
+              "najbardziej atrakcyjnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejsze",
+              "najbardziej atrakcyjne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszym",
+              "najbardziej atrakcyjnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszym",
+              "najbardziej atrakcyjnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejsi",
+              "najbardziej atrakcyjni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszych",
+              "najbardziej atrakcyjnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszym",
+              "najbardziej atrakcyjnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszych",
+              "najbardziej atrakcyjnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszymi",
+              "najbardziej atrakcyjnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszych",
+              "najbardziej atrakcyjnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejsze",
+              "najbardziej atrakcyjne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszych",
+              "najbardziej atrakcyjnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszym",
+              "najbardziej atrakcyjnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejsze",
+              "najbardziej atrakcyjne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszymi",
+              "najbardziej atrakcyjnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najatrakcyjniejszych",
+              "najbardziej atrakcyjnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

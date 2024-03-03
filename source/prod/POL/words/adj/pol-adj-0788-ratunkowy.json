@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ratunkowy",
+          "gen": "ratunkowego",
+          "dat": "ratunkowemu",
+          "acc": "ratunkowego",
+          "ins": "ratunkowym",
+          "loc": "ratunkowym"
+        },
+        "m3": {
+          "nom": "ratunkowy",
+          "gen": "ratunkowego",
+          "dat": "ratunkowemu",
+          "acc": "ratunkowy",
+          "ins": "ratunkowym",
+          "loc": "ratunkowym"
+        },
+        "f": {
+          "nom": "ratunkowa",
+          "gen": "ratunkowej",
+          "dat": "ratunkowej",
+          "acc": "ratunkową",
+          "ins": "ratunkową",
+          "loc": "ratunkowej"
+        },
+        "n": {
+          "nom": "ratunkowe",
+          "gen": "ratunkowego",
+          "dat": "ratunkowemu",
+          "acc": "ratunkowe",
+          "ins": "ratunkowym",
+          "loc": "ratunkowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ratunkowi",
+          "gen": "ratunkowych",
+          "dat": "ratunkowym",
+          "acc": "ratunkowych",
+          "ins": "ratunkowymi",
+          "loc": "ratunkowych"
+        },
+        "nonvirile": {
+          "nom": "ratunkowe",
+          "gen": "ratunkowych",
+          "dat": "ratunkowym",
+          "acc": "ratunkowe",
+          "ins": "ratunkowymi",
+          "loc": "ratunkowych"
+        }
+      }
+    }
+  }
+}

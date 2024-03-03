@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "president",
+      "gen": "president's"
+    },
+    "plural": {
+      "nom": "presidents",
+      "gen": "presidents'"
+    }
+  }
+}

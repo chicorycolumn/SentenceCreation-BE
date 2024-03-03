@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "wściekle",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "wściekły",
+          "gen": "wściekłego",
+          "dat": "wściekłemu",
+          "acc": "wściekłego",
+          "ins": "wściekłym",
+          "loc": "wściekłym"
+        },
+        "m3": {
+          "nom": "wściekły",
+          "gen": "wściekłego",
+          "dat": "wściekłemu",
+          "acc": "wściekły",
+          "ins": "wściekłym",
+          "loc": "wściekłym"
+        },
+        "f": {
+          "nom": "wściekła",
+          "gen": "wściekłej",
+          "dat": "wściekłej",
+          "acc": "wściekłą",
+          "ins": "wściekłą",
+          "loc": "wściekłej"
+        },
+        "n": {
+          "nom": "wściekłe",
+          "gen": "wściekłego",
+          "dat": "wściekłemu",
+          "acc": "wściekłe",
+          "ins": "wściekłym",
+          "loc": "wściekłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wściekli",
+          "gen": "wściekłych",
+          "dat": "wściekłym",
+          "acc": "wściekłych",
+          "ins": "wściekłymi",
+          "loc": "wściekłych"
+        },
+        "nonvirile": {
+          "nom": "wściekłe",
+          "gen": "wściekłych",
+          "dat": "wściekłym",
+          "acc": "wściekłe",
+          "ins": "wściekłymi",
+          "loc": "wściekłych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "wścieklejszy",
+          "gen": "wścieklejszego",
+          "dat": "wścieklejszemu",
+          "acc": "wścieklejszego",
+          "ins": "wścieklejszym",
+          "loc": "wścieklejszym"
+        },
+        "m3": {
+          "nom": "wścieklejszy",
+          "gen": "wścieklejszego",
+          "dat": "wścieklejszemu",
+          "acc": "wścieklejszy",
+          "ins": "wścieklejszym",
+          "loc": "wścieklejszym"
+        },
+        "f": {
+          "nom": "wścieklejsza",
+          "gen": "wścieklejszej",
+          "dat": "wścieklejszej",
+          "acc": "wścieklejszą",
+          "ins": "wścieklejszą",
+          "loc": "wścieklejszej"
+        },
+        "n": {
+          "nom": "wścieklejsze",
+          "gen": "wścieklejszego",
+          "dat": "wścieklejszemu",
+          "acc": "wścieklejsze",
+          "ins": "wścieklejszym",
+          "loc": "wścieklejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wścieklejsi",
+          "gen": "wścieklejszych",
+          "dat": "wścieklejszym",
+          "acc": "wścieklejszych",
+          "ins": "wścieklejszymi",
+          "loc": "wścieklejszych"
+        },
+        "nonvirile": {
+          "nom": "wścieklejsze",
+          "gen": "wścieklejszych",
+          "dat": "wścieklejszym",
+          "acc": "wścieklejsze",
+          "ins": "wścieklejszymi",
+          "loc": "wścieklejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najwścieklejszy",
+          "gen": "najwścieklejszego",
+          "dat": "najwścieklejszemu",
+          "acc": "najwścieklejszego",
+          "ins": "najwścieklejszym",
+          "loc": "najwścieklejszym"
+        },
+        "m3": {
+          "nom": "najwścieklejszy",
+          "gen": "najwścieklejszego",
+          "dat": "najwścieklejszemu",
+          "acc": "najwścieklejszy",
+          "ins": "najwścieklejszym",
+          "loc": "najwścieklejszym"
+        },
+        "f": {
+          "nom": "najwścieklejsza",
+          "gen": "najwścieklejszej",
+          "dat": "najwścieklejszej",
+          "acc": "najwścieklejszą",
+          "ins": "najwścieklejszą",
+          "loc": "najwścieklejszej"
+        },
+        "n": {
+          "nom": "najwścieklejsze",
+          "gen": "najwścieklejszego",
+          "dat": "najwścieklejszemu",
+          "acc": "najwścieklejsze",
+          "ins": "najwścieklejszym",
+          "loc": "najwścieklejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najwścieklejsi",
+          "gen": "najwścieklejszych",
+          "dat": "najwścieklejszym",
+          "acc": "najwścieklejszych",
+          "ins": "najwścieklejszymi",
+          "loc": "najwścieklejszych"
+        },
+        "nonvirile": {
+          "nom": "najwścieklejsze",
+          "gen": "najwścieklejszych",
+          "dat": "najwścieklejszym",
+          "acc": "najwścieklejsze",
+          "ins": "najwścieklejszymi",
+          "loc": "najwścieklejszych"
+        }
+      }
+    }
+  }
+}

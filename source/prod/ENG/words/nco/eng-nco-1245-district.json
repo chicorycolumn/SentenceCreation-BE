@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "district",
+      "gen": "district's"
+    },
+    "plural": {
+      "nom": "districts",
+      "gen": "districts'"
+    }
+  }
+}

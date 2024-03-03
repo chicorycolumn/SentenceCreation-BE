@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "granica",
+      "gen": "granicy",
+      "dat": "granicy",
+      "acc": "granicę",
+      "ins": "granicą",
+      "loc": "granicy",
+      "voc": "granico"
+    },
+    "plural": {
+      "nom": "granice",
+      "gen": "granic",
+      "dat": "granicom",
+      "acc": "granice",
+      "ins": "granicami",
+      "loc": "granicach",
+      "voc": "granice"
+    }
+  }
+}

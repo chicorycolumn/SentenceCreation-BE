@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przejście",
+      "gen": "przejścia",
+      "dat": "przejściu",
+      "acc": "przejście",
+      "ins": "przejściem",
+      "loc": "przejściu",
+      "voc": "przejście"
+    },
+    "plural": {
+      "nom": "przejścia",
+      "gen": "przejść",
+      "dat": "przejściom",
+      "acc": "przejścia",
+      "ins": "przejściami",
+      "loc": "przejściach",
+      "voc": "przejścia"
+    }
+  }
+}

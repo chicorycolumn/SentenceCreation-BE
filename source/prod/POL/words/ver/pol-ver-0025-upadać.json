@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "upadać",
+    "verbalNoun": "upadanie",
+    "activeAdjectival": "upadający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "upadając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "upadaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "upadano"
+          },
+          "plural": {
+            "allPluralGenders": "upadano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "upadałem",
+            "f": "upadałam"
+          },
+          "plural": {
+            "virile": "upadaliśmy",
+            "nonvirile": "upadałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "upadałeś",
+            "f": "upadałaś"
+          },
+          "plural": {
+            "virile": "upadaliście",
+            "nonvirile": "upadałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "upadał",
+            "f": "upadała",
+            "n": "upadało"
+          },
+          "plural": {
+            "virile": "upadali",
+            "nonvirile": "upadały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "upada się"
+          },
+          "plural": {
+            "allPluralGenders": "upada się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "upadam"
+          },
+          "plural": {
+            "allPluralGenders": "upadamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "upadasz"
+          },
+          "plural": {
+            "allPluralGenders": "upadacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "upada"
+          },
+          "plural": {
+            "allPluralGenders": "upadają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "polegać",
+    "verbalNoun": "poleganie",
+    "activeAdjectival": "polegający",
+    "passiveAdjectival": "polegany",
+    "contemporaryAdverbial": "polegając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "polegaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "polegano"
+          },
+          "plural": {
+            "allPluralGenders": "polegano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "polegałem",
+            "f": "polegałam"
+          },
+          "plural": {
+            "virile": "polegaliśmy",
+            "nonvirile": "polegałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "polegałeś",
+            "f": "polegałaś"
+          },
+          "plural": {
+            "virile": "polegaliście",
+            "nonvirile": "polegałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "polegał",
+            "f": "polegała",
+            "n": "polegało"
+          },
+          "plural": {
+            "virile": "polegali",
+            "nonvirile": "polegały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "polega się"
+          },
+          "plural": {
+            "allPluralGenders": "polega się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "polegam"
+          },
+          "plural": {
+            "allPluralGenders": "polegamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "polegasz"
+          },
+          "plural": {
+            "allPluralGenders": "polegacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "polega"
+          },
+          "plural": {
+            "allPluralGenders": "polegają"
+          }
+        }
+      }
+    }
+  }
+}

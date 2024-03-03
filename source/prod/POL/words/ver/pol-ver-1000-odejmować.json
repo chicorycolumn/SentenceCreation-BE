@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odejmować",
+    "verbalNoun": "odejmowanie",
+    "activeAdjectival": "odejmujący",
+    "passiveAdjectival": "odejmowany",
+    "contemporaryAdverbial": "odejmując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odejmuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odejmowano"
+          },
+          "plural": {
+            "allPluralGenders": "odejmowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odejmowałem",
+            "f": "odejmowałam"
+          },
+          "plural": {
+            "virile": "odejmowaliśmy",
+            "nonvirile": "odejmowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odejmowałeś",
+            "f": "odejmowałaś"
+          },
+          "plural": {
+            "virile": "odejmowaliście",
+            "nonvirile": "odejmowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odejmował",
+            "f": "odejmowała",
+            "n": "odejmowało"
+          },
+          "plural": {
+            "virile": "odejmowali",
+            "nonvirile": "odejmowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odejmuje się"
+          },
+          "plural": {
+            "allPluralGenders": "odejmuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odejmuję"
+          },
+          "plural": {
+            "allPluralGenders": "odejmujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odejmujesz"
+          },
+          "plural": {
+            "allPluralGenders": "odejmujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odejmuje"
+          },
+          "plural": {
+            "allPluralGenders": "odejmują"
+          }
+        }
+      }
+    }
+  }
+}

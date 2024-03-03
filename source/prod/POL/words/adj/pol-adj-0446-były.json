@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "były",
+          "gen": "byłego",
+          "dat": "byłemu",
+          "acc": "byłego",
+          "ins": "byłym",
+          "loc": "byłym"
+        },
+        "m3": {
+          "nom": "były",
+          "gen": "byłego",
+          "dat": "byłemu",
+          "acc": "były",
+          "ins": "byłym",
+          "loc": "byłym"
+        },
+        "f": {
+          "nom": "była",
+          "gen": "byłej",
+          "dat": "byłej",
+          "acc": "byłą",
+          "ins": "byłą",
+          "loc": "byłej"
+        },
+        "n": {
+          "nom": "byłe",
+          "gen": "byłego",
+          "dat": "byłemu",
+          "acc": "byłe",
+          "ins": "byłym",
+          "loc": "byłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "byli",
+          "gen": "byłych",
+          "dat": "byłym",
+          "acc": "byłych",
+          "ins": "byłymi",
+          "loc": "byłych"
+        },
+        "nonvirile": {
+          "nom": "byłe",
+          "gen": "byłych",
+          "dat": "byłym",
+          "acc": "byłe",
+          "ins": "byłymi",
+          "loc": "byłych"
+        }
+      }
+    }
+  }
+}

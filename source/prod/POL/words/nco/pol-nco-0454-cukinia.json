@@ -1,0 +1,30 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cukinia",
+      "gen": "cukinii",
+      "dat": "cukinii",
+      "acc": "cukinię",
+      "ins": "cukinią",
+      "loc": "cukinii",
+      "voc": "cukinio"
+    },
+    "plural": {
+      "nom": "cukinie",
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "cukinii"
+        ],
+        "additionalInfrequent": [
+          "cukinij"
+        ]
+      },
+      "dat": "cukiniom",
+      "acc": "cukinie",
+      "ins": "cukiniami",
+      "loc": "cukiniach",
+      "voc": "cukinie"
+    }
+  }
+}

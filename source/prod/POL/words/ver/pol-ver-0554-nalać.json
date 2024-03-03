@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nalać",
+    "verbalNoun": "nalanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "nalany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "nalawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "naleje się"
+          },
+          "plural": {
+            "allPluralGenders": "naleje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "naleję"
+          },
+          "plural": {
+            "allPluralGenders": "nalejemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nalejesz"
+          },
+          "plural": {
+            "allPluralGenders": "nalejecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "naleje"
+          },
+          "plural": {
+            "allPluralGenders": "naleją"
+          }
+        }
+      },
+      "imperative": "nalej",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nalano"
+          },
+          "plural": {
+            "allPluralGenders": "nalano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nalałem",
+            "f": "nalałam"
+          },
+          "plural": {
+            "virile": "nalaliśmy",
+            "nonvirile": "nalałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nalałeś",
+            "f": "nalałaś"
+          },
+          "plural": {
+            "virile": "nalaliście",
+            "nonvirile": "nalałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nalał",
+            "f": "nalała",
+            "n": "nalało"
+          },
+          "plural": {
+            "virile": "nalali",
+            "nonvirile": "nalały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

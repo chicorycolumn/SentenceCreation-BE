@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kurs",
+      "gen": "kursu",
+      "dat": "kursowi",
+      "acc": "kurs",
+      "ins": "kursem",
+      "loc": "kursie",
+      "voc": "kursie"
+    },
+    "plural": {
+      "nom": "kursy",
+      "gen": "kursów",
+      "dat": "kursom",
+      "acc": "kursy",
+      "ins": "kursami",
+      "loc": "kursach",
+      "voc": "kursy"
+    }
+  }
+}

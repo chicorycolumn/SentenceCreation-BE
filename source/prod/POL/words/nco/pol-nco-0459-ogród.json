@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ogród",
+      "gen": "ogrodu",
+      "dat": "ogrodowi",
+      "acc": "ogród",
+      "ins": "ogrodem",
+      "loc": "ogrodzie",
+      "voc": "ogrodzie"
+    },
+    "plural": {
+      "nom": "ogrody",
+      "gen": "ogrodów",
+      "dat": "ogrodom",
+      "acc": "ogrody",
+      "ins": "ogrodami",
+      "loc": "ogrodach",
+      "voc": "ogrody"
+    }
+  }
+}

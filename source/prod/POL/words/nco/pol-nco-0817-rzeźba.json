@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rzeźba",
+      "gen": "rzeźby",
+      "dat": "rzeźbie",
+      "acc": "rzeźbę",
+      "ins": "rzeźbą",
+      "loc": "rzeźbie",
+      "voc": "rzeźbo"
+    },
+    "plural": {
+      "nom": "rzeźby",
+      "gen": "rzeźb",
+      "dat": "rzeźbom",
+      "acc": "rzeźby",
+      "ins": "rzeźbami",
+      "loc": "rzeźbach",
+      "voc": "rzeźby"
+    }
+  }
+}

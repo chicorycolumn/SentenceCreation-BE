@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "szybko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "szybki",
+          "gen": "szybkiego",
+          "dat": "szybkiemu",
+          "acc": "szybkiego",
+          "ins": "szybkim",
+          "loc": "szybkim"
+        },
+        "m3": {
+          "nom": "szybki",
+          "gen": "szybkiego",
+          "dat": "szybkiemu",
+          "acc": "szybki",
+          "ins": "szybkim",
+          "loc": "szybkim"
+        },
+        "f": {
+          "nom": "szybka",
+          "gen": "szybkiej",
+          "dat": "szybkiej",
+          "acc": "szybką",
+          "ins": "szybką",
+          "loc": "szybkiej"
+        },
+        "n": {
+          "nom": "szybkie",
+          "gen": "szybkiego",
+          "dat": "szybkiemu",
+          "acc": "szybkie",
+          "ins": "szybkim",
+          "loc": "szybkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "szybcy",
+          "gen": "szybkich",
+          "dat": "szybkim",
+          "acc": "szybkich",
+          "ins": "szybkimi",
+          "loc": "szybkich"
+        },
+        "nonvirile": {
+          "nom": "szybkie",
+          "gen": "szybkich",
+          "dat": "szybkim",
+          "acc": "szybkie",
+          "ins": "szybkimi",
+          "loc": "szybkich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "szybszy",
+          "gen": "szybszego",
+          "dat": "szybszemu",
+          "acc": "szybszego",
+          "ins": "szybszym",
+          "loc": "szybszym"
+        },
+        "m3": {
+          "nom": "szybszy",
+          "gen": "szybszego",
+          "dat": "szybszemu",
+          "acc": "szybszy",
+          "ins": "szybszym",
+          "loc": "szybszym"
+        },
+        "f": {
+          "nom": "szybsza",
+          "gen": "szybszej",
+          "dat": "szybszej",
+          "acc": "szybszą",
+          "ins": "szybszą",
+          "loc": "szybszej"
+        },
+        "n": {
+          "nom": "szybsze",
+          "gen": "szybszego",
+          "dat": "szybszemu",
+          "acc": "szybsze",
+          "ins": "szybszym",
+          "loc": "szybszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "szybsi",
+          "gen": "szybszych",
+          "dat": "szybszym",
+          "acc": "szybszych",
+          "ins": "szybszymi",
+          "loc": "szybszych"
+        },
+        "nonvirile": {
+          "nom": "szybsze",
+          "gen": "szybszych",
+          "dat": "szybszym",
+          "acc": "szybsze",
+          "ins": "szybszymi",
+          "loc": "szybszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najszybszy",
+          "gen": "najszybszego",
+          "dat": "najszybszemu",
+          "acc": "najszybszego",
+          "ins": "najszybszym",
+          "loc": "najszybszym"
+        },
+        "m3": {
+          "nom": "najszybszy",
+          "gen": "najszybszego",
+          "dat": "najszybszemu",
+          "acc": "najszybszy",
+          "ins": "najszybszym",
+          "loc": "najszybszym"
+        },
+        "f": {
+          "nom": "najszybsza",
+          "gen": "najszybszej",
+          "dat": "najszybszej",
+          "acc": "najszybszą",
+          "ins": "najszybszą",
+          "loc": "najszybszej"
+        },
+        "n": {
+          "nom": "najszybsze",
+          "gen": "najszybszego",
+          "dat": "najszybszemu",
+          "acc": "najszybsze",
+          "ins": "najszybszym",
+          "loc": "najszybszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najszybsi",
+          "gen": "najszybszych",
+          "dat": "najszybszym",
+          "acc": "najszybszych",
+          "ins": "najszybszymi",
+          "loc": "najszybszych"
+        },
+        "nonvirile": {
+          "nom": "najszybsze",
+          "gen": "najszybszych",
+          "dat": "najszybszym",
+          "acc": "najszybsze",
+          "ins": "najszybszymi",
+          "loc": "najszybszych"
+        }
+      }
+    }
+  }
+}

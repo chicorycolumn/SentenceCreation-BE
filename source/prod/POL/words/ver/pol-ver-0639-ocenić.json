@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ocenić",
+    "verbalNoun": "ocenienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "oceniony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "oceniwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oceni się"
+          },
+          "plural": {
+            "allPluralGenders": "oceni się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ocenię"
+          },
+          "plural": {
+            "allPluralGenders": "ocenimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ocenisz"
+          },
+          "plural": {
+            "allPluralGenders": "ocenicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "oceni"
+          },
+          "plural": {
+            "allPluralGenders": "ocenią"
+          }
+        }
+      },
+      "imperative": "oceń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oceniono"
+          },
+          "plural": {
+            "allPluralGenders": "oceniono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oceniłem",
+            "f": "oceniłam"
+          },
+          "plural": {
+            "virile": "oceniliśmy",
+            "nonvirile": "oceniłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oceniłeś",
+            "f": "oceniłaś"
+          },
+          "plural": {
+            "virile": "oceniliście",
+            "nonvirile": "oceniłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ocenił",
+            "f": "oceniła",
+            "n": "oceniło"
+          },
+          "plural": {
+            "virile": "ocenili",
+            "nonvirile": "oceniły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

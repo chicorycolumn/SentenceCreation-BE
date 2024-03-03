@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lipiec",
+      "gen": "lipca",
+      "dat": "lipcowi",
+      "acc": "lipiec",
+      "ins": "lipcem",
+      "loc": "lipcu",
+      "voc": "lipcu"
+    },
+    "plural": {
+      "nom": "lipce",
+      "gen": "lipców",
+      "dat": "lipcom",
+      "acc": "lipce",
+      "ins": "lipcami",
+      "loc": "lipcach",
+      "voc": "lipce"
+    }
+  }
+}

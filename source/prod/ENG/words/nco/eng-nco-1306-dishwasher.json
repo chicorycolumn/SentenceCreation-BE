@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dishwasher",
+      "gen": "dishwasher's"
+    },
+    "plural": {
+      "nom": "dishwashers",
+      "gen": "dishwashers'"
+    }
+  }
+}

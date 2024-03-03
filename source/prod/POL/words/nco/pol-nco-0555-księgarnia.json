@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "księgarnia",
+      "gen": "księgarni",
+      "dat": "księgarni",
+      "acc": "księgarnię",
+      "ins": "księgarnią",
+      "loc": "księgarni",
+      "voc": "księgarnio"
+    },
+    "plural": {
+      "nom": "księgarnie",
+      "gen": [
+        "księgarni",
+        "księgarń"
+      ],
+      "dat": "księgarniom",
+      "acc": "księgarnie",
+      "ins": "księgarniami",
+      "loc": "księgarniach",
+      "voc": "księgarnie"
+    }
+  }
+}

@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "odmiennie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "odmienny",
+          "gen": "odmiennego",
+          "dat": "odmiennemu",
+          "acc": "odmiennego",
+          "ins": "odmiennym",
+          "loc": "odmiennym"
+        },
+        "m3": {
+          "nom": "odmienny",
+          "gen": "odmiennego",
+          "dat": "odmiennemu",
+          "acc": "odmienny",
+          "ins": "odmiennym",
+          "loc": "odmiennym"
+        },
+        "f": {
+          "nom": "odmienna",
+          "gen": "odmiennej",
+          "dat": "odmiennej",
+          "acc": "odmienną",
+          "ins": "odmienną",
+          "loc": "odmiennej"
+        },
+        "n": {
+          "nom": "odmienne",
+          "gen": "odmiennego",
+          "dat": "odmiennemu",
+          "acc": "odmienne",
+          "ins": "odmiennym",
+          "loc": "odmiennym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "odmienni",
+          "gen": "odmiennych",
+          "dat": "odmiennym",
+          "acc": "odmiennych",
+          "ins": "odmiennymi",
+          "loc": "odmiennych"
+        },
+        "nonvirile": {
+          "nom": "odmienne",
+          "gen": "odmiennych",
+          "dat": "odmiennym",
+          "acc": "odmienne",
+          "ins": "odmiennymi",
+          "loc": "odmiennych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszy",
+              "bardziej odmienny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszego",
+              "bardziej odmiennego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszemu",
+              "bardziej odmiennemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszego",
+              "bardziej odmiennego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszym",
+              "bardziej odmiennym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszym",
+              "bardziej odmiennym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszy",
+              "bardziej odmienny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszego",
+              "bardziej odmiennego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszemu",
+              "bardziej odmiennemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszy",
+              "bardziej odmienny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszym",
+              "bardziej odmiennym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszym",
+              "bardziej odmiennym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejsza",
+              "bardziej odmienna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszej",
+              "bardziej odmiennej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszej",
+              "bardziej odmiennej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszą",
+              "bardziej odmienną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszą",
+              "bardziej odmienną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszej",
+              "bardziej odmiennej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejsze",
+              "bardziej odmienne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszego",
+              "bardziej odmiennego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszemu",
+              "bardziej odmiennemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejsze",
+              "bardziej odmienne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszym",
+              "bardziej odmiennym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszym",
+              "bardziej odmiennym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejsi",
+              "bardziej odmienni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszych",
+              "bardziej odmiennych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszym",
+              "bardziej odmiennym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszych",
+              "bardziej odmiennych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszymi",
+              "bardziej odmiennymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszych",
+              "bardziej odmiennych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejsze",
+              "bardziej odmienne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszych",
+              "bardziej odmiennych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszym",
+              "bardziej odmiennym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejsze",
+              "bardziej odmienne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszymi",
+              "bardziej odmiennymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "odmienniejszych",
+              "bardziej odmiennych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszy",
+              "najbardziej odmienny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszego",
+              "najbardziej odmiennego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszemu",
+              "najbardziej odmiennemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszego",
+              "najbardziej odmiennego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszym",
+              "najbardziej odmiennym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszym",
+              "najbardziej odmiennym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszy",
+              "najbardziej odmienny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszego",
+              "najbardziej odmiennego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszemu",
+              "najbardziej odmiennemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszy",
+              "najbardziej odmienny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszym",
+              "najbardziej odmiennym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszym",
+              "najbardziej odmiennym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejsza",
+              "najbardziej odmienna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszej",
+              "najbardziej odmiennej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszej",
+              "najbardziej odmiennej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszą",
+              "najbardziej odmienną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszą",
+              "najbardziej odmienną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszej",
+              "najbardziej odmiennej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejsze",
+              "najbardziej odmienne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszego",
+              "najbardziej odmiennego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszemu",
+              "najbardziej odmiennemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejsze",
+              "najbardziej odmienne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszym",
+              "najbardziej odmiennym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszym",
+              "najbardziej odmiennym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejsi",
+              "najbardziej odmienni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszych",
+              "najbardziej odmiennych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszym",
+              "najbardziej odmiennym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszych",
+              "najbardziej odmiennych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszymi",
+              "najbardziej odmiennymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszych",
+              "najbardziej odmiennych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejsze",
+              "najbardziej odmienne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszych",
+              "najbardziej odmiennych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszym",
+              "najbardziej odmiennym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejsze",
+              "najbardziej odmienne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszymi",
+              "najbardziej odmiennymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najodmienniejszych",
+              "najbardziej odmiennych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

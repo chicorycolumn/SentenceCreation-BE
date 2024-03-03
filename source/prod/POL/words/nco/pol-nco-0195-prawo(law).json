@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "prawo",
+      "gen": "prawa",
+      "dat": "prawu",
+      "acc": "prawo",
+      "ins": "prawem",
+      "loc": "prawie",
+      "voc": "prawo"
+    },
+    "plural": {
+      "nom": "prawa",
+      "gen": "praw",
+      "dat": "prawom",
+      "acc": "prawa",
+      "ins": "prawami",
+      "loc": "prawach",
+      "voc": "prawa"
+    }
+  }
+}

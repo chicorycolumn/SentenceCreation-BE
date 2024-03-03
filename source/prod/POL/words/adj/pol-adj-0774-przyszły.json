@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "przyszle",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przyszły",
+          "gen": "przyszłego",
+          "dat": "przyszłemu",
+          "acc": "przyszłego",
+          "ins": "przyszłym",
+          "loc": "przyszłym"
+        },
+        "m3": {
+          "nom": "przyszły",
+          "gen": "przyszłego",
+          "dat": "przyszłemu",
+          "acc": "przyszły",
+          "ins": "przyszłym",
+          "loc": "przyszłym"
+        },
+        "f": {
+          "nom": "przyszła",
+          "gen": "przyszłej",
+          "dat": "przyszłej",
+          "acc": "przyszłą",
+          "ins": "przyszłą",
+          "loc": "przyszłej"
+        },
+        "n": {
+          "nom": "przyszłe",
+          "gen": "przyszłego",
+          "dat": "przyszłemu",
+          "acc": "przyszłe",
+          "ins": "przyszłym",
+          "loc": "przyszłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przyszli",
+          "gen": "przyszłych",
+          "dat": "przyszłym",
+          "acc": "przyszłych",
+          "ins": "przyszłymi",
+          "loc": "przyszłych"
+        },
+        "nonvirile": {
+          "nom": "przyszłe",
+          "gen": "przyszłych",
+          "dat": "przyszłym",
+          "acc": "przyszłe",
+          "ins": "przyszłymi",
+          "loc": "przyszłych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gęś",
+      "gen": "gęsi",
+      "dat": "gęsi",
+      "acc": "gęś",
+      "ins": "gęsią",
+      "loc": "gęsi",
+      "voc": "gęsi"
+    },
+    "plural": {
+      "nom": "gęsi",
+      "gen": "gęsi",
+      "dat": "gęsiom",
+      "acc": "gęsi",
+      "ins": [
+        "gęśmi",
+        "gęsiami"
+      ],
+      "loc": "gęsiach",
+      "voc": "gęsi"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sposób",
+      "gen": "sposobu",
+      "dat": "sposobowi",
+      "acc": "sposób",
+      "ins": "sposobem",
+      "loc": "sposobie",
+      "voc": "sposobie"
+    },
+    "plural": {
+      "nom": "sposoby",
+      "gen": "sposobów",
+      "dat": "sposobom",
+      "acc": "sposoby",
+      "ins": "sposobami",
+      "loc": "sposobach",
+      "voc": "sposoby"
+    }
+  }
+}

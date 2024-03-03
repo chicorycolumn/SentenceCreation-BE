@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "poprawiać",
+    "verbalNoun": "poprawianie",
+    "activeAdjectival": "poprawiający",
+    "passiveAdjectival": "poprawiany",
+    "contemporaryAdverbial": "poprawiając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "poprawiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poprawiano"
+          },
+          "plural": {
+            "allPluralGenders": "poprawiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "poprawiałem",
+            "f": "poprawiałam"
+          },
+          "plural": {
+            "virile": "poprawialiśmy",
+            "nonvirile": "poprawiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "poprawiałeś",
+            "f": "poprawiałaś"
+          },
+          "plural": {
+            "virile": "poprawialiście",
+            "nonvirile": "poprawiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "poprawiał",
+            "f": "poprawiała",
+            "n": "poprawiało"
+          },
+          "plural": {
+            "virile": "poprawiali",
+            "nonvirile": "poprawiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poprawia się"
+          },
+          "plural": {
+            "allPluralGenders": "poprawia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "poprawiam"
+          },
+          "plural": {
+            "allPluralGenders": "poprawiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "poprawiasz"
+          },
+          "plural": {
+            "allPluralGenders": "poprawiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "poprawia"
+          },
+          "plural": {
+            "allPluralGenders": "poprawiają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mosiądz",
+      "gen": "mosiądzu",
+      "dat": "mosiądzowi",
+      "acc": "mosiądz",
+      "ins": "mosiądzem",
+      "loc": "mosiądzu",
+      "voc": "mosiądzu"
+    },
+    "plural": {
+      "nom": "mosiądze",
+      "gen": "mosiądzów",
+      "dat": "mosiądzom",
+      "acc": "mosiądze",
+      "ins": "mosiądzami",
+      "loc": "mosiądzach",
+      "voc": "mosiądze"
+    }
+  }
+}

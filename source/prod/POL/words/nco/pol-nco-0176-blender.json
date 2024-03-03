@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "blender",
+      "gen": "blendera",
+      "dat": "blenderowi",
+      "acc": "blendera",
+      "ins": "blenderem",
+      "loc": "blenderze",
+      "voc": "blenderze"
+    },
+    "plural": {
+      "nom": "blendery",
+      "gen": "blenderów",
+      "dat": "blenderom",
+      "acc": "blendery",
+      "ins": "blenderami",
+      "loc": "blenderach",
+      "voc": "blendery"
+    }
+  }
+}

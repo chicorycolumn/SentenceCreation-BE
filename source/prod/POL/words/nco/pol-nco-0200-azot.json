@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "azot",
+      "gen": "azotu",
+      "dat": "azotowi",
+      "acc": "azot",
+      "ins": "azotem",
+      "loc": "azocie",
+      "voc": "azocie"
+    }
+  }
+}

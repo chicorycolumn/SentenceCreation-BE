@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "powierzchownie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "powierzchowny",
+          "gen": "powierzchownego",
+          "dat": "powierzchownemu",
+          "acc": "powierzchownego",
+          "ins": "powierzchownym",
+          "loc": "powierzchownym"
+        },
+        "m3": {
+          "nom": "powierzchowny",
+          "gen": "powierzchownego",
+          "dat": "powierzchownemu",
+          "acc": "powierzchowny",
+          "ins": "powierzchownym",
+          "loc": "powierzchownym"
+        },
+        "f": {
+          "nom": "powierzchowna",
+          "gen": "powierzchownej",
+          "dat": "powierzchownej",
+          "acc": "powierzchowną",
+          "ins": "powierzchowną",
+          "loc": "powierzchownej"
+        },
+        "n": {
+          "nom": "powierzchowne",
+          "gen": "powierzchownego",
+          "dat": "powierzchownemu",
+          "acc": "powierzchowne",
+          "ins": "powierzchownym",
+          "loc": "powierzchownym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "powierzchowni",
+          "gen": "powierzchownych",
+          "dat": "powierzchownym",
+          "acc": "powierzchownych",
+          "ins": "powierzchownymi",
+          "loc": "powierzchownych"
+        },
+        "nonvirile": {
+          "nom": "powierzchowne",
+          "gen": "powierzchownych",
+          "dat": "powierzchownym",
+          "acc": "powierzchowne",
+          "ins": "powierzchownymi",
+          "loc": "powierzchownych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszy",
+              "bardziej powierzchowny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszego",
+              "bardziej powierzchownego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszemu",
+              "bardziej powierzchownemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszego",
+              "bardziej powierzchownego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszym",
+              "bardziej powierzchownym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszym",
+              "bardziej powierzchownym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszy",
+              "bardziej powierzchowny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszego",
+              "bardziej powierzchownego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszemu",
+              "bardziej powierzchownemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszy",
+              "bardziej powierzchowny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszym",
+              "bardziej powierzchownym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszym",
+              "bardziej powierzchownym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejsza",
+              "bardziej powierzchowna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszej",
+              "bardziej powierzchownej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszej",
+              "bardziej powierzchownej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszą",
+              "bardziej powierzchowną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszą",
+              "bardziej powierzchowną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszej",
+              "bardziej powierzchownej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejsze",
+              "bardziej powierzchowne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszego",
+              "bardziej powierzchownego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszemu",
+              "bardziej powierzchownemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejsze",
+              "bardziej powierzchowne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszym",
+              "bardziej powierzchownym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszym",
+              "bardziej powierzchownym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejsi",
+              "bardziej powierzchowni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszych",
+              "bardziej powierzchownych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszym",
+              "bardziej powierzchownym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszych",
+              "bardziej powierzchownych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszymi",
+              "bardziej powierzchownymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszych",
+              "bardziej powierzchownych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejsze",
+              "bardziej powierzchowne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszych",
+              "bardziej powierzchownych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszym",
+              "bardziej powierzchownym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejsze",
+              "bardziej powierzchowne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszymi",
+              "bardziej powierzchownymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "powierzchowniejszych",
+              "bardziej powierzchownych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszy",
+              "najbardziej powierzchowny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszego",
+              "najbardziej powierzchownego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszemu",
+              "najbardziej powierzchownemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszego",
+              "najbardziej powierzchownego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszym",
+              "najbardziej powierzchownym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszym",
+              "najbardziej powierzchownym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszy",
+              "najbardziej powierzchowny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszego",
+              "najbardziej powierzchownego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszemu",
+              "najbardziej powierzchownemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszy",
+              "najbardziej powierzchowny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszym",
+              "najbardziej powierzchownym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszym",
+              "najbardziej powierzchownym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejsza",
+              "najbardziej powierzchowna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszej",
+              "najbardziej powierzchownej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszej",
+              "najbardziej powierzchownej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszą",
+              "najbardziej powierzchowną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszą",
+              "najbardziej powierzchowną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszej",
+              "najbardziej powierzchownej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejsze",
+              "najbardziej powierzchowne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszego",
+              "najbardziej powierzchownego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszemu",
+              "najbardziej powierzchownemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejsze",
+              "najbardziej powierzchowne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszym",
+              "najbardziej powierzchownym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszym",
+              "najbardziej powierzchownym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejsi",
+              "najbardziej powierzchowni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszych",
+              "najbardziej powierzchownych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszym",
+              "najbardziej powierzchownym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszych",
+              "najbardziej powierzchownych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszymi",
+              "najbardziej powierzchownymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszych",
+              "najbardziej powierzchownych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejsze",
+              "najbardziej powierzchowne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszych",
+              "najbardziej powierzchownych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszym",
+              "najbardziej powierzchownym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejsze",
+              "najbardziej powierzchowne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszymi",
+              "najbardziej powierzchownymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpowierzchowniejszych",
+              "najbardziej powierzchownych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

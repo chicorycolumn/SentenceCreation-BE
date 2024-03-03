@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przedsiębiorstwo",
+      "gen": "przedsiębiorstwa",
+      "dat": "przedsiębiorstwu",
+      "acc": "przedsiębiorstwo",
+      "ins": "przedsiębiorstwem",
+      "loc": "przedsiębiorstwie",
+      "voc": "przedsiębiorstwo"
+    },
+    "plural": {
+      "nom": "przedsiębiorstwa",
+      "gen": "przedsiębiorstw",
+      "dat": "przedsiębiorstwom",
+      "acc": "przedsiębiorstwa",
+      "ins": "przedsiębiorstwami",
+      "loc": "przedsiębiorstwach",
+      "voc": "przedsiębiorstwa"
+    }
+  }
+}

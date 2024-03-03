@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pogorszyć",
+    "verbalNoun": "pogorszenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pogorszony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pogorszywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pogorszy się"
+          },
+          "plural": {
+            "allPluralGenders": "pogorszy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pogorszę"
+          },
+          "plural": {
+            "allPluralGenders": "pogorszymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pogorszysz"
+          },
+          "plural": {
+            "allPluralGenders": "pogorszycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pogorszy"
+          },
+          "plural": {
+            "allPluralGenders": "pogorszą"
+          }
+        }
+      },
+      "imperative": "pogorsz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pogorszono"
+          },
+          "plural": {
+            "allPluralGenders": "pogorszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pogorszyłem",
+            "f": "pogorszyłam"
+          },
+          "plural": {
+            "virile": "pogorszyliśmy",
+            "nonvirile": "pogorszyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pogorszyłeś",
+            "f": "pogorszyłaś"
+          },
+          "plural": {
+            "virile": "pogorszyliście",
+            "nonvirile": "pogorszyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pogorszył",
+            "f": "pogorszyła",
+            "n": "pogorszyło"
+          },
+          "plural": {
+            "virile": "pogorszyli",
+            "nonvirile": "pogorszyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

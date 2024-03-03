@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "podjechać",
+    "verbalNoun": "podjechanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "podjechawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podjedzie się"
+          },
+          "plural": {
+            "allPluralGenders": "podjedzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podjadę"
+          },
+          "plural": {
+            "allPluralGenders": "podjedziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podjedziesz"
+          },
+          "plural": {
+            "allPluralGenders": "podjedziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podjedzie"
+          },
+          "plural": {
+            "allPluralGenders": "podjadą"
+          }
+        }
+      },
+      "imperative": "podjedź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podjechano"
+          },
+          "plural": {
+            "allPluralGenders": "podjechano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "podjechałem",
+            "f": "podjechałam"
+          },
+          "plural": {
+            "virile": "podjechaliśmy",
+            "nonvirile": "podjechałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podjechałeś",
+            "f": "podjechałaś"
+          },
+          "plural": {
+            "virile": "podjechaliście",
+            "nonvirile": "podjechałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podjechał",
+            "f": "podjechała",
+            "n": "podjechało"
+          },
+          "plural": {
+            "virile": "podjechali",
+            "nonvirile": "podjechały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

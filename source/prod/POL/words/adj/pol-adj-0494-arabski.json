@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "arabski",
+          "gen": "arabskiego",
+          "dat": "arabskiemu",
+          "acc": "arabskiego",
+          "ins": "arabskim",
+          "loc": "arabskim"
+        },
+        "m3": {
+          "nom": "arabski",
+          "gen": "arabskiego",
+          "dat": "arabskiemu",
+          "acc": "arabski",
+          "ins": "arabskim",
+          "loc": "arabskim"
+        },
+        "f": {
+          "nom": "arabska",
+          "gen": "arabskiej",
+          "dat": "arabskiej",
+          "acc": "arabską",
+          "ins": "arabską",
+          "loc": "arabskiej"
+        },
+        "n": {
+          "nom": "arabskie",
+          "gen": "arabskiego",
+          "dat": "arabskiemu",
+          "acc": "arabskie",
+          "ins": "arabskim",
+          "loc": "arabskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "arabscy",
+          "gen": "arabskich",
+          "dat": "arabskim",
+          "acc": "arabskich",
+          "ins": "arabskimi",
+          "loc": "arabskich"
+        },
+        "nonvirile": {
+          "nom": "arabskie",
+          "gen": "arabskich",
+          "dat": "arabskim",
+          "acc": "arabskie",
+          "ins": "arabskimi",
+          "loc": "arabskich"
+        }
+      }
+    }
+  }
+}

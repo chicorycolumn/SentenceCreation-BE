@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "bank",
+      "gen": "banku",
+      "dat": "bankowi",
+      "acc": "bank",
+      "ins": "bankiem",
+      "loc": "banku",
+      "voc": "banku"
+    },
+    "plural": {
+      "nom": "banki",
+      "gen": "banków",
+      "dat": "bankom",
+      "acc": "banki",
+      "ins": "bankami",
+      "loc": "bankach",
+      "voc": "banki"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "blisko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bliski",
+          "gen": "bliskiego",
+          "dat": "bliskiemu",
+          "acc": "bliskiego",
+          "ins": "bliskim",
+          "loc": "bliskim"
+        },
+        "m3": {
+          "nom": "bliski",
+          "gen": "bliskiego",
+          "dat": "bliskiemu",
+          "acc": "bliski",
+          "ins": "bliskim",
+          "loc": "bliskim"
+        },
+        "f": {
+          "nom": "bliska",
+          "gen": "bliskiej",
+          "dat": "bliskiej",
+          "acc": "bliską",
+          "ins": "bliską",
+          "loc": "bliskiej"
+        },
+        "n": {
+          "nom": "bliskie",
+          "gen": "bliskiego",
+          "dat": "bliskiemu",
+          "acc": "bliskie",
+          "ins": "bliskim",
+          "loc": "bliskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bliscy",
+          "gen": "bliskich",
+          "dat": "bliskim",
+          "acc": "bliskich",
+          "ins": "bliskimi",
+          "loc": "bliskich"
+        },
+        "nonvirile": {
+          "nom": "bliskie",
+          "gen": "bliskich",
+          "dat": "bliskim",
+          "acc": "bliskie",
+          "ins": "bliskimi",
+          "loc": "bliskich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bliższy",
+          "gen": "bliższego",
+          "dat": "bliższemu",
+          "acc": "bliższego",
+          "ins": "bliższym",
+          "loc": "bliższym"
+        },
+        "m3": {
+          "nom": "bliższy",
+          "gen": "bliższego",
+          "dat": "bliższemu",
+          "acc": "bliższy",
+          "ins": "bliższym",
+          "loc": "bliższym"
+        },
+        "f": {
+          "nom": "bliższa",
+          "gen": "bliższej",
+          "dat": "bliższej",
+          "acc": "bliższą",
+          "ins": "bliższą",
+          "loc": "bliższej"
+        },
+        "n": {
+          "nom": "bliższe",
+          "gen": "bliższego",
+          "dat": "bliższemu",
+          "acc": "bliższe",
+          "ins": "bliższym",
+          "loc": "bliższym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bliżsi",
+          "gen": "bliższych",
+          "dat": "bliższym",
+          "acc": "bliższych",
+          "ins": "bliższymi",
+          "loc": "bliższych"
+        },
+        "nonvirile": {
+          "nom": "bliższe",
+          "gen": "bliższych",
+          "dat": "bliższym",
+          "acc": "bliższe",
+          "ins": "bliższymi",
+          "loc": "bliższych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbliższy",
+          "gen": "najbliższego",
+          "dat": "najbliższemu",
+          "acc": "najbliższego",
+          "ins": "najbliższym",
+          "loc": "najbliższym"
+        },
+        "m3": {
+          "nom": "najbliższy",
+          "gen": "najbliższego",
+          "dat": "najbliższemu",
+          "acc": "najbliższy",
+          "ins": "najbliższym",
+          "loc": "najbliższym"
+        },
+        "f": {
+          "nom": "najbliższa",
+          "gen": "najbliższej",
+          "dat": "najbliższej",
+          "acc": "najbliższą",
+          "ins": "najbliższą",
+          "loc": "najbliższej"
+        },
+        "n": {
+          "nom": "najbliższe",
+          "gen": "najbliższego",
+          "dat": "najbliższemu",
+          "acc": "najbliższe",
+          "ins": "najbliższym",
+          "loc": "najbliższym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbliżsi",
+          "gen": "najbliższych",
+          "dat": "najbliższym",
+          "acc": "najbliższych",
+          "ins": "najbliższymi",
+          "loc": "najbliższych"
+        },
+        "nonvirile": {
+          "nom": "najbliższe",
+          "gen": "najbliższych",
+          "dat": "najbliższym",
+          "acc": "najbliższe",
+          "ins": "najbliższymi",
+          "loc": "najbliższych"
+        }
+      }
+    }
+  }
+}

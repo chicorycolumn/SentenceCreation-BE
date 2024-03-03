@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "god",
+      "gen": "god's"
+    },
+    "plural": {
+      "nom": "gods",
+      "gen": "gods'"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "wyjątkowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "wyjątkowy",
+          "gen": "wyjątkowego",
+          "dat": "wyjątkowemu",
+          "acc": "wyjątkowego",
+          "ins": "wyjątkowym",
+          "loc": "wyjątkowym"
+        },
+        "m3": {
+          "nom": "wyjątkowy",
+          "gen": "wyjątkowego",
+          "dat": "wyjątkowemu",
+          "acc": "wyjątkowy",
+          "ins": "wyjątkowym",
+          "loc": "wyjątkowym"
+        },
+        "f": {
+          "nom": "wyjątkowa",
+          "gen": "wyjątkowej",
+          "dat": "wyjątkowej",
+          "acc": "wyjątkową",
+          "ins": "wyjątkową",
+          "loc": "wyjątkowej"
+        },
+        "n": {
+          "nom": "wyjątkowe",
+          "gen": "wyjątkowego",
+          "dat": "wyjątkowemu",
+          "acc": "wyjątkowe",
+          "ins": "wyjątkowym",
+          "loc": "wyjątkowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wyjątkowi",
+          "gen": "wyjątkowych",
+          "dat": "wyjątkowym",
+          "acc": "wyjątkowych",
+          "ins": "wyjątkowymi",
+          "loc": "wyjątkowych"
+        },
+        "nonvirile": {
+          "nom": "wyjątkowe",
+          "gen": "wyjątkowych",
+          "dat": "wyjątkowym",
+          "acc": "wyjątkowe",
+          "ins": "wyjątkowymi",
+          "loc": "wyjątkowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej wyjątkowy",
+          "gen": "bardziej wyjątkowego",
+          "dat": "bardziej wyjątkowemu",
+          "acc": "bardziej wyjątkowego",
+          "ins": "bardziej wyjątkowym",
+          "loc": "bardziej wyjątkowym"
+        },
+        "m3": {
+          "nom": "bardziej wyjątkowy",
+          "gen": "bardziej wyjątkowego",
+          "dat": "bardziej wyjątkowemu",
+          "acc": "bardziej wyjątkowy",
+          "ins": "bardziej wyjątkowym",
+          "loc": "bardziej wyjątkowym"
+        },
+        "f": {
+          "nom": "bardziej wyjątkowa",
+          "gen": "bardziej wyjątkowej",
+          "dat": "bardziej wyjątkowej",
+          "acc": "bardziej wyjątkową",
+          "ins": "bardziej wyjątkową",
+          "loc": "bardziej wyjątkowej"
+        },
+        "n": {
+          "nom": "bardziej wyjątkowe",
+          "gen": "bardziej wyjątkowego",
+          "dat": "bardziej wyjątkowemu",
+          "acc": "bardziej wyjątkowe",
+          "ins": "bardziej wyjątkowym",
+          "loc": "bardziej wyjątkowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej wyjątkoi",
+          "gen": "bardziej wyjątkowych",
+          "dat": "bardziej wyjątkowym",
+          "acc": "bardziej wyjątkowych",
+          "ins": "bardziej wyjątkowymi",
+          "loc": "bardziej wyjątkowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej wyjątkowe",
+          "gen": "bardziej wyjątkowych",
+          "dat": "bardziej wyjątkowym",
+          "acc": "bardziej wyjątkowe",
+          "ins": "bardziej wyjątkowymi",
+          "loc": "bardziej wyjątkowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej wyjątkowy",
+          "gen": "najbardziej wyjątkowego",
+          "dat": "najbardziej wyjątkowemu",
+          "acc": "najbardziej wyjątkowego",
+          "ins": "najbardziej wyjątkowym",
+          "loc": "najbardziej wyjątkowym"
+        },
+        "m3": {
+          "nom": "najbardziej wyjątkowy",
+          "gen": "najbardziej wyjątkowego",
+          "dat": "najbardziej wyjątkowemu",
+          "acc": "najbardziej wyjątkowy",
+          "ins": "najbardziej wyjątkowym",
+          "loc": "najbardziej wyjątkowym"
+        },
+        "f": {
+          "nom": "najbardziej wyjątkowa",
+          "gen": "najbardziej wyjątkowej",
+          "dat": "najbardziej wyjątkowej",
+          "acc": "najbardziej wyjątkową",
+          "ins": "najbardziej wyjątkową",
+          "loc": "najbardziej wyjątkowej"
+        },
+        "n": {
+          "nom": "najbardziej wyjątkowe",
+          "gen": "najbardziej wyjątkowego",
+          "dat": "najbardziej wyjątkowemu",
+          "acc": "najbardziej wyjątkowe",
+          "ins": "najbardziej wyjątkowym",
+          "loc": "najbardziej wyjątkowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej wyjątkoi",
+          "gen": "najbardziej wyjątkowych",
+          "dat": "najbardziej wyjątkowym",
+          "acc": "najbardziej wyjątkowych",
+          "ins": "najbardziej wyjątkowymi",
+          "loc": "najbardziej wyjątkowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej wyjątkowe",
+          "gen": "najbardziej wyjątkowych",
+          "dat": "najbardziej wyjątkowym",
+          "acc": "najbardziej wyjątkowe",
+          "ins": "najbardziej wyjątkowymi",
+          "loc": "najbardziej wyjątkowych"
+        }
+      }
+    }
+  }
+}

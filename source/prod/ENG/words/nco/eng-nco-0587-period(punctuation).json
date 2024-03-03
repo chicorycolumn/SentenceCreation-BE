@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "period",
+      "gen": "period's"
+    },
+    "plural": {
+      "nom": "periods",
+      "gen": "periods'"
+    }
+  }
+}

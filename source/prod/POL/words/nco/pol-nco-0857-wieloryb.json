@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wieloryb",
+      "gen": "wieloryba",
+      "dat": "wielorybowi",
+      "acc": "wieloryba",
+      "ins": "wielorybem",
+      "loc": "wielorybie",
+      "voc": "wielorybie"
+    },
+    "plural": {
+      "nom": "wieloryby",
+      "gen": "wielorybów",
+      "dat": "wielorybom",
+      "acc": "wieloryby",
+      "ins": "wielorybami",
+      "loc": "wielorybach",
+      "voc": "wieloryby"
+    }
+  }
+}

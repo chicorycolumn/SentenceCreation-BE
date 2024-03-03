@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zamieszkać",
+    "verbalNoun": "zamieszkanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zamieszkawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zamieszka się"
+          },
+          "plural": {
+            "allPluralGenders": "zamieszka się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zamieszkam"
+          },
+          "plural": {
+            "allPluralGenders": "zamieszkamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zamieszkasz"
+          },
+          "plural": {
+            "allPluralGenders": "zamieszkacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zamieszka"
+          },
+          "plural": {
+            "allPluralGenders": "zamieszkają"
+          }
+        }
+      },
+      "imperative": "zamieszkaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zamieszkano"
+          },
+          "plural": {
+            "allPluralGenders": "zamieszkano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zamieszkałem",
+            "f": "zamieszkałam"
+          },
+          "plural": {
+            "virile": "zamieszkaliśmy",
+            "nonvirile": "zamieszkałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zamieszkałeś",
+            "f": "zamieszkałaś"
+          },
+          "plural": {
+            "virile": "zamieszkaliście",
+            "nonvirile": "zamieszkałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zamieszkał",
+            "f": "zamieszkała",
+            "n": "zamieszkało"
+          },
+          "plural": {
+            "virile": "zamieszkali",
+            "nonvirile": "zamieszkały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

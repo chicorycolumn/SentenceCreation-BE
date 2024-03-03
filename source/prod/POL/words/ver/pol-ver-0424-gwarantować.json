@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "gwarantować",
+    "verbalNoun": "gwarantowanie",
+    "activeAdjectival": "gwarantujący",
+    "passiveAdjectival": "gwarantowany",
+    "contemporaryAdverbial": "gwarantując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "gwarantuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "gwarantowano"
+          },
+          "plural": {
+            "allPluralGenders": "gwarantowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "gwarantowałem",
+            "f": "gwarantowałam"
+          },
+          "plural": {
+            "virile": "gwarantowaliśmy",
+            "nonvirile": "gwarantowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "gwarantowałeś",
+            "f": "gwarantowałaś"
+          },
+          "plural": {
+            "virile": "gwarantowaliście",
+            "nonvirile": "gwarantowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "gwarantował",
+            "f": "gwarantowała",
+            "n": "gwarantowało"
+          },
+          "plural": {
+            "virile": "gwarantowali",
+            "nonvirile": "gwarantowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "gwarantuje się"
+          },
+          "plural": {
+            "allPluralGenders": "gwarantuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "gwarantuję"
+          },
+          "plural": {
+            "allPluralGenders": "gwarantujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "gwarantujesz"
+          },
+          "plural": {
+            "allPluralGenders": "gwarantujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "gwarantuje"
+          },
+          "plural": {
+            "allPluralGenders": "gwarantują"
+          }
+        }
+      }
+    }
+  }
+}

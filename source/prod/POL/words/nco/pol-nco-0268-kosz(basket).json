@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kosz",
+      "gen": "kosza",
+      "dat": "koszowi",
+      "acc": "kosz",
+      "ins": "koszem",
+      "loc": "koszu",
+      "voc": "koszu"
+    },
+    "plural": {
+      "nom": "kosze",
+      "gen": [
+        "koszy",
+        "koszów"
+      ],
+      "dat": "koszom",
+      "acc": "kosze",
+      "ins": "koszami",
+      "loc": "koszach",
+      "voc": "kosze"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dostarczać",
+    "verbalNoun": "dostarczanie",
+    "activeAdjectival": "dostarczający",
+    "passiveAdjectival": "dostarczany",
+    "contemporaryAdverbial": "dostarczając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dostarczaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dostarczano"
+          },
+          "plural": {
+            "allPluralGenders": "dostarczano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dostarczałem",
+            "f": "dostarczałam"
+          },
+          "plural": {
+            "virile": "dostarczaliśmy",
+            "nonvirile": "dostarczałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dostarczałeś",
+            "f": "dostarczałaś"
+          },
+          "plural": {
+            "virile": "dostarczaliście",
+            "nonvirile": "dostarczałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dostarczał",
+            "f": "dostarczała",
+            "n": "dostarczało"
+          },
+          "plural": {
+            "virile": "dostarczali",
+            "nonvirile": "dostarczały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dostarcza się"
+          },
+          "plural": {
+            "allPluralGenders": "dostarcza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dostarczam"
+          },
+          "plural": {
+            "allPluralGenders": "dostarczamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dostarczasz"
+          },
+          "plural": {
+            "allPluralGenders": "dostarczacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dostarcza"
+          },
+          "plural": {
+            "allPluralGenders": "dostarczają"
+          }
+        }
+      }
+    }
+  }
+}

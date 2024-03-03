@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "gigantycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "gigantyczny",
+          "gen": "gigantycznego",
+          "dat": "gigantycznemu",
+          "acc": "gigantycznego",
+          "ins": "gigantycznym",
+          "loc": "gigantycznym"
+        },
+        "m3": {
+          "nom": "gigantyczny",
+          "gen": "gigantycznego",
+          "dat": "gigantycznemu",
+          "acc": "gigantyczny",
+          "ins": "gigantycznym",
+          "loc": "gigantycznym"
+        },
+        "f": {
+          "nom": "gigantyczna",
+          "gen": "gigantycznej",
+          "dat": "gigantycznej",
+          "acc": "gigantyczną",
+          "ins": "gigantyczną",
+          "loc": "gigantycznej"
+        },
+        "n": {
+          "nom": "gigantyczne",
+          "gen": "gigantycznego",
+          "dat": "gigantycznemu",
+          "acc": "gigantyczne",
+          "ins": "gigantycznym",
+          "loc": "gigantycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "gigantyczni",
+          "gen": "gigantycznych",
+          "dat": "gigantycznym",
+          "acc": "gigantycznych",
+          "ins": "gigantycznymi",
+          "loc": "gigantycznych"
+        },
+        "nonvirile": {
+          "nom": "gigantyczne",
+          "gen": "gigantycznych",
+          "dat": "gigantycznym",
+          "acc": "gigantyczne",
+          "ins": "gigantycznymi",
+          "loc": "gigantycznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej gigantyczny",
+          "gen": "bardziej gigantycznego",
+          "dat": "bardziej gigantycznemu",
+          "acc": "bardziej gigantycznego",
+          "ins": "bardziej gigantycznym",
+          "loc": "bardziej gigantycznym"
+        },
+        "m3": {
+          "nom": "bardziej gigantyczny",
+          "gen": "bardziej gigantycznego",
+          "dat": "bardziej gigantycznemu",
+          "acc": "bardziej gigantyczny",
+          "ins": "bardziej gigantycznym",
+          "loc": "bardziej gigantycznym"
+        },
+        "f": {
+          "nom": "bardziej gigantyczna",
+          "gen": "bardziej gigantycznej",
+          "dat": "bardziej gigantycznej",
+          "acc": "bardziej gigantyczną",
+          "ins": "bardziej gigantyczną",
+          "loc": "bardziej gigantycznej"
+        },
+        "n": {
+          "nom": "bardziej gigantyczne",
+          "gen": "bardziej gigantycznego",
+          "dat": "bardziej gigantycznemu",
+          "acc": "bardziej gigantyczne",
+          "ins": "bardziej gigantycznym",
+          "loc": "bardziej gigantycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej gigantyczni",
+          "gen": "bardziej gigantycznych",
+          "dat": "bardziej gigantycznym",
+          "acc": "bardziej gigantycznych",
+          "ins": "bardziej gigantycznymi",
+          "loc": "bardziej gigantycznych"
+        },
+        "nonvirile": {
+          "nom": "bardziej gigantyczne",
+          "gen": "bardziej gigantycznych",
+          "dat": "bardziej gigantycznym",
+          "acc": "bardziej gigantyczne",
+          "ins": "bardziej gigantycznymi",
+          "loc": "bardziej gigantycznych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej gigantyczny",
+          "gen": "najbardziej gigantycznego",
+          "dat": "najbardziej gigantycznemu",
+          "acc": "najbardziej gigantycznego",
+          "ins": "najbardziej gigantycznym",
+          "loc": "najbardziej gigantycznym"
+        },
+        "m3": {
+          "nom": "najbardziej gigantyczny",
+          "gen": "najbardziej gigantycznego",
+          "dat": "najbardziej gigantycznemu",
+          "acc": "najbardziej gigantyczny",
+          "ins": "najbardziej gigantycznym",
+          "loc": "najbardziej gigantycznym"
+        },
+        "f": {
+          "nom": "najbardziej gigantyczna",
+          "gen": "najbardziej gigantycznej",
+          "dat": "najbardziej gigantycznej",
+          "acc": "najbardziej gigantyczną",
+          "ins": "najbardziej gigantyczną",
+          "loc": "najbardziej gigantycznej"
+        },
+        "n": {
+          "nom": "najbardziej gigantyczne",
+          "gen": "najbardziej gigantycznego",
+          "dat": "najbardziej gigantycznemu",
+          "acc": "najbardziej gigantyczne",
+          "ins": "najbardziej gigantycznym",
+          "loc": "najbardziej gigantycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej gigantyczni",
+          "gen": "najbardziej gigantycznych",
+          "dat": "najbardziej gigantycznym",
+          "acc": "najbardziej gigantycznych",
+          "ins": "najbardziej gigantycznymi",
+          "loc": "najbardziej gigantycznych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej gigantyczne",
+          "gen": "najbardziej gigantycznych",
+          "dat": "najbardziej gigantycznym",
+          "acc": "najbardziej gigantyczne",
+          "ins": "najbardziej gigantycznymi",
+          "loc": "najbardziej gigantycznych"
+        }
+      }
+    }
+  }
+}

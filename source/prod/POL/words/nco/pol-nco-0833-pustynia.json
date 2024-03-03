@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pustynia",
+      "gen": "pustyni",
+      "dat": "pustyni",
+      "acc": "pustynię",
+      "ins": "pustynią",
+      "loc": "pustyni",
+      "voc": "pustynio"
+    },
+    "plural": {
+      "nom": "pustynie",
+      "gen": "pustyń",
+      "dat": "pustyniom",
+      "acc": "pustynie",
+      "ins": "pustyniami",
+      "loc": "pustyniach",
+      "voc": "pustynie"
+    }
+  }
+}

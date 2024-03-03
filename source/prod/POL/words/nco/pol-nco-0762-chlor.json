@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "chlor",
+      "gen": "chloru",
+      "dat": "chlorowi",
+      "acc": "chlor",
+      "ins": "chlorem",
+      "loc": "chlorze",
+      "voc": "chlorze"
+    }
+  }
+}

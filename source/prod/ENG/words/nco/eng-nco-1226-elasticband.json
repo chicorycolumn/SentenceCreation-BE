@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "elastic band",
+      "gen": "elastic band's"
+    },
+    "plural": {
+      "nom": "elastic bands",
+      "gen": "elastic bands'"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "człowiek",
+      "gen": "człowieka",
+      "dat": "człowiekowi",
+      "acc": "człowieka",
+      "ins": "człowiekiem",
+      "loc": "człowieku",
+      "voc": [
+        "człowiecze",
+        "człowieku"
+      ]
+    },
+    "plural": {
+      "nom": "ludzie",
+      "gen": "ludzi",
+      "dat": "ludziom",
+      "acc": "ludzi",
+      "ins": "ludźmi",
+      "loc": "ludziach",
+      "voc": "ludzie"
+    }
+  }
+}

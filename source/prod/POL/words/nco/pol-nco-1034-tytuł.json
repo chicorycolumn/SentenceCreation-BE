@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "tytuł",
+      "gen": "tytułu",
+      "dat": "tytułowi",
+      "acc": "tytuł",
+      "ins": "tytułem",
+      "loc": "tytule",
+      "voc": "tytule"
+    },
+    "plural": {
+      "nom": "tytuły",
+      "gen": "tytułów",
+      "dat": "tytułom",
+      "acc": "tytuły",
+      "ins": "tytułami",
+      "loc": "tytułach",
+      "voc": "tytuły"
+    }
+  }
+}

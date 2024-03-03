@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "rodzinnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "rodzinny",
+          "gen": "rodzinnego",
+          "dat": "rodzinnemu",
+          "acc": "rodzinnego",
+          "ins": "rodzinnym",
+          "loc": "rodzinnym"
+        },
+        "m3": {
+          "nom": "rodzinny",
+          "gen": "rodzinnego",
+          "dat": "rodzinnemu",
+          "acc": "rodzinny",
+          "ins": "rodzinnym",
+          "loc": "rodzinnym"
+        },
+        "f": {
+          "nom": "rodzinna",
+          "gen": "rodzinnej",
+          "dat": "rodzinnej",
+          "acc": "rodzinną",
+          "ins": "rodzinną",
+          "loc": "rodzinnej"
+        },
+        "n": {
+          "nom": "rodzinne",
+          "gen": "rodzinnego",
+          "dat": "rodzinnemu",
+          "acc": "rodzinne",
+          "ins": "rodzinnym",
+          "loc": "rodzinnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "rodzinni",
+          "gen": "rodzinnych",
+          "dat": "rodzinnym",
+          "acc": "rodzinnych",
+          "ins": "rodzinnymi",
+          "loc": "rodzinnych"
+        },
+        "nonvirile": {
+          "nom": "rodzinne",
+          "gen": "rodzinnych",
+          "dat": "rodzinnym",
+          "acc": "rodzinne",
+          "ins": "rodzinnymi",
+          "loc": "rodzinnych"
+        }
+      }
+    }
+  }
+}

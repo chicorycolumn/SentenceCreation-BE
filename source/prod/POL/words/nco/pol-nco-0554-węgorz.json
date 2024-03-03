@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "węgorz",
+      "gen": "węgorza",
+      "dat": "węgorzowi",
+      "acc": "węgorza",
+      "ins": "węgorzem",
+      "loc": "węgorzu",
+      "voc": "węgorzu"
+    },
+    "plural": {
+      "nom": "węgorze",
+      "gen": [
+        "węgorzy",
+        "węgorzów"
+      ],
+      "dat": "węgorzom",
+      "acc": "węgorze",
+      "ins": "węgorzami",
+      "loc": "węgorzach",
+      "voc": "węgorze"
+    }
+  }
+}

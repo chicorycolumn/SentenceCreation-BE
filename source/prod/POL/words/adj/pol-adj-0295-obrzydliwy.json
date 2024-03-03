@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "obrzydliwie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "obrzydliwy",
+          "gen": "obrzydliwego",
+          "dat": "obrzydliwemu",
+          "acc": "obrzydliwego",
+          "ins": "obrzydliwym",
+          "loc": "obrzydliwym"
+        },
+        "m3": {
+          "nom": "obrzydliwy",
+          "gen": "obrzydliwego",
+          "dat": "obrzydliwemu",
+          "acc": "obrzydliwy",
+          "ins": "obrzydliwym",
+          "loc": "obrzydliwym"
+        },
+        "f": {
+          "nom": "obrzydliwa",
+          "gen": "obrzydliwej",
+          "dat": "obrzydliwej",
+          "acc": "obrzydliwą",
+          "ins": "obrzydliwą",
+          "loc": "obrzydliwej"
+        },
+        "n": {
+          "nom": "obrzydliwe",
+          "gen": "obrzydliwego",
+          "dat": "obrzydliwemu",
+          "acc": "obrzydliwe",
+          "ins": "obrzydliwym",
+          "loc": "obrzydliwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "obrzydliwi",
+          "gen": "obrzydliwych",
+          "dat": "obrzydliwym",
+          "acc": "obrzydliwych",
+          "ins": "obrzydliwymi",
+          "loc": "obrzydliwych"
+        },
+        "nonvirile": {
+          "nom": "obrzydliwe",
+          "gen": "obrzydliwych",
+          "dat": "obrzydliwym",
+          "acc": "obrzydliwe",
+          "ins": "obrzydliwymi",
+          "loc": "obrzydliwych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "obrzydliwszy",
+          "gen": "obrzydliwszego",
+          "dat": "obrzydliwszemu",
+          "acc": "obrzydliwszego",
+          "ins": "obrzydliwszym",
+          "loc": "obrzydliwszym"
+        },
+        "m3": {
+          "nom": "obrzydliwszy",
+          "gen": "obrzydliwszego",
+          "dat": "obrzydliwszemu",
+          "acc": "obrzydliwszy",
+          "ins": "obrzydliwszym",
+          "loc": "obrzydliwszym"
+        },
+        "f": {
+          "nom": "obrzydliwsza",
+          "gen": "obrzydliwszej",
+          "dat": "obrzydliwszej",
+          "acc": "obrzydliwszą",
+          "ins": "obrzydliwszą",
+          "loc": "obrzydliwszej"
+        },
+        "n": {
+          "nom": "obrzydliwsze",
+          "gen": "obrzydliwszego",
+          "dat": "obrzydliwszemu",
+          "acc": "obrzydliwsze",
+          "ins": "obrzydliwszym",
+          "loc": "obrzydliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "obrzydliwsi",
+          "gen": "obrzydliwszych",
+          "dat": "obrzydliwszym",
+          "acc": "obrzydliwszych",
+          "ins": "obrzydliwszymi",
+          "loc": "obrzydliwszych"
+        },
+        "nonvirile": {
+          "nom": "obrzydliwsze",
+          "gen": "obrzydliwszych",
+          "dat": "obrzydliwszym",
+          "acc": "obrzydliwsze",
+          "ins": "obrzydliwszymi",
+          "loc": "obrzydliwszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najobrzydliwszy",
+          "gen": "najobrzydliwszego",
+          "dat": "najobrzydliwszemu",
+          "acc": "najobrzydliwszego",
+          "ins": "najobrzydliwszym",
+          "loc": "najobrzydliwszym"
+        },
+        "m3": {
+          "nom": "najobrzydliwszy",
+          "gen": "najobrzydliwszego",
+          "dat": "najobrzydliwszemu",
+          "acc": "najobrzydliwszy",
+          "ins": "najobrzydliwszym",
+          "loc": "najobrzydliwszym"
+        },
+        "f": {
+          "nom": "najobrzydliwsza",
+          "gen": "najobrzydliwszej",
+          "dat": "najobrzydliwszej",
+          "acc": "najobrzydliwszą",
+          "ins": "najobrzydliwszą",
+          "loc": "najobrzydliwszej"
+        },
+        "n": {
+          "nom": "najobrzydliwsze",
+          "gen": "najobrzydliwszego",
+          "dat": "najobrzydliwszemu",
+          "acc": "najobrzydliwsze",
+          "ins": "najobrzydliwszym",
+          "loc": "najobrzydliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najobrzydliwsi",
+          "gen": "najobrzydliwszych",
+          "dat": "najobrzydliwszym",
+          "acc": "najobrzydliwszych",
+          "ins": "najobrzydliwszymi",
+          "loc": "najobrzydliwszych"
+        },
+        "nonvirile": {
+          "nom": "najobrzydliwsze",
+          "gen": "najobrzydliwszych",
+          "dat": "najobrzydliwszym",
+          "acc": "najobrzydliwsze",
+          "ins": "najobrzydliwszymi",
+          "loc": "najobrzydliwszych"
+        }
+      }
+    }
+  }
+}

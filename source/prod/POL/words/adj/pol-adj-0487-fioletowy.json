@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "fioletowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "fioletowy",
+          "gen": "fioletowego",
+          "dat": "fioletowemu",
+          "acc": "fioletowego",
+          "ins": "fioletowym",
+          "loc": "fioletowym"
+        },
+        "m3": {
+          "nom": "fioletowy",
+          "gen": "fioletowego",
+          "dat": "fioletowemu",
+          "acc": "fioletowy",
+          "ins": "fioletowym",
+          "loc": "fioletowym"
+        },
+        "f": {
+          "nom": "fioletowa",
+          "gen": "fioletowej",
+          "dat": "fioletowej",
+          "acc": "fioletową",
+          "ins": "fioletową",
+          "loc": "fioletowej"
+        },
+        "n": {
+          "nom": "fioletowe",
+          "gen": "fioletowego",
+          "dat": "fioletowemu",
+          "acc": "fioletowe",
+          "ins": "fioletowym",
+          "loc": "fioletowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "fioletowi",
+          "gen": "fioletowych",
+          "dat": "fioletowym",
+          "acc": "fioletowych",
+          "ins": "fioletowymi",
+          "loc": "fioletowych"
+        },
+        "nonvirile": {
+          "nom": "fioletowe",
+          "gen": "fioletowych",
+          "dat": "fioletowym",
+          "acc": "fioletowe",
+          "ins": "fioletowymi",
+          "loc": "fioletowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej fioletowy",
+          "gen": "bardziej fioletowego",
+          "dat": "bardziej fioletowemu",
+          "acc": "bardziej fioletowego",
+          "ins": "bardziej fioletowym",
+          "loc": "bardziej fioletowym"
+        },
+        "m3": {
+          "nom": "bardziej fioletowy",
+          "gen": "bardziej fioletowego",
+          "dat": "bardziej fioletowemu",
+          "acc": "bardziej fioletowy",
+          "ins": "bardziej fioletowym",
+          "loc": "bardziej fioletowym"
+        },
+        "f": {
+          "nom": "bardziej fioletowa",
+          "gen": "bardziej fioletowej",
+          "dat": "bardziej fioletowej",
+          "acc": "bardziej fioletową",
+          "ins": "bardziej fioletową",
+          "loc": "bardziej fioletowej"
+        },
+        "n": {
+          "nom": "bardziej fioletowe",
+          "gen": "bardziej fioletowego",
+          "dat": "bardziej fioletowemu",
+          "acc": "bardziej fioletowe",
+          "ins": "bardziej fioletowym",
+          "loc": "bardziej fioletowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej fioletowi",
+          "gen": "bardziej fioletowych",
+          "dat": "bardziej fioletowym",
+          "acc": "bardziej fioletowych",
+          "ins": "bardziej fioletowymi",
+          "loc": "bardziej fioletowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej fioletowe",
+          "gen": "bardziej fioletowych",
+          "dat": "bardziej fioletowym",
+          "acc": "bardziej fioletowe",
+          "ins": "bardziej fioletowymi",
+          "loc": "bardziej fioletowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej fioletowy",
+          "gen": "najbardziej fioletowego",
+          "dat": "najbardziej fioletowemu",
+          "acc": "najbardziej fioletowego",
+          "ins": "najbardziej fioletowym",
+          "loc": "najbardziej fioletowym"
+        },
+        "m3": {
+          "nom": "najbardziej fioletowy",
+          "gen": "najbardziej fioletowego",
+          "dat": "najbardziej fioletowemu",
+          "acc": "najbardziej fioletowy",
+          "ins": "najbardziej fioletowym",
+          "loc": "najbardziej fioletowym"
+        },
+        "f": {
+          "nom": "najbardziej fioletowa",
+          "gen": "najbardziej fioletowej",
+          "dat": "najbardziej fioletowej",
+          "acc": "najbardziej fioletową",
+          "ins": "najbardziej fioletową",
+          "loc": "najbardziej fioletowej"
+        },
+        "n": {
+          "nom": "najbardziej fioletowe",
+          "gen": "najbardziej fioletowego",
+          "dat": "najbardziej fioletowemu",
+          "acc": "najbardziej fioletowe",
+          "ins": "najbardziej fioletowym",
+          "loc": "najbardziej fioletowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej fioletowi",
+          "gen": "najbardziej fioletowych",
+          "dat": "najbardziej fioletowym",
+          "acc": "najbardziej fioletowych",
+          "ins": "najbardziej fioletowymi",
+          "loc": "najbardziej fioletowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej fioletowe",
+          "gen": "najbardziej fioletowych",
+          "dat": "najbardziej fioletowym",
+          "acc": "najbardziej fioletowe",
+          "ins": "najbardziej fioletowymi",
+          "loc": "najbardziej fioletowych"
+        }
+      }
+    }
+  }
+}

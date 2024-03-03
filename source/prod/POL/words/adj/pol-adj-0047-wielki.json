@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "wielce",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "wielki",
+          "gen": "wielkiego",
+          "dat": "wielkiemu",
+          "acc": "wielkiego",
+          "ins": "wielkim",
+          "loc": "wielkim"
+        },
+        "m3": {
+          "nom": "wielki",
+          "gen": "wielkiego",
+          "dat": "wielkiemu",
+          "acc": "wielki",
+          "ins": "wielkim",
+          "loc": "wielkim"
+        },
+        "f": {
+          "nom": "wielka",
+          "gen": "wielkiej",
+          "dat": "wielkiej",
+          "acc": "wielką",
+          "ins": "wielką",
+          "loc": "wielkiej"
+        },
+        "n": {
+          "nom": "wielkie",
+          "gen": "wielkiego",
+          "dat": "wielkiemu",
+          "acc": "wielkie",
+          "ins": "wielkim",
+          "loc": "wielkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wielcy",
+          "gen": "wielkich",
+          "dat": "wielkim",
+          "acc": "wielkich",
+          "ins": "wielkimi",
+          "loc": "wielkich"
+        },
+        "nonvirile": {
+          "nom": "wielkie",
+          "gen": "wielkich",
+          "dat": "wielkim",
+          "acc": "wielkie",
+          "ins": "wielkimi",
+          "loc": "wielkich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "większy",
+          "gen": "większego",
+          "dat": "większemu",
+          "acc": "większego",
+          "ins": "większym",
+          "loc": "większym"
+        },
+        "m3": {
+          "nom": "większy",
+          "gen": "większego",
+          "dat": "większemu",
+          "acc": "większy",
+          "ins": "większym",
+          "loc": "większym"
+        },
+        "f": {
+          "nom": "większa",
+          "gen": "większej",
+          "dat": "większej",
+          "acc": "większą",
+          "ins": "większą",
+          "loc": "większej"
+        },
+        "n": {
+          "nom": "większe",
+          "gen": "większego",
+          "dat": "większemu",
+          "acc": "większe",
+          "ins": "większym",
+          "loc": "większym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "więksi",
+          "gen": "większych",
+          "dat": "większym",
+          "acc": "większych",
+          "ins": "większymi",
+          "loc": "większych"
+        },
+        "nonvirile": {
+          "nom": "większe",
+          "gen": "większych",
+          "dat": "większym",
+          "acc": "większe",
+          "ins": "większymi",
+          "loc": "większych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "największy",
+          "gen": "największego",
+          "dat": "największemu",
+          "acc": "największego",
+          "ins": "największym",
+          "loc": "największym"
+        },
+        "m3": {
+          "nom": "największy",
+          "gen": "największego",
+          "dat": "największemu",
+          "acc": "największy",
+          "ins": "największym",
+          "loc": "największym"
+        },
+        "f": {
+          "nom": "największa",
+          "gen": "największej",
+          "dat": "największej",
+          "acc": "największą",
+          "ins": "największą",
+          "loc": "największej"
+        },
+        "n": {
+          "nom": "największe",
+          "gen": "największego",
+          "dat": "największemu",
+          "acc": "największe",
+          "ins": "największym",
+          "loc": "największym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najwięksi",
+          "gen": "największych",
+          "dat": "największym",
+          "acc": "największych",
+          "ins": "największymi",
+          "loc": "największych"
+        },
+        "nonvirile": {
+          "nom": "największe",
+          "gen": "największych",
+          "dat": "największym",
+          "acc": "największe",
+          "ins": "największymi",
+          "loc": "największych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pismo",
+      "gen": "pisma",
+      "dat": "pismu",
+      "acc": "pismo",
+      "ins": "pismem",
+      "loc": "piśmie",
+      "voc": "pismo"
+    },
+    "plural": {
+      "nom": "pisma",
+      "gen": "pism",
+      "dat": "pismom",
+      "acc": "pisma",
+      "ins": "pismami",
+      "loc": "pismach",
+      "voc": "pisma"
+    }
+  }
+}

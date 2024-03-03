@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "niszczyć",
+    "verbalNoun": "niszczenie",
+    "activeAdjectival": "niszczący",
+    "passiveAdjectival": "niszczony",
+    "contemporaryAdverbial": "niszcząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "niszcz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "niszczono"
+          },
+          "plural": {
+            "allPluralGenders": "niszczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "niszczyłem",
+            "f": "niszczyłam"
+          },
+          "plural": {
+            "virile": "niszczyliśmy",
+            "nonvirile": "niszczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "niszczyłeś",
+            "f": "niszczyłaś"
+          },
+          "plural": {
+            "virile": "niszczyliście",
+            "nonvirile": "niszczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "niszczył",
+            "f": "niszczyła",
+            "n": "niszczyło"
+          },
+          "plural": {
+            "virile": "niszczyli",
+            "nonvirile": "niszczyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "niszczy się"
+          },
+          "plural": {
+            "allPluralGenders": "niszczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "niszczę"
+          },
+          "plural": {
+            "allPluralGenders": "niszczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "niszczysz"
+          },
+          "plural": {
+            "allPluralGenders": "niszczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "niszczy"
+          },
+          "plural": {
+            "allPluralGenders": "niszczą"
+          }
+        }
+      }
+    }
+  }
+}

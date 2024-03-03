@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "urzędowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "urzędowy",
+          "gen": "urzędowego",
+          "dat": "urzędowemu",
+          "acc": "urzędowego",
+          "ins": "urzędowym",
+          "loc": "urzędowym"
+        },
+        "m3": {
+          "nom": "urzędowy",
+          "gen": "urzędowego",
+          "dat": "urzędowemu",
+          "acc": "urzędowy",
+          "ins": "urzędowym",
+          "loc": "urzędowym"
+        },
+        "f": {
+          "nom": "urzędowa",
+          "gen": "urzędowej",
+          "dat": "urzędowej",
+          "acc": "urzędową",
+          "ins": "urzędową",
+          "loc": "urzędowej"
+        },
+        "n": {
+          "nom": "urzędowe",
+          "gen": "urzędowego",
+          "dat": "urzędowemu",
+          "acc": "urzędowe",
+          "ins": "urzędowym",
+          "loc": "urzędowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "urzędowi",
+          "gen": "urzędowych",
+          "dat": "urzędowym",
+          "acc": "urzędowych",
+          "ins": "urzędowymi",
+          "loc": "urzędowych"
+        },
+        "nonvirile": {
+          "nom": "urzędowe",
+          "gen": "urzędowych",
+          "dat": "urzędowym",
+          "acc": "urzędowe",
+          "ins": "urzędowymi",
+          "loc": "urzędowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej urzędowy",
+          "gen": "bardziej urzędowego",
+          "dat": "bardziej urzędowemu",
+          "acc": "bardziej urzędowego",
+          "ins": "bardziej urzędowym",
+          "loc": "bardziej urzędowym"
+        },
+        "m3": {
+          "nom": "bardziej urzędowy",
+          "gen": "bardziej urzędowego",
+          "dat": "bardziej urzędowemu",
+          "acc": "bardziej urzędowy",
+          "ins": "bardziej urzędowym",
+          "loc": "bardziej urzędowym"
+        },
+        "f": {
+          "nom": "bardziej urzędowa",
+          "gen": "bardziej urzędowej",
+          "dat": "bardziej urzędowej",
+          "acc": "bardziej urzędową",
+          "ins": "bardziej urzędową",
+          "loc": "bardziej urzędowej"
+        },
+        "n": {
+          "nom": "bardziej urzędowe",
+          "gen": "bardziej urzędowego",
+          "dat": "bardziej urzędowemu",
+          "acc": "bardziej urzędowe",
+          "ins": "bardziej urzędowym",
+          "loc": "bardziej urzędowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej urzędowi",
+          "gen": "bardziej urzędowych",
+          "dat": "bardziej urzędowym",
+          "acc": "bardziej urzędowych",
+          "ins": "bardziej urzędowymi",
+          "loc": "bardziej urzędowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej urzędowe",
+          "gen": "bardziej urzędowych",
+          "dat": "bardziej urzędowym",
+          "acc": "bardziej urzędowe",
+          "ins": "bardziej urzędowymi",
+          "loc": "bardziej urzędowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej urzędowy",
+          "gen": "najbardziej urzędowego",
+          "dat": "najbardziej urzędowemu",
+          "acc": "najbardziej urzędowego",
+          "ins": "najbardziej urzędowym",
+          "loc": "najbardziej urzędowym"
+        },
+        "m3": {
+          "nom": "najbardziej urzędowy",
+          "gen": "najbardziej urzędowego",
+          "dat": "najbardziej urzędowemu",
+          "acc": "najbardziej urzędowy",
+          "ins": "najbardziej urzędowym",
+          "loc": "najbardziej urzędowym"
+        },
+        "f": {
+          "nom": "najbardziej urzędowa",
+          "gen": "najbardziej urzędowej",
+          "dat": "najbardziej urzędowej",
+          "acc": "najbardziej urzędową",
+          "ins": "najbardziej urzędową",
+          "loc": "najbardziej urzędowej"
+        },
+        "n": {
+          "nom": "najbardziej urzędowe",
+          "gen": "najbardziej urzędowego",
+          "dat": "najbardziej urzędowemu",
+          "acc": "najbardziej urzędowe",
+          "ins": "najbardziej urzędowym",
+          "loc": "najbardziej urzędowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej urzędowi",
+          "gen": "najbardziej urzędowych",
+          "dat": "najbardziej urzędowym",
+          "acc": "najbardziej urzędowych",
+          "ins": "najbardziej urzędowymi",
+          "loc": "najbardziej urzędowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej urzędowe",
+          "gen": "najbardziej urzędowych",
+          "dat": "najbardziej urzędowym",
+          "acc": "najbardziej urzędowe",
+          "ins": "najbardziej urzędowymi",
+          "loc": "najbardziej urzędowych"
+        }
+      }
+    }
+  }
+}

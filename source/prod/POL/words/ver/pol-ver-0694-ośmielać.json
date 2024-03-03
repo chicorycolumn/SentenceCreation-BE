@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ośmielać",
+    "verbalNoun": "ośmielanie",
+    "activeAdjectival": "ośmielający",
+    "passiveAdjectival": "ośmielany",
+    "contemporaryAdverbial": "ośmielając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "ośmielaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ośmielano"
+          },
+          "plural": {
+            "allPluralGenders": "ośmielano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ośmielałem",
+            "f": "ośmielałam"
+          },
+          "plural": {
+            "virile": "ośmielaliśmy",
+            "nonvirile": "ośmielałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ośmielałeś",
+            "f": "ośmielałaś"
+          },
+          "plural": {
+            "virile": "ośmielaliście",
+            "nonvirile": "ośmielałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ośmielał",
+            "f": "ośmielała",
+            "n": "ośmielało"
+          },
+          "plural": {
+            "virile": "ośmielali",
+            "nonvirile": "ośmielały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ośmiela się"
+          },
+          "plural": {
+            "allPluralGenders": "ośmiela się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ośmielam"
+          },
+          "plural": {
+            "allPluralGenders": "ośmielamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ośmielasz"
+          },
+          "plural": {
+            "allPluralGenders": "ośmielacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ośmiela"
+          },
+          "plural": {
+            "allPluralGenders": "ośmielają"
+          }
+        }
+      }
+    }
+  }
+}

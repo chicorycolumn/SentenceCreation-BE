@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "biegać",
+    "verbalNoun": "bieganie",
+    "activeAdjectival": "biegający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "biegając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "biegaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "biegano"
+          },
+          "plural": {
+            "allPluralGenders": "biegano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "biegałem",
+            "f": "biegałam"
+          },
+          "plural": {
+            "virile": "biegaliśmy",
+            "nonvirile": "biegałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "biegałeś",
+            "f": "biegałaś"
+          },
+          "plural": {
+            "virile": "biegaliście",
+            "nonvirile": "biegałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "biegał",
+            "f": "biegała",
+            "n": "biegało"
+          },
+          "plural": {
+            "virile": "biegali",
+            "nonvirile": "biegały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "biega się"
+          },
+          "plural": {
+            "allPluralGenders": "biega się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "biegam"
+          },
+          "plural": {
+            "allPluralGenders": "biegamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "biegasz"
+          },
+          "plural": {
+            "allPluralGenders": "biegacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "biega"
+          },
+          "plural": {
+            "allPluralGenders": "biegają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ciąć",
+    "verbalNoun": "cięcie",
+    "activeAdjectival": "tnący",
+    "passiveAdjectival": "cięty",
+    "contemporaryAdverbial": "tnąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "tnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "cięto"
+          },
+          "plural": {
+            "allPluralGenders": "cięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ciąłem",
+            "f": "cięłam"
+          },
+          "plural": {
+            "virile": "cięliśmy",
+            "nonvirile": "cięłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ciąłeś",
+            "f": "cięłaś"
+          },
+          "plural": {
+            "virile": "cięliście",
+            "nonvirile": "cięłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ciął",
+            "f": "cięła",
+            "n": "cięło"
+          },
+          "plural": {
+            "virile": "cięli",
+            "nonvirile": "cięły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "tnie się"
+          },
+          "plural": {
+            "allPluralGenders": "tnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "tnę"
+          },
+          "plural": {
+            "allPluralGenders": "tniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "tniesz"
+          },
+          "plural": {
+            "allPluralGenders": "tniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "tnie"
+          },
+          "plural": {
+            "allPluralGenders": "tną"
+          }
+        }
+      }
+    }
+  }
+}

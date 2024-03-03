@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "rzadko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "rzadki",
+          "gen": "rzadkiego",
+          "dat": "rzadkiemu",
+          "acc": "rzadkiego",
+          "ins": "rzadkim",
+          "loc": "rzadkim"
+        },
+        "m3": {
+          "nom": "rzadki",
+          "gen": "rzadkiego",
+          "dat": "rzadkiemu",
+          "acc": "rzadki",
+          "ins": "rzadkim",
+          "loc": "rzadkim"
+        },
+        "f": {
+          "nom": "rzadka",
+          "gen": "rzadkiej",
+          "dat": "rzadkiej",
+          "acc": "rzadką",
+          "ins": "rzadką",
+          "loc": "rzadkiej"
+        },
+        "n": {
+          "nom": "rzadkie",
+          "gen": "rzadkiego",
+          "dat": "rzadkiemu",
+          "acc": "rzadkie",
+          "ins": "rzadkim",
+          "loc": "rzadkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "rzadcy",
+          "gen": "rzadkich",
+          "dat": "rzadkim",
+          "acc": "rzadkich",
+          "ins": "rzadkimi",
+          "loc": "rzadkich"
+        },
+        "nonvirile": {
+          "nom": "rzadkie",
+          "gen": "rzadkich",
+          "dat": "rzadkim",
+          "acc": "rzadkie",
+          "ins": "rzadkimi",
+          "loc": "rzadkich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "rzadszy",
+          "gen": "rzadszego",
+          "dat": "rzadszemu",
+          "acc": "rzadszego",
+          "ins": "rzadszym",
+          "loc": "rzadszym"
+        },
+        "m3": {
+          "nom": "rzadszy",
+          "gen": "rzadszego",
+          "dat": "rzadszemu",
+          "acc": "rzadszy",
+          "ins": "rzadszym",
+          "loc": "rzadszym"
+        },
+        "f": {
+          "nom": "rzadsza",
+          "gen": "rzadszej",
+          "dat": "rzadszej",
+          "acc": "rzadszą",
+          "ins": "rzadszą",
+          "loc": "rzadszej"
+        },
+        "n": {
+          "nom": "rzadsze",
+          "gen": "rzadszego",
+          "dat": "rzadszemu",
+          "acc": "rzadsze",
+          "ins": "rzadszym",
+          "loc": "rzadszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "rzadsi",
+          "gen": "rzadszych",
+          "dat": "rzadszym",
+          "acc": "rzadszych",
+          "ins": "rzadszymi",
+          "loc": "rzadszych"
+        },
+        "nonvirile": {
+          "nom": "rzadsze",
+          "gen": "rzadszych",
+          "dat": "rzadszym",
+          "acc": "rzadsze",
+          "ins": "rzadszymi",
+          "loc": "rzadszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najrzadszy",
+          "gen": "najrzadszego",
+          "dat": "najrzadszemu",
+          "acc": "najrzadszego",
+          "ins": "najrzadszym",
+          "loc": "najrzadszym"
+        },
+        "m3": {
+          "nom": "najrzadszy",
+          "gen": "najrzadszego",
+          "dat": "najrzadszemu",
+          "acc": "najrzadszy",
+          "ins": "najrzadszym",
+          "loc": "najrzadszym"
+        },
+        "f": {
+          "nom": "najrzadsza",
+          "gen": "najrzadszej",
+          "dat": "najrzadszej",
+          "acc": "najrzadszą",
+          "ins": "najrzadszą",
+          "loc": "najrzadszej"
+        },
+        "n": {
+          "nom": "najrzadsze",
+          "gen": "najrzadszego",
+          "dat": "najrzadszemu",
+          "acc": "najrzadsze",
+          "ins": "najrzadszym",
+          "loc": "najrzadszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najrzadsi",
+          "gen": "najrzadszych",
+          "dat": "najrzadszym",
+          "acc": "najrzadszych",
+          "ins": "najrzadszymi",
+          "loc": "najrzadszych"
+        },
+        "nonvirile": {
+          "nom": "najrzadsze",
+          "gen": "najrzadszych",
+          "dat": "najrzadszym",
+          "acc": "najrzadsze",
+          "ins": "najrzadszymi",
+          "loc": "najrzadszych"
+        }
+      }
+    }
+  }
+}

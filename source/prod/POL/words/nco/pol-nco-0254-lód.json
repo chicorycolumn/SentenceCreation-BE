@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lód",
+      "gen": "lodu",
+      "dat": "lodowi",
+      "acc": "lód",
+      "ins": "lodem",
+      "loc": "lodzie",
+      "voc": "lodzie"
+    },
+    "plural": {
+      "nom": "lody",
+      "gen": "lodów",
+      "dat": "lodom",
+      "acc": "lody",
+      "ins": "lodami",
+      "loc": "lodach",
+      "voc": "lody"
+    }
+  }
+}

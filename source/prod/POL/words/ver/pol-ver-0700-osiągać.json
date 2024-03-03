@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "osiągać",
+    "verbalNoun": "osiąganie",
+    "activeAdjectival": "osiągający",
+    "passiveAdjectival": "osiągany",
+    "contemporaryAdverbial": "osiągając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "osiągaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "osiągano"
+          },
+          "plural": {
+            "allPluralGenders": "osiągano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "osiągałem",
+            "f": "osiągałam"
+          },
+          "plural": {
+            "virile": "osiągaliśmy",
+            "nonvirile": "osiągałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "osiągałeś",
+            "f": "osiągałaś"
+          },
+          "plural": {
+            "virile": "osiągaliście",
+            "nonvirile": "osiągałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "osiągał",
+            "f": "osiągała",
+            "n": "osiągało"
+          },
+          "plural": {
+            "virile": "osiągali",
+            "nonvirile": "osiągały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "osiąga się"
+          },
+          "plural": {
+            "allPluralGenders": "osiąga się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "osiągam"
+          },
+          "plural": {
+            "allPluralGenders": "osiągamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "osiągasz"
+          },
+          "plural": {
+            "allPluralGenders": "osiągacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "osiąga"
+          },
+          "plural": {
+            "allPluralGenders": "osiągają"
+          }
+        }
+      }
+    }
+  }
+}

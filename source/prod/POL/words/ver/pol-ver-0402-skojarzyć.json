@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "skojarzyć",
+    "verbalNoun": "skojarzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "skojarzony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "skojarzywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "skojarzy się"
+          },
+          "plural": {
+            "allPluralGenders": "skojarzy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "skojarzę"
+          },
+          "plural": {
+            "allPluralGenders": "skojarzymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "skojarzysz"
+          },
+          "plural": {
+            "allPluralGenders": "skojarzycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "skojarzy"
+          },
+          "plural": {
+            "allPluralGenders": "skojarzą"
+          }
+        }
+      },
+      "imperative": "skojarz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "skojarzono"
+          },
+          "plural": {
+            "allPluralGenders": "skojarzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "skojarzyłem",
+            "f": "skojarzyłam"
+          },
+          "plural": {
+            "virile": "skojarzyliśmy",
+            "nonvirile": "skojarzyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "skojarzyłeś",
+            "f": "skojarzyłaś"
+          },
+          "plural": {
+            "virile": "skojarzyliście",
+            "nonvirile": "skojarzyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "skojarzył",
+            "f": "skojarzyła",
+            "n": "skojarzyło"
+          },
+          "plural": {
+            "virile": "skojarzyli",
+            "nonvirile": "skojarzyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

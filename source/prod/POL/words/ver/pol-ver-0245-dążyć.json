@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dążyć",
+    "verbalNoun": "dążenie",
+    "activeAdjectival": "dążący",
+    "passiveAdjectival": "dążony",
+    "contemporaryAdverbial": "dążąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dąż",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dążono"
+          },
+          "plural": {
+            "allPluralGenders": "dążono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dążyłem",
+            "f": "dążyłam"
+          },
+          "plural": {
+            "virile": "dążyliśmy",
+            "nonvirile": "dążyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dążyłeś",
+            "f": "dążyłaś"
+          },
+          "plural": {
+            "virile": "dążyliście",
+            "nonvirile": "dążyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dążył",
+            "f": "dążyła",
+            "n": "dążyło"
+          },
+          "plural": {
+            "virile": "dążyli",
+            "nonvirile": "dążyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dąży się"
+          },
+          "plural": {
+            "allPluralGenders": "dąży się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dążę"
+          },
+          "plural": {
+            "allPluralGenders": "dążymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dążysz"
+          },
+          "plural": {
+            "allPluralGenders": "dążycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dąży"
+          },
+          "plural": {
+            "allPluralGenders": "dążą"
+          }
+        }
+      }
+    }
+  }
+}

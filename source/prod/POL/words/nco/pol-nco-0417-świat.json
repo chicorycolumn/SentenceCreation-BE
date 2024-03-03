@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "świat",
+      "gen": "świata",
+      "dat": "światu",
+      "acc": "świat",
+      "ins": "światem",
+      "loc": "świecie",
+      "voc": "świecie"
+    },
+    "plural": {
+      "nom": "światy",
+      "gen": "światów",
+      "dat": "światom",
+      "acc": "światy",
+      "ins": "światami",
+      "loc": "światach",
+      "voc": "światy"
+    }
+  }
+}

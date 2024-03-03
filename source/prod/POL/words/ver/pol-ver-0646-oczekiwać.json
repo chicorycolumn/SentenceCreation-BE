@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oczekiwać",
+    "verbalNoun": "oczekiwanie",
+    "activeAdjectival": "oczekujący",
+    "passiveAdjectival": "oczekiwany",
+    "contemporaryAdverbial": "oczekując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "oczekuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oczekiwano"
+          },
+          "plural": {
+            "allPluralGenders": "oczekiwano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oczekiwałem",
+            "f": "oczekiwałam"
+          },
+          "plural": {
+            "virile": "oczekiwaliśmy",
+            "nonvirile": "oczekiwałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oczekiwałeś",
+            "f": "oczekiwałaś"
+          },
+          "plural": {
+            "virile": "oczekiwaliście",
+            "nonvirile": "oczekiwałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oczekiwał",
+            "f": "oczekiwała",
+            "n": "oczekiwało"
+          },
+          "plural": {
+            "virile": "oczekiwali",
+            "nonvirile": "oczekiwały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oczekuje się"
+          },
+          "plural": {
+            "allPluralGenders": "oczekuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oczekuję"
+          },
+          "plural": {
+            "allPluralGenders": "oczekujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oczekujesz"
+          },
+          "plural": {
+            "allPluralGenders": "oczekujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "oczekuje"
+          },
+          "plural": {
+            "allPluralGenders": "oczekują"
+          }
+        }
+      }
+    }
+  }
+}

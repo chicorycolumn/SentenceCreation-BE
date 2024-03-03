@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "city centre",
+      "gen": "city centre's"
+    },
+    "plural": {
+      "nom": "city centres",
+      "gen": "city centres'"
+    }
+  }
+}

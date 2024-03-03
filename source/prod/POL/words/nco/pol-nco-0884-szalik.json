@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "szalik",
+      "gen": "szalika",
+      "dat": "szalikowi",
+      "acc": "szalik",
+      "ins": "szalikiem",
+      "loc": "szaliku",
+      "voc": "szaliku"
+    },
+    "plural": {
+      "nom": "szaliki",
+      "gen": "szalików",
+      "dat": "szalikom",
+      "acc": "szaliki",
+      "ins": "szalikami",
+      "loc": "szalikach",
+      "voc": "szaliki"
+    }
+  }
+}

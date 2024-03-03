@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wilk",
+      "gen": "wilka",
+      "dat": "wilkowi",
+      "acc": "wilka",
+      "ins": "wilkiem",
+      "loc": "wilku",
+      "voc": "wilku"
+    },
+    "plural": {
+      "nom": "wilki",
+      "gen": "wilków",
+      "dat": "wilkom",
+      "acc": "wilki",
+      "ins": "wilkami",
+      "loc": "wilkach",
+      "voc": "wilki"
+    }
+  }
+}

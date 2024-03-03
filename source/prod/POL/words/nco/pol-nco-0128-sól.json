@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sól",
+      "gen": "soli",
+      "dat": "soli",
+      "acc": "sól",
+      "ins": "solą",
+      "loc": "soli",
+      "voc": "soli"
+    },
+    "plural": {
+      "nom": "sole",
+      "gen": "soli",
+      "dat": "solom",
+      "acc": "sole",
+      "ins": "solami",
+      "loc": "solach",
+      "voc": "sole"
+    }
+  }
+}

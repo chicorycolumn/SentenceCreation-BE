@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wojna",
+      "gen": "wojny",
+      "dat": "wojnie",
+      "acc": "wojnę",
+      "ins": "wojną",
+      "loc": "wojnie",
+      "voc": "wojno"
+    },
+    "plural": {
+      "nom": "wojny",
+      "gen": "wojen",
+      "dat": "wojnom",
+      "acc": "wojny",
+      "ins": "wojnami",
+      "loc": "wojnach",
+      "voc": "wojny"
+    }
+  }
+}

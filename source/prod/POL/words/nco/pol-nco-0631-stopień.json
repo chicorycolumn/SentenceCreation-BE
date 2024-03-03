@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "stopień",
+      "gen": "stopnia",
+      "dat": "stopniowi",
+      "acc": "stopień",
+      "ins": "stopniem",
+      "loc": "stopniu",
+      "voc": "stopniu"
+    },
+    "plural": {
+      "nom": "stopnie",
+      "gen": "stopni",
+      "dat": "stopniom",
+      "acc": "stopnie",
+      "ins": "stopniami",
+      "loc": "stopniach",
+      "voc": "stopnie"
+    }
+  }
+}

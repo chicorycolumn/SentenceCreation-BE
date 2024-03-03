@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "polować",
+    "verbalNoun": "polowanie",
+    "activeAdjectival": "polujący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "polując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "poluj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "polowano"
+          },
+          "plural": {
+            "allPluralGenders": "polowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "polowałem",
+            "f": "polowałam"
+          },
+          "plural": {
+            "virile": "polowaliśmy",
+            "nonvirile": "polowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "polowałeś",
+            "f": "polowałaś"
+          },
+          "plural": {
+            "virile": "polowaliście",
+            "nonvirile": "polowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "polował",
+            "f": "polowała",
+            "n": "polowało"
+          },
+          "plural": {
+            "virile": "polowali",
+            "nonvirile": "polowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poluje się"
+          },
+          "plural": {
+            "allPluralGenders": "poluje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "poluję"
+          },
+          "plural": {
+            "allPluralGenders": "polujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "polujesz"
+          },
+          "plural": {
+            "allPluralGenders": "polujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "poluje"
+          },
+          "plural": {
+            "allPluralGenders": "polują"
+          }
+        }
+      }
+    }
+  }
+}

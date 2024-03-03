@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przestraszać",
+    "verbalNoun": "przestraszanie",
+    "activeAdjectival": "przestraszający",
+    "passiveAdjectival": "przestraszany",
+    "contemporaryAdverbial": "przestraszając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przestraszaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przestraszano"
+          },
+          "plural": {
+            "allPluralGenders": "przestraszano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przestraszałem",
+            "f": "przestraszałam"
+          },
+          "plural": {
+            "virile": "przestraszaliśmy",
+            "nonvirile": "przestraszałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przestraszałeś",
+            "f": "przestraszałaś"
+          },
+          "plural": {
+            "virile": "przestraszaliście",
+            "nonvirile": "przestraszałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przestraszał",
+            "f": "przestraszała",
+            "n": "przestraszało"
+          },
+          "plural": {
+            "virile": "przestraszali",
+            "nonvirile": "przestraszały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przestrasza się"
+          },
+          "plural": {
+            "allPluralGenders": "przestrasza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przestraszam"
+          },
+          "plural": {
+            "allPluralGenders": "przestraszamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przestraszasz"
+          },
+          "plural": {
+            "allPluralGenders": "przestraszacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przestrasza"
+          },
+          "plural": {
+            "allPluralGenders": "przestraszają"
+          }
+        }
+      }
+    }
+  }
+}

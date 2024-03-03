@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "spakować",
+    "verbalNoun": "spakowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "spakowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "spakowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "spakuje się"
+          },
+          "plural": {
+            "allPluralGenders": "spakuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "spakuję"
+          },
+          "plural": {
+            "allPluralGenders": "spakujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "spakujesz"
+          },
+          "plural": {
+            "allPluralGenders": "spakujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "spakuje"
+          },
+          "plural": {
+            "allPluralGenders": "spakują"
+          }
+        }
+      },
+      "imperative": "spakuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "spakowano"
+          },
+          "plural": {
+            "allPluralGenders": "spakowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "spakowałem",
+            "f": "spakowałam"
+          },
+          "plural": {
+            "virile": "spakowaliśmy",
+            "nonvirile": "spakowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "spakowałeś",
+            "f": "spakowałaś"
+          },
+          "plural": {
+            "virile": "spakowaliście",
+            "nonvirile": "spakowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "spakował",
+            "f": "spakowała",
+            "n": "spakowało"
+          },
+          "plural": {
+            "virile": "spakowali",
+            "nonvirile": "spakowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

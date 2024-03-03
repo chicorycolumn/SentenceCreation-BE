@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "znakomicie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "znakomity",
+          "gen": "znakomitego",
+          "dat": "znakomitemu",
+          "acc": "znakomitego",
+          "ins": "znakomitym",
+          "loc": "znakomitym"
+        },
+        "m3": {
+          "nom": "znakomity",
+          "gen": "znakomitego",
+          "dat": "znakomitemu",
+          "acc": "znakomity",
+          "ins": "znakomitym",
+          "loc": "znakomitym"
+        },
+        "f": {
+          "nom": "znakomita",
+          "gen": "znakomitej",
+          "dat": "znakomitej",
+          "acc": "znakomitą",
+          "ins": "znakomitą",
+          "loc": "znakomitej"
+        },
+        "n": {
+          "nom": "znakomite",
+          "gen": "znakomitego",
+          "dat": "znakomitemu",
+          "acc": "znakomite",
+          "ins": "znakomitym",
+          "loc": "znakomitym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "znakomici",
+          "gen": "znakomitych",
+          "dat": "znakomitym",
+          "acc": "znakomitych",
+          "ins": "znakomitymi",
+          "loc": "znakomitych"
+        },
+        "nonvirile": {
+          "nom": "znakomite",
+          "gen": "znakomitych",
+          "dat": "znakomitym",
+          "acc": "znakomite",
+          "ins": "znakomitymi",
+          "loc": "znakomitych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "znakomitszy",
+          "gen": "znakomitszego",
+          "dat": "znakomitszemu",
+          "acc": "znakomitszego",
+          "ins": "znakomitszym",
+          "loc": "znakomitszym"
+        },
+        "m3": {
+          "nom": "znakomitszy",
+          "gen": "znakomitszego",
+          "dat": "znakomitszemu",
+          "acc": "znakomitszy",
+          "ins": "znakomitszym",
+          "loc": "znakomitszym"
+        },
+        "f": {
+          "nom": "znakomitsza",
+          "gen": "znakomitszej",
+          "dat": "znakomitszej",
+          "acc": "znakomitszą",
+          "ins": "znakomitszą",
+          "loc": "znakomitszej"
+        },
+        "n": {
+          "nom": "znakomitsze",
+          "gen": "znakomitszego",
+          "dat": "znakomitszemu",
+          "acc": "znakomitsze",
+          "ins": "znakomitszym",
+          "loc": "znakomitszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "znakomitsi",
+          "gen": "znakomitszych",
+          "dat": "znakomitszym",
+          "acc": "znakomitszych",
+          "ins": "znakomitszymi",
+          "loc": "znakomitszych"
+        },
+        "nonvirile": {
+          "nom": "znakomitsze",
+          "gen": "znakomitszych",
+          "dat": "znakomitszym",
+          "acc": "znakomitsze",
+          "ins": "znakomitszymi",
+          "loc": "znakomitszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najznakomitszy",
+          "gen": "najznakomitszego",
+          "dat": "najznakomitszemu",
+          "acc": "najznakomitszego",
+          "ins": "najznakomitszym",
+          "loc": "najznakomitszym"
+        },
+        "m3": {
+          "nom": "najznakomitszy",
+          "gen": "najznakomitszego",
+          "dat": "najznakomitszemu",
+          "acc": "najznakomitszy",
+          "ins": "najznakomitszym",
+          "loc": "najznakomitszym"
+        },
+        "f": {
+          "nom": "najznakomitsza",
+          "gen": "najznakomitszej",
+          "dat": "najznakomitszej",
+          "acc": "najznakomitszą",
+          "ins": "najznakomitszą",
+          "loc": "najznakomitszej"
+        },
+        "n": {
+          "nom": "najznakomitsze",
+          "gen": "najznakomitszego",
+          "dat": "najznakomitszemu",
+          "acc": "najznakomitsze",
+          "ins": "najznakomitszym",
+          "loc": "najznakomitszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najznakomitsi",
+          "gen": "najznakomitszych",
+          "dat": "najznakomitszym",
+          "acc": "najznakomitszych",
+          "ins": "najznakomitszymi",
+          "loc": "najznakomitszych"
+        },
+        "nonvirile": {
+          "nom": "najznakomitsze",
+          "gen": "najznakomitszych",
+          "dat": "najznakomitszym",
+          "acc": "najznakomitsze",
+          "ins": "najznakomitszymi",
+          "loc": "najznakomitszych"
+        }
+      }
+    }
+  }
+}

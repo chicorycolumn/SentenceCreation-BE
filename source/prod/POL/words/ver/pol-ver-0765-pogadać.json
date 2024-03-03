@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pogadać",
+    "verbalNoun": "pogadanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pogadawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pogada się"
+          },
+          "plural": {
+            "allPluralGenders": "pogada się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pogadam"
+          },
+          "plural": {
+            "allPluralGenders": "pogadamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pogadasz"
+          },
+          "plural": {
+            "allPluralGenders": "pogadacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pogada"
+          },
+          "plural": {
+            "allPluralGenders": "pogadają"
+          }
+        }
+      },
+      "imperative": "pogadaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pogadano"
+          },
+          "plural": {
+            "allPluralGenders": "pogadano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pogadałem",
+            "f": "pogadałam"
+          },
+          "plural": {
+            "virile": "pogadaliśmy",
+            "nonvirile": "pogadałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pogadałeś",
+            "f": "pogadałaś"
+          },
+          "plural": {
+            "virile": "pogadaliście",
+            "nonvirile": "pogadałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pogadał",
+            "f": "pogadała",
+            "n": "pogadało"
+          },
+          "plural": {
+            "virile": "pogadali",
+            "nonvirile": "pogadały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

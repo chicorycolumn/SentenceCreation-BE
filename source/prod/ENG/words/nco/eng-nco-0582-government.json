@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "government",
+      "gen": "government's"
+    },
+    "plural": {
+      "nom": "governments",
+      "gen": "governments'"
+    }
+  }
+}

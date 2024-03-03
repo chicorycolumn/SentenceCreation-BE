@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "siekiera",
+      "gen": "siekiery",
+      "dat": "siekierze",
+      "acc": "siekierę",
+      "ins": "siekierą",
+      "loc": "siekierze",
+      "voc": "siekiero"
+    },
+    "plural": {
+      "nom": "siekiery",
+      "gen": "siekier",
+      "dat": "siekierom",
+      "acc": "siekiery",
+      "ins": "siekierami",
+      "loc": "siekierach",
+      "voc": "siekiery"
+    }
+  }
+}

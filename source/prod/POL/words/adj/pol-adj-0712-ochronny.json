@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "ochronnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ochronny",
+          "gen": "ochronnego",
+          "dat": "ochronnemu",
+          "acc": "ochronnego",
+          "ins": "ochronnym",
+          "loc": "ochronnym"
+        },
+        "m3": {
+          "nom": "ochronny",
+          "gen": "ochronnego",
+          "dat": "ochronnemu",
+          "acc": "ochronny",
+          "ins": "ochronnym",
+          "loc": "ochronnym"
+        },
+        "f": {
+          "nom": "ochronna",
+          "gen": "ochronnej",
+          "dat": "ochronnej",
+          "acc": "ochronną",
+          "ins": "ochronną",
+          "loc": "ochronnej"
+        },
+        "n": {
+          "nom": "ochronne",
+          "gen": "ochronnego",
+          "dat": "ochronnemu",
+          "acc": "ochronne",
+          "ins": "ochronnym",
+          "loc": "ochronnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ochronni",
+          "gen": "ochronnych",
+          "dat": "ochronnym",
+          "acc": "ochronnych",
+          "ins": "ochronnymi",
+          "loc": "ochronnych"
+        },
+        "nonvirile": {
+          "nom": "ochronne",
+          "gen": "ochronnych",
+          "dat": "ochronnym",
+          "acc": "ochronne",
+          "ins": "ochronnymi",
+          "loc": "ochronnych"
+        }
+      }
+    }
+  }
+}

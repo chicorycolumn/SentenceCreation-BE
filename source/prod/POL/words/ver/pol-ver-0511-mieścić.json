@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "mieścić",
+    "verbalNoun": "mieszczenie",
+    "activeAdjectival": "mieszczący",
+    "passiveAdjectival": "mieszczony",
+    "contemporaryAdverbial": "mieszcząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "mieść",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mieszczono"
+          },
+          "plural": {
+            "allPluralGenders": "mieszczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "mieściłem",
+            "f": "mieściłam"
+          },
+          "plural": {
+            "virile": "mieściliśmy",
+            "nonvirile": "mieściłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "mieściłeś",
+            "f": "mieściłaś"
+          },
+          "plural": {
+            "virile": "mieściliście",
+            "nonvirile": "mieściłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "mieścił",
+            "f": "mieściła",
+            "n": "mieściło"
+          },
+          "plural": {
+            "virile": "mieścili",
+            "nonvirile": "mieściły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mieści się"
+          },
+          "plural": {
+            "allPluralGenders": "mieści się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "mieszczę"
+          },
+          "plural": {
+            "allPluralGenders": "mieścimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "mieścisz"
+          },
+          "plural": {
+            "allPluralGenders": "mieścicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "mieści"
+          },
+          "plural": {
+            "allPluralGenders": "mieszczą"
+          }
+        }
+      }
+    }
+  }
+}

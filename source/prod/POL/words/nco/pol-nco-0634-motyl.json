@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "motyl",
+      "gen": "motyla",
+      "dat": "motylowi",
+      "acc": "motyla",
+      "ins": "motylem",
+      "loc": "motylu",
+      "voc": "motylu"
+    },
+    "plural": {
+      "nom": "motyle",
+      "gen": "motyli",
+      "dat": "motylom",
+      "acc": "motyle",
+      "ins": "motylami",
+      "loc": "motylach",
+      "voc": "motyle"
+    }
+  }
+}

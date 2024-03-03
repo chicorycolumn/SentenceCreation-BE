@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "generation",
+      "gen": "generation's"
+    },
+    "plural": {
+      "nom": "generations",
+      "gen": "generations'"
+    }
+  }
+}

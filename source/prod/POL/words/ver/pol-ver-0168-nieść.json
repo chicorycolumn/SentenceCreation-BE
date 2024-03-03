@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nieść",
+    "verbalNoun": "niesienie",
+    "activeAdjectival": "niosący",
+    "passiveAdjectival": "niesiony",
+    "contemporaryAdverbial": "niosąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "nieś",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "niesiono"
+          },
+          "plural": {
+            "allPluralGenders": "niesiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "niosłem",
+            "f": "niosłam"
+          },
+          "plural": {
+            "virile": "nieśliśmy",
+            "nonvirile": "niosłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "niosłeś",
+            "f": "niosłaś"
+          },
+          "plural": {
+            "virile": "nieśliście",
+            "nonvirile": "niosłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "niósł",
+            "f": "niosła",
+            "n": "niosło"
+          },
+          "plural": {
+            "virile": "nieśli",
+            "nonvirile": "niosły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "niesie się"
+          },
+          "plural": {
+            "allPluralGenders": "niesie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "niosę"
+          },
+          "plural": {
+            "allPluralGenders": "niesiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "niesiesz"
+          },
+          "plural": {
+            "allPluralGenders": "niesiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "niesie"
+          },
+          "plural": {
+            "allPluralGenders": "niosą"
+          }
+        }
+      }
+    }
+  }
+}

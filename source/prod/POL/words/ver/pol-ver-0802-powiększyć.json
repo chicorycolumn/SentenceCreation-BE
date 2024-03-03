@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "powiększyć",
+    "verbalNoun": "powiększenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "powiększony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "powiększywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powiększy się"
+          },
+          "plural": {
+            "allPluralGenders": "powiększy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "powiększę"
+          },
+          "plural": {
+            "allPluralGenders": "powiększymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "powiększysz"
+          },
+          "plural": {
+            "allPluralGenders": "powiększycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "powiększy"
+          },
+          "plural": {
+            "allPluralGenders": "powiększą"
+          }
+        }
+      },
+      "imperative": "powiększ",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powiększono"
+          },
+          "plural": {
+            "allPluralGenders": "powiększono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "powiększyłem",
+            "f": "powiększyłam"
+          },
+          "plural": {
+            "virile": "powiększyliśmy",
+            "nonvirile": "powiększyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "powiększyłeś",
+            "f": "powiększyłaś"
+          },
+          "plural": {
+            "virile": "powiększyliście",
+            "nonvirile": "powiększyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "powiększył",
+            "f": "powiększyła",
+            "n": "powiększyło"
+          },
+          "plural": {
+            "virile": "powiększyli",
+            "nonvirile": "powiększyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wash basin",
+      "gen": "wash basin's"
+    },
+    "plural": {
+      "nom": "wash basins",
+      "gen": "wash basins'"
+    }
+  }
+}

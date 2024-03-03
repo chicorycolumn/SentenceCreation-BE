@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "chrzan",
+      "gen": "chrzanu",
+      "dat": "chrzanowi",
+      "acc": "chrzan",
+      "ins": "chrzanem",
+      "loc": "chrzanie",
+      "voc": "chrzanie"
+    },
+    "plural": {
+      "nom": "chrzany",
+      "gen": "chrzanów",
+      "dat": "chrzanom",
+      "acc": "chrzany",
+      "ins": "chrzanami",
+      "loc": "chrzanach",
+      "voc": "chrzany"
+    }
+  }
+}

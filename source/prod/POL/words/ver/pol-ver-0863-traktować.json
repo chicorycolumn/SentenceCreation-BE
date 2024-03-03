@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "traktować",
+    "verbalNoun": "traktowanie",
+    "activeAdjectival": "traktujący",
+    "passiveAdjectival": "traktowany",
+    "contemporaryAdverbial": "traktując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "traktuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "traktowano"
+          },
+          "plural": {
+            "allPluralGenders": "traktowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "traktowałem",
+            "f": "traktowałam"
+          },
+          "plural": {
+            "virile": "traktowaliśmy",
+            "nonvirile": "traktowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "traktowałeś",
+            "f": "traktowałaś"
+          },
+          "plural": {
+            "virile": "traktowaliście",
+            "nonvirile": "traktowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "traktował",
+            "f": "traktowała",
+            "n": "traktowało"
+          },
+          "plural": {
+            "virile": "traktowali",
+            "nonvirile": "traktowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "traktuje się"
+          },
+          "plural": {
+            "allPluralGenders": "traktuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "traktuję"
+          },
+          "plural": {
+            "allPluralGenders": "traktujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "traktujesz"
+          },
+          "plural": {
+            "allPluralGenders": "traktujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "traktuje"
+          },
+          "plural": {
+            "allPluralGenders": "traktują"
+          }
+        }
+      }
+    }
+  }
+}

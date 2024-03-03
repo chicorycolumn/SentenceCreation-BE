@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "obracać",
+    "verbalNoun": "obracanie",
+    "activeAdjectival": "obracający",
+    "passiveAdjectival": "obracany",
+    "contemporaryAdverbial": "obracając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "obracaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obracano"
+          },
+          "plural": {
+            "allPluralGenders": "obracano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "obracałem",
+            "f": "obracałam"
+          },
+          "plural": {
+            "virile": "obracaliśmy",
+            "nonvirile": "obracałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "obracałeś",
+            "f": "obracałaś"
+          },
+          "plural": {
+            "virile": "obracaliście",
+            "nonvirile": "obracałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "obracał",
+            "f": "obracała",
+            "n": "obracało"
+          },
+          "plural": {
+            "virile": "obracali",
+            "nonvirile": "obracały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obraca się"
+          },
+          "plural": {
+            "allPluralGenders": "obraca się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "obracam"
+          },
+          "plural": {
+            "allPluralGenders": "obracamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "obracasz"
+          },
+          "plural": {
+            "allPluralGenders": "obracacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "obraca"
+          },
+          "plural": {
+            "allPluralGenders": "obracają"
+          }
+        }
+      }
+    }
+  }
+}

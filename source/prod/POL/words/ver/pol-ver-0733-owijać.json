@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "owijać",
+    "verbalNoun": "owijanie",
+    "activeAdjectival": "owijający",
+    "passiveAdjectival": "owijany",
+    "contemporaryAdverbial": "owijając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "owijaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "owijano"
+          },
+          "plural": {
+            "allPluralGenders": "owijano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "owijałem",
+            "f": "owijałam"
+          },
+          "plural": {
+            "virile": "owijaliśmy",
+            "nonvirile": "owijałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "owijałeś",
+            "f": "owijałaś"
+          },
+          "plural": {
+            "virile": "owijaliście",
+            "nonvirile": "owijałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "owijał",
+            "f": "owijała",
+            "n": "owijało"
+          },
+          "plural": {
+            "virile": "owijali",
+            "nonvirile": "owijały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "owija się"
+          },
+          "plural": {
+            "allPluralGenders": "owija się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "owijam"
+          },
+          "plural": {
+            "allPluralGenders": "owijamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "owijasz"
+          },
+          "plural": {
+            "allPluralGenders": "owijacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "owija"
+          },
+          "plural": {
+            "allPluralGenders": "owijają"
+          }
+        }
+      }
+    }
+  }
+}

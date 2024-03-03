@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "słowo",
+      "gen": "słowa",
+      "dat": "słowu",
+      "acc": "słowo",
+      "ins": "słowem",
+      "loc": "słowie",
+      "voc": "słowo"
+    },
+    "plural": {
+      "nom": "słowa",
+      "gen": "słów",
+      "dat": "słowom",
+      "acc": "słowa",
+      "ins": [
+        "słowami",
+        "słowy¹"
+      ],
+      "loc": "słowach",
+      "voc": "słowa"
+    }
+  }
+}

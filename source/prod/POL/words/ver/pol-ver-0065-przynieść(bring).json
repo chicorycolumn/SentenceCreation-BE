@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przynieść",
+    "verbalNoun": "przyniesienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przyniesiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przyniósłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przyniesie się"
+          },
+          "plural": {
+            "allPluralGenders": "przyniesie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przyniosę"
+          },
+          "plural": {
+            "allPluralGenders": "przyniesiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przyniesiesz"
+          },
+          "plural": {
+            "allPluralGenders": "przyniesiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przyniesie"
+          },
+          "plural": {
+            "allPluralGenders": "przyniosą"
+          }
+        }
+      },
+      "imperative": "przynieś",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przyniesiono"
+          },
+          "plural": {
+            "allPluralGenders": "przyniesiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przyniosłem",
+            "f": "przyniosłam"
+          },
+          "plural": {
+            "virile": "przynieśliśmy",
+            "nonvirile": "przyniosłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przyniosłeś",
+            "f": "przyniosłaś"
+          },
+          "plural": {
+            "virile": "przynieśliście",
+            "nonvirile": "przyniosłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przyniósł",
+            "f": "przyniosła",
+            "n": "przyniosło"
+          },
+          "plural": {
+            "virile": "przynieśli",
+            "nonvirile": "przyniosły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

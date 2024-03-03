@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "bić",
+    "verbalNoun": "bicie",
+    "activeAdjectival": "bijący",
+    "passiveAdjectival": "bity",
+    "contemporaryAdverbial": "bijąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "bij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "bito"
+          },
+          "plural": {
+            "allPluralGenders": "bito"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "biłem",
+            "f": "biłam"
+          },
+          "plural": {
+            "virile": "biliśmy",
+            "nonvirile": "biłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "biłeś",
+            "f": "biłaś"
+          },
+          "plural": {
+            "virile": "biliście",
+            "nonvirile": "biłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "bił",
+            "f": "biła",
+            "n": "biło"
+          },
+          "plural": {
+            "virile": "bili",
+            "nonvirile": "biły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "bije się"
+          },
+          "plural": {
+            "allPluralGenders": "bije się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "biję"
+          },
+          "plural": {
+            "allPluralGenders": "bijemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "bijesz"
+          },
+          "plural": {
+            "allPluralGenders": "bijecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "bije"
+          },
+          "plural": {
+            "allPluralGenders": "biją"
+          }
+        }
+      }
+    }
+  }
+}

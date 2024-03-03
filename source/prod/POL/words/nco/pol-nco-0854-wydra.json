@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wydra",
+      "gen": "wydry",
+      "dat": "wydrze",
+      "acc": "wydrę",
+      "ins": "wydrą",
+      "loc": "wydrze",
+      "voc": "wydro"
+    },
+    "plural": {
+      "nom": "wydry",
+      "gen": [
+        "wyder",
+        "wydr"
+      ],
+      "dat": "wydrom",
+      "acc": "wydry",
+      "ins": "wydrami",
+      "loc": "wydrach",
+      "voc": "wydry"
+    }
+  }
+}

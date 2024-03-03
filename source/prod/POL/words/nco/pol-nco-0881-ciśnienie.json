@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ciśnienie",
+      "gen": "ciśnienia",
+      "dat": "ciśnieniu",
+      "acc": "ciśnienie",
+      "ins": "ciśnieniem",
+      "loc": "ciśnieniu",
+      "voc": "ciśnienie"
+    },
+    "plural": {
+      "nom": "ciśnienia",
+      "gen": "ciśnień",
+      "dat": "ciśnieniom",
+      "acc": "ciśnienia",
+      "ins": "ciśnieniami",
+      "loc": "ciśnieniach",
+      "voc": "ciśnienia"
+    }
+  }
+}

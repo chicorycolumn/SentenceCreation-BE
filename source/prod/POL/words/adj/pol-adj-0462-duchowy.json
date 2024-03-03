@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "duchowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "duchowy",
+          "gen": "duchowego",
+          "dat": "duchowemu",
+          "acc": "duchowego",
+          "ins": "duchowym",
+          "loc": "duchowym"
+        },
+        "m3": {
+          "nom": "duchowy",
+          "gen": "duchowego",
+          "dat": "duchowemu",
+          "acc": "duchowy",
+          "ins": "duchowym",
+          "loc": "duchowym"
+        },
+        "f": {
+          "nom": "duchowa",
+          "gen": "duchowej",
+          "dat": "duchowej",
+          "acc": "duchową",
+          "ins": "duchową",
+          "loc": "duchowej"
+        },
+        "n": {
+          "nom": "duchowe",
+          "gen": "duchowego",
+          "dat": "duchowemu",
+          "acc": "duchowe",
+          "ins": "duchowym",
+          "loc": "duchowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "duchowi",
+          "gen": "duchowych",
+          "dat": "duchowym",
+          "acc": "duchowych",
+          "ins": "duchowymi",
+          "loc": "duchowych"
+        },
+        "nonvirile": {
+          "nom": "duchowe",
+          "gen": "duchowych",
+          "dat": "duchowym",
+          "acc": "duchowe",
+          "ins": "duchowymi",
+          "loc": "duchowych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "nić",
+      "gen": "nici",
+      "dat": "nici",
+      "acc": "nić",
+      "ins": "nicią",
+      "loc": "nici",
+      "voc": "nici"
+    },
+    "plural": {
+      "nom": "nici",
+      "gen": "nici",
+      "dat": "niciom",
+      "acc": "nici",
+      "ins": "nićmi",
+      "loc": "niciach",
+      "voc": "nici"
+    }
+  }
+}

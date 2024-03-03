@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "psychicznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "psychiczny",
+          "gen": "psychicznego",
+          "dat": "psychicznemu",
+          "acc": "psychicznego",
+          "ins": "psychicznym",
+          "loc": "psychicznym"
+        },
+        "m3": {
+          "nom": "psychiczny",
+          "gen": "psychicznego",
+          "dat": "psychicznemu",
+          "acc": "psychiczny",
+          "ins": "psychicznym",
+          "loc": "psychicznym"
+        },
+        "f": {
+          "nom": "psychiczna",
+          "gen": "psychicznej",
+          "dat": "psychicznej",
+          "acc": "psychiczną",
+          "ins": "psychiczną",
+          "loc": "psychicznej"
+        },
+        "n": {
+          "nom": "psychiczne",
+          "gen": "psychicznego",
+          "dat": "psychicznemu",
+          "acc": "psychiczne",
+          "ins": "psychicznym",
+          "loc": "psychicznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "psychiczni",
+          "gen": "psychicznych",
+          "dat": "psychicznym",
+          "acc": "psychicznych",
+          "ins": "psychicznymi",
+          "loc": "psychicznych"
+        },
+        "nonvirile": {
+          "nom": "psychiczne",
+          "gen": "psychicznych",
+          "dat": "psychicznym",
+          "acc": "psychiczne",
+          "ins": "psychicznymi",
+          "loc": "psychicznych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wziąć",
+    "verbalNoun": "wzięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "wzięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "wziąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "weźmie się"
+          },
+          "plural": {
+            "allPluralGenders": "weźmie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wezmę"
+          },
+          "plural": {
+            "allPluralGenders": "weźmiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "weźmiesz"
+          },
+          "plural": {
+            "allPluralGenders": "weźmiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "weźmie"
+          },
+          "plural": {
+            "allPluralGenders": "wezmą"
+          }
+        }
+      },
+      "imperative": "weź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wzięto"
+          },
+          "plural": {
+            "allPluralGenders": "wzięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wziąłem",
+            "f": "wzięłam"
+          },
+          "plural": {
+            "virile": "wzięliśmy",
+            "nonvirile": "wzięłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wziąłeś",
+            "f": "wzięłaś"
+          },
+          "plural": {
+            "virile": "wzięliście",
+            "nonvirile": "wzięłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wziął",
+            "f": "wzięła",
+            "n": "wzięło"
+          },
+          "plural": {
+            "virile": "wzięli",
+            "nonvirile": "wzięły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

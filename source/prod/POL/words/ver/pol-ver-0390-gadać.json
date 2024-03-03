@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "gadać",
+    "verbalNoun": "gadanie",
+    "activeAdjectival": "gadający",
+    "passiveAdjectival": "gadany",
+    "contemporaryAdverbial": "gadając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "gadaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "gadano"
+          },
+          "plural": {
+            "allPluralGenders": "gadano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "gadałem",
+            "f": "gadałam"
+          },
+          "plural": {
+            "virile": "gadaliśmy",
+            "nonvirile": "gadałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "gadałeś",
+            "f": "gadałaś"
+          },
+          "plural": {
+            "virile": "gadaliście",
+            "nonvirile": "gadałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "gadał",
+            "f": "gadała",
+            "n": "gadało"
+          },
+          "plural": {
+            "virile": "gadali",
+            "nonvirile": "gadały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "gada się"
+          },
+          "plural": {
+            "allPluralGenders": "gada się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "gadam"
+          },
+          "plural": {
+            "allPluralGenders": "gadamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "gadasz"
+          },
+          "plural": {
+            "allPluralGenders": "gadacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "gada"
+          },
+          "plural": {
+            "allPluralGenders": "gadają"
+          }
+        }
+      }
+    }
+  }
+}

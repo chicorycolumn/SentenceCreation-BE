@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "znaczenie",
+      "gen": "znaczenia",
+      "dat": "znaczeniu",
+      "acc": "znaczenie",
+      "ins": "znaczeniem",
+      "loc": "znaczeniu",
+      "voc": "znaczenie"
+    },
+    "plural": {
+      "nom": "znaczenia",
+      "gen": "znaczeń",
+      "dat": "znaczeniom",
+      "acc": "znaczenia",
+      "ins": "znaczeniami",
+      "loc": "znaczeniach",
+      "voc": "znaczenia"
+    }
+  }
+}

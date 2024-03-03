@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "fikcyjnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "fikcyjny",
+          "gen": "fikcyjnego",
+          "dat": "fikcyjnemu",
+          "acc": "fikcyjnego",
+          "ins": "fikcyjnym",
+          "loc": "fikcyjnym"
+        },
+        "m3": {
+          "nom": "fikcyjny",
+          "gen": "fikcyjnego",
+          "dat": "fikcyjnemu",
+          "acc": "fikcyjny",
+          "ins": "fikcyjnym",
+          "loc": "fikcyjnym"
+        },
+        "f": {
+          "nom": "fikcyjna",
+          "gen": "fikcyjnej",
+          "dat": "fikcyjnej",
+          "acc": "fikcyjną",
+          "ins": "fikcyjną",
+          "loc": "fikcyjnej"
+        },
+        "n": {
+          "nom": "fikcyjne",
+          "gen": "fikcyjnego",
+          "dat": "fikcyjnemu",
+          "acc": "fikcyjne",
+          "ins": "fikcyjnym",
+          "loc": "fikcyjnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "fikcyjni",
+          "gen": "fikcyjnych",
+          "dat": "fikcyjnym",
+          "acc": "fikcyjnych",
+          "ins": "fikcyjnymi",
+          "loc": "fikcyjnych"
+        },
+        "nonvirile": {
+          "nom": "fikcyjne",
+          "gen": "fikcyjnych",
+          "dat": "fikcyjnym",
+          "acc": "fikcyjne",
+          "ins": "fikcyjnymi",
+          "loc": "fikcyjnych"
+        }
+      }
+    }
+  }
+}

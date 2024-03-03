@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "popychać",
+    "verbalNoun": "popychanie",
+    "activeAdjectival": "popychający",
+    "passiveAdjectival": "popychany",
+    "contemporaryAdverbial": "popychając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "popychaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "popychano"
+          },
+          "plural": {
+            "allPluralGenders": "popychano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "popychałem",
+            "f": "popychałam"
+          },
+          "plural": {
+            "virile": "popychaliśmy",
+            "nonvirile": "popychałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "popychałeś",
+            "f": "popychałaś"
+          },
+          "plural": {
+            "virile": "popychaliście",
+            "nonvirile": "popychałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "popychał",
+            "f": "popychała",
+            "n": "popychało"
+          },
+          "plural": {
+            "virile": "popychali",
+            "nonvirile": "popychały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "popycha się"
+          },
+          "plural": {
+            "allPluralGenders": "popycha się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "popycham"
+          },
+          "plural": {
+            "allPluralGenders": "popychamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "popychasz"
+          },
+          "plural": {
+            "allPluralGenders": "popychacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "popycha"
+          },
+          "plural": {
+            "allPluralGenders": "popychają"
+          }
+        }
+      }
+    }
+  }
+}

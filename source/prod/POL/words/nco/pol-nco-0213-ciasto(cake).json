@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ciasto",
+      "gen": "ciasta",
+      "dat": "ciastu",
+      "acc": "ciasto",
+      "ins": "ciastem",
+      "loc": "cieście",
+      "voc": "ciasto"
+    },
+    "plural": {
+      "nom": "ciasta",
+      "gen": "ciast",
+      "dat": "ciastom",
+      "acc": "ciasta",
+      "ins": "ciastami",
+      "loc": "ciastach",
+      "voc": "ciasta"
+    }
+  }
+}

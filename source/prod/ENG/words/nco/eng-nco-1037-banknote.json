@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "banknote",
+      "gen": "banknote's"
+    },
+    "plural": {
+      "nom": "banknotes",
+      "gen": "banknotes'"
+    }
+  }
+}

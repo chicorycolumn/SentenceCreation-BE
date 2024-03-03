@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rower",
+      "gen": "roweru",
+      "dat": "rowerowi",
+      "acc": "rower",
+      "ins": "rowerem",
+      "loc": "rowerze",
+      "voc": "rowerze"
+    },
+    "plural": {
+      "nom": "rowery",
+      "gen": "rowerów",
+      "dat": "rowerom",
+      "acc": "rowery",
+      "ins": "rowerami",
+      "loc": "rowerach",
+      "voc": "rowery"
+    }
+  }
+}

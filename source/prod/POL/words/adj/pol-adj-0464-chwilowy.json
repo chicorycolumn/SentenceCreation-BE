@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "chwilowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "chwilowy",
+          "gen": "chwilowego",
+          "dat": "chwilowemu",
+          "acc": "chwilowego",
+          "ins": "chwilowym",
+          "loc": "chwilowym"
+        },
+        "m3": {
+          "nom": "chwilowy",
+          "gen": "chwilowego",
+          "dat": "chwilowemu",
+          "acc": "chwilowy",
+          "ins": "chwilowym",
+          "loc": "chwilowym"
+        },
+        "f": {
+          "nom": "chwilowa",
+          "gen": "chwilowej",
+          "dat": "chwilowej",
+          "acc": "chwilową",
+          "ins": "chwilową",
+          "loc": "chwilowej"
+        },
+        "n": {
+          "nom": "chwilowe",
+          "gen": "chwilowego",
+          "dat": "chwilowemu",
+          "acc": "chwilowe",
+          "ins": "chwilowym",
+          "loc": "chwilowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "chwilowi",
+          "gen": "chwilowych",
+          "dat": "chwilowym",
+          "acc": "chwilowych",
+          "ins": "chwilowymi",
+          "loc": "chwilowych"
+        },
+        "nonvirile": {
+          "nom": "chwilowe",
+          "gen": "chwilowych",
+          "dat": "chwilowym",
+          "acc": "chwilowe",
+          "ins": "chwilowymi",
+          "loc": "chwilowych"
+        }
+      }
+    }
+  }
+}

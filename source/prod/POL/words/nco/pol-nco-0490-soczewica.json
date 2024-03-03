@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "soczewica",
+      "gen": "soczewicy",
+      "dat": "soczewicy",
+      "acc": "soczewicę",
+      "ins": "soczewicą",
+      "loc": "soczewicy",
+      "voc": "soczewico"
+    },
+    "plural": {
+      "nom": "soczewice",
+      "gen": "soczewic",
+      "dat": "soczewicom",
+      "acc": "soczewice",
+      "ins": "soczewicami",
+      "loc": "soczewicach",
+      "voc": "soczewice"
+    }
+  }
+}

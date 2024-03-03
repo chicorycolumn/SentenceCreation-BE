@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przygotować",
+    "verbalNoun": "przygotowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przygotowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przygotowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przygotuje się"
+          },
+          "plural": {
+            "allPluralGenders": "przygotuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przygotuję"
+          },
+          "plural": {
+            "allPluralGenders": "przygotujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przygotujesz"
+          },
+          "plural": {
+            "allPluralGenders": "przygotujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przygotuje"
+          },
+          "plural": {
+            "allPluralGenders": "przygotują"
+          }
+        }
+      },
+      "imperative": "przygotuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przygotowano"
+          },
+          "plural": {
+            "allPluralGenders": "przygotowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przygotowałem",
+            "f": "przygotowałam"
+          },
+          "plural": {
+            "virile": "przygotowaliśmy",
+            "nonvirile": "przygotowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przygotowałeś",
+            "f": "przygotowałaś"
+          },
+          "plural": {
+            "virile": "przygotowaliście",
+            "nonvirile": "przygotowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przygotował",
+            "f": "przygotowała",
+            "n": "przygotowało"
+          },
+          "plural": {
+            "virile": "przygotowali",
+            "nonvirile": "przygotowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

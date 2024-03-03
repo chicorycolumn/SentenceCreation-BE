@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sowa",
+      "gen": "sowy",
+      "dat": "sowie",
+      "acc": "sowę",
+      "ins": "sową",
+      "loc": "sowie",
+      "voc": "sowo"
+    },
+    "plural": {
+      "nom": "sowy",
+      "gen": "sów",
+      "dat": "sowom",
+      "acc": "sowy",
+      "ins": "sowami",
+      "loc": "sowach",
+      "voc": "sowy"
+    }
+  }
+}

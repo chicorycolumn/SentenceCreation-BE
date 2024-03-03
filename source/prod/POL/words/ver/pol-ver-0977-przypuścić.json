@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przypuszczać",
+    "verbalNoun": "przypuszczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przypuszczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przypuściwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przypuści się"
+          },
+          "plural": {
+            "allPluralGenders": "przypuści się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przypuszczę"
+          },
+          "plural": {
+            "allPluralGenders": "przypuścimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przypuścisz"
+          },
+          "plural": {
+            "allPluralGenders": "przypuścicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przypuści"
+          },
+          "plural": {
+            "allPluralGenders": "przypuszczą"
+          }
+        }
+      },
+      "imperative": "przypuść",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przypuszczono"
+          },
+          "plural": {
+            "allPluralGenders": "przypuszczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przypuściłem",
+            "f": "przypuściłam"
+          },
+          "plural": {
+            "virile": "przypuściliśmy",
+            "nonvirile": "przypuściłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przypuściłeś",
+            "f": "przypuściłaś"
+          },
+          "plural": {
+            "virile": "przypuściliście",
+            "nonvirile": "przypuściłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przypuścił",
+            "f": "przypuściła",
+            "n": "przypuściło"
+          },
+          "plural": {
+            "virile": "przypuścili",
+            "nonvirile": "przypuściły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

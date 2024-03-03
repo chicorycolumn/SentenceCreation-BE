@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "opłacić",
+    "verbalNoun": "opłacenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "opłacony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "opłaciwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opłaci się"
+          },
+          "plural": {
+            "allPluralGenders": "opłaci się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "opłacę"
+          },
+          "plural": {
+            "allPluralGenders": "opłacimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "opłacisz"
+          },
+          "plural": {
+            "allPluralGenders": "opłacicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "opłaci"
+          },
+          "plural": {
+            "allPluralGenders": "opłacą"
+          }
+        }
+      },
+      "imperative": "opłać",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opłacono"
+          },
+          "plural": {
+            "allPluralGenders": "opłacono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "opłaciłem",
+            "f": "opłaciłam"
+          },
+          "plural": {
+            "virile": "opłaciliśmy",
+            "nonvirile": "opłaciłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "opłaciłeś",
+            "f": "opłaciłaś"
+          },
+          "plural": {
+            "virile": "opłaciliście",
+            "nonvirile": "opłaciłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "opłacił",
+            "f": "opłaciła",
+            "n": "opłaciło"
+          },
+          "plural": {
+            "virile": "opłacili",
+            "nonvirile": "opłaciły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

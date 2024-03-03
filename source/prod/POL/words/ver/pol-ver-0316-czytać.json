@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "czytać",
+    "verbalNoun": "czytanie",
+    "activeAdjectival": "czytający",
+    "passiveAdjectival": "czytany",
+    "contemporaryAdverbial": "czytając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "czytaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "czytano"
+          },
+          "plural": {
+            "allPluralGenders": "czytano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "czytałem",
+            "f": "czytałam"
+          },
+          "plural": {
+            "virile": "czytaliśmy",
+            "nonvirile": "czytałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "czytałeś",
+            "f": "czytałaś"
+          },
+          "plural": {
+            "virile": "czytaliście",
+            "nonvirile": "czytałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "czytał",
+            "f": "czytała",
+            "n": "czytało"
+          },
+          "plural": {
+            "virile": "czytali",
+            "nonvirile": "czytały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "czyta się"
+          },
+          "plural": {
+            "allPluralGenders": "czyta się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "czytam"
+          },
+          "plural": {
+            "allPluralGenders": "czytamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "czytasz"
+          },
+          "plural": {
+            "allPluralGenders": "czytacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "czyta"
+          },
+          "plural": {
+            "allPluralGenders": "czytają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "tożsamość",
+      "gen": "tożsamości",
+      "dat": "tożsamości",
+      "acc": "tożsamość",
+      "ins": "tożsamością",
+      "loc": "tożsamości",
+      "voc": "tożsamości"
+    },
+    "plural": {
+      "nom": "tożsamości",
+      "gen": "tożsamości",
+      "dat": "tożsamościom",
+      "acc": "tożsamości",
+      "ins": "tożsamościami",
+      "loc": "tożsamościach",
+      "voc": "tożsamości"
+    }
+  }
+}

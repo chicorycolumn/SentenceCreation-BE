@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "optymistycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "optymistyczny",
+          "gen": "optymistycznego",
+          "dat": "optymistycznemu",
+          "acc": "optymistycznego",
+          "ins": "optymistycznym",
+          "loc": "optymistycznym"
+        },
+        "m3": {
+          "nom": "optymistyczny",
+          "gen": "optymistycznego",
+          "dat": "optymistycznemu",
+          "acc": "optymistyczny",
+          "ins": "optymistycznym",
+          "loc": "optymistycznym"
+        },
+        "f": {
+          "nom": "optymistyczna",
+          "gen": "optymistycznej",
+          "dat": "optymistycznej",
+          "acc": "optymistyczną",
+          "ins": "optymistyczną",
+          "loc": "optymistycznej"
+        },
+        "n": {
+          "nom": "optymistyczne",
+          "gen": "optymistycznego",
+          "dat": "optymistycznemu",
+          "acc": "optymistyczne",
+          "ins": "optymistycznym",
+          "loc": "optymistycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "optymistyczni",
+          "gen": "optymistycznych",
+          "dat": "optymistycznym",
+          "acc": "optymistycznych",
+          "ins": "optymistycznymi",
+          "loc": "optymistycznych"
+        },
+        "nonvirile": {
+          "nom": "optymistyczne",
+          "gen": "optymistycznych",
+          "dat": "optymistycznym",
+          "acc": "optymistyczne",
+          "ins": "optymistycznymi",
+          "loc": "optymistycznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej optymistyczny",
+          "gen": "bardziej optymistycznego",
+          "dat": "bardziej optymistycznemu",
+          "acc": "bardziej optymistycznego",
+          "ins": "bardziej optymistycznym",
+          "loc": "bardziej optymistycznym"
+        },
+        "m3": {
+          "nom": "bardziej optymistyczny",
+          "gen": "bardziej optymistycznego",
+          "dat": "bardziej optymistycznemu",
+          "acc": "bardziej optymistyczny",
+          "ins": "bardziej optymistycznym",
+          "loc": "bardziej optymistycznym"
+        },
+        "f": {
+          "nom": "bardziej optymistyczna",
+          "gen": "bardziej optymistycznej",
+          "dat": "bardziej optymistycznej",
+          "acc": "bardziej optymistyczną",
+          "ins": "bardziej optymistyczną",
+          "loc": "bardziej optymistycznej"
+        },
+        "n": {
+          "nom": "bardziej optymistyczne",
+          "gen": "bardziej optymistycznego",
+          "dat": "bardziej optymistycznemu",
+          "acc": "bardziej optymistyczne",
+          "ins": "bardziej optymistycznym",
+          "loc": "bardziej optymistycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej optymistyczni",
+          "gen": "bardziej optymistycznych",
+          "dat": "bardziej optymistycznym",
+          "acc": "bardziej optymistycznych",
+          "ins": "bardziej optymistycznymi",
+          "loc": "bardziej optymistycznych"
+        },
+        "nonvirile": {
+          "nom": "bardziej optymistyczne",
+          "gen": "bardziej optymistycznych",
+          "dat": "bardziej optymistycznym",
+          "acc": "bardziej optymistyczne",
+          "ins": "bardziej optymistycznymi",
+          "loc": "bardziej optymistycznych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej optymistyczny",
+          "gen": "najbardziej optymistycznego",
+          "dat": "najbardziej optymistycznemu",
+          "acc": "najbardziej optymistycznego",
+          "ins": "najbardziej optymistycznym",
+          "loc": "najbardziej optymistycznym"
+        },
+        "m3": {
+          "nom": "najbardziej optymistyczny",
+          "gen": "najbardziej optymistycznego",
+          "dat": "najbardziej optymistycznemu",
+          "acc": "najbardziej optymistyczny",
+          "ins": "najbardziej optymistycznym",
+          "loc": "najbardziej optymistycznym"
+        },
+        "f": {
+          "nom": "najbardziej optymistyczna",
+          "gen": "najbardziej optymistycznej",
+          "dat": "najbardziej optymistycznej",
+          "acc": "najbardziej optymistyczną",
+          "ins": "najbardziej optymistyczną",
+          "loc": "najbardziej optymistycznej"
+        },
+        "n": {
+          "nom": "najbardziej optymistyczne",
+          "gen": "najbardziej optymistycznego",
+          "dat": "najbardziej optymistycznemu",
+          "acc": "najbardziej optymistyczne",
+          "ins": "najbardziej optymistycznym",
+          "loc": "najbardziej optymistycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej optymistyczni",
+          "gen": "najbardziej optymistycznych",
+          "dat": "najbardziej optymistycznym",
+          "acc": "najbardziej optymistycznych",
+          "ins": "najbardziej optymistycznymi",
+          "loc": "najbardziej optymistycznych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej optymistyczne",
+          "gen": "najbardziej optymistycznych",
+          "dat": "najbardziej optymistycznym",
+          "acc": "najbardziej optymistyczne",
+          "ins": "najbardziej optymistycznymi",
+          "loc": "najbardziej optymistycznych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zamieszać",
+    "verbalNoun": "zamieszanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zamieszany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zamieszawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zamiesza się"
+          },
+          "plural": {
+            "allPluralGenders": "zamiesza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zamieszam"
+          },
+          "plural": {
+            "allPluralGenders": "zamieszamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zamieszasz"
+          },
+          "plural": {
+            "allPluralGenders": "zamieszacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zamiesza"
+          },
+          "plural": {
+            "allPluralGenders": "zamieszają"
+          }
+        }
+      },
+      "imperative": "zamieszaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zamieszano"
+          },
+          "plural": {
+            "allPluralGenders": "zamieszano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zamieszałem",
+            "f": "zamieszałam"
+          },
+          "plural": {
+            "virile": "zamieszaliśmy",
+            "nonvirile": "zamieszałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zamieszałeś",
+            "f": "zamieszałaś"
+          },
+          "plural": {
+            "virile": "zamieszaliście",
+            "nonvirile": "zamieszałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zamieszał",
+            "f": "zamieszała",
+            "n": "zamieszało"
+          },
+          "plural": {
+            "virile": "zamieszali",
+            "nonvirile": "zamieszały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

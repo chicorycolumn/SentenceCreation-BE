@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "kiepsko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "kiepski",
+          "gen": "kiepskiego",
+          "dat": "kiepskiemu",
+          "acc": "kiepskiego",
+          "ins": "kiepskim",
+          "loc": "kiepskim"
+        },
+        "m3": {
+          "nom": "kiepski",
+          "gen": "kiepskiego",
+          "dat": "kiepskiemu",
+          "acc": "kiepski",
+          "ins": "kiepskim",
+          "loc": "kiepskim"
+        },
+        "f": {
+          "nom": "kiepska",
+          "gen": "kiepskiej",
+          "dat": "kiepskiej",
+          "acc": "kiepską",
+          "ins": "kiepską",
+          "loc": "kiepskiej"
+        },
+        "n": {
+          "nom": "kiepskie",
+          "gen": "kiepskiego",
+          "dat": "kiepskiemu",
+          "acc": "kiepskie",
+          "ins": "kiepskim",
+          "loc": "kiepskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "kiepscy",
+          "gen": "kiepskich",
+          "dat": "kiepskim",
+          "acc": "kiepskich",
+          "ins": "kiepskimi",
+          "loc": "kiepskich"
+        },
+        "nonvirile": {
+          "nom": "kiepskie",
+          "gen": "kiepskich",
+          "dat": "kiepskim",
+          "acc": "kiepskie",
+          "ins": "kiepskimi",
+          "loc": "kiepskich"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "anioł",
+      "gen": "anioła",
+      "dat": "aniołowi",
+      "acc": "anioła",
+      "ins": "aniołem",
+      "loc": "aniele",
+      "voc": "aniele"
+    },
+    "plural": {
+      "nom": [
+        "anioły",
+        "aniołowie",
+        "anieli"
+      ],
+      "gen": "aniołów",
+      "dat": "aniołom",
+      "acc": [
+        "anioły",
+        "aniołów"
+      ],
+      "ins": "aniołami",
+      "loc": "aniołach",
+      "voc": [
+        "anioły",
+        "aniołowie",
+        "anieli"
+      ]
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "spać",
+    "verbalNoun": "spanie",
+    "activeAdjectival": "śpiący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "śpiąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "śpij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "spano"
+          },
+          "plural": {
+            "allPluralGenders": "spano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "spałem",
+            "f": "spałam"
+          },
+          "plural": {
+            "virile": "spaliśmy",
+            "nonvirile": "spałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "spałeś",
+            "f": "spałaś"
+          },
+          "plural": {
+            "virile": "spaliście",
+            "nonvirile": "spałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "spał",
+            "f": "spała",
+            "n": "spało"
+          },
+          "plural": {
+            "virile": "spali",
+            "nonvirile": "spały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "śpi się"
+          },
+          "plural": {
+            "allPluralGenders": "śpi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "śpię"
+          },
+          "plural": {
+            "allPluralGenders": "śpimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "śpisz"
+          },
+          "plural": {
+            "allPluralGenders": "śpicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "śpi"
+          },
+          "plural": {
+            "allPluralGenders": "śpią"
+          }
+        }
+      }
+    }
+  }
+}

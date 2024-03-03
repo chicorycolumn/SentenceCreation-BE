@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kaszel",
+      "gen": "kaszlu",
+      "dat": "kaszlowi",
+      "acc": "kaszel",
+      "ins": "kaszlem",
+      "loc": "kaszlu",
+      "voc": "kaszlu"
+    },
+    "plural": {
+      "nom": "kaszle",
+      "gen": [
+        "kaszli",
+        "kaszlów"
+      ],
+      "dat": "kaszlom",
+      "acc": "kaszle",
+      "ins": "kaszlami",
+      "loc": "kaszlach",
+      "voc": "kaszle"
+    }
+  }
+}

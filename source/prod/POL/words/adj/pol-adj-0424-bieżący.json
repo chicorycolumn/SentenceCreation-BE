@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "bieżąco",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bieżący",
+          "gen": "bieżącego",
+          "dat": "bieżącemu",
+          "acc": "bieżącego",
+          "ins": "bieżącym",
+          "loc": "bieżącym"
+        },
+        "m3": {
+          "nom": "bieżący",
+          "gen": "bieżącego",
+          "dat": "bieżącemu",
+          "acc": "bieżący",
+          "ins": "bieżącym",
+          "loc": "bieżącym"
+        },
+        "f": {
+          "nom": "bieżąca",
+          "gen": "bieżącej",
+          "dat": "bieżącej",
+          "acc": "bieżącą",
+          "ins": "bieżącą",
+          "loc": "bieżącej"
+        },
+        "n": {
+          "nom": "bieżące",
+          "gen": "bieżącego",
+          "dat": "bieżącemu",
+          "acc": "bieżące",
+          "ins": "bieżącym",
+          "loc": "bieżącym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bieżący",
+          "gen": "bieżących",
+          "dat": "bieżącym",
+          "acc": "bieżących",
+          "ins": "bieżącymi",
+          "loc": "bieżących"
+        },
+        "nonvirile": {
+          "nom": "bieżące",
+          "gen": "bieżących",
+          "dat": "bieżącym",
+          "acc": "bieżące",
+          "ins": "bieżącymi",
+          "loc": "bieżących"
+        }
+      }
+    }
+  }
+}

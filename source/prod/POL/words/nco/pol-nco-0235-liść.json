@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "liść",
+      "gen": "liścia",
+      "dat": "liściowi",
+      "acc": "liść",
+      "ins": "liściem",
+      "loc": "liściu",
+      "voc": "liściu"
+    },
+    "plural": {
+      "nom": "liście",
+      "gen": "liści",
+      "dat": "liściom",
+      "acc": "liście",
+      "ins": "liśćmi",
+      "loc": "liściach",
+      "voc": "liście"
+    }
+  }
+}

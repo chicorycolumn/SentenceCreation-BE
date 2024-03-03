@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pomieszczać",
+    "verbalNoun": "pomieszczanie",
+    "activeAdjectival": "pomieszczający",
+    "passiveAdjectival": "pomieszczany",
+    "contemporaryAdverbial": "pomieszczając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pomieszczaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pomieszczano"
+          },
+          "plural": {
+            "allPluralGenders": "pomieszczano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pomieszczałem",
+            "f": "pomieszczałam"
+          },
+          "plural": {
+            "virile": "pomieszczaliśmy",
+            "nonvirile": "pomieszczałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pomieszczałeś",
+            "f": "pomieszczałaś"
+          },
+          "plural": {
+            "virile": "pomieszczaliście",
+            "nonvirile": "pomieszczałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pomieszczał",
+            "f": "pomieszczała",
+            "n": "pomieszczało"
+          },
+          "plural": {
+            "virile": "pomieszczali",
+            "nonvirile": "pomieszczały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pomieszcza się"
+          },
+          "plural": {
+            "allPluralGenders": "pomieszcza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pomieszczam"
+          },
+          "plural": {
+            "allPluralGenders": "pomieszczamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pomieszczasz"
+          },
+          "plural": {
+            "allPluralGenders": "pomieszczacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pomieszcza"
+          },
+          "plural": {
+            "allPluralGenders": "pomieszczają"
+          }
+        }
+      }
+    }
+  }
+}

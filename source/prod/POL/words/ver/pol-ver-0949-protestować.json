@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "protestować",
+    "verbalNoun": "protestowanie",
+    "activeAdjectival": "protestujący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "protestując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "protestuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "protestowano"
+          },
+          "plural": {
+            "allPluralGenders": "protestowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "protestowałem",
+            "f": "protestowałam"
+          },
+          "plural": {
+            "virile": "protestowaliśmy",
+            "nonvirile": "protestowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "protestowałeś",
+            "f": "protestowałaś"
+          },
+          "plural": {
+            "virile": "protestowaliście",
+            "nonvirile": "protestowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "protestował",
+            "f": "protestowała",
+            "n": "protestowało"
+          },
+          "plural": {
+            "virile": "protestowali",
+            "nonvirile": "protestowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "protestuje się"
+          },
+          "plural": {
+            "allPluralGenders": "protestuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "protestuję"
+          },
+          "plural": {
+            "allPluralGenders": "protestujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "protestujesz"
+          },
+          "plural": {
+            "allPluralGenders": "protestujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "protestuje"
+          },
+          "plural": {
+            "allPluralGenders": "protestują"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przerwać",
+    "verbalNoun": "przerwanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przerwany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przerwawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przerwie się"
+          },
+          "plural": {
+            "allPluralGenders": "przerwie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przerwę"
+          },
+          "plural": {
+            "allPluralGenders": "przerwiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przerwiesz"
+          },
+          "plural": {
+            "allPluralGenders": "przerwiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przerwie"
+          },
+          "plural": {
+            "allPluralGenders": "przerwą"
+          }
+        }
+      },
+      "imperative": "przerwij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przerwano"
+          },
+          "plural": {
+            "allPluralGenders": "przerwano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przerwałem",
+            "f": "przerwałam"
+          },
+          "plural": {
+            "virile": "przerwaliśmy",
+            "nonvirile": "przerwałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przerwałeś",
+            "f": "przerwałaś"
+          },
+          "plural": {
+            "virile": "przerwaliście",
+            "nonvirile": "przerwałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przerwał",
+            "f": "przerwała",
+            "n": "przerwało"
+          },
+          "plural": {
+            "virile": "przerwali",
+            "nonvirile": "przerwały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "napad",
+      "gen": "napadu",
+      "dat": "napadowi",
+      "acc": "napad",
+      "ins": "napadem",
+      "loc": "napadzie",
+      "voc": "napadzie"
+    },
+    "plural": {
+      "nom": "napady",
+      "gen": "napadów",
+      "dat": "napadom",
+      "acc": "napady",
+      "ins": "napadami",
+      "loc": "napadach",
+      "voc": "napady"
+    }
+  }
+}

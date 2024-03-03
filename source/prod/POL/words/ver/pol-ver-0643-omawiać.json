@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "omawiać",
+    "verbalNoun": "omawianie",
+    "activeAdjectival": "omawiający",
+    "passiveAdjectival": "omawiany",
+    "contemporaryAdverbial": "omawiając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "omawiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "omawiano"
+          },
+          "plural": {
+            "allPluralGenders": "omawiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "omawiałem",
+            "f": "omawiałam"
+          },
+          "plural": {
+            "virile": "omawialiśmy",
+            "nonvirile": "omawiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "omawiałeś",
+            "f": "omawiałaś"
+          },
+          "plural": {
+            "virile": "omawialiście",
+            "nonvirile": "omawiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "omawiał",
+            "f": "omawiała",
+            "n": "omawiało"
+          },
+          "plural": {
+            "virile": "omawiali",
+            "nonvirile": "omawiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "omawia się"
+          },
+          "plural": {
+            "allPluralGenders": "omawia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "omawiam"
+          },
+          "plural": {
+            "allPluralGenders": "omawiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "omawiasz"
+          },
+          "plural": {
+            "allPluralGenders": "omawiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "omawia"
+          },
+          "plural": {
+            "allPluralGenders": "omawiają"
+          }
+        }
+      }
+    }
+  }
+}

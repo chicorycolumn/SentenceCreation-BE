@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "miejski",
+          "gen": "miejskiego",
+          "dat": "miejskiemu",
+          "acc": "miejskiego",
+          "ins": "miejskim",
+          "loc": "miejskim"
+        },
+        "m3": {
+          "nom": "miejski",
+          "gen": "miejskiego",
+          "dat": "miejskiemu",
+          "acc": "miejski",
+          "ins": "miejskim",
+          "loc": "miejskim"
+        },
+        "f": {
+          "nom": "miejska",
+          "gen": "miejskiej",
+          "dat": "miejskiej",
+          "acc": "miejską",
+          "ins": "miejską",
+          "loc": "miejskiej"
+        },
+        "n": {
+          "nom": "miejskie",
+          "gen": "miejskiego",
+          "dat": "miejskiemu",
+          "acc": "miejskie",
+          "ins": "miejskim",
+          "loc": "miejskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "miejscy",
+          "gen": "miejskich",
+          "dat": "miejskim",
+          "acc": "miejskich",
+          "ins": "miejskimi",
+          "loc": "miejskich"
+        },
+        "nonvirile": {
+          "nom": "miejskie",
+          "gen": "miejskich",
+          "dat": "miejskim",
+          "acc": "miejskie",
+          "ins": "miejskimi",
+          "loc": "miejskich"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pozbyć",
+    "verbalNoun": "pozbycie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pozbywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pozbędzie się"
+          },
+          "plural": {
+            "allPluralGenders": "pozbędzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pozbędę"
+          },
+          "plural": {
+            "allPluralGenders": "pozbędziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pozbędziesz"
+          },
+          "plural": {
+            "allPluralGenders": "pozbędziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pozbędzie"
+          },
+          "plural": {
+            "allPluralGenders": "pozbędą"
+          }
+        }
+      },
+      "imperative": "pozbądź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pozbyto"
+          },
+          "plural": {
+            "allPluralGenders": "pozbyto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pozbyłem",
+            "f": "pozbyłam"
+          },
+          "plural": {
+            "virile": "pozbyliśmy",
+            "nonvirile": "pozbyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pozbyłeś",
+            "f": "pozbyłaś"
+          },
+          "plural": {
+            "virile": "pozbyliście",
+            "nonvirile": "pozbyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pozbył",
+            "f": "pozbyła",
+            "n": "pozbyło"
+          },
+          "plural": {
+            "virile": "pozbyli",
+            "nonvirile": "pozbyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "błyskać",
+    "verbalNoun": "błyskanie",
+    "activeAdjectival": "błyskający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "błyskając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "błyskaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "błyskano"
+          },
+          "plural": {
+            "allPluralGenders": "błyskano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "błyskałem",
+            "f": "błyskałam"
+          },
+          "plural": {
+            "virile": "błyskaliśmy",
+            "nonvirile": "błyskałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "błyskałeś",
+            "f": "błyskałaś"
+          },
+          "plural": {
+            "virile": "błyskaliście",
+            "nonvirile": "błyskałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "błyskał",
+            "f": "błyskała",
+            "n": "błyskało"
+          },
+          "plural": {
+            "virile": "błyskali",
+            "nonvirile": "błyskały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "błyska się"
+          },
+          "plural": {
+            "allPluralGenders": "błyska się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "błyskam"
+          },
+          "plural": {
+            "allPluralGenders": "błyskamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "błyskasz"
+          },
+          "plural": {
+            "allPluralGenders": "błyskacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "błyska"
+          },
+          "plural": {
+            "allPluralGenders": "błyskają"
+          }
+        }
+      }
+    }
+  }
+}

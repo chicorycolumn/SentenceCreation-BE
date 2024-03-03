@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "śmiesznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "śmieszny",
+          "gen": "śmiesznego",
+          "dat": "śmiesznemu",
+          "acc": "śmiesznego",
+          "ins": "śmiesznym",
+          "loc": "śmiesznym"
+        },
+        "m3": {
+          "nom": "śmieszny",
+          "gen": "śmiesznego",
+          "dat": "śmiesznemu",
+          "acc": "śmieszny",
+          "ins": "śmiesznym",
+          "loc": "śmiesznym"
+        },
+        "f": {
+          "nom": "śmieszna",
+          "gen": "śmiesznej",
+          "dat": "śmiesznej",
+          "acc": "śmieszną",
+          "ins": "śmieszną",
+          "loc": "śmiesznej"
+        },
+        "n": {
+          "nom": "śmieszne",
+          "gen": "śmiesznego",
+          "dat": "śmiesznemu",
+          "acc": "śmieszne",
+          "ins": "śmiesznym",
+          "loc": "śmiesznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "śmieszni",
+          "gen": "śmiesznych",
+          "dat": "śmiesznym",
+          "acc": "śmiesznych",
+          "ins": "śmiesznymi",
+          "loc": "śmiesznych"
+        },
+        "nonvirile": {
+          "nom": "śmieszne",
+          "gen": "śmiesznych",
+          "dat": "śmiesznym",
+          "acc": "śmieszne",
+          "ins": "śmiesznymi",
+          "loc": "śmiesznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "śmieszniejszy",
+          "gen": "śmieszniejszego",
+          "dat": "śmieszniejszemu",
+          "acc": "śmieszniejszego",
+          "ins": "śmieszniejszym",
+          "loc": "śmieszniejszym"
+        },
+        "m3": {
+          "nom": "śmieszniejszy",
+          "gen": "śmieszniejszego",
+          "dat": "śmieszniejszemu",
+          "acc": "śmieszniejszy",
+          "ins": "śmieszniejszym",
+          "loc": "śmieszniejszym"
+        },
+        "f": {
+          "nom": "śmieszniejsza",
+          "gen": "śmieszniejszej",
+          "dat": "śmieszniejszej",
+          "acc": "śmieszniejszą",
+          "ins": "śmieszniejszą",
+          "loc": "śmieszniejszej"
+        },
+        "n": {
+          "nom": "śmieszniejsze",
+          "gen": "śmieszniejszego",
+          "dat": "śmieszniejszemu",
+          "acc": "śmieszniejsze",
+          "ins": "śmieszniejszym",
+          "loc": "śmieszniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "śmieszniejsi",
+          "gen": "śmieszniejszych",
+          "dat": "śmieszniejszym",
+          "acc": "śmieszniejszych",
+          "ins": "śmieszniejszymi",
+          "loc": "śmieszniejszych"
+        },
+        "nonvirile": {
+          "nom": "śmieszniejsze",
+          "gen": "śmieszniejszych",
+          "dat": "śmieszniejszym",
+          "acc": "śmieszniejsze",
+          "ins": "śmieszniejszymi",
+          "loc": "śmieszniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najśmieszniejszy",
+          "gen": "najśmieszniejszego",
+          "dat": "najśmieszniejszemu",
+          "acc": "najśmieszniejszego",
+          "ins": "najśmieszniejszym",
+          "loc": "najśmieszniejszym"
+        },
+        "m3": {
+          "nom": "najśmieszniejszy",
+          "gen": "najśmieszniejszego",
+          "dat": "najśmieszniejszemu",
+          "acc": "najśmieszniejszy",
+          "ins": "najśmieszniejszym",
+          "loc": "najśmieszniejszym"
+        },
+        "f": {
+          "nom": "najśmieszniejsza",
+          "gen": "najśmieszniejszej",
+          "dat": "najśmieszniejszej",
+          "acc": "najśmieszniejszą",
+          "ins": "najśmieszniejszą",
+          "loc": "najśmieszniejszej"
+        },
+        "n": {
+          "nom": "najśmieszniejsze",
+          "gen": "najśmieszniejszego",
+          "dat": "najśmieszniejszemu",
+          "acc": "najśmieszniejsze",
+          "ins": "najśmieszniejszym",
+          "loc": "najśmieszniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najśmieszniejsi",
+          "gen": "najśmieszniejszych",
+          "dat": "najśmieszniejszym",
+          "acc": "najśmieszniejszych",
+          "ins": "najśmieszniejszymi",
+          "loc": "najśmieszniejszych"
+        },
+        "nonvirile": {
+          "nom": "najśmieszniejsze",
+          "gen": "najśmieszniejszych",
+          "dat": "najśmieszniejszym",
+          "acc": "najśmieszniejsze",
+          "ins": "najśmieszniejszymi",
+          "loc": "najśmieszniejszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "żarówka",
+      "gen": "żarówki",
+      "dat": "żarówce",
+      "acc": "żarówkę",
+      "ins": "żarówką",
+      "loc": "żarówce",
+      "voc": "żarówko"
+    },
+    "plural": {
+      "nom": "żarówki",
+      "gen": "żarówek",
+      "dat": "żarówkom",
+      "acc": "żarówki",
+      "ins": "żarówkami",
+      "loc": "żarówkach",
+      "voc": "żarówki"
+    }
+  }
+}

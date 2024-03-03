@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "shoulder",
+      "gen": "shoulder's"
+    },
+    "plural": {
+      "nom": "shoulders",
+      "gen": "shoulders'"
+    }
+  }
+}

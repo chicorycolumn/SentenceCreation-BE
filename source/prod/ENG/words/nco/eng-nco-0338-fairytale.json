@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "fairy tale",
+      "gen": "fairy tale's"
+    },
+    "plural": {
+      "nom": "fairy tales",
+      "gen": "fairy tales'"
+    }
+  }
+}

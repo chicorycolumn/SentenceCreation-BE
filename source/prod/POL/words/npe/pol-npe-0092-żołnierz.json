@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "żołnierz",
+      "gen": "żołnierza",
+      "dat": "żołnierzowi",
+      "acc": "żołnierza",
+      "ins": "żołnierzem",
+      "loc": "żołnierzu",
+      "voc": "żołnierzu"
+    },
+    "plural": {
+      "nom": "żołnierze",
+      "gen": "żołnierzy",
+      "dat": "żołnierzom",
+      "acc": "żołnierzy",
+      "ins": "żołnierzami",
+      "loc": "żołnierzach",
+      "voc": "żołnierze"
+    }
+  }
+}

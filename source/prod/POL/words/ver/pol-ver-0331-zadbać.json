@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zadbać",
+    "verbalNoun": "zadbanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zadbany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zadbawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zadba się"
+          },
+          "plural": {
+            "allPluralGenders": "zadba się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zadbam"
+          },
+          "plural": {
+            "allPluralGenders": "zadbamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zadbasz"
+          },
+          "plural": {
+            "allPluralGenders": "zadbacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zadba"
+          },
+          "plural": {
+            "allPluralGenders": "zadbają"
+          }
+        }
+      },
+      "imperative": "zadbaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zadbano"
+          },
+          "plural": {
+            "allPluralGenders": "zadbano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zadbałem",
+            "f": "zadbałam"
+          },
+          "plural": {
+            "virile": "zadbaliśmy",
+            "nonvirile": "zadbałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zadbałeś",
+            "f": "zadbałaś"
+          },
+          "plural": {
+            "virile": "zadbaliście",
+            "nonvirile": "zadbałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zadbał",
+            "f": "zadbała",
+            "n": "zadbało"
+          },
+          "plural": {
+            "virile": "zadbali",
+            "nonvirile": "zadbały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

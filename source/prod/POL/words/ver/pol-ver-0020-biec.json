@@ -1,0 +1,81 @@
+{
+  "inflections": {
+    "infinitive": "biec biegnąć",
+    "activeAdjectival": "biegnący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "biegnąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "biegnij",
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "biegłem",
+            "f": "biegłam"
+          },
+          "plural": {
+            "virile": "biegliśmy",
+            "nonvirile": "biegłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "biegłeś",
+            "f": "biegłaś"
+          },
+          "plural": {
+            "virile": "biegliście",
+            "nonvirile": "biegłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "biegł",
+            "f": "biegła",
+            "n": "biegło"
+          },
+          "plural": {
+            "virile": "biegli",
+            "nonvirile": "biegły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "biegnie się"
+          },
+          "plural": {
+            "allPluralGenders": "biegnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "biegnę"
+          },
+          "plural": {
+            "allPluralGenders": "biegniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "biegniesz"
+          },
+          "plural": {
+            "allPluralGenders": "biegniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "biegnie"
+          },
+          "plural": {
+            "allPluralGenders": "biegną"
+          }
+        }
+      }
+    }
+  }
+}

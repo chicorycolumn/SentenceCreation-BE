@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "inflammation",
+      "gen": "inflammation's"
+    },
+    "plural": {
+      "nom": "inflammations",
+      "gen": "inflammations'"
+    }
+  }
+}

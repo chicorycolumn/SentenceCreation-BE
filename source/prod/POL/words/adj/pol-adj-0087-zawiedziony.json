@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zawiedziony",
+          "gen": "zawiedzionego",
+          "dat": "zawiedzionemu",
+          "acc": "zawiedzionego",
+          "ins": "zawiedzionym",
+          "loc": "zawiedzionym"
+        },
+        "m3": {
+          "nom": "zawiedziony",
+          "gen": "zawiedzionego",
+          "dat": "zawiedzionemu",
+          "acc": "zawiedziony",
+          "ins": "zawiedzionym",
+          "loc": "zawiedzionym"
+        },
+        "f": {
+          "nom": "zawiedziona",
+          "gen": "zawiedzionej",
+          "dat": "zawiedzionej",
+          "acc": "zawiedzioną",
+          "ins": "zawiedzioną",
+          "loc": "zawiedzionej"
+        },
+        "n": {
+          "nom": "zawiedzione",
+          "gen": "zawiedzionego",
+          "dat": "zawiedzionemu",
+          "acc": "zawiedzione",
+          "ins": "zawiedzionym",
+          "loc": "zawiedzionym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zawiedzieni",
+          "gen": "zawiedzionych",
+          "dat": "zawiedzionym",
+          "acc": "zawiedzionych",
+          "ins": "zawiedzionymi",
+          "loc": "zawiedzionych"
+        },
+        "nonvirile": {
+          "nom": "zawiedzione",
+          "gen": "zawiedzionych",
+          "dat": "zawiedzionym",
+          "acc": "zawiedzione",
+          "ins": "zawiedzionymi",
+          "loc": "zawiedzionych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej zawiedziony",
+          "gen": "bardziej zawiedzionego",
+          "dat": "bardziej zawiedzionemu",
+          "acc": "bardziej zawiedzionego",
+          "ins": "bardziej zawiedzionym",
+          "loc": "bardziej zawiedzionym"
+        },
+        "m3": {
+          "nom": "bardziej zawiedziony",
+          "gen": "bardziej zawiedzionego",
+          "dat": "bardziej zawiedzionemu",
+          "acc": "bardziej zawiedziony",
+          "ins": "bardziej zawiedzionym",
+          "loc": "bardziej zawiedzionym"
+        },
+        "f": {
+          "nom": "bardziej zawiedziona",
+          "gen": "bardziej zawiedzionej",
+          "dat": "bardziej zawiedzionej",
+          "acc": "bardziej zawiedzioną",
+          "ins": "bardziej zawiedzioną",
+          "loc": "bardziej zawiedzionej"
+        },
+        "n": {
+          "nom": "bardziej zawiedzione",
+          "gen": "bardziej zawiedzionego",
+          "dat": "bardziej zawiedzionemu",
+          "acc": "bardziej zawiedzione",
+          "ins": "bardziej zawiedzionym",
+          "loc": "bardziej zawiedzionym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej zawiedzieni",
+          "gen": "bardziej zawiedzionych",
+          "dat": "bardziej zawiedzionym",
+          "acc": "bardziej zawiedzionych",
+          "ins": "bardziej zawiedzionymi",
+          "loc": "bardziej zawiedzionych"
+        },
+        "nonvirile": {
+          "nom": "bardziej zawiedzione",
+          "gen": "bardziej zawiedzionych",
+          "dat": "bardziej zawiedzionym",
+          "acc": "bardziej zawiedzione",
+          "ins": "bardziej zawiedzionymi",
+          "loc": "bardziej zawiedzionych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej zawiedziony",
+          "gen": "najbardziej zawiedzionego",
+          "dat": "najbardziej zawiedzionemu",
+          "acc": "najbardziej zawiedzionego",
+          "ins": "najbardziej zawiedzionym",
+          "loc": "najbardziej zawiedzionym"
+        },
+        "m3": {
+          "nom": "najbardziej zawiedziony",
+          "gen": "najbardziej zawiedzionego",
+          "dat": "najbardziej zawiedzionemu",
+          "acc": "najbardziej zawiedziony",
+          "ins": "najbardziej zawiedzionym",
+          "loc": "najbardziej zawiedzionym"
+        },
+        "f": {
+          "nom": "najbardziej zawiedziona",
+          "gen": "najbardziej zawiedzionej",
+          "dat": "najbardziej zawiedzionej",
+          "acc": "najbardziej zawiedzioną",
+          "ins": "najbardziej zawiedzioną",
+          "loc": "najbardziej zawiedzionej"
+        },
+        "n": {
+          "nom": "najbardziej zawiedzione",
+          "gen": "najbardziej zawiedzionego",
+          "dat": "najbardziej zawiedzionemu",
+          "acc": "najbardziej zawiedzione",
+          "ins": "najbardziej zawiedzionym",
+          "loc": "najbardziej zawiedzionym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej zawiedzieni",
+          "gen": "najbardziej zawiedzionych",
+          "dat": "najbardziej zawiedzionym",
+          "acc": "najbardziej zawiedzionych",
+          "ins": "najbardziej zawiedzionymi",
+          "loc": "najbardziej zawiedzionych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej zawiedzione",
+          "gen": "najbardziej zawiedzionych",
+          "dat": "najbardziej zawiedzionym",
+          "acc": "najbardziej zawiedzione",
+          "ins": "najbardziej zawiedzionymi",
+          "loc": "najbardziej zawiedzionych"
+        }
+      }
+    }
+  }
+}

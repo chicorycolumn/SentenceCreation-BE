@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "podróż",
+      "gen": "podróży",
+      "dat": "podróży",
+      "acc": "podróż",
+      "ins": "podróżą",
+      "loc": "podróży",
+      "voc": "podróży"
+    },
+    "plural": {
+      "nom": "podróże",
+      "gen": "podróży",
+      "dat": "podróżom",
+      "acc": "podróże",
+      "ins": "podróżami",
+      "loc": "podróżach",
+      "voc": "podróże"
+    }
+  }
+}

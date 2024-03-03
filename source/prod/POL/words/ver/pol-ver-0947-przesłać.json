@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przesłać",
+    "verbalNoun": "przesłanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przesłany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przesławszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "prześle się"
+          },
+          "plural": {
+            "allPluralGenders": "prześle się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "prześlę"
+          },
+          "plural": {
+            "allPluralGenders": "prześlemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "prześlesz"
+          },
+          "plural": {
+            "allPluralGenders": "prześlecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "prześle"
+          },
+          "plural": {
+            "allPluralGenders": "prześlą"
+          }
+        }
+      },
+      "imperative": "prześlij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przesłano"
+          },
+          "plural": {
+            "allPluralGenders": "przesłano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przesłałem",
+            "f": "przesłałam"
+          },
+          "plural": {
+            "virile": "przesłaliśmy",
+            "nonvirile": "przesłałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przesłałeś",
+            "f": "przesłałaś"
+          },
+          "plural": {
+            "virile": "przesłaliście",
+            "nonvirile": "przesłałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przesłał",
+            "f": "przesłała",
+            "n": "przesłało"
+          },
+          "plural": {
+            "virile": "przesłali",
+            "nonvirile": "przesłały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

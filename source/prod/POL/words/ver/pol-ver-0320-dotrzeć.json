@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dotrzeć",
+    "verbalNoun": "dotarcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "dotarty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "dotarłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dotrze się"
+          },
+          "plural": {
+            "allPluralGenders": "dotrze się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dotrę"
+          },
+          "plural": {
+            "allPluralGenders": "dotrzemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dotrzesz"
+          },
+          "plural": {
+            "allPluralGenders": "dotrzecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dotrze"
+          },
+          "plural": {
+            "allPluralGenders": "dotrą"
+          }
+        }
+      },
+      "imperative": "dotrzyj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dotarto"
+          },
+          "plural": {
+            "allPluralGenders": "dotarto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dotarłem",
+            "f": "dotarłam"
+          },
+          "plural": {
+            "virile": "dotarliśmy",
+            "nonvirile": "dotarłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dotarłeś",
+            "f": "dotarłaś"
+          },
+          "plural": {
+            "virile": "dotarliście",
+            "nonvirile": "dotarłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dotarł",
+            "f": "dotarła",
+            "n": "dotarło"
+          },
+          "plural": {
+            "virile": "dotarli",
+            "nonvirile": "dotarły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

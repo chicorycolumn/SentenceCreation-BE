@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "walizka",
+      "gen": "walizki",
+      "dat": "walizce",
+      "acc": "walizkę",
+      "ins": "walizką",
+      "loc": "walizce",
+      "voc": "walizko"
+    },
+    "plural": {
+      "nom": "walizki",
+      "gen": "walizek",
+      "dat": "walizkom",
+      "acc": "walizki",
+      "ins": "walizkami",
+      "loc": "walizkach",
+      "voc": "walizki"
+    }
+  }
+}

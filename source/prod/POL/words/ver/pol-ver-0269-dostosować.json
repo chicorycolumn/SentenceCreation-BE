@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dostosować",
+    "verbalNoun": "dostosowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "dostosowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "dostosowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dostosuje się"
+          },
+          "plural": {
+            "allPluralGenders": "dostosuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dostosuję"
+          },
+          "plural": {
+            "allPluralGenders": "dostosujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dostosujesz"
+          },
+          "plural": {
+            "allPluralGenders": "dostosujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dostosuje"
+          },
+          "plural": {
+            "allPluralGenders": "dostosują"
+          }
+        }
+      },
+      "imperative": "dostosuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dostosowano"
+          },
+          "plural": {
+            "allPluralGenders": "dostosowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dostosowałem",
+            "f": "dostosowałam"
+          },
+          "plural": {
+            "virile": "dostosowaliśmy",
+            "nonvirile": "dostosowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dostosowałeś",
+            "f": "dostosowałaś"
+          },
+          "plural": {
+            "virile": "dostosowaliście",
+            "nonvirile": "dostosowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dostosował",
+            "f": "dostosowała",
+            "n": "dostosowało"
+          },
+          "plural": {
+            "virile": "dostosowali",
+            "nonvirile": "dostosowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

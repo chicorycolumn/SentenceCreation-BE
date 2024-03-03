@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "przypadkowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przypadkowy",
+          "gen": "przypadkowego",
+          "dat": "przypadkowemu",
+          "acc": "przypadkowego",
+          "ins": "przypadkowym",
+          "loc": "przypadkowym"
+        },
+        "m3": {
+          "nom": "przypadkowy",
+          "gen": "przypadkowego",
+          "dat": "przypadkowemu",
+          "acc": "przypadkowy",
+          "ins": "przypadkowym",
+          "loc": "przypadkowym"
+        },
+        "f": {
+          "nom": "przypadkowa",
+          "gen": "przypadkowej",
+          "dat": "przypadkowej",
+          "acc": "przypadkową",
+          "ins": "przypadkową",
+          "loc": "przypadkowej"
+        },
+        "n": {
+          "nom": "przypadkowe",
+          "gen": "przypadkowego",
+          "dat": "przypadkowemu",
+          "acc": "przypadkowe",
+          "ins": "przypadkowym",
+          "loc": "przypadkowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przypadkowi",
+          "gen": "przypadkowych",
+          "dat": "przypadkowym",
+          "acc": "przypadkowych",
+          "ins": "przypadkowymi",
+          "loc": "przypadkowych"
+        },
+        "nonvirile": {
+          "nom": "przypadkowe",
+          "gen": "przypadkowych",
+          "dat": "przypadkowym",
+          "acc": "przypadkowe",
+          "ins": "przypadkowymi",
+          "loc": "przypadkowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej przypadkowy",
+          "gen": "bardziej przypadkowego",
+          "dat": "bardziej przypadkowemu",
+          "acc": "bardziej przypadkowego",
+          "ins": "bardziej przypadkowym",
+          "loc": "bardziej przypadkowym"
+        },
+        "m3": {
+          "nom": "bardziej przypadkowy",
+          "gen": "bardziej przypadkowego",
+          "dat": "bardziej przypadkowemu",
+          "acc": "bardziej przypadkowy",
+          "ins": "bardziej przypadkowym",
+          "loc": "bardziej przypadkowym"
+        },
+        "f": {
+          "nom": "bardziej przypadkowa",
+          "gen": "bardziej przypadkowej",
+          "dat": "bardziej przypadkowej",
+          "acc": "bardziej przypadkową",
+          "ins": "bardziej przypadkową",
+          "loc": "bardziej przypadkowej"
+        },
+        "n": {
+          "nom": "bardziej przypadkowe",
+          "gen": "bardziej przypadkowego",
+          "dat": "bardziej przypadkowemu",
+          "acc": "bardziej przypadkowe",
+          "ins": "bardziej przypadkowym",
+          "loc": "bardziej przypadkowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej przypadkowi",
+          "gen": "bardziej przypadkowych",
+          "dat": "bardziej przypadkowym",
+          "acc": "bardziej przypadkowych",
+          "ins": "bardziej przypadkowymi",
+          "loc": "bardziej przypadkowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej przypadkowe",
+          "gen": "bardziej przypadkowych",
+          "dat": "bardziej przypadkowym",
+          "acc": "bardziej przypadkowe",
+          "ins": "bardziej przypadkowymi",
+          "loc": "bardziej przypadkowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej przypadkowy",
+          "gen": "najbardziej przypadkowego",
+          "dat": "najbardziej przypadkowemu",
+          "acc": "najbardziej przypadkowego",
+          "ins": "najbardziej przypadkowym",
+          "loc": "najbardziej przypadkowym"
+        },
+        "m3": {
+          "nom": "najbardziej przypadkowy",
+          "gen": "najbardziej przypadkowego",
+          "dat": "najbardziej przypadkowemu",
+          "acc": "najbardziej przypadkowy",
+          "ins": "najbardziej przypadkowym",
+          "loc": "najbardziej przypadkowym"
+        },
+        "f": {
+          "nom": "najbardziej przypadkowa",
+          "gen": "najbardziej przypadkowej",
+          "dat": "najbardziej przypadkowej",
+          "acc": "najbardziej przypadkową",
+          "ins": "najbardziej przypadkową",
+          "loc": "najbardziej przypadkowej"
+        },
+        "n": {
+          "nom": "najbardziej przypadkowe",
+          "gen": "najbardziej przypadkowego",
+          "dat": "najbardziej przypadkowemu",
+          "acc": "najbardziej przypadkowe",
+          "ins": "najbardziej przypadkowym",
+          "loc": "najbardziej przypadkowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej przypadkowi",
+          "gen": "najbardziej przypadkowych",
+          "dat": "najbardziej przypadkowym",
+          "acc": "najbardziej przypadkowych",
+          "ins": "najbardziej przypadkowymi",
+          "loc": "najbardziej przypadkowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej przypadkowe",
+          "gen": "najbardziej przypadkowych",
+          "dat": "najbardziej przypadkowym",
+          "acc": "najbardziej przypadkowe",
+          "ins": "najbardziej przypadkowymi",
+          "loc": "najbardziej przypadkowych"
+        }
+      }
+    }
+  }
+}

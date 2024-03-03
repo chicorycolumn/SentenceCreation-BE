@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "skorzystać",
+    "verbalNoun": "skorzystanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "skorzystawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "skorzysta się"
+          },
+          "plural": {
+            "allPluralGenders": "skorzysta się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "skorzystam"
+          },
+          "plural": {
+            "allPluralGenders": "skorzystamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "skorzystasz"
+          },
+          "plural": {
+            "allPluralGenders": "skorzystacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "skorzysta"
+          },
+          "plural": {
+            "allPluralGenders": "skorzystają"
+          }
+        }
+      },
+      "imperative": "skorzystaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "skorzystano"
+          },
+          "plural": {
+            "allPluralGenders": "skorzystano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "skorzystałem",
+            "f": "skorzystałam"
+          },
+          "plural": {
+            "virile": "skorzystaliśmy",
+            "nonvirile": "skorzystałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "skorzystałeś",
+            "f": "skorzystałaś"
+          },
+          "plural": {
+            "virile": "skorzystaliście",
+            "nonvirile": "skorzystałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "skorzystał",
+            "f": "skorzystała",
+            "n": "skorzystało"
+          },
+          "plural": {
+            "virile": "skorzystali",
+            "nonvirile": "skorzystały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

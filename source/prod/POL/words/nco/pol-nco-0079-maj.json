@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "maj",
+      "gen": "maja",
+      "dat": "majowi",
+      "acc": "maj",
+      "ins": "majem",
+      "loc": "maju",
+      "voc": "maju"
+    },
+    "plural": {
+      "nom": "maje",
+      "gen": "majów",
+      "dat": "majom",
+      "acc": "maje",
+      "ins": "majami",
+      "loc": "majach",
+      "voc": "maje"
+    }
+  }
+}

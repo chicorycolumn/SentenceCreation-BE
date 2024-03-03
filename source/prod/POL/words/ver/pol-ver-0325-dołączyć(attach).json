@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dołączyć",
+    "verbalNoun": "dołączenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "dołączony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "dołączywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dołączy się"
+          },
+          "plural": {
+            "allPluralGenders": "dołączy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dołączę"
+          },
+          "plural": {
+            "allPluralGenders": "dołączymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dołączysz"
+          },
+          "plural": {
+            "allPluralGenders": "dołączycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dołączy"
+          },
+          "plural": {
+            "allPluralGenders": "dołączą"
+          }
+        }
+      },
+      "imperative": "dołącz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dołączono"
+          },
+          "plural": {
+            "allPluralGenders": "dołączono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dołączyłem",
+            "f": "dołączyłam"
+          },
+          "plural": {
+            "virile": "dołączyliśmy",
+            "nonvirile": "dołączyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dołączyłeś",
+            "f": "dołączyłaś"
+          },
+          "plural": {
+            "virile": "dołączyliście",
+            "nonvirile": "dołączyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dołączył",
+            "f": "dołączyła",
+            "n": "dołączyło"
+          },
+          "plural": {
+            "virile": "dołączyli",
+            "nonvirile": "dołączyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "pionowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pionowy",
+          "gen": "pionowego",
+          "dat": "pionowemu",
+          "acc": "pionowego",
+          "ins": "pionowym",
+          "loc": "pionowym"
+        },
+        "m3": {
+          "nom": "pionowy",
+          "gen": "pionowego",
+          "dat": "pionowemu",
+          "acc": "pionowy",
+          "ins": "pionowym",
+          "loc": "pionowym"
+        },
+        "f": {
+          "nom": "pionowa",
+          "gen": "pionowej",
+          "dat": "pionowej",
+          "acc": "pionową",
+          "ins": "pionową",
+          "loc": "pionowej"
+        },
+        "n": {
+          "nom": "pionowe",
+          "gen": "pionowego",
+          "dat": "pionowemu",
+          "acc": "pionowe",
+          "ins": "pionowym",
+          "loc": "pionowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pionowi",
+          "gen": "pionowych",
+          "dat": "pionowym",
+          "acc": "pionowych",
+          "ins": "pionowymi",
+          "loc": "pionowych"
+        },
+        "nonvirile": {
+          "nom": "pionowe",
+          "gen": "pionowych",
+          "dat": "pionowym",
+          "acc": "pionowe",
+          "ins": "pionowymi",
+          "loc": "pionowych"
+        }
+      }
+    }
+  }
+}

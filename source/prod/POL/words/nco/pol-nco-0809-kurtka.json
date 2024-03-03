@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kurtka",
+      "gen": "kurtki",
+      "dat": "kurtce",
+      "acc": "kurtkę",
+      "ins": "kurtką",
+      "loc": "kurtce",
+      "voc": "kurtko"
+    },
+    "plural": {
+      "nom": "kurtki",
+      "gen": "kurtek",
+      "dat": "kurtkom",
+      "acc": "kurtki",
+      "ins": "kurtkami",
+      "loc": "kurtkach",
+      "voc": "kurtki"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lekarz",
+      "gen": "lekarza",
+      "dat": "lekarzowi",
+      "acc": "lekarza",
+      "ins": "lekarzem",
+      "loc": "lekarzu",
+      "voc": "lekarzu"
+    },
+    "plural": {
+      "nom": "lekarze",
+      "gen": "lekarzy",
+      "dat": "lekarzom",
+      "acc": "lekarzy",
+      "ins": "lekarzami",
+      "loc": "lekarzach",
+      "voc": "lekarze"
+    }
+  }
+}

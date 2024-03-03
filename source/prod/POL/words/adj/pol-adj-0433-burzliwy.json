@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "burzliwie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "burzliwy",
+          "gen": "burzliwego",
+          "dat": "burzliwemu",
+          "acc": "burzliwego",
+          "ins": "burzliwym",
+          "loc": "burzliwym"
+        },
+        "m3": {
+          "nom": "burzliwy",
+          "gen": "burzliwego",
+          "dat": "burzliwemu",
+          "acc": "burzliwy",
+          "ins": "burzliwym",
+          "loc": "burzliwym"
+        },
+        "f": {
+          "nom": "burzliwa",
+          "gen": "burzliwej",
+          "dat": "burzliwej",
+          "acc": "burzliwą",
+          "ins": "burzliwą",
+          "loc": "burzliwej"
+        },
+        "n": {
+          "nom": "burzliwe",
+          "gen": "burzliwego",
+          "dat": "burzliwemu",
+          "acc": "burzliwe",
+          "ins": "burzliwym",
+          "loc": "burzliwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "burzliwi",
+          "gen": "burzliwych",
+          "dat": "burzliwym",
+          "acc": "burzliwych",
+          "ins": "burzliwymi",
+          "loc": "burzliwych"
+        },
+        "nonvirile": {
+          "nom": "burzliwe",
+          "gen": "burzliwych",
+          "dat": "burzliwym",
+          "acc": "burzliwe",
+          "ins": "burzliwymi",
+          "loc": "burzliwych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "burzliwszy",
+          "gen": "burzliwszego",
+          "dat": "burzliwszemu",
+          "acc": "burzliwszego",
+          "ins": "burzliwszym",
+          "loc": "burzliwszym"
+        },
+        "m3": {
+          "nom": "burzliwszy",
+          "gen": "burzliwszego",
+          "dat": "burzliwszemu",
+          "acc": "burzliwszy",
+          "ins": "burzliwszym",
+          "loc": "burzliwszym"
+        },
+        "f": {
+          "nom": "burzliwsza",
+          "gen": "burzliwszej",
+          "dat": "burzliwszej",
+          "acc": "burzliwszą",
+          "ins": "burzliwszą",
+          "loc": "burzliwszej"
+        },
+        "n": {
+          "nom": "burzliwsze",
+          "gen": "burzliwszego",
+          "dat": "burzliwszemu",
+          "acc": "burzliwsze",
+          "ins": "burzliwszym",
+          "loc": "burzliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "burzliwsi",
+          "gen": "burzliwszych",
+          "dat": "burzliwszym",
+          "acc": "burzliwszych",
+          "ins": "burzliwszymi",
+          "loc": "burzliwszych"
+        },
+        "nonvirile": {
+          "nom": "burzliwsze",
+          "gen": "burzliwszych",
+          "dat": "burzliwszym",
+          "acc": "burzliwsze",
+          "ins": "burzliwszymi",
+          "loc": "burzliwszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najburzliwszy",
+          "gen": "najburzliwszego",
+          "dat": "najburzliwszemu",
+          "acc": "najburzliwszego",
+          "ins": "najburzliwszym",
+          "loc": "najburzliwszym"
+        },
+        "m3": {
+          "nom": "najburzliwszy",
+          "gen": "najburzliwszego",
+          "dat": "najburzliwszemu",
+          "acc": "najburzliwszy",
+          "ins": "najburzliwszym",
+          "loc": "najburzliwszym"
+        },
+        "f": {
+          "nom": "najburzliwsza",
+          "gen": "najburzliwszej",
+          "dat": "najburzliwszej",
+          "acc": "najburzliwszą",
+          "ins": "najburzliwszą",
+          "loc": "najburzliwszej"
+        },
+        "n": {
+          "nom": "najburzliwsze",
+          "gen": "najburzliwszego",
+          "dat": "najburzliwszemu",
+          "acc": "najburzliwsze",
+          "ins": "najburzliwszym",
+          "loc": "najburzliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najburzliwsi",
+          "gen": "najburzliwszych",
+          "dat": "najburzliwszym",
+          "acc": "najburzliwszych",
+          "ins": "najburzliwszymi",
+          "loc": "najburzliwszych"
+        },
+        "nonvirile": {
+          "nom": "najburzliwsze",
+          "gen": "najburzliwszych",
+          "dat": "najburzliwszym",
+          "acc": "najburzliwsze",
+          "ins": "najburzliwszymi",
+          "loc": "najburzliwszych"
+        }
+      }
+    }
+  }
+}

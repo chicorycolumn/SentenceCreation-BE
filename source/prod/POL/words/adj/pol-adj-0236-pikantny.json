@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "pikantnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pikantny",
+          "gen": "pikantnego",
+          "dat": "pikantnemu",
+          "acc": "pikantnego",
+          "ins": "pikantnym",
+          "loc": "pikantnym"
+        },
+        "m3": {
+          "nom": "pikantny",
+          "gen": "pikantnego",
+          "dat": "pikantnemu",
+          "acc": "pikantny",
+          "ins": "pikantnym",
+          "loc": "pikantnym"
+        },
+        "f": {
+          "nom": "pikantna",
+          "gen": "pikantnej",
+          "dat": "pikantnej",
+          "acc": "pikantną",
+          "ins": "pikantną",
+          "loc": "pikantnej"
+        },
+        "n": {
+          "nom": "pikantne",
+          "gen": "pikantnego",
+          "dat": "pikantnemu",
+          "acc": "pikantne",
+          "ins": "pikantnym",
+          "loc": "pikantnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pikantni",
+          "gen": "pikantnych",
+          "dat": "pikantnym",
+          "acc": "pikantnych",
+          "ins": "pikantnymi",
+          "loc": "pikantnych"
+        },
+        "nonvirile": {
+          "nom": "pikantne",
+          "gen": "pikantnych",
+          "dat": "pikantnym",
+          "acc": "pikantne",
+          "ins": "pikantnymi",
+          "loc": "pikantnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "pikantniejszy",
+          "gen": "pikantniejszego",
+          "dat": "pikantniejszemu",
+          "acc": "pikantniejszego",
+          "ins": "pikantniejszym",
+          "loc": "pikantniejszym"
+        },
+        "m3": {
+          "nom": "pikantniejszy",
+          "gen": "pikantniejszego",
+          "dat": "pikantniejszemu",
+          "acc": "pikantniejszy",
+          "ins": "pikantniejszym",
+          "loc": "pikantniejszym"
+        },
+        "f": {
+          "nom": "pikantniejsza",
+          "gen": "pikantniejszej",
+          "dat": "pikantniejszej",
+          "acc": "pikantniejszą",
+          "ins": "pikantniejszą",
+          "loc": "pikantniejszej"
+        },
+        "n": {
+          "nom": "pikantniejsze",
+          "gen": "pikantniejszego",
+          "dat": "pikantniejszemu",
+          "acc": "pikantniejsze",
+          "ins": "pikantniejszym",
+          "loc": "pikantniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pikantniejsi",
+          "gen": "pikantniejszych",
+          "dat": "pikantniejszym",
+          "acc": "pikantniejszych",
+          "ins": "pikantniejszymi",
+          "loc": "pikantniejszych"
+        },
+        "nonvirile": {
+          "nom": "pikantniejsze",
+          "gen": "pikantniejszych",
+          "dat": "pikantniejszym",
+          "acc": "pikantniejsze",
+          "ins": "pikantniejszymi",
+          "loc": "pikantniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najpikantniejszy",
+          "gen": "najpikantniejszego",
+          "dat": "najpikantniejszemu",
+          "acc": "najpikantniejszego",
+          "ins": "najpikantniejszym",
+          "loc": "najpikantniejszym"
+        },
+        "m3": {
+          "nom": "najpikantniejszy",
+          "gen": "najpikantniejszego",
+          "dat": "najpikantniejszemu",
+          "acc": "najpikantniejszy",
+          "ins": "najpikantniejszym",
+          "loc": "najpikantniejszym"
+        },
+        "f": {
+          "nom": "najpikantniejsza",
+          "gen": "najpikantniejszej",
+          "dat": "najpikantniejszej",
+          "acc": "najpikantniejszą",
+          "ins": "najpikantniejszą",
+          "loc": "najpikantniejszej"
+        },
+        "n": {
+          "nom": "najpikantniejsze",
+          "gen": "najpikantniejszego",
+          "dat": "najpikantniejszemu",
+          "acc": "najpikantniejsze",
+          "ins": "najpikantniejszym",
+          "loc": "najpikantniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najpikantniejsi",
+          "gen": "najpikantniejszych",
+          "dat": "najpikantniejszym",
+          "acc": "najpikantniejszych",
+          "ins": "najpikantniejszymi",
+          "loc": "najpikantniejszych"
+        },
+        "nonvirile": {
+          "nom": "najpikantniejsze",
+          "gen": "najpikantniejszych",
+          "dat": "najpikantniejszym",
+          "acc": "najpikantniejsze",
+          "ins": "najpikantniejszymi",
+          "loc": "najpikantniejszych"
+        }
+      }
+    }
+  }
+}

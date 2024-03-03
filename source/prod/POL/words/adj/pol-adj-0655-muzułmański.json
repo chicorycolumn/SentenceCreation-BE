@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "muzułmański",
+          "gen": "muzułmańskiego",
+          "dat": "muzułmańskiemu",
+          "acc": "muzułmańskiego",
+          "ins": "muzułmańskim",
+          "loc": "muzułmańskim"
+        },
+        "m3": {
+          "nom": "muzułmański",
+          "gen": "muzułmańskiego",
+          "dat": "muzułmańskiemu",
+          "acc": "muzułmański",
+          "ins": "muzułmańskim",
+          "loc": "muzułmańskim"
+        },
+        "f": {
+          "nom": "muzułmańska",
+          "gen": "muzułmańskiej",
+          "dat": "muzułmańskiej",
+          "acc": "muzułmańską",
+          "ins": "muzułmańską",
+          "loc": "muzułmańskiej"
+        },
+        "n": {
+          "nom": "muzułmańskie",
+          "gen": "muzułmańskiego",
+          "dat": "muzułmańskiemu",
+          "acc": "muzułmańskie",
+          "ins": "muzułmańskim",
+          "loc": "muzułmańskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "muzułmańscy",
+          "gen": "muzułmańskich",
+          "dat": "muzułmańskim",
+          "acc": "muzułmańskich",
+          "ins": "muzułmańskimi",
+          "loc": "muzułmańskich"
+        },
+        "nonvirile": {
+          "nom": "muzułmańskie",
+          "gen": "muzułmańskich",
+          "dat": "muzułmańskim",
+          "acc": "muzułmańskie",
+          "ins": "muzułmańskimi",
+          "loc": "muzułmańskich"
+        }
+      }
+    }
+  }
+}

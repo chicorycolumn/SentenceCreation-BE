@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "turysta",
+      "gen": "turysty",
+      "dat": "turyście",
+      "acc": "turystę",
+      "ins": "turystą",
+      "loc": "turyście",
+      "voc": "turysto"
+    },
+    "plural": {
+      "nom": "turyści",
+      "gen": "turystów",
+      "dat": "turystom",
+      "acc": "turystów",
+      "ins": "turystami",
+      "loc": "turystach",
+      "voc": "turyści"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "chrześcijański",
+          "gen": "chrześcijańskiego",
+          "dat": "chrześcijańskiemu",
+          "acc": "chrześcijańskiego",
+          "ins": "chrześcijańskim",
+          "loc": "chrześcijańskim"
+        },
+        "m3": {
+          "nom": "chrześcijański",
+          "gen": "chrześcijańskiego",
+          "dat": "chrześcijańskiemu",
+          "acc": "chrześcijański",
+          "ins": "chrześcijańskim",
+          "loc": "chrześcijańskim"
+        },
+        "f": {
+          "nom": "chrześcijańska",
+          "gen": "chrześcijańskiej",
+          "dat": "chrześcijańskiej",
+          "acc": "chrześcijańską",
+          "ins": "chrześcijańską",
+          "loc": "chrześcijańskiej"
+        },
+        "n": {
+          "nom": "chrześcijańskie",
+          "gen": "chrześcijańskiego",
+          "dat": "chrześcijańskiemu",
+          "acc": "chrześcijańskie",
+          "ins": "chrześcijańskim",
+          "loc": "chrześcijańskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "chrześcijańscy",
+          "gen": "chrześcijańskich",
+          "dat": "chrześcijańskim",
+          "acc": "chrześcijańskich",
+          "ins": "chrześcijańskimi",
+          "loc": "chrześcijańskich"
+        },
+        "nonvirile": {
+          "nom": "chrześcijańskie",
+          "gen": "chrześcijańskich",
+          "dat": "chrześcijańskim",
+          "acc": "chrześcijańskie",
+          "ins": "chrześcijańskimi",
+          "loc": "chrześcijańskich"
+        }
+      }
+    }
+  }
+}

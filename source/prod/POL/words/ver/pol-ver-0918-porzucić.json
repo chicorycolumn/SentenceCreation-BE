@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "porzucić",
+    "verbalNoun": "porzucenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "porzucony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "porzuciwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "porzuci się"
+          },
+          "plural": {
+            "allPluralGenders": "porzuci się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "porzucę"
+          },
+          "plural": {
+            "allPluralGenders": "porzucimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "porzucisz"
+          },
+          "plural": {
+            "allPluralGenders": "porzucicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "porzuci"
+          },
+          "plural": {
+            "allPluralGenders": "porzucą"
+          }
+        }
+      },
+      "imperative": "porzuć",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "porzucono"
+          },
+          "plural": {
+            "allPluralGenders": "porzucono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "porzuciłem",
+            "f": "porzuciłam"
+          },
+          "plural": {
+            "virile": "porzuciliśmy",
+            "nonvirile": "porzuciłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "porzuciłeś",
+            "f": "porzuciłaś"
+          },
+          "plural": {
+            "virile": "porzuciliście",
+            "nonvirile": "porzuciłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "porzucił",
+            "f": "porzuciła",
+            "n": "porzuciło"
+          },
+          "plural": {
+            "virile": "porzucili",
+            "nonvirile": "porzuciły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

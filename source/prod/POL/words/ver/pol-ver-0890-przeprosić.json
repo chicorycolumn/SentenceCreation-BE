@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przeprosić",
+    "verbalNoun": "przeproszenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przeproszony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przeprosiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeprosi się"
+          },
+          "plural": {
+            "allPluralGenders": "przeprosi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przeproszę"
+          },
+          "plural": {
+            "allPluralGenders": "przeprosimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przeprosisz"
+          },
+          "plural": {
+            "allPluralGenders": "przeprosicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przeprosi"
+          },
+          "plural": {
+            "allPluralGenders": "przeproszą"
+          }
+        }
+      },
+      "imperative": "przeproś",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeproszono"
+          },
+          "plural": {
+            "allPluralGenders": "przeproszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przeprosiłem",
+            "f": "przeprosiłam"
+          },
+          "plural": {
+            "virile": "przeprosiliśmy",
+            "nonvirile": "przeprosiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przeprosiłeś",
+            "f": "przeprosiłaś"
+          },
+          "plural": {
+            "virile": "przeprosiliście",
+            "nonvirile": "przeprosiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przeprosił",
+            "f": "przeprosiła",
+            "n": "przeprosiło"
+          },
+          "plural": {
+            "virile": "przeprosili",
+            "nonvirile": "przeprosiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "gryźć",
+    "verbalNoun": "gryzienie",
+    "activeAdjectival": "gryzący",
+    "passiveAdjectival": "gryziony",
+    "contemporaryAdverbial": "gryząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "gryź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "gryziono"
+          },
+          "plural": {
+            "allPluralGenders": "gryziono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "gryzłem",
+            "f": "gryzłam"
+          },
+          "plural": {
+            "virile": "gryźliśmy",
+            "nonvirile": "gryzłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "gryzłeś",
+            "f": "gryzłaś"
+          },
+          "plural": {
+            "virile": "gryźliście",
+            "nonvirile": "gryzłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "gryzł",
+            "f": "gryzła",
+            "n": "gryzło"
+          },
+          "plural": {
+            "virile": "gryźli",
+            "nonvirile": "gryzły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "gryzie się"
+          },
+          "plural": {
+            "allPluralGenders": "gryzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "gryzę"
+          },
+          "plural": {
+            "allPluralGenders": "gryziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "gryziesz"
+          },
+          "plural": {
+            "allPluralGenders": "gryziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "gryzie"
+          },
+          "plural": {
+            "allPluralGenders": "gryzą"
+          }
+        }
+      }
+    }
+  }
+}

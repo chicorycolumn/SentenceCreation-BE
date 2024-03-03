@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "połowa",
+      "gen": "połowy",
+      "dat": "połowie",
+      "acc": "połowę",
+      "ins": "połową",
+      "loc": "połowie",
+      "voc": "połowo"
+    },
+    "plural": {
+      "nom": "połowy",
+      "gen": "połów",
+      "dat": "połowom",
+      "acc": "połowy",
+      "ins": "połowami",
+      "loc": "połowach",
+      "voc": "połowy"
+    }
+  }
+}

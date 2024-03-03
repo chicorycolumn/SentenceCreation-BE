@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wiedza",
+      "gen": "wiedzy",
+      "dat": "wiedzy",
+      "acc": "wiedzę",
+      "ins": "wiedzą",
+      "loc": "wiedzy",
+      "voc": "wiedzo"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "austriacki",
+          "gen": "austriackiego",
+          "dat": "austriackiemu",
+          "acc": "austriackiego",
+          "ins": "austriackim",
+          "loc": "austriackim"
+        },
+        "m3": {
+          "nom": "austriacki",
+          "gen": "austriackiego",
+          "dat": "austriackiemu",
+          "acc": "austriacki",
+          "ins": "austriackim",
+          "loc": "austriackim"
+        },
+        "f": {
+          "nom": "austriacka",
+          "gen": "austriackiej",
+          "dat": "austriackiej",
+          "acc": "austriacką",
+          "ins": "austriacką",
+          "loc": "austriackiej"
+        },
+        "n": {
+          "nom": "austriackie",
+          "gen": "austriackiego",
+          "dat": "austriackiemu",
+          "acc": "austriackie",
+          "ins": "austriackim",
+          "loc": "austriackim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "austriaccy",
+          "gen": "austriackich",
+          "dat": "austriackim",
+          "acc": "austriackich",
+          "ins": "austriackimi",
+          "loc": "austriackich"
+        },
+        "nonvirile": {
+          "nom": "austriackie",
+          "gen": "austriackich",
+          "dat": "austriackim",
+          "acc": "austriackie",
+          "ins": "austriackimi",
+          "loc": "austriackich"
+        }
+      }
+    }
+  }
+}

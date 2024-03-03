@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "motocykl",
+      "gen": "motocykla",
+      "dat": "motocyklowi",
+      "acc": "motocykl",
+      "ins": "motocyklem",
+      "loc": "motocyklu",
+      "voc": "motocyklu"
+    },
+    "plural": {
+      "nom": "motocykle",
+      "gen": [
+        "motocykli",
+        "motocycklów"
+      ],
+      "dat": "motocyklom",
+      "acc": "motocykle",
+      "ins": "motocyklami",
+      "loc": "motocyklach",
+      "voc": "motocykle"
+    }
+  }
+}

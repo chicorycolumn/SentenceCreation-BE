@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "daleko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "daleki",
+          "gen": "dalekiego",
+          "dat": "dalekiemu",
+          "acc": "dalekiego",
+          "ins": "dalekim",
+          "loc": "dalekim"
+        },
+        "m3": {
+          "nom": "daleki",
+          "gen": "dalekiego",
+          "dat": "dalekiemu",
+          "acc": "daleki",
+          "ins": "dalekim",
+          "loc": "dalekim"
+        },
+        "f": {
+          "nom": "daleka",
+          "gen": "dalekiej",
+          "dat": "dalekiej",
+          "acc": "daleką",
+          "ins": "daleką",
+          "loc": "dalekiej"
+        },
+        "n": {
+          "nom": "dalekie",
+          "gen": "dalekiego",
+          "dat": "dalekiemu",
+          "acc": "dalekie",
+          "ins": "dalekim",
+          "loc": "dalekim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dalecy",
+          "gen": "dalekich",
+          "dat": "dalekim",
+          "acc": "dalekich",
+          "ins": "dalekimi",
+          "loc": "dalekich"
+        },
+        "nonvirile": {
+          "nom": "dalekie",
+          "gen": "dalekich",
+          "dat": "dalekim",
+          "acc": "dalekie",
+          "ins": "dalekimi",
+          "loc": "dalekich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "dalszy",
+          "gen": "dalszego",
+          "dat": "dalszemu",
+          "acc": "dalszego",
+          "ins": "dalszym",
+          "loc": "dalszym"
+        },
+        "m3": {
+          "nom": "dalszy",
+          "gen": "dalszego",
+          "dat": "dalszemu",
+          "acc": "dalszy",
+          "ins": "dalszym",
+          "loc": "dalszym"
+        },
+        "f": {
+          "nom": "dalsza",
+          "gen": "dalszej",
+          "dat": "dalszej",
+          "acc": "dalszą",
+          "ins": "dalszą",
+          "loc": "dalszej"
+        },
+        "n": {
+          "nom": "dalsze",
+          "gen": "dalszego",
+          "dat": "dalszemu",
+          "acc": "dalsze",
+          "ins": "dalszym",
+          "loc": "dalszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dalsi",
+          "gen": "dalszych",
+          "dat": "dalszym",
+          "acc": "dalszych",
+          "ins": "dalszymi",
+          "loc": "dalszych"
+        },
+        "nonvirile": {
+          "nom": "dalsze",
+          "gen": "dalszych",
+          "dat": "dalszym",
+          "acc": "dalsze",
+          "ins": "dalszymi",
+          "loc": "dalszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najdalszy",
+          "gen": "najdalszego",
+          "dat": "najdalszemu",
+          "acc": "najdalszego",
+          "ins": "najdalszym",
+          "loc": "najdalszym"
+        },
+        "m3": {
+          "nom": "najdalszy",
+          "gen": "najdalszego",
+          "dat": "najdalszemu",
+          "acc": "najdalszy",
+          "ins": "najdalszym",
+          "loc": "najdalszym"
+        },
+        "f": {
+          "nom": "najdalsza",
+          "gen": "najdalszej",
+          "dat": "najdalszej",
+          "acc": "najdalszą",
+          "ins": "najdalszą",
+          "loc": "najdalszej"
+        },
+        "n": {
+          "nom": "najdalsze",
+          "gen": "najdalszego",
+          "dat": "najdalszemu",
+          "acc": "najdalsze",
+          "ins": "najdalszym",
+          "loc": "najdalszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najdalsi",
+          "gen": "najdalszych",
+          "dat": "najdalszym",
+          "acc": "najdalszych",
+          "ins": "najdalszymi",
+          "loc": "najdalszych"
+        },
+        "nonvirile": {
+          "nom": "najdalsze",
+          "gen": "najdalszych",
+          "dat": "najdalszym",
+          "acc": "najdalsze",
+          "ins": "najdalszymi",
+          "loc": "najdalszych"
+        }
+      }
+    }
+  }
+}

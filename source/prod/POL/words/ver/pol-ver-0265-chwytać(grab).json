@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "chwytać",
+    "verbalNoun": "chwytanie",
+    "activeAdjectival": "chwytający",
+    "passiveAdjectival": "chwytany",
+    "contemporaryAdverbial": "chwytając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "chwytaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "chwytano"
+          },
+          "plural": {
+            "allPluralGenders": "chwytano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "chwytałem",
+            "f": "chwytałam"
+          },
+          "plural": {
+            "virile": "chwytaliśmy",
+            "nonvirile": "chwytałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "chwytałeś",
+            "f": "chwytałaś"
+          },
+          "plural": {
+            "virile": "chwytaliście",
+            "nonvirile": "chwytałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "chwytał",
+            "f": "chwytała",
+            "n": "chwytało"
+          },
+          "plural": {
+            "virile": "chwytali",
+            "nonvirile": "chwytały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "chwyta się"
+          },
+          "plural": {
+            "allPluralGenders": "chwyta się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "chwytam"
+          },
+          "plural": {
+            "allPluralGenders": "chwytamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "chwytasz"
+          },
+          "plural": {
+            "allPluralGenders": "chwytacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "chwyta"
+          },
+          "plural": {
+            "allPluralGenders": "chwytają"
+          }
+        }
+      }
+    }
+  }
+}

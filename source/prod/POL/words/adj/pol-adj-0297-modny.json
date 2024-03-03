@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "modnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "modny",
+          "gen": "modnego",
+          "dat": "modnemu",
+          "acc": "modnego",
+          "ins": "modnym",
+          "loc": "modnym"
+        },
+        "m3": {
+          "nom": "modny",
+          "gen": "modnego",
+          "dat": "modnemu",
+          "acc": "modny",
+          "ins": "modnym",
+          "loc": "modnym"
+        },
+        "f": {
+          "nom": "modna",
+          "gen": "modnej",
+          "dat": "modnej",
+          "acc": "modną",
+          "ins": "modną",
+          "loc": "modnej"
+        },
+        "n": {
+          "nom": "modne",
+          "gen": "modnego",
+          "dat": "modnemu",
+          "acc": "modne",
+          "ins": "modnym",
+          "loc": "modnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "modni",
+          "gen": "modnych",
+          "dat": "modnym",
+          "acc": "modnych",
+          "ins": "modnymi",
+          "loc": "modnych"
+        },
+        "nonvirile": {
+          "nom": "modne",
+          "gen": "modnych",
+          "dat": "modnym",
+          "acc": "modne",
+          "ins": "modnymi",
+          "loc": "modnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "modniejszy",
+          "gen": "modniejszego",
+          "dat": "modniejszemu",
+          "acc": "modniejszego",
+          "ins": "modniejszym",
+          "loc": "modniejszym"
+        },
+        "m3": {
+          "nom": "modniejszy",
+          "gen": "modniejszego",
+          "dat": "modniejszemu",
+          "acc": "modniejszy",
+          "ins": "modniejszym",
+          "loc": "modniejszym"
+        },
+        "f": {
+          "nom": "modniejsza",
+          "gen": "modniejszej",
+          "dat": "modniejszej",
+          "acc": "modniejszą",
+          "ins": "modniejszą",
+          "loc": "modniejszej"
+        },
+        "n": {
+          "nom": "modniejsze",
+          "gen": "modniejszego",
+          "dat": "modniejszemu",
+          "acc": "modniejsze",
+          "ins": "modniejszym",
+          "loc": "modniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "modniejsi",
+          "gen": "modniejszych",
+          "dat": "modniejszym",
+          "acc": "modniejszych",
+          "ins": "modniejszymi",
+          "loc": "modniejszych"
+        },
+        "nonvirile": {
+          "nom": "modniejsze",
+          "gen": "modniejszych",
+          "dat": "modniejszym",
+          "acc": "modniejsze",
+          "ins": "modniejszymi",
+          "loc": "modniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najmodniejszy",
+          "gen": "najmodniejszego",
+          "dat": "najmodniejszemu",
+          "acc": "najmodniejszego",
+          "ins": "najmodniejszym",
+          "loc": "najmodniejszym"
+        },
+        "m3": {
+          "nom": "najmodniejszy",
+          "gen": "najmodniejszego",
+          "dat": "najmodniejszemu",
+          "acc": "najmodniejszy",
+          "ins": "najmodniejszym",
+          "loc": "najmodniejszym"
+        },
+        "f": {
+          "nom": "najmodniejsza",
+          "gen": "najmodniejszej",
+          "dat": "najmodniejszej",
+          "acc": "najmodniejszą",
+          "ins": "najmodniejszą",
+          "loc": "najmodniejszej"
+        },
+        "n": {
+          "nom": "najmodniejsze",
+          "gen": "najmodniejszego",
+          "dat": "najmodniejszemu",
+          "acc": "najmodniejsze",
+          "ins": "najmodniejszym",
+          "loc": "najmodniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najmodniejsi",
+          "gen": "najmodniejszych",
+          "dat": "najmodniejszym",
+          "acc": "najmodniejszych",
+          "ins": "najmodniejszymi",
+          "loc": "najmodniejszych"
+        },
+        "nonvirile": {
+          "nom": "najmodniejsze",
+          "gen": "najmodniejszych",
+          "dat": "najmodniejszym",
+          "acc": "najmodniejsze",
+          "ins": "najmodniejszymi",
+          "loc": "najmodniejszych"
+        }
+      }
+    }
+  }
+}

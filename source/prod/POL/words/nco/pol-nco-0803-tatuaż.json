@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "tatuaż",
+      "gen": "tatuażu",
+      "dat": "tatuażowi",
+      "acc": "tatuaż",
+      "ins": "tatuażem",
+      "loc": "tatuażu",
+      "voc": "tatuażu"
+    },
+    "plural": {
+      "nom": "tatuaże",
+      "gen": [
+        "tatuaży",
+        "tatuażów"
+      ],
+      "dat": "tatuażom",
+      "acc": "tatuaże",
+      "ins": "tatuażami",
+      "loc": "tatuażach",
+      "voc": "tatuaże"
+    }
+  }
+}

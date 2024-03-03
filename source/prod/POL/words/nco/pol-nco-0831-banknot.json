@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "banknot",
+      "gen": "banknotu",
+      "dat": "banknotowi",
+      "acc": "banknot",
+      "ins": "banknotem",
+      "loc": "banknocie",
+      "voc": "banknocie"
+    },
+    "plural": {
+      "nom": "banknoty",
+      "gen": "banknotów",
+      "dat": "banknotom",
+      "acc": "banknoty",
+      "ins": "banknotami",
+      "loc": "banknotach",
+      "voc": "banknoty"
+    }
+  }
+}

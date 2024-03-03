@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "okropnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "okropny",
+          "gen": "okropnego",
+          "dat": "okropnemu",
+          "acc": "okropnego",
+          "ins": "okropnym",
+          "loc": "okropnym"
+        },
+        "m3": {
+          "nom": "okropny",
+          "gen": "okropnego",
+          "dat": "okropnemu",
+          "acc": "okropny",
+          "ins": "okropnym",
+          "loc": "okropnym"
+        },
+        "f": {
+          "nom": "okropna",
+          "gen": "okropnej",
+          "dat": "okropnej",
+          "acc": "okropną",
+          "ins": "okropną",
+          "loc": "okropnej"
+        },
+        "n": {
+          "nom": "okropne",
+          "gen": "okropnego",
+          "dat": "okropnemu",
+          "acc": "okropne",
+          "ins": "okropnym",
+          "loc": "okropnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "okropni",
+          "gen": "okropnych",
+          "dat": "okropnym",
+          "acc": "okropnych",
+          "ins": "okropnymi",
+          "loc": "okropnych"
+        },
+        "nonvirile": {
+          "nom": "okropne",
+          "gen": "okropnych",
+          "dat": "okropnym",
+          "acc": "okropne",
+          "ins": "okropnymi",
+          "loc": "okropnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "okropniejszy",
+          "gen": "okropniejszego",
+          "dat": "okropniejszemu",
+          "acc": "okropniejszego",
+          "ins": "okropniejszym",
+          "loc": "okropniejszym"
+        },
+        "m3": {
+          "nom": "okropniejszy",
+          "gen": "okropniejszego",
+          "dat": "okropniejszemu",
+          "acc": "okropniejszy",
+          "ins": "okropniejszym",
+          "loc": "okropniejszym"
+        },
+        "f": {
+          "nom": "okropniejsza",
+          "gen": "okropniejszej",
+          "dat": "okropniejszej",
+          "acc": "okropniejszą",
+          "ins": "okropniejszą",
+          "loc": "okropniejszej"
+        },
+        "n": {
+          "nom": "okropniejsze",
+          "gen": "okropniejszego",
+          "dat": "okropniejszemu",
+          "acc": "okropniejsze",
+          "ins": "okropniejszym",
+          "loc": "okropniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "okropniejsi",
+          "gen": "okropniejszych",
+          "dat": "okropniejszym",
+          "acc": "okropniejszych",
+          "ins": "okropniejszymi",
+          "loc": "okropniejszych"
+        },
+        "nonvirile": {
+          "nom": "okropniejsze",
+          "gen": "okropniejszych",
+          "dat": "okropniejszym",
+          "acc": "okropniejsze",
+          "ins": "okropniejszymi",
+          "loc": "okropniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najokropniejszy",
+          "gen": "najokropniejszego",
+          "dat": "najokropniejszemu",
+          "acc": "najokropniejszego",
+          "ins": "najokropniejszym",
+          "loc": "najokropniejszym"
+        },
+        "m3": {
+          "nom": "najokropniejszy",
+          "gen": "najokropniejszego",
+          "dat": "najokropniejszemu",
+          "acc": "najokropniejszy",
+          "ins": "najokropniejszym",
+          "loc": "najokropniejszym"
+        },
+        "f": {
+          "nom": "najokropniejsza",
+          "gen": "najokropniejszej",
+          "dat": "najokropniejszej",
+          "acc": "najokropniejszą",
+          "ins": "najokropniejszą",
+          "loc": "najokropniejszej"
+        },
+        "n": {
+          "nom": "najokropniejsze",
+          "gen": "najokropniejszego",
+          "dat": "najokropniejszemu",
+          "acc": "najokropniejsze",
+          "ins": "najokropniejszym",
+          "loc": "najokropniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najokropniejsi",
+          "gen": "najokropniejszych",
+          "dat": "najokropniejszym",
+          "acc": "najokropniejszych",
+          "ins": "najokropniejszymi",
+          "loc": "najokropniejszych"
+        },
+        "nonvirile": {
+          "nom": "najokropniejsze",
+          "gen": "najokropniejszych",
+          "dat": "najokropniejszym",
+          "acc": "najokropniejsze",
+          "ins": "najokropniejszymi",
+          "loc": "najokropniejszych"
+        }
+      }
+    }
+  }
+}

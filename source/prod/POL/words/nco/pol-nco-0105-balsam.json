@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "balsam",
+      "gen": "balsamu",
+      "dat": "balsamowi",
+      "acc": "balsam",
+      "ins": "balsamem",
+      "loc": "balsamie",
+      "voc": "balsamie"
+    },
+    "plural": {
+      "nom": "balsamy",
+      "gen": "balsamów",
+      "dat": "balsamom",
+      "acc": "balsamy",
+      "ins": "balsamami",
+      "loc": "balsamach",
+      "voc": "balsamy"
+    }
+  }
+}

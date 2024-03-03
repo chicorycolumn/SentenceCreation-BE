@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przyjeżdżać",
+    "verbalNoun": "przyjeżdżanie",
+    "activeAdjectival": "przyjeżdżający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "przyjeżdżając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przyjeżdżaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przyjeżdżano"
+          },
+          "plural": {
+            "allPluralGenders": "przyjeżdżano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przyjeżdżałem",
+            "f": "przyjeżdżałam"
+          },
+          "plural": {
+            "virile": "przyjeżdżaliśmy",
+            "nonvirile": "przyjeżdżałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przyjeżdżałeś",
+            "f": "przyjeżdżałaś"
+          },
+          "plural": {
+            "virile": "przyjeżdżaliście",
+            "nonvirile": "przyjeżdżałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przyjeżdżał",
+            "f": "przyjeżdżała",
+            "n": "przyjeżdżało"
+          },
+          "plural": {
+            "virile": "przyjeżdżali",
+            "nonvirile": "przyjeżdżały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przyjeżdża się"
+          },
+          "plural": {
+            "allPluralGenders": "przyjeżdża się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przyjeżdżam"
+          },
+          "plural": {
+            "allPluralGenders": "przyjeżdżamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przyjeżdżasz"
+          },
+          "plural": {
+            "allPluralGenders": "przyjeżdżacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przyjeżdża"
+          },
+          "plural": {
+            "allPluralGenders": "przyjeżdżają"
+          }
+        }
+      }
+    }
+  }
+}

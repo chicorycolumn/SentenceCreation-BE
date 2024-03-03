@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "trawa",
+      "gen": "trawy",
+      "dat": "trawie",
+      "acc": "trawę",
+      "ins": "trawą",
+      "loc": "trawie",
+      "voc": "trawo"
+    },
+    "plural": {
+      "nom": "trawy",
+      "gen": "traw",
+      "dat": "trawom",
+      "acc": "trawy",
+      "ins": "trawami",
+      "loc": "trawach",
+      "voc": "trawy"
+    }
+  }
+}

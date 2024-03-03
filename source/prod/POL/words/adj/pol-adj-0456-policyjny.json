@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "policyjnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "policyjny",
+          "gen": "policyjnego",
+          "dat": "policyjnemu",
+          "acc": "policyjnego",
+          "ins": "policyjnym",
+          "loc": "policyjnym"
+        },
+        "m3": {
+          "nom": "policyjny",
+          "gen": "policyjnego",
+          "dat": "policyjnemu",
+          "acc": "policyjny",
+          "ins": "policyjnym",
+          "loc": "policyjnym"
+        },
+        "f": {
+          "nom": "policyjna",
+          "gen": "policyjnej",
+          "dat": "policyjnej",
+          "acc": "policyjną",
+          "ins": "policyjną",
+          "loc": "policyjnej"
+        },
+        "n": {
+          "nom": "policyjne",
+          "gen": "policyjnego",
+          "dat": "policyjnemu",
+          "acc": "policyjne",
+          "ins": "policyjnym",
+          "loc": "policyjnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "policyjni",
+          "gen": "policyjnych",
+          "dat": "policyjnym",
+          "acc": "policyjnych",
+          "ins": "policyjnymi",
+          "loc": "policyjnych"
+        },
+        "nonvirile": {
+          "nom": "policyjne",
+          "gen": "policyjnych",
+          "dat": "policyjnym",
+          "acc": "policyjne",
+          "ins": "policyjnymi",
+          "loc": "policyjnych"
+        }
+      }
+    }
+  }
+}

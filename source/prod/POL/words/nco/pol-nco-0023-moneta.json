@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "moneta",
+      "gen": "monety",
+      "dat": "monecie",
+      "acc": "monetę",
+      "ins": "monetą",
+      "loc": "monecie",
+      "voc": "moneto"
+    },
+    "plural": {
+      "nom": "monety",
+      "gen": "monet",
+      "dat": "monetom",
+      "acc": "monety",
+      "ins": "monetami",
+      "loc": "monetach",
+      "voc": "monety"
+    }
+  }
+}

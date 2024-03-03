@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "knitting needle",
+      "gen": "knitting needle's"
+    },
+    "plural": {
+      "nom": "knitting needles",
+      "gen": "knitting needles'"
+    }
+  }
+}

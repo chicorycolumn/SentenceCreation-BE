@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nakręcić",
+    "verbalNoun": "nakręcenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "nakręcony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "nakręciwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nakręci się"
+          },
+          "plural": {
+            "allPluralGenders": "nakręci się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nakręcę"
+          },
+          "plural": {
+            "allPluralGenders": "nakręcimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nakręcisz"
+          },
+          "plural": {
+            "allPluralGenders": "nakręcicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nakręci"
+          },
+          "plural": {
+            "allPluralGenders": "nakręcą"
+          }
+        }
+      },
+      "imperative": "nakręć",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nakręcono"
+          },
+          "plural": {
+            "allPluralGenders": "nakręcono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nakręciłem",
+            "f": "nakręciłam"
+          },
+          "plural": {
+            "virile": "nakręciliśmy",
+            "nonvirile": "nakręciłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nakręciłeś",
+            "f": "nakręciłaś"
+          },
+          "plural": {
+            "virile": "nakręciliście",
+            "nonvirile": "nakręciłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nakręcił",
+            "f": "nakręciła",
+            "n": "nakręciło"
+          },
+          "plural": {
+            "virile": "nakręcili",
+            "nonvirile": "nakręciły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

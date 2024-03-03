@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "krab",
+      "gen": "kraba",
+      "dat": "krabowi",
+      "acc": "kraba",
+      "ins": "krabem",
+      "loc": "krabie",
+      "voc": "krabie"
+    },
+    "plural": {
+      "nom": "kraby",
+      "gen": "krabów",
+      "dat": "krabom",
+      "acc": "kraby",
+      "ins": "krabami",
+      "loc": "krabach",
+      "voc": "kraby"
+    }
+  }
+}

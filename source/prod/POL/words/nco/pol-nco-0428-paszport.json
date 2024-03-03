@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "paszport",
+      "gen": "paszportu",
+      "dat": "paszportowi",
+      "acc": "paszport",
+      "ins": "paszportem",
+      "loc": "paszporcie",
+      "voc": "paszporcie"
+    },
+    "plural": {
+      "nom": "paszporty",
+      "gen": "paszportów",
+      "dat": "paszportom",
+      "acc": "paszporty",
+      "ins": "paszportami",
+      "loc": "paszportach",
+      "voc": "paszporty"
+    }
+  }
+}

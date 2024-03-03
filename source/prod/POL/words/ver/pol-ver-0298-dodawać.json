@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dodawać",
+    "verbalNoun": "dodawanie",
+    "activeAdjectival": "dodający",
+    "passiveAdjectival": "dodawany",
+    "contemporaryAdverbial": "dodając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dodawaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dodawano"
+          },
+          "plural": {
+            "allPluralGenders": "dodawano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dodawałem",
+            "f": "dodawałam"
+          },
+          "plural": {
+            "virile": "dodawaliśmy",
+            "nonvirile": "dodawałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dodawałeś",
+            "f": "dodawałaś"
+          },
+          "plural": {
+            "virile": "dodawaliście",
+            "nonvirile": "dodawałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dodawał",
+            "f": "dodawała",
+            "n": "dodawało"
+          },
+          "plural": {
+            "virile": "dodawali",
+            "nonvirile": "dodawały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dodaje się"
+          },
+          "plural": {
+            "allPluralGenders": "dodaje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dodaję"
+          },
+          "plural": {
+            "allPluralGenders": "dodajemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dodajesz"
+          },
+          "plural": {
+            "allPluralGenders": "dodajecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dodaje"
+          },
+          "plural": {
+            "allPluralGenders": "dodają"
+          }
+        }
+      }
+    }
+  }
+}

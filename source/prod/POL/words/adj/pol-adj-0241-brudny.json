@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "brudno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "brudny",
+          "gen": "brudnego",
+          "dat": "brudnemu",
+          "acc": "brudnego",
+          "ins": "brudnym",
+          "loc": "brudnym"
+        },
+        "m3": {
+          "nom": "brudny",
+          "gen": "brudnego",
+          "dat": "brudnemu",
+          "acc": "brudny",
+          "ins": "brudnym",
+          "loc": "brudnym"
+        },
+        "f": {
+          "nom": "brudna",
+          "gen": "brudnej",
+          "dat": "brudnej",
+          "acc": "brudną",
+          "ins": "brudną",
+          "loc": "brudnej"
+        },
+        "n": {
+          "nom": "brudne",
+          "gen": "brudnego",
+          "dat": "brudnemu",
+          "acc": "brudne",
+          "ins": "brudnym",
+          "loc": "brudnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "brudni",
+          "gen": "brudnych",
+          "dat": "brudnym",
+          "acc": "brudnych",
+          "ins": "brudnymi",
+          "loc": "brudnych"
+        },
+        "nonvirile": {
+          "nom": "brudne",
+          "gen": "brudnych",
+          "dat": "brudnym",
+          "acc": "brudne",
+          "ins": "brudnymi",
+          "loc": "brudnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "brudniejszy",
+          "gen": "brudniejszego",
+          "dat": "brudniejszemu",
+          "acc": "brudniejszego",
+          "ins": "brudniejszym",
+          "loc": "brudniejszym"
+        },
+        "m3": {
+          "nom": "brudniejszy",
+          "gen": "brudniejszego",
+          "dat": "brudniejszemu",
+          "acc": "brudniejszy",
+          "ins": "brudniejszym",
+          "loc": "brudniejszym"
+        },
+        "f": {
+          "nom": "brudniejsza",
+          "gen": "brudniejszej",
+          "dat": "brudniejszej",
+          "acc": "brudniejszą",
+          "ins": "brudniejszą",
+          "loc": "brudniejszej"
+        },
+        "n": {
+          "nom": "brudniejsze",
+          "gen": "brudniejszego",
+          "dat": "brudniejszemu",
+          "acc": "brudniejsze",
+          "ins": "brudniejszym",
+          "loc": "brudniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "brudniejsi",
+          "gen": "brudniejszych",
+          "dat": "brudniejszym",
+          "acc": "brudniejszych",
+          "ins": "brudniejszymi",
+          "loc": "brudniejszych"
+        },
+        "nonvirile": {
+          "nom": "brudniejsze",
+          "gen": "brudniejszych",
+          "dat": "brudniejszym",
+          "acc": "brudniejsze",
+          "ins": "brudniejszymi",
+          "loc": "brudniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbrudniejszy",
+          "gen": "najbrudniejszego",
+          "dat": "najbrudniejszemu",
+          "acc": "najbrudniejszego",
+          "ins": "najbrudniejszym",
+          "loc": "najbrudniejszym"
+        },
+        "m3": {
+          "nom": "najbrudniejszy",
+          "gen": "najbrudniejszego",
+          "dat": "najbrudniejszemu",
+          "acc": "najbrudniejszy",
+          "ins": "najbrudniejszym",
+          "loc": "najbrudniejszym"
+        },
+        "f": {
+          "nom": "najbrudniejsza",
+          "gen": "najbrudniejszej",
+          "dat": "najbrudniejszej",
+          "acc": "najbrudniejszą",
+          "ins": "najbrudniejszą",
+          "loc": "najbrudniejszej"
+        },
+        "n": {
+          "nom": "najbrudniejsze",
+          "gen": "najbrudniejszego",
+          "dat": "najbrudniejszemu",
+          "acc": "najbrudniejsze",
+          "ins": "najbrudniejszym",
+          "loc": "najbrudniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbrudniejsi",
+          "gen": "najbrudniejszych",
+          "dat": "najbrudniejszym",
+          "acc": "najbrudniejszych",
+          "ins": "najbrudniejszymi",
+          "loc": "najbrudniejszych"
+        },
+        "nonvirile": {
+          "nom": "najbrudniejsze",
+          "gen": "najbrudniejszych",
+          "dat": "najbrudniejszym",
+          "acc": "najbrudniejsze",
+          "ins": "najbrudniejszymi",
+          "loc": "najbrudniejszych"
+        }
+      }
+    }
+  }
+}

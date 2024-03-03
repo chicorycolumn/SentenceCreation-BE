@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "smród",
+      "gen": "smrodu",
+      "dat": "smrodowi",
+      "acc": "smród",
+      "ins": "smrodem",
+      "loc": "smrodzie",
+      "voc": "smrodzie"
+    },
+    "plural": {
+      "nom": "smrody",
+      "gen": "smrodów",
+      "dat": "smrodom",
+      "acc": "smrody",
+      "ins": "smrodami",
+      "loc": "smrodach",
+      "voc": "smrody"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "soczewka",
+      "gen": "soczewki",
+      "dat": "soczewce",
+      "acc": "soczewkę",
+      "ins": "soczewką",
+      "loc": "soczewce",
+      "voc": "soczewko"
+    },
+    "plural": {
+      "nom": "soczewki",
+      "gen": "soczewek",
+      "dat": "soczewkom",
+      "acc": "soczewki",
+      "ins": "soczewkami",
+      "loc": "soczewkach",
+      "voc": "soczewki"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "plural": {
+      "nom": "usta",
+      "gen": "ust",
+      "dat": "ustom",
+      "acc": "usta",
+      "ins": "ustami",
+      "loc": "ustach",
+      "voc": "usta"
+    }
+  }
+}

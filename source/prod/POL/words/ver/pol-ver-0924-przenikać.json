@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przenikać",
+    "verbalNoun": "przenikanie",
+    "activeAdjectival": "przenikający",
+    "passiveAdjectival": "przenikany",
+    "contemporaryAdverbial": "przenikając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przenikaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przenikano"
+          },
+          "plural": {
+            "allPluralGenders": "przenikano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przenikałem",
+            "f": "przenikałam"
+          },
+          "plural": {
+            "virile": "przenikaliśmy",
+            "nonvirile": "przenikałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przenikałeś",
+            "f": "przenikałaś"
+          },
+          "plural": {
+            "virile": "przenikaliście",
+            "nonvirile": "przenikałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przenikał",
+            "f": "przenikała",
+            "n": "przenikało"
+          },
+          "plural": {
+            "virile": "przenikali",
+            "nonvirile": "przenikały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przenika się"
+          },
+          "plural": {
+            "allPluralGenders": "przenika się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przenikam"
+          },
+          "plural": {
+            "allPluralGenders": "przenikamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przenikasz"
+          },
+          "plural": {
+            "allPluralGenders": "przenikacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przenika"
+          },
+          "plural": {
+            "allPluralGenders": "przenikają"
+          }
+        }
+      }
+    }
+  }
+}

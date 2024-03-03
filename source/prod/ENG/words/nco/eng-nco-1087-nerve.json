@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "nerve",
+      "gen": "nerve's"
+    },
+    "plural": {
+      "nom": "nerves",
+      "gen": "nerves'"
+    }
+  }
+}

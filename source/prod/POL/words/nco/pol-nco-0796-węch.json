@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "węch",
+      "gen": "węchu",
+      "dat": "węchowi",
+      "acc": "węch",
+      "ins": "węchem",
+      "loc": "węchu",
+      "voc": "węchu"
+    }
+  }
+}

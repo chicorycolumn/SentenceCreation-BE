@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "rozlegle",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "rozległy",
+          "gen": "rozległego",
+          "dat": "rozległemu",
+          "acc": "rozległego",
+          "ins": "rozległym",
+          "loc": "rozległym"
+        },
+        "m3": {
+          "nom": "rozległy",
+          "gen": "rozległego",
+          "dat": "rozległemu",
+          "acc": "rozległy",
+          "ins": "rozległym",
+          "loc": "rozległym"
+        },
+        "f": {
+          "nom": "rozległa",
+          "gen": "rozległej",
+          "dat": "rozległej",
+          "acc": "rozległą",
+          "ins": "rozległą",
+          "loc": "rozległej"
+        },
+        "n": {
+          "nom": "rozległe",
+          "gen": "rozległego",
+          "dat": "rozległemu",
+          "acc": "rozległe",
+          "ins": "rozległym",
+          "loc": "rozległym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "rozlegli",
+          "gen": "rozległych",
+          "dat": "rozległym",
+          "acc": "rozległych",
+          "ins": "rozległymi",
+          "loc": "rozległych"
+        },
+        "nonvirile": {
+          "nom": "rozległe",
+          "gen": "rozległych",
+          "dat": "rozległym",
+          "acc": "rozległe",
+          "ins": "rozległymi",
+          "loc": "rozległych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "rozleglejszy",
+          "gen": "rozleglejszego",
+          "dat": "rozleglejszemu",
+          "acc": "rozleglejszego",
+          "ins": "rozleglejszym",
+          "loc": "rozleglejszym"
+        },
+        "m3": {
+          "nom": "rozleglejszy",
+          "gen": "rozleglejszego",
+          "dat": "rozleglejszemu",
+          "acc": "rozleglejszy",
+          "ins": "rozleglejszym",
+          "loc": "rozleglejszym"
+        },
+        "f": {
+          "nom": "rozleglejsza",
+          "gen": "rozleglejszej",
+          "dat": "rozleglejszej",
+          "acc": "rozleglejszą",
+          "ins": "rozleglejszą",
+          "loc": "rozleglejszej"
+        },
+        "n": {
+          "nom": "rozleglejsze",
+          "gen": "rozleglejszego",
+          "dat": "rozleglejszemu",
+          "acc": "rozleglejsze",
+          "ins": "rozleglejszym",
+          "loc": "rozleglejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "rozleglejsi",
+          "gen": "rozleglejszych",
+          "dat": "rozleglejszym",
+          "acc": "rozleglejszych",
+          "ins": "rozleglejszymi",
+          "loc": "rozleglejszych"
+        },
+        "nonvirile": {
+          "nom": "rozleglejsze",
+          "gen": "rozleglejszych",
+          "dat": "rozleglejszym",
+          "acc": "rozleglejsze",
+          "ins": "rozleglejszymi",
+          "loc": "rozleglejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najrozleglejszy",
+          "gen": "najrozleglejszego",
+          "dat": "najrozleglejszemu",
+          "acc": "najrozleglejszego",
+          "ins": "najrozleglejszym",
+          "loc": "najrozleglejszym"
+        },
+        "m3": {
+          "nom": "najrozleglejszy",
+          "gen": "najrozleglejszego",
+          "dat": "najrozleglejszemu",
+          "acc": "najrozleglejszy",
+          "ins": "najrozleglejszym",
+          "loc": "najrozleglejszym"
+        },
+        "f": {
+          "nom": "najrozleglejsza",
+          "gen": "najrozleglejszej",
+          "dat": "najrozleglejszej",
+          "acc": "najrozleglejszą",
+          "ins": "najrozleglejszą",
+          "loc": "najrozleglejszej"
+        },
+        "n": {
+          "nom": "najrozleglejsze",
+          "gen": "najrozleglejszego",
+          "dat": "najrozleglejszemu",
+          "acc": "najrozleglejsze",
+          "ins": "najrozleglejszym",
+          "loc": "najrozleglejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najrozleglejsi",
+          "gen": "najrozleglejszych",
+          "dat": "najrozleglejszym",
+          "acc": "najrozleglejszych",
+          "ins": "najrozleglejszymi",
+          "loc": "najrozleglejszych"
+        },
+        "nonvirile": {
+          "nom": "najrozleglejsze",
+          "gen": "najrozleglejszych",
+          "dat": "najrozleglejszym",
+          "acc": "najrozleglejsze",
+          "ins": "najrozleglejszymi",
+          "loc": "najrozleglejszych"
+        }
+      }
+    }
+  }
+}

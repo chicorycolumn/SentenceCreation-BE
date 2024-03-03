@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dotknąć",
+    "verbalNoun": "dotknięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "dotknięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "dotknąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dotknie się"
+          },
+          "plural": {
+            "allPluralGenders": "dotknie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dotknę"
+          },
+          "plural": {
+            "allPluralGenders": "dotkniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dotkniesz"
+          },
+          "plural": {
+            "allPluralGenders": "dotkniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dotknie"
+          },
+          "plural": {
+            "allPluralGenders": "dotkną"
+          }
+        }
+      },
+      "imperative": "dotknij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dotknięto"
+          },
+          "plural": {
+            "allPluralGenders": "dotknięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dotknąłem",
+            "f": "dotknęłam"
+          },
+          "plural": {
+            "virile": "dotknęliśmy",
+            "nonvirile": "dotknęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dotknąłeś",
+            "f": "dotknęłaś"
+          },
+          "plural": {
+            "virile": "dotknęliście",
+            "nonvirile": "dotknęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dotknął",
+            "f": "dotknęła",
+            "n": "dotknęło"
+          },
+          "plural": {
+            "virile": "dotknęli",
+            "nonvirile": "dotknęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

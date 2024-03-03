@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mózg",
+      "gen": "mózgu",
+      "dat": "mózgowi",
+      "acc": "mózg",
+      "ins": "mózgiem",
+      "loc": "mózgu",
+      "voc": "mózgu"
+    },
+    "plural": {
+      "nom": "mózgi",
+      "gen": "mózgów",
+      "dat": "mózgom",
+      "acc": "mózgi",
+      "ins": "mózgami",
+      "loc": "mózgach",
+      "voc": "mózgi"
+    }
+  }
+}

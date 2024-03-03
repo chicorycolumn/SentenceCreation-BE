@@ -1,0 +1,82 @@
+{
+  "inflections": {
+    "infinitive": "stanąć",
+    "verbalNoun": "stanięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "stanąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "stanie się"
+          },
+          "plural": {
+            "allPluralGenders": "stanie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "stanę"
+          },
+          "plural": {
+            "allPluralGenders": "staniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "staniesz"
+          },
+          "plural": {
+            "allPluralGenders": "staniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "stanie"
+          },
+          "plural": {
+            "allPluralGenders": "staną"
+          }
+        }
+      },
+      "imperative": "stań",
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "stanąłem",
+            "f": "stanęłam"
+          },
+          "plural": {
+            "virile": "stanęliśmy",
+            "nonvirile": "stanęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "stanąłeś",
+            "f": "stanęłaś"
+          },
+          "plural": {
+            "virile": "stanęliście",
+            "nonvirile": "stanęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "stanął",
+            "f": "stanęła",
+            "n": "stanęło"
+          },
+          "plural": {
+            "virile": "stanęli",
+            "nonvirile": "stanęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

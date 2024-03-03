@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "screen",
+      "gen": "screen's"
+    },
+    "plural": {
+      "nom": "screens",
+      "gen": "screens'"
+    }
+  }
+}

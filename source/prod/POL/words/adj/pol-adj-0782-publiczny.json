@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "publicznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "publiczny",
+          "gen": "publicznego",
+          "dat": "publicznemu",
+          "acc": "publicznego",
+          "ins": "publicznym",
+          "loc": "publicznym"
+        },
+        "m3": {
+          "nom": "publiczny",
+          "gen": "publicznego",
+          "dat": "publicznemu",
+          "acc": "publiczny",
+          "ins": "publicznym",
+          "loc": "publicznym"
+        },
+        "f": {
+          "nom": "publiczna",
+          "gen": "publicznej",
+          "dat": "publicznej",
+          "acc": "publiczną",
+          "ins": "publiczną",
+          "loc": "publicznej"
+        },
+        "n": {
+          "nom": "publiczne",
+          "gen": "publicznego",
+          "dat": "publicznemu",
+          "acc": "publiczne",
+          "ins": "publicznym",
+          "loc": "publicznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "publiczni",
+          "gen": "publicznych",
+          "dat": "publicznym",
+          "acc": "publicznych",
+          "ins": "publicznymi",
+          "loc": "publicznych"
+        },
+        "nonvirile": {
+          "nom": "publiczne",
+          "gen": "publicznych",
+          "dat": "publicznym",
+          "acc": "publiczne",
+          "ins": "publicznymi",
+          "loc": "publicznych"
+        }
+      }
+    }
+  }
+}

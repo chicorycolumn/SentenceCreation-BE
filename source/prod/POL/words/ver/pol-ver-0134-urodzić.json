@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "urodzić",
+    "verbalNoun": "urodzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "urodzony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "urodziwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "urodzi się"
+          },
+          "plural": {
+            "allPluralGenders": "urodzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "urodzę"
+          },
+          "plural": {
+            "allPluralGenders": "urodzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "urodzisz"
+          },
+          "plural": {
+            "allPluralGenders": "urodzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "urodzi"
+          },
+          "plural": {
+            "allPluralGenders": "urodzą"
+          }
+        }
+      },
+      "imperative": "uródź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "urodzono"
+          },
+          "plural": {
+            "allPluralGenders": "urodzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "urodziłem",
+            "f": "urodziłam"
+          },
+          "plural": {
+            "virile": "urodziliśmy",
+            "nonvirile": "urodziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "urodziłeś",
+            "f": "urodziłaś"
+          },
+          "plural": {
+            "virile": "urodziliście",
+            "nonvirile": "urodziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "urodził",
+            "f": "urodziła",
+            "n": "urodziło"
+          },
+          "plural": {
+            "virile": "urodzili",
+            "nonvirile": "urodziły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

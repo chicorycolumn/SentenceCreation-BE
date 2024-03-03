@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "magicznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "magiczny",
+          "gen": "magicznego",
+          "dat": "magicznemu",
+          "acc": "magicznego",
+          "ins": "magicznym",
+          "loc": "magicznym"
+        },
+        "m3": {
+          "nom": "magiczny",
+          "gen": "magicznego",
+          "dat": "magicznemu",
+          "acc": "magiczny",
+          "ins": "magicznym",
+          "loc": "magicznym"
+        },
+        "f": {
+          "nom": "magiczna",
+          "gen": "magicznej",
+          "dat": "magicznej",
+          "acc": "magiczną",
+          "ins": "magiczną",
+          "loc": "magicznej"
+        },
+        "n": {
+          "nom": "magiczne",
+          "gen": "magicznego",
+          "dat": "magicznemu",
+          "acc": "magiczne",
+          "ins": "magicznym",
+          "loc": "magicznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "magiczni",
+          "gen": "magicznych",
+          "dat": "magicznym",
+          "acc": "magicznych",
+          "ins": "magicznymi",
+          "loc": "magicznych"
+        },
+        "nonvirile": {
+          "nom": "magiczne",
+          "gen": "magicznych",
+          "dat": "magicznym",
+          "acc": "magiczne",
+          "ins": "magicznymi",
+          "loc": "magicznych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "upiec",
+    "verbalNoun": "upieczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "upieczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "upiekłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "upiecze się"
+          },
+          "plural": {
+            "allPluralGenders": "upiecze się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "upiekę"
+          },
+          "plural": {
+            "allPluralGenders": "upieczemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "upieczesz"
+          },
+          "plural": {
+            "allPluralGenders": "upieczecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "upiecze"
+          },
+          "plural": {
+            "allPluralGenders": "upieką"
+          }
+        }
+      },
+      "imperative": "upiecz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "upieczono"
+          },
+          "plural": {
+            "allPluralGenders": "upieczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "upiekłem",
+            "f": "upiekłam"
+          },
+          "plural": {
+            "virile": "upiekliśmy",
+            "nonvirile": "upiekłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "upiekłeś",
+            "f": "upiekłaś"
+          },
+          "plural": {
+            "virile": "upiekliście",
+            "nonvirile": "upiekłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "upiekł",
+            "f": "upiekła",
+            "n": "upiekło"
+          },
+          "plural": {
+            "virile": "upiekli",
+            "nonvirile": "upiekły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

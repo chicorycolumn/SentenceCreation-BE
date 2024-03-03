@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dostosowywać",
+    "verbalNoun": "dostosowywanie",
+    "activeAdjectival": "dostosowujący",
+    "passiveAdjectival": "dostosowywany",
+    "contemporaryAdverbial": "dostosowując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dostosowuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dostosowywano"
+          },
+          "plural": {
+            "allPluralGenders": "dostosowywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dostosowywałem",
+            "f": "dostosowywałam"
+          },
+          "plural": {
+            "virile": "dostosowywaliśmy",
+            "nonvirile": "dostosowywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dostosowywałeś",
+            "f": "dostosowywałaś"
+          },
+          "plural": {
+            "virile": "dostosowywaliście",
+            "nonvirile": "dostosowywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dostosowywał",
+            "f": "dostosowywała",
+            "n": "dostosowywało"
+          },
+          "plural": {
+            "virile": "dostosowywali",
+            "nonvirile": "dostosowywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dostosowuje się"
+          },
+          "plural": {
+            "allPluralGenders": "dostosowuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dostosowuję"
+          },
+          "plural": {
+            "allPluralGenders": "dostosowujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dostosowujesz"
+          },
+          "plural": {
+            "allPluralGenders": "dostosowujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dostosowuje"
+          },
+          "plural": {
+            "allPluralGenders": "dostosowują"
+          }
+        }
+      }
+    }
+  }
+}

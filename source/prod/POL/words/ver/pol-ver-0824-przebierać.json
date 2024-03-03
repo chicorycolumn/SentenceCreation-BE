@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przebierać",
+    "verbalNoun": "przebieranie",
+    "activeAdjectival": "przebierający",
+    "passiveAdjectival": "przebierany",
+    "contemporaryAdverbial": "przebierając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przebieraj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przebierano"
+          },
+          "plural": {
+            "allPluralGenders": "przebierano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przebierałem",
+            "f": "przebierałam"
+          },
+          "plural": {
+            "virile": "przebieraliśmy",
+            "nonvirile": "przebierałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przebierałeś",
+            "f": "przebierałaś"
+          },
+          "plural": {
+            "virile": "przebieraliście",
+            "nonvirile": "przebierałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przebierał",
+            "f": "przebierała",
+            "n": "przebierało"
+          },
+          "plural": {
+            "virile": "przebierali",
+            "nonvirile": "przebierały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przebiera się"
+          },
+          "plural": {
+            "allPluralGenders": "przebiera się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przebieram"
+          },
+          "plural": {
+            "allPluralGenders": "przebieramy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przebierasz"
+          },
+          "plural": {
+            "allPluralGenders": "przebieracie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przebiera"
+          },
+          "plural": {
+            "allPluralGenders": "przebierają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "krajowy",
+          "gen": "krajowego",
+          "dat": "krajowemu",
+          "acc": "krajowego",
+          "ins": "krajowym",
+          "loc": "krajowym"
+        },
+        "m3": {
+          "nom": "krajowy",
+          "gen": "krajowego",
+          "dat": "krajowemu",
+          "acc": "krajowy",
+          "ins": "krajowym",
+          "loc": "krajowym"
+        },
+        "f": {
+          "nom": "krajowa",
+          "gen": "krajowej",
+          "dat": "krajowej",
+          "acc": "krajową",
+          "ins": "krajową",
+          "loc": "krajowej"
+        },
+        "n": {
+          "nom": "krajowe",
+          "gen": "krajowego",
+          "dat": "krajowemu",
+          "acc": "krajowe",
+          "ins": "krajowym",
+          "loc": "krajowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "krajowi",
+          "gen": "krajowych",
+          "dat": "krajowym",
+          "acc": "krajowych",
+          "ins": "krajowymi",
+          "loc": "krajowych"
+        },
+        "nonvirile": {
+          "nom": "krajowe",
+          "gen": "krajowych",
+          "dat": "krajowym",
+          "acc": "krajowe",
+          "ins": "krajowymi",
+          "loc": "krajowych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "piątek",
+      "gen": "piątku",
+      "dat": "piątkowi",
+      "acc": "piątek",
+      "ins": "piątkiem",
+      "loc": "piątku",
+      "voc": "piątku"
+    },
+    "plural": {
+      "nom": "piątki",
+      "gen": "piątków",
+      "dat": "piątkom",
+      "acc": "piątki",
+      "ins": "piątkami",
+      "loc": "piątkach",
+      "voc": "piątki"
+    }
+  }
+}

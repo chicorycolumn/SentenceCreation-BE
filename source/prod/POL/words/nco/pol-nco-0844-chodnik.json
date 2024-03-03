@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "chodnik",
+      "gen": "chodnika",
+      "dat": "chodnikowi",
+      "acc": "chodnik",
+      "ins": "chodnikiem",
+      "loc": "chodniku",
+      "voc": "chodniku"
+    },
+    "plural": {
+      "nom": "chodniki",
+      "gen": "chodników",
+      "dat": "chodnikom",
+      "acc": "chodniki",
+      "ins": "chodnikami",
+      "loc": "chodnikach",
+      "voc": "chodniki"
+    }
+  }
+}

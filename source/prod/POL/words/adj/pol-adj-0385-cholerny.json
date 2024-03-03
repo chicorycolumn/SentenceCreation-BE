@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "cholernie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "cholerny",
+          "gen": "cholernego",
+          "dat": "cholernemu",
+          "acc": "cholernego",
+          "ins": "cholernym",
+          "loc": "cholernym"
+        },
+        "m3": {
+          "nom": "cholerny",
+          "gen": "cholernego",
+          "dat": "cholernemu",
+          "acc": "cholerny",
+          "ins": "cholernym",
+          "loc": "cholernym"
+        },
+        "f": {
+          "nom": "cholerna",
+          "gen": "cholernej",
+          "dat": "cholernej",
+          "acc": "cholerną",
+          "ins": "cholerną",
+          "loc": "cholernej"
+        },
+        "n": {
+          "nom": "cholerne",
+          "gen": "cholernego",
+          "dat": "cholernemu",
+          "acc": "cholerne",
+          "ins": "cholernym",
+          "loc": "cholernym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "cholerni",
+          "gen": "cholernych",
+          "dat": "cholernym",
+          "acc": "cholernych",
+          "ins": "cholernymi",
+          "loc": "cholernych"
+        },
+        "nonvirile": {
+          "nom": "cholerne",
+          "gen": "cholernych",
+          "dat": "cholernym",
+          "acc": "cholerne",
+          "ins": "cholernymi",
+          "loc": "cholernych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przestępstwo",
+      "gen": "przestępstwa",
+      "dat": "przestępstwu",
+      "acc": "przestępstwo",
+      "ins": "przestępstwem",
+      "loc": "przestępstwie",
+      "voc": "przestępstwo"
+    },
+    "plural": {
+      "nom": "przestępstwa",
+      "gen": "przestępstw",
+      "dat": "przestępstwom",
+      "acc": "przestępstwa",
+      "ins": "przestępstwami",
+      "loc": "przestępstwach",
+      "voc": "przestępstwa"
+    }
+  }
+}

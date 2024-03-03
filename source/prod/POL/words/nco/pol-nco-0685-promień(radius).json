@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "promień",
+      "gen": "promienia",
+      "dat": "promieniowi",
+      "acc": "promień",
+      "ins": "promieniem",
+      "loc": "promieniu",
+      "voc": "promieniu"
+    },
+    "plural": {
+      "nom": "promienie",
+      "gen": "promieni",
+      "dat": "promieniom",
+      "acc": "promienie",
+      "ins": "promieniami",
+      "loc": "promieniach",
+      "voc": "promienie"
+    }
+  }
+}

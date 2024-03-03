@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ranny",
+          "gen": "rannego",
+          "dat": "rannemu",
+          "acc": "rannego",
+          "ins": "rannym",
+          "loc": "rannym"
+        },
+        "m3": {
+          "nom": "ranny",
+          "gen": "rannego",
+          "dat": "rannemu",
+          "acc": "ranny",
+          "ins": "rannym",
+          "loc": "rannym"
+        },
+        "f": {
+          "nom": "ranna",
+          "gen": "rannej",
+          "dat": "rannej",
+          "acc": "ranną",
+          "ins": "ranną",
+          "loc": "rannej"
+        },
+        "n": {
+          "nom": "ranne",
+          "gen": "rannego",
+          "dat": "rannemu",
+          "acc": "ranne",
+          "ins": "rannym",
+          "loc": "rannym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ranni",
+          "gen": "rannych",
+          "dat": "rannym",
+          "acc": "rannych",
+          "ins": "rannymi",
+          "loc": "rannych"
+        },
+        "nonvirile": {
+          "nom": "ranne",
+          "gen": "rannych",
+          "dat": "rannym",
+          "acc": "ranne",
+          "ins": "rannymi",
+          "loc": "rannych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej ranny",
+          "gen": "bardziej rannego",
+          "dat": "bardziej rannemu",
+          "acc": "bardziej rannego",
+          "ins": "bardziej rannym",
+          "loc": "bardziej rannym"
+        },
+        "m3": {
+          "nom": "bardziej ranny",
+          "gen": "bardziej rannego",
+          "dat": "bardziej rannemu",
+          "acc": "bardziej ranny",
+          "ins": "bardziej rannym",
+          "loc": "bardziej rannym"
+        },
+        "f": {
+          "nom": "bardziej ranna",
+          "gen": "bardziej rannej",
+          "dat": "bardziej rannej",
+          "acc": "bardziej ranną",
+          "ins": "bardziej ranną",
+          "loc": "bardziej rannej"
+        },
+        "n": {
+          "nom": "bardziej ranne",
+          "gen": "bardziej rannego",
+          "dat": "bardziej rannemu",
+          "acc": "bardziej ranne",
+          "ins": "bardziej rannym",
+          "loc": "bardziej rannym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej ranni",
+          "gen": "bardziej rannych",
+          "dat": "bardziej rannym",
+          "acc": "bardziej rannych",
+          "ins": "bardziej rannymi",
+          "loc": "bardziej rannych"
+        },
+        "nonvirile": {
+          "nom": "bardziej ranne",
+          "gen": "bardziej rannych",
+          "dat": "bardziej rannym",
+          "acc": "bardziej ranne",
+          "ins": "bardziej rannymi",
+          "loc": "bardziej rannych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej ranny",
+          "gen": "najbardziej rannego",
+          "dat": "najbardziej rannemu",
+          "acc": "najbardziej rannego",
+          "ins": "najbardziej rannym",
+          "loc": "najbardziej rannym"
+        },
+        "m3": {
+          "nom": "najbardziej ranny",
+          "gen": "najbardziej rannego",
+          "dat": "najbardziej rannemu",
+          "acc": "najbardziej ranny",
+          "ins": "najbardziej rannym",
+          "loc": "najbardziej rannym"
+        },
+        "f": {
+          "nom": "najbardziej ranna",
+          "gen": "najbardziej rannej",
+          "dat": "najbardziej rannej",
+          "acc": "najbardziej ranną",
+          "ins": "najbardziej ranną",
+          "loc": "najbardziej rannej"
+        },
+        "n": {
+          "nom": "najbardziej ranne",
+          "gen": "najbardziej rannego",
+          "dat": "najbardziej rannemu",
+          "acc": "najbardziej ranne",
+          "ins": "najbardziej rannym",
+          "loc": "najbardziej rannym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej ranni",
+          "gen": "najbardziej rannych",
+          "dat": "najbardziej rannym",
+          "acc": "najbardziej rannych",
+          "ins": "najbardziej rannymi",
+          "loc": "najbardziej rannych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej ranne",
+          "gen": "najbardziej rannych",
+          "dat": "najbardziej rannym",
+          "acc": "najbardziej ranne",
+          "ins": "najbardziej rannymi",
+          "loc": "najbardziej rannych"
+        }
+      }
+    }
+  }
+}

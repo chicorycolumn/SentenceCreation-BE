@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "ostrożnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ostrożny",
+          "gen": "ostrożnego",
+          "dat": "ostrożnemu",
+          "acc": "ostrożnego",
+          "ins": "ostrożnym",
+          "loc": "ostrożnym"
+        },
+        "m3": {
+          "nom": "ostrożny",
+          "gen": "ostrożnego",
+          "dat": "ostrożnemu",
+          "acc": "ostrożny",
+          "ins": "ostrożnym",
+          "loc": "ostrożnym"
+        },
+        "f": {
+          "nom": "ostrożna",
+          "gen": "ostrożnej",
+          "dat": "ostrożnej",
+          "acc": "ostrożną",
+          "ins": "ostrożną",
+          "loc": "ostrożnej"
+        },
+        "n": {
+          "nom": "ostrożne",
+          "gen": "ostrożnego",
+          "dat": "ostrożnemu",
+          "acc": "ostrożne",
+          "ins": "ostrożnym",
+          "loc": "ostrożnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ostrożni",
+          "gen": "ostrożnych",
+          "dat": "ostrożnym",
+          "acc": "ostrożnych",
+          "ins": "ostrożnymi",
+          "loc": "ostrożnych"
+        },
+        "nonvirile": {
+          "nom": "ostrożne",
+          "gen": "ostrożnych",
+          "dat": "ostrożnym",
+          "acc": "ostrożne",
+          "ins": "ostrożnymi",
+          "loc": "ostrożnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszy",
+              "bardziej ostrożny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszego",
+              "bardziej ostrożnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszemu",
+              "bardziej ostrożnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszego",
+              "bardziej ostrożnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszym",
+              "bardziej ostrożnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszym",
+              "bardziej ostrożnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszy",
+              "bardziej ostrożny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszego",
+              "bardziej ostrożnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszemu",
+              "bardziej ostrożnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszy",
+              "bardziej ostrożny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszym",
+              "bardziej ostrożnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszym",
+              "bardziej ostrożnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejsza",
+              "bardziej ostrożna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszej",
+              "bardziej ostrożnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszej",
+              "bardziej ostrożnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszą",
+              "bardziej ostrożną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszą",
+              "bardziej ostrożną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszej",
+              "bardziej ostrożnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejsze",
+              "bardziej ostrożne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszego",
+              "bardziej ostrożnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszemu",
+              "bardziej ostrożnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejsze",
+              "bardziej ostrożne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszym",
+              "bardziej ostrożnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszym",
+              "bardziej ostrożnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejsi",
+              "bardziej ostrożni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszych",
+              "bardziej ostrożnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszym",
+              "bardziej ostrożnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszych",
+              "bardziej ostrożnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszymi",
+              "bardziej ostrożnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszych",
+              "bardziej ostrożnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejsze",
+              "bardziej ostrożne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszych",
+              "bardziej ostrożnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszym",
+              "bardziej ostrożnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejsze",
+              "bardziej ostrożne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszymi",
+              "bardziej ostrożnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "ostrożniejszych",
+              "bardziej ostrożnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszy",
+              "najbardziej ostrożny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszego",
+              "najbardziej ostrożnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszemu",
+              "najbardziej ostrożnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszego",
+              "najbardziej ostrożnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszym",
+              "najbardziej ostrożnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszym",
+              "najbardziej ostrożnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszy",
+              "najbardziej ostrożny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszego",
+              "najbardziej ostrożnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszemu",
+              "najbardziej ostrożnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszy",
+              "najbardziej ostrożny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszym",
+              "najbardziej ostrożnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszym",
+              "najbardziej ostrożnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejsza",
+              "najbardziej ostrożna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszej",
+              "najbardziej ostrożnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszej",
+              "najbardziej ostrożnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszą",
+              "najbardziej ostrożną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszą",
+              "najbardziej ostrożną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszej",
+              "najbardziej ostrożnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejsze",
+              "najbardziej ostrożne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszego",
+              "najbardziej ostrożnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszemu",
+              "najbardziej ostrożnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejsze",
+              "najbardziej ostrożne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszym",
+              "najbardziej ostrożnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszym",
+              "najbardziej ostrożnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejsi",
+              "najbardziej ostrożni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszych",
+              "najbardziej ostrożnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszym",
+              "najbardziej ostrożnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszych",
+              "najbardziej ostrożnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszymi",
+              "najbardziej ostrożnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszych",
+              "najbardziej ostrożnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejsze",
+              "najbardziej ostrożne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszych",
+              "najbardziej ostrożnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszym",
+              "najbardziej ostrożnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejsze",
+              "najbardziej ostrożne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszymi",
+              "najbardziej ostrożnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najostrożniejszych",
+              "najbardziej ostrożnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

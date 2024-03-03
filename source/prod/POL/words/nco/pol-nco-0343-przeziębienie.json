@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przeziębienie",
+      "gen": "przeziębienia",
+      "dat": "przeziębieniu",
+      "acc": "przeziębienie",
+      "ins": "przeziębieniem",
+      "loc": "przeziębieniu",
+      "voc": "przeziębienie"
+    },
+    "plural": {
+      "nom": "przeziębienia",
+      "gen": "przeziębień",
+      "dat": "przeziębieniom",
+      "acc": "przeziębienia",
+      "ins": "przeziębieniami",
+      "loc": "przeziębieniach",
+      "voc": "przeziębienia"
+    }
+  }
+}

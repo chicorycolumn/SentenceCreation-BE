@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przesadzać",
+    "verbalNoun": "przesadzanie",
+    "activeAdjectival": "przesadzający",
+    "passiveAdjectival": "przesadzany",
+    "contemporaryAdverbial": "przesadzając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przesadzaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przesadzano"
+          },
+          "plural": {
+            "allPluralGenders": "przesadzano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przesadzałem",
+            "f": "przesadzałam"
+          },
+          "plural": {
+            "virile": "przesadzaliśmy",
+            "nonvirile": "przesadzałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przesadzałeś",
+            "f": "przesadzałaś"
+          },
+          "plural": {
+            "virile": "przesadzaliście",
+            "nonvirile": "przesadzałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przesadzał",
+            "f": "przesadzała",
+            "n": "przesadzało"
+          },
+          "plural": {
+            "virile": "przesadzali",
+            "nonvirile": "przesadzały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przesadza się"
+          },
+          "plural": {
+            "allPluralGenders": "przesadza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przesadzam"
+          },
+          "plural": {
+            "allPluralGenders": "przesadzamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przesadzasz"
+          },
+          "plural": {
+            "allPluralGenders": "przesadzacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przesadza"
+          },
+          "plural": {
+            "allPluralGenders": "przesadzają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "ładnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ładny",
+          "gen": "ładnego",
+          "dat": "ładnemu",
+          "acc": "ładnego",
+          "ins": "ładnym",
+          "loc": "ładnym"
+        },
+        "m3": {
+          "nom": "ładny",
+          "gen": "ładnego",
+          "dat": "ładnemu",
+          "acc": "ładny",
+          "ins": "ładnym",
+          "loc": "ładnym"
+        },
+        "f": {
+          "nom": "ładna",
+          "gen": "ładnej",
+          "dat": "ładnej",
+          "acc": "ładną",
+          "ins": "ładną",
+          "loc": "ładnej"
+        },
+        "n": {
+          "nom": "ładne",
+          "gen": "ładnego",
+          "dat": "ładnemu",
+          "acc": "ładne",
+          "ins": "ładnym",
+          "loc": "ładnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ładni",
+          "gen": "ładnych",
+          "dat": "ładnym",
+          "acc": "ładnych",
+          "ins": "ładnymi",
+          "loc": "ładnych"
+        },
+        "nonvirile": {
+          "nom": "ładne",
+          "gen": "ładnych",
+          "dat": "ładnym",
+          "acc": "ładne",
+          "ins": "ładnymi",
+          "loc": "ładnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "ładniejszy",
+          "gen": "ładniejszego",
+          "dat": "ładniejszemu",
+          "acc": "ładniejszego",
+          "ins": "ładniejszym",
+          "loc": "ładniejszym"
+        },
+        "m3": {
+          "nom": "ładniejszy",
+          "gen": "ładniejszego",
+          "dat": "ładniejszemu",
+          "acc": "ładniejszy",
+          "ins": "ładniejszym",
+          "loc": "ładniejszym"
+        },
+        "f": {
+          "nom": "ładniejsza",
+          "gen": "ładniejszej",
+          "dat": "ładniejszej",
+          "acc": "ładniejszą",
+          "ins": "ładniejszą",
+          "loc": "ładniejszej"
+        },
+        "n": {
+          "nom": "ładniejsze",
+          "gen": "ładniejszego",
+          "dat": "ładniejszemu",
+          "acc": "ładniejsze",
+          "ins": "ładniejszym",
+          "loc": "ładniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ładniejsi",
+          "gen": "ładniejszych",
+          "dat": "ładniejszym",
+          "acc": "ładniejszych",
+          "ins": "ładniejszymi",
+          "loc": "ładniejszych"
+        },
+        "nonvirile": {
+          "nom": "ładniejsze",
+          "gen": "ładniejszych",
+          "dat": "ładniejszym",
+          "acc": "ładniejsze",
+          "ins": "ładniejszymi",
+          "loc": "ładniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najładniejszy",
+          "gen": "najładniejszego",
+          "dat": "najładniejszemu",
+          "acc": "najładniejszego",
+          "ins": "najładniejszym",
+          "loc": "najładniejszym"
+        },
+        "m3": {
+          "nom": "najładniejszy",
+          "gen": "najładniejszego",
+          "dat": "najładniejszemu",
+          "acc": "najładniejszy",
+          "ins": "najładniejszym",
+          "loc": "najładniejszym"
+        },
+        "f": {
+          "nom": "najładniejsza",
+          "gen": "najładniejszej",
+          "dat": "najładniejszej",
+          "acc": "najładniejszą",
+          "ins": "najładniejszą",
+          "loc": "najładniejszej"
+        },
+        "n": {
+          "nom": "najładniejsze",
+          "gen": "najładniejszego",
+          "dat": "najładniejszemu",
+          "acc": "najładniejsze",
+          "ins": "najładniejszym",
+          "loc": "najładniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najładniejsi",
+          "gen": "najładniejszych",
+          "dat": "najładniejszym",
+          "acc": "najładniejszych",
+          "ins": "najładniejszymi",
+          "loc": "najładniejszych"
+        },
+        "nonvirile": {
+          "nom": "najładniejsze",
+          "gen": "najładniejszych",
+          "dat": "najładniejszym",
+          "acc": "najładniejsze",
+          "ins": "najładniejszymi",
+          "loc": "najładniejszych"
+        }
+      }
+    }
+  }
+}

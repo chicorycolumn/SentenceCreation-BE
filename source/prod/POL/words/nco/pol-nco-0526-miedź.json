@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "miedź",
+      "gen": "miedzi",
+      "dat": "miedzi",
+      "acc": "miedź",
+      "ins": "miedzią",
+      "loc": "miedzi",
+      "voc": "miedzi"
+    }
+  }
+}

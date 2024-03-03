@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "deadline",
+      "gen": "deadline's"
+    },
+    "plural": {
+      "nom": "deadlines",
+      "gen": "deadlines'"
+    }
+  }
+}

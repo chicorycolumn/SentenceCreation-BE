@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nagrać",
+    "verbalNoun": "nagranie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "nagrany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "nagrawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nagra się"
+          },
+          "plural": {
+            "allPluralGenders": "nagra się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nagram"
+          },
+          "plural": {
+            "allPluralGenders": "nagramy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nagrasz"
+          },
+          "plural": {
+            "allPluralGenders": "nagracie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nagra"
+          },
+          "plural": {
+            "allPluralGenders": "nagrają"
+          }
+        }
+      },
+      "imperative": "nagraj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nagrano"
+          },
+          "plural": {
+            "allPluralGenders": "nagrano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nagrałem",
+            "f": "nagrałam"
+          },
+          "plural": {
+            "virile": "nagraliśmy",
+            "nonvirile": "nagrałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nagrałeś",
+            "f": "nagrałaś"
+          },
+          "plural": {
+            "virile": "nagraliście",
+            "nonvirile": "nagrałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nagrał",
+            "f": "nagrała",
+            "n": "nagrało"
+          },
+          "plural": {
+            "virile": "nagrali",
+            "nonvirile": "nagrały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

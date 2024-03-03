@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "amatorsko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "amatorski",
+          "gen": "amatorskiego",
+          "dat": "amatorskiemu",
+          "acc": "amatorskiego",
+          "ins": "amatorskim",
+          "loc": "amatorskim"
+        },
+        "m3": {
+          "nom": "amatorski",
+          "gen": "amatorskiego",
+          "dat": "amatorskiemu",
+          "acc": "amatorski",
+          "ins": "amatorskim",
+          "loc": "amatorskim"
+        },
+        "f": {
+          "nom": "amatorska",
+          "gen": "amatorskiej",
+          "dat": "amatorskiej",
+          "acc": "amatorską",
+          "ins": "amatorską",
+          "loc": "amatorskiej"
+        },
+        "n": {
+          "nom": "amatorskie",
+          "gen": "amatorskiego",
+          "dat": "amatorskiemu",
+          "acc": "amatorskie",
+          "ins": "amatorskim",
+          "loc": "amatorskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "amatorscy",
+          "gen": "amatorskich",
+          "dat": "amatorskim",
+          "acc": "amatorskich",
+          "ins": "amatorskimi",
+          "loc": "amatorskich"
+        },
+        "nonvirile": {
+          "nom": "amatorskie",
+          "gen": "amatorskich",
+          "dat": "amatorskim",
+          "acc": "amatorskie",
+          "ins": "amatorskimi",
+          "loc": "amatorskich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej amatorski",
+          "gen": "bardziej amatorskiego",
+          "dat": "bardziej amatorskiemu",
+          "acc": "bardziej amatorskiego",
+          "ins": "bardziej amatorskim",
+          "loc": "bardziej amatorskim"
+        },
+        "m3": {
+          "nom": "bardziej amatorski",
+          "gen": "bardziej amatorskiego",
+          "dat": "bardziej amatorskiemu",
+          "acc": "bardziej amatorski",
+          "ins": "bardziej amatorskim",
+          "loc": "bardziej amatorskim"
+        },
+        "f": {
+          "nom": "bardziej amatorska",
+          "gen": "bardziej amatorskiej",
+          "dat": "bardziej amatorskiej",
+          "acc": "bardziej amatorską",
+          "ins": "bardziej amatorską",
+          "loc": "bardziej amatorskiej"
+        },
+        "n": {
+          "nom": "bardziej amatorskie",
+          "gen": "bardziej amatorskiego",
+          "dat": "bardziej amatorskiemu",
+          "acc": "bardziej amatorskie",
+          "ins": "bardziej amatorskim",
+          "loc": "bardziej amatorskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej amatorscy",
+          "gen": "bardziej amatorskich",
+          "dat": "bardziej amatorskim",
+          "acc": "bardziej amatorskich",
+          "ins": "bardziej amatorskimi",
+          "loc": "bardziej amatorskich"
+        },
+        "nonvirile": {
+          "nom": "bardziej amatorskie",
+          "gen": "bardziej amatorskich",
+          "dat": "bardziej amatorskim",
+          "acc": "bardziej amatorskie",
+          "ins": "bardziej amatorskimi",
+          "loc": "bardziej amatorskich"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej amatorski",
+          "gen": "najbardziej amatorskiego",
+          "dat": "najbardziej amatorskiemu",
+          "acc": "najbardziej amatorskiego",
+          "ins": "najbardziej amatorskim",
+          "loc": "najbardziej amatorskim"
+        },
+        "m3": {
+          "nom": "najbardziej amatorski",
+          "gen": "najbardziej amatorskiego",
+          "dat": "najbardziej amatorskiemu",
+          "acc": "najbardziej amatorski",
+          "ins": "najbardziej amatorskim",
+          "loc": "najbardziej amatorskim"
+        },
+        "f": {
+          "nom": "najbardziej amatorska",
+          "gen": "najbardziej amatorskiej",
+          "dat": "najbardziej amatorskiej",
+          "acc": "najbardziej amatorską",
+          "ins": "najbardziej amatorską",
+          "loc": "najbardziej amatorskiej"
+        },
+        "n": {
+          "nom": "najbardziej amatorskie",
+          "gen": "najbardziej amatorskiego",
+          "dat": "najbardziej amatorskiemu",
+          "acc": "najbardziej amatorskie",
+          "ins": "najbardziej amatorskim",
+          "loc": "najbardziej amatorskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej amatorscy",
+          "gen": "najbardziej amatorskich",
+          "dat": "najbardziej amatorskim",
+          "acc": "najbardziej amatorskich",
+          "ins": "najbardziej amatorskimi",
+          "loc": "najbardziej amatorskich"
+        },
+        "nonvirile": {
+          "nom": "najbardziej amatorskie",
+          "gen": "najbardziej amatorskich",
+          "dat": "najbardziej amatorskim",
+          "acc": "najbardziej amatorskie",
+          "ins": "najbardziej amatorskimi",
+          "loc": "najbardziej amatorskich"
+        }
+      }
+    }
+  }
+}

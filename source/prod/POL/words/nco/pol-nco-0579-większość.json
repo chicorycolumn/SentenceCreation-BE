@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "większość",
+      "gen": "większości",
+      "dat": "większości",
+      "acc": "większość",
+      "ins": "większością",
+      "loc": "większości",
+      "voc": "większości"
+    },
+    "plural": {
+      "nom": "większości",
+      "gen": "większości",
+      "dat": "większościom",
+      "acc": "większości",
+      "ins": "większościami",
+      "loc": "większościach",
+      "voc": "większości"
+    }
+  }
+}

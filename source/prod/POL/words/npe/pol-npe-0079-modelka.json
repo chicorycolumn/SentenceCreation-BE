@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "modelka",
+      "gen": "modelki",
+      "dat": "modelce",
+      "acc": "modelkę",
+      "ins": "modelką",
+      "loc": "modelce",
+      "voc": "modelko"
+    },
+    "plural": {
+      "nom": "modelki",
+      "gen": "modelek",
+      "dat": "modelkom",
+      "acc": "modelki",
+      "ins": "modelkami",
+      "loc": "modelkach",
+      "voc": "modelki"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "full stop",
+      "gen": "full stop's"
+    },
+    "plural": {
+      "nom": "full stops",
+      "gen": "full stops'"
+    }
+  }
+}

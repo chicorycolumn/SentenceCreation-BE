@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "śrubokręt",
+      "gen": [
+        "śrubokrętu",
+        "śrubokręta"
+      ],
+      "dat": "śrubokrętowi",
+      "acc": "śrubokręt",
+      "ins": "śrubokrętem",
+      "loc": "śrubokręcie",
+      "voc": "śrubokręcie"
+    },
+    "plural": {
+      "nom": "śrubokręty",
+      "gen": "śrubokrętów",
+      "dat": "śrubokrętom",
+      "acc": "śrubokręty",
+      "ins": "śrubokrętami",
+      "loc": "śrubokrętach",
+      "voc": "śrubokręty"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "naprawić",
+    "verbalNoun": "naprawienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "naprawiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "naprawiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "naprawi się"
+          },
+          "plural": {
+            "allPluralGenders": "naprawi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "naprawię"
+          },
+          "plural": {
+            "allPluralGenders": "naprawimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "naprawisz"
+          },
+          "plural": {
+            "allPluralGenders": "naprawicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "naprawi"
+          },
+          "plural": {
+            "allPluralGenders": "naprawią"
+          }
+        }
+      },
+      "imperative": "napraw",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "naprawiono"
+          },
+          "plural": {
+            "allPluralGenders": "naprawiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "naprawiłem",
+            "f": "naprawiłam"
+          },
+          "plural": {
+            "virile": "naprawiliśmy",
+            "nonvirile": "naprawiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "naprawiłeś",
+            "f": "naprawiłaś"
+          },
+          "plural": {
+            "virile": "naprawiliście",
+            "nonvirile": "naprawiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "naprawił",
+            "f": "naprawiła",
+            "n": "naprawiło"
+          },
+          "plural": {
+            "virile": "naprawili",
+            "nonvirile": "naprawiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

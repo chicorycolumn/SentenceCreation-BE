@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przesyłać",
+    "verbalNoun": "przesyłanie",
+    "activeAdjectival": "przesyłający",
+    "passiveAdjectival": "przesyłany",
+    "contemporaryAdverbial": "przesyłając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przesyłaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przesyłano"
+          },
+          "plural": {
+            "allPluralGenders": "przesyłano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przesyłałem",
+            "f": "przesyłałam"
+          },
+          "plural": {
+            "virile": "przesyłaliśmy",
+            "nonvirile": "przesyłałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przesyłałeś",
+            "f": "przesyłałaś"
+          },
+          "plural": {
+            "virile": "przesyłaliście",
+            "nonvirile": "przesyłałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przesyłał",
+            "f": "przesyłała",
+            "n": "przesyłało"
+          },
+          "plural": {
+            "virile": "przesyłali",
+            "nonvirile": "przesyłały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przesyła się"
+          },
+          "plural": {
+            "allPluralGenders": "przesyła się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przesyłam"
+          },
+          "plural": {
+            "allPluralGenders": "przesyłamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przesyłasz"
+          },
+          "plural": {
+            "allPluralGenders": "przesyłacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przesyła"
+          },
+          "plural": {
+            "allPluralGenders": "przesyłają"
+          }
+        }
+      }
+    }
+  }
+}

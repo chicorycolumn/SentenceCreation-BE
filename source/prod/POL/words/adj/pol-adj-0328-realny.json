@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "realnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "realny",
+          "gen": "realnego",
+          "dat": "realnemu",
+          "acc": "realnego",
+          "ins": "realnym",
+          "loc": "realnym"
+        },
+        "m3": {
+          "nom": "realny",
+          "gen": "realnego",
+          "dat": "realnemu",
+          "acc": "realny",
+          "ins": "realnym",
+          "loc": "realnym"
+        },
+        "f": {
+          "nom": "realna",
+          "gen": "realnej",
+          "dat": "realnej",
+          "acc": "realną",
+          "ins": "realną",
+          "loc": "realnej"
+        },
+        "n": {
+          "nom": "realne",
+          "gen": "realnego",
+          "dat": "realnemu",
+          "acc": "realne",
+          "ins": "realnym",
+          "loc": "realnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "realni",
+          "gen": "realnych",
+          "dat": "realnym",
+          "acc": "realnych",
+          "ins": "realnymi",
+          "loc": "realnych"
+        },
+        "nonvirile": {
+          "nom": "realne",
+          "gen": "realnych",
+          "dat": "realnym",
+          "acc": "realne",
+          "ins": "realnymi",
+          "loc": "realnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "realniejszy",
+          "gen": "realniejszego",
+          "dat": "realniejszemu",
+          "acc": "realniejszego",
+          "ins": "realniejszym",
+          "loc": "realniejszym"
+        },
+        "m3": {
+          "nom": "realniejszy",
+          "gen": "realniejszego",
+          "dat": "realniejszemu",
+          "acc": "realniejszy",
+          "ins": "realniejszym",
+          "loc": "realniejszym"
+        },
+        "f": {
+          "nom": "realniejsza",
+          "gen": "realniejszej",
+          "dat": "realniejszej",
+          "acc": "realniejszą",
+          "ins": "realniejszą",
+          "loc": "realniejszej"
+        },
+        "n": {
+          "nom": "realniejsze",
+          "gen": "realniejszego",
+          "dat": "realniejszemu",
+          "acc": "realniejsze",
+          "ins": "realniejszym",
+          "loc": "realniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "realniejsi",
+          "gen": "realniejszych",
+          "dat": "realniejszym",
+          "acc": "realniejszych",
+          "ins": "realniejszymi",
+          "loc": "realniejszych"
+        },
+        "nonvirile": {
+          "nom": "realniejsze",
+          "gen": "realniejszych",
+          "dat": "realniejszym",
+          "acc": "realniejsze",
+          "ins": "realniejszymi",
+          "loc": "realniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najrealniejszy",
+          "gen": "najrealniejszego",
+          "dat": "najrealniejszemu",
+          "acc": "najrealniejszego",
+          "ins": "najrealniejszym",
+          "loc": "najrealniejszym"
+        },
+        "m3": {
+          "nom": "najrealniejszy",
+          "gen": "najrealniejszego",
+          "dat": "najrealniejszemu",
+          "acc": "najrealniejszy",
+          "ins": "najrealniejszym",
+          "loc": "najrealniejszym"
+        },
+        "f": {
+          "nom": "najrealniejsza",
+          "gen": "najrealniejszej",
+          "dat": "najrealniejszej",
+          "acc": "najrealniejszą",
+          "ins": "najrealniejszą",
+          "loc": "najrealniejszej"
+        },
+        "n": {
+          "nom": "najrealniejsze",
+          "gen": "najrealniejszego",
+          "dat": "najrealniejszemu",
+          "acc": "najrealniejsze",
+          "ins": "najrealniejszym",
+          "loc": "najrealniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najrealniejsi",
+          "gen": "najrealniejszych",
+          "dat": "najrealniejszym",
+          "acc": "najrealniejszych",
+          "ins": "najrealniejszymi",
+          "loc": "najrealniejszych"
+        },
+        "nonvirile": {
+          "nom": "najrealniejsze",
+          "gen": "najrealniejszych",
+          "dat": "najrealniejszym",
+          "acc": "najrealniejsze",
+          "ins": "najrealniejszymi",
+          "loc": "najrealniejszych"
+        }
+      }
+    }
+  }
+}

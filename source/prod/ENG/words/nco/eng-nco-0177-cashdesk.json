@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cash desk",
+      "gen": "cash desk's"
+    },
+    "plural": {
+      "nom": "cash desks",
+      "gen": "cash desks'"
+    }
+  }
+}

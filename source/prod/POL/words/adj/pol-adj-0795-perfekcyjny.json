@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "perfekcyjnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "perfekcyjny",
+          "gen": "perfekcyjnego",
+          "dat": "perfekcyjnemu",
+          "acc": "perfekcyjnego",
+          "ins": "perfekcyjnym",
+          "loc": "perfekcyjnym"
+        },
+        "m3": {
+          "nom": "perfekcyjny",
+          "gen": "perfekcyjnego",
+          "dat": "perfekcyjnemu",
+          "acc": "perfekcyjny",
+          "ins": "perfekcyjnym",
+          "loc": "perfekcyjnym"
+        },
+        "f": {
+          "nom": "perfekcyjna",
+          "gen": "perfekcyjnej",
+          "dat": "perfekcyjnej",
+          "acc": "perfekcyjną",
+          "ins": "perfekcyjną",
+          "loc": "perfekcyjnej"
+        },
+        "n": {
+          "nom": "perfekcyjne",
+          "gen": "perfekcyjnego",
+          "dat": "perfekcyjnemu",
+          "acc": "perfekcyjne",
+          "ins": "perfekcyjnym",
+          "loc": "perfekcyjnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "perfekcyjni",
+          "gen": "perfekcyjnych",
+          "dat": "perfekcyjnym",
+          "acc": "perfekcyjnych",
+          "ins": "perfekcyjnymi",
+          "loc": "perfekcyjnych"
+        },
+        "nonvirile": {
+          "nom": "perfekcyjne",
+          "gen": "perfekcyjnych",
+          "dat": "perfekcyjnym",
+          "acc": "perfekcyjne",
+          "ins": "perfekcyjnymi",
+          "loc": "perfekcyjnych"
+        }
+      }
+    }
+  }
+}

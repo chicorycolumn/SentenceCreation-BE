@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "doświadczać",
+    "verbalNoun": "doświadczanie",
+    "activeAdjectival": "doświadczający",
+    "passiveAdjectival": "doświadczany",
+    "contemporaryAdverbial": "doświadczając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "doświadczaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "doświadczano"
+          },
+          "plural": {
+            "allPluralGenders": "doświadczano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "doświadczałem",
+            "f": "doświadczałam"
+          },
+          "plural": {
+            "virile": "doświadczaliśmy",
+            "nonvirile": "doświadczałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "doświadczałeś",
+            "f": "doświadczałaś"
+          },
+          "plural": {
+            "virile": "doświadczaliście",
+            "nonvirile": "doświadczałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "doświadczał",
+            "f": "doświadczała",
+            "n": "doświadczało"
+          },
+          "plural": {
+            "virile": "doświadczali",
+            "nonvirile": "doświadczały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "doświadcza się"
+          },
+          "plural": {
+            "allPluralGenders": "doświadcza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "doświadczam"
+          },
+          "plural": {
+            "allPluralGenders": "doświadczamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "doświadczasz"
+          },
+          "plural": {
+            "allPluralGenders": "doświadczacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "doświadcza"
+          },
+          "plural": {
+            "allPluralGenders": "doświadczają"
+          }
+        }
+      }
+    }
+  }
+}

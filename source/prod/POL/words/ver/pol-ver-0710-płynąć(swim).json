@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "płynąć",
+    "verbalNoun": "płynięcie",
+    "activeAdjectival": "płynący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "płynąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "płyń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "płynięto"
+          },
+          "plural": {
+            "allPluralGenders": "płynięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "płynąłem",
+            "f": "płynęłam"
+          },
+          "plural": {
+            "virile": "płynęliśmy",
+            "nonvirile": "płynęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "płynąłeś",
+            "f": "płynęłaś"
+          },
+          "plural": {
+            "virile": "płynęliście",
+            "nonvirile": "płynęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "płynął",
+            "f": "płynęła",
+            "n": "płynęło"
+          },
+          "plural": {
+            "virile": "płynęli",
+            "nonvirile": "płynęły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "płynie się"
+          },
+          "plural": {
+            "allPluralGenders": "płynie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "płynę"
+          },
+          "plural": {
+            "allPluralGenders": "płyniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "płyniesz"
+          },
+          "plural": {
+            "allPluralGenders": "płyniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "płynie"
+          },
+          "plural": {
+            "allPluralGenders": "płyną"
+          }
+        }
+      }
+    }
+  }
+}

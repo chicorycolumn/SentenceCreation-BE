@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "płaszcz",
+      "gen": "płaszcza",
+      "dat": "płaszczowi",
+      "acc": "płaszcz",
+      "ins": "płaszczem",
+      "loc": "płaszczu",
+      "voc": "płaszczu"
+    },
+    "plural": {
+      "nom": "płaszcze",
+      "gen": [
+        "płaszczy",
+        "płaszczów"
+      ],
+      "dat": "płaszczom",
+      "acc": "płaszcze",
+      "ins": "płaszczami",
+      "loc": "płaszczach",
+      "voc": "płaszcze"
+    }
+  }
+}

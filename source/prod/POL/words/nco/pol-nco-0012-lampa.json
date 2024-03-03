@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lampa",
+      "gen": "lampy",
+      "dat": "lampie",
+      "acc": "lampę",
+      "ins": "lampą",
+      "loc": "lampie",
+      "voc": "lampo"
+    },
+    "plural": {
+      "nom": "lampy",
+      "gen": "lamp",
+      "dat": "lampom",
+      "acc": "lampy",
+      "ins": "lampami",
+      "loc": "lampach",
+      "voc": "lampy"
+    }
+  }
+}

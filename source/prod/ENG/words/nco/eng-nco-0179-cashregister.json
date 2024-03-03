@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cash register",
+      "gen": "cash register's"
+    },
+    "plural": {
+      "nom": "cash registers",
+      "gen": "cash registers'"
+    }
+  }
+}

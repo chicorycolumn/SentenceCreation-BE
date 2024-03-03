@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "journalist",
+      "gen": "journalist's"
+    },
+    "plural": {
+      "nom": "journalists",
+      "gen": "journalists'"
+    }
+  }
+}

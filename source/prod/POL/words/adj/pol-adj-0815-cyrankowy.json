@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "cyrankowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "cyrankowy",
+          "gen": "cyrankowego",
+          "dat": "cyrankowemu",
+          "acc": "cyrankowego",
+          "ins": "cyrankowym",
+          "loc": "cyrankowym"
+        },
+        "m3": {
+          "nom": "cyrankowy",
+          "gen": "cyrankowego",
+          "dat": "cyrankowemu",
+          "acc": "cyrankowy",
+          "ins": "cyrankowym",
+          "loc": "cyrankowym"
+        },
+        "f": {
+          "nom": "cyrankowa",
+          "gen": "cyrankowej",
+          "dat": "cyrankowej",
+          "acc": "cyrankową",
+          "ins": "cyrankową",
+          "loc": "cyrankowej"
+        },
+        "n": {
+          "nom": "cyrankowe",
+          "gen": "cyrankowego",
+          "dat": "cyrankowemu",
+          "acc": "cyrankowe",
+          "ins": "cyrankowym",
+          "loc": "cyrankowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "cyrankowi",
+          "gen": "cyrankowych",
+          "dat": "cyrankowym",
+          "acc": "cyrankowych",
+          "ins": "cyrankowymi",
+          "loc": "cyrankowych"
+        },
+        "nonvirile": {
+          "nom": "cyrankowe",
+          "gen": "cyrankowych",
+          "dat": "cyrankowym",
+          "acc": "cyrankowe",
+          "ins": "cyrankowymi",
+          "loc": "cyrankowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej cyrankowy",
+          "gen": "bardziej cyrankowego",
+          "dat": "bardziej cyrankowemu",
+          "acc": "bardziej cyrankowego",
+          "ins": "bardziej cyrankowym",
+          "loc": "bardziej cyrankowym"
+        },
+        "m3": {
+          "nom": "bardziej cyrankowy",
+          "gen": "bardziej cyrankowego",
+          "dat": "bardziej cyrankowemu",
+          "acc": "bardziej cyrankowy",
+          "ins": "bardziej cyrankowym",
+          "loc": "bardziej cyrankowym"
+        },
+        "f": {
+          "nom": "bardziej cyrankowa",
+          "gen": "bardziej cyrankowej",
+          "dat": "bardziej cyrankowej",
+          "acc": "bardziej cyrankową",
+          "ins": "bardziej cyrankową",
+          "loc": "bardziej cyrankowej"
+        },
+        "n": {
+          "nom": "bardziej cyrankowe",
+          "gen": "bardziej cyrankowego",
+          "dat": "bardziej cyrankowemu",
+          "acc": "bardziej cyrankowe",
+          "ins": "bardziej cyrankowym",
+          "loc": "bardziej cyrankowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej cyrankowi",
+          "gen": "bardziej cyrankowych",
+          "dat": "bardziej cyrankowym",
+          "acc": "bardziej cyrankowych",
+          "ins": "bardziej cyrankowymi",
+          "loc": "bardziej cyrankowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej cyrankowe",
+          "gen": "bardziej cyrankowych",
+          "dat": "bardziej cyrankowym",
+          "acc": "bardziej cyrankowe",
+          "ins": "bardziej cyrankowymi",
+          "loc": "bardziej cyrankowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej cyrankowy",
+          "gen": "najbardziej cyrankowego",
+          "dat": "najbardziej cyrankowemu",
+          "acc": "najbardziej cyrankowego",
+          "ins": "najbardziej cyrankowym",
+          "loc": "najbardziej cyrankowym"
+        },
+        "m3": {
+          "nom": "najbardziej cyrankowy",
+          "gen": "najbardziej cyrankowego",
+          "dat": "najbardziej cyrankowemu",
+          "acc": "najbardziej cyrankowy",
+          "ins": "najbardziej cyrankowym",
+          "loc": "najbardziej cyrankowym"
+        },
+        "f": {
+          "nom": "najbardziej cyrankowa",
+          "gen": "najbardziej cyrankowej",
+          "dat": "najbardziej cyrankowej",
+          "acc": "najbardziej cyrankową",
+          "ins": "najbardziej cyrankową",
+          "loc": "najbardziej cyrankowej"
+        },
+        "n": {
+          "nom": "najbardziej cyrankowe",
+          "gen": "najbardziej cyrankowego",
+          "dat": "najbardziej cyrankowemu",
+          "acc": "najbardziej cyrankowe",
+          "ins": "najbardziej cyrankowym",
+          "loc": "najbardziej cyrankowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej cyrankowi",
+          "gen": "najbardziej cyrankowych",
+          "dat": "najbardziej cyrankowym",
+          "acc": "najbardziej cyrankowych",
+          "ins": "najbardziej cyrankowymi",
+          "loc": "najbardziej cyrankowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej cyrankowe",
+          "gen": "najbardziej cyrankowych",
+          "dat": "najbardziej cyrankowym",
+          "acc": "najbardziej cyrankowe",
+          "ins": "najbardziej cyrankowymi",
+          "loc": "najbardziej cyrankowych"
+        }
+      }
+    }
+  }
+}

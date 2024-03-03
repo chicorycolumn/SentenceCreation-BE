@@ -1,0 +1,15 @@
+{
+  "inflections": {
+    "infinitive": "be bored",
+    "v2": {
+      "isTerminus": true,
+      "normal": [
+        "was bored",
+        "were bored"
+      ]
+    },
+    "v3": "been bored",
+    "thirdPS": "is bored",
+    "gerund": "being bored"
+  }
+}

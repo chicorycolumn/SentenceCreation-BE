@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "sławnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "sławny",
+          "gen": "sławnego",
+          "dat": "sławnemu",
+          "acc": "sławnego",
+          "ins": "sławnym",
+          "loc": "sławnym"
+        },
+        "m3": {
+          "nom": "sławny",
+          "gen": "sławnego",
+          "dat": "sławnemu",
+          "acc": "sławny",
+          "ins": "sławnym",
+          "loc": "sławnym"
+        },
+        "f": {
+          "nom": "sławna",
+          "gen": "sławnej",
+          "dat": "sławnej",
+          "acc": "sławną",
+          "ins": "sławną",
+          "loc": "sławnej"
+        },
+        "n": {
+          "nom": "sławne",
+          "gen": "sławnego",
+          "dat": "sławnemu",
+          "acc": "sławne",
+          "ins": "sławnym",
+          "loc": "sławnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "sławni",
+          "gen": "sławnych",
+          "dat": "sławnym",
+          "acc": "sławnych",
+          "ins": "sławnymi",
+          "loc": "sławnych"
+        },
+        "nonvirile": {
+          "nom": "sławne",
+          "gen": "sławnych",
+          "dat": "sławnym",
+          "acc": "sławne",
+          "ins": "sławnymi",
+          "loc": "sławnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "sławniejszy",
+          "gen": "sławniejszego",
+          "dat": "sławniejszemu",
+          "acc": "sławniejszego",
+          "ins": "sławniejszym",
+          "loc": "sławniejszym"
+        },
+        "m3": {
+          "nom": "sławniejszy",
+          "gen": "sławniejszego",
+          "dat": "sławniejszemu",
+          "acc": "sławniejszy",
+          "ins": "sławniejszym",
+          "loc": "sławniejszym"
+        },
+        "f": {
+          "nom": "sławniejsza",
+          "gen": "sławniejszej",
+          "dat": "sławniejszej",
+          "acc": "sławniejszą",
+          "ins": "sławniejszą",
+          "loc": "sławniejszej"
+        },
+        "n": {
+          "nom": "sławniejsze",
+          "gen": "sławniejszego",
+          "dat": "sławniejszemu",
+          "acc": "sławniejsze",
+          "ins": "sławniejszym",
+          "loc": "sławniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "sławniejsi",
+          "gen": "sławniejszych",
+          "dat": "sławniejszym",
+          "acc": "sławniejszych",
+          "ins": "sławniejszymi",
+          "loc": "sławniejszych"
+        },
+        "nonvirile": {
+          "nom": "sławniejsze",
+          "gen": "sławniejszych",
+          "dat": "sławniejszym",
+          "acc": "sławniejsze",
+          "ins": "sławniejszymi",
+          "loc": "sławniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najsławniejszy",
+          "gen": "najsławniejszego",
+          "dat": "najsławniejszemu",
+          "acc": "najsławniejszego",
+          "ins": "najsławniejszym",
+          "loc": "najsławniejszym"
+        },
+        "m3": {
+          "nom": "najsławniejszy",
+          "gen": "najsławniejszego",
+          "dat": "najsławniejszemu",
+          "acc": "najsławniejszy",
+          "ins": "najsławniejszym",
+          "loc": "najsławniejszym"
+        },
+        "f": {
+          "nom": "najsławniejsza",
+          "gen": "najsławniejszej",
+          "dat": "najsławniejszej",
+          "acc": "najsławniejszą",
+          "ins": "najsławniejszą",
+          "loc": "najsławniejszej"
+        },
+        "n": {
+          "nom": "najsławniejsze",
+          "gen": "najsławniejszego",
+          "dat": "najsławniejszemu",
+          "acc": "najsławniejsze",
+          "ins": "najsławniejszym",
+          "loc": "najsławniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najsławniejsi",
+          "gen": "najsławniejszych",
+          "dat": "najsławniejszym",
+          "acc": "najsławniejszych",
+          "ins": "najsławniejszymi",
+          "loc": "najsławniejszych"
+        },
+        "nonvirile": {
+          "nom": "najsławniejsze",
+          "gen": "najsławniejszych",
+          "dat": "najsławniejszym",
+          "acc": "najsławniejsze",
+          "ins": "najsławniejszymi",
+          "loc": "najsławniejszych"
+        }
+      }
+    }
+  }
+}

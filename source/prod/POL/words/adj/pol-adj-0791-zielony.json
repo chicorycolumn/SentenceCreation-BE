@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "zielono",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zielony",
+          "gen": "zielonego",
+          "dat": "zielonemu",
+          "acc": "zielonego",
+          "ins": "zielonym",
+          "loc": "zielonym"
+        },
+        "m3": {
+          "nom": "zielony",
+          "gen": "zielonego",
+          "dat": "zielonemu",
+          "acc": "zielony",
+          "ins": "zielonym",
+          "loc": "zielonym"
+        },
+        "f": {
+          "nom": "zielona",
+          "gen": "zielonej",
+          "dat": "zielonej",
+          "acc": "zieloną",
+          "ins": "zieloną",
+          "loc": "zielonej"
+        },
+        "n": {
+          "nom": "zielone",
+          "gen": "zielonego",
+          "dat": "zielonemu",
+          "acc": "zielone",
+          "ins": "zielonym",
+          "loc": "zielonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zieloni",
+          "gen": "zielonych",
+          "dat": "zielonym",
+          "acc": "zielonych",
+          "ins": "zielonymi",
+          "loc": "zielonych"
+        },
+        "nonvirile": {
+          "nom": "zielone",
+          "gen": "zielonych",
+          "dat": "zielonym",
+          "acc": "zielone",
+          "ins": "zielonymi",
+          "loc": "zielonych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszy",
+              "bardziej zielony"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszego",
+              "bardziej zielonego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszemu",
+              "bardziej zielonemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszego",
+              "bardziej zielonego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszym",
+              "bardziej zielonym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszym",
+              "bardziej zielonym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszy",
+              "bardziej zielony"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszego",
+              "bardziej zielonego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszemu",
+              "bardziej zielonemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszy",
+              "bardziej zielony"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszym",
+              "bardziej zielonym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszym",
+              "bardziej zielonym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńsza",
+              "bardziej zielona"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszej",
+              "bardziej zielonej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszej",
+              "bardziej zielonej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszą",
+              "bardziej zieloną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszą",
+              "bardziej zieloną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszej",
+              "bardziej zielonej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńsze",
+              "bardziej zielone"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszego",
+              "bardziej zielonego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszemu",
+              "bardziej zielonemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńsze",
+              "bardziej zielone"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszym",
+              "bardziej zielonym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszym",
+              "bardziej zielonym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńsi",
+              "bardziej zieloni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszych",
+              "bardziej zielonych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszym",
+              "bardziej zielonym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszych",
+              "bardziej zielonych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszymi",
+              "bardziej zielonymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszych",
+              "bardziej zielonych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńsze",
+              "bardziej zielone"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszych",
+              "bardziej zielonych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszym",
+              "bardziej zielonym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńsze",
+              "bardziej zielone"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszymi",
+              "bardziej zielonymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "zieleńszych",
+              "bardziej zielonych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszy",
+              "najbardziej zielony"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszego",
+              "najbardziej zielonego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszemu",
+              "najbardziej zielonemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszego",
+              "najbardziej zielonego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszym",
+              "najbardziej zielonym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszym",
+              "najbardziej zielonym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszy",
+              "najbardziej zielony"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszego",
+              "najbardziej zielonego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszemu",
+              "najbardziej zielonemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszy",
+              "najbardziej zielony"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszym",
+              "najbardziej zielonym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszym",
+              "najbardziej zielonym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńsza",
+              "najbardziej zielona"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszej",
+              "najbardziej zielonej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszej",
+              "najbardziej zielonej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszą",
+              "najbardziej zieloną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszą",
+              "najbardziej zieloną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszej",
+              "najbardziej zielonej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńsze",
+              "najbardziej zielone"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszego",
+              "najbardziej zielonego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszemu",
+              "najbardziej zielonemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńsze",
+              "najbardziej zielone"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszym",
+              "najbardziej zielonym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszym",
+              "najbardziej zielonym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńsi",
+              "najbardziej zieloni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszych",
+              "najbardziej zielonych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszym",
+              "najbardziej zielonym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszych",
+              "najbardziej zielonych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszymi",
+              "najbardziej zielonymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszych",
+              "najbardziej zielonych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńsze",
+              "najbardziej zielone"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszych",
+              "najbardziej zielonych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszym",
+              "najbardziej zielonym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńsze",
+              "najbardziej zielone"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszymi",
+              "najbardziej zielonymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najzieleńszych",
+              "najbardziej zielonych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

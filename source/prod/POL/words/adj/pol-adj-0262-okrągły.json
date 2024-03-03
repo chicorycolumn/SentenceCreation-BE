@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "okrągły",
+          "gen": "okrągłego",
+          "dat": "okrągłemu",
+          "acc": "okrągłego",
+          "ins": "okrągłym",
+          "loc": "okrągłym"
+        },
+        "m3": {
+          "nom": "okrągły",
+          "gen": "okrągłego",
+          "dat": "okrągłemu",
+          "acc": "okrągły",
+          "ins": "okrągłym",
+          "loc": "okrągłym"
+        },
+        "f": {
+          "nom": "okrągła",
+          "gen": "okrągłej",
+          "dat": "okrągłej",
+          "acc": "okrągłą",
+          "ins": "okrągłą",
+          "loc": "okrągłej"
+        },
+        "n": {
+          "nom": "okrągłe",
+          "gen": "okrągłego",
+          "dat": "okrągłemu",
+          "acc": "okrągłe",
+          "ins": "okrągłym",
+          "loc": "okrągłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "okrągli",
+          "gen": "okrągłych",
+          "dat": "okrągłym",
+          "acc": "okrągłych",
+          "ins": "okrągłymi",
+          "loc": "okrągłych"
+        },
+        "nonvirile": {
+          "nom": "okrągłe",
+          "gen": "okrągłych",
+          "dat": "okrągłym",
+          "acc": "okrągłe",
+          "ins": "okrągłymi",
+          "loc": "okrągłych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "okrąglejszy",
+          "gen": "okrąglejszego",
+          "dat": "okrąglejszemu",
+          "acc": "okrąglejszego",
+          "ins": "okrąglejszym",
+          "loc": "okrąglejszym"
+        },
+        "m3": {
+          "nom": "okrąglejszy",
+          "gen": "okrąglejszego",
+          "dat": "okrąglejszemu",
+          "acc": "okrąglejszy",
+          "ins": "okrąglejszym",
+          "loc": "okrąglejszym"
+        },
+        "f": {
+          "nom": "okrąglejsza",
+          "gen": "okrąglejszej",
+          "dat": "okrąglejszej",
+          "acc": "okrąglejszą",
+          "ins": "okrąglejszą",
+          "loc": "okrąglejszej"
+        },
+        "n": {
+          "nom": "okrąglejsze",
+          "gen": "okrąglejszego",
+          "dat": "okrąglejszemu",
+          "acc": "okrąglejsze",
+          "ins": "okrąglejszym",
+          "loc": "okrąglejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "okrąglejsi",
+          "gen": "okrąglejszych",
+          "dat": "okrąglejszym",
+          "acc": "okrąglejszych",
+          "ins": "okrąglejszymi",
+          "loc": "okrąglejszych"
+        },
+        "nonvirile": {
+          "nom": "okrąglejsze",
+          "gen": "okrąglejszych",
+          "dat": "okrąglejszym",
+          "acc": "okrąglejsze",
+          "ins": "okrąglejszymi",
+          "loc": "okrąglejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najokrąglejszy",
+          "gen": "najokrąglejszego",
+          "dat": "najokrąglejszemu",
+          "acc": "najokrąglejszego",
+          "ins": "najokrąglejszym",
+          "loc": "najokrąglejszym"
+        },
+        "m3": {
+          "nom": "najokrąglejszy",
+          "gen": "najokrąglejszego",
+          "dat": "najokrąglejszemu",
+          "acc": "najokrąglejszy",
+          "ins": "najokrąglejszym",
+          "loc": "najokrąglejszym"
+        },
+        "f": {
+          "nom": "najokrąglejsza",
+          "gen": "najokrąglejszej",
+          "dat": "najokrąglejszej",
+          "acc": "najokrąglejszą",
+          "ins": "najokrąglejszą",
+          "loc": "najokrąglejszej"
+        },
+        "n": {
+          "nom": "najokrąglejsze",
+          "gen": "najokrąglejszego",
+          "dat": "najokrąglejszemu",
+          "acc": "najokrąglejsze",
+          "ins": "najokrąglejszym",
+          "loc": "najokrąglejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najokrąglejsi",
+          "gen": "najokrąglejszych",
+          "dat": "najokrąglejszym",
+          "acc": "najokrąglejszych",
+          "ins": "najokrąglejszymi",
+          "loc": "najokrąglejszych"
+        },
+        "nonvirile": {
+          "nom": "najokrąglejsze",
+          "gen": "najokrąglejszych",
+          "dat": "najokrąglejszym",
+          "acc": "najokrąglejsze",
+          "ins": "najokrąglejszymi",
+          "loc": "najokrąglejszych"
+        }
+      }
+    }
+  }
+}

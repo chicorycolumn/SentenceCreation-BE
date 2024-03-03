@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "walking stick",
+      "gen": "walking stick's"
+    },
+    "plural": {
+      "nom": "walking sticks",
+      "gen": "walking sticks'"
+    }
+  }
+}

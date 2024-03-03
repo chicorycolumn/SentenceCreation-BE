@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "opracowywać",
+    "verbalNoun": "opracowywanie",
+    "activeAdjectival": "opracowujący",
+    "passiveAdjectival": "opracowywany",
+    "contemporaryAdverbial": "opracowując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "opracowuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opracowywano"
+          },
+          "plural": {
+            "allPluralGenders": "opracowywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "opracowywałem",
+            "f": "opracowywałam"
+          },
+          "plural": {
+            "virile": "opracowywaliśmy",
+            "nonvirile": "opracowywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "opracowywałeś",
+            "f": "opracowywałaś"
+          },
+          "plural": {
+            "virile": "opracowywaliście",
+            "nonvirile": "opracowywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "opracowywał",
+            "f": "opracowywała",
+            "n": "opracowywało"
+          },
+          "plural": {
+            "virile": "opracowywali",
+            "nonvirile": "opracowywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opracowuje się"
+          },
+          "plural": {
+            "allPluralGenders": "opracowuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "opracowuję"
+          },
+          "plural": {
+            "allPluralGenders": "opracowujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "opracowujesz"
+          },
+          "plural": {
+            "allPluralGenders": "opracowujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "opracowuje"
+          },
+          "plural": {
+            "allPluralGenders": "opracowują"
+          }
+        }
+      }
+    }
+  }
+}

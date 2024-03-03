@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zmieścić",
+    "verbalNoun": "zmieszczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zmieszczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zmieściwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zmieści się"
+          },
+          "plural": {
+            "allPluralGenders": "zmieści się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zmieszczę"
+          },
+          "plural": {
+            "allPluralGenders": "zmieścimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zmieścisz"
+          },
+          "plural": {
+            "allPluralGenders": "zmieścicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zmieści"
+          },
+          "plural": {
+            "allPluralGenders": "zmieszczą"
+          }
+        }
+      },
+      "imperative": "zmieść",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zmieszczono"
+          },
+          "plural": {
+            "allPluralGenders": "zmieszczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zmieściłem",
+            "f": "zmieściłam"
+          },
+          "plural": {
+            "virile": "zmieściliśmy",
+            "nonvirile": "zmieściłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zmieściłeś",
+            "f": "zmieściłaś"
+          },
+          "plural": {
+            "virile": "zmieściliście",
+            "nonvirile": "zmieściłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zmieścił",
+            "f": "zmieściła",
+            "n": "zmieściło"
+          },
+          "plural": {
+            "virile": "zmieścili",
+            "nonvirile": "zmieściły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

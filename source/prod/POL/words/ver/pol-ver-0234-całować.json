@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "całować",
+    "verbalNoun": "całowanie",
+    "activeAdjectival": "całujący",
+    "passiveAdjectival": "całowany",
+    "contemporaryAdverbial": "całując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "całuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "całowano"
+          },
+          "plural": {
+            "allPluralGenders": "całowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "całowałem",
+            "f": "całowałam"
+          },
+          "plural": {
+            "virile": "całowaliśmy",
+            "nonvirile": "całowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "całowałeś",
+            "f": "całowałaś"
+          },
+          "plural": {
+            "virile": "całowaliście",
+            "nonvirile": "całowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "całował",
+            "f": "całowała",
+            "n": "całowało"
+          },
+          "plural": {
+            "virile": "całowali",
+            "nonvirile": "całowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "całuje się"
+          },
+          "plural": {
+            "allPluralGenders": "całuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "całuję"
+          },
+          "plural": {
+            "allPluralGenders": "całujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "całujesz"
+          },
+          "plural": {
+            "allPluralGenders": "całujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "całuje"
+          },
+          "plural": {
+            "allPluralGenders": "całują"
+          }
+        }
+      }
+    }
+  }
+}

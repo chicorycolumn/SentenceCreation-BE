@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lodówka",
+      "gen": "lodówki",
+      "dat": "lodówce",
+      "acc": "lodówkę",
+      "ins": "lodówką",
+      "loc": "lodówce",
+      "voc": "lodówko"
+    },
+    "plural": {
+      "nom": "lodówki",
+      "gen": "lodówek",
+      "dat": "lodówkom",
+      "acc": "lodówki",
+      "ins": "lodówkami",
+      "loc": "lodówkach",
+      "voc": "lodówki"
+    }
+  }
+}

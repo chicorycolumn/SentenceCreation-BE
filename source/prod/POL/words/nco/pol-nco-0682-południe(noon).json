@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "południe",
+      "gen": "południa",
+      "dat": "południu",
+      "acc": "południe",
+      "ins": "południem",
+      "loc": "południu",
+      "voc": "południe"
+    },
+    "plural": {
+      "nom": "południa",
+      "gen": "południ",
+      "dat": "południom",
+      "acc": "południa",
+      "ins": "południami",
+      "loc": "południach",
+      "voc": "południa"
+    }
+  }
+}

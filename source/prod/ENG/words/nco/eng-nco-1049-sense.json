@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sense",
+      "gen": "sense's"
+    },
+    "plural": {
+      "nom": "senses",
+      "gen": "senses'"
+    }
+  }
+}

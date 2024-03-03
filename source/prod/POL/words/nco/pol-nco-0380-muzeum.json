@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "muzeum",
+      "gen": "muzeum",
+      "dat": "muzeum",
+      "acc": "muzeum",
+      "ins": "muzeum",
+      "loc": "muzeum",
+      "voc": "muzeum"
+    },
+    "plural": {
+      "nom": "muzea",
+      "gen": "muzeów",
+      "dat": "muzeom",
+      "acc": "muzea",
+      "ins": "muzeami",
+      "loc": "muzeach",
+      "voc": "muzea"
+    }
+  }
+}

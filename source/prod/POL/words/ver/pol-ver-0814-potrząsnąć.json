@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "potrząsnąć",
+    "verbalNoun": "potrząsnięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "potrząsnięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "potrząsnąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "potrząsnie się"
+          },
+          "plural": {
+            "allPluralGenders": "potrząsnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "potrząsnę"
+          },
+          "plural": {
+            "allPluralGenders": "potrząsniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "potrząsniesz"
+          },
+          "plural": {
+            "allPluralGenders": "potrząsniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "potrząsnie"
+          },
+          "plural": {
+            "allPluralGenders": "potrząsną"
+          }
+        }
+      },
+      "imperative": "potrząsnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "potrząsnięto"
+          },
+          "plural": {
+            "allPluralGenders": "potrząsnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "potrząsnąłem",
+            "f": "potrząsnęłam"
+          },
+          "plural": {
+            "virile": "potrząsnęliśmy",
+            "nonvirile": "potrząsnęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "potrząsnąłeś",
+            "f": "potrząsnęłaś"
+          },
+          "plural": {
+            "virile": "potrząsnęliście",
+            "nonvirile": "potrząsnęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "potrząsnął",
+            "f": "potrząsnęła",
+            "n": "potrząsnęło"
+          },
+          "plural": {
+            "virile": "potrząsnęli",
+            "nonvirile": "potrząsnęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

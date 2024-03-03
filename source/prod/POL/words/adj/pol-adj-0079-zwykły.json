@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "zwykle",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zwykły",
+          "gen": "zwykłego",
+          "dat": "zwykłemu",
+          "acc": "zwykłego",
+          "ins": "zwykłym",
+          "loc": "zwykłym"
+        },
+        "m3": {
+          "nom": "zwykły",
+          "gen": "zwykłego",
+          "dat": "zwykłemu",
+          "acc": "zwykły",
+          "ins": "zwykłym",
+          "loc": "zwykłym"
+        },
+        "f": {
+          "nom": "zwykła",
+          "gen": "zwykłej",
+          "dat": "zwykłej",
+          "acc": "zwykłą",
+          "ins": "zwykłą",
+          "loc": "zwykłej"
+        },
+        "n": {
+          "nom": "zwykłe",
+          "gen": "zwykłego",
+          "dat": "zwykłemu",
+          "acc": "zwykłe",
+          "ins": "zwykłym",
+          "loc": "zwykłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zwykli",
+          "gen": "zwykłych",
+          "dat": "zwykłym",
+          "acc": "zwykłych",
+          "ins": "zwykłymi",
+          "loc": "zwykłych"
+        },
+        "nonvirile": {
+          "nom": "zwykłe",
+          "gen": "zwykłych",
+          "dat": "zwykłym",
+          "acc": "zwykłe",
+          "ins": "zwykłymi",
+          "loc": "zwykłych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "zwyklejszy",
+          "gen": "zwyklejszego",
+          "dat": "zwyklejszemu",
+          "acc": "zwyklejszego",
+          "ins": "zwyklejszym",
+          "loc": "zwyklejszym"
+        },
+        "m3": {
+          "nom": "zwyklejszy",
+          "gen": "zwyklejszego",
+          "dat": "zwyklejszemu",
+          "acc": "zwyklejszy",
+          "ins": "zwyklejszym",
+          "loc": "zwyklejszym"
+        },
+        "f": {
+          "nom": "zwyklejsza",
+          "gen": "zwyklejszej",
+          "dat": "zwyklejszej",
+          "acc": "zwyklejszą",
+          "ins": "zwyklejszą",
+          "loc": "zwyklejszej"
+        },
+        "n": {
+          "nom": "zwyklejsze",
+          "gen": "zwyklejszego",
+          "dat": "zwyklejszemu",
+          "acc": "zwyklejsze",
+          "ins": "zwyklejszym",
+          "loc": "zwyklejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zwyklejsi",
+          "gen": "zwyklejszych",
+          "dat": "zwyklejszym",
+          "acc": "zwyklejszych",
+          "ins": "zwyklejszymi",
+          "loc": "zwyklejszych"
+        },
+        "nonvirile": {
+          "nom": "zwyklejsze",
+          "gen": "zwyklejszych",
+          "dat": "zwyklejszym",
+          "acc": "zwyklejsze",
+          "ins": "zwyklejszymi",
+          "loc": "zwyklejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najzwyklejszy",
+          "gen": "najzwyklejszego",
+          "dat": "najzwyklejszemu",
+          "acc": "najzwyklejszego",
+          "ins": "najzwyklejszym",
+          "loc": "najzwyklejszym"
+        },
+        "m3": {
+          "nom": "najzwyklejszy",
+          "gen": "najzwyklejszego",
+          "dat": "najzwyklejszemu",
+          "acc": "najzwyklejszy",
+          "ins": "najzwyklejszym",
+          "loc": "najzwyklejszym"
+        },
+        "f": {
+          "nom": "najzwyklejsza",
+          "gen": "najzwyklejszej",
+          "dat": "najzwyklejszej",
+          "acc": "najzwyklejszą",
+          "ins": "najzwyklejszą",
+          "loc": "najzwyklejszej"
+        },
+        "n": {
+          "nom": "najzwyklejsze",
+          "gen": "najzwyklejszego",
+          "dat": "najzwyklejszemu",
+          "acc": "najzwyklejsze",
+          "ins": "najzwyklejszym",
+          "loc": "najzwyklejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najzwyklejsi",
+          "gen": "najzwyklejszych",
+          "dat": "najzwyklejszym",
+          "acc": "najzwyklejszych",
+          "ins": "najzwyklejszymi",
+          "loc": "najzwyklejszych"
+        },
+        "nonvirile": {
+          "nom": "najzwyklejsze",
+          "gen": "najzwyklejszych",
+          "dat": "najzwyklejszym",
+          "acc": "najzwyklejsze",
+          "ins": "najzwyklejszymi",
+          "loc": "najzwyklejszych"
+        }
+      }
+    }
+  }
+}

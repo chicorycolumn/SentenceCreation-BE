@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zbrodnia",
+      "gen": "zbrodni",
+      "dat": "zbrodni",
+      "acc": "zbrodnię",
+      "ins": "zbrodnią",
+      "loc": "zbrodni",
+      "voc": "zbrodnio"
+    },
+    "plural": {
+      "nom": "zbrodnie",
+      "gen": "zbrodni",
+      "dat": "zbrodniom",
+      "acc": "zbrodnie",
+      "ins": "zbrodniami",
+      "loc": "zbrodniach",
+      "voc": "zbrodnie"
+    }
+  }
+}

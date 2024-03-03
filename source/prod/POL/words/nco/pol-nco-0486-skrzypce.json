@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "plural": {
+      "nom": "skrzypce",
+      "gen": "skrzypiec",
+      "dat": "skrzypcom",
+      "acc": "skrzypce",
+      "ins": "skrzypcami",
+      "loc": "skrzypcach",
+      "voc": "skrzypce"
+    }
+  }
+}

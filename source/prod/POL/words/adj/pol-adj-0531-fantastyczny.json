@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "fantastycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "fantastyczny",
+          "gen": "fantastycznego",
+          "dat": "fantastycznemu",
+          "acc": "fantastycznego",
+          "ins": "fantastycznym",
+          "loc": "fantastycznym"
+        },
+        "m3": {
+          "nom": "fantastyczny",
+          "gen": "fantastycznego",
+          "dat": "fantastycznemu",
+          "acc": "fantastyczny",
+          "ins": "fantastycznym",
+          "loc": "fantastycznym"
+        },
+        "f": {
+          "nom": "fantastyczna",
+          "gen": "fantastycznej",
+          "dat": "fantastycznej",
+          "acc": "fantastyczną",
+          "ins": "fantastyczną",
+          "loc": "fantastycznej"
+        },
+        "n": {
+          "nom": "fantastyczne",
+          "gen": "fantastycznego",
+          "dat": "fantastycznemu",
+          "acc": "fantastyczne",
+          "ins": "fantastycznym",
+          "loc": "fantastycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "fantastyczni",
+          "gen": "fantastycznych",
+          "dat": "fantastycznym",
+          "acc": "fantastycznych",
+          "ins": "fantastycznymi",
+          "loc": "fantastycznych"
+        },
+        "nonvirile": {
+          "nom": "fantastyczne",
+          "gen": "fantastycznych",
+          "dat": "fantastycznym",
+          "acc": "fantastyczne",
+          "ins": "fantastycznymi",
+          "loc": "fantastycznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "fantastyczniejszy",
+          "gen": "fantastyczniejszego",
+          "dat": "fantastyczniejszemu",
+          "acc": "fantastyczniejszego",
+          "ins": "fantastyczniejszym",
+          "loc": "fantastyczniejszym"
+        },
+        "m3": {
+          "nom": "fantastyczniejszy",
+          "gen": "fantastyczniejszego",
+          "dat": "fantastyczniejszemu",
+          "acc": "fantastyczniejszy",
+          "ins": "fantastyczniejszym",
+          "loc": "fantastyczniejszym"
+        },
+        "f": {
+          "nom": "fantastyczniejsza",
+          "gen": "fantastyczniejszej",
+          "dat": "fantastyczniejszej",
+          "acc": "fantastyczniejszą",
+          "ins": "fantastyczniejszą",
+          "loc": "fantastyczniejszej"
+        },
+        "n": {
+          "nom": "fantastyczniejsze",
+          "gen": "fantastyczniejszego",
+          "dat": "fantastyczniejszemu",
+          "acc": "fantastyczniejsze",
+          "ins": "fantastyczniejszym",
+          "loc": "fantastyczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "fantastyczniejsi",
+          "gen": "fantastyczniejszych",
+          "dat": "fantastyczniejszym",
+          "acc": "fantastyczniejszych",
+          "ins": "fantastyczniejszymi",
+          "loc": "fantastyczniejszych"
+        },
+        "nonvirile": {
+          "nom": "fantastyczniejsze",
+          "gen": "fantastyczniejszych",
+          "dat": "fantastyczniejszym",
+          "acc": "fantastyczniejsze",
+          "ins": "fantastyczniejszymi",
+          "loc": "fantastyczniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najfantastyczniejszy",
+          "gen": "najfantastyczniejszego",
+          "dat": "najfantastyczniejszemu",
+          "acc": "najfantastyczniejszego",
+          "ins": "najfantastyczniejszym",
+          "loc": "najfantastyczniejszym"
+        },
+        "m3": {
+          "nom": "najfantastyczniejszy",
+          "gen": "najfantastyczniejszego",
+          "dat": "najfantastyczniejszemu",
+          "acc": "najfantastyczniejszy",
+          "ins": "najfantastyczniejszym",
+          "loc": "najfantastyczniejszym"
+        },
+        "f": {
+          "nom": "najfantastyczniejsza",
+          "gen": "najfantastyczniejszej",
+          "dat": "najfantastyczniejszej",
+          "acc": "najfantastyczniejszą",
+          "ins": "najfantastyczniejszą",
+          "loc": "najfantastyczniejszej"
+        },
+        "n": {
+          "nom": "najfantastyczniejsze",
+          "gen": "najfantastyczniejszego",
+          "dat": "najfantastyczniejszemu",
+          "acc": "najfantastyczniejsze",
+          "ins": "najfantastyczniejszym",
+          "loc": "najfantastyczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najfantastyczniejsi",
+          "gen": "najfantastyczniejszych",
+          "dat": "najfantastyczniejszym",
+          "acc": "najfantastyczniejszych",
+          "ins": "najfantastyczniejszymi",
+          "loc": "najfantastyczniejszych"
+        },
+        "nonvirile": {
+          "nom": "najfantastyczniejsze",
+          "gen": "najfantastyczniejszych",
+          "dat": "najfantastyczniejszym",
+          "acc": "najfantastyczniejsze",
+          "ins": "najfantastyczniejszymi",
+          "loc": "najfantastyczniejszych"
+        }
+      }
+    }
+  }
+}

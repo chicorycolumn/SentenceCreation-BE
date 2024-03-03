@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "płynnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "płynny",
+          "gen": "płynnego",
+          "dat": "płynnemu",
+          "acc": "płynnego",
+          "ins": "płynnym",
+          "loc": "płynnym"
+        },
+        "m3": {
+          "nom": "płynny",
+          "gen": "płynnego",
+          "dat": "płynnemu",
+          "acc": "płynny",
+          "ins": "płynnym",
+          "loc": "płynnym"
+        },
+        "f": {
+          "nom": "płynna",
+          "gen": "płynnej",
+          "dat": "płynnej",
+          "acc": "płynną",
+          "ins": "płynną",
+          "loc": "płynnej"
+        },
+        "n": {
+          "nom": "płynne",
+          "gen": "płynnego",
+          "dat": "płynnemu",
+          "acc": "płynne",
+          "ins": "płynnym",
+          "loc": "płynnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "płynni",
+          "gen": "płynnych",
+          "dat": "płynnym",
+          "acc": "płynnych",
+          "ins": "płynnymi",
+          "loc": "płynnych"
+        },
+        "nonvirile": {
+          "nom": "płynne",
+          "gen": "płynnych",
+          "dat": "płynnym",
+          "acc": "płynne",
+          "ins": "płynnymi",
+          "loc": "płynnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "płynniejszy",
+          "gen": "płynniejszego",
+          "dat": "płynniejszemu",
+          "acc": "płynniejszego",
+          "ins": "płynniejszym",
+          "loc": "płynniejszym"
+        },
+        "m3": {
+          "nom": "płynniejszy",
+          "gen": "płynniejszego",
+          "dat": "płynniejszemu",
+          "acc": "płynniejszy",
+          "ins": "płynniejszym",
+          "loc": "płynniejszym"
+        },
+        "f": {
+          "nom": "płynniejsza",
+          "gen": "płynniejszej",
+          "dat": "płynniejszej",
+          "acc": "płynniejszą",
+          "ins": "płynniejszą",
+          "loc": "płynniejszej"
+        },
+        "n": {
+          "nom": "płynniejsze",
+          "gen": "płynniejszego",
+          "dat": "płynniejszemu",
+          "acc": "płynniejsze",
+          "ins": "płynniejszym",
+          "loc": "płynniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "płynniejsi",
+          "gen": "płynniejszych",
+          "dat": "płynniejszym",
+          "acc": "płynniejszych",
+          "ins": "płynniejszymi",
+          "loc": "płynniejszych"
+        },
+        "nonvirile": {
+          "nom": "płynniejsze",
+          "gen": "płynniejszych",
+          "dat": "płynniejszym",
+          "acc": "płynniejsze",
+          "ins": "płynniejszymi",
+          "loc": "płynniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najpłynniejszy",
+          "gen": "najpłynniejszego",
+          "dat": "najpłynniejszemu",
+          "acc": "najpłynniejszego",
+          "ins": "najpłynniejszym",
+          "loc": "najpłynniejszym"
+        },
+        "m3": {
+          "nom": "najpłynniejszy",
+          "gen": "najpłynniejszego",
+          "dat": "najpłynniejszemu",
+          "acc": "najpłynniejszy",
+          "ins": "najpłynniejszym",
+          "loc": "najpłynniejszym"
+        },
+        "f": {
+          "nom": "najpłynniejsza",
+          "gen": "najpłynniejszej",
+          "dat": "najpłynniejszej",
+          "acc": "najpłynniejszą",
+          "ins": "najpłynniejszą",
+          "loc": "najpłynniejszej"
+        },
+        "n": {
+          "nom": "najpłynniejsze",
+          "gen": "najpłynniejszego",
+          "dat": "najpłynniejszemu",
+          "acc": "najpłynniejsze",
+          "ins": "najpłynniejszym",
+          "loc": "najpłynniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najpłynniejsi",
+          "gen": "najpłynniejszych",
+          "dat": "najpłynniejszym",
+          "acc": "najpłynniejszych",
+          "ins": "najpłynniejszymi",
+          "loc": "najpłynniejszych"
+        },
+        "nonvirile": {
+          "nom": "najpłynniejsze",
+          "gen": "najpłynniejszych",
+          "dat": "najpłynniejszym",
+          "acc": "najpłynniejsze",
+          "ins": "najpłynniejszymi",
+          "loc": "najpłynniejszych"
+        }
+      }
+    }
+  }
+}

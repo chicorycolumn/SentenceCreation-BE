@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "bratanica",
+      "gen": "bratanicy",
+      "dat": "bratanicy",
+      "acc": "bratanicę",
+      "ins": "bratanicą",
+      "loc": "bratanicy",
+      "voc": "bratanico"
+    },
+    "plural": {
+      "nom": "bratanice",
+      "gen": "bratanic",
+      "dat": "bratanicom",
+      "acc": "bratanice",
+      "ins": "bratanicami",
+      "loc": "bratanicach",
+      "voc": "bratanice"
+    }
+  }
+}

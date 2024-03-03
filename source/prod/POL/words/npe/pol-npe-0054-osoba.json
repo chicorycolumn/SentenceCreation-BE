@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "osoba",
+      "gen": "osoby",
+      "dat": "osobie",
+      "acc": "osobę",
+      "ins": "osobą",
+      "loc": "osobie",
+      "voc": "osobo"
+    },
+    "plural": {
+      "nom": "osoby",
+      "gen": "osób",
+      "dat": "osobom",
+      "acc": "osoby",
+      "ins": "osobami",
+      "loc": "osobach",
+      "voc": "osoby"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "plural": {
+      "nom": "nożyczki",
+      "gen": "nożyczek",
+      "dat": "nożyczkom",
+      "acc": "nożyczki",
+      "ins": "nożyczkami",
+      "loc": "nożyczkach",
+      "voc": "nożyczki"
+    }
+  }
+}

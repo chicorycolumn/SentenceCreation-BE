@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "smukło",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "smukły",
+          "gen": "smukłego",
+          "dat": "smukłemu",
+          "acc": "smukłego",
+          "ins": "smukłym",
+          "loc": "smukłym"
+        },
+        "m3": {
+          "nom": "smukły",
+          "gen": "smukłego",
+          "dat": "smukłemu",
+          "acc": "smukły",
+          "ins": "smukłym",
+          "loc": "smukłym"
+        },
+        "f": {
+          "nom": "smukła",
+          "gen": "smukłej",
+          "dat": "smukłej",
+          "acc": "smukłą",
+          "ins": "smukłą",
+          "loc": "smukłej"
+        },
+        "n": {
+          "nom": "smukłe",
+          "gen": "smukłego",
+          "dat": "smukłemu",
+          "acc": "smukłe",
+          "ins": "smukłym",
+          "loc": "smukłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "smukli",
+          "gen": "smukłych",
+          "dat": "smukłym",
+          "acc": "smukłych",
+          "ins": "smukłymi",
+          "loc": "smukłych"
+        },
+        "nonvirile": {
+          "nom": "smukłe",
+          "gen": "smukłych",
+          "dat": "smukłym",
+          "acc": "smukłe",
+          "ins": "smukłymi",
+          "loc": "smukłych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "smuklejszy",
+          "gen": "smuklejszego",
+          "dat": "smuklejszemu",
+          "acc": "smuklejszego",
+          "ins": "smuklejszym",
+          "loc": "smuklejszym"
+        },
+        "m3": {
+          "nom": "smuklejszy",
+          "gen": "smuklejszego",
+          "dat": "smuklejszemu",
+          "acc": "smuklejszy",
+          "ins": "smuklejszym",
+          "loc": "smuklejszym"
+        },
+        "f": {
+          "nom": "smuklejsza",
+          "gen": "smuklejszej",
+          "dat": "smuklejszej",
+          "acc": "smuklejszą",
+          "ins": "smuklejszą",
+          "loc": "smuklejszej"
+        },
+        "n": {
+          "nom": "smuklejsze",
+          "gen": "smuklejszego",
+          "dat": "smuklejszemu",
+          "acc": "smuklejsze",
+          "ins": "smuklejszym",
+          "loc": "smuklejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "smuklejsi",
+          "gen": "smuklejszych",
+          "dat": "smuklejszym",
+          "acc": "smuklejszych",
+          "ins": "smuklejszymi",
+          "loc": "smuklejszych"
+        },
+        "nonvirile": {
+          "nom": "smuklejsze",
+          "gen": "smuklejszych",
+          "dat": "smuklejszym",
+          "acc": "smuklejsze",
+          "ins": "smuklejszymi",
+          "loc": "smuklejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najsmuklejszy",
+          "gen": "najsmuklejszego",
+          "dat": "najsmuklejszemu",
+          "acc": "najsmuklejszego",
+          "ins": "najsmuklejszym",
+          "loc": "najsmuklejszym"
+        },
+        "m3": {
+          "nom": "najsmuklejszy",
+          "gen": "najsmuklejszego",
+          "dat": "najsmuklejszemu",
+          "acc": "najsmuklejszy",
+          "ins": "najsmuklejszym",
+          "loc": "najsmuklejszym"
+        },
+        "f": {
+          "nom": "najsmuklejsza",
+          "gen": "najsmuklejszej",
+          "dat": "najsmuklejszej",
+          "acc": "najsmuklejszą",
+          "ins": "najsmuklejszą",
+          "loc": "najsmuklejszej"
+        },
+        "n": {
+          "nom": "najsmuklejsze",
+          "gen": "najsmuklejszego",
+          "dat": "najsmuklejszemu",
+          "acc": "najsmuklejsze",
+          "ins": "najsmuklejszym",
+          "loc": "najsmuklejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najsmuklejsi",
+          "gen": "najsmuklejszych",
+          "dat": "najsmuklejszym",
+          "acc": "najsmuklejszych",
+          "ins": "najsmuklejszymi",
+          "loc": "najsmuklejszych"
+        },
+        "nonvirile": {
+          "nom": "najsmuklejsze",
+          "gen": "najsmuklejszych",
+          "dat": "najsmuklejszym",
+          "acc": "najsmuklejsze",
+          "ins": "najsmuklejszymi",
+          "loc": "najsmuklejszych"
+        }
+      }
+    }
+  }
+}

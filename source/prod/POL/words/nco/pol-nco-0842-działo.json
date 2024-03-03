@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "działo",
+      "gen": "działa",
+      "dat": "działu",
+      "acc": "działo",
+      "ins": "działem",
+      "loc": "dziale",
+      "voc": "działo"
+    },
+    "plural": {
+      "nom": "działa",
+      "gen": "dział",
+      "dat": "działom",
+      "acc": "działa",
+      "ins": "działami",
+      "loc": "działach",
+      "voc": "działa"
+    }
+  }
+}

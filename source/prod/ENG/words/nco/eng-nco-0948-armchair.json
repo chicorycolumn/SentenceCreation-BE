@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "armchair",
+      "gen": "armchair's"
+    },
+    "plural": {
+      "nom": "armchairs",
+      "gen": "armchairs'"
+    }
+  }
+}

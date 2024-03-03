@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zorganizować",
+    "verbalNoun": "zorganizowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zorganizowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zorganizowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zorganizuje się"
+          },
+          "plural": {
+            "allPluralGenders": "zorganizuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zorganizuję"
+          },
+          "plural": {
+            "allPluralGenders": "zorganizujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zorganizujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zorganizujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zorganizuje"
+          },
+          "plural": {
+            "allPluralGenders": "zorganizują"
+          }
+        }
+      },
+      "imperative": "zorganizuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zorganizowano"
+          },
+          "plural": {
+            "allPluralGenders": "zorganizowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zorganizowałem",
+            "f": "zorganizowałam"
+          },
+          "plural": {
+            "virile": "zorganizowaliśmy",
+            "nonvirile": "zorganizowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zorganizowałeś",
+            "f": "zorganizowałaś"
+          },
+          "plural": {
+            "virile": "zorganizowaliście",
+            "nonvirile": "zorganizowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zorganizował",
+            "f": "zorganizowała",
+            "n": "zorganizowało"
+          },
+          "plural": {
+            "virile": "zorganizowali",
+            "nonvirile": "zorganizowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

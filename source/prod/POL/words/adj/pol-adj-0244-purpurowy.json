@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "purpurowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "purpurowy",
+          "gen": "purpurowego",
+          "dat": "purpurowemu",
+          "acc": "purpurowego",
+          "ins": "purpurowym",
+          "loc": "purpurowym"
+        },
+        "m3": {
+          "nom": "purpurowy",
+          "gen": "purpurowego",
+          "dat": "purpurowemu",
+          "acc": "purpurowy",
+          "ins": "purpurowym",
+          "loc": "purpurowym"
+        },
+        "f": {
+          "nom": "purpurowa",
+          "gen": "purpurowej",
+          "dat": "purpurowej",
+          "acc": "purpurową",
+          "ins": "purpurową",
+          "loc": "purpurowej"
+        },
+        "n": {
+          "nom": "purpurowe",
+          "gen": "purpurowego",
+          "dat": "purpurowemu",
+          "acc": "purpurowe",
+          "ins": "purpurowym",
+          "loc": "purpurowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "purpurowi",
+          "gen": "purpurowych",
+          "dat": "purpurowym",
+          "acc": "purpurowych",
+          "ins": "purpurowymi",
+          "loc": "purpurowych"
+        },
+        "nonvirile": {
+          "nom": "purpurowe",
+          "gen": "purpurowych",
+          "dat": "purpurowym",
+          "acc": "purpurowe",
+          "ins": "purpurowymi",
+          "loc": "purpurowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej purpurowy",
+          "gen": "bardziej purpurowego",
+          "dat": "bardziej purpurowemu",
+          "acc": "bardziej purpurowego",
+          "ins": "bardziej purpurowym",
+          "loc": "bardziej purpurowym"
+        },
+        "m3": {
+          "nom": "bardziej purpurowy",
+          "gen": "bardziej purpurowego",
+          "dat": "bardziej purpurowemu",
+          "acc": "bardziej purpurowy",
+          "ins": "bardziej purpurowym",
+          "loc": "bardziej purpurowym"
+        },
+        "f": {
+          "nom": "bardziej purpurowa",
+          "gen": "bardziej purpurowej",
+          "dat": "bardziej purpurowej",
+          "acc": "bardziej purpurową",
+          "ins": "bardziej purpurową",
+          "loc": "bardziej purpurowej"
+        },
+        "n": {
+          "nom": "bardziej purpurowe",
+          "gen": "bardziej purpurowego",
+          "dat": "bardziej purpurowemu",
+          "acc": "bardziej purpurowe",
+          "ins": "bardziej purpurowym",
+          "loc": "bardziej purpurowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej purpurowi",
+          "gen": "bardziej purpurowych",
+          "dat": "bardziej purpurowym",
+          "acc": "bardziej purpurowych",
+          "ins": "bardziej purpurowymi",
+          "loc": "bardziej purpurowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej purpurowe",
+          "gen": "bardziej purpurowych",
+          "dat": "bardziej purpurowym",
+          "acc": "bardziej purpurowe",
+          "ins": "bardziej purpurowymi",
+          "loc": "bardziej purpurowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej purpurowy",
+          "gen": "najbardziej purpurowego",
+          "dat": "najbardziej purpurowemu",
+          "acc": "najbardziej purpurowego",
+          "ins": "najbardziej purpurowym",
+          "loc": "najbardziej purpurowym"
+        },
+        "m3": {
+          "nom": "najbardziej purpurowy",
+          "gen": "najbardziej purpurowego",
+          "dat": "najbardziej purpurowemu",
+          "acc": "najbardziej purpurowy",
+          "ins": "najbardziej purpurowym",
+          "loc": "najbardziej purpurowym"
+        },
+        "f": {
+          "nom": "najbardziej purpurowa",
+          "gen": "najbardziej purpurowej",
+          "dat": "najbardziej purpurowej",
+          "acc": "najbardziej purpurową",
+          "ins": "najbardziej purpurową",
+          "loc": "najbardziej purpurowej"
+        },
+        "n": {
+          "nom": "najbardziej purpurowe",
+          "gen": "najbardziej purpurowego",
+          "dat": "najbardziej purpurowemu",
+          "acc": "najbardziej purpurowe",
+          "ins": "najbardziej purpurowym",
+          "loc": "najbardziej purpurowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej purpurowi",
+          "gen": "najbardziej purpurowych",
+          "dat": "najbardziej purpurowym",
+          "acc": "najbardziej purpurowych",
+          "ins": "najbardziej purpurowymi",
+          "loc": "najbardziej purpurowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej purpurowe",
+          "gen": "najbardziej purpurowych",
+          "dat": "najbardziej purpurowym",
+          "acc": "najbardziej purpurowe",
+          "ins": "najbardziej purpurowymi",
+          "loc": "najbardziej purpurowych"
+        }
+      }
+    }
+  }
+}

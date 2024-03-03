@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "państwowy",
+          "gen": "państwowego",
+          "dat": "państwowemu",
+          "acc": "państwowego",
+          "ins": "państwowym",
+          "loc": "państwowym"
+        },
+        "m3": {
+          "nom": "państwowy",
+          "gen": "państwowego",
+          "dat": "państwowemu",
+          "acc": "państwowy",
+          "ins": "państwowym",
+          "loc": "państwowym"
+        },
+        "f": {
+          "nom": "państwowa",
+          "gen": "państwowej",
+          "dat": "państwowej",
+          "acc": "państwową",
+          "ins": "państwową",
+          "loc": "państwowej"
+        },
+        "n": {
+          "nom": "państwowe",
+          "gen": "państwowego",
+          "dat": "państwowemu",
+          "acc": "państwowe",
+          "ins": "państwowym",
+          "loc": "państwowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "państwowi",
+          "gen": "państwowych",
+          "dat": "państwowym",
+          "acc": "państwowych",
+          "ins": "państwowymi",
+          "loc": "państwowych"
+        },
+        "nonvirile": {
+          "nom": "państwowe",
+          "gen": "państwowych",
+          "dat": "państwowym",
+          "acc": "państwowe",
+          "ins": "państwowymi",
+          "loc": "państwowych"
+        }
+      }
+    }
+  }
+}

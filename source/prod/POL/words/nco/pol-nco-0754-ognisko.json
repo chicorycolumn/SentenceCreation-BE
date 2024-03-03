@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ognisko",
+      "gen": "ogniska",
+      "dat": "ognisku",
+      "acc": "ognisko",
+      "ins": "ogniskiem",
+      "loc": "ognisku",
+      "voc": "ognisko"
+    },
+    "plural": {
+      "nom": "ogniska",
+      "gen": "ognisk",
+      "dat": "ogniskom",
+      "acc": "ogniska",
+      "ins": "ogniskami",
+      "loc": "ogniskach",
+      "voc": "ogniska"
+    }
+  }
+}

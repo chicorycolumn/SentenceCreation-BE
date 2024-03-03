@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dotrzymać",
+    "verbalNoun": "dotrzymanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "dotrzymany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "dotrzymawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dotrzyma się"
+          },
+          "plural": {
+            "allPluralGenders": "dotrzyma się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dotrzymam"
+          },
+          "plural": {
+            "allPluralGenders": "dotrzymamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dotrzymasz"
+          },
+          "plural": {
+            "allPluralGenders": "dotrzymacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dotrzyma"
+          },
+          "plural": {
+            "allPluralGenders": "dotrzymają"
+          }
+        }
+      },
+      "imperative": "dotrzymaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dotrzymano"
+          },
+          "plural": {
+            "allPluralGenders": "dotrzymano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dotrzymałem",
+            "f": "dotrzymałam"
+          },
+          "plural": {
+            "virile": "dotrzymaliśmy",
+            "nonvirile": "dotrzymałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dotrzymałeś",
+            "f": "dotrzymałaś"
+          },
+          "plural": {
+            "virile": "dotrzymaliście",
+            "nonvirile": "dotrzymałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dotrzymał",
+            "f": "dotrzymała",
+            "n": "dotrzymało"
+          },
+          "plural": {
+            "virile": "dotrzymali",
+            "nonvirile": "dotrzymały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "widelec",
+      "gen": "widelca",
+      "dat": "widelcowi",
+      "acc": "widelec",
+      "ins": "widelcem",
+      "loc": "widelcu",
+      "voc": "widelcu"
+    },
+    "plural": {
+      "nom": "widelce",
+      "gen": "widelców",
+      "dat": "widelcom",
+      "acc": "widelce",
+      "ins": "widelcami",
+      "loc": "widelcach",
+      "voc": "widelce"
+    }
+  }
+}

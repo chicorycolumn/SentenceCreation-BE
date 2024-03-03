@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "nieopłacalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nieopłacalny",
+          "gen": "nieopłacalnego",
+          "dat": "nieopłacalnemu",
+          "acc": "nieopłacalnego",
+          "ins": "nieopłacalnym",
+          "loc": "nieopłacalnym"
+        },
+        "m3": {
+          "nom": "nieopłacalny",
+          "gen": "nieopłacalnego",
+          "dat": "nieopłacalnemu",
+          "acc": "nieopłacalny",
+          "ins": "nieopłacalnym",
+          "loc": "nieopłacalnym"
+        },
+        "f": {
+          "nom": "nieopłacalna",
+          "gen": "nieopłacalnej",
+          "dat": "nieopłacalnej",
+          "acc": "nieopłacalną",
+          "ins": "nieopłacalną",
+          "loc": "nieopłacalnej"
+        },
+        "n": {
+          "nom": "nieopłacalne",
+          "gen": "nieopłacalnego",
+          "dat": "nieopłacalnemu",
+          "acc": "nieopłacalne",
+          "ins": "nieopłacalnym",
+          "loc": "nieopłacalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieopłacalni",
+          "gen": "nieopłacalnych",
+          "dat": "nieopłacalnym",
+          "acc": "nieopłacalnych",
+          "ins": "nieopłacalnymi",
+          "loc": "nieopłacalnych"
+        },
+        "nonvirile": {
+          "nom": "nieopłacalne",
+          "gen": "nieopłacalnych",
+          "dat": "nieopłacalnym",
+          "acc": "nieopłacalne",
+          "ins": "nieopłacalnymi",
+          "loc": "nieopłacalnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej nieopłacalny",
+          "gen": "bardziej nieopłacalnego",
+          "dat": "bardziej nieopłacalnemu",
+          "acc": "bardziej nieopłacalnego",
+          "ins": "bardziej nieopłacalnym",
+          "loc": "bardziej nieopłacalnym"
+        },
+        "m3": {
+          "nom": "bardziej nieopłacalny",
+          "gen": "bardziej nieopłacalnego",
+          "dat": "bardziej nieopłacalnemu",
+          "acc": "bardziej nieopłacalny",
+          "ins": "bardziej nieopłacalnym",
+          "loc": "bardziej nieopłacalnym"
+        },
+        "f": {
+          "nom": "bardziej nieopłacalna",
+          "gen": "bardziej nieopłacalnej",
+          "dat": "bardziej nieopłacalnej",
+          "acc": "bardziej nieopłacalną",
+          "ins": "bardziej nieopłacalną",
+          "loc": "bardziej nieopłacalnej"
+        },
+        "n": {
+          "nom": "bardziej nieopłacalne",
+          "gen": "bardziej nieopłacalnego",
+          "dat": "bardziej nieopłacalnemu",
+          "acc": "bardziej nieopłacalne",
+          "ins": "bardziej nieopłacalnym",
+          "loc": "bardziej nieopłacalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej nieopłacalni",
+          "gen": "bardziej nieopłacalnych",
+          "dat": "bardziej nieopłacalnym",
+          "acc": "bardziej nieopłacalnych",
+          "ins": "bardziej nieopłacalnymi",
+          "loc": "bardziej nieopłacalnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej nieopłacalne",
+          "gen": "bardziej nieopłacalnych",
+          "dat": "bardziej nieopłacalnym",
+          "acc": "bardziej nieopłacalne",
+          "ins": "bardziej nieopłacalnymi",
+          "loc": "bardziej nieopłacalnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej nieopłacalny",
+          "gen": "najbardziej nieopłacalnego",
+          "dat": "najbardziej nieopłacalnemu",
+          "acc": "najbardziej nieopłacalnego",
+          "ins": "najbardziej nieopłacalnym",
+          "loc": "najbardziej nieopłacalnym"
+        },
+        "m3": {
+          "nom": "najbardziej nieopłacalny",
+          "gen": "najbardziej nieopłacalnego",
+          "dat": "najbardziej nieopłacalnemu",
+          "acc": "najbardziej nieopłacalny",
+          "ins": "najbardziej nieopłacalnym",
+          "loc": "najbardziej nieopłacalnym"
+        },
+        "f": {
+          "nom": "najbardziej nieopłacalna",
+          "gen": "najbardziej nieopłacalnej",
+          "dat": "najbardziej nieopłacalnej",
+          "acc": "najbardziej nieopłacalną",
+          "ins": "najbardziej nieopłacalną",
+          "loc": "najbardziej nieopłacalnej"
+        },
+        "n": {
+          "nom": "najbardziej nieopłacalne",
+          "gen": "najbardziej nieopłacalnego",
+          "dat": "najbardziej nieopłacalnemu",
+          "acc": "najbardziej nieopłacalne",
+          "ins": "najbardziej nieopłacalnym",
+          "loc": "najbardziej nieopłacalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej nieopłacalni",
+          "gen": "najbardziej nieopłacalnych",
+          "dat": "najbardziej nieopłacalnym",
+          "acc": "najbardziej nieopłacalnych",
+          "ins": "najbardziej nieopłacalnymi",
+          "loc": "najbardziej nieopłacalnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej nieopłacalne",
+          "gen": "najbardziej nieopłacalnych",
+          "dat": "najbardziej nieopłacalnym",
+          "acc": "najbardziej nieopłacalne",
+          "ins": "najbardziej nieopłacalnymi",
+          "loc": "najbardziej nieopłacalnych"
+        }
+      }
+    }
+  }
+}

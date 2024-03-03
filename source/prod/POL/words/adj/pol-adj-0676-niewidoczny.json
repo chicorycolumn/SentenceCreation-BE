@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "niewidocznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niewidoczny",
+          "gen": "niewidocznego",
+          "dat": "niewidocznemu",
+          "acc": "niewidocznego",
+          "ins": "niewidocznym",
+          "loc": "niewidocznym"
+        },
+        "m3": {
+          "nom": "niewidoczny",
+          "gen": "niewidocznego",
+          "dat": "niewidocznemu",
+          "acc": "niewidoczny",
+          "ins": "niewidocznym",
+          "loc": "niewidocznym"
+        },
+        "f": {
+          "nom": "niewidoczna",
+          "gen": "niewidocznej",
+          "dat": "niewidocznej",
+          "acc": "niewidoczną",
+          "ins": "niewidoczną",
+          "loc": "niewidocznej"
+        },
+        "n": {
+          "nom": "niewidoczne",
+          "gen": "niewidocznego",
+          "dat": "niewidocznemu",
+          "acc": "niewidoczne",
+          "ins": "niewidocznym",
+          "loc": "niewidocznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niewidoczni",
+          "gen": "niewidocznych",
+          "dat": "niewidocznym",
+          "acc": "niewidocznych",
+          "ins": "niewidocznymi",
+          "loc": "niewidocznych"
+        },
+        "nonvirile": {
+          "nom": "niewidoczne",
+          "gen": "niewidocznych",
+          "dat": "niewidocznym",
+          "acc": "niewidoczne",
+          "ins": "niewidocznymi",
+          "loc": "niewidocznych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zmierzyć",
+    "verbalNoun": "zmierzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zmierzony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zmierzywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zmierzy się"
+          },
+          "plural": {
+            "allPluralGenders": "zmierzy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zmierzę"
+          },
+          "plural": {
+            "allPluralGenders": "zmierzymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zmierzysz"
+          },
+          "plural": {
+            "allPluralGenders": "zmierzycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zmierzy"
+          },
+          "plural": {
+            "allPluralGenders": "zmierzą"
+          }
+        }
+      },
+      "imperative": "zmierz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zmierzono"
+          },
+          "plural": {
+            "allPluralGenders": "zmierzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zmierzyłem",
+            "f": "zmierzyłam"
+          },
+          "plural": {
+            "virile": "zmierzyliśmy",
+            "nonvirile": "zmierzyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zmierzyłeś",
+            "f": "zmierzyłaś"
+          },
+          "plural": {
+            "virile": "zmierzyliście",
+            "nonvirile": "zmierzyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zmierzył",
+            "f": "zmierzyła",
+            "n": "zmierzyło"
+          },
+          "plural": {
+            "virile": "zmierzyli",
+            "nonvirile": "zmierzyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

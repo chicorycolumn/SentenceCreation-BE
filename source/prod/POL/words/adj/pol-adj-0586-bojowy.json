@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "bojowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bojowy",
+          "gen": "bojowego",
+          "dat": "bojowemu",
+          "acc": "bojowego",
+          "ins": "bojowym",
+          "loc": "bojowym"
+        },
+        "m3": {
+          "nom": "bojowy",
+          "gen": "bojowego",
+          "dat": "bojowemu",
+          "acc": "bojowy",
+          "ins": "bojowym",
+          "loc": "bojowym"
+        },
+        "f": {
+          "nom": "bojowa",
+          "gen": "bojowej",
+          "dat": "bojowej",
+          "acc": "bojową",
+          "ins": "bojową",
+          "loc": "bojowej"
+        },
+        "n": {
+          "nom": "bojowe",
+          "gen": "bojowego",
+          "dat": "bojowemu",
+          "acc": "bojowe",
+          "ins": "bojowym",
+          "loc": "bojowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bojowi",
+          "gen": "bojowych",
+          "dat": "bojowym",
+          "acc": "bojowych",
+          "ins": "bojowymi",
+          "loc": "bojowych"
+        },
+        "nonvirile": {
+          "nom": "bojowe",
+          "gen": "bojowych",
+          "dat": "bojowym",
+          "acc": "bojowe",
+          "ins": "bojowymi",
+          "loc": "bojowych"
+        }
+      }
+    }
+  }
+}

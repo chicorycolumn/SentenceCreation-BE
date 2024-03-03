@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "chmura",
+      "gen": "chmury",
+      "dat": "chmurze",
+      "acc": "chmurę",
+      "ins": "chmurą",
+      "loc": "chmurze",
+      "voc": "chmuro"
+    },
+    "plural": {
+      "nom": "chmury",
+      "gen": "chmur",
+      "dat": "chmurom",
+      "acc": "chmury",
+      "ins": "chmurami",
+      "loc": "chmurach",
+      "voc": "chmury"
+    }
+  }
+}

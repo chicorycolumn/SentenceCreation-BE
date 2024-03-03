@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "prawidłowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "prawidłowy",
+          "gen": "prawidłowego",
+          "dat": "prawidłowemu",
+          "acc": "prawidłowego",
+          "ins": "prawidłowym",
+          "loc": "prawidłowym"
+        },
+        "m3": {
+          "nom": "prawidłowy",
+          "gen": "prawidłowego",
+          "dat": "prawidłowemu",
+          "acc": "prawidłowy",
+          "ins": "prawidłowym",
+          "loc": "prawidłowym"
+        },
+        "f": {
+          "nom": "prawidłowa",
+          "gen": "prawidłowej",
+          "dat": "prawidłowej",
+          "acc": "prawidłową",
+          "ins": "prawidłową",
+          "loc": "prawidłowej"
+        },
+        "n": {
+          "nom": "prawidłowe",
+          "gen": "prawidłowego",
+          "dat": "prawidłowemu",
+          "acc": "prawidłowe",
+          "ins": "prawidłowym",
+          "loc": "prawidłowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "prawidłowi",
+          "gen": "prawidłowych",
+          "dat": "prawidłowym",
+          "acc": "prawidłowych",
+          "ins": "prawidłowymi",
+          "loc": "prawidłowych"
+        },
+        "nonvirile": {
+          "nom": "prawidłowe",
+          "gen": "prawidłowych",
+          "dat": "prawidłowym",
+          "acc": "prawidłowe",
+          "ins": "prawidłowymi",
+          "loc": "prawidłowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej prawidłowy",
+          "gen": "bardziej prawidłowego",
+          "dat": "bardziej prawidłowemu",
+          "acc": "bardziej prawidłowego",
+          "ins": "bardziej prawidłowym",
+          "loc": "bardziej prawidłowym"
+        },
+        "m3": {
+          "nom": "bardziej prawidłowy",
+          "gen": "bardziej prawidłowego",
+          "dat": "bardziej prawidłowemu",
+          "acc": "bardziej prawidłowy",
+          "ins": "bardziej prawidłowym",
+          "loc": "bardziej prawidłowym"
+        },
+        "f": {
+          "nom": "bardziej prawidłowa",
+          "gen": "bardziej prawidłowej",
+          "dat": "bardziej prawidłowej",
+          "acc": "bardziej prawidłową",
+          "ins": "bardziej prawidłową",
+          "loc": "bardziej prawidłowej"
+        },
+        "n": {
+          "nom": "bardziej prawidłowe",
+          "gen": "bardziej prawidłowego",
+          "dat": "bardziej prawidłowemu",
+          "acc": "bardziej prawidłowe",
+          "ins": "bardziej prawidłowym",
+          "loc": "bardziej prawidłowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej prawidłowi",
+          "gen": "bardziej prawidłowych",
+          "dat": "bardziej prawidłowym",
+          "acc": "bardziej prawidłowych",
+          "ins": "bardziej prawidłowymi",
+          "loc": "bardziej prawidłowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej prawidłowe",
+          "gen": "bardziej prawidłowych",
+          "dat": "bardziej prawidłowym",
+          "acc": "bardziej prawidłowe",
+          "ins": "bardziej prawidłowymi",
+          "loc": "bardziej prawidłowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej prawidłowy",
+          "gen": "najbardziej prawidłowego",
+          "dat": "najbardziej prawidłowemu",
+          "acc": "najbardziej prawidłowego",
+          "ins": "najbardziej prawidłowym",
+          "loc": "najbardziej prawidłowym"
+        },
+        "m3": {
+          "nom": "najbardziej prawidłowy",
+          "gen": "najbardziej prawidłowego",
+          "dat": "najbardziej prawidłowemu",
+          "acc": "najbardziej prawidłowy",
+          "ins": "najbardziej prawidłowym",
+          "loc": "najbardziej prawidłowym"
+        },
+        "f": {
+          "nom": "najbardziej prawidłowa",
+          "gen": "najbardziej prawidłowej",
+          "dat": "najbardziej prawidłowej",
+          "acc": "najbardziej prawidłową",
+          "ins": "najbardziej prawidłową",
+          "loc": "najbardziej prawidłowej"
+        },
+        "n": {
+          "nom": "najbardziej prawidłowe",
+          "gen": "najbardziej prawidłowego",
+          "dat": "najbardziej prawidłowemu",
+          "acc": "najbardziej prawidłowe",
+          "ins": "najbardziej prawidłowym",
+          "loc": "najbardziej prawidłowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej prawidłowi",
+          "gen": "najbardziej prawidłowych",
+          "dat": "najbardziej prawidłowym",
+          "acc": "najbardziej prawidłowych",
+          "ins": "najbardziej prawidłowymi",
+          "loc": "najbardziej prawidłowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej prawidłowe",
+          "gen": "najbardziej prawidłowych",
+          "dat": "najbardziej prawidłowym",
+          "acc": "najbardziej prawidłowe",
+          "ins": "najbardziej prawidłowymi",
+          "loc": "najbardziej prawidłowych"
+        }
+      }
+    }
+  }
+}

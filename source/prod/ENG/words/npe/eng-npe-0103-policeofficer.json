@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "police officer",
+      "gen": "police officer's"
+    },
+    "plural": {
+      "nom": "police officers",
+      "gen": "police officers'"
+    }
+  }
+}

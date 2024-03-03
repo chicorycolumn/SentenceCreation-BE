@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "zawodowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zawodowy",
+          "gen": "zawodowego",
+          "dat": "zawodowemu",
+          "acc": "zawodowego",
+          "ins": "zawodowym",
+          "loc": "zawodowym"
+        },
+        "m3": {
+          "nom": "zawodowy",
+          "gen": "zawodowego",
+          "dat": "zawodowemu",
+          "acc": "zawodowy",
+          "ins": "zawodowym",
+          "loc": "zawodowym"
+        },
+        "f": {
+          "nom": "zawodowa",
+          "gen": "zawodowej",
+          "dat": "zawodowej",
+          "acc": "zawodową",
+          "ins": "zawodową",
+          "loc": "zawodowej"
+        },
+        "n": {
+          "nom": "zawodowe",
+          "gen": "zawodowego",
+          "dat": "zawodowemu",
+          "acc": "zawodowe",
+          "ins": "zawodowym",
+          "loc": "zawodowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zawodowi",
+          "gen": "zawodowych",
+          "dat": "zawodowym",
+          "acc": "zawodowych",
+          "ins": "zawodowymi",
+          "loc": "zawodowych"
+        },
+        "nonvirile": {
+          "nom": "zawodowe",
+          "gen": "zawodowych",
+          "dat": "zawodowym",
+          "acc": "zawodowe",
+          "ins": "zawodowymi",
+          "loc": "zawodowych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "budzić",
+    "verbalNoun": "budzenie",
+    "activeAdjectival": "budzący",
+    "passiveAdjectival": "budzony",
+    "contemporaryAdverbial": "budząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "budź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "budzono"
+          },
+          "plural": {
+            "allPluralGenders": "budzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "budziłem",
+            "f": "budziłam"
+          },
+          "plural": {
+            "virile": "budziliśmy",
+            "nonvirile": "budziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "budziłeś",
+            "f": "budziłaś"
+          },
+          "plural": {
+            "virile": "budziliście",
+            "nonvirile": "budziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "budził",
+            "f": "budziła",
+            "n": "budziło"
+          },
+          "plural": {
+            "virile": "budzili",
+            "nonvirile": "budziły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "budzi się"
+          },
+          "plural": {
+            "allPluralGenders": "budzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "budzę"
+          },
+          "plural": {
+            "allPluralGenders": "budzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "budzisz"
+          },
+          "plural": {
+            "allPluralGenders": "budzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "budzi"
+          },
+          "plural": {
+            "allPluralGenders": "budzą"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ślimak",
+      "gen": "ślimaka",
+      "dat": "ślimakowi",
+      "acc": "ślimaka",
+      "ins": "ślimakiem",
+      "loc": "ślimaku",
+      "voc": "ślimaku"
+    },
+    "plural": {
+      "nom": "ślimaki",
+      "gen": "ślimaków",
+      "dat": "ślimakom",
+      "acc": "ślimaki",
+      "ins": "ślimakami",
+      "loc": "ślimakach",
+      "voc": "ślimaki"
+    }
+  }
+}

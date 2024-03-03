@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ominąć",
+    "verbalNoun": "ominięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "ominięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "ominąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ominie się"
+          },
+          "plural": {
+            "allPluralGenders": "ominie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ominę"
+          },
+          "plural": {
+            "allPluralGenders": "ominiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ominiesz"
+          },
+          "plural": {
+            "allPluralGenders": "ominiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ominie"
+          },
+          "plural": {
+            "allPluralGenders": "ominą"
+          }
+        }
+      },
+      "imperative": "omiń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ominięto"
+          },
+          "plural": {
+            "allPluralGenders": "ominięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ominąłem",
+            "f": "ominęłam"
+          },
+          "plural": {
+            "virile": "ominęliśmy",
+            "nonvirile": "ominęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ominąłeś",
+            "f": "ominęłaś"
+          },
+          "plural": {
+            "virile": "ominęliście",
+            "nonvirile": "ominęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ominął",
+            "f": "ominęła",
+            "n": "ominęło"
+          },
+          "plural": {
+            "virile": "ominęli",
+            "nonvirile": "ominęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cotton wool",
+      "gen": "cotton wool's"
+    },
+    "plural": {
+      "nom": "cotton wool",
+      "gen": "cotton wool's"
+    }
+  }
+}

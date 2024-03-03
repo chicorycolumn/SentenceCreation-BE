@@ -1,0 +1,175 @@
+{
+  "inflections": {
+    "adverb": {
+      "isTerminus": true,
+      "normal": [
+        "puszyście"
+      ],
+      "additionalInfrequent": [
+        "puszysto"
+      ]
+    },
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "puszysty",
+          "gen": "puszystego",
+          "dat": "puszystemu",
+          "acc": "puszystego",
+          "ins": "puszystym",
+          "loc": "puszystym"
+        },
+        "m3": {
+          "nom": "puszysty",
+          "gen": "puszystego",
+          "dat": "puszystemu",
+          "acc": "puszysty",
+          "ins": "puszystym",
+          "loc": "puszystym"
+        },
+        "f": {
+          "nom": "puszysta",
+          "gen": "puszystej",
+          "dat": "puszystej",
+          "acc": "puszystą",
+          "ins": "puszystą",
+          "loc": "puszystej"
+        },
+        "n": {
+          "nom": "puszyste",
+          "gen": "puszystego",
+          "dat": "puszystemu",
+          "acc": "puszyste",
+          "ins": "puszystym",
+          "loc": "puszystym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "puszyści",
+          "gen": "puszystych",
+          "dat": "puszystym",
+          "acc": "puszystych",
+          "ins": "puszystymi",
+          "loc": "puszystych"
+        },
+        "nonvirile": {
+          "nom": "puszyste",
+          "gen": "puszystych",
+          "dat": "puszystym",
+          "acc": "puszyste",
+          "ins": "puszystymi",
+          "loc": "puszystych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej puszysty",
+          "gen": "bardziej puszystego",
+          "dat": "bardziej puszystemu",
+          "acc": "bardziej puszystego",
+          "ins": "bardziej puszystym",
+          "loc": "bardziej puszystym"
+        },
+        "m3": {
+          "nom": "bardziej puszysty",
+          "gen": "bardziej puszystego",
+          "dat": "bardziej puszystemu",
+          "acc": "bardziej puszysty",
+          "ins": "bardziej puszystym",
+          "loc": "bardziej puszystym"
+        },
+        "f": {
+          "nom": "bardziej puszysta",
+          "gen": "bardziej puszystej",
+          "dat": "bardziej puszystej",
+          "acc": "bardziej puszystą",
+          "ins": "bardziej puszystą",
+          "loc": "bardziej puszystej"
+        },
+        "n": {
+          "nom": "bardziej puszyste",
+          "gen": "bardziej puszystego",
+          "dat": "bardziej puszystemu",
+          "acc": "bardziej puszyste",
+          "ins": "bardziej puszystym",
+          "loc": "bardziej puszystym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej puszyści",
+          "gen": "bardziej puszystych",
+          "dat": "bardziej puszystym",
+          "acc": "bardziej puszystych",
+          "ins": "bardziej puszystymi",
+          "loc": "bardziej puszystych"
+        },
+        "nonvirile": {
+          "nom": "bardziej puszyste",
+          "gen": "bardziej puszystych",
+          "dat": "bardziej puszystym",
+          "acc": "bardziej puszyste",
+          "ins": "bardziej puszystymi",
+          "loc": "bardziej puszystych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej puszysty",
+          "gen": "najbardziej puszystego",
+          "dat": "najbardziej puszystemu",
+          "acc": "najbardziej puszystego",
+          "ins": "najbardziej puszystym",
+          "loc": "najbardziej puszystym"
+        },
+        "m3": {
+          "nom": "najbardziej puszysty",
+          "gen": "najbardziej puszystego",
+          "dat": "najbardziej puszystemu",
+          "acc": "najbardziej puszysty",
+          "ins": "najbardziej puszystym",
+          "loc": "najbardziej puszystym"
+        },
+        "f": {
+          "nom": "najbardziej puszysta",
+          "gen": "najbardziej puszystej",
+          "dat": "najbardziej puszystej",
+          "acc": "najbardziej puszystą",
+          "ins": "najbardziej puszystą",
+          "loc": "najbardziej puszystej"
+        },
+        "n": {
+          "nom": "najbardziej puszyste",
+          "gen": "najbardziej puszystego",
+          "dat": "najbardziej puszystemu",
+          "acc": "najbardziej puszyste",
+          "ins": "najbardziej puszystym",
+          "loc": "najbardziej puszystym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej puszyści",
+          "gen": "najbardziej puszystych",
+          "dat": "najbardziej puszystym",
+          "acc": "najbardziej puszystych",
+          "ins": "najbardziej puszystymi",
+          "loc": "najbardziej puszystych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej puszyste",
+          "gen": "najbardziej puszystych",
+          "dat": "najbardziej puszystym",
+          "acc": "najbardziej puszyste",
+          "ins": "najbardziej puszystymi",
+          "loc": "najbardziej puszystych"
+        }
+      }
+    }
+  }
+}

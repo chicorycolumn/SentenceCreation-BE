@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pająk",
+      "gen": "pająka",
+      "dat": "pająkowi",
+      "acc": "pająka",
+      "ins": "pająkiem",
+      "loc": "pająku",
+      "voc": "pająku"
+    },
+    "plural": {
+      "nom": "pająki",
+      "gen": "pająków",
+      "dat": "pająkom",
+      "acc": "pająki",
+      "ins": "pająkami",
+      "loc": "pająkach",
+      "voc": "pająki"
+    }
+  }
+}

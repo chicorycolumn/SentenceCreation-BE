@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "cofnąć",
+    "verbalNoun": "cofnięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "cofnięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "cofnąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "cofnie się"
+          },
+          "plural": {
+            "allPluralGenders": "cofnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "cofnę"
+          },
+          "plural": {
+            "allPluralGenders": "cofniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "cofniesz"
+          },
+          "plural": {
+            "allPluralGenders": "cofniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "cofnie"
+          },
+          "plural": {
+            "allPluralGenders": "cofną"
+          }
+        }
+      },
+      "imperative": "cofnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "cofnięto"
+          },
+          "plural": {
+            "allPluralGenders": "cofnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "cofnąłem",
+            "f": "cofnęłam"
+          },
+          "plural": {
+            "virile": "cofnęliśmy",
+            "nonvirile": "cofnęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "cofnąłeś",
+            "f": "cofnęłaś"
+          },
+          "plural": {
+            "virile": "cofnęliście",
+            "nonvirile": "cofnęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "cofnął",
+            "f": "cofnęła",
+            "n": "cofnęło"
+          },
+          "plural": {
+            "virile": "cofnęli",
+            "nonvirile": "cofnęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

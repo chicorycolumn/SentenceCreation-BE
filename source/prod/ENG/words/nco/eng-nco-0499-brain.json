@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "brain",
+      "gen": "brain's"
+    },
+    "plural": {
+      "nom": "brains",
+      "gen": "brains'"
+    }
+  }
+}

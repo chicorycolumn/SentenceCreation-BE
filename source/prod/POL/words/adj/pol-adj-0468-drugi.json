@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "drugo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "drugi",
+          "gen": "drugiego",
+          "dat": "drugiemu",
+          "acc": "drugiego",
+          "ins": "drugim",
+          "loc": "drugim"
+        },
+        "m3": {
+          "nom": "drugi",
+          "gen": "drugiego",
+          "dat": "drugiemu",
+          "acc": "drugi",
+          "ins": "drugim",
+          "loc": "drugim"
+        },
+        "f": {
+          "nom": "druga",
+          "gen": "drugiej",
+          "dat": "drugiej",
+          "acc": "drugą",
+          "ins": "drugą",
+          "loc": "drugiej"
+        },
+        "n": {
+          "nom": "drugie",
+          "gen": "drugiego",
+          "dat": "drugiemu",
+          "acc": "drugie",
+          "ins": "drugim",
+          "loc": "drugim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "drudzy",
+          "gen": "drugich",
+          "dat": "drugim",
+          "acc": "drugich",
+          "ins": "drugimi",
+          "loc": "drugich"
+        },
+        "nonvirile": {
+          "nom": "drugie",
+          "gen": "drugich",
+          "dat": "drugim",
+          "acc": "drugie",
+          "ins": "drugimi",
+          "loc": "drugich"
+        }
+      }
+    }
+  }
+}

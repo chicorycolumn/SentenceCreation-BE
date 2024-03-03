@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "precyzyjnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "precyzyjny",
+          "gen": "precyzyjnego",
+          "dat": "precyzyjnemu",
+          "acc": "precyzyjnego",
+          "ins": "precyzyjnym",
+          "loc": "precyzyjnym"
+        },
+        "m3": {
+          "nom": "precyzyjny",
+          "gen": "precyzyjnego",
+          "dat": "precyzyjnemu",
+          "acc": "precyzyjny",
+          "ins": "precyzyjnym",
+          "loc": "precyzyjnym"
+        },
+        "f": {
+          "nom": "precyzyjna",
+          "gen": "precyzyjnej",
+          "dat": "precyzyjnej",
+          "acc": "precyzyjną",
+          "ins": "precyzyjną",
+          "loc": "precyzyjnej"
+        },
+        "n": {
+          "nom": "precyzyjne",
+          "gen": "precyzyjnego",
+          "dat": "precyzyjnemu",
+          "acc": "precyzyjne",
+          "ins": "precyzyjnym",
+          "loc": "precyzyjnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "precyzyjni",
+          "gen": "precyzyjnych",
+          "dat": "precyzyjnym",
+          "acc": "precyzyjnych",
+          "ins": "precyzyjnymi",
+          "loc": "precyzyjnych"
+        },
+        "nonvirile": {
+          "nom": "precyzyjne",
+          "gen": "precyzyjnych",
+          "dat": "precyzyjnym",
+          "acc": "precyzyjne",
+          "ins": "precyzyjnymi",
+          "loc": "precyzyjnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "precyzyjniejszy",
+          "gen": "precyzyjniejszego",
+          "dat": "precyzyjniejszemu",
+          "acc": "precyzyjniejszego",
+          "ins": "precyzyjniejszym",
+          "loc": "precyzyjniejszym"
+        },
+        "m3": {
+          "nom": "precyzyjniejszy",
+          "gen": "precyzyjniejszego",
+          "dat": "precyzyjniejszemu",
+          "acc": "precyzyjniejszy",
+          "ins": "precyzyjniejszym",
+          "loc": "precyzyjniejszym"
+        },
+        "f": {
+          "nom": "precyzyjniejsza",
+          "gen": "precyzyjniejszej",
+          "dat": "precyzyjniejszej",
+          "acc": "precyzyjniejszą",
+          "ins": "precyzyjniejszą",
+          "loc": "precyzyjniejszej"
+        },
+        "n": {
+          "nom": "precyzyjniejsze",
+          "gen": "precyzyjniejszego",
+          "dat": "precyzyjniejszemu",
+          "acc": "precyzyjniejsze",
+          "ins": "precyzyjniejszym",
+          "loc": "precyzyjniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "precyzyjniejsi",
+          "gen": "precyzyjniejszych",
+          "dat": "precyzyjniejszym",
+          "acc": "precyzyjniejszych",
+          "ins": "precyzyjniejszymi",
+          "loc": "precyzyjniejszych"
+        },
+        "nonvirile": {
+          "nom": "precyzyjniejsze",
+          "gen": "precyzyjniejszych",
+          "dat": "precyzyjniejszym",
+          "acc": "precyzyjniejsze",
+          "ins": "precyzyjniejszymi",
+          "loc": "precyzyjniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najprecyzyjniejszy",
+          "gen": "najprecyzyjniejszego",
+          "dat": "najprecyzyjniejszemu",
+          "acc": "najprecyzyjniejszego",
+          "ins": "najprecyzyjniejszym",
+          "loc": "najprecyzyjniejszym"
+        },
+        "m3": {
+          "nom": "najprecyzyjniejszy",
+          "gen": "najprecyzyjniejszego",
+          "dat": "najprecyzyjniejszemu",
+          "acc": "najprecyzyjniejszy",
+          "ins": "najprecyzyjniejszym",
+          "loc": "najprecyzyjniejszym"
+        },
+        "f": {
+          "nom": "najprecyzyjniejsza",
+          "gen": "najprecyzyjniejszej",
+          "dat": "najprecyzyjniejszej",
+          "acc": "najprecyzyjniejszą",
+          "ins": "najprecyzyjniejszą",
+          "loc": "najprecyzyjniejszej"
+        },
+        "n": {
+          "nom": "najprecyzyjniejsze",
+          "gen": "najprecyzyjniejszego",
+          "dat": "najprecyzyjniejszemu",
+          "acc": "najprecyzyjniejsze",
+          "ins": "najprecyzyjniejszym",
+          "loc": "najprecyzyjniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najprecyzyjniejsi",
+          "gen": "najprecyzyjniejszych",
+          "dat": "najprecyzyjniejszym",
+          "acc": "najprecyzyjniejszych",
+          "ins": "najprecyzyjniejszymi",
+          "loc": "najprecyzyjniejszych"
+        },
+        "nonvirile": {
+          "nom": "najprecyzyjniejsze",
+          "gen": "najprecyzyjniejszych",
+          "dat": "najprecyzyjniejszym",
+          "acc": "najprecyzyjniejsze",
+          "ins": "najprecyzyjniejszymi",
+          "loc": "najprecyzyjniejszych"
+        }
+      }
+    }
+  }
+}

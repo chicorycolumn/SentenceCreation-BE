@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "duma",
+      "gen": "dumy",
+      "dat": "dumie",
+      "acc": "dumę",
+      "ins": "dumą",
+      "loc": "dumie",
+      "voc": "dumo"
+    },
+    "plural": {
+      "nom": "dumy",
+      "gen": "dum",
+      "dat": "dumom",
+      "acc": "dumy",
+      "ins": "dumami",
+      "loc": "dumach",
+      "voc": "dumy"
+    }
+  }
+}

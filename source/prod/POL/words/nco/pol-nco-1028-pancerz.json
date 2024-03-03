@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pancerz",
+      "gen": "pancerza",
+      "dat": "pancerzowi",
+      "acc": "pancerz",
+      "ins": "pancerzem",
+      "loc": "pancerzu",
+      "voc": "pancerzu"
+    },
+    "plural": {
+      "nom": "pancerze",
+      "gen": "pancerzy",
+      "dat": "pancerzom",
+      "acc": "pancerze",
+      "ins": "pancerzami",
+      "loc": "pancerzach",
+      "voc": "pancerze"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "imponująco",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "imponujący",
+          "gen": "imponującego",
+          "dat": "imponującemu",
+          "acc": "imponującego",
+          "ins": "imponującym",
+          "loc": "imponującym"
+        },
+        "m3": {
+          "nom": "imponujący",
+          "gen": "imponującego",
+          "dat": "imponującemu",
+          "acc": "imponujący",
+          "ins": "imponującym",
+          "loc": "imponującym"
+        },
+        "f": {
+          "nom": "imponująca",
+          "gen": "imponującej",
+          "dat": "imponującej",
+          "acc": "imponującą",
+          "ins": "imponującą",
+          "loc": "imponującej"
+        },
+        "n": {
+          "nom": "imponujące",
+          "gen": "imponującego",
+          "dat": "imponującemu",
+          "acc": "imponujące",
+          "ins": "imponującym",
+          "loc": "imponującym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "imponujący",
+          "gen": "imponujących",
+          "dat": "imponującym",
+          "acc": "imponujących",
+          "ins": "imponującymi",
+          "loc": "imponujących"
+        },
+        "nonvirile": {
+          "nom": "imponujące",
+          "gen": "imponujących",
+          "dat": "imponującym",
+          "acc": "imponujące",
+          "ins": "imponującymi",
+          "loc": "imponujących"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej imponujący",
+          "gen": "bardziej imponującego",
+          "dat": "bardziej imponującemu",
+          "acc": "bardziej imponującego",
+          "ins": "bardziej imponującym",
+          "loc": "bardziej imponującym"
+        },
+        "m3": {
+          "nom": "bardziej imponujący",
+          "gen": "bardziej imponującego",
+          "dat": "bardziej imponującemu",
+          "acc": "bardziej imponujący",
+          "ins": "bardziej imponującym",
+          "loc": "bardziej imponującym"
+        },
+        "f": {
+          "nom": "bardziej imponująca",
+          "gen": "bardziej imponującej",
+          "dat": "bardziej imponującej",
+          "acc": "bardziej imponującą",
+          "ins": "bardziej imponującą",
+          "loc": "bardziej imponującej"
+        },
+        "n": {
+          "nom": "bardziej imponujące",
+          "gen": "bardziej imponującego",
+          "dat": "bardziej imponującemu",
+          "acc": "bardziej imponujące",
+          "ins": "bardziej imponującym",
+          "loc": "bardziej imponującym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej imponujący",
+          "gen": "bardziej imponujących",
+          "dat": "bardziej imponującym",
+          "acc": "bardziej imponujących",
+          "ins": "bardziej imponującymi",
+          "loc": "bardziej imponujących"
+        },
+        "nonvirile": {
+          "nom": "bardziej imponujące",
+          "gen": "bardziej imponujących",
+          "dat": "bardziej imponującym",
+          "acc": "bardziej imponujące",
+          "ins": "bardziej imponującymi",
+          "loc": "bardziej imponujących"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej imponujący",
+          "gen": "najbardziej imponującego",
+          "dat": "najbardziej imponującemu",
+          "acc": "najbardziej imponującego",
+          "ins": "najbardziej imponującym",
+          "loc": "najbardziej imponującym"
+        },
+        "m3": {
+          "nom": "najbardziej imponujący",
+          "gen": "najbardziej imponującego",
+          "dat": "najbardziej imponującemu",
+          "acc": "najbardziej imponujący",
+          "ins": "najbardziej imponującym",
+          "loc": "najbardziej imponującym"
+        },
+        "f": {
+          "nom": "najbardziej imponująca",
+          "gen": "najbardziej imponującej",
+          "dat": "najbardziej imponującej",
+          "acc": "najbardziej imponującą",
+          "ins": "najbardziej imponującą",
+          "loc": "najbardziej imponującej"
+        },
+        "n": {
+          "nom": "najbardziej imponujące",
+          "gen": "najbardziej imponującego",
+          "dat": "najbardziej imponującemu",
+          "acc": "najbardziej imponujące",
+          "ins": "najbardziej imponującym",
+          "loc": "najbardziej imponującym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej imponujący",
+          "gen": "najbardziej imponujących",
+          "dat": "najbardziej imponującym",
+          "acc": "najbardziej imponujących",
+          "ins": "najbardziej imponującymi",
+          "loc": "najbardziej imponujących"
+        },
+        "nonvirile": {
+          "nom": "najbardziej imponujące",
+          "gen": "najbardziej imponujących",
+          "dat": "najbardziej imponującym",
+          "acc": "najbardziej imponujące",
+          "ins": "najbardziej imponującymi",
+          "loc": "najbardziej imponujących"
+        }
+      }
+    }
+  }
+}

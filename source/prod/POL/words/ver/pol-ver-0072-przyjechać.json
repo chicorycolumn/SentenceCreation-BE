@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przyjechać",
+    "verbalNoun": "przyjechanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przyjechawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przyjedzie się"
+          },
+          "plural": {
+            "allPluralGenders": "przyjedzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przyjadę"
+          },
+          "plural": {
+            "allPluralGenders": "przyjedziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przyjedziesz"
+          },
+          "plural": {
+            "allPluralGenders": "przyjedziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przyjedzie"
+          },
+          "plural": {
+            "allPluralGenders": "przyjadą"
+          }
+        }
+      },
+      "imperative": "przyjedź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przyjechano"
+          },
+          "plural": {
+            "allPluralGenders": "przyjechano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przyjechałem",
+            "f": "przyjechałam"
+          },
+          "plural": {
+            "virile": "przyjechaliśmy",
+            "nonvirile": "przyjechałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przyjechałeś",
+            "f": "przyjechałaś"
+          },
+          "plural": {
+            "virile": "przyjechaliście",
+            "nonvirile": "przyjechałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przyjechał",
+            "f": "przyjechała",
+            "n": "przyjechało"
+          },
+          "plural": {
+            "virile": "przyjechali",
+            "nonvirile": "przyjechały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

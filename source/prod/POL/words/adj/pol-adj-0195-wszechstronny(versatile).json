@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "wszechstronnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "wszechstronny",
+          "gen": "wszechstronnego",
+          "dat": "wszechstronnemu",
+          "acc": "wszechstronnego",
+          "ins": "wszechstronnym",
+          "loc": "wszechstronnym"
+        },
+        "m3": {
+          "nom": "wszechstronny",
+          "gen": "wszechstronnego",
+          "dat": "wszechstronnemu",
+          "acc": "wszechstronny",
+          "ins": "wszechstronnym",
+          "loc": "wszechstronnym"
+        },
+        "f": {
+          "nom": "wszechstronna",
+          "gen": "wszechstronnej",
+          "dat": "wszechstronnej",
+          "acc": "wszechstronną",
+          "ins": "wszechstronną",
+          "loc": "wszechstronnej"
+        },
+        "n": {
+          "nom": "wszechstronne",
+          "gen": "wszechstronnego",
+          "dat": "wszechstronnemu",
+          "acc": "wszechstronne",
+          "ins": "wszechstronnym",
+          "loc": "wszechstronnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wszechstronni",
+          "gen": "wszechstronnych",
+          "dat": "wszechstronnym",
+          "acc": "wszechstronnych",
+          "ins": "wszechstronnymi",
+          "loc": "wszechstronnych"
+        },
+        "nonvirile": {
+          "nom": "wszechstronne",
+          "gen": "wszechstronnych",
+          "dat": "wszechstronnym",
+          "acc": "wszechstronne",
+          "ins": "wszechstronnymi",
+          "loc": "wszechstronnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej wszechstronny",
+          "gen": "bardziej wszechstronnego",
+          "dat": "bardziej wszechstronnemu",
+          "acc": "bardziej wszechstronnego",
+          "ins": "bardziej wszechstronnym",
+          "loc": "bardziej wszechstronnym"
+        },
+        "m3": {
+          "nom": "bardziej wszechstronny",
+          "gen": "bardziej wszechstronnego",
+          "dat": "bardziej wszechstronnemu",
+          "acc": "bardziej wszechstronny",
+          "ins": "bardziej wszechstronnym",
+          "loc": "bardziej wszechstronnym"
+        },
+        "f": {
+          "nom": "bardziej wszechstronna",
+          "gen": "bardziej wszechstronnej",
+          "dat": "bardziej wszechstronnej",
+          "acc": "bardziej wszechstronną",
+          "ins": "bardziej wszechstronną",
+          "loc": "bardziej wszechstronnej"
+        },
+        "n": {
+          "nom": "bardziej wszechstronne",
+          "gen": "bardziej wszechstronnego",
+          "dat": "bardziej wszechstronnemu",
+          "acc": "bardziej wszechstronne",
+          "ins": "bardziej wszechstronnym",
+          "loc": "bardziej wszechstronnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej wszechstronni",
+          "gen": "bardziej wszechstronnych",
+          "dat": "bardziej wszechstronnym",
+          "acc": "bardziej wszechstronnych",
+          "ins": "bardziej wszechstronnymi",
+          "loc": "bardziej wszechstronnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej wszechstronne",
+          "gen": "bardziej wszechstronnych",
+          "dat": "bardziej wszechstronnym",
+          "acc": "bardziej wszechstronne",
+          "ins": "bardziej wszechstronnymi",
+          "loc": "bardziej wszechstronnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej wszechstronny",
+          "gen": "najbardziej wszechstronnego",
+          "dat": "najbardziej wszechstronnemu",
+          "acc": "najbardziej wszechstronnego",
+          "ins": "najbardziej wszechstronnym",
+          "loc": "najbardziej wszechstronnym"
+        },
+        "m3": {
+          "nom": "najbardziej wszechstronny",
+          "gen": "najbardziej wszechstronnego",
+          "dat": "najbardziej wszechstronnemu",
+          "acc": "najbardziej wszechstronny",
+          "ins": "najbardziej wszechstronnym",
+          "loc": "najbardziej wszechstronnym"
+        },
+        "f": {
+          "nom": "najbardziej wszechstronna",
+          "gen": "najbardziej wszechstronnej",
+          "dat": "najbardziej wszechstronnej",
+          "acc": "najbardziej wszechstronną",
+          "ins": "najbardziej wszechstronną",
+          "loc": "najbardziej wszechstronnej"
+        },
+        "n": {
+          "nom": "najbardziej wszechstronne",
+          "gen": "najbardziej wszechstronnego",
+          "dat": "najbardziej wszechstronnemu",
+          "acc": "najbardziej wszechstronne",
+          "ins": "najbardziej wszechstronnym",
+          "loc": "najbardziej wszechstronnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej wszechstronni",
+          "gen": "najbardziej wszechstronnych",
+          "dat": "najbardziej wszechstronnym",
+          "acc": "najbardziej wszechstronnych",
+          "ins": "najbardziej wszechstronnymi",
+          "loc": "najbardziej wszechstronnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej wszechstronne",
+          "gen": "najbardziej wszechstronnych",
+          "dat": "najbardziej wszechstronnym",
+          "acc": "najbardziej wszechstronne",
+          "ins": "najbardziej wszechstronnymi",
+          "loc": "najbardziej wszechstronnych"
+        }
+      }
+    }
+  }
+}

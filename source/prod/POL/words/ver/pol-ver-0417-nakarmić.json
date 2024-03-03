@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nakarmić",
+    "verbalNoun": "nakarmienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "nakarmiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "nakarmiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nakarmi się"
+          },
+          "plural": {
+            "allPluralGenders": "nakarmi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nakarmię"
+          },
+          "plural": {
+            "allPluralGenders": "nakarmimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nakarmisz"
+          },
+          "plural": {
+            "allPluralGenders": "nakarmicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nakarmi"
+          },
+          "plural": {
+            "allPluralGenders": "nakarmią"
+          }
+        }
+      },
+      "imperative": "nakarm",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nakarmiono"
+          },
+          "plural": {
+            "allPluralGenders": "nakarmiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nakarmiłem",
+            "f": "nakarmiłam"
+          },
+          "plural": {
+            "virile": "nakarmiliśmy",
+            "nonvirile": "nakarmiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nakarmiłeś",
+            "f": "nakarmiłaś"
+          },
+          "plural": {
+            "virile": "nakarmiliście",
+            "nonvirile": "nakarmiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nakarmił",
+            "f": "nakarmiła",
+            "n": "nakarmiło"
+          },
+          "plural": {
+            "virile": "nakarmili",
+            "nonvirile": "nakarmiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

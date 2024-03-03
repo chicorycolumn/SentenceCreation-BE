@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "północno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "północny",
+          "gen": "północnego",
+          "dat": "północnemu",
+          "acc": "północnego",
+          "ins": "północnym",
+          "loc": "północnym"
+        },
+        "m3": {
+          "nom": "północny",
+          "gen": "północnego",
+          "dat": "północnemu",
+          "acc": "północny",
+          "ins": "północnym",
+          "loc": "północnym"
+        },
+        "f": {
+          "nom": "północna",
+          "gen": "północnej",
+          "dat": "północnej",
+          "acc": "północną",
+          "ins": "północną",
+          "loc": "północnej"
+        },
+        "n": {
+          "nom": "północne",
+          "gen": "północnego",
+          "dat": "północnemu",
+          "acc": "północne",
+          "ins": "północnym",
+          "loc": "północnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "północni",
+          "gen": "północnych",
+          "dat": "północnym",
+          "acc": "północnych",
+          "ins": "północnymi",
+          "loc": "północnych"
+        },
+        "nonvirile": {
+          "nom": "północne",
+          "gen": "północnych",
+          "dat": "północnym",
+          "acc": "północne",
+          "ins": "północnymi",
+          "loc": "północnych"
+        }
+      }
+    }
+  }
+}

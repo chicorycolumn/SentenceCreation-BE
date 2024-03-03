@@ -1,0 +1,174 @@
+{
+  "inflections": {
+    "adverb": {
+      "isTerminus": true,
+      "normal": [
+        "szkarłatno",
+        "szkarłatnie"
+      ],
+      "additionalInfrequent": []
+    },
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "szkarłatny",
+          "gen": "szkarłatnego",
+          "dat": "szkarłatnemu",
+          "acc": "szkarłatnego",
+          "ins": "szkarłatnym",
+          "loc": "szkarłatnym"
+        },
+        "m3": {
+          "nom": "szkarłatny",
+          "gen": "szkarłatnego",
+          "dat": "szkarłatnemu",
+          "acc": "szkarłatny",
+          "ins": "szkarłatnym",
+          "loc": "szkarłatnym"
+        },
+        "f": {
+          "nom": "szkarłatna",
+          "gen": "szkarłatnej",
+          "dat": "szkarłatnej",
+          "acc": "szkarłatną",
+          "ins": "szkarłatną",
+          "loc": "szkarłatnej"
+        },
+        "n": {
+          "nom": "szkarłatne",
+          "gen": "szkarłatnego",
+          "dat": "szkarłatnemu",
+          "acc": "szkarłatne",
+          "ins": "szkarłatnym",
+          "loc": "szkarłatnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "szkarłatni",
+          "gen": "szkarłatnych",
+          "dat": "szkarłatnym",
+          "acc": "szkarłatnych",
+          "ins": "szkarłatnymi",
+          "loc": "szkarłatnych"
+        },
+        "nonvirile": {
+          "nom": "szkarłatne",
+          "gen": "szkarłatnych",
+          "dat": "szkarłatnym",
+          "acc": "szkarłatne",
+          "ins": "szkarłatnymi",
+          "loc": "szkarłatnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej szkarłatny",
+          "gen": "bardziej szkarłatnego",
+          "dat": "bardziej szkarłatnemu",
+          "acc": "bardziej szkarłatnego",
+          "ins": "bardziej szkarłatnym",
+          "loc": "bardziej szkarłatnym"
+        },
+        "m3": {
+          "nom": "bardziej szkarłatny",
+          "gen": "bardziej szkarłatnego",
+          "dat": "bardziej szkarłatnemu",
+          "acc": "bardziej szkarłatny",
+          "ins": "bardziej szkarłatnym",
+          "loc": "bardziej szkarłatnym"
+        },
+        "f": {
+          "nom": "bardziej szkarłatna",
+          "gen": "bardziej szkarłatnej",
+          "dat": "bardziej szkarłatnej",
+          "acc": "bardziej szkarłatną",
+          "ins": "bardziej szkarłatną",
+          "loc": "bardziej szkarłatnej"
+        },
+        "n": {
+          "nom": "bardziej szkarłatne",
+          "gen": "bardziej szkarłatnego",
+          "dat": "bardziej szkarłatnemu",
+          "acc": "bardziej szkarłatne",
+          "ins": "bardziej szkarłatnym",
+          "loc": "bardziej szkarłatnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej szkarłatni",
+          "gen": "bardziej szkarłatnych",
+          "dat": "bardziej szkarłatnym",
+          "acc": "bardziej szkarłatnych",
+          "ins": "bardziej szkarłatnymi",
+          "loc": "bardziej szkarłatnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej szkarłatne",
+          "gen": "bardziej szkarłatnych",
+          "dat": "bardziej szkarłatnym",
+          "acc": "bardziej szkarłatne",
+          "ins": "bardziej szkarłatnymi",
+          "loc": "bardziej szkarłatnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej szkarłatny",
+          "gen": "najbardziej szkarłatnego",
+          "dat": "najbardziej szkarłatnemu",
+          "acc": "najbardziej szkarłatnego",
+          "ins": "najbardziej szkarłatnym",
+          "loc": "najbardziej szkarłatnym"
+        },
+        "m3": {
+          "nom": "najbardziej szkarłatny",
+          "gen": "najbardziej szkarłatnego",
+          "dat": "najbardziej szkarłatnemu",
+          "acc": "najbardziej szkarłatny",
+          "ins": "najbardziej szkarłatnym",
+          "loc": "najbardziej szkarłatnym"
+        },
+        "f": {
+          "nom": "najbardziej szkarłatna",
+          "gen": "najbardziej szkarłatnej",
+          "dat": "najbardziej szkarłatnej",
+          "acc": "najbardziej szkarłatną",
+          "ins": "najbardziej szkarłatną",
+          "loc": "najbardziej szkarłatnej"
+        },
+        "n": {
+          "nom": "najbardziej szkarłatne",
+          "gen": "najbardziej szkarłatnego",
+          "dat": "najbardziej szkarłatnemu",
+          "acc": "najbardziej szkarłatne",
+          "ins": "najbardziej szkarłatnym",
+          "loc": "najbardziej szkarłatnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej szkarłatni",
+          "gen": "najbardziej szkarłatnych",
+          "dat": "najbardziej szkarłatnym",
+          "acc": "najbardziej szkarłatnych",
+          "ins": "najbardziej szkarłatnymi",
+          "loc": "najbardziej szkarłatnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej szkarłatne",
+          "gen": "najbardziej szkarłatnych",
+          "dat": "najbardziej szkarłatnym",
+          "acc": "najbardziej szkarłatne",
+          "ins": "najbardziej szkarłatnymi",
+          "loc": "najbardziej szkarłatnych"
+        }
+      }
+    }
+  }
+}

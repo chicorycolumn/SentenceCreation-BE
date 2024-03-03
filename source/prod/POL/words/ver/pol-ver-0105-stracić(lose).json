@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "stracić",
+    "verbalNoun": "stracenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "stracony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "straciwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "straci się"
+          },
+          "plural": {
+            "allPluralGenders": "straci się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "stracę"
+          },
+          "plural": {
+            "allPluralGenders": "stracimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "stracisz"
+          },
+          "plural": {
+            "allPluralGenders": "stracicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "straci"
+          },
+          "plural": {
+            "allPluralGenders": "stracą"
+          }
+        }
+      },
+      "imperative": "strać",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "stracono"
+          },
+          "plural": {
+            "allPluralGenders": "stracono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "straciłem",
+            "f": "straciłam"
+          },
+          "plural": {
+            "virile": "straciliśmy",
+            "nonvirile": "straciłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "straciłeś",
+            "f": "straciłaś"
+          },
+          "plural": {
+            "virile": "straciliście",
+            "nonvirile": "straciłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "stracił",
+            "f": "straciła",
+            "n": "straciło"
+          },
+          "plural": {
+            "virile": "stracili",
+            "nonvirile": "straciły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

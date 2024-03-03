@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "twardo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "twardy",
+          "gen": "twardego",
+          "dat": "twardemu",
+          "acc": "twardego",
+          "ins": "twardym",
+          "loc": "twardym"
+        },
+        "m3": {
+          "nom": "twardy",
+          "gen": "twardego",
+          "dat": "twardemu",
+          "acc": "twardy",
+          "ins": "twardym",
+          "loc": "twardym"
+        },
+        "f": {
+          "nom": "twarda",
+          "gen": "twardej",
+          "dat": "twardej",
+          "acc": "twardą",
+          "ins": "twardą",
+          "loc": "twardej"
+        },
+        "n": {
+          "nom": "twarde",
+          "gen": "twardego",
+          "dat": "twardemu",
+          "acc": "twarde",
+          "ins": "twardym",
+          "loc": "twardym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "twardzi",
+          "gen": "twardych",
+          "dat": "twardym",
+          "acc": "twardych",
+          "ins": "twardymi",
+          "loc": "twardych"
+        },
+        "nonvirile": {
+          "nom": "twarde",
+          "gen": "twardych",
+          "dat": "twardym",
+          "acc": "twarde",
+          "ins": "twardymi",
+          "loc": "twardych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "twardszy",
+          "gen": "twardszego",
+          "dat": "twardszemu",
+          "acc": "twardszego",
+          "ins": "twardszym",
+          "loc": "twardszym"
+        },
+        "m3": {
+          "nom": "twardszy",
+          "gen": "twardszego",
+          "dat": "twardszemu",
+          "acc": "twardszy",
+          "ins": "twardszym",
+          "loc": "twardszym"
+        },
+        "f": {
+          "nom": "twardsza",
+          "gen": "twardszej",
+          "dat": "twardszej",
+          "acc": "twardszą",
+          "ins": "twardszą",
+          "loc": "twardszej"
+        },
+        "n": {
+          "nom": "twardsze",
+          "gen": "twardszego",
+          "dat": "twardszemu",
+          "acc": "twardsze",
+          "ins": "twardszym",
+          "loc": "twardszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "twardsi",
+          "gen": "twardszych",
+          "dat": "twardszym",
+          "acc": "twardszych",
+          "ins": "twardszymi",
+          "loc": "twardszych"
+        },
+        "nonvirile": {
+          "nom": "twardsze",
+          "gen": "twardszych",
+          "dat": "twardszym",
+          "acc": "twardsze",
+          "ins": "twardszymi",
+          "loc": "twardszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najtwardszy",
+          "gen": "najtwardszego",
+          "dat": "najtwardszemu",
+          "acc": "najtwardszego",
+          "ins": "najtwardszym",
+          "loc": "najtwardszym"
+        },
+        "m3": {
+          "nom": "najtwardszy",
+          "gen": "najtwardszego",
+          "dat": "najtwardszemu",
+          "acc": "najtwardszy",
+          "ins": "najtwardszym",
+          "loc": "najtwardszym"
+        },
+        "f": {
+          "nom": "najtwardsza",
+          "gen": "najtwardszej",
+          "dat": "najtwardszej",
+          "acc": "najtwardszą",
+          "ins": "najtwardszą",
+          "loc": "najtwardszej"
+        },
+        "n": {
+          "nom": "najtwardsze",
+          "gen": "najtwardszego",
+          "dat": "najtwardszemu",
+          "acc": "najtwardsze",
+          "ins": "najtwardszym",
+          "loc": "najtwardszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najtwardsi",
+          "gen": "najtwardszych",
+          "dat": "najtwardszym",
+          "acc": "najtwardszych",
+          "ins": "najtwardszymi",
+          "loc": "najtwardszych"
+        },
+        "nonvirile": {
+          "nom": "najtwardsze",
+          "gen": "najtwardszych",
+          "dat": "najtwardszym",
+          "acc": "najtwardsze",
+          "ins": "najtwardszymi",
+          "loc": "najtwardszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nastąpić",
+    "verbalNoun": "nastąpienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "nastąpiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nastąpi się"
+          },
+          "plural": {
+            "allPluralGenders": "nastąpi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nastąpię"
+          },
+          "plural": {
+            "allPluralGenders": "nastąpimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nastąpisz"
+          },
+          "plural": {
+            "allPluralGenders": "nastąpicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nastąpi"
+          },
+          "plural": {
+            "allPluralGenders": "nastąpią"
+          }
+        }
+      },
+      "imperative": "nastąp",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nastąpiono"
+          },
+          "plural": {
+            "allPluralGenders": "nastąpiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nastąpiłem",
+            "f": "nastąpiłam"
+          },
+          "plural": {
+            "virile": "nastąpiliśmy",
+            "nonvirile": "nastąpiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nastąpiłeś",
+            "f": "nastąpiłaś"
+          },
+          "plural": {
+            "virile": "nastąpiliście",
+            "nonvirile": "nastąpiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nastąpił",
+            "f": "nastąpiła",
+            "n": "nastąpiło"
+          },
+          "plural": {
+            "virile": "nastąpili",
+            "nonvirile": "nastąpiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

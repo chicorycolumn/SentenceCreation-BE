@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "potężnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "potężny",
+          "gen": "potężnego",
+          "dat": "potężnemu",
+          "acc": "potężnego",
+          "ins": "potężnym",
+          "loc": "potężnym"
+        },
+        "m3": {
+          "nom": "potężny",
+          "gen": "potężnego",
+          "dat": "potężnemu",
+          "acc": "potężny",
+          "ins": "potężnym",
+          "loc": "potężnym"
+        },
+        "f": {
+          "nom": "potężna",
+          "gen": "potężnej",
+          "dat": "potężnej",
+          "acc": "potężną",
+          "ins": "potężną",
+          "loc": "potężnej"
+        },
+        "n": {
+          "nom": "potężne",
+          "gen": "potężnego",
+          "dat": "potężnemu",
+          "acc": "potężne",
+          "ins": "potężnym",
+          "loc": "potężnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "potężni",
+          "gen": "potężnych",
+          "dat": "potężnym",
+          "acc": "potężnych",
+          "ins": "potężnymi",
+          "loc": "potężnych"
+        },
+        "nonvirile": {
+          "nom": "potężne",
+          "gen": "potężnych",
+          "dat": "potężnym",
+          "acc": "potężne",
+          "ins": "potężnymi",
+          "loc": "potężnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "potężniejszy",
+          "gen": "potężniejszego",
+          "dat": "potężniejszemu",
+          "acc": "potężniejszego",
+          "ins": "potężniejszym",
+          "loc": "potężniejszym"
+        },
+        "m3": {
+          "nom": "potężniejszy",
+          "gen": "potężniejszego",
+          "dat": "potężniejszemu",
+          "acc": "potężniejszy",
+          "ins": "potężniejszym",
+          "loc": "potężniejszym"
+        },
+        "f": {
+          "nom": "potężniejsza",
+          "gen": "potężniejszej",
+          "dat": "potężniejszej",
+          "acc": "potężniejszą",
+          "ins": "potężniejszą",
+          "loc": "potężniejszej"
+        },
+        "n": {
+          "nom": "potężniejsze",
+          "gen": "potężniejszego",
+          "dat": "potężniejszemu",
+          "acc": "potężniejsze",
+          "ins": "potężniejszym",
+          "loc": "potężniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "potężniejsi",
+          "gen": "potężniejszych",
+          "dat": "potężniejszym",
+          "acc": "potężniejszych",
+          "ins": "potężniejszymi",
+          "loc": "potężniejszych"
+        },
+        "nonvirile": {
+          "nom": "potężniejsze",
+          "gen": "potężniejszych",
+          "dat": "potężniejszym",
+          "acc": "potężniejsze",
+          "ins": "potężniejszymi",
+          "loc": "potężniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najpotężniejszy",
+          "gen": "najpotężniejszego",
+          "dat": "najpotężniejszemu",
+          "acc": "najpotężniejszego",
+          "ins": "najpotężniejszym",
+          "loc": "najpotężniejszym"
+        },
+        "m3": {
+          "nom": "najpotężniejszy",
+          "gen": "najpotężniejszego",
+          "dat": "najpotężniejszemu",
+          "acc": "najpotężniejszy",
+          "ins": "najpotężniejszym",
+          "loc": "najpotężniejszym"
+        },
+        "f": {
+          "nom": "najpotężniejsza",
+          "gen": "najpotężniejszej",
+          "dat": "najpotężniejszej",
+          "acc": "najpotężniejszą",
+          "ins": "najpotężniejszą",
+          "loc": "najpotężniejszej"
+        },
+        "n": {
+          "nom": "najpotężniejsze",
+          "gen": "najpotężniejszego",
+          "dat": "najpotężniejszemu",
+          "acc": "najpotężniejsze",
+          "ins": "najpotężniejszym",
+          "loc": "najpotężniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najpotężniejsi",
+          "gen": "najpotężniejszych",
+          "dat": "najpotężniejszym",
+          "acc": "najpotężniejszych",
+          "ins": "najpotężniejszymi",
+          "loc": "najpotężniejszych"
+        },
+        "nonvirile": {
+          "nom": "najpotężniejsze",
+          "gen": "najpotężniejszych",
+          "dat": "najpotężniejszym",
+          "acc": "najpotężniejsze",
+          "ins": "najpotężniejszymi",
+          "loc": "najpotężniejszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "skok",
+      "gen": "skoku",
+      "dat": "skokowi",
+      "acc": "skok",
+      "ins": "skokiem",
+      "loc": "skoku",
+      "voc": "skoku"
+    },
+    "plural": {
+      "nom": "skoki",
+      "gen": "skoków",
+      "dat": "skokom",
+      "acc": "skoki",
+      "ins": "skokami",
+      "loc": "skokach",
+      "voc": "skoki"
+    }
+  }
+}

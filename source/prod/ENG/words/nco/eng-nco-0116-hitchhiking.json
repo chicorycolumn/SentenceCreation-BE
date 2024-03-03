@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "hitchhiking",
+      "gen": "hitchhiking's"
+    },
+    "plural": {
+      "nom": "hitchhikings",
+      "gen": "hitchhikings'"
+    }
+  }
+}

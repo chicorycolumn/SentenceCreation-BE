@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dłoń",
+      "gen": "dłoni",
+      "dat": "dłoni",
+      "acc": "dłoń",
+      "ins": "dłonią",
+      "loc": "dłoni",
+      "voc": "dłoni"
+    },
+    "plural": {
+      "nom": "dłonie",
+      "gen": "dłoni",
+      "dat": "dłoniom",
+      "acc": "dłonie",
+      "ins": [
+        "dłońmi",
+        "dłoniami"
+      ],
+      "loc": "dłoniach",
+      "voc": "dłonie"
+    }
+  }
+}

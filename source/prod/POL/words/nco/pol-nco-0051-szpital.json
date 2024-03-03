@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "szpital",
+      "gen": "szpitala",
+      "dat": "szpitalowi",
+      "acc": "szpital",
+      "ins": "szpitalem",
+      "loc": "szpitalu",
+      "voc": "szpitalu"
+    },
+    "plural": {
+      "nom": "szpitale",
+      "gen": "szpitali",
+      "dat": "szpitalom",
+      "acc": "szpitale",
+      "ins": "szpitalami",
+      "loc": "szpitalach",
+      "voc": "szpitale"
+    }
+  }
+}

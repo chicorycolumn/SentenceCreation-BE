@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "poprawić",
+    "verbalNoun": "poprawienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "poprawiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "poprawiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poprawi się"
+          },
+          "plural": {
+            "allPluralGenders": "poprawi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "poprawię"
+          },
+          "plural": {
+            "allPluralGenders": "poprawimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "poprawisz"
+          },
+          "plural": {
+            "allPluralGenders": "poprawicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "poprawi"
+          },
+          "plural": {
+            "allPluralGenders": "poprawią"
+          }
+        }
+      },
+      "imperative": "popraw",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poprawiono"
+          },
+          "plural": {
+            "allPluralGenders": "poprawiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "poprawiłem",
+            "f": "poprawiłam"
+          },
+          "plural": {
+            "virile": "poprawiliśmy",
+            "nonvirile": "poprawiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "poprawiłeś",
+            "f": "poprawiłaś"
+          },
+          "plural": {
+            "virile": "poprawiliście",
+            "nonvirile": "poprawiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "poprawił",
+            "f": "poprawiła",
+            "n": "poprawiło"
+          },
+          "plural": {
+            "virile": "poprawili",
+            "nonvirile": "poprawiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

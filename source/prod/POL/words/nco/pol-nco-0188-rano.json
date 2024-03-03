@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rano",
+      "gen": "rana",
+      "dat": "ranu",
+      "acc": "rano",
+      "ins": "ranem",
+      "loc": "ranie",
+      "voc": "rano"
+    },
+    "plural": {
+      "nom": "rana",
+      "gen": "ran",
+      "dat": "ranom",
+      "acc": "rana",
+      "ins": "ranami",
+      "loc": "ranach",
+      "voc": "rana"
+    }
+  }
+}

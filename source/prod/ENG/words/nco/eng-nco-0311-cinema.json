@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cinema",
+      "gen": "cinema's"
+    },
+    "plural": {
+      "nom": "cinemas",
+      "gen": "cinemas'"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "kusić",
+    "verbalNoun": "kuszenie",
+    "activeAdjectival": "kuszący",
+    "passiveAdjectival": "kuszony",
+    "contemporaryAdverbial": "kusząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "kuś",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kuszono"
+          },
+          "plural": {
+            "allPluralGenders": "kuszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "kusiłem",
+            "f": "kusiłam"
+          },
+          "plural": {
+            "virile": "kusiliśmy",
+            "nonvirile": "kusiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "kusiłeś",
+            "f": "kusiłaś"
+          },
+          "plural": {
+            "virile": "kusiliście",
+            "nonvirile": "kusiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "kusił",
+            "f": "kusiła",
+            "n": "kusiło"
+          },
+          "plural": {
+            "virile": "kusili",
+            "nonvirile": "kusiły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kusi się"
+          },
+          "plural": {
+            "allPluralGenders": "kusi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "kuszę"
+          },
+          "plural": {
+            "allPluralGenders": "kusimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "kusisz"
+          },
+          "plural": {
+            "allPluralGenders": "kusicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "kusi"
+          },
+          "plural": {
+            "allPluralGenders": "kuszą"
+          }
+        }
+      }
+    }
+  }
+}

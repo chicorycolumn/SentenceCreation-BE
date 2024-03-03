@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "europejski",
+          "gen": "europejskiego",
+          "dat": "europejskiemu",
+          "acc": "europejskiego",
+          "ins": "europejskim",
+          "loc": "europejskim"
+        },
+        "m3": {
+          "nom": "europejski",
+          "gen": "europejskiego",
+          "dat": "europejskiemu",
+          "acc": "europejski",
+          "ins": "europejskim",
+          "loc": "europejskim"
+        },
+        "f": {
+          "nom": "europejska",
+          "gen": "europejskiej",
+          "dat": "europejskiej",
+          "acc": "europejską",
+          "ins": "europejską",
+          "loc": "europejskiej"
+        },
+        "n": {
+          "nom": "europejskie",
+          "gen": "europejskiego",
+          "dat": "europejskiemu",
+          "acc": "europejskie",
+          "ins": "europejskim",
+          "loc": "europejskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "europejscy",
+          "gen": "europejskich",
+          "dat": "europejskim",
+          "acc": "europejskich",
+          "ins": "europejskimi",
+          "loc": "europejskich"
+        },
+        "nonvirile": {
+          "nom": "europejskie",
+          "gen": "europejskich",
+          "dat": "europejskim",
+          "acc": "europejskie",
+          "ins": "europejskimi",
+          "loc": "europejskich"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "obiecać",
+    "verbalNoun": "obiecanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "obiecany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "obiecawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obieca się"
+          },
+          "plural": {
+            "allPluralGenders": "obieca się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "obiecam"
+          },
+          "plural": {
+            "allPluralGenders": "obiecamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "obiecasz"
+          },
+          "plural": {
+            "allPluralGenders": "obiecacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "obieca"
+          },
+          "plural": {
+            "allPluralGenders": "obiecają"
+          }
+        }
+      },
+      "imperative": "obiecaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obiecano"
+          },
+          "plural": {
+            "allPluralGenders": "obiecano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "obiecałem",
+            "f": "obiecałam"
+          },
+          "plural": {
+            "virile": "obiecaliśmy",
+            "nonvirile": "obiecałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "obiecałeś",
+            "f": "obiecałaś"
+          },
+          "plural": {
+            "virile": "obiecaliście",
+            "nonvirile": "obiecałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "obiecał",
+            "f": "obiecała",
+            "n": "obiecało"
+          },
+          "plural": {
+            "virile": "obiecali",
+            "nonvirile": "obiecały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

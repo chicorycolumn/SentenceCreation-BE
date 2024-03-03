@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pocałunek",
+      "gen": "pocałunku",
+      "dat": "pocałunkowi",
+      "acc": "pocałunek",
+      "ins": "pocałunkiem",
+      "loc": "pocałunku",
+      "voc": "pocałunku"
+    },
+    "plural": {
+      "nom": "pocałunki",
+      "gen": "pocałunków",
+      "dat": "pocałunkom",
+      "acc": "pocałunki",
+      "ins": "pocałunkami",
+      "loc": "pocałunkach",
+      "voc": "pocałunki"
+    }
+  }
+}

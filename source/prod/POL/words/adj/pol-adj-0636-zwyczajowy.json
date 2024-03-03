@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "zwyczajowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zwyczajowy",
+          "gen": "zwyczajowego",
+          "dat": "zwyczajowemu",
+          "acc": "zwyczajowego",
+          "ins": "zwyczajowym",
+          "loc": "zwyczajowym"
+        },
+        "m3": {
+          "nom": "zwyczajowy",
+          "gen": "zwyczajowego",
+          "dat": "zwyczajowemu",
+          "acc": "zwyczajowy",
+          "ins": "zwyczajowym",
+          "loc": "zwyczajowym"
+        },
+        "f": {
+          "nom": "zwyczajowa",
+          "gen": "zwyczajowej",
+          "dat": "zwyczajowej",
+          "acc": "zwyczajową",
+          "ins": "zwyczajową",
+          "loc": "zwyczajowej"
+        },
+        "n": {
+          "nom": "zwyczajowe",
+          "gen": "zwyczajowego",
+          "dat": "zwyczajowemu",
+          "acc": "zwyczajowe",
+          "ins": "zwyczajowym",
+          "loc": "zwyczajowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zwyczajowi",
+          "gen": "zwyczajowych",
+          "dat": "zwyczajowym",
+          "acc": "zwyczajowych",
+          "ins": "zwyczajowymi",
+          "loc": "zwyczajowych"
+        },
+        "nonvirile": {
+          "nom": "zwyczajowe",
+          "gen": "zwyczajowych",
+          "dat": "zwyczajowym",
+          "acc": "zwyczajowe",
+          "ins": "zwyczajowymi",
+          "loc": "zwyczajowych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "dowcipnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dowcipny",
+          "gen": "dowcipnego",
+          "dat": "dowcipnemu",
+          "acc": "dowcipnego",
+          "ins": "dowcipnym",
+          "loc": "dowcipnym"
+        },
+        "m3": {
+          "nom": "dowcipny",
+          "gen": "dowcipnego",
+          "dat": "dowcipnemu",
+          "acc": "dowcipny",
+          "ins": "dowcipnym",
+          "loc": "dowcipnym"
+        },
+        "f": {
+          "nom": "dowcipna",
+          "gen": "dowcipnej",
+          "dat": "dowcipnej",
+          "acc": "dowcipną",
+          "ins": "dowcipną",
+          "loc": "dowcipnej"
+        },
+        "n": {
+          "nom": "dowcipne",
+          "gen": "dowcipnego",
+          "dat": "dowcipnemu",
+          "acc": "dowcipne",
+          "ins": "dowcipnym",
+          "loc": "dowcipnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dowcipni",
+          "gen": "dowcipnych",
+          "dat": "dowcipnym",
+          "acc": "dowcipnych",
+          "ins": "dowcipnymi",
+          "loc": "dowcipnych"
+        },
+        "nonvirile": {
+          "nom": "dowcipne",
+          "gen": "dowcipnych",
+          "dat": "dowcipnym",
+          "acc": "dowcipne",
+          "ins": "dowcipnymi",
+          "loc": "dowcipnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "dowcipniejszy",
+          "gen": "dowcipniejszego",
+          "dat": "dowcipniejszemu",
+          "acc": "dowcipniejszego",
+          "ins": "dowcipniejszym",
+          "loc": "dowcipniejszym"
+        },
+        "m3": {
+          "nom": "dowcipniejszy",
+          "gen": "dowcipniejszego",
+          "dat": "dowcipniejszemu",
+          "acc": "dowcipniejszy",
+          "ins": "dowcipniejszym",
+          "loc": "dowcipniejszym"
+        },
+        "f": {
+          "nom": "dowcipniejsza",
+          "gen": "dowcipniejszej",
+          "dat": "dowcipniejszej",
+          "acc": "dowcipniejszą",
+          "ins": "dowcipniejszą",
+          "loc": "dowcipniejszej"
+        },
+        "n": {
+          "nom": "dowcipniejsze",
+          "gen": "dowcipniejszego",
+          "dat": "dowcipniejszemu",
+          "acc": "dowcipniejsze",
+          "ins": "dowcipniejszym",
+          "loc": "dowcipniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dowcipniejsi",
+          "gen": "dowcipniejszych",
+          "dat": "dowcipniejszym",
+          "acc": "dowcipniejszych",
+          "ins": "dowcipniejszymi",
+          "loc": "dowcipniejszych"
+        },
+        "nonvirile": {
+          "nom": "dowcipniejsze",
+          "gen": "dowcipniejszych",
+          "dat": "dowcipniejszym",
+          "acc": "dowcipniejsze",
+          "ins": "dowcipniejszymi",
+          "loc": "dowcipniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najdowcipniejszy",
+          "gen": "najdowcipniejszego",
+          "dat": "najdowcipniejszemu",
+          "acc": "najdowcipniejszego",
+          "ins": "najdowcipniejszym",
+          "loc": "najdowcipniejszym"
+        },
+        "m3": {
+          "nom": "najdowcipniejszy",
+          "gen": "najdowcipniejszego",
+          "dat": "najdowcipniejszemu",
+          "acc": "najdowcipniejszy",
+          "ins": "najdowcipniejszym",
+          "loc": "najdowcipniejszym"
+        },
+        "f": {
+          "nom": "najdowcipniejsza",
+          "gen": "najdowcipniejszej",
+          "dat": "najdowcipniejszej",
+          "acc": "najdowcipniejszą",
+          "ins": "najdowcipniejszą",
+          "loc": "najdowcipniejszej"
+        },
+        "n": {
+          "nom": "najdowcipniejsze",
+          "gen": "najdowcipniejszego",
+          "dat": "najdowcipniejszemu",
+          "acc": "najdowcipniejsze",
+          "ins": "najdowcipniejszym",
+          "loc": "najdowcipniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najdowcipniejsi",
+          "gen": "najdowcipniejszych",
+          "dat": "najdowcipniejszym",
+          "acc": "najdowcipniejszych",
+          "ins": "najdowcipniejszymi",
+          "loc": "najdowcipniejszych"
+        },
+        "nonvirile": {
+          "nom": "najdowcipniejsze",
+          "gen": "najdowcipniejszych",
+          "dat": "najdowcipniejszym",
+          "acc": "najdowcipniejsze",
+          "ins": "najdowcipniejszymi",
+          "loc": "najdowcipniejszych"
+        }
+      }
+    }
+  }
+}

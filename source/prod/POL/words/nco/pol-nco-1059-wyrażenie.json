@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wyrażenie",
+      "gen": "wyrażenia",
+      "dat": "wyrażeniu",
+      "acc": "wyrażenie",
+      "ins": "wyrażeniem",
+      "loc": "wyrażeniu",
+      "voc": "wyrażenie"
+    },
+    "plural": {
+      "nom": "wyrażenia",
+      "gen": "wyrażeń",
+      "dat": "wyrażeniom",
+      "acc": "wyrażenia",
+      "ins": "wyrażeniami",
+      "loc": "wyrażeniach",
+      "voc": "wyrażenia"
+    }
+  }
+}

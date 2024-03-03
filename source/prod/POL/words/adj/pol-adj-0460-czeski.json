@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "czeski",
+          "gen": "czeskiego",
+          "dat": "czeskiemu",
+          "acc": "czeskiego",
+          "ins": "czeskim",
+          "loc": "czeskim"
+        },
+        "m3": {
+          "nom": "czeski",
+          "gen": "czeskiego",
+          "dat": "czeskiemu",
+          "acc": "czeski",
+          "ins": "czeskim",
+          "loc": "czeskim"
+        },
+        "f": {
+          "nom": "czeska",
+          "gen": "czeskiej",
+          "dat": "czeskiej",
+          "acc": "czeską",
+          "ins": "czeską",
+          "loc": "czeskiej"
+        },
+        "n": {
+          "nom": "czeskie",
+          "gen": "czeskiego",
+          "dat": "czeskiemu",
+          "acc": "czeskie",
+          "ins": "czeskim",
+          "loc": "czeskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "czescy",
+          "gen": "czeskich",
+          "dat": "czeskim",
+          "acc": "czeskich",
+          "ins": "czeskimi",
+          "loc": "czeskich"
+        },
+        "nonvirile": {
+          "nom": "czeskie",
+          "gen": "czeskich",
+          "dat": "czeskim",
+          "acc": "czeskie",
+          "ins": "czeskimi",
+          "loc": "czeskich"
+        }
+      }
+    }
+  }
+}

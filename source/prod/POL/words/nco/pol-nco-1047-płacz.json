@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "płacz",
+      "gen": "płaczu",
+      "dat": "płaczowi",
+      "acc": "płacz",
+      "ins": "płaczem",
+      "loc": "płaczu",
+      "voc": "płaczu"
+    },
+    "plural": {
+      "nom": "płacze",
+      "gen": "płaczów",
+      "dat": "płaczom",
+      "acc": "płacze",
+      "ins": "płaczami",
+      "loc": "płaczach",
+      "voc": "płacze"
+    }
+  }
+}

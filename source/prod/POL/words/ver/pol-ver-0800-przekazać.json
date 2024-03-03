@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przekazać",
+    "verbalNoun": "przekazanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przekazany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przekazawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przekaże się"
+          },
+          "plural": {
+            "allPluralGenders": "przekaże się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przekażę"
+          },
+          "plural": {
+            "allPluralGenders": "przekażemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przekażesz"
+          },
+          "plural": {
+            "allPluralGenders": "przekażecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przekaże"
+          },
+          "plural": {
+            "allPluralGenders": "przekażą"
+          }
+        }
+      },
+      "imperative": "przekaż",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przekazano"
+          },
+          "plural": {
+            "allPluralGenders": "przekazano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przekazałem",
+            "f": "przekazałam"
+          },
+          "plural": {
+            "virile": "przekazaliśmy",
+            "nonvirile": "przekazałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przekazałeś",
+            "f": "przekazałaś"
+          },
+          "plural": {
+            "virile": "przekazaliście",
+            "nonvirile": "przekazałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przekazał",
+            "f": "przekazała",
+            "n": "przekazało"
+          },
+          "plural": {
+            "virile": "przekazali",
+            "nonvirile": "przekazały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

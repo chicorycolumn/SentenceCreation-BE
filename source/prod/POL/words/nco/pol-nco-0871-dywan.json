@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dywan",
+      "gen": "dywanu",
+      "dat": "dywanowi",
+      "acc": "dywan",
+      "ins": "dywanem",
+      "loc": "dywanie",
+      "voc": "dywanie"
+    },
+    "plural": {
+      "nom": "dywany",
+      "gen": "dywanów",
+      "dat": "dywanom",
+      "acc": "dywany",
+      "ins": "dywanami",
+      "loc": "dywanach",
+      "voc": "dywany"
+    }
+  }
+}

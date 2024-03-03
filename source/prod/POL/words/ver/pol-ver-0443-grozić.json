@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "grozić",
+    "verbalNoun": "grożenie",
+    "activeAdjectival": "grożący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "grożąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "groź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "grożono"
+          },
+          "plural": {
+            "allPluralGenders": "grożono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "groziłem",
+            "f": "groziłam"
+          },
+          "plural": {
+            "virile": "groziliśmy",
+            "nonvirile": "groziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "groziłeś",
+            "f": "groziłaś"
+          },
+          "plural": {
+            "virile": "groziliście",
+            "nonvirile": "groziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "groził",
+            "f": "groziła",
+            "n": "groziło"
+          },
+          "plural": {
+            "virile": "grozili",
+            "nonvirile": "groziły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "grozi się"
+          },
+          "plural": {
+            "allPluralGenders": "grozi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "grożę"
+          },
+          "plural": {
+            "allPluralGenders": "grozimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "grozisz"
+          },
+          "plural": {
+            "allPluralGenders": "grozicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "grozi"
+          },
+          "plural": {
+            "allPluralGenders": "grożą"
+          }
+        }
+      }
+    }
+  }
+}

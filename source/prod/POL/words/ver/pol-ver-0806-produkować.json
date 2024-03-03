@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "produkować",
+    "verbalNoun": "produkowanie",
+    "activeAdjectival": "produkujący",
+    "passiveAdjectival": "produkowany",
+    "contemporaryAdverbial": "produkując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "produkuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "produkowano"
+          },
+          "plural": {
+            "allPluralGenders": "produkowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "produkowałem",
+            "f": "produkowałam"
+          },
+          "plural": {
+            "virile": "produkowaliśmy",
+            "nonvirile": "produkowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "produkowałeś",
+            "f": "produkowałaś"
+          },
+          "plural": {
+            "virile": "produkowaliście",
+            "nonvirile": "produkowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "produkował",
+            "f": "produkowała",
+            "n": "produkowało"
+          },
+          "plural": {
+            "virile": "produkowali",
+            "nonvirile": "produkowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "produkuje się"
+          },
+          "plural": {
+            "allPluralGenders": "produkuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "produkuję"
+          },
+          "plural": {
+            "allPluralGenders": "produkujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "produkujesz"
+          },
+          "plural": {
+            "allPluralGenders": "produkujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "produkuje"
+          },
+          "plural": {
+            "allPluralGenders": "produkują"
+          }
+        }
+      }
+    }
+  }
+}

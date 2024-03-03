@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "uwaga",
+      "gen": "uwagi",
+      "dat": "uwadze",
+      "acc": "uwagę",
+      "ins": "uwagą",
+      "loc": "uwadze",
+      "voc": "uwago"
+    },
+    "plural": {
+      "nom": "uwagi",
+      "gen": "uwag",
+      "dat": "uwagom",
+      "acc": "uwagi",
+      "ins": "uwagami",
+      "loc": "uwagach",
+      "voc": "uwagi"
+    }
+  }
+}

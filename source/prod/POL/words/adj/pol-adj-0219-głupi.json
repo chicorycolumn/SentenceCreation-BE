@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "głupio",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "głupi",
+          "gen": "głupiego",
+          "dat": "głupiemu",
+          "acc": "głupiego",
+          "ins": "głupim",
+          "loc": "głupim"
+        },
+        "m3": {
+          "nom": "głupi",
+          "gen": "głupiego",
+          "dat": "głupiemu",
+          "acc": "głupi",
+          "ins": "głupim",
+          "loc": "głupim"
+        },
+        "f": {
+          "nom": "głupa",
+          "gen": "głupiej",
+          "dat": "głupiej",
+          "acc": "głupą",
+          "ins": "głupą",
+          "loc": "głupiej"
+        },
+        "n": {
+          "nom": "głupie",
+          "gen": "głupiego",
+          "dat": "głupiemu",
+          "acc": "głupie",
+          "ins": "głupim",
+          "loc": "głupim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "głupi",
+          "gen": "głupich",
+          "dat": "głupim",
+          "acc": "głupich",
+          "ins": "głupimi",
+          "loc": "głupich"
+        },
+        "nonvirile": {
+          "nom": "głupie",
+          "gen": "głupich",
+          "dat": "głupim",
+          "acc": "głupie",
+          "ins": "głupimi",
+          "loc": "głupich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "głupszy",
+          "gen": "głupszego",
+          "dat": "głupszemu",
+          "acc": "głupszego",
+          "ins": "głupszym",
+          "loc": "głupszym"
+        },
+        "m3": {
+          "nom": "głupszy",
+          "gen": "głupszego",
+          "dat": "głupszemu",
+          "acc": "głupszy",
+          "ins": "głupszym",
+          "loc": "głupszym"
+        },
+        "f": {
+          "nom": "głupsza",
+          "gen": "głupszej",
+          "dat": "głupszej",
+          "acc": "głupszą",
+          "ins": "głupszą",
+          "loc": "głupszej"
+        },
+        "n": {
+          "nom": "głupsze",
+          "gen": "głupszego",
+          "dat": "głupszemu",
+          "acc": "głupsze",
+          "ins": "głupszym",
+          "loc": "głupszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "głupsi",
+          "gen": "głupszych",
+          "dat": "głupszym",
+          "acc": "głupszych",
+          "ins": "głupszymi",
+          "loc": "głupszych"
+        },
+        "nonvirile": {
+          "nom": "głupsze",
+          "gen": "głupszych",
+          "dat": "głupszym",
+          "acc": "głupsze",
+          "ins": "głupszymi",
+          "loc": "głupszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najgłupszy",
+          "gen": "najgłupszego",
+          "dat": "najgłupszemu",
+          "acc": "najgłupszego",
+          "ins": "najgłupszym",
+          "loc": "najgłupszym"
+        },
+        "m3": {
+          "nom": "najgłupszy",
+          "gen": "najgłupszego",
+          "dat": "najgłupszemu",
+          "acc": "najgłupszy",
+          "ins": "najgłupszym",
+          "loc": "najgłupszym"
+        },
+        "f": {
+          "nom": "najgłupsza",
+          "gen": "najgłupszej",
+          "dat": "najgłupszej",
+          "acc": "najgłupszą",
+          "ins": "najgłupszą",
+          "loc": "najgłupszej"
+        },
+        "n": {
+          "nom": "najgłupsze",
+          "gen": "najgłupszego",
+          "dat": "najgłupszemu",
+          "acc": "najgłupsze",
+          "ins": "najgłupszym",
+          "loc": "najgłupszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najgłupsi",
+          "gen": "najgłupszych",
+          "dat": "najgłupszym",
+          "acc": "najgłupszych",
+          "ins": "najgłupszymi",
+          "loc": "najgłupszych"
+        },
+        "nonvirile": {
+          "nom": "najgłupsze",
+          "gen": "najgłupszych",
+          "dat": "najgłupszym",
+          "acc": "najgłupsze",
+          "ins": "najgłupszymi",
+          "loc": "najgłupszych"
+        }
+      }
+    }
+  }
+}

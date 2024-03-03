@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oskarżyć",
+    "verbalNoun": "oskarżenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "oskarżony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "oskarżywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oskarży się"
+          },
+          "plural": {
+            "allPluralGenders": "oskarży się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oskarżę"
+          },
+          "plural": {
+            "allPluralGenders": "oskarżymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oskarżysz"
+          },
+          "plural": {
+            "allPluralGenders": "oskarżycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "oskarży"
+          },
+          "plural": {
+            "allPluralGenders": "oskarżą"
+          }
+        }
+      },
+      "imperative": "oskarż",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oskarżono"
+          },
+          "plural": {
+            "allPluralGenders": "oskarżono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oskarżyłem",
+            "f": "oskarżyłam"
+          },
+          "plural": {
+            "virile": "oskarżyliśmy",
+            "nonvirile": "oskarżyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oskarżyłeś",
+            "f": "oskarżyłaś"
+          },
+          "plural": {
+            "virile": "oskarżyliście",
+            "nonvirile": "oskarżyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oskarżył",
+            "f": "oskarżyła",
+            "n": "oskarżyło"
+          },
+          "plural": {
+            "virile": "oskarżyli",
+            "nonvirile": "oskarżyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

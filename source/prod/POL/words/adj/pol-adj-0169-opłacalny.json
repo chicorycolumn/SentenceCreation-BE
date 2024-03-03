@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "opłacalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "opłacalny",
+          "gen": "opłacalnego",
+          "dat": "opłacalnemu",
+          "acc": "opłacalnego",
+          "ins": "opłacalnym",
+          "loc": "opłacalnym"
+        },
+        "m3": {
+          "nom": "opłacalny",
+          "gen": "opłacalnego",
+          "dat": "opłacalnemu",
+          "acc": "opłacalny",
+          "ins": "opłacalnym",
+          "loc": "opłacalnym"
+        },
+        "f": {
+          "nom": "opłacalna",
+          "gen": "opłacalnej",
+          "dat": "opłacalnej",
+          "acc": "opłacalną",
+          "ins": "opłacalną",
+          "loc": "opłacalnej"
+        },
+        "n": {
+          "nom": "opłacalne",
+          "gen": "opłacalnego",
+          "dat": "opłacalnemu",
+          "acc": "opłacalne",
+          "ins": "opłacalnym",
+          "loc": "opłacalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "opłacalni",
+          "gen": "opłacalnych",
+          "dat": "opłacalnym",
+          "acc": "opłacalnych",
+          "ins": "opłacalnymi",
+          "loc": "opłacalnych"
+        },
+        "nonvirile": {
+          "nom": "opłacalne",
+          "gen": "opłacalnych",
+          "dat": "opłacalnym",
+          "acc": "opłacalne",
+          "ins": "opłacalnymi",
+          "loc": "opłacalnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej opłacalny",
+          "gen": "bardziej opłacalnego",
+          "dat": "bardziej opłacalnemu",
+          "acc": "bardziej opłacalnego",
+          "ins": "bardziej opłacalnym",
+          "loc": "bardziej opłacalnym"
+        },
+        "m3": {
+          "nom": "bardziej opłacalny",
+          "gen": "bardziej opłacalnego",
+          "dat": "bardziej opłacalnemu",
+          "acc": "bardziej opłacalny",
+          "ins": "bardziej opłacalnym",
+          "loc": "bardziej opłacalnym"
+        },
+        "f": {
+          "nom": "bardziej opłacalna",
+          "gen": "bardziej opłacalnej",
+          "dat": "bardziej opłacalnej",
+          "acc": "bardziej opłacalną",
+          "ins": "bardziej opłacalną",
+          "loc": "bardziej opłacalnej"
+        },
+        "n": {
+          "nom": "bardziej opłacalne",
+          "gen": "bardziej opłacalnego",
+          "dat": "bardziej opłacalnemu",
+          "acc": "bardziej opłacalne",
+          "ins": "bardziej opłacalnym",
+          "loc": "bardziej opłacalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej opłacalni",
+          "gen": "bardziej opłacalnych",
+          "dat": "bardziej opłacalnym",
+          "acc": "bardziej opłacalnych",
+          "ins": "bardziej opłacalnymi",
+          "loc": "bardziej opłacalnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej opłacalne",
+          "gen": "bardziej opłacalnych",
+          "dat": "bardziej opłacalnym",
+          "acc": "bardziej opłacalne",
+          "ins": "bardziej opłacalnymi",
+          "loc": "bardziej opłacalnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej opłacalny",
+          "gen": "najbardziej opłacalnego",
+          "dat": "najbardziej opłacalnemu",
+          "acc": "najbardziej opłacalnego",
+          "ins": "najbardziej opłacalnym",
+          "loc": "najbardziej opłacalnym"
+        },
+        "m3": {
+          "nom": "najbardziej opłacalny",
+          "gen": "najbardziej opłacalnego",
+          "dat": "najbardziej opłacalnemu",
+          "acc": "najbardziej opłacalny",
+          "ins": "najbardziej opłacalnym",
+          "loc": "najbardziej opłacalnym"
+        },
+        "f": {
+          "nom": "najbardziej opłacalna",
+          "gen": "najbardziej opłacalnej",
+          "dat": "najbardziej opłacalnej",
+          "acc": "najbardziej opłacalną",
+          "ins": "najbardziej opłacalną",
+          "loc": "najbardziej opłacalnej"
+        },
+        "n": {
+          "nom": "najbardziej opłacalne",
+          "gen": "najbardziej opłacalnego",
+          "dat": "najbardziej opłacalnemu",
+          "acc": "najbardziej opłacalne",
+          "ins": "najbardziej opłacalnym",
+          "loc": "najbardziej opłacalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej opłacalni",
+          "gen": "najbardziej opłacalnych",
+          "dat": "najbardziej opłacalnym",
+          "acc": "najbardziej opłacalnych",
+          "ins": "najbardziej opłacalnymi",
+          "loc": "najbardziej opłacalnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej opłacalne",
+          "gen": "najbardziej opłacalnych",
+          "dat": "najbardziej opłacalnym",
+          "acc": "najbardziej opłacalne",
+          "ins": "najbardziej opłacalnymi",
+          "loc": "najbardziej opłacalnych"
+        }
+      }
+    }
+  }
+}

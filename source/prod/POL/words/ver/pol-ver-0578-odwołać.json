@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odwołać",
+    "verbalNoun": "odwołanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "odwołany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odwoławszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odwoła się"
+          },
+          "plural": {
+            "allPluralGenders": "odwoła się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odwołam"
+          },
+          "plural": {
+            "allPluralGenders": "odwołamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odwołasz"
+          },
+          "plural": {
+            "allPluralGenders": "odwołacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odwoła"
+          },
+          "plural": {
+            "allPluralGenders": "odwołają"
+          }
+        }
+      },
+      "imperative": "odwołaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odwołano"
+          },
+          "plural": {
+            "allPluralGenders": "odwołano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odwołałem",
+            "f": "odwołałam"
+          },
+          "plural": {
+            "virile": "odwołaliśmy",
+            "nonvirile": "odwołałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odwołałeś",
+            "f": "odwołałaś"
+          },
+          "plural": {
+            "virile": "odwołaliście",
+            "nonvirile": "odwołałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odwołał",
+            "f": "odwołała",
+            "n": "odwołało"
+          },
+          "plural": {
+            "virile": "odwołali",
+            "nonvirile": "odwołały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

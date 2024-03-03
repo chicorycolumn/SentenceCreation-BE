@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "głodno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "głodny",
+          "gen": "głodnego",
+          "dat": "głodnemu",
+          "acc": "głodnego",
+          "ins": "głodnym",
+          "loc": "głodnym"
+        },
+        "m3": {
+          "nom": "głodny",
+          "gen": "głodnego",
+          "dat": "głodnemu",
+          "acc": "głodny",
+          "ins": "głodnym",
+          "loc": "głodnym"
+        },
+        "f": {
+          "nom": "głodna",
+          "gen": "głodnej",
+          "dat": "głodnej",
+          "acc": "głodną",
+          "ins": "głodną",
+          "loc": "głodnej"
+        },
+        "n": {
+          "nom": "głodne",
+          "gen": "głodnego",
+          "dat": "głodnemu",
+          "acc": "głodne",
+          "ins": "głodnym",
+          "loc": "głodnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "głodni",
+          "gen": "głodnych",
+          "dat": "głodnym",
+          "acc": "głodnych",
+          "ins": "głodnymi",
+          "loc": "głodnych"
+        },
+        "nonvirile": {
+          "nom": "głodne",
+          "gen": "głodnych",
+          "dat": "głodnym",
+          "acc": "głodne",
+          "ins": "głodnymi",
+          "loc": "głodnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "głodniejszy",
+          "gen": "głodniejszego",
+          "dat": "głodniejszemu",
+          "acc": "głodniejszego",
+          "ins": "głodniejszym",
+          "loc": "głodniejszym"
+        },
+        "m3": {
+          "nom": "głodniejszy",
+          "gen": "głodniejszego",
+          "dat": "głodniejszemu",
+          "acc": "głodniejszy",
+          "ins": "głodniejszym",
+          "loc": "głodniejszym"
+        },
+        "f": {
+          "nom": "głodniejsza",
+          "gen": "głodniejszej",
+          "dat": "głodniejszej",
+          "acc": "głodniejszą",
+          "ins": "głodniejszą",
+          "loc": "głodniejszej"
+        },
+        "n": {
+          "nom": "głodniejsze",
+          "gen": "głodniejszego",
+          "dat": "głodniejszemu",
+          "acc": "głodniejsze",
+          "ins": "głodniejszym",
+          "loc": "głodniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "głodniejsi",
+          "gen": "głodniejszych",
+          "dat": "głodniejszym",
+          "acc": "głodniejszych",
+          "ins": "głodniejszymi",
+          "loc": "głodniejszych"
+        },
+        "nonvirile": {
+          "nom": "głodniejsze",
+          "gen": "głodniejszych",
+          "dat": "głodniejszym",
+          "acc": "głodniejsze",
+          "ins": "głodniejszymi",
+          "loc": "głodniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najgłodniejszy",
+          "gen": "najgłodniejszego",
+          "dat": "najgłodniejszemu",
+          "acc": "najgłodniejszego",
+          "ins": "najgłodniejszym",
+          "loc": "najgłodniejszym"
+        },
+        "m3": {
+          "nom": "najgłodniejszy",
+          "gen": "najgłodniejszego",
+          "dat": "najgłodniejszemu",
+          "acc": "najgłodniejszy",
+          "ins": "najgłodniejszym",
+          "loc": "najgłodniejszym"
+        },
+        "f": {
+          "nom": "najgłodniejsza",
+          "gen": "najgłodniejszej",
+          "dat": "najgłodniejszej",
+          "acc": "najgłodniejszą",
+          "ins": "najgłodniejszą",
+          "loc": "najgłodniejszej"
+        },
+        "n": {
+          "nom": "najgłodniejsze",
+          "gen": "najgłodniejszego",
+          "dat": "najgłodniejszemu",
+          "acc": "najgłodniejsze",
+          "ins": "najgłodniejszym",
+          "loc": "najgłodniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najgłodniejsi",
+          "gen": "najgłodniejszych",
+          "dat": "najgłodniejszym",
+          "acc": "najgłodniejszych",
+          "ins": "najgłodniejszymi",
+          "loc": "najgłodniejszych"
+        },
+        "nonvirile": {
+          "nom": "najgłodniejsze",
+          "gen": "najgłodniejszych",
+          "dat": "najgłodniejszym",
+          "acc": "najgłodniejsze",
+          "ins": "najgłodniejszymi",
+          "loc": "najgłodniejszych"
+        }
+      }
+    }
+  }
+}

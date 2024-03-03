@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "smycz",
+      "gen": "smyczy",
+      "dat": "smyczy",
+      "acc": "smycz",
+      "ins": "smyczą",
+      "loc": "smyczy",
+      "voc": "smyczy"
+    },
+    "plural": {
+      "nom": "smycze",
+      "gen": "smyczy",
+      "dat": "smyczom",
+      "acc": "smycze",
+      "ins": "smyczami",
+      "loc": "smyczach",
+      "voc": "smycze"
+    }
+  }
+}

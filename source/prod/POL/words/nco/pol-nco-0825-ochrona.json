@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ochrona",
+      "gen": "ochrony",
+      "dat": "ochronie",
+      "acc": "ochronę",
+      "ins": "ochroną",
+      "loc": "ochronie",
+      "voc": "ochrono"
+    }
+  }
+}

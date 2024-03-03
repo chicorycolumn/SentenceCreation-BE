@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "nóż",
+      "gen": "noża",
+      "dat": "nożowi",
+      "acc": "nóż",
+      "ins": "nożem",
+      "loc": "nożu",
+      "voc": "nożu"
+    },
+    "plural": {
+      "nom": "noże",
+      "gen": "noży",
+      "dat": "nożom",
+      "acc": "noże",
+      "ins": "nożami",
+      "loc": "nożach",
+      "voc": "noże"
+    }
+  }
+}

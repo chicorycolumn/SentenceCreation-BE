@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "dramatycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dramatyczny",
+          "gen": "dramatycznego",
+          "dat": "dramatycznemu",
+          "acc": "dramatycznego",
+          "ins": "dramatycznym",
+          "loc": "dramatycznym"
+        },
+        "m3": {
+          "nom": "dramatyczny",
+          "gen": "dramatycznego",
+          "dat": "dramatycznemu",
+          "acc": "dramatyczny",
+          "ins": "dramatycznym",
+          "loc": "dramatycznym"
+        },
+        "f": {
+          "nom": "dramatyczna",
+          "gen": "dramatycznej",
+          "dat": "dramatycznej",
+          "acc": "dramatyczną",
+          "ins": "dramatyczną",
+          "loc": "dramatycznej"
+        },
+        "n": {
+          "nom": "dramatyczne",
+          "gen": "dramatycznego",
+          "dat": "dramatycznemu",
+          "acc": "dramatyczne",
+          "ins": "dramatycznym",
+          "loc": "dramatycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dramatyczni",
+          "gen": "dramatycznych",
+          "dat": "dramatycznym",
+          "acc": "dramatycznych",
+          "ins": "dramatycznymi",
+          "loc": "dramatycznych"
+        },
+        "nonvirile": {
+          "nom": "dramatyczne",
+          "gen": "dramatycznych",
+          "dat": "dramatycznym",
+          "acc": "dramatyczne",
+          "ins": "dramatycznymi",
+          "loc": "dramatycznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej dramatyczny",
+          "gen": "bardziej dramatycznego",
+          "dat": "bardziej dramatycznemu",
+          "acc": "bardziej dramatycznego",
+          "ins": "bardziej dramatycznym",
+          "loc": "bardziej dramatycznym"
+        },
+        "m3": {
+          "nom": "bardziej dramatyczny",
+          "gen": "bardziej dramatycznego",
+          "dat": "bardziej dramatycznemu",
+          "acc": "bardziej dramatyczny",
+          "ins": "bardziej dramatycznym",
+          "loc": "bardziej dramatycznym"
+        },
+        "f": {
+          "nom": "bardziej dramatyczna",
+          "gen": "bardziej dramatycznej",
+          "dat": "bardziej dramatycznej",
+          "acc": "bardziej dramatyczną",
+          "ins": "bardziej dramatyczną",
+          "loc": "bardziej dramatycznej"
+        },
+        "n": {
+          "nom": "bardziej dramatyczne",
+          "gen": "bardziej dramatycznego",
+          "dat": "bardziej dramatycznemu",
+          "acc": "bardziej dramatyczne",
+          "ins": "bardziej dramatycznym",
+          "loc": "bardziej dramatycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej dramatyczni",
+          "gen": "bardziej dramatycznych",
+          "dat": "bardziej dramatycznym",
+          "acc": "bardziej dramatycznych",
+          "ins": "bardziej dramatycznymi",
+          "loc": "bardziej dramatycznych"
+        },
+        "nonvirile": {
+          "nom": "bardziej dramatyczne",
+          "gen": "bardziej dramatycznych",
+          "dat": "bardziej dramatycznym",
+          "acc": "bardziej dramatyczne",
+          "ins": "bardziej dramatycznymi",
+          "loc": "bardziej dramatycznych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej dramatyczny",
+          "gen": "najbardziej dramatycznego",
+          "dat": "najbardziej dramatycznemu",
+          "acc": "najbardziej dramatycznego",
+          "ins": "najbardziej dramatycznym",
+          "loc": "najbardziej dramatycznym"
+        },
+        "m3": {
+          "nom": "najbardziej dramatyczny",
+          "gen": "najbardziej dramatycznego",
+          "dat": "najbardziej dramatycznemu",
+          "acc": "najbardziej dramatyczny",
+          "ins": "najbardziej dramatycznym",
+          "loc": "najbardziej dramatycznym"
+        },
+        "f": {
+          "nom": "najbardziej dramatyczna",
+          "gen": "najbardziej dramatycznej",
+          "dat": "najbardziej dramatycznej",
+          "acc": "najbardziej dramatyczną",
+          "ins": "najbardziej dramatyczną",
+          "loc": "najbardziej dramatycznej"
+        },
+        "n": {
+          "nom": "najbardziej dramatyczne",
+          "gen": "najbardziej dramatycznego",
+          "dat": "najbardziej dramatycznemu",
+          "acc": "najbardziej dramatyczne",
+          "ins": "najbardziej dramatycznym",
+          "loc": "najbardziej dramatycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej dramatyczni",
+          "gen": "najbardziej dramatycznych",
+          "dat": "najbardziej dramatycznym",
+          "acc": "najbardziej dramatycznych",
+          "ins": "najbardziej dramatycznymi",
+          "loc": "najbardziej dramatycznych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej dramatyczne",
+          "gen": "najbardziej dramatycznych",
+          "dat": "najbardziej dramatycznym",
+          "acc": "najbardziej dramatyczne",
+          "ins": "najbardziej dramatycznymi",
+          "loc": "najbardziej dramatycznych"
+        }
+      }
+    }
+  }
+}

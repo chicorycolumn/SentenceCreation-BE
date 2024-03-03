@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "witać",
+    "verbalNoun": "witanie",
+    "activeAdjectival": "witający",
+    "passiveAdjectival": "witany",
+    "contemporaryAdverbial": "witając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "witaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "witano"
+          },
+          "plural": {
+            "allPluralGenders": "witano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "witałem",
+            "f": "witałam"
+          },
+          "plural": {
+            "virile": "witaliśmy",
+            "nonvirile": "witałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "witałeś",
+            "f": "witałaś"
+          },
+          "plural": {
+            "virile": "witaliście",
+            "nonvirile": "witałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "witał",
+            "f": "witała",
+            "n": "witało"
+          },
+          "plural": {
+            "virile": "witali",
+            "nonvirile": "witały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wita się"
+          },
+          "plural": {
+            "allPluralGenders": "wita się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "witam"
+          },
+          "plural": {
+            "allPluralGenders": "witamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "witasz"
+          },
+          "plural": {
+            "allPluralGenders": "witacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wita"
+          },
+          "plural": {
+            "allPluralGenders": "witają"
+          }
+        }
+      }
+    }
+  }
+}

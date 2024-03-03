@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "syn",
+      "gen": "syna",
+      "dat": "synowi",
+      "acc": "syna",
+      "ins": "synem",
+      "loc": "synu",
+      "voc": "synu"
+    },
+    "plural": {
+      "nom": "synowie",
+      "gen": "synów",
+      "dat": "synom",
+      "acc": "synów",
+      "ins": "synami",
+      "loc": "synach",
+      "voc": "synowie"
+    }
+  }
+}

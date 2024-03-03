@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "posiłek",
+      "gen": "posiłku",
+      "dat": "posiłkowi",
+      "acc": "posiłek",
+      "ins": "posiłkiem",
+      "loc": "posiłku",
+      "voc": "posiłku"
+    },
+    "plural": {
+      "nom": "posiłki",
+      "gen": "posiłków",
+      "dat": "posiłkom",
+      "acc": "posiłki",
+      "ins": "posiłkami",
+      "loc": "posiłkach",
+      "voc": "posiłki"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "bratanek",
+      "gen": "bratanka",
+      "dat": "bratankowi",
+      "acc": "bratanka",
+      "ins": "bratankiem",
+      "loc": "bratanku",
+      "voc": "bratanku"
+    },
+    "plural": {
+      "nom": [
+        "bratankowie",
+        "bratanki"
+      ],
+      "gen": "bratanków",
+      "dat": "bratankom",
+      "acc": "bratanków",
+      "ins": "bratankami",
+      "loc": "bratankach",
+      "voc": [
+        "bratankowie",
+        "bratanki"
+      ]
+    }
+  }
+}

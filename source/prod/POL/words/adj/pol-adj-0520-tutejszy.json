@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "tutejszy",
+          "gen": "tutejszego",
+          "dat": "tutejszemu",
+          "acc": "tutejszego",
+          "ins": "tutejszym",
+          "loc": "tutejszym"
+        },
+        "m3": {
+          "nom": "tutejszy",
+          "gen": "tutejszego",
+          "dat": "tutejszemu",
+          "acc": "tutejszy",
+          "ins": "tutejszym",
+          "loc": "tutejszym"
+        },
+        "f": {
+          "nom": "tutejsza",
+          "gen": "tutejszej",
+          "dat": "tutejszej",
+          "acc": "tutejszą",
+          "ins": "tutejszą",
+          "loc": "tutejszej"
+        },
+        "n": {
+          "nom": "tutejsze",
+          "gen": "tutejszego",
+          "dat": "tutejszemu",
+          "acc": "tutejsze",
+          "ins": "tutejszym",
+          "loc": "tutejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "tutejsi",
+          "gen": "tutejszych",
+          "dat": "tutejszym",
+          "acc": "tutejszych",
+          "ins": "tutejszymi",
+          "loc": "tutejszych"
+        },
+        "nonvirile": {
+          "nom": "tutejsze",
+          "gen": "tutejszych",
+          "dat": "tutejszym",
+          "acc": "tutejsze",
+          "ins": "tutejszymi",
+          "loc": "tutejszych"
+        }
+      }
+    }
+  }
+}

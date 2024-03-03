@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pojmować",
+    "verbalNoun": "pojmowanie",
+    "activeAdjectival": "pojmujący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "pojmując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pojmuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pojmowano"
+          },
+          "plural": {
+            "allPluralGenders": "pojmowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pojmowałem",
+            "f": "pojmowałam"
+          },
+          "plural": {
+            "virile": "pojmowaliśmy",
+            "nonvirile": "pojmowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pojmowałeś",
+            "f": "pojmowałaś"
+          },
+          "plural": {
+            "virile": "pojmowaliście",
+            "nonvirile": "pojmowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pojmował",
+            "f": "pojmowała",
+            "n": "pojmowało"
+          },
+          "plural": {
+            "virile": "pojmowali",
+            "nonvirile": "pojmowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pojmuje się"
+          },
+          "plural": {
+            "allPluralGenders": "pojmuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pojmuję"
+          },
+          "plural": {
+            "allPluralGenders": "pojmujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pojmujesz"
+          },
+          "plural": {
+            "allPluralGenders": "pojmujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pojmuje"
+          },
+          "plural": {
+            "allPluralGenders": "pojmują"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "łatwo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "łatwy",
+          "gen": "łatwego",
+          "dat": "łatwemu",
+          "acc": "łatwego",
+          "ins": "łatwym",
+          "loc": "łatwym"
+        },
+        "m3": {
+          "nom": "łatwy",
+          "gen": "łatwego",
+          "dat": "łatwemu",
+          "acc": "łatwy",
+          "ins": "łatwym",
+          "loc": "łatwym"
+        },
+        "f": {
+          "nom": "łatwa",
+          "gen": "łatwej",
+          "dat": "łatwej",
+          "acc": "łatwą",
+          "ins": "łatwą",
+          "loc": "łatwej"
+        },
+        "n": {
+          "nom": "łatwe",
+          "gen": "łatwego",
+          "dat": "łatwemu",
+          "acc": "łatwe",
+          "ins": "łatwym",
+          "loc": "łatwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "łatwi",
+          "gen": "łatwych",
+          "dat": "łatwym",
+          "acc": "łatwych",
+          "ins": "łatwymi",
+          "loc": "łatwych"
+        },
+        "nonvirile": {
+          "nom": "łatwe",
+          "gen": "łatwych",
+          "dat": "łatwym",
+          "acc": "łatwe",
+          "ins": "łatwymi",
+          "loc": "łatwych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "łatwiejszy",
+          "gen": "łatwiejszego",
+          "dat": "łatwiejszemu",
+          "acc": "łatwiejszego",
+          "ins": "łatwiejszym",
+          "loc": "łatwiejszym"
+        },
+        "m3": {
+          "nom": "łatwiejszy",
+          "gen": "łatwiejszego",
+          "dat": "łatwiejszemu",
+          "acc": "łatwiejszy",
+          "ins": "łatwiejszym",
+          "loc": "łatwiejszym"
+        },
+        "f": {
+          "nom": "łatwiejsza",
+          "gen": "łatwiejszej",
+          "dat": "łatwiejszej",
+          "acc": "łatwiejszą",
+          "ins": "łatwiejszą",
+          "loc": "łatwiejszej"
+        },
+        "n": {
+          "nom": "łatwiejsze",
+          "gen": "łatwiejszego",
+          "dat": "łatwiejszemu",
+          "acc": "łatwiejsze",
+          "ins": "łatwiejszym",
+          "loc": "łatwiejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "łatwiejsi",
+          "gen": "łatwiejszych",
+          "dat": "łatwiejszym",
+          "acc": "łatwiejszych",
+          "ins": "łatwiejszymi",
+          "loc": "łatwiejszych"
+        },
+        "nonvirile": {
+          "nom": "łatwiejsze",
+          "gen": "łatwiejszych",
+          "dat": "łatwiejszym",
+          "acc": "łatwiejsze",
+          "ins": "łatwiejszymi",
+          "loc": "łatwiejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najłatwiejszy",
+          "gen": "najłatwiejszego",
+          "dat": "najłatwiejszemu",
+          "acc": "najłatwiejszego",
+          "ins": "najłatwiejszym",
+          "loc": "najłatwiejszym"
+        },
+        "m3": {
+          "nom": "najłatwiejszy",
+          "gen": "najłatwiejszego",
+          "dat": "najłatwiejszemu",
+          "acc": "najłatwiejszy",
+          "ins": "najłatwiejszym",
+          "loc": "najłatwiejszym"
+        },
+        "f": {
+          "nom": "najłatwiejsza",
+          "gen": "najłatwiejszej",
+          "dat": "najłatwiejszej",
+          "acc": "najłatwiejszą",
+          "ins": "najłatwiejszą",
+          "loc": "najłatwiejszej"
+        },
+        "n": {
+          "nom": "najłatwiejsze",
+          "gen": "najłatwiejszego",
+          "dat": "najłatwiejszemu",
+          "acc": "najłatwiejsze",
+          "ins": "najłatwiejszym",
+          "loc": "najłatwiejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najłatwiejsi",
+          "gen": "najłatwiejszych",
+          "dat": "najłatwiejszym",
+          "acc": "najłatwiejszych",
+          "ins": "najłatwiejszymi",
+          "loc": "najłatwiejszych"
+        },
+        "nonvirile": {
+          "nom": "najłatwiejsze",
+          "gen": "najłatwiejszych",
+          "dat": "najłatwiejszym",
+          "acc": "najłatwiejsze",
+          "ins": "najłatwiejszymi",
+          "loc": "najłatwiejszych"
+        }
+      }
+    }
+  }
+}

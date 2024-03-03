@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "śmiało",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "śmiały",
+          "gen": "śmiałego",
+          "dat": "śmiałemu",
+          "acc": "śmiałego",
+          "ins": "śmiałym",
+          "loc": "śmiałym"
+        },
+        "m3": {
+          "nom": "śmiały",
+          "gen": "śmiałego",
+          "dat": "śmiałemu",
+          "acc": "śmiały",
+          "ins": "śmiałym",
+          "loc": "śmiałym"
+        },
+        "f": {
+          "nom": "śmiała",
+          "gen": "śmiałej",
+          "dat": "śmiałej",
+          "acc": "śmiałą",
+          "ins": "śmiałą",
+          "loc": "śmiałej"
+        },
+        "n": {
+          "nom": "śmiałe",
+          "gen": "śmiałego",
+          "dat": "śmiałemu",
+          "acc": "śmiałe",
+          "ins": "śmiałym",
+          "loc": "śmiałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "śmiali",
+          "gen": "śmiałych",
+          "dat": "śmiałym",
+          "acc": "śmiałych",
+          "ins": "śmiałymi",
+          "loc": "śmiałych"
+        },
+        "nonvirile": {
+          "nom": "śmiałe",
+          "gen": "śmiałych",
+          "dat": "śmiałym",
+          "acc": "śmiałe",
+          "ins": "śmiałymi",
+          "loc": "śmiałych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "śmielszy",
+          "gen": "śmielszego",
+          "dat": "śmielszemu",
+          "acc": "śmielszego",
+          "ins": "śmielszym",
+          "loc": "śmielszym"
+        },
+        "m3": {
+          "nom": "śmielszy",
+          "gen": "śmielszego",
+          "dat": "śmielszemu",
+          "acc": "śmielszy",
+          "ins": "śmielszym",
+          "loc": "śmielszym"
+        },
+        "f": {
+          "nom": "śmielsza",
+          "gen": "śmielszej",
+          "dat": "śmielszej",
+          "acc": "śmielszą",
+          "ins": "śmielszą",
+          "loc": "śmielszej"
+        },
+        "n": {
+          "nom": "śmielsze",
+          "gen": "śmielszego",
+          "dat": "śmielszemu",
+          "acc": "śmielsze",
+          "ins": "śmielszym",
+          "loc": "śmielszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "śmielsi",
+          "gen": "śmielszych",
+          "dat": "śmielszym",
+          "acc": "śmielszych",
+          "ins": "śmielszymi",
+          "loc": "śmielszych"
+        },
+        "nonvirile": {
+          "nom": "śmielsze",
+          "gen": "śmielszych",
+          "dat": "śmielszym",
+          "acc": "śmielsze",
+          "ins": "śmielszymi",
+          "loc": "śmielszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najśmielszy",
+          "gen": "najśmielszego",
+          "dat": "najśmielszemu",
+          "acc": "najśmielszego",
+          "ins": "najśmielszym",
+          "loc": "najśmielszym"
+        },
+        "m3": {
+          "nom": "najśmielszy",
+          "gen": "najśmielszego",
+          "dat": "najśmielszemu",
+          "acc": "najśmielszy",
+          "ins": "najśmielszym",
+          "loc": "najśmielszym"
+        },
+        "f": {
+          "nom": "najśmielsza",
+          "gen": "najśmielszej",
+          "dat": "najśmielszej",
+          "acc": "najśmielszą",
+          "ins": "najśmielszą",
+          "loc": "najśmielszej"
+        },
+        "n": {
+          "nom": "najśmielsze",
+          "gen": "najśmielszego",
+          "dat": "najśmielszemu",
+          "acc": "najśmielsze",
+          "ins": "najśmielszym",
+          "loc": "najśmielszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najśmielsi",
+          "gen": "najśmielszych",
+          "dat": "najśmielszym",
+          "acc": "najśmielszych",
+          "ins": "najśmielszymi",
+          "loc": "najśmielszych"
+        },
+        "nonvirile": {
+          "nom": "najśmielsze",
+          "gen": "najśmielszych",
+          "dat": "najśmielszym",
+          "acc": "najśmielsze",
+          "ins": "najśmielszymi",
+          "loc": "najśmielszych"
+        }
+      }
+    }
+  }
+}

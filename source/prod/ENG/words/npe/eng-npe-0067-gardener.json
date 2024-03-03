@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gardener",
+      "gen": "gardener's"
+    },
+    "plural": {
+      "nom": "gardeners",
+      "gen": "gardeners'"
+    }
+  }
+}

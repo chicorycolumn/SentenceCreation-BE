@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zaplanować",
+    "verbalNoun": "zaplanowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zaplanowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zaplanowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaplanuje się"
+          },
+          "plural": {
+            "allPluralGenders": "zaplanuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zaplanuję"
+          },
+          "plural": {
+            "allPluralGenders": "zaplanujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zaplanujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zaplanujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zaplanuje"
+          },
+          "plural": {
+            "allPluralGenders": "zaplanują"
+          }
+        }
+      },
+      "imperative": "zaplanuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaplanowano"
+          },
+          "plural": {
+            "allPluralGenders": "zaplanowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zaplanowałem",
+            "f": "zaplanowałam"
+          },
+          "plural": {
+            "virile": "zaplanowaliśmy",
+            "nonvirile": "zaplanowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zaplanowałeś",
+            "f": "zaplanowałaś"
+          },
+          "plural": {
+            "virile": "zaplanowaliście",
+            "nonvirile": "zaplanowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zaplanował",
+            "f": "zaplanowała",
+            "n": "zaplanowało"
+          },
+          "plural": {
+            "virile": "zaplanowali",
+            "nonvirile": "zaplanowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

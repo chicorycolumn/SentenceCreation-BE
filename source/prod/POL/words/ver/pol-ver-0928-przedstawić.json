@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przedstawić",
+    "verbalNoun": "przedstawienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przedstawiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przedstawiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przedstawi się"
+          },
+          "plural": {
+            "allPluralGenders": "przedstawi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przedstawię"
+          },
+          "plural": {
+            "allPluralGenders": "przedstawimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przedstawisz"
+          },
+          "plural": {
+            "allPluralGenders": "przedstawicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przedstawi"
+          },
+          "plural": {
+            "allPluralGenders": "przedstawią"
+          }
+        }
+      },
+      "imperative": "przedstaw",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przedstawiono"
+          },
+          "plural": {
+            "allPluralGenders": "przedstawiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przedstawiłem",
+            "f": "przedstawiłam"
+          },
+          "plural": {
+            "virile": "przedstawiliśmy",
+            "nonvirile": "przedstawiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przedstawiłeś",
+            "f": "przedstawiłaś"
+          },
+          "plural": {
+            "virile": "przedstawiliście",
+            "nonvirile": "przedstawiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przedstawił",
+            "f": "przedstawiła",
+            "n": "przedstawiło"
+          },
+          "plural": {
+            "virile": "przedstawili",
+            "nonvirile": "przedstawiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

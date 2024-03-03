@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "bok",
+      "gen": "boku",
+      "dat": "bokowi",
+      "acc": "bok",
+      "ins": "bokiem",
+      "loc": "boku",
+      "voc": "boku"
+    },
+    "plural": {
+      "nom": "boki",
+      "gen": "boków",
+      "dat": "bokom",
+      "acc": "boki",
+      "ins": "bokami",
+      "loc": "bokach",
+      "voc": "boki"
+    }
+  }
+}

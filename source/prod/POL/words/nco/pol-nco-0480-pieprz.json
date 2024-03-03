@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pieprz",
+      "gen": "pieprzu",
+      "dat": "pieprzowi",
+      "acc": "pieprz",
+      "ins": "pieprzem",
+      "loc": "pieprzu",
+      "voc": "pieprzu"
+    },
+    "plural": {
+      "nom": "pieprze",
+      "gen": [
+        "pieprzów",
+        "pieprzy"
+      ],
+      "dat": "pieprzom",
+      "acc": "pieprze",
+      "ins": "pieprzami",
+      "loc": "pieprzach",
+      "voc": "pieprze"
+    }
+  }
+}

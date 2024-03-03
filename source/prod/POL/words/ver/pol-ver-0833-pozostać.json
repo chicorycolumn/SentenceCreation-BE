@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pozostać",
+    "verbalNoun": "pozostanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pozostawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pozostanie się"
+          },
+          "plural": {
+            "allPluralGenders": "pozostanie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pozostanę"
+          },
+          "plural": {
+            "allPluralGenders": "pozostaniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pozostaniesz"
+          },
+          "plural": {
+            "allPluralGenders": "pozostaniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pozostanie"
+          },
+          "plural": {
+            "allPluralGenders": "pozostaną"
+          }
+        }
+      },
+      "imperative": "pozostań",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pozostano"
+          },
+          "plural": {
+            "allPluralGenders": "pozostano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pozostałem",
+            "f": "pozostałam"
+          },
+          "plural": {
+            "virile": "pozostaliśmy",
+            "nonvirile": "pozostałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pozostałeś",
+            "f": "pozostałaś"
+          },
+          "plural": {
+            "virile": "pozostaliście",
+            "nonvirile": "pozostałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pozostał",
+            "f": "pozostała",
+            "n": "pozostało"
+          },
+          "plural": {
+            "virile": "pozostali",
+            "nonvirile": "pozostały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

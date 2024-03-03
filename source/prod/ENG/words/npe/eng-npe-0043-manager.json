@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "manager",
+      "gen": "manager's"
+    },
+    "plural": {
+      "nom": "managers",
+      "gen": "managers'"
+    }
+  }
+}

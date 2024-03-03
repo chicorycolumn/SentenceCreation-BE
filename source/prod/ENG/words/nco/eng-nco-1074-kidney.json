@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kidney",
+      "gen": "kidney's"
+    },
+    "plural": {
+      "nom": "kidneys",
+      "gen": "kidneys'"
+    }
+  }
+}

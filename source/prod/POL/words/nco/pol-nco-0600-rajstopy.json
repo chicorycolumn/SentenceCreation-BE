@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "plural": {
+      "nom": "rajstopy",
+      "gen": "rajstop",
+      "dat": "rajstopom",
+      "acc": "rajstopy",
+      "ins": "rajstopami",
+      "loc": "rajstopach",
+      "voc": "rajstopy"
+    }
+  }
+}

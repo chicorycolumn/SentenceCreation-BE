@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "włączać",
+    "verbalNoun": "włączanie",
+    "activeAdjectival": "włączający",
+    "passiveAdjectival": "włączany",
+    "contemporaryAdverbial": "włączając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "włączaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "włączano"
+          },
+          "plural": {
+            "allPluralGenders": "włączano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "włączałem",
+            "f": "włączałam"
+          },
+          "plural": {
+            "virile": "włączaliśmy",
+            "nonvirile": "włączałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "włączałeś",
+            "f": "włączałaś"
+          },
+          "plural": {
+            "virile": "włączaliście",
+            "nonvirile": "włączałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "włączał",
+            "f": "włączała",
+            "n": "włączało"
+          },
+          "plural": {
+            "virile": "włączali",
+            "nonvirile": "włączały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "włącza się"
+          },
+          "plural": {
+            "allPluralGenders": "włącza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "włączam"
+          },
+          "plural": {
+            "allPluralGenders": "włączamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "włączasz"
+          },
+          "plural": {
+            "allPluralGenders": "włączacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "włącza"
+          },
+          "plural": {
+            "allPluralGenders": "włączają"
+          }
+        }
+      }
+    }
+  }
+}

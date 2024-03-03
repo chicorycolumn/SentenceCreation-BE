@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przepraszać",
+    "verbalNoun": "przepraszanie",
+    "activeAdjectival": "przepraszający",
+    "passiveAdjectival": "przepraszany",
+    "contemporaryAdverbial": "przepraszając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przepraszaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przepraszano"
+          },
+          "plural": {
+            "allPluralGenders": "przepraszano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przepraszałem",
+            "f": "przepraszałam"
+          },
+          "plural": {
+            "virile": "przepraszaliśmy",
+            "nonvirile": "przepraszałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przepraszałeś",
+            "f": "przepraszałaś"
+          },
+          "plural": {
+            "virile": "przepraszaliście",
+            "nonvirile": "przepraszałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przepraszał",
+            "f": "przepraszała",
+            "n": "przepraszało"
+          },
+          "plural": {
+            "virile": "przepraszali",
+            "nonvirile": "przepraszały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeprasza się"
+          },
+          "plural": {
+            "allPluralGenders": "przeprasza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przepraszam"
+          },
+          "plural": {
+            "allPluralGenders": "przepraszamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przepraszasz"
+          },
+          "plural": {
+            "allPluralGenders": "przepraszacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przeprasza"
+          },
+          "plural": {
+            "allPluralGenders": "przepraszają"
+          }
+        }
+      }
+    }
+  }
+}

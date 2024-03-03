@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "aktorka",
+      "gen": "aktorki",
+      "dat": "aktorce",
+      "acc": "aktorkę",
+      "ins": "aktorką",
+      "loc": "aktorce",
+      "voc": "aktorko"
+    },
+    "plural": {
+      "nom": "aktorki",
+      "gen": "aktorek",
+      "dat": "aktorkom",
+      "acc": "aktorki",
+      "ins": "aktorkami",
+      "loc": "aktorkach",
+      "voc": "aktorki"
+    }
+  }
+}

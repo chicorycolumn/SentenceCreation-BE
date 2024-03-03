@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zadzwonić",
+    "verbalNoun": "zadzwonienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zadzwoniwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zadzwoni się"
+          },
+          "plural": {
+            "allPluralGenders": "zadzwoni się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zadzwonię"
+          },
+          "plural": {
+            "allPluralGenders": "zadzwonimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zadzwonisz"
+          },
+          "plural": {
+            "allPluralGenders": "zadzwonicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zadzwoni"
+          },
+          "plural": {
+            "allPluralGenders": "zadzwonią"
+          }
+        }
+      },
+      "imperative": "zadzwoń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zadzwoniono"
+          },
+          "plural": {
+            "allPluralGenders": "zadzwoniono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zadzwoniłem",
+            "f": "zadzwoniłam"
+          },
+          "plural": {
+            "virile": "zadzwoniliśmy",
+            "nonvirile": "zadzwoniłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zadzwoniłeś",
+            "f": "zadzwoniłaś"
+          },
+          "plural": {
+            "virile": "zadzwoniliście",
+            "nonvirile": "zadzwoniłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zadzwonił",
+            "f": "zadzwoniła",
+            "n": "zadzwoniło"
+          },
+          "plural": {
+            "virile": "zadzwonili",
+            "nonvirile": "zadzwoniły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

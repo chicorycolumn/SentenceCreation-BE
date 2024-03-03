@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odcinać",
+    "verbalNoun": "odcinanie",
+    "activeAdjectival": "odcinający",
+    "passiveAdjectival": "odcinany",
+    "contemporaryAdverbial": "odcinając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odcinaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odcinano"
+          },
+          "plural": {
+            "allPluralGenders": "odcinano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odcinałem",
+            "f": "odcinałam"
+          },
+          "plural": {
+            "virile": "odcinaliśmy",
+            "nonvirile": "odcinałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odcinałeś",
+            "f": "odcinałaś"
+          },
+          "plural": {
+            "virile": "odcinaliście",
+            "nonvirile": "odcinałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odcinał",
+            "f": "odcinała",
+            "n": "odcinało"
+          },
+          "plural": {
+            "virile": "odcinali",
+            "nonvirile": "odcinały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odcina się"
+          },
+          "plural": {
+            "allPluralGenders": "odcina się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odcinam"
+          },
+          "plural": {
+            "allPluralGenders": "odcinamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odcinasz"
+          },
+          "plural": {
+            "allPluralGenders": "odcinacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odcina"
+          },
+          "plural": {
+            "allPluralGenders": "odcinają"
+          }
+        }
+      }
+    }
+  }
+}

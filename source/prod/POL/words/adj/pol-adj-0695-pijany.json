@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "po pijaku",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pijany",
+          "gen": "pijanego",
+          "dat": "pijanemu",
+          "acc": "pijanego",
+          "ins": "pijanym",
+          "loc": "pijanym"
+        },
+        "m3": {
+          "nom": "pijany",
+          "gen": "pijanego",
+          "dat": "pijanemu",
+          "acc": "pijany",
+          "ins": "pijanym",
+          "loc": "pijanym"
+        },
+        "f": {
+          "nom": "pijana",
+          "gen": "pijanej",
+          "dat": "pijanej",
+          "acc": "pijaną",
+          "ins": "pijaną",
+          "loc": "pijanej"
+        },
+        "n": {
+          "nom": "pijane",
+          "gen": "pijanego",
+          "dat": "pijanemu",
+          "acc": "pijane",
+          "ins": "pijanym",
+          "loc": "pijanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pijani",
+          "gen": "pijanych",
+          "dat": "pijanym",
+          "acc": "pijanych",
+          "ins": "pijanymi",
+          "loc": "pijanych"
+        },
+        "nonvirile": {
+          "nom": "pijane",
+          "gen": "pijanych",
+          "dat": "pijanym",
+          "acc": "pijane",
+          "ins": "pijanymi",
+          "loc": "pijanych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej pijany",
+          "gen": "bardziej pijanego",
+          "dat": "bardziej pijanemu",
+          "acc": "bardziej pijanego",
+          "ins": "bardziej pijanym",
+          "loc": "bardziej pijanym"
+        },
+        "m3": {
+          "nom": "bardziej pijany",
+          "gen": "bardziej pijanego",
+          "dat": "bardziej pijanemu",
+          "acc": "bardziej pijany",
+          "ins": "bardziej pijanym",
+          "loc": "bardziej pijanym"
+        },
+        "f": {
+          "nom": "bardziej pijana",
+          "gen": "bardziej pijanej",
+          "dat": "bardziej pijanej",
+          "acc": "bardziej pijaną",
+          "ins": "bardziej pijaną",
+          "loc": "bardziej pijanej"
+        },
+        "n": {
+          "nom": "bardziej pijane",
+          "gen": "bardziej pijanego",
+          "dat": "bardziej pijanemu",
+          "acc": "bardziej pijane",
+          "ins": "bardziej pijanym",
+          "loc": "bardziej pijanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej pijani",
+          "gen": "bardziej pijanych",
+          "dat": "bardziej pijanym",
+          "acc": "bardziej pijanych",
+          "ins": "bardziej pijanymi",
+          "loc": "bardziej pijanych"
+        },
+        "nonvirile": {
+          "nom": "bardziej pijane",
+          "gen": "bardziej pijanych",
+          "dat": "bardziej pijanym",
+          "acc": "bardziej pijane",
+          "ins": "bardziej pijanymi",
+          "loc": "bardziej pijanych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej pijany",
+          "gen": "najbardziej pijanego",
+          "dat": "najbardziej pijanemu",
+          "acc": "najbardziej pijanego",
+          "ins": "najbardziej pijanym",
+          "loc": "najbardziej pijanym"
+        },
+        "m3": {
+          "nom": "najbardziej pijany",
+          "gen": "najbardziej pijanego",
+          "dat": "najbardziej pijanemu",
+          "acc": "najbardziej pijany",
+          "ins": "najbardziej pijanym",
+          "loc": "najbardziej pijanym"
+        },
+        "f": {
+          "nom": "najbardziej pijana",
+          "gen": "najbardziej pijanej",
+          "dat": "najbardziej pijanej",
+          "acc": "najbardziej pijaną",
+          "ins": "najbardziej pijaną",
+          "loc": "najbardziej pijanej"
+        },
+        "n": {
+          "nom": "najbardziej pijane",
+          "gen": "najbardziej pijanego",
+          "dat": "najbardziej pijanemu",
+          "acc": "najbardziej pijane",
+          "ins": "najbardziej pijanym",
+          "loc": "najbardziej pijanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej pijani",
+          "gen": "najbardziej pijanych",
+          "dat": "najbardziej pijanym",
+          "acc": "najbardziej pijanych",
+          "ins": "najbardziej pijanymi",
+          "loc": "najbardziej pijanych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej pijane",
+          "gen": "najbardziej pijanych",
+          "dat": "najbardziej pijanym",
+          "acc": "najbardziej pijane",
+          "ins": "najbardziej pijanymi",
+          "loc": "najbardziej pijanych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sukces",
+      "gen": "sukcesu",
+      "dat": "sukcesowi",
+      "acc": "sukces",
+      "ins": "sukcesem",
+      "loc": "sukcesie",
+      "voc": "sukcesie"
+    },
+    "plural": {
+      "nom": "sukcesy",
+      "gen": "sukcesów",
+      "dat": "sukcesom",
+      "acc": "sukcesy",
+      "ins": "sukcesami",
+      "loc": "sukcesach",
+      "voc": "sukcesy"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "oddany",
+          "gen": "oddanego",
+          "dat": "oddanemu",
+          "acc": "oddanego",
+          "ins": "oddanym",
+          "loc": "oddanym"
+        },
+        "m3": {
+          "nom": "oddany",
+          "gen": "oddanego",
+          "dat": "oddanemu",
+          "acc": "oddany",
+          "ins": "oddanym",
+          "loc": "oddanym"
+        },
+        "f": {
+          "nom": "oddana",
+          "gen": "oddanej",
+          "dat": "oddanej",
+          "acc": "oddaną",
+          "ins": "oddaną",
+          "loc": "oddanej"
+        },
+        "n": {
+          "nom": "oddane",
+          "gen": "oddanego",
+          "dat": "oddanemu",
+          "acc": "oddane",
+          "ins": "oddanym",
+          "loc": "oddanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "oddani",
+          "gen": "oddanych",
+          "dat": "oddanym",
+          "acc": "oddanych",
+          "ins": "oddanymi",
+          "loc": "oddanych"
+        },
+        "nonvirile": {
+          "nom": "oddane",
+          "gen": "oddanych",
+          "dat": "oddanym",
+          "acc": "oddane",
+          "ins": "oddanymi",
+          "loc": "oddanych"
+        }
+      }
+    }
+  }
+}

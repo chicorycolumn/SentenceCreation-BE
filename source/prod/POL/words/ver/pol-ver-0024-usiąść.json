@@ -1,0 +1,81 @@
+{
+  "inflections": {
+    "infinitive": "usiąść",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "usiadłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "usiądzie się"
+          },
+          "plural": {
+            "allPluralGenders": "usiądzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "usiądę"
+          },
+          "plural": {
+            "allPluralGenders": "usiądziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "usiądziesz"
+          },
+          "plural": {
+            "allPluralGenders": "usiądziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "usiądzie"
+          },
+          "plural": {
+            "allPluralGenders": "usiądą"
+          }
+        }
+      },
+      "imperative": "usiądź",
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "usiadłem",
+            "f": "usiadłam"
+          },
+          "plural": {
+            "virile": "usiedliśmy",
+            "nonvirile": "usiadłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "usiadłeś",
+            "f": "usiadłaś"
+          },
+          "plural": {
+            "virile": "usiedliście",
+            "nonvirile": "usiadłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "usiadł",
+            "f": "usiadła",
+            "n": "usiadło"
+          },
+          "plural": {
+            "virile": "usiedli",
+            "nonvirile": "usiadły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

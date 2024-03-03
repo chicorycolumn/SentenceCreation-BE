@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "poczta",
+      "gen": "poczty",
+      "dat": "poczcie",
+      "acc": "pocztę",
+      "ins": "pocztą",
+      "loc": "poczcie",
+      "voc": "poczto"
+    },
+    "plural": {
+      "nom": "poczty",
+      "gen": "poczt",
+      "dat": "pocztom",
+      "acc": "poczty",
+      "ins": "pocztami",
+      "loc": "pocztach",
+      "voc": "poczty"
+    }
+  }
+}

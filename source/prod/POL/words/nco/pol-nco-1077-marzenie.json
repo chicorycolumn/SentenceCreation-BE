@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "marzenie",
+      "gen": "marzenia",
+      "dat": "marzeniu",
+      "acc": "marzenie",
+      "ins": "marzeniem",
+      "loc": "marzeniu",
+      "voc": "marzenie"
+    },
+    "plural": {
+      "nom": "marzenia",
+      "gen": "marzeń",
+      "dat": "marzeniom",
+      "acc": "marzenia",
+      "ins": "marzeniami",
+      "loc": "marzeniach",
+      "voc": "marzenia"
+    }
+  }
+}

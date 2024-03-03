@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dzwonek",
+      "gen": "dzwonka",
+      "dat": "dzwonkowi",
+      "acc": "dzwonek",
+      "ins": "dzwonkiem",
+      "loc": "dzwonku",
+      "voc": "dzwonku"
+    },
+    "plural": {
+      "nom": "dzwonki",
+      "gen": "dzwonków",
+      "dat": "dzwonkom",
+      "acc": "dzwonki",
+      "ins": "dzwonkami",
+      "loc": "dzwonkach",
+      "voc": "dzwonki"
+    }
+  }
+}

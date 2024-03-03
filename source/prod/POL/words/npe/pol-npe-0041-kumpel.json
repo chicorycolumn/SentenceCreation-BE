@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kumpel",
+      "gen": "kumpla",
+      "dat": "kumplowi",
+      "acc": "kumpla",
+      "ins": "kumplem",
+      "loc": "kumplu",
+      "voc": "kumplu"
+    },
+    "plural": {
+      "nom": "kumple",
+      "gen": "kumpli",
+      "dat": "kumplom",
+      "acc": "kumpli",
+      "ins": "kumplami",
+      "loc": "kumplach",
+      "voc": "kumple"
+    }
+  }
+}

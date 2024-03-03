@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "uczyć",
+    "verbalNoun": "uczenie",
+    "activeAdjectival": "uczący",
+    "passiveAdjectival": "uczony",
+    "contemporaryAdverbial": "ucząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "ucz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "uczono"
+          },
+          "plural": {
+            "allPluralGenders": "uczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "uczyłem",
+            "f": "uczyłam"
+          },
+          "plural": {
+            "virile": "uczyliśmy",
+            "nonvirile": "uczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "uczyłeś",
+            "f": "uczyłaś"
+          },
+          "plural": {
+            "virile": "uczyliście",
+            "nonvirile": "uczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "uczył",
+            "f": "uczyła",
+            "n": "uczyło"
+          },
+          "plural": {
+            "virile": "uczyli",
+            "nonvirile": "uczyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "uczy się"
+          },
+          "plural": {
+            "allPluralGenders": "uczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "uczę"
+          },
+          "plural": {
+            "allPluralGenders": "uczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "uczysz"
+          },
+          "plural": {
+            "allPluralGenders": "uczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "uczy"
+          },
+          "plural": {
+            "allPluralGenders": "uczą"
+          }
+        }
+      }
+    }
+  }
+}

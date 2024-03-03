@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "bóbr",
+      "gen": "bobra",
+      "dat": "bobrowi",
+      "acc": "bobra",
+      "ins": "bobrem",
+      "loc": "bobrze",
+      "voc": "bobrze"
+    },
+    "plural": {
+      "nom": "bobry",
+      "gen": "bobrów",
+      "dat": "bobrom",
+      "acc": "bobry",
+      "ins": "bobrami",
+      "loc": "bobrach",
+      "voc": "bobry"
+    }
+  }
+}

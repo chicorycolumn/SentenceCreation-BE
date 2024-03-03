@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dowód",
+      "gen": "dowodu",
+      "dat": "dowodowi",
+      "acc": "dowód",
+      "ins": "dowodem",
+      "loc": "dowodzie",
+      "voc": "dowodzie"
+    },
+    "plural": {
+      "nom": "dowody",
+      "gen": "dowodów",
+      "dat": "dowodom",
+      "acc": "dowody",
+      "ins": "dowodami",
+      "loc": "dowodach",
+      "voc": "dowody"
+    }
+  }
+}

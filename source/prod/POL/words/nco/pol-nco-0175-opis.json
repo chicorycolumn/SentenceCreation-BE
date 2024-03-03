@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "opis",
+      "gen": "opisu",
+      "dat": "opisowi",
+      "acc": "opis",
+      "ins": "opisem",
+      "loc": "opisie",
+      "voc": "opisie"
+    },
+    "plural": {
+      "nom": "opisy",
+      "gen": "opisów",
+      "dat": "opisom",
+      "acc": "opisy",
+      "ins": "opisami",
+      "loc": "opisach",
+      "voc": "opisy"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zostawiać",
+    "verbalNoun": "zostawianie",
+    "activeAdjectival": "zostawiający",
+    "passiveAdjectival": "zostawiany",
+    "contemporaryAdverbial": "zostawiając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "zostawiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zostawiano"
+          },
+          "plural": {
+            "allPluralGenders": "zostawiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zostawiałem",
+            "f": "zostawiałam"
+          },
+          "plural": {
+            "virile": "zostawialiśmy",
+            "nonvirile": "zostawiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zostawiałeś",
+            "f": "zostawiałaś"
+          },
+          "plural": {
+            "virile": "zostawialiście",
+            "nonvirile": "zostawiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zostawiał",
+            "f": "zostawiała",
+            "n": "zostawiało"
+          },
+          "plural": {
+            "virile": "zostawiali",
+            "nonvirile": "zostawiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zostawia się"
+          },
+          "plural": {
+            "allPluralGenders": "zostawia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zostawiam"
+          },
+          "plural": {
+            "allPluralGenders": "zostawiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zostawiasz"
+          },
+          "plural": {
+            "allPluralGenders": "zostawiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zostawia"
+          },
+          "plural": {
+            "allPluralGenders": "zostawiają"
+          }
+        }
+      }
+    }
+  }
+}

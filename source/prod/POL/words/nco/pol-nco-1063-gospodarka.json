@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gospodarka",
+      "gen": "gospodarki",
+      "dat": "gospodarce",
+      "acc": "gospodarkę",
+      "ins": "gospodarką",
+      "loc": "gospodarce",
+      "voc": "gospodarko"
+    },
+    "plural": {
+      "nom": "gospodarki",
+      "gen": "gospodarek",
+      "dat": "gospodarkom",
+      "acc": "gospodarki",
+      "ins": "gospodarkami",
+      "loc": "gospodarkach",
+      "voc": "gospodarki"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "powstrzymać",
+    "verbalNoun": "powstrzymanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "powstrzymany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "powstrzymawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powstrzyma się"
+          },
+          "plural": {
+            "allPluralGenders": "powstrzyma się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "powstrzymam"
+          },
+          "plural": {
+            "allPluralGenders": "powstrzymamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "powstrzymasz"
+          },
+          "plural": {
+            "allPluralGenders": "powstrzymacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "powstrzyma"
+          },
+          "plural": {
+            "allPluralGenders": "powstrzymają"
+          }
+        }
+      },
+      "imperative": "powstrzymaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powstrzymano"
+          },
+          "plural": {
+            "allPluralGenders": "powstrzymano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "powstrzymałem",
+            "f": "powstrzymałam"
+          },
+          "plural": {
+            "virile": "powstrzymaliśmy",
+            "nonvirile": "powstrzymałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "powstrzymałeś",
+            "f": "powstrzymałaś"
+          },
+          "plural": {
+            "virile": "powstrzymaliście",
+            "nonvirile": "powstrzymałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "powstrzymał",
+            "f": "powstrzymała",
+            "n": "powstrzymało"
+          },
+          "plural": {
+            "virile": "powstrzymali",
+            "nonvirile": "powstrzymały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

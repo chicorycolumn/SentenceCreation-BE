@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "barwnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "barwny",
+          "gen": "barwnego",
+          "dat": "barwnemu",
+          "acc": "barwnego",
+          "ins": "barwnym",
+          "loc": "barwnym"
+        },
+        "m3": {
+          "nom": "barwny",
+          "gen": "barwnego",
+          "dat": "barwnemu",
+          "acc": "barwny",
+          "ins": "barwnym",
+          "loc": "barwnym"
+        },
+        "f": {
+          "nom": "barwna",
+          "gen": "barwnej",
+          "dat": "barwnej",
+          "acc": "barwną",
+          "ins": "barwną",
+          "loc": "barwnej"
+        },
+        "n": {
+          "nom": "barwne",
+          "gen": "barwnego",
+          "dat": "barwnemu",
+          "acc": "barwne",
+          "ins": "barwnym",
+          "loc": "barwnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "barwni",
+          "gen": "barwnych",
+          "dat": "barwnym",
+          "acc": "barwnych",
+          "ins": "barwnymi",
+          "loc": "barwnych"
+        },
+        "nonvirile": {
+          "nom": "barwne",
+          "gen": "barwnych",
+          "dat": "barwnym",
+          "acc": "barwne",
+          "ins": "barwnymi",
+          "loc": "barwnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszy",
+              "bardziej barwny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszego",
+              "bardziej barwnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszemu",
+              "bardziej barwnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszego",
+              "bardziej barwnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszym",
+              "bardziej barwnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszym",
+              "bardziej barwnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszy",
+              "bardziej barwny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszego",
+              "bardziej barwnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszemu",
+              "bardziej barwnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszy",
+              "bardziej barwny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszym",
+              "bardziej barwnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszym",
+              "bardziej barwnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejsza",
+              "bardziej barwna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszej",
+              "bardziej barwnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszej",
+              "bardziej barwnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszą",
+              "bardziej barwną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszą",
+              "bardziej barwną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszej",
+              "bardziej barwnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejsze",
+              "bardziej barwne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszego",
+              "bardziej barwnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszemu",
+              "bardziej barwnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejsze",
+              "bardziej barwne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszym",
+              "bardziej barwnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszym",
+              "bardziej barwnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejsi",
+              "bardziej barwni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszych",
+              "bardziej barwnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszym",
+              "bardziej barwnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszych",
+              "bardziej barwnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszymi",
+              "bardziej barwnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszych",
+              "bardziej barwnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejsze",
+              "bardziej barwne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszych",
+              "bardziej barwnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszym",
+              "bardziej barwnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejsze",
+              "bardziej barwne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszymi",
+              "bardziej barwnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "barwniejszych",
+              "bardziej barwnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszy",
+              "najbardziej barwny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszego",
+              "najbardziej barwnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszemu",
+              "najbardziej barwnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszego",
+              "najbardziej barwnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszym",
+              "najbardziej barwnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszym",
+              "najbardziej barwnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszy",
+              "najbardziej barwny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszego",
+              "najbardziej barwnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszemu",
+              "najbardziej barwnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszy",
+              "najbardziej barwny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszym",
+              "najbardziej barwnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszym",
+              "najbardziej barwnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejsza",
+              "najbardziej barwna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszej",
+              "najbardziej barwnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszej",
+              "najbardziej barwnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszą",
+              "najbardziej barwną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszą",
+              "najbardziej barwną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszej",
+              "najbardziej barwnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejsze",
+              "najbardziej barwne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszego",
+              "najbardziej barwnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszemu",
+              "najbardziej barwnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejsze",
+              "najbardziej barwne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszym",
+              "najbardziej barwnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszym",
+              "najbardziej barwnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejsi",
+              "najbardziej barwni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszych",
+              "najbardziej barwnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszym",
+              "najbardziej barwnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszych",
+              "najbardziej barwnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszymi",
+              "najbardziej barwnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszych",
+              "najbardziej barwnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejsze",
+              "najbardziej barwne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszych",
+              "najbardziej barwnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszym",
+              "najbardziej barwnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejsze",
+              "najbardziej barwne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszymi",
+              "najbardziej barwnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najbarwniejszych",
+              "najbardziej barwnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

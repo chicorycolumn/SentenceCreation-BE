@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "drewniany",
+          "gen": "drewnianego",
+          "dat": "drewnianemu",
+          "acc": "drewnianego",
+          "ins": "drewnianym",
+          "loc": "drewnianym"
+        },
+        "m3": {
+          "nom": "drewniany",
+          "gen": "drewnianego",
+          "dat": "drewnianemu",
+          "acc": "drewniany",
+          "ins": "drewnianym",
+          "loc": "drewnianym"
+        },
+        "f": {
+          "nom": "drewniana",
+          "gen": "drewnianej",
+          "dat": "drewnianej",
+          "acc": "drewnianą",
+          "ins": "drewnianą",
+          "loc": "drewnianej"
+        },
+        "n": {
+          "nom": "drewniane",
+          "gen": "drewnianego",
+          "dat": "drewnianemu",
+          "acc": "drewniane",
+          "ins": "drewnianym",
+          "loc": "drewnianym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "drewniani",
+          "gen": "drewnianych",
+          "dat": "drewnianym",
+          "acc": "drewnianych",
+          "ins": "drewnianymi",
+          "loc": "drewnianych"
+        },
+        "nonvirile": {
+          "nom": "drewniane",
+          "gen": "drewnianych",
+          "dat": "drewnianym",
+          "acc": "drewniane",
+          "ins": "drewnianymi",
+          "loc": "drewnianych"
+        }
+      }
+    }
+  }
+}

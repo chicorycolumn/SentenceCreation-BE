@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ból",
+      "gen": "bólu",
+      "dat": "bólowi",
+      "acc": "ból",
+      "ins": "bólem",
+      "loc": "bólu",
+      "voc": "bólu"
+    },
+    "plural": {
+      "nom": "bóle",
+      "gen": [
+        "bólów",
+        "bóli"
+      ],
+      "dat": "bólom",
+      "acc": "bóle",
+      "ins": "bólami",
+      "loc": "bólach",
+      "voc": "bóle"
+    }
+  }
+}

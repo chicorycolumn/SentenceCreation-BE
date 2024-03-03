@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "drogo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "drogi",
+          "gen": "drogiego",
+          "dat": "drogiemu",
+          "acc": "drogiego",
+          "ins": "drogim",
+          "loc": "drogim"
+        },
+        "m3": {
+          "nom": "drogi",
+          "gen": "drogiego",
+          "dat": "drogiemu",
+          "acc": "drogi",
+          "ins": "drogim",
+          "loc": "drogim"
+        },
+        "f": {
+          "nom": "droga",
+          "gen": "drogiej",
+          "dat": "drogiej",
+          "acc": "drogą",
+          "ins": "drogą",
+          "loc": "drogiej"
+        },
+        "n": {
+          "nom": "drogie",
+          "gen": "drogiego",
+          "dat": "drogiemu",
+          "acc": "drogie",
+          "ins": "drogim",
+          "loc": "drogim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "drodzy",
+          "gen": "drogich",
+          "dat": "drogim",
+          "acc": "drogich",
+          "ins": "drogimi",
+          "loc": "drogich"
+        },
+        "nonvirile": {
+          "nom": "drogie",
+          "gen": "drogich",
+          "dat": "drogim",
+          "acc": "drogie",
+          "ins": "drogimi",
+          "loc": "drogich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "droższy",
+          "gen": "droższego",
+          "dat": "droższemu",
+          "acc": "droższego",
+          "ins": "droższym",
+          "loc": "droższym"
+        },
+        "m3": {
+          "nom": "droższy",
+          "gen": "droższego",
+          "dat": "droższemu",
+          "acc": "droższy",
+          "ins": "droższym",
+          "loc": "droższym"
+        },
+        "f": {
+          "nom": "droższa",
+          "gen": "droższej",
+          "dat": "droższej",
+          "acc": "droższą",
+          "ins": "droższą",
+          "loc": "droższej"
+        },
+        "n": {
+          "nom": "droższe",
+          "gen": "droższego",
+          "dat": "droższemu",
+          "acc": "droższe",
+          "ins": "droższym",
+          "loc": "droższym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "drożsi",
+          "gen": "droższych",
+          "dat": "droższym",
+          "acc": "droższych",
+          "ins": "droższymi",
+          "loc": "droższych"
+        },
+        "nonvirile": {
+          "nom": "droższe",
+          "gen": "droższych",
+          "dat": "droższym",
+          "acc": "droższe",
+          "ins": "droższymi",
+          "loc": "droższych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najdroższy",
+          "gen": "najdroższego",
+          "dat": "najdroższemu",
+          "acc": "najdroższego",
+          "ins": "najdroższym",
+          "loc": "najdroższym"
+        },
+        "m3": {
+          "nom": "najdroższy",
+          "gen": "najdroższego",
+          "dat": "najdroższemu",
+          "acc": "najdroższy",
+          "ins": "najdroższym",
+          "loc": "najdroższym"
+        },
+        "f": {
+          "nom": "najdroższa",
+          "gen": "najdroższej",
+          "dat": "najdroższej",
+          "acc": "najdroższą",
+          "ins": "najdroższą",
+          "loc": "najdroższej"
+        },
+        "n": {
+          "nom": "najdroższe",
+          "gen": "najdroższego",
+          "dat": "najdroższemu",
+          "acc": "najdroższe",
+          "ins": "najdroższym",
+          "loc": "najdroższym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najdrożsi",
+          "gen": "najdroższych",
+          "dat": "najdroższym",
+          "acc": "najdroższych",
+          "ins": "najdroższymi",
+          "loc": "najdroższych"
+        },
+        "nonvirile": {
+          "nom": "najdroższe",
+          "gen": "najdroższych",
+          "dat": "najdroższym",
+          "acc": "najdroższe",
+          "ins": "najdroższymi",
+          "loc": "najdroższych"
+        }
+      }
+    }
+  }
+}

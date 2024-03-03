@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "czosnek",
+      "gen": "czosnku",
+      "dat": "czosnkowi",
+      "acc": "czosnek",
+      "ins": "czosnkiem",
+      "loc": "czosnku",
+      "voc": "czosnku"
+    },
+    "plural": {
+      "nom": "czosnki",
+      "gen": "czosnków",
+      "dat": "czosnkom",
+      "acc": "czosnki",
+      "ins": "czosnkami",
+      "loc": "czosnkach",
+      "voc": "czosnki"
+    }
+  }
+}

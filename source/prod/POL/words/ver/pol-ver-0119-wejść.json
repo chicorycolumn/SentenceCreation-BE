@@ -1,0 +1,82 @@
+{
+  "inflections": {
+    "infinitive": "wejść",
+    "verbalNoun": "wejście",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "wszedłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wejdzie się"
+          },
+          "plural": {
+            "allPluralGenders": "wejdzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wejdę"
+          },
+          "plural": {
+            "allPluralGenders": "wejdziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wejdziesz"
+          },
+          "plural": {
+            "allPluralGenders": "wejdziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wejdzie"
+          },
+          "plural": {
+            "allPluralGenders": "wejdą"
+          }
+        }
+      },
+      "imperative": "wejdź",
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "wszedłem",
+            "f": "weszłam"
+          },
+          "plural": {
+            "virile": "weszliśmy",
+            "nonvirile": "weszłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wszedłeś",
+            "f": "weszłaś"
+          },
+          "plural": {
+            "virile": "weszliście",
+            "nonvirile": "weszłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wszedł",
+            "f": "weszła",
+            "n": "weszło"
+          },
+          "plural": {
+            "virile": "weszli",
+            "nonvirile": "weszły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

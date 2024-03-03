@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "bezsilnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bezsilny",
+          "gen": "bezsilnego",
+          "dat": "bezsilnemu",
+          "acc": "bezsilnego",
+          "ins": "bezsilnym",
+          "loc": "bezsilnym"
+        },
+        "m3": {
+          "nom": "bezsilny",
+          "gen": "bezsilnego",
+          "dat": "bezsilnemu",
+          "acc": "bezsilny",
+          "ins": "bezsilnym",
+          "loc": "bezsilnym"
+        },
+        "f": {
+          "nom": "bezsilna",
+          "gen": "bezsilnej",
+          "dat": "bezsilnej",
+          "acc": "bezsilną",
+          "ins": "bezsilną",
+          "loc": "bezsilnej"
+        },
+        "n": {
+          "nom": "bezsilne",
+          "gen": "bezsilnego",
+          "dat": "bezsilnemu",
+          "acc": "bezsilne",
+          "ins": "bezsilnym",
+          "loc": "bezsilnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bezsilni",
+          "gen": "bezsilnych",
+          "dat": "bezsilnym",
+          "acc": "bezsilnych",
+          "ins": "bezsilnymi",
+          "loc": "bezsilnych"
+        },
+        "nonvirile": {
+          "nom": "bezsilne",
+          "gen": "bezsilnych",
+          "dat": "bezsilnym",
+          "acc": "bezsilne",
+          "ins": "bezsilnymi",
+          "loc": "bezsilnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej bezsilny",
+          "gen": "bardziej bezsilnego",
+          "dat": "bardziej bezsilnemu",
+          "acc": "bardziej bezsilnego",
+          "ins": "bardziej bezsilnym",
+          "loc": "bardziej bezsilnym"
+        },
+        "m3": {
+          "nom": "bardziej bezsilny",
+          "gen": "bardziej bezsilnego",
+          "dat": "bardziej bezsilnemu",
+          "acc": "bardziej bezsilny",
+          "ins": "bardziej bezsilnym",
+          "loc": "bardziej bezsilnym"
+        },
+        "f": {
+          "nom": "bardziej bezsilna",
+          "gen": "bardziej bezsilnej",
+          "dat": "bardziej bezsilnej",
+          "acc": "bardziej bezsilną",
+          "ins": "bardziej bezsilną",
+          "loc": "bardziej bezsilnej"
+        },
+        "n": {
+          "nom": "bardziej bezsilne",
+          "gen": "bardziej bezsilnego",
+          "dat": "bardziej bezsilnemu",
+          "acc": "bardziej bezsilne",
+          "ins": "bardziej bezsilnym",
+          "loc": "bardziej bezsilnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej bezsilni",
+          "gen": "bardziej bezsilnych",
+          "dat": "bardziej bezsilnym",
+          "acc": "bardziej bezsilnych",
+          "ins": "bardziej bezsilnymi",
+          "loc": "bardziej bezsilnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej bezsilne",
+          "gen": "bardziej bezsilnych",
+          "dat": "bardziej bezsilnym",
+          "acc": "bardziej bezsilne",
+          "ins": "bardziej bezsilnymi",
+          "loc": "bardziej bezsilnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej bezsilny",
+          "gen": "najbardziej bezsilnego",
+          "dat": "najbardziej bezsilnemu",
+          "acc": "najbardziej bezsilnego",
+          "ins": "najbardziej bezsilnym",
+          "loc": "najbardziej bezsilnym"
+        },
+        "m3": {
+          "nom": "najbardziej bezsilny",
+          "gen": "najbardziej bezsilnego",
+          "dat": "najbardziej bezsilnemu",
+          "acc": "najbardziej bezsilny",
+          "ins": "najbardziej bezsilnym",
+          "loc": "najbardziej bezsilnym"
+        },
+        "f": {
+          "nom": "najbardziej bezsilna",
+          "gen": "najbardziej bezsilnej",
+          "dat": "najbardziej bezsilnej",
+          "acc": "najbardziej bezsilną",
+          "ins": "najbardziej bezsilną",
+          "loc": "najbardziej bezsilnej"
+        },
+        "n": {
+          "nom": "najbardziej bezsilne",
+          "gen": "najbardziej bezsilnego",
+          "dat": "najbardziej bezsilnemu",
+          "acc": "najbardziej bezsilne",
+          "ins": "najbardziej bezsilnym",
+          "loc": "najbardziej bezsilnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej bezsilni",
+          "gen": "najbardziej bezsilnych",
+          "dat": "najbardziej bezsilnym",
+          "acc": "najbardziej bezsilnych",
+          "ins": "najbardziej bezsilnymi",
+          "loc": "najbardziej bezsilnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej bezsilne",
+          "gen": "najbardziej bezsilnych",
+          "dat": "najbardziej bezsilnym",
+          "acc": "najbardziej bezsilne",
+          "ins": "najbardziej bezsilnymi",
+          "loc": "najbardziej bezsilnych"
+        }
+      }
+    }
+  }
+}

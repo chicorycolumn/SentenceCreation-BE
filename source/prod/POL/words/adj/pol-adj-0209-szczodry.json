@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "szczodrze",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "szczodry",
+          "gen": "szczodrego",
+          "dat": "szczodremu",
+          "acc": "szczodrego",
+          "ins": "szczodrym",
+          "loc": "szczodrym"
+        },
+        "m3": {
+          "nom": "szczodry",
+          "gen": "szczodrego",
+          "dat": "szczodremu",
+          "acc": "szczodry",
+          "ins": "szczodrym",
+          "loc": "szczodrym"
+        },
+        "f": {
+          "nom": "szczodra",
+          "gen": "szczodrej",
+          "dat": "szczodrej",
+          "acc": "szczodrą",
+          "ins": "szczodrą",
+          "loc": "szczodrej"
+        },
+        "n": {
+          "nom": "szczodre",
+          "gen": "szczodrego",
+          "dat": "szczodremu",
+          "acc": "szczodre",
+          "ins": "szczodrym",
+          "loc": "szczodrym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "szczodrzy",
+          "gen": "szczodrych",
+          "dat": "szczodrym",
+          "acc": "szczodrych",
+          "ins": "szczodrymi",
+          "loc": "szczodrych"
+        },
+        "nonvirile": {
+          "nom": "szczodre",
+          "gen": "szczodrych",
+          "dat": "szczodrym",
+          "acc": "szczodre",
+          "ins": "szczodrymi",
+          "loc": "szczodrych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "szczodrzejszy",
+          "gen": "szczodrzejszego",
+          "dat": "szczodrzejszemu",
+          "acc": "szczodrzejszego",
+          "ins": "szczodrzejszym",
+          "loc": "szczodrzejszym"
+        },
+        "m3": {
+          "nom": "szczodrzejszy",
+          "gen": "szczodrzejszego",
+          "dat": "szczodrzejszemu",
+          "acc": "szczodrzejszy",
+          "ins": "szczodrzejszym",
+          "loc": "szczodrzejszym"
+        },
+        "f": {
+          "nom": "szczodrzejsza",
+          "gen": "szczodrzejszej",
+          "dat": "szczodrzejszej",
+          "acc": "szczodrzejszą",
+          "ins": "szczodrzejszą",
+          "loc": "szczodrzejszej"
+        },
+        "n": {
+          "nom": "szczodrzejsze",
+          "gen": "szczodrzejszego",
+          "dat": "szczodrzejszemu",
+          "acc": "szczodrzejsze",
+          "ins": "szczodrzejszym",
+          "loc": "szczodrzejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "szczodrzejsi",
+          "gen": "szczodrzejszych",
+          "dat": "szczodrzejszym",
+          "acc": "szczodrzejszych",
+          "ins": "szczodrzejszymi",
+          "loc": "szczodrzejszych"
+        },
+        "nonvirile": {
+          "nom": "szczodrzejsze",
+          "gen": "szczodrzejszych",
+          "dat": "szczodrzejszym",
+          "acc": "szczodrzejsze",
+          "ins": "szczodrzejszymi",
+          "loc": "szczodrzejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najszczodrzejszy",
+          "gen": "najszczodrzejszego",
+          "dat": "najszczodrzejszemu",
+          "acc": "najszczodrzejszego",
+          "ins": "najszczodrzejszym",
+          "loc": "najszczodrzejszym"
+        },
+        "m3": {
+          "nom": "najszczodrzejszy",
+          "gen": "najszczodrzejszego",
+          "dat": "najszczodrzejszemu",
+          "acc": "najszczodrzejszy",
+          "ins": "najszczodrzejszym",
+          "loc": "najszczodrzejszym"
+        },
+        "f": {
+          "nom": "najszczodrzejsza",
+          "gen": "najszczodrzejszej",
+          "dat": "najszczodrzejszej",
+          "acc": "najszczodrzejszą",
+          "ins": "najszczodrzejszą",
+          "loc": "najszczodrzejszej"
+        },
+        "n": {
+          "nom": "najszczodrzejsze",
+          "gen": "najszczodrzejszego",
+          "dat": "najszczodrzejszemu",
+          "acc": "najszczodrzejsze",
+          "ins": "najszczodrzejszym",
+          "loc": "najszczodrzejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najszczodrzejsi",
+          "gen": "najszczodrzejszych",
+          "dat": "najszczodrzejszym",
+          "acc": "najszczodrzejszych",
+          "ins": "najszczodrzejszymi",
+          "loc": "najszczodrzejszych"
+        },
+        "nonvirile": {
+          "nom": "najszczodrzejsze",
+          "gen": "najszczodrzejszych",
+          "dat": "najszczodrzejszym",
+          "acc": "najszczodrzejsze",
+          "ins": "najszczodrzejszymi",
+          "loc": "najszczodrzejszych"
+        }
+      }
+    }
+  }
+}

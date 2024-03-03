@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "litewski",
+          "gen": "litewskiego",
+          "dat": "litewskiemu",
+          "acc": "litewskiego",
+          "ins": "litewskim",
+          "loc": "litewskim"
+        },
+        "m3": {
+          "nom": "litewski",
+          "gen": "litewskiego",
+          "dat": "litewskiemu",
+          "acc": "litewski",
+          "ins": "litewskim",
+          "loc": "litewskim"
+        },
+        "f": {
+          "nom": "litewska",
+          "gen": "litewskiej",
+          "dat": "litewskiej",
+          "acc": "litewską",
+          "ins": "litewską",
+          "loc": "litewskiej"
+        },
+        "n": {
+          "nom": "litewskie",
+          "gen": "litewskiego",
+          "dat": "litewskiemu",
+          "acc": "litewskie",
+          "ins": "litewskim",
+          "loc": "litewskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "litewscy",
+          "gen": "litewskich",
+          "dat": "litewskim",
+          "acc": "litewskich",
+          "ins": "litewskimi",
+          "loc": "litewskich"
+        },
+        "nonvirile": {
+          "nom": "litewskie",
+          "gen": "litewskich",
+          "dat": "litewskim",
+          "acc": "litewskie",
+          "ins": "litewskimi",
+          "loc": "litewskich"
+        }
+      }
+    }
+  }
+}

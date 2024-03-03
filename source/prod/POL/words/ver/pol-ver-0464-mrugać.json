@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "mrugać",
+    "verbalNoun": "mruganie",
+    "activeAdjectival": "mrugający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "mrugając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "mrugaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mrugano"
+          },
+          "plural": {
+            "allPluralGenders": "mrugano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "mrugałem",
+            "f": "mrugałam"
+          },
+          "plural": {
+            "virile": "mrugaliśmy",
+            "nonvirile": "mrugałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "mrugałeś",
+            "f": "mrugałaś"
+          },
+          "plural": {
+            "virile": "mrugaliście",
+            "nonvirile": "mrugałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "mrugał",
+            "f": "mrugała",
+            "n": "mrugało"
+          },
+          "plural": {
+            "virile": "mrugali",
+            "nonvirile": "mrugały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mruga się"
+          },
+          "plural": {
+            "allPluralGenders": "mruga się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "mrugam"
+          },
+          "plural": {
+            "allPluralGenders": "mrugamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "mrugasz"
+          },
+          "plural": {
+            "allPluralGenders": "mrugacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "mruga"
+          },
+          "plural": {
+            "allPluralGenders": "mrugają"
+          }
+        }
+      }
+    }
+  }
+}

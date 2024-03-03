@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oczyszczać",
+    "verbalNoun": "oczyszczanie",
+    "activeAdjectival": "oczyszczający",
+    "passiveAdjectival": "oczyszczany",
+    "contemporaryAdverbial": "oczyszczając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "oczyszczaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oczyszczano"
+          },
+          "plural": {
+            "allPluralGenders": "oczyszczano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oczyszczałem",
+            "f": "oczyszczałam"
+          },
+          "plural": {
+            "virile": "oczyszczaliśmy",
+            "nonvirile": "oczyszczałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oczyszczałeś",
+            "f": "oczyszczałaś"
+          },
+          "plural": {
+            "virile": "oczyszczaliście",
+            "nonvirile": "oczyszczałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oczyszczał",
+            "f": "oczyszczała",
+            "n": "oczyszczało"
+          },
+          "plural": {
+            "virile": "oczyszczali",
+            "nonvirile": "oczyszczały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oczyszcza się"
+          },
+          "plural": {
+            "allPluralGenders": "oczyszcza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oczyszczam"
+          },
+          "plural": {
+            "allPluralGenders": "oczyszczamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oczyszczasz"
+          },
+          "plural": {
+            "allPluralGenders": "oczyszczacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "oczyszcza"
+          },
+          "plural": {
+            "allPluralGenders": "oczyszczają"
+          }
+        }
+      }
+    }
+  }
+}

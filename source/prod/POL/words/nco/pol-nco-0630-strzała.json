@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "strzała",
+      "gen": "strzały",
+      "dat": "strzale",
+      "acc": "strzałę",
+      "ins": "strzałą",
+      "loc": "strzale",
+      "voc": "strzało"
+    },
+    "plural": {
+      "nom": "strzały",
+      "gen": "strzał",
+      "dat": "strzałom",
+      "acc": "strzały",
+      "ins": "strzałami",
+      "loc": "strzałach",
+      "voc": "strzały"
+    }
+  }
+}

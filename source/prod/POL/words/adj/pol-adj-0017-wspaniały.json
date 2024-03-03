@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "wspaniale",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "wspaniały",
+          "gen": "wspaniałego",
+          "dat": "wspaniałemu",
+          "acc": "wspaniałego",
+          "ins": "wspaniałym",
+          "loc": "wspaniałym"
+        },
+        "m3": {
+          "nom": "wspaniały",
+          "gen": "wspaniałego",
+          "dat": "wspaniałemu",
+          "acc": "wspaniały",
+          "ins": "wspaniałym",
+          "loc": "wspaniałym"
+        },
+        "f": {
+          "nom": "wspaniała",
+          "gen": "wspaniałej",
+          "dat": "wspaniałej",
+          "acc": "wspaniałą",
+          "ins": "wspaniałą",
+          "loc": "wspaniałej"
+        },
+        "n": {
+          "nom": "wspaniałe",
+          "gen": "wspaniałego",
+          "dat": "wspaniałemu",
+          "acc": "wspaniałe",
+          "ins": "wspaniałym",
+          "loc": "wspaniałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wspaniali",
+          "gen": "wspaniałych",
+          "dat": "wspaniałym",
+          "acc": "wspaniałych",
+          "ins": "wspaniałymi",
+          "loc": "wspaniałych"
+        },
+        "nonvirile": {
+          "nom": "wspaniałe",
+          "gen": "wspaniałych",
+          "dat": "wspaniałym",
+          "acc": "wspaniałe",
+          "ins": "wspaniałymi",
+          "loc": "wspaniałych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszy",
+              "bardziej wspaniały"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszego",
+              "bardziej wspaniałego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszemu",
+              "bardziej wspaniałemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszego",
+              "bardziej wspaniałego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszym",
+              "bardziej wspaniałym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszym",
+              "bardziej wspaniałym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszy",
+              "bardziej wspaniały"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszego",
+              "bardziej wspaniałego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszemu",
+              "bardziej wspaniałemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszy",
+              "bardziej wspaniały"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszym",
+              "bardziej wspaniałym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszym",
+              "bardziej wspaniałym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialsza",
+              "bardziej wspaniała"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszej",
+              "bardziej wspaniałej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszej",
+              "bardziej wspaniałej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszą",
+              "bardziej wspaniałą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszą",
+              "bardziej wspaniałą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszej",
+              "bardziej wspaniałej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialsze",
+              "bardziej wspaniałe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszego",
+              "bardziej wspaniałego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszemu",
+              "bardziej wspaniałemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialsze",
+              "bardziej wspaniałe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszym",
+              "bardziej wspaniałym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszym",
+              "bardziej wspaniałym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialsi",
+              "bardziej wspaniali"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszych",
+              "bardziej wspaniałych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszym",
+              "bardziej wspaniałym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszych",
+              "bardziej wspaniałych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszymi",
+              "bardziej wspaniałymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszych",
+              "bardziej wspaniałych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialsze",
+              "bardziej wspaniałe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszych",
+              "bardziej wspaniałych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszym",
+              "bardziej wspaniałym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialsze",
+              "bardziej wspaniałe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszymi",
+              "bardziej wspaniałymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "wspanialszych",
+              "bardziej wspaniałych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszy",
+              "najbardziej wspaniały"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszego",
+              "najbardziej wspaniałego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszemu",
+              "najbardziej wspaniałemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszego",
+              "najbardziej wspaniałego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszym",
+              "najbardziej wspaniałym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszym",
+              "najbardziej wspaniałym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszy",
+              "najbardziej wspaniały"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszego",
+              "najbardziej wspaniałego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszemu",
+              "najbardziej wspaniałemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszy",
+              "najbardziej wspaniały"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszym",
+              "najbardziej wspaniałym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszym",
+              "najbardziej wspaniałym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialsza",
+              "najbardziej wspaniała"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszej",
+              "najbardziej wspaniałej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszej",
+              "najbardziej wspaniałej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszą",
+              "najbardziej wspaniałą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszą",
+              "najbardziej wspaniałą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszej",
+              "najbardziej wspaniałej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialsze",
+              "najbardziej wspaniałe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszego",
+              "najbardziej wspaniałego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszemu",
+              "najbardziej wspaniałemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialsze",
+              "najbardziej wspaniałe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszym",
+              "najbardziej wspaniałym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszym",
+              "najbardziej wspaniałym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialsi",
+              "najbardziej wspaniali"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszych",
+              "najbardziej wspaniałych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszym",
+              "najbardziej wspaniałym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszych",
+              "najbardziej wspaniałych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszymi",
+              "najbardziej wspaniałymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszych",
+              "najbardziej wspaniałych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialsze",
+              "najbardziej wspaniałe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszych",
+              "najbardziej wspaniałych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszym",
+              "najbardziej wspaniałym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialsze",
+              "najbardziej wspaniałe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszymi",
+              "najbardziej wspaniałymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najwspanialszych",
+              "najbardziej wspaniałych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

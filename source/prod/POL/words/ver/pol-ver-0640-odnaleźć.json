@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odnaleźć",
+    "verbalNoun": "odnalezienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "odnaleziony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odnalazłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odnajdzie się"
+          },
+          "plural": {
+            "allPluralGenders": "odnajdzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odnajdę"
+          },
+          "plural": {
+            "allPluralGenders": "odnajdziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odnajdziesz"
+          },
+          "plural": {
+            "allPluralGenders": "odnajdziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odnajdzie"
+          },
+          "plural": {
+            "allPluralGenders": "odnajdą"
+          }
+        }
+      },
+      "imperative": "odnajdź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odnaleziono"
+          },
+          "plural": {
+            "allPluralGenders": "odnaleziono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odnalazłem",
+            "f": "odnalazłam"
+          },
+          "plural": {
+            "virile": "odnaleźliśmy",
+            "nonvirile": "odnalazłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odnalazłeś",
+            "f": "odnalazłaś"
+          },
+          "plural": {
+            "virile": "odnaleźliście",
+            "nonvirile": "odnalazłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odnalazł",
+            "f": "odnalazła",
+            "n": "odnalazło"
+          },
+          "plural": {
+            "virile": "odnaleźli",
+            "nonvirile": "odnalazły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

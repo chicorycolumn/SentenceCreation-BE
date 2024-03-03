@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "uran",
+      "gen": "uranu",
+      "dat": "uranowi",
+      "acc": "uran",
+      "ins": "uranem",
+      "loc": "uranie",
+      "voc": "uranie"
+    }
+  }
+}

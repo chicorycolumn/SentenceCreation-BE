@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zagraniczny",
+          "gen": "zagranicznego",
+          "dat": "zagranicznemu",
+          "acc": "zagranicznego",
+          "ins": "zagranicznym",
+          "loc": "zagranicznym"
+        },
+        "m3": {
+          "nom": "zagraniczny",
+          "gen": "zagranicznego",
+          "dat": "zagranicznemu",
+          "acc": "zagraniczny",
+          "ins": "zagranicznym",
+          "loc": "zagranicznym"
+        },
+        "f": {
+          "nom": "zagraniczna",
+          "gen": "zagranicznej",
+          "dat": "zagranicznej",
+          "acc": "zagraniczną",
+          "ins": "zagraniczną",
+          "loc": "zagranicznej"
+        },
+        "n": {
+          "nom": "zagraniczne",
+          "gen": "zagranicznego",
+          "dat": "zagranicznemu",
+          "acc": "zagraniczne",
+          "ins": "zagranicznym",
+          "loc": "zagranicznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zagraniczni",
+          "gen": "zagranicznych",
+          "dat": "zagranicznym",
+          "acc": "zagranicznych",
+          "ins": "zagranicznymi",
+          "loc": "zagranicznych"
+        },
+        "nonvirile": {
+          "nom": "zagraniczne",
+          "gen": "zagranicznych",
+          "dat": "zagranicznym",
+          "acc": "zagraniczne",
+          "ins": "zagranicznymi",
+          "loc": "zagranicznych"
+        }
+      }
+    }
+  }
+}

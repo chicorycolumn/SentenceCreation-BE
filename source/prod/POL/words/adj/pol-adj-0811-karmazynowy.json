@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "karmazynowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "karmazynowy",
+          "gen": "karmazynowego",
+          "dat": "karmazynowemu",
+          "acc": "karmazynowego",
+          "ins": "karmazynowym",
+          "loc": "karmazynowym"
+        },
+        "m3": {
+          "nom": "karmazynowy",
+          "gen": "karmazynowego",
+          "dat": "karmazynowemu",
+          "acc": "karmazynowy",
+          "ins": "karmazynowym",
+          "loc": "karmazynowym"
+        },
+        "f": {
+          "nom": "karmazynowa",
+          "gen": "karmazynowej",
+          "dat": "karmazynowej",
+          "acc": "karmazynową",
+          "ins": "karmazynową",
+          "loc": "karmazynowej"
+        },
+        "n": {
+          "nom": "karmazynowe",
+          "gen": "karmazynowego",
+          "dat": "karmazynowemu",
+          "acc": "karmazynowe",
+          "ins": "karmazynowym",
+          "loc": "karmazynowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "karmazynowi",
+          "gen": "karmazynowych",
+          "dat": "karmazynowym",
+          "acc": "karmazynowych",
+          "ins": "karmazynowymi",
+          "loc": "karmazynowych"
+        },
+        "nonvirile": {
+          "nom": "karmazynowe",
+          "gen": "karmazynowych",
+          "dat": "karmazynowym",
+          "acc": "karmazynowe",
+          "ins": "karmazynowymi",
+          "loc": "karmazynowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej karmazynowy",
+          "gen": "bardziej karmazynowego",
+          "dat": "bardziej karmazynowemu",
+          "acc": "bardziej karmazynowego",
+          "ins": "bardziej karmazynowym",
+          "loc": "bardziej karmazynowym"
+        },
+        "m3": {
+          "nom": "bardziej karmazynowy",
+          "gen": "bardziej karmazynowego",
+          "dat": "bardziej karmazynowemu",
+          "acc": "bardziej karmazynowy",
+          "ins": "bardziej karmazynowym",
+          "loc": "bardziej karmazynowym"
+        },
+        "f": {
+          "nom": "bardziej karmazynowa",
+          "gen": "bardziej karmazynowej",
+          "dat": "bardziej karmazynowej",
+          "acc": "bardziej karmazynową",
+          "ins": "bardziej karmazynową",
+          "loc": "bardziej karmazynowej"
+        },
+        "n": {
+          "nom": "bardziej karmazynowe",
+          "gen": "bardziej karmazynowego",
+          "dat": "bardziej karmazynowemu",
+          "acc": "bardziej karmazynowe",
+          "ins": "bardziej karmazynowym",
+          "loc": "bardziej karmazynowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej karmazynowi",
+          "gen": "bardziej karmazynowych",
+          "dat": "bardziej karmazynowym",
+          "acc": "bardziej karmazynowych",
+          "ins": "bardziej karmazynowymi",
+          "loc": "bardziej karmazynowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej karmazynowe",
+          "gen": "bardziej karmazynowych",
+          "dat": "bardziej karmazynowym",
+          "acc": "bardziej karmazynowe",
+          "ins": "bardziej karmazynowymi",
+          "loc": "bardziej karmazynowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej karmazynowy",
+          "gen": "najbardziej karmazynowego",
+          "dat": "najbardziej karmazynowemu",
+          "acc": "najbardziej karmazynowego",
+          "ins": "najbardziej karmazynowym",
+          "loc": "najbardziej karmazynowym"
+        },
+        "m3": {
+          "nom": "najbardziej karmazynowy",
+          "gen": "najbardziej karmazynowego",
+          "dat": "najbardziej karmazynowemu",
+          "acc": "najbardziej karmazynowy",
+          "ins": "najbardziej karmazynowym",
+          "loc": "najbardziej karmazynowym"
+        },
+        "f": {
+          "nom": "najbardziej karmazynowa",
+          "gen": "najbardziej karmazynowej",
+          "dat": "najbardziej karmazynowej",
+          "acc": "najbardziej karmazynową",
+          "ins": "najbardziej karmazynową",
+          "loc": "najbardziej karmazynowej"
+        },
+        "n": {
+          "nom": "najbardziej karmazynowe",
+          "gen": "najbardziej karmazynowego",
+          "dat": "najbardziej karmazynowemu",
+          "acc": "najbardziej karmazynowe",
+          "ins": "najbardziej karmazynowym",
+          "loc": "najbardziej karmazynowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej karmazynowi",
+          "gen": "najbardziej karmazynowych",
+          "dat": "najbardziej karmazynowym",
+          "acc": "najbardziej karmazynowych",
+          "ins": "najbardziej karmazynowymi",
+          "loc": "najbardziej karmazynowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej karmazynowe",
+          "gen": "najbardziej karmazynowych",
+          "dat": "najbardziej karmazynowym",
+          "acc": "najbardziej karmazynowe",
+          "ins": "najbardziej karmazynowymi",
+          "loc": "najbardziej karmazynowych"
+        }
+      }
+    }
+  }
+}

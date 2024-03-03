@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "naleśnik",
+      "gen": "naleśnika",
+      "dat": "naleśnikowi",
+      "acc": "naleśnik",
+      "ins": "naleśnikiem",
+      "loc": "naleśniku",
+      "voc": "naleśniku"
+    },
+    "plural": {
+      "nom": "naleśniki",
+      "gen": "naleśników",
+      "dat": "naleśnikom",
+      "acc": "naleśniki",
+      "ins": "naleśnikami",
+      "loc": "naleśnikach",
+      "voc": "naleśniki"
+    }
+  }
+}

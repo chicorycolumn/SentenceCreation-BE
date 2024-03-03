@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dołączać",
+    "verbalNoun": "dołączanie",
+    "activeAdjectival": "dołączający",
+    "passiveAdjectival": "dołączany",
+    "contemporaryAdverbial": "dołączając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dołączaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dołączano"
+          },
+          "plural": {
+            "allPluralGenders": "dołączano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dołączałem",
+            "f": "dołączałam"
+          },
+          "plural": {
+            "virile": "dołączaliśmy",
+            "nonvirile": "dołączałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dołączałeś",
+            "f": "dołączałaś"
+          },
+          "plural": {
+            "virile": "dołączaliście",
+            "nonvirile": "dołączałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dołączał",
+            "f": "dołączała",
+            "n": "dołączało"
+          },
+          "plural": {
+            "virile": "dołączali",
+            "nonvirile": "dołączały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dołącza się"
+          },
+          "plural": {
+            "allPluralGenders": "dołącza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dołączam"
+          },
+          "plural": {
+            "allPluralGenders": "dołączamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dołączasz"
+          },
+          "plural": {
+            "allPluralGenders": "dołączacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dołącza"
+          },
+          "plural": {
+            "allPluralGenders": "dołączają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "strych",
+      "gen": "strychu",
+      "dat": "strychowi",
+      "acc": "strych",
+      "ins": "strychem",
+      "loc": "strychu",
+      "voc": "strychu"
+    },
+    "plural": {
+      "nom": "strychy",
+      "gen": "strychów",
+      "dat": "strychom",
+      "acc": "strychy",
+      "ins": "strychami",
+      "loc": "strychach",
+      "voc": "strychy"
+    }
+  }
+}

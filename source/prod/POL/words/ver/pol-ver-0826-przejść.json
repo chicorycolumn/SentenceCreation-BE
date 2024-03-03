@@ -1,0 +1,82 @@
+{
+  "inflections": {
+    "infinitive": "przejść",
+    "verbalNoun": "przejście",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przeszedłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przejdzie się"
+          },
+          "plural": {
+            "allPluralGenders": "przejdzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przejdę"
+          },
+          "plural": {
+            "allPluralGenders": "przejdziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przejdziesz"
+          },
+          "plural": {
+            "allPluralGenders": "przejdziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przejdzie"
+          },
+          "plural": {
+            "allPluralGenders": "przejdą"
+          }
+        }
+      },
+      "imperative": "przejdź",
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "przeszedłem",
+            "f": "przeszłam"
+          },
+          "plural": {
+            "virile": "przeszliśmy",
+            "nonvirile": "przeszłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przeszedłeś",
+            "f": "przeszłaś"
+          },
+          "plural": {
+            "virile": "przeszliście",
+            "nonvirile": "przeszłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przeszedł",
+            "f": "przeszła",
+            "n": "przeszło"
+          },
+          "plural": {
+            "virile": "przeszli",
+            "nonvirile": "przeszły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zgromadzic",
+    "verbalNoun": "zgromadzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zgromadzony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zgromadziwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zgromadzi się"
+          },
+          "plural": {
+            "allPluralGenders": "zgromadzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zgromadzę"
+          },
+          "plural": {
+            "allPluralGenders": "zgromadzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zgromadzisz"
+          },
+          "plural": {
+            "allPluralGenders": "zgromadzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zgromadzi"
+          },
+          "plural": {
+            "allPluralGenders": "zgromadzą"
+          }
+        }
+      },
+      "imperative": "zgromadź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zgromadzono"
+          },
+          "plural": {
+            "allPluralGenders": "zgromadzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zgromadziłem",
+            "f": "zgromadziłam"
+          },
+          "plural": {
+            "virile": "zgromadziliśmy",
+            "nonvirile": "zgromadziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zgromadziłeś",
+            "f": "zgromadziłaś"
+          },
+          "plural": {
+            "virile": "zgromadziliście",
+            "nonvirile": "zgromadziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zgromadził",
+            "f": "zgromadziła",
+            "n": "zgromadziło"
+          },
+          "plural": {
+            "virile": "zgromadzili",
+            "nonvirile": "zgromadziły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

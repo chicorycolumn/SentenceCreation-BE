@@ -1,0 +1,30 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kolacja",
+      "gen": "kolacji",
+      "dat": "kolacji",
+      "acc": "kolację",
+      "ins": "kolacją",
+      "loc": "kolacji",
+      "voc": "kolacjo"
+    },
+    "plural": {
+      "nom": "kolacje",
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "kolacji"
+        ],
+        "additionalInfrequent": [
+          "kolacyj"
+        ]
+      },
+      "dat": "kolacjom",
+      "acc": "kolacje",
+      "ins": "kolacjami",
+      "loc": "kolacjach",
+      "voc": "kolacje"
+    }
+  }
+}

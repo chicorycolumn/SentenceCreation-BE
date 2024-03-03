@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pomalować",
+    "verbalNoun": "pomalowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pomalowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pomalowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pomaluje się"
+          },
+          "plural": {
+            "allPluralGenders": "pomaluje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pomaluję"
+          },
+          "plural": {
+            "allPluralGenders": "pomalujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pomalujesz"
+          },
+          "plural": {
+            "allPluralGenders": "pomalujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pomaluje"
+          },
+          "plural": {
+            "allPluralGenders": "pomalują"
+          }
+        }
+      },
+      "imperative": "pomaluj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pomalowano"
+          },
+          "plural": {
+            "allPluralGenders": "pomalowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pomalowałem",
+            "f": "pomalowałam"
+          },
+          "plural": {
+            "virile": "pomalowaliśmy",
+            "nonvirile": "pomalowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pomalowałeś",
+            "f": "pomalowałaś"
+          },
+          "plural": {
+            "virile": "pomalowaliście",
+            "nonvirile": "pomalowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pomalował",
+            "f": "pomalowała",
+            "n": "pomalowało"
+          },
+          "plural": {
+            "virile": "pomalowali",
+            "nonvirile": "pomalowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

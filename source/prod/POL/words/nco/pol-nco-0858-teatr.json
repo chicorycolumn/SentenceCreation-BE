@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "teatr",
+      "gen": "teatru",
+      "dat": "teatrowi",
+      "acc": "teatr",
+      "ins": "teatrem",
+      "loc": "teatrze",
+      "voc": "teatrze"
+    },
+    "plural": {
+      "nom": "teatry",
+      "gen": "teatrów",
+      "dat": "teatrom",
+      "acc": "teatry",
+      "ins": "teatrami",
+      "loc": "teatrach",
+      "voc": "teatry"
+    }
+  }
+}

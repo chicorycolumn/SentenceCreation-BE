@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "czasownik",
+      "gen": "czasownika",
+      "dat": "czasownikowi",
+      "acc": "czasownik",
+      "ins": "czasownikiem",
+      "loc": "czasowniku",
+      "voc": "czasowniku"
+    },
+    "plural": {
+      "nom": "czasowniki",
+      "gen": "czasowników",
+      "dat": "czasownikom",
+      "acc": "czasowniki",
+      "ins": "czasownikami",
+      "loc": "czasownikach",
+      "voc": "czasowniki"
+    }
+  }
+}

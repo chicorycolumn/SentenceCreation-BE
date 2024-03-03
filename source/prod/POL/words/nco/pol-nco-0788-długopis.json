@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "długopis",
+      "gen": "długopisu",
+      "dat": "długopisowi",
+      "acc": "długopis",
+      "ins": "długopisem",
+      "loc": "długopisie",
+      "voc": "długopisie"
+    },
+    "plural": {
+      "nom": "długopisy",
+      "gen": "długopisów",
+      "dat": "długopisom",
+      "acc": "długopisy",
+      "ins": "długopisami",
+      "loc": "długopisach",
+      "voc": "długopisy"
+    }
+  }
+}

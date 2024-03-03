@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "udar",
+      "gen": "udaru",
+      "dat": "udarowi",
+      "acc": "udar",
+      "ins": "udarem",
+      "loc": "udarze",
+      "voc": "udarze"
+    },
+    "plural": {
+      "nom": "udary",
+      "gen": "udarów",
+      "dat": "udarom",
+      "acc": "udary",
+      "ins": "udarami",
+      "loc": "udarach",
+      "voc": "udary"
+    }
+  }
+}

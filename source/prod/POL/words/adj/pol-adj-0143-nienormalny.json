@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "nienormalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nienormalny",
+          "gen": "nienormalnego",
+          "dat": "nienormalnemu",
+          "acc": "nienormalnego",
+          "ins": "nienormalnym",
+          "loc": "nienormalnym"
+        },
+        "m3": {
+          "nom": "nienormalny",
+          "gen": "nienormalnego",
+          "dat": "nienormalnemu",
+          "acc": "nienormalny",
+          "ins": "nienormalnym",
+          "loc": "nienormalnym"
+        },
+        "f": {
+          "nom": "nienormalna",
+          "gen": "nienormalnej",
+          "dat": "nienormalnej",
+          "acc": "nienormalną",
+          "ins": "nienormalną",
+          "loc": "nienormalnej"
+        },
+        "n": {
+          "nom": "nienormalne",
+          "gen": "nienormalnego",
+          "dat": "nienormalnemu",
+          "acc": "nienormalne",
+          "ins": "nienormalnym",
+          "loc": "nienormalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nienormalni",
+          "gen": "nienormalnych",
+          "dat": "nienormalnym",
+          "acc": "nienormalnych",
+          "ins": "nienormalnymi",
+          "loc": "nienormalnych"
+        },
+        "nonvirile": {
+          "nom": "nienormalne",
+          "gen": "nienormalnych",
+          "dat": "nienormalnym",
+          "acc": "nienormalne",
+          "ins": "nienormalnymi",
+          "loc": "nienormalnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej nienormalny",
+          "gen": "bardziej nienormalnego",
+          "dat": "bardziej nienormalnemu",
+          "acc": "bardziej nienormalnego",
+          "ins": "bardziej nienormalnym",
+          "loc": "bardziej nienormalnym"
+        },
+        "m3": {
+          "nom": "bardziej nienormalny",
+          "gen": "bardziej nienormalnego",
+          "dat": "bardziej nienormalnemu",
+          "acc": "bardziej nienormalny",
+          "ins": "bardziej nienormalnym",
+          "loc": "bardziej nienormalnym"
+        },
+        "f": {
+          "nom": "bardziej nienormalna",
+          "gen": "bardziej nienormalnej",
+          "dat": "bardziej nienormalnej",
+          "acc": "bardziej nienormalną",
+          "ins": "bardziej nienormalną",
+          "loc": "bardziej nienormalnej"
+        },
+        "n": {
+          "nom": "bardziej nienormalne",
+          "gen": "bardziej nienormalnego",
+          "dat": "bardziej nienormalnemu",
+          "acc": "bardziej nienormalne",
+          "ins": "bardziej nienormalnym",
+          "loc": "bardziej nienormalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej nienormalni",
+          "gen": "bardziej nienormalnych",
+          "dat": "bardziej nienormalnym",
+          "acc": "bardziej nienormalnych",
+          "ins": "bardziej nienormalnymi",
+          "loc": "bardziej nienormalnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej nienormalne",
+          "gen": "bardziej nienormalnych",
+          "dat": "bardziej nienormalnym",
+          "acc": "bardziej nienormalne",
+          "ins": "bardziej nienormalnymi",
+          "loc": "bardziej nienormalnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej nienormalny",
+          "gen": "najbardziej nienormalnego",
+          "dat": "najbardziej nienormalnemu",
+          "acc": "najbardziej nienormalnego",
+          "ins": "najbardziej nienormalnym",
+          "loc": "najbardziej nienormalnym"
+        },
+        "m3": {
+          "nom": "najbardziej nienormalny",
+          "gen": "najbardziej nienormalnego",
+          "dat": "najbardziej nienormalnemu",
+          "acc": "najbardziej nienormalny",
+          "ins": "najbardziej nienormalnym",
+          "loc": "najbardziej nienormalnym"
+        },
+        "f": {
+          "nom": "najbardziej nienormalna",
+          "gen": "najbardziej nienormalnej",
+          "dat": "najbardziej nienormalnej",
+          "acc": "najbardziej nienormalną",
+          "ins": "najbardziej nienormalną",
+          "loc": "najbardziej nienormalnej"
+        },
+        "n": {
+          "nom": "najbardziej nienormalne",
+          "gen": "najbardziej nienormalnego",
+          "dat": "najbardziej nienormalnemu",
+          "acc": "najbardziej nienormalne",
+          "ins": "najbardziej nienormalnym",
+          "loc": "najbardziej nienormalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej nienormalni",
+          "gen": "najbardziej nienormalnych",
+          "dat": "najbardziej nienormalnym",
+          "acc": "najbardziej nienormalnych",
+          "ins": "najbardziej nienormalnymi",
+          "loc": "najbardziej nienormalnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej nienormalne",
+          "gen": "najbardziej nienormalnych",
+          "dat": "najbardziej nienormalnym",
+          "acc": "najbardziej nienormalne",
+          "ins": "najbardziej nienormalnymi",
+          "loc": "najbardziej nienormalnych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "nowocześnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nowoczesny",
+          "gen": "nowoczesnego",
+          "dat": "nowoczesnemu",
+          "acc": "nowoczesnego",
+          "ins": "nowoczesnym",
+          "loc": "nowoczesnym"
+        },
+        "m3": {
+          "nom": "nowoczesny",
+          "gen": "nowoczesnego",
+          "dat": "nowoczesnemu",
+          "acc": "nowoczesny",
+          "ins": "nowoczesnym",
+          "loc": "nowoczesnym"
+        },
+        "f": {
+          "nom": "nowoczesna",
+          "gen": "nowoczesnej",
+          "dat": "nowoczesnej",
+          "acc": "nowoczesną",
+          "ins": "nowoczesną",
+          "loc": "nowoczesnej"
+        },
+        "n": {
+          "nom": "nowoczesne",
+          "gen": "nowoczesnego",
+          "dat": "nowoczesnemu",
+          "acc": "nowoczesne",
+          "ins": "nowoczesnym",
+          "loc": "nowoczesnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nowocześni",
+          "gen": "nowoczesnych",
+          "dat": "nowoczesnym",
+          "acc": "nowoczesnych",
+          "ins": "nowoczesnymi",
+          "loc": "nowoczesnych"
+        },
+        "nonvirile": {
+          "nom": "nowoczesne",
+          "gen": "nowoczesnych",
+          "dat": "nowoczesnym",
+          "acc": "nowoczesne",
+          "ins": "nowoczesnymi",
+          "loc": "nowoczesnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "nowocześniejszy",
+          "gen": "nowocześniejszego",
+          "dat": "nowocześniejszemu",
+          "acc": "nowocześniejszego",
+          "ins": "nowocześniejszym",
+          "loc": "nowocześniejszym"
+        },
+        "m3": {
+          "nom": "nowocześniejszy",
+          "gen": "nowocześniejszego",
+          "dat": "nowocześniejszemu",
+          "acc": "nowocześniejszy",
+          "ins": "nowocześniejszym",
+          "loc": "nowocześniejszym"
+        },
+        "f": {
+          "nom": "nowocześniejsza",
+          "gen": "nowocześniejszej",
+          "dat": "nowocześniejszej",
+          "acc": "nowocześniejszą",
+          "ins": "nowocześniejszą",
+          "loc": "nowocześniejszej"
+        },
+        "n": {
+          "nom": "nowocześniejsze",
+          "gen": "nowocześniejszego",
+          "dat": "nowocześniejszemu",
+          "acc": "nowocześniejsze",
+          "ins": "nowocześniejszym",
+          "loc": "nowocześniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nowocześniejsi",
+          "gen": "nowocześniejszych",
+          "dat": "nowocześniejszym",
+          "acc": "nowocześniejszych",
+          "ins": "nowocześniejszymi",
+          "loc": "nowocześniejszych"
+        },
+        "nonvirile": {
+          "nom": "nowocześniejsze",
+          "gen": "nowocześniejszych",
+          "dat": "nowocześniejszym",
+          "acc": "nowocześniejsze",
+          "ins": "nowocześniejszymi",
+          "loc": "nowocześniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najnowocześniejszy",
+          "gen": "najnowocześniejszego",
+          "dat": "najnowocześniejszemu",
+          "acc": "najnowocześniejszego",
+          "ins": "najnowocześniejszym",
+          "loc": "najnowocześniejszym"
+        },
+        "m3": {
+          "nom": "najnowocześniejszy",
+          "gen": "najnowocześniejszego",
+          "dat": "najnowocześniejszemu",
+          "acc": "najnowocześniejszy",
+          "ins": "najnowocześniejszym",
+          "loc": "najnowocześniejszym"
+        },
+        "f": {
+          "nom": "najnowocześniejsza",
+          "gen": "najnowocześniejszej",
+          "dat": "najnowocześniejszej",
+          "acc": "najnowocześniejszą",
+          "ins": "najnowocześniejszą",
+          "loc": "najnowocześniejszej"
+        },
+        "n": {
+          "nom": "najnowocześniejsze",
+          "gen": "najnowocześniejszego",
+          "dat": "najnowocześniejszemu",
+          "acc": "najnowocześniejsze",
+          "ins": "najnowocześniejszym",
+          "loc": "najnowocześniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najnowocześniejsi",
+          "gen": "najnowocześniejszych",
+          "dat": "najnowocześniejszym",
+          "acc": "najnowocześniejszych",
+          "ins": "najnowocześniejszymi",
+          "loc": "najnowocześniejszych"
+        },
+        "nonvirile": {
+          "nom": "najnowocześniejsze",
+          "gen": "najnowocześniejszych",
+          "dat": "najnowocześniejszym",
+          "acc": "najnowocześniejsze",
+          "ins": "najnowocześniejszymi",
+          "loc": "najnowocześniejszych"
+        }
+      }
+    }
+  }
+}

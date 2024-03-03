@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "działać",
+    "verbalNoun": "działanie",
+    "activeAdjectival": "działający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "działając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "działaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "działano"
+          },
+          "plural": {
+            "allPluralGenders": "działano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "działałem",
+            "f": "działałam"
+          },
+          "plural": {
+            "virile": "działaliśmy",
+            "nonvirile": "działałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "działałeś",
+            "f": "działałaś"
+          },
+          "plural": {
+            "virile": "działaliście",
+            "nonvirile": "działałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "działał",
+            "f": "działała",
+            "n": "działało"
+          },
+          "plural": {
+            "virile": "działali",
+            "nonvirile": "działały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "działa się"
+          },
+          "plural": {
+            "allPluralGenders": "działa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "działam"
+          },
+          "plural": {
+            "allPluralGenders": "działamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "działasz"
+          },
+          "plural": {
+            "allPluralGenders": "działacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "działa"
+          },
+          "plural": {
+            "allPluralGenders": "działają"
+          }
+        }
+      }
+    }
+  }
+}

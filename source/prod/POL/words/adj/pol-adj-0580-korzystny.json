@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "korzystnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "korzystny",
+          "gen": "korzystnego",
+          "dat": "korzystnemu",
+          "acc": "korzystnego",
+          "ins": "korzystnym",
+          "loc": "korzystnym"
+        },
+        "m3": {
+          "nom": "korzystny",
+          "gen": "korzystnego",
+          "dat": "korzystnemu",
+          "acc": "korzystny",
+          "ins": "korzystnym",
+          "loc": "korzystnym"
+        },
+        "f": {
+          "nom": "korzystna",
+          "gen": "korzystnej",
+          "dat": "korzystnej",
+          "acc": "korzystną",
+          "ins": "korzystną",
+          "loc": "korzystnej"
+        },
+        "n": {
+          "nom": "korzystne",
+          "gen": "korzystnego",
+          "dat": "korzystnemu",
+          "acc": "korzystne",
+          "ins": "korzystnym",
+          "loc": "korzystnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "korzystni",
+          "gen": "korzystnych",
+          "dat": "korzystnym",
+          "acc": "korzystnych",
+          "ins": "korzystnymi",
+          "loc": "korzystnych"
+        },
+        "nonvirile": {
+          "nom": "korzystne",
+          "gen": "korzystnych",
+          "dat": "korzystnym",
+          "acc": "korzystne",
+          "ins": "korzystnymi",
+          "loc": "korzystnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "korzystniejszy",
+          "gen": "korzystniejszego",
+          "dat": "korzystniejszemu",
+          "acc": "korzystniejszego",
+          "ins": "korzystniejszym",
+          "loc": "korzystniejszym"
+        },
+        "m3": {
+          "nom": "korzystniejszy",
+          "gen": "korzystniejszego",
+          "dat": "korzystniejszemu",
+          "acc": "korzystniejszy",
+          "ins": "korzystniejszym",
+          "loc": "korzystniejszym"
+        },
+        "f": {
+          "nom": "korzystniejsza",
+          "gen": "korzystniejszej",
+          "dat": "korzystniejszej",
+          "acc": "korzystniejszą",
+          "ins": "korzystniejszą",
+          "loc": "korzystniejszej"
+        },
+        "n": {
+          "nom": "korzystniejsze",
+          "gen": "korzystniejszego",
+          "dat": "korzystniejszemu",
+          "acc": "korzystniejsze",
+          "ins": "korzystniejszym",
+          "loc": "korzystniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "korzystniejsi",
+          "gen": "korzystniejszych",
+          "dat": "korzystniejszym",
+          "acc": "korzystniejszych",
+          "ins": "korzystniejszymi",
+          "loc": "korzystniejszych"
+        },
+        "nonvirile": {
+          "nom": "korzystniejsze",
+          "gen": "korzystniejszych",
+          "dat": "korzystniejszym",
+          "acc": "korzystniejsze",
+          "ins": "korzystniejszymi",
+          "loc": "korzystniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najkorzystniejszy",
+          "gen": "najkorzystniejszego",
+          "dat": "najkorzystniejszemu",
+          "acc": "najkorzystniejszego",
+          "ins": "najkorzystniejszym",
+          "loc": "najkorzystniejszym"
+        },
+        "m3": {
+          "nom": "najkorzystniejszy",
+          "gen": "najkorzystniejszego",
+          "dat": "najkorzystniejszemu",
+          "acc": "najkorzystniejszy",
+          "ins": "najkorzystniejszym",
+          "loc": "najkorzystniejszym"
+        },
+        "f": {
+          "nom": "najkorzystniejsza",
+          "gen": "najkorzystniejszej",
+          "dat": "najkorzystniejszej",
+          "acc": "najkorzystniejszą",
+          "ins": "najkorzystniejszą",
+          "loc": "najkorzystniejszej"
+        },
+        "n": {
+          "nom": "najkorzystniejsze",
+          "gen": "najkorzystniejszego",
+          "dat": "najkorzystniejszemu",
+          "acc": "najkorzystniejsze",
+          "ins": "najkorzystniejszym",
+          "loc": "najkorzystniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najkorzystniejsi",
+          "gen": "najkorzystniejszych",
+          "dat": "najkorzystniejszym",
+          "acc": "najkorzystniejszych",
+          "ins": "najkorzystniejszymi",
+          "loc": "najkorzystniejszych"
+        },
+        "nonvirile": {
+          "nom": "najkorzystniejsze",
+          "gen": "najkorzystniejszych",
+          "dat": "najkorzystniejszym",
+          "acc": "najkorzystniejsze",
+          "ins": "najkorzystniejszymi",
+          "loc": "najkorzystniejszych"
+        }
+      }
+    }
+  }
+}

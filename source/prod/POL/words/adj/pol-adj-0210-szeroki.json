@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "szeroko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "szeroki",
+          "gen": "szerokiego",
+          "dat": "szerokiemu",
+          "acc": "szerokiego",
+          "ins": "szerokim",
+          "loc": "szerokim"
+        },
+        "m3": {
+          "nom": "szeroki",
+          "gen": "szerokiego",
+          "dat": "szerokiemu",
+          "acc": "szeroki",
+          "ins": "szerokim",
+          "loc": "szerokim"
+        },
+        "f": {
+          "nom": "szeroka",
+          "gen": "szerokiej",
+          "dat": "szerokiej",
+          "acc": "szeroką",
+          "ins": "szeroką",
+          "loc": "szerokiej"
+        },
+        "n": {
+          "nom": "szerokie",
+          "gen": "szerokiego",
+          "dat": "szerokiemu",
+          "acc": "szerokie",
+          "ins": "szerokim",
+          "loc": "szerokim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "szerocy",
+          "gen": "szerokich",
+          "dat": "szerokim",
+          "acc": "szerokich",
+          "ins": "szerokimi",
+          "loc": "szerokich"
+        },
+        "nonvirile": {
+          "nom": "szerokie",
+          "gen": "szerokich",
+          "dat": "szerokim",
+          "acc": "szerokie",
+          "ins": "szerokimi",
+          "loc": "szerokich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "szerszy",
+          "gen": "szerszego",
+          "dat": "szerszemu",
+          "acc": "szerszego",
+          "ins": "szerszym",
+          "loc": "szerszym"
+        },
+        "m3": {
+          "nom": "szerszy",
+          "gen": "szerszego",
+          "dat": "szerszemu",
+          "acc": "szerszy",
+          "ins": "szerszym",
+          "loc": "szerszym"
+        },
+        "f": {
+          "nom": "szersza",
+          "gen": "szerszej",
+          "dat": "szerszej",
+          "acc": "szerszą",
+          "ins": "szerszą",
+          "loc": "szerszej"
+        },
+        "n": {
+          "nom": "szersze",
+          "gen": "szerszego",
+          "dat": "szerszemu",
+          "acc": "szersze",
+          "ins": "szerszym",
+          "loc": "szerszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "szersi",
+          "gen": "szerszych",
+          "dat": "szerszym",
+          "acc": "szerszych",
+          "ins": "szerszymi",
+          "loc": "szerszych"
+        },
+        "nonvirile": {
+          "nom": "szersze",
+          "gen": "szerszych",
+          "dat": "szerszym",
+          "acc": "szersze",
+          "ins": "szerszymi",
+          "loc": "szerszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najszerszy",
+          "gen": "najszerszego",
+          "dat": "najszerszemu",
+          "acc": "najszerszego",
+          "ins": "najszerszym",
+          "loc": "najszerszym"
+        },
+        "m3": {
+          "nom": "najszerszy",
+          "gen": "najszerszego",
+          "dat": "najszerszemu",
+          "acc": "najszerszy",
+          "ins": "najszerszym",
+          "loc": "najszerszym"
+        },
+        "f": {
+          "nom": "najszersza",
+          "gen": "najszerszej",
+          "dat": "najszerszej",
+          "acc": "najszerszą",
+          "ins": "najszerszą",
+          "loc": "najszerszej"
+        },
+        "n": {
+          "nom": "najszersze",
+          "gen": "najszerszego",
+          "dat": "najszerszemu",
+          "acc": "najszersze",
+          "ins": "najszerszym",
+          "loc": "najszerszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najszersi",
+          "gen": "najszerszych",
+          "dat": "najszerszym",
+          "acc": "najszerszych",
+          "ins": "najszerszymi",
+          "loc": "najszerszych"
+        },
+        "nonvirile": {
+          "nom": "najszersze",
+          "gen": "najszerszych",
+          "dat": "najszerszym",
+          "acc": "najszersze",
+          "ins": "najszerszymi",
+          "loc": "najszerszych"
+        }
+      }
+    }
+  }
+}

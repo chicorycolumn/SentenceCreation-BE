@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "guzik",
+      "gen": "guzika",
+      "dat": "guzikowi",
+      "acc": "guzik",
+      "ins": "guzikiem",
+      "loc": "guziku",
+      "voc": "guziku"
+    },
+    "plural": {
+      "nom": "guziki",
+      "gen": "guzików",
+      "dat": "guzikom",
+      "acc": "guziki",
+      "ins": "guzikami",
+      "loc": "guzikach",
+      "voc": "guziki"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zablokować",
+    "verbalNoun": "zablokowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zablokowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zablokowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zablokuje się"
+          },
+          "plural": {
+            "allPluralGenders": "zablokuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zablokuję"
+          },
+          "plural": {
+            "allPluralGenders": "zablokujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zablokujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zablokujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zablokuje"
+          },
+          "plural": {
+            "allPluralGenders": "zablokują"
+          }
+        }
+      },
+      "imperative": "zablokuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zablokowano"
+          },
+          "plural": {
+            "allPluralGenders": "zablokowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zablokowałem",
+            "f": "zablokowałam"
+          },
+          "plural": {
+            "virile": "zablokowaliśmy",
+            "nonvirile": "zablokowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zablokowałeś",
+            "f": "zablokowałaś"
+          },
+          "plural": {
+            "virile": "zablokowaliście",
+            "nonvirile": "zablokowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zablokował",
+            "f": "zablokowała",
+            "n": "zablokowało"
+          },
+          "plural": {
+            "virile": "zablokowali",
+            "nonvirile": "zablokowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

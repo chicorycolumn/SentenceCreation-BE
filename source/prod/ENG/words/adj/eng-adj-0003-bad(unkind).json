@@ -1,0 +1,14 @@
+{
+  "inflections": {
+    "simple": "bad",
+    "comparative": [
+      "worse",
+      "badder"
+    ],
+    "superlative": [
+      "worst",
+      "baddest"
+    ],
+    "adverb": "badly"
+  }
+}

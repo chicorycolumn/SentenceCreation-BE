@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "bijać",
+    "verbalNoun": "bijanie",
+    "activeAdjectival": "bijający",
+    "passiveAdjectival": "bijany",
+    "contemporaryAdverbial": "bijając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "bijaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "bijano"
+          },
+          "plural": {
+            "allPluralGenders": "bijano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "bijałem",
+            "f": "bijałam"
+          },
+          "plural": {
+            "virile": "bijaliśmy",
+            "nonvirile": "bijałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "bijałeś",
+            "f": "bijałaś"
+          },
+          "plural": {
+            "virile": "bijaliście",
+            "nonvirile": "bijałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "bijał",
+            "f": "bijała",
+            "n": "bijało"
+          },
+          "plural": {
+            "virile": "bijali",
+            "nonvirile": "bijały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "bija się"
+          },
+          "plural": {
+            "allPluralGenders": "bija się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "bijam"
+          },
+          "plural": {
+            "allPluralGenders": "bijamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "bijasz"
+          },
+          "plural": {
+            "allPluralGenders": "bijacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "bija"
+          },
+          "plural": {
+            "allPluralGenders": "bijają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "korytarz",
+      "gen": "korytarza",
+      "dat": "korytarzowi",
+      "acc": "korytarz",
+      "ins": "korytarzem",
+      "loc": "korytarzu",
+      "voc": "korytarzu"
+    },
+    "plural": {
+      "nom": "korytarze",
+      "gen": "korytarzy",
+      "dat": "korytarzom",
+      "acc": "korytarze",
+      "ins": "korytarzami",
+      "loc": "korytarzach",
+      "voc": "korytarze"
+    }
+  }
+}

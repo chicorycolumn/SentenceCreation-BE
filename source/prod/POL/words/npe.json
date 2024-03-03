@@ -1,0 +1,2868 @@
+[
+  {
+    "lemma": "matka",
+    "id": "pol-npe-0001-matka",
+    "frequency": 1,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "derivedTerms": [
+        "awiomatka",
+        "matczyny",
+        "mateczny",
+        "matecznik",
+        "matula",
+        "matczyć",
+        "matkować"
+      ]
+    }
+  },
+  {
+    "lemma": "ojciec",
+    "id": "pol-npe-0002-ojciec",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "abbreviation": [
+          "o."
+        ]
+      },
+      "synonyms": [
+        "ksiądz"
+      ],
+      "derivedTerms": [
+        "ojcobójczy",
+        "ojcowski",
+        "ojcowy",
+        "ojczysty",
+        "ojciec chrzestny",
+        "ojciec dyrektor",
+        "ojcobójca",
+        "ojcobójczyni",
+        "ojcobójstwo",
+        "ojcostwo",
+        "ojcowizna",
+        "ojczym",
+        "ojczyzna",
+        "jaki ojciec, taki syn"
+      ]
+    }
+  },
+  {
+    "lemma": "brat",
+    "id": "pol-npe-0003-brat",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "braciszek"
+        ]
+      },
+      "derivedTerms": [
+        "bracki",
+        "braterski",
+        "bratni",
+        "pobratymczy",
+        "bratersko",
+        "po bratersku",
+        "brachol",
+        "bractwo",
+        "brać",
+        "brat łata",
+        "bratanek",
+        "bratanica",
+        "bratanka",
+        "bratowa",
+        "bratczyk",
+        "bratek",
+        "brateńko",
+        "bratul",
+        "bratunio",
+        "rozbrat",
+        "pobratymstwo",
+        "pobratymiec",
+        "pobratymca",
+        "półbrat",
+        "bratać",
+        "być za pan brat",
+        "rozbratać",
+        "zbratać"
+      ],
+      "usage": [
+        "A przechadzając się nad Morzem Galilejskim, zobaczył Szymona i Andrzeja, jego brata , zarzucających sieć w morze; byli bowiem rybakami. As Jesus was strolling beside the Sea of Galilee, he saw Simon and Andrew, his brother , casting a net into the sea; they were fishermen"
+      ]
+    }
+  },
+  {
+    "lemma": "siostra",
+    "id": "pol-npe-0004-siostra",
+    "frequency": 1,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "siostrzyczka"
+        ]
+      },
+      "derivedTerms": [
+        "siostrzany",
+        "siostrunia",
+        "siostrzyca",
+        "siostrzyczka"
+      ]
+    }
+  },
+  {
+    "lemma": "kobieta",
+    "id": "pol-npe-0005-kobieta",
+    "frequency": 1,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "kobietka"
+        ]
+      },
+      "antonyms": [
+        "mężczyzna"
+      ],
+      "derivedTerms": [
+        "kobiecy",
+        "(adjective)"
+      ]
+    }
+  },
+  {
+    "lemma": "mężczyzna",
+    "id": "pol-npe-0006-mężczyzna",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "antonyms": [
+        "kobieta"
+      ]
+    }
+  },
+  {
+    "lemma": "córka",
+    "id": "pol-npe-0007-córka",
+    "frequency": 1,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "córeczka"
+        ],
+        "augmentative": [
+          "córa"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "syn",
+    "id": "pol-npe-0008-syn",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "synek"
+        ]
+      },
+      "derivedTerms": [
+        "syneczek",
+        "synek",
+        "syncio",
+        "synulek",
+        "synuś",
+        "synal",
+        "synalek"
+      ]
+    }
+  },
+  {
+    "lemma": "dziadek",
+    "id": "pol-npe-0009-dziadek",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "dziadziuś"
+        ],
+        "augmentative": [
+          "dziad"
+        ]
+      },
+      "derivedTerms": [
+        "gdyby babcia miała wąsy, toby była dziadkiem",
+        "dziadek do orzechów"
+      ]
+    }
+  },
+  {
+    "lemma": "babcia",
+    "id": "pol-npe-0010-babcia",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "babunia",
+          "babusia"
+        ]
+      },
+      "synonyms": [
+        "baba",
+        "babka",
+        "babunia",
+        "babina",
+        "starowina",
+        "staruszka"
+      ],
+      "derivedTerms": [
+        "babciny",
+        "babciowy",
+        "babcia klozetowa",
+        "gdyby babcia miała wąsy, toby była dziadkiem",
+        "skończyło się babci sranie"
+      ]
+    }
+  },
+  {
+    "lemma": "mąż",
+    "id": "pol-npe-0011-mąż",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "derivedTerms": [
+        "mężowski",
+        "mężowy",
+        "mąż stanu",
+        "mężulek",
+        "mężuś",
+        "mężysko"
+      ],
+      "usage": [
+        "Usage notes [ edit ] The sense of \"male human being\" carries connotations of bravery honour or responsibility ; in other words, the stereotypical quality of \" manliness \"."
+      ]
+    }
+  },
+  {
+    "lemma": "żona",
+    "id": "pol-npe-0012-żona",
+    "frequency": 1,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "derivedTerms": [
+        "bezżenny",
+        "nieżonaty",
+        "żonaty",
+        "żonin",
+        "żoniny",
+        "bezżennie",
+        "bezżeństwo",
+        "bezżenność",
+        "żoncia",
+        "żoneczka",
+        "żonisko",
+        "żonka",
+        "żonkoś",
+        "żonusia"
+      ]
+    }
+  },
+  {
+    "lemma": "wuj",
+    "id": "pol-npe-0013-wuj",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "synonyms": [
+        "wujek"
+      ],
+      "derivedTerms": [
+        "wujaszkowy",
+        "wujeczny",
+        "wujowski",
+        "wujowy",
+        "wujanka",
+        "wujaszek",
+        "wujek",
+        "wujenka",
+        "wujostwo",
+        "wujaszkować"
+      ],
+      "usage": [
+        "Coordinate term: stryj"
+      ]
+    }
+  },
+  {
+    "lemma": "wujek",
+    "id": "pol-npe-0014-wujek",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "wujcio",
+          "wujaszek"
+        ]
+      },
+      "synonyms": [
+        "wuj"
+      ]
+    }
+  },
+  {
+    "lemma": "ciocia",
+    "id": "pol-npe-0015-ciocia",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "synonyms": [
+        "ciotka"
+      ]
+    }
+  },
+  {
+    "lemma": "kuzyn",
+    "id": "pol-npe-0016-kuzyn",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "kuzynka"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "siostrzenica",
+    "id": "pol-npe-0017-siostrzenica",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f"
+  },
+  {
+    "lemma": "bratanica",
+    "id": "pol-npe-0018-bratanica",
+    "frequency": 1,
+    "register": 0,
+    "gender": "f"
+  },
+  {
+    "lemma": "siostrzeniec",
+    "id": "pol-npe-0019-siostrzeniec",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1"
+  },
+  {
+    "lemma": "bratanek",
+    "id": "pol-npe-0020-bratanek",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "synonyms": [
+        "brataniec",
+        "synowiec"
+      ]
+    }
+  },
+  {
+    "lemma": "partner",
+    "id": "pol-npe-0021-partner",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "partnerka"
+        ]
+      },
+      "derivedTerms": [
+        "partnerski",
+        "partnerstwo",
+        "partnerować"
+      ]
+    }
+  },
+  {
+    "lemma": "partnerka",
+    "id": "pol-npe-0022-partnerka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "partner"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "chłopak",
+    "id": "pol-npe-0023-chłopak(boy)",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "general",
+      "emoji": "🔲"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "chłopiec"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "chłopak",
+    "id": "pol-npe-0024-chłopak(boyfriend)",
+    "_inflectionsRoot": "pol-npe-0023-chłopak(boy)",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "romantic",
+      "emoji": "💕"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "chłopiec"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "chłopiec",
+    "id": "pol-npe-0025-chłopiec",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "chłopczyk"
+        ]
+      },
+      "synonyms": [
+        "chłopak",
+        "małolat",
+        "młodzieniec",
+        "młodzik",
+        "podrostek",
+        "chłopak",
+        "partner",
+        "dziewczyna",
+        "partnerka"
+      ],
+      "antonyms": [
+        "(",
+        "by",
+        "age",
+        ")",
+        "mężczyzna",
+        "(",
+        "by",
+        "gender",
+        ")",
+        "dziewczyna"
+      ],
+      "usage": [
+        "Usage notes [ edit ] The word chłopiec is usually used for people younger than chłopak ."
+      ]
+    }
+  },
+  {
+    "lemma": "dziewczyna",
+    "id": "pol-npe-0026-dziewczyna(girl)",
+    "frequency": 1,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "general",
+      "emoji": "🔲"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "dziewczynka"
+        ]
+      },
+      "synonyms": [
+        "dziewczę",
+        "dziewka"
+      ],
+      "antonyms": [
+        "chłopak"
+      ]
+    }
+  },
+  {
+    "lemma": "dziewczyna",
+    "id": "pol-npe-0027-dziewczyna(girlfriend)",
+    "_inflectionsRoot": "pol-npe-0026-dziewczyna(girl)",
+    "frequency": 1,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "romantic",
+      "emoji": "💕"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "dziewczynka"
+        ]
+      },
+      "synonyms": [
+        "dziewczę",
+        "dziewka"
+      ],
+      "antonyms": [
+        "chłopak"
+      ]
+    }
+  },
+  {
+    "lemma": "nauczycielka",
+    "id": "pol-npe-0028-nauczycielka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "nauczyciel"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "nauczyciel",
+    "id": "pol-npe-0029-nauczyciel",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "nauczycielka"
+        ]
+      },
+      "derivedTerms": [
+        "nauczycielski",
+        "nauczycielstwo"
+      ]
+    }
+  },
+  {
+    "lemma": "laska",
+    "id": "pol-npe-0030-laska(woman)",
+    "frequency": 4,
+    "register": 6,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": false,
+      "text": "person",
+      "emoji": "🏃"
+    }
+  },
+  {
+    "lemma": "facet",
+    "id": "pol-npe-0031-facet",
+    "frequency": 1,
+    "register": 6,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "facecik"
+        ],
+        "feminine": [
+          "facetka"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "ziom",
+    "id": "pol-npe-0032-ziom",
+    "frequency": 4,
+    "register": 6,
+    "gender": "m1",
+    "extra": {
+      "synonyms": [
+        "facet",
+        "kolo",
+        "typ",
+        "hiter"
+      ]
+    }
+  },
+  {
+    "lemma": "aktorka",
+    "id": "pol-npe-0033-aktorka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "aktoreczka"
+        ],
+        "augmentative": [
+          "aktorzyca"
+        ],
+        "masculine": [
+          "aktor"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "aktor",
+    "id": "pol-npe-0034-aktor",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "aktorzyk"
+        ],
+        "augmentative": [
+          "aktorzyna",
+          "aktorzysko"
+        ],
+        "feminine": [
+          "aktorka"
+        ]
+      },
+      "derivedTerms": [
+        "aktor charakterystyczny",
+        "aktoreczka",
+        "aktorstwo",
+        "aktorszczyzna",
+        "aktorzysko",
+        "teatr jednego aktora",
+        "aktorski",
+        "aktorsko",
+        "aktorować"
+      ]
+    }
+  },
+  {
+    "lemma": "przyjaciółka",
+    "id": "pol-npe-0035-przyjaciółka",
+    "frequency": 1,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "przyjaciel"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "przyjaciel",
+    "id": "pol-npe-0036-przyjaciel",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "przyjaciółka"
+        ]
+      },
+      "derivedTerms": [
+        "prawdziwych przyjaciół poznaje się w biedzie"
+      ],
+      "usage": [
+        "Usage notes [ edit ] Not used for casual relationships; znajomy or kolega is preferable for that."
+      ]
+    }
+  },
+  {
+    "lemma": "kolega",
+    "id": "pol-npe-0037-kolega(friend)",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "more close",
+      "emoji": "🫂"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "koleżka"
+        ],
+        "feminine": [
+          "koleżanka"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "kolega",
+    "id": "pol-npe-0038-kolega(colleague)",
+    "_inflectionsRoot": "pol-npe-0037-kolega(friend)",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "more distant",
+      "emoji": "👋"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "koleżka"
+        ],
+        "feminine": [
+          "koleżanka"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "koleżanka",
+    "id": "pol-npe-0039-koleżanka(friend)",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "more close",
+      "emoji": "🫂"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "koleżaneczka"
+        ],
+        "masculine": [
+          "kolega"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "koleżanka",
+    "id": "pol-npe-0040-koleżanka(colleague)",
+    "_inflectionsRoot": "pol-npe-0039-koleżanka(friend)",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "more distant",
+      "emoji": "👋"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "koleżaneczka"
+        ],
+        "masculine": [
+          "kolega"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "kumpel",
+    "id": "pol-npe-0041-kumpel",
+    "frequency": 3,
+    "register": 6,
+    "gender": "m1",
+    "extra": {
+      "synonyms": [
+        "znajomy"
+      ]
+    }
+  },
+  {
+    "lemma": "kumpela",
+    "id": "pol-npe-0042-kumpela",
+    "frequency": 3,
+    "register": 6,
+    "gender": "f",
+    "extra": {
+      "synonyms": [
+        "znajoma"
+      ]
+    }
+  },
+  {
+    "lemma": "człowiek",
+    "id": "pol-npe-0043-człowiek",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "człowieczek"
+        ],
+        "augmentative": [
+          "człowieczysko"
+        ]
+      },
+      "derivedTerms": [
+        "człowieczy",
+        "jak człowiek",
+        "biały człowiek",
+        "człeczyna",
+        "człek",
+        "człowieczę",
+        "człowieczeństwo",
+        "człowieczość",
+        "człowieczyna",
+        "człowiek czynu",
+        "człowiek honoru",
+        "człowiek interesu",
+        "człowiek orkiestra",
+        "człowiekowate",
+        "człowiek pióra",
+        "człowiek renesansu",
+        "człowiek rozumny",
+        "człowiek śniegu",
+        "dusza człowiek",
+        "swój człowiek",
+        "odczłowieczać",
+        "odczłowieczyć",
+        "uczłowieczać",
+        "uczłowieczyć"
+      ]
+    }
+  },
+  {
+    "lemma": "turysta",
+    "id": "pol-npe-0044-turysta",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "turystka"
+        ]
+      },
+      "derivedTerms": [
+        "agroturysta",
+        "agroturystka"
+      ]
+    }
+  },
+  {
+    "lemma": "bohater",
+    "id": "pol-npe-0045-bohater(hero)",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "positive term",
+      "emoji": "👍"
+    },
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "bohaterka"
+        ]
+      },
+      "derivedTerms": [
+        "antybohaterski",
+        "bohaterski",
+        "antybohater",
+        "antybohaterka",
+        "bohater mojej bajki",
+        "bohaterskość",
+        "bohaterstwo",
+        "bohaterszczyzna"
+      ]
+    }
+  },
+  {
+    "lemma": "bohater",
+    "id": "pol-npe-0046-bohater(protagonist)",
+    "_inflectionsRoot": "pol-npe-0045-bohater(hero)",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "writing",
+      "emoji": "📖"
+    },
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "bohaterka"
+        ]
+      },
+      "synonyms": [
+        "heros"
+      ],
+      "derivedTerms": [
+        "antybohaterski",
+        "bohaterski",
+        "antybohater",
+        "antybohaterka",
+        "bohater mojej bajki",
+        "bohaterskość",
+        "bohaterstwo",
+        "bohaterszczyzna"
+      ],
+      "usage": [
+        "wojenny bohater ― a hero warrior",
+        "bohater narodowy ― a national hero",
+        "bohater powstania ― a hero of a uprising",
+        "bohater rewolucji ― a hero of a revolution",
+        "bohater wojny ― a war hero",
+        "bohaterowie pól bitewnych ― battlefield heroes",
+        "składać hołd bohaterom ― to honor heroes",
+        "bohater dnia ― the man of the hour/the hero of the day",
+        "antyczny bohater ― an antique hero",
+        "mitologiczny bohater ― a mythological hero",
+        "mityczny bohater ― a mythical hero",
+        "bohater liryczny ― Llyrical subject",
+        "główny bohater ― the main character",
+        "tytułowy bohater ― title character",
+        "filmowy bohater ― a film protagonist",
+        "bohater literacki ― a literary protagonist",
+        "bohater pierwszoplanowy bohater ― the lead protagonist",
+        "ekranowy bohater ― a screen protagonist",
+        "telewizyjny bohater bohater ― a television protagonist",
+        "bohater bajki/baśni ― the protagonist of a fairy tell",
+        "bohater dramatu ― the protagonist of a drama",
+        "bohater noweli ― the protagonist of a novel",
+        "bohater opowiadani/powieścia ― the protagonist of a story",
+        "bohater utworu ― the protagonist of a piece of work",
+        "bohater filmu ― the protagonist of a movie",
+        "bohater książki ― the protagonist of a book",
+        "bohater epopei/eposów ― the protagonist of epics",
+        "bohater seriali ― the protagonist of a series",
+        "dzieje bohatera ― the history of a protagonist",
+        "losy bohatera ― the fate of a protagonist",
+        "przygody bohatera ― the adventures of a protagonist",
+        "śledzić losy bohaterów ― to follow the fate of a protagonist"
+      ]
+    }
+  },
+  {
+    "lemma": "polityk",
+    "id": "pol-npe-0047-polityk",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "polityk",
+          "polityczka"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "chirurg",
+    "id": "pol-npe-0048-chirurg",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "synonyms": [
+        "operator"
+      ]
+    }
+  },
+  {
+    "lemma": "sąsiad",
+    "id": "pol-npe-0049-sąsiad",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "derivedTerms": [
+        "sąsiadka",
+        "sąsiedni",
+        "sąsiedztwo"
+      ]
+    }
+  },
+  {
+    "lemma": "sąsiadka",
+    "id": "pol-npe-0050-sąsiadka",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f"
+  },
+  {
+    "lemma": "tłumacz",
+    "id": "pol-npe-0051-tłumacz",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "tłumaczka"
+        ]
+      },
+      "derivedTerms": [
+        "tłumaczenie",
+        "tłumaczka",
+        "tłumaczyć",
+        "тлума́ч"
+      ]
+    }
+  },
+  {
+    "lemma": "kierownik",
+    "id": "pol-npe-0052-kierownik",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "kierowniczka"
+        ]
+      },
+      "synonyms": [
+        "zarządca",
+        "dyrektor"
+      ]
+    }
+  },
+  {
+    "lemma": "rycerz",
+    "id": "pol-npe-0053-rycerz",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "rycerzyk"
+        ]
+      },
+      "derivedTerms": [
+        "rycerski",
+        "rycersko",
+        "błędny rycerz",
+        "rycerskość",
+        "rycerstwo"
+      ]
+    }
+  },
+  {
+    "lemma": "osoba",
+    "id": "pol-npe-0054-osoba",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f"
+  },
+  {
+    "lemma": "złodziej",
+    "id": "pol-npe-0055-złodziej",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "złodziejaszek"
+        ],
+        "feminine": [
+          "złodziejka"
+        ]
+      },
+      "synonyms": [
+        "złodziej"
+      ],
+      "derivedTerms": [
+        "złodziejski",
+        "złodziejstwo"
+      ]
+    }
+  },
+  {
+    "lemma": "kelner",
+    "id": "pol-npe-0056-kelner",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "kelnerka"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "kelnerka",
+    "id": "pol-npe-0057-kelnerka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f"
+  },
+  {
+    "lemma": "inżynier",
+    "id": "pol-npe-0058-inżynier",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "abbreviation": [
+          "inż."
+        ]
+      },
+      "derivedTerms": [
+        "inżynierski",
+        "inżynierstwo"
+      ]
+    }
+  },
+  {
+    "lemma": "papież",
+    "id": "pol-npe-0059-papież",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "papieżyca"
+        ]
+      },
+      "derivedTerms": [
+        "papieski",
+        "antypapież",
+        "papiestwo",
+        "papieżnica",
+        "papieżnik",
+        "papieżować"
+      ]
+    }
+  },
+  {
+    "lemma": "policja",
+    "id": "pol-npe-0060-policja",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "derivedTerms": [
+        "policyjny",
+        "policja dochodzeniowa",
+        "policja drogowa",
+        "policja obyczajowa",
+        "policja polityczna",
+        "policjant",
+        "policjantka"
+      ]
+    }
+  },
+  {
+    "lemma": "obcy",
+    "id": "pol-npe-0061-obcy(alien)",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "animal",
+      "emoji": "🐕"
+    },
+    "extra": {
+      "synonyms": [
+        "kosmita",
+        "ufoludek",
+        "zielony"
+      ],
+      "derivedTerms": [
+        "obczyzna"
+      ]
+    }
+  },
+  {
+    "lemma": "obcy",
+    "id": "pol-npe-0062-obcy(stranger)",
+    "_inflectionsRoot": "pol-npe-0061-obcy(alien)",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    },
+    "extra": {
+      "synonyms": [
+        "nieznajomy"
+      ],
+      "derivedTerms": [
+        "obczyzna"
+      ]
+    }
+  },
+  {
+    "lemma": "kierowca",
+    "id": "pol-npe-0063-kierowca",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "synonyms": [
+        "(",
+        "archaic",
+        ")",
+        "automobilista"
+      ]
+    }
+  },
+  {
+    "lemma": "pułkownik",
+    "id": "pol-npe-0064-pułkownik",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1"
+  },
+  {
+    "lemma": "przestępca",
+    "id": "pol-npe-0065-przestępca",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "przestępczyni"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "teść",
+    "id": "pol-npe-0066-teść",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "teściowa"
+        ]
+      },
+      "derivedTerms": [
+        "teściowy",
+        "teściostwo"
+      ]
+    }
+  },
+  {
+    "lemma": "bóg",
+    "id": "pol-npe-0067-bóg",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "bożek"
+        ],
+        "feminine": [
+          "bogini"
+        ]
+      },
+      "synonyms": [
+        "bóstwo"
+      ],
+      "derivedTerms": [
+        "bezbożniczy",
+        "bezbożny",
+        "bogobojny",
+        "bogoburczy",
+        "bogomyślny",
+        "bogoojczyźniany",
+        "boski",
+        "bożniczny",
+        "bożniczy",
+        "bożogrobski",
+        "bożonarodzeniowy",
+        "boży",
+        "nabożny",
+        "niebożny",
+        "nieboży",
+        "nienabożny",
+        "niepobożny",
+        "niezbożny",
+        "pobożny",
+        "bezbożnie",
+        "bogobojnie",
+        "bogoojczyźnianie",
+        "bosko",
+        "nabożnie",
+        "niepobożnie",
+        "za chińskiego boga",
+        "zemsta jest rozkoszą bogów",
+        "bezbożnica",
+        "bezbożnictwo",
+        "bezbożnik",
+        "bezbożność",
+        "bogini",
+        "boginka",
+        "bogobojność",
+        "bogoburstwo",
+        "bogomódlca",
+        "bogomyślność",
+        "bogożerca",
+        "boguwola",
+        "boskość",
+        "bożec",
+        "bożeczek",
+        "bożek",
+        "bożnica",
+        "bożniczka",
+        "bożnik",
+        "bożodajnia",
+        "bożodrzew",
+        "bożogrobiec",
+        "bożyszcze",
+        "bóstewko",
+        "bóstwo",
+        "nabożnica",
+        "nabożnik",
+        "nabożnisia",
+        "nabożnisiostwo",
+        "nabożniś",
+        "nabożność",
+        "niepobożność",
+        "niezbożnik",
+        "niezbożność",
+        "pobożnisia",
+        "pobożnisiostwo",
+        "pobożniś",
+        "pobożność",
+        "półbogini",
+        "półbożek",
+        "półbóg",
+        "współbóg",
+        "zbożność",
+        "bodaj",
+        "bodajby",
+        "bodajże",
+        "dalibóg",
+        "dlaboga",
+        "laboga",
+        "olaboga",
+        "przebóg",
+        "Bogarodzica",
+        "Boguchwał",
+        "Bogumił",
+        "Bogumiła",
+        "Bogun",
+        "Boguń",
+        "Bogurad",
+        "Bogurodzica",
+        "Bogusia",
+        "Bogusław",
+        "Bogusławski",
+        "Bogusz",
+        "Boguś",
+        "Boguta",
+        "Bohun",
+        "Bozia",
+        "Bożena",
+        "Bożenka",
+        "Bóg",
+        "Chwalibóg",
+        "Dadźbog",
+        "bóstwić",
+        "przebóstwiać",
+        "przebóstwić",
+        "ubóstwiać",
+        "ubóstwić"
+      ]
+    }
+  },
+  {
+    "lemma": "strażak",
+    "id": "pol-npe-0068-strażak",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "strażaczek"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "adwokat",
+    "id": "pol-npe-0069-adwokat",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "adwokacik"
+        ],
+        "feminine": [
+          "adwokatka"
+        ]
+      },
+      "synonyms": [
+        "prawnik",
+        "rzecznik"
+      ],
+      "derivedTerms": [
+        "adwokacki",
+        "adwokacina",
+        "adwokacja",
+        "adwokat diabła",
+        "adwokatowa",
+        "adwokatura",
+        "adwokatować"
+      ]
+    }
+  },
+  {
+    "lemma": "pracownik",
+    "id": "pol-npe-0070-pracownik",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "pracownica",
+          "pracowniczka"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "narzeczony",
+    "id": "pol-npe-0071-narzeczony",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "narzeczona"
+        ]
+      },
+      "usage": [
+        "Usage notes [ edit ] The plural of this masculine form is also used to refer to couples."
+      ]
+    }
+  },
+  {
+    "lemma": "narzeczona",
+    "id": "pol-npe-0072-narzeczona",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "narzeczony"
+        ]
+      },
+      "usage": [
+        "Usage notes [ edit ] The plural of this word refers to multiple female fiancées. The plural of the masculine form is used to refer to couples."
+      ]
+    }
+  },
+  {
+    "lemma": "ogrodnik",
+    "id": "pol-npe-0073-ogrodnik",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "ogrodniczka"
+        ]
+      },
+      "derivedTerms": [
+        "ogrodnictwo",
+        "ogrodniczki",
+        "ogrodniczy"
+      ]
+    }
+  },
+  {
+    "lemma": "nastolatek",
+    "id": "pol-npe-0074-nastolatek",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "nastolatka"
+        ]
+      },
+      "derivedTerms": [
+        "nastolatkowy",
+        "nastoletni",
+        "nastoletniość"
+      ]
+    }
+  },
+  {
+    "lemma": "nastolatka",
+    "id": "pol-npe-0075-nastolatka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "nastolatek"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "student",
+    "id": "pol-npe-0076-student",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "studentka"
+        ]
+      },
+      "derivedTerms": [
+        "studencki"
+      ],
+      "usage": [
+        "Hypernyms: uczeń uczennica"
+      ]
+    }
+  },
+  {
+    "lemma": "studentka",
+    "id": "pol-npe-0077-studentka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "student"
+        ]
+      },
+      "usage": [
+        "Hypernym: uczennica"
+      ]
+    }
+  },
+  {
+    "lemma": "optyk",
+    "id": "pol-npe-0078-optyk",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "derivedTerms": [
+        "optyka"
+      ]
+    }
+  },
+  {
+    "lemma": "modelka",
+    "id": "pol-npe-0079-modelka",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "model"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "książę",
+    "id": "pol-npe-0080-książę",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "księżna"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "księżniczka",
+    "id": "pol-npe-0081-księżniczka",
+    "frequency": 4,
+    "register": 0,
+    "gender": "f"
+  },
+  {
+    "lemma": "gość",
+    "id": "pol-npe-0082-gość(guest)",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "hospitality",
+      "emoji": "🏨"
+    },
+    "extra": {
+      "derivedTerms": [
+        "gościnny",
+        "w gości",
+        "gościna",
+        "gościniec",
+        "gość w dom, Bóg w dom",
+        "gościć"
+      ]
+    }
+  },
+  {
+    "lemma": "gość",
+    "id": "pol-npe-0083-gość(guy)",
+    "_inflectionsRoot": "pol-npe-0082-gość(guest)",
+    "frequency": 2,
+    "register": 6,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    },
+    "extra": {
+      "derivedTerms": [
+        "gościnny",
+        "w gości",
+        "gościna",
+        "gościniec",
+        "gość w dom, Bóg w dom",
+        "gościć"
+      ]
+    }
+  },
+  {
+    "lemma": "wnuk",
+    "id": "pol-npe-0084-wnuk",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "wnuczek",
+          "wnuś"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "wnuczka",
+    "id": "pol-npe-0085-wnuczka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "wnusia"
+        ],
+        "masculine": [
+          "wnuk"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "kucharz",
+    "id": "pol-npe-0086-kucharz",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "kucharka"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "przewodnik",
+    "id": "pol-npe-0087-przewodnik(person)",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": false,
+      "text": "person",
+      "emoji": "🏃"
+    },
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "przewodniczka"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "akuszerka",
+    "id": "pol-npe-0088-akuszerka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "akuszer"
+        ]
+      },
+      "synonyms": [
+        "położna"
+      ],
+      "usage": [
+        "wiejska akuszerka ― a rural/village accoucheuse",
+        "stara akuszerka ― an old accoucheuse",
+        "rola akuszerki ― the role of an accoucheuse"
+      ]
+    }
+  },
+  {
+    "lemma": "kapłan",
+    "id": "pol-npe-0089-kapłan",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "kapłanka"
+        ]
+      },
+      "derivedTerms": [
+        "arcykapłański",
+        "kapłański",
+        "arcykapłan",
+        "arcykapłanka",
+        "kapłańskość",
+        "kapłaństwo"
+      ],
+      "usage": [
+        "Usage notes [ edit ] This term is neutral and can apply to a priest of any religion."
+      ]
+    }
+  },
+  {
+    "lemma": "wróg",
+    "id": "pol-npe-0090-wróg",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "synonyms": [
+        "nieprzyjaciel",
+        "przeciwnik"
+      ],
+      "derivedTerms": [
+        "wrogi",
+        "wrogość"
+      ]
+    }
+  },
+  {
+    "lemma": "pasażer",
+    "id": "pol-npe-0091-pasażer",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "pasażerka"
+        ]
+      },
+      "derivedTerms": [
+        "pasażerski"
+      ]
+    }
+  },
+  {
+    "lemma": "żołnierz",
+    "id": "pol-npe-0092-żołnierz",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "żołnierzyk"
+        ],
+        "feminine": [
+          "żołnierka"
+        ]
+      },
+      "synonyms": [
+        "wojak",
+        "wojskowy"
+      ],
+      "derivedTerms": [
+        "żołnierski"
+      ],
+      "usage": [
+        "Hyponyms: najemnik najmita"
+      ]
+    }
+  },
+  {
+    "lemma": "dentysta",
+    "id": "pol-npe-0093-dentysta",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "synonyms": [
+        "stomatolog"
+      ]
+    }
+  },
+  {
+    "lemma": "rodzic",
+    "id": "pol-npe-0094-rodzic",
+    "frequency": 1,
+    "register": 0,
+    "gender": "m1"
+  },
+  {
+    "lemma": "dupek",
+    "id": "pol-npe-0095-dupek",
+    "frequency": 3,
+    "register": 7,
+    "gender": "m1"
+  },
+  {
+    "lemma": "uczeń",
+    "id": "pol-npe-0096-uczeń",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "uczennica"
+        ]
+      },
+      "usage": [
+        "Hyponyms: student studentka"
+      ]
+    }
+  },
+  {
+    "lemma": "właściciel",
+    "id": "pol-npe-0097-właściciel(owner)",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "of anything",
+      "emoji": "🔲"
+    },
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "właścicielka"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "właściciel",
+    "id": "pol-npe-0098-właściciel(landlord)",
+    "_inflectionsRoot": "pol-npe-0097-właściciel(owner)",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "of a building",
+      "emoji": "🏠"
+    },
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "właścicielka"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "pisarz",
+    "id": "pol-npe-0099-pisarz",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "pisarka"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "lekarz",
+    "id": "pol-npe-0100-lekarz",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "lekarka"
+        ]
+      },
+      "synonyms": [
+        "doktor",
+        "eskulap",
+        "medyk"
+      ],
+      "derivedTerms": [
+        "lekarski",
+        "lekarstwo"
+      ]
+    }
+  },
+  {
+    "lemma": "lekarka",
+    "id": "pol-npe-0101-lekarka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "lekarz"
+        ]
+      },
+      "synonyms": [
+        "doktorka",
+        "medyczka"
+      ]
+    }
+  },
+  {
+    "lemma": "sędzia",
+    "id": "pol-npe-0102-sędzia(judge)",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "law/justice",
+      "emoji": "⚖️"
+    },
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "sędzia",
+          "sędzina"
+        ]
+      },
+      "synonyms": [
+        "arbiter"
+      ],
+      "derivedTerms": [
+        "sędziowski"
+      ]
+    }
+  },
+  {
+    "lemma": "sędzia",
+    "id": "pol-npe-0103-sędzia(referee)",
+    "_inflectionsRoot": "pol-npe-0102-sędzia(judge)",
+    "frequency": 4,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "games/sports",
+      "emoji": "🎲"
+    },
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "sędzia"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "kochanie",
+    "id": "pol-npe-0104-kochanie",
+    "frequency": 4,
+    "register": 6,
+    "gender": "n",
+    "extra": {
+      "usage": [
+        "Moim dwóm największym kochaniom , temu dużemu i temu małemu. To my two most darling dear s, the big one and the little one.",
+        "Od tego kochania całkiem już straciła głowę. ― She almost went crazy from all this loving ."
+      ]
+    }
+  },
+  {
+    "lemma": "turystka",
+    "id": "pol-npe-0105-turystka",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "turysta"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "dziennikarz",
+    "id": "pol-npe-0106-dziennikarz",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "augmentative": [
+          "dziennikarzyna"
+        ],
+        "feminine": [
+          "dziennikarka"
+        ]
+      },
+      "synonyms": [
+        "żurnalista"
+      ],
+      "derivedTerms": [
+        "dziennikarski",
+        "dziennikarstwo"
+      ]
+    }
+  },
+  {
+    "lemma": "celnik",
+    "id": "pol-npe-0107-celnik",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "celniczka"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "klient",
+    "id": "pol-npe-0108-klient",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "klientka"
+        ]
+      },
+      "synonyms": [
+        "delikwent",
+        "interesant",
+        "petent"
+      ]
+    }
+  },
+  {
+    "lemma": "fryzjer",
+    "id": "pol-npe-0109-fryzjer",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "fryzjerka"
+        ]
+      },
+      "derivedTerms": [
+        "fryzjerski",
+        "fryzjerczyk",
+        "fryzjernia",
+        "fryzjerstwo"
+      ]
+    }
+  },
+  {
+    "lemma": "śpiewak",
+    "id": "pol-npe-0110-śpiewak",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "śpiewaczka"
+        ]
+      },
+      "synonyms": [
+        "piosenkarz"
+      ]
+    }
+  },
+  {
+    "lemma": "morderca",
+    "id": "pol-npe-0111-morderca",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "morderczyni"
+        ]
+      },
+      "synonyms": [
+        "zabójca",
+        "rezun"
+      ]
+    }
+  },
+  {
+    "lemma": "policjant",
+    "id": "pol-npe-0112-policjant",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "policjantka"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "policjantka",
+    "id": "pol-npe-0113-policjantka",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "policjant"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "pielęgniarka",
+    "id": "pol-npe-0114-pielęgniarka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f"
+  },
+  {
+    "lemma": "pielęgniarz",
+    "id": "pol-npe-0115-pielęgniarz",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "pielęgniarka"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "obywatel",
+    "id": "pol-npe-0116-obywatel",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "obywatelka"
+        ]
+      },
+      "derivedTerms": [
+        "współobywatel"
+      ]
+    }
+  },
+  {
+    "lemma": "strażnik",
+    "id": "pol-npe-0117-strażnik",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "strażniczka"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "naukowiec",
+    "id": "pol-npe-0118-naukowiec",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1"
+  },
+  {
+    "lemma": "pacjent",
+    "id": "pol-npe-0119-pacjent",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1"
+  },
+  {
+    "lemma": "krewna",
+    "id": "pol-npe-0120-krewna",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "krewny"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "krewny",
+    "id": "pol-npe-0121-krewny",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "krewna"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "rolnik",
+    "id": "pol-npe-0122-rolnik",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "rolniczka"
+        ]
+      },
+      "synonyms": [
+        "farmer"
+      ],
+      "derivedTerms": [
+        "rolniczy",
+        "rolnictwo"
+      ]
+    }
+  },
+  {
+    "lemma": "ofiara",
+    "id": "pol-npe-0123-ofiara(victim)",
+    "frequency": 4,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": false,
+      "text": "person",
+      "emoji": "🏃"
+    },
+    "extra": {
+      "synonyms": [
+        "niezdara"
+      ],
+      "derivedTerms": [
+        "ofiarny",
+        "ofiarować"
+      ]
+    }
+  },
+  {
+    "lemma": "detektyw",
+    "id": "pol-npe-0124-detektyw",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "synonyms": [
+        "śledczy"
+      ],
+      "derivedTerms": [
+        "detektywistyczny"
+      ]
+    }
+  },
+  {
+    "lemma": "mistrz",
+    "id": "pol-npe-0125-mistrz",
+    "frequency": 5,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "mistrzyni"
+        ]
+      },
+      "derivedTerms": [
+        "arcymistrzowski",
+        "baletmistrzowski",
+        "mistrzowski",
+        "arcymistrz",
+        "arcymistrzyni",
+        "baletmistrz",
+        "baletmistrzyni",
+        "mistrzostwo",
+        "zegarmistrz"
+      ]
+    }
+  },
+  {
+    "lemma": "wegetarianin",
+    "id": "pol-npe-0126-wegetarianin",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "wegetarianka"
+        ]
+      },
+      "synonyms": [
+        "jarosz"
+      ]
+    }
+  },
+  {
+    "lemma": "sekretarz",
+    "id": "pol-npe-0127-sekretarz",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "sekretarka"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "znajoma",
+    "id": "pol-npe-0128-znajoma",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "znajomy"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "znajomy",
+    "id": "pol-npe-0129-znajomy",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "znajoma"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "artysta",
+    "id": "pol-npe-0130-artysta",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "abbreviation": [
+          "art."
+        ],
+        "feminine": [
+          "artystka"
+        ]
+      },
+      "synonyms": [
+        "fachman",
+        "fachowiec",
+        "fachura",
+        "profesjonalista"
+      ],
+      "antonyms": [
+        "partacz"
+      ],
+      "derivedTerms": [
+        "antyartystyczny",
+        "artystowski",
+        "artystyczny",
+        "artystycznie",
+        "artystostwo",
+        "artystyczność",
+        "artyzm"
+      ]
+    }
+  },
+  {
+    "lemma": "artystka",
+    "id": "pol-npe-0131-artystka",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": [
+          "artysta"
+        ]
+      },
+      "synonyms": [
+        "profesjonalistka",
+        "specjalistka"
+      ]
+    }
+  },
+  {
+    "lemma": "kryminalista",
+    "id": "pol-npe-0132-kryminalista",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "synonyms": [
+        "przestępca"
+      ]
+    }
+  },
+  {
+    "lemma": "prezydent",
+    "id": "pol-npe-0133-prezydent",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "prezydentka"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "więzień",
+    "id": "pol-npe-0134-więzień",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "więźniarka"
+        ]
+      }
+    }
+  },
+  {
+    "lemma": "miliarder",
+    "id": "pol-npe-0135-miliarder",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1"
+  },
+  {
+    "lemma": "milioner",
+    "id": "pol-npe-0136-milioner",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1"
+  },
+  {
+    "lemma": "pieszy",
+    "id": "pol-npe-0137-pieszy",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1"
+  },
+  {
+    "lemma": "piesza",
+    "id": "pol-npe-0138-piesza",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f"
+  },
+  {
+    "lemma": "pan",
+    "id": "pol-npe-0139-pan(title)",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "title",
+      "emoji": "🙇"
+    }
+  },
+  {
+    "lemma": "pan",
+    "id": "pol-npe-0140-pan(address)",
+    "_inflectionsRoot": "pol-npe-0139-pan(title)",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "form of address",
+      "emoji": "👋"
+    }
+  },
+  {
+    "lemma": "pan",
+    "id": "pol-npe-0141-pan(man)",
+    "_inflectionsRoot": "pol-npe-0139-pan(title)",
+    "frequency": 2,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "a gender",
+      "emoji": "👫"
+    }
+  },
+  {
+    "lemma": "pani",
+    "id": "pol-npe-0142-pani(title)",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "title",
+      "emoji": "🙇"
+    }
+  },
+  {
+    "lemma": "pani",
+    "id": "pol-npe-0143-pani(address)",
+    "_inflectionsRoot": "pol-npe-0142-pani(title)",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "form of address",
+      "emoji": "👋"
+    }
+  },
+  {
+    "lemma": "pani",
+    "id": "pol-npe-0144-pani(woman)",
+    "_inflectionsRoot": "pol-npe-0142-pani(title)",
+    "frequency": 2,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "a gender",
+      "emoji": "👫"
+    }
+  },
+  {
+    "lemma": "panna",
+    "id": "pol-npe-0145-panna",
+    "frequency": 1,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "panienka"
+        ],
+        "augmentative": [
+          "pannica",
+          "pannisko"
+        ]
+      },
+      "derivedTerms": [
+        "panieński",
+        "panieństwo",
+        "Panna"
+      ]
+    }
+  },
+  {
+    "lemma": "pilot",
+    "id": "pol-npe-0146-pilot(pilot)",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": false,
+      "text": "a job",
+      "emoji": "✈️"
+    }
+  },
+  {
+    "lemma": "lider",
+    "id": "pol-npe-0147-lider",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": [
+          "liderka"
+        ]
+      },
+      "synonyms": [
+        "przywódca"
+      ]
+    }
+  },
+  {
+    "lemma": "król",
+    "id": "pol-npe-0148-król",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "królewiątko"
+        ],
+        "feminine": [
+          "królowa"
+        ]
+      },
+      "derivedTerms": [
+        "bezkrólewie",
+        "Król",
+        "królestwo",
+        "królewiątko",
+        "królewiacki",
+        "królewiak",
+        "królewicz",
+        "królewna",
+        "królewski",
+        "królewskość",
+        "królewszczyzna",
+        "króliczek",
+        "królik",
+        "królowa",
+        "królować",
+        "królowanie",
+        "Trzej Królowie"
+      ]
+    }
+  },
+  {
+    "lemma": "królowa",
+    "id": "pol-npe-0149-królowa",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "extra": {
+      "synonyms": [
+        "dama",
+        "hetman",
+        "królówka"
+      ]
+    }
+  },
+  {
+    "lemma": "dziecko",
+    "id": "pol-npe-0150-dziecko",
+    "frequency": 1,
+    "register": 0,
+    "gender": "n",
+    "extra": {
+      "synonyms": [
+        "dziecko"
+      ],
+      "derivedTerms": [
+        "bezdzietny",
+        "bezdzietnie",
+        "bezdzietność",
+        "wylać dziecko z kąpielą",
+        "wylewać dziecko z kąpielą"
+      ]
+    }
+  },
+  {
+    "lemma": "niemowlę",
+    "id": "pol-npe-0151-niemowlę",
+    "frequency": 1,
+    "register": 0,
+    "gender": "n"
+  },
+  {
+    "lemma": "anioł",
+    "id": "pol-npe-0152-anioł",
+    "frequency": 4,
+    "register": 0,
+    "gender": "m2",
+    "extra": {
+      "otherShapes": {
+        "diminutive": [
+          "aniołek"
+        ],
+        "feminine": [
+          "anielica"
+        ]
+      },
+      "derivedTerms": [
+        "anieli",
+        "anielski",
+        "aniołkowaty",
+        "aniołowy",
+        "archanielski",
+        "anielsko",
+        "anielątko",
+        "anielę",
+        "anielica",
+        "anielskość",
+        "anielstwo",
+        "aniołeczek",
+        "anioł morski",
+        "Anioł Pański",
+        "Anioł Stróż",
+        "anioł stróż",
+        "archanioł",
+        "Miasto Aniołów",
+        "upadły anioł",
+        "anieleć",
+        "rozanielać",
+        "rozanielić"
+      ]
+    }
+  },
+  {
+    "lemma": "ksiądz",
+    "id": "pol-npe-0153-ksiądz",
+    "frequency": 3,
+    "register": 0,
+    "gender": "m3",
+    "extra": {
+      "otherShapes": {
+        "abbreviation": [
+          "ks."
+        ]
+      },
+      "synonyms": [
+        "ksiądz"
+      ],
+      "derivedTerms": [
+        "kto ma księdza w rodzie, tego bieda nie ubodzie"
+      ],
+      "usage": [
+        "Nasza szefowa, pani Magdalena, na zarzut księdza , że jej nieskromny dekolt wzbudza grzeszne myśli odpowiedziała, że on nie skusiłby jej, nawet gdyby stanął przed nią nago. Our boss, Ms. Magdalena, to the priest's objection that her immodest décolletage evokes sinful thoughts replied that he would not tempt her even if he stood naked in front of her."
+      ]
+    }
+  },
+  {
+    "lemma": "pierdolec",
+    "id": "pol-npe-0154-pierdolec",
+    "_lacking": true,
+    "frequency": 3,
+    "register": 7,
+    "gender": "m1"
+  },
+  {
+    "lemma": "skurwiel",
+    "id": "pol-npe-0155-skurwiel",
+    "frequency": 3,
+    "register": 7,
+    "gender": "m2"
+  }
+]

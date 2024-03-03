@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ciocia",
+      "gen": "cioci",
+      "dat": "cioci",
+      "acc": "ciocię",
+      "ins": "ciocią",
+      "loc": "cioci",
+      "voc": "ciociu"
+    },
+    "plural": {
+      "nom": "ciocie",
+      "gen": "cioć",
+      "dat": "ciociom",
+      "acc": "ciocie",
+      "ins": "ciociami",
+      "loc": "ciociach",
+      "voc": "ciocie"
+    }
+  }
+}

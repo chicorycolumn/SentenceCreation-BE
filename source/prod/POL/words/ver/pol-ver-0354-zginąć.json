@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zginąć",
+    "verbalNoun": "zginięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zginąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zginie się"
+          },
+          "plural": {
+            "allPluralGenders": "zginie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zginę"
+          },
+          "plural": {
+            "allPluralGenders": "zginiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zginiesz"
+          },
+          "plural": {
+            "allPluralGenders": "zginiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zginie"
+          },
+          "plural": {
+            "allPluralGenders": "zginą"
+          }
+        }
+      },
+      "imperative": "zgiń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zginięto"
+          },
+          "plural": {
+            "allPluralGenders": "zginięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zginąłem",
+            "f": "zginęłam"
+          },
+          "plural": {
+            "virile": "zginęliśmy",
+            "nonvirile": "zginęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zginąłeś",
+            "f": "zginęłaś"
+          },
+          "plural": {
+            "virile": "zginęliście",
+            "nonvirile": "zginęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zginął",
+            "f": "zginęła",
+            "n": "zginęło"
+          },
+          "plural": {
+            "virile": "zginęli",
+            "nonvirile": "zginęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

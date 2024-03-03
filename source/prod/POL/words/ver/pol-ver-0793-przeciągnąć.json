@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przeciągnąć",
+    "verbalNoun": "przeciągnięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przeciągnięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przeciągnąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeciągnie się"
+          },
+          "plural": {
+            "allPluralGenders": "przeciągnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przeciągnę"
+          },
+          "plural": {
+            "allPluralGenders": "przeciągniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przeciągniesz"
+          },
+          "plural": {
+            "allPluralGenders": "przeciągniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przeciągnie"
+          },
+          "plural": {
+            "allPluralGenders": "przeciągną"
+          }
+        }
+      },
+      "imperative": "przeciągnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeciągnięto"
+          },
+          "plural": {
+            "allPluralGenders": "przeciągnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przeciągnąłem",
+            "f": "przeciągnęłam"
+          },
+          "plural": {
+            "virile": "przeciągnęliśmy",
+            "nonvirile": "przeciągnęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przeciągnąłeś",
+            "f": "przeciągnęłaś"
+          },
+          "plural": {
+            "virile": "przeciągnęliście",
+            "nonvirile": "przeciągnęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przeciągnął",
+            "f": "przeciągnęła",
+            "n": "przeciągnęło"
+          },
+          "plural": {
+            "virile": "przeciągnęli",
+            "nonvirile": "przeciągnęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

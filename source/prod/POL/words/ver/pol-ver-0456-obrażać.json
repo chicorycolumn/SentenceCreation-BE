@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "obrażać",
+    "verbalNoun": "obrażanie",
+    "activeAdjectival": "obrażający",
+    "passiveAdjectival": "obrażany",
+    "contemporaryAdverbial": "obrażając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "obrażaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obrażano"
+          },
+          "plural": {
+            "allPluralGenders": "obrażano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "obrażałem",
+            "f": "obrażałam"
+          },
+          "plural": {
+            "virile": "obrażaliśmy",
+            "nonvirile": "obrażałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "obrażałeś",
+            "f": "obrażałaś"
+          },
+          "plural": {
+            "virile": "obrażaliście",
+            "nonvirile": "obrażałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "obrażał",
+            "f": "obrażała",
+            "n": "obrażało"
+          },
+          "plural": {
+            "virile": "obrażali",
+            "nonvirile": "obrażały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obraża się"
+          },
+          "plural": {
+            "allPluralGenders": "obraża się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "obrażam"
+          },
+          "plural": {
+            "allPluralGenders": "obrażamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "obrażasz"
+          },
+          "plural": {
+            "allPluralGenders": "obrażacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "obraża"
+          },
+          "plural": {
+            "allPluralGenders": "obrażają"
+          }
+        }
+      }
+    }
+  }
+}

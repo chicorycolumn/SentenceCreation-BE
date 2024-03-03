@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wata",
+      "gen": "waty",
+      "dat": "wacie",
+      "acc": "watę",
+      "ins": "watą",
+      "loc": "wacie",
+      "voc": "wato"
+    },
+    "plural": {
+      "nom": "waty",
+      "gen": "wat",
+      "dat": "watom",
+      "acc": "waty",
+      "ins": "watami",
+      "loc": "watach",
+      "voc": "waty"
+    }
+  }
+}

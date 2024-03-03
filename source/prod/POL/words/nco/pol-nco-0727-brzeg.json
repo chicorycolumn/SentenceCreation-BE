@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "brzeg",
+      "gen": "brzegu",
+      "dat": "brzegowi",
+      "acc": "brzeg",
+      "ins": "brzegiem",
+      "loc": "brzegu",
+      "voc": "brzegu"
+    },
+    "plural": {
+      "nom": "brzegi",
+      "gen": "brzegów",
+      "dat": "brzegom",
+      "acc": "brzegi",
+      "ins": "brzegami",
+      "loc": "brzegach",
+      "voc": "brzegi"
+    }
+  }
+}

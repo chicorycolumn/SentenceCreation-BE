@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "organ",
+      "gen": "organ's"
+    },
+    "plural": {
+      "nom": "organs",
+      "gen": "organs'"
+    }
+  }
+}

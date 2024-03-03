@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "obrócić",
+    "verbalNoun": "obrócenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "obrócony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "obróciwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obróci się"
+          },
+          "plural": {
+            "allPluralGenders": "obróci się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "obrócę"
+          },
+          "plural": {
+            "allPluralGenders": "obrócimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "obrócisz"
+          },
+          "plural": {
+            "allPluralGenders": "obrócicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "obróci"
+          },
+          "plural": {
+            "allPluralGenders": "obrócą"
+          }
+        }
+      },
+      "imperative": "obróć",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obrócon"
+          },
+          "plural": {
+            "allPluralGenders": "obrócon"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "obróciłem",
+            "f": "obróciłam"
+          },
+          "plural": {
+            "virile": "obróciliśmy",
+            "nonvirile": "obróciłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "obróciłeś",
+            "f": "obróciłaś"
+          },
+          "plural": {
+            "virile": "obróciliście",
+            "nonvirile": "obróciłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "obrócił",
+            "f": "obróciła",
+            "n": "obróciło"
+          },
+          "plural": {
+            "virile": "obrócili",
+            "nonvirile": "obróciły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "twarz",
+      "gen": "twarzy",
+      "dat": "twarzy",
+      "acc": "twarz",
+      "ins": "twarzą",
+      "loc": "twarzy",
+      "voc": "twarzy"
+    },
+    "plural": {
+      "nom": "twarze",
+      "gen": "twarzy",
+      "dat": "twarzom",
+      "acc": "twarze",
+      "ins": "twarzami",
+      "loc": "twarzach",
+      "voc": "twarze"
+    }
+  }
+}

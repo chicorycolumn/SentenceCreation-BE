@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pchać",
+    "verbalNoun": "pchanie",
+    "activeAdjectival": "pchający",
+    "passiveAdjectival": "pchany",
+    "contemporaryAdverbial": "pchając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pchaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pchano"
+          },
+          "plural": {
+            "allPluralGenders": "pchano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pchałem",
+            "f": "pchałam"
+          },
+          "plural": {
+            "virile": "pchaliśmy",
+            "nonvirile": "pchałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pchałeś",
+            "f": "pchałaś"
+          },
+          "plural": {
+            "virile": "pchaliście",
+            "nonvirile": "pchałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pchał",
+            "f": "pchała",
+            "n": "pchało"
+          },
+          "plural": {
+            "virile": "pchali",
+            "nonvirile": "pchały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pcha się"
+          },
+          "plural": {
+            "allPluralGenders": "pcha się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pcham"
+          },
+          "plural": {
+            "allPluralGenders": "pchamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pchasz"
+          },
+          "plural": {
+            "allPluralGenders": "pchacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pcha"
+          },
+          "plural": {
+            "allPluralGenders": "pchają"
+          }
+        }
+      }
+    }
+  }
+}

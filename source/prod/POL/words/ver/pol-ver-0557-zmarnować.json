@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zmarnować",
+    "verbalNoun": "zmarnowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zmarnowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zmarnowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zmarnuje się"
+          },
+          "plural": {
+            "allPluralGenders": "zmarnuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zmarnuję"
+          },
+          "plural": {
+            "allPluralGenders": "zmarnujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zmarnujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zmarnujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zmarnuje"
+          },
+          "plural": {
+            "allPluralGenders": "zmarnują"
+          }
+        }
+      },
+      "imperative": "zmarnuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zmarnowano"
+          },
+          "plural": {
+            "allPluralGenders": "zmarnowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zmarnowałem",
+            "f": "zmarnowałam"
+          },
+          "plural": {
+            "virile": "zmarnowaliśmy",
+            "nonvirile": "zmarnowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zmarnowałeś",
+            "f": "zmarnowałaś"
+          },
+          "plural": {
+            "virile": "zmarnowaliście",
+            "nonvirile": "zmarnowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zmarnował",
+            "f": "zmarnowała",
+            "n": "zmarnowało"
+          },
+          "plural": {
+            "virile": "zmarnowali",
+            "nonvirile": "zmarnowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

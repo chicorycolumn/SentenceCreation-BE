@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pożyczać",
+    "verbalNoun": "pożyczanie",
+    "activeAdjectival": "pożyczający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "pożyczając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pożyczaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pożyczano"
+          },
+          "plural": {
+            "allPluralGenders": "pożyczano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pożyczałem",
+            "f": "pożyczałam"
+          },
+          "plural": {
+            "virile": "pożyczaliśmy",
+            "nonvirile": "pożyczałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pożyczałeś",
+            "f": "pożyczałaś"
+          },
+          "plural": {
+            "virile": "pożyczaliście",
+            "nonvirile": "pożyczałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pożyczał",
+            "f": "pożyczała",
+            "n": "pożyczało"
+          },
+          "plural": {
+            "virile": "pożyczali",
+            "nonvirile": "pożyczały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pożycza się"
+          },
+          "plural": {
+            "allPluralGenders": "pożycza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pożyczam"
+          },
+          "plural": {
+            "allPluralGenders": "pożyczamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pożyczasz"
+          },
+          "plural": {
+            "allPluralGenders": "pożyczacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pożycza"
+          },
+          "plural": {
+            "allPluralGenders": "pożyczają"
+          }
+        }
+      }
+    }
+  }
+}

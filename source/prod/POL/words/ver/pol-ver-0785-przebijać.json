@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przebijać",
+    "verbalNoun": "przebijanie",
+    "activeAdjectival": "przebijający",
+    "passiveAdjectival": "przebijany",
+    "contemporaryAdverbial": "przebijając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przebijaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przebijano"
+          },
+          "plural": {
+            "allPluralGenders": "przebijano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przebijałem",
+            "f": "przebijałam"
+          },
+          "plural": {
+            "virile": "przebijaliśmy",
+            "nonvirile": "przebijałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przebijałeś",
+            "f": "przebijałaś"
+          },
+          "plural": {
+            "virile": "przebijaliście",
+            "nonvirile": "przebijałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przebijał",
+            "f": "przebijała",
+            "n": "przebijało"
+          },
+          "plural": {
+            "virile": "przebijali",
+            "nonvirile": "przebijały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przebija się"
+          },
+          "plural": {
+            "allPluralGenders": "przebija się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przebijam"
+          },
+          "plural": {
+            "allPluralGenders": "przebijamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przebijasz"
+          },
+          "plural": {
+            "allPluralGenders": "przebijacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przebija"
+          },
+          "plural": {
+            "allPluralGenders": "przebijają"
+          }
+        }
+      }
+    }
+  }
+}

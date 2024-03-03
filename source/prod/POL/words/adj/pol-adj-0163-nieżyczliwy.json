@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "nieżyczliwie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nieżyczliwy",
+          "gen": "nieżyczliwego",
+          "dat": "nieżyczliwemu",
+          "acc": "nieżyczliwego",
+          "ins": "nieżyczliwym",
+          "loc": "nieżyczliwym"
+        },
+        "m3": {
+          "nom": "nieżyczliwy",
+          "gen": "nieżyczliwego",
+          "dat": "nieżyczliwemu",
+          "acc": "nieżyczliwy",
+          "ins": "nieżyczliwym",
+          "loc": "nieżyczliwym"
+        },
+        "f": {
+          "nom": "nieżyczliwa",
+          "gen": "nieżyczliwej",
+          "dat": "nieżyczliwej",
+          "acc": "nieżyczliwą",
+          "ins": "nieżyczliwą",
+          "loc": "nieżyczliwej"
+        },
+        "n": {
+          "nom": "nieżyczliwe",
+          "gen": "nieżyczliwego",
+          "dat": "nieżyczliwemu",
+          "acc": "nieżyczliwe",
+          "ins": "nieżyczliwym",
+          "loc": "nieżyczliwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieżyczliwi",
+          "gen": "nieżyczliwych",
+          "dat": "nieżyczliwym",
+          "acc": "nieżyczliwych",
+          "ins": "nieżyczliwymi",
+          "loc": "nieżyczliwych"
+        },
+        "nonvirile": {
+          "nom": "nieżyczliwe",
+          "gen": "nieżyczliwych",
+          "dat": "nieżyczliwym",
+          "acc": "nieżyczliwe",
+          "ins": "nieżyczliwymi",
+          "loc": "nieżyczliwych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "nieżyczliwszy",
+          "gen": "nieżyczliwszego",
+          "dat": "nieżyczliwszemu",
+          "acc": "nieżyczliwszego",
+          "ins": "nieżyczliwszym",
+          "loc": "nieżyczliwszym"
+        },
+        "m3": {
+          "nom": "nieżyczliwszy",
+          "gen": "nieżyczliwszego",
+          "dat": "nieżyczliwszemu",
+          "acc": "nieżyczliwszy",
+          "ins": "nieżyczliwszym",
+          "loc": "nieżyczliwszym"
+        },
+        "f": {
+          "nom": "nieżyczliwsza",
+          "gen": "nieżyczliwszej",
+          "dat": "nieżyczliwszej",
+          "acc": "nieżyczliwszą",
+          "ins": "nieżyczliwszą",
+          "loc": "nieżyczliwszej"
+        },
+        "n": {
+          "nom": "nieżyczliwsze",
+          "gen": "nieżyczliwszego",
+          "dat": "nieżyczliwszemu",
+          "acc": "nieżyczliwsze",
+          "ins": "nieżyczliwszym",
+          "loc": "nieżyczliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieżyczliwsi",
+          "gen": "nieżyczliwszych",
+          "dat": "nieżyczliwszym",
+          "acc": "nieżyczliwszych",
+          "ins": "nieżyczliwszymi",
+          "loc": "nieżyczliwszych"
+        },
+        "nonvirile": {
+          "nom": "nieżyczliwsze",
+          "gen": "nieżyczliwszych",
+          "dat": "nieżyczliwszym",
+          "acc": "nieżyczliwsze",
+          "ins": "nieżyczliwszymi",
+          "loc": "nieżyczliwszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najnieżyczliwszy",
+          "gen": "najnieżyczliwszego",
+          "dat": "najnieżyczliwszemu",
+          "acc": "najnieżyczliwszego",
+          "ins": "najnieżyczliwszym",
+          "loc": "najnieżyczliwszym"
+        },
+        "m3": {
+          "nom": "najnieżyczliwszy",
+          "gen": "najnieżyczliwszego",
+          "dat": "najnieżyczliwszemu",
+          "acc": "najnieżyczliwszy",
+          "ins": "najnieżyczliwszym",
+          "loc": "najnieżyczliwszym"
+        },
+        "f": {
+          "nom": "najnieżyczliwsza",
+          "gen": "najnieżyczliwszej",
+          "dat": "najnieżyczliwszej",
+          "acc": "najnieżyczliwszą",
+          "ins": "najnieżyczliwszą",
+          "loc": "najnieżyczliwszej"
+        },
+        "n": {
+          "nom": "najnieżyczliwsze",
+          "gen": "najnieżyczliwszego",
+          "dat": "najnieżyczliwszemu",
+          "acc": "najnieżyczliwsze",
+          "ins": "najnieżyczliwszym",
+          "loc": "najnieżyczliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najnieżyczliwsi",
+          "gen": "najnieżyczliwszych",
+          "dat": "najnieżyczliwszym",
+          "acc": "najnieżyczliwszych",
+          "ins": "najnieżyczliwszymi",
+          "loc": "najnieżyczliwszych"
+        },
+        "nonvirile": {
+          "nom": "najnieżyczliwsze",
+          "gen": "najnieżyczliwszych",
+          "dat": "najnieżyczliwszym",
+          "acc": "najnieżyczliwsze",
+          "ins": "najnieżyczliwszymi",
+          "loc": "najnieżyczliwszych"
+        }
+      }
+    }
+  }
+}

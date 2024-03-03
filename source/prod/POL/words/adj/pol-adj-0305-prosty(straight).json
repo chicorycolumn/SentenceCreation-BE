@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "prosto",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "prosty",
+          "gen": "prostego",
+          "dat": "prostemu",
+          "acc": "prostego",
+          "ins": "prostym",
+          "loc": "prostym"
+        },
+        "m3": {
+          "nom": "prosty",
+          "gen": "prostego",
+          "dat": "prostemu",
+          "acc": "prosty",
+          "ins": "prostym",
+          "loc": "prostym"
+        },
+        "f": {
+          "nom": "prosta",
+          "gen": "prostej",
+          "dat": "prostej",
+          "acc": "prostą",
+          "ins": "prostą",
+          "loc": "prostej"
+        },
+        "n": {
+          "nom": "proste",
+          "gen": "prostego",
+          "dat": "prostemu",
+          "acc": "proste",
+          "ins": "prostym",
+          "loc": "prostym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "prości",
+          "gen": "prostych",
+          "dat": "prostym",
+          "acc": "prostych",
+          "ins": "prostymi",
+          "loc": "prostych"
+        },
+        "nonvirile": {
+          "nom": "proste",
+          "gen": "prostych",
+          "dat": "prostym",
+          "acc": "proste",
+          "ins": "prostymi",
+          "loc": "prostych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "prostszy",
+          "gen": "prostszego",
+          "dat": "prostszemu",
+          "acc": "prostszego",
+          "ins": "prostszym",
+          "loc": "prostszym"
+        },
+        "m3": {
+          "nom": "prostszy",
+          "gen": "prostszego",
+          "dat": "prostszemu",
+          "acc": "prostszy",
+          "ins": "prostszym",
+          "loc": "prostszym"
+        },
+        "f": {
+          "nom": "prostsza",
+          "gen": "prostszej",
+          "dat": "prostszej",
+          "acc": "prostszą",
+          "ins": "prostszą",
+          "loc": "prostszej"
+        },
+        "n": {
+          "nom": "prostsze",
+          "gen": "prostszego",
+          "dat": "prostszemu",
+          "acc": "prostsze",
+          "ins": "prostszym",
+          "loc": "prostszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "prostsi",
+          "gen": "prostszych",
+          "dat": "prostszym",
+          "acc": "prostszych",
+          "ins": "prostszymi",
+          "loc": "prostszych"
+        },
+        "nonvirile": {
+          "nom": "prostsze",
+          "gen": "prostszych",
+          "dat": "prostszym",
+          "acc": "prostsze",
+          "ins": "prostszymi",
+          "loc": "prostszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najprostszy",
+          "gen": "najprostszego",
+          "dat": "najprostszemu",
+          "acc": "najprostszego",
+          "ins": "najprostszym",
+          "loc": "najprostszym"
+        },
+        "m3": {
+          "nom": "najprostszy",
+          "gen": "najprostszego",
+          "dat": "najprostszemu",
+          "acc": "najprostszy",
+          "ins": "najprostszym",
+          "loc": "najprostszym"
+        },
+        "f": {
+          "nom": "najprostsza",
+          "gen": "najprostszej",
+          "dat": "najprostszej",
+          "acc": "najprostszą",
+          "ins": "najprostszą",
+          "loc": "najprostszej"
+        },
+        "n": {
+          "nom": "najprostsze",
+          "gen": "najprostszego",
+          "dat": "najprostszemu",
+          "acc": "najprostsze",
+          "ins": "najprostszym",
+          "loc": "najprostszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najprostsi",
+          "gen": "najprostszych",
+          "dat": "najprostszym",
+          "acc": "najprostszych",
+          "ins": "najprostszymi",
+          "loc": "najprostszych"
+        },
+        "nonvirile": {
+          "nom": "najprostsze",
+          "gen": "najprostszych",
+          "dat": "najprostszym",
+          "acc": "najprostsze",
+          "ins": "najprostszymi",
+          "loc": "najprostszych"
+        }
+      }
+    }
+  }
+}

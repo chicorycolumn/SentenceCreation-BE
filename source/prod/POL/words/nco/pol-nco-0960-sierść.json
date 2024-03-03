@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sierść",
+      "gen": "sierści",
+      "dat": "sierści",
+      "acc": "sierść",
+      "ins": "sierścią",
+      "loc": "sierści",
+      "voc": "sierści"
+    },
+    "plural": {
+      "nom": "sierści",
+      "gen": "sierści",
+      "dat": "sierściom",
+      "acc": "sierści",
+      "ins": "sierściami",
+      "loc": "sierściach",
+      "voc": "sierści"
+    }
+  }
+}

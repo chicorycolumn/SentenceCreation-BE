@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "potrwać",
+    "verbalNoun": "potrwanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "potrwawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "potrwa się"
+          },
+          "plural": {
+            "allPluralGenders": "potrwa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "potrwam"
+          },
+          "plural": {
+            "allPluralGenders": "potrwamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "potrwasz"
+          },
+          "plural": {
+            "allPluralGenders": "potrwacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "potrwa"
+          },
+          "plural": {
+            "allPluralGenders": "potrwają"
+          }
+        }
+      },
+      "imperative": "potrwaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "potrwano"
+          },
+          "plural": {
+            "allPluralGenders": "potrwano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "potrwałem",
+            "f": "potrwałam"
+          },
+          "plural": {
+            "virile": "potrwaliśmy",
+            "nonvirile": "potrwałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "potrwałeś",
+            "f": "potrwałaś"
+          },
+          "plural": {
+            "virile": "potrwaliście",
+            "nonvirile": "potrwałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "potrwał",
+            "f": "potrwała",
+            "n": "potrwało"
+          },
+          "plural": {
+            "virile": "potrwali",
+            "nonvirile": "potrwały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

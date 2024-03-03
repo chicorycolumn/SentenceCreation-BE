@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "bezsensownie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bezsensowny",
+          "gen": "bezsensownego",
+          "dat": "bezsensownemu",
+          "acc": "bezsensownego",
+          "ins": "bezsensownym",
+          "loc": "bezsensownym"
+        },
+        "m3": {
+          "nom": "bezsensowny",
+          "gen": "bezsensownego",
+          "dat": "bezsensownemu",
+          "acc": "bezsensowny",
+          "ins": "bezsensownym",
+          "loc": "bezsensownym"
+        },
+        "f": {
+          "nom": "bezsensowna",
+          "gen": "bezsensownej",
+          "dat": "bezsensownej",
+          "acc": "bezsensowną",
+          "ins": "bezsensowną",
+          "loc": "bezsensownej"
+        },
+        "n": {
+          "nom": "bezsensowne",
+          "gen": "bezsensownego",
+          "dat": "bezsensownemu",
+          "acc": "bezsensowne",
+          "ins": "bezsensownym",
+          "loc": "bezsensownym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bezsensowni",
+          "gen": "bezsensownych",
+          "dat": "bezsensownym",
+          "acc": "bezsensownych",
+          "ins": "bezsensownymi",
+          "loc": "bezsensownych"
+        },
+        "nonvirile": {
+          "nom": "bezsensowne",
+          "gen": "bezsensownych",
+          "dat": "bezsensownym",
+          "acc": "bezsensowne",
+          "ins": "bezsensownymi",
+          "loc": "bezsensownych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bezsensowniejszy",
+          "gen": "bezsensowniejszego",
+          "dat": "bezsensowniejszemu",
+          "acc": "bezsensowniejszego",
+          "ins": "bezsensowniejszym",
+          "loc": "bezsensowniejszym"
+        },
+        "m3": {
+          "nom": "bezsensowniejszy",
+          "gen": "bezsensowniejszego",
+          "dat": "bezsensowniejszemu",
+          "acc": "bezsensowniejszy",
+          "ins": "bezsensowniejszym",
+          "loc": "bezsensowniejszym"
+        },
+        "f": {
+          "nom": "bezsensowniejsza",
+          "gen": "bezsensowniejszej",
+          "dat": "bezsensowniejszej",
+          "acc": "bezsensowniejszą",
+          "ins": "bezsensowniejszą",
+          "loc": "bezsensowniejszej"
+        },
+        "n": {
+          "nom": "bezsensowniejsze",
+          "gen": "bezsensowniejszego",
+          "dat": "bezsensowniejszemu",
+          "acc": "bezsensowniejsze",
+          "ins": "bezsensowniejszym",
+          "loc": "bezsensowniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bezsensowniejsi",
+          "gen": "bezsensowniejszych",
+          "dat": "bezsensowniejszym",
+          "acc": "bezsensowniejszych",
+          "ins": "bezsensowniejszymi",
+          "loc": "bezsensowniejszych"
+        },
+        "nonvirile": {
+          "nom": "bezsensowniejsze",
+          "gen": "bezsensowniejszych",
+          "dat": "bezsensowniejszym",
+          "acc": "bezsensowniejsze",
+          "ins": "bezsensowniejszymi",
+          "loc": "bezsensowniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbezsensowniejszy",
+          "gen": "najbezsensowniejszego",
+          "dat": "najbezsensowniejszemu",
+          "acc": "najbezsensowniejszego",
+          "ins": "najbezsensowniejszym",
+          "loc": "najbezsensowniejszym"
+        },
+        "m3": {
+          "nom": "najbezsensowniejszy",
+          "gen": "najbezsensowniejszego",
+          "dat": "najbezsensowniejszemu",
+          "acc": "najbezsensowniejszy",
+          "ins": "najbezsensowniejszym",
+          "loc": "najbezsensowniejszym"
+        },
+        "f": {
+          "nom": "najbezsensowniejsza",
+          "gen": "najbezsensowniejszej",
+          "dat": "najbezsensowniejszej",
+          "acc": "najbezsensowniejszą",
+          "ins": "najbezsensowniejszą",
+          "loc": "najbezsensowniejszej"
+        },
+        "n": {
+          "nom": "najbezsensowniejsze",
+          "gen": "najbezsensowniejszego",
+          "dat": "najbezsensowniejszemu",
+          "acc": "najbezsensowniejsze",
+          "ins": "najbezsensowniejszym",
+          "loc": "najbezsensowniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbezsensowniejsi",
+          "gen": "najbezsensowniejszych",
+          "dat": "najbezsensowniejszym",
+          "acc": "najbezsensowniejszych",
+          "ins": "najbezsensowniejszymi",
+          "loc": "najbezsensowniejszych"
+        },
+        "nonvirile": {
+          "nom": "najbezsensowniejsze",
+          "gen": "najbezsensowniejszych",
+          "dat": "najbezsensowniejszym",
+          "acc": "najbezsensowniejsze",
+          "ins": "najbezsensowniejszymi",
+          "loc": "najbezsensowniejszych"
+        }
+      }
+    }
+  }
+}

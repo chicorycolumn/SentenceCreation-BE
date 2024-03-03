@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "płytko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "płytki",
+          "gen": "płytkiego",
+          "dat": "płytkiemu",
+          "acc": "płytkiego",
+          "ins": "płytkim",
+          "loc": "płytkim"
+        },
+        "m3": {
+          "nom": "płytki",
+          "gen": "płytkiego",
+          "dat": "płytkiemu",
+          "acc": "płytki",
+          "ins": "płytkim",
+          "loc": "płytkim"
+        },
+        "f": {
+          "nom": "płytka",
+          "gen": "płytkiej",
+          "dat": "płytkiej",
+          "acc": "płytką",
+          "ins": "płytką",
+          "loc": "płytkiej"
+        },
+        "n": {
+          "nom": "płytkie",
+          "gen": "płytkiego",
+          "dat": "płytkiemu",
+          "acc": "płytkie",
+          "ins": "płytkim",
+          "loc": "płytkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "płytcy",
+          "gen": "płytkich",
+          "dat": "płytkim",
+          "acc": "płytkich",
+          "ins": "płytkimi",
+          "loc": "płytkich"
+        },
+        "nonvirile": {
+          "nom": "płytkie",
+          "gen": "płytkich",
+          "dat": "płytkim",
+          "acc": "płytkie",
+          "ins": "płytkimi",
+          "loc": "płytkich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "płytszy",
+          "gen": "płytszego",
+          "dat": "płytszemu",
+          "acc": "płytszego",
+          "ins": "płytszym",
+          "loc": "płytszym"
+        },
+        "m3": {
+          "nom": "płytszy",
+          "gen": "płytszego",
+          "dat": "płytszemu",
+          "acc": "płytszy",
+          "ins": "płytszym",
+          "loc": "płytszym"
+        },
+        "f": {
+          "nom": "płytsza",
+          "gen": "płytszej",
+          "dat": "płytszej",
+          "acc": "płytszą",
+          "ins": "płytszą",
+          "loc": "płytszej"
+        },
+        "n": {
+          "nom": "płytsze",
+          "gen": "płytszego",
+          "dat": "płytszemu",
+          "acc": "płytsze",
+          "ins": "płytszym",
+          "loc": "płytszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "płytsi",
+          "gen": "płytszych",
+          "dat": "płytszym",
+          "acc": "płytszych",
+          "ins": "płytszymi",
+          "loc": "płytszych"
+        },
+        "nonvirile": {
+          "nom": "płytsze",
+          "gen": "płytszych",
+          "dat": "płytszym",
+          "acc": "płytsze",
+          "ins": "płytszymi",
+          "loc": "płytszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najpłytszy",
+          "gen": "najpłytszego",
+          "dat": "najpłytszemu",
+          "acc": "najpłytszego",
+          "ins": "najpłytszym",
+          "loc": "najpłytszym"
+        },
+        "m3": {
+          "nom": "najpłytszy",
+          "gen": "najpłytszego",
+          "dat": "najpłytszemu",
+          "acc": "najpłytszy",
+          "ins": "najpłytszym",
+          "loc": "najpłytszym"
+        },
+        "f": {
+          "nom": "najpłytsza",
+          "gen": "najpłytszej",
+          "dat": "najpłytszej",
+          "acc": "najpłytszą",
+          "ins": "najpłytszą",
+          "loc": "najpłytszej"
+        },
+        "n": {
+          "nom": "najpłytsze",
+          "gen": "najpłytszego",
+          "dat": "najpłytszemu",
+          "acc": "najpłytsze",
+          "ins": "najpłytszym",
+          "loc": "najpłytszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najpłytsi",
+          "gen": "najpłytszych",
+          "dat": "najpłytszym",
+          "acc": "najpłytszych",
+          "ins": "najpłytszymi",
+          "loc": "najpłytszych"
+        },
+        "nonvirile": {
+          "nom": "najpłytsze",
+          "gen": "najpłytszych",
+          "dat": "najpłytszym",
+          "acc": "najpłytsze",
+          "ins": "najpłytszymi",
+          "loc": "najpłytszych"
+        }
+      }
+    }
+  }
+}

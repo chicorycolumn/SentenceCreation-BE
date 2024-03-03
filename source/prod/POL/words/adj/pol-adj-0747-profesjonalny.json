@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "profesjonalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "profesjonalny",
+          "gen": "profesjonalnego",
+          "dat": "profesjonalnemu",
+          "acc": "profesjonalnego",
+          "ins": "profesjonalnym",
+          "loc": "profesjonalnym"
+        },
+        "m3": {
+          "nom": "profesjonalny",
+          "gen": "profesjonalnego",
+          "dat": "profesjonalnemu",
+          "acc": "profesjonalny",
+          "ins": "profesjonalnym",
+          "loc": "profesjonalnym"
+        },
+        "f": {
+          "nom": "profesjonalna",
+          "gen": "profesjonalnej",
+          "dat": "profesjonalnej",
+          "acc": "profesjonalną",
+          "ins": "profesjonalną",
+          "loc": "profesjonalnej"
+        },
+        "n": {
+          "nom": "profesjonalne",
+          "gen": "profesjonalnego",
+          "dat": "profesjonalnemu",
+          "acc": "profesjonalne",
+          "ins": "profesjonalnym",
+          "loc": "profesjonalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "profesjonalni",
+          "gen": "profesjonalnych",
+          "dat": "profesjonalnym",
+          "acc": "profesjonalnych",
+          "ins": "profesjonalnymi",
+          "loc": "profesjonalnych"
+        },
+        "nonvirile": {
+          "nom": "profesjonalne",
+          "gen": "profesjonalnych",
+          "dat": "profesjonalnym",
+          "acc": "profesjonalne",
+          "ins": "profesjonalnymi",
+          "loc": "profesjonalnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej profesjonalny",
+          "gen": "bardziej profesjonalnego",
+          "dat": "bardziej profesjonalnemu",
+          "acc": "bardziej profesjonalnego",
+          "ins": "bardziej profesjonalnym",
+          "loc": "bardziej profesjonalnym"
+        },
+        "m3": {
+          "nom": "bardziej profesjonalny",
+          "gen": "bardziej profesjonalnego",
+          "dat": "bardziej profesjonalnemu",
+          "acc": "bardziej profesjonalny",
+          "ins": "bardziej profesjonalnym",
+          "loc": "bardziej profesjonalnym"
+        },
+        "f": {
+          "nom": "bardziej profesjonalna",
+          "gen": "bardziej profesjonalnej",
+          "dat": "bardziej profesjonalnej",
+          "acc": "bardziej profesjonalną",
+          "ins": "bardziej profesjonalną",
+          "loc": "bardziej profesjonalnej"
+        },
+        "n": {
+          "nom": "bardziej profesjonalne",
+          "gen": "bardziej profesjonalnego",
+          "dat": "bardziej profesjonalnemu",
+          "acc": "bardziej profesjonalne",
+          "ins": "bardziej profesjonalnym",
+          "loc": "bardziej profesjonalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej profesjonalni",
+          "gen": "bardziej profesjonalnych",
+          "dat": "bardziej profesjonalnym",
+          "acc": "bardziej profesjonalnych",
+          "ins": "bardziej profesjonalnymi",
+          "loc": "bardziej profesjonalnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej profesjonalne",
+          "gen": "bardziej profesjonalnych",
+          "dat": "bardziej profesjonalnym",
+          "acc": "bardziej profesjonalne",
+          "ins": "bardziej profesjonalnymi",
+          "loc": "bardziej profesjonalnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej profesjonalny",
+          "gen": "najbardziej profesjonalnego",
+          "dat": "najbardziej profesjonalnemu",
+          "acc": "najbardziej profesjonalnego",
+          "ins": "najbardziej profesjonalnym",
+          "loc": "najbardziej profesjonalnym"
+        },
+        "m3": {
+          "nom": "najbardziej profesjonalny",
+          "gen": "najbardziej profesjonalnego",
+          "dat": "najbardziej profesjonalnemu",
+          "acc": "najbardziej profesjonalny",
+          "ins": "najbardziej profesjonalnym",
+          "loc": "najbardziej profesjonalnym"
+        },
+        "f": {
+          "nom": "najbardziej profesjonalna",
+          "gen": "najbardziej profesjonalnej",
+          "dat": "najbardziej profesjonalnej",
+          "acc": "najbardziej profesjonalną",
+          "ins": "najbardziej profesjonalną",
+          "loc": "najbardziej profesjonalnej"
+        },
+        "n": {
+          "nom": "najbardziej profesjonalne",
+          "gen": "najbardziej profesjonalnego",
+          "dat": "najbardziej profesjonalnemu",
+          "acc": "najbardziej profesjonalne",
+          "ins": "najbardziej profesjonalnym",
+          "loc": "najbardziej profesjonalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej profesjonalni",
+          "gen": "najbardziej profesjonalnych",
+          "dat": "najbardziej profesjonalnym",
+          "acc": "najbardziej profesjonalnych",
+          "ins": "najbardziej profesjonalnymi",
+          "loc": "najbardziej profesjonalnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej profesjonalne",
+          "gen": "najbardziej profesjonalnych",
+          "dat": "najbardziej profesjonalnym",
+          "acc": "najbardziej profesjonalne",
+          "ins": "najbardziej profesjonalnymi",
+          "loc": "najbardziej profesjonalnych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "podłoga",
+      "gen": "podłogi",
+      "dat": "podłodze",
+      "acc": "podłogę",
+      "ins": "podłogą",
+      "loc": "podłodze",
+      "voc": "podłogo"
+    },
+    "plural": {
+      "nom": "podłogi",
+      "gen": "podłóg",
+      "dat": "podłogom",
+      "acc": "podłogi",
+      "ins": "podłogami",
+      "loc": "podłogach",
+      "voc": "podłogi"
+    }
+  }
+}

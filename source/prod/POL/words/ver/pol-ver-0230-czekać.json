@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "czekać",
+    "verbalNoun": "czekanie",
+    "activeAdjectival": "czekający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "czekając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "czekaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "czekano"
+          },
+          "plural": {
+            "allPluralGenders": "czekano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "czekałem",
+            "f": "czekałam"
+          },
+          "plural": {
+            "virile": "czekaliśmy",
+            "nonvirile": "czekałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "czekałeś",
+            "f": "czekałaś"
+          },
+          "plural": {
+            "virile": "czekaliście",
+            "nonvirile": "czekałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "czekał",
+            "f": "czekała",
+            "n": "czekało"
+          },
+          "plural": {
+            "virile": "czekali",
+            "nonvirile": "czekały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "czeka się"
+          },
+          "plural": {
+            "allPluralGenders": "czeka się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "czekam"
+          },
+          "plural": {
+            "allPluralGenders": "czekamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "czekasz"
+          },
+          "plural": {
+            "allPluralGenders": "czekacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "czeka"
+          },
+          "plural": {
+            "allPluralGenders": "czekają"
+          }
+        }
+      }
+    }
+  }
+}

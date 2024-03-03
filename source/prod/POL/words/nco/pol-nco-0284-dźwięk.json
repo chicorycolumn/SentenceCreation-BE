@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dźwięk",
+      "gen": "dźwięku",
+      "dat": "dźwiękowi",
+      "acc": "dźwięk",
+      "ins": "dźwiękiem",
+      "loc": "dźwięku",
+      "voc": "dźwięku"
+    },
+    "plural": {
+      "nom": "dźwięki",
+      "gen": "dźwięków",
+      "dat": "dźwiękom",
+      "acc": "dźwięki",
+      "ins": "dźwiękami",
+      "loc": "dźwiękach",
+      "voc": "dźwięki"
+    }
+  }
+}

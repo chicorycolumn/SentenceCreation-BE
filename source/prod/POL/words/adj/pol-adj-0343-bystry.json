@@ -1,0 +1,175 @@
+{
+  "inflections": {
+    "adverb": {
+      "isTerminus": true,
+      "normal": [
+        "bystrze"
+      ],
+      "additionalInfrequent": [
+        "bystro"
+      ]
+    },
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bystry",
+          "gen": "bystrego",
+          "dat": "bystremu",
+          "acc": "bystrego",
+          "ins": "bystrym",
+          "loc": "bystrym"
+        },
+        "m3": {
+          "nom": "bystry",
+          "gen": "bystrego",
+          "dat": "bystremu",
+          "acc": "bystry",
+          "ins": "bystrym",
+          "loc": "bystrym"
+        },
+        "f": {
+          "nom": "bystra",
+          "gen": "bystrej",
+          "dat": "bystrej",
+          "acc": "bystrą",
+          "ins": "bystrą",
+          "loc": "bystrej"
+        },
+        "n": {
+          "nom": "bystre",
+          "gen": "bystrego",
+          "dat": "bystremu",
+          "acc": "bystre",
+          "ins": "bystrym",
+          "loc": "bystrym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bystrzy",
+          "gen": "bystrych",
+          "dat": "bystrym",
+          "acc": "bystrych",
+          "ins": "bystrymi",
+          "loc": "bystrych"
+        },
+        "nonvirile": {
+          "nom": "bystre",
+          "gen": "bystrych",
+          "dat": "bystrym",
+          "acc": "bystre",
+          "ins": "bystrymi",
+          "loc": "bystrych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bystrzejszy",
+          "gen": "bystrzejszego",
+          "dat": "bystrzejszemu",
+          "acc": "bystrzejszego",
+          "ins": "bystrzejszym",
+          "loc": "bystrzejszym"
+        },
+        "m3": {
+          "nom": "bystrzejszy",
+          "gen": "bystrzejszego",
+          "dat": "bystrzejszemu",
+          "acc": "bystrzejszy",
+          "ins": "bystrzejszym",
+          "loc": "bystrzejszym"
+        },
+        "f": {
+          "nom": "bystrzejsza",
+          "gen": "bystrzejszej",
+          "dat": "bystrzejszej",
+          "acc": "bystrzejszą",
+          "ins": "bystrzejszą",
+          "loc": "bystrzejszej"
+        },
+        "n": {
+          "nom": "bystrzejsze",
+          "gen": "bystrzejszego",
+          "dat": "bystrzejszemu",
+          "acc": "bystrzejsze",
+          "ins": "bystrzejszym",
+          "loc": "bystrzejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bystrzejsi",
+          "gen": "bystrzejszych",
+          "dat": "bystrzejszym",
+          "acc": "bystrzejszych",
+          "ins": "bystrzejszymi",
+          "loc": "bystrzejszych"
+        },
+        "nonvirile": {
+          "nom": "bystrzejsze",
+          "gen": "bystrzejszych",
+          "dat": "bystrzejszym",
+          "acc": "bystrzejsze",
+          "ins": "bystrzejszymi",
+          "loc": "bystrzejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbystrzejszy",
+          "gen": "najbystrzejszego",
+          "dat": "najbystrzejszemu",
+          "acc": "najbystrzejszego",
+          "ins": "najbystrzejszym",
+          "loc": "najbystrzejszym"
+        },
+        "m3": {
+          "nom": "najbystrzejszy",
+          "gen": "najbystrzejszego",
+          "dat": "najbystrzejszemu",
+          "acc": "najbystrzejszy",
+          "ins": "najbystrzejszym",
+          "loc": "najbystrzejszym"
+        },
+        "f": {
+          "nom": "najbystrzejsza",
+          "gen": "najbystrzejszej",
+          "dat": "najbystrzejszej",
+          "acc": "najbystrzejszą",
+          "ins": "najbystrzejszą",
+          "loc": "najbystrzejszej"
+        },
+        "n": {
+          "nom": "najbystrzejsze",
+          "gen": "najbystrzejszego",
+          "dat": "najbystrzejszemu",
+          "acc": "najbystrzejsze",
+          "ins": "najbystrzejszym",
+          "loc": "najbystrzejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbystrzejsi",
+          "gen": "najbystrzejszych",
+          "dat": "najbystrzejszym",
+          "acc": "najbystrzejszych",
+          "ins": "najbystrzejszymi",
+          "loc": "najbystrzejszych"
+        },
+        "nonvirile": {
+          "nom": "najbystrzejsze",
+          "gen": "najbystrzejszych",
+          "dat": "najbystrzejszym",
+          "acc": "najbystrzejsze",
+          "ins": "najbystrzejszymi",
+          "loc": "najbystrzejszych"
+        }
+      }
+    }
+  }
+}

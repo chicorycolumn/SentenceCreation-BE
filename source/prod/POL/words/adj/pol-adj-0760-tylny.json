@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "tylny",
+          "gen": "tylnego",
+          "dat": "tylnemu",
+          "acc": "tylnego",
+          "ins": "tylnym",
+          "loc": "tylnym"
+        },
+        "m3": {
+          "nom": "tylny",
+          "gen": "tylnego",
+          "dat": "tylnemu",
+          "acc": "tylny",
+          "ins": "tylnym",
+          "loc": "tylnym"
+        },
+        "f": {
+          "nom": "tylna",
+          "gen": "tylnej",
+          "dat": "tylnej",
+          "acc": "tylną",
+          "ins": "tylną",
+          "loc": "tylnej"
+        },
+        "n": {
+          "nom": "tylne",
+          "gen": "tylnego",
+          "dat": "tylnemu",
+          "acc": "tylne",
+          "ins": "tylnym",
+          "loc": "tylnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "tylni",
+          "gen": "tylnych",
+          "dat": "tylnym",
+          "acc": "tylnych",
+          "ins": "tylnymi",
+          "loc": "tylnych"
+        },
+        "nonvirile": {
+          "nom": "tylne",
+          "gen": "tylnych",
+          "dat": "tylnym",
+          "acc": "tylne",
+          "ins": "tylnymi",
+          "loc": "tylnych"
+        }
+      }
+    }
+  }
+}

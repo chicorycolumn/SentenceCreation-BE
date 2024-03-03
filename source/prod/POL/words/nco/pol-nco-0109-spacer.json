@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "spacer",
+      "gen": "spaceru",
+      "dat": "spacerowi",
+      "acc": "spacer",
+      "ins": "spacerem",
+      "loc": "spacerze",
+      "voc": "spacerze"
+    },
+    "plural": {
+      "nom": "spacery",
+      "gen": "spacerów",
+      "dat": "spacerom",
+      "acc": "spacery",
+      "ins": "spacerami",
+      "loc": "spacerach",
+      "voc": "spacery"
+    }
+  }
+}

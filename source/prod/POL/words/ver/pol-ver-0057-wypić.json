@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wypić",
+    "verbalNoun": "wypicie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "wypity",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "wypiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wypije się"
+          },
+          "plural": {
+            "allPluralGenders": "wypije się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wypiję"
+          },
+          "plural": {
+            "allPluralGenders": "wypijemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wypijesz"
+          },
+          "plural": {
+            "allPluralGenders": "wypijecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wypije"
+          },
+          "plural": {
+            "allPluralGenders": "wypiją"
+          }
+        }
+      },
+      "imperative": "wypij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wypito"
+          },
+          "plural": {
+            "allPluralGenders": "wypito"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wypiłem",
+            "f": "wypiłam"
+          },
+          "plural": {
+            "virile": "wypiliśmy",
+            "nonvirile": "wypiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wypiłeś",
+            "f": "wypiłaś"
+          },
+          "plural": {
+            "virile": "wypiliście",
+            "nonvirile": "wypiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wypił",
+            "f": "wypiła",
+            "n": "wypiło"
+          },
+          "plural": {
+            "virile": "wypili",
+            "nonvirile": "wypiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

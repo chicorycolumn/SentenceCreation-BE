@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "umyć",
+    "verbalNoun": "umycie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "umyty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "umywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "umyje się"
+          },
+          "plural": {
+            "allPluralGenders": "umyje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "umyję"
+          },
+          "plural": {
+            "allPluralGenders": "umyjemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "umyjesz"
+          },
+          "plural": {
+            "allPluralGenders": "umyjecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "umyje"
+          },
+          "plural": {
+            "allPluralGenders": "umyją"
+          }
+        }
+      },
+      "imperative": "umyj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "umyto"
+          },
+          "plural": {
+            "allPluralGenders": "umyto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "umyłem",
+            "f": "umyłam"
+          },
+          "plural": {
+            "virile": "umyliśmy",
+            "nonvirile": "umyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "umyłeś",
+            "f": "umyłaś"
+          },
+          "plural": {
+            "virile": "umyliście",
+            "nonvirile": "umyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "umył",
+            "f": "umyła",
+            "n": "umyło"
+          },
+          "plural": {
+            "virile": "umyli",
+            "nonvirile": "umyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

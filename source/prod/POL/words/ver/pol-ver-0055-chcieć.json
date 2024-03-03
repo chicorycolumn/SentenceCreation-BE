@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "chcieć",
+    "verbalNoun": "chcenie",
+    "activeAdjectival": "chcący",
+    "passiveAdjectival": "chciany",
+    "contemporaryAdverbial": "chcąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "chciej",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "chciano"
+          },
+          "plural": {
+            "allPluralGenders": "chciano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "chciałem",
+            "f": "chciałam"
+          },
+          "plural": {
+            "virile": "chcieliśmy",
+            "nonvirile": "chciałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "chciałeś",
+            "f": "chciałaś"
+          },
+          "plural": {
+            "virile": "chcieliście",
+            "nonvirile": "chciałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "chciał",
+            "f": "chciała",
+            "n": "chciało"
+          },
+          "plural": {
+            "virile": "chcieli",
+            "nonvirile": "chciały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "chce się"
+          },
+          "plural": {
+            "allPluralGenders": "chce się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "chcę"
+          },
+          "plural": {
+            "allPluralGenders": "chcemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "chcesz"
+          },
+          "plural": {
+            "allPluralGenders": "chcecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "chce"
+          },
+          "plural": {
+            "allPluralGenders": "chcą"
+          }
+        }
+      }
+    }
+  }
+}

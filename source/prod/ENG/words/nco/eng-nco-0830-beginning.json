@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "beginning",
+      "gen": "beginning's"
+    },
+    "plural": {
+      "nom": "beginnings",
+      "gen": "beginnings'"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "deszcz",
+      "gen": "deszczu",
+      "dat": "deszczowi",
+      "acc": "deszcz",
+      "ins": "deszczem",
+      "loc": "deszczu",
+      "voc": "deszczu"
+    },
+    "plural": {
+      "nom": "deszcze",
+      "gen": [
+        "deszczy",
+        "deszczów"
+      ],
+      "dat": "deszczom",
+      "acc": "deszcze",
+      "ins": "deszczami",
+      "loc": "deszczach",
+      "voc": "deszcze"
+    }
+  }
+}

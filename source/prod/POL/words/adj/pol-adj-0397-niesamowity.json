@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niesamowicie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niesamowity",
+          "gen": "niesamowitego",
+          "dat": "niesamowitemu",
+          "acc": "niesamowitego",
+          "ins": "niesamowitym",
+          "loc": "niesamowitym"
+        },
+        "m3": {
+          "nom": "niesamowity",
+          "gen": "niesamowitego",
+          "dat": "niesamowitemu",
+          "acc": "niesamowity",
+          "ins": "niesamowitym",
+          "loc": "niesamowitym"
+        },
+        "f": {
+          "nom": "niesamowita",
+          "gen": "niesamowitej",
+          "dat": "niesamowitej",
+          "acc": "niesamowitą",
+          "ins": "niesamowitą",
+          "loc": "niesamowitej"
+        },
+        "n": {
+          "nom": "niesamowite",
+          "gen": "niesamowitego",
+          "dat": "niesamowitemu",
+          "acc": "niesamowite",
+          "ins": "niesamowitym",
+          "loc": "niesamowitym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niesamowici",
+          "gen": "niesamowitych",
+          "dat": "niesamowitym",
+          "acc": "niesamowitych",
+          "ins": "niesamowitymi",
+          "loc": "niesamowitych"
+        },
+        "nonvirile": {
+          "nom": "niesamowite",
+          "gen": "niesamowitych",
+          "dat": "niesamowitym",
+          "acc": "niesamowite",
+          "ins": "niesamowitymi",
+          "loc": "niesamowitych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "niesamowitszy",
+          "gen": "niesamowitszego",
+          "dat": "niesamowitszemu",
+          "acc": "niesamowitszego",
+          "ins": "niesamowitszym",
+          "loc": "niesamowitszym"
+        },
+        "m3": {
+          "nom": "niesamowitszy",
+          "gen": "niesamowitszego",
+          "dat": "niesamowitszemu",
+          "acc": "niesamowitszy",
+          "ins": "niesamowitszym",
+          "loc": "niesamowitszym"
+        },
+        "f": {
+          "nom": "niesamowitsza",
+          "gen": "niesamowitszej",
+          "dat": "niesamowitszej",
+          "acc": "niesamowitszą",
+          "ins": "niesamowitszą",
+          "loc": "niesamowitszej"
+        },
+        "n": {
+          "nom": "niesamowitsze",
+          "gen": "niesamowitszego",
+          "dat": "niesamowitszemu",
+          "acc": "niesamowitsze",
+          "ins": "niesamowitszym",
+          "loc": "niesamowitszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niesamowitsi",
+          "gen": "niesamowitszych",
+          "dat": "niesamowitszym",
+          "acc": "niesamowitszych",
+          "ins": "niesamowitszymi",
+          "loc": "niesamowitszych"
+        },
+        "nonvirile": {
+          "nom": "niesamowitsze",
+          "gen": "niesamowitszych",
+          "dat": "niesamowitszym",
+          "acc": "niesamowitsze",
+          "ins": "niesamowitszymi",
+          "loc": "niesamowitszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najniesamowitszy",
+          "gen": "najniesamowitszego",
+          "dat": "najniesamowitszemu",
+          "acc": "najniesamowitszego",
+          "ins": "najniesamowitszym",
+          "loc": "najniesamowitszym"
+        },
+        "m3": {
+          "nom": "najniesamowitszy",
+          "gen": "najniesamowitszego",
+          "dat": "najniesamowitszemu",
+          "acc": "najniesamowitszy",
+          "ins": "najniesamowitszym",
+          "loc": "najniesamowitszym"
+        },
+        "f": {
+          "nom": "najniesamowitsza",
+          "gen": "najniesamowitszej",
+          "dat": "najniesamowitszej",
+          "acc": "najniesamowitszą",
+          "ins": "najniesamowitszą",
+          "loc": "najniesamowitszej"
+        },
+        "n": {
+          "nom": "najniesamowitsze",
+          "gen": "najniesamowitszego",
+          "dat": "najniesamowitszemu",
+          "acc": "najniesamowitsze",
+          "ins": "najniesamowitszym",
+          "loc": "najniesamowitszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najniesamowitsi",
+          "gen": "najniesamowitszych",
+          "dat": "najniesamowitszym",
+          "acc": "najniesamowitszych",
+          "ins": "najniesamowitszymi",
+          "loc": "najniesamowitszych"
+        },
+        "nonvirile": {
+          "nom": "najniesamowitsze",
+          "gen": "najniesamowitszych",
+          "dat": "najniesamowitszym",
+          "acc": "najniesamowitsze",
+          "ins": "najniesamowitszymi",
+          "loc": "najniesamowitszych"
+        }
+      }
+    }
+  }
+}

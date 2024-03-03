@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "leniwiec",
+      "gen": "leniwca",
+      "dat": "leniwcowi",
+      "acc": "leniwca",
+      "ins": "leniwcem",
+      "loc": "leniwcu",
+      "voc": "leniwcu"
+    },
+    "plural": {
+      "nom": "leniwce",
+      "gen": "leniwców",
+      "dat": "leniwcom",
+      "acc": "leniwce",
+      "ins": "leniwcami",
+      "loc": "leniwcach",
+      "voc": "leniwce"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "przymusowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przymusowy",
+          "gen": "przymusowego",
+          "dat": "przymusowemu",
+          "acc": "przymusowego",
+          "ins": "przymusowym",
+          "loc": "przymusowym"
+        },
+        "m3": {
+          "nom": "przymusowy",
+          "gen": "przymusowego",
+          "dat": "przymusowemu",
+          "acc": "przymusowy",
+          "ins": "przymusowym",
+          "loc": "przymusowym"
+        },
+        "f": {
+          "nom": "przymusowa",
+          "gen": "przymusowej",
+          "dat": "przymusowej",
+          "acc": "przymusową",
+          "ins": "przymusową",
+          "loc": "przymusowej"
+        },
+        "n": {
+          "nom": "przymusowe",
+          "gen": "przymusowego",
+          "dat": "przymusowemu",
+          "acc": "przymusowe",
+          "ins": "przymusowym",
+          "loc": "przymusowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przymusowi",
+          "gen": "przymusowych",
+          "dat": "przymusowym",
+          "acc": "przymusowych",
+          "ins": "przymusowymi",
+          "loc": "przymusowych"
+        },
+        "nonvirile": {
+          "nom": "przymusowe",
+          "gen": "przymusowych",
+          "dat": "przymusowym",
+          "acc": "przymusowe",
+          "ins": "przymusowymi",
+          "loc": "przymusowych"
+        }
+      }
+    }
+  }
+}

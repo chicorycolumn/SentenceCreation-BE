@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "czujnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "czujny",
+          "gen": "czujnego",
+          "dat": "czujnemu",
+          "acc": "czujnego",
+          "ins": "czujnym",
+          "loc": "czujnym"
+        },
+        "m3": {
+          "nom": "czujny",
+          "gen": "czujnego",
+          "dat": "czujnemu",
+          "acc": "czujny",
+          "ins": "czujnym",
+          "loc": "czujnym"
+        },
+        "f": {
+          "nom": "czujna",
+          "gen": "czujnej",
+          "dat": "czujnej",
+          "acc": "czujną",
+          "ins": "czujną",
+          "loc": "czujnej"
+        },
+        "n": {
+          "nom": "czujne",
+          "gen": "czujnego",
+          "dat": "czujnemu",
+          "acc": "czujne",
+          "ins": "czujnym",
+          "loc": "czujnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "czujni",
+          "gen": "czujnych",
+          "dat": "czujnym",
+          "acc": "czujnych",
+          "ins": "czujnymi",
+          "loc": "czujnych"
+        },
+        "nonvirile": {
+          "nom": "czujne",
+          "gen": "czujnych",
+          "dat": "czujnym",
+          "acc": "czujne",
+          "ins": "czujnymi",
+          "loc": "czujnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "czujniejszy",
+          "gen": "czujniejszego",
+          "dat": "czujniejszemu",
+          "acc": "czujniejszego",
+          "ins": "czujniejszym",
+          "loc": "czujniejszym"
+        },
+        "m3": {
+          "nom": "czujniejszy",
+          "gen": "czujniejszego",
+          "dat": "czujniejszemu",
+          "acc": "czujniejszy",
+          "ins": "czujniejszym",
+          "loc": "czujniejszym"
+        },
+        "f": {
+          "nom": "czujniejsza",
+          "gen": "czujniejszej",
+          "dat": "czujniejszej",
+          "acc": "czujniejszą",
+          "ins": "czujniejszą",
+          "loc": "czujniejszej"
+        },
+        "n": {
+          "nom": "czujniejsze",
+          "gen": "czujniejszego",
+          "dat": "czujniejszemu",
+          "acc": "czujniejsze",
+          "ins": "czujniejszym",
+          "loc": "czujniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "czujniejsi",
+          "gen": "czujniejszych",
+          "dat": "czujniejszym",
+          "acc": "czujniejszych",
+          "ins": "czujniejszymi",
+          "loc": "czujniejszych"
+        },
+        "nonvirile": {
+          "nom": "czujniejsze",
+          "gen": "czujniejszych",
+          "dat": "czujniejszym",
+          "acc": "czujniejsze",
+          "ins": "czujniejszymi",
+          "loc": "czujniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najczujniejszy",
+          "gen": "najczujniejszego",
+          "dat": "najczujniejszemu",
+          "acc": "najczujniejszego",
+          "ins": "najczujniejszym",
+          "loc": "najczujniejszym"
+        },
+        "m3": {
+          "nom": "najczujniejszy",
+          "gen": "najczujniejszego",
+          "dat": "najczujniejszemu",
+          "acc": "najczujniejszy",
+          "ins": "najczujniejszym",
+          "loc": "najczujniejszym"
+        },
+        "f": {
+          "nom": "najczujniejsza",
+          "gen": "najczujniejszej",
+          "dat": "najczujniejszej",
+          "acc": "najczujniejszą",
+          "ins": "najczujniejszą",
+          "loc": "najczujniejszej"
+        },
+        "n": {
+          "nom": "najczujniejsze",
+          "gen": "najczujniejszego",
+          "dat": "najczujniejszemu",
+          "acc": "najczujniejsze",
+          "ins": "najczujniejszym",
+          "loc": "najczujniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najczujniejsi",
+          "gen": "najczujniejszych",
+          "dat": "najczujniejszym",
+          "acc": "najczujniejszych",
+          "ins": "najczujniejszymi",
+          "loc": "najczujniejszych"
+        },
+        "nonvirile": {
+          "nom": "najczujniejsze",
+          "gen": "najczujniejszych",
+          "dat": "najczujniejszym",
+          "acc": "najczujniejsze",
+          "ins": "najczujniejszymi",
+          "loc": "najczujniejszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "żyć",
+    "verbalNoun": "życie",
+    "activeAdjectival": "żyjący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "żyjąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "żyj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "żyto"
+          },
+          "plural": {
+            "allPluralGenders": "żyto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "żyłem",
+            "f": "żyłam"
+          },
+          "plural": {
+            "virile": "żyliśmy",
+            "nonvirile": "żyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "żyłeś",
+            "f": "żyłaś"
+          },
+          "plural": {
+            "virile": "żyliście",
+            "nonvirile": "żyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "żył",
+            "f": "żyła",
+            "n": "żyło"
+          },
+          "plural": {
+            "virile": "żyli",
+            "nonvirile": "żyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "żyje się"
+          },
+          "plural": {
+            "allPluralGenders": "żyje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "żyję"
+          },
+          "plural": {
+            "allPluralGenders": "żyjemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "żyjesz"
+          },
+          "plural": {
+            "allPluralGenders": "żyjecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "żyje"
+          },
+          "plural": {
+            "allPluralGenders": "żyją"
+          }
+        }
+      }
+    }
+  }
+}

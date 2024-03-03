@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "termin",
+      "gen": "terminu",
+      "dat": "terminowi",
+      "acc": "termin",
+      "ins": "terminem",
+      "loc": "terminie",
+      "voc": "terminie"
+    },
+    "plural": {
+      "nom": "terminy",
+      "gen": "terminów",
+      "dat": "terminom",
+      "acc": "terminy",
+      "ins": "terminami",
+      "loc": "terminach",
+      "voc": "terminy"
+    }
+  }
+}

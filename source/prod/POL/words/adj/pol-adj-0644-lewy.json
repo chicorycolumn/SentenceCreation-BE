@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "lewo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "lewy",
+          "gen": "lewego",
+          "dat": "lewemu",
+          "acc": "lewego",
+          "ins": "lewym",
+          "loc": "lewym"
+        },
+        "m3": {
+          "nom": "lewy",
+          "gen": "lewego",
+          "dat": "lewemu",
+          "acc": "lewy",
+          "ins": "lewym",
+          "loc": "lewym"
+        },
+        "f": {
+          "nom": "lewa",
+          "gen": "lewej",
+          "dat": "lewej",
+          "acc": "lewą",
+          "ins": "lewą",
+          "loc": "lewej"
+        },
+        "n": {
+          "nom": "lewe",
+          "gen": "lewego",
+          "dat": "lewemu",
+          "acc": "lewe",
+          "ins": "lewym",
+          "loc": "lewym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "lewi",
+          "gen": "lewych",
+          "dat": "lewym",
+          "acc": "lewych",
+          "ins": "lewymi",
+          "loc": "lewych"
+        },
+        "nonvirile": {
+          "nom": "lewe",
+          "gen": "lewych",
+          "dat": "lewym",
+          "acc": "lewe",
+          "ins": "lewymi",
+          "loc": "lewych"
+        }
+      }
+    }
+  }
+}

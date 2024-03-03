@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "piętro",
+      "gen": "piętra",
+      "dat": "piętru",
+      "acc": "piętro",
+      "ins": "piętrem",
+      "loc": "piętrze",
+      "voc": "piętro"
+    },
+    "plural": {
+      "nom": "piętra",
+      "gen": [
+        "pięter",
+        "piętr"
+      ],
+      "dat": "piętrom",
+      "acc": "piętra",
+      "ins": "piętrami",
+      "loc": "piętrach",
+      "voc": "piętra"
+    }
+  }
+}

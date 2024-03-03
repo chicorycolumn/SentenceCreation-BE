@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "opierać",
+    "verbalNoun": "opieranie",
+    "activeAdjectival": "opierający",
+    "passiveAdjectival": "opierany",
+    "contemporaryAdverbial": "opierając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "opieraj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opierano"
+          },
+          "plural": {
+            "allPluralGenders": "opierano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "opierałem",
+            "f": "opierałam"
+          },
+          "plural": {
+            "virile": "opieraliśmy",
+            "nonvirile": "opierałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "opierałeś",
+            "f": "opierałaś"
+          },
+          "plural": {
+            "virile": "opieraliście",
+            "nonvirile": "opierałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "opierał",
+            "f": "opierała",
+            "n": "opierało"
+          },
+          "plural": {
+            "virile": "opierali",
+            "nonvirile": "opierały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opiera się"
+          },
+          "plural": {
+            "allPluralGenders": "opiera się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "opieram"
+          },
+          "plural": {
+            "allPluralGenders": "opieramy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "opierasz"
+          },
+          "plural": {
+            "allPluralGenders": "opieracie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "opiera"
+          },
+          "plural": {
+            "allPluralGenders": "opierają"
+          }
+        }
+      }
+    }
+  }
+}

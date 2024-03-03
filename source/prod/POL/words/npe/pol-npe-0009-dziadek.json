@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dziadek",
+      "gen": "dziadka",
+      "dat": "dziadkowi",
+      "acc": "dziadka",
+      "ins": "dziadkiem",
+      "loc": "dziadku",
+      "voc": "dziadku"
+    },
+    "plural": {
+      "nom": "dziadkowie",
+      "gen": "dziadków",
+      "dat": "dziadkom",
+      "acc": "dziadków",
+      "ins": "dziadkami",
+      "loc": "dziadkach",
+      "voc": "dziadkowie"
+    }
+  }
+}

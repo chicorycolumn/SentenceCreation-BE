@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "kłótliwie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "kłótliwy",
+          "gen": "kłótliwego",
+          "dat": "kłótliwemu",
+          "acc": "kłótliwego",
+          "ins": "kłótliwym",
+          "loc": "kłótliwym"
+        },
+        "m3": {
+          "nom": "kłótliwy",
+          "gen": "kłótliwego",
+          "dat": "kłótliwemu",
+          "acc": "kłótliwy",
+          "ins": "kłótliwym",
+          "loc": "kłótliwym"
+        },
+        "f": {
+          "nom": "kłótliwa",
+          "gen": "kłótliwej",
+          "dat": "kłótliwej",
+          "acc": "kłótliwą",
+          "ins": "kłótliwą",
+          "loc": "kłótliwej"
+        },
+        "n": {
+          "nom": "kłótliwe",
+          "gen": "kłótliwego",
+          "dat": "kłótliwemu",
+          "acc": "kłótliwe",
+          "ins": "kłótliwym",
+          "loc": "kłótliwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "kłótliwi",
+          "gen": "kłótliwych",
+          "dat": "kłótliwym",
+          "acc": "kłótliwych",
+          "ins": "kłótliwymi",
+          "loc": "kłótliwych"
+        },
+        "nonvirile": {
+          "nom": "kłótliwe",
+          "gen": "kłótliwych",
+          "dat": "kłótliwym",
+          "acc": "kłótliwe",
+          "ins": "kłótliwymi",
+          "loc": "kłótliwych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "kłótliwszy",
+          "gen": "kłótliwszego",
+          "dat": "kłótliwszemu",
+          "acc": "kłótliwszego",
+          "ins": "kłótliwszym",
+          "loc": "kłótliwszym"
+        },
+        "m3": {
+          "nom": "kłótliwszy",
+          "gen": "kłótliwszego",
+          "dat": "kłótliwszemu",
+          "acc": "kłótliwszy",
+          "ins": "kłótliwszym",
+          "loc": "kłótliwszym"
+        },
+        "f": {
+          "nom": "kłótliwsza",
+          "gen": "kłótliwszej",
+          "dat": "kłótliwszej",
+          "acc": "kłótliwszą",
+          "ins": "kłótliwszą",
+          "loc": "kłótliwszej"
+        },
+        "n": {
+          "nom": "kłótliwsze",
+          "gen": "kłótliwszego",
+          "dat": "kłótliwszemu",
+          "acc": "kłótliwsze",
+          "ins": "kłótliwszym",
+          "loc": "kłótliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "kłótliwsi",
+          "gen": "kłótliwszych",
+          "dat": "kłótliwszym",
+          "acc": "kłótliwszych",
+          "ins": "kłótliwszymi",
+          "loc": "kłótliwszych"
+        },
+        "nonvirile": {
+          "nom": "kłótliwsze",
+          "gen": "kłótliwszych",
+          "dat": "kłótliwszym",
+          "acc": "kłótliwsze",
+          "ins": "kłótliwszymi",
+          "loc": "kłótliwszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najkłótliwszy",
+          "gen": "najkłótliwszego",
+          "dat": "najkłótliwszemu",
+          "acc": "najkłótliwszego",
+          "ins": "najkłótliwszym",
+          "loc": "najkłótliwszym"
+        },
+        "m3": {
+          "nom": "najkłótliwszy",
+          "gen": "najkłótliwszego",
+          "dat": "najkłótliwszemu",
+          "acc": "najkłótliwszy",
+          "ins": "najkłótliwszym",
+          "loc": "najkłótliwszym"
+        },
+        "f": {
+          "nom": "najkłótliwsza",
+          "gen": "najkłótliwszej",
+          "dat": "najkłótliwszej",
+          "acc": "najkłótliwszą",
+          "ins": "najkłótliwszą",
+          "loc": "najkłótliwszej"
+        },
+        "n": {
+          "nom": "najkłótliwsze",
+          "gen": "najkłótliwszego",
+          "dat": "najkłótliwszemu",
+          "acc": "najkłótliwsze",
+          "ins": "najkłótliwszym",
+          "loc": "najkłótliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najkłótliwsi",
+          "gen": "najkłótliwszych",
+          "dat": "najkłótliwszym",
+          "acc": "najkłótliwszych",
+          "ins": "najkłótliwszymi",
+          "loc": "najkłótliwszych"
+        },
+        "nonvirile": {
+          "nom": "najkłótliwsze",
+          "gen": "najkłótliwszych",
+          "dat": "najkłótliwszym",
+          "acc": "najkłótliwsze",
+          "ins": "najkłótliwszymi",
+          "loc": "najkłótliwszych"
+        }
+      }
+    }
+  }
+}

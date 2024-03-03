@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "poważnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "poważny",
+          "gen": "poważnego",
+          "dat": "poważnemu",
+          "acc": "poważnego",
+          "ins": "poważnym",
+          "loc": "poważnym"
+        },
+        "m3": {
+          "nom": "poważny",
+          "gen": "poważnego",
+          "dat": "poważnemu",
+          "acc": "poważny",
+          "ins": "poważnym",
+          "loc": "poważnym"
+        },
+        "f": {
+          "nom": "poważna",
+          "gen": "poważnej",
+          "dat": "poważnej",
+          "acc": "poważną",
+          "ins": "poważną",
+          "loc": "poważnej"
+        },
+        "n": {
+          "nom": "poważne",
+          "gen": "poważnego",
+          "dat": "poważnemu",
+          "acc": "poważne",
+          "ins": "poważnym",
+          "loc": "poważnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "poważni",
+          "gen": "poważnych",
+          "dat": "poważnym",
+          "acc": "poważnych",
+          "ins": "poważnymi",
+          "loc": "poważnych"
+        },
+        "nonvirile": {
+          "nom": "poważne",
+          "gen": "poważnych",
+          "dat": "poważnym",
+          "acc": "poważne",
+          "ins": "poważnymi",
+          "loc": "poważnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "poważniejszy",
+          "gen": "poważniejszego",
+          "dat": "poważniejszemu",
+          "acc": "poważniejszego",
+          "ins": "poważniejszym",
+          "loc": "poważniejszym"
+        },
+        "m3": {
+          "nom": "poważniejszy",
+          "gen": "poważniejszego",
+          "dat": "poważniejszemu",
+          "acc": "poważniejszy",
+          "ins": "poważniejszym",
+          "loc": "poważniejszym"
+        },
+        "f": {
+          "nom": "poważniejsza",
+          "gen": "poważniejszej",
+          "dat": "poważniejszej",
+          "acc": "poważniejszą",
+          "ins": "poważniejszą",
+          "loc": "poważniejszej"
+        },
+        "n": {
+          "nom": "poważniejsze",
+          "gen": "poważniejszego",
+          "dat": "poważniejszemu",
+          "acc": "poważniejsze",
+          "ins": "poważniejszym",
+          "loc": "poważniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "poważniejsi",
+          "gen": "poważniejszych",
+          "dat": "poważniejszym",
+          "acc": "poważniejszych",
+          "ins": "poważniejszymi",
+          "loc": "poważniejszych"
+        },
+        "nonvirile": {
+          "nom": "poważniejsze",
+          "gen": "poważniejszych",
+          "dat": "poważniejszym",
+          "acc": "poważniejsze",
+          "ins": "poważniejszymi",
+          "loc": "poważniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najpoważniejszy",
+          "gen": "najpoważniejszego",
+          "dat": "najpoważniejszemu",
+          "acc": "najpoważniejszego",
+          "ins": "najpoważniejszym",
+          "loc": "najpoważniejszym"
+        },
+        "m3": {
+          "nom": "najpoważniejszy",
+          "gen": "najpoważniejszego",
+          "dat": "najpoważniejszemu",
+          "acc": "najpoważniejszy",
+          "ins": "najpoważniejszym",
+          "loc": "najpoważniejszym"
+        },
+        "f": {
+          "nom": "najpoważniejsza",
+          "gen": "najpoważniejszej",
+          "dat": "najpoważniejszej",
+          "acc": "najpoważniejszą",
+          "ins": "najpoważniejszą",
+          "loc": "najpoważniejszej"
+        },
+        "n": {
+          "nom": "najpoważniejsze",
+          "gen": "najpoważniejszego",
+          "dat": "najpoważniejszemu",
+          "acc": "najpoważniejsze",
+          "ins": "najpoważniejszym",
+          "loc": "najpoważniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najpoważniejsi",
+          "gen": "najpoważniejszych",
+          "dat": "najpoważniejszym",
+          "acc": "najpoważniejszych",
+          "ins": "najpoważniejszymi",
+          "loc": "najpoważniejszych"
+        },
+        "nonvirile": {
+          "nom": "najpoważniejsze",
+          "gen": "najpoważniejszych",
+          "dat": "najpoważniejszym",
+          "acc": "najpoważniejsze",
+          "ins": "najpoważniejszymi",
+          "loc": "najpoważniejszych"
+        }
+      }
+    }
+  }
+}

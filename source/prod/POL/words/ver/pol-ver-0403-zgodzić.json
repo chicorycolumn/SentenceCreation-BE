@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zgodzić",
+    "verbalNoun": "zgodzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zgodzony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zgodziwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zgodzi się"
+          },
+          "plural": {
+            "allPluralGenders": "zgodzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zgodzę"
+          },
+          "plural": {
+            "allPluralGenders": "zgodzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zgodzisz"
+          },
+          "plural": {
+            "allPluralGenders": "zgodzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zgodzi"
+          },
+          "plural": {
+            "allPluralGenders": "zgodzą"
+          }
+        }
+      },
+      "imperative": "zgódź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zgodzono"
+          },
+          "plural": {
+            "allPluralGenders": "zgodzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zgodziłem",
+            "f": "zgodziłam"
+          },
+          "plural": {
+            "virile": "zgodziliśmy",
+            "nonvirile": "zgodziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zgodziłeś",
+            "f": "zgodziłaś"
+          },
+          "plural": {
+            "virile": "zgodziliście",
+            "nonvirile": "zgodziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zgodził",
+            "f": "zgodziła",
+            "n": "zgodziło"
+          },
+          "plural": {
+            "virile": "zgodzili",
+            "nonvirile": "zgodziły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "przyzwoicie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przyzwoity",
+          "gen": "przyzwoitego",
+          "dat": "przyzwoitemu",
+          "acc": "przyzwoitego",
+          "ins": "przyzwoitym",
+          "loc": "przyzwoitym"
+        },
+        "m3": {
+          "nom": "przyzwoity",
+          "gen": "przyzwoitego",
+          "dat": "przyzwoitemu",
+          "acc": "przyzwoity",
+          "ins": "przyzwoitym",
+          "loc": "przyzwoitym"
+        },
+        "f": {
+          "nom": "przyzwoita",
+          "gen": "przyzwoitej",
+          "dat": "przyzwoitej",
+          "acc": "przyzwoitą",
+          "ins": "przyzwoitą",
+          "loc": "przyzwoitej"
+        },
+        "n": {
+          "nom": "przyzwoite",
+          "gen": "przyzwoitego",
+          "dat": "przyzwoitemu",
+          "acc": "przyzwoite",
+          "ins": "przyzwoitym",
+          "loc": "przyzwoitym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przyzwoici",
+          "gen": "przyzwoitych",
+          "dat": "przyzwoitym",
+          "acc": "przyzwoitych",
+          "ins": "przyzwoitymi",
+          "loc": "przyzwoitych"
+        },
+        "nonvirile": {
+          "nom": "przyzwoite",
+          "gen": "przyzwoitych",
+          "dat": "przyzwoitym",
+          "acc": "przyzwoite",
+          "ins": "przyzwoitymi",
+          "loc": "przyzwoitych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "przyzwoitszy",
+          "gen": "przyzwoitszego",
+          "dat": "przyzwoitszemu",
+          "acc": "przyzwoitszego",
+          "ins": "przyzwoitszym",
+          "loc": "przyzwoitszym"
+        },
+        "m3": {
+          "nom": "przyzwoitszy",
+          "gen": "przyzwoitszego",
+          "dat": "przyzwoitszemu",
+          "acc": "przyzwoitszy",
+          "ins": "przyzwoitszym",
+          "loc": "przyzwoitszym"
+        },
+        "f": {
+          "nom": "przyzwoitsza",
+          "gen": "przyzwoitszej",
+          "dat": "przyzwoitszej",
+          "acc": "przyzwoitszą",
+          "ins": "przyzwoitszą",
+          "loc": "przyzwoitszej"
+        },
+        "n": {
+          "nom": "przyzwoitsze",
+          "gen": "przyzwoitszego",
+          "dat": "przyzwoitszemu",
+          "acc": "przyzwoitsze",
+          "ins": "przyzwoitszym",
+          "loc": "przyzwoitszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przyzwoitsi",
+          "gen": "przyzwoitszych",
+          "dat": "przyzwoitszym",
+          "acc": "przyzwoitszych",
+          "ins": "przyzwoitszymi",
+          "loc": "przyzwoitszych"
+        },
+        "nonvirile": {
+          "nom": "przyzwoitsze",
+          "gen": "przyzwoitszych",
+          "dat": "przyzwoitszym",
+          "acc": "przyzwoitsze",
+          "ins": "przyzwoitszymi",
+          "loc": "przyzwoitszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najprzyzwoitszy",
+          "gen": "najprzyzwoitszego",
+          "dat": "najprzyzwoitszemu",
+          "acc": "najprzyzwoitszego",
+          "ins": "najprzyzwoitszym",
+          "loc": "najprzyzwoitszym"
+        },
+        "m3": {
+          "nom": "najprzyzwoitszy",
+          "gen": "najprzyzwoitszego",
+          "dat": "najprzyzwoitszemu",
+          "acc": "najprzyzwoitszy",
+          "ins": "najprzyzwoitszym",
+          "loc": "najprzyzwoitszym"
+        },
+        "f": {
+          "nom": "najprzyzwoitsza",
+          "gen": "najprzyzwoitszej",
+          "dat": "najprzyzwoitszej",
+          "acc": "najprzyzwoitszą",
+          "ins": "najprzyzwoitszą",
+          "loc": "najprzyzwoitszej"
+        },
+        "n": {
+          "nom": "najprzyzwoitsze",
+          "gen": "najprzyzwoitszego",
+          "dat": "najprzyzwoitszemu",
+          "acc": "najprzyzwoitsze",
+          "ins": "najprzyzwoitszym",
+          "loc": "najprzyzwoitszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najprzyzwoitsi",
+          "gen": "najprzyzwoitszych",
+          "dat": "najprzyzwoitszym",
+          "acc": "najprzyzwoitszych",
+          "ins": "najprzyzwoitszymi",
+          "loc": "najprzyzwoitszych"
+        },
+        "nonvirile": {
+          "nom": "najprzyzwoitsze",
+          "gen": "najprzyzwoitszych",
+          "dat": "najprzyzwoitszym",
+          "acc": "najprzyzwoitsze",
+          "ins": "najprzyzwoitszymi",
+          "loc": "najprzyzwoitszych"
+        }
+      }
+    }
+  }
+}

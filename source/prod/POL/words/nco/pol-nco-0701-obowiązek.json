@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "obowiązek",
+      "gen": "obowiązku",
+      "dat": "obowiązkowi",
+      "acc": "obowiązek",
+      "ins": "obowiązkiem",
+      "loc": "obowiązku",
+      "voc": "obowiązku"
+    },
+    "plural": {
+      "nom": "obowiązki",
+      "gen": "obowiązków",
+      "dat": "obowiązkom",
+      "acc": "obowiązki",
+      "ins": "obowiązkami",
+      "loc": "obowiązkach",
+      "voc": "obowiązki"
+    }
+  }
+}

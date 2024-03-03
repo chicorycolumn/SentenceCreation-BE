@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przeprowadzić",
+    "verbalNoun": "przeprowadzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przeprowadzony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przeprowadziwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeprowadzi się"
+          },
+          "plural": {
+            "allPluralGenders": "przeprowadzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przeprowadzę"
+          },
+          "plural": {
+            "allPluralGenders": "przeprowadzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przeprowadzisz"
+          },
+          "plural": {
+            "allPluralGenders": "przeprowadzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przeprowadzi"
+          },
+          "plural": {
+            "allPluralGenders": "przeprowadzą"
+          }
+        }
+      },
+      "imperative": "przeprowadź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeprowadzono"
+          },
+          "plural": {
+            "allPluralGenders": "przeprowadzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przeprowadziłem",
+            "f": "przeprowadziłam"
+          },
+          "plural": {
+            "virile": "przeprowadziliśmy",
+            "nonvirile": "przeprowadziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przeprowadziłeś",
+            "f": "przeprowadziłaś"
+          },
+          "plural": {
+            "virile": "przeprowadziliście",
+            "nonvirile": "przeprowadziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przeprowadził",
+            "f": "przeprowadziła",
+            "n": "przeprowadziło"
+          },
+          "plural": {
+            "virile": "przeprowadzili",
+            "nonvirile": "przeprowadziły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

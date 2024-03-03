@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "kosztować",
+    "verbalNoun": "kosztowanie",
+    "activeAdjectival": "kosztujący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "kosztując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "kosztuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kosztowano"
+          },
+          "plural": {
+            "allPluralGenders": "kosztowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "kosztowałem",
+            "f": "kosztowałam"
+          },
+          "plural": {
+            "virile": "kosztowaliśmy",
+            "nonvirile": "kosztowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "kosztowałeś",
+            "f": "kosztowałaś"
+          },
+          "plural": {
+            "virile": "kosztowaliście",
+            "nonvirile": "kosztowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "kosztował",
+            "f": "kosztowała",
+            "n": "kosztowało"
+          },
+          "plural": {
+            "virile": "kosztowali",
+            "nonvirile": "kosztowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kosztuje się"
+          },
+          "plural": {
+            "allPluralGenders": "kosztuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "kosztuję"
+          },
+          "plural": {
+            "allPluralGenders": "kosztujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "kosztujesz"
+          },
+          "plural": {
+            "allPluralGenders": "kosztujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "kosztuje"
+          },
+          "plural": {
+            "allPluralGenders": "kosztują"
+          }
+        }
+      }
+    }
+  }
+}

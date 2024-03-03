@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "piece of news",
+      "gen": "piece of news's"
+    },
+    "plural": {
+      "nom": "pieces of news",
+      "gen": "pieces of news'"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dolar",
+      "gen": "dolara",
+      "dat": "dolarowi",
+      "acc": "dolara",
+      "ins": "dolarem",
+      "loc": "dolarze",
+      "voc": "dolarze"
+    },
+    "plural": {
+      "nom": "dolary",
+      "gen": "dolarów",
+      "dat": "dolarom",
+      "acc": "dolary",
+      "ins": "dolarami",
+      "loc": "dolarach",
+      "voc": "dolary"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zaczynać",
+    "verbalNoun": "zaczynanie",
+    "activeAdjectival": "zaczynający",
+    "passiveAdjectival": "zaczynany",
+    "contemporaryAdverbial": "zaczynając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "zaczynaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaczynano"
+          },
+          "plural": {
+            "allPluralGenders": "zaczynano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zaczynałem",
+            "f": "zaczynałam"
+          },
+          "plural": {
+            "virile": "zaczynaliśmy",
+            "nonvirile": "zaczynałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zaczynałeś",
+            "f": "zaczynałaś"
+          },
+          "plural": {
+            "virile": "zaczynaliście",
+            "nonvirile": "zaczynałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zaczynał",
+            "f": "zaczynała",
+            "n": "zaczynało"
+          },
+          "plural": {
+            "virile": "zaczynali",
+            "nonvirile": "zaczynały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaczyna się"
+          },
+          "plural": {
+            "allPluralGenders": "zaczyna się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zaczynam"
+          },
+          "plural": {
+            "allPluralGenders": "zaczynamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zaczynasz"
+          },
+          "plural": {
+            "allPluralGenders": "zaczynacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zaczyna"
+          },
+          "plural": {
+            "allPluralGenders": "zaczynają"
+          }
+        }
+      }
+    }
+  }
+}

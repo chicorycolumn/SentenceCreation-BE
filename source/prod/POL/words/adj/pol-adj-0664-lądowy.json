@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "lądowy",
+          "gen": "lądowego",
+          "dat": "lądowemu",
+          "acc": "lądowego",
+          "ins": "lądowym",
+          "loc": "lądowym"
+        },
+        "m3": {
+          "nom": "lądowy",
+          "gen": "lądowego",
+          "dat": "lądowemu",
+          "acc": "lądowy",
+          "ins": "lądowym",
+          "loc": "lądowym"
+        },
+        "f": {
+          "nom": "lądowa",
+          "gen": "lądowej",
+          "dat": "lądowej",
+          "acc": "lądową",
+          "ins": "lądową",
+          "loc": "lądowej"
+        },
+        "n": {
+          "nom": "lądowe",
+          "gen": "lądowego",
+          "dat": "lądowemu",
+          "acc": "lądowe",
+          "ins": "lądowym",
+          "loc": "lądowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "lądowi",
+          "gen": "lądowych",
+          "dat": "lądowym",
+          "acc": "lądowych",
+          "ins": "lądowymi",
+          "loc": "lądowych"
+        },
+        "nonvirile": {
+          "nom": "lądowe",
+          "gen": "lądowych",
+          "dat": "lądowym",
+          "acc": "lądowe",
+          "ins": "lądowymi",
+          "loc": "lądowych"
+        }
+      }
+    }
+  }
+}

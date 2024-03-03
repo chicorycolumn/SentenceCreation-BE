@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "pobłażliwie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pobłażliwy",
+          "gen": "pobłażliwego",
+          "dat": "pobłażliwemu",
+          "acc": "pobłażliwego",
+          "ins": "pobłażliwym",
+          "loc": "pobłażliwym"
+        },
+        "m3": {
+          "nom": "pobłażliwy",
+          "gen": "pobłażliwego",
+          "dat": "pobłażliwemu",
+          "acc": "pobłażliwy",
+          "ins": "pobłażliwym",
+          "loc": "pobłażliwym"
+        },
+        "f": {
+          "nom": "pobłażliwa",
+          "gen": "pobłażliwej",
+          "dat": "pobłażliwej",
+          "acc": "pobłażliwą",
+          "ins": "pobłażliwą",
+          "loc": "pobłażliwej"
+        },
+        "n": {
+          "nom": "pobłażliwe",
+          "gen": "pobłażliwego",
+          "dat": "pobłażliwemu",
+          "acc": "pobłażliwe",
+          "ins": "pobłażliwym",
+          "loc": "pobłażliwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pobłażliwi",
+          "gen": "pobłażliwych",
+          "dat": "pobłażliwym",
+          "acc": "pobłażliwych",
+          "ins": "pobłażliwymi",
+          "loc": "pobłażliwych"
+        },
+        "nonvirile": {
+          "nom": "pobłażliwe",
+          "gen": "pobłażliwych",
+          "dat": "pobłażliwym",
+          "acc": "pobłażliwe",
+          "ins": "pobłażliwymi",
+          "loc": "pobłażliwych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "pobłażliwszy",
+          "gen": "pobłażliwszego",
+          "dat": "pobłażliwszemu",
+          "acc": "pobłażliwszego",
+          "ins": "pobłażliwszym",
+          "loc": "pobłażliwszym"
+        },
+        "m3": {
+          "nom": "pobłażliwszy",
+          "gen": "pobłażliwszego",
+          "dat": "pobłażliwszemu",
+          "acc": "pobłażliwszy",
+          "ins": "pobłażliwszym",
+          "loc": "pobłażliwszym"
+        },
+        "f": {
+          "nom": "pobłażliwsza",
+          "gen": "pobłażliwszej",
+          "dat": "pobłażliwszej",
+          "acc": "pobłażliwszą",
+          "ins": "pobłażliwszą",
+          "loc": "pobłażliwszej"
+        },
+        "n": {
+          "nom": "pobłażliwsze",
+          "gen": "pobłażliwszego",
+          "dat": "pobłażliwszemu",
+          "acc": "pobłażliwsze",
+          "ins": "pobłażliwszym",
+          "loc": "pobłażliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pobłażliwsi",
+          "gen": "pobłażliwszych",
+          "dat": "pobłażliwszym",
+          "acc": "pobłażliwszych",
+          "ins": "pobłażliwszymi",
+          "loc": "pobłażliwszych"
+        },
+        "nonvirile": {
+          "nom": "pobłażliwsze",
+          "gen": "pobłażliwszych",
+          "dat": "pobłażliwszym",
+          "acc": "pobłażliwsze",
+          "ins": "pobłażliwszymi",
+          "loc": "pobłażliwszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najpobłażliwszy",
+          "gen": "najpobłażliwszego",
+          "dat": "najpobłażliwszemu",
+          "acc": "najpobłażliwszego",
+          "ins": "najpobłażliwszym",
+          "loc": "najpobłażliwszym"
+        },
+        "m3": {
+          "nom": "najpobłażliwszy",
+          "gen": "najpobłażliwszego",
+          "dat": "najpobłażliwszemu",
+          "acc": "najpobłażliwszy",
+          "ins": "najpobłażliwszym",
+          "loc": "najpobłażliwszym"
+        },
+        "f": {
+          "nom": "najpobłażliwsza",
+          "gen": "najpobłażliwszej",
+          "dat": "najpobłażliwszej",
+          "acc": "najpobłażliwszą",
+          "ins": "najpobłażliwszą",
+          "loc": "najpobłażliwszej"
+        },
+        "n": {
+          "nom": "najpobłażliwsze",
+          "gen": "najpobłażliwszego",
+          "dat": "najpobłażliwszemu",
+          "acc": "najpobłażliwsze",
+          "ins": "najpobłażliwszym",
+          "loc": "najpobłażliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najpobłażliwsi",
+          "gen": "najpobłażliwszych",
+          "dat": "najpobłażliwszym",
+          "acc": "najpobłażliwszych",
+          "ins": "najpobłażliwszymi",
+          "loc": "najpobłażliwszych"
+        },
+        "nonvirile": {
+          "nom": "najpobłażliwsze",
+          "gen": "najpobłażliwszych",
+          "dat": "najpobłażliwszym",
+          "acc": "najpobłażliwsze",
+          "ins": "najpobłażliwszymi",
+          "loc": "najpobłażliwszych"
+        }
+      }
+    }
+  }
+}

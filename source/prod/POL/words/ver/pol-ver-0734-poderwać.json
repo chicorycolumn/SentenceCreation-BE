@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "poderwać",
+    "verbalNoun": "poderwanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "poderwany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "poderwawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poderwie się"
+          },
+          "plural": {
+            "allPluralGenders": "poderwie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "poderwę"
+          },
+          "plural": {
+            "allPluralGenders": "poderwiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "poderwiesz"
+          },
+          "plural": {
+            "allPluralGenders": "poderwiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "poderwie"
+          },
+          "plural": {
+            "allPluralGenders": "poderwą"
+          }
+        }
+      },
+      "imperative": "poderwij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poderwano"
+          },
+          "plural": {
+            "allPluralGenders": "poderwano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "poderwałem",
+            "f": "poderwałam"
+          },
+          "plural": {
+            "virile": "poderwaliśmy",
+            "nonvirile": "poderwałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "poderwałeś",
+            "f": "poderwałaś"
+          },
+          "plural": {
+            "virile": "poderwaliście",
+            "nonvirile": "poderwałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "poderwał",
+            "f": "poderwała",
+            "n": "poderwało"
+          },
+          "plural": {
+            "virile": "poderwali",
+            "nonvirile": "poderwały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lekarka",
+      "gen": "lekarki",
+      "dat": "lekarce",
+      "acc": "lekarkę",
+      "ins": "lekarką",
+      "loc": "lekarce",
+      "voc": "lekarko"
+    },
+    "plural": {
+      "nom": "lekarki",
+      "gen": "lekarek",
+      "dat": "lekarkom",
+      "acc": "lekarki",
+      "ins": "lekarkami",
+      "loc": "lekarkach",
+      "voc": "lekarki"
+    }
+  }
+}

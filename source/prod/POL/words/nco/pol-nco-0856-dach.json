@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dach",
+      "gen": "dachu",
+      "dat": "dachowi",
+      "acc": "dach",
+      "ins": "dachem",
+      "loc": "dachu",
+      "voc": "dachu"
+    },
+    "plural": {
+      "nom": "dachy",
+      "gen": "dachów",
+      "dat": "dachom",
+      "acc": "dachy",
+      "ins": "dachami",
+      "loc": "dachach",
+      "voc": "dachy"
+    }
+  }
+}

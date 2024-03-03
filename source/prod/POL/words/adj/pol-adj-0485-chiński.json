@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "chiński",
+          "gen": "chińskiego",
+          "dat": "chińskiemu",
+          "acc": "chińskiego",
+          "ins": "chińskim",
+          "loc": "chińskim"
+        },
+        "m3": {
+          "nom": "chiński",
+          "gen": "chińskiego",
+          "dat": "chińskiemu",
+          "acc": "chiński",
+          "ins": "chińskim",
+          "loc": "chińskim"
+        },
+        "f": {
+          "nom": "chińska",
+          "gen": "chińskiej",
+          "dat": "chińskiej",
+          "acc": "chińską",
+          "ins": "chińską",
+          "loc": "chińskiej"
+        },
+        "n": {
+          "nom": "chińskie",
+          "gen": "chińskiego",
+          "dat": "chińskiemu",
+          "acc": "chińskie",
+          "ins": "chińskim",
+          "loc": "chińskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "chińscy",
+          "gen": "chińskich",
+          "dat": "chińskim",
+          "acc": "chińskich",
+          "ins": "chińskimi",
+          "loc": "chińskich"
+        },
+        "nonvirile": {
+          "nom": "chińskie",
+          "gen": "chińskich",
+          "dat": "chińskim",
+          "acc": "chińskie",
+          "ins": "chińskimi",
+          "loc": "chińskich"
+        }
+      }
+    }
+  }
+}

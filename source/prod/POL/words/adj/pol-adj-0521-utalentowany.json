@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "utalentowany",
+          "gen": "utalentowanego",
+          "dat": "utalentowanemu",
+          "acc": "utalentowanego",
+          "ins": "utalentowanym",
+          "loc": "utalentowanym"
+        },
+        "m3": {
+          "nom": "utalentowany",
+          "gen": "utalentowanego",
+          "dat": "utalentowanemu",
+          "acc": "utalentowany",
+          "ins": "utalentowanym",
+          "loc": "utalentowanym"
+        },
+        "f": {
+          "nom": "utalentowana",
+          "gen": "utalentowanej",
+          "dat": "utalentowanej",
+          "acc": "utalentowaną",
+          "ins": "utalentowaną",
+          "loc": "utalentowanej"
+        },
+        "n": {
+          "nom": "utalentowane",
+          "gen": "utalentowanego",
+          "dat": "utalentowanemu",
+          "acc": "utalentowane",
+          "ins": "utalentowanym",
+          "loc": "utalentowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "utalentowani",
+          "gen": "utalentowanych",
+          "dat": "utalentowanym",
+          "acc": "utalentowanych",
+          "ins": "utalentowanymi",
+          "loc": "utalentowanych"
+        },
+        "nonvirile": {
+          "nom": "utalentowane",
+          "gen": "utalentowanych",
+          "dat": "utalentowanym",
+          "acc": "utalentowane",
+          "ins": "utalentowanymi",
+          "loc": "utalentowanych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej utalentowany",
+          "gen": "bardziej utalentowanego",
+          "dat": "bardziej utalentowanemu",
+          "acc": "bardziej utalentowanego",
+          "ins": "bardziej utalentowanym",
+          "loc": "bardziej utalentowanym"
+        },
+        "m3": {
+          "nom": "bardziej utalentowany",
+          "gen": "bardziej utalentowanego",
+          "dat": "bardziej utalentowanemu",
+          "acc": "bardziej utalentowany",
+          "ins": "bardziej utalentowanym",
+          "loc": "bardziej utalentowanym"
+        },
+        "f": {
+          "nom": "bardziej utalentowana",
+          "gen": "bardziej utalentowanej",
+          "dat": "bardziej utalentowanej",
+          "acc": "bardziej utalentowaną",
+          "ins": "bardziej utalentowaną",
+          "loc": "bardziej utalentowanej"
+        },
+        "n": {
+          "nom": "bardziej utalentowane",
+          "gen": "bardziej utalentowanego",
+          "dat": "bardziej utalentowanemu",
+          "acc": "bardziej utalentowane",
+          "ins": "bardziej utalentowanym",
+          "loc": "bardziej utalentowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej utalentowani",
+          "gen": "bardziej utalentowanych",
+          "dat": "bardziej utalentowanym",
+          "acc": "bardziej utalentowanych",
+          "ins": "bardziej utalentowanymi",
+          "loc": "bardziej utalentowanych"
+        },
+        "nonvirile": {
+          "nom": "bardziej utalentowane",
+          "gen": "bardziej utalentowanych",
+          "dat": "bardziej utalentowanym",
+          "acc": "bardziej utalentowane",
+          "ins": "bardziej utalentowanymi",
+          "loc": "bardziej utalentowanych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej utalentowany",
+          "gen": "najbardziej utalentowanego",
+          "dat": "najbardziej utalentowanemu",
+          "acc": "najbardziej utalentowanego",
+          "ins": "najbardziej utalentowanym",
+          "loc": "najbardziej utalentowanym"
+        },
+        "m3": {
+          "nom": "najbardziej utalentowany",
+          "gen": "najbardziej utalentowanego",
+          "dat": "najbardziej utalentowanemu",
+          "acc": "najbardziej utalentowany",
+          "ins": "najbardziej utalentowanym",
+          "loc": "najbardziej utalentowanym"
+        },
+        "f": {
+          "nom": "najbardziej utalentowana",
+          "gen": "najbardziej utalentowanej",
+          "dat": "najbardziej utalentowanej",
+          "acc": "najbardziej utalentowaną",
+          "ins": "najbardziej utalentowaną",
+          "loc": "najbardziej utalentowanej"
+        },
+        "n": {
+          "nom": "najbardziej utalentowane",
+          "gen": "najbardziej utalentowanego",
+          "dat": "najbardziej utalentowanemu",
+          "acc": "najbardziej utalentowane",
+          "ins": "najbardziej utalentowanym",
+          "loc": "najbardziej utalentowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej utalentowani",
+          "gen": "najbardziej utalentowanych",
+          "dat": "najbardziej utalentowanym",
+          "acc": "najbardziej utalentowanych",
+          "ins": "najbardziej utalentowanymi",
+          "loc": "najbardziej utalentowanych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej utalentowane",
+          "gen": "najbardziej utalentowanych",
+          "dat": "najbardziej utalentowanym",
+          "acc": "najbardziej utalentowane",
+          "ins": "najbardziej utalentowanymi",
+          "loc": "najbardziej utalentowanych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zmywarka",
+      "gen": "zmywarki",
+      "dat": "zmywarce",
+      "acc": "zmywarkę",
+      "ins": "zmywarką",
+      "loc": "zmywarce",
+      "voc": "zmywarko"
+    },
+    "plural": {
+      "nom": "zmywarki",
+      "gen": "zmywarek",
+      "dat": "zmywarkom",
+      "acc": "zmywarki",
+      "ins": "zmywarkami",
+      "loc": "zmywarkach",
+      "voc": "zmywarki"
+    }
+  }
+}

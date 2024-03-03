@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "generalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "generalny",
+          "gen": "generalnego",
+          "dat": "generalnemu",
+          "acc": "generalnego",
+          "ins": "generalnym",
+          "loc": "generalnym"
+        },
+        "m3": {
+          "nom": "generalny",
+          "gen": "generalnego",
+          "dat": "generalnemu",
+          "acc": "generalny",
+          "ins": "generalnym",
+          "loc": "generalnym"
+        },
+        "f": {
+          "nom": "generalna",
+          "gen": "generalnej",
+          "dat": "generalnej",
+          "acc": "generalną",
+          "ins": "generalną",
+          "loc": "generalnej"
+        },
+        "n": {
+          "nom": "generalne",
+          "gen": "generalnego",
+          "dat": "generalnemu",
+          "acc": "generalne",
+          "ins": "generalnym",
+          "loc": "generalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "generalni",
+          "gen": "generalnych",
+          "dat": "generalnym",
+          "acc": "generalnych",
+          "ins": "generalnymi",
+          "loc": "generalnych"
+        },
+        "nonvirile": {
+          "nom": "generalne",
+          "gen": "generalnych",
+          "dat": "generalnym",
+          "acc": "generalne",
+          "ins": "generalnymi",
+          "loc": "generalnych"
+        }
+      }
+    }
+  }
+}

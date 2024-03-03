@@ -1,0 +1,106 @@
+{
+  "inflections": {
+    "infinitive": "sugerować",
+    "verbalNoun": "sugerowanie",
+    "activeAdjectival": "sugerujący",
+    "passiveAdjectival": "sugerowany",
+    "contemporaryAdverbial": "sugerując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "sugeruj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "sugerowano"
+          },
+          "plural": {
+            "allPluralGenders": "sugerowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": [
+              "sugerowałem"
+            ],
+            "f": [
+              "sugerowałam"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "sugerowaliśmy"
+            ],
+            "nonvirile": [
+              "sugerowałyśmy"
+            ]
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": [
+              "sugerowałeś"
+            ],
+            "f": [
+              "sugerowałaś"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "sugerowaliście"
+            ],
+            "nonvirile": [
+              "sugerowałyście"
+            ]
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "sugerował",
+            "f": "sugerowała",
+            "n": "sugerowało"
+          },
+          "plural": {
+            "virile": "sugerowali",
+            "nonvirile": "sugerowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "sugeruje się"
+          },
+          "plural": {
+            "allPluralGenders": "sugeruje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "sugeruję"
+          },
+          "plural": {
+            "allPluralGenders": "sugerujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "sugerujesz"
+          },
+          "plural": {
+            "allPluralGenders": "sugerujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "sugeruje"
+          },
+          "plural": {
+            "allPluralGenders": "sugerują"
+          }
+        }
+      }
+    }
+  }
+}

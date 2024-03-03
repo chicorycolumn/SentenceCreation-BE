@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "radzić",
+    "verbalNoun": "radzenie",
+    "activeAdjectival": "radzący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "radząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "radź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "radzono"
+          },
+          "plural": {
+            "allPluralGenders": "radzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "radziłem",
+            "f": "radziłam"
+          },
+          "plural": {
+            "virile": "radziliśmy",
+            "nonvirile": "radziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "radziłeś",
+            "f": "radziłaś"
+          },
+          "plural": {
+            "virile": "radziliście",
+            "nonvirile": "radziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "radził",
+            "f": "radziła",
+            "n": "radziło"
+          },
+          "plural": {
+            "virile": "radzili",
+            "nonvirile": "radziły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "radzi się"
+          },
+          "plural": {
+            "allPluralGenders": "radzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "radzę"
+          },
+          "plural": {
+            "allPluralGenders": "radzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "radzisz"
+          },
+          "plural": {
+            "allPluralGenders": "radzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "radzi"
+          },
+          "plural": {
+            "allPluralGenders": "radzą"
+          }
+        }
+      }
+    }
+  }
+}

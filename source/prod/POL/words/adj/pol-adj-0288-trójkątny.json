@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "trójkątnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "trójkątny",
+          "gen": "trójkątnego",
+          "dat": "trójkątnemu",
+          "acc": "trójkątnego",
+          "ins": "trójkątnym",
+          "loc": "trójkątnym"
+        },
+        "m3": {
+          "nom": "trójkątny",
+          "gen": "trójkątnego",
+          "dat": "trójkątnemu",
+          "acc": "trójkątny",
+          "ins": "trójkątnym",
+          "loc": "trójkątnym"
+        },
+        "f": {
+          "nom": "trójkątna",
+          "gen": "trójkątnej",
+          "dat": "trójkątnej",
+          "acc": "trójkątną",
+          "ins": "trójkątną",
+          "loc": "trójkątnej"
+        },
+        "n": {
+          "nom": "trójkątne",
+          "gen": "trójkątnego",
+          "dat": "trójkątnemu",
+          "acc": "trójkątne",
+          "ins": "trójkątnym",
+          "loc": "trójkątnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "trójkątni",
+          "gen": "trójkątnych",
+          "dat": "trójkątnym",
+          "acc": "trójkątnych",
+          "ins": "trójkątnymi",
+          "loc": "trójkątnych"
+        },
+        "nonvirile": {
+          "nom": "trójkątne",
+          "gen": "trójkątnych",
+          "dat": "trójkątnym",
+          "acc": "trójkątne",
+          "ins": "trójkątnymi",
+          "loc": "trójkątnych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "potrącać",
+    "verbalNoun": "potrącanie",
+    "activeAdjectival": "potrącający",
+    "passiveAdjectival": "potrącany",
+    "contemporaryAdverbial": "potrącając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "potrącaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "potrącano"
+          },
+          "plural": {
+            "allPluralGenders": "potrącano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "potrącałem",
+            "f": "potrącałam"
+          },
+          "plural": {
+            "virile": "potrącaliśmy",
+            "nonvirile": "potrącałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "potrącałeś",
+            "f": "potrącałaś"
+          },
+          "plural": {
+            "virile": "potrącaliście",
+            "nonvirile": "potrącałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "potrącał",
+            "f": "potrącała",
+            "n": "potrącało"
+          },
+          "plural": {
+            "virile": "potrącali",
+            "nonvirile": "potrącały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "potrąca się"
+          },
+          "plural": {
+            "allPluralGenders": "potrąca się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "potrącam"
+          },
+          "plural": {
+            "allPluralGenders": "potrącamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "potrącasz"
+          },
+          "plural": {
+            "allPluralGenders": "potrącacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "potrąca"
+          },
+          "plural": {
+            "allPluralGenders": "potrącają"
+          }
+        }
+      }
+    }
+  }
+}

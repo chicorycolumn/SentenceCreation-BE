@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "spłonąć",
+    "verbalNoun": "spłonięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "spłonąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "spłonie się"
+          },
+          "plural": {
+            "allPluralGenders": "spłonie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "spłonę"
+          },
+          "plural": {
+            "allPluralGenders": "spłoniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "spłoniesz"
+          },
+          "plural": {
+            "allPluralGenders": "spłoniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "spłonie"
+          },
+          "plural": {
+            "allPluralGenders": "spłoną"
+          }
+        }
+      },
+      "imperative": "spłoń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "spłonięto"
+          },
+          "plural": {
+            "allPluralGenders": "spłonięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "spłonąłem",
+            "f": "spłonęłam"
+          },
+          "plural": {
+            "virile": "spłonęliśmy",
+            "nonvirile": "spłonęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "spłonąłeś",
+            "f": "spłonęłaś"
+          },
+          "plural": {
+            "virile": "spłonęliście",
+            "nonvirile": "spłonęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "spłonął",
+            "f": "spłonęła",
+            "n": "spłonęło"
+          },
+          "plural": {
+            "virile": "spłonęli",
+            "nonvirile": "spłonęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "demokratycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "demokratyczny",
+          "gen": "demokratycznego",
+          "dat": "demokratycznemu",
+          "acc": "demokratycznego",
+          "ins": "demokratycznym",
+          "loc": "demokratycznym"
+        },
+        "m3": {
+          "nom": "demokratyczny",
+          "gen": "demokratycznego",
+          "dat": "demokratycznemu",
+          "acc": "demokratyczny",
+          "ins": "demokratycznym",
+          "loc": "demokratycznym"
+        },
+        "f": {
+          "nom": "demokratyczna",
+          "gen": "demokratycznej",
+          "dat": "demokratycznej",
+          "acc": "demokratyczną",
+          "ins": "demokratyczną",
+          "loc": "demokratycznej"
+        },
+        "n": {
+          "nom": "demokratyczne",
+          "gen": "demokratycznego",
+          "dat": "demokratycznemu",
+          "acc": "demokratyczne",
+          "ins": "demokratycznym",
+          "loc": "demokratycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "demokratyczni",
+          "gen": "demokratycznych",
+          "dat": "demokratycznym",
+          "acc": "demokratycznych",
+          "ins": "demokratycznymi",
+          "loc": "demokratycznych"
+        },
+        "nonvirile": {
+          "nom": "demokratyczne",
+          "gen": "demokratycznych",
+          "dat": "demokratycznym",
+          "acc": "demokratyczne",
+          "ins": "demokratycznymi",
+          "loc": "demokratycznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej demokratyczny",
+          "gen": "bardziej demokratycznego",
+          "dat": "bardziej demokratycznemu",
+          "acc": "bardziej demokratycznego",
+          "ins": "bardziej demokratycznym",
+          "loc": "bardziej demokratycznym"
+        },
+        "m3": {
+          "nom": "bardziej demokratyczny",
+          "gen": "bardziej demokratycznego",
+          "dat": "bardziej demokratycznemu",
+          "acc": "bardziej demokratyczny",
+          "ins": "bardziej demokratycznym",
+          "loc": "bardziej demokratycznym"
+        },
+        "f": {
+          "nom": "bardziej demokratyczna",
+          "gen": "bardziej demokratycznej",
+          "dat": "bardziej demokratycznej",
+          "acc": "bardziej demokratyczną",
+          "ins": "bardziej demokratyczną",
+          "loc": "bardziej demokratycznej"
+        },
+        "n": {
+          "nom": "bardziej demokratyczne",
+          "gen": "bardziej demokratycznego",
+          "dat": "bardziej demokratycznemu",
+          "acc": "bardziej demokratyczne",
+          "ins": "bardziej demokratycznym",
+          "loc": "bardziej demokratycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej demokratyczni",
+          "gen": "bardziej demokratycznych",
+          "dat": "bardziej demokratycznym",
+          "acc": "bardziej demokratycznych",
+          "ins": "bardziej demokratycznymi",
+          "loc": "bardziej demokratycznych"
+        },
+        "nonvirile": {
+          "nom": "bardziej demokratyczne",
+          "gen": "bardziej demokratycznych",
+          "dat": "bardziej demokratycznym",
+          "acc": "bardziej demokratyczne",
+          "ins": "bardziej demokratycznymi",
+          "loc": "bardziej demokratycznych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej demokratyczny",
+          "gen": "najbardziej demokratycznego",
+          "dat": "najbardziej demokratycznemu",
+          "acc": "najbardziej demokratycznego",
+          "ins": "najbardziej demokratycznym",
+          "loc": "najbardziej demokratycznym"
+        },
+        "m3": {
+          "nom": "najbardziej demokratyczny",
+          "gen": "najbardziej demokratycznego",
+          "dat": "najbardziej demokratycznemu",
+          "acc": "najbardziej demokratyczny",
+          "ins": "najbardziej demokratycznym",
+          "loc": "najbardziej demokratycznym"
+        },
+        "f": {
+          "nom": "najbardziej demokratyczna",
+          "gen": "najbardziej demokratycznej",
+          "dat": "najbardziej demokratycznej",
+          "acc": "najbardziej demokratyczną",
+          "ins": "najbardziej demokratyczną",
+          "loc": "najbardziej demokratycznej"
+        },
+        "n": {
+          "nom": "najbardziej demokratyczne",
+          "gen": "najbardziej demokratycznego",
+          "dat": "najbardziej demokratycznemu",
+          "acc": "najbardziej demokratyczne",
+          "ins": "najbardziej demokratycznym",
+          "loc": "najbardziej demokratycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej demokratyczni",
+          "gen": "najbardziej demokratycznych",
+          "dat": "najbardziej demokratycznym",
+          "acc": "najbardziej demokratycznych",
+          "ins": "najbardziej demokratycznymi",
+          "loc": "najbardziej demokratycznych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej demokratyczne",
+          "gen": "najbardziej demokratycznych",
+          "dat": "najbardziej demokratycznym",
+          "acc": "najbardziej demokratyczne",
+          "ins": "najbardziej demokratycznymi",
+          "loc": "najbardziej demokratycznych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "czwartek",
+      "gen": "czwartku",
+      "dat": "czwartkowi",
+      "acc": "czwartek",
+      "ins": "czwartkiem",
+      "loc": "czwartku",
+      "voc": "czwartku"
+    },
+    "plural": {
+      "nom": "czwartki",
+      "gen": "czwartków",
+      "dat": "czwartkom",
+      "acc": "czwartki",
+      "ins": "czwartkami",
+      "loc": "czwartkach",
+      "voc": "czwartki"
+    }
+  }
+}

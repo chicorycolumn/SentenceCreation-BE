@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "nieodpowiedzialnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nieodpowiedzialny",
+          "gen": "nieodpowiedzialnego",
+          "dat": "nieodpowiedzialnemu",
+          "acc": "nieodpowiedzialnego",
+          "ins": "nieodpowiedzialnym",
+          "loc": "nieodpowiedzialnym"
+        },
+        "m3": {
+          "nom": "nieodpowiedzialny",
+          "gen": "nieodpowiedzialnego",
+          "dat": "nieodpowiedzialnemu",
+          "acc": "nieodpowiedzialny",
+          "ins": "nieodpowiedzialnym",
+          "loc": "nieodpowiedzialnym"
+        },
+        "f": {
+          "nom": "nieodpowiedzialna",
+          "gen": "nieodpowiedzialnej",
+          "dat": "nieodpowiedzialnej",
+          "acc": "nieodpowiedzialną",
+          "ins": "nieodpowiedzialną",
+          "loc": "nieodpowiedzialnej"
+        },
+        "n": {
+          "nom": "nieodpowiedzialne",
+          "gen": "nieodpowiedzialnego",
+          "dat": "nieodpowiedzialnemu",
+          "acc": "nieodpowiedzialne",
+          "ins": "nieodpowiedzialnym",
+          "loc": "nieodpowiedzialnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieodpowiedzialni",
+          "gen": "nieodpowiedzialnych",
+          "dat": "nieodpowiedzialnym",
+          "acc": "nieodpowiedzialnych",
+          "ins": "nieodpowiedzialnymi",
+          "loc": "nieodpowiedzialnych"
+        },
+        "nonvirile": {
+          "nom": "nieodpowiedzialne",
+          "gen": "nieodpowiedzialnych",
+          "dat": "nieodpowiedzialnym",
+          "acc": "nieodpowiedzialne",
+          "ins": "nieodpowiedzialnymi",
+          "loc": "nieodpowiedzialnych"
+        }
+      }
+    }
+  }
+}

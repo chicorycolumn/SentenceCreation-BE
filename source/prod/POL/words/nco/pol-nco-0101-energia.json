@@ -1,0 +1,30 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "energia",
+      "gen": "energii",
+      "dat": "energii",
+      "acc": "energię",
+      "ins": "energią",
+      "loc": "energii",
+      "voc": "energio"
+    },
+    "plural": {
+      "nom": "energie",
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "energii"
+        ],
+        "additionalInfrequent": [
+          "energij"
+        ]
+      },
+      "dat": "energiom",
+      "acc": "energie",
+      "ins": "energiami",
+      "loc": "energiach",
+      "voc": "energie"
+    }
+  }
+}

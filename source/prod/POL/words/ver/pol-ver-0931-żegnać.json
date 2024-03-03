@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "żegnać",
+    "verbalNoun": "żegnanie",
+    "activeAdjectival": "żegnający",
+    "passiveAdjectival": "żegnany",
+    "contemporaryAdverbial": "żegnając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "żegnaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "żegnano"
+          },
+          "plural": {
+            "allPluralGenders": "żegnano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "żegnałem",
+            "f": "żegnałam"
+          },
+          "plural": {
+            "virile": "żegnaliśmy",
+            "nonvirile": "żegnałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "żegnałeś",
+            "f": "żegnałaś"
+          },
+          "plural": {
+            "virile": "żegnaliście",
+            "nonvirile": "żegnałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "żegnał",
+            "f": "żegnała",
+            "n": "żegnało"
+          },
+          "plural": {
+            "virile": "żegnali",
+            "nonvirile": "żegnały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "żegna się"
+          },
+          "plural": {
+            "allPluralGenders": "żegna się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "żegnam"
+          },
+          "plural": {
+            "allPluralGenders": "żegnamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "żegnasz"
+          },
+          "plural": {
+            "allPluralGenders": "żegnacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "żegna"
+          },
+          "plural": {
+            "allPluralGenders": "żegnają"
+          }
+        }
+      }
+    }
+  }
+}

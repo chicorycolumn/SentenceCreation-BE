@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zamknięty",
+          "gen": "zamkniętego",
+          "dat": "zamkniętemu",
+          "acc": "zamkniętego",
+          "ins": "zamkniętym",
+          "loc": "zamkniętym"
+        },
+        "m3": {
+          "nom": "zamknięty",
+          "gen": "zamkniętego",
+          "dat": "zamkniętemu",
+          "acc": "zamknięty",
+          "ins": "zamkniętym",
+          "loc": "zamkniętym"
+        },
+        "f": {
+          "nom": "zamknięta",
+          "gen": "zamkniętej",
+          "dat": "zamkniętej",
+          "acc": "zamkniętą",
+          "ins": "zamkniętą",
+          "loc": "zamkniętej"
+        },
+        "n": {
+          "nom": "zamknięte",
+          "gen": "zamkniętego",
+          "dat": "zamkniętemu",
+          "acc": "zamknięte",
+          "ins": "zamkniętym",
+          "loc": "zamkniętym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zamknięci",
+          "gen": "zamkniętych",
+          "dat": "zamkniętym",
+          "acc": "zamkniętych",
+          "ins": "zamkniętymi",
+          "loc": "zamkniętych"
+        },
+        "nonvirile": {
+          "nom": "zamknięte",
+          "gen": "zamkniętych",
+          "dat": "zamkniętym",
+          "acc": "zamknięte",
+          "ins": "zamkniętymi",
+          "loc": "zamkniętych"
+        }
+      }
+    }
+  }
+}

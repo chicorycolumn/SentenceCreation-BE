@@ -1,0 +1,21 @@
+{
+  "inflections": {
+    "plural": {
+      "nom": "wakacje",
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "wakacji"
+        ],
+        "additionalInfrequent": [
+          "wakacyj"
+        ]
+      },
+      "dat": "wakacjom",
+      "acc": "wakacje",
+      "ins": "wakacjami",
+      "loc": "wakacjach",
+      "voc": "wakacje"
+    }
+  }
+}

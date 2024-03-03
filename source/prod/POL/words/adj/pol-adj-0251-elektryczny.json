@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "elektrycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "elektryczny",
+          "gen": "elektrycznego",
+          "dat": "elektrycznemu",
+          "acc": "elektrycznego",
+          "ins": "elektrycznym",
+          "loc": "elektrycznym"
+        },
+        "m3": {
+          "nom": "elektryczny",
+          "gen": "elektrycznego",
+          "dat": "elektrycznemu",
+          "acc": "elektryczny",
+          "ins": "elektrycznym",
+          "loc": "elektrycznym"
+        },
+        "f": {
+          "nom": "elektryczna",
+          "gen": "elektrycznej",
+          "dat": "elektrycznej",
+          "acc": "elektryczną",
+          "ins": "elektryczną",
+          "loc": "elektrycznej"
+        },
+        "n": {
+          "nom": "elektryczne",
+          "gen": "elektrycznego",
+          "dat": "elektrycznemu",
+          "acc": "elektryczne",
+          "ins": "elektrycznym",
+          "loc": "elektrycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "elektryczni",
+          "gen": "elektrycznych",
+          "dat": "elektrycznym",
+          "acc": "elektrycznych",
+          "ins": "elektrycznymi",
+          "loc": "elektrycznych"
+        },
+        "nonvirile": {
+          "nom": "elektryczne",
+          "gen": "elektrycznych",
+          "dat": "elektrycznym",
+          "acc": "elektryczne",
+          "ins": "elektrycznymi",
+          "loc": "elektrycznych"
+        }
+      }
+    }
+  }
+}

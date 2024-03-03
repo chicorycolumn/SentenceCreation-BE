@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "estetycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "estetyczny",
+          "gen": "estetycznego",
+          "dat": "estetycznemu",
+          "acc": "estetycznego",
+          "ins": "estetycznym",
+          "loc": "estetycznym"
+        },
+        "m3": {
+          "nom": "estetyczny",
+          "gen": "estetycznego",
+          "dat": "estetycznemu",
+          "acc": "estetyczny",
+          "ins": "estetycznym",
+          "loc": "estetycznym"
+        },
+        "f": {
+          "nom": "estetyczna",
+          "gen": "estetycznej",
+          "dat": "estetycznej",
+          "acc": "estetyczną",
+          "ins": "estetyczną",
+          "loc": "estetycznej"
+        },
+        "n": {
+          "nom": "estetyczne",
+          "gen": "estetycznego",
+          "dat": "estetycznemu",
+          "acc": "estetyczne",
+          "ins": "estetycznym",
+          "loc": "estetycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "estetyczni",
+          "gen": "estetycznych",
+          "dat": "estetycznym",
+          "acc": "estetycznych",
+          "ins": "estetycznymi",
+          "loc": "estetycznych"
+        },
+        "nonvirile": {
+          "nom": "estetyczne",
+          "gen": "estetycznych",
+          "dat": "estetycznym",
+          "acc": "estetyczne",
+          "ins": "estetycznymi",
+          "loc": "estetycznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "estetyczniejszy",
+          "gen": "estetyczniejszego",
+          "dat": "estetyczniejszemu",
+          "acc": "estetyczniejszego",
+          "ins": "estetyczniejszym",
+          "loc": "estetyczniejszym"
+        },
+        "m3": {
+          "nom": "estetyczniejszy",
+          "gen": "estetyczniejszego",
+          "dat": "estetyczniejszemu",
+          "acc": "estetyczniejszy",
+          "ins": "estetyczniejszym",
+          "loc": "estetyczniejszym"
+        },
+        "f": {
+          "nom": "estetyczniejsza",
+          "gen": "estetyczniejszej",
+          "dat": "estetyczniejszej",
+          "acc": "estetyczniejszą",
+          "ins": "estetyczniejszą",
+          "loc": "estetyczniejszej"
+        },
+        "n": {
+          "nom": "estetyczniejsze",
+          "gen": "estetyczniejszego",
+          "dat": "estetyczniejszemu",
+          "acc": "estetyczniejsze",
+          "ins": "estetyczniejszym",
+          "loc": "estetyczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "estetyczniejsi",
+          "gen": "estetyczniejszych",
+          "dat": "estetyczniejszym",
+          "acc": "estetyczniejszych",
+          "ins": "estetyczniejszymi",
+          "loc": "estetyczniejszych"
+        },
+        "nonvirile": {
+          "nom": "estetyczniejsze",
+          "gen": "estetyczniejszych",
+          "dat": "estetyczniejszym",
+          "acc": "estetyczniejsze",
+          "ins": "estetyczniejszymi",
+          "loc": "estetyczniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najestetyczniejszy",
+          "gen": "najestetyczniejszego",
+          "dat": "najestetyczniejszemu",
+          "acc": "najestetyczniejszego",
+          "ins": "najestetyczniejszym",
+          "loc": "najestetyczniejszym"
+        },
+        "m3": {
+          "nom": "najestetyczniejszy",
+          "gen": "najestetyczniejszego",
+          "dat": "najestetyczniejszemu",
+          "acc": "najestetyczniejszy",
+          "ins": "najestetyczniejszym",
+          "loc": "najestetyczniejszym"
+        },
+        "f": {
+          "nom": "najestetyczniejsza",
+          "gen": "najestetyczniejszej",
+          "dat": "najestetyczniejszej",
+          "acc": "najestetyczniejszą",
+          "ins": "najestetyczniejszą",
+          "loc": "najestetyczniejszej"
+        },
+        "n": {
+          "nom": "najestetyczniejsze",
+          "gen": "najestetyczniejszego",
+          "dat": "najestetyczniejszemu",
+          "acc": "najestetyczniejsze",
+          "ins": "najestetyczniejszym",
+          "loc": "najestetyczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najestetyczniejsi",
+          "gen": "najestetyczniejszych",
+          "dat": "najestetyczniejszym",
+          "acc": "najestetyczniejszych",
+          "ins": "najestetyczniejszymi",
+          "loc": "najestetyczniejszych"
+        },
+        "nonvirile": {
+          "nom": "najestetyczniejsze",
+          "gen": "najestetyczniejszych",
+          "dat": "najestetyczniejszym",
+          "acc": "najestetyczniejsze",
+          "ins": "najestetyczniejszymi",
+          "loc": "najestetyczniejszych"
+        }
+      }
+    }
+  }
+}

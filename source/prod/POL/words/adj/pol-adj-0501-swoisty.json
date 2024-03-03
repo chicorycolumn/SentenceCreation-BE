@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "swoiście",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "swoisty",
+          "gen": "swoistego",
+          "dat": "swoistemu",
+          "acc": "swoistego",
+          "ins": "swoistym",
+          "loc": "swoistym"
+        },
+        "m3": {
+          "nom": "swoisty",
+          "gen": "swoistego",
+          "dat": "swoistemu",
+          "acc": "swoisty",
+          "ins": "swoistym",
+          "loc": "swoistym"
+        },
+        "f": {
+          "nom": "swoista",
+          "gen": "swoistej",
+          "dat": "swoistej",
+          "acc": "swoistą",
+          "ins": "swoistą",
+          "loc": "swoistej"
+        },
+        "n": {
+          "nom": "swoiste",
+          "gen": "swoistego",
+          "dat": "swoistemu",
+          "acc": "swoiste",
+          "ins": "swoistym",
+          "loc": "swoistym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "swoiści",
+          "gen": "swoistych",
+          "dat": "swoistym",
+          "acc": "swoistych",
+          "ins": "swoistymi",
+          "loc": "swoistych"
+        },
+        "nonvirile": {
+          "nom": "swoiste",
+          "gen": "swoistych",
+          "dat": "swoistym",
+          "acc": "swoiste",
+          "ins": "swoistymi",
+          "loc": "swoistych"
+        }
+      }
+    }
+  }
+}

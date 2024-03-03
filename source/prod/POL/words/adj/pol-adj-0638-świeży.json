@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "świeżo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "świeży",
+          "gen": "świeżego",
+          "dat": "świeżemu",
+          "acc": "świeżego",
+          "ins": "świeżym",
+          "loc": "świeżym"
+        },
+        "m3": {
+          "nom": "świeży",
+          "gen": "świeżego",
+          "dat": "świeżemu",
+          "acc": "świeży",
+          "ins": "świeżym",
+          "loc": "świeżym"
+        },
+        "f": {
+          "nom": "świeża",
+          "gen": "świeżej",
+          "dat": "świeżej",
+          "acc": "świeżą",
+          "ins": "świeżą",
+          "loc": "świeżej"
+        },
+        "n": {
+          "nom": "świeże",
+          "gen": "świeżego",
+          "dat": "świeżemu",
+          "acc": "świeże",
+          "ins": "świeżym",
+          "loc": "świeżym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "świeży",
+          "gen": "świeżych",
+          "dat": "świeżym",
+          "acc": "świeżych",
+          "ins": "świeżymi",
+          "loc": "świeżych"
+        },
+        "nonvirile": {
+          "nom": "świeże",
+          "gen": "świeżych",
+          "dat": "świeżym",
+          "acc": "świeże",
+          "ins": "świeżymi",
+          "loc": "świeżych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "świeższy",
+          "gen": "świeższego",
+          "dat": "świeższemu",
+          "acc": "świeższego",
+          "ins": "świeższym",
+          "loc": "świeższym"
+        },
+        "m3": {
+          "nom": "świeższy",
+          "gen": "świeższego",
+          "dat": "świeższemu",
+          "acc": "świeższy",
+          "ins": "świeższym",
+          "loc": "świeższym"
+        },
+        "f": {
+          "nom": "świeższa",
+          "gen": "świeższej",
+          "dat": "świeższej",
+          "acc": "świeższą",
+          "ins": "świeższą",
+          "loc": "świeższej"
+        },
+        "n": {
+          "nom": "świeższe",
+          "gen": "świeższego",
+          "dat": "świeższemu",
+          "acc": "świeższe",
+          "ins": "świeższym",
+          "loc": "świeższym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "świeżsi",
+          "gen": "świeższych",
+          "dat": "świeższym",
+          "acc": "świeższych",
+          "ins": "świeższymi",
+          "loc": "świeższych"
+        },
+        "nonvirile": {
+          "nom": "świeższe",
+          "gen": "świeższych",
+          "dat": "świeższym",
+          "acc": "świeższe",
+          "ins": "świeższymi",
+          "loc": "świeższych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najświeższy",
+          "gen": "najświeższego",
+          "dat": "najświeższemu",
+          "acc": "najświeższego",
+          "ins": "najświeższym",
+          "loc": "najświeższym"
+        },
+        "m3": {
+          "nom": "najświeższy",
+          "gen": "najświeższego",
+          "dat": "najświeższemu",
+          "acc": "najświeższy",
+          "ins": "najświeższym",
+          "loc": "najświeższym"
+        },
+        "f": {
+          "nom": "najświeższa",
+          "gen": "najświeższej",
+          "dat": "najświeższej",
+          "acc": "najświeższą",
+          "ins": "najświeższą",
+          "loc": "najświeższej"
+        },
+        "n": {
+          "nom": "najświeższe",
+          "gen": "najświeższego",
+          "dat": "najświeższemu",
+          "acc": "najświeższe",
+          "ins": "najświeższym",
+          "loc": "najświeższym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najświeżsi",
+          "gen": "najświeższych",
+          "dat": "najświeższym",
+          "acc": "najświeższych",
+          "ins": "najświeższymi",
+          "loc": "najświeższych"
+        },
+        "nonvirile": {
+          "nom": "najświeższe",
+          "gen": "najświeższych",
+          "dat": "najświeższym",
+          "acc": "najświeższe",
+          "ins": "najświeższymi",
+          "loc": "najświeższych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "odpornie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "odporny",
+          "gen": "odpornego",
+          "dat": "odpornemu",
+          "acc": "odpornego",
+          "ins": "odpornym",
+          "loc": "odpornym"
+        },
+        "m3": {
+          "nom": "odporny",
+          "gen": "odpornego",
+          "dat": "odpornemu",
+          "acc": "odporny",
+          "ins": "odpornym",
+          "loc": "odpornym"
+        },
+        "f": {
+          "nom": "odporna",
+          "gen": "odpornej",
+          "dat": "odpornej",
+          "acc": "odporną",
+          "ins": "odporną",
+          "loc": "odpornej"
+        },
+        "n": {
+          "nom": "odporne",
+          "gen": "odpornego",
+          "dat": "odpornemu",
+          "acc": "odporne",
+          "ins": "odpornym",
+          "loc": "odpornym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "odporni",
+          "gen": "odpornych",
+          "dat": "odpornym",
+          "acc": "odpornych",
+          "ins": "odpornymi",
+          "loc": "odpornych"
+        },
+        "nonvirile": {
+          "nom": "odporne",
+          "gen": "odpornych",
+          "dat": "odpornym",
+          "acc": "odporne",
+          "ins": "odpornymi",
+          "loc": "odpornych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "odporniejszy",
+          "gen": "odporniejszego",
+          "dat": "odporniejszemu",
+          "acc": "odporniejszego",
+          "ins": "odporniejszym",
+          "loc": "odporniejszym"
+        },
+        "m3": {
+          "nom": "odporniejszy",
+          "gen": "odporniejszego",
+          "dat": "odporniejszemu",
+          "acc": "odporniejszy",
+          "ins": "odporniejszym",
+          "loc": "odporniejszym"
+        },
+        "f": {
+          "nom": "odporniejsza",
+          "gen": "odporniejszej",
+          "dat": "odporniejszej",
+          "acc": "odporniejszą",
+          "ins": "odporniejszą",
+          "loc": "odporniejszej"
+        },
+        "n": {
+          "nom": "odporniejsze",
+          "gen": "odporniejszego",
+          "dat": "odporniejszemu",
+          "acc": "odporniejsze",
+          "ins": "odporniejszym",
+          "loc": "odporniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "odporniejsi",
+          "gen": "odporniejszych",
+          "dat": "odporniejszym",
+          "acc": "odporniejszych",
+          "ins": "odporniejszymi",
+          "loc": "odporniejszych"
+        },
+        "nonvirile": {
+          "nom": "odporniejsze",
+          "gen": "odporniejszych",
+          "dat": "odporniejszym",
+          "acc": "odporniejsze",
+          "ins": "odporniejszymi",
+          "loc": "odporniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najodporniejszy",
+          "gen": "najodporniejszego",
+          "dat": "najodporniejszemu",
+          "acc": "najodporniejszego",
+          "ins": "najodporniejszym",
+          "loc": "najodporniejszym"
+        },
+        "m3": {
+          "nom": "najodporniejszy",
+          "gen": "najodporniejszego",
+          "dat": "najodporniejszemu",
+          "acc": "najodporniejszy",
+          "ins": "najodporniejszym",
+          "loc": "najodporniejszym"
+        },
+        "f": {
+          "nom": "najodporniejsza",
+          "gen": "najodporniejszej",
+          "dat": "najodporniejszej",
+          "acc": "najodporniejszą",
+          "ins": "najodporniejszą",
+          "loc": "najodporniejszej"
+        },
+        "n": {
+          "nom": "najodporniejsze",
+          "gen": "najodporniejszego",
+          "dat": "najodporniejszemu",
+          "acc": "najodporniejsze",
+          "ins": "najodporniejszym",
+          "loc": "najodporniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najodporniejsi",
+          "gen": "najodporniejszych",
+          "dat": "najodporniejszym",
+          "acc": "najodporniejszych",
+          "ins": "najodporniejszymi",
+          "loc": "najodporniejszych"
+        },
+        "nonvirile": {
+          "nom": "najodporniejsze",
+          "gen": "najodporniejszych",
+          "dat": "najodporniejszym",
+          "acc": "najodporniejsze",
+          "ins": "najodporniejszymi",
+          "loc": "najodporniejszych"
+        }
+      }
+    }
+  }
+}

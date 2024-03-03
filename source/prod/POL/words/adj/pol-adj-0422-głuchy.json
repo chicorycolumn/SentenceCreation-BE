@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "głucho",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "głuchy",
+          "gen": "głuchego",
+          "dat": "głuchemu",
+          "acc": "głuchego",
+          "ins": "głuchym",
+          "loc": "głuchym"
+        },
+        "m3": {
+          "nom": "głuchy",
+          "gen": "głuchego",
+          "dat": "głuchemu",
+          "acc": "głuchy",
+          "ins": "głuchym",
+          "loc": "głuchym"
+        },
+        "f": {
+          "nom": "głucha",
+          "gen": "głuchej",
+          "dat": "głuchej",
+          "acc": "głuchą",
+          "ins": "głuchą",
+          "loc": "głuchej"
+        },
+        "n": {
+          "nom": "głuche",
+          "gen": "głuchego",
+          "dat": "głuchemu",
+          "acc": "głuche",
+          "ins": "głuchym",
+          "loc": "głuchym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "głusi",
+          "gen": "głuchych",
+          "dat": "głuchym",
+          "acc": "głuchych",
+          "ins": "głuchymi",
+          "loc": "głuchych"
+        },
+        "nonvirile": {
+          "nom": "głuche",
+          "gen": "głuchych",
+          "dat": "głuchym",
+          "acc": "głuche",
+          "ins": "głuchymi",
+          "loc": "głuchych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "głuchszy",
+          "gen": "głuchszego",
+          "dat": "głuchszemu",
+          "acc": "głuchszego",
+          "ins": "głuchszym",
+          "loc": "głuchszym"
+        },
+        "m3": {
+          "nom": "głuchszy",
+          "gen": "głuchszego",
+          "dat": "głuchszemu",
+          "acc": "głuchszy",
+          "ins": "głuchszym",
+          "loc": "głuchszym"
+        },
+        "f": {
+          "nom": "głuchsza",
+          "gen": "głuchszej",
+          "dat": "głuchszej",
+          "acc": "głuchszą",
+          "ins": "głuchszą",
+          "loc": "głuchszej"
+        },
+        "n": {
+          "nom": "głuchsze",
+          "gen": "głuchszego",
+          "dat": "głuchszemu",
+          "acc": "głuchsze",
+          "ins": "głuchszym",
+          "loc": "głuchszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "głuchsi",
+          "gen": "głuchszych",
+          "dat": "głuchszym",
+          "acc": "głuchszych",
+          "ins": "głuchszymi",
+          "loc": "głuchszych"
+        },
+        "nonvirile": {
+          "nom": "głuchsze",
+          "gen": "głuchszych",
+          "dat": "głuchszym",
+          "acc": "głuchsze",
+          "ins": "głuchszymi",
+          "loc": "głuchszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najgłuchszy",
+          "gen": "najgłuchszego",
+          "dat": "najgłuchszemu",
+          "acc": "najgłuchszego",
+          "ins": "najgłuchszym",
+          "loc": "najgłuchszym"
+        },
+        "m3": {
+          "nom": "najgłuchszy",
+          "gen": "najgłuchszego",
+          "dat": "najgłuchszemu",
+          "acc": "najgłuchszy",
+          "ins": "najgłuchszym",
+          "loc": "najgłuchszym"
+        },
+        "f": {
+          "nom": "najgłuchsza",
+          "gen": "najgłuchszej",
+          "dat": "najgłuchszej",
+          "acc": "najgłuchszą",
+          "ins": "najgłuchszą",
+          "loc": "najgłuchszej"
+        },
+        "n": {
+          "nom": "najgłuchsze",
+          "gen": "najgłuchszego",
+          "dat": "najgłuchszemu",
+          "acc": "najgłuchsze",
+          "ins": "najgłuchszym",
+          "loc": "najgłuchszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najgłuchsi",
+          "gen": "najgłuchszych",
+          "dat": "najgłuchszym",
+          "acc": "najgłuchszych",
+          "ins": "najgłuchszymi",
+          "loc": "najgłuchszych"
+        },
+        "nonvirile": {
+          "nom": "najgłuchsze",
+          "gen": "najgłuchszych",
+          "dat": "najgłuchszym",
+          "acc": "najgłuchsze",
+          "ins": "najgłuchszymi",
+          "loc": "najgłuchszych"
+        }
+      }
+    }
+  }
+}

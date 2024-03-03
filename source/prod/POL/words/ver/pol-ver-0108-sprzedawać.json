@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "sprzedawać",
+    "verbalNoun": "sprzedawanie",
+    "activeAdjectival": "sprzedający",
+    "passiveAdjectival": "sprzedawany",
+    "contemporaryAdverbial": "sprzedając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "sprzedawaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "sprzedawano"
+          },
+          "plural": {
+            "allPluralGenders": "sprzedawano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "sprzedawałem",
+            "f": "sprzedawałam"
+          },
+          "plural": {
+            "virile": "sprzedawaliśmy",
+            "nonvirile": "sprzedawałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "sprzedawałeś",
+            "f": "sprzedawałaś"
+          },
+          "plural": {
+            "virile": "sprzedawaliście",
+            "nonvirile": "sprzedawałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "sprzedawał",
+            "f": "sprzedawała",
+            "n": "sprzedawało"
+          },
+          "plural": {
+            "virile": "sprzedawali",
+            "nonvirile": "sprzedawały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "sprzedaje się"
+          },
+          "plural": {
+            "allPluralGenders": "sprzedaje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "sprzedaję"
+          },
+          "plural": {
+            "allPluralGenders": "sprzedajemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "sprzedajesz"
+          },
+          "plural": {
+            "allPluralGenders": "sprzedajecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "sprzedaje"
+          },
+          "plural": {
+            "allPluralGenders": "sprzedają"
+          }
+        }
+      }
+    }
+  }
+}

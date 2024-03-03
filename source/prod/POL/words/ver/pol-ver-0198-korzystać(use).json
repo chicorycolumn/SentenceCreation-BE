@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "korzystać",
+    "verbalNoun": "korzystanie",
+    "activeAdjectival": "korzystający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "korzystając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "korzystaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "korzystano"
+          },
+          "plural": {
+            "allPluralGenders": "korzystano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "korzystałem",
+            "f": "korzystałam"
+          },
+          "plural": {
+            "virile": "korzystaliśmy",
+            "nonvirile": "korzystałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "korzystałeś",
+            "f": "korzystałaś"
+          },
+          "plural": {
+            "virile": "korzystaliście",
+            "nonvirile": "korzystałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "korzystał",
+            "f": "korzystała",
+            "n": "korzystało"
+          },
+          "plural": {
+            "virile": "korzystali",
+            "nonvirile": "korzystały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "korzysta się"
+          },
+          "plural": {
+            "allPluralGenders": "korzysta się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "korzystam"
+          },
+          "plural": {
+            "allPluralGenders": "korzystamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "korzystasz"
+          },
+          "plural": {
+            "allPluralGenders": "korzystacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "korzysta"
+          },
+          "plural": {
+            "allPluralGenders": "korzystają"
+          }
+        }
+      }
+    }
+  }
+}

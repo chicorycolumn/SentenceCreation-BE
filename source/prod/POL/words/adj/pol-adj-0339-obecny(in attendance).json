@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "obecnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "obecny",
+          "gen": "obecnego",
+          "dat": "obecnemu",
+          "acc": "obecnego",
+          "ins": "obecnym",
+          "loc": "obecnym"
+        },
+        "m3": {
+          "nom": "obecny",
+          "gen": "obecnego",
+          "dat": "obecnemu",
+          "acc": "obecny",
+          "ins": "obecnym",
+          "loc": "obecnym"
+        },
+        "f": {
+          "nom": "obecna",
+          "gen": "obecnej",
+          "dat": "obecnej",
+          "acc": "obecną",
+          "ins": "obecną",
+          "loc": "obecnej"
+        },
+        "n": {
+          "nom": "obecne",
+          "gen": "obecnego",
+          "dat": "obecnemu",
+          "acc": "obecne",
+          "ins": "obecnym",
+          "loc": "obecnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "obecni",
+          "gen": "obecnych",
+          "dat": "obecnym",
+          "acc": "obecnych",
+          "ins": "obecnymi",
+          "loc": "obecnych"
+        },
+        "nonvirile": {
+          "nom": "obecne",
+          "gen": "obecnych",
+          "dat": "obecnym",
+          "acc": "obecne",
+          "ins": "obecnymi",
+          "loc": "obecnych"
+        }
+      }
+    }
+  }
+}

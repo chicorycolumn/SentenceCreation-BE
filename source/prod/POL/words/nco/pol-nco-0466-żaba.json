@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "żaba",
+      "gen": "żaby",
+      "dat": "żabie",
+      "acc": "żabę",
+      "ins": "żabą",
+      "loc": "żabie",
+      "voc": "żabo"
+    },
+    "plural": {
+      "nom": "żaby",
+      "gen": "żab",
+      "dat": "żabom",
+      "acc": "żaby",
+      "ins": "żabami",
+      "loc": "żabach",
+      "voc": "żaby"
+    }
+  }
+}

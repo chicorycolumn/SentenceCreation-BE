@@ -1,0 +1,18 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mosquito",
+      "gen": "mosquito's"
+    },
+    "plural": {
+      "nom": [
+        "mosquitoes",
+        "mosquitos"
+      ],
+      "gen": [
+        "mosquitoes'",
+        "mosquitos'"
+      ]
+    }
+  }
+}

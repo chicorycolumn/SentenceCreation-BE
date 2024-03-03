@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dostarczyć",
+    "verbalNoun": "dostarczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "dostarczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "dostarczywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dostarczy się"
+          },
+          "plural": {
+            "allPluralGenders": "dostarczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dostarczę"
+          },
+          "plural": {
+            "allPluralGenders": "dostarczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dostarczysz"
+          },
+          "plural": {
+            "allPluralGenders": "dostarczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dostarczy"
+          },
+          "plural": {
+            "allPluralGenders": "dostarczą"
+          }
+        }
+      },
+      "imperative": "dostarcz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dostarczono"
+          },
+          "plural": {
+            "allPluralGenders": "dostarczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dostarczyłem",
+            "f": "dostarczyłam"
+          },
+          "plural": {
+            "virile": "dostarczyliśmy",
+            "nonvirile": "dostarczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dostarczyłeś",
+            "f": "dostarczyłaś"
+          },
+          "plural": {
+            "virile": "dostarczyliście",
+            "nonvirile": "dostarczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dostarczył",
+            "f": "dostarczyła",
+            "n": "dostarczyło"
+          },
+          "plural": {
+            "virile": "dostarczyli",
+            "nonvirile": "dostarczyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

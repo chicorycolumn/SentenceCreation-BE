@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "footpath",
+      "gen": "footpath's"
+    },
+    "plural": {
+      "nom": "footpaths",
+      "gen": "footpaths'"
+    }
+  }
+}

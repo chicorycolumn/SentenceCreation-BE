@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pokazywać",
+    "verbalNoun": "pokazywanie",
+    "activeAdjectival": "pokazujący",
+    "passiveAdjectival": "pokazywany",
+    "contemporaryAdverbial": "pokazując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pokazuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pokazywano"
+          },
+          "plural": {
+            "allPluralGenders": "pokazywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pokazywałem",
+            "f": "pokazywałam"
+          },
+          "plural": {
+            "virile": "pokazywaliśmy",
+            "nonvirile": "pokazywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pokazywałeś",
+            "f": "pokazywałaś"
+          },
+          "plural": {
+            "virile": "pokazywaliście",
+            "nonvirile": "pokazywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pokazywał",
+            "f": "pokazywała",
+            "n": "pokazywało"
+          },
+          "plural": {
+            "virile": "pokazywali",
+            "nonvirile": "pokazywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pokazuje się"
+          },
+          "plural": {
+            "allPluralGenders": "pokazuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pokazuję"
+          },
+          "plural": {
+            "allPluralGenders": "pokazujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pokazujesz"
+          },
+          "plural": {
+            "allPluralGenders": "pokazujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pokazuje"
+          },
+          "plural": {
+            "allPluralGenders": "pokazują"
+          }
+        }
+      }
+    }
+  }
+}

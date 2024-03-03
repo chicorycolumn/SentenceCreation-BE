@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lew",
+      "gen": "lwa",
+      "dat": "lwu",
+      "acc": "lwa",
+      "ins": "lwem",
+      "loc": "lwie",
+      "voc": "lwie"
+    },
+    "plural": {
+      "nom": "lwy",
+      "gen": "lwów",
+      "dat": "lwom",
+      "acc": "lwy",
+      "ins": "lwami",
+      "loc": "lwach",
+      "voc": "lwy"
+    }
+  }
+}

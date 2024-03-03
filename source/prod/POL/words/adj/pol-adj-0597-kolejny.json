@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "kolejno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "kolejny",
+          "gen": "kolejnego",
+          "dat": "kolejnemu",
+          "acc": "kolejnego",
+          "ins": "kolejnym",
+          "loc": "kolejnym"
+        },
+        "m3": {
+          "nom": "kolejny",
+          "gen": "kolejnego",
+          "dat": "kolejnemu",
+          "acc": "kolejny",
+          "ins": "kolejnym",
+          "loc": "kolejnym"
+        },
+        "f": {
+          "nom": "kolejna",
+          "gen": "kolejnej",
+          "dat": "kolejnej",
+          "acc": "kolejną",
+          "ins": "kolejną",
+          "loc": "kolejnej"
+        },
+        "n": {
+          "nom": "kolejne",
+          "gen": "kolejnego",
+          "dat": "kolejnemu",
+          "acc": "kolejne",
+          "ins": "kolejnym",
+          "loc": "kolejnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "kolejni",
+          "gen": "kolejnych",
+          "dat": "kolejnym",
+          "acc": "kolejnych",
+          "ins": "kolejnymi",
+          "loc": "kolejnych"
+        },
+        "nonvirile": {
+          "nom": "kolejne",
+          "gen": "kolejnych",
+          "dat": "kolejnym",
+          "acc": "kolejne",
+          "ins": "kolejnymi",
+          "loc": "kolejnych"
+        }
+      }
+    }
+  }
+}

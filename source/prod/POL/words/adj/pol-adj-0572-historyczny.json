@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "historycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "historyczny",
+          "gen": "historycznego",
+          "dat": "historycznemu",
+          "acc": "historycznego",
+          "ins": "historycznym",
+          "loc": "historycznym"
+        },
+        "m3": {
+          "nom": "historyczny",
+          "gen": "historycznego",
+          "dat": "historycznemu",
+          "acc": "historyczny",
+          "ins": "historycznym",
+          "loc": "historycznym"
+        },
+        "f": {
+          "nom": "historyczna",
+          "gen": "historycznej",
+          "dat": "historycznej",
+          "acc": "historyczną",
+          "ins": "historyczną",
+          "loc": "historycznej"
+        },
+        "n": {
+          "nom": "historyczne",
+          "gen": "historycznego",
+          "dat": "historycznemu",
+          "acc": "historyczne",
+          "ins": "historycznym",
+          "loc": "historycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "historyczni",
+          "gen": "historycznych",
+          "dat": "historycznym",
+          "acc": "historycznych",
+          "ins": "historycznymi",
+          "loc": "historycznych"
+        },
+        "nonvirile": {
+          "nom": "historyczne",
+          "gen": "historycznych",
+          "dat": "historycznym",
+          "acc": "historyczne",
+          "ins": "historycznymi",
+          "loc": "historycznych"
+        }
+      }
+    }
+  }
+}

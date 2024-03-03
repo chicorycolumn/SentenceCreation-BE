@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "church",
+      "gen": "church's"
+    },
+    "plural": {
+      "nom": "churches",
+      "gen": "churches'"
+    }
+  }
+}

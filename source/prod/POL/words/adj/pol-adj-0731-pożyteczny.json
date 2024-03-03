@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "pożytecznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pożyteczny",
+          "gen": "pożytecznego",
+          "dat": "pożytecznemu",
+          "acc": "pożytecznego",
+          "ins": "pożytecznym",
+          "loc": "pożytecznym"
+        },
+        "m3": {
+          "nom": "pożyteczny",
+          "gen": "pożytecznego",
+          "dat": "pożytecznemu",
+          "acc": "pożyteczny",
+          "ins": "pożytecznym",
+          "loc": "pożytecznym"
+        },
+        "f": {
+          "nom": "pożyteczna",
+          "gen": "pożytecznej",
+          "dat": "pożytecznej",
+          "acc": "pożyteczną",
+          "ins": "pożyteczną",
+          "loc": "pożytecznej"
+        },
+        "n": {
+          "nom": "pożyteczne",
+          "gen": "pożytecznego",
+          "dat": "pożytecznemu",
+          "acc": "pożyteczne",
+          "ins": "pożytecznym",
+          "loc": "pożytecznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pożyteczni",
+          "gen": "pożytecznych",
+          "dat": "pożytecznym",
+          "acc": "pożytecznych",
+          "ins": "pożytecznymi",
+          "loc": "pożytecznych"
+        },
+        "nonvirile": {
+          "nom": "pożyteczne",
+          "gen": "pożytecznych",
+          "dat": "pożytecznym",
+          "acc": "pożyteczne",
+          "ins": "pożytecznymi",
+          "loc": "pożytecznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "pożyteczniejszy",
+          "gen": "pożyteczniejszego",
+          "dat": "pożyteczniejszemu",
+          "acc": "pożyteczniejszego",
+          "ins": "pożyteczniejszym",
+          "loc": "pożyteczniejszym"
+        },
+        "m3": {
+          "nom": "pożyteczniejszy",
+          "gen": "pożyteczniejszego",
+          "dat": "pożyteczniejszemu",
+          "acc": "pożyteczniejszy",
+          "ins": "pożyteczniejszym",
+          "loc": "pożyteczniejszym"
+        },
+        "f": {
+          "nom": "pożyteczniejsza",
+          "gen": "pożyteczniejszej",
+          "dat": "pożyteczniejszej",
+          "acc": "pożyteczniejszą",
+          "ins": "pożyteczniejszą",
+          "loc": "pożyteczniejszej"
+        },
+        "n": {
+          "nom": "pożyteczniejsze",
+          "gen": "pożyteczniejszego",
+          "dat": "pożyteczniejszemu",
+          "acc": "pożyteczniejsze",
+          "ins": "pożyteczniejszym",
+          "loc": "pożyteczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pożyteczniejsi",
+          "gen": "pożyteczniejszych",
+          "dat": "pożyteczniejszym",
+          "acc": "pożyteczniejszych",
+          "ins": "pożyteczniejszymi",
+          "loc": "pożyteczniejszych"
+        },
+        "nonvirile": {
+          "nom": "pożyteczniejsze",
+          "gen": "pożyteczniejszych",
+          "dat": "pożyteczniejszym",
+          "acc": "pożyteczniejsze",
+          "ins": "pożyteczniejszymi",
+          "loc": "pożyteczniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najpożyteczniejszy",
+          "gen": "najpożyteczniejszego",
+          "dat": "najpożyteczniejszemu",
+          "acc": "najpożyteczniejszego",
+          "ins": "najpożyteczniejszym",
+          "loc": "najpożyteczniejszym"
+        },
+        "m3": {
+          "nom": "najpożyteczniejszy",
+          "gen": "najpożyteczniejszego",
+          "dat": "najpożyteczniejszemu",
+          "acc": "najpożyteczniejszy",
+          "ins": "najpożyteczniejszym",
+          "loc": "najpożyteczniejszym"
+        },
+        "f": {
+          "nom": "najpożyteczniejsza",
+          "gen": "najpożyteczniejszej",
+          "dat": "najpożyteczniejszej",
+          "acc": "najpożyteczniejszą",
+          "ins": "najpożyteczniejszą",
+          "loc": "najpożyteczniejszej"
+        },
+        "n": {
+          "nom": "najpożyteczniejsze",
+          "gen": "najpożyteczniejszego",
+          "dat": "najpożyteczniejszemu",
+          "acc": "najpożyteczniejsze",
+          "ins": "najpożyteczniejszym",
+          "loc": "najpożyteczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najpożyteczniejsi",
+          "gen": "najpożyteczniejszych",
+          "dat": "najpożyteczniejszym",
+          "acc": "najpożyteczniejszych",
+          "ins": "najpożyteczniejszymi",
+          "loc": "najpożyteczniejszych"
+        },
+        "nonvirile": {
+          "nom": "najpożyteczniejsze",
+          "gen": "najpożyteczniejszych",
+          "dat": "najpożyteczniejszym",
+          "acc": "najpożyteczniejsze",
+          "ins": "najpożyteczniejszymi",
+          "loc": "najpożyteczniejszych"
+        }
+      }
+    }
+  }
+}

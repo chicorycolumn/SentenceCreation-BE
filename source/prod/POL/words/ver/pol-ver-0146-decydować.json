@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "decydować",
+    "verbalNoun": "decydowanie",
+    "activeAdjectival": "decydujący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "decydując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "decyduj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "decydowano"
+          },
+          "plural": {
+            "allPluralGenders": "decydowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "decydowałem",
+            "f": "decydowałam"
+          },
+          "plural": {
+            "virile": "decydowaliśmy",
+            "nonvirile": "decydowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "decydowałeś",
+            "f": "decydowałaś"
+          },
+          "plural": {
+            "virile": "decydowaliście",
+            "nonvirile": "decydowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "decydował",
+            "f": "decydowała",
+            "n": "decydowało"
+          },
+          "plural": {
+            "virile": "decydowali",
+            "nonvirile": "decydowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "decyduje się"
+          },
+          "plural": {
+            "allPluralGenders": "decyduje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "decyduję"
+          },
+          "plural": {
+            "allPluralGenders": "decydujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "decydujesz"
+          },
+          "plural": {
+            "allPluralGenders": "decydujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "decyduje"
+          },
+          "plural": {
+            "allPluralGenders": "decydują"
+          }
+        }
+      }
+    }
+  }
+}

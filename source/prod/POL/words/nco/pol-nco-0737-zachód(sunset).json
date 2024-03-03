@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zachód",
+      "gen": "zachodu",
+      "dat": "zachodowi",
+      "acc": "zachód",
+      "ins": "zachodem",
+      "loc": "zachodzie",
+      "voc": "zachodzie"
+    },
+    "plural": {
+      "nom": "zachody",
+      "gen": "zachodów",
+      "dat": "zachodom",
+      "acc": "zachody",
+      "ins": "zachodami",
+      "loc": "zachodach",
+      "voc": "zachody"
+    }
+  }
+}

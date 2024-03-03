@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "additive",
+      "gen": "additive's"
+    },
+    "plural": {
+      "nom": "additives",
+      "gen": "additives'"
+    }
+  }
+}

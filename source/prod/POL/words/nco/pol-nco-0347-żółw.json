@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "żółw",
+      "gen": "żółwia",
+      "dat": "żółwiowi",
+      "acc": "żółwia",
+      "ins": "żółwiem",
+      "loc": "żółwiu",
+      "voc": "żółwiu"
+    },
+    "plural": {
+      "nom": "żółwie",
+      "gen": "żółwi",
+      "dat": "żółwiom",
+      "acc": "żółwie",
+      "ins": "żółwiami",
+      "loc": "żółwiach",
+      "voc": "żółwie"
+    }
+  }
+}

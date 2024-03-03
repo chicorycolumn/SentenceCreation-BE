@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "hairdresser",
+      "gen": "hairdresser's"
+    },
+    "plural": {
+      "nom": "hairdressers",
+      "gen": "hairdressers'"
+    }
+  }
+}

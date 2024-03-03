@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "bajka",
+      "gen": "bajki",
+      "dat": "bajce",
+      "acc": "bajkę",
+      "ins": "bajką",
+      "loc": "bajce",
+      "voc": "bajko"
+    },
+    "plural": {
+      "nom": "bajki",
+      "gen": "bajek",
+      "dat": "bajkom",
+      "acc": "bajki",
+      "ins": "bajkami",
+      "loc": "bajkach",
+      "voc": "bajki"
+    }
+  }
+}

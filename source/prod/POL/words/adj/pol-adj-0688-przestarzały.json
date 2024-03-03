@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "przestarzale",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przestarzały",
+          "gen": "przestarzałego",
+          "dat": "przestarzałemu",
+          "acc": "przestarzałego",
+          "ins": "przestarzałym",
+          "loc": "przestarzałym"
+        },
+        "m3": {
+          "nom": "przestarzały",
+          "gen": "przestarzałego",
+          "dat": "przestarzałemu",
+          "acc": "przestarzały",
+          "ins": "przestarzałym",
+          "loc": "przestarzałym"
+        },
+        "f": {
+          "nom": "przestarzała",
+          "gen": "przestarzałej",
+          "dat": "przestarzałej",
+          "acc": "przestarzałą",
+          "ins": "przestarzałą",
+          "loc": "przestarzałej"
+        },
+        "n": {
+          "nom": "przestarzałe",
+          "gen": "przestarzałego",
+          "dat": "przestarzałemu",
+          "acc": "przestarzałe",
+          "ins": "przestarzałym",
+          "loc": "przestarzałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przestarzali",
+          "gen": "przestarzałych",
+          "dat": "przestarzałym",
+          "acc": "przestarzałych",
+          "ins": "przestarzałymi",
+          "loc": "przestarzałych"
+        },
+        "nonvirile": {
+          "nom": "przestarzałe",
+          "gen": "przestarzałych",
+          "dat": "przestarzałym",
+          "acc": "przestarzałe",
+          "ins": "przestarzałymi",
+          "loc": "przestarzałych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "tęcza",
+      "gen": "tęczy",
+      "dat": "tęczy",
+      "acc": "tęczę",
+      "ins": "tęczą",
+      "loc": "tęczy",
+      "voc": "tęczo"
+    },
+    "plural": {
+      "nom": "tęcze",
+      "gen": "tęcz",
+      "dat": "tęczom",
+      "acc": "tęcze",
+      "ins": "tęczami",
+      "loc": "tęczach",
+      "voc": "tęcze"
+    }
+  }
+}

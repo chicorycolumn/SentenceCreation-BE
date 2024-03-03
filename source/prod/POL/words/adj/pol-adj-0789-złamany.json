@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "złamany",
+          "gen": "złamanego",
+          "dat": "złamanemu",
+          "acc": "złamanego",
+          "ins": "złamanym",
+          "loc": "złamanym"
+        },
+        "m3": {
+          "nom": "złamany",
+          "gen": "złamanego",
+          "dat": "złamanemu",
+          "acc": "złamany",
+          "ins": "złamanym",
+          "loc": "złamanym"
+        },
+        "f": {
+          "nom": "złamana",
+          "gen": "złamanej",
+          "dat": "złamanej",
+          "acc": "złamaną",
+          "ins": "złamaną",
+          "loc": "złamanej"
+        },
+        "n": {
+          "nom": "złamane",
+          "gen": "złamanego",
+          "dat": "złamanemu",
+          "acc": "złamane",
+          "ins": "złamanym",
+          "loc": "złamanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "złamani",
+          "gen": "złamanych",
+          "dat": "złamanym",
+          "acc": "złamanych",
+          "ins": "złamanymi",
+          "loc": "złamanych"
+        },
+        "nonvirile": {
+          "nom": "złamane",
+          "gen": "złamanych",
+          "dat": "złamanym",
+          "acc": "złamane",
+          "ins": "złamanymi",
+          "loc": "złamanych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej złamany",
+          "gen": "bardziej złamanego",
+          "dat": "bardziej złamanemu",
+          "acc": "bardziej złamanego",
+          "ins": "bardziej złamanym",
+          "loc": "bardziej złamanym"
+        },
+        "m3": {
+          "nom": "bardziej złamany",
+          "gen": "bardziej złamanego",
+          "dat": "bardziej złamanemu",
+          "acc": "bardziej złamany",
+          "ins": "bardziej złamanym",
+          "loc": "bardziej złamanym"
+        },
+        "f": {
+          "nom": "bardziej złamana",
+          "gen": "bardziej złamanej",
+          "dat": "bardziej złamanej",
+          "acc": "bardziej złamaną",
+          "ins": "bardziej złamaną",
+          "loc": "bardziej złamanej"
+        },
+        "n": {
+          "nom": "bardziej złamane",
+          "gen": "bardziej złamanego",
+          "dat": "bardziej złamanemu",
+          "acc": "bardziej złamane",
+          "ins": "bardziej złamanym",
+          "loc": "bardziej złamanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej złamani",
+          "gen": "bardziej złamanych",
+          "dat": "bardziej złamanym",
+          "acc": "bardziej złamanych",
+          "ins": "bardziej złamanymi",
+          "loc": "bardziej złamanych"
+        },
+        "nonvirile": {
+          "nom": "bardziej złamane",
+          "gen": "bardziej złamanych",
+          "dat": "bardziej złamanym",
+          "acc": "bardziej złamane",
+          "ins": "bardziej złamanymi",
+          "loc": "bardziej złamanych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej złamany",
+          "gen": "najbardziej złamanego",
+          "dat": "najbardziej złamanemu",
+          "acc": "najbardziej złamanego",
+          "ins": "najbardziej złamanym",
+          "loc": "najbardziej złamanym"
+        },
+        "m3": {
+          "nom": "najbardziej złamany",
+          "gen": "najbardziej złamanego",
+          "dat": "najbardziej złamanemu",
+          "acc": "najbardziej złamany",
+          "ins": "najbardziej złamanym",
+          "loc": "najbardziej złamanym"
+        },
+        "f": {
+          "nom": "najbardziej złamana",
+          "gen": "najbardziej złamanej",
+          "dat": "najbardziej złamanej",
+          "acc": "najbardziej złamaną",
+          "ins": "najbardziej złamaną",
+          "loc": "najbardziej złamanej"
+        },
+        "n": {
+          "nom": "najbardziej złamane",
+          "gen": "najbardziej złamanego",
+          "dat": "najbardziej złamanemu",
+          "acc": "najbardziej złamane",
+          "ins": "najbardziej złamanym",
+          "loc": "najbardziej złamanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej złamani",
+          "gen": "najbardziej złamanych",
+          "dat": "najbardziej złamanym",
+          "acc": "najbardziej złamanych",
+          "ins": "najbardziej złamanymi",
+          "loc": "najbardziej złamanych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej złamane",
+          "gen": "najbardziej złamanych",
+          "dat": "najbardziej złamanym",
+          "acc": "najbardziej złamane",
+          "ins": "najbardziej złamanymi",
+          "loc": "najbardziej złamanych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "thread",
+      "gen": "thread's"
+    },
+    "plural": {
+      "nom": "threads",
+      "gen": "threads'"
+    }
+  }
+}

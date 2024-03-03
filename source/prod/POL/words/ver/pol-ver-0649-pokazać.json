@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pokazać",
+    "verbalNoun": "pokazanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pokazany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pokazawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pokaże się"
+          },
+          "plural": {
+            "allPluralGenders": "pokaże się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pokażę"
+          },
+          "plural": {
+            "allPluralGenders": "pokażemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pokażesz"
+          },
+          "plural": {
+            "allPluralGenders": "pokażecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pokaże"
+          },
+          "plural": {
+            "allPluralGenders": "pokażą"
+          }
+        }
+      },
+      "imperative": "pokaż",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pokazano"
+          },
+          "plural": {
+            "allPluralGenders": "pokazano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pokazałem",
+            "f": "pokazałam"
+          },
+          "plural": {
+            "virile": "pokazaliśmy",
+            "nonvirile": "pokazałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pokazałeś",
+            "f": "pokazałaś"
+          },
+          "plural": {
+            "virile": "pokazaliście",
+            "nonvirile": "pokazałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pokazał",
+            "f": "pokazała",
+            "n": "pokazało"
+          },
+          "plural": {
+            "virile": "pokazali",
+            "nonvirile": "pokazały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

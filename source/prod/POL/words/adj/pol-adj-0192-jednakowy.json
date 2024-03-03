@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "jednakowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "jednakowy",
+          "gen": "jednakowego",
+          "dat": "jednakowemu",
+          "acc": "jednakowego",
+          "ins": "jednakowym",
+          "loc": "jednakowym"
+        },
+        "m3": {
+          "nom": "jednakowy",
+          "gen": "jednakowego",
+          "dat": "jednakowemu",
+          "acc": "jednakowy",
+          "ins": "jednakowym",
+          "loc": "jednakowym"
+        },
+        "f": {
+          "nom": "jednakowa",
+          "gen": "jednakowej",
+          "dat": "jednakowej",
+          "acc": "jednakową",
+          "ins": "jednakową",
+          "loc": "jednakowej"
+        },
+        "n": {
+          "nom": "jednakowe",
+          "gen": "jednakowego",
+          "dat": "jednakowemu",
+          "acc": "jednakowe",
+          "ins": "jednakowym",
+          "loc": "jednakowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "jednakowi",
+          "gen": "jednakowych",
+          "dat": "jednakowym",
+          "acc": "jednakowych",
+          "ins": "jednakowymi",
+          "loc": "jednakowych"
+        },
+        "nonvirile": {
+          "nom": "jednakowe",
+          "gen": "jednakowych",
+          "dat": "jednakowym",
+          "acc": "jednakowe",
+          "ins": "jednakowymi",
+          "loc": "jednakowych"
+        }
+      }
+    }
+  }
+}

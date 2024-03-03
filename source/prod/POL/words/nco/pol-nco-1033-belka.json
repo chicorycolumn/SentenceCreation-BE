@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "belka",
+      "gen": "belki",
+      "dat": "belce",
+      "acc": "belkę",
+      "ins": "belką",
+      "loc": "belce",
+      "voc": "belko"
+    },
+    "plural": {
+      "nom": "belki",
+      "gen": "belek",
+      "dat": "belkom",
+      "acc": "belki",
+      "ins": "belkami",
+      "loc": "belkach",
+      "voc": "belki"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "miesięcznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "miesięczny",
+          "gen": "miesięcznego",
+          "dat": "miesięcznemu",
+          "acc": "miesięcznego",
+          "ins": "miesięcznym",
+          "loc": "miesięcznym"
+        },
+        "m3": {
+          "nom": "miesięczny",
+          "gen": "miesięcznego",
+          "dat": "miesięcznemu",
+          "acc": "miesięczny",
+          "ins": "miesięcznym",
+          "loc": "miesięcznym"
+        },
+        "f": {
+          "nom": "miesięczna",
+          "gen": "miesięcznej",
+          "dat": "miesięcznej",
+          "acc": "miesięczną",
+          "ins": "miesięczną",
+          "loc": "miesięcznej"
+        },
+        "n": {
+          "nom": "miesięczne",
+          "gen": "miesięcznego",
+          "dat": "miesięcznemu",
+          "acc": "miesięczne",
+          "ins": "miesięcznym",
+          "loc": "miesięcznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "miesięczni",
+          "gen": "miesięcznych",
+          "dat": "miesięcznym",
+          "acc": "miesięcznych",
+          "ins": "miesięcznymi",
+          "loc": "miesięcznych"
+        },
+        "nonvirile": {
+          "nom": "miesięczne",
+          "gen": "miesięcznych",
+          "dat": "miesięcznym",
+          "acc": "miesięczne",
+          "ins": "miesięcznymi",
+          "loc": "miesięcznych"
+        }
+      }
+    }
+  }
+}

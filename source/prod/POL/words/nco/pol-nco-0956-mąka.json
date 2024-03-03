@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mąka",
+      "gen": "mąki",
+      "dat": "mące",
+      "acc": "mąkę",
+      "ins": "mąką",
+      "loc": "mące",
+      "voc": "mąko"
+    },
+    "plural": {
+      "nom": "mąki",
+      "gen": "mąk",
+      "dat": "mąkom",
+      "acc": "mąki",
+      "ins": "mąkami",
+      "loc": "mąkach",
+      "voc": "mąki"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dostrzegać",
+    "verbalNoun": "dostrzeganie",
+    "activeAdjectival": "dostrzegający",
+    "passiveAdjectival": "dostrzegany",
+    "contemporaryAdverbial": "dostrzegając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dostrzegaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dostrzegano"
+          },
+          "plural": {
+            "allPluralGenders": "dostrzegano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dostrzegałem",
+            "f": "dostrzegałam"
+          },
+          "plural": {
+            "virile": "dostrzegaliśmy",
+            "nonvirile": "dostrzegałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dostrzegałeś",
+            "f": "dostrzegałaś"
+          },
+          "plural": {
+            "virile": "dostrzegaliście",
+            "nonvirile": "dostrzegałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dostrzegał",
+            "f": "dostrzegała",
+            "n": "dostrzegało"
+          },
+          "plural": {
+            "virile": "dostrzegali",
+            "nonvirile": "dostrzegały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dostrzega się"
+          },
+          "plural": {
+            "allPluralGenders": "dostrzega się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dostrzegam"
+          },
+          "plural": {
+            "allPluralGenders": "dostrzegamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dostrzegasz"
+          },
+          "plural": {
+            "allPluralGenders": "dostrzegacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dostrzega"
+          },
+          "plural": {
+            "allPluralGenders": "dostrzegają"
+          }
+        }
+      }
+    }
+  }
+}

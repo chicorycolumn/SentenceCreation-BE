@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "window",
+      "gen": "window's"
+    },
+    "plural": {
+      "nom": "windows",
+      "gen": "windows'"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "dobrze",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dobry",
+          "gen": "dobrego",
+          "dat": "dobremu",
+          "acc": "dobrego",
+          "ins": "dobrym",
+          "loc": "dobrym"
+        },
+        "m3": {
+          "nom": "dobry",
+          "gen": "dobrego",
+          "dat": "dobremu",
+          "acc": "dobry",
+          "ins": "dobrym",
+          "loc": "dobrym"
+        },
+        "f": {
+          "nom": "dobra",
+          "gen": "dobrej",
+          "dat": "dobrej",
+          "acc": "dobrą",
+          "ins": "dobrą",
+          "loc": "dobrej"
+        },
+        "n": {
+          "nom": "dobre",
+          "gen": "dobrego",
+          "dat": "dobremu",
+          "acc": "dobre",
+          "ins": "dobrym",
+          "loc": "dobrym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dobrzy",
+          "gen": "dobrych",
+          "dat": "dobrym",
+          "acc": "dobrych",
+          "ins": "dobrymi",
+          "loc": "dobrych"
+        },
+        "nonvirile": {
+          "nom": "dobre",
+          "gen": "dobrych",
+          "dat": "dobrym",
+          "acc": "dobre",
+          "ins": "dobrymi",
+          "loc": "dobrych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "lepszy",
+          "gen": "lepszego",
+          "dat": "lepszemu",
+          "acc": "lepszego",
+          "ins": "lepszym",
+          "loc": "lepszym"
+        },
+        "m3": {
+          "nom": "lepszy",
+          "gen": "lepszego",
+          "dat": "lepszemu",
+          "acc": "lepszy",
+          "ins": "lepszym",
+          "loc": "lepszym"
+        },
+        "f": {
+          "nom": "lepsza",
+          "gen": "lepszej",
+          "dat": "lepszej",
+          "acc": "lepszą",
+          "ins": "lepszą",
+          "loc": "lepszej"
+        },
+        "n": {
+          "nom": "lepsze",
+          "gen": "lepszego",
+          "dat": "lepszemu",
+          "acc": "lepsze",
+          "ins": "lepszym",
+          "loc": "lepszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "lepsi",
+          "gen": "lepszych",
+          "dat": "lepszym",
+          "acc": "lepszych",
+          "ins": "lepszymi",
+          "loc": "lepszych"
+        },
+        "nonvirile": {
+          "nom": "lepsze",
+          "gen": "lepszych",
+          "dat": "lepszym",
+          "acc": "lepsze",
+          "ins": "lepszymi",
+          "loc": "lepszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najlepszy",
+          "gen": "najlepszego",
+          "dat": "najlepszemu",
+          "acc": "najlepszego",
+          "ins": "najlepszym",
+          "loc": "najlepszym"
+        },
+        "m3": {
+          "nom": "najlepszy",
+          "gen": "najlepszego",
+          "dat": "najlepszemu",
+          "acc": "najlepszy",
+          "ins": "najlepszym",
+          "loc": "najlepszym"
+        },
+        "f": {
+          "nom": "najlepsza",
+          "gen": "najlepszej",
+          "dat": "najlepszej",
+          "acc": "najlepszą",
+          "ins": "najlepszą",
+          "loc": "najlepszej"
+        },
+        "n": {
+          "nom": "najlepsze",
+          "gen": "najlepszego",
+          "dat": "najlepszemu",
+          "acc": "najlepsze",
+          "ins": "najlepszym",
+          "loc": "najlepszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najlepsi",
+          "gen": "najlepszych",
+          "dat": "najlepszym",
+          "acc": "najlepszych",
+          "ins": "najlepszymi",
+          "loc": "najlepszych"
+        },
+        "nonvirile": {
+          "nom": "najlepsze",
+          "gen": "najlepszych",
+          "dat": "najlepszym",
+          "acc": "najlepsze",
+          "ins": "najlepszymi",
+          "loc": "najlepszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zadowolony",
+          "gen": "zadowolonego",
+          "dat": "zadowolonemu",
+          "acc": "zadowolonego",
+          "ins": "zadowolonym",
+          "loc": "zadowolonym"
+        },
+        "m3": {
+          "nom": "zadowolony",
+          "gen": "zadowolonego",
+          "dat": "zadowolonemu",
+          "acc": "zadowolony",
+          "ins": "zadowolonym",
+          "loc": "zadowolonym"
+        },
+        "f": {
+          "nom": "zadowolona",
+          "gen": "zadowolonej",
+          "dat": "zadowolonej",
+          "acc": "zadowoloną",
+          "ins": "zadowoloną",
+          "loc": "zadowolonej"
+        },
+        "n": {
+          "nom": "zadowolone",
+          "gen": "zadowolonego",
+          "dat": "zadowolonemu",
+          "acc": "zadowolone",
+          "ins": "zadowolonym",
+          "loc": "zadowolonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zadowoleni",
+          "gen": "zadowolonych",
+          "dat": "zadowolonym",
+          "acc": "zadowolonych",
+          "ins": "zadowolonymi",
+          "loc": "zadowolonych"
+        },
+        "nonvirile": {
+          "nom": "zadowolone",
+          "gen": "zadowolonych",
+          "dat": "zadowolonym",
+          "acc": "zadowolone",
+          "ins": "zadowolonymi",
+          "loc": "zadowolonych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej zadowolony",
+          "gen": "bardziej zadowolonego",
+          "dat": "bardziej zadowolonemu",
+          "acc": "bardziej zadowolonego",
+          "ins": "bardziej zadowolonym",
+          "loc": "bardziej zadowolonym"
+        },
+        "m3": {
+          "nom": "bardziej zadowolony",
+          "gen": "bardziej zadowolonego",
+          "dat": "bardziej zadowolonemu",
+          "acc": "bardziej zadowolony",
+          "ins": "bardziej zadowolonym",
+          "loc": "bardziej zadowolonym"
+        },
+        "f": {
+          "nom": "bardziej zadowolona",
+          "gen": "bardziej zadowolonej",
+          "dat": "bardziej zadowolonej",
+          "acc": "bardziej zadowoloną",
+          "ins": "bardziej zadowoloną",
+          "loc": "bardziej zadowolonej"
+        },
+        "n": {
+          "nom": "bardziej zadowolone",
+          "gen": "bardziej zadowolonego",
+          "dat": "bardziej zadowolonemu",
+          "acc": "bardziej zadowolone",
+          "ins": "bardziej zadowolonym",
+          "loc": "bardziej zadowolonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej zadowoleni",
+          "gen": "bardziej zadowolonych",
+          "dat": "bardziej zadowolonym",
+          "acc": "bardziej zadowolonych",
+          "ins": "bardziej zadowolonymi",
+          "loc": "bardziej zadowolonych"
+        },
+        "nonvirile": {
+          "nom": "bardziej zadowolone",
+          "gen": "bardziej zadowolonych",
+          "dat": "bardziej zadowolonym",
+          "acc": "bardziej zadowolone",
+          "ins": "bardziej zadowolonymi",
+          "loc": "bardziej zadowolonych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej zadowolony",
+          "gen": "najbardziej zadowolonego",
+          "dat": "najbardziej zadowolonemu",
+          "acc": "najbardziej zadowolonego",
+          "ins": "najbardziej zadowolonym",
+          "loc": "najbardziej zadowolonym"
+        },
+        "m3": {
+          "nom": "najbardziej zadowolony",
+          "gen": "najbardziej zadowolonego",
+          "dat": "najbardziej zadowolonemu",
+          "acc": "najbardziej zadowolony",
+          "ins": "najbardziej zadowolonym",
+          "loc": "najbardziej zadowolonym"
+        },
+        "f": {
+          "nom": "najbardziej zadowolona",
+          "gen": "najbardziej zadowolonej",
+          "dat": "najbardziej zadowolonej",
+          "acc": "najbardziej zadowoloną",
+          "ins": "najbardziej zadowoloną",
+          "loc": "najbardziej zadowolonej"
+        },
+        "n": {
+          "nom": "najbardziej zadowolone",
+          "gen": "najbardziej zadowolonego",
+          "dat": "najbardziej zadowolonemu",
+          "acc": "najbardziej zadowolone",
+          "ins": "najbardziej zadowolonym",
+          "loc": "najbardziej zadowolonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej zadowoleni",
+          "gen": "najbardziej zadowolonych",
+          "dat": "najbardziej zadowolonym",
+          "acc": "najbardziej zadowolonych",
+          "ins": "najbardziej zadowolonymi",
+          "loc": "najbardziej zadowolonych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej zadowolone",
+          "gen": "najbardziej zadowolonych",
+          "dat": "najbardziej zadowolonym",
+          "acc": "najbardziej zadowolone",
+          "ins": "najbardziej zadowolonymi",
+          "loc": "najbardziej zadowolonych"
+        }
+      }
+    }
+  }
+}

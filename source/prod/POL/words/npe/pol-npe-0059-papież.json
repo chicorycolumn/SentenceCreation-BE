@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "papież",
+      "gen": "papieża",
+      "dat": "papieżowi",
+      "acc": "papieża",
+      "ins": "papieżem",
+      "loc": "papieżu",
+      "voc": "papieżu"
+    },
+    "plural": {
+      "nom": "papieże",
+      "gen": [
+        "papieżów",
+        "papieży"
+      ],
+      "dat": "papieżom",
+      "acc": [
+        "papieżów",
+        "papieży"
+      ],
+      "ins": "papieżami",
+      "loc": "papieżach",
+      "voc": "papieże"
+    }
+  }
+}

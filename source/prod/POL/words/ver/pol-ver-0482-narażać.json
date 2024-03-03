@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "narażać",
+    "verbalNoun": "narażanie",
+    "activeAdjectival": "narażający",
+    "passiveAdjectival": "narażany",
+    "contemporaryAdverbial": "narażając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "narażaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "narażano"
+          },
+          "plural": {
+            "allPluralGenders": "narażano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "narażałem",
+            "f": "narażałam"
+          },
+          "plural": {
+            "virile": "narażaliśmy",
+            "nonvirile": "narażałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "narażałeś",
+            "f": "narażałaś"
+          },
+          "plural": {
+            "virile": "narażaliście",
+            "nonvirile": "narażałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "narażał",
+            "f": "narażała",
+            "n": "narażało"
+          },
+          "plural": {
+            "virile": "narażali",
+            "nonvirile": "narażały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "naraża się"
+          },
+          "plural": {
+            "allPluralGenders": "naraża się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "narażam"
+          },
+          "plural": {
+            "allPluralGenders": "narażamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "narażasz"
+          },
+          "plural": {
+            "allPluralGenders": "narażacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "naraża"
+          },
+          "plural": {
+            "allPluralGenders": "narażają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "kryminalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "kryminalny",
+          "gen": "kryminalnego",
+          "dat": "kryminalnemu",
+          "acc": "kryminalnego",
+          "ins": "kryminalnym",
+          "loc": "kryminalnym"
+        },
+        "m3": {
+          "nom": "kryminalny",
+          "gen": "kryminalnego",
+          "dat": "kryminalnemu",
+          "acc": "kryminalny",
+          "ins": "kryminalnym",
+          "loc": "kryminalnym"
+        },
+        "f": {
+          "nom": "kryminalna",
+          "gen": "kryminalnej",
+          "dat": "kryminalnej",
+          "acc": "kryminalną",
+          "ins": "kryminalną",
+          "loc": "kryminalnej"
+        },
+        "n": {
+          "nom": "kryminalne",
+          "gen": "kryminalnego",
+          "dat": "kryminalnemu",
+          "acc": "kryminalne",
+          "ins": "kryminalnym",
+          "loc": "kryminalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "kryminalni",
+          "gen": "kryminalnych",
+          "dat": "kryminalnym",
+          "acc": "kryminalnych",
+          "ins": "kryminalnymi",
+          "loc": "kryminalnych"
+        },
+        "nonvirile": {
+          "nom": "kryminalne",
+          "gen": "kryminalnych",
+          "dat": "kryminalnym",
+          "acc": "kryminalne",
+          "ins": "kryminalnymi",
+          "loc": "kryminalnych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "mieszkać",
+    "verbalNoun": "mieszkanie",
+    "activeAdjectival": "mieszkający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "mieszkając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "mieszkaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mieszkano"
+          },
+          "plural": {
+            "allPluralGenders": "mieszkano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "mieszkałem",
+            "f": "mieszkałam"
+          },
+          "plural": {
+            "virile": "mieszkaliśmy",
+            "nonvirile": "mieszkałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "mieszkałeś",
+            "f": "mieszkałaś"
+          },
+          "plural": {
+            "virile": "mieszkaliście",
+            "nonvirile": "mieszkałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "mieszkał",
+            "f": "mieszkała",
+            "n": "mieszkało"
+          },
+          "plural": {
+            "virile": "mieszkali",
+            "nonvirile": "mieszkały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mieszka się"
+          },
+          "plural": {
+            "allPluralGenders": "mieszka się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "mieszkam"
+          },
+          "plural": {
+            "allPluralGenders": "mieszkamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "mieszkasz"
+          },
+          "plural": {
+            "allPluralGenders": "mieszkacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "mieszka"
+          },
+          "plural": {
+            "allPluralGenders": "mieszkają"
+          }
+        }
+      }
+    }
+  }
+}

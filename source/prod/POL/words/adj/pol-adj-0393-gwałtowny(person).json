@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "gwałtownie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "gwałtowny",
+          "gen": "gwałtownego",
+          "dat": "gwałtownemu",
+          "acc": "gwałtownego",
+          "ins": "gwałtownym",
+          "loc": "gwałtownym"
+        },
+        "m3": {
+          "nom": "gwałtowny",
+          "gen": "gwałtownego",
+          "dat": "gwałtownemu",
+          "acc": "gwałtowny",
+          "ins": "gwałtownym",
+          "loc": "gwałtownym"
+        },
+        "f": {
+          "nom": "gwałtowna",
+          "gen": "gwałtownej",
+          "dat": "gwałtownej",
+          "acc": "gwałtowną",
+          "ins": "gwałtowną",
+          "loc": "gwałtownej"
+        },
+        "n": {
+          "nom": "gwałtowne",
+          "gen": "gwałtownego",
+          "dat": "gwałtownemu",
+          "acc": "gwałtowne",
+          "ins": "gwałtownym",
+          "loc": "gwałtownym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "gwałtowni",
+          "gen": "gwałtownych",
+          "dat": "gwałtownym",
+          "acc": "gwałtownych",
+          "ins": "gwałtownymi",
+          "loc": "gwałtownych"
+        },
+        "nonvirile": {
+          "nom": "gwałtowne",
+          "gen": "gwałtownych",
+          "dat": "gwałtownym",
+          "acc": "gwałtowne",
+          "ins": "gwałtownymi",
+          "loc": "gwałtownych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "gwałtowniejszy",
+          "gen": "gwałtowniejszego",
+          "dat": "gwałtowniejszemu",
+          "acc": "gwałtowniejszego",
+          "ins": "gwałtowniejszym",
+          "loc": "gwałtowniejszym"
+        },
+        "m3": {
+          "nom": "gwałtowniejszy",
+          "gen": "gwałtowniejszego",
+          "dat": "gwałtowniejszemu",
+          "acc": "gwałtowniejszy",
+          "ins": "gwałtowniejszym",
+          "loc": "gwałtowniejszym"
+        },
+        "f": {
+          "nom": "gwałtowniejsza",
+          "gen": "gwałtowniejszej",
+          "dat": "gwałtowniejszej",
+          "acc": "gwałtowniejszą",
+          "ins": "gwałtowniejszą",
+          "loc": "gwałtowniejszej"
+        },
+        "n": {
+          "nom": "gwałtowniejsze",
+          "gen": "gwałtowniejszego",
+          "dat": "gwałtowniejszemu",
+          "acc": "gwałtowniejsze",
+          "ins": "gwałtowniejszym",
+          "loc": "gwałtowniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "gwałtowniejsi",
+          "gen": "gwałtowniejszych",
+          "dat": "gwałtowniejszym",
+          "acc": "gwałtowniejszych",
+          "ins": "gwałtowniejszymi",
+          "loc": "gwałtowniejszych"
+        },
+        "nonvirile": {
+          "nom": "gwałtowniejsze",
+          "gen": "gwałtowniejszych",
+          "dat": "gwałtowniejszym",
+          "acc": "gwałtowniejsze",
+          "ins": "gwałtowniejszymi",
+          "loc": "gwałtowniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najgwałtowniejszy",
+          "gen": "najgwałtowniejszego",
+          "dat": "najgwałtowniejszemu",
+          "acc": "najgwałtowniejszego",
+          "ins": "najgwałtowniejszym",
+          "loc": "najgwałtowniejszym"
+        },
+        "m3": {
+          "nom": "najgwałtowniejszy",
+          "gen": "najgwałtowniejszego",
+          "dat": "najgwałtowniejszemu",
+          "acc": "najgwałtowniejszy",
+          "ins": "najgwałtowniejszym",
+          "loc": "najgwałtowniejszym"
+        },
+        "f": {
+          "nom": "najgwałtowniejsza",
+          "gen": "najgwałtowniejszej",
+          "dat": "najgwałtowniejszej",
+          "acc": "najgwałtowniejszą",
+          "ins": "najgwałtowniejszą",
+          "loc": "najgwałtowniejszej"
+        },
+        "n": {
+          "nom": "najgwałtowniejsze",
+          "gen": "najgwałtowniejszego",
+          "dat": "najgwałtowniejszemu",
+          "acc": "najgwałtowniejsze",
+          "ins": "najgwałtowniejszym",
+          "loc": "najgwałtowniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najgwałtowniejsi",
+          "gen": "najgwałtowniejszych",
+          "dat": "najgwałtowniejszym",
+          "acc": "najgwałtowniejszych",
+          "ins": "najgwałtowniejszymi",
+          "loc": "najgwałtowniejszych"
+        },
+        "nonvirile": {
+          "nom": "najgwałtowniejsze",
+          "gen": "najgwałtowniejszych",
+          "dat": "najgwałtowniejszym",
+          "acc": "najgwałtowniejsze",
+          "ins": "najgwałtowniejszymi",
+          "loc": "najgwałtowniejszych"
+        }
+      }
+    }
+  }
+}

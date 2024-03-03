@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "skłamać",
+    "verbalNoun": "skłamanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "skłamany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "skłamawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "skłamie się"
+          },
+          "plural": {
+            "allPluralGenders": "skłamie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "skłamię"
+          },
+          "plural": {
+            "allPluralGenders": "skłamiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "skłamiesz"
+          },
+          "plural": {
+            "allPluralGenders": "skłamiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "skłamie"
+          },
+          "plural": {
+            "allPluralGenders": "skłamią"
+          }
+        }
+      },
+      "imperative": "skłam",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "skłamano"
+          },
+          "plural": {
+            "allPluralGenders": "skłamano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "skłamałem",
+            "f": "skłamałam"
+          },
+          "plural": {
+            "virile": "skłamaliśmy",
+            "nonvirile": "skłamałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "skłamałeś",
+            "f": "skłamałaś"
+          },
+          "plural": {
+            "virile": "skłamaliście",
+            "nonvirile": "skłamałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "skłamał",
+            "f": "skłamała",
+            "n": "skłamało"
+          },
+          "plural": {
+            "virile": "skłamali",
+            "nonvirile": "skłamały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

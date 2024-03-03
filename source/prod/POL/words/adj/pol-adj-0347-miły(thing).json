@@ -1,0 +1,174 @@
+{
+  "inflections": {
+    "adverb": {
+      "isTerminus": true,
+      "normal": [
+        "miło",
+        "mile"
+      ],
+      "additionalInfrequent": []
+    },
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "miły",
+          "gen": "miłego",
+          "dat": "miłemu",
+          "acc": "miłego",
+          "ins": "miłym",
+          "loc": "miłym"
+        },
+        "m3": {
+          "nom": "miły",
+          "gen": "miłego",
+          "dat": "miłemu",
+          "acc": "miły",
+          "ins": "miłym",
+          "loc": "miłym"
+        },
+        "f": {
+          "nom": "miła",
+          "gen": "miłej",
+          "dat": "miłej",
+          "acc": "miłą",
+          "ins": "miłą",
+          "loc": "miłej"
+        },
+        "n": {
+          "nom": "miłe",
+          "gen": "miłego",
+          "dat": "miłemu",
+          "acc": "miłe",
+          "ins": "miłym",
+          "loc": "miłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "mili",
+          "gen": "miłych",
+          "dat": "miłym",
+          "acc": "miłych",
+          "ins": "miłymi",
+          "loc": "miłych"
+        },
+        "nonvirile": {
+          "nom": "miłe",
+          "gen": "miłych",
+          "dat": "miłym",
+          "acc": "miłe",
+          "ins": "miłymi",
+          "loc": "miłych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "milszy",
+          "gen": "milszego",
+          "dat": "milszemu",
+          "acc": "milszego",
+          "ins": "milszym",
+          "loc": "milszym"
+        },
+        "m3": {
+          "nom": "milszy",
+          "gen": "milszego",
+          "dat": "milszemu",
+          "acc": "milszy",
+          "ins": "milszym",
+          "loc": "milszym"
+        },
+        "f": {
+          "nom": "milsza",
+          "gen": "milszej",
+          "dat": "milszej",
+          "acc": "milszą",
+          "ins": "milszą",
+          "loc": "milszej"
+        },
+        "n": {
+          "nom": "milsze",
+          "gen": "milszego",
+          "dat": "milszemu",
+          "acc": "milsze",
+          "ins": "milszym",
+          "loc": "milszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "milsi",
+          "gen": "milszych",
+          "dat": "milszym",
+          "acc": "milszych",
+          "ins": "milszymi",
+          "loc": "milszych"
+        },
+        "nonvirile": {
+          "nom": "milsze",
+          "gen": "milszych",
+          "dat": "milszym",
+          "acc": "milsze",
+          "ins": "milszymi",
+          "loc": "milszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najmilszy",
+          "gen": "najmilszego",
+          "dat": "najmilszemu",
+          "acc": "najmilszego",
+          "ins": "najmilszym",
+          "loc": "najmilszym"
+        },
+        "m3": {
+          "nom": "najmilszy",
+          "gen": "najmilszego",
+          "dat": "najmilszemu",
+          "acc": "najmilszy",
+          "ins": "najmilszym",
+          "loc": "najmilszym"
+        },
+        "f": {
+          "nom": "najmilsza",
+          "gen": "najmilszej",
+          "dat": "najmilszej",
+          "acc": "najmilszą",
+          "ins": "najmilszą",
+          "loc": "najmilszej"
+        },
+        "n": {
+          "nom": "najmilsze",
+          "gen": "najmilszego",
+          "dat": "najmilszemu",
+          "acc": "najmilsze",
+          "ins": "najmilszym",
+          "loc": "najmilszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najmilsi",
+          "gen": "najmilszych",
+          "dat": "najmilszym",
+          "acc": "najmilszych",
+          "ins": "najmilszymi",
+          "loc": "najmilszych"
+        },
+        "nonvirile": {
+          "nom": "najmilsze",
+          "gen": "najmilszych",
+          "dat": "najmilszym",
+          "acc": "najmilsze",
+          "ins": "najmilszymi",
+          "loc": "najmilszych"
+        }
+      }
+    }
+  }
+}

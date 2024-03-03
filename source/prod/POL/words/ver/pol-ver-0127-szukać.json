@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "szukać",
+    "verbalNoun": "szukanie",
+    "activeAdjectival": "szukający",
+    "passiveAdjectival": "szukany",
+    "contemporaryAdverbial": "szukając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "szukaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "szukano"
+          },
+          "plural": {
+            "allPluralGenders": "szukano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "szukałem",
+            "f": "szukałam"
+          },
+          "plural": {
+            "virile": "szukaliśmy",
+            "nonvirile": "szukałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "szukałeś",
+            "f": "szukałaś"
+          },
+          "plural": {
+            "virile": "szukaliście",
+            "nonvirile": "szukałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "szukał",
+            "f": "szukała",
+            "n": "szukało"
+          },
+          "plural": {
+            "virile": "szukali",
+            "nonvirile": "szukały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "szuka się"
+          },
+          "plural": {
+            "allPluralGenders": "szuka się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "szukam"
+          },
+          "plural": {
+            "allPluralGenders": "szukamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "szukasz"
+          },
+          "plural": {
+            "allPluralGenders": "szukacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "szuka"
+          },
+          "plural": {
+            "allPluralGenders": "szukają"
+          }
+        }
+      }
+    }
+  }
+}

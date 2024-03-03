@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "chomik",
+      "gen": "chomika",
+      "dat": "chomikowi",
+      "acc": "chomika",
+      "ins": "chomikiem",
+      "loc": "chomiku",
+      "voc": "chomiku"
+    },
+    "plural": {
+      "nom": "chomiki",
+      "gen": "chomików",
+      "dat": "chomikom",
+      "acc": "chomiki",
+      "ins": "chomikami",
+      "loc": "chomikach",
+      "voc": "chomiki"
+    }
+  }
+}

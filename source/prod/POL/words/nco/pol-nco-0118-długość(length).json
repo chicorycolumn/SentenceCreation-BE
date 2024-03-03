@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "długość",
+      "gen": "długości",
+      "dat": "długości",
+      "acc": "długość",
+      "ins": "długością",
+      "loc": "długości",
+      "voc": "długości"
+    },
+    "plural": {
+      "nom": "długości",
+      "gen": "długości",
+      "dat": "długościom",
+      "acc": "długości",
+      "ins": "długościami",
+      "loc": "długościach",
+      "voc": "długości"
+    }
+  }
+}

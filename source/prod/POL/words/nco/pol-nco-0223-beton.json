@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "beton",
+      "gen": "betonu",
+      "dat": "betonowi",
+      "acc": "beton",
+      "ins": "betonem",
+      "loc": "betonie",
+      "voc": "betonie"
+    },
+    "plural": {
+      "nom": "betony",
+      "gen": "betonów",
+      "dat": "betonom",
+      "acc": "betony",
+      "ins": "betonami",
+      "loc": "betonach",
+      "voc": "betony"
+    }
+  }
+}

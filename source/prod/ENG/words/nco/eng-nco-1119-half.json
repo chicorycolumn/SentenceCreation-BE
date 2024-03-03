@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "half",
+      "gen": "half's"
+    },
+    "plural": {
+      "nom": "halves",
+      "gen": "halves'"
+    }
+  }
+}

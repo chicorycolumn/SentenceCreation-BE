@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cena",
+      "gen": "ceny",
+      "dat": "cenie",
+      "acc": "cenę",
+      "ins": "ceną",
+      "loc": "cenie",
+      "voc": "ceno"
+    },
+    "plural": {
+      "nom": "ceny",
+      "gen": "cen",
+      "dat": "cenom",
+      "acc": "ceny",
+      "ins": "cenami",
+      "loc": "cenach",
+      "voc": "ceny"
+    }
+  }
+}

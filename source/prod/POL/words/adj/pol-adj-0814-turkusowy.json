@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "turkusowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "turkusowy",
+          "gen": "turkusowego",
+          "dat": "turkusowemu",
+          "acc": "turkusowego",
+          "ins": "turkusowym",
+          "loc": "turkusowym"
+        },
+        "m3": {
+          "nom": "turkusowy",
+          "gen": "turkusowego",
+          "dat": "turkusowemu",
+          "acc": "turkusowy",
+          "ins": "turkusowym",
+          "loc": "turkusowym"
+        },
+        "f": {
+          "nom": "turkusowa",
+          "gen": "turkusowej",
+          "dat": "turkusowej",
+          "acc": "turkusową",
+          "ins": "turkusową",
+          "loc": "turkusowej"
+        },
+        "n": {
+          "nom": "turkusowe",
+          "gen": "turkusowego",
+          "dat": "turkusowemu",
+          "acc": "turkusowe",
+          "ins": "turkusowym",
+          "loc": "turkusowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "turkusowi",
+          "gen": "turkusowych",
+          "dat": "turkusowym",
+          "acc": "turkusowych",
+          "ins": "turkusowymi",
+          "loc": "turkusowych"
+        },
+        "nonvirile": {
+          "nom": "turkusowe",
+          "gen": "turkusowych",
+          "dat": "turkusowym",
+          "acc": "turkusowe",
+          "ins": "turkusowymi",
+          "loc": "turkusowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej turkusowy",
+          "gen": "bardziej turkusowego",
+          "dat": "bardziej turkusowemu",
+          "acc": "bardziej turkusowego",
+          "ins": "bardziej turkusowym",
+          "loc": "bardziej turkusowym"
+        },
+        "m3": {
+          "nom": "bardziej turkusowy",
+          "gen": "bardziej turkusowego",
+          "dat": "bardziej turkusowemu",
+          "acc": "bardziej turkusowy",
+          "ins": "bardziej turkusowym",
+          "loc": "bardziej turkusowym"
+        },
+        "f": {
+          "nom": "bardziej turkusowa",
+          "gen": "bardziej turkusowej",
+          "dat": "bardziej turkusowej",
+          "acc": "bardziej turkusową",
+          "ins": "bardziej turkusową",
+          "loc": "bardziej turkusowej"
+        },
+        "n": {
+          "nom": "bardziej turkusowe",
+          "gen": "bardziej turkusowego",
+          "dat": "bardziej turkusowemu",
+          "acc": "bardziej turkusowe",
+          "ins": "bardziej turkusowym",
+          "loc": "bardziej turkusowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej turkusowi",
+          "gen": "bardziej turkusowych",
+          "dat": "bardziej turkusowym",
+          "acc": "bardziej turkusowych",
+          "ins": "bardziej turkusowymi",
+          "loc": "bardziej turkusowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej turkusowe",
+          "gen": "bardziej turkusowych",
+          "dat": "bardziej turkusowym",
+          "acc": "bardziej turkusowe",
+          "ins": "bardziej turkusowymi",
+          "loc": "bardziej turkusowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej turkusowy",
+          "gen": "najbardziej turkusowego",
+          "dat": "najbardziej turkusowemu",
+          "acc": "najbardziej turkusowego",
+          "ins": "najbardziej turkusowym",
+          "loc": "najbardziej turkusowym"
+        },
+        "m3": {
+          "nom": "najbardziej turkusowy",
+          "gen": "najbardziej turkusowego",
+          "dat": "najbardziej turkusowemu",
+          "acc": "najbardziej turkusowy",
+          "ins": "najbardziej turkusowym",
+          "loc": "najbardziej turkusowym"
+        },
+        "f": {
+          "nom": "najbardziej turkusowa",
+          "gen": "najbardziej turkusowej",
+          "dat": "najbardziej turkusowej",
+          "acc": "najbardziej turkusową",
+          "ins": "najbardziej turkusową",
+          "loc": "najbardziej turkusowej"
+        },
+        "n": {
+          "nom": "najbardziej turkusowe",
+          "gen": "najbardziej turkusowego",
+          "dat": "najbardziej turkusowemu",
+          "acc": "najbardziej turkusowe",
+          "ins": "najbardziej turkusowym",
+          "loc": "najbardziej turkusowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej turkusowi",
+          "gen": "najbardziej turkusowych",
+          "dat": "najbardziej turkusowym",
+          "acc": "najbardziej turkusowych",
+          "ins": "najbardziej turkusowymi",
+          "loc": "najbardziej turkusowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej turkusowe",
+          "gen": "najbardziej turkusowych",
+          "dat": "najbardziej turkusowym",
+          "acc": "najbardziej turkusowe",
+          "ins": "najbardziej turkusowymi",
+          "loc": "najbardziej turkusowych"
+        }
+      }
+    }
+  }
+}

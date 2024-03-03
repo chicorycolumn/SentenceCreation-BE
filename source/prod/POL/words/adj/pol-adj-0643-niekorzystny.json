@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niekorzystnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niekorzystny",
+          "gen": "niekorzystnego",
+          "dat": "niekorzystnemu",
+          "acc": "niekorzystnego",
+          "ins": "niekorzystnym",
+          "loc": "niekorzystnym"
+        },
+        "m3": {
+          "nom": "niekorzystny",
+          "gen": "niekorzystnego",
+          "dat": "niekorzystnemu",
+          "acc": "niekorzystny",
+          "ins": "niekorzystnym",
+          "loc": "niekorzystnym"
+        },
+        "f": {
+          "nom": "niekorzystna",
+          "gen": "niekorzystnej",
+          "dat": "niekorzystnej",
+          "acc": "niekorzystną",
+          "ins": "niekorzystną",
+          "loc": "niekorzystnej"
+        },
+        "n": {
+          "nom": "niekorzystne",
+          "gen": "niekorzystnego",
+          "dat": "niekorzystnemu",
+          "acc": "niekorzystne",
+          "ins": "niekorzystnym",
+          "loc": "niekorzystnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niekorzystni",
+          "gen": "niekorzystnych",
+          "dat": "niekorzystnym",
+          "acc": "niekorzystnych",
+          "ins": "niekorzystnymi",
+          "loc": "niekorzystnych"
+        },
+        "nonvirile": {
+          "nom": "niekorzystne",
+          "gen": "niekorzystnych",
+          "dat": "niekorzystnym",
+          "acc": "niekorzystne",
+          "ins": "niekorzystnymi",
+          "loc": "niekorzystnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej niekorzystny",
+          "gen": "bardziej niekorzystnego",
+          "dat": "bardziej niekorzystnemu",
+          "acc": "bardziej niekorzystnego",
+          "ins": "bardziej niekorzystnym",
+          "loc": "bardziej niekorzystnym"
+        },
+        "m3": {
+          "nom": "bardziej niekorzystny",
+          "gen": "bardziej niekorzystnego",
+          "dat": "bardziej niekorzystnemu",
+          "acc": "bardziej niekorzystny",
+          "ins": "bardziej niekorzystnym",
+          "loc": "bardziej niekorzystnym"
+        },
+        "f": {
+          "nom": "bardziej niekorzystna",
+          "gen": "bardziej niekorzystnej",
+          "dat": "bardziej niekorzystnej",
+          "acc": "bardziej niekorzystną",
+          "ins": "bardziej niekorzystną",
+          "loc": "bardziej niekorzystnej"
+        },
+        "n": {
+          "nom": "bardziej niekorzystne",
+          "gen": "bardziej niekorzystnego",
+          "dat": "bardziej niekorzystnemu",
+          "acc": "bardziej niekorzystne",
+          "ins": "bardziej niekorzystnym",
+          "loc": "bardziej niekorzystnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej niekorzystni",
+          "gen": "bardziej niekorzystnych",
+          "dat": "bardziej niekorzystnym",
+          "acc": "bardziej niekorzystnych",
+          "ins": "bardziej niekorzystnymi",
+          "loc": "bardziej niekorzystnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej niekorzystne",
+          "gen": "bardziej niekorzystnych",
+          "dat": "bardziej niekorzystnym",
+          "acc": "bardziej niekorzystne",
+          "ins": "bardziej niekorzystnymi",
+          "loc": "bardziej niekorzystnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej niekorzystny",
+          "gen": "najbardziej niekorzystnego",
+          "dat": "najbardziej niekorzystnemu",
+          "acc": "najbardziej niekorzystnego",
+          "ins": "najbardziej niekorzystnym",
+          "loc": "najbardziej niekorzystnym"
+        },
+        "m3": {
+          "nom": "najbardziej niekorzystny",
+          "gen": "najbardziej niekorzystnego",
+          "dat": "najbardziej niekorzystnemu",
+          "acc": "najbardziej niekorzystny",
+          "ins": "najbardziej niekorzystnym",
+          "loc": "najbardziej niekorzystnym"
+        },
+        "f": {
+          "nom": "najbardziej niekorzystna",
+          "gen": "najbardziej niekorzystnej",
+          "dat": "najbardziej niekorzystnej",
+          "acc": "najbardziej niekorzystną",
+          "ins": "najbardziej niekorzystną",
+          "loc": "najbardziej niekorzystnej"
+        },
+        "n": {
+          "nom": "najbardziej niekorzystne",
+          "gen": "najbardziej niekorzystnego",
+          "dat": "najbardziej niekorzystnemu",
+          "acc": "najbardziej niekorzystne",
+          "ins": "najbardziej niekorzystnym",
+          "loc": "najbardziej niekorzystnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej niekorzystni",
+          "gen": "najbardziej niekorzystnych",
+          "dat": "najbardziej niekorzystnym",
+          "acc": "najbardziej niekorzystnych",
+          "ins": "najbardziej niekorzystnymi",
+          "loc": "najbardziej niekorzystnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej niekorzystne",
+          "gen": "najbardziej niekorzystnych",
+          "dat": "najbardziej niekorzystnym",
+          "acc": "najbardziej niekorzystne",
+          "ins": "najbardziej niekorzystnymi",
+          "loc": "najbardziej niekorzystnych"
+        }
+      }
+    }
+  }
+}

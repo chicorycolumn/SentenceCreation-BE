@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "posiadać",
+    "verbalNoun": "posiadanie",
+    "activeAdjectival": "posiadający",
+    "passiveAdjectival": "posiadany",
+    "contemporaryAdverbial": "posiadając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "posiadaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "posiadano"
+          },
+          "plural": {
+            "allPluralGenders": "posiadano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "posiadałem",
+            "f": "posiadałam"
+          },
+          "plural": {
+            "virile": "posiadaliśmy",
+            "nonvirile": "posiadałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "posiadałeś",
+            "f": "posiadałaś"
+          },
+          "plural": {
+            "virile": "posiadaliście",
+            "nonvirile": "posiadałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "posiadał",
+            "f": "posiadała",
+            "n": "posiadało"
+          },
+          "plural": {
+            "virile": "posiadali",
+            "nonvirile": "posiadały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "posiada się"
+          },
+          "plural": {
+            "allPluralGenders": "posiada się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "posiadam"
+          },
+          "plural": {
+            "allPluralGenders": "posiadamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "posiadasz"
+          },
+          "plural": {
+            "allPluralGenders": "posiadacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "posiada"
+          },
+          "plural": {
+            "allPluralGenders": "posiadają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "bezradnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bezradny",
+          "gen": "bezradnego",
+          "dat": "bezradnemu",
+          "acc": "bezradnego",
+          "ins": "bezradnym",
+          "loc": "bezradnym"
+        },
+        "m3": {
+          "nom": "bezradny",
+          "gen": "bezradnego",
+          "dat": "bezradnemu",
+          "acc": "bezradny",
+          "ins": "bezradnym",
+          "loc": "bezradnym"
+        },
+        "f": {
+          "nom": "bezradna",
+          "gen": "bezradnej",
+          "dat": "bezradnej",
+          "acc": "bezradną",
+          "ins": "bezradną",
+          "loc": "bezradnej"
+        },
+        "n": {
+          "nom": "bezradne",
+          "gen": "bezradnego",
+          "dat": "bezradnemu",
+          "acc": "bezradne",
+          "ins": "bezradnym",
+          "loc": "bezradnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bezradni",
+          "gen": "bezradnych",
+          "dat": "bezradnym",
+          "acc": "bezradnych",
+          "ins": "bezradnymi",
+          "loc": "bezradnych"
+        },
+        "nonvirile": {
+          "nom": "bezradne",
+          "gen": "bezradnych",
+          "dat": "bezradnym",
+          "acc": "bezradne",
+          "ins": "bezradnymi",
+          "loc": "bezradnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej bezradny",
+          "gen": "bardziej bezradnego",
+          "dat": "bardziej bezradnemu",
+          "acc": "bardziej bezradnego",
+          "ins": "bardziej bezradnym",
+          "loc": "bardziej bezradnym"
+        },
+        "m3": {
+          "nom": "bardziej bezradny",
+          "gen": "bardziej bezradnego",
+          "dat": "bardziej bezradnemu",
+          "acc": "bardziej bezradny",
+          "ins": "bardziej bezradnym",
+          "loc": "bardziej bezradnym"
+        },
+        "f": {
+          "nom": "bardziej bezradna",
+          "gen": "bardziej bezradnej",
+          "dat": "bardziej bezradnej",
+          "acc": "bardziej bezradną",
+          "ins": "bardziej bezradną",
+          "loc": "bardziej bezradnej"
+        },
+        "n": {
+          "nom": "bardziej bezradne",
+          "gen": "bardziej bezradnego",
+          "dat": "bardziej bezradnemu",
+          "acc": "bardziej bezradne",
+          "ins": "bardziej bezradnym",
+          "loc": "bardziej bezradnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej bezradni",
+          "gen": "bardziej bezradnych",
+          "dat": "bardziej bezradnym",
+          "acc": "bardziej bezradnych",
+          "ins": "bardziej bezradnymi",
+          "loc": "bardziej bezradnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej bezradne",
+          "gen": "bardziej bezradnych",
+          "dat": "bardziej bezradnym",
+          "acc": "bardziej bezradne",
+          "ins": "bardziej bezradnymi",
+          "loc": "bardziej bezradnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej bezradny",
+          "gen": "najbardziej bezradnego",
+          "dat": "najbardziej bezradnemu",
+          "acc": "najbardziej bezradnego",
+          "ins": "najbardziej bezradnym",
+          "loc": "najbardziej bezradnym"
+        },
+        "m3": {
+          "nom": "najbardziej bezradny",
+          "gen": "najbardziej bezradnego",
+          "dat": "najbardziej bezradnemu",
+          "acc": "najbardziej bezradny",
+          "ins": "najbardziej bezradnym",
+          "loc": "najbardziej bezradnym"
+        },
+        "f": {
+          "nom": "najbardziej bezradna",
+          "gen": "najbardziej bezradnej",
+          "dat": "najbardziej bezradnej",
+          "acc": "najbardziej bezradną",
+          "ins": "najbardziej bezradną",
+          "loc": "najbardziej bezradnej"
+        },
+        "n": {
+          "nom": "najbardziej bezradne",
+          "gen": "najbardziej bezradnego",
+          "dat": "najbardziej bezradnemu",
+          "acc": "najbardziej bezradne",
+          "ins": "najbardziej bezradnym",
+          "loc": "najbardziej bezradnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej bezradni",
+          "gen": "najbardziej bezradnych",
+          "dat": "najbardziej bezradnym",
+          "acc": "najbardziej bezradnych",
+          "ins": "najbardziej bezradnymi",
+          "loc": "najbardziej bezradnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej bezradne",
+          "gen": "najbardziej bezradnych",
+          "dat": "najbardziej bezradnym",
+          "acc": "najbardziej bezradne",
+          "ins": "najbardziej bezradnymi",
+          "loc": "najbardziej bezradnych"
+        }
+      }
+    }
+  }
+}

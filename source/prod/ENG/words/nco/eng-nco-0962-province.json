@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "province",
+      "gen": "province's"
+    },
+    "plural": {
+      "nom": "provinces",
+      "gen": "provinces'"
+    }
+  }
+}

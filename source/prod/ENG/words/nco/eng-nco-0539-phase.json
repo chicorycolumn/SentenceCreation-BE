@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "phase",
+      "gen": "phase's"
+    },
+    "plural": {
+      "nom": "phases",
+      "gen": "phases'"
+    }
+  }
+}

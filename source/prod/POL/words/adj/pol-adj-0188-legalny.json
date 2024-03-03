@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "legalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "legalny",
+          "gen": "legalnego",
+          "dat": "legalnemu",
+          "acc": "legalnego",
+          "ins": "legalnym",
+          "loc": "legalnym"
+        },
+        "m3": {
+          "nom": "legalny",
+          "gen": "legalnego",
+          "dat": "legalnemu",
+          "acc": "legalny",
+          "ins": "legalnym",
+          "loc": "legalnym"
+        },
+        "f": {
+          "nom": "legalna",
+          "gen": "legalnej",
+          "dat": "legalnej",
+          "acc": "legalną",
+          "ins": "legalną",
+          "loc": "legalnej"
+        },
+        "n": {
+          "nom": "legalne",
+          "gen": "legalnego",
+          "dat": "legalnemu",
+          "acc": "legalne",
+          "ins": "legalnym",
+          "loc": "legalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "legalni",
+          "gen": "legalnych",
+          "dat": "legalnym",
+          "acc": "legalnych",
+          "ins": "legalnymi",
+          "loc": "legalnych"
+        },
+        "nonvirile": {
+          "nom": "legalne",
+          "gen": "legalnych",
+          "dat": "legalnym",
+          "acc": "legalne",
+          "ins": "legalnymi",
+          "loc": "legalnych"
+        }
+      }
+    }
+  }
+}

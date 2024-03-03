@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "kolorowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "kolorowy",
+          "gen": "kolorowego",
+          "dat": "kolorowemu",
+          "acc": "kolorowego",
+          "ins": "kolorowym",
+          "loc": "kolorowym"
+        },
+        "m3": {
+          "nom": "kolorowy",
+          "gen": "kolorowego",
+          "dat": "kolorowemu",
+          "acc": "kolorowy",
+          "ins": "kolorowym",
+          "loc": "kolorowym"
+        },
+        "f": {
+          "nom": "kolorowa",
+          "gen": "kolorowej",
+          "dat": "kolorowej",
+          "acc": "kolorową",
+          "ins": "kolorową",
+          "loc": "kolorowej"
+        },
+        "n": {
+          "nom": "kolorowe",
+          "gen": "kolorowego",
+          "dat": "kolorowemu",
+          "acc": "kolorowe",
+          "ins": "kolorowym",
+          "loc": "kolorowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "kolorowi",
+          "gen": "kolorowych",
+          "dat": "kolorowym",
+          "acc": "kolorowych",
+          "ins": "kolorowymi",
+          "loc": "kolorowych"
+        },
+        "nonvirile": {
+          "nom": "kolorowe",
+          "gen": "kolorowych",
+          "dat": "kolorowym",
+          "acc": "kolorowe",
+          "ins": "kolorowymi",
+          "loc": "kolorowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej kolorowy",
+          "gen": "bardziej kolorowego",
+          "dat": "bardziej kolorowemu",
+          "acc": "bardziej kolorowego",
+          "ins": "bardziej kolorowym",
+          "loc": "bardziej kolorowym"
+        },
+        "m3": {
+          "nom": "bardziej kolorowy",
+          "gen": "bardziej kolorowego",
+          "dat": "bardziej kolorowemu",
+          "acc": "bardziej kolorowy",
+          "ins": "bardziej kolorowym",
+          "loc": "bardziej kolorowym"
+        },
+        "f": {
+          "nom": "bardziej kolorowa",
+          "gen": "bardziej kolorowej",
+          "dat": "bardziej kolorowej",
+          "acc": "bardziej kolorową",
+          "ins": "bardziej kolorową",
+          "loc": "bardziej kolorowej"
+        },
+        "n": {
+          "nom": "bardziej kolorowe",
+          "gen": "bardziej kolorowego",
+          "dat": "bardziej kolorowemu",
+          "acc": "bardziej kolorowe",
+          "ins": "bardziej kolorowym",
+          "loc": "bardziej kolorowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej kolorowi",
+          "gen": "bardziej kolorowych",
+          "dat": "bardziej kolorowym",
+          "acc": "bardziej kolorowych",
+          "ins": "bardziej kolorowymi",
+          "loc": "bardziej kolorowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej kolorowe",
+          "gen": "bardziej kolorowych",
+          "dat": "bardziej kolorowym",
+          "acc": "bardziej kolorowe",
+          "ins": "bardziej kolorowymi",
+          "loc": "bardziej kolorowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej kolorowy",
+          "gen": "najbardziej kolorowego",
+          "dat": "najbardziej kolorowemu",
+          "acc": "najbardziej kolorowego",
+          "ins": "najbardziej kolorowym",
+          "loc": "najbardziej kolorowym"
+        },
+        "m3": {
+          "nom": "najbardziej kolorowy",
+          "gen": "najbardziej kolorowego",
+          "dat": "najbardziej kolorowemu",
+          "acc": "najbardziej kolorowy",
+          "ins": "najbardziej kolorowym",
+          "loc": "najbardziej kolorowym"
+        },
+        "f": {
+          "nom": "najbardziej kolorowa",
+          "gen": "najbardziej kolorowej",
+          "dat": "najbardziej kolorowej",
+          "acc": "najbardziej kolorową",
+          "ins": "najbardziej kolorową",
+          "loc": "najbardziej kolorowej"
+        },
+        "n": {
+          "nom": "najbardziej kolorowe",
+          "gen": "najbardziej kolorowego",
+          "dat": "najbardziej kolorowemu",
+          "acc": "najbardziej kolorowe",
+          "ins": "najbardziej kolorowym",
+          "loc": "najbardziej kolorowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej kolorowi",
+          "gen": "najbardziej kolorowych",
+          "dat": "najbardziej kolorowym",
+          "acc": "najbardziej kolorowych",
+          "ins": "najbardziej kolorowymi",
+          "loc": "najbardziej kolorowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej kolorowe",
+          "gen": "najbardziej kolorowych",
+          "dat": "najbardziej kolorowym",
+          "acc": "najbardziej kolorowe",
+          "ins": "najbardziej kolorowymi",
+          "loc": "najbardziej kolorowych"
+        }
+      }
+    }
+  }
+}

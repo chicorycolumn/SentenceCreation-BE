@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "bezpłatnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bezpłatny",
+          "gen": "bezpłatnego",
+          "dat": "bezpłatnemu",
+          "acc": "bezpłatnego",
+          "ins": "bezpłatnym",
+          "loc": "bezpłatnym"
+        },
+        "m3": {
+          "nom": "bezpłatny",
+          "gen": "bezpłatnego",
+          "dat": "bezpłatnemu",
+          "acc": "bezpłatny",
+          "ins": "bezpłatnym",
+          "loc": "bezpłatnym"
+        },
+        "f": {
+          "nom": "bezpłatna",
+          "gen": "bezpłatnej",
+          "dat": "bezpłatnej",
+          "acc": "bezpłatną",
+          "ins": "bezpłatną",
+          "loc": "bezpłatnej"
+        },
+        "n": {
+          "nom": "bezpłatne",
+          "gen": "bezpłatnego",
+          "dat": "bezpłatnemu",
+          "acc": "bezpłatne",
+          "ins": "bezpłatnym",
+          "loc": "bezpłatnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bezpłatni",
+          "gen": "bezpłatnych",
+          "dat": "bezpłatnym",
+          "acc": "bezpłatnych",
+          "ins": "bezpłatnymi",
+          "loc": "bezpłatnych"
+        },
+        "nonvirile": {
+          "nom": "bezpłatne",
+          "gen": "bezpłatnych",
+          "dat": "bezpłatnym",
+          "acc": "bezpłatne",
+          "ins": "bezpłatnymi",
+          "loc": "bezpłatnych"
+        }
+      }
+    }
+  }
+}

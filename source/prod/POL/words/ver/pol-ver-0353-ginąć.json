@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ginąć",
+    "verbalNoun": "ginięcie",
+    "activeAdjectival": "ginący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "ginąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "giń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ginięto"
+          },
+          "plural": {
+            "allPluralGenders": "ginięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ginąłem",
+            "f": "ginęłam"
+          },
+          "plural": {
+            "virile": "ginęliśmy",
+            "nonvirile": "ginęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ginąłeś",
+            "f": "ginęłaś"
+          },
+          "plural": {
+            "virile": "ginęliście",
+            "nonvirile": "ginęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ginął",
+            "f": "ginęła",
+            "n": "ginęło"
+          },
+          "plural": {
+            "virile": "ginęli",
+            "nonvirile": "ginęły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ginie się"
+          },
+          "plural": {
+            "allPluralGenders": "ginie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ginę"
+          },
+          "plural": {
+            "allPluralGenders": "giniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "giniesz"
+          },
+          "plural": {
+            "allPluralGenders": "giniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ginie"
+          },
+          "plural": {
+            "allPluralGenders": "giną"
+          }
+        }
+      }
+    }
+  }
+}

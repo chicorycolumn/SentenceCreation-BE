@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "globalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "globalny",
+          "gen": "globalnego",
+          "dat": "globalnemu",
+          "acc": "globalnego",
+          "ins": "globalnym",
+          "loc": "globalnym"
+        },
+        "m3": {
+          "nom": "globalny",
+          "gen": "globalnego",
+          "dat": "globalnemu",
+          "acc": "globalny",
+          "ins": "globalnym",
+          "loc": "globalnym"
+        },
+        "f": {
+          "nom": "globalna",
+          "gen": "globalnej",
+          "dat": "globalnej",
+          "acc": "globalną",
+          "ins": "globalną",
+          "loc": "globalnej"
+        },
+        "n": {
+          "nom": "globalne",
+          "gen": "globalnego",
+          "dat": "globalnemu",
+          "acc": "globalne",
+          "ins": "globalnym",
+          "loc": "globalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "globalni",
+          "gen": "globalnych",
+          "dat": "globalnym",
+          "acc": "globalnych",
+          "ins": "globalnymi",
+          "loc": "globalnych"
+        },
+        "nonvirile": {
+          "nom": "globalne",
+          "gen": "globalnych",
+          "dat": "globalnym",
+          "acc": "globalne",
+          "ins": "globalnymi",
+          "loc": "globalnych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kłopot",
+      "gen": "kłopotu",
+      "dat": "kłopotowi",
+      "acc": "kłopot",
+      "ins": "kłopotem",
+      "loc": "kłopocie",
+      "voc": "kłopocie"
+    },
+    "plural": {
+      "nom": "kłopoty",
+      "gen": "kłopotów",
+      "dat": "kłopotom",
+      "acc": "kłopoty",
+      "ins": "kłopotami",
+      "loc": "kłopotach",
+      "voc": "kłopoty"
+    }
+  }
+}

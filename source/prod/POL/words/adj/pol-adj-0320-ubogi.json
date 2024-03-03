@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "ubogo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ubogi",
+          "gen": "ubogiego",
+          "dat": "ubogiemu",
+          "acc": "ubogiego",
+          "ins": "ubogim",
+          "loc": "ubogim"
+        },
+        "m3": {
+          "nom": "ubogi",
+          "gen": "ubogiego",
+          "dat": "ubogiemu",
+          "acc": "ubogi",
+          "ins": "ubogim",
+          "loc": "ubogim"
+        },
+        "f": {
+          "nom": "uboga",
+          "gen": "ubogiej",
+          "dat": "ubogiej",
+          "acc": "ubogą",
+          "ins": "ubogą",
+          "loc": "ubogiej"
+        },
+        "n": {
+          "nom": "ubogie",
+          "gen": "ubogiego",
+          "dat": "ubogiemu",
+          "acc": "ubogie",
+          "ins": "ubogim",
+          "loc": "ubogim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ubodzy",
+          "gen": "ubogich",
+          "dat": "ubogim",
+          "acc": "ubogich",
+          "ins": "ubogimi",
+          "loc": "ubogich"
+        },
+        "nonvirile": {
+          "nom": "ubogie",
+          "gen": "ubogich",
+          "dat": "ubogim",
+          "acc": "ubogie",
+          "ins": "ubogimi",
+          "loc": "ubogich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "uboższy",
+              "bardziej ubogi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "uboższego",
+              "bardziej ubogiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "uboższemu",
+              "bardziej ubogiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "uboższego",
+              "bardziej ubogiego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "uboższym",
+              "bardziej ubogim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "uboższym",
+              "bardziej ubogim"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "uboższy",
+              "bardziej ubogi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "uboższego",
+              "bardziej ubogiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "uboższemu",
+              "bardziej ubogiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "uboższy",
+              "bardziej ubogi"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "uboższym",
+              "bardziej ubogim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "uboższym",
+              "bardziej ubogim"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "uboższa",
+              "bardziej uboga"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "uboższej",
+              "bardziej ubogiej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "uboższej",
+              "bardziej ubogiej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "uboższą",
+              "bardziej ubogą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "uboższą",
+              "bardziej ubogą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "uboższej",
+              "bardziej ubogiej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "uboższe",
+              "bardziej ubogie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "uboższego",
+              "bardziej ubogiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "uboższemu",
+              "bardziej ubogiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "uboższe",
+              "bardziej ubogie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "uboższym",
+              "bardziej ubogim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "uboższym",
+              "bardziej ubogim"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "ubożsi",
+              "bardziej ubodzy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "uboższych",
+              "bardziej ubogich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "uboższym",
+              "bardziej ubogim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "uboższych",
+              "bardziej ubogich"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "uboższymi",
+              "bardziej ubogimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "uboższych",
+              "bardziej ubogich"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "uboższe",
+              "bardziej ubogie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "uboższych",
+              "bardziej ubogich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "uboższym",
+              "bardziej ubogim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "uboższe",
+              "bardziej ubogie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "uboższymi",
+              "bardziej ubogimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "uboższych",
+              "bardziej ubogich"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższy",
+              "najbardziej ubogi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższego",
+              "najbardziej ubogiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższemu",
+              "najbardziej ubogiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższego",
+              "najbardziej ubogiego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższym",
+              "najbardziej ubogim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższym",
+              "najbardziej ubogim"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższy",
+              "najbardziej ubogi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższego",
+              "najbardziej ubogiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższemu",
+              "najbardziej ubogiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższy",
+              "najbardziej ubogi"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższym",
+              "najbardziej ubogim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższym",
+              "najbardziej ubogim"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższa",
+              "najbardziej uboga"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższej",
+              "najbardziej ubogiej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższej",
+              "najbardziej ubogiej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższą",
+              "najbardziej ubogą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższą",
+              "najbardziej ubogą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższej",
+              "najbardziej ubogiej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższe",
+              "najbardziej ubogie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższego",
+              "najbardziej ubogiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższemu",
+              "najbardziej ubogiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższe",
+              "najbardziej ubogie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższym",
+              "najbardziej ubogim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższym",
+              "najbardziej ubogim"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najubożsi",
+              "najbardziej ubodzy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższych",
+              "najbardziej ubogich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższym",
+              "najbardziej ubogim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższych",
+              "najbardziej ubogich"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższymi",
+              "najbardziej ubogimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższych",
+              "najbardziej ubogich"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższe",
+              "najbardziej ubogie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższych",
+              "najbardziej ubogich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższym",
+              "najbardziej ubogim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższe",
+              "najbardziej ubogie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższymi",
+              "najbardziej ubogimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najuboższych",
+              "najbardziej ubogich"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

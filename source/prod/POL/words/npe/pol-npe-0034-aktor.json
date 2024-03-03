@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "aktor",
+      "gen": "aktora",
+      "dat": "aktorowi",
+      "acc": "aktora",
+      "ins": "aktorem",
+      "loc": "aktorze",
+      "voc": "aktorze"
+    },
+    "plural": {
+      "nom": "aktorzy",
+      "gen": "aktorów",
+      "dat": "aktorom",
+      "acc": "aktorów",
+      "ins": "aktorami",
+      "loc": "aktorach",
+      "voc": "aktorzy"
+    }
+  }
+}

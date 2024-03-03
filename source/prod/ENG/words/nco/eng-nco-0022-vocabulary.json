@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "vocabulary",
+      "gen": "vocabulary's"
+    },
+    "plural": {
+      "nom": "vocabularies",
+      "gen": "vocabularies'"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "druk",
+      "gen": "druku",
+      "dat": "drukowi",
+      "acc": "druk",
+      "ins": "drukiem",
+      "loc": "druku",
+      "voc": "druku"
+    }
+  }
+}

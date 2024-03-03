@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zmęczyć",
+    "verbalNoun": "zmęczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zmęczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zmęczywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zmęczy się"
+          },
+          "plural": {
+            "allPluralGenders": "zmęczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zmęczę"
+          },
+          "plural": {
+            "allPluralGenders": "zmęczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zmęczysz"
+          },
+          "plural": {
+            "allPluralGenders": "zmęczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zmęczy"
+          },
+          "plural": {
+            "allPluralGenders": "zmęczą"
+          }
+        }
+      },
+      "imperative": "zmęcz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zmęczono"
+          },
+          "plural": {
+            "allPluralGenders": "zmęczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zmęczyłem",
+            "f": "zmęczyłam"
+          },
+          "plural": {
+            "virile": "zmęczyliśmy",
+            "nonvirile": "zmęczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zmęczyłeś",
+            "f": "zmęczyłaś"
+          },
+          "plural": {
+            "virile": "zmęczyliście",
+            "nonvirile": "zmęczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zmęczył",
+            "f": "zmęczyła",
+            "n": "zmęczyło"
+          },
+          "plural": {
+            "virile": "zmęczyli",
+            "nonvirile": "zmęczyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

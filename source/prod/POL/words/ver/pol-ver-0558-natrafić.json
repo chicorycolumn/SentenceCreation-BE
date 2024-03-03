@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "natrafić",
+    "verbalNoun": "natrafienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "natrafiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "natrafi się"
+          },
+          "plural": {
+            "allPluralGenders": "natrafi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "natrafię"
+          },
+          "plural": {
+            "allPluralGenders": "natrafimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "natrafisz"
+          },
+          "plural": {
+            "allPluralGenders": "natraficie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "natrafi"
+          },
+          "plural": {
+            "allPluralGenders": "natrafią"
+          }
+        }
+      },
+      "imperative": "natraf",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "natrafiono"
+          },
+          "plural": {
+            "allPluralGenders": "natrafiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "natrafiłem",
+            "f": "natrafiłam"
+          },
+          "plural": {
+            "virile": "natrafiliśmy",
+            "nonvirile": "natrafiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "natrafiłeś",
+            "f": "natrafiłaś"
+          },
+          "plural": {
+            "virile": "natrafiliście",
+            "nonvirile": "natrafiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "natrafił",
+            "f": "natrafiła",
+            "n": "natrafiło"
+          },
+          "plural": {
+            "virile": "natrafili",
+            "nonvirile": "natrafiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

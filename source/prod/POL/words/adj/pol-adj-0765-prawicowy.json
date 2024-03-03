@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "prawicowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "prawicowy",
+          "gen": "prawicowego",
+          "dat": "prawicowemu",
+          "acc": "prawicowego",
+          "ins": "prawicowym",
+          "loc": "prawicowym"
+        },
+        "m3": {
+          "nom": "prawicowy",
+          "gen": "prawicowego",
+          "dat": "prawicowemu",
+          "acc": "prawicowy",
+          "ins": "prawicowym",
+          "loc": "prawicowym"
+        },
+        "f": {
+          "nom": "prawicowa",
+          "gen": "prawicowej",
+          "dat": "prawicowej",
+          "acc": "prawicową",
+          "ins": "prawicową",
+          "loc": "prawicowej"
+        },
+        "n": {
+          "nom": "prawicowe",
+          "gen": "prawicowego",
+          "dat": "prawicowemu",
+          "acc": "prawicowe",
+          "ins": "prawicowym",
+          "loc": "prawicowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "prawicowi",
+          "gen": "prawicowych",
+          "dat": "prawicowym",
+          "acc": "prawicowych",
+          "ins": "prawicowymi",
+          "loc": "prawicowych"
+        },
+        "nonvirile": {
+          "nom": "prawicowe",
+          "gen": "prawicowych",
+          "dat": "prawicowym",
+          "acc": "prawicowe",
+          "ins": "prawicowymi",
+          "loc": "prawicowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej prawicowy",
+          "gen": "bardziej prawicowego",
+          "dat": "bardziej prawicowemu",
+          "acc": "bardziej prawicowego",
+          "ins": "bardziej prawicowym",
+          "loc": "bardziej prawicowym"
+        },
+        "m3": {
+          "nom": "bardziej prawicowy",
+          "gen": "bardziej prawicowego",
+          "dat": "bardziej prawicowemu",
+          "acc": "bardziej prawicowy",
+          "ins": "bardziej prawicowym",
+          "loc": "bardziej prawicowym"
+        },
+        "f": {
+          "nom": "bardziej prawicowa",
+          "gen": "bardziej prawicowej",
+          "dat": "bardziej prawicowej",
+          "acc": "bardziej prawicową",
+          "ins": "bardziej prawicową",
+          "loc": "bardziej prawicowej"
+        },
+        "n": {
+          "nom": "bardziej prawicowe",
+          "gen": "bardziej prawicowego",
+          "dat": "bardziej prawicowemu",
+          "acc": "bardziej prawicowe",
+          "ins": "bardziej prawicowym",
+          "loc": "bardziej prawicowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej prawicowi",
+          "gen": "bardziej prawicowych",
+          "dat": "bardziej prawicowym",
+          "acc": "bardziej prawicowych",
+          "ins": "bardziej prawicowymi",
+          "loc": "bardziej prawicowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej prawicowe",
+          "gen": "bardziej prawicowych",
+          "dat": "bardziej prawicowym",
+          "acc": "bardziej prawicowe",
+          "ins": "bardziej prawicowymi",
+          "loc": "bardziej prawicowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej prawicowy",
+          "gen": "najbardziej prawicowego",
+          "dat": "najbardziej prawicowemu",
+          "acc": "najbardziej prawicowego",
+          "ins": "najbardziej prawicowym",
+          "loc": "najbardziej prawicowym"
+        },
+        "m3": {
+          "nom": "najbardziej prawicowy",
+          "gen": "najbardziej prawicowego",
+          "dat": "najbardziej prawicowemu",
+          "acc": "najbardziej prawicowy",
+          "ins": "najbardziej prawicowym",
+          "loc": "najbardziej prawicowym"
+        },
+        "f": {
+          "nom": "najbardziej prawicowa",
+          "gen": "najbardziej prawicowej",
+          "dat": "najbardziej prawicowej",
+          "acc": "najbardziej prawicową",
+          "ins": "najbardziej prawicową",
+          "loc": "najbardziej prawicowej"
+        },
+        "n": {
+          "nom": "najbardziej prawicowe",
+          "gen": "najbardziej prawicowego",
+          "dat": "najbardziej prawicowemu",
+          "acc": "najbardziej prawicowe",
+          "ins": "najbardziej prawicowym",
+          "loc": "najbardziej prawicowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej prawicowi",
+          "gen": "najbardziej prawicowych",
+          "dat": "najbardziej prawicowym",
+          "acc": "najbardziej prawicowych",
+          "ins": "najbardziej prawicowymi",
+          "loc": "najbardziej prawicowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej prawicowe",
+          "gen": "najbardziej prawicowych",
+          "dat": "najbardziej prawicowym",
+          "acc": "najbardziej prawicowe",
+          "ins": "najbardziej prawicowymi",
+          "loc": "najbardziej prawicowych"
+        }
+      }
+    }
+  }
+}

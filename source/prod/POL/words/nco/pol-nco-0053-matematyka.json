@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "matematyka",
+      "gen": "matematyki",
+      "dat": "matematyce",
+      "acc": "matematykę",
+      "ins": "matematyką",
+      "loc": "matematyce",
+      "voc": "matematyko"
+    },
+    "plural": {
+      "nom": "matematyki",
+      "gen": "matematyk",
+      "dat": "matematykom",
+      "acc": "matematyki",
+      "ins": "matematykami",
+      "loc": "matematykach",
+      "voc": "matematyki"
+    }
+  }
+}

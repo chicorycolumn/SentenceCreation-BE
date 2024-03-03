@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cement",
+      "gen": "cementu",
+      "dat": "cementowi",
+      "acc": "cement",
+      "ins": "cementem",
+      "loc": "cemencie",
+      "voc": "cemencie"
+    }
+  }
+}

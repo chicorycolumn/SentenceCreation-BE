@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "popchnąć",
+    "verbalNoun": "popchnięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "popchnięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "popchnąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "popchnie się"
+          },
+          "plural": {
+            "allPluralGenders": "popchnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "popchnę"
+          },
+          "plural": {
+            "allPluralGenders": "popchniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "popchniesz"
+          },
+          "plural": {
+            "allPluralGenders": "popchniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "popchnie"
+          },
+          "plural": {
+            "allPluralGenders": "popchną"
+          }
+        }
+      },
+      "imperative": "popchnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "popchnięto"
+          },
+          "plural": {
+            "allPluralGenders": "popchnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "popchnąłem",
+            "f": "popchnęłam"
+          },
+          "plural": {
+            "virile": "popchnęliśmy",
+            "nonvirile": "popchnęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "popchnąłeś",
+            "f": "popchnęłaś"
+          },
+          "plural": {
+            "virile": "popchnęliście",
+            "nonvirile": "popchnęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "popchnął",
+            "f": "popchnęła",
+            "n": "popchnęło"
+          },
+          "plural": {
+            "virile": "popchnęli",
+            "nonvirile": "popchnęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

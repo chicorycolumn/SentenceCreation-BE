@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mistake",
+      "gen": "mistake's"
+    },
+    "plural": {
+      "nom": "mistakes",
+      "gen": "mistakes'"
+    }
+  }
+}

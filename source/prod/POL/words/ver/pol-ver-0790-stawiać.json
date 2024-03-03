@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "stawiać",
+    "verbalNoun": "stawianie",
+    "activeAdjectival": "stawiający",
+    "passiveAdjectival": "stawiany",
+    "contemporaryAdverbial": "stawiając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "stawiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "stawiano"
+          },
+          "plural": {
+            "allPluralGenders": "stawiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "stawiałem",
+            "f": "stawiałam"
+          },
+          "plural": {
+            "virile": "stawialiśmy",
+            "nonvirile": "stawiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "stawiałeś",
+            "f": "stawiałaś"
+          },
+          "plural": {
+            "virile": "stawialiście",
+            "nonvirile": "stawiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "stawiał",
+            "f": "stawiała",
+            "n": "stawiało"
+          },
+          "plural": {
+            "virile": "stawiali",
+            "nonvirile": "stawiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "stawia się"
+          },
+          "plural": {
+            "allPluralGenders": "stawia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "stawiam"
+          },
+          "plural": {
+            "allPluralGenders": "stawiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "stawiasz"
+          },
+          "plural": {
+            "allPluralGenders": "stawiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "stawia"
+          },
+          "plural": {
+            "allPluralGenders": "stawiają"
+          }
+        }
+      }
+    }
+  }
+}

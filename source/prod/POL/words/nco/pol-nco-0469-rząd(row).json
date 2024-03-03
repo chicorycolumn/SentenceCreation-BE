@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rząd",
+      "gen": "rzędu",
+      "dat": "rzędowi",
+      "acc": "rząd",
+      "ins": "rzędem",
+      "loc": "rzędzie",
+      "voc": "rzędzie"
+    },
+    "plural": {
+      "nom": "rzędy",
+      "gen": "rzędów",
+      "dat": "rzędom",
+      "acc": "rzędy",
+      "ins": "rzędami",
+      "loc": "rzędach",
+      "voc": "rzędy"
+    }
+  }
+}

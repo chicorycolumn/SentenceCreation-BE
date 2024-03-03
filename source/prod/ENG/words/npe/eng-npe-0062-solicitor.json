@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "solicitor",
+      "gen": "solicitor's"
+    },
+    "plural": {
+      "nom": "solicitors",
+      "gen": "solicitors'"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "tanio",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "tani",
+          "gen": "taniego",
+          "dat": "taniemu",
+          "acc": "taniego",
+          "ins": "tanim",
+          "loc": "tanim"
+        },
+        "m3": {
+          "nom": "tani",
+          "gen": "taniego",
+          "dat": "taniemu",
+          "acc": "tani",
+          "ins": "tanim",
+          "loc": "tanim"
+        },
+        "f": {
+          "nom": "tana",
+          "gen": "taniej",
+          "dat": "taniej",
+          "acc": "taną",
+          "ins": "taną",
+          "loc": "taniej"
+        },
+        "n": {
+          "nom": "tanie",
+          "gen": "taniego",
+          "dat": "taniemu",
+          "acc": "tanie",
+          "ins": "tanim",
+          "loc": "tanim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "tani",
+          "gen": "tanich",
+          "dat": "tanim",
+          "acc": "tanich",
+          "ins": "tanimi",
+          "loc": "tanich"
+        },
+        "nonvirile": {
+          "nom": "tanie",
+          "gen": "tanich",
+          "dat": "tanim",
+          "acc": "tanie",
+          "ins": "tanimi",
+          "loc": "tanich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "tańszy",
+          "gen": "tańszego",
+          "dat": "tańszemu",
+          "acc": "tańszego",
+          "ins": "tańszym",
+          "loc": "tańszym"
+        },
+        "m3": {
+          "nom": "tańszy",
+          "gen": "tańszego",
+          "dat": "tańszemu",
+          "acc": "tańszy",
+          "ins": "tańszym",
+          "loc": "tańszym"
+        },
+        "f": {
+          "nom": "tańsza",
+          "gen": "tańszej",
+          "dat": "tańszej",
+          "acc": "tańszą",
+          "ins": "tańszą",
+          "loc": "tańszej"
+        },
+        "n": {
+          "nom": "tańsze",
+          "gen": "tańszego",
+          "dat": "tańszemu",
+          "acc": "tańsze",
+          "ins": "tańszym",
+          "loc": "tańszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "tańsi",
+          "gen": "tańszych",
+          "dat": "tańszym",
+          "acc": "tańszych",
+          "ins": "tańszymi",
+          "loc": "tańszych"
+        },
+        "nonvirile": {
+          "nom": "tańsze",
+          "gen": "tańszych",
+          "dat": "tańszym",
+          "acc": "tańsze",
+          "ins": "tańszymi",
+          "loc": "tańszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najtańszy",
+          "gen": "najtańszego",
+          "dat": "najtańszemu",
+          "acc": "najtańszego",
+          "ins": "najtańszym",
+          "loc": "najtańszym"
+        },
+        "m3": {
+          "nom": "najtańszy",
+          "gen": "najtańszego",
+          "dat": "najtańszemu",
+          "acc": "najtańszy",
+          "ins": "najtańszym",
+          "loc": "najtańszym"
+        },
+        "f": {
+          "nom": "najtańsza",
+          "gen": "najtańszej",
+          "dat": "najtańszej",
+          "acc": "najtańszą",
+          "ins": "najtańszą",
+          "loc": "najtańszej"
+        },
+        "n": {
+          "nom": "najtańsze",
+          "gen": "najtańszego",
+          "dat": "najtańszemu",
+          "acc": "najtańsze",
+          "ins": "najtańszym",
+          "loc": "najtańszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najtańsi",
+          "gen": "najtańszych",
+          "dat": "najtańszym",
+          "acc": "najtańszych",
+          "ins": "najtańszymi",
+          "loc": "najtańszych"
+        },
+        "nonvirile": {
+          "nom": "najtańsze",
+          "gen": "najtańszych",
+          "dat": "najtańszym",
+          "acc": "najtańsze",
+          "ins": "najtańszymi",
+          "loc": "najtańszych"
+        }
+      }
+    }
+  }
+}

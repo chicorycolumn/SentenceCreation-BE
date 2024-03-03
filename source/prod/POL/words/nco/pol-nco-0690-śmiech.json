@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "śmiech",
+      "gen": "śmiechu",
+      "dat": "śmiechowi",
+      "acc": "śmiech",
+      "ins": "śmiechem",
+      "loc": "śmiechu",
+      "voc": "śmiechu"
+    },
+    "plural": {
+      "nom": "śmiechy",
+      "gen": "śmiechów",
+      "dat": "śmiechom",
+      "acc": "śmiechy",
+      "ins": "śmiechami",
+      "loc": "śmiechach",
+      "voc": "śmiechy"
+    }
+  }
+}

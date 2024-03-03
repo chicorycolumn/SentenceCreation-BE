@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "nieśmiało",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nieśmiały",
+          "gen": "nieśmiałego",
+          "dat": "nieśmiałemu",
+          "acc": "nieśmiałego",
+          "ins": "nieśmiałym",
+          "loc": "nieśmiałym"
+        },
+        "m3": {
+          "nom": "nieśmiały",
+          "gen": "nieśmiałego",
+          "dat": "nieśmiałemu",
+          "acc": "nieśmiały",
+          "ins": "nieśmiałym",
+          "loc": "nieśmiałym"
+        },
+        "f": {
+          "nom": "nieśmiała",
+          "gen": "nieśmiałej",
+          "dat": "nieśmiałej",
+          "acc": "nieśmiałą",
+          "ins": "nieśmiałą",
+          "loc": "nieśmiałej"
+        },
+        "n": {
+          "nom": "nieśmiałe",
+          "gen": "nieśmiałego",
+          "dat": "nieśmiałemu",
+          "acc": "nieśmiałe",
+          "ins": "nieśmiałym",
+          "loc": "nieśmiałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieśmiali",
+          "gen": "nieśmiałych",
+          "dat": "nieśmiałym",
+          "acc": "nieśmiałych",
+          "ins": "nieśmiałymi",
+          "loc": "nieśmiałych"
+        },
+        "nonvirile": {
+          "nom": "nieśmiałe",
+          "gen": "nieśmiałych",
+          "dat": "nieśmiałym",
+          "acc": "nieśmiałe",
+          "ins": "nieśmiałymi",
+          "loc": "nieśmiałych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej nieśmiały",
+          "gen": "bardziej nieśmiałego",
+          "dat": "bardziej nieśmiałemu",
+          "acc": "bardziej nieśmiałego",
+          "ins": "bardziej nieśmiałym",
+          "loc": "bardziej nieśmiałym"
+        },
+        "m3": {
+          "nom": "bardziej nieśmiały",
+          "gen": "bardziej nieśmiałego",
+          "dat": "bardziej nieśmiałemu",
+          "acc": "bardziej nieśmiały",
+          "ins": "bardziej nieśmiałym",
+          "loc": "bardziej nieśmiałym"
+        },
+        "f": {
+          "nom": "bardziej nieśmiała",
+          "gen": "bardziej nieśmiałej",
+          "dat": "bardziej nieśmiałej",
+          "acc": "bardziej nieśmiałą",
+          "ins": "bardziej nieśmiałą",
+          "loc": "bardziej nieśmiałej"
+        },
+        "n": {
+          "nom": "bardziej nieśmiałe",
+          "gen": "bardziej nieśmiałego",
+          "dat": "bardziej nieśmiałemu",
+          "acc": "bardziej nieśmiałe",
+          "ins": "bardziej nieśmiałym",
+          "loc": "bardziej nieśmiałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej nieśmiali",
+          "gen": "bardziej nieśmiałych",
+          "dat": "bardziej nieśmiałym",
+          "acc": "bardziej nieśmiałych",
+          "ins": "bardziej nieśmiałymi",
+          "loc": "bardziej nieśmiałych"
+        },
+        "nonvirile": {
+          "nom": "bardziej nieśmiałe",
+          "gen": "bardziej nieśmiałych",
+          "dat": "bardziej nieśmiałym",
+          "acc": "bardziej nieśmiałe",
+          "ins": "bardziej nieśmiałymi",
+          "loc": "bardziej nieśmiałych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej nieśmiały",
+          "gen": "najbardziej nieśmiałego",
+          "dat": "najbardziej nieśmiałemu",
+          "acc": "najbardziej nieśmiałego",
+          "ins": "najbardziej nieśmiałym",
+          "loc": "najbardziej nieśmiałym"
+        },
+        "m3": {
+          "nom": "najbardziej nieśmiały",
+          "gen": "najbardziej nieśmiałego",
+          "dat": "najbardziej nieśmiałemu",
+          "acc": "najbardziej nieśmiały",
+          "ins": "najbardziej nieśmiałym",
+          "loc": "najbardziej nieśmiałym"
+        },
+        "f": {
+          "nom": "najbardziej nieśmiała",
+          "gen": "najbardziej nieśmiałej",
+          "dat": "najbardziej nieśmiałej",
+          "acc": "najbardziej nieśmiałą",
+          "ins": "najbardziej nieśmiałą",
+          "loc": "najbardziej nieśmiałej"
+        },
+        "n": {
+          "nom": "najbardziej nieśmiałe",
+          "gen": "najbardziej nieśmiałego",
+          "dat": "najbardziej nieśmiałemu",
+          "acc": "najbardziej nieśmiałe",
+          "ins": "najbardziej nieśmiałym",
+          "loc": "najbardziej nieśmiałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej nieśmiali",
+          "gen": "najbardziej nieśmiałych",
+          "dat": "najbardziej nieśmiałym",
+          "acc": "najbardziej nieśmiałych",
+          "ins": "najbardziej nieśmiałymi",
+          "loc": "najbardziej nieśmiałych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej nieśmiałe",
+          "gen": "najbardziej nieśmiałych",
+          "dat": "najbardziej nieśmiałym",
+          "acc": "najbardziej nieśmiałe",
+          "ins": "najbardziej nieśmiałymi",
+          "loc": "najbardziej nieśmiałych"
+        }
+      }
+    }
+  }
+}

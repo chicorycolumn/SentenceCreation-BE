@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "grób",
+      "gen": "grobu",
+      "dat": "grobowi",
+      "acc": "grób",
+      "ins": "grobem",
+      "loc": "grobie",
+      "voc": "grobie"
+    },
+    "plural": {
+      "nom": "groby",
+      "gen": "grobów",
+      "dat": "grobom",
+      "acc": "groby",
+      "ins": "grobami",
+      "loc": "grobach",
+      "voc": "groby"
+    }
+  }
+}

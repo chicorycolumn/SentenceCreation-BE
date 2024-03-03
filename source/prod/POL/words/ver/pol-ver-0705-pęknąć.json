@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pęknąć",
+    "verbalNoun": "pęknięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pęknięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pęknąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pęknie się"
+          },
+          "plural": {
+            "allPluralGenders": "pęknie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pęknę"
+          },
+          "plural": {
+            "allPluralGenders": "pękniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pękniesz"
+          },
+          "plural": {
+            "allPluralGenders": "pękniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pęknie"
+          },
+          "plural": {
+            "allPluralGenders": "pękną"
+          }
+        }
+      },
+      "imperative": "pęknij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pęknięto"
+          },
+          "plural": {
+            "allPluralGenders": "pęknięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pękłem",
+            "f": "pękłam"
+          },
+          "plural": {
+            "virile": "pękliśmy",
+            "nonvirile": "pękłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pękłeś",
+            "f": "pękłaś"
+          },
+          "plural": {
+            "virile": "pękliście",
+            "nonvirile": "pękłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pękł",
+            "f": "pękła",
+            "n": "pękło"
+          },
+          "plural": {
+            "virile": "pękli",
+            "nonvirile": "pękły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

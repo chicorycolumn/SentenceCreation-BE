@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "podchodzić",
+    "verbalNoun": "podchodzenie",
+    "activeAdjectival": "podchodzący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "podchodząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "podchodź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podchodzono"
+          },
+          "plural": {
+            "allPluralGenders": "podchodzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "podchodziłem",
+            "f": "podchodziłam"
+          },
+          "plural": {
+            "virile": "podchodziliśmy",
+            "nonvirile": "podchodziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podchodziłeś",
+            "f": "podchodziłaś"
+          },
+          "plural": {
+            "virile": "podchodziliście",
+            "nonvirile": "podchodziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podchodził",
+            "f": "podchodziła",
+            "n": "podchodziło"
+          },
+          "plural": {
+            "virile": "podchodzili",
+            "nonvirile": "podchodziły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podchodzi się"
+          },
+          "plural": {
+            "allPluralGenders": "podchodzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podchodzę"
+          },
+          "plural": {
+            "allPluralGenders": "podchodzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podchodzisz"
+          },
+          "plural": {
+            "allPluralGenders": "podchodzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podchodzi"
+          },
+          "plural": {
+            "allPluralGenders": "podchodzą"
+          }
+        }
+      }
+    }
+  }
+}

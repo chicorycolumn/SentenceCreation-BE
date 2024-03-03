@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "obrazić",
+    "verbalNoun": "obrażenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "obrażony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "obraziwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obrazi się"
+          },
+          "plural": {
+            "allPluralGenders": "obrazi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "obrażę"
+          },
+          "plural": {
+            "allPluralGenders": "obrazimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "obrazisz"
+          },
+          "plural": {
+            "allPluralGenders": "obrazicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "obrazi"
+          },
+          "plural": {
+            "allPluralGenders": "obrażą"
+          }
+        }
+      },
+      "imperative": "obraź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obrażono"
+          },
+          "plural": {
+            "allPluralGenders": "obrażono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "obraziłem",
+            "f": "obraziłam"
+          },
+          "plural": {
+            "virile": "obraziliśmy",
+            "nonvirile": "obraziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "obraziłeś",
+            "f": "obraziłaś"
+          },
+          "plural": {
+            "virile": "obraziliście",
+            "nonvirile": "obraziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "obraził",
+            "f": "obraziła",
+            "n": "obraziło"
+          },
+          "plural": {
+            "virile": "obrazili",
+            "nonvirile": "obraziły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "brązowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "brązowy",
+          "gen": "brązowego",
+          "dat": "brązowemu",
+          "acc": "brązowego",
+          "ins": "brązowym",
+          "loc": "brązowym"
+        },
+        "m3": {
+          "nom": "brązowy",
+          "gen": "brązowego",
+          "dat": "brązowemu",
+          "acc": "brązowy",
+          "ins": "brązowym",
+          "loc": "brązowym"
+        },
+        "f": {
+          "nom": "brązowa",
+          "gen": "brązowej",
+          "dat": "brązowej",
+          "acc": "brązową",
+          "ins": "brązową",
+          "loc": "brązowej"
+        },
+        "n": {
+          "nom": "brązowe",
+          "gen": "brązowego",
+          "dat": "brązowemu",
+          "acc": "brązowe",
+          "ins": "brązowym",
+          "loc": "brązowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "brązowi",
+          "gen": "brązowych",
+          "dat": "brązowym",
+          "acc": "brązowych",
+          "ins": "brązowymi",
+          "loc": "brązowych"
+        },
+        "nonvirile": {
+          "nom": "brązowe",
+          "gen": "brązowych",
+          "dat": "brązowym",
+          "acc": "brązowe",
+          "ins": "brązowymi",
+          "loc": "brązowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej brązowy",
+          "gen": "bardziej brązowego",
+          "dat": "bardziej brązowemu",
+          "acc": "bardziej brązowego",
+          "ins": "bardziej brązowym",
+          "loc": "bardziej brązowym"
+        },
+        "m3": {
+          "nom": "bardziej brązowy",
+          "gen": "bardziej brązowego",
+          "dat": "bardziej brązowemu",
+          "acc": "bardziej brązowy",
+          "ins": "bardziej brązowym",
+          "loc": "bardziej brązowym"
+        },
+        "f": {
+          "nom": "bardziej brązowa",
+          "gen": "bardziej brązowej",
+          "dat": "bardziej brązowej",
+          "acc": "bardziej brązową",
+          "ins": "bardziej brązową",
+          "loc": "bardziej brązowej"
+        },
+        "n": {
+          "nom": "bardziej brązowe",
+          "gen": "bardziej brązowego",
+          "dat": "bardziej brązowemu",
+          "acc": "bardziej brązowe",
+          "ins": "bardziej brązowym",
+          "loc": "bardziej brązowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej brązowi",
+          "gen": "bardziej brązowych",
+          "dat": "bardziej brązowym",
+          "acc": "bardziej brązowych",
+          "ins": "bardziej brązowymi",
+          "loc": "bardziej brązowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej brązowe",
+          "gen": "bardziej brązowych",
+          "dat": "bardziej brązowym",
+          "acc": "bardziej brązowe",
+          "ins": "bardziej brązowymi",
+          "loc": "bardziej brązowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej brązowy",
+          "gen": "najbardziej brązowego",
+          "dat": "najbardziej brązowemu",
+          "acc": "najbardziej brązowego",
+          "ins": "najbardziej brązowym",
+          "loc": "najbardziej brązowym"
+        },
+        "m3": {
+          "nom": "najbardziej brązowy",
+          "gen": "najbardziej brązowego",
+          "dat": "najbardziej brązowemu",
+          "acc": "najbardziej brązowy",
+          "ins": "najbardziej brązowym",
+          "loc": "najbardziej brązowym"
+        },
+        "f": {
+          "nom": "najbardziej brązowa",
+          "gen": "najbardziej brązowej",
+          "dat": "najbardziej brązowej",
+          "acc": "najbardziej brązową",
+          "ins": "najbardziej brązową",
+          "loc": "najbardziej brązowej"
+        },
+        "n": {
+          "nom": "najbardziej brązowe",
+          "gen": "najbardziej brązowego",
+          "dat": "najbardziej brązowemu",
+          "acc": "najbardziej brązowe",
+          "ins": "najbardziej brązowym",
+          "loc": "najbardziej brązowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej brązowi",
+          "gen": "najbardziej brązowych",
+          "dat": "najbardziej brązowym",
+          "acc": "najbardziej brązowych",
+          "ins": "najbardziej brązowymi",
+          "loc": "najbardziej brązowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej brązowe",
+          "gen": "najbardziej brązowych",
+          "dat": "najbardziej brązowym",
+          "acc": "najbardziej brązowe",
+          "ins": "najbardziej brązowymi",
+          "loc": "najbardziej brązowych"
+        }
+      }
+    }
+  }
+}

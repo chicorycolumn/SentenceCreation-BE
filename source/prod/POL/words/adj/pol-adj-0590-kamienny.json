@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "kamienny",
+          "gen": "kamiennego",
+          "dat": "kamiennemu",
+          "acc": "kamiennego",
+          "ins": "kamiennym",
+          "loc": "kamiennym"
+        },
+        "m3": {
+          "nom": "kamienny",
+          "gen": "kamiennego",
+          "dat": "kamiennemu",
+          "acc": "kamienny",
+          "ins": "kamiennym",
+          "loc": "kamiennym"
+        },
+        "f": {
+          "nom": "kamienna",
+          "gen": "kamiennej",
+          "dat": "kamiennej",
+          "acc": "kamienną",
+          "ins": "kamienną",
+          "loc": "kamiennej"
+        },
+        "n": {
+          "nom": "kamienne",
+          "gen": "kamiennego",
+          "dat": "kamiennemu",
+          "acc": "kamienne",
+          "ins": "kamiennym",
+          "loc": "kamiennym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "kamienni",
+          "gen": "kamiennych",
+          "dat": "kamiennym",
+          "acc": "kamiennych",
+          "ins": "kamiennymi",
+          "loc": "kamiennych"
+        },
+        "nonvirile": {
+          "nom": "kamienne",
+          "gen": "kamiennych",
+          "dat": "kamiennym",
+          "acc": "kamienne",
+          "ins": "kamiennymi",
+          "loc": "kamiennych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej kamienny",
+          "gen": "bardziej kamiennego",
+          "dat": "bardziej kamiennemu",
+          "acc": "bardziej kamiennego",
+          "ins": "bardziej kamiennym",
+          "loc": "bardziej kamiennym"
+        },
+        "m3": {
+          "nom": "bardziej kamienny",
+          "gen": "bardziej kamiennego",
+          "dat": "bardziej kamiennemu",
+          "acc": "bardziej kamienny",
+          "ins": "bardziej kamiennym",
+          "loc": "bardziej kamiennym"
+        },
+        "f": {
+          "nom": "bardziej kamienna",
+          "gen": "bardziej kamiennej",
+          "dat": "bardziej kamiennej",
+          "acc": "bardziej kamienną",
+          "ins": "bardziej kamienną",
+          "loc": "bardziej kamiennej"
+        },
+        "n": {
+          "nom": "bardziej kamienne",
+          "gen": "bardziej kamiennego",
+          "dat": "bardziej kamiennemu",
+          "acc": "bardziej kamienne",
+          "ins": "bardziej kamiennym",
+          "loc": "bardziej kamiennym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej kamienni",
+          "gen": "bardziej kamiennych",
+          "dat": "bardziej kamiennym",
+          "acc": "bardziej kamiennych",
+          "ins": "bardziej kamiennymi",
+          "loc": "bardziej kamiennych"
+        },
+        "nonvirile": {
+          "nom": "bardziej kamienne",
+          "gen": "bardziej kamiennych",
+          "dat": "bardziej kamiennym",
+          "acc": "bardziej kamienne",
+          "ins": "bardziej kamiennymi",
+          "loc": "bardziej kamiennych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej kamienny",
+          "gen": "najbardziej kamiennego",
+          "dat": "najbardziej kamiennemu",
+          "acc": "najbardziej kamiennego",
+          "ins": "najbardziej kamiennym",
+          "loc": "najbardziej kamiennym"
+        },
+        "m3": {
+          "nom": "najbardziej kamienny",
+          "gen": "najbardziej kamiennego",
+          "dat": "najbardziej kamiennemu",
+          "acc": "najbardziej kamienny",
+          "ins": "najbardziej kamiennym",
+          "loc": "najbardziej kamiennym"
+        },
+        "f": {
+          "nom": "najbardziej kamienna",
+          "gen": "najbardziej kamiennej",
+          "dat": "najbardziej kamiennej",
+          "acc": "najbardziej kamienną",
+          "ins": "najbardziej kamienną",
+          "loc": "najbardziej kamiennej"
+        },
+        "n": {
+          "nom": "najbardziej kamienne",
+          "gen": "najbardziej kamiennego",
+          "dat": "najbardziej kamiennemu",
+          "acc": "najbardziej kamienne",
+          "ins": "najbardziej kamiennym",
+          "loc": "najbardziej kamiennym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej kamienni",
+          "gen": "najbardziej kamiennych",
+          "dat": "najbardziej kamiennym",
+          "acc": "najbardziej kamiennych",
+          "ins": "najbardziej kamiennymi",
+          "loc": "najbardziej kamiennych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej kamienne",
+          "gen": "najbardziej kamiennych",
+          "dat": "najbardziej kamiennym",
+          "acc": "najbardziej kamienne",
+          "ins": "najbardziej kamiennymi",
+          "loc": "najbardziej kamiennych"
+        }
+      }
+    }
+  }
+}

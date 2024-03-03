@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "poród",
+      "gen": "porodu",
+      "dat": "porodowi",
+      "acc": "poród",
+      "ins": "porodem",
+      "loc": "porodzie",
+      "voc": "porodzie"
+    },
+    "plural": {
+      "nom": "porody",
+      "gen": "porodów",
+      "dat": "porodom",
+      "acc": "porody",
+      "ins": "porodami",
+      "loc": "porodach",
+      "voc": "porody"
+    }
+  }
+}

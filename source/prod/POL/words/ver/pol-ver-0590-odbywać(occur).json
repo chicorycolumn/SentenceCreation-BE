@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odbywać",
+    "verbalNoun": "odbywanie",
+    "activeAdjectival": "odbywający",
+    "passiveAdjectival": "odbywany",
+    "contemporaryAdverbial": "odbywając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odbywaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odbywano"
+          },
+          "plural": {
+            "allPluralGenders": "odbywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odbywałem",
+            "f": "odbywałam"
+          },
+          "plural": {
+            "virile": "odbywaliśmy",
+            "nonvirile": "odbywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odbywałeś",
+            "f": "odbywałaś"
+          },
+          "plural": {
+            "virile": "odbywaliście",
+            "nonvirile": "odbywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odbywał",
+            "f": "odbywała",
+            "n": "odbywało"
+          },
+          "plural": {
+            "virile": "odbywali",
+            "nonvirile": "odbywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odbywa się"
+          },
+          "plural": {
+            "allPluralGenders": "odbywa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odbywam"
+          },
+          "plural": {
+            "allPluralGenders": "odbywamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odbywasz"
+          },
+          "plural": {
+            "allPluralGenders": "odbywacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odbywa"
+          },
+          "plural": {
+            "allPluralGenders": "odbywają"
+          }
+        }
+      }
+    }
+  }
+}

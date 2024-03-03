@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "niedziela",
+      "gen": "niedzieli",
+      "dat": "niedzieli",
+      "acc": "niedzielę",
+      "ins": "niedzielą",
+      "loc": "niedzieli",
+      "voc": "niedzielo"
+    },
+    "plural": {
+      "nom": "niedziele",
+      "gen": [
+        "niedzieli",
+        "niedziel"
+      ],
+      "dat": "niedzielom",
+      "acc": "niedziele",
+      "ins": "niedzielami",
+      "loc": "niedzielach",
+      "voc": "niedziele"
+    }
+  }
+}

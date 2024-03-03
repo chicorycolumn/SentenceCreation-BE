@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nalewać",
+    "verbalNoun": "nalewanie",
+    "activeAdjectival": "nalewający",
+    "passiveAdjectival": "nalewany",
+    "contemporaryAdverbial": "nalewając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "nalewaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nalewano"
+          },
+          "plural": {
+            "allPluralGenders": "nalewano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nalewałem",
+            "f": "nalewałam"
+          },
+          "plural": {
+            "virile": "nalewaliśmy",
+            "nonvirile": "nalewałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nalewałeś",
+            "f": "nalewałaś"
+          },
+          "plural": {
+            "virile": "nalewaliście",
+            "nonvirile": "nalewałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nalewał",
+            "f": "nalewała",
+            "n": "nalewało"
+          },
+          "plural": {
+            "virile": "nalewali",
+            "nonvirile": "nalewały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nalewa się"
+          },
+          "plural": {
+            "allPluralGenders": "nalewa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nalewam"
+          },
+          "plural": {
+            "allPluralGenders": "nalewamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nalewasz"
+          },
+          "plural": {
+            "allPluralGenders": "nalewacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nalewa"
+          },
+          "plural": {
+            "allPluralGenders": "nalewają"
+          }
+        }
+      }
+    }
+  }
+}

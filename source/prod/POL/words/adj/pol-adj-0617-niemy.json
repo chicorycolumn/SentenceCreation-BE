@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niemy",
+          "gen": "niemego",
+          "dat": "niememu",
+          "acc": "niemego",
+          "ins": "niemym",
+          "loc": "niemym"
+        },
+        "m3": {
+          "nom": "niemy",
+          "gen": "niemego",
+          "dat": "niememu",
+          "acc": "niemy",
+          "ins": "niemym",
+          "loc": "niemym"
+        },
+        "f": {
+          "nom": "niema",
+          "gen": "niemej",
+          "dat": "niemej",
+          "acc": "niemą",
+          "ins": "niemą",
+          "loc": "niemej"
+        },
+        "n": {
+          "nom": "nieme",
+          "gen": "niemego",
+          "dat": "niememu",
+          "acc": "nieme",
+          "ins": "niemym",
+          "loc": "niemym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niemi",
+          "gen": "niemych",
+          "dat": "niemym",
+          "acc": "niemych",
+          "ins": "niemymi",
+          "loc": "niemych"
+        },
+        "nonvirile": {
+          "nom": "nieme",
+          "gen": "niemych",
+          "dat": "niemym",
+          "acc": "nieme",
+          "ins": "niemymi",
+          "loc": "niemych"
+        }
+      }
+    }
+  }
+}

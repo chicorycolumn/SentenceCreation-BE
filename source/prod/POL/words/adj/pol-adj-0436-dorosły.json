@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "dorośle",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dorosły",
+          "gen": "dorosłego",
+          "dat": "dorosłemu",
+          "acc": "dorosłego",
+          "ins": "dorosłym",
+          "loc": "dorosłym"
+        },
+        "m3": {
+          "nom": "dorosły",
+          "gen": "dorosłego",
+          "dat": "dorosłemu",
+          "acc": "dorosły",
+          "ins": "dorosłym",
+          "loc": "dorosłym"
+        },
+        "f": {
+          "nom": "dorosła",
+          "gen": "dorosłej",
+          "dat": "dorosłej",
+          "acc": "dorosłą",
+          "ins": "dorosłą",
+          "loc": "dorosłej"
+        },
+        "n": {
+          "nom": "dorosłe",
+          "gen": "dorosłego",
+          "dat": "dorosłemu",
+          "acc": "dorosłe",
+          "ins": "dorosłym",
+          "loc": "dorosłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dorośli",
+          "gen": "dorosłych",
+          "dat": "dorosłym",
+          "acc": "dorosłych",
+          "ins": "dorosłymi",
+          "loc": "dorosłych"
+        },
+        "nonvirile": {
+          "nom": "dorosłe",
+          "gen": "dorosłych",
+          "dat": "dorosłym",
+          "acc": "dorosłe",
+          "ins": "dorosłymi",
+          "loc": "dorosłych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "doroślejszy",
+          "gen": "doroślejszego",
+          "dat": "doroślejszemu",
+          "acc": "doroślejszego",
+          "ins": "doroślejszym",
+          "loc": "doroślejszym"
+        },
+        "m3": {
+          "nom": "doroślejszy",
+          "gen": "doroślejszego",
+          "dat": "doroślejszemu",
+          "acc": "doroślejszy",
+          "ins": "doroślejszym",
+          "loc": "doroślejszym"
+        },
+        "f": {
+          "nom": "doroślejsza",
+          "gen": "doroślejszej",
+          "dat": "doroślejszej",
+          "acc": "doroślejszą",
+          "ins": "doroślejszą",
+          "loc": "doroślejszej"
+        },
+        "n": {
+          "nom": "doroślejsze",
+          "gen": "doroślejszego",
+          "dat": "doroślejszemu",
+          "acc": "doroślejsze",
+          "ins": "doroślejszym",
+          "loc": "doroślejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "doroślejsi",
+          "gen": "doroślejszych",
+          "dat": "doroślejszym",
+          "acc": "doroślejszych",
+          "ins": "doroślejszymi",
+          "loc": "doroślejszych"
+        },
+        "nonvirile": {
+          "nom": "doroślejsze",
+          "gen": "doroślejszych",
+          "dat": "doroślejszym",
+          "acc": "doroślejsze",
+          "ins": "doroślejszymi",
+          "loc": "doroślejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najdoroślejszy",
+          "gen": "najdoroślejszego",
+          "dat": "najdoroślejszemu",
+          "acc": "najdoroślejszego",
+          "ins": "najdoroślejszym",
+          "loc": "najdoroślejszym"
+        },
+        "m3": {
+          "nom": "najdoroślejszy",
+          "gen": "najdoroślejszego",
+          "dat": "najdoroślejszemu",
+          "acc": "najdoroślejszy",
+          "ins": "najdoroślejszym",
+          "loc": "najdoroślejszym"
+        },
+        "f": {
+          "nom": "najdoroślejsza",
+          "gen": "najdoroślejszej",
+          "dat": "najdoroślejszej",
+          "acc": "najdoroślejszą",
+          "ins": "najdoroślejszą",
+          "loc": "najdoroślejszej"
+        },
+        "n": {
+          "nom": "najdoroślejsze",
+          "gen": "najdoroślejszego",
+          "dat": "najdoroślejszemu",
+          "acc": "najdoroślejsze",
+          "ins": "najdoroślejszym",
+          "loc": "najdoroślejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najdoroślejsi",
+          "gen": "najdoroślejszych",
+          "dat": "najdoroślejszym",
+          "acc": "najdoroślejszych",
+          "ins": "najdoroślejszymi",
+          "loc": "najdoroślejszych"
+        },
+        "nonvirile": {
+          "nom": "najdoroślejsze",
+          "gen": "najdoroślejszych",
+          "dat": "najdoroślejszym",
+          "acc": "najdoroślejsze",
+          "ins": "najdoroślejszymi",
+          "loc": "najdoroślejszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "judge",
+      "gen": "judge's"
+    },
+    "plural": {
+      "nom": "judges",
+      "gen": "judges'"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "poprzeć",
+    "verbalNoun": "poparcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "poparty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "poparłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poprze się"
+          },
+          "plural": {
+            "allPluralGenders": "poprze się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "poprę"
+          },
+          "plural": {
+            "allPluralGenders": "poprzemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "poprzesz"
+          },
+          "plural": {
+            "allPluralGenders": "poprzecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "poprze"
+          },
+          "plural": {
+            "allPluralGenders": "poprą"
+          }
+        }
+      },
+      "imperative": "poprzyj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poparto"
+          },
+          "plural": {
+            "allPluralGenders": "poparto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "poparłem",
+            "f": "poparłam"
+          },
+          "plural": {
+            "virile": "poparliśmy",
+            "nonvirile": "poparłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "poparłeś",
+            "f": "poparłaś"
+          },
+          "plural": {
+            "virile": "poparliście",
+            "nonvirile": "poparłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "poparł",
+            "f": "poparła",
+            "n": "poparło"
+          },
+          "plural": {
+            "virile": "poparli",
+            "nonvirile": "poparły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

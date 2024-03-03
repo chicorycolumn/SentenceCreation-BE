@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "posadzić",
+    "verbalNoun": "posadzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "posadzony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "posadziwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "posadzi się"
+          },
+          "plural": {
+            "allPluralGenders": "posadzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "posadzę"
+          },
+          "plural": {
+            "allPluralGenders": "posadzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "posadzisz"
+          },
+          "plural": {
+            "allPluralGenders": "posadzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "posadzi"
+          },
+          "plural": {
+            "allPluralGenders": "posadzą"
+          }
+        }
+      },
+      "imperative": "posadź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "posadzono"
+          },
+          "plural": {
+            "allPluralGenders": "posadzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "posadziłem",
+            "f": "posadziłam"
+          },
+          "plural": {
+            "virile": "posadziliśmy",
+            "nonvirile": "posadziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "posadziłeś",
+            "f": "posadziłaś"
+          },
+          "plural": {
+            "virile": "posadziliście",
+            "nonvirile": "posadziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "posadził",
+            "f": "posadziła",
+            "n": "posadziło"
+          },
+          "plural": {
+            "virile": "posadzili",
+            "nonvirile": "posadziły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

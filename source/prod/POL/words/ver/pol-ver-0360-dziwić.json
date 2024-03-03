@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dziwić",
+    "verbalNoun": "dziwienie",
+    "activeAdjectival": "dziwiący",
+    "passiveAdjectival": "dziwiony",
+    "contemporaryAdverbial": "dziwiąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dziw",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dziwiono"
+          },
+          "plural": {
+            "allPluralGenders": "dziwiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dziwiłem",
+            "f": "dziwiłam"
+          },
+          "plural": {
+            "virile": "dziwiliśmy",
+            "nonvirile": "dziwiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dziwiłeś",
+            "f": "dziwiłaś"
+          },
+          "plural": {
+            "virile": "dziwiliście",
+            "nonvirile": "dziwiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dziwił",
+            "f": "dziwiła",
+            "n": "dziwiło"
+          },
+          "plural": {
+            "virile": "dziwili",
+            "nonvirile": "dziwiły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dziwi się"
+          },
+          "plural": {
+            "allPluralGenders": "dziwi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dziwię"
+          },
+          "plural": {
+            "allPluralGenders": "dziwimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dziwisz"
+          },
+          "plural": {
+            "allPluralGenders": "dziwicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dziwi"
+          },
+          "plural": {
+            "allPluralGenders": "dziwią"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "masaż",
+      "gen": "masażu",
+      "dat": "masażowi",
+      "acc": "masaż",
+      "ins": "masażem",
+      "loc": "masażu",
+      "voc": "masażu"
+    },
+    "plural": {
+      "nom": "masaże",
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "masaży"
+        ],
+        "additionalInfrequent": [
+          "masażów"
+        ]
+      },
+      "dat": "masażom",
+      "acc": "masaże",
+      "ins": "masażami",
+      "loc": "masażach",
+      "voc": "masaże"
+    }
+  }
+}

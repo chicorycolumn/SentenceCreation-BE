@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "prowadzić",
+    "verbalNoun": "prowadzenie",
+    "activeAdjectival": "prowadzący",
+    "passiveAdjectival": "prowadzony",
+    "contemporaryAdverbial": "prowadząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "prowadź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "prowadzono"
+          },
+          "plural": {
+            "allPluralGenders": "prowadzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "prowadziłem",
+            "f": "prowadziłam"
+          },
+          "plural": {
+            "virile": "prowadziliśmy",
+            "nonvirile": "prowadziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "prowadziłeś",
+            "f": "prowadziłaś"
+          },
+          "plural": {
+            "virile": "prowadziliście",
+            "nonvirile": "prowadziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "prowadził",
+            "f": "prowadziła",
+            "n": "prowadziło"
+          },
+          "plural": {
+            "virile": "prowadzili",
+            "nonvirile": "prowadziły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "prowadzi się"
+          },
+          "plural": {
+            "allPluralGenders": "prowadzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "prowadzę"
+          },
+          "plural": {
+            "allPluralGenders": "prowadzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "prowadzisz"
+          },
+          "plural": {
+            "allPluralGenders": "prowadzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "prowadzi"
+          },
+          "plural": {
+            "allPluralGenders": "prowadzą"
+          }
+        }
+      }
+    }
+  }
+}

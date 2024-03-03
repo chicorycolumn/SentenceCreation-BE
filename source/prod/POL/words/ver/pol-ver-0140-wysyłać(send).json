@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wysyłać",
+    "verbalNoun": "wysyłanie",
+    "activeAdjectival": "wysyłający",
+    "passiveAdjectival": "wysyłany",
+    "contemporaryAdverbial": "wysyłając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "wysyłaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wysyłano"
+          },
+          "plural": {
+            "allPluralGenders": "wysyłano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wysyłałem",
+            "f": "wysyłałam"
+          },
+          "plural": {
+            "virile": "wysyłaliśmy",
+            "nonvirile": "wysyłałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wysyłałeś",
+            "f": "wysyłałaś"
+          },
+          "plural": {
+            "virile": "wysyłaliście",
+            "nonvirile": "wysyłałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wysyłał",
+            "f": "wysyłała",
+            "n": "wysyłało"
+          },
+          "plural": {
+            "virile": "wysyłali",
+            "nonvirile": "wysyłały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wysyła się"
+          },
+          "plural": {
+            "allPluralGenders": "wysyła się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wysyłam"
+          },
+          "plural": {
+            "allPluralGenders": "wysyłamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wysyłasz"
+          },
+          "plural": {
+            "allPluralGenders": "wysyłacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wysyła"
+          },
+          "plural": {
+            "allPluralGenders": "wysyłają"
+          }
+        }
+      }
+    }
+  }
+}

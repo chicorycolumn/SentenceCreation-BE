@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "medycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "medyczny",
+          "gen": "medycznego",
+          "dat": "medycznemu",
+          "acc": "medycznego",
+          "ins": "medycznym",
+          "loc": "medycznym"
+        },
+        "m3": {
+          "nom": "medyczny",
+          "gen": "medycznego",
+          "dat": "medycznemu",
+          "acc": "medyczny",
+          "ins": "medycznym",
+          "loc": "medycznym"
+        },
+        "f": {
+          "nom": "medyczna",
+          "gen": "medycznej",
+          "dat": "medycznej",
+          "acc": "medyczną",
+          "ins": "medyczną",
+          "loc": "medycznej"
+        },
+        "n": {
+          "nom": "medyczne",
+          "gen": "medycznego",
+          "dat": "medycznemu",
+          "acc": "medyczne",
+          "ins": "medycznym",
+          "loc": "medycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "medyczni",
+          "gen": "medycznych",
+          "dat": "medycznym",
+          "acc": "medycznych",
+          "ins": "medycznymi",
+          "loc": "medycznych"
+        },
+        "nonvirile": {
+          "nom": "medyczne",
+          "gen": "medycznych",
+          "dat": "medycznym",
+          "acc": "medyczne",
+          "ins": "medycznymi",
+          "loc": "medycznych"
+        }
+      }
+    }
+  }
+}

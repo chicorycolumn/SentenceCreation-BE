@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "policy",
+      "gen": "policy's"
+    },
+    "plural": {
+      "nom": "policies",
+      "gen": "policies'"
+    }
+  }
+}

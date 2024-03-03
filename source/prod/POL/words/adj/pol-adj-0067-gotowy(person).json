@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "gotowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "gotowy",
+          "gen": "gotowego",
+          "dat": "gotowemu",
+          "acc": "gotowego",
+          "ins": "gotowym",
+          "loc": "gotowym"
+        },
+        "m3": {
+          "nom": "gotowy",
+          "gen": "gotowego",
+          "dat": "gotowemu",
+          "acc": "gotowy",
+          "ins": "gotowym",
+          "loc": "gotowym"
+        },
+        "f": {
+          "nom": "gotowa",
+          "gen": "gotowej",
+          "dat": "gotowej",
+          "acc": "gotową",
+          "ins": "gotową",
+          "loc": "gotowej"
+        },
+        "n": {
+          "nom": "gotowe",
+          "gen": "gotowego",
+          "dat": "gotowemu",
+          "acc": "gotowe",
+          "ins": "gotowym",
+          "loc": "gotowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "gotowi",
+          "gen": "gotowych",
+          "dat": "gotowym",
+          "acc": "gotowych",
+          "ins": "gotowymi",
+          "loc": "gotowych"
+        },
+        "nonvirile": {
+          "nom": "gotowe",
+          "gen": "gotowych",
+          "dat": "gotowym",
+          "acc": "gotowe",
+          "ins": "gotowymi",
+          "loc": "gotowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "gotowszy",
+          "gen": "gotowszego",
+          "dat": "gotowszemu",
+          "acc": "gotowszego",
+          "ins": "gotowszym",
+          "loc": "gotowszym"
+        },
+        "m3": {
+          "nom": "gotowszy",
+          "gen": "gotowszego",
+          "dat": "gotowszemu",
+          "acc": "gotowszy",
+          "ins": "gotowszym",
+          "loc": "gotowszym"
+        },
+        "f": {
+          "nom": "gotowsza",
+          "gen": "gotowszej",
+          "dat": "gotowszej",
+          "acc": "gotowszą",
+          "ins": "gotowszą",
+          "loc": "gotowszej"
+        },
+        "n": {
+          "nom": "gotowsze",
+          "gen": "gotowszego",
+          "dat": "gotowszemu",
+          "acc": "gotowsze",
+          "ins": "gotowszym",
+          "loc": "gotowszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "gotowsi",
+          "gen": "gotowszych",
+          "dat": "gotowszym",
+          "acc": "gotowszych",
+          "ins": "gotowszymi",
+          "loc": "gotowszych"
+        },
+        "nonvirile": {
+          "nom": "gotowsze",
+          "gen": "gotowszych",
+          "dat": "gotowszym",
+          "acc": "gotowsze",
+          "ins": "gotowszymi",
+          "loc": "gotowszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najgotowszy",
+          "gen": "najgotowszego",
+          "dat": "najgotowszemu",
+          "acc": "najgotowszego",
+          "ins": "najgotowszym",
+          "loc": "najgotowszym"
+        },
+        "m3": {
+          "nom": "najgotowszy",
+          "gen": "najgotowszego",
+          "dat": "najgotowszemu",
+          "acc": "najgotowszy",
+          "ins": "najgotowszym",
+          "loc": "najgotowszym"
+        },
+        "f": {
+          "nom": "najgotowsza",
+          "gen": "najgotowszej",
+          "dat": "najgotowszej",
+          "acc": "najgotowszą",
+          "ins": "najgotowszą",
+          "loc": "najgotowszej"
+        },
+        "n": {
+          "nom": "najgotowsze",
+          "gen": "najgotowszego",
+          "dat": "najgotowszemu",
+          "acc": "najgotowsze",
+          "ins": "najgotowszym",
+          "loc": "najgotowszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najgotowsi",
+          "gen": "najgotowszych",
+          "dat": "najgotowszym",
+          "acc": "najgotowszych",
+          "ins": "najgotowszymi",
+          "loc": "najgotowszych"
+        },
+        "nonvirile": {
+          "nom": "najgotowsze",
+          "gen": "najgotowszych",
+          "dat": "najgotowszym",
+          "acc": "najgotowsze",
+          "ins": "najgotowszymi",
+          "loc": "najgotowszych"
+        }
+      }
+    }
+  }
+}

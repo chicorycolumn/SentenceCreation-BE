@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dręczyć",
+    "verbalNoun": "dręczenie",
+    "activeAdjectival": "dręczący",
+    "passiveAdjectival": "dręczony",
+    "contemporaryAdverbial": "dręcząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dręcz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dręczono"
+          },
+          "plural": {
+            "allPluralGenders": "dręczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dręczyłem",
+            "f": "dręczyłam"
+          },
+          "plural": {
+            "virile": "dręczyliśmy",
+            "nonvirile": "dręczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dręczyłeś",
+            "f": "dręczyłaś"
+          },
+          "plural": {
+            "virile": "dręczyliście",
+            "nonvirile": "dręczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dręczył",
+            "f": "dręczyła",
+            "n": "dręczyło"
+          },
+          "plural": {
+            "virile": "dręczyli",
+            "nonvirile": "dręczyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dręczy się"
+          },
+          "plural": {
+            "allPluralGenders": "dręczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dręczę"
+          },
+          "plural": {
+            "allPluralGenders": "dręczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dręczysz"
+          },
+          "plural": {
+            "allPluralGenders": "dręczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dręczy"
+          },
+          "plural": {
+            "allPluralGenders": "dręczą"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "łza",
+      "gen": "łzy",
+      "dat": "łzie",
+      "acc": "łzę",
+      "ins": "łzą",
+      "loc": "łzie",
+      "voc": "łzo"
+    },
+    "plural": {
+      "nom": "łzy",
+      "gen": "łez",
+      "dat": "łzom",
+      "acc": "łzy",
+      "ins": "łzami",
+      "loc": "łzach",
+      "voc": "łzy"
+    }
+  }
+}

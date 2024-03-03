@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dworzec",
+      "gen": "dworca",
+      "dat": "dworcowi",
+      "acc": "dworzec",
+      "ins": "dworcem",
+      "loc": "dworcu",
+      "voc": "dworcu"
+    },
+    "plural": {
+      "nom": "dworce",
+      "gen": "dworców",
+      "dat": "dworcom",
+      "acc": "dworce",
+      "ins": "dworcami",
+      "loc": "dworcach",
+      "voc": "dworce"
+    }
+  }
+}

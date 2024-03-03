@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "mruczeć",
+    "verbalNoun": "mruczenie",
+    "activeAdjectival": "mruczący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "mrucząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "mrucz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mruczano"
+          },
+          "plural": {
+            "allPluralGenders": "mruczano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "mruczałem",
+            "f": "mruczałam"
+          },
+          "plural": {
+            "virile": "mruczeliśmy",
+            "nonvirile": "mruczałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "mruczałeś",
+            "f": "mruczałaś"
+          },
+          "plural": {
+            "virile": "mruczeliście",
+            "nonvirile": "mruczałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "mruczał",
+            "f": "mruczała",
+            "n": "mruczało"
+          },
+          "plural": {
+            "virile": "mruczeli",
+            "nonvirile": "mruczały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mruczy się"
+          },
+          "plural": {
+            "allPluralGenders": "mruczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "mruczę"
+          },
+          "plural": {
+            "allPluralGenders": "mruczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "mruczysz"
+          },
+          "plural": {
+            "allPluralGenders": "mruczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "mruczy"
+          },
+          "plural": {
+            "allPluralGenders": "mruczą"
+          }
+        }
+      }
+    }
+  }
+}

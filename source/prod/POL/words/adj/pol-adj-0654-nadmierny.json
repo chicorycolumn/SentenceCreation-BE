@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "nadmiernie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nadmierny",
+          "gen": "nadmiernego",
+          "dat": "nadmiernemu",
+          "acc": "nadmiernego",
+          "ins": "nadmiernym",
+          "loc": "nadmiernym"
+        },
+        "m3": {
+          "nom": "nadmierny",
+          "gen": "nadmiernego",
+          "dat": "nadmiernemu",
+          "acc": "nadmierny",
+          "ins": "nadmiernym",
+          "loc": "nadmiernym"
+        },
+        "f": {
+          "nom": "nadmierna",
+          "gen": "nadmiernej",
+          "dat": "nadmiernej",
+          "acc": "nadmierną",
+          "ins": "nadmierną",
+          "loc": "nadmiernej"
+        },
+        "n": {
+          "nom": "nadmierne",
+          "gen": "nadmiernego",
+          "dat": "nadmiernemu",
+          "acc": "nadmierne",
+          "ins": "nadmiernym",
+          "loc": "nadmiernym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nadmierni",
+          "gen": "nadmiernych",
+          "dat": "nadmiernym",
+          "acc": "nadmiernych",
+          "ins": "nadmiernymi",
+          "loc": "nadmiernych"
+        },
+        "nonvirile": {
+          "nom": "nadmierne",
+          "gen": "nadmiernych",
+          "dat": "nadmiernym",
+          "acc": "nadmierne",
+          "ins": "nadmiernymi",
+          "loc": "nadmiernych"
+        }
+      }
+    }
+  }
+}

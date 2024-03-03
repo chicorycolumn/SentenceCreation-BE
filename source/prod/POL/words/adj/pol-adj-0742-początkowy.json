@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "początkowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "początkowy",
+          "gen": "początkowego",
+          "dat": "początkowemu",
+          "acc": "początkowego",
+          "ins": "początkowym",
+          "loc": "początkowym"
+        },
+        "m3": {
+          "nom": "początkowy",
+          "gen": "początkowego",
+          "dat": "początkowemu",
+          "acc": "początkowy",
+          "ins": "początkowym",
+          "loc": "początkowym"
+        },
+        "f": {
+          "nom": "początkowa",
+          "gen": "początkowej",
+          "dat": "początkowej",
+          "acc": "początkową",
+          "ins": "początkową",
+          "loc": "początkowej"
+        },
+        "n": {
+          "nom": "początkowe",
+          "gen": "początkowego",
+          "dat": "początkowemu",
+          "acc": "początkowe",
+          "ins": "początkowym",
+          "loc": "początkowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "początkowi",
+          "gen": "początkowych",
+          "dat": "początkowym",
+          "acc": "początkowych",
+          "ins": "początkowymi",
+          "loc": "początkowych"
+        },
+        "nonvirile": {
+          "nom": "początkowe",
+          "gen": "początkowych",
+          "dat": "początkowym",
+          "acc": "początkowe",
+          "ins": "początkowymi",
+          "loc": "początkowych"
+        }
+      }
+    }
+  }
+}

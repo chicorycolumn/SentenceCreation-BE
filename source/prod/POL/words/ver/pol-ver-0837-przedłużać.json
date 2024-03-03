@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przedłużać",
+    "verbalNoun": "przedłużanie",
+    "activeAdjectival": "przedłużający",
+    "passiveAdjectival": "przedłużany",
+    "contemporaryAdverbial": "przedłużając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przedłużaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przedłużano"
+          },
+          "plural": {
+            "allPluralGenders": "przedłużano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przedłużałem",
+            "f": "przedłużałam"
+          },
+          "plural": {
+            "virile": "przedłużaliśmy",
+            "nonvirile": "przedłużałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przedłużałeś",
+            "f": "przedłużałaś"
+          },
+          "plural": {
+            "virile": "przedłużaliście",
+            "nonvirile": "przedłużałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przedłużał",
+            "f": "przedłużała",
+            "n": "przedłużało"
+          },
+          "plural": {
+            "virile": "przedłużali",
+            "nonvirile": "przedłużały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przedłuża się"
+          },
+          "plural": {
+            "allPluralGenders": "przedłuża się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przedłużam"
+          },
+          "plural": {
+            "allPluralGenders": "przedłużamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przedłużasz"
+          },
+          "plural": {
+            "allPluralGenders": "przedłużacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przedłuża"
+          },
+          "plural": {
+            "allPluralGenders": "przedłużają"
+          }
+        }
+      }
+    }
+  }
+}

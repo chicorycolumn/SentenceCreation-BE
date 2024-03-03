@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "crocodile",
+      "gen": "crocodile's"
+    },
+    "plural": {
+      "nom": "crocodiles",
+      "gen": "crocodiles'"
+    }
+  }
+}

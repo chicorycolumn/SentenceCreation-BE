@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "garaż",
+      "gen": "garażu",
+      "dat": "garażowi",
+      "acc": "garaż",
+      "ins": "garażem",
+      "loc": "garażu",
+      "voc": "garażu"
+    },
+    "plural": {
+      "nom": "garaże",
+      "gen": "garaży",
+      "dat": "garażom",
+      "acc": "garaże",
+      "ins": "garażami",
+      "loc": "garażach",
+      "voc": "garaże"
+    }
+  }
+}

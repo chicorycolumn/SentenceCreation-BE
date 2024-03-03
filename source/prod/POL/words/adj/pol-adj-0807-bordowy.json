@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "bordowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bordowy",
+          "gen": "bordowego",
+          "dat": "bordowemu",
+          "acc": "bordowego",
+          "ins": "bordowym",
+          "loc": "bordowym"
+        },
+        "m3": {
+          "nom": "bordowy",
+          "gen": "bordowego",
+          "dat": "bordowemu",
+          "acc": "bordowy",
+          "ins": "bordowym",
+          "loc": "bordowym"
+        },
+        "f": {
+          "nom": "bordowa",
+          "gen": "bordowej",
+          "dat": "bordowej",
+          "acc": "bordową",
+          "ins": "bordową",
+          "loc": "bordowej"
+        },
+        "n": {
+          "nom": "bordowe",
+          "gen": "bordowego",
+          "dat": "bordowemu",
+          "acc": "bordowe",
+          "ins": "bordowym",
+          "loc": "bordowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bordowi",
+          "gen": "bordowych",
+          "dat": "bordowym",
+          "acc": "bordowych",
+          "ins": "bordowymi",
+          "loc": "bordowych"
+        },
+        "nonvirile": {
+          "nom": "bordowe",
+          "gen": "bordowych",
+          "dat": "bordowym",
+          "acc": "bordowe",
+          "ins": "bordowymi",
+          "loc": "bordowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej bordowy",
+          "gen": "bardziej bordowego",
+          "dat": "bardziej bordowemu",
+          "acc": "bardziej bordowego",
+          "ins": "bardziej bordowym",
+          "loc": "bardziej bordowym"
+        },
+        "m3": {
+          "nom": "bardziej bordowy",
+          "gen": "bardziej bordowego",
+          "dat": "bardziej bordowemu",
+          "acc": "bardziej bordowy",
+          "ins": "bardziej bordowym",
+          "loc": "bardziej bordowym"
+        },
+        "f": {
+          "nom": "bardziej bordowa",
+          "gen": "bardziej bordowej",
+          "dat": "bardziej bordowej",
+          "acc": "bardziej bordową",
+          "ins": "bardziej bordową",
+          "loc": "bardziej bordowej"
+        },
+        "n": {
+          "nom": "bardziej bordowe",
+          "gen": "bardziej bordowego",
+          "dat": "bardziej bordowemu",
+          "acc": "bardziej bordowe",
+          "ins": "bardziej bordowym",
+          "loc": "bardziej bordowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej bordowi",
+          "gen": "bardziej bordowych",
+          "dat": "bardziej bordowym",
+          "acc": "bardziej bordowych",
+          "ins": "bardziej bordowymi",
+          "loc": "bardziej bordowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej bordowe",
+          "gen": "bardziej bordowych",
+          "dat": "bardziej bordowym",
+          "acc": "bardziej bordowe",
+          "ins": "bardziej bordowymi",
+          "loc": "bardziej bordowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej bordowy",
+          "gen": "najbardziej bordowego",
+          "dat": "najbardziej bordowemu",
+          "acc": "najbardziej bordowego",
+          "ins": "najbardziej bordowym",
+          "loc": "najbardziej bordowym"
+        },
+        "m3": {
+          "nom": "najbardziej bordowy",
+          "gen": "najbardziej bordowego",
+          "dat": "najbardziej bordowemu",
+          "acc": "najbardziej bordowy",
+          "ins": "najbardziej bordowym",
+          "loc": "najbardziej bordowym"
+        },
+        "f": {
+          "nom": "najbardziej bordowa",
+          "gen": "najbardziej bordowej",
+          "dat": "najbardziej bordowej",
+          "acc": "najbardziej bordową",
+          "ins": "najbardziej bordową",
+          "loc": "najbardziej bordowej"
+        },
+        "n": {
+          "nom": "najbardziej bordowe",
+          "gen": "najbardziej bordowego",
+          "dat": "najbardziej bordowemu",
+          "acc": "najbardziej bordowe",
+          "ins": "najbardziej bordowym",
+          "loc": "najbardziej bordowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej bordowi",
+          "gen": "najbardziej bordowych",
+          "dat": "najbardziej bordowym",
+          "acc": "najbardziej bordowych",
+          "ins": "najbardziej bordowymi",
+          "loc": "najbardziej bordowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej bordowe",
+          "gen": "najbardziej bordowych",
+          "dat": "najbardziej bordowym",
+          "acc": "najbardziej bordowe",
+          "ins": "najbardziej bordowymi",
+          "loc": "najbardziej bordowych"
+        }
+      }
+    }
+  }
+}

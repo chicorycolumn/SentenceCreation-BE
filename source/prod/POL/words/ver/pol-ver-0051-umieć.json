@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "umieć",
+    "verbalNoun": "umienie",
+    "activeAdjectival": "umiejący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "umiejąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "umiej",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "umiano"
+          },
+          "plural": {
+            "allPluralGenders": "umiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "umiałem",
+            "f": "umiałam"
+          },
+          "plural": {
+            "virile": "umieliśmy",
+            "nonvirile": "umiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "umiałeś",
+            "f": "umiałaś"
+          },
+          "plural": {
+            "virile": "umieliście",
+            "nonvirile": "umiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "umiał",
+            "f": "umiała",
+            "n": "umiało"
+          },
+          "plural": {
+            "virile": "umieli",
+            "nonvirile": "umiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "umie się"
+          },
+          "plural": {
+            "allPluralGenders": "umie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "umiem"
+          },
+          "plural": {
+            "allPluralGenders": "umiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "umiesz"
+          },
+          "plural": {
+            "allPluralGenders": "umiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "umie"
+          },
+          "plural": {
+            "allPluralGenders": "umieją"
+          }
+        }
+      }
+    }
+  }
+}

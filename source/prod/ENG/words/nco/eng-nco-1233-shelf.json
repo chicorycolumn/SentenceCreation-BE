@@ -1,0 +1,16 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "shelf",
+      "gen": "shelf's"
+    },
+    "plural": {
+      "nom": [
+        "shelves"
+      ],
+      "gen": [
+        "shelves'"
+      ]
+    }
+  }
+}

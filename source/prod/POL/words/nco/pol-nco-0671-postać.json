@@ -1,0 +1,31 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "postać",
+      "gen": "postaci",
+      "dat": "postaci",
+      "acc": "postać",
+      "ins": "postacią",
+      "loc": "postaci",
+      "voc": "postaci"
+    },
+    "plural": {
+      "nom": [
+        "postacie",
+        "postaci"
+      ],
+      "gen": "postaci",
+      "dat": "postaciom",
+      "acc": [
+        "postacie",
+        "postaci"
+      ],
+      "ins": "postaciami",
+      "loc": "postaciach",
+      "voc": [
+        "postacie",
+        "postaci"
+      ]
+    }
+  }
+}

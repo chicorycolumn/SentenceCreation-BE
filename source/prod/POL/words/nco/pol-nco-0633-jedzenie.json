@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "jedzenie",
+      "gen": "jedzenia",
+      "dat": "jedzeniu",
+      "acc": "jedzenie",
+      "ins": "jedzeniem",
+      "loc": "jedzeniu",
+      "voc": "jedzenie"
+    }
+  }
+}

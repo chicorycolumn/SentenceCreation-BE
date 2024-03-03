@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "przyrodniczo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przyrodniczy",
+          "gen": "przyrodniczego",
+          "dat": "przyrodniczemu",
+          "acc": "przyrodniczego",
+          "ins": "przyrodniczym",
+          "loc": "przyrodniczym"
+        },
+        "m3": {
+          "nom": "przyrodniczy",
+          "gen": "przyrodniczego",
+          "dat": "przyrodniczemu",
+          "acc": "przyrodniczy",
+          "ins": "przyrodniczym",
+          "loc": "przyrodniczym"
+        },
+        "f": {
+          "nom": "przyrodnicza",
+          "gen": "przyrodniczej",
+          "dat": "przyrodniczej",
+          "acc": "przyrodniczą",
+          "ins": "przyrodniczą",
+          "loc": "przyrodniczej"
+        },
+        "n": {
+          "nom": "przyrodnicze",
+          "gen": "przyrodniczego",
+          "dat": "przyrodniczemu",
+          "acc": "przyrodnicze",
+          "ins": "przyrodniczym",
+          "loc": "przyrodniczym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przyrodniczy",
+          "gen": "przyrodniczych",
+          "dat": "przyrodniczym",
+          "acc": "przyrodniczych",
+          "ins": "przyrodniczymi",
+          "loc": "przyrodniczych"
+        },
+        "nonvirile": {
+          "nom": "przyrodnicze",
+          "gen": "przyrodniczych",
+          "dat": "przyrodniczym",
+          "acc": "przyrodnicze",
+          "ins": "przyrodniczymi",
+          "loc": "przyrodniczych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej przyrodniczy",
+          "gen": "bardziej przyrodniczego",
+          "dat": "bardziej przyrodniczemu",
+          "acc": "bardziej przyrodniczego",
+          "ins": "bardziej przyrodniczym",
+          "loc": "bardziej przyrodniczym"
+        },
+        "m3": {
+          "nom": "bardziej przyrodniczy",
+          "gen": "bardziej przyrodniczego",
+          "dat": "bardziej przyrodniczemu",
+          "acc": "bardziej przyrodniczy",
+          "ins": "bardziej przyrodniczym",
+          "loc": "bardziej przyrodniczym"
+        },
+        "f": {
+          "nom": "bardziej przyrodnicza",
+          "gen": "bardziej przyrodniczej",
+          "dat": "bardziej przyrodniczej",
+          "acc": "bardziej przyrodniczą",
+          "ins": "bardziej przyrodniczą",
+          "loc": "bardziej przyrodniczej"
+        },
+        "n": {
+          "nom": "bardziej przyrodnicze",
+          "gen": "bardziej przyrodniczego",
+          "dat": "bardziej przyrodniczemu",
+          "acc": "bardziej przyrodnicze",
+          "ins": "bardziej przyrodniczym",
+          "loc": "bardziej przyrodniczym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej przyrodniczy",
+          "gen": "bardziej przyrodniczych",
+          "dat": "bardziej przyrodniczym",
+          "acc": "bardziej przyrodniczych",
+          "ins": "bardziej przyrodniczymi",
+          "loc": "bardziej przyrodniczych"
+        },
+        "nonvirile": {
+          "nom": "bardziej przyrodnicze",
+          "gen": "bardziej przyrodniczych",
+          "dat": "bardziej przyrodniczym",
+          "acc": "bardziej przyrodnicze",
+          "ins": "bardziej przyrodniczymi",
+          "loc": "bardziej przyrodniczych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej przyrodniczy",
+          "gen": "najbardziej przyrodniczego",
+          "dat": "najbardziej przyrodniczemu",
+          "acc": "najbardziej przyrodniczego",
+          "ins": "najbardziej przyrodniczym",
+          "loc": "najbardziej przyrodniczym"
+        },
+        "m3": {
+          "nom": "najbardziej przyrodniczy",
+          "gen": "najbardziej przyrodniczego",
+          "dat": "najbardziej przyrodniczemu",
+          "acc": "najbardziej przyrodniczy",
+          "ins": "najbardziej przyrodniczym",
+          "loc": "najbardziej przyrodniczym"
+        },
+        "f": {
+          "nom": "najbardziej przyrodnicza",
+          "gen": "najbardziej przyrodniczej",
+          "dat": "najbardziej przyrodniczej",
+          "acc": "najbardziej przyrodniczą",
+          "ins": "najbardziej przyrodniczą",
+          "loc": "najbardziej przyrodniczej"
+        },
+        "n": {
+          "nom": "najbardziej przyrodnicze",
+          "gen": "najbardziej przyrodniczego",
+          "dat": "najbardziej przyrodniczemu",
+          "acc": "najbardziej przyrodnicze",
+          "ins": "najbardziej przyrodniczym",
+          "loc": "najbardziej przyrodniczym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej przyrodniczy",
+          "gen": "najbardziej przyrodniczych",
+          "dat": "najbardziej przyrodniczym",
+          "acc": "najbardziej przyrodniczych",
+          "ins": "najbardziej przyrodniczymi",
+          "loc": "najbardziej przyrodniczych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej przyrodnicze",
+          "gen": "najbardziej przyrodniczych",
+          "dat": "najbardziej przyrodniczym",
+          "acc": "najbardziej przyrodnicze",
+          "ins": "najbardziej przyrodniczymi",
+          "loc": "najbardziej przyrodniczych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dodatek",
+      "gen": "dodatku",
+      "dat": "dodatkowi",
+      "acc": "dodatek",
+      "ins": "dodatkiem",
+      "loc": "dodatku",
+      "voc": "dodatku"
+    },
+    "plural": {
+      "nom": "dodatki",
+      "gen": "dodatków",
+      "dat": "dodatkom",
+      "acc": "dodatki",
+      "ins": "dodatkami",
+      "loc": "dodatkach",
+      "voc": "dodatki"
+    }
+  }
+}

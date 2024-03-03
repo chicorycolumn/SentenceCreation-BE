@@ -1,0 +1,106 @@
+{
+  "inflections": {
+    "infinitive": "cuchnąć",
+    "verbalNoun": "cuchnięcie",
+    "activeAdjectival": "cuchnący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "cuchnąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "cuchnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "cuchnięto"
+          },
+          "plural": {
+            "allPluralGenders": "cuchnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": [
+              "cuchnąłem"
+            ],
+            "f": [
+              "cuchnęłam"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "cuchnęliśmy"
+            ],
+            "nonvirile": [
+              "cuchnęłyśmy"
+            ]
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": [
+              "cuchnąłeś"
+            ],
+            "f": [
+              "cuchnęłaś"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "cuchnęliście"
+            ],
+            "nonvirile": [
+              "cuchnęłyście"
+            ]
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "cuchnął",
+            "f": "cuchnęła",
+            "n": "cuchnęło"
+          },
+          "plural": {
+            "virile": "cuchnęli",
+            "nonvirile": "cuchnęły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "cuchnie się"
+          },
+          "plural": {
+            "allPluralGenders": "cuchnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "cuchnę"
+          },
+          "plural": {
+            "allPluralGenders": "cuchniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "cuchniesz"
+          },
+          "plural": {
+            "allPluralGenders": "cuchniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "cuchnie"
+          },
+          "plural": {
+            "allPluralGenders": "cuchną"
+          }
+        }
+      }
+    }
+  }
+}

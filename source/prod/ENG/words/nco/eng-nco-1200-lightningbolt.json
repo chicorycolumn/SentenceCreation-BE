@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lightning bolt",
+      "gen": "lightning bolt's"
+    },
+    "plural": {
+      "nom": "lightning bolts",
+      "gen": "lightning bolts'"
+    }
+  }
+}

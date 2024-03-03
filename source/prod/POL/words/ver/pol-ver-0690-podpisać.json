@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "podpisać",
+    "verbalNoun": "podpisanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "podpisany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "podpisawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podpisze się"
+          },
+          "plural": {
+            "allPluralGenders": "podpisze się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podpiszę"
+          },
+          "plural": {
+            "allPluralGenders": "podpiszemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podpiszesz"
+          },
+          "plural": {
+            "allPluralGenders": "podpiszecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podpisze"
+          },
+          "plural": {
+            "allPluralGenders": "podpiszą"
+          }
+        }
+      },
+      "imperative": "podpisz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podpisano"
+          },
+          "plural": {
+            "allPluralGenders": "podpisano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "podpisałem",
+            "f": "podpisałam"
+          },
+          "plural": {
+            "virile": "podpisaliśmy",
+            "nonvirile": "podpisałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podpisałeś",
+            "f": "podpisałaś"
+          },
+          "plural": {
+            "virile": "podpisaliście",
+            "nonvirile": "podpisałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podpisał",
+            "f": "podpisała",
+            "n": "podpisało"
+          },
+          "plural": {
+            "virile": "podpisali",
+            "nonvirile": "podpisały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

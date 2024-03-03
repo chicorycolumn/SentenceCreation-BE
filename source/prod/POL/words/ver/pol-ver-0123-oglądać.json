@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oglądać",
+    "verbalNoun": "oglądanie",
+    "activeAdjectival": "oglądający",
+    "passiveAdjectival": "oglądany",
+    "contemporaryAdverbial": "oglądając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "oglądaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oglądano"
+          },
+          "plural": {
+            "allPluralGenders": "oglądano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oglądałem",
+            "f": "oglądałam"
+          },
+          "plural": {
+            "virile": "oglądaliśmy",
+            "nonvirile": "oglądałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oglądałeś",
+            "f": "oglądałaś"
+          },
+          "plural": {
+            "virile": "oglądaliście",
+            "nonvirile": "oglądałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oglądał",
+            "f": "oglądała",
+            "n": "oglądało"
+          },
+          "plural": {
+            "virile": "oglądali",
+            "nonvirile": "oglądały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ogląda się"
+          },
+          "plural": {
+            "allPluralGenders": "ogląda się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oglądam"
+          },
+          "plural": {
+            "allPluralGenders": "oglądamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oglądasz"
+          },
+          "plural": {
+            "allPluralGenders": "oglądacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ogląda"
+          },
+          "plural": {
+            "allPluralGenders": "oglądają"
+          }
+        }
+      }
+    }
+  }
+}

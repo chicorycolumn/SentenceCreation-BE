@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zabójstwo",
+      "gen": "zabójstwa",
+      "dat": "zabójstwu",
+      "acc": "zabójstwo",
+      "ins": "zabójstwem",
+      "loc": "zabójstwie",
+      "voc": "zabójstwo"
+    },
+    "plural": {
+      "nom": "zabójstwa",
+      "gen": "zabójstw",
+      "dat": "zabójstwom",
+      "acc": "zabójstwa",
+      "ins": "zabójstwami",
+      "loc": "zabójstwach",
+      "voc": "zabójstwa"
+    }
+  }
+}

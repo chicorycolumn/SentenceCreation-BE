@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pchnąć",
+    "verbalNoun": "pchnięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pchnięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pchnąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pchnie się"
+          },
+          "plural": {
+            "allPluralGenders": "pchnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pchnę"
+          },
+          "plural": {
+            "allPluralGenders": "pchniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pchniesz"
+          },
+          "plural": {
+            "allPluralGenders": "pchniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pchnie"
+          },
+          "plural": {
+            "allPluralGenders": "pchną"
+          }
+        }
+      },
+      "imperative": "pchnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pchnięto"
+          },
+          "plural": {
+            "allPluralGenders": "pchnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pchnąłem",
+            "f": "pchnęłam"
+          },
+          "plural": {
+            "virile": "pchnęliśmy",
+            "nonvirile": "pchnęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pchnąłeś",
+            "f": "pchnęłaś"
+          },
+          "plural": {
+            "virile": "pchnęliście",
+            "nonvirile": "pchnęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pchnął",
+            "f": "pchnęła",
+            "n": "pchnęło"
+          },
+          "plural": {
+            "virile": "pchnęli",
+            "nonvirile": "pchnęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

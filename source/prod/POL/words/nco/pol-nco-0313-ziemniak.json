@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ziemniak",
+      "gen": "ziemniaka",
+      "dat": "ziemniakowi",
+      "acc": "ziemniaka",
+      "ins": "ziemniakiem",
+      "loc": "ziemniaku",
+      "voc": "ziemniaku"
+    },
+    "plural": {
+      "nom": "ziemniaki",
+      "gen": "ziemniaków",
+      "dat": "ziemniakom",
+      "acc": "ziemniaki",
+      "ins": "ziemniakami",
+      "loc": "ziemniakach",
+      "voc": "ziemniaki"
+    }
+  }
+}

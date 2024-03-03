@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rhinoceros",
+      "gen": "rhinoceros's"
+    },
+    "plural": {
+      "nom": "rhinoceroses",
+      "gen": "rhinoceroses'"
+    }
+  }
+}

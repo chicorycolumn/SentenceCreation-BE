@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "popołudniowy",
+          "gen": "popołudniowego",
+          "dat": "popołudniowemu",
+          "acc": "popołudniowego",
+          "ins": "popołudniowym",
+          "loc": "popołudniowym"
+        },
+        "m3": {
+          "nom": "popołudniowy",
+          "gen": "popołudniowego",
+          "dat": "popołudniowemu",
+          "acc": "popołudniowy",
+          "ins": "popołudniowym",
+          "loc": "popołudniowym"
+        },
+        "f": {
+          "nom": "popołudniowa",
+          "gen": "popołudniowej",
+          "dat": "popołudniowej",
+          "acc": "popołudniową",
+          "ins": "popołudniową",
+          "loc": "popołudniowej"
+        },
+        "n": {
+          "nom": "popołudniowe",
+          "gen": "popołudniowego",
+          "dat": "popołudniowemu",
+          "acc": "popołudniowe",
+          "ins": "popołudniowym",
+          "loc": "popołudniowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "popołudniowi",
+          "gen": "popołudniowych",
+          "dat": "popołudniowym",
+          "acc": "popołudniowych",
+          "ins": "popołudniowymi",
+          "loc": "popołudniowych"
+        },
+        "nonvirile": {
+          "nom": "popołudniowe",
+          "gen": "popołudniowych",
+          "dat": "popołudniowym",
+          "acc": "popołudniowe",
+          "ins": "popołudniowymi",
+          "loc": "popołudniowych"
+        }
+      }
+    }
+  }
+}

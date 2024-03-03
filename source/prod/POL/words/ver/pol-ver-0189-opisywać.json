@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "opisywać",
+    "verbalNoun": "opisywanie",
+    "activeAdjectival": "opisujący",
+    "passiveAdjectival": "opisywany",
+    "contemporaryAdverbial": "opisując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "opisuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opisywano"
+          },
+          "plural": {
+            "allPluralGenders": "opisywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "opisywałem",
+            "f": "opisywałam"
+          },
+          "plural": {
+            "virile": "opisywaliśmy",
+            "nonvirile": "opisywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "opisywałeś",
+            "f": "opisywałaś"
+          },
+          "plural": {
+            "virile": "opisywaliście",
+            "nonvirile": "opisywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "opisywał",
+            "f": "opisywała",
+            "n": "opisywało"
+          },
+          "plural": {
+            "virile": "opisywali",
+            "nonvirile": "opisywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opisuje się"
+          },
+          "plural": {
+            "allPluralGenders": "opisuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "opisuję"
+          },
+          "plural": {
+            "allPluralGenders": "opisujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "opisujesz"
+          },
+          "plural": {
+            "allPluralGenders": "opisujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "opisuje"
+          },
+          "plural": {
+            "allPluralGenders": "opisują"
+          }
+        }
+      }
+    }
+  }
+}

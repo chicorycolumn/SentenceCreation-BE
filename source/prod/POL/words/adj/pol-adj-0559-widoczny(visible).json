@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "widocznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "widoczny",
+          "gen": "widocznego",
+          "dat": "widocznemu",
+          "acc": "widocznego",
+          "ins": "widocznym",
+          "loc": "widocznym"
+        },
+        "m3": {
+          "nom": "widoczny",
+          "gen": "widocznego",
+          "dat": "widocznemu",
+          "acc": "widoczny",
+          "ins": "widocznym",
+          "loc": "widocznym"
+        },
+        "f": {
+          "nom": "widoczna",
+          "gen": "widocznej",
+          "dat": "widocznej",
+          "acc": "widoczną",
+          "ins": "widoczną",
+          "loc": "widocznej"
+        },
+        "n": {
+          "nom": "widoczne",
+          "gen": "widocznego",
+          "dat": "widocznemu",
+          "acc": "widoczne",
+          "ins": "widocznym",
+          "loc": "widocznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "widoczni",
+          "gen": "widocznych",
+          "dat": "widocznym",
+          "acc": "widocznych",
+          "ins": "widocznymi",
+          "loc": "widocznych"
+        },
+        "nonvirile": {
+          "nom": "widoczne",
+          "gen": "widocznych",
+          "dat": "widocznym",
+          "acc": "widoczne",
+          "ins": "widocznymi",
+          "loc": "widocznych"
+        }
+      }
+    }
+  }
+}

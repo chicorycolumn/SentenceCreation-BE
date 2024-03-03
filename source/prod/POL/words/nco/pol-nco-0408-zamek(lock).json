@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zamek",
+      "gen": "zamka",
+      "dat": "zamkowi",
+      "acc": "zamek",
+      "ins": "zamkiem",
+      "loc": "zamku",
+      "voc": "zamku"
+    },
+    "plural": {
+      "nom": "zamki",
+      "gen": "zamków",
+      "dat": "zamkom",
+      "acc": "zamki",
+      "ins": "zamkami",
+      "loc": "zamkach",
+      "voc": "zamki"
+    }
+  }
+}

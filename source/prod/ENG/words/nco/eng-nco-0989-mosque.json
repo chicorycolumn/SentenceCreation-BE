@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mosque",
+      "gen": "mosque's"
+    },
+    "plural": {
+      "nom": "mosques",
+      "gen": "mosques'"
+    }
+  }
+}

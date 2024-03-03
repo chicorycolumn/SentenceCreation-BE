@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "brąz",
+      "gen": "brązu",
+      "dat": "brązowi",
+      "acc": "brąz",
+      "ins": "brązem",
+      "loc": "brązie",
+      "voc": "brązie"
+    },
+    "plural": {
+      "nom": "brązy",
+      "gen": "brązów",
+      "dat": "brązom",
+      "acc": "brązy",
+      "ins": "brązami",
+      "loc": "brązach",
+      "voc": "brązy"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kapelusz",
+      "gen": "kapelusza",
+      "dat": "kapeluszowi",
+      "acc": "kapelusz",
+      "ins": "kapeluszem",
+      "loc": "kapeluszu",
+      "voc": "kapeluszu"
+    },
+    "plural": {
+      "nom": "kapelusze",
+      "gen": "kapeluszy",
+      "dat": "kapeluszom",
+      "acc": "kapelusze",
+      "ins": "kapeluszami",
+      "loc": "kapeluszach",
+      "voc": "kapelusze"
+    }
+  }
+}

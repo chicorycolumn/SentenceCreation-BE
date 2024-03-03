@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "czynić",
+    "verbalNoun": "czynienie",
+    "activeAdjectival": "czyniący",
+    "passiveAdjectival": "czyniony",
+    "contemporaryAdverbial": "czyniąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "czyń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "czyniono"
+          },
+          "plural": {
+            "allPluralGenders": "czyniono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "czyniłem",
+            "f": "czyniłam"
+          },
+          "plural": {
+            "virile": "czyniliśmy",
+            "nonvirile": "czyniłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "czyniłeś",
+            "f": "czyniłaś"
+          },
+          "plural": {
+            "virile": "czyniliście",
+            "nonvirile": "czyniłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "czynił",
+            "f": "czyniła",
+            "n": "czyniło"
+          },
+          "plural": {
+            "virile": "czynili",
+            "nonvirile": "czyniły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "czyni się"
+          },
+          "plural": {
+            "allPluralGenders": "czyni się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "czynię"
+          },
+          "plural": {
+            "allPluralGenders": "czynimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "czynisz"
+          },
+          "plural": {
+            "allPluralGenders": "czynicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "czyni"
+          },
+          "plural": {
+            "allPluralGenders": "czynią"
+          }
+        }
+      }
+    }
+  }
+}

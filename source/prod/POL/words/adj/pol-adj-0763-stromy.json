@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "stromo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "stromy",
+          "gen": "stromego",
+          "dat": "stromemu",
+          "acc": "stromego",
+          "ins": "stromym",
+          "loc": "stromym"
+        },
+        "m3": {
+          "nom": "stromy",
+          "gen": "stromego",
+          "dat": "stromemu",
+          "acc": "stromy",
+          "ins": "stromym",
+          "loc": "stromym"
+        },
+        "f": {
+          "nom": "stroma",
+          "gen": "stromej",
+          "dat": "stromej",
+          "acc": "stromą",
+          "ins": "stromą",
+          "loc": "stromej"
+        },
+        "n": {
+          "nom": "strome",
+          "gen": "stromego",
+          "dat": "stromemu",
+          "acc": "strome",
+          "ins": "stromym",
+          "loc": "stromym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "stromi",
+          "gen": "stromych",
+          "dat": "stromym",
+          "acc": "stromych",
+          "ins": "stromymi",
+          "loc": "stromych"
+        },
+        "nonvirile": {
+          "nom": "strome",
+          "gen": "stromych",
+          "dat": "stromym",
+          "acc": "strome",
+          "ins": "stromymi",
+          "loc": "stromych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej stromy",
+          "gen": "bardziej stromego",
+          "dat": "bardziej stromemu",
+          "acc": "bardziej stromego",
+          "ins": "bardziej stromym",
+          "loc": "bardziej stromym"
+        },
+        "m3": {
+          "nom": "bardziej stromy",
+          "gen": "bardziej stromego",
+          "dat": "bardziej stromemu",
+          "acc": "bardziej stromy",
+          "ins": "bardziej stromym",
+          "loc": "bardziej stromym"
+        },
+        "f": {
+          "nom": "bardziej stroma",
+          "gen": "bardziej stromej",
+          "dat": "bardziej stromej",
+          "acc": "bardziej stromą",
+          "ins": "bardziej stromą",
+          "loc": "bardziej stromej"
+        },
+        "n": {
+          "nom": "bardziej strome",
+          "gen": "bardziej stromego",
+          "dat": "bardziej stromemu",
+          "acc": "bardziej strome",
+          "ins": "bardziej stromym",
+          "loc": "bardziej stromym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej stromi",
+          "gen": "bardziej stromych",
+          "dat": "bardziej stromym",
+          "acc": "bardziej stromych",
+          "ins": "bardziej stromymi",
+          "loc": "bardziej stromych"
+        },
+        "nonvirile": {
+          "nom": "bardziej strome",
+          "gen": "bardziej stromych",
+          "dat": "bardziej stromym",
+          "acc": "bardziej strome",
+          "ins": "bardziej stromymi",
+          "loc": "bardziej stromych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej stromy",
+          "gen": "najbardziej stromego",
+          "dat": "najbardziej stromemu",
+          "acc": "najbardziej stromego",
+          "ins": "najbardziej stromym",
+          "loc": "najbardziej stromym"
+        },
+        "m3": {
+          "nom": "najbardziej stromy",
+          "gen": "najbardziej stromego",
+          "dat": "najbardziej stromemu",
+          "acc": "najbardziej stromy",
+          "ins": "najbardziej stromym",
+          "loc": "najbardziej stromym"
+        },
+        "f": {
+          "nom": "najbardziej stroma",
+          "gen": "najbardziej stromej",
+          "dat": "najbardziej stromej",
+          "acc": "najbardziej stromą",
+          "ins": "najbardziej stromą",
+          "loc": "najbardziej stromej"
+        },
+        "n": {
+          "nom": "najbardziej strome",
+          "gen": "najbardziej stromego",
+          "dat": "najbardziej stromemu",
+          "acc": "najbardziej strome",
+          "ins": "najbardziej stromym",
+          "loc": "najbardziej stromym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej stromi",
+          "gen": "najbardziej stromych",
+          "dat": "najbardziej stromym",
+          "acc": "najbardziej stromych",
+          "ins": "najbardziej stromymi",
+          "loc": "najbardziej stromych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej strome",
+          "gen": "najbardziej stromych",
+          "dat": "najbardziej stromym",
+          "acc": "najbardziej strome",
+          "ins": "najbardziej stromymi",
+          "loc": "najbardziej stromych"
+        }
+      }
+    }
+  }
+}

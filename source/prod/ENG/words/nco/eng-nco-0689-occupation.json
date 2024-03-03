@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "occupation",
+      "gen": "occupation's"
+    },
+    "plural": {
+      "nom": "occupations",
+      "gen": "occupations'"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "linia",
+      "gen": "linii",
+      "dat": "linii",
+      "acc": "linię",
+      "ins": "linią",
+      "loc": "linii",
+      "voc": "linio"
+    },
+    "plural": {
+      "nom": "linie",
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "linii"
+        ],
+        "additionalInfrequent": [
+          "linij"
+        ]
+      },
+      "dat": "liniom",
+      "acc": "linie",
+      "ins": "liniami",
+      "loc": "liniach",
+      "voc": "linie"
+    }
+  }
+}

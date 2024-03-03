@@ -1,0 +1,15 @@
+{
+  "inflections": {
+    "infinitive": "be allowed",
+    "v2": {
+      "isTerminus": true,
+      "normal": [
+        "was allowed",
+        "were allowed"
+      ]
+    },
+    "v3": "been allowed",
+    "thirdPS": "is allowed",
+    "gerund": "being allowed"
+  }
+}

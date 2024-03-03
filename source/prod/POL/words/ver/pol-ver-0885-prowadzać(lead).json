@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "prowadzać",
+    "verbalNoun": "prowadzanie",
+    "activeAdjectival": "prowadzający",
+    "passiveAdjectival": "prowadzany",
+    "contemporaryAdverbial": "prowadzając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "prowadzaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "prowadzano"
+          },
+          "plural": {
+            "allPluralGenders": "prowadzano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "prowadzałem",
+            "f": "prowadzałam"
+          },
+          "plural": {
+            "virile": "prowadzaliśmy",
+            "nonvirile": "prowadzałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "prowadzałeś",
+            "f": "prowadzałaś"
+          },
+          "plural": {
+            "virile": "prowadzaliście",
+            "nonvirile": "prowadzałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "prowadzał",
+            "f": "prowadzała",
+            "n": "prowadzało"
+          },
+          "plural": {
+            "virile": "prowadzali",
+            "nonvirile": "prowadzały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "prowadza się"
+          },
+          "plural": {
+            "allPluralGenders": "prowadza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "prowadzam"
+          },
+          "plural": {
+            "allPluralGenders": "prowadzamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "prowadzasz"
+          },
+          "plural": {
+            "allPluralGenders": "prowadzacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "prowadza"
+          },
+          "plural": {
+            "allPluralGenders": "prowadzają"
+          }
+        }
+      }
+    }
+  }
+}

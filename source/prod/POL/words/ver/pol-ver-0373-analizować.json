@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "analizować",
+    "verbalNoun": "analizowanie",
+    "activeAdjectival": "analizujący",
+    "passiveAdjectival": "analizowany",
+    "contemporaryAdverbial": "analizując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "analizuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "analizowano"
+          },
+          "plural": {
+            "allPluralGenders": "analizowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "analizowałem",
+            "f": "analizowałam"
+          },
+          "plural": {
+            "virile": "analizowaliśmy",
+            "nonvirile": "analizowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "analizowałeś",
+            "f": "analizowałaś"
+          },
+          "plural": {
+            "virile": "analizowaliście",
+            "nonvirile": "analizowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "analizował",
+            "f": "analizowała",
+            "n": "analizowało"
+          },
+          "plural": {
+            "virile": "analizowali",
+            "nonvirile": "analizowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "analizuje się"
+          },
+          "plural": {
+            "allPluralGenders": "analizuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "analizuję"
+          },
+          "plural": {
+            "allPluralGenders": "analizujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "analizujesz"
+          },
+          "plural": {
+            "allPluralGenders": "analizujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "analizuje"
+          },
+          "plural": {
+            "allPluralGenders": "analizują"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oszczędzić",
+    "verbalNoun": "oszczędzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "oszczędzony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "oszczędziwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oszczędzą się"
+          },
+          "plural": {
+            "allPluralGenders": "oszczędzą się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oszczędzę"
+          },
+          "plural": {
+            "allPluralGenders": "oszczędząmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oszczędząsz"
+          },
+          "plural": {
+            "allPluralGenders": "oszczędzącie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "oszczędzą"
+          },
+          "plural": {
+            "allPluralGenders": "oszczędzi"
+          }
+        }
+      },
+      "imperative": "oszczędź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oszczędzono"
+          },
+          "plural": {
+            "allPluralGenders": "oszczędzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oszczędziłem",
+            "f": "oszczędziłam"
+          },
+          "plural": {
+            "virile": "oszczędźliśmy",
+            "nonvirile": "oszczędziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oszczędziłeś",
+            "f": "oszczędziłaś"
+          },
+          "plural": {
+            "virile": "oszczędźliście",
+            "nonvirile": "oszczędziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oszczędził",
+            "f": "oszczędziła",
+            "n": "oszczędziło"
+          },
+          "plural": {
+            "virile": "oszczędźli",
+            "nonvirile": "oszczędziły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

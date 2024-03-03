@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "sypko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "sypki",
+          "gen": "sypkiego",
+          "dat": "sypkiemu",
+          "acc": "sypkiego",
+          "ins": "sypkim",
+          "loc": "sypkim"
+        },
+        "m3": {
+          "nom": "sypki",
+          "gen": "sypkiego",
+          "dat": "sypkiemu",
+          "acc": "sypki",
+          "ins": "sypkim",
+          "loc": "sypkim"
+        },
+        "f": {
+          "nom": "sypka",
+          "gen": "sypkiej",
+          "dat": "sypkiej",
+          "acc": "sypką",
+          "ins": "sypką",
+          "loc": "sypkiej"
+        },
+        "n": {
+          "nom": "sypkie",
+          "gen": "sypkiego",
+          "dat": "sypkiemu",
+          "acc": "sypkie",
+          "ins": "sypkim",
+          "loc": "sypkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "sypcy",
+          "gen": "sypkich",
+          "dat": "sypkim",
+          "acc": "sypkich",
+          "ins": "sypkimi",
+          "loc": "sypkich"
+        },
+        "nonvirile": {
+          "nom": "sypkie",
+          "gen": "sypkich",
+          "dat": "sypkim",
+          "acc": "sypkie",
+          "ins": "sypkimi",
+          "loc": "sypkich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej sypki",
+          "gen": "bardziej sypkiego",
+          "dat": "bardziej sypkiemu",
+          "acc": "bardziej sypkiego",
+          "ins": "bardziej sypkim",
+          "loc": "bardziej sypkim"
+        },
+        "m3": {
+          "nom": "bardziej sypki",
+          "gen": "bardziej sypkiego",
+          "dat": "bardziej sypkiemu",
+          "acc": "bardziej sypki",
+          "ins": "bardziej sypkim",
+          "loc": "bardziej sypkim"
+        },
+        "f": {
+          "nom": "bardziej sypka",
+          "gen": "bardziej sypkiej",
+          "dat": "bardziej sypkiej",
+          "acc": "bardziej sypką",
+          "ins": "bardziej sypką",
+          "loc": "bardziej sypkiej"
+        },
+        "n": {
+          "nom": "bardziej sypkie",
+          "gen": "bardziej sypkiego",
+          "dat": "bardziej sypkiemu",
+          "acc": "bardziej sypkie",
+          "ins": "bardziej sypkim",
+          "loc": "bardziej sypkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej sypcy",
+          "gen": "bardziej sypkich",
+          "dat": "bardziej sypkim",
+          "acc": "bardziej sypkich",
+          "ins": "bardziej sypkimi",
+          "loc": "bardziej sypkich"
+        },
+        "nonvirile": {
+          "nom": "bardziej sypkie",
+          "gen": "bardziej sypkich",
+          "dat": "bardziej sypkim",
+          "acc": "bardziej sypkie",
+          "ins": "bardziej sypkimi",
+          "loc": "bardziej sypkich"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej sypki",
+          "gen": "najbardziej sypkiego",
+          "dat": "najbardziej sypkiemu",
+          "acc": "najbardziej sypkiego",
+          "ins": "najbardziej sypkim",
+          "loc": "najbardziej sypkim"
+        },
+        "m3": {
+          "nom": "najbardziej sypki",
+          "gen": "najbardziej sypkiego",
+          "dat": "najbardziej sypkiemu",
+          "acc": "najbardziej sypki",
+          "ins": "najbardziej sypkim",
+          "loc": "najbardziej sypkim"
+        },
+        "f": {
+          "nom": "najbardziej sypka",
+          "gen": "najbardziej sypkiej",
+          "dat": "najbardziej sypkiej",
+          "acc": "najbardziej sypką",
+          "ins": "najbardziej sypką",
+          "loc": "najbardziej sypkiej"
+        },
+        "n": {
+          "nom": "najbardziej sypkie",
+          "gen": "najbardziej sypkiego",
+          "dat": "najbardziej sypkiemu",
+          "acc": "najbardziej sypkie",
+          "ins": "najbardziej sypkim",
+          "loc": "najbardziej sypkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej sypcy",
+          "gen": "najbardziej sypkich",
+          "dat": "najbardziej sypkim",
+          "acc": "najbardziej sypkich",
+          "ins": "najbardziej sypkimi",
+          "loc": "najbardziej sypkich"
+        },
+        "nonvirile": {
+          "nom": "najbardziej sypkie",
+          "gen": "najbardziej sypkich",
+          "dat": "najbardziej sypkim",
+          "acc": "najbardziej sypkie",
+          "ins": "najbardziej sypkimi",
+          "loc": "najbardziej sypkich"
+        }
+      }
+    }
+  }
+}

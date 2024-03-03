@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "add-on",
+      "gen": "add-on's"
+    },
+    "plural": {
+      "nom": "add-ons",
+      "gen": "add-ons'"
+    }
+  }
+}

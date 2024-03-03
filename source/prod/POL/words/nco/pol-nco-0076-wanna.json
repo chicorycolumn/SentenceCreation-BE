@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wanna",
+      "gen": "wanny",
+      "dat": "wannie",
+      "acc": "wannę",
+      "ins": "wanną",
+      "loc": "wannie",
+      "voc": "wanno"
+    },
+    "plural": {
+      "nom": "wanny",
+      "gen": "wanien",
+      "dat": "wannom",
+      "acc": "wanny",
+      "ins": "wannami",
+      "loc": "wannach",
+      "voc": "wanny"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "naród",
+      "gen": "narodu",
+      "dat": "narodowi",
+      "acc": "naród",
+      "ins": "narodem",
+      "loc": "narodzie",
+      "voc": "narodzie"
+    },
+    "plural": {
+      "nom": "narody",
+      "gen": "narodów",
+      "dat": "narodom",
+      "acc": "narody",
+      "ins": "narodami",
+      "loc": "narodach",
+      "voc": "narody"
+    }
+  }
+}

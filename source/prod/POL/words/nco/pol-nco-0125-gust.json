@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gust",
+      "gen": "gustu",
+      "dat": "gustowi",
+      "acc": "gust",
+      "ins": "gustem",
+      "loc": "guście",
+      "voc": "guście"
+    },
+    "plural": {
+      "nom": "gusty",
+      "gen": "gustów",
+      "dat": "gustom",
+      "acc": "gusty",
+      "ins": "gustami",
+      "loc": "gustach",
+      "voc": "gusty"
+    }
+  }
+}

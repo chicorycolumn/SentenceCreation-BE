@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "omówić",
+    "verbalNoun": "omówienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "omówiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "omówiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "omówi się"
+          },
+          "plural": {
+            "allPluralGenders": "omówi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "omówię"
+          },
+          "plural": {
+            "allPluralGenders": "omówimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "omówisz"
+          },
+          "plural": {
+            "allPluralGenders": "omówicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "omówi"
+          },
+          "plural": {
+            "allPluralGenders": "omówią"
+          }
+        }
+      },
+      "imperative": "omów",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "omówiono"
+          },
+          "plural": {
+            "allPluralGenders": "omówiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "omówiłem",
+            "f": "omówiłam"
+          },
+          "plural": {
+            "virile": "omówiliśmy",
+            "nonvirile": "omówiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "omówiłeś",
+            "f": "omówiłaś"
+          },
+          "plural": {
+            "virile": "omówiliście",
+            "nonvirile": "omówiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "omówił",
+            "f": "omówiła",
+            "n": "omówiło"
+          },
+          "plural": {
+            "virile": "omówili",
+            "nonvirile": "omówiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

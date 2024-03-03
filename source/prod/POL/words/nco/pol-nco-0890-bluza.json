@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "bluza",
+      "gen": "bluzy",
+      "dat": "bluzie",
+      "acc": "bluzę",
+      "ins": "bluzą",
+      "loc": "bluzie",
+      "voc": "bluzo"
+    },
+    "plural": {
+      "nom": "bluzy",
+      "gen": "bluz",
+      "dat": "bluzom",
+      "acc": "bluzy",
+      "ins": "bluzami",
+      "loc": "bluzach",
+      "voc": "bluzy"
+    }
+  }
+}

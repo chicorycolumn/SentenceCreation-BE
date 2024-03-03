@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niektóry",
+          "gen": "niektórego",
+          "dat": "niektóremu",
+          "acc": "niektórego",
+          "ins": "niektórym",
+          "loc": "niektórym"
+        },
+        "m3": {
+          "nom": "niektóry",
+          "gen": "niektórego",
+          "dat": "niektóremu",
+          "acc": "niektóry",
+          "ins": "niektórym",
+          "loc": "niektórym"
+        },
+        "f": {
+          "nom": "niektóra",
+          "gen": "niektórej",
+          "dat": "niektórej",
+          "acc": "niektórą",
+          "ins": "niektórą",
+          "loc": "niektórej"
+        },
+        "n": {
+          "nom": "niektóre",
+          "gen": "niektórego",
+          "dat": "niektóremu",
+          "acc": "niektóre",
+          "ins": "niektórym",
+          "loc": "niektórym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niektórzy",
+          "gen": "niektórych",
+          "dat": "niektórym",
+          "acc": "niektórych",
+          "ins": "niektórymi",
+          "loc": "niektórych"
+        },
+        "nonvirile": {
+          "nom": "niektóre",
+          "gen": "niektórych",
+          "dat": "niektórym",
+          "acc": "niektóre",
+          "ins": "niektórymi",
+          "loc": "niektórych"
+        }
+      }
+    }
+  }
+}

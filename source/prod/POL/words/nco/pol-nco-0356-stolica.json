@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "stolica",
+      "gen": "stolicy",
+      "dat": "stolicy",
+      "acc": "stolicę",
+      "ins": "stolicą",
+      "loc": "stolicy",
+      "voc": "stolico"
+    },
+    "plural": {
+      "nom": "stolice",
+      "gen": "stolic",
+      "dat": "stolicom",
+      "acc": "stolice",
+      "ins": "stolicami",
+      "loc": "stolicach",
+      "voc": "stolice"
+    }
+  }
+}

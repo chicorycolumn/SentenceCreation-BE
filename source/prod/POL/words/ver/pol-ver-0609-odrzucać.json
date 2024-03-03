@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odrzucać",
+    "verbalNoun": "odrzucanie",
+    "activeAdjectival": "odrzucający",
+    "passiveAdjectival": "odrzucany",
+    "contemporaryAdverbial": "odrzucając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odrzucaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odrzucano"
+          },
+          "plural": {
+            "allPluralGenders": "odrzucano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odrzucałem",
+            "f": "odrzucałam"
+          },
+          "plural": {
+            "virile": "odrzucaliśmy",
+            "nonvirile": "odrzucałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odrzucałeś",
+            "f": "odrzucałaś"
+          },
+          "plural": {
+            "virile": "odrzucaliście",
+            "nonvirile": "odrzucałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odrzucał",
+            "f": "odrzucała",
+            "n": "odrzucało"
+          },
+          "plural": {
+            "virile": "odrzucali",
+            "nonvirile": "odrzucały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odrzuca się"
+          },
+          "plural": {
+            "allPluralGenders": "odrzuca się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odrzucam"
+          },
+          "plural": {
+            "allPluralGenders": "odrzucamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odrzucasz"
+          },
+          "plural": {
+            "allPluralGenders": "odrzucacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odrzuca"
+          },
+          "plural": {
+            "allPluralGenders": "odrzucają"
+          }
+        }
+      }
+    }
+  }
+}

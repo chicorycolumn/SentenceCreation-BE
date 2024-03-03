@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "liczba",
+      "gen": "liczby",
+      "dat": "liczbie",
+      "acc": "liczbę",
+      "ins": "liczbą",
+      "loc": "liczbie",
+      "voc": "liczbo"
+    },
+    "plural": {
+      "nom": "liczby",
+      "gen": "liczb",
+      "dat": "liczbom",
+      "acc": "liczby",
+      "ins": "liczbami",
+      "loc": "liczbach",
+      "voc": "liczby"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odlatywać",
+    "verbalNoun": "odlatywanie",
+    "activeAdjectival": "odlatujący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "odlatując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odlatuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odlatywano"
+          },
+          "plural": {
+            "allPluralGenders": "odlatywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odlatywałem",
+            "f": "odlatywałam"
+          },
+          "plural": {
+            "virile": "odlatywaliśmy",
+            "nonvirile": "odlatywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odlatywałeś",
+            "f": "odlatywałaś"
+          },
+          "plural": {
+            "virile": "odlatywaliście",
+            "nonvirile": "odlatywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odlatywał",
+            "f": "odlatywała",
+            "n": "odlatywało"
+          },
+          "plural": {
+            "virile": "odlatywali",
+            "nonvirile": "odlatywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odlatuje się"
+          },
+          "plural": {
+            "allPluralGenders": "odlatuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odlatuję"
+          },
+          "plural": {
+            "allPluralGenders": "odlatujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odlatujesz"
+          },
+          "plural": {
+            "allPluralGenders": "odlatujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odlatuje"
+          },
+          "plural": {
+            "allPluralGenders": "odlatują"
+          }
+        }
+      }
+    }
+  }
+}

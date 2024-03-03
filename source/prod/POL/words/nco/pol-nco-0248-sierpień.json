@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sierpień",
+      "gen": "sierpnia",
+      "dat": "sierpniowi",
+      "acc": "sierpień",
+      "ins": "sierpniem",
+      "loc": "sierpniu",
+      "voc": "sierpniu"
+    },
+    "plural": {
+      "nom": "sierpnie",
+      "gen": [
+        "sierpni",
+        "sierpniów"
+      ],
+      "dat": "sierpniom",
+      "acc": "sierpnie",
+      "ins": "sierpniami",
+      "loc": "sierpniach",
+      "voc": "sierpnie"
+    }
+  }
+}

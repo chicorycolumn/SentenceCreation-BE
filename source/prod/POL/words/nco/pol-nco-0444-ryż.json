@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ryż",
+      "gen": "ryżu",
+      "dat": "ryżowi",
+      "acc": "ryż",
+      "ins": "ryżem",
+      "loc": "ryżu",
+      "voc": "ryżu"
+    }
+  }
+}

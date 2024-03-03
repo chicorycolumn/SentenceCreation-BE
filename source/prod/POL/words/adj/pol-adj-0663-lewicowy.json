@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "lewicowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "lewicowy",
+          "gen": "lewicowego",
+          "dat": "lewicowemu",
+          "acc": "lewicowego",
+          "ins": "lewicowym",
+          "loc": "lewicowym"
+        },
+        "m3": {
+          "nom": "lewicowy",
+          "gen": "lewicowego",
+          "dat": "lewicowemu",
+          "acc": "lewicowy",
+          "ins": "lewicowym",
+          "loc": "lewicowym"
+        },
+        "f": {
+          "nom": "lewicowa",
+          "gen": "lewicowej",
+          "dat": "lewicowej",
+          "acc": "lewicową",
+          "ins": "lewicową",
+          "loc": "lewicowej"
+        },
+        "n": {
+          "nom": "lewicowe",
+          "gen": "lewicowego",
+          "dat": "lewicowemu",
+          "acc": "lewicowe",
+          "ins": "lewicowym",
+          "loc": "lewicowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "lewicowi",
+          "gen": "lewicowych",
+          "dat": "lewicowym",
+          "acc": "lewicowych",
+          "ins": "lewicowymi",
+          "loc": "lewicowych"
+        },
+        "nonvirile": {
+          "nom": "lewicowe",
+          "gen": "lewicowych",
+          "dat": "lewicowym",
+          "acc": "lewicowe",
+          "ins": "lewicowymi",
+          "loc": "lewicowych"
+        }
+      }
+    }
+  }
+}

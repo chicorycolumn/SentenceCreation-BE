@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pomarańcza",
+      "gen": "pomarańczy",
+      "dat": "pomarańczy",
+      "acc": "pomarańczę",
+      "ins": "pomarańczą",
+      "loc": "pomarańczy",
+      "voc": "pomarańczo"
+    },
+    "plural": {
+      "nom": "pomarańcze",
+      "gen": [
+        "pomarańczy",
+        "pomarańcz"
+      ],
+      "dat": "pomarańczom",
+      "acc": "pomarańcze",
+      "ins": "pomarańczami",
+      "loc": "pomarańczach",
+      "voc": "pomarańcze"
+    }
+  }
+}

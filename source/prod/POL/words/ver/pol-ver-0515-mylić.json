@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "mylić",
+    "verbalNoun": "mylenie",
+    "activeAdjectival": "mylący",
+    "passiveAdjectival": "mylony",
+    "contemporaryAdverbial": "myląc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "myl",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mylono"
+          },
+          "plural": {
+            "allPluralGenders": "mylono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "myliłem",
+            "f": "myliłam"
+          },
+          "plural": {
+            "virile": "myliliśmy",
+            "nonvirile": "myliłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "myliłeś",
+            "f": "myliłaś"
+          },
+          "plural": {
+            "virile": "myliliście",
+            "nonvirile": "myliłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "mylił",
+            "f": "myliła",
+            "n": "myliło"
+          },
+          "plural": {
+            "virile": "mylili",
+            "nonvirile": "myliły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "myli się"
+          },
+          "plural": {
+            "allPluralGenders": "myli się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "mylę"
+          },
+          "plural": {
+            "allPluralGenders": "mylimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "mylisz"
+          },
+          "plural": {
+            "allPluralGenders": "mylicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "myli"
+          },
+          "plural": {
+            "allPluralGenders": "mylą"
+          }
+        }
+      }
+    }
+  }
+}

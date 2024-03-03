@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lider",
+      "gen": "lidera",
+      "dat": "liderowi",
+      "acc": "lidera",
+      "ins": "liderem",
+      "loc": "liderze",
+      "voc": "liderze"
+    },
+    "plural": {
+      "nom": "liderzy",
+      "gen": "liderów",
+      "dat": "liderom",
+      "acc": "liderów",
+      "ins": "liderami",
+      "loc": "liderach",
+      "voc": "liderzy"
+    }
+  }
+}

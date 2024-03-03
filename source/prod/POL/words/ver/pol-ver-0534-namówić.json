@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "namówić",
+    "verbalNoun": "namówienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "namówiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "namówiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "namówi się"
+          },
+          "plural": {
+            "allPluralGenders": "namówi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "namówię"
+          },
+          "plural": {
+            "allPluralGenders": "namówimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "namówisz"
+          },
+          "plural": {
+            "allPluralGenders": "namówicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "namówi"
+          },
+          "plural": {
+            "allPluralGenders": "namówią"
+          }
+        }
+      },
+      "imperative": "namów",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "namówiono"
+          },
+          "plural": {
+            "allPluralGenders": "namówiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "namówiłem",
+            "f": "namówiłam"
+          },
+          "plural": {
+            "virile": "namówiliśmy",
+            "nonvirile": "namówiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "namówiłeś",
+            "f": "namówiłaś"
+          },
+          "plural": {
+            "virile": "namówiliście",
+            "nonvirile": "namówiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "namówił",
+            "f": "namówiła",
+            "n": "namówiło"
+          },
+          "plural": {
+            "virile": "namówili",
+            "nonvirile": "namówiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

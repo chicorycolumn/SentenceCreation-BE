@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ogień",
+      "gen": "ognia",
+      "dat": "ogniowi",
+      "acc": "ogień",
+      "ins": "ogniem",
+      "loc": "ogniu",
+      "voc": "ogniu"
+    },
+    "plural": {
+      "nom": "ognie",
+      "gen": "ogni",
+      "dat": "ogniom",
+      "acc": "ognie",
+      "ins": "ogniami",
+      "loc": "ogniach",
+      "voc": "ognie"
+    }
+  }
+}

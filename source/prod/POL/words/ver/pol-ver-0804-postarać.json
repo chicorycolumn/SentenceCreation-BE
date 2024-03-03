@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "postarać",
+    "verbalNoun": "postaranie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "postarawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "postara się"
+          },
+          "plural": {
+            "allPluralGenders": "postara się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "postaram"
+          },
+          "plural": {
+            "allPluralGenders": "postaramy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "postarasz"
+          },
+          "plural": {
+            "allPluralGenders": "postaracie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "postara"
+          },
+          "plural": {
+            "allPluralGenders": "postarają"
+          }
+        }
+      },
+      "imperative": "postaraj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "postarano"
+          },
+          "plural": {
+            "allPluralGenders": "postarano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "postarałem",
+            "f": "postarałam"
+          },
+          "plural": {
+            "virile": "postaraliśmy",
+            "nonvirile": "postarałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "postarałeś",
+            "f": "postarałaś"
+          },
+          "plural": {
+            "virile": "postaraliście",
+            "nonvirile": "postarałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "postarał",
+            "f": "postarała",
+            "n": "postarało"
+          },
+          "plural": {
+            "virile": "postarali",
+            "nonvirile": "postarały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

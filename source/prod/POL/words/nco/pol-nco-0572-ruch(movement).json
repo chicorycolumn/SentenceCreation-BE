@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ruch",
+      "gen": "ruchu",
+      "dat": "ruchowi",
+      "acc": "ruch",
+      "ins": "ruchem",
+      "loc": "ruchu",
+      "voc": "ruchu"
+    },
+    "plural": {
+      "nom": "ruchy",
+      "gen": "ruchów",
+      "dat": "ruchom",
+      "acc": "ruchy",
+      "ins": "ruchami",
+      "loc": "ruchach",
+      "voc": "ruchy"
+    }
+  }
+}

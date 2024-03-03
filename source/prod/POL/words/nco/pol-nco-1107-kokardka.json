@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kokardka",
+      "gen": "kokardki",
+      "dat": "kokardce",
+      "acc": "kokardkę",
+      "ins": "kokardką",
+      "loc": "kokardce",
+      "voc": "kokardko"
+    },
+    "plural": {
+      "nom": "kokardki",
+      "gen": "kokardek",
+      "dat": "kokardkom",
+      "acc": "kokardki",
+      "ins": "kokardkami",
+      "loc": "kokardkach",
+      "voc": "kokardki"
+    }
+  }
+}

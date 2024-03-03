@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zacząć",
+    "verbalNoun": "zaczęcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zaczęty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zacząwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zacznie się"
+          },
+          "plural": {
+            "allPluralGenders": "zacznie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zacznę"
+          },
+          "plural": {
+            "allPluralGenders": "zaczniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zaczniesz"
+          },
+          "plural": {
+            "allPluralGenders": "zaczniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zacznie"
+          },
+          "plural": {
+            "allPluralGenders": "zaczną"
+          }
+        }
+      },
+      "imperative": "zacznij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaczęto"
+          },
+          "plural": {
+            "allPluralGenders": "zaczęto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zacząłem",
+            "f": "zaczęłam"
+          },
+          "plural": {
+            "virile": "zaczęliśmy",
+            "nonvirile": "zaczęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zacząłeś",
+            "f": "zaczęłaś"
+          },
+          "plural": {
+            "virile": "zaczęliście",
+            "nonvirile": "zaczęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zaczął",
+            "f": "zaczęła",
+            "n": "zaczęło"
+          },
+          "plural": {
+            "virile": "zaczęli",
+            "nonvirile": "zaczęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

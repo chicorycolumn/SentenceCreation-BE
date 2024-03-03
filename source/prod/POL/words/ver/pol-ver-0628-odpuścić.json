@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odpuścić",
+    "verbalNoun": "odpuszczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "odpuszczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odpuściwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odpuści się"
+          },
+          "plural": {
+            "allPluralGenders": "odpuści się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odpuszczę"
+          },
+          "plural": {
+            "allPluralGenders": "odpuścimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odpuścisz"
+          },
+          "plural": {
+            "allPluralGenders": "odpuścicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odpuści"
+          },
+          "plural": {
+            "allPluralGenders": "odpuszczą"
+          }
+        }
+      },
+      "imperative": "odpuść",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odpuszczono"
+          },
+          "plural": {
+            "allPluralGenders": "odpuszczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odpuściłem",
+            "f": "odpuściłam"
+          },
+          "plural": {
+            "virile": "odpuściliśmy",
+            "nonvirile": "odpuściłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odpuściłeś",
+            "f": "odpuściłaś"
+          },
+          "plural": {
+            "virile": "odpuściliście",
+            "nonvirile": "odpuściłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odpuścił",
+            "f": "odpuściła",
+            "n": "odpuściło"
+          },
+          "plural": {
+            "virile": "odpuścili",
+            "nonvirile": "odpuściły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

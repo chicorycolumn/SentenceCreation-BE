@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "tlen",
+      "gen": "tlenu",
+      "dat": "tlenowi",
+      "acc": "tlen",
+      "ins": "tlenem",
+      "loc": "tlenie",
+      "voc": "tlenie"
+    }
+  }
+}

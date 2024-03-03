@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "powstrzymywać",
+    "verbalNoun": "powstrzymywanie",
+    "activeAdjectival": "powstrzymujący",
+    "passiveAdjectival": "powstrzymywany",
+    "contemporaryAdverbial": "powstrzymując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "powstrzymuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powstrzymywano"
+          },
+          "plural": {
+            "allPluralGenders": "powstrzymywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "powstrzymywałem",
+            "f": "powstrzymywałam"
+          },
+          "plural": {
+            "virile": "powstrzymywaliśmy",
+            "nonvirile": "powstrzymywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "powstrzymywałeś",
+            "f": "powstrzymywałaś"
+          },
+          "plural": {
+            "virile": "powstrzymywaliście",
+            "nonvirile": "powstrzymywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "powstrzymywał",
+            "f": "powstrzymywała",
+            "n": "powstrzymywało"
+          },
+          "plural": {
+            "virile": "powstrzymywali",
+            "nonvirile": "powstrzymywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powstrzymuje się"
+          },
+          "plural": {
+            "allPluralGenders": "powstrzymuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "powstrzymuję"
+          },
+          "plural": {
+            "allPluralGenders": "powstrzymujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "powstrzymujesz"
+          },
+          "plural": {
+            "allPluralGenders": "powstrzymujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "powstrzymuje"
+          },
+          "plural": {
+            "allPluralGenders": "powstrzymują"
+          }
+        }
+      }
+    }
+  }
+}

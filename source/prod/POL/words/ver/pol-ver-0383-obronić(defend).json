@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "obronić",
+    "verbalNoun": "obronienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "obroniony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "obroniwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obroni się"
+          },
+          "plural": {
+            "allPluralGenders": "obroni się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "obronię"
+          },
+          "plural": {
+            "allPluralGenders": "obronimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "obronisz"
+          },
+          "plural": {
+            "allPluralGenders": "obronicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "obroni"
+          },
+          "plural": {
+            "allPluralGenders": "obronią"
+          }
+        }
+      },
+      "imperative": "obroń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obroniono"
+          },
+          "plural": {
+            "allPluralGenders": "obroniono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "obroniłem",
+            "f": "obroniłam"
+          },
+          "plural": {
+            "virile": "obroniliśmy",
+            "nonvirile": "obroniłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "obroniłeś",
+            "f": "obroniłaś"
+          },
+          "plural": {
+            "virile": "obroniliście",
+            "nonvirile": "obroniłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "obronił",
+            "f": "obroniła",
+            "n": "obroniło"
+          },
+          "plural": {
+            "virile": "obronili",
+            "nonvirile": "obroniły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

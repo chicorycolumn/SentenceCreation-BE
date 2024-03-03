@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rodzina",
+      "gen": "rodziny",
+      "dat": "rodzinie",
+      "acc": "rodzinę",
+      "ins": "rodziną",
+      "loc": "rodzinie",
+      "voc": "rodzino"
+    },
+    "plural": {
+      "nom": "rodziny",
+      "gen": "rodzin",
+      "dat": "rodzinom",
+      "acc": "rodziny",
+      "ins": "rodzinami",
+      "loc": "rodzinach",
+      "voc": "rodziny"
+    }
+  }
+}

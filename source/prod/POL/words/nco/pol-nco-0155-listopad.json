@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "listopad",
+      "gen": "listopada",
+      "dat": "listopadowi",
+      "acc": "listopad",
+      "ins": "listopadem",
+      "loc": "listopadzie",
+      "voc": "listopadzie"
+    },
+    "plural": {
+      "nom": "listopady",
+      "gen": "listopadów",
+      "dat": "listopadom",
+      "acc": "listopady",
+      "ins": "listopadami",
+      "loc": "listopadach",
+      "voc": "listopady"
+    }
+  }
+}

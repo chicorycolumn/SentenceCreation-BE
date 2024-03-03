@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kino",
+      "gen": "kina",
+      "dat": "kinu",
+      "acc": "kino",
+      "ins": "kinem",
+      "loc": "kinie",
+      "voc": "kino"
+    },
+    "plural": {
+      "nom": "kina",
+      "gen": "kin",
+      "dat": "kinom",
+      "acc": "kina",
+      "ins": "kinami",
+      "loc": "kinach",
+      "voc": "kina"
+    }
+  }
+}

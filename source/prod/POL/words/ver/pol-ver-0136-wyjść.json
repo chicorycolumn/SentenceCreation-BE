@@ -1,0 +1,82 @@
+{
+  "inflections": {
+    "infinitive": "wyjść",
+    "verbalNoun": "wyjście",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "wyszedłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wyjdzie się"
+          },
+          "plural": {
+            "allPluralGenders": "wyjdzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wyjdę"
+          },
+          "plural": {
+            "allPluralGenders": "wyjdziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wyjdziesz"
+          },
+          "plural": {
+            "allPluralGenders": "wyjdziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wyjdzie"
+          },
+          "plural": {
+            "allPluralGenders": "wyjdą"
+          }
+        }
+      },
+      "imperative": "wyjdź",
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "wyszedłem",
+            "f": "wyszłam"
+          },
+          "plural": {
+            "virile": "wyszliśmy",
+            "nonvirile": "wyszłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wyszedłeś",
+            "f": "wyszłaś"
+          },
+          "plural": {
+            "virile": "wyszliście",
+            "nonvirile": "wyszłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wyszedł",
+            "f": "wyszła",
+            "n": "wyszło"
+          },
+          "plural": {
+            "virile": "wyszli",
+            "nonvirile": "wyszły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

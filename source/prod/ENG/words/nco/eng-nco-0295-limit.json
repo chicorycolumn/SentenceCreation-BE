@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "limit",
+      "gen": "limit's"
+    },
+    "plural": {
+      "nom": "limits",
+      "gen": "limits'"
+    }
+  }
+}

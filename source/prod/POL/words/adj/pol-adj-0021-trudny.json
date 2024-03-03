@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "trudno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "trudny",
+          "gen": "trudnego",
+          "dat": "trudnemu",
+          "acc": "trudnego",
+          "ins": "trudnym",
+          "loc": "trudnym"
+        },
+        "m3": {
+          "nom": "trudny",
+          "gen": "trudnego",
+          "dat": "trudnemu",
+          "acc": "trudny",
+          "ins": "trudnym",
+          "loc": "trudnym"
+        },
+        "f": {
+          "nom": "trudna",
+          "gen": "trudnej",
+          "dat": "trudnej",
+          "acc": "trudną",
+          "ins": "trudną",
+          "loc": "trudnej"
+        },
+        "n": {
+          "nom": "trudne",
+          "gen": "trudnego",
+          "dat": "trudnemu",
+          "acc": "trudne",
+          "ins": "trudnym",
+          "loc": "trudnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "trudni",
+          "gen": "trudnych",
+          "dat": "trudnym",
+          "acc": "trudnych",
+          "ins": "trudnymi",
+          "loc": "trudnych"
+        },
+        "nonvirile": {
+          "nom": "trudne",
+          "gen": "trudnych",
+          "dat": "trudnym",
+          "acc": "trudne",
+          "ins": "trudnymi",
+          "loc": "trudnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "trudniejszy",
+          "gen": "trudniejszego",
+          "dat": "trudniejszemu",
+          "acc": "trudniejszego",
+          "ins": "trudniejszym",
+          "loc": "trudniejszym"
+        },
+        "m3": {
+          "nom": "trudniejszy",
+          "gen": "trudniejszego",
+          "dat": "trudniejszemu",
+          "acc": "trudniejszy",
+          "ins": "trudniejszym",
+          "loc": "trudniejszym"
+        },
+        "f": {
+          "nom": "trudniejsza",
+          "gen": "trudniejszej",
+          "dat": "trudniejszej",
+          "acc": "trudniejszą",
+          "ins": "trudniejszą",
+          "loc": "trudniejszej"
+        },
+        "n": {
+          "nom": "trudniejsze",
+          "gen": "trudniejszego",
+          "dat": "trudniejszemu",
+          "acc": "trudniejsze",
+          "ins": "trudniejszym",
+          "loc": "trudniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "trudniejsi",
+          "gen": "trudniejszych",
+          "dat": "trudniejszym",
+          "acc": "trudniejszych",
+          "ins": "trudniejszymi",
+          "loc": "trudniejszych"
+        },
+        "nonvirile": {
+          "nom": "trudniejsze",
+          "gen": "trudniejszych",
+          "dat": "trudniejszym",
+          "acc": "trudniejsze",
+          "ins": "trudniejszymi",
+          "loc": "trudniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najtrudniejszy",
+          "gen": "najtrudniejszego",
+          "dat": "najtrudniejszemu",
+          "acc": "najtrudniejszego",
+          "ins": "najtrudniejszym",
+          "loc": "najtrudniejszym"
+        },
+        "m3": {
+          "nom": "najtrudniejszy",
+          "gen": "najtrudniejszego",
+          "dat": "najtrudniejszemu",
+          "acc": "najtrudniejszy",
+          "ins": "najtrudniejszym",
+          "loc": "najtrudniejszym"
+        },
+        "f": {
+          "nom": "najtrudniejsza",
+          "gen": "najtrudniejszej",
+          "dat": "najtrudniejszej",
+          "acc": "najtrudniejszą",
+          "ins": "najtrudniejszą",
+          "loc": "najtrudniejszej"
+        },
+        "n": {
+          "nom": "najtrudniejsze",
+          "gen": "najtrudniejszego",
+          "dat": "najtrudniejszemu",
+          "acc": "najtrudniejsze",
+          "ins": "najtrudniejszym",
+          "loc": "najtrudniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najtrudniejsi",
+          "gen": "najtrudniejszych",
+          "dat": "najtrudniejszym",
+          "acc": "najtrudniejszych",
+          "ins": "najtrudniejszymi",
+          "loc": "najtrudniejszych"
+        },
+        "nonvirile": {
+          "nom": "najtrudniejsze",
+          "gen": "najtrudniejszych",
+          "dat": "najtrudniejszym",
+          "acc": "najtrudniejsze",
+          "ins": "najtrudniejszymi",
+          "loc": "najtrudniejszych"
+        }
+      }
+    }
+  }
+}

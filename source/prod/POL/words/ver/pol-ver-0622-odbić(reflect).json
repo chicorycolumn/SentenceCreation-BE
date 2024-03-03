@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odbić",
+    "verbalNoun": "odbicie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "odbity",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odbiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odbije się"
+          },
+          "plural": {
+            "allPluralGenders": "odbije się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odbiję"
+          },
+          "plural": {
+            "allPluralGenders": "odbijemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odbijesz"
+          },
+          "plural": {
+            "allPluralGenders": "odbijecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odbije"
+          },
+          "plural": {
+            "allPluralGenders": "odbiją"
+          }
+        }
+      },
+      "imperative": "odbij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odbito"
+          },
+          "plural": {
+            "allPluralGenders": "odbito"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odbiłem",
+            "f": "odbiłam"
+          },
+          "plural": {
+            "virile": "odbiliśmy",
+            "nonvirile": "odbiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odbiłeś",
+            "f": "odbiłaś"
+          },
+          "plural": {
+            "virile": "odbiliście",
+            "nonvirile": "odbiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odbił",
+            "f": "odbiła",
+            "n": "odbiło"
+          },
+          "plural": {
+            "virile": "odbili",
+            "nonvirile": "odbiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

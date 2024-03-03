@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "powiadomić",
+    "verbalNoun": "powiadomienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "powiadomiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "powiadomiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powiadomi się"
+          },
+          "plural": {
+            "allPluralGenders": "powiadomi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "powiadomię"
+          },
+          "plural": {
+            "allPluralGenders": "powiadomimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "powiadomisz"
+          },
+          "plural": {
+            "allPluralGenders": "powiadomicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "powiadomi"
+          },
+          "plural": {
+            "allPluralGenders": "powiadomią"
+          }
+        }
+      },
+      "imperative": "powiadom",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powiadomiono"
+          },
+          "plural": {
+            "allPluralGenders": "powiadomiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "powiadomiłem",
+            "f": "powiadomiłam"
+          },
+          "plural": {
+            "virile": "powiadomiliśmy",
+            "nonvirile": "powiadomiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "powiadomiłeś",
+            "f": "powiadomiłaś"
+          },
+          "plural": {
+            "virile": "powiadomiliście",
+            "nonvirile": "powiadomiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "powiadomił",
+            "f": "powiadomiła",
+            "n": "powiadomiło"
+          },
+          "plural": {
+            "virile": "powiadomili",
+            "nonvirile": "powiadomiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

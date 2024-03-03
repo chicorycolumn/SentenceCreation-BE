@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "inteligentnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "inteligentny",
+          "gen": "inteligentnego",
+          "dat": "inteligentnemu",
+          "acc": "inteligentnego",
+          "ins": "inteligentnym",
+          "loc": "inteligentnym"
+        },
+        "m3": {
+          "nom": "inteligentny",
+          "gen": "inteligentnego",
+          "dat": "inteligentnemu",
+          "acc": "inteligentny",
+          "ins": "inteligentnym",
+          "loc": "inteligentnym"
+        },
+        "f": {
+          "nom": "inteligentna",
+          "gen": "inteligentnej",
+          "dat": "inteligentnej",
+          "acc": "inteligentną",
+          "ins": "inteligentną",
+          "loc": "inteligentnej"
+        },
+        "n": {
+          "nom": "inteligentne",
+          "gen": "inteligentnego",
+          "dat": "inteligentnemu",
+          "acc": "inteligentne",
+          "ins": "inteligentnym",
+          "loc": "inteligentnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "inteligentni",
+          "gen": "inteligentnych",
+          "dat": "inteligentnym",
+          "acc": "inteligentnych",
+          "ins": "inteligentnymi",
+          "loc": "inteligentnych"
+        },
+        "nonvirile": {
+          "nom": "inteligentne",
+          "gen": "inteligentnych",
+          "dat": "inteligentnym",
+          "acc": "inteligentne",
+          "ins": "inteligentnymi",
+          "loc": "inteligentnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszy",
+              "bardziej inteligentny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszego",
+              "bardziej inteligentnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszemu",
+              "bardziej inteligentnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszego",
+              "bardziej inteligentnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszym",
+              "bardziej inteligentnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszym",
+              "bardziej inteligentnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszy",
+              "bardziej inteligentny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszego",
+              "bardziej inteligentnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszemu",
+              "bardziej inteligentnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszy",
+              "bardziej inteligentny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszym",
+              "bardziej inteligentnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszym",
+              "bardziej inteligentnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejsza",
+              "bardziej inteligentna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszej",
+              "bardziej inteligentnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszej",
+              "bardziej inteligentnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszą",
+              "bardziej inteligentną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszą",
+              "bardziej inteligentną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszej",
+              "bardziej inteligentnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejsze",
+              "bardziej inteligentne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszego",
+              "bardziej inteligentnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszemu",
+              "bardziej inteligentnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejsze",
+              "bardziej inteligentne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszym",
+              "bardziej inteligentnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszym",
+              "bardziej inteligentnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejsi",
+              "bardziej inteligentni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszych",
+              "bardziej inteligentnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszym",
+              "bardziej inteligentnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszych",
+              "bardziej inteligentnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszymi",
+              "bardziej inteligentnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszych",
+              "bardziej inteligentnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejsze",
+              "bardziej inteligentne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszych",
+              "bardziej inteligentnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszym",
+              "bardziej inteligentnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejsze",
+              "bardziej inteligentne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszymi",
+              "bardziej inteligentnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "inteligentniejszych",
+              "bardziej inteligentnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszy",
+              "najbardziej inteligentny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszego",
+              "najbardziej inteligentnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszemu",
+              "najbardziej inteligentnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszego",
+              "najbardziej inteligentnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszym",
+              "najbardziej inteligentnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszym",
+              "najbardziej inteligentnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszy",
+              "najbardziej inteligentny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszego",
+              "najbardziej inteligentnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszemu",
+              "najbardziej inteligentnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszy",
+              "najbardziej inteligentny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszym",
+              "najbardziej inteligentnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszym",
+              "najbardziej inteligentnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejsza",
+              "najbardziej inteligentna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszej",
+              "najbardziej inteligentnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszej",
+              "najbardziej inteligentnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszą",
+              "najbardziej inteligentną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszą",
+              "najbardziej inteligentną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszej",
+              "najbardziej inteligentnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejsze",
+              "najbardziej inteligentne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszego",
+              "najbardziej inteligentnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszemu",
+              "najbardziej inteligentnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejsze",
+              "najbardziej inteligentne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszym",
+              "najbardziej inteligentnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszym",
+              "najbardziej inteligentnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejsi",
+              "najbardziej inteligentni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszych",
+              "najbardziej inteligentnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszym",
+              "najbardziej inteligentnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszych",
+              "najbardziej inteligentnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszymi",
+              "najbardziej inteligentnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszych",
+              "najbardziej inteligentnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejsze",
+              "najbardziej inteligentne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszych",
+              "najbardziej inteligentnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszym",
+              "najbardziej inteligentnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejsze",
+              "najbardziej inteligentne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszymi",
+              "najbardziej inteligentnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najinteligentniejszych",
+              "najbardziej inteligentnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

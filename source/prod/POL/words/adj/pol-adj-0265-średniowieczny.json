@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "średniowiecznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "średniowieczny",
+          "gen": "średniowiecznego",
+          "dat": "średniowiecznemu",
+          "acc": "średniowiecznego",
+          "ins": "średniowiecznym",
+          "loc": "średniowiecznym"
+        },
+        "m3": {
+          "nom": "średniowieczny",
+          "gen": "średniowiecznego",
+          "dat": "średniowiecznemu",
+          "acc": "średniowieczny",
+          "ins": "średniowiecznym",
+          "loc": "średniowiecznym"
+        },
+        "f": {
+          "nom": "średniowieczna",
+          "gen": "średniowiecznej",
+          "dat": "średniowiecznej",
+          "acc": "średniowieczną",
+          "ins": "średniowieczną",
+          "loc": "średniowiecznej"
+        },
+        "n": {
+          "nom": "średniowieczne",
+          "gen": "średniowiecznego",
+          "dat": "średniowiecznemu",
+          "acc": "średniowieczne",
+          "ins": "średniowiecznym",
+          "loc": "średniowiecznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "średniowieczni",
+          "gen": "średniowiecznych",
+          "dat": "średniowiecznym",
+          "acc": "średniowiecznych",
+          "ins": "średniowiecznymi",
+          "loc": "średniowiecznych"
+        },
+        "nonvirile": {
+          "nom": "średniowieczne",
+          "gen": "średniowiecznych",
+          "dat": "średniowiecznym",
+          "acc": "średniowieczne",
+          "ins": "średniowiecznymi",
+          "loc": "średniowiecznych"
+        }
+      }
+    }
+  }
+}

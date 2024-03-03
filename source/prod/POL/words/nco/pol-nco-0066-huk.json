@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "huk",
+      "gen": "huku",
+      "dat": "hukowi",
+      "acc": "huk",
+      "ins": "hukiem",
+      "loc": "huku",
+      "voc": "huku"
+    },
+    "plural": {
+      "nom": "huki",
+      "gen": "huków",
+      "dat": "hukom",
+      "acc": "huki",
+      "ins": "hukami",
+      "loc": "hukach",
+      "voc": "huki"
+    }
+  }
+}

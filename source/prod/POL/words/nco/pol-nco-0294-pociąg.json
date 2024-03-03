@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pociąg",
+      "gen": "pociągu",
+      "dat": "pociągowi",
+      "acc": "pociąg",
+      "ins": "pociągiem",
+      "loc": "pociągu",
+      "voc": "pociągu"
+    },
+    "plural": {
+      "nom": "pociągi",
+      "gen": "pociągów",
+      "dat": "pociągom",
+      "acc": "pociągi",
+      "ins": "pociągami",
+      "loc": "pociągach",
+      "voc": "pociągi"
+    }
+  }
+}

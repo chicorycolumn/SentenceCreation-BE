@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "drobno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "drobny",
+          "gen": "drobnego",
+          "dat": "drobnemu",
+          "acc": "drobnego",
+          "ins": "drobnym",
+          "loc": "drobnym"
+        },
+        "m3": {
+          "nom": "drobny",
+          "gen": "drobnego",
+          "dat": "drobnemu",
+          "acc": "drobny",
+          "ins": "drobnym",
+          "loc": "drobnym"
+        },
+        "f": {
+          "nom": "drobna",
+          "gen": "drobnej",
+          "dat": "drobnej",
+          "acc": "drobną",
+          "ins": "drobną",
+          "loc": "drobnej"
+        },
+        "n": {
+          "nom": "drobne",
+          "gen": "drobnego",
+          "dat": "drobnemu",
+          "acc": "drobne",
+          "ins": "drobnym",
+          "loc": "drobnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "drobni",
+          "gen": "drobnych",
+          "dat": "drobnym",
+          "acc": "drobnych",
+          "ins": "drobnymi",
+          "loc": "drobnych"
+        },
+        "nonvirile": {
+          "nom": "drobne",
+          "gen": "drobnych",
+          "dat": "drobnym",
+          "acc": "drobne",
+          "ins": "drobnymi",
+          "loc": "drobnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "drobniejszy",
+          "gen": "drobniejszego",
+          "dat": "drobniejszemu",
+          "acc": "drobniejszego",
+          "ins": "drobniejszym",
+          "loc": "drobniejszym"
+        },
+        "m3": {
+          "nom": "drobniejszy",
+          "gen": "drobniejszego",
+          "dat": "drobniejszemu",
+          "acc": "drobniejszy",
+          "ins": "drobniejszym",
+          "loc": "drobniejszym"
+        },
+        "f": {
+          "nom": "drobniejsza",
+          "gen": "drobniejszej",
+          "dat": "drobniejszej",
+          "acc": "drobniejszą",
+          "ins": "drobniejszą",
+          "loc": "drobniejszej"
+        },
+        "n": {
+          "nom": "drobniejsze",
+          "gen": "drobniejszego",
+          "dat": "drobniejszemu",
+          "acc": "drobniejsze",
+          "ins": "drobniejszym",
+          "loc": "drobniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "drobniejsi",
+          "gen": "drobniejszych",
+          "dat": "drobniejszym",
+          "acc": "drobniejszych",
+          "ins": "drobniejszymi",
+          "loc": "drobniejszych"
+        },
+        "nonvirile": {
+          "nom": "drobniejsze",
+          "gen": "drobniejszych",
+          "dat": "drobniejszym",
+          "acc": "drobniejsze",
+          "ins": "drobniejszymi",
+          "loc": "drobniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najdrobniejszy",
+          "gen": "najdrobniejszego",
+          "dat": "najdrobniejszemu",
+          "acc": "najdrobniejszego",
+          "ins": "najdrobniejszym",
+          "loc": "najdrobniejszym"
+        },
+        "m3": {
+          "nom": "najdrobniejszy",
+          "gen": "najdrobniejszego",
+          "dat": "najdrobniejszemu",
+          "acc": "najdrobniejszy",
+          "ins": "najdrobniejszym",
+          "loc": "najdrobniejszym"
+        },
+        "f": {
+          "nom": "najdrobniejsza",
+          "gen": "najdrobniejszej",
+          "dat": "najdrobniejszej",
+          "acc": "najdrobniejszą",
+          "ins": "najdrobniejszą",
+          "loc": "najdrobniejszej"
+        },
+        "n": {
+          "nom": "najdrobniejsze",
+          "gen": "najdrobniejszego",
+          "dat": "najdrobniejszemu",
+          "acc": "najdrobniejsze",
+          "ins": "najdrobniejszym",
+          "loc": "najdrobniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najdrobniejsi",
+          "gen": "najdrobniejszych",
+          "dat": "najdrobniejszym",
+          "acc": "najdrobniejszych",
+          "ins": "najdrobniejszymi",
+          "loc": "najdrobniejszych"
+        },
+        "nonvirile": {
+          "nom": "najdrobniejsze",
+          "gen": "najdrobniejszych",
+          "dat": "najdrobniejszym",
+          "acc": "najdrobniejsze",
+          "ins": "najdrobniejszymi",
+          "loc": "najdrobniejszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pochodzić",
+    "verbalNoun": "pochodzenie",
+    "activeAdjectival": "pochodzący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "pochodząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pochodź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pochodzono"
+          },
+          "plural": {
+            "allPluralGenders": "pochodzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pochodziłem",
+            "f": "pochodziłam"
+          },
+          "plural": {
+            "virile": "pochodziliśmy",
+            "nonvirile": "pochodziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pochodziłeś",
+            "f": "pochodziłaś"
+          },
+          "plural": {
+            "virile": "pochodziliście",
+            "nonvirile": "pochodziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pochodził",
+            "f": "pochodziła",
+            "n": "pochodziło"
+          },
+          "plural": {
+            "virile": "pochodzili",
+            "nonvirile": "pochodziły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pochodzi się"
+          },
+          "plural": {
+            "allPluralGenders": "pochodzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pochodzę"
+          },
+          "plural": {
+            "allPluralGenders": "pochodzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pochodzisz"
+          },
+          "plural": {
+            "allPluralGenders": "pochodzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pochodzi"
+          },
+          "plural": {
+            "allPluralGenders": "pochodzą"
+          }
+        }
+      }
+    }
+  }
+}

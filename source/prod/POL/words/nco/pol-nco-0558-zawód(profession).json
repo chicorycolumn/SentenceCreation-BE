@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zawód",
+      "gen": "zawodu",
+      "dat": "zawodowi",
+      "acc": "zawód",
+      "ins": "zawodem",
+      "loc": "zawodzie",
+      "voc": "zawodzie"
+    },
+    "plural": {
+      "nom": "zawody",
+      "gen": "zawodów",
+      "dat": "zawodom",
+      "acc": "zawody",
+      "ins": "zawodami",
+      "loc": "zawodach",
+      "voc": "zawody"
+    }
+  }
+}

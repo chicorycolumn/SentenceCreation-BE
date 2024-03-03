@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lekarstwo",
+      "gen": "lekarstwa",
+      "dat": "lekarstwu",
+      "acc": "lekarstwo",
+      "ins": "lekarstwem",
+      "loc": "lekarstwie",
+      "voc": "lekarstwo"
+    },
+    "plural": {
+      "nom": "lekarstwa",
+      "gen": "lekarstw",
+      "dat": "lekarstwom",
+      "acc": "lekarstwa",
+      "ins": "lekarstwami",
+      "loc": "lekarstwach",
+      "voc": "lekarstwa"
+    }
+  }
+}

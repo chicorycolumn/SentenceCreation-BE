@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "słońce",
+      "gen": "słońca",
+      "dat": "słońcu",
+      "acc": "słońce",
+      "ins": "słońcem",
+      "loc": "słońcu",
+      "voc": "słońce"
+    },
+    "plural": {
+      "nom": "słońca",
+      "gen": "słońc",
+      "dat": "słońcom",
+      "acc": "słońca",
+      "ins": "słońcami",
+      "loc": "słońcach",
+      "voc": "słońca"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wszechświat",
+      "gen": "wszechświata",
+      "dat": "wszechświatowi",
+      "acc": "wszechświat",
+      "ins": "wszechświatem",
+      "loc": "wszechświecie",
+      "voc": "wszechświecie"
+    },
+    "plural": {
+      "nom": "wszechświaty",
+      "gen": "wszechświatów",
+      "dat": "wszechświatom",
+      "acc": "wszechświaty",
+      "ins": "wszechświatami",
+      "loc": "wszechświatach",
+      "voc": "wszechświaty"
+    }
+  }
+}

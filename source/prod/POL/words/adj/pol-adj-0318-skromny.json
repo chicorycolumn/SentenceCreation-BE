@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "skromnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "skromny",
+          "gen": "skromnego",
+          "dat": "skromnemu",
+          "acc": "skromnego",
+          "ins": "skromnym",
+          "loc": "skromnym"
+        },
+        "m3": {
+          "nom": "skromny",
+          "gen": "skromnego",
+          "dat": "skromnemu",
+          "acc": "skromny",
+          "ins": "skromnym",
+          "loc": "skromnym"
+        },
+        "f": {
+          "nom": "skromna",
+          "gen": "skromnej",
+          "dat": "skromnej",
+          "acc": "skromną",
+          "ins": "skromną",
+          "loc": "skromnej"
+        },
+        "n": {
+          "nom": "skromne",
+          "gen": "skromnego",
+          "dat": "skromnemu",
+          "acc": "skromne",
+          "ins": "skromnym",
+          "loc": "skromnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "skromni",
+          "gen": "skromnych",
+          "dat": "skromnym",
+          "acc": "skromnych",
+          "ins": "skromnymi",
+          "loc": "skromnych"
+        },
+        "nonvirile": {
+          "nom": "skromne",
+          "gen": "skromnych",
+          "dat": "skromnym",
+          "acc": "skromne",
+          "ins": "skromnymi",
+          "loc": "skromnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "skromniejszy",
+          "gen": "skromniejszego",
+          "dat": "skromniejszemu",
+          "acc": "skromniejszego",
+          "ins": "skromniejszym",
+          "loc": "skromniejszym"
+        },
+        "m3": {
+          "nom": "skromniejszy",
+          "gen": "skromniejszego",
+          "dat": "skromniejszemu",
+          "acc": "skromniejszy",
+          "ins": "skromniejszym",
+          "loc": "skromniejszym"
+        },
+        "f": {
+          "nom": "skromniejsza",
+          "gen": "skromniejszej",
+          "dat": "skromniejszej",
+          "acc": "skromniejszą",
+          "ins": "skromniejszą",
+          "loc": "skromniejszej"
+        },
+        "n": {
+          "nom": "skromniejsze",
+          "gen": "skromniejszego",
+          "dat": "skromniejszemu",
+          "acc": "skromniejsze",
+          "ins": "skromniejszym",
+          "loc": "skromniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "skromniejsi",
+          "gen": "skromniejszych",
+          "dat": "skromniejszym",
+          "acc": "skromniejszych",
+          "ins": "skromniejszymi",
+          "loc": "skromniejszych"
+        },
+        "nonvirile": {
+          "nom": "skromniejsze",
+          "gen": "skromniejszych",
+          "dat": "skromniejszym",
+          "acc": "skromniejsze",
+          "ins": "skromniejszymi",
+          "loc": "skromniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najskromniejszy",
+          "gen": "najskromniejszego",
+          "dat": "najskromniejszemu",
+          "acc": "najskromniejszego",
+          "ins": "najskromniejszym",
+          "loc": "najskromniejszym"
+        },
+        "m3": {
+          "nom": "najskromniejszy",
+          "gen": "najskromniejszego",
+          "dat": "najskromniejszemu",
+          "acc": "najskromniejszy",
+          "ins": "najskromniejszym",
+          "loc": "najskromniejszym"
+        },
+        "f": {
+          "nom": "najskromniejsza",
+          "gen": "najskromniejszej",
+          "dat": "najskromniejszej",
+          "acc": "najskromniejszą",
+          "ins": "najskromniejszą",
+          "loc": "najskromniejszej"
+        },
+        "n": {
+          "nom": "najskromniejsze",
+          "gen": "najskromniejszego",
+          "dat": "najskromniejszemu",
+          "acc": "najskromniejsze",
+          "ins": "najskromniejszym",
+          "loc": "najskromniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najskromniejsi",
+          "gen": "najskromniejszych",
+          "dat": "najskromniejszym",
+          "acc": "najskromniejszych",
+          "ins": "najskromniejszymi",
+          "loc": "najskromniejszych"
+        },
+        "nonvirile": {
+          "nom": "najskromniejsze",
+          "gen": "najskromniejszych",
+          "dat": "najskromniejszym",
+          "acc": "najskromniejsze",
+          "ins": "najskromniejszymi",
+          "loc": "najskromniejszych"
+        }
+      }
+    }
+  }
+}

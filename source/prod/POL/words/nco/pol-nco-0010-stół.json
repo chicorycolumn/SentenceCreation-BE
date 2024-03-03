@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "stół",
+      "gen": "stołu",
+      "dat": "stołowi",
+      "acc": "stół",
+      "ins": "stołem",
+      "loc": "stole",
+      "voc": "stole"
+    },
+    "plural": {
+      "nom": "stoły",
+      "gen": "stołów",
+      "dat": "stołom",
+      "acc": "stoły",
+      "ins": "stołami",
+      "loc": "stołach",
+      "voc": "stoły"
+    }
+  }
+}

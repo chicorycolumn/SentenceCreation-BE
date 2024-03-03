@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "domagać",
+    "verbalNoun": "domaganie",
+    "activeAdjectival": "domagający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "domagając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "domagaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "domagano"
+          },
+          "plural": {
+            "allPluralGenders": "domagano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "domagałem",
+            "f": "domagałam"
+          },
+          "plural": {
+            "virile": "domagaliśmy",
+            "nonvirile": "domagałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "domagałeś",
+            "f": "domagałaś"
+          },
+          "plural": {
+            "virile": "domagaliście",
+            "nonvirile": "domagałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "domagał",
+            "f": "domagała",
+            "n": "domagało"
+          },
+          "plural": {
+            "virile": "domagali",
+            "nonvirile": "domagały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "domaga się"
+          },
+          "plural": {
+            "allPluralGenders": "domaga się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "domagam"
+          },
+          "plural": {
+            "allPluralGenders": "domagamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "domagasz"
+          },
+          "plural": {
+            "allPluralGenders": "domagacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "domaga"
+          },
+          "plural": {
+            "allPluralGenders": "domagają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przód",
+      "gen": "przodu",
+      "dat": "przodowi",
+      "acc": "przód",
+      "ins": "przodem",
+      "loc": [
+        "przodzie",
+        "przedzie"
+      ],
+      "voc": [
+        "przodzie",
+        "przedzie"
+      ]
+    },
+    "plural": {
+      "nom": "przody",
+      "gen": "przodów",
+      "dat": "przodom",
+      "acc": "przody",
+      "ins": "przodami",
+      "loc": "przodach",
+      "voc": "przody"
+    }
+  }
+}

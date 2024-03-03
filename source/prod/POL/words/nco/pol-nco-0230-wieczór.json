@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wieczór",
+      "gen": [
+        "wieczoru",
+        "wieczora"
+      ],
+      "dat": "wieczorowi",
+      "acc": "wieczór",
+      "ins": "wieczorem",
+      "loc": "wieczorze",
+      "voc": "wieczorze"
+    },
+    "plural": {
+      "nom": "wieczory",
+      "gen": "wieczorów",
+      "dat": "wieczorom",
+      "acc": "wieczory",
+      "ins": "wieczorami",
+      "loc": "wieczorach",
+      "voc": "wieczory"
+    }
+  }
+}

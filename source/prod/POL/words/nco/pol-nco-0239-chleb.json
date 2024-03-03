@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "chleb",
+      "gen": "chleba",
+      "dat": "chlebowi",
+      "acc": "chleb",
+      "ins": "chlebem",
+      "loc": "chlebie",
+      "voc": "chlebie"
+    },
+    "plural": {
+      "nom": "chleby",
+      "gen": "chlebów",
+      "dat": "chlebom",
+      "acc": "chleby",
+      "ins": "chlebami",
+      "loc": "chlebach",
+      "voc": "chleby"
+    }
+  }
+}

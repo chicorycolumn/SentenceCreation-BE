@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "możliwie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "możliwy",
+          "gen": "możliwego",
+          "dat": "możliwemu",
+          "acc": "możliwego",
+          "ins": "możliwym",
+          "loc": "możliwym"
+        },
+        "m3": {
+          "nom": "możliwy",
+          "gen": "możliwego",
+          "dat": "możliwemu",
+          "acc": "możliwy",
+          "ins": "możliwym",
+          "loc": "możliwym"
+        },
+        "f": {
+          "nom": "możliwa",
+          "gen": "możliwej",
+          "dat": "możliwej",
+          "acc": "możliwą",
+          "ins": "możliwą",
+          "loc": "możliwej"
+        },
+        "n": {
+          "nom": "możliwe",
+          "gen": "możliwego",
+          "dat": "możliwemu",
+          "acc": "możliwe",
+          "ins": "możliwym",
+          "loc": "możliwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "możliwi",
+          "gen": "możliwych",
+          "dat": "możliwym",
+          "acc": "możliwych",
+          "ins": "możliwymi",
+          "loc": "możliwych"
+        },
+        "nonvirile": {
+          "nom": "możliwe",
+          "gen": "możliwych",
+          "dat": "możliwym",
+          "acc": "możliwe",
+          "ins": "możliwymi",
+          "loc": "możliwych"
+        }
+      }
+    }
+  }
+}

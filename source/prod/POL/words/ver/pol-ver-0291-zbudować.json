@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zbudować",
+    "verbalNoun": "zbudowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zbudowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zbudowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zbuduje się"
+          },
+          "plural": {
+            "allPluralGenders": "zbuduje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zbuduję"
+          },
+          "plural": {
+            "allPluralGenders": "zbudujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zbudujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zbudujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zbuduje"
+          },
+          "plural": {
+            "allPluralGenders": "zbudują"
+          }
+        }
+      },
+      "imperative": "zbuduj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zbudowano"
+          },
+          "plural": {
+            "allPluralGenders": "zbudowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zbudowałem",
+            "f": "zbudowałam"
+          },
+          "plural": {
+            "virile": "zbudowaliśmy",
+            "nonvirile": "zbudowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zbudowałeś",
+            "f": "zbudowałaś"
+          },
+          "plural": {
+            "virile": "zbudowaliście",
+            "nonvirile": "zbudowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zbudował",
+            "f": "zbudowała",
+            "n": "zbudowało"
+          },
+          "plural": {
+            "virile": "zbudowali",
+            "nonvirile": "zbudowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

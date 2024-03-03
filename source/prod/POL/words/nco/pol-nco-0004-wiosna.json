@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wiosna",
+      "gen": "wiosny",
+      "dat": "wiośnie",
+      "acc": "wiosnę",
+      "ins": "wiosną",
+      "loc": "wiośnie",
+      "voc": "wiosno"
+    },
+    "plural": {
+      "nom": "wiosny",
+      "gen": "wiosen",
+      "dat": "wiosnom",
+      "acc": "wiosny",
+      "ins": "wiosnami",
+      "loc": "wiosnach",
+      "voc": "wiosny"
+    }
+  }
+}

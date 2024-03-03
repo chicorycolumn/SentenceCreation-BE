@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "córka",
+      "gen": "córki",
+      "dat": "córce",
+      "acc": "córkę",
+      "ins": "córką",
+      "loc": "córce",
+      "voc": "córko"
+    },
+    "plural": {
+      "nom": "córki",
+      "gen": "córek",
+      "dat": "córkom",
+      "acc": "córki",
+      "ins": "córkami",
+      "loc": "córkach",
+      "voc": "córki"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "rolniczo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "rolniczy",
+          "gen": "rolniczego",
+          "dat": "rolniczemu",
+          "acc": "rolniczego",
+          "ins": "rolniczym",
+          "loc": "rolniczym"
+        },
+        "m3": {
+          "nom": "rolniczy",
+          "gen": "rolniczego",
+          "dat": "rolniczemu",
+          "acc": "rolniczy",
+          "ins": "rolniczym",
+          "loc": "rolniczym"
+        },
+        "f": {
+          "nom": "rolnicza",
+          "gen": "rolniczej",
+          "dat": "rolniczej",
+          "acc": "rolniczą",
+          "ins": "rolniczą",
+          "loc": "rolniczej"
+        },
+        "n": {
+          "nom": "rolnicze",
+          "gen": "rolniczego",
+          "dat": "rolniczemu",
+          "acc": "rolnicze",
+          "ins": "rolniczym",
+          "loc": "rolniczym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "rolniczy",
+          "gen": "rolniczych",
+          "dat": "rolniczym",
+          "acc": "rolniczych",
+          "ins": "rolniczymi",
+          "loc": "rolniczych"
+        },
+        "nonvirile": {
+          "nom": "rolnicze",
+          "gen": "rolniczych",
+          "dat": "rolniczym",
+          "acc": "rolnicze",
+          "ins": "rolniczymi",
+          "loc": "rolniczych"
+        }
+      }
+    }
+  }
+}

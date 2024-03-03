@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "sprzedać",
+    "verbalNoun": "sprzedanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "sprzedany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "sprzedawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "sprzeda się"
+          },
+          "plural": {
+            "allPluralGenders": "sprzeda się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "sprzedam"
+          },
+          "plural": {
+            "allPluralGenders": "sprzedamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "sprzedasz"
+          },
+          "plural": {
+            "allPluralGenders": "sprzedacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "sprzeda"
+          },
+          "plural": {
+            "allPluralGenders": "sprzedadzą"
+          }
+        }
+      },
+      "imperative": "sprzedaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "sprzedano"
+          },
+          "plural": {
+            "allPluralGenders": "sprzedano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "sprzedałem",
+            "f": "sprzedałam"
+          },
+          "plural": {
+            "virile": "sprzedaliśmy",
+            "nonvirile": "sprzedałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "sprzedałeś",
+            "f": "sprzedałaś"
+          },
+          "plural": {
+            "virile": "sprzedaliście",
+            "nonvirile": "sprzedałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "sprzedał",
+            "f": "sprzedała",
+            "n": "sprzedało"
+          },
+          "plural": {
+            "virile": "sprzedali",
+            "nonvirile": "sprzedały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

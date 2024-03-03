@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "natrafiać",
+    "verbalNoun": "natrafianie",
+    "activeAdjectival": "natrafiający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "natrafiając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "natrafiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "natrafiano"
+          },
+          "plural": {
+            "allPluralGenders": "natrafiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "natrafiałem",
+            "f": "natrafiałam"
+          },
+          "plural": {
+            "virile": "natrafialiśmy",
+            "nonvirile": "natrafiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "natrafiałeś",
+            "f": "natrafiałaś"
+          },
+          "plural": {
+            "virile": "natrafialiście",
+            "nonvirile": "natrafiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "natrafiał",
+            "f": "natrafiała",
+            "n": "natrafiało"
+          },
+          "plural": {
+            "virile": "natrafiali",
+            "nonvirile": "natrafiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "natrafia się"
+          },
+          "plural": {
+            "allPluralGenders": "natrafia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "natrafiam"
+          },
+          "plural": {
+            "allPluralGenders": "natrafiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "natrafiasz"
+          },
+          "plural": {
+            "allPluralGenders": "natrafiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "natrafia"
+          },
+          "plural": {
+            "allPluralGenders": "natrafiają"
+          }
+        }
+      }
+    }
+  }
+}

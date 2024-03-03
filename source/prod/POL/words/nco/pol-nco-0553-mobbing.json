@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mobbing",
+      "gen": "mobbingu",
+      "dat": "mobbingowi",
+      "acc": "mobbing",
+      "ins": "mobbingiem",
+      "loc": "mobbingu",
+      "voc": "mobbingu"
+    }
+  }
+}

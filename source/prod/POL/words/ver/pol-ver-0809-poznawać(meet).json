@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "poznawać",
+    "verbalNoun": "poznawanie",
+    "activeAdjectival": "poznający",
+    "passiveAdjectival": "poznawany",
+    "contemporaryAdverbial": "poznając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "poznawaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poznawano"
+          },
+          "plural": {
+            "allPluralGenders": "poznawano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "poznawałem",
+            "f": "poznawałam"
+          },
+          "plural": {
+            "virile": "poznawaliśmy",
+            "nonvirile": "poznawałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "poznawałeś",
+            "f": "poznawałaś"
+          },
+          "plural": {
+            "virile": "poznawaliście",
+            "nonvirile": "poznawałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "poznawał",
+            "f": "poznawała",
+            "n": "poznawało"
+          },
+          "plural": {
+            "virile": "poznawali",
+            "nonvirile": "poznawały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poznaje się"
+          },
+          "plural": {
+            "allPluralGenders": "poznaje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "poznaję"
+          },
+          "plural": {
+            "allPluralGenders": "poznajemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "poznajesz"
+          },
+          "plural": {
+            "allPluralGenders": "poznajecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "poznaje"
+          },
+          "plural": {
+            "allPluralGenders": "poznają"
+          }
+        }
+      }
+    }
+  }
+}

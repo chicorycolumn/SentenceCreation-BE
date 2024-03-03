@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wymiana",
+      "gen": "wymiany",
+      "dat": "wymianie",
+      "acc": "wymianę",
+      "ins": "wymianą",
+      "loc": "wymianie",
+      "voc": "wymiano"
+    },
+    "plural": {
+      "nom": "wymiany",
+      "gen": "wymian",
+      "dat": "wymianom",
+      "acc": "wymiany",
+      "ins": "wymianami",
+      "loc": "wymianach",
+      "voc": "wymiany"
+    }
+  }
+}

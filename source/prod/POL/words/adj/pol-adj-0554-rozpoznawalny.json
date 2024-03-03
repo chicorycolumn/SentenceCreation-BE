@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "rozpoznawalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "rozpoznawalny",
+          "gen": "rozpoznawalnego",
+          "dat": "rozpoznawalnemu",
+          "acc": "rozpoznawalnego",
+          "ins": "rozpoznawalnym",
+          "loc": "rozpoznawalnym"
+        },
+        "m3": {
+          "nom": "rozpoznawalny",
+          "gen": "rozpoznawalnego",
+          "dat": "rozpoznawalnemu",
+          "acc": "rozpoznawalny",
+          "ins": "rozpoznawalnym",
+          "loc": "rozpoznawalnym"
+        },
+        "f": {
+          "nom": "rozpoznawalna",
+          "gen": "rozpoznawalnej",
+          "dat": "rozpoznawalnej",
+          "acc": "rozpoznawalną",
+          "ins": "rozpoznawalną",
+          "loc": "rozpoznawalnej"
+        },
+        "n": {
+          "nom": "rozpoznawalne",
+          "gen": "rozpoznawalnego",
+          "dat": "rozpoznawalnemu",
+          "acc": "rozpoznawalne",
+          "ins": "rozpoznawalnym",
+          "loc": "rozpoznawalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "rozpoznawalni",
+          "gen": "rozpoznawalnych",
+          "dat": "rozpoznawalnym",
+          "acc": "rozpoznawalnych",
+          "ins": "rozpoznawalnymi",
+          "loc": "rozpoznawalnych"
+        },
+        "nonvirile": {
+          "nom": "rozpoznawalne",
+          "gen": "rozpoznawalnych",
+          "dat": "rozpoznawalnym",
+          "acc": "rozpoznawalne",
+          "ins": "rozpoznawalnymi",
+          "loc": "rozpoznawalnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej rozpoznawalny",
+          "gen": "bardziej rozpoznawalnego",
+          "dat": "bardziej rozpoznawalnemu",
+          "acc": "bardziej rozpoznawalnego",
+          "ins": "bardziej rozpoznawalnym",
+          "loc": "bardziej rozpoznawalnym"
+        },
+        "m3": {
+          "nom": "bardziej rozpoznawalny",
+          "gen": "bardziej rozpoznawalnego",
+          "dat": "bardziej rozpoznawalnemu",
+          "acc": "bardziej rozpoznawalny",
+          "ins": "bardziej rozpoznawalnym",
+          "loc": "bardziej rozpoznawalnym"
+        },
+        "f": {
+          "nom": "bardziej rozpoznawalna",
+          "gen": "bardziej rozpoznawalnej",
+          "dat": "bardziej rozpoznawalnej",
+          "acc": "bardziej rozpoznawalną",
+          "ins": "bardziej rozpoznawalną",
+          "loc": "bardziej rozpoznawalnej"
+        },
+        "n": {
+          "nom": "bardziej rozpoznawalne",
+          "gen": "bardziej rozpoznawalnego",
+          "dat": "bardziej rozpoznawalnemu",
+          "acc": "bardziej rozpoznawalne",
+          "ins": "bardziej rozpoznawalnym",
+          "loc": "bardziej rozpoznawalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej rozpoznawalni",
+          "gen": "bardziej rozpoznawalnych",
+          "dat": "bardziej rozpoznawalnym",
+          "acc": "bardziej rozpoznawalnych",
+          "ins": "bardziej rozpoznawalnymi",
+          "loc": "bardziej rozpoznawalnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej rozpoznawalne",
+          "gen": "bardziej rozpoznawalnych",
+          "dat": "bardziej rozpoznawalnym",
+          "acc": "bardziej rozpoznawalne",
+          "ins": "bardziej rozpoznawalnymi",
+          "loc": "bardziej rozpoznawalnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej rozpoznawalny",
+          "gen": "najbardziej rozpoznawalnego",
+          "dat": "najbardziej rozpoznawalnemu",
+          "acc": "najbardziej rozpoznawalnego",
+          "ins": "najbardziej rozpoznawalnym",
+          "loc": "najbardziej rozpoznawalnym"
+        },
+        "m3": {
+          "nom": "najbardziej rozpoznawalny",
+          "gen": "najbardziej rozpoznawalnego",
+          "dat": "najbardziej rozpoznawalnemu",
+          "acc": "najbardziej rozpoznawalny",
+          "ins": "najbardziej rozpoznawalnym",
+          "loc": "najbardziej rozpoznawalnym"
+        },
+        "f": {
+          "nom": "najbardziej rozpoznawalna",
+          "gen": "najbardziej rozpoznawalnej",
+          "dat": "najbardziej rozpoznawalnej",
+          "acc": "najbardziej rozpoznawalną",
+          "ins": "najbardziej rozpoznawalną",
+          "loc": "najbardziej rozpoznawalnej"
+        },
+        "n": {
+          "nom": "najbardziej rozpoznawalne",
+          "gen": "najbardziej rozpoznawalnego",
+          "dat": "najbardziej rozpoznawalnemu",
+          "acc": "najbardziej rozpoznawalne",
+          "ins": "najbardziej rozpoznawalnym",
+          "loc": "najbardziej rozpoznawalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej rozpoznawalni",
+          "gen": "najbardziej rozpoznawalnych",
+          "dat": "najbardziej rozpoznawalnym",
+          "acc": "najbardziej rozpoznawalnych",
+          "ins": "najbardziej rozpoznawalnymi",
+          "loc": "najbardziej rozpoznawalnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej rozpoznawalne",
+          "gen": "najbardziej rozpoznawalnych",
+          "dat": "najbardziej rozpoznawalnym",
+          "acc": "najbardziej rozpoznawalne",
+          "ins": "najbardziej rozpoznawalnymi",
+          "loc": "najbardziej rozpoznawalnych"
+        }
+      }
+    }
+  }
+}

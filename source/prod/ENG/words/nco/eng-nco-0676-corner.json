@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "corner",
+      "gen": "corner's"
+    },
+    "plural": {
+      "nom": "corners",
+      "gen": "corners'"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dentysta",
+      "gen": "dentysty",
+      "dat": "dentyście",
+      "acc": "dentystę",
+      "ins": "dentystą",
+      "loc": "dentyście",
+      "voc": "dentysto"
+    },
+    "plural": {
+      "nom": "dentyści",
+      "gen": "dentystów",
+      "dat": "dentystom",
+      "acc": "dentystów",
+      "ins": "dentystami",
+      "loc": "dentystach",
+      "voc": "dentyści"
+    }
+  }
+}

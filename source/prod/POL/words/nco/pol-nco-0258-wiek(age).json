@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wiek",
+      "gen": "wieku",
+      "dat": "wiekowi",
+      "acc": "wiek",
+      "ins": "wiekiem",
+      "loc": "wieku",
+      "voc": "wieku"
+    },
+    "plural": {
+      "nom": "wieki",
+      "gen": "wieków",
+      "dat": "wiekom",
+      "acc": "wieki",
+      "ins": "wiekami",
+      "loc": "wiekach",
+      "voc": "wieki"
+    }
+  }
+}

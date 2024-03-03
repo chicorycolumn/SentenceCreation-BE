@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "napadać",
+    "verbalNoun": "napadanie",
+    "activeAdjectival": "napadający",
+    "passiveAdjectival": "napadany",
+    "contemporaryAdverbial": "napadając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "napadaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "napadano"
+          },
+          "plural": {
+            "allPluralGenders": "napadano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "napadałem",
+            "f": "napadałam"
+          },
+          "plural": {
+            "virile": "napadaliśmy",
+            "nonvirile": "napadałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "napadałeś",
+            "f": "napadałaś"
+          },
+          "plural": {
+            "virile": "napadaliście",
+            "nonvirile": "napadałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "napadał",
+            "f": "napadała",
+            "n": "napadało"
+          },
+          "plural": {
+            "virile": "napadali",
+            "nonvirile": "napadały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "napada się"
+          },
+          "plural": {
+            "allPluralGenders": "napada się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "napadam"
+          },
+          "plural": {
+            "allPluralGenders": "napadamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "napadasz"
+          },
+          "plural": {
+            "allPluralGenders": "napadacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "napada"
+          },
+          "plural": {
+            "allPluralGenders": "napadają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "różnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "różny",
+          "gen": "różnego",
+          "dat": "różnemu",
+          "acc": "różnego",
+          "ins": "różnym",
+          "loc": "różnym"
+        },
+        "m3": {
+          "nom": "różny",
+          "gen": "różnego",
+          "dat": "różnemu",
+          "acc": "różny",
+          "ins": "różnym",
+          "loc": "różnym"
+        },
+        "f": {
+          "nom": "różna",
+          "gen": "różnej",
+          "dat": "różnej",
+          "acc": "różną",
+          "ins": "różną",
+          "loc": "różnej"
+        },
+        "n": {
+          "nom": "różne",
+          "gen": "różnego",
+          "dat": "różnemu",
+          "acc": "różne",
+          "ins": "różnym",
+          "loc": "różnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "różni",
+          "gen": "różnych",
+          "dat": "różnym",
+          "acc": "różnych",
+          "ins": "różnymi",
+          "loc": "różnych"
+        },
+        "nonvirile": {
+          "nom": "różne",
+          "gen": "różnych",
+          "dat": "różnym",
+          "acc": "różne",
+          "ins": "różnymi",
+          "loc": "różnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "różniejszy",
+          "gen": "różniejszego",
+          "dat": "różniejszemu",
+          "acc": "różniejszego",
+          "ins": "różniejszym",
+          "loc": "różniejszym"
+        },
+        "m3": {
+          "nom": "różniejszy",
+          "gen": "różniejszego",
+          "dat": "różniejszemu",
+          "acc": "różniejszy",
+          "ins": "różniejszym",
+          "loc": "różniejszym"
+        },
+        "f": {
+          "nom": "różniejsza",
+          "gen": "różniejszej",
+          "dat": "różniejszej",
+          "acc": "różniejszą",
+          "ins": "różniejszą",
+          "loc": "różniejszej"
+        },
+        "n": {
+          "nom": "różniejsze",
+          "gen": "różniejszego",
+          "dat": "różniejszemu",
+          "acc": "różniejsze",
+          "ins": "różniejszym",
+          "loc": "różniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "różniejsi",
+          "gen": "różniejszych",
+          "dat": "różniejszym",
+          "acc": "różniejszych",
+          "ins": "różniejszymi",
+          "loc": "różniejszych"
+        },
+        "nonvirile": {
+          "nom": "różniejsze",
+          "gen": "różniejszych",
+          "dat": "różniejszym",
+          "acc": "różniejsze",
+          "ins": "różniejszymi",
+          "loc": "różniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najróżniejszy",
+          "gen": "najróżniejszego",
+          "dat": "najróżniejszemu",
+          "acc": "najróżniejszego",
+          "ins": "najróżniejszym",
+          "loc": "najróżniejszym"
+        },
+        "m3": {
+          "nom": "najróżniejszy",
+          "gen": "najróżniejszego",
+          "dat": "najróżniejszemu",
+          "acc": "najróżniejszy",
+          "ins": "najróżniejszym",
+          "loc": "najróżniejszym"
+        },
+        "f": {
+          "nom": "najróżniejsza",
+          "gen": "najróżniejszej",
+          "dat": "najróżniejszej",
+          "acc": "najróżniejszą",
+          "ins": "najróżniejszą",
+          "loc": "najróżniejszej"
+        },
+        "n": {
+          "nom": "najróżniejsze",
+          "gen": "najróżniejszego",
+          "dat": "najróżniejszemu",
+          "acc": "najróżniejsze",
+          "ins": "najróżniejszym",
+          "loc": "najróżniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najróżniejsi",
+          "gen": "najróżniejszych",
+          "dat": "najróżniejszym",
+          "acc": "najróżniejszych",
+          "ins": "najróżniejszymi",
+          "loc": "najróżniejszych"
+        },
+        "nonvirile": {
+          "nom": "najróżniejsze",
+          "gen": "najróżniejszych",
+          "dat": "najróżniejszym",
+          "acc": "najróżniejsze",
+          "ins": "najróżniejszymi",
+          "loc": "najróżniejszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "nieatrakcyjnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nieatrakcyjny",
+          "gen": "nieatrakcyjnego",
+          "dat": "nieatrakcyjnemu",
+          "acc": "nieatrakcyjnego",
+          "ins": "nieatrakcyjnym",
+          "loc": "nieatrakcyjnym"
+        },
+        "m3": {
+          "nom": "nieatrakcyjny",
+          "gen": "nieatrakcyjnego",
+          "dat": "nieatrakcyjnemu",
+          "acc": "nieatrakcyjny",
+          "ins": "nieatrakcyjnym",
+          "loc": "nieatrakcyjnym"
+        },
+        "f": {
+          "nom": "nieatrakcyjna",
+          "gen": "nieatrakcyjnej",
+          "dat": "nieatrakcyjnej",
+          "acc": "nieatrakcyjną",
+          "ins": "nieatrakcyjną",
+          "loc": "nieatrakcyjnej"
+        },
+        "n": {
+          "nom": "nieatrakcyjne",
+          "gen": "nieatrakcyjnego",
+          "dat": "nieatrakcyjnemu",
+          "acc": "nieatrakcyjne",
+          "ins": "nieatrakcyjnym",
+          "loc": "nieatrakcyjnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieatrakcyjni",
+          "gen": "nieatrakcyjnych",
+          "dat": "nieatrakcyjnym",
+          "acc": "nieatrakcyjnych",
+          "ins": "nieatrakcyjnymi",
+          "loc": "nieatrakcyjnych"
+        },
+        "nonvirile": {
+          "nom": "nieatrakcyjne",
+          "gen": "nieatrakcyjnych",
+          "dat": "nieatrakcyjnym",
+          "acc": "nieatrakcyjne",
+          "ins": "nieatrakcyjnymi",
+          "loc": "nieatrakcyjnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej nieatrakcyjny",
+          "gen": "bardziej nieatrakcyjnego",
+          "dat": "bardziej nieatrakcyjnemu",
+          "acc": "bardziej nieatrakcyjnego",
+          "ins": "bardziej nieatrakcyjnym",
+          "loc": "bardziej nieatrakcyjnym"
+        },
+        "m3": {
+          "nom": "bardziej nieatrakcyjny",
+          "gen": "bardziej nieatrakcyjnego",
+          "dat": "bardziej nieatrakcyjnemu",
+          "acc": "bardziej nieatrakcyjny",
+          "ins": "bardziej nieatrakcyjnym",
+          "loc": "bardziej nieatrakcyjnym"
+        },
+        "f": {
+          "nom": "bardziej nieatrakcyjna",
+          "gen": "bardziej nieatrakcyjnej",
+          "dat": "bardziej nieatrakcyjnej",
+          "acc": "bardziej nieatrakcyjną",
+          "ins": "bardziej nieatrakcyjną",
+          "loc": "bardziej nieatrakcyjnej"
+        },
+        "n": {
+          "nom": "bardziej nieatrakcyjne",
+          "gen": "bardziej nieatrakcyjnego",
+          "dat": "bardziej nieatrakcyjnemu",
+          "acc": "bardziej nieatrakcyjne",
+          "ins": "bardziej nieatrakcyjnym",
+          "loc": "bardziej nieatrakcyjnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej nieatrakcyjni",
+          "gen": "bardziej nieatrakcyjnych",
+          "dat": "bardziej nieatrakcyjnym",
+          "acc": "bardziej nieatrakcyjnych",
+          "ins": "bardziej nieatrakcyjnymi",
+          "loc": "bardziej nieatrakcyjnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej nieatrakcyjne",
+          "gen": "bardziej nieatrakcyjnych",
+          "dat": "bardziej nieatrakcyjnym",
+          "acc": "bardziej nieatrakcyjne",
+          "ins": "bardziej nieatrakcyjnymi",
+          "loc": "bardziej nieatrakcyjnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej nieatrakcyjny",
+          "gen": "najbardziej nieatrakcyjnego",
+          "dat": "najbardziej nieatrakcyjnemu",
+          "acc": "najbardziej nieatrakcyjnego",
+          "ins": "najbardziej nieatrakcyjnym",
+          "loc": "najbardziej nieatrakcyjnym"
+        },
+        "m3": {
+          "nom": "najbardziej nieatrakcyjny",
+          "gen": "najbardziej nieatrakcyjnego",
+          "dat": "najbardziej nieatrakcyjnemu",
+          "acc": "najbardziej nieatrakcyjny",
+          "ins": "najbardziej nieatrakcyjnym",
+          "loc": "najbardziej nieatrakcyjnym"
+        },
+        "f": {
+          "nom": "najbardziej nieatrakcyjna",
+          "gen": "najbardziej nieatrakcyjnej",
+          "dat": "najbardziej nieatrakcyjnej",
+          "acc": "najbardziej nieatrakcyjną",
+          "ins": "najbardziej nieatrakcyjną",
+          "loc": "najbardziej nieatrakcyjnej"
+        },
+        "n": {
+          "nom": "najbardziej nieatrakcyjne",
+          "gen": "najbardziej nieatrakcyjnego",
+          "dat": "najbardziej nieatrakcyjnemu",
+          "acc": "najbardziej nieatrakcyjne",
+          "ins": "najbardziej nieatrakcyjnym",
+          "loc": "najbardziej nieatrakcyjnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej nieatrakcyjni",
+          "gen": "najbardziej nieatrakcyjnych",
+          "dat": "najbardziej nieatrakcyjnym",
+          "acc": "najbardziej nieatrakcyjnych",
+          "ins": "najbardziej nieatrakcyjnymi",
+          "loc": "najbardziej nieatrakcyjnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej nieatrakcyjne",
+          "gen": "najbardziej nieatrakcyjnych",
+          "dat": "najbardziej nieatrakcyjnym",
+          "acc": "najbardziej nieatrakcyjne",
+          "ins": "najbardziej nieatrakcyjnymi",
+          "loc": "najbardziej nieatrakcyjnych"
+        }
+      }
+    }
+  }
+}

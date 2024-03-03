@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "blat",
+      "gen": "blatu",
+      "dat": "blatowi",
+      "acc": "blat",
+      "ins": "blatem",
+      "loc": "blacie",
+      "voc": "blacie"
+    },
+    "plural": {
+      "nom": "blaty",
+      "gen": "blatów",
+      "dat": "blatom",
+      "acc": "blaty",
+      "ins": "blatami",
+      "loc": "blatach",
+      "voc": "blaty"
+    }
+  }
+}

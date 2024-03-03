@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "taras",
+      "gen": "tarasu",
+      "dat": "tarasowi",
+      "acc": "taras",
+      "ins": "tarasem",
+      "loc": "tarasie",
+      "voc": "tarasie"
+    },
+    "plural": {
+      "nom": "tarasy",
+      "gen": "tarasów",
+      "dat": "tarasom",
+      "acc": "tarasy",
+      "ins": "tarasami",
+      "loc": "tarasach",
+      "voc": "tarasy"
+    }
+  }
+}

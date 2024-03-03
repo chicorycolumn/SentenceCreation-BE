@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odpłynąć",
+    "verbalNoun": "odpłynięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odpłynąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odpłynie się"
+          },
+          "plural": {
+            "allPluralGenders": "odpłynie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odpłynę"
+          },
+          "plural": {
+            "allPluralGenders": "odpłyniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odpłyniesz"
+          },
+          "plural": {
+            "allPluralGenders": "odpłyniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odpłynie"
+          },
+          "plural": {
+            "allPluralGenders": "odpłyną"
+          }
+        }
+      },
+      "imperative": "odpłyń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odpłynięto"
+          },
+          "plural": {
+            "allPluralGenders": "odpłynięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odpłynąłem",
+            "f": "odpłynęłam"
+          },
+          "plural": {
+            "virile": "odpłynęliśmy",
+            "nonvirile": "odpłynęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odpłynąłeś",
+            "f": "odpłynęłaś"
+          },
+          "plural": {
+            "virile": "odpłynęliście",
+            "nonvirile": "odpłynęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odpłynął",
+            "f": "odpłynęła",
+            "n": "odpłynęło"
+          },
+          "plural": {
+            "virile": "odpłynęli",
+            "nonvirile": "odpłynęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

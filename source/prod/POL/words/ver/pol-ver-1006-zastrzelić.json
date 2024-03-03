@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zastrzelić",
+    "verbalNoun": "zastrzelenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zastrzeliwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zastrzeli się"
+          },
+          "plural": {
+            "allPluralGenders": "zastrzeli się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zastrzelę"
+          },
+          "plural": {
+            "allPluralGenders": "zastrzelimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zastrzelisz"
+          },
+          "plural": {
+            "allPluralGenders": "zastrzelicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zastrzeli"
+          },
+          "plural": {
+            "allPluralGenders": "zastrzelą"
+          }
+        }
+      },
+      "imperative": "zastrzel",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zastrzelono"
+          },
+          "plural": {
+            "allPluralGenders": "zastrzelono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zastrzeliłem",
+            "f": "zastrzeliłam"
+          },
+          "plural": {
+            "virile": "zastrzeliliśmy",
+            "nonvirile": "zastrzeliłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zastrzeliłeś",
+            "f": "zastrzeliłaś"
+          },
+          "plural": {
+            "virile": "zastrzeliliście",
+            "nonvirile": "zastrzeliłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zastrzelił",
+            "f": "zastrzeliła",
+            "n": "zastrzeliło"
+          },
+          "plural": {
+            "virile": "zastrzelili",
+            "nonvirile": "zastrzeliły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

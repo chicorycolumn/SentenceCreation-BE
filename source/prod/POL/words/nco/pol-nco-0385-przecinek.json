@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przecinek",
+      "gen": "przecinka",
+      "dat": "przecinkowi",
+      "acc": "przecinek",
+      "ins": "przecinkiem",
+      "loc": "przecinku",
+      "voc": "przecinku"
+    },
+    "plural": {
+      "nom": "przecinki",
+      "gen": "przecinków",
+      "dat": "przecinkom",
+      "acc": "przecinki",
+      "ins": "przecinkami",
+      "loc": "przecinkach",
+      "voc": "przecinki"
+    }
+  }
+}

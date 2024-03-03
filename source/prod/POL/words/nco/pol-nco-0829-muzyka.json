@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "muzyka",
+      "gen": "muzyki",
+      "dat": "muzyce",
+      "acc": "muzykę",
+      "ins": "muzyką",
+      "loc": "muzyce",
+      "voc": "muzyko"
+    }
+  }
+}

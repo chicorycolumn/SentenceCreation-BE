@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odliczyć",
+    "verbalNoun": "odliczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "odliczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odliczywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odliczy się"
+          },
+          "plural": {
+            "allPluralGenders": "odliczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odliczę"
+          },
+          "plural": {
+            "allPluralGenders": "odliczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odliczysz"
+          },
+          "plural": {
+            "allPluralGenders": "odliczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odliczy"
+          },
+          "plural": {
+            "allPluralGenders": "odliczą"
+          }
+        }
+      },
+      "imperative": "odlicz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odliczono"
+          },
+          "plural": {
+            "allPluralGenders": "odliczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odliczyłem",
+            "f": "odliczyłam"
+          },
+          "plural": {
+            "virile": "odliczyliśmy",
+            "nonvirile": "odliczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odliczyłeś",
+            "f": "odliczyłaś"
+          },
+          "plural": {
+            "virile": "odliczyliście",
+            "nonvirile": "odliczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odliczył",
+            "f": "odliczyła",
+            "n": "odliczyło"
+          },
+          "plural": {
+            "virile": "odliczyli",
+            "nonvirile": "odliczyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

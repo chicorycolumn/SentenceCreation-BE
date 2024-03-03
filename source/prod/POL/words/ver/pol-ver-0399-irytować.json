@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "irytować",
+    "verbalNoun": "irytowanie",
+    "activeAdjectival": "irytujący",
+    "passiveAdjectival": "irytowany",
+    "contemporaryAdverbial": "irytując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "irytuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "irytowano"
+          },
+          "plural": {
+            "allPluralGenders": "irytowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "irytowałem",
+            "f": "irytowałam"
+          },
+          "plural": {
+            "virile": "irytowaliśmy",
+            "nonvirile": "irytowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "irytowałeś",
+            "f": "irytowałaś"
+          },
+          "plural": {
+            "virile": "irytowaliście",
+            "nonvirile": "irytowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "irytował",
+            "f": "irytowała",
+            "n": "irytowało"
+          },
+          "plural": {
+            "virile": "irytowali",
+            "nonvirile": "irytowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "irytuje się"
+          },
+          "plural": {
+            "allPluralGenders": "irytuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "irytuję"
+          },
+          "plural": {
+            "allPluralGenders": "irytujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "irytujesz"
+          },
+          "plural": {
+            "allPluralGenders": "irytujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "irytuje"
+          },
+          "plural": {
+            "allPluralGenders": "irytują"
+          }
+        }
+      }
+    }
+  }
+}

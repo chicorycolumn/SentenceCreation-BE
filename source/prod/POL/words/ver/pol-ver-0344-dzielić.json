@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dzielić",
+    "verbalNoun": "dzielenie",
+    "activeAdjectival": "dzielący",
+    "passiveAdjectival": "dzielony",
+    "contemporaryAdverbial": "dzieląc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dziel",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dzielono"
+          },
+          "plural": {
+            "allPluralGenders": "dzielono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dzieliłem",
+            "f": "dzieliłam"
+          },
+          "plural": {
+            "virile": "dzieliliśmy",
+            "nonvirile": "dzieliłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dzieliłeś",
+            "f": "dzieliłaś"
+          },
+          "plural": {
+            "virile": "dzieliliście",
+            "nonvirile": "dzieliłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dzielił",
+            "f": "dzieliła",
+            "n": "dzieliło"
+          },
+          "plural": {
+            "virile": "dzielili",
+            "nonvirile": "dzieliły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dzieli się"
+          },
+          "plural": {
+            "allPluralGenders": "dzieli się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dzielę"
+          },
+          "plural": {
+            "allPluralGenders": "dzielimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dzielisz"
+          },
+          "plural": {
+            "allPluralGenders": "dzielicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dzieli"
+          },
+          "plural": {
+            "allPluralGenders": "dzielą"
+          }
+        }
+      }
+    }
+  }
+}

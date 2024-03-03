@@ -1,0 +1,15 @@
+{
+  "inflections": {
+    "infinitive": "be silent",
+    "v2": {
+      "isTerminus": true,
+      "normal": [
+        "was silent",
+        "were silent"
+      ]
+    },
+    "v3": "been silent",
+    "thirdPS": "is silent",
+    "gerund": "being silent"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "chłopak",
+      "gen": "chłopaka",
+      "dat": "chłopakowi",
+      "acc": "chłopaka",
+      "ins": "chłopakiem",
+      "loc": "chłopaku",
+      "voc": "chłopaku"
+    },
+    "plural": {
+      "nom": [
+        "chłopacy",
+        "chłopaki"
+      ],
+      "gen": "chłopaków",
+      "dat": "chłopakom",
+      "acc": "chłopaków",
+      "ins": "chłopakami",
+      "loc": "chłopakach",
+      "voc": [
+        "chłopacy",
+        "chłopaki"
+      ]
+    }
+  }
+}

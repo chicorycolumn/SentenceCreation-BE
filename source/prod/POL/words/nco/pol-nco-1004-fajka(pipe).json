@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "fajka",
+      "gen": "fajki",
+      "dat": "fajce",
+      "acc": "fajkę",
+      "ins": "fajką",
+      "loc": "fajce",
+      "voc": "fajko"
+    },
+    "plural": {
+      "nom": "fajki",
+      "gen": "fajek",
+      "dat": "fajkom",
+      "acc": "fajki",
+      "ins": "fajkami",
+      "loc": "fajkach",
+      "voc": "fajki"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "radośnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "radosny",
+          "gen": "radosnego",
+          "dat": "radosnemu",
+          "acc": "radosnego",
+          "ins": "radosnym",
+          "loc": "radosnym"
+        },
+        "m3": {
+          "nom": "radosny",
+          "gen": "radosnego",
+          "dat": "radosnemu",
+          "acc": "radosny",
+          "ins": "radosnym",
+          "loc": "radosnym"
+        },
+        "f": {
+          "nom": "radosna",
+          "gen": "radosnej",
+          "dat": "radosnej",
+          "acc": "radosną",
+          "ins": "radosną",
+          "loc": "radosnej"
+        },
+        "n": {
+          "nom": "radosne",
+          "gen": "radosnego",
+          "dat": "radosnemu",
+          "acc": "radosne",
+          "ins": "radosnym",
+          "loc": "radosnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "radośni",
+          "gen": "radosnych",
+          "dat": "radosnym",
+          "acc": "radosnych",
+          "ins": "radosnymi",
+          "loc": "radosnych"
+        },
+        "nonvirile": {
+          "nom": "radosne",
+          "gen": "radosnych",
+          "dat": "radosnym",
+          "acc": "radosne",
+          "ins": "radosnymi",
+          "loc": "radosnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "radośniejszy",
+          "gen": "radośniejszego",
+          "dat": "radośniejszemu",
+          "acc": "radośniejszego",
+          "ins": "radośniejszym",
+          "loc": "radośniejszym"
+        },
+        "m3": {
+          "nom": "radośniejszy",
+          "gen": "radośniejszego",
+          "dat": "radośniejszemu",
+          "acc": "radośniejszy",
+          "ins": "radośniejszym",
+          "loc": "radośniejszym"
+        },
+        "f": {
+          "nom": "radośniejsza",
+          "gen": "radośniejszej",
+          "dat": "radośniejszej",
+          "acc": "radośniejszą",
+          "ins": "radośniejszą",
+          "loc": "radośniejszej"
+        },
+        "n": {
+          "nom": "radośniejsze",
+          "gen": "radośniejszego",
+          "dat": "radośniejszemu",
+          "acc": "radośniejsze",
+          "ins": "radośniejszym",
+          "loc": "radośniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "radośniejsi",
+          "gen": "radośniejszych",
+          "dat": "radośniejszym",
+          "acc": "radośniejszych",
+          "ins": "radośniejszymi",
+          "loc": "radośniejszych"
+        },
+        "nonvirile": {
+          "nom": "radośniejsze",
+          "gen": "radośniejszych",
+          "dat": "radośniejszym",
+          "acc": "radośniejsze",
+          "ins": "radośniejszymi",
+          "loc": "radośniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najradośniejszy",
+          "gen": "najradośniejszego",
+          "dat": "najradośniejszemu",
+          "acc": "najradośniejszego",
+          "ins": "najradośniejszym",
+          "loc": "najradośniejszym"
+        },
+        "m3": {
+          "nom": "najradośniejszy",
+          "gen": "najradośniejszego",
+          "dat": "najradośniejszemu",
+          "acc": "najradośniejszy",
+          "ins": "najradośniejszym",
+          "loc": "najradośniejszym"
+        },
+        "f": {
+          "nom": "najradośniejsza",
+          "gen": "najradośniejszej",
+          "dat": "najradośniejszej",
+          "acc": "najradośniejszą",
+          "ins": "najradośniejszą",
+          "loc": "najradośniejszej"
+        },
+        "n": {
+          "nom": "najradośniejsze",
+          "gen": "najradośniejszego",
+          "dat": "najradośniejszemu",
+          "acc": "najradośniejsze",
+          "ins": "najradośniejszym",
+          "loc": "najradośniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najradośniejsi",
+          "gen": "najradośniejszych",
+          "dat": "najradośniejszym",
+          "acc": "najradośniejszych",
+          "ins": "najradośniejszymi",
+          "loc": "najradośniejszych"
+        },
+        "nonvirile": {
+          "nom": "najradośniejsze",
+          "gen": "najradośniejszych",
+          "dat": "najradośniejszym",
+          "acc": "najradośniejsze",
+          "ins": "najradośniejszymi",
+          "loc": "najradośniejszych"
+        }
+      }
+    }
+  }
+}

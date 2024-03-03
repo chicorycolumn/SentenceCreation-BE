@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zjeść",
+    "verbalNoun": "zjedzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zjedzony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zjadłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zje się"
+          },
+          "plural": {
+            "allPluralGenders": "zje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zjem"
+          },
+          "plural": {
+            "allPluralGenders": "zjemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zjesz"
+          },
+          "plural": {
+            "allPluralGenders": "zjecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zje"
+          },
+          "plural": {
+            "allPluralGenders": "zjedzą"
+          }
+        }
+      },
+      "imperative": "zjedz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zjedzono"
+          },
+          "plural": {
+            "allPluralGenders": "zjedzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zjadłem",
+            "f": "zjadłam"
+          },
+          "plural": {
+            "virile": "zjedliśmy",
+            "nonvirile": "zjadłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zjadłeś",
+            "f": "zjadłaś"
+          },
+          "plural": {
+            "virile": "zjedliście",
+            "nonvirile": "zjadłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zjadł",
+            "f": "zjadła",
+            "n": "zjadło"
+          },
+          "plural": {
+            "virile": "zjedli",
+            "nonvirile": "zjadły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "finansowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "finansowy",
+          "gen": "finansowego",
+          "dat": "finansowemu",
+          "acc": "finansowego",
+          "ins": "finansowym",
+          "loc": "finansowym"
+        },
+        "m3": {
+          "nom": "finansowy",
+          "gen": "finansowego",
+          "dat": "finansowemu",
+          "acc": "finansowy",
+          "ins": "finansowym",
+          "loc": "finansowym"
+        },
+        "f": {
+          "nom": "finansowa",
+          "gen": "finansowej",
+          "dat": "finansowej",
+          "acc": "finansową",
+          "ins": "finansową",
+          "loc": "finansowej"
+        },
+        "n": {
+          "nom": "finansowe",
+          "gen": "finansowego",
+          "dat": "finansowemu",
+          "acc": "finansowe",
+          "ins": "finansowym",
+          "loc": "finansowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "finansowi",
+          "gen": "finansowych",
+          "dat": "finansowym",
+          "acc": "finansowych",
+          "ins": "finansowymi",
+          "loc": "finansowych"
+        },
+        "nonvirile": {
+          "nom": "finansowe",
+          "gen": "finansowych",
+          "dat": "finansowym",
+          "acc": "finansowe",
+          "ins": "finansowymi",
+          "loc": "finansowych"
+        }
+      }
+    }
+  }
+}

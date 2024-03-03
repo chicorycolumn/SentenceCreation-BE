@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wąż",
+      "gen": "węża",
+      "dat": "wężowi",
+      "acc": "węża",
+      "ins": "wężem",
+      "loc": "wężu",
+      "voc": "wężu"
+    },
+    "plural": {
+      "nom": "węże",
+      "gen": [
+        "węży",
+        "wężów"
+      ],
+      "dat": "wężom",
+      "acc": "węże",
+      "ins": "wężami",
+      "loc": "wężach",
+      "voc": "węże"
+    }
+  }
+}

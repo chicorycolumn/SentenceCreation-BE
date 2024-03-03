@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pielęgniarka",
+      "gen": "pielęgniarki",
+      "dat": "pielęgniarce",
+      "acc": "pielęgniarkę",
+      "ins": "pielęgniarką",
+      "loc": "pielęgniarce",
+      "voc": "pielęgniarko"
+    },
+    "plural": {
+      "nom": "pielęgniarki",
+      "gen": "pielęgniarek",
+      "dat": "pielęgniarkom",
+      "acc": "pielęgniarki",
+      "ins": "pielęgniarkami",
+      "loc": "pielęgniarkach",
+      "voc": "pielęgniarki"
+    }
+  }
+}

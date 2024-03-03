@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zjadać",
+    "verbalNoun": "zjadanie",
+    "activeAdjectival": "zjadający",
+    "passiveAdjectival": "zjadany",
+    "contemporaryAdverbial": "zjadając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "zjadaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zjadano"
+          },
+          "plural": {
+            "allPluralGenders": "zjadano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zjadałem",
+            "f": "zjadałam"
+          },
+          "plural": {
+            "virile": "zjadaliśmy",
+            "nonvirile": "zjadałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zjadałeś",
+            "f": "zjadałaś"
+          },
+          "plural": {
+            "virile": "zjadaliście",
+            "nonvirile": "zjadałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zjadał",
+            "f": "zjadała",
+            "n": "zjadało"
+          },
+          "plural": {
+            "virile": "zjadali",
+            "nonvirile": "zjadały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zjada się"
+          },
+          "plural": {
+            "allPluralGenders": "zjada się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zjadam"
+          },
+          "plural": {
+            "allPluralGenders": "zjadamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zjadasz"
+          },
+          "plural": {
+            "allPluralGenders": "zjadacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zjada"
+          },
+          "plural": {
+            "allPluralGenders": "zjadają"
+          }
+        }
+      }
+    }
+  }
+}

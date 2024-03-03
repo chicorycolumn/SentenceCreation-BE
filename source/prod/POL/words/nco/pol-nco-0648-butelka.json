@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "butelka",
+      "gen": "butelki",
+      "dat": "butelce",
+      "acc": "butelkę",
+      "ins": "butelką",
+      "loc": "butelce",
+      "voc": "butelko"
+    },
+    "plural": {
+      "nom": "butelki",
+      "gen": "butelek",
+      "dat": "butelkom",
+      "acc": "butelki",
+      "ins": "butelkami",
+      "loc": "butelkach",
+      "voc": "butelki"
+    }
+  }
+}

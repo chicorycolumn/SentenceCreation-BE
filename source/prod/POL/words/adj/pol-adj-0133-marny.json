@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "marnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "marny",
+          "gen": "marnego",
+          "dat": "marnemu",
+          "acc": "marnego",
+          "ins": "marnym",
+          "loc": "marnym"
+        },
+        "m3": {
+          "nom": "marny",
+          "gen": "marnego",
+          "dat": "marnemu",
+          "acc": "marny",
+          "ins": "marnym",
+          "loc": "marnym"
+        },
+        "f": {
+          "nom": "marna",
+          "gen": "marnej",
+          "dat": "marnej",
+          "acc": "marną",
+          "ins": "marną",
+          "loc": "marnej"
+        },
+        "n": {
+          "nom": "marne",
+          "gen": "marnego",
+          "dat": "marnemu",
+          "acc": "marne",
+          "ins": "marnym",
+          "loc": "marnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "marni",
+          "gen": "marnych",
+          "dat": "marnym",
+          "acc": "marnych",
+          "ins": "marnymi",
+          "loc": "marnych"
+        },
+        "nonvirile": {
+          "nom": "marne",
+          "gen": "marnych",
+          "dat": "marnym",
+          "acc": "marne",
+          "ins": "marnymi",
+          "loc": "marnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "marniejszy",
+          "gen": "marniejszego",
+          "dat": "marniejszemu",
+          "acc": "marniejszego",
+          "ins": "marniejszym",
+          "loc": "marniejszym"
+        },
+        "m3": {
+          "nom": "marniejszy",
+          "gen": "marniejszego",
+          "dat": "marniejszemu",
+          "acc": "marniejszy",
+          "ins": "marniejszym",
+          "loc": "marniejszym"
+        },
+        "f": {
+          "nom": "marniejsza",
+          "gen": "marniejszej",
+          "dat": "marniejszej",
+          "acc": "marniejszą",
+          "ins": "marniejszą",
+          "loc": "marniejszej"
+        },
+        "n": {
+          "nom": "marniejsze",
+          "gen": "marniejszego",
+          "dat": "marniejszemu",
+          "acc": "marniejsze",
+          "ins": "marniejszym",
+          "loc": "marniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "marniejsi",
+          "gen": "marniejszych",
+          "dat": "marniejszym",
+          "acc": "marniejszych",
+          "ins": "marniejszymi",
+          "loc": "marniejszych"
+        },
+        "nonvirile": {
+          "nom": "marniejsze",
+          "gen": "marniejszych",
+          "dat": "marniejszym",
+          "acc": "marniejsze",
+          "ins": "marniejszymi",
+          "loc": "marniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najmarniejszy",
+          "gen": "najmarniejszego",
+          "dat": "najmarniejszemu",
+          "acc": "najmarniejszego",
+          "ins": "najmarniejszym",
+          "loc": "najmarniejszym"
+        },
+        "m3": {
+          "nom": "najmarniejszy",
+          "gen": "najmarniejszego",
+          "dat": "najmarniejszemu",
+          "acc": "najmarniejszy",
+          "ins": "najmarniejszym",
+          "loc": "najmarniejszym"
+        },
+        "f": {
+          "nom": "najmarniejsza",
+          "gen": "najmarniejszej",
+          "dat": "najmarniejszej",
+          "acc": "najmarniejszą",
+          "ins": "najmarniejszą",
+          "loc": "najmarniejszej"
+        },
+        "n": {
+          "nom": "najmarniejsze",
+          "gen": "najmarniejszego",
+          "dat": "najmarniejszemu",
+          "acc": "najmarniejsze",
+          "ins": "najmarniejszym",
+          "loc": "najmarniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najmarniejsi",
+          "gen": "najmarniejszych",
+          "dat": "najmarniejszym",
+          "acc": "najmarniejszych",
+          "ins": "najmarniejszymi",
+          "loc": "najmarniejszych"
+        },
+        "nonvirile": {
+          "nom": "najmarniejsze",
+          "gen": "najmarniejszych",
+          "dat": "najmarniejszym",
+          "acc": "najmarniejsze",
+          "ins": "najmarniejszymi",
+          "loc": "najmarniejszych"
+        }
+      }
+    }
+  }
+}

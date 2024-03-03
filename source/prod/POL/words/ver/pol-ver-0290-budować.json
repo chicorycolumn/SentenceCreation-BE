@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "budować",
+    "verbalNoun": "budowanie",
+    "activeAdjectival": "budujący",
+    "passiveAdjectival": "budowany",
+    "contemporaryAdverbial": "budując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "buduj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "budowano"
+          },
+          "plural": {
+            "allPluralGenders": "budowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "budowałem",
+            "f": "budowałam"
+          },
+          "plural": {
+            "virile": "budowaliśmy",
+            "nonvirile": "budowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "budowałeś",
+            "f": "budowałaś"
+          },
+          "plural": {
+            "virile": "budowaliście",
+            "nonvirile": "budowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "budował",
+            "f": "budowała",
+            "n": "budowało"
+          },
+          "plural": {
+            "virile": "budowali",
+            "nonvirile": "budowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "buduje się"
+          },
+          "plural": {
+            "allPluralGenders": "buduje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "buduję"
+          },
+          "plural": {
+            "allPluralGenders": "budujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "budujesz"
+          },
+          "plural": {
+            "allPluralGenders": "budujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "buduje"
+          },
+          "plural": {
+            "allPluralGenders": "budują"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ambulans",
+      "gen": "ambulansu",
+      "dat": "ambulansowi",
+      "acc": "ambulans",
+      "ins": "ambulansem",
+      "loc": "ambulansie",
+      "voc": "ambulansie"
+    },
+    "plural": {
+      "nom": [
+        "ambulanse",
+        "ambulansy"
+      ],
+      "gen": "ambulansów",
+      "dat": "ambulansom",
+      "acc": [
+        "ambulanse",
+        "ambulansy"
+      ],
+      "ins": "ambulansami",
+      "loc": "ambulansach",
+      "voc": [
+        "ambulanse",
+        "ambulansy"
+      ]
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pomieścić",
+    "verbalNoun": "pomieszczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pomieszczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pomieściwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pomieści się"
+          },
+          "plural": {
+            "allPluralGenders": "pomieści się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pomieszczę"
+          },
+          "plural": {
+            "allPluralGenders": "pomieścimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pomieścisz"
+          },
+          "plural": {
+            "allPluralGenders": "pomieścicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pomieści"
+          },
+          "plural": {
+            "allPluralGenders": "pomieszczą"
+          }
+        }
+      },
+      "imperative": "pomieść",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pomieszczono"
+          },
+          "plural": {
+            "allPluralGenders": "pomieszczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pomieściłem",
+            "f": "pomieściłam"
+          },
+          "plural": {
+            "virile": "pomieściliśmy",
+            "nonvirile": "pomieściłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pomieściłeś",
+            "f": "pomieściłaś"
+          },
+          "plural": {
+            "virile": "pomieściliście",
+            "nonvirile": "pomieściłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pomieścił",
+            "f": "pomieściła",
+            "n": "pomieściło"
+          },
+          "plural": {
+            "virile": "pomieścili",
+            "nonvirile": "pomieściły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

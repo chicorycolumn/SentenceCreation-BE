@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "eraser",
+      "gen": "eraser's"
+    },
+    "plural": {
+      "nom": "erasers",
+      "gen": "erasers'"
+    }
+  }
+}

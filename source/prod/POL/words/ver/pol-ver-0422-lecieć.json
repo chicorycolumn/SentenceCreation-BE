@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "lecieć",
+    "verbalNoun": "lecenie",
+    "activeAdjectival": "lecący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "lecąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "leć",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "leciano"
+          },
+          "plural": {
+            "allPluralGenders": "leciano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "leciałem",
+            "f": "leciałam"
+          },
+          "plural": {
+            "virile": "lecieliśmy",
+            "nonvirile": "leciałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "leciałeś",
+            "f": "leciałaś"
+          },
+          "plural": {
+            "virile": "lecieliście",
+            "nonvirile": "leciałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "leciał",
+            "f": "leciała",
+            "n": "leciało"
+          },
+          "plural": {
+            "virile": "lecieli",
+            "nonvirile": "leciały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "leci się"
+          },
+          "plural": {
+            "allPluralGenders": "leci się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "lecę"
+          },
+          "plural": {
+            "allPluralGenders": "lecimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "lecisz"
+          },
+          "plural": {
+            "allPluralGenders": "lecicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "leci"
+          },
+          "plural": {
+            "allPluralGenders": "lecą"
+          }
+        }
+      }
+    }
+  }
+}

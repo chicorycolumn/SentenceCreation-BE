@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "koszulka",
+      "gen": "koszulki",
+      "dat": "koszulce",
+      "acc": "koszulkę",
+      "ins": "koszulką",
+      "loc": "koszulce",
+      "voc": "koszulko"
+    },
+    "plural": {
+      "nom": "koszulki",
+      "gen": "koszulek",
+      "dat": "koszulkom",
+      "acc": "koszulki",
+      "ins": "koszulkami",
+      "loc": "koszulkach",
+      "voc": "koszulki"
+    }
+  }
+}

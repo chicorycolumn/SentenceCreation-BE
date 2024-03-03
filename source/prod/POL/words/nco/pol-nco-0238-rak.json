@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rak",
+      "gen": "raka",
+      "dat": "rakowi",
+      "acc": "raka",
+      "ins": "rakiem",
+      "loc": "raku",
+      "voc": "raku"
+    },
+    "plural": {
+      "nom": "raki",
+      "gen": "raków",
+      "dat": "rakom",
+      "acc": "raki",
+      "ins": "rakami",
+      "loc": "rakach",
+      "voc": "raki"
+    }
+  }
+}

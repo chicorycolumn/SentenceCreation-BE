@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "malutko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "malutki",
+          "gen": "malutkiego",
+          "dat": "malutkiemu",
+          "acc": "malutkiego",
+          "ins": "malutkim",
+          "loc": "malutkim"
+        },
+        "m3": {
+          "nom": "malutki",
+          "gen": "malutkiego",
+          "dat": "malutkiemu",
+          "acc": "malutki",
+          "ins": "malutkim",
+          "loc": "malutkim"
+        },
+        "f": {
+          "nom": "malutka",
+          "gen": "malutkiej",
+          "dat": "malutkiej",
+          "acc": "malutką",
+          "ins": "malutką",
+          "loc": "malutkiej"
+        },
+        "n": {
+          "nom": "malutkie",
+          "gen": "malutkiego",
+          "dat": "malutkiemu",
+          "acc": "malutkie",
+          "ins": "malutkim",
+          "loc": "malutkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "malutcy",
+          "gen": "malutkich",
+          "dat": "malutkim",
+          "acc": "malutkich",
+          "ins": "malutkimi",
+          "loc": "malutkich"
+        },
+        "nonvirile": {
+          "nom": "malutkie",
+          "gen": "malutkich",
+          "dat": "malutkim",
+          "acc": "malutkie",
+          "ins": "malutkimi",
+          "loc": "malutkich"
+        }
+      }
+    }
+  }
+}

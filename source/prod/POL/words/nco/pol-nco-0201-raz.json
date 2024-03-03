@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "raz",
+      "gen": "razu",
+      "dat": "razowi",
+      "acc": "raz",
+      "ins": "razem",
+      "loc": "razie",
+      "voc": "razie"
+    },
+    "plural": {
+      "nom": "razy",
+      "gen": "razów",
+      "dat": "razom",
+      "acc": "razy",
+      "ins": "razami",
+      "loc": "razach",
+      "voc": "razy"
+    }
+  }
+}

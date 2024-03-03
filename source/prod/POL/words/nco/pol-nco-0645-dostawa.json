@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dostawa",
+      "gen": "dostawy",
+      "dat": "dostawie",
+      "acc": "dostawę",
+      "ins": "dostawą",
+      "loc": "dostawie",
+      "voc": "dostawo"
+    },
+    "plural": {
+      "nom": "dostawy",
+      "gen": "dostaw",
+      "dat": "dostawom",
+      "acc": "dostawy",
+      "ins": "dostawami",
+      "loc": "dostawach",
+      "voc": "dostawy"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "plural": {
+      "nom": "spodnie",
+      "gen": "spodni",
+      "dat": "spodniom",
+      "acc": "spodnie",
+      "ins": "spodniami",
+      "loc": "spodniach",
+      "voc": "spodnie"
+    }
+  }
+}

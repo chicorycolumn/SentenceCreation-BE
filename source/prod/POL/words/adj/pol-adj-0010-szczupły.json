@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "szczupło",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "szczupły",
+          "gen": "szczupłego",
+          "dat": "szczupłemu",
+          "acc": "szczupłego",
+          "ins": "szczupłym",
+          "loc": "szczupłym"
+        },
+        "m3": {
+          "nom": "szczupły",
+          "gen": "szczupłego",
+          "dat": "szczupłemu",
+          "acc": "szczupły",
+          "ins": "szczupłym",
+          "loc": "szczupłym"
+        },
+        "f": {
+          "nom": "szczupła",
+          "gen": "szczupłej",
+          "dat": "szczupłej",
+          "acc": "szczupłą",
+          "ins": "szczupłą",
+          "loc": "szczupłej"
+        },
+        "n": {
+          "nom": "szczupłe",
+          "gen": "szczupłego",
+          "dat": "szczupłemu",
+          "acc": "szczupłe",
+          "ins": "szczupłym",
+          "loc": "szczupłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "szczupli",
+          "gen": "szczupłych",
+          "dat": "szczupłym",
+          "acc": "szczupłych",
+          "ins": "szczupłymi",
+          "loc": "szczupłych"
+        },
+        "nonvirile": {
+          "nom": "szczupłe",
+          "gen": "szczupłych",
+          "dat": "szczupłym",
+          "acc": "szczupłe",
+          "ins": "szczupłymi",
+          "loc": "szczupłych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "szczuplejszy",
+          "gen": "szczuplejszego",
+          "dat": "szczuplejszemu",
+          "acc": "szczuplejszego",
+          "ins": "szczuplejszym",
+          "loc": "szczuplejszym"
+        },
+        "m3": {
+          "nom": "szczuplejszy",
+          "gen": "szczuplejszego",
+          "dat": "szczuplejszemu",
+          "acc": "szczuplejszy",
+          "ins": "szczuplejszym",
+          "loc": "szczuplejszym"
+        },
+        "f": {
+          "nom": "szczuplejsza",
+          "gen": "szczuplejszej",
+          "dat": "szczuplejszej",
+          "acc": "szczuplejszą",
+          "ins": "szczuplejszą",
+          "loc": "szczuplejszej"
+        },
+        "n": {
+          "nom": "szczuplejsze",
+          "gen": "szczuplejszego",
+          "dat": "szczuplejszemu",
+          "acc": "szczuplejsze",
+          "ins": "szczuplejszym",
+          "loc": "szczuplejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "szczuplejsi",
+          "gen": "szczuplejszych",
+          "dat": "szczuplejszym",
+          "acc": "szczuplejszych",
+          "ins": "szczuplejszymi",
+          "loc": "szczuplejszych"
+        },
+        "nonvirile": {
+          "nom": "szczuplejsze",
+          "gen": "szczuplejszych",
+          "dat": "szczuplejszym",
+          "acc": "szczuplejsze",
+          "ins": "szczuplejszymi",
+          "loc": "szczuplejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najszczuplejszy",
+          "gen": "najszczuplejszego",
+          "dat": "najszczuplejszemu",
+          "acc": "najszczuplejszego",
+          "ins": "najszczuplejszym",
+          "loc": "najszczuplejszym"
+        },
+        "m3": {
+          "nom": "najszczuplejszy",
+          "gen": "najszczuplejszego",
+          "dat": "najszczuplejszemu",
+          "acc": "najszczuplejszy",
+          "ins": "najszczuplejszym",
+          "loc": "najszczuplejszym"
+        },
+        "f": {
+          "nom": "najszczuplejsza",
+          "gen": "najszczuplejszej",
+          "dat": "najszczuplejszej",
+          "acc": "najszczuplejszą",
+          "ins": "najszczuplejszą",
+          "loc": "najszczuplejszej"
+        },
+        "n": {
+          "nom": "najszczuplejsze",
+          "gen": "najszczuplejszego",
+          "dat": "najszczuplejszemu",
+          "acc": "najszczuplejsze",
+          "ins": "najszczuplejszym",
+          "loc": "najszczuplejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najszczuplejsi",
+          "gen": "najszczuplejszych",
+          "dat": "najszczuplejszym",
+          "acc": "najszczuplejszych",
+          "ins": "najszczuplejszymi",
+          "loc": "najszczuplejszych"
+        },
+        "nonvirile": {
+          "nom": "najszczuplejsze",
+          "gen": "najszczuplejszych",
+          "dat": "najszczuplejszym",
+          "acc": "najszczuplejsze",
+          "ins": "najszczuplejszymi",
+          "loc": "najszczuplejszych"
+        }
+      }
+    }
+  }
+}

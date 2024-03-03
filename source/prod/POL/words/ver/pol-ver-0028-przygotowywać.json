@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przygotowywać",
+    "verbalNoun": "przygotowywanie",
+    "activeAdjectival": "przygotowujący",
+    "passiveAdjectival": "przygotowywany",
+    "contemporaryAdverbial": "przygotowując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przygotowuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przygotowywano"
+          },
+          "plural": {
+            "allPluralGenders": "przygotowywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przygotowywałem",
+            "f": "przygotowywałam"
+          },
+          "plural": {
+            "virile": "przygotowywaliśmy",
+            "nonvirile": "przygotowywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przygotowywałeś",
+            "f": "przygotowywałaś"
+          },
+          "plural": {
+            "virile": "przygotowywaliście",
+            "nonvirile": "przygotowywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przygotowywał",
+            "f": "przygotowywała",
+            "n": "przygotowywało"
+          },
+          "plural": {
+            "virile": "przygotowywali",
+            "nonvirile": "przygotowywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przygotowuje się"
+          },
+          "plural": {
+            "allPluralGenders": "przygotowuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przygotowuję"
+          },
+          "plural": {
+            "allPluralGenders": "przygotowujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przygotowujesz"
+          },
+          "plural": {
+            "allPluralGenders": "przygotowujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przygotowuje"
+          },
+          "plural": {
+            "allPluralGenders": "przygotowują"
+          }
+        }
+      }
+    }
+  }
+}

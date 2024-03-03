@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sickness",
+      "gen": "sickness's"
+    },
+    "plural": {
+      "nom": "sicknesses",
+      "gen": "sicknesses'"
+    }
+  }
+}

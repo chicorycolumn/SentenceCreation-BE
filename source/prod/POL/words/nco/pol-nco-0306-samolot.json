@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "samolot",
+      "gen": "samolotu",
+      "dat": "samolotowi",
+      "acc": "samolot",
+      "ins": "samolotem",
+      "loc": "samolocie",
+      "voc": "samolocie"
+    },
+    "plural": {
+      "nom": "samoloty",
+      "gen": "samolotów",
+      "dat": "samolotom",
+      "acc": "samoloty",
+      "ins": "samolotami",
+      "loc": "samolotach",
+      "voc": "samoloty"
+    }
+  }
+}

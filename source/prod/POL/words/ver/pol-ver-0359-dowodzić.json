@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dowodzić",
+    "verbalNoun": "dowodzenie",
+    "activeAdjectival": "dowodzący",
+    "passiveAdjectival": "dowodzony",
+    "contemporaryAdverbial": "dowodząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dowódź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dowodzono"
+          },
+          "plural": {
+            "allPluralGenders": "dowodzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dowodziłem",
+            "f": "dowodziłam"
+          },
+          "plural": {
+            "virile": "dowodziliśmy",
+            "nonvirile": "dowodziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dowodziłeś",
+            "f": "dowodziłaś"
+          },
+          "plural": {
+            "virile": "dowodziliście",
+            "nonvirile": "dowodziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dowodził",
+            "f": "dowodziła",
+            "n": "dowodziło"
+          },
+          "plural": {
+            "virile": "dowodzili",
+            "nonvirile": "dowodziły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dowodzi się"
+          },
+          "plural": {
+            "allPluralGenders": "dowodzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dowodzę"
+          },
+          "plural": {
+            "allPluralGenders": "dowodzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dowodzisz"
+          },
+          "plural": {
+            "allPluralGenders": "dowodzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dowodzi"
+          },
+          "plural": {
+            "allPluralGenders": "dowodzą"
+          }
+        }
+      }
+    }
+  }
+}

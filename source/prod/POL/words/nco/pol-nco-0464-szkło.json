@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "szkło",
+      "gen": "szkła",
+      "dat": "szkłu",
+      "acc": "szkło",
+      "ins": "szkłem",
+      "loc": "szkle",
+      "voc": "szkło"
+    },
+    "plural": {
+      "nom": "szkła",
+      "gen": "szkieł",
+      "dat": "szkłom",
+      "acc": "szkła",
+      "ins": "szkłami",
+      "loc": "szkłach",
+      "voc": "szkła"
+    }
+  }
+}

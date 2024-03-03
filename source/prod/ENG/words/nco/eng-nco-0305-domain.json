@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "domain",
+      "gen": "domain's"
+    },
+    "plural": {
+      "nom": "domains",
+      "gen": "domains'"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nałożyć",
+    "verbalNoun": "nałożenia",
+    "activeAdjectival": false,
+    "passiveAdjectival": "nałożony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "nałożywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nałoży się"
+          },
+          "plural": {
+            "allPluralGenders": "nałoży się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nałożę"
+          },
+          "plural": {
+            "allPluralGenders": "nałożymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nałożysz"
+          },
+          "plural": {
+            "allPluralGenders": "nałożycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nałoży"
+          },
+          "plural": {
+            "allPluralGenders": "nałożą"
+          }
+        }
+      },
+      "imperative": "nałóż",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nałożono"
+          },
+          "plural": {
+            "allPluralGenders": "nałożono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nałożyłem",
+            "f": "nałożyłam"
+          },
+          "plural": {
+            "virile": "nałożyliśmy",
+            "nonvirile": "nałożyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nałożyłeś",
+            "f": "nałożyłaś"
+          },
+          "plural": {
+            "virile": "nałożyliście",
+            "nonvirile": "nałożyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nałożył",
+            "f": "nałożyła",
+            "n": "nałożyło"
+          },
+          "plural": {
+            "virile": "nałożyli",
+            "nonvirile": "nałożyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

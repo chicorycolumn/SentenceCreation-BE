@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oddawać",
+    "verbalNoun": "oddawanie",
+    "activeAdjectival": "oddający",
+    "passiveAdjectival": "oddawany",
+    "contemporaryAdverbial": "oddając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "oddawaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oddawano"
+          },
+          "plural": {
+            "allPluralGenders": "oddawano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oddawałem",
+            "f": "oddawałam"
+          },
+          "plural": {
+            "virile": "oddawaliśmy",
+            "nonvirile": "oddawałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oddawałeś",
+            "f": "oddawałaś"
+          },
+          "plural": {
+            "virile": "oddawaliście",
+            "nonvirile": "oddawałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oddawał",
+            "f": "oddawała",
+            "n": "oddawało"
+          },
+          "plural": {
+            "virile": "oddawali",
+            "nonvirile": "oddawały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oddaje się"
+          },
+          "plural": {
+            "allPluralGenders": "oddaje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oddaję"
+          },
+          "plural": {
+            "allPluralGenders": "oddajemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oddajesz"
+          },
+          "plural": {
+            "allPluralGenders": "oddajecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "oddaje"
+          },
+          "plural": {
+            "allPluralGenders": "oddają"
+          }
+        }
+      }
+    }
+  }
+}

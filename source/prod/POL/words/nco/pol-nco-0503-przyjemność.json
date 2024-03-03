@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przyjemność",
+      "gen": "przyjemności",
+      "dat": "przyjemności",
+      "acc": "przyjemność",
+      "ins": "przyjemnością",
+      "loc": "przyjemności",
+      "voc": "przyjemności"
+    },
+    "plural": {
+      "nom": "przyjemności",
+      "gen": "przyjemności",
+      "dat": "przyjemnościom",
+      "acc": "przyjemności",
+      "ins": "przyjemnościami",
+      "loc": "przyjemnościach",
+      "voc": "przyjemności"
+    }
+  }
+}

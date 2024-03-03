@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "wojennie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "wojenny",
+          "gen": "wojennego",
+          "dat": "wojennemu",
+          "acc": "wojennego",
+          "ins": "wojennym",
+          "loc": "wojennym"
+        },
+        "m3": {
+          "nom": "wojenny",
+          "gen": "wojennego",
+          "dat": "wojennemu",
+          "acc": "wojenny",
+          "ins": "wojennym",
+          "loc": "wojennym"
+        },
+        "f": {
+          "nom": "wojenna",
+          "gen": "wojennej",
+          "dat": "wojennej",
+          "acc": "wojenną",
+          "ins": "wojenną",
+          "loc": "wojennej"
+        },
+        "n": {
+          "nom": "wojenne",
+          "gen": "wojennego",
+          "dat": "wojennemu",
+          "acc": "wojenne",
+          "ins": "wojennym",
+          "loc": "wojennym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wojenni",
+          "gen": "wojennych",
+          "dat": "wojennym",
+          "acc": "wojennych",
+          "ins": "wojennymi",
+          "loc": "wojennych"
+        },
+        "nonvirile": {
+          "nom": "wojenne",
+          "gen": "wojennych",
+          "dat": "wojennym",
+          "acc": "wojenne",
+          "ins": "wojennymi",
+          "loc": "wojennych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przerzucać",
+    "verbalNoun": "przerzucanie",
+    "activeAdjectival": "przerzucający",
+    "passiveAdjectival": "przerzucany",
+    "contemporaryAdverbial": "przerzucając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przerzucaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przerzucano"
+          },
+          "plural": {
+            "allPluralGenders": "przerzucano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przerzucałem",
+            "f": "przerzucałam"
+          },
+          "plural": {
+            "virile": "przerzucaliśmy",
+            "nonvirile": "przerzucałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przerzucałeś",
+            "f": "przerzucałaś"
+          },
+          "plural": {
+            "virile": "przerzucaliście",
+            "nonvirile": "przerzucałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przerzucał",
+            "f": "przerzucała",
+            "n": "przerzucało"
+          },
+          "plural": {
+            "virile": "przerzucali",
+            "nonvirile": "przerzucały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przerzuca się"
+          },
+          "plural": {
+            "allPluralGenders": "przerzuca się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przerzucam"
+          },
+          "plural": {
+            "allPluralGenders": "przerzucamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przerzucasz"
+          },
+          "plural": {
+            "allPluralGenders": "przerzucacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przerzuca"
+          },
+          "plural": {
+            "allPluralGenders": "przerzucają"
+          }
+        }
+      }
+    }
+  }
+}

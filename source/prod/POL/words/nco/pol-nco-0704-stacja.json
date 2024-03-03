@@ -1,0 +1,30 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "stacja",
+      "gen": "stacji",
+      "dat": "stacji",
+      "acc": "stację",
+      "ins": "stacją",
+      "loc": "stacji",
+      "voc": "stacjo"
+    },
+    "plural": {
+      "nom": "stacje",
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "stacji"
+        ],
+        "additionalInfrequent": [
+          "stacyj"
+        ]
+      },
+      "dat": "stacjom",
+      "acc": "stacje",
+      "ins": "stacjami",
+      "loc": "stacjach",
+      "voc": "stacje"
+    }
+  }
+}

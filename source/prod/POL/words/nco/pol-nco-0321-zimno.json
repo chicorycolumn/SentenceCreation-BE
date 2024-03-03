@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zimno",
+      "gen": "zimna",
+      "dat": "zimnu",
+      "acc": "zimno",
+      "ins": "zimnem",
+      "loc": "zimnie",
+      "voc": "zimno"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niespokojnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niespokojny",
+          "gen": "niespokojnego",
+          "dat": "niespokojnemu",
+          "acc": "niespokojnego",
+          "ins": "niespokojnym",
+          "loc": "niespokojnym"
+        },
+        "m3": {
+          "nom": "niespokojny",
+          "gen": "niespokojnego",
+          "dat": "niespokojnemu",
+          "acc": "niespokojny",
+          "ins": "niespokojnym",
+          "loc": "niespokojnym"
+        },
+        "f": {
+          "nom": "niespokojna",
+          "gen": "niespokojnej",
+          "dat": "niespokojnej",
+          "acc": "niespokojną",
+          "ins": "niespokojną",
+          "loc": "niespokojnej"
+        },
+        "n": {
+          "nom": "niespokojne",
+          "gen": "niespokojnego",
+          "dat": "niespokojnemu",
+          "acc": "niespokojne",
+          "ins": "niespokojnym",
+          "loc": "niespokojnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niespokojni",
+          "gen": "niespokojnych",
+          "dat": "niespokojnym",
+          "acc": "niespokojnych",
+          "ins": "niespokojnymi",
+          "loc": "niespokojnych"
+        },
+        "nonvirile": {
+          "nom": "niespokojne",
+          "gen": "niespokojnych",
+          "dat": "niespokojnym",
+          "acc": "niespokojne",
+          "ins": "niespokojnymi",
+          "loc": "niespokojnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej niespokojny",
+          "gen": "bardziej niespokojnego",
+          "dat": "bardziej niespokojnemu",
+          "acc": "bardziej niespokojnego",
+          "ins": "bardziej niespokojnym",
+          "loc": "bardziej niespokojnym"
+        },
+        "m3": {
+          "nom": "bardziej niespokojny",
+          "gen": "bardziej niespokojnego",
+          "dat": "bardziej niespokojnemu",
+          "acc": "bardziej niespokojny",
+          "ins": "bardziej niespokojnym",
+          "loc": "bardziej niespokojnym"
+        },
+        "f": {
+          "nom": "bardziej niespokojna",
+          "gen": "bardziej niespokojnej",
+          "dat": "bardziej niespokojnej",
+          "acc": "bardziej niespokojną",
+          "ins": "bardziej niespokojną",
+          "loc": "bardziej niespokojnej"
+        },
+        "n": {
+          "nom": "bardziej niespokojne",
+          "gen": "bardziej niespokojnego",
+          "dat": "bardziej niespokojnemu",
+          "acc": "bardziej niespokojne",
+          "ins": "bardziej niespokojnym",
+          "loc": "bardziej niespokojnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej niespokojni",
+          "gen": "bardziej niespokojnych",
+          "dat": "bardziej niespokojnym",
+          "acc": "bardziej niespokojnych",
+          "ins": "bardziej niespokojnymi",
+          "loc": "bardziej niespokojnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej niespokojne",
+          "gen": "bardziej niespokojnych",
+          "dat": "bardziej niespokojnym",
+          "acc": "bardziej niespokojne",
+          "ins": "bardziej niespokojnymi",
+          "loc": "bardziej niespokojnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej niespokojny",
+          "gen": "najbardziej niespokojnego",
+          "dat": "najbardziej niespokojnemu",
+          "acc": "najbardziej niespokojnego",
+          "ins": "najbardziej niespokojnym",
+          "loc": "najbardziej niespokojnym"
+        },
+        "m3": {
+          "nom": "najbardziej niespokojny",
+          "gen": "najbardziej niespokojnego",
+          "dat": "najbardziej niespokojnemu",
+          "acc": "najbardziej niespokojny",
+          "ins": "najbardziej niespokojnym",
+          "loc": "najbardziej niespokojnym"
+        },
+        "f": {
+          "nom": "najbardziej niespokojna",
+          "gen": "najbardziej niespokojnej",
+          "dat": "najbardziej niespokojnej",
+          "acc": "najbardziej niespokojną",
+          "ins": "najbardziej niespokojną",
+          "loc": "najbardziej niespokojnej"
+        },
+        "n": {
+          "nom": "najbardziej niespokojne",
+          "gen": "najbardziej niespokojnego",
+          "dat": "najbardziej niespokojnemu",
+          "acc": "najbardziej niespokojne",
+          "ins": "najbardziej niespokojnym",
+          "loc": "najbardziej niespokojnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej niespokojni",
+          "gen": "najbardziej niespokojnych",
+          "dat": "najbardziej niespokojnym",
+          "acc": "najbardziej niespokojnych",
+          "ins": "najbardziej niespokojnymi",
+          "loc": "najbardziej niespokojnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej niespokojne",
+          "gen": "najbardziej niespokojnych",
+          "dat": "najbardziej niespokojnym",
+          "acc": "najbardziej niespokojne",
+          "ins": "najbardziej niespokojnymi",
+          "loc": "najbardziej niespokojnych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "matka",
+      "gen": "matki",
+      "dat": "matce",
+      "acc": "matkę",
+      "ins": "matką",
+      "loc": "matce",
+      "voc": "matko"
+    },
+    "plural": {
+      "nom": "matki",
+      "gen": "matek",
+      "dat": "matkom",
+      "acc": "matki",
+      "ins": "matkami",
+      "loc": "matkach",
+      "voc": "matki"
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niepełnosprawny",
+          "gen": "niepełnosprawnego",
+          "dat": "niepełnosprawnemu",
+          "acc": "niepełnosprawnego",
+          "ins": "niepełnosprawnym",
+          "loc": "niepełnosprawnym"
+        },
+        "m3": {
+          "nom": "niepełnosprawny",
+          "gen": "niepełnosprawnego",
+          "dat": "niepełnosprawnemu",
+          "acc": "niepełnosprawny",
+          "ins": "niepełnosprawnym",
+          "loc": "niepełnosprawnym"
+        },
+        "f": {
+          "nom": "niepełnosprawna",
+          "gen": "niepełnosprawnej",
+          "dat": "niepełnosprawnej",
+          "acc": "niepełnosprawną",
+          "ins": "niepełnosprawną",
+          "loc": "niepełnosprawnej"
+        },
+        "n": {
+          "nom": "niepełnosprawne",
+          "gen": "niepełnosprawnego",
+          "dat": "niepełnosprawnemu",
+          "acc": "niepełnosprawne",
+          "ins": "niepełnosprawnym",
+          "loc": "niepełnosprawnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niepełnosprawni",
+          "gen": "niepełnosprawnych",
+          "dat": "niepełnosprawnym",
+          "acc": "niepełnosprawnych",
+          "ins": "niepełnosprawnymi",
+          "loc": "niepełnosprawnych"
+        },
+        "nonvirile": {
+          "nom": "niepełnosprawne",
+          "gen": "niepełnosprawnych",
+          "dat": "niepełnosprawnym",
+          "acc": "niepełnosprawne",
+          "ins": "niepełnosprawnymi",
+          "loc": "niepełnosprawnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej niepełnosprawny",
+          "gen": "bardziej niepełnosprawnego",
+          "dat": "bardziej niepełnosprawnemu",
+          "acc": "bardziej niepełnosprawnego",
+          "ins": "bardziej niepełnosprawnym",
+          "loc": "bardziej niepełnosprawnym"
+        },
+        "m3": {
+          "nom": "bardziej niepełnosprawny",
+          "gen": "bardziej niepełnosprawnego",
+          "dat": "bardziej niepełnosprawnemu",
+          "acc": "bardziej niepełnosprawny",
+          "ins": "bardziej niepełnosprawnym",
+          "loc": "bardziej niepełnosprawnym"
+        },
+        "f": {
+          "nom": "bardziej niepełnosprawna",
+          "gen": "bardziej niepełnosprawnej",
+          "dat": "bardziej niepełnosprawnej",
+          "acc": "bardziej niepełnosprawną",
+          "ins": "bardziej niepełnosprawną",
+          "loc": "bardziej niepełnosprawnej"
+        },
+        "n": {
+          "nom": "bardziej niepełnosprawne",
+          "gen": "bardziej niepełnosprawnego",
+          "dat": "bardziej niepełnosprawnemu",
+          "acc": "bardziej niepełnosprawne",
+          "ins": "bardziej niepełnosprawnym",
+          "loc": "bardziej niepełnosprawnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej niepełnosprawni",
+          "gen": "bardziej niepełnosprawnych",
+          "dat": "bardziej niepełnosprawnym",
+          "acc": "bardziej niepełnosprawnych",
+          "ins": "bardziej niepełnosprawnymi",
+          "loc": "bardziej niepełnosprawnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej niepełnosprawne",
+          "gen": "bardziej niepełnosprawnych",
+          "dat": "bardziej niepełnosprawnym",
+          "acc": "bardziej niepełnosprawne",
+          "ins": "bardziej niepełnosprawnymi",
+          "loc": "bardziej niepełnosprawnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej niepełnosprawny",
+          "gen": "najbardziej niepełnosprawnego",
+          "dat": "najbardziej niepełnosprawnemu",
+          "acc": "najbardziej niepełnosprawnego",
+          "ins": "najbardziej niepełnosprawnym",
+          "loc": "najbardziej niepełnosprawnym"
+        },
+        "m3": {
+          "nom": "najbardziej niepełnosprawny",
+          "gen": "najbardziej niepełnosprawnego",
+          "dat": "najbardziej niepełnosprawnemu",
+          "acc": "najbardziej niepełnosprawny",
+          "ins": "najbardziej niepełnosprawnym",
+          "loc": "najbardziej niepełnosprawnym"
+        },
+        "f": {
+          "nom": "najbardziej niepełnosprawna",
+          "gen": "najbardziej niepełnosprawnej",
+          "dat": "najbardziej niepełnosprawnej",
+          "acc": "najbardziej niepełnosprawną",
+          "ins": "najbardziej niepełnosprawną",
+          "loc": "najbardziej niepełnosprawnej"
+        },
+        "n": {
+          "nom": "najbardziej niepełnosprawne",
+          "gen": "najbardziej niepełnosprawnego",
+          "dat": "najbardziej niepełnosprawnemu",
+          "acc": "najbardziej niepełnosprawne",
+          "ins": "najbardziej niepełnosprawnym",
+          "loc": "najbardziej niepełnosprawnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej niepełnosprawni",
+          "gen": "najbardziej niepełnosprawnych",
+          "dat": "najbardziej niepełnosprawnym",
+          "acc": "najbardziej niepełnosprawnych",
+          "ins": "najbardziej niepełnosprawnymi",
+          "loc": "najbardziej niepełnosprawnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej niepełnosprawne",
+          "gen": "najbardziej niepełnosprawnych",
+          "dat": "najbardziej niepełnosprawnym",
+          "acc": "najbardziej niepełnosprawne",
+          "ins": "najbardziej niepełnosprawnymi",
+          "loc": "najbardziej niepełnosprawnych"
+        }
+      }
+    }
+  }
+}

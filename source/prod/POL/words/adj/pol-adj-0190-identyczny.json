@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "identycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "identyczny",
+          "gen": "identycznego",
+          "dat": "identycznemu",
+          "acc": "identycznego",
+          "ins": "identycznym",
+          "loc": "identycznym"
+        },
+        "m3": {
+          "nom": "identyczny",
+          "gen": "identycznego",
+          "dat": "identycznemu",
+          "acc": "identyczny",
+          "ins": "identycznym",
+          "loc": "identycznym"
+        },
+        "f": {
+          "nom": "identyczna",
+          "gen": "identycznej",
+          "dat": "identycznej",
+          "acc": "identyczną",
+          "ins": "identyczną",
+          "loc": "identycznej"
+        },
+        "n": {
+          "nom": "identyczne",
+          "gen": "identycznego",
+          "dat": "identycznemu",
+          "acc": "identyczne",
+          "ins": "identycznym",
+          "loc": "identycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "identyczni",
+          "gen": "identycznych",
+          "dat": "identycznym",
+          "acc": "identycznych",
+          "ins": "identycznymi",
+          "loc": "identycznych"
+        },
+        "nonvirile": {
+          "nom": "identyczne",
+          "gen": "identycznych",
+          "dat": "identycznym",
+          "acc": "identyczne",
+          "ins": "identycznymi",
+          "loc": "identycznych"
+        }
+      }
+    }
+  }
+}

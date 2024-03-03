@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "truck",
+      "gen": "truck's"
+    },
+    "plural": {
+      "nom": "trucks",
+      "gen": "trucks'"
+    }
+  }
+}

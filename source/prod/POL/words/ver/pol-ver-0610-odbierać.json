@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odbierać",
+    "verbalNoun": "odbieranie",
+    "activeAdjectival": "odbierający",
+    "passiveAdjectival": "odbierany",
+    "contemporaryAdverbial": "odbierając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odbieraj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odbierano"
+          },
+          "plural": {
+            "allPluralGenders": "odbierano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odbierałem",
+            "f": "odbierałam"
+          },
+          "plural": {
+            "virile": "odbieraliśmy",
+            "nonvirile": "odbierałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odbierałeś",
+            "f": "odbierałaś"
+          },
+          "plural": {
+            "virile": "odbieraliście",
+            "nonvirile": "odbierałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odbierał",
+            "f": "odbierała",
+            "n": "odbierało"
+          },
+          "plural": {
+            "virile": "odbierali",
+            "nonvirile": "odbierały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odbiera się"
+          },
+          "plural": {
+            "allPluralGenders": "odbiera się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odbieram"
+          },
+          "plural": {
+            "allPluralGenders": "odbieramy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odbierasz"
+          },
+          "plural": {
+            "allPluralGenders": "odbieracie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odbiera"
+          },
+          "plural": {
+            "allPluralGenders": "odbierają"
+          }
+        }
+      }
+    }
+  }
+}

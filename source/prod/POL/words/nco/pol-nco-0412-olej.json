@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "olej",
+      "gen": "oleju",
+      "dat": "olejowi",
+      "acc": "olej",
+      "ins": "olejem",
+      "loc": "oleju",
+      "voc": "oleju"
+    },
+    "plural": {
+      "nom": "oleje",
+      "gen": [
+        "olejów",
+        "olei"
+      ],
+      "dat": "olejom",
+      "acc": "oleje",
+      "ins": "olejami",
+      "loc": "olejach",
+      "voc": "oleje"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "inflections": {
+    "infinitive": "podejść",
+    "verbalNoun": "podejście",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "podszedłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podejdzie się"
+          },
+          "plural": {
+            "allPluralGenders": "podejdzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podejdę"
+          },
+          "plural": {
+            "allPluralGenders": "podejdziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podejdziesz"
+          },
+          "plural": {
+            "allPluralGenders": "podejdziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podejdzie"
+          },
+          "plural": {
+            "allPluralGenders": "podejdą"
+          }
+        }
+      },
+      "imperative": "podejdź",
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "podszedłem",
+            "f": "podeszłam"
+          },
+          "plural": {
+            "virile": "podeszliśmy",
+            "nonvirile": "podeszłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podszedłeś",
+            "f": "podeszłaś"
+          },
+          "plural": {
+            "virile": "podeszliście",
+            "nonvirile": "podeszłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podszedł",
+            "f": "podeszła",
+            "n": "podeszło"
+          },
+          "plural": {
+            "virile": "podeszli",
+            "nonvirile": "podeszły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

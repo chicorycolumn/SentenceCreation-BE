@@ -1,0 +1,8 @@
+{
+  "inflections": {
+    "simple": "awesome",
+    "comparative": "more awesome",
+    "superlative": "the most awesome",
+    "adverb": false
+  }
+}

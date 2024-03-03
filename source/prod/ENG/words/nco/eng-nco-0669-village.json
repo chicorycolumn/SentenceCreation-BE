@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "village",
+      "gen": "village's"
+    },
+    "plural": {
+      "nom": "villages",
+      "gen": "villages'"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "inflections": {
+    "infinitive": "pójść",
+    "verbalNoun": "pójście",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "poszedłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pójdzie się"
+          },
+          "plural": {
+            "allPluralGenders": "pójdzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pójdę"
+          },
+          "plural": {
+            "allPluralGenders": "pójdziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pójdziesz"
+          },
+          "plural": {
+            "allPluralGenders": "pójdziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pójdzie"
+          },
+          "plural": {
+            "allPluralGenders": "pójdą"
+          }
+        }
+      },
+      "imperative": "pójdź",
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "poszedłem",
+            "f": "poszłam"
+          },
+          "plural": {
+            "virile": "poszliśmy",
+            "nonvirile": "poszłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "poszedłeś",
+            "f": "poszłaś"
+          },
+          "plural": {
+            "virile": "poszliście",
+            "nonvirile": "poszłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "poszedł",
+            "f": "poszła",
+            "n": "poszło"
+          },
+          "plural": {
+            "virile": "poszli",
+            "nonvirile": "poszły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

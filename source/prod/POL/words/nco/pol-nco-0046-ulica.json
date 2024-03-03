@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ulica",
+      "gen": "ulicy",
+      "dat": "ulicy",
+      "acc": "ulicę",
+      "ins": "ulicą",
+      "loc": "ulicy",
+      "voc": "ulico"
+    },
+    "plural": {
+      "nom": "ulice",
+      "gen": "ulic",
+      "dat": "ulicom",
+      "acc": "ulice",
+      "ins": "ulicami",
+      "loc": "ulicach",
+      "voc": "ulice"
+    }
+  }
+}

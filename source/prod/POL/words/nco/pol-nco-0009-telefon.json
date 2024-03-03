@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "telefon",
+      "gen": "telefonu",
+      "dat": "telefonowi",
+      "acc": "telefon",
+      "ins": "telefonem",
+      "loc": "telefonie",
+      "voc": "telefonie"
+    },
+    "plural": {
+      "nom": "telefony",
+      "gen": "telefonów",
+      "dat": "telefonom",
+      "acc": "telefony",
+      "ins": "telefonami",
+      "loc": "telefonach",
+      "voc": "telefony"
+    }
+  }
+}

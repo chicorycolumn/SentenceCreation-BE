@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "rodzić",
+    "verbalNoun": "rodzenie",
+    "activeAdjectival": "rodzący",
+    "passiveAdjectival": "rodzony",
+    "contemporaryAdverbial": "rodząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "ródź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "rodzono"
+          },
+          "plural": {
+            "allPluralGenders": "rodzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "rodziłem",
+            "f": "rodziłam"
+          },
+          "plural": {
+            "virile": "rodziliśmy",
+            "nonvirile": "rodziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "rodziłeś",
+            "f": "rodziłaś"
+          },
+          "plural": {
+            "virile": "rodziliście",
+            "nonvirile": "rodziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "rodził",
+            "f": "rodziła",
+            "n": "rodziło"
+          },
+          "plural": {
+            "virile": "rodzili",
+            "nonvirile": "rodziły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "rodzi się"
+          },
+          "plural": {
+            "allPluralGenders": "rodzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "rodzę"
+          },
+          "plural": {
+            "allPluralGenders": "rodzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "rodzisz"
+          },
+          "plural": {
+            "allPluralGenders": "rodzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "rodzi"
+          },
+          "plural": {
+            "allPluralGenders": "rodzą"
+          }
+        }
+      }
+    }
+  }
+}

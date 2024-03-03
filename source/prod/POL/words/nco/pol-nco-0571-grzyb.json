@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "grzyb",
+      "gen": "grzyba",
+      "dat": "grzybowi",
+      "acc": "grzyb",
+      "ins": "grzybem",
+      "loc": "grzybie",
+      "voc": "grzybie"
+    },
+    "plural": {
+      "nom": "grzyby",
+      "gen": "grzybów",
+      "dat": "grzybom",
+      "acc": "grzyby",
+      "ins": "grzybami",
+      "loc": "grzybach",
+      "voc": "grzyby"
+    }
+  }
+}

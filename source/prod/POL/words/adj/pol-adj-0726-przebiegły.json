@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "przebiegle",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przebiegły",
+          "gen": "przebiegłego",
+          "dat": "przebiegłemu",
+          "acc": "przebiegłego",
+          "ins": "przebiegłym",
+          "loc": "przebiegłym"
+        },
+        "m3": {
+          "nom": "przebiegły",
+          "gen": "przebiegłego",
+          "dat": "przebiegłemu",
+          "acc": "przebiegły",
+          "ins": "przebiegłym",
+          "loc": "przebiegłym"
+        },
+        "f": {
+          "nom": "przebiegła",
+          "gen": "przebiegłej",
+          "dat": "przebiegłej",
+          "acc": "przebiegłą",
+          "ins": "przebiegłą",
+          "loc": "przebiegłej"
+        },
+        "n": {
+          "nom": "przebiegłe",
+          "gen": "przebiegłego",
+          "dat": "przebiegłemu",
+          "acc": "przebiegłe",
+          "ins": "przebiegłym",
+          "loc": "przebiegłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przebiegli",
+          "gen": "przebiegłych",
+          "dat": "przebiegłym",
+          "acc": "przebiegłych",
+          "ins": "przebiegłymi",
+          "loc": "przebiegłych"
+        },
+        "nonvirile": {
+          "nom": "przebiegłe",
+          "gen": "przebiegłych",
+          "dat": "przebiegłym",
+          "acc": "przebiegłe",
+          "ins": "przebiegłymi",
+          "loc": "przebiegłych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "przebieglejszy",
+          "gen": "przebieglejszego",
+          "dat": "przebieglejszemu",
+          "acc": "przebieglejszego",
+          "ins": "przebieglejszym",
+          "loc": "przebieglejszym"
+        },
+        "m3": {
+          "nom": "przebieglejszy",
+          "gen": "przebieglejszego",
+          "dat": "przebieglejszemu",
+          "acc": "przebieglejszy",
+          "ins": "przebieglejszym",
+          "loc": "przebieglejszym"
+        },
+        "f": {
+          "nom": "przebieglejsza",
+          "gen": "przebieglejszej",
+          "dat": "przebieglejszej",
+          "acc": "przebieglejszą",
+          "ins": "przebieglejszą",
+          "loc": "przebieglejszej"
+        },
+        "n": {
+          "nom": "przebieglejsze",
+          "gen": "przebieglejszego",
+          "dat": "przebieglejszemu",
+          "acc": "przebieglejsze",
+          "ins": "przebieglejszym",
+          "loc": "przebieglejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przebieglejsi",
+          "gen": "przebieglejszych",
+          "dat": "przebieglejszym",
+          "acc": "przebieglejszych",
+          "ins": "przebieglejszymi",
+          "loc": "przebieglejszych"
+        },
+        "nonvirile": {
+          "nom": "przebieglejsze",
+          "gen": "przebieglejszych",
+          "dat": "przebieglejszym",
+          "acc": "przebieglejsze",
+          "ins": "przebieglejszymi",
+          "loc": "przebieglejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najprzebieglejszy",
+          "gen": "najprzebieglejszego",
+          "dat": "najprzebieglejszemu",
+          "acc": "najprzebieglejszego",
+          "ins": "najprzebieglejszym",
+          "loc": "najprzebieglejszym"
+        },
+        "m3": {
+          "nom": "najprzebieglejszy",
+          "gen": "najprzebieglejszego",
+          "dat": "najprzebieglejszemu",
+          "acc": "najprzebieglejszy",
+          "ins": "najprzebieglejszym",
+          "loc": "najprzebieglejszym"
+        },
+        "f": {
+          "nom": "najprzebieglejsza",
+          "gen": "najprzebieglejszej",
+          "dat": "najprzebieglejszej",
+          "acc": "najprzebieglejszą",
+          "ins": "najprzebieglejszą",
+          "loc": "najprzebieglejszej"
+        },
+        "n": {
+          "nom": "najprzebieglejsze",
+          "gen": "najprzebieglejszego",
+          "dat": "najprzebieglejszemu",
+          "acc": "najprzebieglejsze",
+          "ins": "najprzebieglejszym",
+          "loc": "najprzebieglejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najprzebieglejsi",
+          "gen": "najprzebieglejszych",
+          "dat": "najprzebieglejszym",
+          "acc": "najprzebieglejszych",
+          "ins": "najprzebieglejszymi",
+          "loc": "najprzebieglejszych"
+        },
+        "nonvirile": {
+          "nom": "najprzebieglejsze",
+          "gen": "najprzebieglejszych",
+          "dat": "najprzebieglejszym",
+          "acc": "najprzebieglejsze",
+          "ins": "najprzebieglejszymi",
+          "loc": "najprzebieglejszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "obrus",
+      "gen": "obrusu",
+      "dat": "obrusowi",
+      "acc": "obrus",
+      "ins": "obrusem",
+      "loc": "obrusie",
+      "voc": "obrusie"
+    },
+    "plural": {
+      "nom": "obrusy",
+      "gen": "obrusów",
+      "dat": "obrusom",
+      "acc": "obrusy",
+      "ins": "obrusami",
+      "loc": "obrusach",
+      "voc": "obrusy"
+    }
+  }
+}

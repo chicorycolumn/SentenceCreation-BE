@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nakręcać",
+    "verbalNoun": "nakręcanie",
+    "activeAdjectival": "nakręcający",
+    "passiveAdjectival": "nakręcany",
+    "contemporaryAdverbial": "nakręcając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "nakręcaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nakręcano"
+          },
+          "plural": {
+            "allPluralGenders": "nakręcano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nakręcałem",
+            "f": "nakręcałam"
+          },
+          "plural": {
+            "virile": "nakręcaliśmy",
+            "nonvirile": "nakręcałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nakręcałeś",
+            "f": "nakręcałaś"
+          },
+          "plural": {
+            "virile": "nakręcaliście",
+            "nonvirile": "nakręcałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nakręcał",
+            "f": "nakręcała",
+            "n": "nakręcało"
+          },
+          "plural": {
+            "virile": "nakręcali",
+            "nonvirile": "nakręcały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nakręca się"
+          },
+          "plural": {
+            "allPluralGenders": "nakręca się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nakręcam"
+          },
+          "plural": {
+            "allPluralGenders": "nakręcamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nakręcasz"
+          },
+          "plural": {
+            "allPluralGenders": "nakręcacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nakręca"
+          },
+          "plural": {
+            "allPluralGenders": "nakręcają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "kryć",
+    "verbalNoun": "krycie",
+    "activeAdjectival": "kryjący",
+    "passiveAdjectival": "kryty",
+    "contemporaryAdverbial": "kryjąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "kryj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kryto"
+          },
+          "plural": {
+            "allPluralGenders": "kryto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "kryłem",
+            "f": "kryłam"
+          },
+          "plural": {
+            "virile": "kryliśmy",
+            "nonvirile": "kryłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "kryłeś",
+            "f": "kryłaś"
+          },
+          "plural": {
+            "virile": "kryliście",
+            "nonvirile": "kryłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "krył",
+            "f": "kryła",
+            "n": "kryło"
+          },
+          "plural": {
+            "virile": "kryli",
+            "nonvirile": "kryły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kryje się"
+          },
+          "plural": {
+            "allPluralGenders": "kryje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "kryję"
+          },
+          "plural": {
+            "allPluralGenders": "kryjemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "kryjesz"
+          },
+          "plural": {
+            "allPluralGenders": "kryjecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "kryje"
+          },
+          "plural": {
+            "allPluralGenders": "kryją"
+          }
+        }
+      }
+    }
+  }
+}

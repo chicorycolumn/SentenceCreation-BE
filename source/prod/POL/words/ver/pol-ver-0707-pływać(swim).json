@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pływać",
+    "verbalNoun": "pływanie",
+    "activeAdjectival": "pływający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "pływając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pływaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pływano"
+          },
+          "plural": {
+            "allPluralGenders": "pływano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pływałem",
+            "f": "pływałam"
+          },
+          "plural": {
+            "virile": "pływaliśmy",
+            "nonvirile": "pływałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pływałeś",
+            "f": "pływałaś"
+          },
+          "plural": {
+            "virile": "pływaliście",
+            "nonvirile": "pływałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pływał",
+            "f": "pływała",
+            "n": "pływało"
+          },
+          "plural": {
+            "virile": "pływali",
+            "nonvirile": "pływały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pływa się"
+          },
+          "plural": {
+            "allPluralGenders": "pływa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pływam"
+          },
+          "plural": {
+            "allPluralGenders": "pływamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pływasz"
+          },
+          "plural": {
+            "allPluralGenders": "pływacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pływa"
+          },
+          "plural": {
+            "allPluralGenders": "pływają"
+          }
+        }
+      }
+    }
+  }
+}

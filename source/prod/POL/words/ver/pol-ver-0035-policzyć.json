@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "policzyć",
+    "verbalNoun": "policzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "policzony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "policzywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "policzy się"
+          },
+          "plural": {
+            "allPluralGenders": "policzy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "policzę"
+          },
+          "plural": {
+            "allPluralGenders": "policzymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "policzysz"
+          },
+          "plural": {
+            "allPluralGenders": "policzycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "policzy"
+          },
+          "plural": {
+            "allPluralGenders": "policzą"
+          }
+        }
+      },
+      "imperative": "policz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "policzono"
+          },
+          "plural": {
+            "allPluralGenders": "policzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "policzyłem",
+            "f": "policzyłam"
+          },
+          "plural": {
+            "virile": "policzyliśmy",
+            "nonvirile": "policzyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "policzyłeś",
+            "f": "policzyłaś"
+          },
+          "plural": {
+            "virile": "policzyliście",
+            "nonvirile": "policzyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "policzył",
+            "f": "policzyła",
+            "n": "policzyło"
+          },
+          "plural": {
+            "virile": "policzyli",
+            "nonvirile": "policzyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

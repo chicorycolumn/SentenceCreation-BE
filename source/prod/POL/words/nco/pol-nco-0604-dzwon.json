@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dzwon",
+      "gen": "dzwonu",
+      "dat": "dzwonowi",
+      "acc": "dzwon",
+      "ins": "dzwonem",
+      "loc": "dzwonie",
+      "voc": "dzwonie"
+    },
+    "plural": {
+      "nom": "dzwony",
+      "gen": "dzwonów",
+      "dat": "dzwonom",
+      "acc": "dzwony",
+      "ins": "dzwonami",
+      "loc": "dzwonach",
+      "voc": "dzwony"
+    }
+  }
+}

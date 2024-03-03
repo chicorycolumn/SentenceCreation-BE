@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "litera",
+      "gen": "litery",
+      "dat": "literze",
+      "acc": "literę",
+      "ins": "literą",
+      "loc": "literze",
+      "voc": "litero"
+    },
+    "plural": {
+      "nom": "litery",
+      "gen": "liter",
+      "dat": "literom",
+      "acc": "litery",
+      "ins": "literami",
+      "loc": "literach",
+      "voc": "litery"
+    }
+  }
+}

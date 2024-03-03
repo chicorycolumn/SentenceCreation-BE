@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "theatre",
+      "gen": "theatre's"
+    },
+    "plural": {
+      "nom": "theatres",
+      "gen": "theatres'"
+    }
+  }
+}

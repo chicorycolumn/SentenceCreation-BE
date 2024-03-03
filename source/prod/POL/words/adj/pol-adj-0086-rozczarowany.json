@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "rozczarowany",
+          "gen": "rozczarowanego",
+          "dat": "rozczarowanemu",
+          "acc": "rozczarowanego",
+          "ins": "rozczarowanym",
+          "loc": "rozczarowanym"
+        },
+        "m3": {
+          "nom": "rozczarowany",
+          "gen": "rozczarowanego",
+          "dat": "rozczarowanemu",
+          "acc": "rozczarowany",
+          "ins": "rozczarowanym",
+          "loc": "rozczarowanym"
+        },
+        "f": {
+          "nom": "rozczarowana",
+          "gen": "rozczarowanej",
+          "dat": "rozczarowanej",
+          "acc": "rozczarowaną",
+          "ins": "rozczarowaną",
+          "loc": "rozczarowanej"
+        },
+        "n": {
+          "nom": "rozczarowane",
+          "gen": "rozczarowanego",
+          "dat": "rozczarowanemu",
+          "acc": "rozczarowane",
+          "ins": "rozczarowanym",
+          "loc": "rozczarowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "rozczarowani",
+          "gen": "rozczarowanych",
+          "dat": "rozczarowanym",
+          "acc": "rozczarowanych",
+          "ins": "rozczarowanymi",
+          "loc": "rozczarowanych"
+        },
+        "nonvirile": {
+          "nom": "rozczarowane",
+          "gen": "rozczarowanych",
+          "dat": "rozczarowanym",
+          "acc": "rozczarowane",
+          "ins": "rozczarowanymi",
+          "loc": "rozczarowanych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej rozczarowany",
+          "gen": "bardziej rozczarowanego",
+          "dat": "bardziej rozczarowanemu",
+          "acc": "bardziej rozczarowanego",
+          "ins": "bardziej rozczarowanym",
+          "loc": "bardziej rozczarowanym"
+        },
+        "m3": {
+          "nom": "bardziej rozczarowany",
+          "gen": "bardziej rozczarowanego",
+          "dat": "bardziej rozczarowanemu",
+          "acc": "bardziej rozczarowany",
+          "ins": "bardziej rozczarowanym",
+          "loc": "bardziej rozczarowanym"
+        },
+        "f": {
+          "nom": "bardziej rozczarowana",
+          "gen": "bardziej rozczarowanej",
+          "dat": "bardziej rozczarowanej",
+          "acc": "bardziej rozczarowaną",
+          "ins": "bardziej rozczarowaną",
+          "loc": "bardziej rozczarowanej"
+        },
+        "n": {
+          "nom": "bardziej rozczarowane",
+          "gen": "bardziej rozczarowanego",
+          "dat": "bardziej rozczarowanemu",
+          "acc": "bardziej rozczarowane",
+          "ins": "bardziej rozczarowanym",
+          "loc": "bardziej rozczarowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej rozczarowani",
+          "gen": "bardziej rozczarowanych",
+          "dat": "bardziej rozczarowanym",
+          "acc": "bardziej rozczarowanych",
+          "ins": "bardziej rozczarowanymi",
+          "loc": "bardziej rozczarowanych"
+        },
+        "nonvirile": {
+          "nom": "bardziej rozczarowane",
+          "gen": "bardziej rozczarowanych",
+          "dat": "bardziej rozczarowanym",
+          "acc": "bardziej rozczarowane",
+          "ins": "bardziej rozczarowanymi",
+          "loc": "bardziej rozczarowanych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej rozczarowany",
+          "gen": "najbardziej rozczarowanego",
+          "dat": "najbardziej rozczarowanemu",
+          "acc": "najbardziej rozczarowanego",
+          "ins": "najbardziej rozczarowanym",
+          "loc": "najbardziej rozczarowanym"
+        },
+        "m3": {
+          "nom": "najbardziej rozczarowany",
+          "gen": "najbardziej rozczarowanego",
+          "dat": "najbardziej rozczarowanemu",
+          "acc": "najbardziej rozczarowany",
+          "ins": "najbardziej rozczarowanym",
+          "loc": "najbardziej rozczarowanym"
+        },
+        "f": {
+          "nom": "najbardziej rozczarowana",
+          "gen": "najbardziej rozczarowanej",
+          "dat": "najbardziej rozczarowanej",
+          "acc": "najbardziej rozczarowaną",
+          "ins": "najbardziej rozczarowaną",
+          "loc": "najbardziej rozczarowanej"
+        },
+        "n": {
+          "nom": "najbardziej rozczarowane",
+          "gen": "najbardziej rozczarowanego",
+          "dat": "najbardziej rozczarowanemu",
+          "acc": "najbardziej rozczarowane",
+          "ins": "najbardziej rozczarowanym",
+          "loc": "najbardziej rozczarowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej rozczarowani",
+          "gen": "najbardziej rozczarowanych",
+          "dat": "najbardziej rozczarowanym",
+          "acc": "najbardziej rozczarowanych",
+          "ins": "najbardziej rozczarowanymi",
+          "loc": "najbardziej rozczarowanych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej rozczarowane",
+          "gen": "najbardziej rozczarowanych",
+          "dat": "najbardziej rozczarowanym",
+          "acc": "najbardziej rozczarowane",
+          "ins": "najbardziej rozczarowanymi",
+          "loc": "najbardziej rozczarowanych"
+        }
+      }
+    }
+  }
+}

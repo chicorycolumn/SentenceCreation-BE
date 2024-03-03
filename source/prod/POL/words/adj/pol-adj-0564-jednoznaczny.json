@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "jednoznacznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "jednoznaczny",
+          "gen": "jednoznacznego",
+          "dat": "jednoznacznemu",
+          "acc": "jednoznacznego",
+          "ins": "jednoznacznym",
+          "loc": "jednoznacznym"
+        },
+        "m3": {
+          "nom": "jednoznaczny",
+          "gen": "jednoznacznego",
+          "dat": "jednoznacznemu",
+          "acc": "jednoznaczny",
+          "ins": "jednoznacznym",
+          "loc": "jednoznacznym"
+        },
+        "f": {
+          "nom": "jednoznaczna",
+          "gen": "jednoznacznej",
+          "dat": "jednoznacznej",
+          "acc": "jednoznaczną",
+          "ins": "jednoznaczną",
+          "loc": "jednoznacznej"
+        },
+        "n": {
+          "nom": "jednoznaczne",
+          "gen": "jednoznacznego",
+          "dat": "jednoznacznemu",
+          "acc": "jednoznaczne",
+          "ins": "jednoznacznym",
+          "loc": "jednoznacznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "jednoznaczni",
+          "gen": "jednoznacznych",
+          "dat": "jednoznacznym",
+          "acc": "jednoznacznych",
+          "ins": "jednoznacznymi",
+          "loc": "jednoznacznych"
+        },
+        "nonvirile": {
+          "nom": "jednoznaczne",
+          "gen": "jednoznacznych",
+          "dat": "jednoznacznym",
+          "acc": "jednoznaczne",
+          "ins": "jednoznacznymi",
+          "loc": "jednoznacznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej jednoznaczny",
+          "gen": "bardziej jednoznacznego",
+          "dat": "bardziej jednoznacznemu",
+          "acc": "bardziej jednoznacznego",
+          "ins": "bardziej jednoznacznym",
+          "loc": "bardziej jednoznacznym"
+        },
+        "m3": {
+          "nom": "bardziej jednoznaczny",
+          "gen": "bardziej jednoznacznego",
+          "dat": "bardziej jednoznacznemu",
+          "acc": "bardziej jednoznaczny",
+          "ins": "bardziej jednoznacznym",
+          "loc": "bardziej jednoznacznym"
+        },
+        "f": {
+          "nom": "bardziej jednoznaczna",
+          "gen": "bardziej jednoznacznej",
+          "dat": "bardziej jednoznacznej",
+          "acc": "bardziej jednoznaczną",
+          "ins": "bardziej jednoznaczną",
+          "loc": "bardziej jednoznacznej"
+        },
+        "n": {
+          "nom": "bardziej jednoznaczne",
+          "gen": "bardziej jednoznacznego",
+          "dat": "bardziej jednoznacznemu",
+          "acc": "bardziej jednoznaczne",
+          "ins": "bardziej jednoznacznym",
+          "loc": "bardziej jednoznacznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej jednoznaczni",
+          "gen": "bardziej jednoznacznych",
+          "dat": "bardziej jednoznacznym",
+          "acc": "bardziej jednoznacznych",
+          "ins": "bardziej jednoznacznymi",
+          "loc": "bardziej jednoznacznych"
+        },
+        "nonvirile": {
+          "nom": "bardziej jednoznaczne",
+          "gen": "bardziej jednoznacznych",
+          "dat": "bardziej jednoznacznym",
+          "acc": "bardziej jednoznaczne",
+          "ins": "bardziej jednoznacznymi",
+          "loc": "bardziej jednoznacznych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej jednoznaczny",
+          "gen": "najbardziej jednoznacznego",
+          "dat": "najbardziej jednoznacznemu",
+          "acc": "najbardziej jednoznacznego",
+          "ins": "najbardziej jednoznacznym",
+          "loc": "najbardziej jednoznacznym"
+        },
+        "m3": {
+          "nom": "najbardziej jednoznaczny",
+          "gen": "najbardziej jednoznacznego",
+          "dat": "najbardziej jednoznacznemu",
+          "acc": "najbardziej jednoznaczny",
+          "ins": "najbardziej jednoznacznym",
+          "loc": "najbardziej jednoznacznym"
+        },
+        "f": {
+          "nom": "najbardziej jednoznaczna",
+          "gen": "najbardziej jednoznacznej",
+          "dat": "najbardziej jednoznacznej",
+          "acc": "najbardziej jednoznaczną",
+          "ins": "najbardziej jednoznaczną",
+          "loc": "najbardziej jednoznacznej"
+        },
+        "n": {
+          "nom": "najbardziej jednoznaczne",
+          "gen": "najbardziej jednoznacznego",
+          "dat": "najbardziej jednoznacznemu",
+          "acc": "najbardziej jednoznaczne",
+          "ins": "najbardziej jednoznacznym",
+          "loc": "najbardziej jednoznacznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej jednoznaczni",
+          "gen": "najbardziej jednoznacznych",
+          "dat": "najbardziej jednoznacznym",
+          "acc": "najbardziej jednoznacznych",
+          "ins": "najbardziej jednoznacznymi",
+          "loc": "najbardziej jednoznacznych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej jednoznaczne",
+          "gen": "najbardziej jednoznacznych",
+          "dat": "najbardziej jednoznacznym",
+          "acc": "najbardziej jednoznaczne",
+          "ins": "najbardziej jednoznacznymi",
+          "loc": "najbardziej jednoznacznych"
+        }
+      }
+    }
+  }
+}

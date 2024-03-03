@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "bogato",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bogaty",
+          "gen": "bogatego",
+          "dat": "bogatemu",
+          "acc": "bogatego",
+          "ins": "bogatym",
+          "loc": "bogatym"
+        },
+        "m3": {
+          "nom": "bogaty",
+          "gen": "bogatego",
+          "dat": "bogatemu",
+          "acc": "bogaty",
+          "ins": "bogatym",
+          "loc": "bogatym"
+        },
+        "f": {
+          "nom": "bogata",
+          "gen": "bogatej",
+          "dat": "bogatej",
+          "acc": "bogatą",
+          "ins": "bogatą",
+          "loc": "bogatej"
+        },
+        "n": {
+          "nom": "bogate",
+          "gen": "bogatego",
+          "dat": "bogatemu",
+          "acc": "bogate",
+          "ins": "bogatym",
+          "loc": "bogatym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bogaci",
+          "gen": "bogatych",
+          "dat": "bogatym",
+          "acc": "bogatych",
+          "ins": "bogatymi",
+          "loc": "bogatych"
+        },
+        "nonvirile": {
+          "nom": "bogate",
+          "gen": "bogatych",
+          "dat": "bogatym",
+          "acc": "bogate",
+          "ins": "bogatymi",
+          "loc": "bogatych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bogatszy",
+          "gen": "bogatszego",
+          "dat": "bogatszemu",
+          "acc": "bogatszego",
+          "ins": "bogatszym",
+          "loc": "bogatszym"
+        },
+        "m3": {
+          "nom": "bogatszy",
+          "gen": "bogatszego",
+          "dat": "bogatszemu",
+          "acc": "bogatszy",
+          "ins": "bogatszym",
+          "loc": "bogatszym"
+        },
+        "f": {
+          "nom": "bogatsza",
+          "gen": "bogatszej",
+          "dat": "bogatszej",
+          "acc": "bogatszą",
+          "ins": "bogatszą",
+          "loc": "bogatszej"
+        },
+        "n": {
+          "nom": "bogatsze",
+          "gen": "bogatszego",
+          "dat": "bogatszemu",
+          "acc": "bogatsze",
+          "ins": "bogatszym",
+          "loc": "bogatszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bogatsi",
+          "gen": "bogatszych",
+          "dat": "bogatszym",
+          "acc": "bogatszych",
+          "ins": "bogatszymi",
+          "loc": "bogatszych"
+        },
+        "nonvirile": {
+          "nom": "bogatsze",
+          "gen": "bogatszych",
+          "dat": "bogatszym",
+          "acc": "bogatsze",
+          "ins": "bogatszymi",
+          "loc": "bogatszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbogatszy",
+          "gen": "najbogatszego",
+          "dat": "najbogatszemu",
+          "acc": "najbogatszego",
+          "ins": "najbogatszym",
+          "loc": "najbogatszym"
+        },
+        "m3": {
+          "nom": "najbogatszy",
+          "gen": "najbogatszego",
+          "dat": "najbogatszemu",
+          "acc": "najbogatszy",
+          "ins": "najbogatszym",
+          "loc": "najbogatszym"
+        },
+        "f": {
+          "nom": "najbogatsza",
+          "gen": "najbogatszej",
+          "dat": "najbogatszej",
+          "acc": "najbogatszą",
+          "ins": "najbogatszą",
+          "loc": "najbogatszej"
+        },
+        "n": {
+          "nom": "najbogatsze",
+          "gen": "najbogatszego",
+          "dat": "najbogatszemu",
+          "acc": "najbogatsze",
+          "ins": "najbogatszym",
+          "loc": "najbogatszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbogatsi",
+          "gen": "najbogatszych",
+          "dat": "najbogatszym",
+          "acc": "najbogatszych",
+          "ins": "najbogatszymi",
+          "loc": "najbogatszych"
+        },
+        "nonvirile": {
+          "nom": "najbogatsze",
+          "gen": "najbogatszych",
+          "dat": "najbogatszym",
+          "acc": "najbogatsze",
+          "ins": "najbogatszymi",
+          "loc": "najbogatszych"
+        }
+      }
+    }
+  }
+}

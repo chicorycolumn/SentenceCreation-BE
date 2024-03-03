@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wzrost",
+      "gen": "wzrostu",
+      "dat": "wzrostowi",
+      "acc": "wzrost",
+      "ins": "wzrostem",
+      "loc": "wzroście",
+      "voc": "wzroście"
+    },
+    "plural": {
+      "nom": "wzrosty",
+      "gen": "wzrostów",
+      "dat": "wzrostom",
+      "acc": "wzrosty",
+      "ins": "wzrostami",
+      "loc": "wzrostach",
+      "voc": "wzrosty"
+    }
+  }
+}

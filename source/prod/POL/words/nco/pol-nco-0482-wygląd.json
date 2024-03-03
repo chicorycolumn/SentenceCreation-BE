@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wygląd",
+      "gen": "wyglądu",
+      "dat": "wyglądowi",
+      "acc": "wygląd",
+      "ins": "wyglądem",
+      "loc": "wyglądzie",
+      "voc": "wyglądzie"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niepokojąco",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niepokojący",
+          "gen": "niepokojącego",
+          "dat": "niepokojącemu",
+          "acc": "niepokojącego",
+          "ins": "niepokojącym",
+          "loc": "niepokojącym"
+        },
+        "m3": {
+          "nom": "niepokojący",
+          "gen": "niepokojącego",
+          "dat": "niepokojącemu",
+          "acc": "niepokojący",
+          "ins": "niepokojącym",
+          "loc": "niepokojącym"
+        },
+        "f": {
+          "nom": "niepokojąca",
+          "gen": "niepokojącej",
+          "dat": "niepokojącej",
+          "acc": "niepokojącą",
+          "ins": "niepokojącą",
+          "loc": "niepokojącej"
+        },
+        "n": {
+          "nom": "niepokojące",
+          "gen": "niepokojącego",
+          "dat": "niepokojącemu",
+          "acc": "niepokojące",
+          "ins": "niepokojącym",
+          "loc": "niepokojącym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niepokojący",
+          "gen": "niepokojących",
+          "dat": "niepokojącym",
+          "acc": "niepokojących",
+          "ins": "niepokojącymi",
+          "loc": "niepokojących"
+        },
+        "nonvirile": {
+          "nom": "niepokojące",
+          "gen": "niepokojących",
+          "dat": "niepokojącym",
+          "acc": "niepokojące",
+          "ins": "niepokojącymi",
+          "loc": "niepokojących"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej niepokojący",
+          "gen": "bardziej niepokojącego",
+          "dat": "bardziej niepokojącemu",
+          "acc": "bardziej niepokojącego",
+          "ins": "bardziej niepokojącym",
+          "loc": "bardziej niepokojącym"
+        },
+        "m3": {
+          "nom": "bardziej niepokojący",
+          "gen": "bardziej niepokojącego",
+          "dat": "bardziej niepokojącemu",
+          "acc": "bardziej niepokojący",
+          "ins": "bardziej niepokojącym",
+          "loc": "bardziej niepokojącym"
+        },
+        "f": {
+          "nom": "bardziej niepokojąca",
+          "gen": "bardziej niepokojącej",
+          "dat": "bardziej niepokojącej",
+          "acc": "bardziej niepokojącą",
+          "ins": "bardziej niepokojącą",
+          "loc": "bardziej niepokojącej"
+        },
+        "n": {
+          "nom": "bardziej niepokojące",
+          "gen": "bardziej niepokojącego",
+          "dat": "bardziej niepokojącemu",
+          "acc": "bardziej niepokojące",
+          "ins": "bardziej niepokojącym",
+          "loc": "bardziej niepokojącym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej niepokojący",
+          "gen": "bardziej niepokojących",
+          "dat": "bardziej niepokojącym",
+          "acc": "bardziej niepokojących",
+          "ins": "bardziej niepokojącymi",
+          "loc": "bardziej niepokojących"
+        },
+        "nonvirile": {
+          "nom": "bardziej niepokojące",
+          "gen": "bardziej niepokojących",
+          "dat": "bardziej niepokojącym",
+          "acc": "bardziej niepokojące",
+          "ins": "bardziej niepokojącymi",
+          "loc": "bardziej niepokojących"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej niepokojący",
+          "gen": "najbardziej niepokojącego",
+          "dat": "najbardziej niepokojącemu",
+          "acc": "najbardziej niepokojącego",
+          "ins": "najbardziej niepokojącym",
+          "loc": "najbardziej niepokojącym"
+        },
+        "m3": {
+          "nom": "najbardziej niepokojący",
+          "gen": "najbardziej niepokojącego",
+          "dat": "najbardziej niepokojącemu",
+          "acc": "najbardziej niepokojący",
+          "ins": "najbardziej niepokojącym",
+          "loc": "najbardziej niepokojącym"
+        },
+        "f": {
+          "nom": "najbardziej niepokojąca",
+          "gen": "najbardziej niepokojącej",
+          "dat": "najbardziej niepokojącej",
+          "acc": "najbardziej niepokojącą",
+          "ins": "najbardziej niepokojącą",
+          "loc": "najbardziej niepokojącej"
+        },
+        "n": {
+          "nom": "najbardziej niepokojące",
+          "gen": "najbardziej niepokojącego",
+          "dat": "najbardziej niepokojącemu",
+          "acc": "najbardziej niepokojące",
+          "ins": "najbardziej niepokojącym",
+          "loc": "najbardziej niepokojącym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej niepokojący",
+          "gen": "najbardziej niepokojących",
+          "dat": "najbardziej niepokojącym",
+          "acc": "najbardziej niepokojących",
+          "ins": "najbardziej niepokojącymi",
+          "loc": "najbardziej niepokojących"
+        },
+        "nonvirile": {
+          "nom": "najbardziej niepokojące",
+          "gen": "najbardziej niepokojących",
+          "dat": "najbardziej niepokojącym",
+          "acc": "najbardziej niepokojące",
+          "ins": "najbardziej niepokojącymi",
+          "loc": "najbardziej niepokojących"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "boleć",
+    "verbalNoun": "bolenie",
+    "activeAdjectival": "bolący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "boląc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "ból",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "bolano"
+          },
+          "plural": {
+            "allPluralGenders": "bolano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "bolałem",
+            "f": "bolałam"
+          },
+          "plural": {
+            "virile": "boleliśmy",
+            "nonvirile": "bolałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "bolałeś",
+            "f": "bolałaś"
+          },
+          "plural": {
+            "virile": "boleliście",
+            "nonvirile": "bolałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "bolał",
+            "f": "bolała",
+            "n": "bolało"
+          },
+          "plural": {
+            "virile": "boleli",
+            "nonvirile": "bolały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "boli się"
+          },
+          "plural": {
+            "allPluralGenders": "boli się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "bolę"
+          },
+          "plural": {
+            "allPluralGenders": "bolimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "bolisz"
+          },
+          "plural": {
+            "allPluralGenders": "bolicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "boli"
+          },
+          "plural": {
+            "allPluralGenders": "bolą"
+          }
+        }
+      }
+    }
+  }
+}

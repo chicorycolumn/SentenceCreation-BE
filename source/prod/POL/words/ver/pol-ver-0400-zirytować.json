@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zirytować",
+    "verbalNoun": "zirytowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zirytowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zirytowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zirytuje się"
+          },
+          "plural": {
+            "allPluralGenders": "zirytuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zirytuję"
+          },
+          "plural": {
+            "allPluralGenders": "zirytujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zirytujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zirytujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zirytuje"
+          },
+          "plural": {
+            "allPluralGenders": "zirytują"
+          }
+        }
+      },
+      "imperative": "zirytuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zirytowano"
+          },
+          "plural": {
+            "allPluralGenders": "zirytowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zirytowałem",
+            "f": "zirytowałam"
+          },
+          "plural": {
+            "virile": "zirytowaliśmy",
+            "nonvirile": "zirytowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zirytowałeś",
+            "f": "zirytowałaś"
+          },
+          "plural": {
+            "virile": "zirytowaliście",
+            "nonvirile": "zirytowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zirytował",
+            "f": "zirytowała",
+            "n": "zirytowało"
+          },
+          "plural": {
+            "virile": "zirytowali",
+            "nonvirile": "zirytowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "małżeński",
+          "gen": "małżeńskiego",
+          "dat": "małżeńskiemu",
+          "acc": "małżeńskiego",
+          "ins": "małżeńskim",
+          "loc": "małżeńskim"
+        },
+        "m3": {
+          "nom": "małżeński",
+          "gen": "małżeńskiego",
+          "dat": "małżeńskiemu",
+          "acc": "małżeński",
+          "ins": "małżeńskim",
+          "loc": "małżeńskim"
+        },
+        "f": {
+          "nom": "małżeńska",
+          "gen": "małżeńskiej",
+          "dat": "małżeńskiej",
+          "acc": "małżeńską",
+          "ins": "małżeńską",
+          "loc": "małżeńskiej"
+        },
+        "n": {
+          "nom": "małżeńskie",
+          "gen": "małżeńskiego",
+          "dat": "małżeńskiemu",
+          "acc": "małżeńskie",
+          "ins": "małżeńskim",
+          "loc": "małżeńskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "małżeńscy",
+          "gen": "małżeńskich",
+          "dat": "małżeńskim",
+          "acc": "małżeńskich",
+          "ins": "małżeńskimi",
+          "loc": "małżeńskich"
+        },
+        "nonvirile": {
+          "nom": "małżeńskie",
+          "gen": "małżeńskich",
+          "dat": "małżeńskim",
+          "acc": "małżeńskie",
+          "ins": "małżeńskimi",
+          "loc": "małżeńskich"
+        }
+      }
+    }
+  }
+}

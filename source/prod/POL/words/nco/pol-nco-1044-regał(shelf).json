@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "regał",
+      "gen": "regału",
+      "dat": "regałowi",
+      "acc": "regał",
+      "ins": "regałem",
+      "loc": "regale",
+      "voc": "regale"
+    },
+    "plural": {
+      "nom": "regały",
+      "gen": "regałów",
+      "dat": "regałom",
+      "acc": "regały",
+      "ins": "regałami",
+      "loc": "regałach",
+      "voc": "regały"
+    }
+  }
+}

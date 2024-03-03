@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "wcześnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "wczesny",
+          "gen": "wczesnego",
+          "dat": "wczesnemu",
+          "acc": "wczesnego",
+          "ins": "wczesnym",
+          "loc": "wczesnym"
+        },
+        "m3": {
+          "nom": "wczesny",
+          "gen": "wczesnego",
+          "dat": "wczesnemu",
+          "acc": "wczesny",
+          "ins": "wczesnym",
+          "loc": "wczesnym"
+        },
+        "f": {
+          "nom": "wczesna",
+          "gen": "wczesnej",
+          "dat": "wczesnej",
+          "acc": "wczesną",
+          "ins": "wczesną",
+          "loc": "wczesnej"
+        },
+        "n": {
+          "nom": "wczesne",
+          "gen": "wczesnego",
+          "dat": "wczesnemu",
+          "acc": "wczesne",
+          "ins": "wczesnym",
+          "loc": "wczesnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wcześni",
+          "gen": "wczesnych",
+          "dat": "wczesnym",
+          "acc": "wczesnych",
+          "ins": "wczesnymi",
+          "loc": "wczesnych"
+        },
+        "nonvirile": {
+          "nom": "wczesne",
+          "gen": "wczesnych",
+          "dat": "wczesnym",
+          "acc": "wczesne",
+          "ins": "wczesnymi",
+          "loc": "wczesnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "wcześniejszy",
+          "gen": "wcześniejszego",
+          "dat": "wcześniejszemu",
+          "acc": "wcześniejszego",
+          "ins": "wcześniejszym",
+          "loc": "wcześniejszym"
+        },
+        "m3": {
+          "nom": "wcześniejszy",
+          "gen": "wcześniejszego",
+          "dat": "wcześniejszemu",
+          "acc": "wcześniejszy",
+          "ins": "wcześniejszym",
+          "loc": "wcześniejszym"
+        },
+        "f": {
+          "nom": "wcześniejsza",
+          "gen": "wcześniejszej",
+          "dat": "wcześniejszej",
+          "acc": "wcześniejszą",
+          "ins": "wcześniejszą",
+          "loc": "wcześniejszej"
+        },
+        "n": {
+          "nom": "wcześniejsze",
+          "gen": "wcześniejszego",
+          "dat": "wcześniejszemu",
+          "acc": "wcześniejsze",
+          "ins": "wcześniejszym",
+          "loc": "wcześniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wcześniejsi",
+          "gen": "wcześniejszych",
+          "dat": "wcześniejszym",
+          "acc": "wcześniejszych",
+          "ins": "wcześniejszymi",
+          "loc": "wcześniejszych"
+        },
+        "nonvirile": {
+          "nom": "wcześniejsze",
+          "gen": "wcześniejszych",
+          "dat": "wcześniejszym",
+          "acc": "wcześniejsze",
+          "ins": "wcześniejszymi",
+          "loc": "wcześniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najwcześniejszy",
+          "gen": "najwcześniejszego",
+          "dat": "najwcześniejszemu",
+          "acc": "najwcześniejszego",
+          "ins": "najwcześniejszym",
+          "loc": "najwcześniejszym"
+        },
+        "m3": {
+          "nom": "najwcześniejszy",
+          "gen": "najwcześniejszego",
+          "dat": "najwcześniejszemu",
+          "acc": "najwcześniejszy",
+          "ins": "najwcześniejszym",
+          "loc": "najwcześniejszym"
+        },
+        "f": {
+          "nom": "najwcześniejsza",
+          "gen": "najwcześniejszej",
+          "dat": "najwcześniejszej",
+          "acc": "najwcześniejszą",
+          "ins": "najwcześniejszą",
+          "loc": "najwcześniejszej"
+        },
+        "n": {
+          "nom": "najwcześniejsze",
+          "gen": "najwcześniejszego",
+          "dat": "najwcześniejszemu",
+          "acc": "najwcześniejsze",
+          "ins": "najwcześniejszym",
+          "loc": "najwcześniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najwcześniejsi",
+          "gen": "najwcześniejszych",
+          "dat": "najwcześniejszym",
+          "acc": "najwcześniejszych",
+          "ins": "najwcześniejszymi",
+          "loc": "najwcześniejszych"
+        },
+        "nonvirile": {
+          "nom": "najwcześniejsze",
+          "gen": "najwcześniejszych",
+          "dat": "najwcześniejszym",
+          "acc": "najwcześniejsze",
+          "ins": "najwcześniejszymi",
+          "loc": "najwcześniejszych"
+        }
+      }
+    }
+  }
+}

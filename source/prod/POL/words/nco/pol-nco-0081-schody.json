@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "plural": {
+      "nom": "schody",
+      "gen": "schodów",
+      "dat": "schodom",
+      "acc": "schody",
+      "ins": "schodami",
+      "loc": "schodach",
+      "voc": "schody"
+    }
+  }
+}

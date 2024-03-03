@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "ciasno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ciasny",
+          "gen": "ciasnego",
+          "dat": "ciasnemu",
+          "acc": "ciasnego",
+          "ins": "ciasnym",
+          "loc": "ciasnym"
+        },
+        "m3": {
+          "nom": "ciasny",
+          "gen": "ciasnego",
+          "dat": "ciasnemu",
+          "acc": "ciasny",
+          "ins": "ciasnym",
+          "loc": "ciasnym"
+        },
+        "f": {
+          "nom": "ciasna",
+          "gen": "ciasnej",
+          "dat": "ciasnej",
+          "acc": "ciasną",
+          "ins": "ciasną",
+          "loc": "ciasnej"
+        },
+        "n": {
+          "nom": "ciasne",
+          "gen": "ciasnego",
+          "dat": "ciasnemu",
+          "acc": "ciasne",
+          "ins": "ciasnym",
+          "loc": "ciasnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ciaśni",
+          "gen": "ciasnych",
+          "dat": "ciasnym",
+          "acc": "ciasnych",
+          "ins": "ciasnymi",
+          "loc": "ciasnych"
+        },
+        "nonvirile": {
+          "nom": "ciasne",
+          "gen": "ciasnych",
+          "dat": "ciasnym",
+          "acc": "ciasne",
+          "ins": "ciasnymi",
+          "loc": "ciasnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "ciaśniejszy",
+          "gen": "ciaśniejszego",
+          "dat": "ciaśniejszemu",
+          "acc": "ciaśniejszego",
+          "ins": "ciaśniejszym",
+          "loc": "ciaśniejszym"
+        },
+        "m3": {
+          "nom": "ciaśniejszy",
+          "gen": "ciaśniejszego",
+          "dat": "ciaśniejszemu",
+          "acc": "ciaśniejszy",
+          "ins": "ciaśniejszym",
+          "loc": "ciaśniejszym"
+        },
+        "f": {
+          "nom": "ciaśniejsza",
+          "gen": "ciaśniejszej",
+          "dat": "ciaśniejszej",
+          "acc": "ciaśniejszą",
+          "ins": "ciaśniejszą",
+          "loc": "ciaśniejszej"
+        },
+        "n": {
+          "nom": "ciaśniejsze",
+          "gen": "ciaśniejszego",
+          "dat": "ciaśniejszemu",
+          "acc": "ciaśniejsze",
+          "ins": "ciaśniejszym",
+          "loc": "ciaśniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ciaśniejsi",
+          "gen": "ciaśniejszych",
+          "dat": "ciaśniejszym",
+          "acc": "ciaśniejszych",
+          "ins": "ciaśniejszymi",
+          "loc": "ciaśniejszych"
+        },
+        "nonvirile": {
+          "nom": "ciaśniejsze",
+          "gen": "ciaśniejszych",
+          "dat": "ciaśniejszym",
+          "acc": "ciaśniejsze",
+          "ins": "ciaśniejszymi",
+          "loc": "ciaśniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najciaśniejszy",
+          "gen": "najciaśniejszego",
+          "dat": "najciaśniejszemu",
+          "acc": "najciaśniejszego",
+          "ins": "najciaśniejszym",
+          "loc": "najciaśniejszym"
+        },
+        "m3": {
+          "nom": "najciaśniejszy",
+          "gen": "najciaśniejszego",
+          "dat": "najciaśniejszemu",
+          "acc": "najciaśniejszy",
+          "ins": "najciaśniejszym",
+          "loc": "najciaśniejszym"
+        },
+        "f": {
+          "nom": "najciaśniejsza",
+          "gen": "najciaśniejszej",
+          "dat": "najciaśniejszej",
+          "acc": "najciaśniejszą",
+          "ins": "najciaśniejszą",
+          "loc": "najciaśniejszej"
+        },
+        "n": {
+          "nom": "najciaśniejsze",
+          "gen": "najciaśniejszego",
+          "dat": "najciaśniejszemu",
+          "acc": "najciaśniejsze",
+          "ins": "najciaśniejszym",
+          "loc": "najciaśniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najciaśniejsi",
+          "gen": "najciaśniejszych",
+          "dat": "najciaśniejszym",
+          "acc": "najciaśniejszych",
+          "ins": "najciaśniejszymi",
+          "loc": "najciaśniejszych"
+        },
+        "nonvirile": {
+          "nom": "najciaśniejsze",
+          "gen": "najciaśniejszych",
+          "dat": "najciaśniejszym",
+          "acc": "najciaśniejsze",
+          "ins": "najciaśniejszymi",
+          "loc": "najciaśniejszych"
+        }
+      }
+    }
+  }
+}

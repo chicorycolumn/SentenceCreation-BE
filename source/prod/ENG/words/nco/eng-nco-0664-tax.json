@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "tax",
+      "gen": "tax's"
+    },
+    "plural": {
+      "nom": "taxes",
+      "gen": "taxes'"
+    }
+  }
+}

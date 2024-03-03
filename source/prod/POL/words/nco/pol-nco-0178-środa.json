@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "środa",
+      "gen": "środy",
+      "dat": "środzie",
+      "acc": "środę",
+      "ins": "środą",
+      "loc": "środzie",
+      "voc": "środo"
+    },
+    "plural": {
+      "nom": "środy",
+      "gen": "śród",
+      "dat": "środom",
+      "acc": "środy",
+      "ins": "środami",
+      "loc": "środach",
+      "voc": "środy"
+    }
+  }
+}

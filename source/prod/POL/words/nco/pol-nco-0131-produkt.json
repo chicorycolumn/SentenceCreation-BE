@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "produkt",
+      "gen": "produktu",
+      "dat": "produktowi",
+      "acc": "produkt",
+      "ins": "produktem",
+      "loc": "produkcie",
+      "voc": "produkcie"
+    },
+    "plural": {
+      "nom": "produkty",
+      "gen": "produktów",
+      "dat": "produktom",
+      "acc": "produkty",
+      "ins": "produktami",
+      "loc": "produktach",
+      "voc": "produkty"
+    }
+  }
+}

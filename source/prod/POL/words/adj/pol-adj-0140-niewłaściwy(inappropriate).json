@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niewłaściwie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niewłaściwy",
+          "gen": "niewłaściwego",
+          "dat": "niewłaściwemu",
+          "acc": "niewłaściwego",
+          "ins": "niewłaściwym",
+          "loc": "niewłaściwym"
+        },
+        "m3": {
+          "nom": "niewłaściwy",
+          "gen": "niewłaściwego",
+          "dat": "niewłaściwemu",
+          "acc": "niewłaściwy",
+          "ins": "niewłaściwym",
+          "loc": "niewłaściwym"
+        },
+        "f": {
+          "nom": "niewłaściwa",
+          "gen": "niewłaściwej",
+          "dat": "niewłaściwej",
+          "acc": "niewłaściwą",
+          "ins": "niewłaściwą",
+          "loc": "niewłaściwej"
+        },
+        "n": {
+          "nom": "niewłaściwe",
+          "gen": "niewłaściwego",
+          "dat": "niewłaściwemu",
+          "acc": "niewłaściwe",
+          "ins": "niewłaściwym",
+          "loc": "niewłaściwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niewłaściwi",
+          "gen": "niewłaściwych",
+          "dat": "niewłaściwym",
+          "acc": "niewłaściwych",
+          "ins": "niewłaściwymi",
+          "loc": "niewłaściwych"
+        },
+        "nonvirile": {
+          "nom": "niewłaściwe",
+          "gen": "niewłaściwych",
+          "dat": "niewłaściwym",
+          "acc": "niewłaściwe",
+          "ins": "niewłaściwymi",
+          "loc": "niewłaściwych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej niewłaściwy",
+          "gen": "bardziej niewłaściwego",
+          "dat": "bardziej niewłaściwemu",
+          "acc": "bardziej niewłaściwego",
+          "ins": "bardziej niewłaściwym",
+          "loc": "bardziej niewłaściwym"
+        },
+        "m3": {
+          "nom": "bardziej niewłaściwy",
+          "gen": "bardziej niewłaściwego",
+          "dat": "bardziej niewłaściwemu",
+          "acc": "bardziej niewłaściwy",
+          "ins": "bardziej niewłaściwym",
+          "loc": "bardziej niewłaściwym"
+        },
+        "f": {
+          "nom": "bardziej niewłaściwa",
+          "gen": "bardziej niewłaściwej",
+          "dat": "bardziej niewłaściwej",
+          "acc": "bardziej niewłaściwą",
+          "ins": "bardziej niewłaściwą",
+          "loc": "bardziej niewłaściwej"
+        },
+        "n": {
+          "nom": "bardziej niewłaściwe",
+          "gen": "bardziej niewłaściwego",
+          "dat": "bardziej niewłaściwemu",
+          "acc": "bardziej niewłaściwe",
+          "ins": "bardziej niewłaściwym",
+          "loc": "bardziej niewłaściwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej niewłaściwi",
+          "gen": "bardziej niewłaściwych",
+          "dat": "bardziej niewłaściwym",
+          "acc": "bardziej niewłaściwych",
+          "ins": "bardziej niewłaściwymi",
+          "loc": "bardziej niewłaściwych"
+        },
+        "nonvirile": {
+          "nom": "bardziej niewłaściwe",
+          "gen": "bardziej niewłaściwych",
+          "dat": "bardziej niewłaściwym",
+          "acc": "bardziej niewłaściwe",
+          "ins": "bardziej niewłaściwymi",
+          "loc": "bardziej niewłaściwych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej niewłaściwy",
+          "gen": "najbardziej niewłaściwego",
+          "dat": "najbardziej niewłaściwemu",
+          "acc": "najbardziej niewłaściwego",
+          "ins": "najbardziej niewłaściwym",
+          "loc": "najbardziej niewłaściwym"
+        },
+        "m3": {
+          "nom": "najbardziej niewłaściwy",
+          "gen": "najbardziej niewłaściwego",
+          "dat": "najbardziej niewłaściwemu",
+          "acc": "najbardziej niewłaściwy",
+          "ins": "najbardziej niewłaściwym",
+          "loc": "najbardziej niewłaściwym"
+        },
+        "f": {
+          "nom": "najbardziej niewłaściwa",
+          "gen": "najbardziej niewłaściwej",
+          "dat": "najbardziej niewłaściwej",
+          "acc": "najbardziej niewłaściwą",
+          "ins": "najbardziej niewłaściwą",
+          "loc": "najbardziej niewłaściwej"
+        },
+        "n": {
+          "nom": "najbardziej niewłaściwe",
+          "gen": "najbardziej niewłaściwego",
+          "dat": "najbardziej niewłaściwemu",
+          "acc": "najbardziej niewłaściwe",
+          "ins": "najbardziej niewłaściwym",
+          "loc": "najbardziej niewłaściwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej niewłaściwi",
+          "gen": "najbardziej niewłaściwych",
+          "dat": "najbardziej niewłaściwym",
+          "acc": "najbardziej niewłaściwych",
+          "ins": "najbardziej niewłaściwymi",
+          "loc": "najbardziej niewłaściwych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej niewłaściwe",
+          "gen": "najbardziej niewłaściwych",
+          "dat": "najbardziej niewłaściwym",
+          "acc": "najbardziej niewłaściwe",
+          "ins": "najbardziej niewłaściwymi",
+          "loc": "najbardziej niewłaściwych"
+        }
+      }
+    }
+  }
+}

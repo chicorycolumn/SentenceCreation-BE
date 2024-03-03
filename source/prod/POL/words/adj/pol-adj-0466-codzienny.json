@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "codziennie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "codzienny",
+          "gen": "codziennego",
+          "dat": "codziennemu",
+          "acc": "codziennego",
+          "ins": "codziennym",
+          "loc": "codziennym"
+        },
+        "m3": {
+          "nom": "codzienny",
+          "gen": "codziennego",
+          "dat": "codziennemu",
+          "acc": "codzienny",
+          "ins": "codziennym",
+          "loc": "codziennym"
+        },
+        "f": {
+          "nom": "codzienna",
+          "gen": "codziennej",
+          "dat": "codziennej",
+          "acc": "codzienną",
+          "ins": "codzienną",
+          "loc": "codziennej"
+        },
+        "n": {
+          "nom": "codzienne",
+          "gen": "codziennego",
+          "dat": "codziennemu",
+          "acc": "codzienne",
+          "ins": "codziennym",
+          "loc": "codziennym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "codzienni",
+          "gen": "codziennych",
+          "dat": "codziennym",
+          "acc": "codziennych",
+          "ins": "codziennymi",
+          "loc": "codziennych"
+        },
+        "nonvirile": {
+          "nom": "codzienne",
+          "gen": "codziennych",
+          "dat": "codziennym",
+          "acc": "codzienne",
+          "ins": "codziennymi",
+          "loc": "codziennych"
+        }
+      }
+    }
+  }
+}

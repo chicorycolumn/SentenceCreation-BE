@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "ręcznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ręczny",
+          "gen": "ręcznego",
+          "dat": "ręcznemu",
+          "acc": "ręcznego",
+          "ins": "ręcznym",
+          "loc": "ręcznym"
+        },
+        "m3": {
+          "nom": "ręczny",
+          "gen": "ręcznego",
+          "dat": "ręcznemu",
+          "acc": "ręczny",
+          "ins": "ręcznym",
+          "loc": "ręcznym"
+        },
+        "f": {
+          "nom": "ręczna",
+          "gen": "ręcznej",
+          "dat": "ręcznej",
+          "acc": "ręczną",
+          "ins": "ręczną",
+          "loc": "ręcznej"
+        },
+        "n": {
+          "nom": "ręczne",
+          "gen": "ręcznego",
+          "dat": "ręcznemu",
+          "acc": "ręczne",
+          "ins": "ręcznym",
+          "loc": "ręcznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ręczni",
+          "gen": "ręcznych",
+          "dat": "ręcznym",
+          "acc": "ręcznych",
+          "ins": "ręcznymi",
+          "loc": "ręcznych"
+        },
+        "nonvirile": {
+          "nom": "ręczne",
+          "gen": "ręcznych",
+          "dat": "ręcznym",
+          "acc": "ręczne",
+          "ins": "ręcznymi",
+          "loc": "ręcznych"
+        }
+      }
+    }
+  }
+}

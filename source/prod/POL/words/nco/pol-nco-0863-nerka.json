@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "nerka",
+      "gen": "nerki",
+      "dat": "nerce",
+      "acc": "nerkę",
+      "ins": "nerką",
+      "loc": "nerce",
+      "voc": "nerko"
+    },
+    "plural": {
+      "nom": "nerki",
+      "gen": "nerek",
+      "dat": "nerkom",
+      "acc": "nerki",
+      "ins": "nerkami",
+      "loc": "nerkach",
+      "voc": "nerki"
+    }
+  }
+}

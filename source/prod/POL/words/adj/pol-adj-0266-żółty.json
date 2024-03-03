@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "żółto",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "żółty",
+          "gen": "żółtego",
+          "dat": "żółtemu",
+          "acc": "żółtego",
+          "ins": "żółtym",
+          "loc": "żółtym"
+        },
+        "m3": {
+          "nom": "żółty",
+          "gen": "żółtego",
+          "dat": "żółtemu",
+          "acc": "żółty",
+          "ins": "żółtym",
+          "loc": "żółtym"
+        },
+        "f": {
+          "nom": "żółta",
+          "gen": "żółtej",
+          "dat": "żółtej",
+          "acc": "żółtą",
+          "ins": "żółtą",
+          "loc": "żółtej"
+        },
+        "n": {
+          "nom": "żółte",
+          "gen": "żółtego",
+          "dat": "żółtemu",
+          "acc": "żółte",
+          "ins": "żółtym",
+          "loc": "żółtym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "żółci",
+          "gen": "żółtych",
+          "dat": "żółtym",
+          "acc": "żółtych",
+          "ins": "żółtymi",
+          "loc": "żółtych"
+        },
+        "nonvirile": {
+          "nom": "żółte",
+          "gen": "żółtych",
+          "dat": "żółtym",
+          "acc": "żółte",
+          "ins": "żółtymi",
+          "loc": "żółtych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej żółty",
+          "gen": "bardziej żółtego",
+          "dat": "bardziej żółtemu",
+          "acc": "bardziej żółtego",
+          "ins": "bardziej żółtym",
+          "loc": "bardziej żółtym"
+        },
+        "m3": {
+          "nom": "bardziej żółty",
+          "gen": "bardziej żółtego",
+          "dat": "bardziej żółtemu",
+          "acc": "bardziej żółty",
+          "ins": "bardziej żółtym",
+          "loc": "bardziej żółtym"
+        },
+        "f": {
+          "nom": "bardziej żółta",
+          "gen": "bardziej żółtej",
+          "dat": "bardziej żółtej",
+          "acc": "bardziej żółtą",
+          "ins": "bardziej żółtą",
+          "loc": "bardziej żółtej"
+        },
+        "n": {
+          "nom": "bardziej żółte",
+          "gen": "bardziej żółtego",
+          "dat": "bardziej żółtemu",
+          "acc": "bardziej żółte",
+          "ins": "bardziej żółtym",
+          "loc": "bardziej żółtym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej żółci",
+          "gen": "bardziej żółtych",
+          "dat": "bardziej żółtym",
+          "acc": "bardziej żółtych",
+          "ins": "bardziej żółtymi",
+          "loc": "bardziej żółtych"
+        },
+        "nonvirile": {
+          "nom": "bardziej żółte",
+          "gen": "bardziej żółtych",
+          "dat": "bardziej żółtym",
+          "acc": "bardziej żółte",
+          "ins": "bardziej żółtymi",
+          "loc": "bardziej żółtych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej żółty",
+          "gen": "najbardziej żółtego",
+          "dat": "najbardziej żółtemu",
+          "acc": "najbardziej żółtego",
+          "ins": "najbardziej żółtym",
+          "loc": "najbardziej żółtym"
+        },
+        "m3": {
+          "nom": "najbardziej żółty",
+          "gen": "najbardziej żółtego",
+          "dat": "najbardziej żółtemu",
+          "acc": "najbardziej żółty",
+          "ins": "najbardziej żółtym",
+          "loc": "najbardziej żółtym"
+        },
+        "f": {
+          "nom": "najbardziej żółta",
+          "gen": "najbardziej żółtej",
+          "dat": "najbardziej żółtej",
+          "acc": "najbardziej żółtą",
+          "ins": "najbardziej żółtą",
+          "loc": "najbardziej żółtej"
+        },
+        "n": {
+          "nom": "najbardziej żółte",
+          "gen": "najbardziej żółtego",
+          "dat": "najbardziej żółtemu",
+          "acc": "najbardziej żółte",
+          "ins": "najbardziej żółtym",
+          "loc": "najbardziej żółtym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej żółci",
+          "gen": "najbardziej żółtych",
+          "dat": "najbardziej żółtym",
+          "acc": "najbardziej żółtych",
+          "ins": "najbardziej żółtymi",
+          "loc": "najbardziej żółtych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej żółte",
+          "gen": "najbardziej żółtych",
+          "dat": "najbardziej żółtym",
+          "acc": "najbardziej żółte",
+          "ins": "najbardziej żółtymi",
+          "loc": "najbardziej żółtych"
+        }
+      }
+    }
+  }
+}

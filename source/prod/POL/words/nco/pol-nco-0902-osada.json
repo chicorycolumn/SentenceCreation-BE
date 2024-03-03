@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "osada",
+      "gen": "osady",
+      "dat": "osadzie",
+      "acc": "osadę",
+      "ins": "osadą",
+      "loc": "osadzie",
+      "voc": "osado"
+    },
+    "plural": {
+      "nom": "osady",
+      "gen": "osad",
+      "dat": "osadom",
+      "acc": "osady",
+      "ins": "osadami",
+      "loc": "osadach",
+      "voc": "osady"
+    }
+  }
+}

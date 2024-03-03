@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dojechać",
+    "verbalNoun": "dojechanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "dojechawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dojedzie się"
+          },
+          "plural": {
+            "allPluralGenders": "dojedzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dojadę"
+          },
+          "plural": {
+            "allPluralGenders": "dojedziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dojedziesz"
+          },
+          "plural": {
+            "allPluralGenders": "dojedziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dojedzie"
+          },
+          "plural": {
+            "allPluralGenders": "dojadą"
+          }
+        }
+      },
+      "imperative": "dojedź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dojechano"
+          },
+          "plural": {
+            "allPluralGenders": "dojechano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dojechałem",
+            "f": "dojechałam"
+          },
+          "plural": {
+            "virile": "dojechaliśmy",
+            "nonvirile": "dojechałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dojechałeś",
+            "f": "dojechałaś"
+          },
+          "plural": {
+            "virile": "dojechaliście",
+            "nonvirile": "dojechałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dojechał",
+            "f": "dojechała",
+            "n": "dojechało"
+          },
+          "plural": {
+            "virile": "dojechali",
+            "nonvirile": "dojechały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

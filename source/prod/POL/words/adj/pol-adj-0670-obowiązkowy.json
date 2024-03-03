@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "obowiązkowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "obowiązkowy",
+          "gen": "obowiązkowego",
+          "dat": "obowiązkowemu",
+          "acc": "obowiązkowego",
+          "ins": "obowiązkowym",
+          "loc": "obowiązkowym"
+        },
+        "m3": {
+          "nom": "obowiązkowy",
+          "gen": "obowiązkowego",
+          "dat": "obowiązkowemu",
+          "acc": "obowiązkowy",
+          "ins": "obowiązkowym",
+          "loc": "obowiązkowym"
+        },
+        "f": {
+          "nom": "obowiązkowa",
+          "gen": "obowiązkowej",
+          "dat": "obowiązkowej",
+          "acc": "obowiązkową",
+          "ins": "obowiązkową",
+          "loc": "obowiązkowej"
+        },
+        "n": {
+          "nom": "obowiązkowe",
+          "gen": "obowiązkowego",
+          "dat": "obowiązkowemu",
+          "acc": "obowiązkowe",
+          "ins": "obowiązkowym",
+          "loc": "obowiązkowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "obowiązkowi",
+          "gen": "obowiązkowych",
+          "dat": "obowiązkowym",
+          "acc": "obowiązkowych",
+          "ins": "obowiązkowymi",
+          "loc": "obowiązkowych"
+        },
+        "nonvirile": {
+          "nom": "obowiązkowe",
+          "gen": "obowiązkowych",
+          "dat": "obowiązkowym",
+          "acc": "obowiązkowe",
+          "ins": "obowiązkowymi",
+          "loc": "obowiązkowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej obowiązkowy",
+          "gen": "bardziej obowiązkowego",
+          "dat": "bardziej obowiązkowemu",
+          "acc": "bardziej obowiązkowego",
+          "ins": "bardziej obowiązkowym",
+          "loc": "bardziej obowiązkowym"
+        },
+        "m3": {
+          "nom": "bardziej obowiązkowy",
+          "gen": "bardziej obowiązkowego",
+          "dat": "bardziej obowiązkowemu",
+          "acc": "bardziej obowiązkowy",
+          "ins": "bardziej obowiązkowym",
+          "loc": "bardziej obowiązkowym"
+        },
+        "f": {
+          "nom": "bardziej obowiązkowa",
+          "gen": "bardziej obowiązkowej",
+          "dat": "bardziej obowiązkowej",
+          "acc": "bardziej obowiązkową",
+          "ins": "bardziej obowiązkową",
+          "loc": "bardziej obowiązkowej"
+        },
+        "n": {
+          "nom": "bardziej obowiązkowe",
+          "gen": "bardziej obowiązkowego",
+          "dat": "bardziej obowiązkowemu",
+          "acc": "bardziej obowiązkowe",
+          "ins": "bardziej obowiązkowym",
+          "loc": "bardziej obowiązkowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej obowiązkowi",
+          "gen": "bardziej obowiązkowych",
+          "dat": "bardziej obowiązkowym",
+          "acc": "bardziej obowiązkowych",
+          "ins": "bardziej obowiązkowymi",
+          "loc": "bardziej obowiązkowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej obowiązkowe",
+          "gen": "bardziej obowiązkowych",
+          "dat": "bardziej obowiązkowym",
+          "acc": "bardziej obowiązkowe",
+          "ins": "bardziej obowiązkowymi",
+          "loc": "bardziej obowiązkowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej obowiązkowy",
+          "gen": "najbardziej obowiązkowego",
+          "dat": "najbardziej obowiązkowemu",
+          "acc": "najbardziej obowiązkowego",
+          "ins": "najbardziej obowiązkowym",
+          "loc": "najbardziej obowiązkowym"
+        },
+        "m3": {
+          "nom": "najbardziej obowiązkowy",
+          "gen": "najbardziej obowiązkowego",
+          "dat": "najbardziej obowiązkowemu",
+          "acc": "najbardziej obowiązkowy",
+          "ins": "najbardziej obowiązkowym",
+          "loc": "najbardziej obowiązkowym"
+        },
+        "f": {
+          "nom": "najbardziej obowiązkowa",
+          "gen": "najbardziej obowiązkowej",
+          "dat": "najbardziej obowiązkowej",
+          "acc": "najbardziej obowiązkową",
+          "ins": "najbardziej obowiązkową",
+          "loc": "najbardziej obowiązkowej"
+        },
+        "n": {
+          "nom": "najbardziej obowiązkowe",
+          "gen": "najbardziej obowiązkowego",
+          "dat": "najbardziej obowiązkowemu",
+          "acc": "najbardziej obowiązkowe",
+          "ins": "najbardziej obowiązkowym",
+          "loc": "najbardziej obowiązkowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej obowiązkowi",
+          "gen": "najbardziej obowiązkowych",
+          "dat": "najbardziej obowiązkowym",
+          "acc": "najbardziej obowiązkowych",
+          "ins": "najbardziej obowiązkowymi",
+          "loc": "najbardziej obowiązkowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej obowiązkowe",
+          "gen": "najbardziej obowiązkowych",
+          "dat": "najbardziej obowiązkowym",
+          "acc": "najbardziej obowiązkowe",
+          "ins": "najbardziej obowiązkowymi",
+          "loc": "najbardziej obowiązkowych"
+        }
+      }
+    }
+  }
+}

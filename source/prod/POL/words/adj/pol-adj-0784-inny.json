@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "inny",
+          "gen": "innego",
+          "dat": "innemu",
+          "acc": "innego",
+          "ins": "innym",
+          "loc": "innym"
+        },
+        "m3": {
+          "nom": "inny",
+          "gen": "innego",
+          "dat": "innemu",
+          "acc": "inny",
+          "ins": "innym",
+          "loc": "innym"
+        },
+        "f": {
+          "nom": "inna",
+          "gen": "innej",
+          "dat": "innej",
+          "acc": "inną",
+          "ins": "inną",
+          "loc": "innej"
+        },
+        "n": {
+          "nom": "inne",
+          "gen": "innego",
+          "dat": "innemu",
+          "acc": "inne",
+          "ins": "innym",
+          "loc": "innym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "inni",
+          "gen": "innych",
+          "dat": "innym",
+          "acc": "innych",
+          "ins": "innymi",
+          "loc": "innych"
+        },
+        "nonvirile": {
+          "nom": "inne",
+          "gen": "innych",
+          "dat": "innym",
+          "acc": "inne",
+          "ins": "innymi",
+          "loc": "innych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej inny",
+          "gen": "bardziej innego",
+          "dat": "bardziej innemu",
+          "acc": "bardziej innego",
+          "ins": "bardziej innym",
+          "loc": "bardziej innym"
+        },
+        "m3": {
+          "nom": "bardziej inny",
+          "gen": "bardziej innego",
+          "dat": "bardziej innemu",
+          "acc": "bardziej inny",
+          "ins": "bardziej innym",
+          "loc": "bardziej innym"
+        },
+        "f": {
+          "nom": "bardziej inna",
+          "gen": "bardziej innej",
+          "dat": "bardziej innej",
+          "acc": "bardziej inną",
+          "ins": "bardziej inną",
+          "loc": "bardziej innej"
+        },
+        "n": {
+          "nom": "bardziej inne",
+          "gen": "bardziej innego",
+          "dat": "bardziej innemu",
+          "acc": "bardziej inne",
+          "ins": "bardziej innym",
+          "loc": "bardziej innym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej inni",
+          "gen": "bardziej innych",
+          "dat": "bardziej innym",
+          "acc": "bardziej innych",
+          "ins": "bardziej innymi",
+          "loc": "bardziej innych"
+        },
+        "nonvirile": {
+          "nom": "bardziej inne",
+          "gen": "bardziej innych",
+          "dat": "bardziej innym",
+          "acc": "bardziej inne",
+          "ins": "bardziej innymi",
+          "loc": "bardziej innych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej inny",
+          "gen": "najbardziej innego",
+          "dat": "najbardziej innemu",
+          "acc": "najbardziej innego",
+          "ins": "najbardziej innym",
+          "loc": "najbardziej innym"
+        },
+        "m3": {
+          "nom": "najbardziej inny",
+          "gen": "najbardziej innego",
+          "dat": "najbardziej innemu",
+          "acc": "najbardziej inny",
+          "ins": "najbardziej innym",
+          "loc": "najbardziej innym"
+        },
+        "f": {
+          "nom": "najbardziej inna",
+          "gen": "najbardziej innej",
+          "dat": "najbardziej innej",
+          "acc": "najbardziej inną",
+          "ins": "najbardziej inną",
+          "loc": "najbardziej innej"
+        },
+        "n": {
+          "nom": "najbardziej inne",
+          "gen": "najbardziej innego",
+          "dat": "najbardziej innemu",
+          "acc": "najbardziej inne",
+          "ins": "najbardziej innym",
+          "loc": "najbardziej innym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej inni",
+          "gen": "najbardziej innych",
+          "dat": "najbardziej innym",
+          "acc": "najbardziej innych",
+          "ins": "najbardziej innymi",
+          "loc": "najbardziej innych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej inne",
+          "gen": "najbardziej innych",
+          "dat": "najbardziej innym",
+          "acc": "najbardziej inne",
+          "ins": "najbardziej innymi",
+          "loc": "najbardziej innych"
+        }
+      }
+    }
+  }
+}

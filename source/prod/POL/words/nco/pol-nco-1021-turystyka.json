@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "turystyka",
+      "gen": "turystyki",
+      "dat": "turystyce",
+      "acc": "turystykę",
+      "ins": "turystyką",
+      "loc": "turystyce",
+      "voc": "turystyko"
+    }
+  }
+}

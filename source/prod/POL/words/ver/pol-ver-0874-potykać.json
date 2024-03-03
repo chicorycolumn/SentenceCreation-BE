@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "potykać",
+    "verbalNoun": "potykanie",
+    "activeAdjectival": "potykający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "potykając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "potykaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "potykano"
+          },
+          "plural": {
+            "allPluralGenders": "potykano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "potykałem",
+            "f": "potykałam"
+          },
+          "plural": {
+            "virile": "potykaliśmy",
+            "nonvirile": "potykałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "potykałeś",
+            "f": "potykałaś"
+          },
+          "plural": {
+            "virile": "potykaliście",
+            "nonvirile": "potykałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "potykał",
+            "f": "potykała",
+            "n": "potykało"
+          },
+          "plural": {
+            "virile": "potykali",
+            "nonvirile": "potykały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "potyka się"
+          },
+          "plural": {
+            "allPluralGenders": "potyka się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "potykam"
+          },
+          "plural": {
+            "allPluralGenders": "potykamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "potykasz"
+          },
+          "plural": {
+            "allPluralGenders": "potykacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "potyka"
+          },
+          "plural": {
+            "allPluralGenders": "potykają"
+          }
+        }
+      }
+    }
+  }
+}

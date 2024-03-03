@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "sztucznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "sztuczny",
+          "gen": "sztucznego",
+          "dat": "sztucznemu",
+          "acc": "sztucznego",
+          "ins": "sztucznym",
+          "loc": "sztucznym"
+        },
+        "m3": {
+          "nom": "sztuczny",
+          "gen": "sztucznego",
+          "dat": "sztucznemu",
+          "acc": "sztuczny",
+          "ins": "sztucznym",
+          "loc": "sztucznym"
+        },
+        "f": {
+          "nom": "sztuczna",
+          "gen": "sztucznej",
+          "dat": "sztucznej",
+          "acc": "sztuczną",
+          "ins": "sztuczną",
+          "loc": "sztucznej"
+        },
+        "n": {
+          "nom": "sztuczne",
+          "gen": "sztucznego",
+          "dat": "sztucznemu",
+          "acc": "sztuczne",
+          "ins": "sztucznym",
+          "loc": "sztucznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "sztuczni",
+          "gen": "sztucznych",
+          "dat": "sztucznym",
+          "acc": "sztucznych",
+          "ins": "sztucznymi",
+          "loc": "sztucznych"
+        },
+        "nonvirile": {
+          "nom": "sztuczne",
+          "gen": "sztucznych",
+          "dat": "sztucznym",
+          "acc": "sztuczne",
+          "ins": "sztucznymi",
+          "loc": "sztucznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "sztuczniejszy",
+          "gen": "sztuczniejszego",
+          "dat": "sztuczniejszemu",
+          "acc": "sztuczniejszego",
+          "ins": "sztuczniejszym",
+          "loc": "sztuczniejszym"
+        },
+        "m3": {
+          "nom": "sztuczniejszy",
+          "gen": "sztuczniejszego",
+          "dat": "sztuczniejszemu",
+          "acc": "sztuczniejszy",
+          "ins": "sztuczniejszym",
+          "loc": "sztuczniejszym"
+        },
+        "f": {
+          "nom": "sztuczniejsza",
+          "gen": "sztuczniejszej",
+          "dat": "sztuczniejszej",
+          "acc": "sztuczniejszą",
+          "ins": "sztuczniejszą",
+          "loc": "sztuczniejszej"
+        },
+        "n": {
+          "nom": "sztuczniejsze",
+          "gen": "sztuczniejszego",
+          "dat": "sztuczniejszemu",
+          "acc": "sztuczniejsze",
+          "ins": "sztuczniejszym",
+          "loc": "sztuczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "sztuczniejsi",
+          "gen": "sztuczniejszych",
+          "dat": "sztuczniejszym",
+          "acc": "sztuczniejszych",
+          "ins": "sztuczniejszymi",
+          "loc": "sztuczniejszych"
+        },
+        "nonvirile": {
+          "nom": "sztuczniejsze",
+          "gen": "sztuczniejszych",
+          "dat": "sztuczniejszym",
+          "acc": "sztuczniejsze",
+          "ins": "sztuczniejszymi",
+          "loc": "sztuczniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najsztuczniejszy",
+          "gen": "najsztuczniejszego",
+          "dat": "najsztuczniejszemu",
+          "acc": "najsztuczniejszego",
+          "ins": "najsztuczniejszym",
+          "loc": "najsztuczniejszym"
+        },
+        "m3": {
+          "nom": "najsztuczniejszy",
+          "gen": "najsztuczniejszego",
+          "dat": "najsztuczniejszemu",
+          "acc": "najsztuczniejszy",
+          "ins": "najsztuczniejszym",
+          "loc": "najsztuczniejszym"
+        },
+        "f": {
+          "nom": "najsztuczniejsza",
+          "gen": "najsztuczniejszej",
+          "dat": "najsztuczniejszej",
+          "acc": "najsztuczniejszą",
+          "ins": "najsztuczniejszą",
+          "loc": "najsztuczniejszej"
+        },
+        "n": {
+          "nom": "najsztuczniejsze",
+          "gen": "najsztuczniejszego",
+          "dat": "najsztuczniejszemu",
+          "acc": "najsztuczniejsze",
+          "ins": "najsztuczniejszym",
+          "loc": "najsztuczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najsztuczniejsi",
+          "gen": "najsztuczniejszych",
+          "dat": "najsztuczniejszym",
+          "acc": "najsztuczniejszych",
+          "ins": "najsztuczniejszymi",
+          "loc": "najsztuczniejszych"
+        },
+        "nonvirile": {
+          "nom": "najsztuczniejsze",
+          "gen": "najsztuczniejszych",
+          "dat": "najsztuczniejszym",
+          "acc": "najsztuczniejsze",
+          "ins": "najsztuczniejszymi",
+          "loc": "najsztuczniejszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przeklinać",
+    "verbalNoun": "przeklinanie",
+    "activeAdjectival": "przeklinający",
+    "passiveAdjectival": "przeklinany",
+    "contemporaryAdverbial": "przeklinając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przeklinaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeklinano"
+          },
+          "plural": {
+            "allPluralGenders": "przeklinano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przeklinałem",
+            "f": "przeklinałam"
+          },
+          "plural": {
+            "virile": "przeklinaliśmy",
+            "nonvirile": "przeklinałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przeklinałeś",
+            "f": "przeklinałaś"
+          },
+          "plural": {
+            "virile": "przeklinaliście",
+            "nonvirile": "przeklinałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przeklinał",
+            "f": "przeklinała",
+            "n": "przeklinało"
+          },
+          "plural": {
+            "virile": "przeklinali",
+            "nonvirile": "przeklinały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeklina się"
+          },
+          "plural": {
+            "allPluralGenders": "przeklina się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przeklinam"
+          },
+          "plural": {
+            "allPluralGenders": "przeklinamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przeklinasz"
+          },
+          "plural": {
+            "allPluralGenders": "przeklinacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przeklina"
+          },
+          "plural": {
+            "allPluralGenders": "przeklinają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "często",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "częsty",
+          "gen": "częstego",
+          "dat": "częstemu",
+          "acc": "częstego",
+          "ins": "częstym",
+          "loc": "częstym"
+        },
+        "m3": {
+          "nom": "częsty",
+          "gen": "częstego",
+          "dat": "częstemu",
+          "acc": "częsty",
+          "ins": "częstym",
+          "loc": "częstym"
+        },
+        "f": {
+          "nom": "częsta",
+          "gen": "częstej",
+          "dat": "częstej",
+          "acc": "częstą",
+          "ins": "częstą",
+          "loc": "częstej"
+        },
+        "n": {
+          "nom": "częste",
+          "gen": "częstego",
+          "dat": "częstemu",
+          "acc": "częste",
+          "ins": "częstym",
+          "loc": "częstym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "części",
+          "gen": "częstych",
+          "dat": "częstym",
+          "acc": "częstych",
+          "ins": "częstymi",
+          "loc": "częstych"
+        },
+        "nonvirile": {
+          "nom": "częste",
+          "gen": "częstych",
+          "dat": "częstym",
+          "acc": "częste",
+          "ins": "częstymi",
+          "loc": "częstych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "częstszy",
+          "gen": "częstszego",
+          "dat": "częstszemu",
+          "acc": "częstszego",
+          "ins": "częstszym",
+          "loc": "częstszym"
+        },
+        "m3": {
+          "nom": "częstszy",
+          "gen": "częstszego",
+          "dat": "częstszemu",
+          "acc": "częstszy",
+          "ins": "częstszym",
+          "loc": "częstszym"
+        },
+        "f": {
+          "nom": "częstsza",
+          "gen": "częstszej",
+          "dat": "częstszej",
+          "acc": "częstszą",
+          "ins": "częstszą",
+          "loc": "częstszej"
+        },
+        "n": {
+          "nom": "częstsze",
+          "gen": "częstszego",
+          "dat": "częstszemu",
+          "acc": "częstsze",
+          "ins": "częstszym",
+          "loc": "częstszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "częstsi",
+          "gen": "częstszych",
+          "dat": "częstszym",
+          "acc": "częstszych",
+          "ins": "częstszymi",
+          "loc": "częstszych"
+        },
+        "nonvirile": {
+          "nom": "częstsze",
+          "gen": "częstszych",
+          "dat": "częstszym",
+          "acc": "częstsze",
+          "ins": "częstszymi",
+          "loc": "częstszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najczęstszy",
+          "gen": "najczęstszego",
+          "dat": "najczęstszemu",
+          "acc": "najczęstszego",
+          "ins": "najczęstszym",
+          "loc": "najczęstszym"
+        },
+        "m3": {
+          "nom": "najczęstszy",
+          "gen": "najczęstszego",
+          "dat": "najczęstszemu",
+          "acc": "najczęstszy",
+          "ins": "najczęstszym",
+          "loc": "najczęstszym"
+        },
+        "f": {
+          "nom": "najczęstsza",
+          "gen": "najczęstszej",
+          "dat": "najczęstszej",
+          "acc": "najczęstszą",
+          "ins": "najczęstszą",
+          "loc": "najczęstszej"
+        },
+        "n": {
+          "nom": "najczęstsze",
+          "gen": "najczęstszego",
+          "dat": "najczęstszemu",
+          "acc": "najczęstsze",
+          "ins": "najczęstszym",
+          "loc": "najczęstszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najczęstsi",
+          "gen": "najczęstszych",
+          "dat": "najczęstszym",
+          "acc": "najczęstszych",
+          "ins": "najczęstszymi",
+          "loc": "najczęstszych"
+        },
+        "nonvirile": {
+          "nom": "najczęstsze",
+          "gen": "najczęstszych",
+          "dat": "najczęstszym",
+          "acc": "najczęstsze",
+          "ins": "najczęstszymi",
+          "loc": "najczęstszych"
+        }
+      }
+    }
+  }
+}

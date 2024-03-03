@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cigarette",
+      "gen": "cigarette's"
+    },
+    "plural": {
+      "nom": "cigarettes",
+      "gen": "cigarettes'"
+    }
+  }
+}

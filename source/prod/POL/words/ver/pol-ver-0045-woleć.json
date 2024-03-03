@@ -1,0 +1,89 @@
+{
+  "inflections": {
+    "infinitive": "woleć",
+    "activeAdjectival": "wolący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "woląc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "wól",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wolano"
+          },
+          "plural": {
+            "allPluralGenders": "wolano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wolałem",
+            "f": "wolałam"
+          },
+          "plural": {
+            "virile": "woleliśmy",
+            "nonvirile": "wolałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wolałeś",
+            "f": "wolałaś"
+          },
+          "plural": {
+            "virile": "woleliście",
+            "nonvirile": "wolałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wolał",
+            "f": "wolała",
+            "n": "wolało"
+          },
+          "plural": {
+            "virile": "woleli",
+            "nonvirile": "wolały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "woli się"
+          },
+          "plural": {
+            "allPluralGenders": "woli się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wolę"
+          },
+          "plural": {
+            "allPluralGenders": "wolimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wolisz"
+          },
+          "plural": {
+            "allPluralGenders": "wolicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "woli"
+          },
+          "plural": {
+            "allPluralGenders": "wolą"
+          }
+        }
+      }
+    }
+  }
+}

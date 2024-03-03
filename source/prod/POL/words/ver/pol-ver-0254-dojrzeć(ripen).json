@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dojrzeć",
+    "verbalNoun": "dojrzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "dojrzawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dojrzeje się"
+          },
+          "plural": {
+            "allPluralGenders": "dojrzeje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dojrzeję"
+          },
+          "plural": {
+            "allPluralGenders": "dojrzejemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dojrzejesz"
+          },
+          "plural": {
+            "allPluralGenders": "dojrzejecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dojrzeje"
+          },
+          "plural": {
+            "allPluralGenders": "dojrzeją"
+          }
+        }
+      },
+      "imperative": "dojrzej",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dojrzano"
+          },
+          "plural": {
+            "allPluralGenders": "dojrzano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dojrzałem",
+            "f": "dojrzałam"
+          },
+          "plural": {
+            "virile": "dojrzeliśmy",
+            "nonvirile": "dojrzałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dojrzałeś",
+            "f": "dojrzałaś"
+          },
+          "plural": {
+            "virile": "dojrzeliście",
+            "nonvirile": "dojrzałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dojrzał",
+            "f": "dojrzała",
+            "n": "dojrzało"
+          },
+          "plural": {
+            "virile": "dojrzeli",
+            "nonvirile": "dojrzały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

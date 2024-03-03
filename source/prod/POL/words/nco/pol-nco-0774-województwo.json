@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "województwo",
+      "gen": "województwa",
+      "dat": "województwu",
+      "acc": "województwo",
+      "ins": "województwem",
+      "loc": "województwie",
+      "voc": "województwo"
+    },
+    "plural": {
+      "nom": "województwa",
+      "gen": "województw",
+      "dat": "województwom",
+      "acc": "województwa",
+      "ins": "województwami",
+      "loc": "województwach",
+      "voc": "województwa"
+    }
+  }
+}

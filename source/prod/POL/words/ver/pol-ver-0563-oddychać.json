@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oddychać",
+    "verbalNoun": "oddychanie",
+    "activeAdjectival": "oddychający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "oddychając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "oddychaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oddychano"
+          },
+          "plural": {
+            "allPluralGenders": "oddychano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oddychałem",
+            "f": "oddychałam"
+          },
+          "plural": {
+            "virile": "oddychaliśmy",
+            "nonvirile": "oddychałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oddychałeś",
+            "f": "oddychałaś"
+          },
+          "plural": {
+            "virile": "oddychaliście",
+            "nonvirile": "oddychałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oddychał",
+            "f": "oddychała",
+            "n": "oddychało"
+          },
+          "plural": {
+            "virile": "oddychali",
+            "nonvirile": "oddychały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oddycha się"
+          },
+          "plural": {
+            "allPluralGenders": "oddycha się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oddycham"
+          },
+          "plural": {
+            "allPluralGenders": "oddychamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oddychasz"
+          },
+          "plural": {
+            "allPluralGenders": "oddychacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "oddycha"
+          },
+          "plural": {
+            "allPluralGenders": "oddychają"
+          }
+        }
+      }
+    }
+  }
+}

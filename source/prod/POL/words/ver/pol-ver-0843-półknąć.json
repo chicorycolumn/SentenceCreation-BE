@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "półknąć",
+    "verbalNoun": "półknięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "półknięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "półknąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "półknie się"
+          },
+          "plural": {
+            "allPluralGenders": "półknie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "półknę"
+          },
+          "plural": {
+            "allPluralGenders": "półkniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "półkniesz"
+          },
+          "plural": {
+            "allPluralGenders": "półkniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "półknie"
+          },
+          "plural": {
+            "allPluralGenders": "półkną"
+          }
+        }
+      },
+      "imperative": "półknij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "półknięto"
+          },
+          "plural": {
+            "allPluralGenders": "półknięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "półknąłem",
+            "f": "półknęłam"
+          },
+          "plural": {
+            "virile": "półknęliśmy",
+            "nonvirile": "półknęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "półknąłeś",
+            "f": "półknęłaś"
+          },
+          "plural": {
+            "virile": "półknęliście",
+            "nonvirile": "półknęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "półknął",
+            "f": "półknęła",
+            "n": "półknęło"
+          },
+          "plural": {
+            "virile": "półknęli",
+            "nonvirile": "półknęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

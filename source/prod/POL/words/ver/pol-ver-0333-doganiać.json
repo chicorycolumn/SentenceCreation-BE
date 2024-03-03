@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "doganiać",
+    "verbalNoun": "doganianie",
+    "activeAdjectival": "doganiający",
+    "passiveAdjectival": "doganiany",
+    "contemporaryAdverbial": "doganiając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "doganiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "doganiano"
+          },
+          "plural": {
+            "allPluralGenders": "doganiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "doganiałem",
+            "f": "doganiałam"
+          },
+          "plural": {
+            "virile": "doganialiśmy",
+            "nonvirile": "doganiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "doganiałeś",
+            "f": "doganiałaś"
+          },
+          "plural": {
+            "virile": "doganialiście",
+            "nonvirile": "doganiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "doganiał",
+            "f": "doganiała",
+            "n": "doganiało"
+          },
+          "plural": {
+            "virile": "doganiali",
+            "nonvirile": "doganiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dogania się"
+          },
+          "plural": {
+            "allPluralGenders": "dogania się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "doganiam"
+          },
+          "plural": {
+            "allPluralGenders": "doganiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "doganiasz"
+          },
+          "plural": {
+            "allPluralGenders": "doganiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dogania"
+          },
+          "plural": {
+            "allPluralGenders": "doganiają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "inflections": {
+    "infinitive": "zasugerować",
+    "verbalNoun": "zasugerowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zasugerowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zasugerowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zasugeruje się"
+          },
+          "plural": {
+            "allPluralGenders": "zasugeruje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "zasugeruję"
+          },
+          "plural": {
+            "allPluralGenders": "zasugerujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "zasugerujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zasugerujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zasugeruje"
+          },
+          "plural": {
+            "allPluralGenders": "zasugerują"
+          }
+        }
+      },
+      "imperative": "zasugeruj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zasugerowano"
+          },
+          "plural": {
+            "allPluralGenders": "zasugerowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": [
+              "zasugerowałem"
+            ],
+            "f": [
+              "zasugerowałam"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "zasugerowaliśmy"
+            ],
+            "nonvirile": [
+              "zasugerowałyśmy"
+            ]
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": [
+              "zasugerowałeś"
+            ],
+            "f": [
+              "zasugerowałaś"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "zasugerowaliście"
+            ],
+            "nonvirile": [
+              "zasugerowałyście"
+            ]
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zasugerował",
+            "f": "zasugerowała",
+            "n": "zasugerowało"
+          },
+          "plural": {
+            "virile": "zasugerowali",
+            "nonvirile": "zasugerowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

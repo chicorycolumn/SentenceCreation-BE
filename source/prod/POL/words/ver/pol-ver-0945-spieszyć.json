@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "spieszyć",
+    "verbalNoun": "spieszenie",
+    "activeAdjectival": "spieszący",
+    "passiveAdjectival": "spieszony",
+    "contemporaryAdverbial": "spiesząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "spiesz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "spieszono"
+          },
+          "plural": {
+            "allPluralGenders": "spieszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "spieszyłem",
+            "f": "spieszyłam"
+          },
+          "plural": {
+            "virile": "spieszyliśmy",
+            "nonvirile": "spieszyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "spieszyłeś",
+            "f": "spieszyłaś"
+          },
+          "plural": {
+            "virile": "spieszyliście",
+            "nonvirile": "spieszyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "spieszył",
+            "f": "spieszyła",
+            "n": "spieszyło"
+          },
+          "plural": {
+            "virile": "spieszyli",
+            "nonvirile": "spieszyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "spieszy się"
+          },
+          "plural": {
+            "allPluralGenders": "spieszy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "spieszę"
+          },
+          "plural": {
+            "allPluralGenders": "spieszymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "spieszysz"
+          },
+          "plural": {
+            "allPluralGenders": "spieszycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "spieszy"
+          },
+          "plural": {
+            "allPluralGenders": "spieszą"
+          }
+        }
+      }
+    }
+  }
+}

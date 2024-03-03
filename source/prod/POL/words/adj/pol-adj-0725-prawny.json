@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "prawnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "prawny",
+          "gen": "prawnego",
+          "dat": "prawnemu",
+          "acc": "prawnego",
+          "ins": "prawnym",
+          "loc": "prawnym"
+        },
+        "m3": {
+          "nom": "prawny",
+          "gen": "prawnego",
+          "dat": "prawnemu",
+          "acc": "prawny",
+          "ins": "prawnym",
+          "loc": "prawnym"
+        },
+        "f": {
+          "nom": "prawna",
+          "gen": "prawnej",
+          "dat": "prawnej",
+          "acc": "prawną",
+          "ins": "prawną",
+          "loc": "prawnej"
+        },
+        "n": {
+          "nom": "prawne",
+          "gen": "prawnego",
+          "dat": "prawnemu",
+          "acc": "prawne",
+          "ins": "prawnym",
+          "loc": "prawnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "prawni",
+          "gen": "prawnych",
+          "dat": "prawnym",
+          "acc": "prawnych",
+          "ins": "prawnymi",
+          "loc": "prawnych"
+        },
+        "nonvirile": {
+          "nom": "prawne",
+          "gen": "prawnych",
+          "dat": "prawnym",
+          "acc": "prawne",
+          "ins": "prawnymi",
+          "loc": "prawnych"
+        }
+      }
+    }
+  }
+}

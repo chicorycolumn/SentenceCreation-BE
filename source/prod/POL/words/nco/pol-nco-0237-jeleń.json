@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "jeleń",
+      "gen": "jelenia",
+      "dat": "jeleniowi",
+      "acc": "jelenia",
+      "ins": "jeleniem",
+      "loc": "jeleniu",
+      "voc": "jeleniu"
+    },
+    "plural": {
+      "nom": "jelenie",
+      "gen": "jeleni",
+      "dat": "jeleniom",
+      "acc": "jelenie",
+      "ins": "jeleniami",
+      "loc": "jeleniach",
+      "voc": "jelenie"
+    }
+  }
+}

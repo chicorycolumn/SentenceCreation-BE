@@ -1,0 +1,31 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wieś",
+      "gen": "wsi",
+      "dat": "wsi",
+      "acc": "wieś",
+      "ins": "wsią",
+      "loc": "wsi",
+      "voc": "wsi"
+    },
+    "plural": {
+      "nom": [
+        "wsie",
+        "wsi"
+      ],
+      "gen": "wsi",
+      "dat": "wsiom",
+      "acc": [
+        "wsie",
+        "wsi"
+      ],
+      "ins": "wsiami",
+      "loc": "wsiach",
+      "voc": [
+        "wsie",
+        "wsi"
+      ]
+    }
+  }
+}

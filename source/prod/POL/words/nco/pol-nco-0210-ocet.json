@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ocet",
+      "gen": "octu",
+      "dat": "octowi",
+      "acc": "ocet",
+      "ins": "octem",
+      "loc": "occie",
+      "voc": "occie"
+    },
+    "plural": {
+      "nom": "octy",
+      "gen": "octów",
+      "dat": "octom",
+      "acc": "octy",
+      "ins": "octami",
+      "loc": "octach",
+      "voc": "octy"
+    }
+  }
+}

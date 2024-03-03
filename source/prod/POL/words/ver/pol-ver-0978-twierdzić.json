@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "twierdzić",
+    "verbalNoun": "twierdzenie",
+    "activeAdjectival": "twierdzący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "twierdząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "twierdź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "twierdzono"
+          },
+          "plural": {
+            "allPluralGenders": "twierdzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "twierdziłem",
+            "f": "twierdziłam"
+          },
+          "plural": {
+            "virile": "twierdziliśmy",
+            "nonvirile": "twierdziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "twierdziłeś",
+            "f": "twierdziłaś"
+          },
+          "plural": {
+            "virile": "twierdziliście",
+            "nonvirile": "twierdziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "twierdził",
+            "f": "twierdziła",
+            "n": "twierdziło"
+          },
+          "plural": {
+            "virile": "twierdzili",
+            "nonvirile": "twierdziły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "twierdzi się"
+          },
+          "plural": {
+            "allPluralGenders": "twierdzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "twierdzę"
+          },
+          "plural": {
+            "allPluralGenders": "twierdzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "twierdzisz"
+          },
+          "plural": {
+            "allPluralGenders": "twierdzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "twierdzi"
+          },
+          "plural": {
+            "allPluralGenders": "twierdzą"
+          }
+        }
+      }
+    }
+  }
+}

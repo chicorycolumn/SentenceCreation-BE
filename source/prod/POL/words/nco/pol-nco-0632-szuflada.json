@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "szuflada",
+      "gen": "szuflady",
+      "dat": "szufladzie",
+      "acc": "szufladę",
+      "ins": "szufladą",
+      "loc": "szufladzie",
+      "voc": "szuflado"
+    },
+    "plural": {
+      "nom": "szuflady",
+      "gen": "szuflad",
+      "dat": "szufladom",
+      "acc": "szuflady",
+      "ins": "szufladami",
+      "loc": "szufladach",
+      "voc": "szuflady"
+    }
+  }
+}

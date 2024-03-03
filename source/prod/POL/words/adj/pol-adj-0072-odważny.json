@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "odważnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "odważny",
+          "gen": "odważnego",
+          "dat": "odważnemu",
+          "acc": "odważnego",
+          "ins": "odważnym",
+          "loc": "odważnym"
+        },
+        "m3": {
+          "nom": "odważny",
+          "gen": "odważnego",
+          "dat": "odważnemu",
+          "acc": "odważny",
+          "ins": "odważnym",
+          "loc": "odważnym"
+        },
+        "f": {
+          "nom": "odważna",
+          "gen": "odważnej",
+          "dat": "odważnej",
+          "acc": "odważną",
+          "ins": "odważną",
+          "loc": "odważnej"
+        },
+        "n": {
+          "nom": "odważne",
+          "gen": "odważnego",
+          "dat": "odważnemu",
+          "acc": "odważne",
+          "ins": "odważnym",
+          "loc": "odważnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "odważni",
+          "gen": "odważnych",
+          "dat": "odważnym",
+          "acc": "odważnych",
+          "ins": "odważnymi",
+          "loc": "odważnych"
+        },
+        "nonvirile": {
+          "nom": "odważne",
+          "gen": "odważnych",
+          "dat": "odważnym",
+          "acc": "odważne",
+          "ins": "odważnymi",
+          "loc": "odważnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "odważniejszy",
+          "gen": "odważniejszego",
+          "dat": "odważniejszemu",
+          "acc": "odważniejszego",
+          "ins": "odważniejszym",
+          "loc": "odważniejszym"
+        },
+        "m3": {
+          "nom": "odważniejszy",
+          "gen": "odważniejszego",
+          "dat": "odważniejszemu",
+          "acc": "odważniejszy",
+          "ins": "odważniejszym",
+          "loc": "odważniejszym"
+        },
+        "f": {
+          "nom": "odważniejsza",
+          "gen": "odważniejszej",
+          "dat": "odważniejszej",
+          "acc": "odważniejszą",
+          "ins": "odważniejszą",
+          "loc": "odważniejszej"
+        },
+        "n": {
+          "nom": "odważniejsze",
+          "gen": "odważniejszego",
+          "dat": "odważniejszemu",
+          "acc": "odważniejsze",
+          "ins": "odważniejszym",
+          "loc": "odważniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "odważniejsi",
+          "gen": "odważniejszych",
+          "dat": "odważniejszym",
+          "acc": "odważniejszych",
+          "ins": "odważniejszymi",
+          "loc": "odważniejszych"
+        },
+        "nonvirile": {
+          "nom": "odważniejsze",
+          "gen": "odważniejszych",
+          "dat": "odważniejszym",
+          "acc": "odważniejsze",
+          "ins": "odważniejszymi",
+          "loc": "odważniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najodważniejszy",
+          "gen": "najodważniejszego",
+          "dat": "najodważniejszemu",
+          "acc": "najodważniejszego",
+          "ins": "najodważniejszym",
+          "loc": "najodważniejszym"
+        },
+        "m3": {
+          "nom": "najodważniejszy",
+          "gen": "najodważniejszego",
+          "dat": "najodważniejszemu",
+          "acc": "najodważniejszy",
+          "ins": "najodważniejszym",
+          "loc": "najodważniejszym"
+        },
+        "f": {
+          "nom": "najodważniejsza",
+          "gen": "najodważniejszej",
+          "dat": "najodważniejszej",
+          "acc": "najodważniejszą",
+          "ins": "najodważniejszą",
+          "loc": "najodważniejszej"
+        },
+        "n": {
+          "nom": "najodważniejsze",
+          "gen": "najodważniejszego",
+          "dat": "najodważniejszemu",
+          "acc": "najodważniejsze",
+          "ins": "najodważniejszym",
+          "loc": "najodważniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najodważniejsi",
+          "gen": "najodważniejszych",
+          "dat": "najodważniejszym",
+          "acc": "najodważniejszych",
+          "ins": "najodważniejszymi",
+          "loc": "najodważniejszych"
+        },
+        "nonvirile": {
+          "nom": "najodważniejsze",
+          "gen": "najodważniejszych",
+          "dat": "najodważniejszym",
+          "acc": "najodważniejsze",
+          "ins": "najodważniejszymi",
+          "loc": "najodważniejszych"
+        }
+      }
+    }
+  }
+}

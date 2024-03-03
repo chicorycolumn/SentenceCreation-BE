@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "uwielbiać",
+    "verbalNoun": "uwielbianie",
+    "activeAdjectival": "uwielbiający",
+    "passiveAdjectival": "uwielbiany",
+    "contemporaryAdverbial": "uwielbiając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "uwielbiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "uwielbiano"
+          },
+          "plural": {
+            "allPluralGenders": "uwielbiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "uwielbiałem",
+            "f": "uwielbiałam"
+          },
+          "plural": {
+            "virile": "uwielbialiśmy",
+            "nonvirile": "uwielbiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "uwielbiałeś",
+            "f": "uwielbiałaś"
+          },
+          "plural": {
+            "virile": "uwielbialiście",
+            "nonvirile": "uwielbiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "uwielbiał",
+            "f": "uwielbiała",
+            "n": "uwielbiało"
+          },
+          "plural": {
+            "virile": "uwielbiali",
+            "nonvirile": "uwielbiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "uwielbia się"
+          },
+          "plural": {
+            "allPluralGenders": "uwielbia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "uwielbiam"
+          },
+          "plural": {
+            "allPluralGenders": "uwielbiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "uwielbiasz"
+          },
+          "plural": {
+            "allPluralGenders": "uwielbiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "uwielbia"
+          },
+          "plural": {
+            "allPluralGenders": "uwielbiają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "gorzko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "gorzki",
+          "gen": "gorzkiego",
+          "dat": "gorzkiemu",
+          "acc": "gorzkiego",
+          "ins": "gorzkim",
+          "loc": "gorzkim"
+        },
+        "m3": {
+          "nom": "gorzki",
+          "gen": "gorzkiego",
+          "dat": "gorzkiemu",
+          "acc": "gorzki",
+          "ins": "gorzkim",
+          "loc": "gorzkim"
+        },
+        "f": {
+          "nom": "gorzka",
+          "gen": "gorzkiej",
+          "dat": "gorzkiej",
+          "acc": "gorzką",
+          "ins": "gorzką",
+          "loc": "gorzkiej"
+        },
+        "n": {
+          "nom": "gorzkie",
+          "gen": "gorzkiego",
+          "dat": "gorzkiemu",
+          "acc": "gorzkie",
+          "ins": "gorzkim",
+          "loc": "gorzkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "gorzcy",
+          "gen": "gorzkich",
+          "dat": "gorzkim",
+          "acc": "gorzkich",
+          "ins": "gorzkimi",
+          "loc": "gorzkich"
+        },
+        "nonvirile": {
+          "nom": "gorzkie",
+          "gen": "gorzkich",
+          "dat": "gorzkim",
+          "acc": "gorzkie",
+          "ins": "gorzkimi",
+          "loc": "gorzkich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej gorzki",
+          "gen": "bardziej gorzkiego",
+          "dat": "bardziej gorzkiemu",
+          "acc": "bardziej gorzkiego",
+          "ins": "bardziej gorzkim",
+          "loc": "bardziej gorzkim"
+        },
+        "m3": {
+          "nom": "bardziej gorzki",
+          "gen": "bardziej gorzkiego",
+          "dat": "bardziej gorzkiemu",
+          "acc": "bardziej gorzki",
+          "ins": "bardziej gorzkim",
+          "loc": "bardziej gorzkim"
+        },
+        "f": {
+          "nom": "bardziej gorzka",
+          "gen": "bardziej gorzkiej",
+          "dat": "bardziej gorzkiej",
+          "acc": "bardziej gorzką",
+          "ins": "bardziej gorzką",
+          "loc": "bardziej gorzkiej"
+        },
+        "n": {
+          "nom": "bardziej gorzkie",
+          "gen": "bardziej gorzkiego",
+          "dat": "bardziej gorzkiemu",
+          "acc": "bardziej gorzkie",
+          "ins": "bardziej gorzkim",
+          "loc": "bardziej gorzkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej gorzcy",
+          "gen": "bardziej gorzkich",
+          "dat": "bardziej gorzkim",
+          "acc": "bardziej gorzkich",
+          "ins": "bardziej gorzkimi",
+          "loc": "bardziej gorzkich"
+        },
+        "nonvirile": {
+          "nom": "bardziej gorzkie",
+          "gen": "bardziej gorzkich",
+          "dat": "bardziej gorzkim",
+          "acc": "bardziej gorzkie",
+          "ins": "bardziej gorzkimi",
+          "loc": "bardziej gorzkich"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej gorzki",
+          "gen": "najbardziej gorzkiego",
+          "dat": "najbardziej gorzkiemu",
+          "acc": "najbardziej gorzkiego",
+          "ins": "najbardziej gorzkim",
+          "loc": "najbardziej gorzkim"
+        },
+        "m3": {
+          "nom": "najbardziej gorzki",
+          "gen": "najbardziej gorzkiego",
+          "dat": "najbardziej gorzkiemu",
+          "acc": "najbardziej gorzki",
+          "ins": "najbardziej gorzkim",
+          "loc": "najbardziej gorzkim"
+        },
+        "f": {
+          "nom": "najbardziej gorzka",
+          "gen": "najbardziej gorzkiej",
+          "dat": "najbardziej gorzkiej",
+          "acc": "najbardziej gorzką",
+          "ins": "najbardziej gorzką",
+          "loc": "najbardziej gorzkiej"
+        },
+        "n": {
+          "nom": "najbardziej gorzkie",
+          "gen": "najbardziej gorzkiego",
+          "dat": "najbardziej gorzkiemu",
+          "acc": "najbardziej gorzkie",
+          "ins": "najbardziej gorzkim",
+          "loc": "najbardziej gorzkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej gorzcy",
+          "gen": "najbardziej gorzkich",
+          "dat": "najbardziej gorzkim",
+          "acc": "najbardziej gorzkich",
+          "ins": "najbardziej gorzkimi",
+          "loc": "najbardziej gorzkich"
+        },
+        "nonvirile": {
+          "nom": "najbardziej gorzkie",
+          "gen": "najbardziej gorzkich",
+          "dat": "najbardziej gorzkim",
+          "acc": "najbardziej gorzkie",
+          "ins": "najbardziej gorzkimi",
+          "loc": "najbardziej gorzkich"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "napisać",
+    "verbalNoun": "napisanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "napisany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "napisawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "napisze się"
+          },
+          "plural": {
+            "allPluralGenders": "napisze się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "napiszę"
+          },
+          "plural": {
+            "allPluralGenders": "napiszemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "napiszesz"
+          },
+          "plural": {
+            "allPluralGenders": "napiszecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "napisze"
+          },
+          "plural": {
+            "allPluralGenders": "napiszą"
+          }
+        }
+      },
+      "imperative": "napisz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "napisano"
+          },
+          "plural": {
+            "allPluralGenders": "napisano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "napisałem",
+            "f": "napisałam"
+          },
+          "plural": {
+            "virile": "napisaliśmy",
+            "nonvirile": "napisałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "napisałeś",
+            "f": "napisałaś"
+          },
+          "plural": {
+            "virile": "napisaliście",
+            "nonvirile": "napisałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "napisał",
+            "f": "napisała",
+            "n": "napisało"
+          },
+          "plural": {
+            "virile": "napisali",
+            "nonvirile": "napisały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

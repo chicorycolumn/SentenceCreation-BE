@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "pośrednio",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pośredni",
+          "gen": "pośredniego",
+          "dat": "pośredniemu",
+          "acc": "pośredniego",
+          "ins": "pośrednim",
+          "loc": "pośrednim"
+        },
+        "m3": {
+          "nom": "pośredni",
+          "gen": "pośredniego",
+          "dat": "pośredniemu",
+          "acc": "pośredni",
+          "ins": "pośrednim",
+          "loc": "pośrednim"
+        },
+        "f": {
+          "nom": "pośredna",
+          "gen": "pośredniej",
+          "dat": "pośredniej",
+          "acc": "pośredną",
+          "ins": "pośredną",
+          "loc": "pośredniej"
+        },
+        "n": {
+          "nom": "pośrednie",
+          "gen": "pośredniego",
+          "dat": "pośredniemu",
+          "acc": "pośrednie",
+          "ins": "pośrednim",
+          "loc": "pośrednim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pośredni",
+          "gen": "pośrednich",
+          "dat": "pośrednim",
+          "acc": "pośrednich",
+          "ins": "pośrednimi",
+          "loc": "pośrednich"
+        },
+        "nonvirile": {
+          "nom": "pośrednie",
+          "gen": "pośrednich",
+          "dat": "pośrednim",
+          "acc": "pośrednie",
+          "ins": "pośrednimi",
+          "loc": "pośrednich"
+        }
+      }
+    }
+  }
+}

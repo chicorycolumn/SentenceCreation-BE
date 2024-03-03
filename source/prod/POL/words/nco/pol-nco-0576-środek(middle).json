@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "środek",
+      "gen": "środka",
+      "dat": "środkowi",
+      "acc": "środek",
+      "ins": "środkiem",
+      "loc": "środku",
+      "voc": "środku"
+    },
+    "plural": {
+      "nom": "środki",
+      "gen": "środków",
+      "dat": "środkom",
+      "acc": "środki",
+      "ins": "środkami",
+      "loc": "środkach",
+      "voc": "środki"
+    }
+  }
+}

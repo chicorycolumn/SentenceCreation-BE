@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "sprytnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "sprytny",
+          "gen": "sprytnego",
+          "dat": "sprytnemu",
+          "acc": "sprytnego",
+          "ins": "sprytnym",
+          "loc": "sprytnym"
+        },
+        "m3": {
+          "nom": "sprytny",
+          "gen": "sprytnego",
+          "dat": "sprytnemu",
+          "acc": "sprytny",
+          "ins": "sprytnym",
+          "loc": "sprytnym"
+        },
+        "f": {
+          "nom": "sprytna",
+          "gen": "sprytnej",
+          "dat": "sprytnej",
+          "acc": "sprytną",
+          "ins": "sprytną",
+          "loc": "sprytnej"
+        },
+        "n": {
+          "nom": "sprytne",
+          "gen": "sprytnego",
+          "dat": "sprytnemu",
+          "acc": "sprytne",
+          "ins": "sprytnym",
+          "loc": "sprytnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "sprytni",
+          "gen": "sprytnych",
+          "dat": "sprytnym",
+          "acc": "sprytnych",
+          "ins": "sprytnymi",
+          "loc": "sprytnych"
+        },
+        "nonvirile": {
+          "nom": "sprytne",
+          "gen": "sprytnych",
+          "dat": "sprytnym",
+          "acc": "sprytne",
+          "ins": "sprytnymi",
+          "loc": "sprytnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "sprytniejszy",
+          "gen": "sprytniejszego",
+          "dat": "sprytniejszemu",
+          "acc": "sprytniejszego",
+          "ins": "sprytniejszym",
+          "loc": "sprytniejszym"
+        },
+        "m3": {
+          "nom": "sprytniejszy",
+          "gen": "sprytniejszego",
+          "dat": "sprytniejszemu",
+          "acc": "sprytniejszy",
+          "ins": "sprytniejszym",
+          "loc": "sprytniejszym"
+        },
+        "f": {
+          "nom": "sprytniejsza",
+          "gen": "sprytniejszej",
+          "dat": "sprytniejszej",
+          "acc": "sprytniejszą",
+          "ins": "sprytniejszą",
+          "loc": "sprytniejszej"
+        },
+        "n": {
+          "nom": "sprytniejsze",
+          "gen": "sprytniejszego",
+          "dat": "sprytniejszemu",
+          "acc": "sprytniejsze",
+          "ins": "sprytniejszym",
+          "loc": "sprytniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "sprytniejsi",
+          "gen": "sprytniejszych",
+          "dat": "sprytniejszym",
+          "acc": "sprytniejszych",
+          "ins": "sprytniejszymi",
+          "loc": "sprytniejszych"
+        },
+        "nonvirile": {
+          "nom": "sprytniejsze",
+          "gen": "sprytniejszych",
+          "dat": "sprytniejszym",
+          "acc": "sprytniejsze",
+          "ins": "sprytniejszymi",
+          "loc": "sprytniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najsprytniejszy",
+          "gen": "najsprytniejszego",
+          "dat": "najsprytniejszemu",
+          "acc": "najsprytniejszego",
+          "ins": "najsprytniejszym",
+          "loc": "najsprytniejszym"
+        },
+        "m3": {
+          "nom": "najsprytniejszy",
+          "gen": "najsprytniejszego",
+          "dat": "najsprytniejszemu",
+          "acc": "najsprytniejszy",
+          "ins": "najsprytniejszym",
+          "loc": "najsprytniejszym"
+        },
+        "f": {
+          "nom": "najsprytniejsza",
+          "gen": "najsprytniejszej",
+          "dat": "najsprytniejszej",
+          "acc": "najsprytniejszą",
+          "ins": "najsprytniejszą",
+          "loc": "najsprytniejszej"
+        },
+        "n": {
+          "nom": "najsprytniejsze",
+          "gen": "najsprytniejszego",
+          "dat": "najsprytniejszemu",
+          "acc": "najsprytniejsze",
+          "ins": "najsprytniejszym",
+          "loc": "najsprytniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najsprytniejsi",
+          "gen": "najsprytniejszych",
+          "dat": "najsprytniejszym",
+          "acc": "najsprytniejszych",
+          "ins": "najsprytniejszymi",
+          "loc": "najsprytniejszych"
+        },
+        "nonvirile": {
+          "nom": "najsprytniejsze",
+          "gen": "najsprytniejszych",
+          "dat": "najsprytniejszym",
+          "acc": "najsprytniejsze",
+          "ins": "najsprytniejszymi",
+          "loc": "najsprytniejszych"
+        }
+      }
+    }
+  }
+}

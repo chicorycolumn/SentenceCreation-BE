@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "rzetelnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "rzetelny",
+          "gen": "rzetelnego",
+          "dat": "rzetelnemu",
+          "acc": "rzetelnego",
+          "ins": "rzetelnym",
+          "loc": "rzetelnym"
+        },
+        "m3": {
+          "nom": "rzetelny",
+          "gen": "rzetelnego",
+          "dat": "rzetelnemu",
+          "acc": "rzetelny",
+          "ins": "rzetelnym",
+          "loc": "rzetelnym"
+        },
+        "f": {
+          "nom": "rzetelna",
+          "gen": "rzetelnej",
+          "dat": "rzetelnej",
+          "acc": "rzetelną",
+          "ins": "rzetelną",
+          "loc": "rzetelnej"
+        },
+        "n": {
+          "nom": "rzetelne",
+          "gen": "rzetelnego",
+          "dat": "rzetelnemu",
+          "acc": "rzetelne",
+          "ins": "rzetelnym",
+          "loc": "rzetelnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "rzetelni",
+          "gen": "rzetelnych",
+          "dat": "rzetelnym",
+          "acc": "rzetelnych",
+          "ins": "rzetelnymi",
+          "loc": "rzetelnych"
+        },
+        "nonvirile": {
+          "nom": "rzetelne",
+          "gen": "rzetelnych",
+          "dat": "rzetelnym",
+          "acc": "rzetelne",
+          "ins": "rzetelnymi",
+          "loc": "rzetelnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "rzetelniejszy",
+          "gen": "rzetelniejszego",
+          "dat": "rzetelniejszemu",
+          "acc": "rzetelniejszego",
+          "ins": "rzetelniejszym",
+          "loc": "rzetelniejszym"
+        },
+        "m3": {
+          "nom": "rzetelniejszy",
+          "gen": "rzetelniejszego",
+          "dat": "rzetelniejszemu",
+          "acc": "rzetelniejszy",
+          "ins": "rzetelniejszym",
+          "loc": "rzetelniejszym"
+        },
+        "f": {
+          "nom": "rzetelniejsza",
+          "gen": "rzetelniejszej",
+          "dat": "rzetelniejszej",
+          "acc": "rzetelniejszą",
+          "ins": "rzetelniejszą",
+          "loc": "rzetelniejszej"
+        },
+        "n": {
+          "nom": "rzetelniejsze",
+          "gen": "rzetelniejszego",
+          "dat": "rzetelniejszemu",
+          "acc": "rzetelniejsze",
+          "ins": "rzetelniejszym",
+          "loc": "rzetelniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "rzetelniejsi",
+          "gen": "rzetelniejszych",
+          "dat": "rzetelniejszym",
+          "acc": "rzetelniejszych",
+          "ins": "rzetelniejszymi",
+          "loc": "rzetelniejszych"
+        },
+        "nonvirile": {
+          "nom": "rzetelniejsze",
+          "gen": "rzetelniejszych",
+          "dat": "rzetelniejszym",
+          "acc": "rzetelniejsze",
+          "ins": "rzetelniejszymi",
+          "loc": "rzetelniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najrzetelniejszy",
+          "gen": "najrzetelniejszego",
+          "dat": "najrzetelniejszemu",
+          "acc": "najrzetelniejszego",
+          "ins": "najrzetelniejszym",
+          "loc": "najrzetelniejszym"
+        },
+        "m3": {
+          "nom": "najrzetelniejszy",
+          "gen": "najrzetelniejszego",
+          "dat": "najrzetelniejszemu",
+          "acc": "najrzetelniejszy",
+          "ins": "najrzetelniejszym",
+          "loc": "najrzetelniejszym"
+        },
+        "f": {
+          "nom": "najrzetelniejsza",
+          "gen": "najrzetelniejszej",
+          "dat": "najrzetelniejszej",
+          "acc": "najrzetelniejszą",
+          "ins": "najrzetelniejszą",
+          "loc": "najrzetelniejszej"
+        },
+        "n": {
+          "nom": "najrzetelniejsze",
+          "gen": "najrzetelniejszego",
+          "dat": "najrzetelniejszemu",
+          "acc": "najrzetelniejsze",
+          "ins": "najrzetelniejszym",
+          "loc": "najrzetelniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najrzetelniejsi",
+          "gen": "najrzetelniejszych",
+          "dat": "najrzetelniejszym",
+          "acc": "najrzetelniejszych",
+          "ins": "najrzetelniejszymi",
+          "loc": "najrzetelniejszych"
+        },
+        "nonvirile": {
+          "nom": "najrzetelniejsze",
+          "gen": "najrzetelniejszych",
+          "dat": "najrzetelniejszym",
+          "acc": "najrzetelniejsze",
+          "ins": "najrzetelniejszymi",
+          "loc": "najrzetelniejszych"
+        }
+      }
+    }
+  }
+}

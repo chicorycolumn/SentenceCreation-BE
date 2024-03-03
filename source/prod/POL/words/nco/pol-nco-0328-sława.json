@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sława",
+      "gen": "sławy",
+      "dat": "sławie",
+      "acc": "sławę",
+      "ins": "sławą",
+      "loc": "sławie",
+      "voc": "sławo"
+    },
+    "plural": {
+      "nom": "sławy",
+      "gen": "sław",
+      "dat": "sławom",
+      "acc": "sławy",
+      "ins": "sławami",
+      "loc": "sławach",
+      "voc": "sławy"
+    }
+  }
+}

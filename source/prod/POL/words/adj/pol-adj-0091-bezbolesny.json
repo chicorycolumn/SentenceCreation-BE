@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "bezboleśnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bezbolesny",
+          "gen": "bezbolesnego",
+          "dat": "bezbolesnemu",
+          "acc": "bezbolesnego",
+          "ins": "bezbolesnym",
+          "loc": "bezbolesnym"
+        },
+        "m3": {
+          "nom": "bezbolesny",
+          "gen": "bezbolesnego",
+          "dat": "bezbolesnemu",
+          "acc": "bezbolesny",
+          "ins": "bezbolesnym",
+          "loc": "bezbolesnym"
+        },
+        "f": {
+          "nom": "bezbolesna",
+          "gen": "bezbolesnej",
+          "dat": "bezbolesnej",
+          "acc": "bezbolesną",
+          "ins": "bezbolesną",
+          "loc": "bezbolesnej"
+        },
+        "n": {
+          "nom": "bezbolesne",
+          "gen": "bezbolesnego",
+          "dat": "bezbolesnemu",
+          "acc": "bezbolesne",
+          "ins": "bezbolesnym",
+          "loc": "bezbolesnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bezboleśni",
+          "gen": "bezbolesnych",
+          "dat": "bezbolesnym",
+          "acc": "bezbolesnych",
+          "ins": "bezbolesnymi",
+          "loc": "bezbolesnych"
+        },
+        "nonvirile": {
+          "nom": "bezbolesne",
+          "gen": "bezbolesnych",
+          "dat": "bezbolesnym",
+          "acc": "bezbolesne",
+          "ins": "bezbolesnymi",
+          "loc": "bezbolesnych"
+        }
+      }
+    }
+  }
+}

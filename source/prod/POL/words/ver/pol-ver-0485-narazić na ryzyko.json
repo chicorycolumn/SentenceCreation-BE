@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "narazić na ryzyko",
+    "verbalNoun": "narażenie na ryzyko",
+    "activeAdjectival": false,
+    "passiveAdjectival": "narażony na ryzyko",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "naraziwszy na ryzyko",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "narazi się na ryzyko"
+          },
+          "plural": {
+            "allPluralGenders": "narazi się na ryzyko"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "narażę na ryzyko"
+          },
+          "plural": {
+            "allPluralGenders": "narazimy na ryzyko"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "narazisz na ryzyko"
+          },
+          "plural": {
+            "allPluralGenders": "narazicie na ryzyko"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "narazi na ryzyko"
+          },
+          "plural": {
+            "allPluralGenders": "narażą na ryzyko"
+          }
+        }
+      },
+      "imperative": "naraź na ryzyko",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "narażono na ryzyko"
+          },
+          "plural": {
+            "allPluralGenders": "narażono na ryzyko"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "naraziłem na ryzyko",
+            "f": "naraziłam na ryzyko"
+          },
+          "plural": {
+            "virile": "naraziliśmy na ryzyko",
+            "nonvirile": "naraziłyśmy na ryzyko"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "naraziłeś na ryzyko",
+            "f": "naraziłaś na ryzyko"
+          },
+          "plural": {
+            "virile": "naraziliście na ryzyko",
+            "nonvirile": "naraziłyście na ryzyko"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "naraził na ryzyko",
+            "f": "naraziła na ryzyko",
+            "n": "naraziło na ryzyko"
+          },
+          "plural": {
+            "virile": "narazili na ryzyko",
+            "nonvirile": "naraziły na ryzyko"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

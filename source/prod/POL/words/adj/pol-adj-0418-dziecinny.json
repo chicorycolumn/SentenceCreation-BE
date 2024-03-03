@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "dziecinnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dziecinny",
+          "gen": "dziecinnego",
+          "dat": "dziecinnemu",
+          "acc": "dziecinnego",
+          "ins": "dziecinnym",
+          "loc": "dziecinnym"
+        },
+        "m3": {
+          "nom": "dziecinny",
+          "gen": "dziecinnego",
+          "dat": "dziecinnemu",
+          "acc": "dziecinny",
+          "ins": "dziecinnym",
+          "loc": "dziecinnym"
+        },
+        "f": {
+          "nom": "dziecinna",
+          "gen": "dziecinnej",
+          "dat": "dziecinnej",
+          "acc": "dziecinną",
+          "ins": "dziecinną",
+          "loc": "dziecinnej"
+        },
+        "n": {
+          "nom": "dziecinne",
+          "gen": "dziecinnego",
+          "dat": "dziecinnemu",
+          "acc": "dziecinne",
+          "ins": "dziecinnym",
+          "loc": "dziecinnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dziecinni",
+          "gen": "dziecinnych",
+          "dat": "dziecinnym",
+          "acc": "dziecinnych",
+          "ins": "dziecinnymi",
+          "loc": "dziecinnych"
+        },
+        "nonvirile": {
+          "nom": "dziecinne",
+          "gen": "dziecinnych",
+          "dat": "dziecinnym",
+          "acc": "dziecinne",
+          "ins": "dziecinnymi",
+          "loc": "dziecinnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej dziecinny",
+          "gen": "bardziej dziecinnego",
+          "dat": "bardziej dziecinnemu",
+          "acc": "bardziej dziecinnego",
+          "ins": "bardziej dziecinnym",
+          "loc": "bardziej dziecinnym"
+        },
+        "m3": {
+          "nom": "bardziej dziecinny",
+          "gen": "bardziej dziecinnego",
+          "dat": "bardziej dziecinnemu",
+          "acc": "bardziej dziecinny",
+          "ins": "bardziej dziecinnym",
+          "loc": "bardziej dziecinnym"
+        },
+        "f": {
+          "nom": "bardziej dziecinna",
+          "gen": "bardziej dziecinnej",
+          "dat": "bardziej dziecinnej",
+          "acc": "bardziej dziecinną",
+          "ins": "bardziej dziecinną",
+          "loc": "bardziej dziecinnej"
+        },
+        "n": {
+          "nom": "bardziej dziecinne",
+          "gen": "bardziej dziecinnego",
+          "dat": "bardziej dziecinnemu",
+          "acc": "bardziej dziecinne",
+          "ins": "bardziej dziecinnym",
+          "loc": "bardziej dziecinnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej dziecinni",
+          "gen": "bardziej dziecinnych",
+          "dat": "bardziej dziecinnym",
+          "acc": "bardziej dziecinnych",
+          "ins": "bardziej dziecinnymi",
+          "loc": "bardziej dziecinnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej dziecinne",
+          "gen": "bardziej dziecinnych",
+          "dat": "bardziej dziecinnym",
+          "acc": "bardziej dziecinne",
+          "ins": "bardziej dziecinnymi",
+          "loc": "bardziej dziecinnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej dziecinny",
+          "gen": "najbardziej dziecinnego",
+          "dat": "najbardziej dziecinnemu",
+          "acc": "najbardziej dziecinnego",
+          "ins": "najbardziej dziecinnym",
+          "loc": "najbardziej dziecinnym"
+        },
+        "m3": {
+          "nom": "najbardziej dziecinny",
+          "gen": "najbardziej dziecinnego",
+          "dat": "najbardziej dziecinnemu",
+          "acc": "najbardziej dziecinny",
+          "ins": "najbardziej dziecinnym",
+          "loc": "najbardziej dziecinnym"
+        },
+        "f": {
+          "nom": "najbardziej dziecinna",
+          "gen": "najbardziej dziecinnej",
+          "dat": "najbardziej dziecinnej",
+          "acc": "najbardziej dziecinną",
+          "ins": "najbardziej dziecinną",
+          "loc": "najbardziej dziecinnej"
+        },
+        "n": {
+          "nom": "najbardziej dziecinne",
+          "gen": "najbardziej dziecinnego",
+          "dat": "najbardziej dziecinnemu",
+          "acc": "najbardziej dziecinne",
+          "ins": "najbardziej dziecinnym",
+          "loc": "najbardziej dziecinnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej dziecinni",
+          "gen": "najbardziej dziecinnych",
+          "dat": "najbardziej dziecinnym",
+          "acc": "najbardziej dziecinnych",
+          "ins": "najbardziej dziecinnymi",
+          "loc": "najbardziej dziecinnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej dziecinne",
+          "gen": "najbardziej dziecinnych",
+          "dat": "najbardziej dziecinnym",
+          "acc": "najbardziej dziecinne",
+          "ins": "najbardziej dziecinnymi",
+          "loc": "najbardziej dziecinnych"
+        }
+      }
+    }
+  }
+}

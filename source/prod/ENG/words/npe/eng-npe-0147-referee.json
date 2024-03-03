@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "referee",
+      "gen": "referee's"
+    },
+    "plural": {
+      "nom": "referees",
+      "gen": "referees'"
+    }
+  }
+}

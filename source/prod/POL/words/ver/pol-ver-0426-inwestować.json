@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "inwestować",
+    "verbalNoun": "inwestowanie",
+    "activeAdjectival": "inwestujący",
+    "passiveAdjectival": "inwestowany",
+    "contemporaryAdverbial": "inwestując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "inwestuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "inwestowano"
+          },
+          "plural": {
+            "allPluralGenders": "inwestowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "inwestowałem",
+            "f": "inwestowałam"
+          },
+          "plural": {
+            "virile": "inwestowaliśmy",
+            "nonvirile": "inwestowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "inwestowałeś",
+            "f": "inwestowałaś"
+          },
+          "plural": {
+            "virile": "inwestowaliście",
+            "nonvirile": "inwestowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "inwestował",
+            "f": "inwestowała",
+            "n": "inwestowało"
+          },
+          "plural": {
+            "virile": "inwestowali",
+            "nonvirile": "inwestowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "inwestuje się"
+          },
+          "plural": {
+            "allPluralGenders": "inwestuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "inwestuję"
+          },
+          "plural": {
+            "allPluralGenders": "inwestujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "inwestujesz"
+          },
+          "plural": {
+            "allPluralGenders": "inwestujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "inwestuje"
+          },
+          "plural": {
+            "allPluralGenders": "inwestują"
+          }
+        }
+      }
+    }
+  }
+}

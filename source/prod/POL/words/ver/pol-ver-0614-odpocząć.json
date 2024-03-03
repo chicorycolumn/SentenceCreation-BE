@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odpocząć",
+    "verbalNoun": "odpoczęcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odpocząwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odpocznie się"
+          },
+          "plural": {
+            "allPluralGenders": "odpocznie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odpocznę"
+          },
+          "plural": {
+            "allPluralGenders": "odpoczniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odpoczniesz"
+          },
+          "plural": {
+            "allPluralGenders": "odpoczniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odpocznie"
+          },
+          "plural": {
+            "allPluralGenders": "odpoczną"
+          }
+        }
+      },
+      "imperative": "odpocznij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odpoczęto"
+          },
+          "plural": {
+            "allPluralGenders": "odpoczęto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odpocząłem",
+            "f": "odpoczęłam"
+          },
+          "plural": {
+            "virile": "odpoczęliśmy",
+            "nonvirile": "odpoczęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odpocząłeś",
+            "f": "odpoczęłaś"
+          },
+          "plural": {
+            "virile": "odpoczęliście",
+            "nonvirile": "odpoczęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odpoczął",
+            "f": "odpoczęła",
+            "n": "odpoczęło"
+          },
+          "plural": {
+            "virile": "odpoczęli",
+            "nonvirile": "odpoczęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

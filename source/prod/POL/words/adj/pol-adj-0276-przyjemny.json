@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "przyjemnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przyjemny",
+          "gen": "przyjemnego",
+          "dat": "przyjemnemu",
+          "acc": "przyjemnego",
+          "ins": "przyjemnym",
+          "loc": "przyjemnym"
+        },
+        "m3": {
+          "nom": "przyjemny",
+          "gen": "przyjemnego",
+          "dat": "przyjemnemu",
+          "acc": "przyjemny",
+          "ins": "przyjemnym",
+          "loc": "przyjemnym"
+        },
+        "f": {
+          "nom": "przyjemna",
+          "gen": "przyjemnej",
+          "dat": "przyjemnej",
+          "acc": "przyjemną",
+          "ins": "przyjemną",
+          "loc": "przyjemnej"
+        },
+        "n": {
+          "nom": "przyjemne",
+          "gen": "przyjemnego",
+          "dat": "przyjemnemu",
+          "acc": "przyjemne",
+          "ins": "przyjemnym",
+          "loc": "przyjemnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przyjemni",
+          "gen": "przyjemnych",
+          "dat": "przyjemnym",
+          "acc": "przyjemnych",
+          "ins": "przyjemnymi",
+          "loc": "przyjemnych"
+        },
+        "nonvirile": {
+          "nom": "przyjemne",
+          "gen": "przyjemnych",
+          "dat": "przyjemnym",
+          "acc": "przyjemne",
+          "ins": "przyjemnymi",
+          "loc": "przyjemnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "przyjemniejszy",
+          "gen": "przyjemniejszego",
+          "dat": "przyjemniejszemu",
+          "acc": "przyjemniejszego",
+          "ins": "przyjemniejszym",
+          "loc": "przyjemniejszym"
+        },
+        "m3": {
+          "nom": "przyjemniejszy",
+          "gen": "przyjemniejszego",
+          "dat": "przyjemniejszemu",
+          "acc": "przyjemniejszy",
+          "ins": "przyjemniejszym",
+          "loc": "przyjemniejszym"
+        },
+        "f": {
+          "nom": "przyjemniejsza",
+          "gen": "przyjemniejszej",
+          "dat": "przyjemniejszej",
+          "acc": "przyjemniejszą",
+          "ins": "przyjemniejszą",
+          "loc": "przyjemniejszej"
+        },
+        "n": {
+          "nom": "przyjemniejsze",
+          "gen": "przyjemniejszego",
+          "dat": "przyjemniejszemu",
+          "acc": "przyjemniejsze",
+          "ins": "przyjemniejszym",
+          "loc": "przyjemniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przyjemniejsi",
+          "gen": "przyjemniejszych",
+          "dat": "przyjemniejszym",
+          "acc": "przyjemniejszych",
+          "ins": "przyjemniejszymi",
+          "loc": "przyjemniejszych"
+        },
+        "nonvirile": {
+          "nom": "przyjemniejsze",
+          "gen": "przyjemniejszych",
+          "dat": "przyjemniejszym",
+          "acc": "przyjemniejsze",
+          "ins": "przyjemniejszymi",
+          "loc": "przyjemniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najprzyjemniejszy",
+          "gen": "najprzyjemniejszego",
+          "dat": "najprzyjemniejszemu",
+          "acc": "najprzyjemniejszego",
+          "ins": "najprzyjemniejszym",
+          "loc": "najprzyjemniejszym"
+        },
+        "m3": {
+          "nom": "najprzyjemniejszy",
+          "gen": "najprzyjemniejszego",
+          "dat": "najprzyjemniejszemu",
+          "acc": "najprzyjemniejszy",
+          "ins": "najprzyjemniejszym",
+          "loc": "najprzyjemniejszym"
+        },
+        "f": {
+          "nom": "najprzyjemniejsza",
+          "gen": "najprzyjemniejszej",
+          "dat": "najprzyjemniejszej",
+          "acc": "najprzyjemniejszą",
+          "ins": "najprzyjemniejszą",
+          "loc": "najprzyjemniejszej"
+        },
+        "n": {
+          "nom": "najprzyjemniejsze",
+          "gen": "najprzyjemniejszego",
+          "dat": "najprzyjemniejszemu",
+          "acc": "najprzyjemniejsze",
+          "ins": "najprzyjemniejszym",
+          "loc": "najprzyjemniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najprzyjemniejsi",
+          "gen": "najprzyjemniejszych",
+          "dat": "najprzyjemniejszym",
+          "acc": "najprzyjemniejszych",
+          "ins": "najprzyjemniejszymi",
+          "loc": "najprzyjemniejszych"
+        },
+        "nonvirile": {
+          "nom": "najprzyjemniejsze",
+          "gen": "najprzyjemniejszych",
+          "dat": "najprzyjemniejszym",
+          "acc": "najprzyjemniejsze",
+          "ins": "najprzyjemniejszymi",
+          "loc": "najprzyjemniejszych"
+        }
+      }
+    }
+  }
+}

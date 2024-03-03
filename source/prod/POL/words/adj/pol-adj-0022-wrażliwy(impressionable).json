@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "wrażliwie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "wrażliwy",
+          "gen": "wrażliwego",
+          "dat": "wrażliwemu",
+          "acc": "wrażliwego",
+          "ins": "wrażliwym",
+          "loc": "wrażliwym"
+        },
+        "m3": {
+          "nom": "wrażliwy",
+          "gen": "wrażliwego",
+          "dat": "wrażliwemu",
+          "acc": "wrażliwy",
+          "ins": "wrażliwym",
+          "loc": "wrażliwym"
+        },
+        "f": {
+          "nom": "wrażliwa",
+          "gen": "wrażliwej",
+          "dat": "wrażliwej",
+          "acc": "wrażliwą",
+          "ins": "wrażliwą",
+          "loc": "wrażliwej"
+        },
+        "n": {
+          "nom": "wrażliwe",
+          "gen": "wrażliwego",
+          "dat": "wrażliwemu",
+          "acc": "wrażliwe",
+          "ins": "wrażliwym",
+          "loc": "wrażliwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wrażliwi",
+          "gen": "wrażliwych",
+          "dat": "wrażliwym",
+          "acc": "wrażliwych",
+          "ins": "wrażliwymi",
+          "loc": "wrażliwych"
+        },
+        "nonvirile": {
+          "nom": "wrażliwe",
+          "gen": "wrażliwych",
+          "dat": "wrażliwym",
+          "acc": "wrażliwe",
+          "ins": "wrażliwymi",
+          "loc": "wrażliwych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszy",
+              "bardziej wrażliwy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszego",
+              "bardziej wrażliwego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszemu",
+              "bardziej wrażliwemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszego",
+              "bardziej wrażliwego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszym",
+              "bardziej wrażliwym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszym",
+              "bardziej wrażliwym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszy",
+              "bardziej wrażliwy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszego",
+              "bardziej wrażliwego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszemu",
+              "bardziej wrażliwemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszy",
+              "bardziej wrażliwy"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszym",
+              "bardziej wrażliwym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszym",
+              "bardziej wrażliwym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwsza",
+              "bardziej wrażliwa"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszej",
+              "bardziej wrażliwej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszej",
+              "bardziej wrażliwej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszą",
+              "bardziej wrażliwą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszą",
+              "bardziej wrażliwą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszej",
+              "bardziej wrażliwej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwsze",
+              "bardziej wrażliwe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszego",
+              "bardziej wrażliwego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszemu",
+              "bardziej wrażliwemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwsze",
+              "bardziej wrażliwe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszym",
+              "bardziej wrażliwym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszym",
+              "bardziej wrażliwym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwsi",
+              "bardziej wrażliwi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszych",
+              "bardziej wrażliwych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszym",
+              "bardziej wrażliwym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszych",
+              "bardziej wrażliwych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszymi",
+              "bardziej wrażliwymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszych",
+              "bardziej wrażliwych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwsze",
+              "bardziej wrażliwe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszych",
+              "bardziej wrażliwych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszym",
+              "bardziej wrażliwym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwsze",
+              "bardziej wrażliwe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszymi",
+              "bardziej wrażliwymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "wrażliwszych",
+              "bardziej wrażliwych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszy",
+              "najbardziej wrażliwy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszego",
+              "najbardziej wrażliwego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszemu",
+              "najbardziej wrażliwemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszego",
+              "najbardziej wrażliwego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszym",
+              "najbardziej wrażliwym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszym",
+              "najbardziej wrażliwym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszy",
+              "najbardziej wrażliwy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszego",
+              "najbardziej wrażliwego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszemu",
+              "najbardziej wrażliwemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszy",
+              "najbardziej wrażliwy"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszym",
+              "najbardziej wrażliwym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszym",
+              "najbardziej wrażliwym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwsza",
+              "najbardziej wrażliwa"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszej",
+              "najbardziej wrażliwej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszej",
+              "najbardziej wrażliwej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszą",
+              "najbardziej wrażliwą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszą",
+              "najbardziej wrażliwą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszej",
+              "najbardziej wrażliwej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwsze",
+              "najbardziej wrażliwe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszego",
+              "najbardziej wrażliwego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszemu",
+              "najbardziej wrażliwemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwsze",
+              "najbardziej wrażliwe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszym",
+              "najbardziej wrażliwym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszym",
+              "najbardziej wrażliwym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwsi",
+              "najbardziej wrażliwi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszych",
+              "najbardziej wrażliwych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszym",
+              "najbardziej wrażliwym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszych",
+              "najbardziej wrażliwych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszymi",
+              "najbardziej wrażliwymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszych",
+              "najbardziej wrażliwych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwsze",
+              "najbardziej wrażliwe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszych",
+              "najbardziej wrażliwych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszym",
+              "najbardziej wrażliwym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwsze",
+              "najbardziej wrażliwe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszymi",
+              "najbardziej wrażliwymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najwrażliwszych",
+              "najbardziej wrażliwych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

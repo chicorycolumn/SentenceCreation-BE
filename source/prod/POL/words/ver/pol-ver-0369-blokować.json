@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "blokować",
+    "verbalNoun": "blokowanie",
+    "activeAdjectival": "blokujący",
+    "passiveAdjectival": "blokowany",
+    "contemporaryAdverbial": "blokując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "blokuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "blokowano"
+          },
+          "plural": {
+            "allPluralGenders": "blokowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "blokowałem",
+            "f": "blokowałam"
+          },
+          "plural": {
+            "virile": "blokowaliśmy",
+            "nonvirile": "blokowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "blokowałeś",
+            "f": "blokowałaś"
+          },
+          "plural": {
+            "virile": "blokowaliście",
+            "nonvirile": "blokowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "blokował",
+            "f": "blokowała",
+            "n": "blokowało"
+          },
+          "plural": {
+            "virile": "blokowali",
+            "nonvirile": "blokowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "blokuje się"
+          },
+          "plural": {
+            "allPluralGenders": "blokuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "blokuję"
+          },
+          "plural": {
+            "allPluralGenders": "blokujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "blokujesz"
+          },
+          "plural": {
+            "allPluralGenders": "blokujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "blokuje"
+          },
+          "plural": {
+            "allPluralGenders": "blokują"
+          }
+        }
+      }
+    }
+  }
+}

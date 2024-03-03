@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zdziwić",
+    "verbalNoun": "zdziwienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zdziwiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zdziwiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zdziwi się"
+          },
+          "plural": {
+            "allPluralGenders": "zdziwi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zdziwię"
+          },
+          "plural": {
+            "allPluralGenders": "zdziwimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zdziwisz"
+          },
+          "plural": {
+            "allPluralGenders": "zdziwicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zdziwi"
+          },
+          "plural": {
+            "allPluralGenders": "zdziwią"
+          }
+        }
+      },
+      "imperative": "zdziw",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zdziwiono"
+          },
+          "plural": {
+            "allPluralGenders": "zdziwiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zdziwiłem",
+            "f": "zdziwiłam"
+          },
+          "plural": {
+            "virile": "zdziwiliśmy",
+            "nonvirile": "zdziwiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zdziwiłeś",
+            "f": "zdziwiłaś"
+          },
+          "plural": {
+            "virile": "zdziwiliście",
+            "nonvirile": "zdziwiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zdziwił",
+            "f": "zdziwiła",
+            "n": "zdziwiło"
+          },
+          "plural": {
+            "virile": "zdziwili",
+            "nonvirile": "zdziwiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

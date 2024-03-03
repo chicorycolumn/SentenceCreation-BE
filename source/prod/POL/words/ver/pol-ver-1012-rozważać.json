@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "rozważać",
+    "verbalNoun": "rozważanie",
+    "activeAdjectival": "rozważający",
+    "passiveAdjectival": "rozważany",
+    "contemporaryAdverbial": "rozważając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "rozważaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "rozważano"
+          },
+          "plural": {
+            "allPluralGenders": "rozważano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "rozważałem",
+            "f": "rozważałam"
+          },
+          "plural": {
+            "virile": "rozważaliśmy",
+            "nonvirile": "rozważałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "rozważałeś",
+            "f": "rozważałaś"
+          },
+          "plural": {
+            "virile": "rozważaliście",
+            "nonvirile": "rozważałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "rozważał",
+            "f": "rozważała",
+            "n": "rozważało"
+          },
+          "plural": {
+            "virile": "rozważali",
+            "nonvirile": "rozważały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "rozważa się"
+          },
+          "plural": {
+            "allPluralGenders": "rozważa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "rozważam"
+          },
+          "plural": {
+            "allPluralGenders": "rozważamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "rozważasz"
+          },
+          "plural": {
+            "allPluralGenders": "rozważacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "rozważa"
+          },
+          "plural": {
+            "allPluralGenders": "rozważają"
+          }
+        }
+      }
+    }
+  }
+}

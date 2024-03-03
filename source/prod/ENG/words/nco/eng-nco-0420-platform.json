@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "platform",
+      "gen": "platform's"
+    },
+    "plural": {
+      "nom": "platforms",
+      "gen": "platforms'"
+    }
+  }
+}

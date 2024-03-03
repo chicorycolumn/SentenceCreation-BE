@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wołowina",
+      "gen": "wołowiny",
+      "dat": "wołowinie",
+      "acc": "wołowinę",
+      "ins": "wołowiną",
+      "loc": "wołowinie",
+      "voc": "wołowino"
+    }
+  }
+}

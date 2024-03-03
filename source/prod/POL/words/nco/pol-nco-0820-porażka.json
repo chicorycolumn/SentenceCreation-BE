@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "porażka",
+      "gen": "porażki",
+      "dat": "porażce",
+      "acc": "porażkę",
+      "ins": "porażką",
+      "loc": "porażce",
+      "voc": "porażko"
+    },
+    "plural": {
+      "nom": "porażki",
+      "gen": "porażek",
+      "dat": "porażkom",
+      "acc": "porażki",
+      "ins": "porażkami",
+      "loc": "porażkach",
+      "voc": "porażki"
+    }
+  }
+}

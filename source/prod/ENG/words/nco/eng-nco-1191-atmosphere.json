@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "atmosphere",
+      "gen": "atmosphere's"
+    },
+    "plural": {
+      "nom": "atmospheres",
+      "gen": "atmospheres'"
+    }
+  }
+}

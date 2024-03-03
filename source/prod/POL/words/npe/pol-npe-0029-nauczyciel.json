@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "nauczyciel",
+      "gen": "nauczyciela",
+      "dat": "nauczycielowi",
+      "acc": "nauczyciela",
+      "ins": "nauczycielem",
+      "loc": "nauczycielu",
+      "voc": "nauczycielu"
+    },
+    "plural": {
+      "nom": "nauczyciele",
+      "gen": "nauczycieli",
+      "dat": "nauczycielom",
+      "acc": "nauczycieli",
+      "ins": "nauczycielami",
+      "loc": "nauczycielach",
+      "voc": "nauczyciele"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "mijać",
+    "verbalNoun": "mijanie",
+    "activeAdjectival": "mijający",
+    "passiveAdjectival": "mijany",
+    "contemporaryAdverbial": "mijając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "mijaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mijano"
+          },
+          "plural": {
+            "allPluralGenders": "mijano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "mijałem",
+            "f": "mijałam"
+          },
+          "plural": {
+            "virile": "mijaliśmy",
+            "nonvirile": "mijałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "mijałeś",
+            "f": "mijałaś"
+          },
+          "plural": {
+            "virile": "mijaliście",
+            "nonvirile": "mijałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "mijał",
+            "f": "mijała",
+            "n": "mijało"
+          },
+          "plural": {
+            "virile": "mijali",
+            "nonvirile": "mijały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mija się"
+          },
+          "plural": {
+            "allPluralGenders": "mija się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "mijam"
+          },
+          "plural": {
+            "allPluralGenders": "mijamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "mijasz"
+          },
+          "plural": {
+            "allPluralGenders": "mijacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "mija"
+          },
+          "plural": {
+            "allPluralGenders": "mijają"
+          }
+        }
+      }
+    }
+  }
+}

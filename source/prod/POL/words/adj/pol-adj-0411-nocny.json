@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nocny",
+          "gen": "nocnego",
+          "dat": "nocnemu",
+          "acc": "nocnego",
+          "ins": "nocnym",
+          "loc": "nocnym"
+        },
+        "m3": {
+          "nom": "nocny",
+          "gen": "nocnego",
+          "dat": "nocnemu",
+          "acc": "nocny",
+          "ins": "nocnym",
+          "loc": "nocnym"
+        },
+        "f": {
+          "nom": "nocna",
+          "gen": "nocnej",
+          "dat": "nocnej",
+          "acc": "nocną",
+          "ins": "nocną",
+          "loc": "nocnej"
+        },
+        "n": {
+          "nom": "nocne",
+          "gen": "nocnego",
+          "dat": "nocnemu",
+          "acc": "nocne",
+          "ins": "nocnym",
+          "loc": "nocnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nocni",
+          "gen": "nocnych",
+          "dat": "nocnym",
+          "acc": "nocnych",
+          "ins": "nocnymi",
+          "loc": "nocnych"
+        },
+        "nonvirile": {
+          "nom": "nocne",
+          "gen": "nocnych",
+          "dat": "nocnym",
+          "acc": "nocne",
+          "ins": "nocnymi",
+          "loc": "nocnych"
+        }
+      }
+    }
+  }
+}

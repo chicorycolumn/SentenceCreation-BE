@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "meduza",
+      "gen": "meduzy",
+      "dat": "meduzie",
+      "acc": "meduzę",
+      "ins": "meduzą",
+      "loc": "meduzie",
+      "voc": "meduzo"
+    },
+    "plural": {
+      "nom": "meduzy",
+      "gen": "meduz",
+      "dat": "meduzom",
+      "acc": "meduzy",
+      "ins": "meduzami",
+      "loc": "meduzach",
+      "voc": "meduzy"
+    }
+  }
+}

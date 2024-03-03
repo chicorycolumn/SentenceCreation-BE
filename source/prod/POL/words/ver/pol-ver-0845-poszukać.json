@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "poszukać",
+    "verbalNoun": "poszukanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "poszukany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "poszukawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poszuka się"
+          },
+          "plural": {
+            "allPluralGenders": "poszuka się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "poszukam"
+          },
+          "plural": {
+            "allPluralGenders": "poszukamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "poszukasz"
+          },
+          "plural": {
+            "allPluralGenders": "poszukacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "poszuka"
+          },
+          "plural": {
+            "allPluralGenders": "poszukają"
+          }
+        }
+      },
+      "imperative": "poszukaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poszukano"
+          },
+          "plural": {
+            "allPluralGenders": "poszukano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "poszukałem",
+            "f": "poszukałam"
+          },
+          "plural": {
+            "virile": "poszukaliśmy",
+            "nonvirile": "poszukałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "poszukałeś",
+            "f": "poszukałaś"
+          },
+          "plural": {
+            "virile": "poszukaliście",
+            "nonvirile": "poszukałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "poszukał",
+            "f": "poszukała",
+            "n": "poszukało"
+          },
+          "plural": {
+            "virile": "poszukali",
+            "nonvirile": "poszukały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

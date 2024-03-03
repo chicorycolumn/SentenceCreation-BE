@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odwracać",
+    "verbalNoun": "odwracanie",
+    "activeAdjectival": "odwracający",
+    "passiveAdjectival": "odwracany",
+    "contemporaryAdverbial": "odwracając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odwracaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odwracano"
+          },
+          "plural": {
+            "allPluralGenders": "odwracano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odwracałem",
+            "f": "odwracałam"
+          },
+          "plural": {
+            "virile": "odwracaliśmy",
+            "nonvirile": "odwracałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odwracałeś",
+            "f": "odwracałaś"
+          },
+          "plural": {
+            "virile": "odwracaliście",
+            "nonvirile": "odwracałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odwracał",
+            "f": "odwracała",
+            "n": "odwracało"
+          },
+          "plural": {
+            "virile": "odwracali",
+            "nonvirile": "odwracały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odwraca się"
+          },
+          "plural": {
+            "allPluralGenders": "odwraca się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odwracam"
+          },
+          "plural": {
+            "allPluralGenders": "odwracamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odwracasz"
+          },
+          "plural": {
+            "allPluralGenders": "odwracacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odwraca"
+          },
+          "plural": {
+            "allPluralGenders": "odwracają"
+          }
+        }
+      }
+    }
+  }
+}

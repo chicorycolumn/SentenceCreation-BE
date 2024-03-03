@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "karmić",
+    "verbalNoun": "karmienie",
+    "activeAdjectival": "karmiący",
+    "passiveAdjectival": "karmiony",
+    "contemporaryAdverbial": "karmiąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "karm",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "karmiono"
+          },
+          "plural": {
+            "allPluralGenders": "karmiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "karmiłem",
+            "f": "karmiłam"
+          },
+          "plural": {
+            "virile": "karmiliśmy",
+            "nonvirile": "karmiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "karmiłeś",
+            "f": "karmiłaś"
+          },
+          "plural": {
+            "virile": "karmiliście",
+            "nonvirile": "karmiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "karmił",
+            "f": "karmiła",
+            "n": "karmiło"
+          },
+          "plural": {
+            "virile": "karmili",
+            "nonvirile": "karmiły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "karmi się"
+          },
+          "plural": {
+            "allPluralGenders": "karmi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "karmię"
+          },
+          "plural": {
+            "allPluralGenders": "karmimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "karmisz"
+          },
+          "plural": {
+            "allPluralGenders": "karmicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "karmi"
+          },
+          "plural": {
+            "allPluralGenders": "karmią"
+          }
+        }
+      }
+    }
+  }
+}

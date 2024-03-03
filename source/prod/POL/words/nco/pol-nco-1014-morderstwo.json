@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "morderstwo",
+      "gen": "morderstwa",
+      "dat": "morderstwu",
+      "acc": "morderstwo",
+      "ins": "morderstwem",
+      "loc": "morderstwie",
+      "voc": "morderstwo"
+    },
+    "plural": {
+      "nom": "morderstwa",
+      "gen": "morderstw",
+      "dat": "morderstwom",
+      "acc": "morderstwa",
+      "ins": "morderstwami",
+      "loc": "morderstwach",
+      "voc": "morderstwa"
+    }
+  }
+}

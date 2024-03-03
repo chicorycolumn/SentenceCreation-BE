@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zagrożenie",
+      "gen": "zagrożenia",
+      "dat": "zagrożeniu",
+      "acc": "zagrożenie",
+      "ins": "zagrożeniem",
+      "loc": "zagrożeniu",
+      "voc": "zagrożenie"
+    },
+    "plural": {
+      "nom": "zagrożenia",
+      "gen": "zagrożeń",
+      "dat": "zagrożeniom",
+      "acc": "zagrożenia",
+      "ins": "zagrożeniami",
+      "loc": "zagrożeniach",
+      "voc": "zagrożenia"
+    }
+  }
+}

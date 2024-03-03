@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ukształtować",
+    "verbalNoun": "ukształtowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "ukształtowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "ukształtowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ukształtuje się"
+          },
+          "plural": {
+            "allPluralGenders": "ukształtuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ukształtuję"
+          },
+          "plural": {
+            "allPluralGenders": "ukształtujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ukształtujesz"
+          },
+          "plural": {
+            "allPluralGenders": "ukształtujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ukształtuje"
+          },
+          "plural": {
+            "allPluralGenders": "ukształtują"
+          }
+        }
+      },
+      "imperative": "ukształtuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ukształtowano"
+          },
+          "plural": {
+            "allPluralGenders": "ukształtowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ukształtowałem",
+            "f": "ukształtowałam"
+          },
+          "plural": {
+            "virile": "ukształtowaliśmy",
+            "nonvirile": "ukształtowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ukształtowałeś",
+            "f": "ukształtowałaś"
+          },
+          "plural": {
+            "virile": "ukształtowaliście",
+            "nonvirile": "ukształtowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ukształtował",
+            "f": "ukształtowała",
+            "n": "ukształtowało"
+          },
+          "plural": {
+            "virile": "ukształtowali",
+            "nonvirile": "ukształtowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

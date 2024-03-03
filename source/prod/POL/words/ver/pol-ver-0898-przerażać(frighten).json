@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przerażać",
+    "verbalNoun": "przerażanie",
+    "activeAdjectival": "przerażający",
+    "passiveAdjectival": "przerażany",
+    "contemporaryAdverbial": "przerażając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przerażaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przerażano"
+          },
+          "plural": {
+            "allPluralGenders": "przerażano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przerażałem",
+            "f": "przerażałam"
+          },
+          "plural": {
+            "virile": "przerażaliśmy",
+            "nonvirile": "przerażałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przerażałeś",
+            "f": "przerażałaś"
+          },
+          "plural": {
+            "virile": "przerażaliście",
+            "nonvirile": "przerażałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przerażał",
+            "f": "przerażała",
+            "n": "przerażało"
+          },
+          "plural": {
+            "virile": "przerażali",
+            "nonvirile": "przerażały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeraża się"
+          },
+          "plural": {
+            "allPluralGenders": "przeraża się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przerażam"
+          },
+          "plural": {
+            "allPluralGenders": "przerażamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przerażasz"
+          },
+          "plural": {
+            "allPluralGenders": "przerażacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przeraża"
+          },
+          "plural": {
+            "allPluralGenders": "przerażają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "shrub",
+      "gen": "shrub's"
+    },
+    "plural": {
+      "nom": "shrubs",
+      "gen": "shrubs'"
+    }
+  }
+}

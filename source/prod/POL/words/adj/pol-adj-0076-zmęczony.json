@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "zmęczono",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zmęczony",
+          "gen": "zmęczonego",
+          "dat": "zmęczonemu",
+          "acc": "zmęczonego",
+          "ins": "zmęczonym",
+          "loc": "zmęczonym"
+        },
+        "m3": {
+          "nom": "zmęczony",
+          "gen": "zmęczonego",
+          "dat": "zmęczonemu",
+          "acc": "zmęczony",
+          "ins": "zmęczonym",
+          "loc": "zmęczonym"
+        },
+        "f": {
+          "nom": "zmęczona",
+          "gen": "zmęczonej",
+          "dat": "zmęczonej",
+          "acc": "zmęczoną",
+          "ins": "zmęczoną",
+          "loc": "zmęczonej"
+        },
+        "n": {
+          "nom": "zmęczone",
+          "gen": "zmęczonego",
+          "dat": "zmęczonemu",
+          "acc": "zmęczone",
+          "ins": "zmęczonym",
+          "loc": "zmęczonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zmęczeni",
+          "gen": "zmęczonych",
+          "dat": "zmęczonym",
+          "acc": "zmęczonych",
+          "ins": "zmęczonymi",
+          "loc": "zmęczonych"
+        },
+        "nonvirile": {
+          "nom": "zmęczone",
+          "gen": "zmęczonych",
+          "dat": "zmęczonym",
+          "acc": "zmęczone",
+          "ins": "zmęczonymi",
+          "loc": "zmęczonych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej zmęczony",
+          "gen": "bardziej zmęczonego",
+          "dat": "bardziej zmęczonemu",
+          "acc": "bardziej zmęczonego",
+          "ins": "bardziej zmęczonym",
+          "loc": "bardziej zmęczonym"
+        },
+        "m3": {
+          "nom": "bardziej zmęczony",
+          "gen": "bardziej zmęczonego",
+          "dat": "bardziej zmęczonemu",
+          "acc": "bardziej zmęczony",
+          "ins": "bardziej zmęczonym",
+          "loc": "bardziej zmęczonym"
+        },
+        "f": {
+          "nom": "bardziej zmęczona",
+          "gen": "bardziej zmęczonej",
+          "dat": "bardziej zmęczonej",
+          "acc": "bardziej zmęczoną",
+          "ins": "bardziej zmęczoną",
+          "loc": "bardziej zmęczonej"
+        },
+        "n": {
+          "nom": "bardziej zmęczone",
+          "gen": "bardziej zmęczonego",
+          "dat": "bardziej zmęczonemu",
+          "acc": "bardziej zmęczone",
+          "ins": "bardziej zmęczonym",
+          "loc": "bardziej zmęczonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej zmęczeni",
+          "gen": "bardziej zmęczonych",
+          "dat": "bardziej zmęczonym",
+          "acc": "bardziej zmęczonych",
+          "ins": "bardziej zmęczonymi",
+          "loc": "bardziej zmęczonych"
+        },
+        "nonvirile": {
+          "nom": "bardziej zmęczone",
+          "gen": "bardziej zmęczonych",
+          "dat": "bardziej zmęczonym",
+          "acc": "bardziej zmęczone",
+          "ins": "bardziej zmęczonymi",
+          "loc": "bardziej zmęczonych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej zmęczony",
+          "gen": "najbardziej zmęczonego",
+          "dat": "najbardziej zmęczonemu",
+          "acc": "najbardziej zmęczonego",
+          "ins": "najbardziej zmęczonym",
+          "loc": "najbardziej zmęczonym"
+        },
+        "m3": {
+          "nom": "najbardziej zmęczony",
+          "gen": "najbardziej zmęczonego",
+          "dat": "najbardziej zmęczonemu",
+          "acc": "najbardziej zmęczony",
+          "ins": "najbardziej zmęczonym",
+          "loc": "najbardziej zmęczonym"
+        },
+        "f": {
+          "nom": "najbardziej zmęczona",
+          "gen": "najbardziej zmęczonej",
+          "dat": "najbardziej zmęczonej",
+          "acc": "najbardziej zmęczoną",
+          "ins": "najbardziej zmęczoną",
+          "loc": "najbardziej zmęczonej"
+        },
+        "n": {
+          "nom": "najbardziej zmęczone",
+          "gen": "najbardziej zmęczonego",
+          "dat": "najbardziej zmęczonemu",
+          "acc": "najbardziej zmęczone",
+          "ins": "najbardziej zmęczonym",
+          "loc": "najbardziej zmęczonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej zmęczeni",
+          "gen": "najbardziej zmęczonych",
+          "dat": "najbardziej zmęczonym",
+          "acc": "najbardziej zmęczonych",
+          "ins": "najbardziej zmęczonymi",
+          "loc": "najbardziej zmęczonych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej zmęczone",
+          "gen": "najbardziej zmęczonych",
+          "dat": "najbardziej zmęczonym",
+          "acc": "najbardziej zmęczone",
+          "ins": "najbardziej zmęczonymi",
+          "loc": "najbardziej zmęczonych"
+        }
+      }
+    }
+  }
+}

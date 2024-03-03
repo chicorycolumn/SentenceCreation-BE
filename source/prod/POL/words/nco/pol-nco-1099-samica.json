@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "samica",
+      "gen": "samicy",
+      "dat": "samicy",
+      "acc": "samicę",
+      "ins": "samicą",
+      "loc": "samicy",
+      "voc": "samico"
+    },
+    "plural": {
+      "nom": "samice",
+      "gen": "samic",
+      "dat": "samicom",
+      "acc": "samice",
+      "ins": "samicami",
+      "loc": "samicach",
+      "voc": "samice"
+    }
+  }
+}

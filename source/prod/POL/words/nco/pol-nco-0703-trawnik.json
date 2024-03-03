@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "trawnik",
+      "gen": "trawnika",
+      "dat": "trawnikowi",
+      "acc": "trawnik",
+      "ins": "trawnikiem",
+      "loc": "trawniku",
+      "voc": "trawniku"
+    },
+    "plural": {
+      "nom": "trawniki",
+      "gen": "trawników",
+      "dat": "trawnikom",
+      "acc": "trawniki",
+      "ins": "trawnikami",
+      "loc": "trawnikach",
+      "voc": "trawniki"
+    }
+  }
+}

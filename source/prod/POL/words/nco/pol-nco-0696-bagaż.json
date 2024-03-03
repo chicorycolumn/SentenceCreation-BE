@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "bagaż",
+      "gen": "bagażu",
+      "dat": "bagażowi",
+      "acc": "bagaż",
+      "ins": "bagażem",
+      "loc": "bagażu",
+      "voc": "bagażu"
+    },
+    "plural": {
+      "nom": "bagaże",
+      "gen": [
+        "bagaży",
+        "bagażów"
+      ],
+      "dat": "bagażom",
+      "acc": "bagaże",
+      "ins": "bagażami",
+      "loc": "bagażach",
+      "voc": "bagaże"
+    }
+  }
+}

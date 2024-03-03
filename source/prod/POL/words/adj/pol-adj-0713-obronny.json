@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "obronnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "obronny",
+          "gen": "obronnego",
+          "dat": "obronnemu",
+          "acc": "obronnego",
+          "ins": "obronnym",
+          "loc": "obronnym"
+        },
+        "m3": {
+          "nom": "obronny",
+          "gen": "obronnego",
+          "dat": "obronnemu",
+          "acc": "obronny",
+          "ins": "obronnym",
+          "loc": "obronnym"
+        },
+        "f": {
+          "nom": "obronna",
+          "gen": "obronnej",
+          "dat": "obronnej",
+          "acc": "obronną",
+          "ins": "obronną",
+          "loc": "obronnej"
+        },
+        "n": {
+          "nom": "obronne",
+          "gen": "obronnego",
+          "dat": "obronnemu",
+          "acc": "obronne",
+          "ins": "obronnym",
+          "loc": "obronnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "obronni",
+          "gen": "obronnych",
+          "dat": "obronnym",
+          "acc": "obronnych",
+          "ins": "obronnymi",
+          "loc": "obronnych"
+        },
+        "nonvirile": {
+          "nom": "obronne",
+          "gen": "obronnych",
+          "dat": "obronnym",
+          "acc": "obronne",
+          "ins": "obronnymi",
+          "loc": "obronnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "obronniejszy",
+          "gen": "obronniejszego",
+          "dat": "obronniejszemu",
+          "acc": "obronniejszego",
+          "ins": "obronniejszym",
+          "loc": "obronniejszym"
+        },
+        "m3": {
+          "nom": "obronniejszy",
+          "gen": "obronniejszego",
+          "dat": "obronniejszemu",
+          "acc": "obronniejszy",
+          "ins": "obronniejszym",
+          "loc": "obronniejszym"
+        },
+        "f": {
+          "nom": "obronniejsza",
+          "gen": "obronniejszej",
+          "dat": "obronniejszej",
+          "acc": "obronniejszą",
+          "ins": "obronniejszą",
+          "loc": "obronniejszej"
+        },
+        "n": {
+          "nom": "obronniejsze",
+          "gen": "obronniejszego",
+          "dat": "obronniejszemu",
+          "acc": "obronniejsze",
+          "ins": "obronniejszym",
+          "loc": "obronniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "obronniejsi",
+          "gen": "obronniejszych",
+          "dat": "obronniejszym",
+          "acc": "obronniejszych",
+          "ins": "obronniejszymi",
+          "loc": "obronniejszych"
+        },
+        "nonvirile": {
+          "nom": "obronniejsze",
+          "gen": "obronniejszych",
+          "dat": "obronniejszym",
+          "acc": "obronniejsze",
+          "ins": "obronniejszymi",
+          "loc": "obronniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najobronniejszy",
+          "gen": "najobronniejszego",
+          "dat": "najobronniejszemu",
+          "acc": "najobronniejszego",
+          "ins": "najobronniejszym",
+          "loc": "najobronniejszym"
+        },
+        "m3": {
+          "nom": "najobronniejszy",
+          "gen": "najobronniejszego",
+          "dat": "najobronniejszemu",
+          "acc": "najobronniejszy",
+          "ins": "najobronniejszym",
+          "loc": "najobronniejszym"
+        },
+        "f": {
+          "nom": "najobronniejsza",
+          "gen": "najobronniejszej",
+          "dat": "najobronniejszej",
+          "acc": "najobronniejszą",
+          "ins": "najobronniejszą",
+          "loc": "najobronniejszej"
+        },
+        "n": {
+          "nom": "najobronniejsze",
+          "gen": "najobronniejszego",
+          "dat": "najobronniejszemu",
+          "acc": "najobronniejsze",
+          "ins": "najobronniejszym",
+          "loc": "najobronniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najobronniejsi",
+          "gen": "najobronniejszych",
+          "dat": "najobronniejszym",
+          "acc": "najobronniejszych",
+          "ins": "najobronniejszymi",
+          "loc": "najobronniejszych"
+        },
+        "nonvirile": {
+          "nom": "najobronniejsze",
+          "gen": "najobronniejszych",
+          "dat": "najobronniejszym",
+          "acc": "najobronniejsze",
+          "ins": "najobronniejszymi",
+          "loc": "najobronniejszych"
+        }
+      }
+    }
+  }
+}

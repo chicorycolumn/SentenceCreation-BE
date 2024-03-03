@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "miejsce",
+      "gen": "miejsca",
+      "dat": "miejscu",
+      "acc": "miejsce",
+      "ins": "miejscem",
+      "loc": "miejscu",
+      "voc": "miejsce"
+    },
+    "plural": {
+      "nom": "miejsca",
+      "gen": "miejsc",
+      "dat": "miejscom",
+      "acc": "miejsca",
+      "ins": "miejscami",
+      "loc": "miejscach",
+      "voc": "miejsca"
+    }
+  }
+}

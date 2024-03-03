@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "glista",
+      "gen": "glisty",
+      "dat": "gliście",
+      "acc": "glistę",
+      "ins": "glistą",
+      "loc": "gliście",
+      "voc": "glisto"
+    },
+    "plural": {
+      "nom": "glisty",
+      "gen": "glist",
+      "dat": "glistom",
+      "acc": "glisty",
+      "ins": "glistami",
+      "loc": "glistach",
+      "voc": "glisty"
+    }
+  }
+}

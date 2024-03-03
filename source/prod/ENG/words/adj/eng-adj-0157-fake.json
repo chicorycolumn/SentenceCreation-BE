@@ -1,0 +1,8 @@
+{
+  "inflections": {
+    "simple": "fake",
+    "comparative": "faker",
+    "superlative": "fakest",
+    "adverb": false
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pomyśleć",
+    "verbalNoun": "pomyślenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pomyślawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pomyśli się"
+          },
+          "plural": {
+            "allPluralGenders": "pomyśli się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pomyślę"
+          },
+          "plural": {
+            "allPluralGenders": "pomyślimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pomyślisz"
+          },
+          "plural": {
+            "allPluralGenders": "pomyślicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pomyśli"
+          },
+          "plural": {
+            "allPluralGenders": "pomyślą"
+          }
+        }
+      },
+      "imperative": "pomyśl",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pomyślano"
+          },
+          "plural": {
+            "allPluralGenders": "pomyślano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pomyślałem",
+            "f": "pomyślałam"
+          },
+          "plural": {
+            "virile": "pomyśleliśmy",
+            "nonvirile": "pomyślałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pomyślałeś",
+            "f": "pomyślałaś"
+          },
+          "plural": {
+            "virile": "pomyśleliście",
+            "nonvirile": "pomyślałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pomyślał",
+            "f": "pomyślała",
+            "n": "pomyślało"
+          },
+          "plural": {
+            "virile": "pomyśleli",
+            "nonvirile": "pomyślały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

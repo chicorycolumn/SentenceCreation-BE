@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "oil",
+      "gen": "oil's"
+    },
+    "plural": {
+      "nom": "oils",
+      "gen": "oils'"
+    }
+  }
+}

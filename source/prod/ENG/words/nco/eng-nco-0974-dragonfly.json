@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dragonfly",
+      "gen": "dragonfly's"
+    },
+    "plural": {
+      "nom": "dragonflies",
+      "gen": "dragonflies'"
+    }
+  }
+}

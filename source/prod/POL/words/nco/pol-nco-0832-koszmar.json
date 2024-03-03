@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "koszmar",
+      "gen": "koszmaru",
+      "dat": "koszmarowi",
+      "acc": "koszmar",
+      "ins": "koszmarem",
+      "loc": "koszmarze",
+      "voc": "koszmarze"
+    },
+    "plural": {
+      "nom": "koszmary",
+      "gen": "koszmarów",
+      "dat": "koszmarom",
+      "acc": "koszmary",
+      "ins": "koszmarami",
+      "loc": "koszmarach",
+      "voc": "koszmary"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wyłącznik",
+      "gen": "wyłącznika",
+      "dat": "wyłącznikowi",
+      "acc": "wyłącznik",
+      "ins": "wyłącznikiem",
+      "loc": "wyłączniku",
+      "voc": "wyłączniku"
+    },
+    "plural": {
+      "nom": "wyłączniki",
+      "gen": "wyłączników",
+      "dat": "wyłącznikom",
+      "acc": "wyłączniki",
+      "ins": "wyłącznikami",
+      "loc": "wyłącznikach",
+      "voc": "wyłączniki"
+    }
+  }
+}

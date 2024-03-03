@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "tygrys",
+      "gen": "tygrysa",
+      "dat": "tygrysowi",
+      "acc": "tygrysa",
+      "ins": "tygrysem",
+      "loc": "tygrysie",
+      "voc": "tygrysie"
+    },
+    "plural": {
+      "nom": "tygrysy",
+      "gen": "tygrysów",
+      "dat": "tygrysom",
+      "acc": "tygrysy",
+      "ins": "tygrysami",
+      "loc": "tygrysach",
+      "voc": "tygrysy"
+    }
+  }
+}

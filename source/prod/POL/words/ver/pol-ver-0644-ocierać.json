@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ocierać",
+    "verbalNoun": "ocieranie",
+    "activeAdjectival": "ocierający",
+    "passiveAdjectival": "ocierany",
+    "contemporaryAdverbial": "ocierając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "ocieraj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ocierano"
+          },
+          "plural": {
+            "allPluralGenders": "ocierano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ocierałem",
+            "f": "ocierałam"
+          },
+          "plural": {
+            "virile": "ocieraliśmy",
+            "nonvirile": "ocierałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ocierałeś",
+            "f": "ocierałaś"
+          },
+          "plural": {
+            "virile": "ocieraliście",
+            "nonvirile": "ocierałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ocierał",
+            "f": "ocierała",
+            "n": "ocierało"
+          },
+          "plural": {
+            "virile": "ocierali",
+            "nonvirile": "ocierały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ociera się"
+          },
+          "plural": {
+            "allPluralGenders": "ociera się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ocieram"
+          },
+          "plural": {
+            "allPluralGenders": "ocieramy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ocierasz"
+          },
+          "plural": {
+            "allPluralGenders": "ocieracie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ociera"
+          },
+          "plural": {
+            "allPluralGenders": "ocierają"
+          }
+        }
+      }
+    }
+  }
+}

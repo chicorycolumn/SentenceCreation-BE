@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "przerażająco",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przerażający",
+          "gen": "przerażającego",
+          "dat": "przerażającemu",
+          "acc": "przerażającego",
+          "ins": "przerażającym",
+          "loc": "przerażającym"
+        },
+        "m3": {
+          "nom": "przerażający",
+          "gen": "przerażającego",
+          "dat": "przerażającemu",
+          "acc": "przerażający",
+          "ins": "przerażającym",
+          "loc": "przerażającym"
+        },
+        "f": {
+          "nom": "przerażająca",
+          "gen": "przerażającej",
+          "dat": "przerażającej",
+          "acc": "przerażającą",
+          "ins": "przerażającą",
+          "loc": "przerażającej"
+        },
+        "n": {
+          "nom": "przerażające",
+          "gen": "przerażającego",
+          "dat": "przerażającemu",
+          "acc": "przerażające",
+          "ins": "przerażającym",
+          "loc": "przerażającym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przerażający",
+          "gen": "przerażających",
+          "dat": "przerażającym",
+          "acc": "przerażających",
+          "ins": "przerażającymi",
+          "loc": "przerażających"
+        },
+        "nonvirile": {
+          "nom": "przerażające",
+          "gen": "przerażających",
+          "dat": "przerażającym",
+          "acc": "przerażające",
+          "ins": "przerażającymi",
+          "loc": "przerażających"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej przerażający",
+          "gen": "bardziej przerażającego",
+          "dat": "bardziej przerażającemu",
+          "acc": "bardziej przerażającego",
+          "ins": "bardziej przerażającym",
+          "loc": "bardziej przerażającym"
+        },
+        "m3": {
+          "nom": "bardziej przerażający",
+          "gen": "bardziej przerażającego",
+          "dat": "bardziej przerażającemu",
+          "acc": "bardziej przerażający",
+          "ins": "bardziej przerażającym",
+          "loc": "bardziej przerażającym"
+        },
+        "f": {
+          "nom": "bardziej przerażająca",
+          "gen": "bardziej przerażającej",
+          "dat": "bardziej przerażającej",
+          "acc": "bardziej przerażającą",
+          "ins": "bardziej przerażającą",
+          "loc": "bardziej przerażającej"
+        },
+        "n": {
+          "nom": "bardziej przerażające",
+          "gen": "bardziej przerażającego",
+          "dat": "bardziej przerażającemu",
+          "acc": "bardziej przerażające",
+          "ins": "bardziej przerażającym",
+          "loc": "bardziej przerażającym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej przerażający",
+          "gen": "bardziej przerażających",
+          "dat": "bardziej przerażającym",
+          "acc": "bardziej przerażających",
+          "ins": "bardziej przerażającymi",
+          "loc": "bardziej przerażających"
+        },
+        "nonvirile": {
+          "nom": "bardziej przerażające",
+          "gen": "bardziej przerażających",
+          "dat": "bardziej przerażającym",
+          "acc": "bardziej przerażające",
+          "ins": "bardziej przerażającymi",
+          "loc": "bardziej przerażających"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej przerażający",
+          "gen": "najbardziej przerażającego",
+          "dat": "najbardziej przerażającemu",
+          "acc": "najbardziej przerażającego",
+          "ins": "najbardziej przerażającym",
+          "loc": "najbardziej przerażającym"
+        },
+        "m3": {
+          "nom": "najbardziej przerażający",
+          "gen": "najbardziej przerażającego",
+          "dat": "najbardziej przerażającemu",
+          "acc": "najbardziej przerażający",
+          "ins": "najbardziej przerażającym",
+          "loc": "najbardziej przerażającym"
+        },
+        "f": {
+          "nom": "najbardziej przerażająca",
+          "gen": "najbardziej przerażającej",
+          "dat": "najbardziej przerażającej",
+          "acc": "najbardziej przerażającą",
+          "ins": "najbardziej przerażającą",
+          "loc": "najbardziej przerażającej"
+        },
+        "n": {
+          "nom": "najbardziej przerażające",
+          "gen": "najbardziej przerażającego",
+          "dat": "najbardziej przerażającemu",
+          "acc": "najbardziej przerażające",
+          "ins": "najbardziej przerażającym",
+          "loc": "najbardziej przerażającym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej przerażający",
+          "gen": "najbardziej przerażających",
+          "dat": "najbardziej przerażającym",
+          "acc": "najbardziej przerażających",
+          "ins": "najbardziej przerażającymi",
+          "loc": "najbardziej przerażających"
+        },
+        "nonvirile": {
+          "nom": "najbardziej przerażające",
+          "gen": "najbardziej przerażających",
+          "dat": "najbardziej przerażającym",
+          "acc": "najbardziej przerażające",
+          "ins": "najbardziej przerażającymi",
+          "loc": "najbardziej przerażających"
+        }
+      }
+    }
+  }
+}

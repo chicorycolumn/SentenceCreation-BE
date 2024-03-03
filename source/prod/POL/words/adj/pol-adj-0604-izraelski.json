@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "izraelski",
+          "gen": "izraelskiego",
+          "dat": "izraelskiemu",
+          "acc": "izraelskiego",
+          "ins": "izraelskim",
+          "loc": "izraelskim"
+        },
+        "m3": {
+          "nom": "izraelski",
+          "gen": "izraelskiego",
+          "dat": "izraelskiemu",
+          "acc": "izraelski",
+          "ins": "izraelskim",
+          "loc": "izraelskim"
+        },
+        "f": {
+          "nom": "izraelska",
+          "gen": "izraelskiej",
+          "dat": "izraelskiej",
+          "acc": "izraelską",
+          "ins": "izraelską",
+          "loc": "izraelskiej"
+        },
+        "n": {
+          "nom": "izraelskie",
+          "gen": "izraelskiego",
+          "dat": "izraelskiemu",
+          "acc": "izraelskie",
+          "ins": "izraelskim",
+          "loc": "izraelskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "izraelscy",
+          "gen": "izraelskich",
+          "dat": "izraelskim",
+          "acc": "izraelskich",
+          "ins": "izraelskimi",
+          "loc": "izraelskich"
+        },
+        "nonvirile": {
+          "nom": "izraelskie",
+          "gen": "izraelskich",
+          "dat": "izraelskim",
+          "acc": "izraelskie",
+          "ins": "izraelskimi",
+          "loc": "izraelskich"
+        }
+      }
+    }
+  }
+}

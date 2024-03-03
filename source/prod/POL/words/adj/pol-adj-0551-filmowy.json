@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "filmowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "filmowy",
+          "gen": "filmowego",
+          "dat": "filmowemu",
+          "acc": "filmowego",
+          "ins": "filmowym",
+          "loc": "filmowym"
+        },
+        "m3": {
+          "nom": "filmowy",
+          "gen": "filmowego",
+          "dat": "filmowemu",
+          "acc": "filmowy",
+          "ins": "filmowym",
+          "loc": "filmowym"
+        },
+        "f": {
+          "nom": "filmowa",
+          "gen": "filmowej",
+          "dat": "filmowej",
+          "acc": "filmową",
+          "ins": "filmową",
+          "loc": "filmowej"
+        },
+        "n": {
+          "nom": "filmowe",
+          "gen": "filmowego",
+          "dat": "filmowemu",
+          "acc": "filmowe",
+          "ins": "filmowym",
+          "loc": "filmowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "filmowi",
+          "gen": "filmowych",
+          "dat": "filmowym",
+          "acc": "filmowych",
+          "ins": "filmowymi",
+          "loc": "filmowych"
+        },
+        "nonvirile": {
+          "nom": "filmowe",
+          "gen": "filmowych",
+          "dat": "filmowym",
+          "acc": "filmowe",
+          "ins": "filmowymi",
+          "loc": "filmowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej filmowy",
+          "gen": "bardziej filmowego",
+          "dat": "bardziej filmowemu",
+          "acc": "bardziej filmowego",
+          "ins": "bardziej filmowym",
+          "loc": "bardziej filmowym"
+        },
+        "m3": {
+          "nom": "bardziej filmowy",
+          "gen": "bardziej filmowego",
+          "dat": "bardziej filmowemu",
+          "acc": "bardziej filmowy",
+          "ins": "bardziej filmowym",
+          "loc": "bardziej filmowym"
+        },
+        "f": {
+          "nom": "bardziej filmowa",
+          "gen": "bardziej filmowej",
+          "dat": "bardziej filmowej",
+          "acc": "bardziej filmową",
+          "ins": "bardziej filmową",
+          "loc": "bardziej filmowej"
+        },
+        "n": {
+          "nom": "bardziej filmowe",
+          "gen": "bardziej filmowego",
+          "dat": "bardziej filmowemu",
+          "acc": "bardziej filmowe",
+          "ins": "bardziej filmowym",
+          "loc": "bardziej filmowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej filmowi",
+          "gen": "bardziej filmowych",
+          "dat": "bardziej filmowym",
+          "acc": "bardziej filmowych",
+          "ins": "bardziej filmowymi",
+          "loc": "bardziej filmowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej filmowe",
+          "gen": "bardziej filmowych",
+          "dat": "bardziej filmowym",
+          "acc": "bardziej filmowe",
+          "ins": "bardziej filmowymi",
+          "loc": "bardziej filmowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej filmowy",
+          "gen": "najbardziej filmowego",
+          "dat": "najbardziej filmowemu",
+          "acc": "najbardziej filmowego",
+          "ins": "najbardziej filmowym",
+          "loc": "najbardziej filmowym"
+        },
+        "m3": {
+          "nom": "najbardziej filmowy",
+          "gen": "najbardziej filmowego",
+          "dat": "najbardziej filmowemu",
+          "acc": "najbardziej filmowy",
+          "ins": "najbardziej filmowym",
+          "loc": "najbardziej filmowym"
+        },
+        "f": {
+          "nom": "najbardziej filmowa",
+          "gen": "najbardziej filmowej",
+          "dat": "najbardziej filmowej",
+          "acc": "najbardziej filmową",
+          "ins": "najbardziej filmową",
+          "loc": "najbardziej filmowej"
+        },
+        "n": {
+          "nom": "najbardziej filmowe",
+          "gen": "najbardziej filmowego",
+          "dat": "najbardziej filmowemu",
+          "acc": "najbardziej filmowe",
+          "ins": "najbardziej filmowym",
+          "loc": "najbardziej filmowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej filmowi",
+          "gen": "najbardziej filmowych",
+          "dat": "najbardziej filmowym",
+          "acc": "najbardziej filmowych",
+          "ins": "najbardziej filmowymi",
+          "loc": "najbardziej filmowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej filmowe",
+          "gen": "najbardziej filmowych",
+          "dat": "najbardziej filmowym",
+          "acc": "najbardziej filmowe",
+          "ins": "najbardziej filmowymi",
+          "loc": "najbardziej filmowych"
+        }
+      }
+    }
+  }
+}

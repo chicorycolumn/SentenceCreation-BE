@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "śnieg",
+      "gen": "śniegu",
+      "dat": "śniegowi",
+      "acc": "śnieg",
+      "ins": "śniegiem",
+      "loc": "śniegu",
+      "voc": "śniegu"
+    },
+    "plural": {
+      "nom": "śniegi",
+      "gen": "śniegów",
+      "dat": "śniegom",
+      "acc": "śniegi",
+      "ins": "śniegami",
+      "loc": "śniegach",
+      "voc": "śniegi"
+    }
+  }
+}

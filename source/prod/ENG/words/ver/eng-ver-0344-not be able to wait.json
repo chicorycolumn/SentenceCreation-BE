@@ -1,0 +1,15 @@
+{
+  "inflections": {
+    "infinitive": "not be able to wait",
+    "v2": {
+      "isTerminus": true,
+      "normal": [
+        "was not able to wait",
+        "were not able to wait"
+      ]
+    },
+    "v3": "not been able to wait",
+    "thirdPS": "is not able to wait",
+    "gerund": "not being able to wait"
+  }
+}

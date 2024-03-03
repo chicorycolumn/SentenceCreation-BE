@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "naciskać",
+    "verbalNoun": "naciskanie",
+    "activeAdjectival": "naciskający",
+    "passiveAdjectival": "naciskany",
+    "contemporaryAdverbial": "naciskając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "naciskaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "naciskano"
+          },
+          "plural": {
+            "allPluralGenders": "naciskano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "naciskałem",
+            "f": "naciskałam"
+          },
+          "plural": {
+            "virile": "naciskaliśmy",
+            "nonvirile": "naciskałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "naciskałeś",
+            "f": "naciskałaś"
+          },
+          "plural": {
+            "virile": "naciskaliście",
+            "nonvirile": "naciskałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "naciskał",
+            "f": "naciskała",
+            "n": "naciskało"
+          },
+          "plural": {
+            "virile": "naciskali",
+            "nonvirile": "naciskały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "naciska się"
+          },
+          "plural": {
+            "allPluralGenders": "naciska się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "naciskam"
+          },
+          "plural": {
+            "allPluralGenders": "naciskamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "naciskasz"
+          },
+          "plural": {
+            "allPluralGenders": "naciskacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "naciska"
+          },
+          "plural": {
+            "allPluralGenders": "naciskają"
+          }
+        }
+      }
+    }
+  }
+}

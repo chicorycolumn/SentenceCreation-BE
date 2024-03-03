@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "fala",
+      "gen": "fali",
+      "dat": "fali",
+      "acc": "falę",
+      "ins": "falą",
+      "loc": "fali",
+      "voc": "falo"
+    },
+    "plural": {
+      "nom": "fale",
+      "gen": "fal",
+      "dat": "falom",
+      "acc": "fale",
+      "ins": "falami",
+      "loc": "falach",
+      "voc": "fale"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "smak",
+      "gen": "smaku",
+      "dat": "smakowi",
+      "acc": "smak",
+      "ins": "smakiem",
+      "loc": "smaku",
+      "voc": "smaku"
+    },
+    "plural": {
+      "nom": "smaki",
+      "gen": "smaków",
+      "dat": "smakom",
+      "acc": "smaki",
+      "ins": "smakami",
+      "loc": "smakach",
+      "voc": "smaki"
+    }
+  }
+}

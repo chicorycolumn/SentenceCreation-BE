@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "polityka",
+      "gen": "polityki",
+      "dat": "polityce",
+      "acc": "politykę",
+      "ins": "polityką",
+      "loc": "polityce",
+      "voc": "polityko"
+    }
+  }
+}

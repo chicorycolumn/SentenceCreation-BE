@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "otoczyć",
+    "verbalNoun": "otoczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "otoczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "otoczywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "otoczy się"
+          },
+          "plural": {
+            "allPluralGenders": "otoczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "otoczę"
+          },
+          "plural": {
+            "allPluralGenders": "otoczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "otoczysz"
+          },
+          "plural": {
+            "allPluralGenders": "otoczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "otoczy"
+          },
+          "plural": {
+            "allPluralGenders": "otoczą"
+          }
+        }
+      },
+      "imperative": "otocz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "otoczono"
+          },
+          "plural": {
+            "allPluralGenders": "otoczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "otoczyłem",
+            "f": "otoczyłam"
+          },
+          "plural": {
+            "virile": "otoczyliśmy",
+            "nonvirile": "otoczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "otoczyłeś",
+            "f": "otoczyłaś"
+          },
+          "plural": {
+            "virile": "otoczyliście",
+            "nonvirile": "otoczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "otoczył",
+            "f": "otoczyła",
+            "n": "otoczyło"
+          },
+          "plural": {
+            "virile": "otoczyli",
+            "nonvirile": "otoczyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

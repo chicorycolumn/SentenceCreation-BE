@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zapłacić",
+    "verbalNoun": "zapłacenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zapłacony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zapłaciwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zapłaci się"
+          },
+          "plural": {
+            "allPluralGenders": "zapłaci się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zapłacę"
+          },
+          "plural": {
+            "allPluralGenders": "zapłacimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zapłacisz"
+          },
+          "plural": {
+            "allPluralGenders": "zapłacicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zapłaci"
+          },
+          "plural": {
+            "allPluralGenders": "zapłacą"
+          }
+        }
+      },
+      "imperative": "zapłać",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zapłacono"
+          },
+          "plural": {
+            "allPluralGenders": "zapłacono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zapłaciłem",
+            "f": "zapłaciłam"
+          },
+          "plural": {
+            "virile": "zapłaciliśmy",
+            "nonvirile": "zapłaciłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zapłaciłeś",
+            "f": "zapłaciłaś"
+          },
+          "plural": {
+            "virile": "zapłaciliście",
+            "nonvirile": "zapłaciłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zapłacił",
+            "f": "zapłaciła",
+            "n": "zapłaciło"
+          },
+          "plural": {
+            "virile": "zapłacili",
+            "nonvirile": "zapłaciły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

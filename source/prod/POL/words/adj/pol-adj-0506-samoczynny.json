@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "samoczynnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "samoczynny",
+          "gen": "samoczynnego",
+          "dat": "samoczynnemu",
+          "acc": "samoczynnego",
+          "ins": "samoczynnym",
+          "loc": "samoczynnym"
+        },
+        "m3": {
+          "nom": "samoczynny",
+          "gen": "samoczynnego",
+          "dat": "samoczynnemu",
+          "acc": "samoczynny",
+          "ins": "samoczynnym",
+          "loc": "samoczynnym"
+        },
+        "f": {
+          "nom": "samoczynna",
+          "gen": "samoczynnej",
+          "dat": "samoczynnej",
+          "acc": "samoczynną",
+          "ins": "samoczynną",
+          "loc": "samoczynnej"
+        },
+        "n": {
+          "nom": "samoczynne",
+          "gen": "samoczynnego",
+          "dat": "samoczynnemu",
+          "acc": "samoczynne",
+          "ins": "samoczynnym",
+          "loc": "samoczynnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "samoczynni",
+          "gen": "samoczynnych",
+          "dat": "samoczynnym",
+          "acc": "samoczynnych",
+          "ins": "samoczynnymi",
+          "loc": "samoczynnych"
+        },
+        "nonvirile": {
+          "nom": "samoczynne",
+          "gen": "samoczynnych",
+          "dat": "samoczynnym",
+          "acc": "samoczynne",
+          "ins": "samoczynnymi",
+          "loc": "samoczynnych"
+        }
+      }
+    }
+  }
+}

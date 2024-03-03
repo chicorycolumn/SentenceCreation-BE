@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "obudzić",
+    "verbalNoun": "obudzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "obudzony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "obudziwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obudzi się"
+          },
+          "plural": {
+            "allPluralGenders": "obudzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "obudzę"
+          },
+          "plural": {
+            "allPluralGenders": "obudzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "obudzisz"
+          },
+          "plural": {
+            "allPluralGenders": "obudzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "obudzi"
+          },
+          "plural": {
+            "allPluralGenders": "obudzą"
+          }
+        }
+      },
+      "imperative": "obudź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obudzono"
+          },
+          "plural": {
+            "allPluralGenders": "obudzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "obudziłem",
+            "f": "obudziłam"
+          },
+          "plural": {
+            "virile": "obudziliśmy",
+            "nonvirile": "obudziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "obudziłeś",
+            "f": "obudziłaś"
+          },
+          "plural": {
+            "virile": "obudziliście",
+            "nonvirile": "obudziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "obudził",
+            "f": "obudziła",
+            "n": "obudziło"
+          },
+          "plural": {
+            "virile": "obudzili",
+            "nonvirile": "obudziły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

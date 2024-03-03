@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "chemicznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "chemiczny",
+          "gen": "chemicznego",
+          "dat": "chemicznemu",
+          "acc": "chemicznego",
+          "ins": "chemicznym",
+          "loc": "chemicznym"
+        },
+        "m3": {
+          "nom": "chemiczny",
+          "gen": "chemicznego",
+          "dat": "chemicznemu",
+          "acc": "chemiczny",
+          "ins": "chemicznym",
+          "loc": "chemicznym"
+        },
+        "f": {
+          "nom": "chemiczna",
+          "gen": "chemicznej",
+          "dat": "chemicznej",
+          "acc": "chemiczną",
+          "ins": "chemiczną",
+          "loc": "chemicznej"
+        },
+        "n": {
+          "nom": "chemiczne",
+          "gen": "chemicznego",
+          "dat": "chemicznemu",
+          "acc": "chemiczne",
+          "ins": "chemicznym",
+          "loc": "chemicznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "chemiczni",
+          "gen": "chemicznych",
+          "dat": "chemicznym",
+          "acc": "chemicznych",
+          "ins": "chemicznymi",
+          "loc": "chemicznych"
+        },
+        "nonvirile": {
+          "nom": "chemiczne",
+          "gen": "chemicznych",
+          "dat": "chemicznym",
+          "acc": "chemiczne",
+          "ins": "chemicznymi",
+          "loc": "chemicznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej chemiczny",
+          "gen": "bardziej chemicznego",
+          "dat": "bardziej chemicznemu",
+          "acc": "bardziej chemicznego",
+          "ins": "bardziej chemicznym",
+          "loc": "bardziej chemicznym"
+        },
+        "m3": {
+          "nom": "bardziej chemiczny",
+          "gen": "bardziej chemicznego",
+          "dat": "bardziej chemicznemu",
+          "acc": "bardziej chemiczny",
+          "ins": "bardziej chemicznym",
+          "loc": "bardziej chemicznym"
+        },
+        "f": {
+          "nom": "bardziej chemiczna",
+          "gen": "bardziej chemicznej",
+          "dat": "bardziej chemicznej",
+          "acc": "bardziej chemiczną",
+          "ins": "bardziej chemiczną",
+          "loc": "bardziej chemicznej"
+        },
+        "n": {
+          "nom": "bardziej chemiczne",
+          "gen": "bardziej chemicznego",
+          "dat": "bardziej chemicznemu",
+          "acc": "bardziej chemiczne",
+          "ins": "bardziej chemicznym",
+          "loc": "bardziej chemicznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej chemiczni",
+          "gen": "bardziej chemicznych",
+          "dat": "bardziej chemicznym",
+          "acc": "bardziej chemicznych",
+          "ins": "bardziej chemicznymi",
+          "loc": "bardziej chemicznych"
+        },
+        "nonvirile": {
+          "nom": "bardziej chemiczne",
+          "gen": "bardziej chemicznych",
+          "dat": "bardziej chemicznym",
+          "acc": "bardziej chemiczne",
+          "ins": "bardziej chemicznymi",
+          "loc": "bardziej chemicznych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej chemiczny",
+          "gen": "najbardziej chemicznego",
+          "dat": "najbardziej chemicznemu",
+          "acc": "najbardziej chemicznego",
+          "ins": "najbardziej chemicznym",
+          "loc": "najbardziej chemicznym"
+        },
+        "m3": {
+          "nom": "najbardziej chemiczny",
+          "gen": "najbardziej chemicznego",
+          "dat": "najbardziej chemicznemu",
+          "acc": "najbardziej chemiczny",
+          "ins": "najbardziej chemicznym",
+          "loc": "najbardziej chemicznym"
+        },
+        "f": {
+          "nom": "najbardziej chemiczna",
+          "gen": "najbardziej chemicznej",
+          "dat": "najbardziej chemicznej",
+          "acc": "najbardziej chemiczną",
+          "ins": "najbardziej chemiczną",
+          "loc": "najbardziej chemicznej"
+        },
+        "n": {
+          "nom": "najbardziej chemiczne",
+          "gen": "najbardziej chemicznego",
+          "dat": "najbardziej chemicznemu",
+          "acc": "najbardziej chemiczne",
+          "ins": "najbardziej chemicznym",
+          "loc": "najbardziej chemicznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej chemiczni",
+          "gen": "najbardziej chemicznych",
+          "dat": "najbardziej chemicznym",
+          "acc": "najbardziej chemicznych",
+          "ins": "najbardziej chemicznymi",
+          "loc": "najbardziej chemicznych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej chemiczne",
+          "gen": "najbardziej chemicznych",
+          "dat": "najbardziej chemicznym",
+          "acc": "najbardziej chemiczne",
+          "ins": "najbardziej chemicznymi",
+          "loc": "najbardziej chemicznych"
+        }
+      }
+    }
+  }
+}

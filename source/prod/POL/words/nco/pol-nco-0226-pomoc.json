@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pomoc",
+      "gen": "pomocy",
+      "dat": "pomocy",
+      "acc": "pomoc",
+      "ins": "pomocą",
+      "loc": "pomocy",
+      "voc": "pomocy"
+    },
+    "plural": {
+      "nom": "pomoce",
+      "gen": "pomocy",
+      "dat": "pomocom",
+      "acc": "pomoce",
+      "ins": "pomocami",
+      "loc": "pomocach",
+      "voc": "pomoce"
+    }
+  }
+}

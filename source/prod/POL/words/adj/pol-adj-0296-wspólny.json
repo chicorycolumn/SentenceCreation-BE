@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "wspólnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "wspólny",
+          "gen": "wspólnego",
+          "dat": "wspólnemu",
+          "acc": "wspólnego",
+          "ins": "wspólnym",
+          "loc": "wspólnym"
+        },
+        "m3": {
+          "nom": "wspólny",
+          "gen": "wspólnego",
+          "dat": "wspólnemu",
+          "acc": "wspólny",
+          "ins": "wspólnym",
+          "loc": "wspólnym"
+        },
+        "f": {
+          "nom": "wspólna",
+          "gen": "wspólnej",
+          "dat": "wspólnej",
+          "acc": "wspólną",
+          "ins": "wspólną",
+          "loc": "wspólnej"
+        },
+        "n": {
+          "nom": "wspólne",
+          "gen": "wspólnego",
+          "dat": "wspólnemu",
+          "acc": "wspólne",
+          "ins": "wspólnym",
+          "loc": "wspólnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wspólni",
+          "gen": "wspólnych",
+          "dat": "wspólnym",
+          "acc": "wspólnych",
+          "ins": "wspólnymi",
+          "loc": "wspólnych"
+        },
+        "nonvirile": {
+          "nom": "wspólne",
+          "gen": "wspólnych",
+          "dat": "wspólnym",
+          "acc": "wspólne",
+          "ins": "wspólnymi",
+          "loc": "wspólnych"
+        }
+      }
+    }
+  }
+}

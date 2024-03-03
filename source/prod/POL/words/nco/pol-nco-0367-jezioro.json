@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "jezioro",
+      "gen": "jeziora",
+      "dat": "jezioru",
+      "acc": "jezioro",
+      "ins": "jeziorem",
+      "loc": "jeziorze",
+      "voc": "jezioro"
+    },
+    "plural": {
+      "nom": "jeziora",
+      "gen": "jezior",
+      "dat": "jeziorom",
+      "acc": "jeziora",
+      "ins": "jeziorami",
+      "loc": "jeziorach",
+      "voc": "jeziora"
+    }
+  }
+}

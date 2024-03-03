@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "ostatnio",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ostatni",
+          "gen": "ostatniego",
+          "dat": "ostatniemu",
+          "acc": "ostatniego",
+          "ins": "ostatnim",
+          "loc": "ostatnim"
+        },
+        "m3": {
+          "nom": "ostatni",
+          "gen": "ostatniego",
+          "dat": "ostatniemu",
+          "acc": "ostatni",
+          "ins": "ostatnim",
+          "loc": "ostatnim"
+        },
+        "f": {
+          "nom": "ostatna",
+          "gen": "ostatniej",
+          "dat": "ostatniej",
+          "acc": "ostatną",
+          "ins": "ostatną",
+          "loc": "ostatniej"
+        },
+        "n": {
+          "nom": "ostatnie",
+          "gen": "ostatniego",
+          "dat": "ostatniemu",
+          "acc": "ostatnie",
+          "ins": "ostatnim",
+          "loc": "ostatnim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ostatni",
+          "gen": "ostatnich",
+          "dat": "ostatnim",
+          "acc": "ostatnich",
+          "ins": "ostatnimi",
+          "loc": "ostatnich"
+        },
+        "nonvirile": {
+          "nom": "ostatnie",
+          "gen": "ostatnich",
+          "dat": "ostatnim",
+          "acc": "ostatnie",
+          "ins": "ostatnimi",
+          "loc": "ostatnich"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "obszar",
+      "gen": "obszaru",
+      "dat": "obszarowi",
+      "acc": "obszar",
+      "ins": "obszarem",
+      "loc": "obszarze",
+      "voc": "obszarze"
+    },
+    "plural": {
+      "nom": "obszary",
+      "gen": "obszarów",
+      "dat": "obszarom",
+      "acc": "obszary",
+      "ins": "obszarami",
+      "loc": "obszarach",
+      "voc": "obszary"
+    }
+  }
+}

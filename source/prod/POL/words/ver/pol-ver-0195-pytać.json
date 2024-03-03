@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pytać",
+    "verbalNoun": "pytanie",
+    "activeAdjectival": "pytający",
+    "passiveAdjectival": "pytany",
+    "contemporaryAdverbial": "pytając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pytaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pytano"
+          },
+          "plural": {
+            "allPluralGenders": "pytano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pytałem",
+            "f": "pytałam"
+          },
+          "plural": {
+            "virile": "pytaliśmy",
+            "nonvirile": "pytałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pytałeś",
+            "f": "pytałaś"
+          },
+          "plural": {
+            "virile": "pytaliście",
+            "nonvirile": "pytałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pytał",
+            "f": "pytała",
+            "n": "pytało"
+          },
+          "plural": {
+            "virile": "pytali",
+            "nonvirile": "pytały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pyta się"
+          },
+          "plural": {
+            "allPluralGenders": "pyta się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pytam"
+          },
+          "plural": {
+            "allPluralGenders": "pytamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pytasz"
+          },
+          "plural": {
+            "allPluralGenders": "pytacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pyta"
+          },
+          "plural": {
+            "allPluralGenders": "pytają"
+          }
+        }
+      }
+    }
+  }
+}

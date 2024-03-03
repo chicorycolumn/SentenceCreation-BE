@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "homar",
+      "gen": "homara",
+      "dat": "homarowi",
+      "acc": "homara",
+      "ins": "homarem",
+      "loc": "homarze",
+      "voc": "homarze"
+    },
+    "plural": {
+      "nom": "homary",
+      "gen": "homarów",
+      "dat": "homarom",
+      "acc": "homary",
+      "ins": "homarami",
+      "loc": "homarach",
+      "voc": "homary"
+    }
+  }
+}

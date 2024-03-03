@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odnajdywać",
+    "verbalNoun": "odnajdywanie",
+    "activeAdjectival": "odnajdujący",
+    "passiveAdjectival": "odnajdywany",
+    "contemporaryAdverbial": "odnajdując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odnajduj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odnajdywano"
+          },
+          "plural": {
+            "allPluralGenders": "odnajdywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odnajdywałem",
+            "f": "odnajdywałam"
+          },
+          "plural": {
+            "virile": "odnajdywaliśmy",
+            "nonvirile": "odnajdywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odnajdywałeś",
+            "f": "odnajdywałaś"
+          },
+          "plural": {
+            "virile": "odnajdywaliście",
+            "nonvirile": "odnajdywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odnajdywał",
+            "f": "odnajdywała",
+            "n": "odnajdywało"
+          },
+          "plural": {
+            "virile": "odnajdywali",
+            "nonvirile": "odnajdywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odnajduje się"
+          },
+          "plural": {
+            "allPluralGenders": "odnajduje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odnajduję"
+          },
+          "plural": {
+            "allPluralGenders": "odnajdujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odnajdujesz"
+          },
+          "plural": {
+            "allPluralGenders": "odnajdujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odnajduje"
+          },
+          "plural": {
+            "allPluralGenders": "odnajdują"
+          }
+        }
+      }
+    }
+  }
+}

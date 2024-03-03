@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "brzuch",
+      "gen": "brzucha",
+      "dat": "brzuchowi",
+      "acc": "brzuch",
+      "ins": "brzuchem",
+      "loc": "brzuchu",
+      "voc": "brzuchu"
+    },
+    "plural": {
+      "nom": "brzuchy",
+      "gen": "brzuchów",
+      "dat": "brzuchom",
+      "acc": "brzuchy",
+      "ins": "brzuchami",
+      "loc": "brzuchach",
+      "voc": "brzuchy"
+    }
+  }
+}

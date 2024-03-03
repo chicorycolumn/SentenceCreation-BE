@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "exit",
+      "gen": "exit's"
+    },
+    "plural": {
+      "nom": "exits",
+      "gen": "exits'"
+    }
+  }
+}

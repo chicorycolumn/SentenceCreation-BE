@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dezodorant",
+      "gen": "dezodorantu",
+      "dat": "dezodorantowi",
+      "acc": "dezodorant",
+      "ins": "dezodorantem",
+      "loc": "dezodorancie",
+      "voc": "dezodorancie"
+    }
+  }
+}

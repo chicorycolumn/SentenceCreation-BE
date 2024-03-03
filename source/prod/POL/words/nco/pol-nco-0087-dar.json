@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dar",
+      "gen": "daru",
+      "dat": "darowi",
+      "acc": "dar",
+      "ins": "darem",
+      "loc": "darze",
+      "voc": "darze"
+    },
+    "plural": {
+      "nom": "dary",
+      "gen": "darów",
+      "dat": "darom",
+      "acc": "dary",
+      "ins": "darami",
+      "loc": "darach",
+      "voc": "dary"
+    }
+  }
+}

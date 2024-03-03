@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "advertisement",
+      "gen": "advertisement's"
+    },
+    "plural": {
+      "nom": "advertisements",
+      "gen": "advertisements'"
+    }
+  }
+}

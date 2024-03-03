@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "godzina",
+      "gen": "godziny",
+      "dat": "godzinie",
+      "acc": "godzinę",
+      "ins": "godziną",
+      "loc": "godzinie",
+      "voc": "godzino"
+    },
+    "plural": {
+      "nom": "godziny",
+      "gen": "godzin",
+      "dat": "godzinom",
+      "acc": "godziny",
+      "ins": "godzinami",
+      "loc": "godzinach",
+      "voc": "godziny"
+    }
+  }
+}

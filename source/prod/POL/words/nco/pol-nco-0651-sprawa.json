@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sprawa",
+      "gen": "sprawy",
+      "dat": "sprawie",
+      "acc": "sprawę",
+      "ins": "sprawą",
+      "loc": "sprawie",
+      "voc": "sprawo"
+    },
+    "plural": {
+      "nom": "sprawy",
+      "gen": "spraw",
+      "dat": "sprawom",
+      "acc": "sprawy",
+      "ins": "sprawami",
+      "loc": "sprawach",
+      "voc": "sprawy"
+    }
+  }
+}

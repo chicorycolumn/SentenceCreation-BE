@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "krzywo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "krzywy",
+          "gen": "krzywego",
+          "dat": "krzywemu",
+          "acc": "krzywego",
+          "ins": "krzywym",
+          "loc": "krzywym"
+        },
+        "m3": {
+          "nom": "krzywy",
+          "gen": "krzywego",
+          "dat": "krzywemu",
+          "acc": "krzywy",
+          "ins": "krzywym",
+          "loc": "krzywym"
+        },
+        "f": {
+          "nom": "krzywa",
+          "gen": "krzywej",
+          "dat": "krzywej",
+          "acc": "krzywą",
+          "ins": "krzywą",
+          "loc": "krzywej"
+        },
+        "n": {
+          "nom": "krzywe",
+          "gen": "krzywego",
+          "dat": "krzywemu",
+          "acc": "krzywe",
+          "ins": "krzywym",
+          "loc": "krzywym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "krzywi",
+          "gen": "krzywych",
+          "dat": "krzywym",
+          "acc": "krzywych",
+          "ins": "krzywymi",
+          "loc": "krzywych"
+        },
+        "nonvirile": {
+          "nom": "krzywe",
+          "gen": "krzywych",
+          "dat": "krzywym",
+          "acc": "krzywe",
+          "ins": "krzywymi",
+          "loc": "krzywych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej krzywy",
+          "gen": "bardziej krzywego",
+          "dat": "bardziej krzywemu",
+          "acc": "bardziej krzywego",
+          "ins": "bardziej krzywym",
+          "loc": "bardziej krzywym"
+        },
+        "m3": {
+          "nom": "bardziej krzywy",
+          "gen": "bardziej krzywego",
+          "dat": "bardziej krzywemu",
+          "acc": "bardziej krzywy",
+          "ins": "bardziej krzywym",
+          "loc": "bardziej krzywym"
+        },
+        "f": {
+          "nom": "bardziej krzywa",
+          "gen": "bardziej krzywej",
+          "dat": "bardziej krzywej",
+          "acc": "bardziej krzywą",
+          "ins": "bardziej krzywą",
+          "loc": "bardziej krzywej"
+        },
+        "n": {
+          "nom": "bardziej krzywe",
+          "gen": "bardziej krzywego",
+          "dat": "bardziej krzywemu",
+          "acc": "bardziej krzywe",
+          "ins": "bardziej krzywym",
+          "loc": "bardziej krzywym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej krzywi",
+          "gen": "bardziej krzywych",
+          "dat": "bardziej krzywym",
+          "acc": "bardziej krzywych",
+          "ins": "bardziej krzywymi",
+          "loc": "bardziej krzywych"
+        },
+        "nonvirile": {
+          "nom": "bardziej krzywe",
+          "gen": "bardziej krzywych",
+          "dat": "bardziej krzywym",
+          "acc": "bardziej krzywe",
+          "ins": "bardziej krzywymi",
+          "loc": "bardziej krzywych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej krzywy",
+          "gen": "najbardziej krzywego",
+          "dat": "najbardziej krzywemu",
+          "acc": "najbardziej krzywego",
+          "ins": "najbardziej krzywym",
+          "loc": "najbardziej krzywym"
+        },
+        "m3": {
+          "nom": "najbardziej krzywy",
+          "gen": "najbardziej krzywego",
+          "dat": "najbardziej krzywemu",
+          "acc": "najbardziej krzywy",
+          "ins": "najbardziej krzywym",
+          "loc": "najbardziej krzywym"
+        },
+        "f": {
+          "nom": "najbardziej krzywa",
+          "gen": "najbardziej krzywej",
+          "dat": "najbardziej krzywej",
+          "acc": "najbardziej krzywą",
+          "ins": "najbardziej krzywą",
+          "loc": "najbardziej krzywej"
+        },
+        "n": {
+          "nom": "najbardziej krzywe",
+          "gen": "najbardziej krzywego",
+          "dat": "najbardziej krzywemu",
+          "acc": "najbardziej krzywe",
+          "ins": "najbardziej krzywym",
+          "loc": "najbardziej krzywym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej krzywi",
+          "gen": "najbardziej krzywych",
+          "dat": "najbardziej krzywym",
+          "acc": "najbardziej krzywych",
+          "ins": "najbardziej krzywymi",
+          "loc": "najbardziej krzywych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej krzywe",
+          "gen": "najbardziej krzywych",
+          "dat": "najbardziej krzywym",
+          "acc": "najbardziej krzywe",
+          "ins": "najbardziej krzywymi",
+          "loc": "najbardziej krzywych"
+        }
+      }
+    }
+  }
+}

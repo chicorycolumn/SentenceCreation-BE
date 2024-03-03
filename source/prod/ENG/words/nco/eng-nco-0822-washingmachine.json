@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "washing machine",
+      "gen": "washing machine's"
+    },
+    "plural": {
+      "nom": "washing machines",
+      "gen": "washing machines'"
+    }
+  }
+}

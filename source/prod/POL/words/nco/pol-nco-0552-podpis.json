@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "podpis",
+      "gen": "podpisu",
+      "dat": "podpisowi",
+      "acc": "podpis",
+      "ins": "podpisem",
+      "loc": "podpisie",
+      "voc": "podpisie"
+    },
+    "plural": {
+      "nom": "podpisy",
+      "gen": "podpisów",
+      "dat": "podpisom",
+      "acc": "podpisy",
+      "ins": "podpisami",
+      "loc": "podpisach",
+      "voc": "podpisy"
+    }
+  }
+}

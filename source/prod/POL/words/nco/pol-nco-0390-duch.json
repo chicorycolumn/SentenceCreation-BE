@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "duch",
+      "gen": "ducha",
+      "dat": "duchowi",
+      "acc": "ducha",
+      "ins": "duchem",
+      "loc": "duchu",
+      "voc": "duchu"
+    },
+    "plural": {
+      "nom": "duchy",
+      "gen": "duchów",
+      "dat": "duchom",
+      "acc": "duchy",
+      "ins": "duchami",
+      "loc": "duchach",
+      "voc": "duchy"
+    }
+  }
+}

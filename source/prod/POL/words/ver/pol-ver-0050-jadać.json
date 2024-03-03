@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "jadać",
+    "verbalNoun": "jadanie",
+    "activeAdjectival": "jadający",
+    "passiveAdjectival": "jadany",
+    "contemporaryAdverbial": "jadając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "jadaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "jadano"
+          },
+          "plural": {
+            "allPluralGenders": "jadano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "jadałem",
+            "f": "jadałam"
+          },
+          "plural": {
+            "virile": "jadaliśmy",
+            "nonvirile": "jadałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "jadałeś",
+            "f": "jadałaś"
+          },
+          "plural": {
+            "virile": "jadaliście",
+            "nonvirile": "jadałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "jadał",
+            "f": "jadała",
+            "n": "jadało"
+          },
+          "plural": {
+            "virile": "jadali",
+            "nonvirile": "jadały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "jada się"
+          },
+          "plural": {
+            "allPluralGenders": "jada się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "jadam"
+          },
+          "plural": {
+            "allPluralGenders": "jadamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "jadasz"
+          },
+          "plural": {
+            "allPluralGenders": "jadacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "jada"
+          },
+          "plural": {
+            "allPluralGenders": "jadają"
+          }
+        }
+      }
+    }
+  }
+}

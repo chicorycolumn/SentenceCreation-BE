@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przejrzeć",
+    "verbalNoun": "przejrzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przejrzany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przejrzawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przejrzy się"
+          },
+          "plural": {
+            "allPluralGenders": "przejrzy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przejrzę"
+          },
+          "plural": {
+            "allPluralGenders": "przejrzymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przejrzysz"
+          },
+          "plural": {
+            "allPluralGenders": "przejrzycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przejrzy"
+          },
+          "plural": {
+            "allPluralGenders": "przejrzą"
+          }
+        }
+      },
+      "imperative": "przejrzyj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przejrzano"
+          },
+          "plural": {
+            "allPluralGenders": "przejrzano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przejrzałem",
+            "f": "przejrzałam"
+          },
+          "plural": {
+            "virile": "przejrzeliśmy",
+            "nonvirile": "przejrzałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przejrzałeś",
+            "f": "przejrzałaś"
+          },
+          "plural": {
+            "virile": "przejrzeliście",
+            "nonvirile": "przejrzałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przejrzał",
+            "f": "przejrzała",
+            "n": "przejrzało"
+          },
+          "plural": {
+            "virile": "przejrzeli",
+            "nonvirile": "przejrzały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

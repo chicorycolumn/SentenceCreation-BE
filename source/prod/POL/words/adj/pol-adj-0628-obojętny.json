@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "obojętnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "obojętny",
+          "gen": "obojętnego",
+          "dat": "obojętnemu",
+          "acc": "obojętnego",
+          "ins": "obojętnym",
+          "loc": "obojętnym"
+        },
+        "m3": {
+          "nom": "obojętny",
+          "gen": "obojętnego",
+          "dat": "obojętnemu",
+          "acc": "obojętny",
+          "ins": "obojętnym",
+          "loc": "obojętnym"
+        },
+        "f": {
+          "nom": "obojętna",
+          "gen": "obojętnej",
+          "dat": "obojętnej",
+          "acc": "obojętną",
+          "ins": "obojętną",
+          "loc": "obojętnej"
+        },
+        "n": {
+          "nom": "obojętne",
+          "gen": "obojętnego",
+          "dat": "obojętnemu",
+          "acc": "obojętne",
+          "ins": "obojętnym",
+          "loc": "obojętnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "obojętni",
+          "gen": "obojętnych",
+          "dat": "obojętnym",
+          "acc": "obojętnych",
+          "ins": "obojętnymi",
+          "loc": "obojętnych"
+        },
+        "nonvirile": {
+          "nom": "obojętne",
+          "gen": "obojętnych",
+          "dat": "obojętnym",
+          "acc": "obojętne",
+          "ins": "obojętnymi",
+          "loc": "obojętnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "obojętniejszy",
+          "gen": "obojętniejszego",
+          "dat": "obojętniejszemu",
+          "acc": "obojętniejszego",
+          "ins": "obojętniejszym",
+          "loc": "obojętniejszym"
+        },
+        "m3": {
+          "nom": "obojętniejszy",
+          "gen": "obojętniejszego",
+          "dat": "obojętniejszemu",
+          "acc": "obojętniejszy",
+          "ins": "obojętniejszym",
+          "loc": "obojętniejszym"
+        },
+        "f": {
+          "nom": "obojętniejsza",
+          "gen": "obojętniejszej",
+          "dat": "obojętniejszej",
+          "acc": "obojętniejszą",
+          "ins": "obojętniejszą",
+          "loc": "obojętniejszej"
+        },
+        "n": {
+          "nom": "obojętniejsze",
+          "gen": "obojętniejszego",
+          "dat": "obojętniejszemu",
+          "acc": "obojętniejsze",
+          "ins": "obojętniejszym",
+          "loc": "obojętniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "obojętniejsi",
+          "gen": "obojętniejszych",
+          "dat": "obojętniejszym",
+          "acc": "obojętniejszych",
+          "ins": "obojętniejszymi",
+          "loc": "obojętniejszych"
+        },
+        "nonvirile": {
+          "nom": "obojętniejsze",
+          "gen": "obojętniejszych",
+          "dat": "obojętniejszym",
+          "acc": "obojętniejsze",
+          "ins": "obojętniejszymi",
+          "loc": "obojętniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najobojętniejszy",
+          "gen": "najobojętniejszego",
+          "dat": "najobojętniejszemu",
+          "acc": "najobojętniejszego",
+          "ins": "najobojętniejszym",
+          "loc": "najobojętniejszym"
+        },
+        "m3": {
+          "nom": "najobojętniejszy",
+          "gen": "najobojętniejszego",
+          "dat": "najobojętniejszemu",
+          "acc": "najobojętniejszy",
+          "ins": "najobojętniejszym",
+          "loc": "najobojętniejszym"
+        },
+        "f": {
+          "nom": "najobojętniejsza",
+          "gen": "najobojętniejszej",
+          "dat": "najobojętniejszej",
+          "acc": "najobojętniejszą",
+          "ins": "najobojętniejszą",
+          "loc": "najobojętniejszej"
+        },
+        "n": {
+          "nom": "najobojętniejsze",
+          "gen": "najobojętniejszego",
+          "dat": "najobojętniejszemu",
+          "acc": "najobojętniejsze",
+          "ins": "najobojętniejszym",
+          "loc": "najobojętniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najobojętniejsi",
+          "gen": "najobojętniejszych",
+          "dat": "najobojętniejszym",
+          "acc": "najobojętniejszych",
+          "ins": "najobojętniejszymi",
+          "loc": "najobojętniejszych"
+        },
+        "nonvirile": {
+          "nom": "najobojętniejsze",
+          "gen": "najobojętniejszych",
+          "dat": "najobojętniejszym",
+          "acc": "najobojętniejsze",
+          "ins": "najobojętniejszymi",
+          "loc": "najobojętniejszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "experience",
+      "gen": "experience's"
+    },
+    "plural": {
+      "nom": "experiences",
+      "gen": "experiences'"
+    }
+  }
+}

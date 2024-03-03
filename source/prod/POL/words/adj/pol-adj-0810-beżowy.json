@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "beżowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "beżowy",
+          "gen": "beżowego",
+          "dat": "beżowemu",
+          "acc": "beżowego",
+          "ins": "beżowym",
+          "loc": "beżowym"
+        },
+        "m3": {
+          "nom": "beżowy",
+          "gen": "beżowego",
+          "dat": "beżowemu",
+          "acc": "beżowy",
+          "ins": "beżowym",
+          "loc": "beżowym"
+        },
+        "f": {
+          "nom": "beżowa",
+          "gen": "beżowej",
+          "dat": "beżowej",
+          "acc": "beżową",
+          "ins": "beżową",
+          "loc": "beżowej"
+        },
+        "n": {
+          "nom": "beżowe",
+          "gen": "beżowego",
+          "dat": "beżowemu",
+          "acc": "beżowe",
+          "ins": "beżowym",
+          "loc": "beżowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "beżowi",
+          "gen": "beżowych",
+          "dat": "beżowym",
+          "acc": "beżowych",
+          "ins": "beżowymi",
+          "loc": "beżowych"
+        },
+        "nonvirile": {
+          "nom": "beżowe",
+          "gen": "beżowych",
+          "dat": "beżowym",
+          "acc": "beżowe",
+          "ins": "beżowymi",
+          "loc": "beżowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej beżowy",
+          "gen": "bardziej beżowego",
+          "dat": "bardziej beżowemu",
+          "acc": "bardziej beżowego",
+          "ins": "bardziej beżowym",
+          "loc": "bardziej beżowym"
+        },
+        "m3": {
+          "nom": "bardziej beżowy",
+          "gen": "bardziej beżowego",
+          "dat": "bardziej beżowemu",
+          "acc": "bardziej beżowy",
+          "ins": "bardziej beżowym",
+          "loc": "bardziej beżowym"
+        },
+        "f": {
+          "nom": "bardziej beżowa",
+          "gen": "bardziej beżowej",
+          "dat": "bardziej beżowej",
+          "acc": "bardziej beżową",
+          "ins": "bardziej beżową",
+          "loc": "bardziej beżowej"
+        },
+        "n": {
+          "nom": "bardziej beżowe",
+          "gen": "bardziej beżowego",
+          "dat": "bardziej beżowemu",
+          "acc": "bardziej beżowe",
+          "ins": "bardziej beżowym",
+          "loc": "bardziej beżowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej beżowi",
+          "gen": "bardziej beżowych",
+          "dat": "bardziej beżowym",
+          "acc": "bardziej beżowych",
+          "ins": "bardziej beżowymi",
+          "loc": "bardziej beżowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej beżowe",
+          "gen": "bardziej beżowych",
+          "dat": "bardziej beżowym",
+          "acc": "bardziej beżowe",
+          "ins": "bardziej beżowymi",
+          "loc": "bardziej beżowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej beżowy",
+          "gen": "najbardziej beżowego",
+          "dat": "najbardziej beżowemu",
+          "acc": "najbardziej beżowego",
+          "ins": "najbardziej beżowym",
+          "loc": "najbardziej beżowym"
+        },
+        "m3": {
+          "nom": "najbardziej beżowy",
+          "gen": "najbardziej beżowego",
+          "dat": "najbardziej beżowemu",
+          "acc": "najbardziej beżowy",
+          "ins": "najbardziej beżowym",
+          "loc": "najbardziej beżowym"
+        },
+        "f": {
+          "nom": "najbardziej beżowa",
+          "gen": "najbardziej beżowej",
+          "dat": "najbardziej beżowej",
+          "acc": "najbardziej beżową",
+          "ins": "najbardziej beżową",
+          "loc": "najbardziej beżowej"
+        },
+        "n": {
+          "nom": "najbardziej beżowe",
+          "gen": "najbardziej beżowego",
+          "dat": "najbardziej beżowemu",
+          "acc": "najbardziej beżowe",
+          "ins": "najbardziej beżowym",
+          "loc": "najbardziej beżowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej beżowi",
+          "gen": "najbardziej beżowych",
+          "dat": "najbardziej beżowym",
+          "acc": "najbardziej beżowych",
+          "ins": "najbardziej beżowymi",
+          "loc": "najbardziej beżowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej beżowe",
+          "gen": "najbardziej beżowych",
+          "dat": "najbardziej beżowym",
+          "acc": "najbardziej beżowe",
+          "ins": "najbardziej beżowymi",
+          "loc": "najbardziej beżowych"
+        }
+      }
+    }
+  }
+}

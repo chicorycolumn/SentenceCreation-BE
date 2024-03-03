@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "psi",
+          "gen": "psiego",
+          "dat": "psiemu",
+          "acc": "psiego",
+          "ins": "psim",
+          "loc": "psim"
+        },
+        "m3": {
+          "nom": "psi",
+          "gen": "psiego",
+          "dat": "psiemu",
+          "acc": "psi",
+          "ins": "psim",
+          "loc": "psim"
+        },
+        "f": {
+          "nom": "psa",
+          "gen": "psiej",
+          "dat": "psiej",
+          "acc": "psą",
+          "ins": "psą",
+          "loc": "psiej"
+        },
+        "n": {
+          "nom": "psie",
+          "gen": "psiego",
+          "dat": "psiemu",
+          "acc": "psie",
+          "ins": "psim",
+          "loc": "psim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "psi",
+          "gen": "psich",
+          "dat": "psim",
+          "acc": "psich",
+          "ins": "psimi",
+          "loc": "psich"
+        },
+        "nonvirile": {
+          "nom": "psie",
+          "gen": "psich",
+          "dat": "psim",
+          "acc": "psie",
+          "ins": "psimi",
+          "loc": "psich"
+        }
+      }
+    }
+  }
+}

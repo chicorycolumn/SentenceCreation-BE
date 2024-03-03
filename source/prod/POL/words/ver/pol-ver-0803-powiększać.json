@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "powiększać",
+    "verbalNoun": "powiększanie",
+    "activeAdjectival": "powiększający",
+    "passiveAdjectival": "powiększany",
+    "contemporaryAdverbial": "powiększając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "powiększaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powiększano"
+          },
+          "plural": {
+            "allPluralGenders": "powiększano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "powiększałem",
+            "f": "powiększałam"
+          },
+          "plural": {
+            "virile": "powiększaliśmy",
+            "nonvirile": "powiększałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "powiększałeś",
+            "f": "powiększałaś"
+          },
+          "plural": {
+            "virile": "powiększaliście",
+            "nonvirile": "powiększałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "powiększał",
+            "f": "powiększała",
+            "n": "powiększało"
+          },
+          "plural": {
+            "virile": "powiększali",
+            "nonvirile": "powiększały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powiększa się"
+          },
+          "plural": {
+            "allPluralGenders": "powiększa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "powiększam"
+          },
+          "plural": {
+            "allPluralGenders": "powiększamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "powiększasz"
+          },
+          "plural": {
+            "allPluralGenders": "powiększacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "powiększa"
+          },
+          "plural": {
+            "allPluralGenders": "powiększają"
+          }
+        }
+      }
+    }
+  }
+}

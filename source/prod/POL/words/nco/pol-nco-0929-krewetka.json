@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "krewetka",
+      "gen": "krewetki",
+      "dat": "krewetce",
+      "acc": "krewetkę",
+      "ins": "krewetką",
+      "loc": "krewetce",
+      "voc": "krewetko"
+    },
+    "plural": {
+      "nom": "krewetki",
+      "gen": "krewetek",
+      "dat": "krewetkom",
+      "acc": "krewetki",
+      "ins": "krewetkami",
+      "loc": "krewetkach",
+      "voc": "krewetki"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odpowiadać",
+    "verbalNoun": "odpowiadanie",
+    "activeAdjectival": "odpowiadający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "odpowiadając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odpowiadaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odpowiadano"
+          },
+          "plural": {
+            "allPluralGenders": "odpowiadano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odpowiadałem",
+            "f": "odpowiadałam"
+          },
+          "plural": {
+            "virile": "odpowiadaliśmy",
+            "nonvirile": "odpowiadałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odpowiadałeś",
+            "f": "odpowiadałaś"
+          },
+          "plural": {
+            "virile": "odpowiadaliście",
+            "nonvirile": "odpowiadałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odpowiadał",
+            "f": "odpowiadała",
+            "n": "odpowiadało"
+          },
+          "plural": {
+            "virile": "odpowiadali",
+            "nonvirile": "odpowiadały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odpowiada się"
+          },
+          "plural": {
+            "allPluralGenders": "odpowiada się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odpowiadam"
+          },
+          "plural": {
+            "allPluralGenders": "odpowiadamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odpowiadasz"
+          },
+          "plural": {
+            "allPluralGenders": "odpowiadacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odpowiada"
+          },
+          "plural": {
+            "allPluralGenders": "odpowiadają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "dumnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dumny",
+          "gen": "dumnego",
+          "dat": "dumnemu",
+          "acc": "dumnego",
+          "ins": "dumnym",
+          "loc": "dumnym"
+        },
+        "m3": {
+          "nom": "dumny",
+          "gen": "dumnego",
+          "dat": "dumnemu",
+          "acc": "dumny",
+          "ins": "dumnym",
+          "loc": "dumnym"
+        },
+        "f": {
+          "nom": "dumna",
+          "gen": "dumnej",
+          "dat": "dumnej",
+          "acc": "dumną",
+          "ins": "dumną",
+          "loc": "dumnej"
+        },
+        "n": {
+          "nom": "dumne",
+          "gen": "dumnego",
+          "dat": "dumnemu",
+          "acc": "dumne",
+          "ins": "dumnym",
+          "loc": "dumnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dumni",
+          "gen": "dumnych",
+          "dat": "dumnym",
+          "acc": "dumnych",
+          "ins": "dumnymi",
+          "loc": "dumnych"
+        },
+        "nonvirile": {
+          "nom": "dumne",
+          "gen": "dumnych",
+          "dat": "dumnym",
+          "acc": "dumne",
+          "ins": "dumnymi",
+          "loc": "dumnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "dumniejszy",
+          "gen": "dumniejszego",
+          "dat": "dumniejszemu",
+          "acc": "dumniejszego",
+          "ins": "dumniejszym",
+          "loc": "dumniejszym"
+        },
+        "m3": {
+          "nom": "dumniejszy",
+          "gen": "dumniejszego",
+          "dat": "dumniejszemu",
+          "acc": "dumniejszy",
+          "ins": "dumniejszym",
+          "loc": "dumniejszym"
+        },
+        "f": {
+          "nom": "dumniejsza",
+          "gen": "dumniejszej",
+          "dat": "dumniejszej",
+          "acc": "dumniejszą",
+          "ins": "dumniejszą",
+          "loc": "dumniejszej"
+        },
+        "n": {
+          "nom": "dumniejsze",
+          "gen": "dumniejszego",
+          "dat": "dumniejszemu",
+          "acc": "dumniejsze",
+          "ins": "dumniejszym",
+          "loc": "dumniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dumniejsi",
+          "gen": "dumniejszych",
+          "dat": "dumniejszym",
+          "acc": "dumniejszych",
+          "ins": "dumniejszymi",
+          "loc": "dumniejszych"
+        },
+        "nonvirile": {
+          "nom": "dumniejsze",
+          "gen": "dumniejszych",
+          "dat": "dumniejszym",
+          "acc": "dumniejsze",
+          "ins": "dumniejszymi",
+          "loc": "dumniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najdumniejszy",
+          "gen": "najdumniejszego",
+          "dat": "najdumniejszemu",
+          "acc": "najdumniejszego",
+          "ins": "najdumniejszym",
+          "loc": "najdumniejszym"
+        },
+        "m3": {
+          "nom": "najdumniejszy",
+          "gen": "najdumniejszego",
+          "dat": "najdumniejszemu",
+          "acc": "najdumniejszy",
+          "ins": "najdumniejszym",
+          "loc": "najdumniejszym"
+        },
+        "f": {
+          "nom": "najdumniejsza",
+          "gen": "najdumniejszej",
+          "dat": "najdumniejszej",
+          "acc": "najdumniejszą",
+          "ins": "najdumniejszą",
+          "loc": "najdumniejszej"
+        },
+        "n": {
+          "nom": "najdumniejsze",
+          "gen": "najdumniejszego",
+          "dat": "najdumniejszemu",
+          "acc": "najdumniejsze",
+          "ins": "najdumniejszym",
+          "loc": "najdumniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najdumniejsi",
+          "gen": "najdumniejszych",
+          "dat": "najdumniejszym",
+          "acc": "najdumniejszych",
+          "ins": "najdumniejszymi",
+          "loc": "najdumniejszych"
+        },
+        "nonvirile": {
+          "nom": "najdumniejsze",
+          "gen": "najdumniejszych",
+          "dat": "najdumniejszym",
+          "acc": "najdumniejsze",
+          "ins": "najdumniejszymi",
+          "loc": "najdumniejszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "życzliwie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "życzliwy",
+          "gen": "życzliwego",
+          "dat": "życzliwemu",
+          "acc": "życzliwego",
+          "ins": "życzliwym",
+          "loc": "życzliwym"
+        },
+        "m3": {
+          "nom": "życzliwy",
+          "gen": "życzliwego",
+          "dat": "życzliwemu",
+          "acc": "życzliwy",
+          "ins": "życzliwym",
+          "loc": "życzliwym"
+        },
+        "f": {
+          "nom": "życzliwa",
+          "gen": "życzliwej",
+          "dat": "życzliwej",
+          "acc": "życzliwą",
+          "ins": "życzliwą",
+          "loc": "życzliwej"
+        },
+        "n": {
+          "nom": "życzliwe",
+          "gen": "życzliwego",
+          "dat": "życzliwemu",
+          "acc": "życzliwe",
+          "ins": "życzliwym",
+          "loc": "życzliwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "życzliwi",
+          "gen": "życzliwych",
+          "dat": "życzliwym",
+          "acc": "życzliwych",
+          "ins": "życzliwymi",
+          "loc": "życzliwych"
+        },
+        "nonvirile": {
+          "nom": "życzliwe",
+          "gen": "życzliwych",
+          "dat": "życzliwym",
+          "acc": "życzliwe",
+          "ins": "życzliwymi",
+          "loc": "życzliwych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "życzliwszy",
+          "gen": "życzliwszego",
+          "dat": "życzliwszemu",
+          "acc": "życzliwszego",
+          "ins": "życzliwszym",
+          "loc": "życzliwszym"
+        },
+        "m3": {
+          "nom": "życzliwszy",
+          "gen": "życzliwszego",
+          "dat": "życzliwszemu",
+          "acc": "życzliwszy",
+          "ins": "życzliwszym",
+          "loc": "życzliwszym"
+        },
+        "f": {
+          "nom": "życzliwsza",
+          "gen": "życzliwszej",
+          "dat": "życzliwszej",
+          "acc": "życzliwszą",
+          "ins": "życzliwszą",
+          "loc": "życzliwszej"
+        },
+        "n": {
+          "nom": "życzliwsze",
+          "gen": "życzliwszego",
+          "dat": "życzliwszemu",
+          "acc": "życzliwsze",
+          "ins": "życzliwszym",
+          "loc": "życzliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "życzliwsi",
+          "gen": "życzliwszych",
+          "dat": "życzliwszym",
+          "acc": "życzliwszych",
+          "ins": "życzliwszymi",
+          "loc": "życzliwszych"
+        },
+        "nonvirile": {
+          "nom": "życzliwsze",
+          "gen": "życzliwszych",
+          "dat": "życzliwszym",
+          "acc": "życzliwsze",
+          "ins": "życzliwszymi",
+          "loc": "życzliwszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najżyczliwszy",
+          "gen": "najżyczliwszego",
+          "dat": "najżyczliwszemu",
+          "acc": "najżyczliwszego",
+          "ins": "najżyczliwszym",
+          "loc": "najżyczliwszym"
+        },
+        "m3": {
+          "nom": "najżyczliwszy",
+          "gen": "najżyczliwszego",
+          "dat": "najżyczliwszemu",
+          "acc": "najżyczliwszy",
+          "ins": "najżyczliwszym",
+          "loc": "najżyczliwszym"
+        },
+        "f": {
+          "nom": "najżyczliwsza",
+          "gen": "najżyczliwszej",
+          "dat": "najżyczliwszej",
+          "acc": "najżyczliwszą",
+          "ins": "najżyczliwszą",
+          "loc": "najżyczliwszej"
+        },
+        "n": {
+          "nom": "najżyczliwsze",
+          "gen": "najżyczliwszego",
+          "dat": "najżyczliwszemu",
+          "acc": "najżyczliwsze",
+          "ins": "najżyczliwszym",
+          "loc": "najżyczliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najżyczliwsi",
+          "gen": "najżyczliwszych",
+          "dat": "najżyczliwszym",
+          "acc": "najżyczliwszych",
+          "ins": "najżyczliwszymi",
+          "loc": "najżyczliwszych"
+        },
+        "nonvirile": {
+          "nom": "najżyczliwsze",
+          "gen": "najżyczliwszych",
+          "dat": "najżyczliwszym",
+          "acc": "najżyczliwsze",
+          "ins": "najżyczliwszymi",
+          "loc": "najżyczliwszych"
+        }
+      }
+    }
+  }
+}

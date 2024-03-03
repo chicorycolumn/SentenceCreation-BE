@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "difference",
+      "gen": "difference's"
+    },
+    "plural": {
+      "nom": "differences",
+      "gen": "differences'"
+    }
+  }
+}

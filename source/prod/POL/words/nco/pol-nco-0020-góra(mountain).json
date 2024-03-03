@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "góra",
+      "gen": "góry",
+      "dat": "górze",
+      "acc": "górę",
+      "ins": "górą",
+      "loc": "górze",
+      "voc": "góro"
+    },
+    "plural": {
+      "nom": "góry",
+      "gen": "gór",
+      "dat": "górom",
+      "acc": "góry",
+      "ins": "górami",
+      "loc": "górach",
+      "voc": "góry"
+    }
+  }
+}

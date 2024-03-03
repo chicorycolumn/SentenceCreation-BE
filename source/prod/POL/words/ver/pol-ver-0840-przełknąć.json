@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przełknąć",
+    "verbalNoun": "przełknięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przełknięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przełknąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przełknie się"
+          },
+          "plural": {
+            "allPluralGenders": "przełknie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przełknę"
+          },
+          "plural": {
+            "allPluralGenders": "przełkniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przełkniesz"
+          },
+          "plural": {
+            "allPluralGenders": "przełkniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przełknie"
+          },
+          "plural": {
+            "allPluralGenders": "przełkną"
+          }
+        }
+      },
+      "imperative": "przełknij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przełknięto"
+          },
+          "plural": {
+            "allPluralGenders": "przełknięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przełknąłem",
+            "f": "przełknęłam"
+          },
+          "plural": {
+            "virile": "przełknęliśmy",
+            "nonvirile": "przełknęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przełknąłeś",
+            "f": "przełknęłaś"
+          },
+          "plural": {
+            "virile": "przełknęliście",
+            "nonvirile": "przełknęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przełknął",
+            "f": "przełknęła",
+            "n": "przełknęło"
+          },
+          "plural": {
+            "virile": "przełknęli",
+            "nonvirile": "przełknęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

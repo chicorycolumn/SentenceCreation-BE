@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "łopata",
+      "gen": "łopaty",
+      "dat": "łopacie",
+      "acc": "łopatę",
+      "ins": "łopatą",
+      "loc": "łopacie",
+      "voc": "łopato"
+    },
+    "plural": {
+      "nom": "łopaty",
+      "gen": "łopat",
+      "dat": "łopatom",
+      "acc": "łopaty",
+      "ins": "łopatami",
+      "loc": "łopatach",
+      "voc": "łopaty"
+    }
+  }
+}

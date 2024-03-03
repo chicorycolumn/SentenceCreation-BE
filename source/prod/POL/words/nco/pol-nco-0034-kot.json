@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kot",
+      "gen": "kota",
+      "dat": "kotu",
+      "acc": "kota",
+      "ins": "kotem",
+      "loc": "kocie",
+      "voc": "kocie"
+    },
+    "plural": {
+      "nom": "koty",
+      "gen": "kotów",
+      "dat": "kotom",
+      "acc": "koty",
+      "ins": "kotami",
+      "loc": "kotach",
+      "voc": "koty"
+    }
+  }
+}

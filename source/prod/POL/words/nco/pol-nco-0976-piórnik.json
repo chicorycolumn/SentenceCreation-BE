@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "piórnik",
+      "gen": "piórnika",
+      "dat": "piórnikowi",
+      "acc": "piórnik",
+      "ins": "piórnikiem",
+      "loc": "piórniku",
+      "voc": "piórniku"
+    },
+    "plural": {
+      "nom": "piórniki",
+      "gen": "piórników",
+      "dat": "piórnikom",
+      "acc": "piórniki",
+      "ins": "piórnikami",
+      "loc": "piórnikach",
+      "voc": "piórniki"
+    }
+  }
+}

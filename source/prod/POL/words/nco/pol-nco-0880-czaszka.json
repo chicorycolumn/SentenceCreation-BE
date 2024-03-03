@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "czaszka",
+      "gen": "czaszki",
+      "dat": "czaszce",
+      "acc": "czaszkę",
+      "ins": "czaszką",
+      "loc": "czaszce",
+      "voc": "czaszko"
+    },
+    "plural": {
+      "nom": "czaszki",
+      "gen": "czaszek",
+      "dat": "czaszkom",
+      "acc": "czaszki",
+      "ins": "czaszkami",
+      "loc": "czaszkach",
+      "voc": "czaszki"
+    }
+  }
+}

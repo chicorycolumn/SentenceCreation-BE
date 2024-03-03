@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wysokość",
+      "gen": "wysokości",
+      "dat": "wysokości",
+      "acc": "wysokość",
+      "ins": "wysokością",
+      "loc": "wysokości",
+      "voc": "wysokości"
+    },
+    "plural": {
+      "nom": "wysokości",
+      "gen": "wysokości",
+      "dat": "wysokościom",
+      "acc": "wysokości",
+      "ins": "wysokościami",
+      "loc": "wysokościach",
+      "voc": "wysokości"
+    }
+  }
+}

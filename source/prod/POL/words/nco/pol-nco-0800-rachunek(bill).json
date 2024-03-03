@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rachunek",
+      "gen": "rachunku",
+      "dat": "rachunkowi",
+      "acc": "rachunek",
+      "ins": "rachunkiem",
+      "loc": "rachunku",
+      "voc": "rachunku"
+    },
+    "plural": {
+      "nom": "rachunki",
+      "gen": "rachunków",
+      "dat": "rachunkom",
+      "acc": "rachunki",
+      "ins": "rachunkami",
+      "loc": "rachunkach",
+      "voc": "rachunki"
+    }
+  }
+}

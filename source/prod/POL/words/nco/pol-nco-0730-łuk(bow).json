@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "łuk",
+      "gen": "łuku",
+      "dat": "łukowi",
+      "acc": "łuk",
+      "ins": "łukiem",
+      "loc": "łuku",
+      "voc": "łuku"
+    },
+    "plural": {
+      "nom": "łuki",
+      "gen": "łuków",
+      "dat": "łukom",
+      "acc": "łuki",
+      "ins": "łukami",
+      "loc": "łukach",
+      "voc": "łuki"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "podpisywać",
+    "verbalNoun": "podpisywanie",
+    "activeAdjectival": "podpisujący",
+    "passiveAdjectival": "podpisywany",
+    "contemporaryAdverbial": "podpisując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "podpisuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podpisywano"
+          },
+          "plural": {
+            "allPluralGenders": "podpisywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "podpisywałem",
+            "f": "podpisywałam"
+          },
+          "plural": {
+            "virile": "podpisywaliśmy",
+            "nonvirile": "podpisywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podpisywałeś",
+            "f": "podpisywałaś"
+          },
+          "plural": {
+            "virile": "podpisywaliście",
+            "nonvirile": "podpisywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podpisywał",
+            "f": "podpisywała",
+            "n": "podpisywało"
+          },
+          "plural": {
+            "virile": "podpisywali",
+            "nonvirile": "podpisywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podpisuje się"
+          },
+          "plural": {
+            "allPluralGenders": "podpisuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podpisuję"
+          },
+          "plural": {
+            "allPluralGenders": "podpisujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podpisujesz"
+          },
+          "plural": {
+            "allPluralGenders": "podpisujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podpisuje"
+          },
+          "plural": {
+            "allPluralGenders": "podpisują"
+          }
+        }
+      }
+    }
+  }
+}

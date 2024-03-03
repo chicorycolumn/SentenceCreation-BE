@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "swear word",
+      "gen": "swear word's"
+    },
+    "plural": {
+      "nom": "swear words",
+      "gen": "swear words'"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "waliza",
+      "gen": "walizy",
+      "dat": "walizie",
+      "acc": "walizę",
+      "ins": "walizą",
+      "loc": "walizie",
+      "voc": "walizo"
+    },
+    "plural": {
+      "nom": "walizy",
+      "gen": "waliz",
+      "dat": "walizom",
+      "acc": "walizy",
+      "ins": "walizami",
+      "loc": "walizach",
+      "voc": "walizy"
+    }
+  }
+}

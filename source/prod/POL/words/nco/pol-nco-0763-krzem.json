@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "krzem",
+      "gen": "krzemu",
+      "dat": "krzemowi",
+      "acc": "krzem",
+      "ins": "krzemem",
+      "loc": "krzemie",
+      "voc": "krzemie"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sen",
+      "gen": "snu",
+      "dat": "snowi",
+      "acc": "sen",
+      "ins": "snem",
+      "loc": "śnie",
+      "voc": "śnie"
+    },
+    "plural": {
+      "nom": "sny",
+      "gen": "snów",
+      "dat": "snom",
+      "acc": "sny",
+      "ins": "snami",
+      "loc": "snach",
+      "voc": "sny"
+    }
+  }
+}

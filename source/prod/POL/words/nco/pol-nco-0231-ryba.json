@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ryba",
+      "gen": "ryby",
+      "dat": "rybie",
+      "acc": "rybę",
+      "ins": "rybą",
+      "loc": "rybie",
+      "voc": "rybo"
+    },
+    "plural": {
+      "nom": "ryby",
+      "gen": "ryb",
+      "dat": "rybom",
+      "acc": "ryby",
+      "ins": "rybami",
+      "loc": "rybach",
+      "voc": "ryby"
+    }
+  }
+}

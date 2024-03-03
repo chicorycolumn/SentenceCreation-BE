@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "srebro",
+      "gen": "srebra",
+      "dat": "srebru",
+      "acc": "srebro",
+      "ins": "srebrem",
+      "loc": "srebrze",
+      "voc": "srebro"
+    }
+  }
+}

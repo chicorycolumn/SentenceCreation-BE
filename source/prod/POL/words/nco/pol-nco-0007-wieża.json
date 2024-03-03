@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wieża",
+      "gen": "wieży",
+      "dat": "wieży",
+      "acc": "wieżę",
+      "ins": "wieżą",
+      "loc": "wieży",
+      "voc": "wieżo"
+    },
+    "plural": {
+      "nom": "wieże",
+      "gen": "wież",
+      "dat": "wieżom",
+      "acc": "wieże",
+      "ins": "wieżami",
+      "loc": "wieżach",
+      "voc": "wieże"
+    }
+  }
+}

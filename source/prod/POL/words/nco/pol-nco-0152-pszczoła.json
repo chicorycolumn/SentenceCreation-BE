@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pszczoła",
+      "gen": "pszczoły",
+      "dat": "pszczole",
+      "acc": "pszczołę",
+      "ins": "pszczołą",
+      "loc": "pszczole",
+      "voc": "pszczoło"
+    },
+    "plural": {
+      "nom": "pszczoły",
+      "gen": "pszczół",
+      "dat": "pszczołom",
+      "acc": "pszczoły",
+      "ins": "pszczołami",
+      "loc": "pszczołach",
+      "voc": "pszczoły"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "inżynier",
+      "gen": "inżyniera",
+      "dat": "inżynierowi",
+      "acc": "inżyniera",
+      "ins": "inżynierem",
+      "loc": "inżynierze",
+      "voc": "inżynierze"
+    },
+    "plural": {
+      "nom": [
+        "inżynierowie",
+        "inżynierzy"
+      ],
+      "gen": "inżynierów",
+      "dat": "inżynierom",
+      "acc": "inżynierów",
+      "ins": "inżynierami",
+      "loc": "inżynierach",
+      "voc": [
+        "inżynierowie",
+        "inżynierzy"
+      ]
+    }
+  }
+}

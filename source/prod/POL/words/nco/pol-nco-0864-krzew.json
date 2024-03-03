@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "krzew",
+      "gen": "krzewu",
+      "dat": "krzewowi",
+      "acc": "krzew",
+      "ins": "krzewem",
+      "loc": "krzewie",
+      "voc": "krzewie"
+    },
+    "plural": {
+      "nom": "krzewy",
+      "gen": "krzewów",
+      "dat": "krzewom",
+      "acc": "krzewy",
+      "ins": "krzewami",
+      "loc": "krzewach",
+      "voc": "krzewy"
+    }
+  }
+}

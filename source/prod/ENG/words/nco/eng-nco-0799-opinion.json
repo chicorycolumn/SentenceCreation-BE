@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "opinion",
+      "gen": "opinion's"
+    },
+    "plural": {
+      "nom": "opinions",
+      "gen": "opinions'"
+    }
+  }
+}

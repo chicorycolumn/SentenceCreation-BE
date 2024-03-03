@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "opowiedzieć",
+    "verbalNoun": "opowiedzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "opowiedziany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "opowiedziawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opowie się"
+          },
+          "plural": {
+            "allPluralGenders": "opowie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "opowiem"
+          },
+          "plural": {
+            "allPluralGenders": "opowiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "opowiesz"
+          },
+          "plural": {
+            "allPluralGenders": "opowiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "opowie"
+          },
+          "plural": {
+            "allPluralGenders": "opowiedzą"
+          }
+        }
+      },
+      "imperative": "opowiedz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opowiedziano"
+          },
+          "plural": {
+            "allPluralGenders": "opowiedziano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "opowiedziałem",
+            "f": "opowiedziałam"
+          },
+          "plural": {
+            "virile": "opowiedzieliśmy",
+            "nonvirile": "opowiedziałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "opowiedziałeś",
+            "f": "opowiedziałaś"
+          },
+          "plural": {
+            "virile": "opowiedzieliście",
+            "nonvirile": "opowiedziałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "opowiedział",
+            "f": "opowiedziała",
+            "n": "opowiedziało"
+          },
+          "plural": {
+            "virile": "opowiedzieli",
+            "nonvirile": "opowiedziały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

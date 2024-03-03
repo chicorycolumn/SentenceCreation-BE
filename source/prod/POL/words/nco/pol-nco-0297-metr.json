@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "metr",
+      "gen": "metra",
+      "dat": "metrowi",
+      "acc": "metr",
+      "ins": "metrem",
+      "loc": "metrze",
+      "voc": "metrze"
+    },
+    "plural": {
+      "nom": "metry",
+      "gen": "metrów",
+      "dat": "metrom",
+      "acc": "metry",
+      "ins": "metrami",
+      "loc": "metrach",
+      "voc": "metry"
+    }
+  }
+}

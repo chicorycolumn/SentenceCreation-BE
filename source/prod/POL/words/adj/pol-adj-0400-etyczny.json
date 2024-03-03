@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "etycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "etyczny",
+          "gen": "etycznego",
+          "dat": "etycznemu",
+          "acc": "etycznego",
+          "ins": "etycznym",
+          "loc": "etycznym"
+        },
+        "m3": {
+          "nom": "etyczny",
+          "gen": "etycznego",
+          "dat": "etycznemu",
+          "acc": "etyczny",
+          "ins": "etycznym",
+          "loc": "etycznym"
+        },
+        "f": {
+          "nom": "etyczna",
+          "gen": "etycznej",
+          "dat": "etycznej",
+          "acc": "etyczną",
+          "ins": "etyczną",
+          "loc": "etycznej"
+        },
+        "n": {
+          "nom": "etyczne",
+          "gen": "etycznego",
+          "dat": "etycznemu",
+          "acc": "etyczne",
+          "ins": "etycznym",
+          "loc": "etycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "etyczni",
+          "gen": "etycznych",
+          "dat": "etycznym",
+          "acc": "etycznych",
+          "ins": "etycznymi",
+          "loc": "etycznych"
+        },
+        "nonvirile": {
+          "nom": "etyczne",
+          "gen": "etycznych",
+          "dat": "etycznym",
+          "acc": "etyczne",
+          "ins": "etycznymi",
+          "loc": "etycznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej etyczny",
+          "gen": "bardziej etycznego",
+          "dat": "bardziej etycznemu",
+          "acc": "bardziej etycznego",
+          "ins": "bardziej etycznym",
+          "loc": "bardziej etycznym"
+        },
+        "m3": {
+          "nom": "bardziej etyczny",
+          "gen": "bardziej etycznego",
+          "dat": "bardziej etycznemu",
+          "acc": "bardziej etyczny",
+          "ins": "bardziej etycznym",
+          "loc": "bardziej etycznym"
+        },
+        "f": {
+          "nom": "bardziej etyczna",
+          "gen": "bardziej etycznej",
+          "dat": "bardziej etycznej",
+          "acc": "bardziej etyczną",
+          "ins": "bardziej etyczną",
+          "loc": "bardziej etycznej"
+        },
+        "n": {
+          "nom": "bardziej etyczne",
+          "gen": "bardziej etycznego",
+          "dat": "bardziej etycznemu",
+          "acc": "bardziej etyczne",
+          "ins": "bardziej etycznym",
+          "loc": "bardziej etycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej etyczni",
+          "gen": "bardziej etycznych",
+          "dat": "bardziej etycznym",
+          "acc": "bardziej etycznych",
+          "ins": "bardziej etycznymi",
+          "loc": "bardziej etycznych"
+        },
+        "nonvirile": {
+          "nom": "bardziej etyczne",
+          "gen": "bardziej etycznych",
+          "dat": "bardziej etycznym",
+          "acc": "bardziej etyczne",
+          "ins": "bardziej etycznymi",
+          "loc": "bardziej etycznych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej etyczny",
+          "gen": "najbardziej etycznego",
+          "dat": "najbardziej etycznemu",
+          "acc": "najbardziej etycznego",
+          "ins": "najbardziej etycznym",
+          "loc": "najbardziej etycznym"
+        },
+        "m3": {
+          "nom": "najbardziej etyczny",
+          "gen": "najbardziej etycznego",
+          "dat": "najbardziej etycznemu",
+          "acc": "najbardziej etyczny",
+          "ins": "najbardziej etycznym",
+          "loc": "najbardziej etycznym"
+        },
+        "f": {
+          "nom": "najbardziej etyczna",
+          "gen": "najbardziej etycznej",
+          "dat": "najbardziej etycznej",
+          "acc": "najbardziej etyczną",
+          "ins": "najbardziej etyczną",
+          "loc": "najbardziej etycznej"
+        },
+        "n": {
+          "nom": "najbardziej etyczne",
+          "gen": "najbardziej etycznego",
+          "dat": "najbardziej etycznemu",
+          "acc": "najbardziej etyczne",
+          "ins": "najbardziej etycznym",
+          "loc": "najbardziej etycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej etyczni",
+          "gen": "najbardziej etycznych",
+          "dat": "najbardziej etycznym",
+          "acc": "najbardziej etycznych",
+          "ins": "najbardziej etycznymi",
+          "loc": "najbardziej etycznych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej etyczne",
+          "gen": "najbardziej etycznych",
+          "dat": "najbardziej etycznym",
+          "acc": "najbardziej etyczne",
+          "ins": "najbardziej etycznymi",
+          "loc": "najbardziej etycznych"
+        }
+      }
+    }
+  }
+}

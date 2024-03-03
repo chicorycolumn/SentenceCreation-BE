@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "szkic",
+      "gen": "szkicu",
+      "dat": "szkicowi",
+      "acc": "szkic",
+      "ins": "szkicem",
+      "loc": "szkicu",
+      "voc": "szkicu"
+    },
+    "plural": {
+      "nom": "szkice",
+      "gen": "szkiców",
+      "dat": "szkicom",
+      "acc": "szkice",
+      "ins": "szkicami",
+      "loc": "szkicach",
+      "voc": "szkice"
+    }
+  }
+}

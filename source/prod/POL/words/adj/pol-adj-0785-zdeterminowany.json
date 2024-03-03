@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zdeterminowany",
+          "gen": "zdeterminowanego",
+          "dat": "zdeterminowanemu",
+          "acc": "zdeterminowanego",
+          "ins": "zdeterminowanym",
+          "loc": "zdeterminowanym"
+        },
+        "m3": {
+          "nom": "zdeterminowany",
+          "gen": "zdeterminowanego",
+          "dat": "zdeterminowanemu",
+          "acc": "zdeterminowany",
+          "ins": "zdeterminowanym",
+          "loc": "zdeterminowanym"
+        },
+        "f": {
+          "nom": "zdeterminowana",
+          "gen": "zdeterminowanej",
+          "dat": "zdeterminowanej",
+          "acc": "zdeterminowaną",
+          "ins": "zdeterminowaną",
+          "loc": "zdeterminowanej"
+        },
+        "n": {
+          "nom": "zdeterminowane",
+          "gen": "zdeterminowanego",
+          "dat": "zdeterminowanemu",
+          "acc": "zdeterminowane",
+          "ins": "zdeterminowanym",
+          "loc": "zdeterminowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zdeterminowani",
+          "gen": "zdeterminowanych",
+          "dat": "zdeterminowanym",
+          "acc": "zdeterminowanych",
+          "ins": "zdeterminowanymi",
+          "loc": "zdeterminowanych"
+        },
+        "nonvirile": {
+          "nom": "zdeterminowane",
+          "gen": "zdeterminowanych",
+          "dat": "zdeterminowanym",
+          "acc": "zdeterminowane",
+          "ins": "zdeterminowanymi",
+          "loc": "zdeterminowanych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej zdeterminowany",
+          "gen": "bardziej zdeterminowanego",
+          "dat": "bardziej zdeterminowanemu",
+          "acc": "bardziej zdeterminowanego",
+          "ins": "bardziej zdeterminowanym",
+          "loc": "bardziej zdeterminowanym"
+        },
+        "m3": {
+          "nom": "bardziej zdeterminowany",
+          "gen": "bardziej zdeterminowanego",
+          "dat": "bardziej zdeterminowanemu",
+          "acc": "bardziej zdeterminowany",
+          "ins": "bardziej zdeterminowanym",
+          "loc": "bardziej zdeterminowanym"
+        },
+        "f": {
+          "nom": "bardziej zdeterminowana",
+          "gen": "bardziej zdeterminowanej",
+          "dat": "bardziej zdeterminowanej",
+          "acc": "bardziej zdeterminowaną",
+          "ins": "bardziej zdeterminowaną",
+          "loc": "bardziej zdeterminowanej"
+        },
+        "n": {
+          "nom": "bardziej zdeterminowane",
+          "gen": "bardziej zdeterminowanego",
+          "dat": "bardziej zdeterminowanemu",
+          "acc": "bardziej zdeterminowane",
+          "ins": "bardziej zdeterminowanym",
+          "loc": "bardziej zdeterminowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej zdeterminowani",
+          "gen": "bardziej zdeterminowanych",
+          "dat": "bardziej zdeterminowanym",
+          "acc": "bardziej zdeterminowanych",
+          "ins": "bardziej zdeterminowanymi",
+          "loc": "bardziej zdeterminowanych"
+        },
+        "nonvirile": {
+          "nom": "bardziej zdeterminowane",
+          "gen": "bardziej zdeterminowanych",
+          "dat": "bardziej zdeterminowanym",
+          "acc": "bardziej zdeterminowane",
+          "ins": "bardziej zdeterminowanymi",
+          "loc": "bardziej zdeterminowanych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej zdeterminowany",
+          "gen": "najbardziej zdeterminowanego",
+          "dat": "najbardziej zdeterminowanemu",
+          "acc": "najbardziej zdeterminowanego",
+          "ins": "najbardziej zdeterminowanym",
+          "loc": "najbardziej zdeterminowanym"
+        },
+        "m3": {
+          "nom": "najbardziej zdeterminowany",
+          "gen": "najbardziej zdeterminowanego",
+          "dat": "najbardziej zdeterminowanemu",
+          "acc": "najbardziej zdeterminowany",
+          "ins": "najbardziej zdeterminowanym",
+          "loc": "najbardziej zdeterminowanym"
+        },
+        "f": {
+          "nom": "najbardziej zdeterminowana",
+          "gen": "najbardziej zdeterminowanej",
+          "dat": "najbardziej zdeterminowanej",
+          "acc": "najbardziej zdeterminowaną",
+          "ins": "najbardziej zdeterminowaną",
+          "loc": "najbardziej zdeterminowanej"
+        },
+        "n": {
+          "nom": "najbardziej zdeterminowane",
+          "gen": "najbardziej zdeterminowanego",
+          "dat": "najbardziej zdeterminowanemu",
+          "acc": "najbardziej zdeterminowane",
+          "ins": "najbardziej zdeterminowanym",
+          "loc": "najbardziej zdeterminowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej zdeterminowani",
+          "gen": "najbardziej zdeterminowanych",
+          "dat": "najbardziej zdeterminowanym",
+          "acc": "najbardziej zdeterminowanych",
+          "ins": "najbardziej zdeterminowanymi",
+          "loc": "najbardziej zdeterminowanych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej zdeterminowane",
+          "gen": "najbardziej zdeterminowanych",
+          "dat": "najbardziej zdeterminowanym",
+          "acc": "najbardziej zdeterminowane",
+          "ins": "najbardziej zdeterminowanymi",
+          "loc": "najbardziej zdeterminowanych"
+        }
+      }
+    }
+  }
+}

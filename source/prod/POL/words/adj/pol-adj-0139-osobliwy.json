@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "osobliwie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "osobliwy",
+          "gen": "osobliwego",
+          "dat": "osobliwemu",
+          "acc": "osobliwego",
+          "ins": "osobliwym",
+          "loc": "osobliwym"
+        },
+        "m3": {
+          "nom": "osobliwy",
+          "gen": "osobliwego",
+          "dat": "osobliwemu",
+          "acc": "osobliwy",
+          "ins": "osobliwym",
+          "loc": "osobliwym"
+        },
+        "f": {
+          "nom": "osobliwa",
+          "gen": "osobliwej",
+          "dat": "osobliwej",
+          "acc": "osobliwą",
+          "ins": "osobliwą",
+          "loc": "osobliwej"
+        },
+        "n": {
+          "nom": "osobliwe",
+          "gen": "osobliwego",
+          "dat": "osobliwemu",
+          "acc": "osobliwe",
+          "ins": "osobliwym",
+          "loc": "osobliwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "osobliwi",
+          "gen": "osobliwych",
+          "dat": "osobliwym",
+          "acc": "osobliwych",
+          "ins": "osobliwymi",
+          "loc": "osobliwych"
+        },
+        "nonvirile": {
+          "nom": "osobliwe",
+          "gen": "osobliwych",
+          "dat": "osobliwym",
+          "acc": "osobliwe",
+          "ins": "osobliwymi",
+          "loc": "osobliwych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "osobliwszy",
+          "gen": "osobliwszego",
+          "dat": "osobliwszemu",
+          "acc": "osobliwszego",
+          "ins": "osobliwszym",
+          "loc": "osobliwszym"
+        },
+        "m3": {
+          "nom": "osobliwszy",
+          "gen": "osobliwszego",
+          "dat": "osobliwszemu",
+          "acc": "osobliwszy",
+          "ins": "osobliwszym",
+          "loc": "osobliwszym"
+        },
+        "f": {
+          "nom": "osobliwsza",
+          "gen": "osobliwszej",
+          "dat": "osobliwszej",
+          "acc": "osobliwszą",
+          "ins": "osobliwszą",
+          "loc": "osobliwszej"
+        },
+        "n": {
+          "nom": "osobliwsze",
+          "gen": "osobliwszego",
+          "dat": "osobliwszemu",
+          "acc": "osobliwsze",
+          "ins": "osobliwszym",
+          "loc": "osobliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "osobliwsi",
+          "gen": "osobliwszych",
+          "dat": "osobliwszym",
+          "acc": "osobliwszych",
+          "ins": "osobliwszymi",
+          "loc": "osobliwszych"
+        },
+        "nonvirile": {
+          "nom": "osobliwsze",
+          "gen": "osobliwszych",
+          "dat": "osobliwszym",
+          "acc": "osobliwsze",
+          "ins": "osobliwszymi",
+          "loc": "osobliwszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najosobliwszy",
+          "gen": "najosobliwszego",
+          "dat": "najosobliwszemu",
+          "acc": "najosobliwszego",
+          "ins": "najosobliwszym",
+          "loc": "najosobliwszym"
+        },
+        "m3": {
+          "nom": "najosobliwszy",
+          "gen": "najosobliwszego",
+          "dat": "najosobliwszemu",
+          "acc": "najosobliwszy",
+          "ins": "najosobliwszym",
+          "loc": "najosobliwszym"
+        },
+        "f": {
+          "nom": "najosobliwsza",
+          "gen": "najosobliwszej",
+          "dat": "najosobliwszej",
+          "acc": "najosobliwszą",
+          "ins": "najosobliwszą",
+          "loc": "najosobliwszej"
+        },
+        "n": {
+          "nom": "najosobliwsze",
+          "gen": "najosobliwszego",
+          "dat": "najosobliwszemu",
+          "acc": "najosobliwsze",
+          "ins": "najosobliwszym",
+          "loc": "najosobliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najosobliwsi",
+          "gen": "najosobliwszych",
+          "dat": "najosobliwszym",
+          "acc": "najosobliwszych",
+          "ins": "najosobliwszymi",
+          "loc": "najosobliwszych"
+        },
+        "nonvirile": {
+          "nom": "najosobliwsze",
+          "gen": "najosobliwszych",
+          "dat": "najosobliwszym",
+          "acc": "najosobliwsze",
+          "ins": "najosobliwszymi",
+          "loc": "najosobliwszych"
+        }
+      }
+    }
+  }
+}

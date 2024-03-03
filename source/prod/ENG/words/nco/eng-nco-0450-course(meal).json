@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "course",
+      "gen": "course's"
+    },
+    "plural": {
+      "nom": "courses",
+      "gen": "courses'"
+    }
+  }
+}

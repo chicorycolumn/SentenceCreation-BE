@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "letnio",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "letni",
+          "gen": "letniego",
+          "dat": "letniemu",
+          "acc": "letniego",
+          "ins": "letnim",
+          "loc": "letnim"
+        },
+        "m3": {
+          "nom": "letni",
+          "gen": "letniego",
+          "dat": "letniemu",
+          "acc": "letni",
+          "ins": "letnim",
+          "loc": "letnim"
+        },
+        "f": {
+          "nom": "letna",
+          "gen": "letniej",
+          "dat": "letniej",
+          "acc": "letną",
+          "ins": "letną",
+          "loc": "letniej"
+        },
+        "n": {
+          "nom": "letnie",
+          "gen": "letniego",
+          "dat": "letniemu",
+          "acc": "letnie",
+          "ins": "letnim",
+          "loc": "letnim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "letni",
+          "gen": "letnich",
+          "dat": "letnim",
+          "acc": "letnich",
+          "ins": "letnimi",
+          "loc": "letnich"
+        },
+        "nonvirile": {
+          "nom": "letnie",
+          "gen": "letnich",
+          "dat": "letnim",
+          "acc": "letnie",
+          "ins": "letnimi",
+          "loc": "letnich"
+        }
+      }
+    }
+  }
+}

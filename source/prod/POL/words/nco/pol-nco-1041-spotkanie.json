@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "spotkanie",
+      "gen": "spotkania",
+      "dat": "spotkaniu",
+      "acc": "spotkanie",
+      "ins": "spotkaniem",
+      "loc": "spotkaniu",
+      "voc": "spotkanie"
+    },
+    "plural": {
+      "nom": "spotkania",
+      "gen": "spotkań",
+      "dat": "spotkaniom",
+      "acc": "spotkania",
+      "ins": "spotkaniami",
+      "loc": "spotkaniach",
+      "voc": "spotkania"
+    }
+  }
+}

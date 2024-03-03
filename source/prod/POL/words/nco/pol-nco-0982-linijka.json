@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "linijka",
+      "gen": "linijki",
+      "dat": "linijce",
+      "acc": "linijkę",
+      "ins": "linijką",
+      "loc": "linijce",
+      "voc": "linijko"
+    },
+    "plural": {
+      "nom": "linijki",
+      "gen": "linijek",
+      "dat": "linijkom",
+      "acc": "linijki",
+      "ins": "linijkami",
+      "loc": "linijkach",
+      "voc": "linijki"
+    }
+  }
+}

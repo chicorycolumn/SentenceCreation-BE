@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pachnieć",
+    "verbalNoun": "pachnienie",
+    "activeAdjectival": "pachnący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "pachnąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pachnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pachniano"
+          },
+          "plural": {
+            "allPluralGenders": "pachniano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pachniałem",
+            "f": "pachniałam"
+          },
+          "plural": {
+            "virile": "pachnieliśmy",
+            "nonvirile": "pachniałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pachniałeś",
+            "f": "pachniałaś"
+          },
+          "plural": {
+            "virile": "pachnieliście",
+            "nonvirile": "pachniałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pachniał",
+            "f": "pachniała",
+            "n": "pachniało"
+          },
+          "plural": {
+            "virile": "pachnieli",
+            "nonvirile": "pachniały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pachnie się"
+          },
+          "plural": {
+            "allPluralGenders": "pachnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pachnę"
+          },
+          "plural": {
+            "allPluralGenders": "pachniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pachniesz"
+          },
+          "plural": {
+            "allPluralGenders": "pachniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pachnie"
+          },
+          "plural": {
+            "allPluralGenders": "pachną"
+          }
+        }
+      }
+    }
+  }
+}

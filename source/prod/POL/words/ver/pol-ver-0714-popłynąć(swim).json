@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "popłynąć",
+    "verbalNoun": "popłynięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "popłynięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "popłynąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "popłynie się"
+          },
+          "plural": {
+            "allPluralGenders": "popłynie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "popłynę"
+          },
+          "plural": {
+            "allPluralGenders": "popłyniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "popłyniesz"
+          },
+          "plural": {
+            "allPluralGenders": "popłyniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "popłynie"
+          },
+          "plural": {
+            "allPluralGenders": "popłyną"
+          }
+        }
+      },
+      "imperative": "popłyń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "popłynięto"
+          },
+          "plural": {
+            "allPluralGenders": "popłynięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "popłynąłem",
+            "f": "popłynęłam"
+          },
+          "plural": {
+            "virile": "popłynęliśmy",
+            "nonvirile": "popłynęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "popłynąłeś",
+            "f": "popłynęłaś"
+          },
+          "plural": {
+            "virile": "popłynęliście",
+            "nonvirile": "popłynęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "popłynął",
+            "f": "popłynęła",
+            "n": "popłynęło"
+          },
+          "plural": {
+            "virile": "popłynęli",
+            "nonvirile": "popłynęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

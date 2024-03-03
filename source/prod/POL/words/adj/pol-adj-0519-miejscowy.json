@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "miejscowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "miejscowy",
+          "gen": "miejscowego",
+          "dat": "miejscowemu",
+          "acc": "miejscowego",
+          "ins": "miejscowym",
+          "loc": "miejscowym"
+        },
+        "m3": {
+          "nom": "miejscowy",
+          "gen": "miejscowego",
+          "dat": "miejscowemu",
+          "acc": "miejscowy",
+          "ins": "miejscowym",
+          "loc": "miejscowym"
+        },
+        "f": {
+          "nom": "miejscowa",
+          "gen": "miejscowej",
+          "dat": "miejscowej",
+          "acc": "miejscową",
+          "ins": "miejscową",
+          "loc": "miejscowej"
+        },
+        "n": {
+          "nom": "miejscowe",
+          "gen": "miejscowego",
+          "dat": "miejscowemu",
+          "acc": "miejscowe",
+          "ins": "miejscowym",
+          "loc": "miejscowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "miejscowi",
+          "gen": "miejscowych",
+          "dat": "miejscowym",
+          "acc": "miejscowych",
+          "ins": "miejscowymi",
+          "loc": "miejscowych"
+        },
+        "nonvirile": {
+          "nom": "miejscowe",
+          "gen": "miejscowych",
+          "dat": "miejscowym",
+          "acc": "miejscowe",
+          "ins": "miejscowymi",
+          "loc": "miejscowych"
+        }
+      }
+    }
+  }
+}

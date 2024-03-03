@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pisklę",
+      "gen": "pisklęcia",
+      "dat": "pisklęciu",
+      "acc": "pisklę",
+      "ins": "pisklęciem",
+      "loc": "pisklęciu",
+      "voc": "pisklę"
+    },
+    "plural": {
+      "nom": "pisklęta",
+      "gen": "piskląt",
+      "dat": "pisklętom",
+      "acc": "pisklęta",
+      "ins": "pisklętami",
+      "loc": "pisklętach",
+      "voc": "pisklęta"
+    }
+  }
+}

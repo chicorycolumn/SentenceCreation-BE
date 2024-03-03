@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "łódź",
+      "gen": "łodzi",
+      "dat": "łodzi",
+      "acc": "łódź",
+      "ins": "łodzią",
+      "loc": "łodzi",
+      "voc": "łodzi"
+    },
+    "plural": {
+      "nom": "łodzie",
+      "gen": "łodzi",
+      "dat": "łodziom",
+      "acc": "łodzie",
+      "ins": "łodziami",
+      "loc": "łodziach",
+      "voc": "łodzie"
+    }
+  }
+}

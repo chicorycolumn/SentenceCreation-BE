@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "nieustannie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nieustanny",
+          "gen": "nieustannego",
+          "dat": "nieustannemu",
+          "acc": "nieustannego",
+          "ins": "nieustannym",
+          "loc": "nieustannym"
+        },
+        "m3": {
+          "nom": "nieustanny",
+          "gen": "nieustannego",
+          "dat": "nieustannemu",
+          "acc": "nieustanny",
+          "ins": "nieustannym",
+          "loc": "nieustannym"
+        },
+        "f": {
+          "nom": "nieustanna",
+          "gen": "nieustannej",
+          "dat": "nieustannej",
+          "acc": "nieustanną",
+          "ins": "nieustanną",
+          "loc": "nieustannej"
+        },
+        "n": {
+          "nom": "nieustanne",
+          "gen": "nieustannego",
+          "dat": "nieustannemu",
+          "acc": "nieustanne",
+          "ins": "nieustannym",
+          "loc": "nieustannym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieustanni",
+          "gen": "nieustannych",
+          "dat": "nieustannym",
+          "acc": "nieustannych",
+          "ins": "nieustannymi",
+          "loc": "nieustannych"
+        },
+        "nonvirile": {
+          "nom": "nieustanne",
+          "gen": "nieustannych",
+          "dat": "nieustannym",
+          "acc": "nieustanne",
+          "ins": "nieustannymi",
+          "loc": "nieustannych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "agresywnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "agresywny",
+          "gen": "agresywnego",
+          "dat": "agresywnemu",
+          "acc": "agresywnego",
+          "ins": "agresywnym",
+          "loc": "agresywnym"
+        },
+        "m3": {
+          "nom": "agresywny",
+          "gen": "agresywnego",
+          "dat": "agresywnemu",
+          "acc": "agresywny",
+          "ins": "agresywnym",
+          "loc": "agresywnym"
+        },
+        "f": {
+          "nom": "agresywna",
+          "gen": "agresywnej",
+          "dat": "agresywnej",
+          "acc": "agresywną",
+          "ins": "agresywną",
+          "loc": "agresywnej"
+        },
+        "n": {
+          "nom": "agresywne",
+          "gen": "agresywnego",
+          "dat": "agresywnemu",
+          "acc": "agresywne",
+          "ins": "agresywnym",
+          "loc": "agresywnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "agresywni",
+          "gen": "agresywnych",
+          "dat": "agresywnym",
+          "acc": "agresywnych",
+          "ins": "agresywnymi",
+          "loc": "agresywnych"
+        },
+        "nonvirile": {
+          "nom": "agresywne",
+          "gen": "agresywnych",
+          "dat": "agresywnym",
+          "acc": "agresywne",
+          "ins": "agresywnymi",
+          "loc": "agresywnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszy",
+              "bardziej agresywny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszego",
+              "bardziej agresywnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszemu",
+              "bardziej agresywnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszego",
+              "bardziej agresywnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszym",
+              "bardziej agresywnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszym",
+              "bardziej agresywnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszy",
+              "bardziej agresywny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszego",
+              "bardziej agresywnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszemu",
+              "bardziej agresywnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszy",
+              "bardziej agresywny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszym",
+              "bardziej agresywnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszym",
+              "bardziej agresywnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejsza",
+              "bardziej agresywna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszej",
+              "bardziej agresywnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszej",
+              "bardziej agresywnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszą",
+              "bardziej agresywną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszą",
+              "bardziej agresywną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszej",
+              "bardziej agresywnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejsze",
+              "bardziej agresywne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszego",
+              "bardziej agresywnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszemu",
+              "bardziej agresywnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejsze",
+              "bardziej agresywne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszym",
+              "bardziej agresywnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszym",
+              "bardziej agresywnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejsi",
+              "bardziej agresywni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszych",
+              "bardziej agresywnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszym",
+              "bardziej agresywnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszych",
+              "bardziej agresywnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszymi",
+              "bardziej agresywnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszych",
+              "bardziej agresywnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejsze",
+              "bardziej agresywne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszych",
+              "bardziej agresywnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszym",
+              "bardziej agresywnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejsze",
+              "bardziej agresywne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszymi",
+              "bardziej agresywnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "agresywniejszych",
+              "bardziej agresywnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszy",
+              "najbardziej agresywny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszego",
+              "najbardziej agresywnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszemu",
+              "najbardziej agresywnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszego",
+              "najbardziej agresywnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszym",
+              "najbardziej agresywnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszym",
+              "najbardziej agresywnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszy",
+              "najbardziej agresywny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszego",
+              "najbardziej agresywnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszemu",
+              "najbardziej agresywnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszy",
+              "najbardziej agresywny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszym",
+              "najbardziej agresywnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszym",
+              "najbardziej agresywnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejsza",
+              "najbardziej agresywna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszej",
+              "najbardziej agresywnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszej",
+              "najbardziej agresywnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszą",
+              "najbardziej agresywną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszą",
+              "najbardziej agresywną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszej",
+              "najbardziej agresywnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejsze",
+              "najbardziej agresywne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszego",
+              "najbardziej agresywnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszemu",
+              "najbardziej agresywnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejsze",
+              "najbardziej agresywne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszym",
+              "najbardziej agresywnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszym",
+              "najbardziej agresywnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejsi",
+              "najbardziej agresywni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszych",
+              "najbardziej agresywnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszym",
+              "najbardziej agresywnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszych",
+              "najbardziej agresywnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszymi",
+              "najbardziej agresywnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszych",
+              "najbardziej agresywnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejsze",
+              "najbardziej agresywne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszych",
+              "najbardziej agresywnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszym",
+              "najbardziej agresywnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejsze",
+              "najbardziej agresywne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszymi",
+              "najbardziej agresywnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najagresywniejszych",
+              "najbardziej agresywnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

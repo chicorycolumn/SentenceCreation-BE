@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "następnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "następny",
+          "gen": "następnego",
+          "dat": "następnemu",
+          "acc": "następnego",
+          "ins": "następnym",
+          "loc": "następnym"
+        },
+        "m3": {
+          "nom": "następny",
+          "gen": "następnego",
+          "dat": "następnemu",
+          "acc": "następny",
+          "ins": "następnym",
+          "loc": "następnym"
+        },
+        "f": {
+          "nom": "następna",
+          "gen": "następnej",
+          "dat": "następnej",
+          "acc": "następną",
+          "ins": "następną",
+          "loc": "następnej"
+        },
+        "n": {
+          "nom": "następne",
+          "gen": "następnego",
+          "dat": "następnemu",
+          "acc": "następne",
+          "ins": "następnym",
+          "loc": "następnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "następni",
+          "gen": "następnych",
+          "dat": "następnym",
+          "acc": "następnych",
+          "ins": "następnymi",
+          "loc": "następnych"
+        },
+        "nonvirile": {
+          "nom": "następne",
+          "gen": "następnych",
+          "dat": "następnym",
+          "acc": "następne",
+          "ins": "następnymi",
+          "loc": "następnych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "bezimiennie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bezimienny",
+          "gen": "bezimiennego",
+          "dat": "bezimiennemu",
+          "acc": "bezimiennego",
+          "ins": "bezimiennym",
+          "loc": "bezimiennym"
+        },
+        "m3": {
+          "nom": "bezimienny",
+          "gen": "bezimiennego",
+          "dat": "bezimiennemu",
+          "acc": "bezimienny",
+          "ins": "bezimiennym",
+          "loc": "bezimiennym"
+        },
+        "f": {
+          "nom": "bezimienna",
+          "gen": "bezimiennej",
+          "dat": "bezimiennej",
+          "acc": "bezimienną",
+          "ins": "bezimienną",
+          "loc": "bezimiennej"
+        },
+        "n": {
+          "nom": "bezimienne",
+          "gen": "bezimiennego",
+          "dat": "bezimiennemu",
+          "acc": "bezimienne",
+          "ins": "bezimiennym",
+          "loc": "bezimiennym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bezimienni",
+          "gen": "bezimiennych",
+          "dat": "bezimiennym",
+          "acc": "bezimiennych",
+          "ins": "bezimiennymi",
+          "loc": "bezimiennych"
+        },
+        "nonvirile": {
+          "nom": "bezimienne",
+          "gen": "bezimiennych",
+          "dat": "bezimiennym",
+          "acc": "bezimienne",
+          "ins": "bezimiennymi",
+          "loc": "bezimiennych"
+        }
+      }
+    }
+  }
+}

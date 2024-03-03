@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "obniżać",
+    "verbalNoun": "obniżanie",
+    "activeAdjectival": "obniżający",
+    "passiveAdjectival": "obniżany",
+    "contemporaryAdverbial": "obniżając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "obniżaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obniżano"
+          },
+          "plural": {
+            "allPluralGenders": "obniżano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "obniżałem",
+            "f": "obniżałam"
+          },
+          "plural": {
+            "virile": "obniżaliśmy",
+            "nonvirile": "obniżałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "obniżałeś",
+            "f": "obniżałaś"
+          },
+          "plural": {
+            "virile": "obniżaliście",
+            "nonvirile": "obniżałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "obniżał",
+            "f": "obniżała",
+            "n": "obniżało"
+          },
+          "plural": {
+            "virile": "obniżali",
+            "nonvirile": "obniżały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obniża się"
+          },
+          "plural": {
+            "allPluralGenders": "obniża się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "obniżam"
+          },
+          "plural": {
+            "allPluralGenders": "obniżamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "obniżasz"
+          },
+          "plural": {
+            "allPluralGenders": "obniżacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "obniża"
+          },
+          "plural": {
+            "allPluralGenders": "obniżają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "poślubić",
+    "verbalNoun": "poślubienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "poślubiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "poślubiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poślubi się"
+          },
+          "plural": {
+            "allPluralGenders": "poślubi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "poślubię"
+          },
+          "plural": {
+            "allPluralGenders": "poślubimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "poślubisz"
+          },
+          "plural": {
+            "allPluralGenders": "poślubicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "poślubi"
+          },
+          "plural": {
+            "allPluralGenders": "poślubią"
+          }
+        }
+      },
+      "imperative": "poślub",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poślubiono"
+          },
+          "plural": {
+            "allPluralGenders": "poślubiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "poślubiłem",
+            "f": "poślubiłam"
+          },
+          "plural": {
+            "virile": "poślubiliśmy",
+            "nonvirile": "poślubiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "poślubiłeś",
+            "f": "poślubiłaś"
+          },
+          "plural": {
+            "virile": "poślubiliście",
+            "nonvirile": "poślubiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "poślubił",
+            "f": "poślubiła",
+            "n": "poślubiło"
+          },
+          "plural": {
+            "virile": "poślubili",
+            "nonvirile": "poślubiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

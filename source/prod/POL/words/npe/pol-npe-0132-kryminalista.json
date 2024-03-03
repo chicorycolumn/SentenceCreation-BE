@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kryminalista",
+      "gen": "kryminalisty",
+      "dat": "kryminaliście",
+      "acc": "kryminalistę",
+      "ins": "kryminalistą",
+      "loc": "kryminaliście",
+      "voc": "kryminalisto"
+    },
+    "plural": {
+      "nom": "kryminaliści",
+      "gen": "kryminalistów",
+      "dat": "kryminalistom",
+      "acc": "kryminalistów",
+      "ins": "kryminalistami",
+      "loc": "kryminalistach",
+      "voc": "kryminaliści"
+    }
+  }
+}

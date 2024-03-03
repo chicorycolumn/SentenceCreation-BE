@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "naśladować",
+    "verbalNoun": "naśladowanie",
+    "activeAdjectival": "naśladujący",
+    "passiveAdjectival": "naśladowany",
+    "contemporaryAdverbial": "naśladując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "naśladuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "naśladowano"
+          },
+          "plural": {
+            "allPluralGenders": "naśladowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "naśladowałem",
+            "f": "naśladowałam"
+          },
+          "plural": {
+            "virile": "naśladowaliśmy",
+            "nonvirile": "naśladowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "naśladowałeś",
+            "f": "naśladowałaś"
+          },
+          "plural": {
+            "virile": "naśladowaliście",
+            "nonvirile": "naśladowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "naśladował",
+            "f": "naśladowała",
+            "n": "naśladowało"
+          },
+          "plural": {
+            "virile": "naśladowali",
+            "nonvirile": "naśladowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "naśladuje się"
+          },
+          "plural": {
+            "allPluralGenders": "naśladuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "naśladuję"
+          },
+          "plural": {
+            "allPluralGenders": "naśladujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "naśladujesz"
+          },
+          "plural": {
+            "allPluralGenders": "naśladujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "naśladuje"
+          },
+          "plural": {
+            "allPluralGenders": "naśladują"
+          }
+        }
+      }
+    }
+  }
+}

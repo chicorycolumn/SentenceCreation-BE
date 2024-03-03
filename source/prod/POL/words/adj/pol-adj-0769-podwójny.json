@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "podwójnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "podwójny",
+          "gen": "podwójnego",
+          "dat": "podwójnemu",
+          "acc": "podwójnego",
+          "ins": "podwójnym",
+          "loc": "podwójnym"
+        },
+        "m3": {
+          "nom": "podwójny",
+          "gen": "podwójnego",
+          "dat": "podwójnemu",
+          "acc": "podwójny",
+          "ins": "podwójnym",
+          "loc": "podwójnym"
+        },
+        "f": {
+          "nom": "podwójna",
+          "gen": "podwójnej",
+          "dat": "podwójnej",
+          "acc": "podwójną",
+          "ins": "podwójną",
+          "loc": "podwójnej"
+        },
+        "n": {
+          "nom": "podwójne",
+          "gen": "podwójnego",
+          "dat": "podwójnemu",
+          "acc": "podwójne",
+          "ins": "podwójnym",
+          "loc": "podwójnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "podwójni",
+          "gen": "podwójnych",
+          "dat": "podwójnym",
+          "acc": "podwójnych",
+          "ins": "podwójnymi",
+          "loc": "podwójnych"
+        },
+        "nonvirile": {
+          "nom": "podwójne",
+          "gen": "podwójnych",
+          "dat": "podwójnym",
+          "acc": "podwójne",
+          "ins": "podwójnymi",
+          "loc": "podwójnych"
+        }
+      }
+    }
+  }
+}

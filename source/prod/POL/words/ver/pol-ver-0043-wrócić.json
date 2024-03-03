@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wrócić",
+    "verbalNoun": "wrócenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "wrócony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "wróciwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wróci się"
+          },
+          "plural": {
+            "allPluralGenders": "wróci się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wrócę"
+          },
+          "plural": {
+            "allPluralGenders": "wrócimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wrócisz"
+          },
+          "plural": {
+            "allPluralGenders": "wrócicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wróci"
+          },
+          "plural": {
+            "allPluralGenders": "wrócą"
+          }
+        }
+      },
+      "imperative": "wróć",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wrócono"
+          },
+          "plural": {
+            "allPluralGenders": "wrócono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wróciłem",
+            "f": "wróciłam"
+          },
+          "plural": {
+            "virile": "wróciliśmy",
+            "nonvirile": "wróciłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wróciłeś",
+            "f": "wróciłaś"
+          },
+          "plural": {
+            "virile": "wróciliście",
+            "nonvirile": "wróciłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wrócił",
+            "f": "wróciła",
+            "n": "wróciło"
+          },
+          "plural": {
+            "virile": "wrócili",
+            "nonvirile": "wróciły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

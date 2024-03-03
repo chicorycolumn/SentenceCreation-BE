@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mapa",
+      "gen": "mapy",
+      "dat": "mapie",
+      "acc": "mapę",
+      "ins": "mapą",
+      "loc": "mapie",
+      "voc": "mapo"
+    },
+    "plural": {
+      "nom": "mapy",
+      "gen": "map",
+      "dat": "mapom",
+      "acc": "mapy",
+      "ins": "mapami",
+      "loc": "mapach",
+      "voc": "mapy"
+    }
+  }
+}

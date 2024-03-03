@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "szczegół",
+      "gen": "szczegółu",
+      "dat": "szczegółowi",
+      "acc": "szczegół",
+      "ins": "szczegółem",
+      "loc": "szczególe",
+      "voc": "szczególe"
+    },
+    "plural": {
+      "nom": "szczegóły",
+      "gen": "szczegółów",
+      "dat": "szczegółom",
+      "acc": "szczegóły",
+      "ins": "szczegółami",
+      "loc": "szczegółach",
+      "voc": "szczegóły"
+    }
+  }
+}

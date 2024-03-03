@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zakażenie",
+      "gen": "zakażenia",
+      "dat": "zakażeniu",
+      "acc": "zakażenie",
+      "ins": "zakażeniem",
+      "loc": "zakażeniu",
+      "voc": "zakażenie"
+    },
+    "plural": {
+      "nom": "zakażenia",
+      "gen": "zakażeń",
+      "dat": "zakażeniom",
+      "acc": "zakażenia",
+      "ins": "zakażeniami",
+      "loc": "zakażeniach",
+      "voc": "zakażenia"
+    }
+  }
+}

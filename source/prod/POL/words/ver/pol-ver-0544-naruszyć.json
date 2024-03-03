@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "naruszyć",
+    "verbalNoun": "naruszenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "naruszony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "naruszywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "naruszy się"
+          },
+          "plural": {
+            "allPluralGenders": "naruszy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "naruszę"
+          },
+          "plural": {
+            "allPluralGenders": "naruszymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "naruszysz"
+          },
+          "plural": {
+            "allPluralGenders": "naruszycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "naruszy"
+          },
+          "plural": {
+            "allPluralGenders": "naruszą"
+          }
+        }
+      },
+      "imperative": "narusz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "naruszono"
+          },
+          "plural": {
+            "allPluralGenders": "naruszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "naruszyłem",
+            "f": "naruszyłam"
+          },
+          "plural": {
+            "virile": "naruszyliśmy",
+            "nonvirile": "naruszyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "naruszyłeś",
+            "f": "naruszyłaś"
+          },
+          "plural": {
+            "virile": "naruszyliście",
+            "nonvirile": "naruszyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "naruszył",
+            "f": "naruszyła",
+            "n": "naruszyło"
+          },
+          "plural": {
+            "virile": "naruszyli",
+            "nonvirile": "naruszyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

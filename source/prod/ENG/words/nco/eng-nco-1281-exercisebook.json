@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "exercise book",
+      "gen": "exercise book's"
+    },
+    "plural": {
+      "nom": "exercise books",
+      "gen": "exercise books'"
+    }
+  }
+}

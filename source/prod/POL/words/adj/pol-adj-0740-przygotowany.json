@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przygotowany",
+          "gen": "przygotowanego",
+          "dat": "przygotowanemu",
+          "acc": "przygotowanego",
+          "ins": "przygotowanym",
+          "loc": "przygotowanym"
+        },
+        "m3": {
+          "nom": "przygotowany",
+          "gen": "przygotowanego",
+          "dat": "przygotowanemu",
+          "acc": "przygotowany",
+          "ins": "przygotowanym",
+          "loc": "przygotowanym"
+        },
+        "f": {
+          "nom": "przygotowana",
+          "gen": "przygotowanej",
+          "dat": "przygotowanej",
+          "acc": "przygotowaną",
+          "ins": "przygotowaną",
+          "loc": "przygotowanej"
+        },
+        "n": {
+          "nom": "przygotowane",
+          "gen": "przygotowanego",
+          "dat": "przygotowanemu",
+          "acc": "przygotowane",
+          "ins": "przygotowanym",
+          "loc": "przygotowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przygotowani",
+          "gen": "przygotowanych",
+          "dat": "przygotowanym",
+          "acc": "przygotowanych",
+          "ins": "przygotowanymi",
+          "loc": "przygotowanych"
+        },
+        "nonvirile": {
+          "nom": "przygotowane",
+          "gen": "przygotowanych",
+          "dat": "przygotowanym",
+          "acc": "przygotowane",
+          "ins": "przygotowanymi",
+          "loc": "przygotowanych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej przygotowany",
+          "gen": "bardziej przygotowanego",
+          "dat": "bardziej przygotowanemu",
+          "acc": "bardziej przygotowanego",
+          "ins": "bardziej przygotowanym",
+          "loc": "bardziej przygotowanym"
+        },
+        "m3": {
+          "nom": "bardziej przygotowany",
+          "gen": "bardziej przygotowanego",
+          "dat": "bardziej przygotowanemu",
+          "acc": "bardziej przygotowany",
+          "ins": "bardziej przygotowanym",
+          "loc": "bardziej przygotowanym"
+        },
+        "f": {
+          "nom": "bardziej przygotowana",
+          "gen": "bardziej przygotowanej",
+          "dat": "bardziej przygotowanej",
+          "acc": "bardziej przygotowaną",
+          "ins": "bardziej przygotowaną",
+          "loc": "bardziej przygotowanej"
+        },
+        "n": {
+          "nom": "bardziej przygotowane",
+          "gen": "bardziej przygotowanego",
+          "dat": "bardziej przygotowanemu",
+          "acc": "bardziej przygotowane",
+          "ins": "bardziej przygotowanym",
+          "loc": "bardziej przygotowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej przygotowani",
+          "gen": "bardziej przygotowanych",
+          "dat": "bardziej przygotowanym",
+          "acc": "bardziej przygotowanych",
+          "ins": "bardziej przygotowanymi",
+          "loc": "bardziej przygotowanych"
+        },
+        "nonvirile": {
+          "nom": "bardziej przygotowane",
+          "gen": "bardziej przygotowanych",
+          "dat": "bardziej przygotowanym",
+          "acc": "bardziej przygotowane",
+          "ins": "bardziej przygotowanymi",
+          "loc": "bardziej przygotowanych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej przygotowany",
+          "gen": "najbardziej przygotowanego",
+          "dat": "najbardziej przygotowanemu",
+          "acc": "najbardziej przygotowanego",
+          "ins": "najbardziej przygotowanym",
+          "loc": "najbardziej przygotowanym"
+        },
+        "m3": {
+          "nom": "najbardziej przygotowany",
+          "gen": "najbardziej przygotowanego",
+          "dat": "najbardziej przygotowanemu",
+          "acc": "najbardziej przygotowany",
+          "ins": "najbardziej przygotowanym",
+          "loc": "najbardziej przygotowanym"
+        },
+        "f": {
+          "nom": "najbardziej przygotowana",
+          "gen": "najbardziej przygotowanej",
+          "dat": "najbardziej przygotowanej",
+          "acc": "najbardziej przygotowaną",
+          "ins": "najbardziej przygotowaną",
+          "loc": "najbardziej przygotowanej"
+        },
+        "n": {
+          "nom": "najbardziej przygotowane",
+          "gen": "najbardziej przygotowanego",
+          "dat": "najbardziej przygotowanemu",
+          "acc": "najbardziej przygotowane",
+          "ins": "najbardziej przygotowanym",
+          "loc": "najbardziej przygotowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej przygotowani",
+          "gen": "najbardziej przygotowanych",
+          "dat": "najbardziej przygotowanym",
+          "acc": "najbardziej przygotowanych",
+          "ins": "najbardziej przygotowanymi",
+          "loc": "najbardziej przygotowanych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej przygotowane",
+          "gen": "najbardziej przygotowanych",
+          "dat": "najbardziej przygotowanym",
+          "acc": "najbardziej przygotowane",
+          "ins": "najbardziej przygotowanymi",
+          "loc": "najbardziej przygotowanych"
+        }
+      }
+    }
+  }
+}

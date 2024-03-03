@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pewien",
+          "gen": "pewienego",
+          "dat": "pewienemu",
+          "acc": "pewienego",
+          "ins": "pewienm",
+          "loc": "pewienm"
+        },
+        "m3": {
+          "nom": "pewien",
+          "gen": "pewienego",
+          "dat": "pewienemu",
+          "acc": "pewien",
+          "ins": "pewienm",
+          "loc": "pewienm"
+        },
+        "f": {
+          "nom": "pewiea",
+          "gen": "pewienej",
+          "dat": "pewienej",
+          "acc": "pewieą",
+          "ins": "pewieą",
+          "loc": "pewienej"
+        },
+        "n": {
+          "nom": "pewiene",
+          "gen": "pewienego",
+          "dat": "pewienemu",
+          "acc": "pewiene",
+          "ins": "pewienm",
+          "loc": "pewienm"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pewni",
+          "gen": "pewiench",
+          "dat": "pewienm",
+          "acc": "pewiench",
+          "ins": "pewienmi",
+          "loc": "pewiench"
+        },
+        "nonvirile": {
+          "nom": "pewiene",
+          "gen": "pewiench",
+          "dat": "pewienm",
+          "acc": "pewiene",
+          "ins": "pewienmi",
+          "loc": "pewiench"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej pewien",
+          "gen": "bardziej pewienego",
+          "dat": "bardziej pewienemu",
+          "acc": "bardziej pewienego",
+          "ins": "bardziej pewienm",
+          "loc": "bardziej pewienm"
+        },
+        "m3": {
+          "nom": "bardziej pewien",
+          "gen": "bardziej pewienego",
+          "dat": "bardziej pewienemu",
+          "acc": "bardziej pewien",
+          "ins": "bardziej pewienm",
+          "loc": "bardziej pewienm"
+        },
+        "f": {
+          "nom": "bardziej pewiea",
+          "gen": "bardziej pewienej",
+          "dat": "bardziej pewienej",
+          "acc": "bardziej pewieą",
+          "ins": "bardziej pewieą",
+          "loc": "bardziej pewienej"
+        },
+        "n": {
+          "nom": "bardziej pewiene",
+          "gen": "bardziej pewienego",
+          "dat": "bardziej pewienemu",
+          "acc": "bardziej pewiene",
+          "ins": "bardziej pewienm",
+          "loc": "bardziej pewienm"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej pewni",
+          "gen": "bardziej pewiench",
+          "dat": "bardziej pewienm",
+          "acc": "bardziej pewiench",
+          "ins": "bardziej pewienmi",
+          "loc": "bardziej pewiench"
+        },
+        "nonvirile": {
+          "nom": "bardziej pewiene",
+          "gen": "bardziej pewiench",
+          "dat": "bardziej pewienm",
+          "acc": "bardziej pewiene",
+          "ins": "bardziej pewienmi",
+          "loc": "bardziej pewiench"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej pewien",
+          "gen": "najbardziej pewienego",
+          "dat": "najbardziej pewienemu",
+          "acc": "najbardziej pewienego",
+          "ins": "najbardziej pewienm",
+          "loc": "najbardziej pewienm"
+        },
+        "m3": {
+          "nom": "najbardziej pewien",
+          "gen": "najbardziej pewienego",
+          "dat": "najbardziej pewienemu",
+          "acc": "najbardziej pewien",
+          "ins": "najbardziej pewienm",
+          "loc": "najbardziej pewienm"
+        },
+        "f": {
+          "nom": "najbardziej pewiea",
+          "gen": "najbardziej pewienej",
+          "dat": "najbardziej pewienej",
+          "acc": "najbardziej pewieą",
+          "ins": "najbardziej pewieą",
+          "loc": "najbardziej pewienej"
+        },
+        "n": {
+          "nom": "najbardziej pewiene",
+          "gen": "najbardziej pewienego",
+          "dat": "najbardziej pewienemu",
+          "acc": "najbardziej pewiene",
+          "ins": "najbardziej pewienm",
+          "loc": "najbardziej pewienm"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej pewni",
+          "gen": "najbardziej pewiench",
+          "dat": "najbardziej pewienm",
+          "acc": "najbardziej pewiench",
+          "ins": "najbardziej pewienmi",
+          "loc": "najbardziej pewiench"
+        },
+        "nonvirile": {
+          "nom": "najbardziej pewiene",
+          "gen": "najbardziej pewiench",
+          "dat": "najbardziej pewienm",
+          "acc": "najbardziej pewiene",
+          "ins": "najbardziej pewienmi",
+          "loc": "najbardziej pewiench"
+        }
+      }
+    }
+  }
+}

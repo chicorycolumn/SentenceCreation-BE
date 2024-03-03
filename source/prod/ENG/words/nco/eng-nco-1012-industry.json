@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "industry",
+      "gen": "industry's"
+    },
+    "plural": {
+      "nom": "industries",
+      "gen": "industries'"
+    }
+  }
+}

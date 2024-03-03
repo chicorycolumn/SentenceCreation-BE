@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kurwa",
+      "gen": "kurwy",
+      "dat": "kurwie",
+      "acc": "kurwę",
+      "ins": "kurwą",
+      "loc": "kurwie",
+      "voc": "kurwo"
+    },
+    "plural": {
+      "nom": "kurwy",
+      "gen": [
+        "kurew",
+        "kurw"
+      ],
+      "dat": "kurwom",
+      "acc": "kurwy",
+      "ins": "kurwami",
+      "loc": "kurwach",
+      "voc": "kurwy"
+    }
+  }
+}

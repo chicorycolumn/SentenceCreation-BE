@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "grubo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "gruby",
+          "gen": "grubego",
+          "dat": "grubemu",
+          "acc": "grubego",
+          "ins": "grubym",
+          "loc": "grubym"
+        },
+        "m3": {
+          "nom": "gruby",
+          "gen": "grubego",
+          "dat": "grubemu",
+          "acc": "gruby",
+          "ins": "grubym",
+          "loc": "grubym"
+        },
+        "f": {
+          "nom": "gruba",
+          "gen": "grubej",
+          "dat": "grubej",
+          "acc": "grubą",
+          "ins": "grubą",
+          "loc": "grubej"
+        },
+        "n": {
+          "nom": "grube",
+          "gen": "grubego",
+          "dat": "grubemu",
+          "acc": "grube",
+          "ins": "grubym",
+          "loc": "grubym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "grubi",
+          "gen": "grubych",
+          "dat": "grubym",
+          "acc": "grubych",
+          "ins": "grubymi",
+          "loc": "grubych"
+        },
+        "nonvirile": {
+          "nom": "grube",
+          "gen": "grubych",
+          "dat": "grubym",
+          "acc": "grube",
+          "ins": "grubymi",
+          "loc": "grubych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "grubszy",
+          "gen": "grubszego",
+          "dat": "grubszemu",
+          "acc": "grubszego",
+          "ins": "grubszym",
+          "loc": "grubszym"
+        },
+        "m3": {
+          "nom": "grubszy",
+          "gen": "grubszego",
+          "dat": "grubszemu",
+          "acc": "grubszy",
+          "ins": "grubszym",
+          "loc": "grubszym"
+        },
+        "f": {
+          "nom": "grubsza",
+          "gen": "grubszej",
+          "dat": "grubszej",
+          "acc": "grubszą",
+          "ins": "grubszą",
+          "loc": "grubszej"
+        },
+        "n": {
+          "nom": "grubsze",
+          "gen": "grubszego",
+          "dat": "grubszemu",
+          "acc": "grubsze",
+          "ins": "grubszym",
+          "loc": "grubszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "grubsi",
+          "gen": "grubszych",
+          "dat": "grubszym",
+          "acc": "grubszych",
+          "ins": "grubszymi",
+          "loc": "grubszych"
+        },
+        "nonvirile": {
+          "nom": "grubsze",
+          "gen": "grubszych",
+          "dat": "grubszym",
+          "acc": "grubsze",
+          "ins": "grubszymi",
+          "loc": "grubszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najgrubszy",
+          "gen": "najgrubszego",
+          "dat": "najgrubszemu",
+          "acc": "najgrubszego",
+          "ins": "najgrubszym",
+          "loc": "najgrubszym"
+        },
+        "m3": {
+          "nom": "najgrubszy",
+          "gen": "najgrubszego",
+          "dat": "najgrubszemu",
+          "acc": "najgrubszy",
+          "ins": "najgrubszym",
+          "loc": "najgrubszym"
+        },
+        "f": {
+          "nom": "najgrubsza",
+          "gen": "najgrubszej",
+          "dat": "najgrubszej",
+          "acc": "najgrubszą",
+          "ins": "najgrubszą",
+          "loc": "najgrubszej"
+        },
+        "n": {
+          "nom": "najgrubsze",
+          "gen": "najgrubszego",
+          "dat": "najgrubszemu",
+          "acc": "najgrubsze",
+          "ins": "najgrubszym",
+          "loc": "najgrubszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najgrubsi",
+          "gen": "najgrubszych",
+          "dat": "najgrubszym",
+          "acc": "najgrubszych",
+          "ins": "najgrubszymi",
+          "loc": "najgrubszych"
+        },
+        "nonvirile": {
+          "nom": "najgrubsze",
+          "gen": "najgrubszych",
+          "dat": "najgrubszym",
+          "acc": "najgrubsze",
+          "ins": "najgrubszymi",
+          "loc": "najgrubszych"
+        }
+      }
+    }
+  }
+}

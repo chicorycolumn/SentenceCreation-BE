@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "taksówka",
+      "gen": "taksówki",
+      "dat": "taksówce",
+      "acc": "taksówkę",
+      "ins": "taksówką",
+      "loc": "taksówce",
+      "voc": "taksówko"
+    },
+    "plural": {
+      "nom": "taksówki",
+      "gen": "taksówek",
+      "dat": "taksówkom",
+      "acc": "taksówki",
+      "ins": "taksówkami",
+      "loc": "taksówkach",
+      "voc": "taksówki"
+    }
+  }
+}

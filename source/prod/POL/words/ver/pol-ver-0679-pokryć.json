@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pokryć",
+    "verbalNoun": "pokrycie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pokryty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pokrywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pokryje się"
+          },
+          "plural": {
+            "allPluralGenders": "pokryje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pokryję"
+          },
+          "plural": {
+            "allPluralGenders": "pokryjemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pokryjesz"
+          },
+          "plural": {
+            "allPluralGenders": "pokryjecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pokryje"
+          },
+          "plural": {
+            "allPluralGenders": "pokryją"
+          }
+        }
+      },
+      "imperative": "pokryj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pokryto"
+          },
+          "plural": {
+            "allPluralGenders": "pokryto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pokryłem",
+            "f": "pokryłam"
+          },
+          "plural": {
+            "virile": "pokryliśmy",
+            "nonvirile": "pokryłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pokryłeś",
+            "f": "pokryłaś"
+          },
+          "plural": {
+            "virile": "pokryliście",
+            "nonvirile": "pokryłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pokrył",
+            "f": "pokryła",
+            "n": "pokryło"
+          },
+          "plural": {
+            "virile": "pokryli",
+            "nonvirile": "pokryły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

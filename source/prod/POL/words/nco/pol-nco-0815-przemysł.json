@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przemysł",
+      "gen": "przemysłu",
+      "dat": "przemysłowi",
+      "acc": "przemysł",
+      "ins": "przemysłem",
+      "loc": "przemyśle",
+      "voc": "przemyśle"
+    },
+    "plural": {
+      "nom": "przemysły",
+      "gen": "przemysłów",
+      "dat": "przemysłom",
+      "acc": "przemysły",
+      "ins": "przemysłami",
+      "loc": "przemysłach",
+      "voc": "przemysły"
+    }
+  }
+}

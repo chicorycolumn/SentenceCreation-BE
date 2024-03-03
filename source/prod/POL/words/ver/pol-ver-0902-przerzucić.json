@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przerzucić",
+    "verbalNoun": "przerzucenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przerzucony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przerzuciwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przerzuci się"
+          },
+          "plural": {
+            "allPluralGenders": "przerzuci się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przerzucę"
+          },
+          "plural": {
+            "allPluralGenders": "przerzucimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przerzucisz"
+          },
+          "plural": {
+            "allPluralGenders": "przerzucicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przerzuci"
+          },
+          "plural": {
+            "allPluralGenders": "przerzucą"
+          }
+        }
+      },
+      "imperative": "przerzuć",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przerzucono"
+          },
+          "plural": {
+            "allPluralGenders": "przerzucono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przerzuciłem",
+            "f": "przerzuciłam"
+          },
+          "plural": {
+            "virile": "przerzuciliśmy",
+            "nonvirile": "przerzuciłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przerzuciłeś",
+            "f": "przerzuciłaś"
+          },
+          "plural": {
+            "virile": "przerzuciliście",
+            "nonvirile": "przerzuciłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przerzucił",
+            "f": "przerzuciła",
+            "n": "przerzuciło"
+          },
+          "plural": {
+            "virile": "przerzucili",
+            "nonvirile": "przerzuciły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

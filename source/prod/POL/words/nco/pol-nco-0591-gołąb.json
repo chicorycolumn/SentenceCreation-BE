@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gołąb",
+      "gen": "gołębia",
+      "dat": "gołębiowi",
+      "acc": "gołębia",
+      "ins": "gołębiem",
+      "loc": "gołębiu",
+      "voc": "gołębiu"
+    },
+    "plural": {
+      "nom": "gołębie",
+      "gen": "gołębi",
+      "dat": "gołębiom",
+      "acc": "gołębie",
+      "ins": "gołębiami",
+      "loc": "gołębiach",
+      "voc": "gołębie"
+    }
+  }
+}

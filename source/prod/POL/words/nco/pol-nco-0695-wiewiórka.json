@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wiewiórka",
+      "gen": "wiewiórki",
+      "dat": "wiewiórce",
+      "acc": "wiewiórkę",
+      "ins": "wiewiórką",
+      "loc": "wiewiórce",
+      "voc": "wiewiórko"
+    },
+    "plural": {
+      "nom": "wiewiórki",
+      "gen": "wiewiórek",
+      "dat": "wiewiórkom",
+      "acc": "wiewiórki",
+      "ins": "wiewiórkami",
+      "loc": "wiewiórkach",
+      "voc": "wiewiórki"
+    }
+  }
+}

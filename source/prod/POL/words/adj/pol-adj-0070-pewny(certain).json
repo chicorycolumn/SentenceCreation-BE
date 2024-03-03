@@ -1,0 +1,174 @@
+{
+  "inflections": {
+    "adverb": {
+      "isTerminus": true,
+      "normal": [
+        "pewnie",
+        "pewno"
+      ],
+      "additionalInfrequent": []
+    },
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pewny",
+          "gen": "pewnego",
+          "dat": "pewnemu",
+          "acc": "pewnego",
+          "ins": "pewnym",
+          "loc": "pewnym"
+        },
+        "m3": {
+          "nom": "pewny",
+          "gen": "pewnego",
+          "dat": "pewnemu",
+          "acc": "pewny",
+          "ins": "pewnym",
+          "loc": "pewnym"
+        },
+        "f": {
+          "nom": "pewna",
+          "gen": "pewnej",
+          "dat": "pewnej",
+          "acc": "pewną",
+          "ins": "pewną",
+          "loc": "pewnej"
+        },
+        "n": {
+          "nom": "pewne",
+          "gen": "pewnego",
+          "dat": "pewnemu",
+          "acc": "pewne",
+          "ins": "pewnym",
+          "loc": "pewnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pewni",
+          "gen": "pewnych",
+          "dat": "pewnym",
+          "acc": "pewnych",
+          "ins": "pewnymi",
+          "loc": "pewnych"
+        },
+        "nonvirile": {
+          "nom": "pewne",
+          "gen": "pewnych",
+          "dat": "pewnym",
+          "acc": "pewne",
+          "ins": "pewnymi",
+          "loc": "pewnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "pewniejszy",
+          "gen": "pewniejszego",
+          "dat": "pewniejszemu",
+          "acc": "pewniejszego",
+          "ins": "pewniejszym",
+          "loc": "pewniejszym"
+        },
+        "m3": {
+          "nom": "pewniejszy",
+          "gen": "pewniejszego",
+          "dat": "pewniejszemu",
+          "acc": "pewniejszy",
+          "ins": "pewniejszym",
+          "loc": "pewniejszym"
+        },
+        "f": {
+          "nom": "pewniejsza",
+          "gen": "pewniejszej",
+          "dat": "pewniejszej",
+          "acc": "pewniejszą",
+          "ins": "pewniejszą",
+          "loc": "pewniejszej"
+        },
+        "n": {
+          "nom": "pewniejsze",
+          "gen": "pewniejszego",
+          "dat": "pewniejszemu",
+          "acc": "pewniejsze",
+          "ins": "pewniejszym",
+          "loc": "pewniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pewniejsi",
+          "gen": "pewniejszych",
+          "dat": "pewniejszym",
+          "acc": "pewniejszych",
+          "ins": "pewniejszymi",
+          "loc": "pewniejszych"
+        },
+        "nonvirile": {
+          "nom": "pewniejsze",
+          "gen": "pewniejszych",
+          "dat": "pewniejszym",
+          "acc": "pewniejsze",
+          "ins": "pewniejszymi",
+          "loc": "pewniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najpewniejszy",
+          "gen": "najpewniejszego",
+          "dat": "najpewniejszemu",
+          "acc": "najpewniejszego",
+          "ins": "najpewniejszym",
+          "loc": "najpewniejszym"
+        },
+        "m3": {
+          "nom": "najpewniejszy",
+          "gen": "najpewniejszego",
+          "dat": "najpewniejszemu",
+          "acc": "najpewniejszy",
+          "ins": "najpewniejszym",
+          "loc": "najpewniejszym"
+        },
+        "f": {
+          "nom": "najpewniejsza",
+          "gen": "najpewniejszej",
+          "dat": "najpewniejszej",
+          "acc": "najpewniejszą",
+          "ins": "najpewniejszą",
+          "loc": "najpewniejszej"
+        },
+        "n": {
+          "nom": "najpewniejsze",
+          "gen": "najpewniejszego",
+          "dat": "najpewniejszemu",
+          "acc": "najpewniejsze",
+          "ins": "najpewniejszym",
+          "loc": "najpewniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najpewniejsi",
+          "gen": "najpewniejszych",
+          "dat": "najpewniejszym",
+          "acc": "najpewniejszych",
+          "ins": "najpewniejszymi",
+          "loc": "najpewniejszych"
+        },
+        "nonvirile": {
+          "nom": "najpewniejsze",
+          "gen": "najpewniejszych",
+          "dat": "najpewniejszym",
+          "acc": "najpewniejsze",
+          "ins": "najpewniejszymi",
+          "loc": "najpewniejszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "inflections": {
+    "adverb": {
+      "isTerminus": true,
+      "normal": [
+        "luźno"
+      ],
+      "additionalInfrequent": [
+        "luźnie"
+      ]
+    },
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "luźny",
+          "gen": "luźnego",
+          "dat": "luźnemu",
+          "acc": "luźnego",
+          "ins": "luźnym",
+          "loc": "luźnym"
+        },
+        "m3": {
+          "nom": "luźny",
+          "gen": "luźnego",
+          "dat": "luźnemu",
+          "acc": "luźny",
+          "ins": "luźnym",
+          "loc": "luźnym"
+        },
+        "f": {
+          "nom": "luźna",
+          "gen": "luźnej",
+          "dat": "luźnej",
+          "acc": "luźną",
+          "ins": "luźną",
+          "loc": "luźnej"
+        },
+        "n": {
+          "nom": "luźne",
+          "gen": "luźnego",
+          "dat": "luźnemu",
+          "acc": "luźne",
+          "ins": "luźnym",
+          "loc": "luźnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "luźni",
+          "gen": "luźnych",
+          "dat": "luźnym",
+          "acc": "luźnych",
+          "ins": "luźnymi",
+          "loc": "luźnych"
+        },
+        "nonvirile": {
+          "nom": "luźne",
+          "gen": "luźnych",
+          "dat": "luźnym",
+          "acc": "luźne",
+          "ins": "luźnymi",
+          "loc": "luźnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "luźniejszy",
+          "gen": "luźniejszego",
+          "dat": "luźniejszemu",
+          "acc": "luźniejszego",
+          "ins": "luźniejszym",
+          "loc": "luźniejszym"
+        },
+        "m3": {
+          "nom": "luźniejszy",
+          "gen": "luźniejszego",
+          "dat": "luźniejszemu",
+          "acc": "luźniejszy",
+          "ins": "luźniejszym",
+          "loc": "luźniejszym"
+        },
+        "f": {
+          "nom": "luźniejsza",
+          "gen": "luźniejszej",
+          "dat": "luźniejszej",
+          "acc": "luźniejszą",
+          "ins": "luźniejszą",
+          "loc": "luźniejszej"
+        },
+        "n": {
+          "nom": "luźniejsze",
+          "gen": "luźniejszego",
+          "dat": "luźniejszemu",
+          "acc": "luźniejsze",
+          "ins": "luźniejszym",
+          "loc": "luźniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "luźniejsi",
+          "gen": "luźniejszych",
+          "dat": "luźniejszym",
+          "acc": "luźniejszych",
+          "ins": "luźniejszymi",
+          "loc": "luźniejszych"
+        },
+        "nonvirile": {
+          "nom": "luźniejsze",
+          "gen": "luźniejszych",
+          "dat": "luźniejszym",
+          "acc": "luźniejsze",
+          "ins": "luźniejszymi",
+          "loc": "luźniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najluźniejszy",
+          "gen": "najluźniejszego",
+          "dat": "najluźniejszemu",
+          "acc": "najluźniejszego",
+          "ins": "najluźniejszym",
+          "loc": "najluźniejszym"
+        },
+        "m3": {
+          "nom": "najluźniejszy",
+          "gen": "najluźniejszego",
+          "dat": "najluźniejszemu",
+          "acc": "najluźniejszy",
+          "ins": "najluźniejszym",
+          "loc": "najluźniejszym"
+        },
+        "f": {
+          "nom": "najluźniejsza",
+          "gen": "najluźniejszej",
+          "dat": "najluźniejszej",
+          "acc": "najluźniejszą",
+          "ins": "najluźniejszą",
+          "loc": "najluźniejszej"
+        },
+        "n": {
+          "nom": "najluźniejsze",
+          "gen": "najluźniejszego",
+          "dat": "najluźniejszemu",
+          "acc": "najluźniejsze",
+          "ins": "najluźniejszym",
+          "loc": "najluźniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najluźniejsi",
+          "gen": "najluźniejszych",
+          "dat": "najluźniejszym",
+          "acc": "najluźniejszych",
+          "ins": "najluźniejszymi",
+          "loc": "najluźniejszych"
+        },
+        "nonvirile": {
+          "nom": "najluźniejsze",
+          "gen": "najluźniejszych",
+          "dat": "najluźniejszym",
+          "acc": "najluźniejsze",
+          "ins": "najluźniejszymi",
+          "loc": "najluźniejszych"
+        }
+      }
+    }
+  }
+}

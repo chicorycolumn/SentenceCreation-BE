@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dziać",
+    "verbalNoun": "dzianie",
+    "activeAdjectival": "dziejący",
+    "passiveAdjectival": "dziany",
+    "contemporaryAdverbial": "dziejąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dziej",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dziano"
+          },
+          "plural": {
+            "allPluralGenders": "dziano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "działem",
+            "f": "działam"
+          },
+          "plural": {
+            "virile": "dzialiśmy",
+            "nonvirile": "działyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "działeś",
+            "f": "działaś"
+          },
+          "plural": {
+            "virile": "dzialiście",
+            "nonvirile": "działyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dział",
+            "f": "działa",
+            "n": "działo"
+          },
+          "plural": {
+            "virile": "dziali",
+            "nonvirile": "działy"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dzieje się"
+          },
+          "plural": {
+            "allPluralGenders": "dzieje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dzieję"
+          },
+          "plural": {
+            "allPluralGenders": "dziejemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dziejesz"
+          },
+          "plural": {
+            "allPluralGenders": "dziejecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dzieje"
+          },
+          "plural": {
+            "allPluralGenders": "dzieją"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "plastikowy",
+          "gen": "plastikowego",
+          "dat": "plastikowemu",
+          "acc": "plastikowego",
+          "ins": "plastikowym",
+          "loc": "plastikowym"
+        },
+        "m3": {
+          "nom": "plastikowy",
+          "gen": "plastikowego",
+          "dat": "plastikowemu",
+          "acc": "plastikowy",
+          "ins": "plastikowym",
+          "loc": "plastikowym"
+        },
+        "f": {
+          "nom": "plastikowa",
+          "gen": "plastikowej",
+          "dat": "plastikowej",
+          "acc": "plastikową",
+          "ins": "plastikową",
+          "loc": "plastikowej"
+        },
+        "n": {
+          "nom": "plastikowe",
+          "gen": "plastikowego",
+          "dat": "plastikowemu",
+          "acc": "plastikowe",
+          "ins": "plastikowym",
+          "loc": "plastikowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "plastikowi",
+          "gen": "plastikowych",
+          "dat": "plastikowym",
+          "acc": "plastikowych",
+          "ins": "plastikowymi",
+          "loc": "plastikowych"
+        },
+        "nonvirile": {
+          "nom": "plastikowe",
+          "gen": "plastikowych",
+          "dat": "plastikowym",
+          "acc": "plastikowe",
+          "ins": "plastikowymi",
+          "loc": "plastikowych"
+        }
+      }
+    }
+  }
+}

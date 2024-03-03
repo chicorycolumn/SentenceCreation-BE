@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "komputer",
+      "gen": "komputera",
+      "dat": "komputerowi",
+      "acc": "komputer",
+      "ins": "komputerem",
+      "loc": "komputerze",
+      "voc": "komputerze"
+    },
+    "plural": {
+      "nom": "komputery",
+      "gen": "komputerów",
+      "dat": "komputerom",
+      "acc": "komputery",
+      "ins": "komputerami",
+      "loc": "komputerach",
+      "voc": "komputery"
+    }
+  }
+}

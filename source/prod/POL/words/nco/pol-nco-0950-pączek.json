@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pączek",
+      "gen": "pączka",
+      "dat": "pączkowi",
+      "acc": [
+        "pączek",
+        "pączka"
+      ],
+      "ins": "pączkiem",
+      "loc": "pączku",
+      "voc": "pączku"
+    },
+    "plural": {
+      "nom": "pączki",
+      "gen": "pączków",
+      "dat": "pączkom",
+      "acc": "pączki",
+      "ins": "pączkami",
+      "loc": "pączkach",
+      "voc": "pączki"
+    }
+  }
+}

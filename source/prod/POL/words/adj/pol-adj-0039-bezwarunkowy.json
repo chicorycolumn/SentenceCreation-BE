@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "bezwarunkowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bezwarunkowy",
+          "gen": "bezwarunkowego",
+          "dat": "bezwarunkowemu",
+          "acc": "bezwarunkowego",
+          "ins": "bezwarunkowym",
+          "loc": "bezwarunkowym"
+        },
+        "m3": {
+          "nom": "bezwarunkowy",
+          "gen": "bezwarunkowego",
+          "dat": "bezwarunkowemu",
+          "acc": "bezwarunkowy",
+          "ins": "bezwarunkowym",
+          "loc": "bezwarunkowym"
+        },
+        "f": {
+          "nom": "bezwarunkowa",
+          "gen": "bezwarunkowej",
+          "dat": "bezwarunkowej",
+          "acc": "bezwarunkową",
+          "ins": "bezwarunkową",
+          "loc": "bezwarunkowej"
+        },
+        "n": {
+          "nom": "bezwarunkowe",
+          "gen": "bezwarunkowego",
+          "dat": "bezwarunkowemu",
+          "acc": "bezwarunkowe",
+          "ins": "bezwarunkowym",
+          "loc": "bezwarunkowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bezwarunkowi",
+          "gen": "bezwarunkowych",
+          "dat": "bezwarunkowym",
+          "acc": "bezwarunkowych",
+          "ins": "bezwarunkowymi",
+          "loc": "bezwarunkowych"
+        },
+        "nonvirile": {
+          "nom": "bezwarunkowe",
+          "gen": "bezwarunkowych",
+          "dat": "bezwarunkowym",
+          "acc": "bezwarunkowe",
+          "ins": "bezwarunkowymi",
+          "loc": "bezwarunkowych"
+        }
+      }
+    }
+  }
+}

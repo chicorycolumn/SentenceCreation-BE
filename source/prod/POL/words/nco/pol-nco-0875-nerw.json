@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "nerw",
+      "gen": "nerwu",
+      "dat": "nerwowi",
+      "acc": "nerw",
+      "ins": "nerwem",
+      "loc": "nerwie",
+      "voc": "nerwie"
+    },
+    "plural": {
+      "nom": "nerwy",
+      "gen": "nerwów",
+      "dat": "nerwom",
+      "acc": "nerwy",
+      "ins": "nerwami",
+      "loc": "nerwach",
+      "voc": "nerwy"
+    }
+  }
+}

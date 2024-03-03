@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "ślicznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "śliczny",
+          "gen": "ślicznego",
+          "dat": "ślicznemu",
+          "acc": "ślicznego",
+          "ins": "ślicznym",
+          "loc": "ślicznym"
+        },
+        "m3": {
+          "nom": "śliczny",
+          "gen": "ślicznego",
+          "dat": "ślicznemu",
+          "acc": "śliczny",
+          "ins": "ślicznym",
+          "loc": "ślicznym"
+        },
+        "f": {
+          "nom": "śliczna",
+          "gen": "ślicznej",
+          "dat": "ślicznej",
+          "acc": "śliczną",
+          "ins": "śliczną",
+          "loc": "ślicznej"
+        },
+        "n": {
+          "nom": "śliczne",
+          "gen": "ślicznego",
+          "dat": "ślicznemu",
+          "acc": "śliczne",
+          "ins": "ślicznym",
+          "loc": "ślicznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "śliczni",
+          "gen": "ślicznych",
+          "dat": "ślicznym",
+          "acc": "ślicznych",
+          "ins": "ślicznymi",
+          "loc": "ślicznych"
+        },
+        "nonvirile": {
+          "nom": "śliczne",
+          "gen": "ślicznych",
+          "dat": "ślicznym",
+          "acc": "śliczne",
+          "ins": "ślicznymi",
+          "loc": "ślicznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "śliczniejszy",
+          "gen": "śliczniejszego",
+          "dat": "śliczniejszemu",
+          "acc": "śliczniejszego",
+          "ins": "śliczniejszym",
+          "loc": "śliczniejszym"
+        },
+        "m3": {
+          "nom": "śliczniejszy",
+          "gen": "śliczniejszego",
+          "dat": "śliczniejszemu",
+          "acc": "śliczniejszy",
+          "ins": "śliczniejszym",
+          "loc": "śliczniejszym"
+        },
+        "f": {
+          "nom": "śliczniejsza",
+          "gen": "śliczniejszej",
+          "dat": "śliczniejszej",
+          "acc": "śliczniejszą",
+          "ins": "śliczniejszą",
+          "loc": "śliczniejszej"
+        },
+        "n": {
+          "nom": "śliczniejsze",
+          "gen": "śliczniejszego",
+          "dat": "śliczniejszemu",
+          "acc": "śliczniejsze",
+          "ins": "śliczniejszym",
+          "loc": "śliczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "śliczniejsi",
+          "gen": "śliczniejszych",
+          "dat": "śliczniejszym",
+          "acc": "śliczniejszych",
+          "ins": "śliczniejszymi",
+          "loc": "śliczniejszych"
+        },
+        "nonvirile": {
+          "nom": "śliczniejsze",
+          "gen": "śliczniejszych",
+          "dat": "śliczniejszym",
+          "acc": "śliczniejsze",
+          "ins": "śliczniejszymi",
+          "loc": "śliczniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najśliczniejszy",
+          "gen": "najśliczniejszego",
+          "dat": "najśliczniejszemu",
+          "acc": "najśliczniejszego",
+          "ins": "najśliczniejszym",
+          "loc": "najśliczniejszym"
+        },
+        "m3": {
+          "nom": "najśliczniejszy",
+          "gen": "najśliczniejszego",
+          "dat": "najśliczniejszemu",
+          "acc": "najśliczniejszy",
+          "ins": "najśliczniejszym",
+          "loc": "najśliczniejszym"
+        },
+        "f": {
+          "nom": "najśliczniejsza",
+          "gen": "najśliczniejszej",
+          "dat": "najśliczniejszej",
+          "acc": "najśliczniejszą",
+          "ins": "najśliczniejszą",
+          "loc": "najśliczniejszej"
+        },
+        "n": {
+          "nom": "najśliczniejsze",
+          "gen": "najśliczniejszego",
+          "dat": "najśliczniejszemu",
+          "acc": "najśliczniejsze",
+          "ins": "najśliczniejszym",
+          "loc": "najśliczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najśliczniejsi",
+          "gen": "najśliczniejszych",
+          "dat": "najśliczniejszym",
+          "acc": "najśliczniejszych",
+          "ins": "najśliczniejszymi",
+          "loc": "najśliczniejszych"
+        },
+        "nonvirile": {
+          "nom": "najśliczniejsze",
+          "gen": "najśliczniejszych",
+          "dat": "najśliczniejszym",
+          "acc": "najśliczniejsze",
+          "ins": "najśliczniejszymi",
+          "loc": "najśliczniejszych"
+        }
+      }
+    }
+  }
+}

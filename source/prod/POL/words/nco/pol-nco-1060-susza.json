@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "susza",
+      "gen": "suszy",
+      "dat": "suszy",
+      "acc": "suszę",
+      "ins": "suszą",
+      "loc": "suszy",
+      "voc": "suszo"
+    },
+    "plural": {
+      "nom": "susze",
+      "gen": "susz",
+      "dat": "suszom",
+      "acc": "susze",
+      "ins": "suszami",
+      "loc": "suszach",
+      "voc": "susze"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kawa",
+      "gen": "kawy",
+      "dat": "kawie",
+      "acc": "kawę",
+      "ins": "kawą",
+      "loc": "kawie",
+      "voc": "kawo"
+    },
+    "plural": {
+      "nom": "kawy",
+      "gen": "kaw",
+      "dat": "kawom",
+      "acc": "kawy",
+      "ins": "kawami",
+      "loc": "kawach",
+      "voc": "kawy"
+    }
+  }
+}

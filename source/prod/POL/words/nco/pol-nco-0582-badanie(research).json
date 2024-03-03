@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "badanie",
+      "gen": "badania",
+      "dat": "badaniu",
+      "acc": "badanie",
+      "ins": "badaniem",
+      "loc": "badaniu",
+      "voc": "badanie"
+    },
+    "plural": {
+      "nom": "badania",
+      "gen": "badań",
+      "dat": "badaniom",
+      "acc": "badania",
+      "ins": "badaniami",
+      "loc": "badaniach",
+      "voc": "badania"
+    }
+  }
+}

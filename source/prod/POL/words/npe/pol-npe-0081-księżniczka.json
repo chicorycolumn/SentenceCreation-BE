@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "księżniczka",
+      "gen": "księżniczki",
+      "dat": "księżniczce",
+      "acc": "księżniczkę",
+      "ins": "księżniczką",
+      "loc": "księżniczce",
+      "voc": "księżniczko"
+    },
+    "plural": {
+      "nom": "księżniczki",
+      "gen": "księżniczek",
+      "dat": "księżniczkom",
+      "acc": "księżniczki",
+      "ins": "księżniczkami",
+      "loc": "księżniczkach",
+      "voc": "księżniczki"
+    }
+  }
+}

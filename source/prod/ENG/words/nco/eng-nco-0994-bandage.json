@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "bandage",
+      "gen": "bandage's"
+    },
+    "plural": {
+      "nom": "bandages",
+      "gen": "bandages'"
+    }
+  }
+}

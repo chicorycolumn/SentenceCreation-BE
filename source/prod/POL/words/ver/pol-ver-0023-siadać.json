@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "siadać",
+    "verbalNoun": "siadanie",
+    "activeAdjectival": "siadający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "siadając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "siadaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "siadano"
+          },
+          "plural": {
+            "allPluralGenders": "siadano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "siadałem",
+            "f": "siadałam"
+          },
+          "plural": {
+            "virile": "siadaliśmy",
+            "nonvirile": "siadałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "siadałeś",
+            "f": "siadałaś"
+          },
+          "plural": {
+            "virile": "siadaliście",
+            "nonvirile": "siadałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "siadał",
+            "f": "siadała",
+            "n": "siadało"
+          },
+          "plural": {
+            "virile": "siadali",
+            "nonvirile": "siadały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "siada się"
+          },
+          "plural": {
+            "allPluralGenders": "siada się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "siadam"
+          },
+          "plural": {
+            "allPluralGenders": "siadamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "siadasz"
+          },
+          "plural": {
+            "allPluralGenders": "siadacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "siada"
+          },
+          "plural": {
+            "allPluralGenders": "siadają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "naiwnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "naiwny",
+          "gen": "naiwnego",
+          "dat": "naiwnemu",
+          "acc": "naiwnego",
+          "ins": "naiwnym",
+          "loc": "naiwnym"
+        },
+        "m3": {
+          "nom": "naiwny",
+          "gen": "naiwnego",
+          "dat": "naiwnemu",
+          "acc": "naiwny",
+          "ins": "naiwnym",
+          "loc": "naiwnym"
+        },
+        "f": {
+          "nom": "naiwna",
+          "gen": "naiwnej",
+          "dat": "naiwnej",
+          "acc": "naiwną",
+          "ins": "naiwną",
+          "loc": "naiwnej"
+        },
+        "n": {
+          "nom": "naiwne",
+          "gen": "naiwnego",
+          "dat": "naiwnemu",
+          "acc": "naiwne",
+          "ins": "naiwnym",
+          "loc": "naiwnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "naiwni",
+          "gen": "naiwnych",
+          "dat": "naiwnym",
+          "acc": "naiwnych",
+          "ins": "naiwnymi",
+          "loc": "naiwnych"
+        },
+        "nonvirile": {
+          "nom": "naiwne",
+          "gen": "naiwnych",
+          "dat": "naiwnym",
+          "acc": "naiwne",
+          "ins": "naiwnymi",
+          "loc": "naiwnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej naiwny",
+          "gen": "bardziej naiwnego",
+          "dat": "bardziej naiwnemu",
+          "acc": "bardziej naiwnego",
+          "ins": "bardziej naiwnym",
+          "loc": "bardziej naiwnym"
+        },
+        "m3": {
+          "nom": "bardziej naiwny",
+          "gen": "bardziej naiwnego",
+          "dat": "bardziej naiwnemu",
+          "acc": "bardziej naiwny",
+          "ins": "bardziej naiwnym",
+          "loc": "bardziej naiwnym"
+        },
+        "f": {
+          "nom": "bardziej naiwna",
+          "gen": "bardziej naiwnej",
+          "dat": "bardziej naiwnej",
+          "acc": "bardziej naiwną",
+          "ins": "bardziej naiwną",
+          "loc": "bardziej naiwnej"
+        },
+        "n": {
+          "nom": "bardziej naiwne",
+          "gen": "bardziej naiwnego",
+          "dat": "bardziej naiwnemu",
+          "acc": "bardziej naiwne",
+          "ins": "bardziej naiwnym",
+          "loc": "bardziej naiwnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej naiwni",
+          "gen": "bardziej naiwnych",
+          "dat": "bardziej naiwnym",
+          "acc": "bardziej naiwnych",
+          "ins": "bardziej naiwnymi",
+          "loc": "bardziej naiwnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej naiwne",
+          "gen": "bardziej naiwnych",
+          "dat": "bardziej naiwnym",
+          "acc": "bardziej naiwne",
+          "ins": "bardziej naiwnymi",
+          "loc": "bardziej naiwnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej naiwny",
+          "gen": "najbardziej naiwnego",
+          "dat": "najbardziej naiwnemu",
+          "acc": "najbardziej naiwnego",
+          "ins": "najbardziej naiwnym",
+          "loc": "najbardziej naiwnym"
+        },
+        "m3": {
+          "nom": "najbardziej naiwny",
+          "gen": "najbardziej naiwnego",
+          "dat": "najbardziej naiwnemu",
+          "acc": "najbardziej naiwny",
+          "ins": "najbardziej naiwnym",
+          "loc": "najbardziej naiwnym"
+        },
+        "f": {
+          "nom": "najbardziej naiwna",
+          "gen": "najbardziej naiwnej",
+          "dat": "najbardziej naiwnej",
+          "acc": "najbardziej naiwną",
+          "ins": "najbardziej naiwną",
+          "loc": "najbardziej naiwnej"
+        },
+        "n": {
+          "nom": "najbardziej naiwne",
+          "gen": "najbardziej naiwnego",
+          "dat": "najbardziej naiwnemu",
+          "acc": "najbardziej naiwne",
+          "ins": "najbardziej naiwnym",
+          "loc": "najbardziej naiwnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej naiwni",
+          "gen": "najbardziej naiwnych",
+          "dat": "najbardziej naiwnym",
+          "acc": "najbardziej naiwnych",
+          "ins": "najbardziej naiwnymi",
+          "loc": "najbardziej naiwnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej naiwne",
+          "gen": "najbardziej naiwnych",
+          "dat": "najbardziej naiwnym",
+          "acc": "najbardziej naiwne",
+          "ins": "najbardziej naiwnymi",
+          "loc": "najbardziej naiwnych"
+        }
+      }
+    }
+  }
+}

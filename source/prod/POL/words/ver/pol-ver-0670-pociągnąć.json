@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pociągnąć",
+    "verbalNoun": "pociągnięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pociągnięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pociągnąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pociągnie się"
+          },
+          "plural": {
+            "allPluralGenders": "pociągnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pociągnę"
+          },
+          "plural": {
+            "allPluralGenders": "pociągniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pociągniesz"
+          },
+          "plural": {
+            "allPluralGenders": "pociągniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pociągnie"
+          },
+          "plural": {
+            "allPluralGenders": "pociągną"
+          }
+        }
+      },
+      "imperative": "pociągnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pociągnięto"
+          },
+          "plural": {
+            "allPluralGenders": "pociągnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pociągnąłem",
+            "f": "pociągnęłam"
+          },
+          "plural": {
+            "virile": "pociągnęliśmy",
+            "nonvirile": "pociągnęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pociągnąłeś",
+            "f": "pociągnęłaś"
+          },
+          "plural": {
+            "virile": "pociągnęliście",
+            "nonvirile": "pociągnęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pociągnął",
+            "f": "pociągnęła",
+            "n": "pociągnęło"
+          },
+          "plural": {
+            "virile": "pociągnęli",
+            "nonvirile": "pociągnęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

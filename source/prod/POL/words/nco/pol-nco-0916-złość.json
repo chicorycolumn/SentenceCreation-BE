@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "złość",
+      "gen": "złości",
+      "dat": "złości",
+      "acc": "złość",
+      "ins": "złością",
+      "loc": "złości",
+      "voc": "złości"
+    }
+  }
+}

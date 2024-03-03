@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "spóźniony",
+          "gen": "spóźnionego",
+          "dat": "spóźnionemu",
+          "acc": "spóźnionego",
+          "ins": "spóźnionym",
+          "loc": "spóźnionym"
+        },
+        "m3": {
+          "nom": "spóźniony",
+          "gen": "spóźnionego",
+          "dat": "spóźnionemu",
+          "acc": "spóźniony",
+          "ins": "spóźnionym",
+          "loc": "spóźnionym"
+        },
+        "f": {
+          "nom": "spóźniona",
+          "gen": "spóźnionej",
+          "dat": "spóźnionej",
+          "acc": "spóźnioną",
+          "ins": "spóźnioną",
+          "loc": "spóźnionej"
+        },
+        "n": {
+          "nom": "spóźnione",
+          "gen": "spóźnionego",
+          "dat": "spóźnionemu",
+          "acc": "spóźnione",
+          "ins": "spóźnionym",
+          "loc": "spóźnionym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "spóźnieni",
+          "gen": "spóźnionych",
+          "dat": "spóźnionym",
+          "acc": "spóźnionych",
+          "ins": "spóźnionymi",
+          "loc": "spóźnionych"
+        },
+        "nonvirile": {
+          "nom": "spóźnione",
+          "gen": "spóźnionych",
+          "dat": "spóźnionym",
+          "acc": "spóźnione",
+          "ins": "spóźnionymi",
+          "loc": "spóźnionych"
+        }
+      }
+    }
+  }
+}

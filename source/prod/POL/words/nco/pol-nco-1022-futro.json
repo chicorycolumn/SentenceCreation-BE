@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "futro",
+      "gen": "futra",
+      "dat": "futru",
+      "acc": "futro",
+      "ins": "futrem",
+      "loc": "futrze",
+      "voc": "futro"
+    },
+    "plural": {
+      "nom": "futra",
+      "gen": "futer",
+      "dat": "futrom",
+      "acc": "futra",
+      "ins": "futrami",
+      "loc": "futrach",
+      "voc": "futra"
+    }
+  }
+}

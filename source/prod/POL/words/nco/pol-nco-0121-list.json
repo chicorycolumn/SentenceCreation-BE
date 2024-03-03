@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "list",
+      "gen": "listu",
+      "dat": "listowi",
+      "acc": "list",
+      "ins": "listem",
+      "loc": "liście",
+      "voc": "liście"
+    },
+    "plural": {
+      "nom": "listy",
+      "gen": "listów",
+      "dat": "listom",
+      "acc": "listy",
+      "ins": "listami",
+      "loc": "listach",
+      "voc": "listy"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "dodatkowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dodatkowy",
+          "gen": "dodatkowego",
+          "dat": "dodatkowemu",
+          "acc": "dodatkowego",
+          "ins": "dodatkowym",
+          "loc": "dodatkowym"
+        },
+        "m3": {
+          "nom": "dodatkowy",
+          "gen": "dodatkowego",
+          "dat": "dodatkowemu",
+          "acc": "dodatkowy",
+          "ins": "dodatkowym",
+          "loc": "dodatkowym"
+        },
+        "f": {
+          "nom": "dodatkowa",
+          "gen": "dodatkowej",
+          "dat": "dodatkowej",
+          "acc": "dodatkową",
+          "ins": "dodatkową",
+          "loc": "dodatkowej"
+        },
+        "n": {
+          "nom": "dodatkowe",
+          "gen": "dodatkowego",
+          "dat": "dodatkowemu",
+          "acc": "dodatkowe",
+          "ins": "dodatkowym",
+          "loc": "dodatkowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dodatkowi",
+          "gen": "dodatkowych",
+          "dat": "dodatkowym",
+          "acc": "dodatkowych",
+          "ins": "dodatkowymi",
+          "loc": "dodatkowych"
+        },
+        "nonvirile": {
+          "nom": "dodatkowe",
+          "gen": "dodatkowych",
+          "dat": "dodatkowym",
+          "acc": "dodatkowe",
+          "ins": "dodatkowymi",
+          "loc": "dodatkowych"
+        }
+      }
+    }
+  }
+}

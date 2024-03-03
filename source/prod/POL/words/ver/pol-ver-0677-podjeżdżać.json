@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "podjeżdżać",
+    "verbalNoun": "podjeżdżanie",
+    "activeAdjectival": "podjeżdżający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "podjeżdżając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "podjeżdżaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podjeżdżano"
+          },
+          "plural": {
+            "allPluralGenders": "podjeżdżano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "podjeżdżałem",
+            "f": "podjeżdżałam"
+          },
+          "plural": {
+            "virile": "podjeżdżaliśmy",
+            "nonvirile": "podjeżdżałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podjeżdżałeś",
+            "f": "podjeżdżałaś"
+          },
+          "plural": {
+            "virile": "podjeżdżaliście",
+            "nonvirile": "podjeżdżałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podjeżdżał",
+            "f": "podjeżdżała",
+            "n": "podjeżdżało"
+          },
+          "plural": {
+            "virile": "podjeżdżali",
+            "nonvirile": "podjeżdżały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podjeżdża się"
+          },
+          "plural": {
+            "allPluralGenders": "podjeżdża się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podjeżdżam"
+          },
+          "plural": {
+            "allPluralGenders": "podjeżdżamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podjeżdżasz"
+          },
+          "plural": {
+            "allPluralGenders": "podjeżdżacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podjeżdża"
+          },
+          "plural": {
+            "allPluralGenders": "podjeżdżają"
+          }
+        }
+      }
+    }
+  }
+}

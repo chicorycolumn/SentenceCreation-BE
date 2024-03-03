@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "krzyż",
+      "gen": "krzyża",
+      "dat": "krzyżowi",
+      "acc": "krzyż",
+      "ins": "krzyżem",
+      "loc": "krzyżu",
+      "voc": "krzyżu"
+    },
+    "plural": {
+      "nom": "krzyże",
+      "gen": [
+        "krzyży",
+        "krzyżów"
+      ],
+      "dat": "krzyżom",
+      "acc": "krzyże",
+      "ins": "krzyżami",
+      "loc": "krzyżach",
+      "voc": "krzyże"
+    }
+  }
+}

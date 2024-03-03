@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "spalić",
+    "verbalNoun": "spalenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "spalony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "spaliwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "spali się"
+          },
+          "plural": {
+            "allPluralGenders": "spali się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "spalę"
+          },
+          "plural": {
+            "allPluralGenders": "spalimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "spalisz"
+          },
+          "plural": {
+            "allPluralGenders": "spalicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "spali"
+          },
+          "plural": {
+            "allPluralGenders": "spalą"
+          }
+        }
+      },
+      "imperative": "spal",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "spalono"
+          },
+          "plural": {
+            "allPluralGenders": "spalono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "spaliłem",
+            "f": "spaliłam"
+          },
+          "plural": {
+            "virile": "spaliliśmy",
+            "nonvirile": "spaliłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "spaliłeś",
+            "f": "spaliłaś"
+          },
+          "plural": {
+            "virile": "spaliliście",
+            "nonvirile": "spaliłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "spalił",
+            "f": "spaliła",
+            "n": "spaliło"
+          },
+          "plural": {
+            "virile": "spalili",
+            "nonvirile": "spaliły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

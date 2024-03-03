@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "gniewnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "gniewny",
+          "gen": "gniewnego",
+          "dat": "gniewnemu",
+          "acc": "gniewnego",
+          "ins": "gniewnym",
+          "loc": "gniewnym"
+        },
+        "m3": {
+          "nom": "gniewny",
+          "gen": "gniewnego",
+          "dat": "gniewnemu",
+          "acc": "gniewny",
+          "ins": "gniewnym",
+          "loc": "gniewnym"
+        },
+        "f": {
+          "nom": "gniewna",
+          "gen": "gniewnej",
+          "dat": "gniewnej",
+          "acc": "gniewną",
+          "ins": "gniewną",
+          "loc": "gniewnej"
+        },
+        "n": {
+          "nom": "gniewne",
+          "gen": "gniewnego",
+          "dat": "gniewnemu",
+          "acc": "gniewne",
+          "ins": "gniewnym",
+          "loc": "gniewnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "gniewni",
+          "gen": "gniewnych",
+          "dat": "gniewnym",
+          "acc": "gniewnych",
+          "ins": "gniewnymi",
+          "loc": "gniewnych"
+        },
+        "nonvirile": {
+          "nom": "gniewne",
+          "gen": "gniewnych",
+          "dat": "gniewnym",
+          "acc": "gniewne",
+          "ins": "gniewnymi",
+          "loc": "gniewnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "gniewniejszy",
+          "gen": "gniewniejszego",
+          "dat": "gniewniejszemu",
+          "acc": "gniewniejszego",
+          "ins": "gniewniejszym",
+          "loc": "gniewniejszym"
+        },
+        "m3": {
+          "nom": "gniewniejszy",
+          "gen": "gniewniejszego",
+          "dat": "gniewniejszemu",
+          "acc": "gniewniejszy",
+          "ins": "gniewniejszym",
+          "loc": "gniewniejszym"
+        },
+        "f": {
+          "nom": "gniewniejsza",
+          "gen": "gniewniejszej",
+          "dat": "gniewniejszej",
+          "acc": "gniewniejszą",
+          "ins": "gniewniejszą",
+          "loc": "gniewniejszej"
+        },
+        "n": {
+          "nom": "gniewniejsze",
+          "gen": "gniewniejszego",
+          "dat": "gniewniejszemu",
+          "acc": "gniewniejsze",
+          "ins": "gniewniejszym",
+          "loc": "gniewniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "gniewniejsi",
+          "gen": "gniewniejszych",
+          "dat": "gniewniejszym",
+          "acc": "gniewniejszych",
+          "ins": "gniewniejszymi",
+          "loc": "gniewniejszych"
+        },
+        "nonvirile": {
+          "nom": "gniewniejsze",
+          "gen": "gniewniejszych",
+          "dat": "gniewniejszym",
+          "acc": "gniewniejsze",
+          "ins": "gniewniejszymi",
+          "loc": "gniewniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najgniewniejszy",
+          "gen": "najgniewniejszego",
+          "dat": "najgniewniejszemu",
+          "acc": "najgniewniejszego",
+          "ins": "najgniewniejszym",
+          "loc": "najgniewniejszym"
+        },
+        "m3": {
+          "nom": "najgniewniejszy",
+          "gen": "najgniewniejszego",
+          "dat": "najgniewniejszemu",
+          "acc": "najgniewniejszy",
+          "ins": "najgniewniejszym",
+          "loc": "najgniewniejszym"
+        },
+        "f": {
+          "nom": "najgniewniejsza",
+          "gen": "najgniewniejszej",
+          "dat": "najgniewniejszej",
+          "acc": "najgniewniejszą",
+          "ins": "najgniewniejszą",
+          "loc": "najgniewniejszej"
+        },
+        "n": {
+          "nom": "najgniewniejsze",
+          "gen": "najgniewniejszego",
+          "dat": "najgniewniejszemu",
+          "acc": "najgniewniejsze",
+          "ins": "najgniewniejszym",
+          "loc": "najgniewniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najgniewniejsi",
+          "gen": "najgniewniejszych",
+          "dat": "najgniewniejszym",
+          "acc": "najgniewniejszych",
+          "ins": "najgniewniejszymi",
+          "loc": "najgniewniejszych"
+        },
+        "nonvirile": {
+          "nom": "najgniewniejsze",
+          "gen": "najgniewniejszych",
+          "dat": "najgniewniejszym",
+          "acc": "najgniewniejsze",
+          "ins": "najgniewniejszymi",
+          "loc": "najgniewniejszych"
+        }
+      }
+    }
+  }
+}

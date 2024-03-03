@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ośmiornica",
+      "gen": "ośmiornicy",
+      "dat": "ośmiornicy",
+      "acc": "ośmiornicę",
+      "ins": "ośmiornicą",
+      "loc": "ośmiornicy",
+      "voc": "ośmiornico"
+    },
+    "plural": {
+      "nom": "ośmiornice",
+      "gen": "ośmiornic",
+      "dat": "ośmiornicom",
+      "acc": "ośmiornice",
+      "ins": "ośmiornicami",
+      "loc": "ośmiornicach",
+      "voc": "ośmiornice"
+    }
+  }
+}

@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "moralnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "moralny",
+          "gen": "moralnego",
+          "dat": "moralnemu",
+          "acc": "moralnego",
+          "ins": "moralnym",
+          "loc": "moralnym"
+        },
+        "m3": {
+          "nom": "moralny",
+          "gen": "moralnego",
+          "dat": "moralnemu",
+          "acc": "moralny",
+          "ins": "moralnym",
+          "loc": "moralnym"
+        },
+        "f": {
+          "nom": "moralna",
+          "gen": "moralnej",
+          "dat": "moralnej",
+          "acc": "moralną",
+          "ins": "moralną",
+          "loc": "moralnej"
+        },
+        "n": {
+          "nom": "moralne",
+          "gen": "moralnego",
+          "dat": "moralnemu",
+          "acc": "moralne",
+          "ins": "moralnym",
+          "loc": "moralnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "moralni",
+          "gen": "moralnych",
+          "dat": "moralnym",
+          "acc": "moralnych",
+          "ins": "moralnymi",
+          "loc": "moralnych"
+        },
+        "nonvirile": {
+          "nom": "moralne",
+          "gen": "moralnych",
+          "dat": "moralnym",
+          "acc": "moralne",
+          "ins": "moralnymi",
+          "loc": "moralnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszy",
+              "bardziej moralny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszego",
+              "bardziej moralnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszemu",
+              "bardziej moralnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszego",
+              "bardziej moralnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszym",
+              "bardziej moralnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszym",
+              "bardziej moralnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszy",
+              "bardziej moralny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszego",
+              "bardziej moralnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszemu",
+              "bardziej moralnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszy",
+              "bardziej moralny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszym",
+              "bardziej moralnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszym",
+              "bardziej moralnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejsza",
+              "bardziej moralna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszej",
+              "bardziej moralnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszej",
+              "bardziej moralnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszą",
+              "bardziej moralną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszą",
+              "bardziej moralną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszej",
+              "bardziej moralnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejsze",
+              "bardziej moralne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszego",
+              "bardziej moralnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszemu",
+              "bardziej moralnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejsze",
+              "bardziej moralne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszym",
+              "bardziej moralnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszym",
+              "bardziej moralnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejsi",
+              "bardziej moralni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszych",
+              "bardziej moralnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszym",
+              "bardziej moralnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszych",
+              "bardziej moralnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszymi",
+              "bardziej moralnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszych",
+              "bardziej moralnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejsze",
+              "bardziej moralne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszych",
+              "bardziej moralnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszym",
+              "bardziej moralnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejsze",
+              "bardziej moralne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszymi",
+              "bardziej moralnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "moralniejszych",
+              "bardziej moralnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszy",
+              "najbardziej moralny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszego",
+              "najbardziej moralnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszemu",
+              "najbardziej moralnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszego",
+              "najbardziej moralnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszym",
+              "najbardziej moralnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszym",
+              "najbardziej moralnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszy",
+              "najbardziej moralny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszego",
+              "najbardziej moralnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszemu",
+              "najbardziej moralnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszy",
+              "najbardziej moralny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszym",
+              "najbardziej moralnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszym",
+              "najbardziej moralnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejsza",
+              "najbardziej moralna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszej",
+              "najbardziej moralnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszej",
+              "najbardziej moralnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszą",
+              "najbardziej moralną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszą",
+              "najbardziej moralną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszej",
+              "najbardziej moralnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejsze",
+              "najbardziej moralne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszego",
+              "najbardziej moralnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszemu",
+              "najbardziej moralnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejsze",
+              "najbardziej moralne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszym",
+              "najbardziej moralnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszym",
+              "najbardziej moralnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejsi",
+              "najbardziej moralni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszych",
+              "najbardziej moralnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszym",
+              "najbardziej moralnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszych",
+              "najbardziej moralnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszymi",
+              "najbardziej moralnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszych",
+              "najbardziej moralnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejsze",
+              "najbardziej moralne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszych",
+              "najbardziej moralnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszym",
+              "najbardziej moralnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejsze",
+              "najbardziej moralne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszymi",
+              "najbardziej moralnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najmoralniejszych",
+              "najbardziej moralnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

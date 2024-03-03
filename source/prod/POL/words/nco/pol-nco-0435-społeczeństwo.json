@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "społeczeństwo",
+      "gen": "społeczeństwa",
+      "dat": "społeczeństwu",
+      "acc": "społeczeństwo",
+      "ins": "społeczeństwem",
+      "loc": "społeczeństwie",
+      "voc": "społeczeństwo"
+    },
+    "plural": {
+      "nom": "społeczeństwa",
+      "gen": "społeczeństw",
+      "dat": "społeczeństwom",
+      "acc": "społeczeństwa",
+      "ins": "społeczeństwami",
+      "loc": "społeczeństwach",
+      "voc": "społeczeństwa"
+    }
+  }
+}

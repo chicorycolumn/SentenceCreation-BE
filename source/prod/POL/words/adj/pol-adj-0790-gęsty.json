@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "gęsto",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "gęsty",
+          "gen": "gęstego",
+          "dat": "gęstemu",
+          "acc": "gęstego",
+          "ins": "gęstym",
+          "loc": "gęstym"
+        },
+        "m3": {
+          "nom": "gęsty",
+          "gen": "gęstego",
+          "dat": "gęstemu",
+          "acc": "gęsty",
+          "ins": "gęstym",
+          "loc": "gęstym"
+        },
+        "f": {
+          "nom": "gęsta",
+          "gen": "gęstej",
+          "dat": "gęstej",
+          "acc": "gęstą",
+          "ins": "gęstą",
+          "loc": "gęstej"
+        },
+        "n": {
+          "nom": "gęste",
+          "gen": "gęstego",
+          "dat": "gęstemu",
+          "acc": "gęste",
+          "ins": "gęstym",
+          "loc": "gęstym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "gęści",
+          "gen": "gęstych",
+          "dat": "gęstym",
+          "acc": "gęstych",
+          "ins": "gęstymi",
+          "loc": "gęstych"
+        },
+        "nonvirile": {
+          "nom": "gęste",
+          "gen": "gęstych",
+          "dat": "gęstym",
+          "acc": "gęste",
+          "ins": "gęstymi",
+          "loc": "gęstych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszy",
+              "gęściejszy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszego",
+              "gęściejszego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszemu",
+              "gęściejszemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszego",
+              "gęściejszego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszym",
+              "gęściejszym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszym",
+              "gęściejszym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszy",
+              "gęściejszy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszego",
+              "gęściejszego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszemu",
+              "gęściejszemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszy",
+              "gęściejszy"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszym",
+              "gęściejszym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszym",
+              "gęściejszym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "gęstsza",
+              "gęściejsza"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszej",
+              "gęściejszej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszej",
+              "gęściejszej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszą",
+              "gęściejszą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszą",
+              "gęściejszą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszej",
+              "gęściejszej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "gęstsze",
+              "gęściejsze"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszego",
+              "gęściejszego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszemu",
+              "gęściejszemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "gęstsze",
+              "gęściejsze"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszym",
+              "gęściejszym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszym",
+              "gęściejszym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "gęstsi",
+              "gęściejsi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszych",
+              "gęściejszych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszym",
+              "gęściejszym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszych",
+              "gęściejszych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszymi",
+              "gęściejszymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszych",
+              "gęściejszych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "gęstsze",
+              "gęściejsze"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszych",
+              "gęściejszych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszym",
+              "gęściejszym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "gęstsze",
+              "gęściejsze"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszymi",
+              "gęściejszymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "gęstszych",
+              "gęściejszych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszy",
+              "najgęściejszy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszego",
+              "najgęściejszego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszemu",
+              "najgęściejszemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszego",
+              "najgęściejszego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszym",
+              "najgęściejszym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszym",
+              "najgęściejszym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszy",
+              "najgęściejszy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszego",
+              "najgęściejszego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszemu",
+              "najgęściejszemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszy",
+              "najgęściejszy"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszym",
+              "najgęściejszym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszym",
+              "najgęściejszym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstsza",
+              "najgęściejsza"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszej",
+              "najgęściejszej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszej",
+              "najgęściejszej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszą",
+              "najgęściejszą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszą",
+              "najgęściejszą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszej",
+              "najgęściejszej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstsze",
+              "najgęściejsze"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszego",
+              "najgęściejszego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszemu",
+              "najgęściejszemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstsze",
+              "najgęściejsze"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszym",
+              "najgęściejszym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszym",
+              "najgęściejszym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstsi",
+              "najgęściejsi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszych",
+              "najgęściejszych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszym",
+              "najgęściejszym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszych",
+              "najgęściejszych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszymi",
+              "najgęściejszymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszych",
+              "najgęściejszych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstsze",
+              "najgęściejsze"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszych",
+              "najgęściejszych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszym",
+              "najgęściejszym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstsze",
+              "najgęściejsze"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszymi",
+              "najgęściejszymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najgęstszych",
+              "najgęściejszych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

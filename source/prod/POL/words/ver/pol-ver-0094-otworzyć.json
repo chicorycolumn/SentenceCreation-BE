@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "otworzyć",
+    "verbalNoun": "otwarcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "otwarty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "otwarłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "otworzy się"
+          },
+          "plural": {
+            "allPluralGenders": "otworzy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "otworzę"
+          },
+          "plural": {
+            "allPluralGenders": "otworzymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "otworzysz"
+          },
+          "plural": {
+            "allPluralGenders": "otworzycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "otworzy"
+          },
+          "plural": {
+            "allPluralGenders": "otworzą"
+          }
+        }
+      },
+      "imperative": "otwórz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "otwarto"
+          },
+          "plural": {
+            "allPluralGenders": "otwarto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "otworzyłem",
+            "f": "otworzyłam"
+          },
+          "plural": {
+            "virile": "otworzyliśmy",
+            "nonvirile": "otworzyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "otworzyłeś",
+            "f": "otworzyłaś"
+          },
+          "plural": {
+            "virile": "otworzyliście",
+            "nonvirile": "otworzyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "otworzył",
+            "f": "otworzyła",
+            "n": "otworzyło"
+          },
+          "plural": {
+            "virile": "otworzyli",
+            "nonvirile": "otworzyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

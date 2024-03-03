@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przeanalizować",
+    "verbalNoun": "przeanalizowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przeanalizowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przeanalizowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeanalizuje się"
+          },
+          "plural": {
+            "allPluralGenders": "przeanalizuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przeanalizuję"
+          },
+          "plural": {
+            "allPluralGenders": "przeanalizujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przeanalizujesz"
+          },
+          "plural": {
+            "allPluralGenders": "przeanalizujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przeanalizuje"
+          },
+          "plural": {
+            "allPluralGenders": "przeanalizują"
+          }
+        }
+      },
+      "imperative": "przeanalizuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeanalizowano"
+          },
+          "plural": {
+            "allPluralGenders": "przeanalizowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przeanalizowałem",
+            "f": "przeanalizowałam"
+          },
+          "plural": {
+            "virile": "przeanalizowaliśmy",
+            "nonvirile": "przeanalizowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przeanalizowałeś",
+            "f": "przeanalizowałaś"
+          },
+          "plural": {
+            "virile": "przeanalizowaliście",
+            "nonvirile": "przeanalizowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przeanalizował",
+            "f": "przeanalizowała",
+            "n": "przeanalizowało"
+          },
+          "plural": {
+            "virile": "przeanalizowali",
+            "nonvirile": "przeanalizowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

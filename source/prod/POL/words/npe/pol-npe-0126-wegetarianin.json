@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wegetarianin",
+      "gen": "wegetarianina",
+      "dat": "wegetarianinowi",
+      "acc": "wegetarianina",
+      "ins": "wegetarianinem",
+      "loc": "wegetarianinie",
+      "voc": "wegetarianinie"
+    },
+    "plural": {
+      "nom": "wegetarianie",
+      "gen": [
+        "wegetarian",
+        "wegetarianów"
+      ],
+      "dat": "wegetarianom",
+      "acc": [
+        "wegetarian",
+        "wegetarianów"
+      ],
+      "ins": "wegetarianami",
+      "loc": "wegetarianach",
+      "voc": "wegetarianie"
+    }
+  }
+}

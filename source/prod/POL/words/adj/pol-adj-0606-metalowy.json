@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "metalowy",
+          "gen": "metalowego",
+          "dat": "metalowemu",
+          "acc": "metalowego",
+          "ins": "metalowym",
+          "loc": "metalowym"
+        },
+        "m3": {
+          "nom": "metalowy",
+          "gen": "metalowego",
+          "dat": "metalowemu",
+          "acc": "metalowy",
+          "ins": "metalowym",
+          "loc": "metalowym"
+        },
+        "f": {
+          "nom": "metalowa",
+          "gen": "metalowej",
+          "dat": "metalowej",
+          "acc": "metalową",
+          "ins": "metalową",
+          "loc": "metalowej"
+        },
+        "n": {
+          "nom": "metalowe",
+          "gen": "metalowego",
+          "dat": "metalowemu",
+          "acc": "metalowe",
+          "ins": "metalowym",
+          "loc": "metalowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "metalowi",
+          "gen": "metalowych",
+          "dat": "metalowym",
+          "acc": "metalowych",
+          "ins": "metalowymi",
+          "loc": "metalowych"
+        },
+        "nonvirile": {
+          "nom": "metalowe",
+          "gen": "metalowych",
+          "dat": "metalowym",
+          "acc": "metalowe",
+          "ins": "metalowymi",
+          "loc": "metalowych"
+        }
+      }
+    }
+  }
+}

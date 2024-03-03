@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "brzmieć",
+    "verbalNoun": "brzmienie",
+    "activeAdjectival": "brzmiący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "brzmiąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "brzmij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "brzmiano"
+          },
+          "plural": {
+            "allPluralGenders": "brzmiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "brzmiałem",
+            "f": "brzmiałam"
+          },
+          "plural": {
+            "virile": "brzmieliśmy",
+            "nonvirile": "brzmiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "brzmiałeś",
+            "f": "brzmiałaś"
+          },
+          "plural": {
+            "virile": "brzmieliście",
+            "nonvirile": "brzmiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "brzmiał",
+            "f": "brzmiała",
+            "n": "brzmiało"
+          },
+          "plural": {
+            "virile": "brzmieli",
+            "nonvirile": "brzmiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "brzmi się"
+          },
+          "plural": {
+            "allPluralGenders": "brzmi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "brzmię"
+          },
+          "plural": {
+            "allPluralGenders": "brzmimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "brzmisz"
+          },
+          "plural": {
+            "allPluralGenders": "brzmicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "brzmi"
+          },
+          "plural": {
+            "allPluralGenders": "brzmią"
+          }
+        }
+      }
+    }
+  }
+}

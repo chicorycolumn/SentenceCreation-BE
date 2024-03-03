@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "podzielać",
+    "verbalNoun": "podzielanie",
+    "activeAdjectival": "podzielający",
+    "passiveAdjectival": "podzielany",
+    "contemporaryAdverbial": "podzielając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "podzielaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podzielano"
+          },
+          "plural": {
+            "allPluralGenders": "podzielano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "podzielałem",
+            "f": "podzielałam"
+          },
+          "plural": {
+            "virile": "podzielaliśmy",
+            "nonvirile": "podzielałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podzielałeś",
+            "f": "podzielałaś"
+          },
+          "plural": {
+            "virile": "podzielaliście",
+            "nonvirile": "podzielałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podzielał",
+            "f": "podzielała",
+            "n": "podzielało"
+          },
+          "plural": {
+            "virile": "podzielali",
+            "nonvirile": "podzielały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podziela się"
+          },
+          "plural": {
+            "allPluralGenders": "podziela się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podzielam"
+          },
+          "plural": {
+            "allPluralGenders": "podzielamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podzielasz"
+          },
+          "plural": {
+            "allPluralGenders": "podzielacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podziela"
+          },
+          "plural": {
+            "allPluralGenders": "podzielają"
+          }
+        }
+      }
+    }
+  }
+}

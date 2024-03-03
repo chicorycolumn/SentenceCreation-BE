@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "potrząsać",
+    "verbalNoun": "potrząsanie",
+    "activeAdjectival": "potrząsający",
+    "passiveAdjectival": "potrząsany",
+    "contemporaryAdverbial": "potrząsając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "potrząsaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "potrząsano"
+          },
+          "plural": {
+            "allPluralGenders": "potrząsano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "potrząsałem",
+            "f": "potrząsałam"
+          },
+          "plural": {
+            "virile": "potrząsaliśmy",
+            "nonvirile": "potrząsałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "potrząsałeś",
+            "f": "potrząsałaś"
+          },
+          "plural": {
+            "virile": "potrząsaliście",
+            "nonvirile": "potrząsałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "potrząsał",
+            "f": "potrząsała",
+            "n": "potrząsało"
+          },
+          "plural": {
+            "virile": "potrząsali",
+            "nonvirile": "potrząsały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "potrząsa się"
+          },
+          "plural": {
+            "allPluralGenders": "potrząsa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "potrząsam"
+          },
+          "plural": {
+            "allPluralGenders": "potrząsamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "potrząsasz"
+          },
+          "plural": {
+            "allPluralGenders": "potrząsacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "potrząsa"
+          },
+          "plural": {
+            "allPluralGenders": "potrząsają"
+          }
+        }
+      }
+    }
+  }
+}

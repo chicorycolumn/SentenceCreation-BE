@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "prawdziwie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "prawdziwy",
+          "gen": "prawdziwego",
+          "dat": "prawdziwemu",
+          "acc": "prawdziwego",
+          "ins": "prawdziwym",
+          "loc": "prawdziwym"
+        },
+        "m3": {
+          "nom": "prawdziwy",
+          "gen": "prawdziwego",
+          "dat": "prawdziwemu",
+          "acc": "prawdziwy",
+          "ins": "prawdziwym",
+          "loc": "prawdziwym"
+        },
+        "f": {
+          "nom": "prawdziwa",
+          "gen": "prawdziwej",
+          "dat": "prawdziwej",
+          "acc": "prawdziwą",
+          "ins": "prawdziwą",
+          "loc": "prawdziwej"
+        },
+        "n": {
+          "nom": "prawdziwe",
+          "gen": "prawdziwego",
+          "dat": "prawdziwemu",
+          "acc": "prawdziwe",
+          "ins": "prawdziwym",
+          "loc": "prawdziwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "prawdziwi",
+          "gen": "prawdziwych",
+          "dat": "prawdziwym",
+          "acc": "prawdziwych",
+          "ins": "prawdziwymi",
+          "loc": "prawdziwych"
+        },
+        "nonvirile": {
+          "nom": "prawdziwe",
+          "gen": "prawdziwych",
+          "dat": "prawdziwym",
+          "acc": "prawdziwe",
+          "ins": "prawdziwymi",
+          "loc": "prawdziwych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszy",
+              "bardziej prawdziwy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszego",
+              "bardziej prawdziwego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszemu",
+              "bardziej prawdziwemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszego",
+              "bardziej prawdziwego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszym",
+              "bardziej prawdziwym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszym",
+              "bardziej prawdziwym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszy",
+              "bardziej prawdziwy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszego",
+              "bardziej prawdziwego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszemu",
+              "bardziej prawdziwemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszy",
+              "bardziej prawdziwy"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszym",
+              "bardziej prawdziwym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszym",
+              "bardziej prawdziwym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwsza",
+              "bardziej prawdziwa"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszej",
+              "bardziej prawdziwej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszej",
+              "bardziej prawdziwej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszą",
+              "bardziej prawdziwą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszą",
+              "bardziej prawdziwą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszej",
+              "bardziej prawdziwej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwsze",
+              "bardziej prawdziwe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszego",
+              "bardziej prawdziwego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszemu",
+              "bardziej prawdziwemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwsze",
+              "bardziej prawdziwe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszym",
+              "bardziej prawdziwym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszym",
+              "bardziej prawdziwym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwsi",
+              "bardziej prawdziwi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszych",
+              "bardziej prawdziwych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszym",
+              "bardziej prawdziwym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszych",
+              "bardziej prawdziwych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszymi",
+              "bardziej prawdziwymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszych",
+              "bardziej prawdziwych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwsze",
+              "bardziej prawdziwe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszych",
+              "bardziej prawdziwych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszym",
+              "bardziej prawdziwym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwsze",
+              "bardziej prawdziwe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszymi",
+              "bardziej prawdziwymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdziwszych",
+              "bardziej prawdziwych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszy",
+              "najbardziej prawdziwy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszego",
+              "najbardziej prawdziwego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszemu",
+              "najbardziej prawdziwemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszego",
+              "najbardziej prawdziwego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszym",
+              "najbardziej prawdziwym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszym",
+              "najbardziej prawdziwym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszy",
+              "najbardziej prawdziwy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszego",
+              "najbardziej prawdziwego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszemu",
+              "najbardziej prawdziwemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszy",
+              "najbardziej prawdziwy"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszym",
+              "najbardziej prawdziwym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszym",
+              "najbardziej prawdziwym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwsza",
+              "najbardziej prawdziwa"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszej",
+              "najbardziej prawdziwej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszej",
+              "najbardziej prawdziwej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszą",
+              "najbardziej prawdziwą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszą",
+              "najbardziej prawdziwą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszej",
+              "najbardziej prawdziwej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwsze",
+              "najbardziej prawdziwe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszego",
+              "najbardziej prawdziwego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszemu",
+              "najbardziej prawdziwemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwsze",
+              "najbardziej prawdziwe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszym",
+              "najbardziej prawdziwym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszym",
+              "najbardziej prawdziwym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwsi",
+              "najbardziej prawdziwi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszych",
+              "najbardziej prawdziwych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszym",
+              "najbardziej prawdziwym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszych",
+              "najbardziej prawdziwych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszymi",
+              "najbardziej prawdziwymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszych",
+              "najbardziej prawdziwych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwsze",
+              "najbardziej prawdziwe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszych",
+              "najbardziej prawdziwych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszym",
+              "najbardziej prawdziwym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwsze",
+              "najbardziej prawdziwe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszymi",
+              "najbardziej prawdziwymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdziwszych",
+              "najbardziej prawdziwych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

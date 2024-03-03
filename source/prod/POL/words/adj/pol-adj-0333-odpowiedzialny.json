@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "odpowiedzialnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "odpowiedzialny",
+          "gen": "odpowiedzialnego",
+          "dat": "odpowiedzialnemu",
+          "acc": "odpowiedzialnego",
+          "ins": "odpowiedzialnym",
+          "loc": "odpowiedzialnym"
+        },
+        "m3": {
+          "nom": "odpowiedzialny",
+          "gen": "odpowiedzialnego",
+          "dat": "odpowiedzialnemu",
+          "acc": "odpowiedzialny",
+          "ins": "odpowiedzialnym",
+          "loc": "odpowiedzialnym"
+        },
+        "f": {
+          "nom": "odpowiedzialna",
+          "gen": "odpowiedzialnej",
+          "dat": "odpowiedzialnej",
+          "acc": "odpowiedzialną",
+          "ins": "odpowiedzialną",
+          "loc": "odpowiedzialnej"
+        },
+        "n": {
+          "nom": "odpowiedzialne",
+          "gen": "odpowiedzialnego",
+          "dat": "odpowiedzialnemu",
+          "acc": "odpowiedzialne",
+          "ins": "odpowiedzialnym",
+          "loc": "odpowiedzialnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "odpowiedzialni",
+          "gen": "odpowiedzialnych",
+          "dat": "odpowiedzialnym",
+          "acc": "odpowiedzialnych",
+          "ins": "odpowiedzialnymi",
+          "loc": "odpowiedzialnych"
+        },
+        "nonvirile": {
+          "nom": "odpowiedzialne",
+          "gen": "odpowiedzialnych",
+          "dat": "odpowiedzialnym",
+          "acc": "odpowiedzialne",
+          "ins": "odpowiedzialnymi",
+          "loc": "odpowiedzialnych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "nagle",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nagły",
+          "gen": "nagłego",
+          "dat": "nagłemu",
+          "acc": "nagłego",
+          "ins": "nagłym",
+          "loc": "nagłym"
+        },
+        "m3": {
+          "nom": "nagły",
+          "gen": "nagłego",
+          "dat": "nagłemu",
+          "acc": "nagły",
+          "ins": "nagłym",
+          "loc": "nagłym"
+        },
+        "f": {
+          "nom": "nagła",
+          "gen": "nagłej",
+          "dat": "nagłej",
+          "acc": "nagłą",
+          "ins": "nagłą",
+          "loc": "nagłej"
+        },
+        "n": {
+          "nom": "nagłe",
+          "gen": "nagłego",
+          "dat": "nagłemu",
+          "acc": "nagłe",
+          "ins": "nagłym",
+          "loc": "nagłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nagli",
+          "gen": "nagłych",
+          "dat": "nagłym",
+          "acc": "nagłych",
+          "ins": "nagłymi",
+          "loc": "nagłych"
+        },
+        "nonvirile": {
+          "nom": "nagłe",
+          "gen": "nagłych",
+          "dat": "nagłym",
+          "acc": "nagłe",
+          "ins": "nagłymi",
+          "loc": "nagłych"
+        }
+      }
+    }
+  }
+}

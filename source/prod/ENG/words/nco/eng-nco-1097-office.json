@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "office",
+      "gen": "office's"
+    },
+    "plural": {
+      "nom": "offices",
+      "gen": "offices'"
+    }
+  }
+}

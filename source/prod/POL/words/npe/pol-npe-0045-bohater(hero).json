@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "bohater",
+      "gen": "bohatera",
+      "dat": "bohaterowi",
+      "acc": "bohatera",
+      "ins": "bohaterem",
+      "loc": "bohaterze",
+      "voc": "bohaterze"
+    },
+    "plural": {
+      "nom": [
+        "bohaterowie",
+        "bohaterzy"
+      ],
+      "gen": "bohaterów",
+      "dat": "bohaterom",
+      "acc": "bohaterów",
+      "ins": "bohaterami",
+      "loc": "bohaterach",
+      "voc": [
+        "bohaterowie",
+        "bohaterzy"
+      ]
+    }
+  }
+}

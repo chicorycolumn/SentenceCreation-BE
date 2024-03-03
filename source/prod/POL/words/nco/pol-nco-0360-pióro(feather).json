@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pióro",
+      "gen": "pióra",
+      "dat": "pióru",
+      "acc": "pióro",
+      "ins": "piórem",
+      "loc": "piórze",
+      "voc": "pióro"
+    },
+    "plural": {
+      "nom": "pióra",
+      "gen": "piór",
+      "dat": "piórom",
+      "acc": "pióra",
+      "ins": "piórami",
+      "loc": "piórach",
+      "voc": "pióra"
+    }
+  }
+}

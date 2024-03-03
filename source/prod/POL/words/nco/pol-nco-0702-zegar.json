@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zegar",
+      "gen": "zegara",
+      "dat": "zegarowi",
+      "acc": "zegar",
+      "ins": "zegarem",
+      "loc": "zegarze",
+      "voc": "zegarze"
+    },
+    "plural": {
+      "nom": "zegary",
+      "gen": "zegarów",
+      "dat": "zegarom",
+      "acc": "zegary",
+      "ins": "zegarami",
+      "loc": "zegarach",
+      "voc": "zegary"
+    }
+  }
+}

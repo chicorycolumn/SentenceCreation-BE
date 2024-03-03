@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "wysoko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "wysoki",
+          "gen": "wysokiego",
+          "dat": "wysokiemu",
+          "acc": "wysokiego",
+          "ins": "wysokim",
+          "loc": "wysokim"
+        },
+        "m3": {
+          "nom": "wysoki",
+          "gen": "wysokiego",
+          "dat": "wysokiemu",
+          "acc": "wysoki",
+          "ins": "wysokim",
+          "loc": "wysokim"
+        },
+        "f": {
+          "nom": "wysoka",
+          "gen": "wysokiej",
+          "dat": "wysokiej",
+          "acc": "wysoką",
+          "ins": "wysoką",
+          "loc": "wysokiej"
+        },
+        "n": {
+          "nom": "wysokie",
+          "gen": "wysokiego",
+          "dat": "wysokiemu",
+          "acc": "wysokie",
+          "ins": "wysokim",
+          "loc": "wysokim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wysocy",
+          "gen": "wysokich",
+          "dat": "wysokim",
+          "acc": "wysokich",
+          "ins": "wysokimi",
+          "loc": "wysokich"
+        },
+        "nonvirile": {
+          "nom": "wysokie",
+          "gen": "wysokich",
+          "dat": "wysokim",
+          "acc": "wysokie",
+          "ins": "wysokimi",
+          "loc": "wysokich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "wyższy",
+          "gen": "wyższego",
+          "dat": "wyższemu",
+          "acc": "wyższego",
+          "ins": "wyższym",
+          "loc": "wyższym"
+        },
+        "m3": {
+          "nom": "wyższy",
+          "gen": "wyższego",
+          "dat": "wyższemu",
+          "acc": "wyższy",
+          "ins": "wyższym",
+          "loc": "wyższym"
+        },
+        "f": {
+          "nom": "wyższa",
+          "gen": "wyższej",
+          "dat": "wyższej",
+          "acc": "wyższą",
+          "ins": "wyższą",
+          "loc": "wyższej"
+        },
+        "n": {
+          "nom": "wyższe",
+          "gen": "wyższego",
+          "dat": "wyższemu",
+          "acc": "wyższe",
+          "ins": "wyższym",
+          "loc": "wyższym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wyżsi",
+          "gen": "wyższych",
+          "dat": "wyższym",
+          "acc": "wyższych",
+          "ins": "wyższymi",
+          "loc": "wyższych"
+        },
+        "nonvirile": {
+          "nom": "wyższe",
+          "gen": "wyższych",
+          "dat": "wyższym",
+          "acc": "wyższe",
+          "ins": "wyższymi",
+          "loc": "wyższych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najwyższy",
+          "gen": "najwyższego",
+          "dat": "najwyższemu",
+          "acc": "najwyższego",
+          "ins": "najwyższym",
+          "loc": "najwyższym"
+        },
+        "m3": {
+          "nom": "najwyższy",
+          "gen": "najwyższego",
+          "dat": "najwyższemu",
+          "acc": "najwyższy",
+          "ins": "najwyższym",
+          "loc": "najwyższym"
+        },
+        "f": {
+          "nom": "najwyższa",
+          "gen": "najwyższej",
+          "dat": "najwyższej",
+          "acc": "najwyższą",
+          "ins": "najwyższą",
+          "loc": "najwyższej"
+        },
+        "n": {
+          "nom": "najwyższe",
+          "gen": "najwyższego",
+          "dat": "najwyższemu",
+          "acc": "najwyższe",
+          "ins": "najwyższym",
+          "loc": "najwyższym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najwyżsi",
+          "gen": "najwyższych",
+          "dat": "najwyższym",
+          "acc": "najwyższych",
+          "ins": "najwyższymi",
+          "loc": "najwyższych"
+        },
+        "nonvirile": {
+          "nom": "najwyższe",
+          "gen": "najwyższych",
+          "dat": "najwyższym",
+          "acc": "najwyższe",
+          "ins": "najwyższymi",
+          "loc": "najwyższych"
+        }
+      }
+    }
+  }
+}

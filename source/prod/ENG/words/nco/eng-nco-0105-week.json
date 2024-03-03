@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "week",
+      "gen": "week's"
+    },
+    "plural": {
+      "nom": "weeks",
+      "gen": "weeks'"
+    }
+  }
+}

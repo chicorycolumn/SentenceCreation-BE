@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lot",
+      "gen": "lotu",
+      "dat": "lotowi",
+      "acc": "lot",
+      "ins": "lotem",
+      "loc": "locie",
+      "voc": "locie"
+    },
+    "plural": {
+      "nom": "loty",
+      "gen": "lotów",
+      "dat": "lotom",
+      "acc": "loty",
+      "ins": "lotami",
+      "loc": "lotach",
+      "voc": "loty"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "idealnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "idealny",
+          "gen": "idealnego",
+          "dat": "idealnemu",
+          "acc": "idealnego",
+          "ins": "idealnym",
+          "loc": "idealnym"
+        },
+        "m3": {
+          "nom": "idealny",
+          "gen": "idealnego",
+          "dat": "idealnemu",
+          "acc": "idealny",
+          "ins": "idealnym",
+          "loc": "idealnym"
+        },
+        "f": {
+          "nom": "idealna",
+          "gen": "idealnej",
+          "dat": "idealnej",
+          "acc": "idealną",
+          "ins": "idealną",
+          "loc": "idealnej"
+        },
+        "n": {
+          "nom": "idealne",
+          "gen": "idealnego",
+          "dat": "idealnemu",
+          "acc": "idealne",
+          "ins": "idealnym",
+          "loc": "idealnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "idealni",
+          "gen": "idealnych",
+          "dat": "idealnym",
+          "acc": "idealnych",
+          "ins": "idealnymi",
+          "loc": "idealnych"
+        },
+        "nonvirile": {
+          "nom": "idealne",
+          "gen": "idealnych",
+          "dat": "idealnym",
+          "acc": "idealne",
+          "ins": "idealnymi",
+          "loc": "idealnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "idealniejszy",
+          "gen": "idealniejszego",
+          "dat": "idealniejszemu",
+          "acc": "idealniejszego",
+          "ins": "idealniejszym",
+          "loc": "idealniejszym"
+        },
+        "m3": {
+          "nom": "idealniejszy",
+          "gen": "idealniejszego",
+          "dat": "idealniejszemu",
+          "acc": "idealniejszy",
+          "ins": "idealniejszym",
+          "loc": "idealniejszym"
+        },
+        "f": {
+          "nom": "idealniejsza",
+          "gen": "idealniejszej",
+          "dat": "idealniejszej",
+          "acc": "idealniejszą",
+          "ins": "idealniejszą",
+          "loc": "idealniejszej"
+        },
+        "n": {
+          "nom": "idealniejsze",
+          "gen": "idealniejszego",
+          "dat": "idealniejszemu",
+          "acc": "idealniejsze",
+          "ins": "idealniejszym",
+          "loc": "idealniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "idealniejsi",
+          "gen": "idealniejszych",
+          "dat": "idealniejszym",
+          "acc": "idealniejszych",
+          "ins": "idealniejszymi",
+          "loc": "idealniejszych"
+        },
+        "nonvirile": {
+          "nom": "idealniejsze",
+          "gen": "idealniejszych",
+          "dat": "idealniejszym",
+          "acc": "idealniejsze",
+          "ins": "idealniejszymi",
+          "loc": "idealniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najidealniejszy",
+          "gen": "najidealniejszego",
+          "dat": "najidealniejszemu",
+          "acc": "najidealniejszego",
+          "ins": "najidealniejszym",
+          "loc": "najidealniejszym"
+        },
+        "m3": {
+          "nom": "najidealniejszy",
+          "gen": "najidealniejszego",
+          "dat": "najidealniejszemu",
+          "acc": "najidealniejszy",
+          "ins": "najidealniejszym",
+          "loc": "najidealniejszym"
+        },
+        "f": {
+          "nom": "najidealniejsza",
+          "gen": "najidealniejszej",
+          "dat": "najidealniejszej",
+          "acc": "najidealniejszą",
+          "ins": "najidealniejszą",
+          "loc": "najidealniejszej"
+        },
+        "n": {
+          "nom": "najidealniejsze",
+          "gen": "najidealniejszego",
+          "dat": "najidealniejszemu",
+          "acc": "najidealniejsze",
+          "ins": "najidealniejszym",
+          "loc": "najidealniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najidealniejsi",
+          "gen": "najidealniejszych",
+          "dat": "najidealniejszym",
+          "acc": "najidealniejszych",
+          "ins": "najidealniejszymi",
+          "loc": "najidealniejszych"
+        },
+        "nonvirile": {
+          "nom": "najidealniejsze",
+          "gen": "najidealniejszych",
+          "dat": "najidealniejszym",
+          "acc": "najidealniejsze",
+          "ins": "najidealniejszymi",
+          "loc": "najidealniejszych"
+        }
+      }
+    }
+  }
+}

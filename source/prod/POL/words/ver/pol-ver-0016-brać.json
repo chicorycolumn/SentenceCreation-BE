@@ -1,0 +1,82 @@
+{
+  "inflections": {
+    "infinitive": "brać",
+    "verbalNoun": "branie",
+    "activeAdjectival": "biorący",
+    "passiveAdjectival": "brany",
+    "contemporaryAdverbial": "biorąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "bierz",
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "brałem",
+            "f": "brałam"
+          },
+          "plural": {
+            "virile": "braliśmy",
+            "nonvirile": "brałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "brałeś",
+            "f": "brałaś"
+          },
+          "plural": {
+            "virile": "braliście",
+            "nonvirile": "brałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "brał",
+            "f": "brała",
+            "n": "brało"
+          },
+          "plural": {
+            "virile": "brali",
+            "nonvirile": "brały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "bierze się"
+          },
+          "plural": {
+            "allPluralGenders": "bierze się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "biorę"
+          },
+          "plural": {
+            "allPluralGenders": "bierzemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "bierzesz"
+          },
+          "plural": {
+            "allPluralGenders": "bierzecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "bierze"
+          },
+          "plural": {
+            "allPluralGenders": "biorą"
+          }
+        }
+      }
+    }
+  }
+}

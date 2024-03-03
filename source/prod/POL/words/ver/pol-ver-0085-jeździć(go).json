@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "jeździć",
+    "verbalNoun": "jeżdżenie",
+    "activeAdjectival": "jeżdżący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "jeżdżąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "jeźdź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "jeżdżono"
+          },
+          "plural": {
+            "allPluralGenders": "jeżdżono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "jeździłem",
+            "f": "jeździłam"
+          },
+          "plural": {
+            "virile": "jeździliśmy",
+            "nonvirile": "jeździłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "jeździłeś",
+            "f": "jeździłaś"
+          },
+          "plural": {
+            "virile": "jeździliście",
+            "nonvirile": "jeździłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "jeździł",
+            "f": "jeździła",
+            "n": "jeździło"
+          },
+          "plural": {
+            "virile": "jeździli",
+            "nonvirile": "jeździły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "jeździ się"
+          },
+          "plural": {
+            "allPluralGenders": "jeździ się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "jeżdżę"
+          },
+          "plural": {
+            "allPluralGenders": "jeździmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "jeździsz"
+          },
+          "plural": {
+            "allPluralGenders": "jeździcie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "jeździ"
+          },
+          "plural": {
+            "allPluralGenders": "jeżdżą"
+          }
+        }
+      }
+    }
+  }
+}

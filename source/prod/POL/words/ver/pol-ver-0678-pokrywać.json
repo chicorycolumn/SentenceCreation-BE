@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pokrywać",
+    "verbalNoun": "pokrywanie",
+    "activeAdjectival": "pokrywający",
+    "passiveAdjectival": "pokrywany",
+    "contemporaryAdverbial": "pokrywając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pokrywaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pokrywano"
+          },
+          "plural": {
+            "allPluralGenders": "pokrywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pokrywałem",
+            "f": "pokrywałam"
+          },
+          "plural": {
+            "virile": "pokrywaliśmy",
+            "nonvirile": "pokrywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pokrywałeś",
+            "f": "pokrywałaś"
+          },
+          "plural": {
+            "virile": "pokrywaliście",
+            "nonvirile": "pokrywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pokrywał",
+            "f": "pokrywała",
+            "n": "pokrywało"
+          },
+          "plural": {
+            "virile": "pokrywali",
+            "nonvirile": "pokrywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pokrywa się"
+          },
+          "plural": {
+            "allPluralGenders": "pokrywa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pokrywam"
+          },
+          "plural": {
+            "allPluralGenders": "pokrywamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pokrywasz"
+          },
+          "plural": {
+            "allPluralGenders": "pokrywacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pokrywa"
+          },
+          "plural": {
+            "allPluralGenders": "pokrywają"
+          }
+        }
+      }
+    }
+  }
+}

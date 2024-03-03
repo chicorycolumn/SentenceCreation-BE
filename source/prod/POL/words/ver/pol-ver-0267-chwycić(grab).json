@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "chwycić",
+    "verbalNoun": "chwycenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "chwycony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "chwyciwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "chwyci się"
+          },
+          "plural": {
+            "allPluralGenders": "chwyci się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "chwycę"
+          },
+          "plural": {
+            "allPluralGenders": "chwycimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "chwycisz"
+          },
+          "plural": {
+            "allPluralGenders": "chwycicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "chwyci"
+          },
+          "plural": {
+            "allPluralGenders": "chwycą"
+          }
+        }
+      },
+      "imperative": "chwyć",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "chwycono"
+          },
+          "plural": {
+            "allPluralGenders": "chwycono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "chwyciłem",
+            "f": "chwyciłam"
+          },
+          "plural": {
+            "virile": "chwyciliśmy",
+            "nonvirile": "chwyciłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "chwyciłeś",
+            "f": "chwyciłaś"
+          },
+          "plural": {
+            "virile": "chwyciliście",
+            "nonvirile": "chwyciłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "chwycił",
+            "f": "chwyciła",
+            "n": "chwyciło"
+          },
+          "plural": {
+            "virile": "chwycili",
+            "nonvirile": "chwyciły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

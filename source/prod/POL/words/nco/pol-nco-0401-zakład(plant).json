@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zakład",
+      "gen": "zakładu",
+      "dat": "zakładowi",
+      "acc": "zakład",
+      "ins": "zakładem",
+      "loc": "zakładzie",
+      "voc": "zakładzie"
+    },
+    "plural": {
+      "nom": "zakłady",
+      "gen": "zakładów",
+      "dat": "zakładom",
+      "acc": "zakłady",
+      "ins": "zakładami",
+      "loc": "zakładach",
+      "voc": "zakłady"
+    }
+  }
+}

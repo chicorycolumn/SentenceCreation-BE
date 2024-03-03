@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "wyczerpany",
+          "gen": "wyczerpanego",
+          "dat": "wyczerpanemu",
+          "acc": "wyczerpanego",
+          "ins": "wyczerpanym",
+          "loc": "wyczerpanym"
+        },
+        "m3": {
+          "nom": "wyczerpany",
+          "gen": "wyczerpanego",
+          "dat": "wyczerpanemu",
+          "acc": "wyczerpany",
+          "ins": "wyczerpanym",
+          "loc": "wyczerpanym"
+        },
+        "f": {
+          "nom": "wyczerpana",
+          "gen": "wyczerpanej",
+          "dat": "wyczerpanej",
+          "acc": "wyczerpaną",
+          "ins": "wyczerpaną",
+          "loc": "wyczerpanej"
+        },
+        "n": {
+          "nom": "wyczerpane",
+          "gen": "wyczerpanego",
+          "dat": "wyczerpanemu",
+          "acc": "wyczerpane",
+          "ins": "wyczerpanym",
+          "loc": "wyczerpanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wyczerpani",
+          "gen": "wyczerpanych",
+          "dat": "wyczerpanym",
+          "acc": "wyczerpanych",
+          "ins": "wyczerpanymi",
+          "loc": "wyczerpanych"
+        },
+        "nonvirile": {
+          "nom": "wyczerpane",
+          "gen": "wyczerpanych",
+          "dat": "wyczerpanym",
+          "acc": "wyczerpane",
+          "ins": "wyczerpanymi",
+          "loc": "wyczerpanych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej wyczerpany",
+          "gen": "bardziej wyczerpanego",
+          "dat": "bardziej wyczerpanemu",
+          "acc": "bardziej wyczerpanego",
+          "ins": "bardziej wyczerpanym",
+          "loc": "bardziej wyczerpanym"
+        },
+        "m3": {
+          "nom": "bardziej wyczerpany",
+          "gen": "bardziej wyczerpanego",
+          "dat": "bardziej wyczerpanemu",
+          "acc": "bardziej wyczerpany",
+          "ins": "bardziej wyczerpanym",
+          "loc": "bardziej wyczerpanym"
+        },
+        "f": {
+          "nom": "bardziej wyczerpana",
+          "gen": "bardziej wyczerpanej",
+          "dat": "bardziej wyczerpanej",
+          "acc": "bardziej wyczerpaną",
+          "ins": "bardziej wyczerpaną",
+          "loc": "bardziej wyczerpanej"
+        },
+        "n": {
+          "nom": "bardziej wyczerpane",
+          "gen": "bardziej wyczerpanego",
+          "dat": "bardziej wyczerpanemu",
+          "acc": "bardziej wyczerpane",
+          "ins": "bardziej wyczerpanym",
+          "loc": "bardziej wyczerpanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej wyczerpani",
+          "gen": "bardziej wyczerpanych",
+          "dat": "bardziej wyczerpanym",
+          "acc": "bardziej wyczerpanych",
+          "ins": "bardziej wyczerpanymi",
+          "loc": "bardziej wyczerpanych"
+        },
+        "nonvirile": {
+          "nom": "bardziej wyczerpane",
+          "gen": "bardziej wyczerpanych",
+          "dat": "bardziej wyczerpanym",
+          "acc": "bardziej wyczerpane",
+          "ins": "bardziej wyczerpanymi",
+          "loc": "bardziej wyczerpanych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej wyczerpany",
+          "gen": "najbardziej wyczerpanego",
+          "dat": "najbardziej wyczerpanemu",
+          "acc": "najbardziej wyczerpanego",
+          "ins": "najbardziej wyczerpanym",
+          "loc": "najbardziej wyczerpanym"
+        },
+        "m3": {
+          "nom": "najbardziej wyczerpany",
+          "gen": "najbardziej wyczerpanego",
+          "dat": "najbardziej wyczerpanemu",
+          "acc": "najbardziej wyczerpany",
+          "ins": "najbardziej wyczerpanym",
+          "loc": "najbardziej wyczerpanym"
+        },
+        "f": {
+          "nom": "najbardziej wyczerpana",
+          "gen": "najbardziej wyczerpanej",
+          "dat": "najbardziej wyczerpanej",
+          "acc": "najbardziej wyczerpaną",
+          "ins": "najbardziej wyczerpaną",
+          "loc": "najbardziej wyczerpanej"
+        },
+        "n": {
+          "nom": "najbardziej wyczerpane",
+          "gen": "najbardziej wyczerpanego",
+          "dat": "najbardziej wyczerpanemu",
+          "acc": "najbardziej wyczerpane",
+          "ins": "najbardziej wyczerpanym",
+          "loc": "najbardziej wyczerpanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej wyczerpani",
+          "gen": "najbardziej wyczerpanych",
+          "dat": "najbardziej wyczerpanym",
+          "acc": "najbardziej wyczerpanych",
+          "ins": "najbardziej wyczerpanymi",
+          "loc": "najbardziej wyczerpanych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej wyczerpane",
+          "gen": "najbardziej wyczerpanych",
+          "dat": "najbardziej wyczerpanym",
+          "acc": "najbardziej wyczerpane",
+          "ins": "najbardziej wyczerpanymi",
+          "loc": "najbardziej wyczerpanych"
+        }
+      }
+    }
+  }
+}

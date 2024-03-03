@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mleko",
+      "gen": "mleka",
+      "dat": "mleku",
+      "acc": "mleko",
+      "ins": "mlekiem",
+      "loc": "mleku",
+      "voc": "mleko"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ważka",
+      "gen": "ważki",
+      "dat": "ważce",
+      "acc": "ważkę",
+      "ins": "ważką",
+      "loc": "ważce",
+      "voc": "ważko"
+    },
+    "plural": {
+      "nom": "ważki",
+      "gen": "ważek",
+      "dat": "ważkom",
+      "acc": "ważki",
+      "ins": "ważkami",
+      "loc": "ważkach",
+      "voc": "ważki"
+    }
+  }
+}

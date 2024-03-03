@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "ohydnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ohydny",
+          "gen": "ohydnego",
+          "dat": "ohydnemu",
+          "acc": "ohydnego",
+          "ins": "ohydnym",
+          "loc": "ohydnym"
+        },
+        "m3": {
+          "nom": "ohydny",
+          "gen": "ohydnego",
+          "dat": "ohydnemu",
+          "acc": "ohydny",
+          "ins": "ohydnym",
+          "loc": "ohydnym"
+        },
+        "f": {
+          "nom": "ohydna",
+          "gen": "ohydnej",
+          "dat": "ohydnej",
+          "acc": "ohydną",
+          "ins": "ohydną",
+          "loc": "ohydnej"
+        },
+        "n": {
+          "nom": "ohydne",
+          "gen": "ohydnego",
+          "dat": "ohydnemu",
+          "acc": "ohydne",
+          "ins": "ohydnym",
+          "loc": "ohydnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ohydni",
+          "gen": "ohydnych",
+          "dat": "ohydnym",
+          "acc": "ohydnych",
+          "ins": "ohydnymi",
+          "loc": "ohydnych"
+        },
+        "nonvirile": {
+          "nom": "ohydne",
+          "gen": "ohydnych",
+          "dat": "ohydnym",
+          "acc": "ohydne",
+          "ins": "ohydnymi",
+          "loc": "ohydnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "ohydniejszy",
+          "gen": "ohydniejszego",
+          "dat": "ohydniejszemu",
+          "acc": "ohydniejszego",
+          "ins": "ohydniejszym",
+          "loc": "ohydniejszym"
+        },
+        "m3": {
+          "nom": "ohydniejszy",
+          "gen": "ohydniejszego",
+          "dat": "ohydniejszemu",
+          "acc": "ohydniejszy",
+          "ins": "ohydniejszym",
+          "loc": "ohydniejszym"
+        },
+        "f": {
+          "nom": "ohydniejsza",
+          "gen": "ohydniejszej",
+          "dat": "ohydniejszej",
+          "acc": "ohydniejszą",
+          "ins": "ohydniejszą",
+          "loc": "ohydniejszej"
+        },
+        "n": {
+          "nom": "ohydniejsze",
+          "gen": "ohydniejszego",
+          "dat": "ohydniejszemu",
+          "acc": "ohydniejsze",
+          "ins": "ohydniejszym",
+          "loc": "ohydniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ohydniejsi",
+          "gen": "ohydniejszych",
+          "dat": "ohydniejszym",
+          "acc": "ohydniejszych",
+          "ins": "ohydniejszymi",
+          "loc": "ohydniejszych"
+        },
+        "nonvirile": {
+          "nom": "ohydniejsze",
+          "gen": "ohydniejszych",
+          "dat": "ohydniejszym",
+          "acc": "ohydniejsze",
+          "ins": "ohydniejszymi",
+          "loc": "ohydniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najohydniejszy",
+          "gen": "najohydniejszego",
+          "dat": "najohydniejszemu",
+          "acc": "najohydniejszego",
+          "ins": "najohydniejszym",
+          "loc": "najohydniejszym"
+        },
+        "m3": {
+          "nom": "najohydniejszy",
+          "gen": "najohydniejszego",
+          "dat": "najohydniejszemu",
+          "acc": "najohydniejszy",
+          "ins": "najohydniejszym",
+          "loc": "najohydniejszym"
+        },
+        "f": {
+          "nom": "najohydniejsza",
+          "gen": "najohydniejszej",
+          "dat": "najohydniejszej",
+          "acc": "najohydniejszą",
+          "ins": "najohydniejszą",
+          "loc": "najohydniejszej"
+        },
+        "n": {
+          "nom": "najohydniejsze",
+          "gen": "najohydniejszego",
+          "dat": "najohydniejszemu",
+          "acc": "najohydniejsze",
+          "ins": "najohydniejszym",
+          "loc": "najohydniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najohydniejsi",
+          "gen": "najohydniejszych",
+          "dat": "najohydniejszym",
+          "acc": "najohydniejszych",
+          "ins": "najohydniejszymi",
+          "loc": "najohydniejszych"
+        },
+        "nonvirile": {
+          "nom": "najohydniejsze",
+          "gen": "najohydniejszych",
+          "dat": "najohydniejszym",
+          "acc": "najohydniejsze",
+          "ins": "najohydniejszymi",
+          "loc": "najohydniejszych"
+        }
+      }
+    }
+  }
+}

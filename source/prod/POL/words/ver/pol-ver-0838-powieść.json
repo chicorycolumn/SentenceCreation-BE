@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "powieść",
+    "verbalNoun": "powiedzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "powiedziony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "powiódłwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powiedzie się"
+          },
+          "plural": {
+            "allPluralGenders": "powiedzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "powiodę"
+          },
+          "plural": {
+            "allPluralGenders": "powiedziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "powiedziesz"
+          },
+          "plural": {
+            "allPluralGenders": "powiedziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "powiedzie"
+          },
+          "plural": {
+            "allPluralGenders": "powiodą"
+          }
+        }
+      },
+      "imperative": "powiedź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powiedziono"
+          },
+          "plural": {
+            "allPluralGenders": "powiedziono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "powiodłem",
+            "f": "powiodłam"
+          },
+          "plural": {
+            "virile": "powiedliśmy",
+            "nonvirile": "powiodłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "powiodłeś",
+            "f": "powiodłaś"
+          },
+          "plural": {
+            "virile": "powiedliście",
+            "nonvirile": "powiodłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "powiódł",
+            "f": "powiodła",
+            "n": "powiodło"
+          },
+          "plural": {
+            "virile": "powiedli",
+            "nonvirile": "powiodły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

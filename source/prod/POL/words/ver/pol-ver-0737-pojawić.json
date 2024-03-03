@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pojawić",
+    "verbalNoun": "pojawienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pojawiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pojawi się"
+          },
+          "plural": {
+            "allPluralGenders": "pojawi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pojawię"
+          },
+          "plural": {
+            "allPluralGenders": "pojawimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pojawisz"
+          },
+          "plural": {
+            "allPluralGenders": "pojawicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pojawi"
+          },
+          "plural": {
+            "allPluralGenders": "pojawią"
+          }
+        }
+      },
+      "imperative": "pojaw",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pojawiono"
+          },
+          "plural": {
+            "allPluralGenders": "pojawiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pojawiłem",
+            "f": "pojawiłam"
+          },
+          "plural": {
+            "virile": "pojawiliśmy",
+            "nonvirile": "pojawiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pojawiłeś",
+            "f": "pojawiłaś"
+          },
+          "plural": {
+            "virile": "pojawiliście",
+            "nonvirile": "pojawiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pojawił",
+            "f": "pojawiła",
+            "n": "pojawiło"
+          },
+          "plural": {
+            "virile": "pojawili",
+            "nonvirile": "pojawiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

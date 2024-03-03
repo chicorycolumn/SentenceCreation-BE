@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dolny",
+          "gen": "dolnego",
+          "dat": "dolnemu",
+          "acc": "dolnego",
+          "ins": "dolnym",
+          "loc": "dolnym"
+        },
+        "m3": {
+          "nom": "dolny",
+          "gen": "dolnego",
+          "dat": "dolnemu",
+          "acc": "dolny",
+          "ins": "dolnym",
+          "loc": "dolnym"
+        },
+        "f": {
+          "nom": "dolna",
+          "gen": "dolnej",
+          "dat": "dolnej",
+          "acc": "dolną",
+          "ins": "dolną",
+          "loc": "dolnej"
+        },
+        "n": {
+          "nom": "dolne",
+          "gen": "dolnego",
+          "dat": "dolnemu",
+          "acc": "dolne",
+          "ins": "dolnym",
+          "loc": "dolnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dolni",
+          "gen": "dolnych",
+          "dat": "dolnym",
+          "acc": "dolnych",
+          "ins": "dolnymi",
+          "loc": "dolnych"
+        },
+        "nonvirile": {
+          "nom": "dolne",
+          "gen": "dolnych",
+          "dat": "dolnym",
+          "acc": "dolne",
+          "ins": "dolnymi",
+          "loc": "dolnych"
+        }
+      }
+    }
+  }
+}

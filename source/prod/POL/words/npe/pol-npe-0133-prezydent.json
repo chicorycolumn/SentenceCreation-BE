@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "prezydent",
+      "gen": "prezydenta",
+      "dat": "prezydentowi",
+      "acc": "prezydenta",
+      "ins": "prezydentem",
+      "loc": "prezydencie",
+      "voc": "prezydencie"
+    },
+    "plural": {
+      "nom": "prezydenci",
+      "gen": "prezydentów",
+      "dat": "prezydentom",
+      "acc": "prezydentów",
+      "ins": "prezydentami",
+      "loc": "prezydentach",
+      "voc": "prezydenci"
+    }
+  }
+}

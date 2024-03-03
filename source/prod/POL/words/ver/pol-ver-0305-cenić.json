@@ -1,0 +1,89 @@
+{
+  "inflections": {
+    "infinitive": "cenić",
+    "activeAdjectival": "ceniący",
+    "passiveAdjectival": "ceniony",
+    "contemporaryAdverbial": "ceniąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "ceń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ceniono"
+          },
+          "plural": {
+            "allPluralGenders": "ceniono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ceniłem",
+            "f": "ceniłam"
+          },
+          "plural": {
+            "virile": "ceniliśmy",
+            "nonvirile": "ceniłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ceniłeś",
+            "f": "ceniłaś"
+          },
+          "plural": {
+            "virile": "ceniliście",
+            "nonvirile": "ceniłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "cenił",
+            "f": "ceniła",
+            "n": "ceniło"
+          },
+          "plural": {
+            "virile": "cenili",
+            "nonvirile": "ceniły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ceni się"
+          },
+          "plural": {
+            "allPluralGenders": "ceni się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "cenię"
+          },
+          "plural": {
+            "allPluralGenders": "cenimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "cenisz"
+          },
+          "plural": {
+            "allPluralGenders": "cenicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ceni"
+          },
+          "plural": {
+            "allPluralGenders": "cenią"
+          }
+        }
+      }
+    }
+  }
+}

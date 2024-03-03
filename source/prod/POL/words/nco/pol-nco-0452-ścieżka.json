@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ścieżka",
+      "gen": "ścieżki",
+      "dat": "ścieżce",
+      "acc": "ścieżkę",
+      "ins": "ścieżką",
+      "loc": "ścieżce",
+      "voc": "ścieżko"
+    },
+    "plural": {
+      "nom": "ścieżki",
+      "gen": "ścieżek",
+      "dat": "ścieżkom",
+      "acc": "ścieżki",
+      "ins": "ścieżkami",
+      "loc": "ścieżkach",
+      "voc": "ścieżki"
+    }
+  }
+}

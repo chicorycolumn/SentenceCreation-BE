@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "nieposłusznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nieposłuszny",
+          "gen": "nieposłusznego",
+          "dat": "nieposłusznemu",
+          "acc": "nieposłusznego",
+          "ins": "nieposłusznym",
+          "loc": "nieposłusznym"
+        },
+        "m3": {
+          "nom": "nieposłuszny",
+          "gen": "nieposłusznego",
+          "dat": "nieposłusznemu",
+          "acc": "nieposłuszny",
+          "ins": "nieposłusznym",
+          "loc": "nieposłusznym"
+        },
+        "f": {
+          "nom": "nieposłuszna",
+          "gen": "nieposłusznej",
+          "dat": "nieposłusznej",
+          "acc": "nieposłuszną",
+          "ins": "nieposłuszną",
+          "loc": "nieposłusznej"
+        },
+        "n": {
+          "nom": "nieposłuszne",
+          "gen": "nieposłusznego",
+          "dat": "nieposłusznemu",
+          "acc": "nieposłuszne",
+          "ins": "nieposłusznym",
+          "loc": "nieposłusznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieposłuszni",
+          "gen": "nieposłusznych",
+          "dat": "nieposłusznym",
+          "acc": "nieposłusznych",
+          "ins": "nieposłusznymi",
+          "loc": "nieposłusznych"
+        },
+        "nonvirile": {
+          "nom": "nieposłuszne",
+          "gen": "nieposłusznych",
+          "dat": "nieposłusznym",
+          "acc": "nieposłuszne",
+          "ins": "nieposłusznymi",
+          "loc": "nieposłusznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej nieposłuszny",
+          "gen": "bardziej nieposłusznego",
+          "dat": "bardziej nieposłusznemu",
+          "acc": "bardziej nieposłusznego",
+          "ins": "bardziej nieposłusznym",
+          "loc": "bardziej nieposłusznym"
+        },
+        "m3": {
+          "nom": "bardziej nieposłuszny",
+          "gen": "bardziej nieposłusznego",
+          "dat": "bardziej nieposłusznemu",
+          "acc": "bardziej nieposłuszny",
+          "ins": "bardziej nieposłusznym",
+          "loc": "bardziej nieposłusznym"
+        },
+        "f": {
+          "nom": "bardziej nieposłuszna",
+          "gen": "bardziej nieposłusznej",
+          "dat": "bardziej nieposłusznej",
+          "acc": "bardziej nieposłuszną",
+          "ins": "bardziej nieposłuszną",
+          "loc": "bardziej nieposłusznej"
+        },
+        "n": {
+          "nom": "bardziej nieposłuszne",
+          "gen": "bardziej nieposłusznego",
+          "dat": "bardziej nieposłusznemu",
+          "acc": "bardziej nieposłuszne",
+          "ins": "bardziej nieposłusznym",
+          "loc": "bardziej nieposłusznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej nieposłuszni",
+          "gen": "bardziej nieposłusznych",
+          "dat": "bardziej nieposłusznym",
+          "acc": "bardziej nieposłusznych",
+          "ins": "bardziej nieposłusznymi",
+          "loc": "bardziej nieposłusznych"
+        },
+        "nonvirile": {
+          "nom": "bardziej nieposłuszne",
+          "gen": "bardziej nieposłusznych",
+          "dat": "bardziej nieposłusznym",
+          "acc": "bardziej nieposłuszne",
+          "ins": "bardziej nieposłusznymi",
+          "loc": "bardziej nieposłusznych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej nieposłuszny",
+          "gen": "najbardziej nieposłusznego",
+          "dat": "najbardziej nieposłusznemu",
+          "acc": "najbardziej nieposłusznego",
+          "ins": "najbardziej nieposłusznym",
+          "loc": "najbardziej nieposłusznym"
+        },
+        "m3": {
+          "nom": "najbardziej nieposłuszny",
+          "gen": "najbardziej nieposłusznego",
+          "dat": "najbardziej nieposłusznemu",
+          "acc": "najbardziej nieposłuszny",
+          "ins": "najbardziej nieposłusznym",
+          "loc": "najbardziej nieposłusznym"
+        },
+        "f": {
+          "nom": "najbardziej nieposłuszna",
+          "gen": "najbardziej nieposłusznej",
+          "dat": "najbardziej nieposłusznej",
+          "acc": "najbardziej nieposłuszną",
+          "ins": "najbardziej nieposłuszną",
+          "loc": "najbardziej nieposłusznej"
+        },
+        "n": {
+          "nom": "najbardziej nieposłuszne",
+          "gen": "najbardziej nieposłusznego",
+          "dat": "najbardziej nieposłusznemu",
+          "acc": "najbardziej nieposłuszne",
+          "ins": "najbardziej nieposłusznym",
+          "loc": "najbardziej nieposłusznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej nieposłuszni",
+          "gen": "najbardziej nieposłusznych",
+          "dat": "najbardziej nieposłusznym",
+          "acc": "najbardziej nieposłusznych",
+          "ins": "najbardziej nieposłusznymi",
+          "loc": "najbardziej nieposłusznych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej nieposłuszne",
+          "gen": "najbardziej nieposłusznych",
+          "dat": "najbardziej nieposłusznym",
+          "acc": "najbardziej nieposłuszne",
+          "ins": "najbardziej nieposłusznymi",
+          "loc": "najbardziej nieposłusznych"
+        }
+      }
+    }
+  }
+}

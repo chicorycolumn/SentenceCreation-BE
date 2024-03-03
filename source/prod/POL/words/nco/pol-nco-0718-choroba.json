@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "choroba",
+      "gen": "choroby",
+      "dat": "chorobie",
+      "acc": "chorobę",
+      "ins": "chorobą",
+      "loc": "chorobie",
+      "voc": "chorobo"
+    },
+    "plural": {
+      "nom": "choroby",
+      "gen": "chorób",
+      "dat": "chorobom",
+      "acc": "choroby",
+      "ins": "chorobami",
+      "loc": "chorobach",
+      "voc": "choroby"
+    }
+  }
+}

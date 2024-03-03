@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "podziękować",
+    "verbalNoun": "podziękowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "podziękowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "podziękowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podziękuje się"
+          },
+          "plural": {
+            "allPluralGenders": "podziękuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podziękuję"
+          },
+          "plural": {
+            "allPluralGenders": "podziękujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podziękujesz"
+          },
+          "plural": {
+            "allPluralGenders": "podziękujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podziękuje"
+          },
+          "plural": {
+            "allPluralGenders": "podziękują"
+          }
+        }
+      },
+      "imperative": "podziękuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podziękowano"
+          },
+          "plural": {
+            "allPluralGenders": "podziękowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "podziękowałem",
+            "f": "podziękowałam"
+          },
+          "plural": {
+            "virile": "podziękowaliśmy",
+            "nonvirile": "podziękowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podziękowałeś",
+            "f": "podziękowałaś"
+          },
+          "plural": {
+            "virile": "podziękowaliście",
+            "nonvirile": "podziękowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podziękował",
+            "f": "podziękowała",
+            "n": "podziękowało"
+          },
+          "plural": {
+            "virile": "podziękowali",
+            "nonvirile": "podziękowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

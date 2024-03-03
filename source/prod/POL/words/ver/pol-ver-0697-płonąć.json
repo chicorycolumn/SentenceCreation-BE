@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "płonąć",
+    "verbalNoun": "płonięcie",
+    "activeAdjectival": "płonący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "płonąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "płoń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "płonięto"
+          },
+          "plural": {
+            "allPluralGenders": "płonięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "płonąłem",
+            "f": "płonęłam"
+          },
+          "plural": {
+            "virile": "płonęliśmy",
+            "nonvirile": "płonęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "płonąłeś",
+            "f": "płonęłaś"
+          },
+          "plural": {
+            "virile": "płonęliście",
+            "nonvirile": "płonęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "płonął",
+            "f": "płonęła",
+            "n": "płonęło"
+          },
+          "plural": {
+            "virile": "płonęli",
+            "nonvirile": "płonęły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "płonie się"
+          },
+          "plural": {
+            "allPluralGenders": "płonie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "płonę"
+          },
+          "plural": {
+            "allPluralGenders": "płoniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "płoniesz"
+          },
+          "plural": {
+            "allPluralGenders": "płoniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "płonie"
+          },
+          "plural": {
+            "allPluralGenders": "płoną"
+          }
+        }
+      }
+    }
+  }
+}

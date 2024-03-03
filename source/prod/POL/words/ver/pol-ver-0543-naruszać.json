@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "naruszać",
+    "verbalNoun": "naruszanie",
+    "activeAdjectival": "naruszający",
+    "passiveAdjectival": "naruszany",
+    "contemporaryAdverbial": "naruszając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "naruszaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "naruszano"
+          },
+          "plural": {
+            "allPluralGenders": "naruszano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "naruszałem",
+            "f": "naruszałam"
+          },
+          "plural": {
+            "virile": "naruszaliśmy",
+            "nonvirile": "naruszałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "naruszałeś",
+            "f": "naruszałaś"
+          },
+          "plural": {
+            "virile": "naruszaliście",
+            "nonvirile": "naruszałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "naruszał",
+            "f": "naruszała",
+            "n": "naruszało"
+          },
+          "plural": {
+            "virile": "naruszali",
+            "nonvirile": "naruszały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "narusza się"
+          },
+          "plural": {
+            "allPluralGenders": "narusza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "naruszam"
+          },
+          "plural": {
+            "allPluralGenders": "naruszamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "naruszasz"
+          },
+          "plural": {
+            "allPluralGenders": "naruszacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "narusza"
+          },
+          "plural": {
+            "allPluralGenders": "naruszają"
+          }
+        }
+      }
+    }
+  }
+}

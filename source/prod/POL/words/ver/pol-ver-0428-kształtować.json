@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "kształtować",
+    "verbalNoun": "kształtowanie",
+    "activeAdjectival": "kształtujący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "kształtując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "kształtuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kształtowano"
+          },
+          "plural": {
+            "allPluralGenders": "kształtowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "kształtowałem",
+            "f": "kształtowałam"
+          },
+          "plural": {
+            "virile": "kształtowaliśmy",
+            "nonvirile": "kształtowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "kształtowałeś",
+            "f": "kształtowałaś"
+          },
+          "plural": {
+            "virile": "kształtowaliście",
+            "nonvirile": "kształtowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "kształtował",
+            "f": "kształtowała",
+            "n": "kształtowało"
+          },
+          "plural": {
+            "virile": "kształtowali",
+            "nonvirile": "kształtowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kształtuje się"
+          },
+          "plural": {
+            "allPluralGenders": "kształtuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "kształtuję"
+          },
+          "plural": {
+            "allPluralGenders": "kształtujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "kształtujesz"
+          },
+          "plural": {
+            "allPluralGenders": "kształtujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "kształtuje"
+          },
+          "plural": {
+            "allPluralGenders": "kształtują"
+          }
+        }
+      }
+    }
+  }
+}

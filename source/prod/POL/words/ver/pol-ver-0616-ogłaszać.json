@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ogłaszać",
+    "verbalNoun": "ogłaszanie",
+    "activeAdjectival": "ogłaszający",
+    "passiveAdjectival": "ogłaszany",
+    "contemporaryAdverbial": "ogłaszając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "ogłaszaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ogłaszano"
+          },
+          "plural": {
+            "allPluralGenders": "ogłaszano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ogłaszałem",
+            "f": "ogłaszałam"
+          },
+          "plural": {
+            "virile": "ogłaszaliśmy",
+            "nonvirile": "ogłaszałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ogłaszałeś",
+            "f": "ogłaszałaś"
+          },
+          "plural": {
+            "virile": "ogłaszaliście",
+            "nonvirile": "ogłaszałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ogłaszał",
+            "f": "ogłaszała",
+            "n": "ogłaszało"
+          },
+          "plural": {
+            "virile": "ogłaszali",
+            "nonvirile": "ogłaszały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ogłasza się"
+          },
+          "plural": {
+            "allPluralGenders": "ogłasza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ogłaszam"
+          },
+          "plural": {
+            "allPluralGenders": "ogłaszamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ogłaszasz"
+          },
+          "plural": {
+            "allPluralGenders": "ogłaszacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ogłasza"
+          },
+          "plural": {
+            "allPluralGenders": "ogłaszają"
+          }
+        }
+      }
+    }
+  }
+}

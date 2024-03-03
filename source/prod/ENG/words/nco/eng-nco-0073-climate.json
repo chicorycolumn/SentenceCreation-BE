@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "climate",
+      "gen": "climate's"
+    },
+    "plural": {
+      "nom": "climates",
+      "gen": "climates'"
+    }
+  }
+}

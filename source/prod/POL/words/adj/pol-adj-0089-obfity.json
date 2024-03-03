@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "obficie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "obfity",
+          "gen": "obfitego",
+          "dat": "obfitemu",
+          "acc": "obfitego",
+          "ins": "obfitym",
+          "loc": "obfitym"
+        },
+        "m3": {
+          "nom": "obfity",
+          "gen": "obfitego",
+          "dat": "obfitemu",
+          "acc": "obfity",
+          "ins": "obfitym",
+          "loc": "obfitym"
+        },
+        "f": {
+          "nom": "obfita",
+          "gen": "obfitej",
+          "dat": "obfitej",
+          "acc": "obfitą",
+          "ins": "obfitą",
+          "loc": "obfitej"
+        },
+        "n": {
+          "nom": "obfite",
+          "gen": "obfitego",
+          "dat": "obfitemu",
+          "acc": "obfite",
+          "ins": "obfitym",
+          "loc": "obfitym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "obfici",
+          "gen": "obfitych",
+          "dat": "obfitym",
+          "acc": "obfitych",
+          "ins": "obfitymi",
+          "loc": "obfitych"
+        },
+        "nonvirile": {
+          "nom": "obfite",
+          "gen": "obfitych",
+          "dat": "obfitym",
+          "acc": "obfite",
+          "ins": "obfitymi",
+          "loc": "obfitych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "obfitszy",
+          "gen": "obfitszego",
+          "dat": "obfitszemu",
+          "acc": "obfitszego",
+          "ins": "obfitszym",
+          "loc": "obfitszym"
+        },
+        "m3": {
+          "nom": "obfitszy",
+          "gen": "obfitszego",
+          "dat": "obfitszemu",
+          "acc": "obfitszy",
+          "ins": "obfitszym",
+          "loc": "obfitszym"
+        },
+        "f": {
+          "nom": "obfitsza",
+          "gen": "obfitszej",
+          "dat": "obfitszej",
+          "acc": "obfitszą",
+          "ins": "obfitszą",
+          "loc": "obfitszej"
+        },
+        "n": {
+          "nom": "obfitsze",
+          "gen": "obfitszego",
+          "dat": "obfitszemu",
+          "acc": "obfitsze",
+          "ins": "obfitszym",
+          "loc": "obfitszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "obfitsi",
+          "gen": "obfitszych",
+          "dat": "obfitszym",
+          "acc": "obfitszych",
+          "ins": "obfitszymi",
+          "loc": "obfitszych"
+        },
+        "nonvirile": {
+          "nom": "obfitsze",
+          "gen": "obfitszych",
+          "dat": "obfitszym",
+          "acc": "obfitsze",
+          "ins": "obfitszymi",
+          "loc": "obfitszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najobfitszy",
+          "gen": "najobfitszego",
+          "dat": "najobfitszemu",
+          "acc": "najobfitszego",
+          "ins": "najobfitszym",
+          "loc": "najobfitszym"
+        },
+        "m3": {
+          "nom": "najobfitszy",
+          "gen": "najobfitszego",
+          "dat": "najobfitszemu",
+          "acc": "najobfitszy",
+          "ins": "najobfitszym",
+          "loc": "najobfitszym"
+        },
+        "f": {
+          "nom": "najobfitsza",
+          "gen": "najobfitszej",
+          "dat": "najobfitszej",
+          "acc": "najobfitszą",
+          "ins": "najobfitszą",
+          "loc": "najobfitszej"
+        },
+        "n": {
+          "nom": "najobfitsze",
+          "gen": "najobfitszego",
+          "dat": "najobfitszemu",
+          "acc": "najobfitsze",
+          "ins": "najobfitszym",
+          "loc": "najobfitszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najobfitsi",
+          "gen": "najobfitszych",
+          "dat": "najobfitszym",
+          "acc": "najobfitszych",
+          "ins": "najobfitszymi",
+          "loc": "najobfitszych"
+        },
+        "nonvirile": {
+          "nom": "najobfitsze",
+          "gen": "najobfitszych",
+          "dat": "najobfitszym",
+          "acc": "najobfitsze",
+          "ins": "najobfitszymi",
+          "loc": "najobfitszych"
+        }
+      }
+    }
+  }
+}

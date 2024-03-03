@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "przestępczo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przestępczy",
+          "gen": "przestępczego",
+          "dat": "przestępczemu",
+          "acc": "przestępczego",
+          "ins": "przestępczym",
+          "loc": "przestępczym"
+        },
+        "m3": {
+          "nom": "przestępczy",
+          "gen": "przestępczego",
+          "dat": "przestępczemu",
+          "acc": "przestępczy",
+          "ins": "przestępczym",
+          "loc": "przestępczym"
+        },
+        "f": {
+          "nom": "przestępcza",
+          "gen": "przestępczej",
+          "dat": "przestępczej",
+          "acc": "przestępczą",
+          "ins": "przestępczą",
+          "loc": "przestępczej"
+        },
+        "n": {
+          "nom": "przestępcze",
+          "gen": "przestępczego",
+          "dat": "przestępczemu",
+          "acc": "przestępcze",
+          "ins": "przestępczym",
+          "loc": "przestępczym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przestępczy",
+          "gen": "przestępczych",
+          "dat": "przestępczym",
+          "acc": "przestępczych",
+          "ins": "przestępczymi",
+          "loc": "przestępczych"
+        },
+        "nonvirile": {
+          "nom": "przestępcze",
+          "gen": "przestępczych",
+          "dat": "przestępczym",
+          "acc": "przestępcze",
+          "ins": "przestępczymi",
+          "loc": "przestępczych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej przestępczy",
+          "gen": "bardziej przestępczego",
+          "dat": "bardziej przestępczemu",
+          "acc": "bardziej przestępczego",
+          "ins": "bardziej przestępczym",
+          "loc": "bardziej przestępczym"
+        },
+        "m3": {
+          "nom": "bardziej przestępczy",
+          "gen": "bardziej przestępczego",
+          "dat": "bardziej przestępczemu",
+          "acc": "bardziej przestępczy",
+          "ins": "bardziej przestępczym",
+          "loc": "bardziej przestępczym"
+        },
+        "f": {
+          "nom": "bardziej przestępcza",
+          "gen": "bardziej przestępczej",
+          "dat": "bardziej przestępczej",
+          "acc": "bardziej przestępczą",
+          "ins": "bardziej przestępczą",
+          "loc": "bardziej przestępczej"
+        },
+        "n": {
+          "nom": "bardziej przestępcze",
+          "gen": "bardziej przestępczego",
+          "dat": "bardziej przestępczemu",
+          "acc": "bardziej przestępcze",
+          "ins": "bardziej przestępczym",
+          "loc": "bardziej przestępczym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej przestępczy",
+          "gen": "bardziej przestępczych",
+          "dat": "bardziej przestępczym",
+          "acc": "bardziej przestępczych",
+          "ins": "bardziej przestępczymi",
+          "loc": "bardziej przestępczych"
+        },
+        "nonvirile": {
+          "nom": "bardziej przestępcze",
+          "gen": "bardziej przestępczych",
+          "dat": "bardziej przestępczym",
+          "acc": "bardziej przestępcze",
+          "ins": "bardziej przestępczymi",
+          "loc": "bardziej przestępczych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej przestępczy",
+          "gen": "najbardziej przestępczego",
+          "dat": "najbardziej przestępczemu",
+          "acc": "najbardziej przestępczego",
+          "ins": "najbardziej przestępczym",
+          "loc": "najbardziej przestępczym"
+        },
+        "m3": {
+          "nom": "najbardziej przestępczy",
+          "gen": "najbardziej przestępczego",
+          "dat": "najbardziej przestępczemu",
+          "acc": "najbardziej przestępczy",
+          "ins": "najbardziej przestępczym",
+          "loc": "najbardziej przestępczym"
+        },
+        "f": {
+          "nom": "najbardziej przestępcza",
+          "gen": "najbardziej przestępczej",
+          "dat": "najbardziej przestępczej",
+          "acc": "najbardziej przestępczą",
+          "ins": "najbardziej przestępczą",
+          "loc": "najbardziej przestępczej"
+        },
+        "n": {
+          "nom": "najbardziej przestępcze",
+          "gen": "najbardziej przestępczego",
+          "dat": "najbardziej przestępczemu",
+          "acc": "najbardziej przestępcze",
+          "ins": "najbardziej przestępczym",
+          "loc": "najbardziej przestępczym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej przestępczy",
+          "gen": "najbardziej przestępczych",
+          "dat": "najbardziej przestępczym",
+          "acc": "najbardziej przestępczych",
+          "ins": "najbardziej przestępczymi",
+          "loc": "najbardziej przestępczych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej przestępcze",
+          "gen": "najbardziej przestępczych",
+          "dat": "najbardziej przestępczym",
+          "acc": "najbardziej przestępcze",
+          "ins": "najbardziej przestępczymi",
+          "loc": "najbardziej przestępczych"
+        }
+      }
+    }
+  }
+}

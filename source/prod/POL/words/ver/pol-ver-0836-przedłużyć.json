@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przedłużyć",
+    "verbalNoun": "przedłużenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przedłużony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przedłużywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przedłuży się"
+          },
+          "plural": {
+            "allPluralGenders": "przedłuży się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przedłużę"
+          },
+          "plural": {
+            "allPluralGenders": "przedłużymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przedłużysz"
+          },
+          "plural": {
+            "allPluralGenders": "przedłużycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przedłuży"
+          },
+          "plural": {
+            "allPluralGenders": "przedłużą"
+          }
+        }
+      },
+      "imperative": "przedłuż",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przedłużono"
+          },
+          "plural": {
+            "allPluralGenders": "przedłużono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przedłużyłem",
+            "f": "przedłużyłam"
+          },
+          "plural": {
+            "virile": "przedłużyliśmy",
+            "nonvirile": "przedłużyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przedłużyłeś",
+            "f": "przedłużyłaś"
+          },
+          "plural": {
+            "virile": "przedłużyliście",
+            "nonvirile": "przedłużyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przedłużył",
+            "f": "przedłużyła",
+            "n": "przedłużyło"
+          },
+          "plural": {
+            "virile": "przedłużyli",
+            "nonvirile": "przedłużyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

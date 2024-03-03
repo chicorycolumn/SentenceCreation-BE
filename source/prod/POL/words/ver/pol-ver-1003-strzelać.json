@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "strzelać",
+    "verbalNoun": "strzelanie",
+    "activeAdjectival": "strzelający",
+    "passiveAdjectival": "strzelany",
+    "contemporaryAdverbial": "strzelając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "strzelaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "strzelano"
+          },
+          "plural": {
+            "allPluralGenders": "strzelano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "strzelałem",
+            "f": "strzelałam"
+          },
+          "plural": {
+            "virile": "strzelaliśmy",
+            "nonvirile": "strzelałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "strzelałeś",
+            "f": "strzelałaś"
+          },
+          "plural": {
+            "virile": "strzelaliście",
+            "nonvirile": "strzelałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "strzelał",
+            "f": "strzelała",
+            "n": "strzelało"
+          },
+          "plural": {
+            "virile": "strzelali",
+            "nonvirile": "strzelały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "strzela się"
+          },
+          "plural": {
+            "allPluralGenders": "strzela się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "strzelam"
+          },
+          "plural": {
+            "allPluralGenders": "strzelamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "strzelasz"
+          },
+          "plural": {
+            "allPluralGenders": "strzelacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "strzela"
+          },
+          "plural": {
+            "allPluralGenders": "strzelają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "złoto",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "złoty",
+          "gen": "złotego",
+          "dat": "złotemu",
+          "acc": "złotego",
+          "ins": "złotym",
+          "loc": "złotym"
+        },
+        "m3": {
+          "nom": "złoty",
+          "gen": "złotego",
+          "dat": "złotemu",
+          "acc": "złoty",
+          "ins": "złotym",
+          "loc": "złotym"
+        },
+        "f": {
+          "nom": "złota",
+          "gen": "złotej",
+          "dat": "złotej",
+          "acc": "złotą",
+          "ins": "złotą",
+          "loc": "złotej"
+        },
+        "n": {
+          "nom": "złote",
+          "gen": "złotego",
+          "dat": "złotemu",
+          "acc": "złote",
+          "ins": "złotym",
+          "loc": "złotym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "złoci",
+          "gen": "złotych",
+          "dat": "złotym",
+          "acc": "złotych",
+          "ins": "złotymi",
+          "loc": "złotych"
+        },
+        "nonvirile": {
+          "nom": "złote",
+          "gen": "złotych",
+          "dat": "złotym",
+          "acc": "złote",
+          "ins": "złotymi",
+          "loc": "złotych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej złoty",
+          "gen": "bardziej złotego",
+          "dat": "bardziej złotemu",
+          "acc": "bardziej złotego",
+          "ins": "bardziej złotym",
+          "loc": "bardziej złotym"
+        },
+        "m3": {
+          "nom": "bardziej złoty",
+          "gen": "bardziej złotego",
+          "dat": "bardziej złotemu",
+          "acc": "bardziej złoty",
+          "ins": "bardziej złotym",
+          "loc": "bardziej złotym"
+        },
+        "f": {
+          "nom": "bardziej złota",
+          "gen": "bardziej złotej",
+          "dat": "bardziej złotej",
+          "acc": "bardziej złotą",
+          "ins": "bardziej złotą",
+          "loc": "bardziej złotej"
+        },
+        "n": {
+          "nom": "bardziej złote",
+          "gen": "bardziej złotego",
+          "dat": "bardziej złotemu",
+          "acc": "bardziej złote",
+          "ins": "bardziej złotym",
+          "loc": "bardziej złotym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej złoci",
+          "gen": "bardziej złotych",
+          "dat": "bardziej złotym",
+          "acc": "bardziej złotych",
+          "ins": "bardziej złotymi",
+          "loc": "bardziej złotych"
+        },
+        "nonvirile": {
+          "nom": "bardziej złote",
+          "gen": "bardziej złotych",
+          "dat": "bardziej złotym",
+          "acc": "bardziej złote",
+          "ins": "bardziej złotymi",
+          "loc": "bardziej złotych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej złoty",
+          "gen": "najbardziej złotego",
+          "dat": "najbardziej złotemu",
+          "acc": "najbardziej złotego",
+          "ins": "najbardziej złotym",
+          "loc": "najbardziej złotym"
+        },
+        "m3": {
+          "nom": "najbardziej złoty",
+          "gen": "najbardziej złotego",
+          "dat": "najbardziej złotemu",
+          "acc": "najbardziej złoty",
+          "ins": "najbardziej złotym",
+          "loc": "najbardziej złotym"
+        },
+        "f": {
+          "nom": "najbardziej złota",
+          "gen": "najbardziej złotej",
+          "dat": "najbardziej złotej",
+          "acc": "najbardziej złotą",
+          "ins": "najbardziej złotą",
+          "loc": "najbardziej złotej"
+        },
+        "n": {
+          "nom": "najbardziej złote",
+          "gen": "najbardziej złotego",
+          "dat": "najbardziej złotemu",
+          "acc": "najbardziej złote",
+          "ins": "najbardziej złotym",
+          "loc": "najbardziej złotym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej złoci",
+          "gen": "najbardziej złotych",
+          "dat": "najbardziej złotym",
+          "acc": "najbardziej złotych",
+          "ins": "najbardziej złotymi",
+          "loc": "najbardziej złotych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej złote",
+          "gen": "najbardziej złotych",
+          "dat": "najbardziej złotym",
+          "acc": "najbardziej złote",
+          "ins": "najbardziej złotymi",
+          "loc": "najbardziej złotych"
+        }
+      }
+    }
+  }
+}

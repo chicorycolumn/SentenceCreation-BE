@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "wygodnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "wygodny",
+          "gen": "wygodnego",
+          "dat": "wygodnemu",
+          "acc": "wygodnego",
+          "ins": "wygodnym",
+          "loc": "wygodnym"
+        },
+        "m3": {
+          "nom": "wygodny",
+          "gen": "wygodnego",
+          "dat": "wygodnemu",
+          "acc": "wygodny",
+          "ins": "wygodnym",
+          "loc": "wygodnym"
+        },
+        "f": {
+          "nom": "wygodna",
+          "gen": "wygodnej",
+          "dat": "wygodnej",
+          "acc": "wygodną",
+          "ins": "wygodną",
+          "loc": "wygodnej"
+        },
+        "n": {
+          "nom": "wygodne",
+          "gen": "wygodnego",
+          "dat": "wygodnemu",
+          "acc": "wygodne",
+          "ins": "wygodnym",
+          "loc": "wygodnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wygodni",
+          "gen": "wygodnych",
+          "dat": "wygodnym",
+          "acc": "wygodnych",
+          "ins": "wygodnymi",
+          "loc": "wygodnych"
+        },
+        "nonvirile": {
+          "nom": "wygodne",
+          "gen": "wygodnych",
+          "dat": "wygodnym",
+          "acc": "wygodne",
+          "ins": "wygodnymi",
+          "loc": "wygodnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "wygodniejszy",
+          "gen": "wygodniejszego",
+          "dat": "wygodniejszemu",
+          "acc": "wygodniejszego",
+          "ins": "wygodniejszym",
+          "loc": "wygodniejszym"
+        },
+        "m3": {
+          "nom": "wygodniejszy",
+          "gen": "wygodniejszego",
+          "dat": "wygodniejszemu",
+          "acc": "wygodniejszy",
+          "ins": "wygodniejszym",
+          "loc": "wygodniejszym"
+        },
+        "f": {
+          "nom": "wygodniejsza",
+          "gen": "wygodniejszej",
+          "dat": "wygodniejszej",
+          "acc": "wygodniejszą",
+          "ins": "wygodniejszą",
+          "loc": "wygodniejszej"
+        },
+        "n": {
+          "nom": "wygodniejsze",
+          "gen": "wygodniejszego",
+          "dat": "wygodniejszemu",
+          "acc": "wygodniejsze",
+          "ins": "wygodniejszym",
+          "loc": "wygodniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wygodniejsi",
+          "gen": "wygodniejszych",
+          "dat": "wygodniejszym",
+          "acc": "wygodniejszych",
+          "ins": "wygodniejszymi",
+          "loc": "wygodniejszych"
+        },
+        "nonvirile": {
+          "nom": "wygodniejsze",
+          "gen": "wygodniejszych",
+          "dat": "wygodniejszym",
+          "acc": "wygodniejsze",
+          "ins": "wygodniejszymi",
+          "loc": "wygodniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najwygodniejszy",
+          "gen": "najwygodniejszego",
+          "dat": "najwygodniejszemu",
+          "acc": "najwygodniejszego",
+          "ins": "najwygodniejszym",
+          "loc": "najwygodniejszym"
+        },
+        "m3": {
+          "nom": "najwygodniejszy",
+          "gen": "najwygodniejszego",
+          "dat": "najwygodniejszemu",
+          "acc": "najwygodniejszy",
+          "ins": "najwygodniejszym",
+          "loc": "najwygodniejszym"
+        },
+        "f": {
+          "nom": "najwygodniejsza",
+          "gen": "najwygodniejszej",
+          "dat": "najwygodniejszej",
+          "acc": "najwygodniejszą",
+          "ins": "najwygodniejszą",
+          "loc": "najwygodniejszej"
+        },
+        "n": {
+          "nom": "najwygodniejsze",
+          "gen": "najwygodniejszego",
+          "dat": "najwygodniejszemu",
+          "acc": "najwygodniejsze",
+          "ins": "najwygodniejszym",
+          "loc": "najwygodniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najwygodniejsi",
+          "gen": "najwygodniejszych",
+          "dat": "najwygodniejszym",
+          "acc": "najwygodniejszych",
+          "ins": "najwygodniejszymi",
+          "loc": "najwygodniejszych"
+        },
+        "nonvirile": {
+          "nom": "najwygodniejsze",
+          "gen": "najwygodniejszych",
+          "dat": "najwygodniejszym",
+          "acc": "najwygodniejsze",
+          "ins": "najwygodniejszymi",
+          "loc": "najwygodniejszych"
+        }
+      }
+    }
+  }
+}

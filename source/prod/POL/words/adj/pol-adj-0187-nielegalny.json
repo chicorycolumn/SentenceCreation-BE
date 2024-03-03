@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "nielegalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nielegalny",
+          "gen": "nielegalnego",
+          "dat": "nielegalnemu",
+          "acc": "nielegalnego",
+          "ins": "nielegalnym",
+          "loc": "nielegalnym"
+        },
+        "m3": {
+          "nom": "nielegalny",
+          "gen": "nielegalnego",
+          "dat": "nielegalnemu",
+          "acc": "nielegalny",
+          "ins": "nielegalnym",
+          "loc": "nielegalnym"
+        },
+        "f": {
+          "nom": "nielegalna",
+          "gen": "nielegalnej",
+          "dat": "nielegalnej",
+          "acc": "nielegalną",
+          "ins": "nielegalną",
+          "loc": "nielegalnej"
+        },
+        "n": {
+          "nom": "nielegalne",
+          "gen": "nielegalnego",
+          "dat": "nielegalnemu",
+          "acc": "nielegalne",
+          "ins": "nielegalnym",
+          "loc": "nielegalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nielegalni",
+          "gen": "nielegalnych",
+          "dat": "nielegalnym",
+          "acc": "nielegalnych",
+          "ins": "nielegalnymi",
+          "loc": "nielegalnych"
+        },
+        "nonvirile": {
+          "nom": "nielegalne",
+          "gen": "nielegalnych",
+          "dat": "nielegalnym",
+          "acc": "nielegalne",
+          "ins": "nielegalnymi",
+          "loc": "nielegalnych"
+        }
+      }
+    }
+  }
+}

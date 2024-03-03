@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "czkawka",
+      "gen": "czkawki",
+      "dat": "czkawce",
+      "acc": "czkawkę",
+      "ins": "czkawką",
+      "loc": "czkawce",
+      "voc": "czkawko"
+    },
+    "plural": {
+      "nom": "czkawki",
+      "gen": "czkawek",
+      "dat": "czkawkom",
+      "acc": "czkawki",
+      "ins": "czkawkami",
+      "loc": "czkawkach",
+      "voc": "czkawki"
+    }
+  }
+}

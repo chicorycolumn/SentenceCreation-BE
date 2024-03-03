@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "bezpiecznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bezpieczny",
+          "gen": "bezpiecznego",
+          "dat": "bezpiecznemu",
+          "acc": "bezpiecznego",
+          "ins": "bezpiecznym",
+          "loc": "bezpiecznym"
+        },
+        "m3": {
+          "nom": "bezpieczny",
+          "gen": "bezpiecznego",
+          "dat": "bezpiecznemu",
+          "acc": "bezpieczny",
+          "ins": "bezpiecznym",
+          "loc": "bezpiecznym"
+        },
+        "f": {
+          "nom": "bezpieczna",
+          "gen": "bezpiecznej",
+          "dat": "bezpiecznej",
+          "acc": "bezpieczną",
+          "ins": "bezpieczną",
+          "loc": "bezpiecznej"
+        },
+        "n": {
+          "nom": "bezpieczne",
+          "gen": "bezpiecznego",
+          "dat": "bezpiecznemu",
+          "acc": "bezpieczne",
+          "ins": "bezpiecznym",
+          "loc": "bezpiecznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bezpieczni",
+          "gen": "bezpiecznych",
+          "dat": "bezpiecznym",
+          "acc": "bezpiecznych",
+          "ins": "bezpiecznymi",
+          "loc": "bezpiecznych"
+        },
+        "nonvirile": {
+          "nom": "bezpieczne",
+          "gen": "bezpiecznych",
+          "dat": "bezpiecznym",
+          "acc": "bezpieczne",
+          "ins": "bezpiecznymi",
+          "loc": "bezpiecznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bezpieczniejszy",
+          "gen": "bezpieczniejszego",
+          "dat": "bezpieczniejszemu",
+          "acc": "bezpieczniejszego",
+          "ins": "bezpieczniejszym",
+          "loc": "bezpieczniejszym"
+        },
+        "m3": {
+          "nom": "bezpieczniejszy",
+          "gen": "bezpieczniejszego",
+          "dat": "bezpieczniejszemu",
+          "acc": "bezpieczniejszy",
+          "ins": "bezpieczniejszym",
+          "loc": "bezpieczniejszym"
+        },
+        "f": {
+          "nom": "bezpieczniejsza",
+          "gen": "bezpieczniejszej",
+          "dat": "bezpieczniejszej",
+          "acc": "bezpieczniejszą",
+          "ins": "bezpieczniejszą",
+          "loc": "bezpieczniejszej"
+        },
+        "n": {
+          "nom": "bezpieczniejsze",
+          "gen": "bezpieczniejszego",
+          "dat": "bezpieczniejszemu",
+          "acc": "bezpieczniejsze",
+          "ins": "bezpieczniejszym",
+          "loc": "bezpieczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bezpieczniejsi",
+          "gen": "bezpieczniejszych",
+          "dat": "bezpieczniejszym",
+          "acc": "bezpieczniejszych",
+          "ins": "bezpieczniejszymi",
+          "loc": "bezpieczniejszych"
+        },
+        "nonvirile": {
+          "nom": "bezpieczniejsze",
+          "gen": "bezpieczniejszych",
+          "dat": "bezpieczniejszym",
+          "acc": "bezpieczniejsze",
+          "ins": "bezpieczniejszymi",
+          "loc": "bezpieczniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbezpieczniejszy",
+          "gen": "najbezpieczniejszego",
+          "dat": "najbezpieczniejszemu",
+          "acc": "najbezpieczniejszego",
+          "ins": "najbezpieczniejszym",
+          "loc": "najbezpieczniejszym"
+        },
+        "m3": {
+          "nom": "najbezpieczniejszy",
+          "gen": "najbezpieczniejszego",
+          "dat": "najbezpieczniejszemu",
+          "acc": "najbezpieczniejszy",
+          "ins": "najbezpieczniejszym",
+          "loc": "najbezpieczniejszym"
+        },
+        "f": {
+          "nom": "najbezpieczniejsza",
+          "gen": "najbezpieczniejszej",
+          "dat": "najbezpieczniejszej",
+          "acc": "najbezpieczniejszą",
+          "ins": "najbezpieczniejszą",
+          "loc": "najbezpieczniejszej"
+        },
+        "n": {
+          "nom": "najbezpieczniejsze",
+          "gen": "najbezpieczniejszego",
+          "dat": "najbezpieczniejszemu",
+          "acc": "najbezpieczniejsze",
+          "ins": "najbezpieczniejszym",
+          "loc": "najbezpieczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbezpieczniejsi",
+          "gen": "najbezpieczniejszych",
+          "dat": "najbezpieczniejszym",
+          "acc": "najbezpieczniejszych",
+          "ins": "najbezpieczniejszymi",
+          "loc": "najbezpieczniejszych"
+        },
+        "nonvirile": {
+          "nom": "najbezpieczniejsze",
+          "gen": "najbezpieczniejszych",
+          "dat": "najbezpieczniejszym",
+          "acc": "najbezpieczniejsze",
+          "ins": "najbezpieczniejszymi",
+          "loc": "najbezpieczniejszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "bóg",
+      "gen": "boga",
+      "dat": [
+        "bogu",
+        "bogowi"
+      ],
+      "acc": "boga",
+      "ins": "bogiem",
+      "loc": "bogu",
+      "voc": "boże"
+    },
+    "plural": {
+      "nom": "bogowie",
+      "gen": "bogów",
+      "dat": "bogom",
+      "acc": "bogów",
+      "ins": "bogami",
+      "loc": "bogach",
+      "voc": "bogowie"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "naukowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "naukowy",
+          "gen": "naukowego",
+          "dat": "naukowemu",
+          "acc": "naukowego",
+          "ins": "naukowym",
+          "loc": "naukowym"
+        },
+        "m3": {
+          "nom": "naukowy",
+          "gen": "naukowego",
+          "dat": "naukowemu",
+          "acc": "naukowy",
+          "ins": "naukowym",
+          "loc": "naukowym"
+        },
+        "f": {
+          "nom": "naukowa",
+          "gen": "naukowej",
+          "dat": "naukowej",
+          "acc": "naukową",
+          "ins": "naukową",
+          "loc": "naukowej"
+        },
+        "n": {
+          "nom": "naukowe",
+          "gen": "naukowego",
+          "dat": "naukowemu",
+          "acc": "naukowe",
+          "ins": "naukowym",
+          "loc": "naukowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "naukowi",
+          "gen": "naukowych",
+          "dat": "naukowym",
+          "acc": "naukowych",
+          "ins": "naukowymi",
+          "loc": "naukowych"
+        },
+        "nonvirile": {
+          "nom": "naukowe",
+          "gen": "naukowych",
+          "dat": "naukowym",
+          "acc": "naukowe",
+          "ins": "naukowymi",
+          "loc": "naukowych"
+        }
+      }
+    }
+  }
+}

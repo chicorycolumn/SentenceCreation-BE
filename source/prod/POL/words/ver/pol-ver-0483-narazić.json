@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "narazić",
+    "verbalNoun": "narażenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "narażony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "naraziwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "narazi się"
+          },
+          "plural": {
+            "allPluralGenders": "narazi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "narażę"
+          },
+          "plural": {
+            "allPluralGenders": "narazimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "narazisz"
+          },
+          "plural": {
+            "allPluralGenders": "narazicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "narazi"
+          },
+          "plural": {
+            "allPluralGenders": "narażą"
+          }
+        }
+      },
+      "imperative": "naraź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "narażono"
+          },
+          "plural": {
+            "allPluralGenders": "narażono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "naraziłem",
+            "f": "naraziłam"
+          },
+          "plural": {
+            "virile": "naraziliśmy",
+            "nonvirile": "naraziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "naraziłeś",
+            "f": "naraziłaś"
+          },
+          "plural": {
+            "virile": "naraziliście",
+            "nonvirile": "naraziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "naraził",
+            "f": "naraziła",
+            "n": "naraziło"
+          },
+          "plural": {
+            "virile": "narazili",
+            "nonvirile": "naraziły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

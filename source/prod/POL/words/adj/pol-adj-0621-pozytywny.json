@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "pozytywnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pozytywny",
+          "gen": "pozytywnego",
+          "dat": "pozytywnemu",
+          "acc": "pozytywnego",
+          "ins": "pozytywnym",
+          "loc": "pozytywnym"
+        },
+        "m3": {
+          "nom": "pozytywny",
+          "gen": "pozytywnego",
+          "dat": "pozytywnemu",
+          "acc": "pozytywny",
+          "ins": "pozytywnym",
+          "loc": "pozytywnym"
+        },
+        "f": {
+          "nom": "pozytywna",
+          "gen": "pozytywnej",
+          "dat": "pozytywnej",
+          "acc": "pozytywną",
+          "ins": "pozytywną",
+          "loc": "pozytywnej"
+        },
+        "n": {
+          "nom": "pozytywne",
+          "gen": "pozytywnego",
+          "dat": "pozytywnemu",
+          "acc": "pozytywne",
+          "ins": "pozytywnym",
+          "loc": "pozytywnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pozytywni",
+          "gen": "pozytywnych",
+          "dat": "pozytywnym",
+          "acc": "pozytywnych",
+          "ins": "pozytywnymi",
+          "loc": "pozytywnych"
+        },
+        "nonvirile": {
+          "nom": "pozytywne",
+          "gen": "pozytywnych",
+          "dat": "pozytywnym",
+          "acc": "pozytywne",
+          "ins": "pozytywnymi",
+          "loc": "pozytywnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "pozytywniejszy",
+          "gen": "pozytywniejszego",
+          "dat": "pozytywniejszemu",
+          "acc": "pozytywniejszego",
+          "ins": "pozytywniejszym",
+          "loc": "pozytywniejszym"
+        },
+        "m3": {
+          "nom": "pozytywniejszy",
+          "gen": "pozytywniejszego",
+          "dat": "pozytywniejszemu",
+          "acc": "pozytywniejszy",
+          "ins": "pozytywniejszym",
+          "loc": "pozytywniejszym"
+        },
+        "f": {
+          "nom": "pozytywniejsza",
+          "gen": "pozytywniejszej",
+          "dat": "pozytywniejszej",
+          "acc": "pozytywniejszą",
+          "ins": "pozytywniejszą",
+          "loc": "pozytywniejszej"
+        },
+        "n": {
+          "nom": "pozytywniejsze",
+          "gen": "pozytywniejszego",
+          "dat": "pozytywniejszemu",
+          "acc": "pozytywniejsze",
+          "ins": "pozytywniejszym",
+          "loc": "pozytywniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pozytywniejsi",
+          "gen": "pozytywniejszych",
+          "dat": "pozytywniejszym",
+          "acc": "pozytywniejszych",
+          "ins": "pozytywniejszymi",
+          "loc": "pozytywniejszych"
+        },
+        "nonvirile": {
+          "nom": "pozytywniejsze",
+          "gen": "pozytywniejszych",
+          "dat": "pozytywniejszym",
+          "acc": "pozytywniejsze",
+          "ins": "pozytywniejszymi",
+          "loc": "pozytywniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najpozytywniejszy",
+          "gen": "najpozytywniejszego",
+          "dat": "najpozytywniejszemu",
+          "acc": "najpozytywniejszego",
+          "ins": "najpozytywniejszym",
+          "loc": "najpozytywniejszym"
+        },
+        "m3": {
+          "nom": "najpozytywniejszy",
+          "gen": "najpozytywniejszego",
+          "dat": "najpozytywniejszemu",
+          "acc": "najpozytywniejszy",
+          "ins": "najpozytywniejszym",
+          "loc": "najpozytywniejszym"
+        },
+        "f": {
+          "nom": "najpozytywniejsza",
+          "gen": "najpozytywniejszej",
+          "dat": "najpozytywniejszej",
+          "acc": "najpozytywniejszą",
+          "ins": "najpozytywniejszą",
+          "loc": "najpozytywniejszej"
+        },
+        "n": {
+          "nom": "najpozytywniejsze",
+          "gen": "najpozytywniejszego",
+          "dat": "najpozytywniejszemu",
+          "acc": "najpozytywniejsze",
+          "ins": "najpozytywniejszym",
+          "loc": "najpozytywniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najpozytywniejsi",
+          "gen": "najpozytywniejszych",
+          "dat": "najpozytywniejszym",
+          "acc": "najpozytywniejszych",
+          "ins": "najpozytywniejszymi",
+          "loc": "najpozytywniejszych"
+        },
+        "nonvirile": {
+          "nom": "najpozytywniejsze",
+          "gen": "najpozytywniejszych",
+          "dat": "najpozytywniejszym",
+          "acc": "najpozytywniejsze",
+          "ins": "najpozytywniejszymi",
+          "loc": "najpozytywniejszych"
+        }
+      }
+    }
+  }
+}

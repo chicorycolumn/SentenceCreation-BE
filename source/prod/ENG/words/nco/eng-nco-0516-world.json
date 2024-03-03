@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "world",
+      "gen": "world's"
+    },
+    "plural": {
+      "nom": "worlds",
+      "gen": "worlds'"
+    }
+  }
+}

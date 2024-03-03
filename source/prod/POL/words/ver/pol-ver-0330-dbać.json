@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dbać",
+    "verbalNoun": "dbanie",
+    "activeAdjectival": "dbający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "dbając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dbaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dbano"
+          },
+          "plural": {
+            "allPluralGenders": "dbano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dbałem",
+            "f": "dbałam"
+          },
+          "plural": {
+            "virile": "dbaliśmy",
+            "nonvirile": "dbałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dbałeś",
+            "f": "dbałaś"
+          },
+          "plural": {
+            "virile": "dbaliście",
+            "nonvirile": "dbałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dbał",
+            "f": "dbała",
+            "n": "dbało"
+          },
+          "plural": {
+            "virile": "dbali",
+            "nonvirile": "dbały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dba się"
+          },
+          "plural": {
+            "allPluralGenders": "dba się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dbam"
+          },
+          "plural": {
+            "allPluralGenders": "dbamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dbasz"
+          },
+          "plural": {
+            "allPluralGenders": "dbacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dba"
+          },
+          "plural": {
+            "allPluralGenders": "dbają"
+          }
+        }
+      }
+    }
+  }
+}

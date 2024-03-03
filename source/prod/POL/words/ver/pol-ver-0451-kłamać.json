@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "kłamać",
+    "verbalNoun": "kłamanie",
+    "activeAdjectival": "kłamiący",
+    "passiveAdjectival": "kłamany",
+    "contemporaryAdverbial": "kłamiąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "kłam",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kłamano"
+          },
+          "plural": {
+            "allPluralGenders": "kłamano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "kłamałem",
+            "f": "kłamałam"
+          },
+          "plural": {
+            "virile": "kłamaliśmy",
+            "nonvirile": "kłamałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "kłamałeś",
+            "f": "kłamałaś"
+          },
+          "plural": {
+            "virile": "kłamaliście",
+            "nonvirile": "kłamałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "kłamał",
+            "f": "kłamała",
+            "n": "kłamało"
+          },
+          "plural": {
+            "virile": "kłamali",
+            "nonvirile": "kłamały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kłamie się"
+          },
+          "plural": {
+            "allPluralGenders": "kłamie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "kłamię"
+          },
+          "plural": {
+            "allPluralGenders": "kłamiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "kłamiesz"
+          },
+          "plural": {
+            "allPluralGenders": "kłamiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "kłamie"
+          },
+          "plural": {
+            "allPluralGenders": "kłamią"
+          }
+        }
+      }
+    }
+  }
+}

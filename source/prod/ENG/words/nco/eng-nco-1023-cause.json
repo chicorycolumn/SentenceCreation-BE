@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cause",
+      "gen": "cause's"
+    },
+    "plural": {
+      "nom": "causes",
+      "gen": "causes'"
+    }
+  }
+}

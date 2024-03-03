@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przewodnik",
+      "gen": "przewodnika",
+      "dat": "przewodnikowi",
+      "acc": "przewodnika",
+      "ins": "przewodnikiem",
+      "loc": "przewodniku",
+      "voc": "przewodniku"
+    },
+    "plural": {
+      "nom": "przewodnicy",
+      "gen": "przewodników",
+      "dat": "przewodnikom",
+      "acc": "przewodników",
+      "ins": "przewodnikami",
+      "loc": "przewodnikach",
+      "voc": "przewodnicy"
+    }
+  }
+}

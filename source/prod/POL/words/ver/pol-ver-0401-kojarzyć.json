@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "kojarzyć",
+    "verbalNoun": "kojarzenie",
+    "activeAdjectival": "kojarzący",
+    "passiveAdjectival": "kojarzony",
+    "contemporaryAdverbial": "kojarząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "kojarz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kojarzono"
+          },
+          "plural": {
+            "allPluralGenders": "kojarzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "kojarzyłem",
+            "f": "kojarzyłam"
+          },
+          "plural": {
+            "virile": "kojarzyliśmy",
+            "nonvirile": "kojarzyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "kojarzyłeś",
+            "f": "kojarzyłaś"
+          },
+          "plural": {
+            "virile": "kojarzyliście",
+            "nonvirile": "kojarzyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "kojarzył",
+            "f": "kojarzyła",
+            "n": "kojarzyło"
+          },
+          "plural": {
+            "virile": "kojarzyli",
+            "nonvirile": "kojarzyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kojarzy się"
+          },
+          "plural": {
+            "allPluralGenders": "kojarzy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "kojarzę"
+          },
+          "plural": {
+            "allPluralGenders": "kojarzymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "kojarzysz"
+          },
+          "plural": {
+            "allPluralGenders": "kojarzycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "kojarzy"
+          },
+          "plural": {
+            "allPluralGenders": "kojarzą"
+          }
+        }
+      }
+    }
+  }
+}

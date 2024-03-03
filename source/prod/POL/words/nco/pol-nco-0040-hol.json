@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "hol",
+      "gen": "holu",
+      "dat": "holowi",
+      "acc": "hol",
+      "ins": "holem",
+      "loc": "holu",
+      "voc": "holu"
+    },
+    "plural": {
+      "nom": "hole",
+      "gen": [
+        "holi",
+        "holów"
+      ],
+      "dat": "holom",
+      "acc": "hole",
+      "ins": "holami",
+      "loc": "holach",
+      "voc": "hole"
+    }
+  }
+}

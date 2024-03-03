@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "belief",
+      "gen": "belief's"
+    },
+    "plural": {
+      "nom": "beliefs",
+      "gen": "beliefs'"
+    }
+  }
+}

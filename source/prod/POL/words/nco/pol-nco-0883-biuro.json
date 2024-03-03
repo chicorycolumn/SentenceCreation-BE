@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "biuro",
+      "gen": "biura",
+      "dat": "biuru",
+      "acc": "biuro",
+      "ins": "biurem",
+      "loc": "biurze",
+      "voc": "biuro"
+    },
+    "plural": {
+      "nom": "biura",
+      "gen": "biur",
+      "dat": "biurom",
+      "acc": "biura",
+      "ins": "biurami",
+      "loc": "biurach",
+      "voc": "biura"
+    }
+  }
+}

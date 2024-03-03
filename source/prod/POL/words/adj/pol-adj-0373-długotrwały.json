@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "długotrwale",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "długotrwały",
+          "gen": "długotrwałego",
+          "dat": "długotrwałemu",
+          "acc": "długotrwałego",
+          "ins": "długotrwałym",
+          "loc": "długotrwałym"
+        },
+        "m3": {
+          "nom": "długotrwały",
+          "gen": "długotrwałego",
+          "dat": "długotrwałemu",
+          "acc": "długotrwały",
+          "ins": "długotrwałym",
+          "loc": "długotrwałym"
+        },
+        "f": {
+          "nom": "długotrwała",
+          "gen": "długotrwałej",
+          "dat": "długotrwałej",
+          "acc": "długotrwałą",
+          "ins": "długotrwałą",
+          "loc": "długotrwałej"
+        },
+        "n": {
+          "nom": "długotrwałe",
+          "gen": "długotrwałego",
+          "dat": "długotrwałemu",
+          "acc": "długotrwałe",
+          "ins": "długotrwałym",
+          "loc": "długotrwałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "długotrwali",
+          "gen": "długotrwałych",
+          "dat": "długotrwałym",
+          "acc": "długotrwałych",
+          "ins": "długotrwałymi",
+          "loc": "długotrwałych"
+        },
+        "nonvirile": {
+          "nom": "długotrwałe",
+          "gen": "długotrwałych",
+          "dat": "długotrwałym",
+          "acc": "długotrwałe",
+          "ins": "długotrwałymi",
+          "loc": "długotrwałych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej długotrwały",
+          "gen": "bardziej długotrwałego",
+          "dat": "bardziej długotrwałemu",
+          "acc": "bardziej długotrwałego",
+          "ins": "bardziej długotrwałym",
+          "loc": "bardziej długotrwałym"
+        },
+        "m3": {
+          "nom": "bardziej długotrwały",
+          "gen": "bardziej długotrwałego",
+          "dat": "bardziej długotrwałemu",
+          "acc": "bardziej długotrwały",
+          "ins": "bardziej długotrwałym",
+          "loc": "bardziej długotrwałym"
+        },
+        "f": {
+          "nom": "bardziej długotrwała",
+          "gen": "bardziej długotrwałej",
+          "dat": "bardziej długotrwałej",
+          "acc": "bardziej długotrwałą",
+          "ins": "bardziej długotrwałą",
+          "loc": "bardziej długotrwałej"
+        },
+        "n": {
+          "nom": "bardziej długotrwałe",
+          "gen": "bardziej długotrwałego",
+          "dat": "bardziej długotrwałemu",
+          "acc": "bardziej długotrwałe",
+          "ins": "bardziej długotrwałym",
+          "loc": "bardziej długotrwałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej długotrwali",
+          "gen": "bardziej długotrwałych",
+          "dat": "bardziej długotrwałym",
+          "acc": "bardziej długotrwałych",
+          "ins": "bardziej długotrwałymi",
+          "loc": "bardziej długotrwałych"
+        },
+        "nonvirile": {
+          "nom": "bardziej długotrwałe",
+          "gen": "bardziej długotrwałych",
+          "dat": "bardziej długotrwałym",
+          "acc": "bardziej długotrwałe",
+          "ins": "bardziej długotrwałymi",
+          "loc": "bardziej długotrwałych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej długotrwały",
+          "gen": "najbardziej długotrwałego",
+          "dat": "najbardziej długotrwałemu",
+          "acc": "najbardziej długotrwałego",
+          "ins": "najbardziej długotrwałym",
+          "loc": "najbardziej długotrwałym"
+        },
+        "m3": {
+          "nom": "najbardziej długotrwały",
+          "gen": "najbardziej długotrwałego",
+          "dat": "najbardziej długotrwałemu",
+          "acc": "najbardziej długotrwały",
+          "ins": "najbardziej długotrwałym",
+          "loc": "najbardziej długotrwałym"
+        },
+        "f": {
+          "nom": "najbardziej długotrwała",
+          "gen": "najbardziej długotrwałej",
+          "dat": "najbardziej długotrwałej",
+          "acc": "najbardziej długotrwałą",
+          "ins": "najbardziej długotrwałą",
+          "loc": "najbardziej długotrwałej"
+        },
+        "n": {
+          "nom": "najbardziej długotrwałe",
+          "gen": "najbardziej długotrwałego",
+          "dat": "najbardziej długotrwałemu",
+          "acc": "najbardziej długotrwałe",
+          "ins": "najbardziej długotrwałym",
+          "loc": "najbardziej długotrwałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej długotrwali",
+          "gen": "najbardziej długotrwałych",
+          "dat": "najbardziej długotrwałym",
+          "acc": "najbardziej długotrwałych",
+          "ins": "najbardziej długotrwałymi",
+          "loc": "najbardziej długotrwałych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej długotrwałe",
+          "gen": "najbardziej długotrwałych",
+          "dat": "najbardziej długotrwałym",
+          "acc": "najbardziej długotrwałe",
+          "ins": "najbardziej długotrwałymi",
+          "loc": "najbardziej długotrwałych"
+        }
+      }
+    }
+  }
+}

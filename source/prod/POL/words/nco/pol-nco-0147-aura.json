@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "aura",
+      "gen": "aury",
+      "dat": "aurze",
+      "acc": "aurę",
+      "ins": "aurą",
+      "loc": "aurze",
+      "voc": "auro"
+    },
+    "plural": {
+      "nom": "aury",
+      "gen": "aur",
+      "dat": "aurom",
+      "acc": "aury",
+      "ins": "aurami",
+      "loc": "aurach",
+      "voc": "aury"
+    }
+  }
+}

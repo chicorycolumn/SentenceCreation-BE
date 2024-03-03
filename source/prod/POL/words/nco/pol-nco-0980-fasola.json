@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "fasola",
+      "gen": "fasoli",
+      "dat": "fasoli",
+      "acc": "fasolę",
+      "ins": "fasolą",
+      "loc": "fasoli",
+      "voc": "fasolo"
+    },
+    "plural": {
+      "nom": "fasole",
+      "gen": "fasoli",
+      "dat": "fasolom",
+      "acc": "fasole",
+      "ins": "fasolami",
+      "loc": "fasolach",
+      "voc": "fasole"
+    }
+  }
+}

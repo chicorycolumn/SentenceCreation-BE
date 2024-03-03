@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zeszyt",
+      "gen": "zeszytu",
+      "dat": "zeszytowi",
+      "acc": "zeszyt",
+      "ins": "zeszytem",
+      "loc": "zeszycie",
+      "voc": "zeszycie"
+    },
+    "plural": {
+      "nom": "zeszyty",
+      "gen": "zeszytów",
+      "dat": "zeszytom",
+      "acc": "zeszyty",
+      "ins": "zeszytami",
+      "loc": "zeszytach",
+      "voc": "zeszyty"
+    }
+  }
+}

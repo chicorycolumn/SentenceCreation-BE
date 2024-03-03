@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "siostrzenica",
+      "gen": "siostrzenicy",
+      "dat": "siostrzenicy",
+      "acc": "siostrzenicę",
+      "ins": "siostrzenicą",
+      "loc": "siostrzenicy",
+      "voc": "siostrzenico"
+    },
+    "plural": {
+      "nom": "siostrzenice",
+      "gen": "siostrzenic",
+      "dat": "siostrzenicom",
+      "acc": "siostrzenice",
+      "ins": "siostrzenicami",
+      "loc": "siostrzenicach",
+      "voc": "siostrzenice"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "angielski",
+          "gen": "angielskiego",
+          "dat": "angielskiemu",
+          "acc": "angielskiego",
+          "ins": "angielskim",
+          "loc": "angielskim"
+        },
+        "m3": {
+          "nom": "angielski",
+          "gen": "angielskiego",
+          "dat": "angielskiemu",
+          "acc": "angielski",
+          "ins": "angielskim",
+          "loc": "angielskim"
+        },
+        "f": {
+          "nom": "angielska",
+          "gen": "angielskiej",
+          "dat": "angielskiej",
+          "acc": "angielską",
+          "ins": "angielską",
+          "loc": "angielskiej"
+        },
+        "n": {
+          "nom": "angielskie",
+          "gen": "angielskiego",
+          "dat": "angielskiemu",
+          "acc": "angielskie",
+          "ins": "angielskim",
+          "loc": "angielskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "angielscy",
+          "gen": "angielskich",
+          "dat": "angielskim",
+          "acc": "angielskich",
+          "ins": "angielskimi",
+          "loc": "angielskich"
+        },
+        "nonvirile": {
+          "nom": "angielskie",
+          "gen": "angielskich",
+          "dat": "angielskim",
+          "acc": "angielskie",
+          "ins": "angielskimi",
+          "loc": "angielskich"
+        }
+      }
+    }
+  }
+}

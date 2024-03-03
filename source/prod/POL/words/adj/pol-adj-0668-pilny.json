@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "pilnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pilny",
+          "gen": "pilnego",
+          "dat": "pilnemu",
+          "acc": "pilnego",
+          "ins": "pilnym",
+          "loc": "pilnym"
+        },
+        "m3": {
+          "nom": "pilny",
+          "gen": "pilnego",
+          "dat": "pilnemu",
+          "acc": "pilny",
+          "ins": "pilnym",
+          "loc": "pilnym"
+        },
+        "f": {
+          "nom": "pilna",
+          "gen": "pilnej",
+          "dat": "pilnej",
+          "acc": "pilną",
+          "ins": "pilną",
+          "loc": "pilnej"
+        },
+        "n": {
+          "nom": "pilne",
+          "gen": "pilnego",
+          "dat": "pilnemu",
+          "acc": "pilne",
+          "ins": "pilnym",
+          "loc": "pilnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pilni",
+          "gen": "pilnych",
+          "dat": "pilnym",
+          "acc": "pilnych",
+          "ins": "pilnymi",
+          "loc": "pilnych"
+        },
+        "nonvirile": {
+          "nom": "pilne",
+          "gen": "pilnych",
+          "dat": "pilnym",
+          "acc": "pilne",
+          "ins": "pilnymi",
+          "loc": "pilnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszy",
+              "bardziej pilny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszego",
+              "bardziej pilnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszemu",
+              "bardziej pilnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszego",
+              "bardziej pilnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszym",
+              "bardziej pilnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszym",
+              "bardziej pilnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszy",
+              "bardziej pilny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszego",
+              "bardziej pilnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszemu",
+              "bardziej pilnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszy",
+              "bardziej pilny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszym",
+              "bardziej pilnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszym",
+              "bardziej pilnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejsza",
+              "bardziej pilna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszej",
+              "bardziej pilnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszej",
+              "bardziej pilnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszą",
+              "bardziej pilną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszą",
+              "bardziej pilną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszej",
+              "bardziej pilnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejsze",
+              "bardziej pilne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszego",
+              "bardziej pilnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszemu",
+              "bardziej pilnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejsze",
+              "bardziej pilne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszym",
+              "bardziej pilnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszym",
+              "bardziej pilnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejsi",
+              "bardziej pilni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszych",
+              "bardziej pilnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszym",
+              "bardziej pilnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszych",
+              "bardziej pilnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszymi",
+              "bardziej pilnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszych",
+              "bardziej pilnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejsze",
+              "bardziej pilne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszych",
+              "bardziej pilnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszym",
+              "bardziej pilnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejsze",
+              "bardziej pilne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszymi",
+              "bardziej pilnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "pilniejszych",
+              "bardziej pilnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszy",
+              "najbardziej pilny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszego",
+              "najbardziej pilnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszemu",
+              "najbardziej pilnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszego",
+              "najbardziej pilnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszym",
+              "najbardziej pilnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszym",
+              "najbardziej pilnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszy",
+              "najbardziej pilny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszego",
+              "najbardziej pilnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszemu",
+              "najbardziej pilnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszy",
+              "najbardziej pilny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszym",
+              "najbardziej pilnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszym",
+              "najbardziej pilnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejsza",
+              "najbardziej pilna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszej",
+              "najbardziej pilnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszej",
+              "najbardziej pilnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszą",
+              "najbardziej pilną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszą",
+              "najbardziej pilną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszej",
+              "najbardziej pilnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejsze",
+              "najbardziej pilne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszego",
+              "najbardziej pilnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszemu",
+              "najbardziej pilnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejsze",
+              "najbardziej pilne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszym",
+              "najbardziej pilnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszym",
+              "najbardziej pilnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejsi",
+              "najbardziej pilni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszych",
+              "najbardziej pilnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszym",
+              "najbardziej pilnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszych",
+              "najbardziej pilnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszymi",
+              "najbardziej pilnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszych",
+              "najbardziej pilnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejsze",
+              "najbardziej pilne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszych",
+              "najbardziej pilnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszym",
+              "najbardziej pilnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejsze",
+              "najbardziej pilne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszymi",
+              "najbardziej pilnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpilniejszych",
+              "najbardziej pilnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wodór",
+      "gen": "wodoru",
+      "dat": "wodorowi",
+      "acc": "wodór",
+      "ins": "wodorem",
+      "loc": "wodorze",
+      "voc": "wodorze"
+    }
+  }
+}

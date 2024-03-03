@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sznurek",
+      "gen": "sznurka",
+      "dat": "sznurkowi",
+      "acc": "sznurek",
+      "ins": "sznurkiem",
+      "loc": "sznurku",
+      "voc": "sznurku"
+    },
+    "plural": {
+      "nom": "sznurki",
+      "gen": "sznurków",
+      "dat": "sznurkom",
+      "acc": "sznurki",
+      "ins": "sznurkami",
+      "loc": "sznurkach",
+      "voc": "sznurki"
+    }
+  }
+}

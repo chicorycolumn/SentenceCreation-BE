@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "gościnnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "gościnny",
+          "gen": "gościnnego",
+          "dat": "gościnnemu",
+          "acc": "gościnnego",
+          "ins": "gościnnym",
+          "loc": "gościnnym"
+        },
+        "m3": {
+          "nom": "gościnny",
+          "gen": "gościnnego",
+          "dat": "gościnnemu",
+          "acc": "gościnny",
+          "ins": "gościnnym",
+          "loc": "gościnnym"
+        },
+        "f": {
+          "nom": "gościnna",
+          "gen": "gościnnej",
+          "dat": "gościnnej",
+          "acc": "gościnną",
+          "ins": "gościnną",
+          "loc": "gościnnej"
+        },
+        "n": {
+          "nom": "gościnne",
+          "gen": "gościnnego",
+          "dat": "gościnnemu",
+          "acc": "gościnne",
+          "ins": "gościnnym",
+          "loc": "gościnnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "gościnni",
+          "gen": "gościnnych",
+          "dat": "gościnnym",
+          "acc": "gościnnych",
+          "ins": "gościnnymi",
+          "loc": "gościnnych"
+        },
+        "nonvirile": {
+          "nom": "gościnne",
+          "gen": "gościnnych",
+          "dat": "gościnnym",
+          "acc": "gościnne",
+          "ins": "gościnnymi",
+          "loc": "gościnnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej gościnny",
+          "gen": "bardziej gościnnego",
+          "dat": "bardziej gościnnemu",
+          "acc": "bardziej gościnnego",
+          "ins": "bardziej gościnnym",
+          "loc": "bardziej gościnnym"
+        },
+        "m3": {
+          "nom": "bardziej gościnny",
+          "gen": "bardziej gościnnego",
+          "dat": "bardziej gościnnemu",
+          "acc": "bardziej gościnny",
+          "ins": "bardziej gościnnym",
+          "loc": "bardziej gościnnym"
+        },
+        "f": {
+          "nom": "bardziej gościnna",
+          "gen": "bardziej gościnnej",
+          "dat": "bardziej gościnnej",
+          "acc": "bardziej gościnną",
+          "ins": "bardziej gościnną",
+          "loc": "bardziej gościnnej"
+        },
+        "n": {
+          "nom": "bardziej gościnne",
+          "gen": "bardziej gościnnego",
+          "dat": "bardziej gościnnemu",
+          "acc": "bardziej gościnne",
+          "ins": "bardziej gościnnym",
+          "loc": "bardziej gościnnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej gościnni",
+          "gen": "bardziej gościnnych",
+          "dat": "bardziej gościnnym",
+          "acc": "bardziej gościnnych",
+          "ins": "bardziej gościnnymi",
+          "loc": "bardziej gościnnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej gościnne",
+          "gen": "bardziej gościnnych",
+          "dat": "bardziej gościnnym",
+          "acc": "bardziej gościnne",
+          "ins": "bardziej gościnnymi",
+          "loc": "bardziej gościnnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej gościnny",
+          "gen": "najbardziej gościnnego",
+          "dat": "najbardziej gościnnemu",
+          "acc": "najbardziej gościnnego",
+          "ins": "najbardziej gościnnym",
+          "loc": "najbardziej gościnnym"
+        },
+        "m3": {
+          "nom": "najbardziej gościnny",
+          "gen": "najbardziej gościnnego",
+          "dat": "najbardziej gościnnemu",
+          "acc": "najbardziej gościnny",
+          "ins": "najbardziej gościnnym",
+          "loc": "najbardziej gościnnym"
+        },
+        "f": {
+          "nom": "najbardziej gościnna",
+          "gen": "najbardziej gościnnej",
+          "dat": "najbardziej gościnnej",
+          "acc": "najbardziej gościnną",
+          "ins": "najbardziej gościnną",
+          "loc": "najbardziej gościnnej"
+        },
+        "n": {
+          "nom": "najbardziej gościnne",
+          "gen": "najbardziej gościnnego",
+          "dat": "najbardziej gościnnemu",
+          "acc": "najbardziej gościnne",
+          "ins": "najbardziej gościnnym",
+          "loc": "najbardziej gościnnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej gościnni",
+          "gen": "najbardziej gościnnych",
+          "dat": "najbardziej gościnnym",
+          "acc": "najbardziej gościnnych",
+          "ins": "najbardziej gościnnymi",
+          "loc": "najbardziej gościnnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej gościnne",
+          "gen": "najbardziej gościnnych",
+          "dat": "najbardziej gościnnym",
+          "acc": "najbardziej gościnne",
+          "ins": "najbardziej gościnnymi",
+          "loc": "najbardziej gościnnych"
+        }
+      }
+    }
+  }
+}

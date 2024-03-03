@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "łączyć",
+    "verbalNoun": "łączenie",
+    "activeAdjectival": "łączący",
+    "passiveAdjectival": "łączony",
+    "contemporaryAdverbial": "łącząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "łącz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "łączono"
+          },
+          "plural": {
+            "allPluralGenders": "łączono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "łączyłem",
+            "f": "łączyłam"
+          },
+          "plural": {
+            "virile": "łączyliśmy",
+            "nonvirile": "łączyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "łączyłeś",
+            "f": "łączyłaś"
+          },
+          "plural": {
+            "virile": "łączyliście",
+            "nonvirile": "łączyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "łączył",
+            "f": "łączyła",
+            "n": "łączyło"
+          },
+          "plural": {
+            "virile": "łączyli",
+            "nonvirile": "łączyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "łączy się"
+          },
+          "plural": {
+            "allPluralGenders": "łączy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "łączę"
+          },
+          "plural": {
+            "allPluralGenders": "łączymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "łączysz"
+          },
+          "plural": {
+            "allPluralGenders": "łączycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "łączy"
+          },
+          "plural": {
+            "allPluralGenders": "łączą"
+          }
+        }
+      }
+    }
+  }
+}

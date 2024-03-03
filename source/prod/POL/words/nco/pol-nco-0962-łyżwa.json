@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "łyżwa",
+      "gen": "łyżwy",
+      "dat": "łyżwie",
+      "acc": "łyżwę",
+      "ins": "łyżwą",
+      "loc": "łyżwie",
+      "voc": "łyżwo"
+    },
+    "plural": {
+      "nom": "łyżwy",
+      "gen": [
+        "łyżew",
+        "łyżw"
+      ],
+      "dat": "łyżwom",
+      "acc": "łyżwy",
+      "ins": "łyżwami",
+      "loc": "łyżwach",
+      "voc": "łyżwy"
+    }
+  }
+}

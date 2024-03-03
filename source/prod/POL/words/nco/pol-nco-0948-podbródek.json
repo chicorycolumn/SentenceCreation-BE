@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "podbródek",
+      "gen": "podbródka",
+      "dat": "podbródkowi",
+      "acc": "podbródek",
+      "ins": "podbródkiem",
+      "loc": "podbródku",
+      "voc": "podbródku"
+    },
+    "plural": {
+      "nom": "podbródki",
+      "gen": "podbródków",
+      "dat": "podbródkom",
+      "acc": "podbródki",
+      "ins": "podbródkami",
+      "loc": "podbródkach",
+      "voc": "podbródki"
+    }
+  }
+}

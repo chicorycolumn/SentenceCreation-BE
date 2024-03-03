@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "podejmować",
+    "verbalNoun": "podejmowanie",
+    "activeAdjectival": "podejmujący",
+    "passiveAdjectival": "podejmowany",
+    "contemporaryAdverbial": "podejmując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "podejmuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podejmowano"
+          },
+          "plural": {
+            "allPluralGenders": "podejmowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "podejmowałem",
+            "f": "podejmowałam"
+          },
+          "plural": {
+            "virile": "podejmowaliśmy",
+            "nonvirile": "podejmowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podejmowałeś",
+            "f": "podejmowałaś"
+          },
+          "plural": {
+            "virile": "podejmowaliście",
+            "nonvirile": "podejmowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podejmował",
+            "f": "podejmowała",
+            "n": "podejmowało"
+          },
+          "plural": {
+            "virile": "podejmowali",
+            "nonvirile": "podejmowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podejmuje się"
+          },
+          "plural": {
+            "allPluralGenders": "podejmuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podejmuję"
+          },
+          "plural": {
+            "allPluralGenders": "podejmujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podejmujesz"
+          },
+          "plural": {
+            "allPluralGenders": "podejmujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podejmuje"
+          },
+          "plural": {
+            "allPluralGenders": "podejmują"
+          }
+        }
+      }
+    }
+  }
+}

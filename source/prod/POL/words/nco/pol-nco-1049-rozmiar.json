@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rozmiar",
+      "gen": "rozmiaru",
+      "dat": "rozmiarowi",
+      "acc": "rozmiar",
+      "ins": "rozmiarem",
+      "loc": "rozmiarze",
+      "voc": "rozmiarze"
+    },
+    "plural": {
+      "nom": "rozmiary",
+      "gen": "rozmiarów",
+      "dat": "rozmiarom",
+      "acc": "rozmiary",
+      "ins": "rozmiarami",
+      "loc": "rozmiarach",
+      "voc": "rozmiary"
+    }
+  }
+}

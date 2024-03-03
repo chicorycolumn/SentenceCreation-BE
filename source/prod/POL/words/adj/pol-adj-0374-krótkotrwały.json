@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "krótkotrwale",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "krótkotrwały",
+          "gen": "krótkotrwałego",
+          "dat": "krótkotrwałemu",
+          "acc": "krótkotrwałego",
+          "ins": "krótkotrwałym",
+          "loc": "krótkotrwałym"
+        },
+        "m3": {
+          "nom": "krótkotrwały",
+          "gen": "krótkotrwałego",
+          "dat": "krótkotrwałemu",
+          "acc": "krótkotrwały",
+          "ins": "krótkotrwałym",
+          "loc": "krótkotrwałym"
+        },
+        "f": {
+          "nom": "krótkotrwała",
+          "gen": "krótkotrwałej",
+          "dat": "krótkotrwałej",
+          "acc": "krótkotrwałą",
+          "ins": "krótkotrwałą",
+          "loc": "krótkotrwałej"
+        },
+        "n": {
+          "nom": "krótkotrwałe",
+          "gen": "krótkotrwałego",
+          "dat": "krótkotrwałemu",
+          "acc": "krótkotrwałe",
+          "ins": "krótkotrwałym",
+          "loc": "krótkotrwałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "krótkotrwali",
+          "gen": "krótkotrwałych",
+          "dat": "krótkotrwałym",
+          "acc": "krótkotrwałych",
+          "ins": "krótkotrwałymi",
+          "loc": "krótkotrwałych"
+        },
+        "nonvirile": {
+          "nom": "krótkotrwałe",
+          "gen": "krótkotrwałych",
+          "dat": "krótkotrwałym",
+          "acc": "krótkotrwałe",
+          "ins": "krótkotrwałymi",
+          "loc": "krótkotrwałych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej krótkotrwały",
+          "gen": "bardziej krótkotrwałego",
+          "dat": "bardziej krótkotrwałemu",
+          "acc": "bardziej krótkotrwałego",
+          "ins": "bardziej krótkotrwałym",
+          "loc": "bardziej krótkotrwałym"
+        },
+        "m3": {
+          "nom": "bardziej krótkotrwały",
+          "gen": "bardziej krótkotrwałego",
+          "dat": "bardziej krótkotrwałemu",
+          "acc": "bardziej krótkotrwały",
+          "ins": "bardziej krótkotrwałym",
+          "loc": "bardziej krótkotrwałym"
+        },
+        "f": {
+          "nom": "bardziej krótkotrwała",
+          "gen": "bardziej krótkotrwałej",
+          "dat": "bardziej krótkotrwałej",
+          "acc": "bardziej krótkotrwałą",
+          "ins": "bardziej krótkotrwałą",
+          "loc": "bardziej krótkotrwałej"
+        },
+        "n": {
+          "nom": "bardziej krótkotrwałe",
+          "gen": "bardziej krótkotrwałego",
+          "dat": "bardziej krótkotrwałemu",
+          "acc": "bardziej krótkotrwałe",
+          "ins": "bardziej krótkotrwałym",
+          "loc": "bardziej krótkotrwałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej krótkotrwali",
+          "gen": "bardziej krótkotrwałych",
+          "dat": "bardziej krótkotrwałym",
+          "acc": "bardziej krótkotrwałych",
+          "ins": "bardziej krótkotrwałymi",
+          "loc": "bardziej krótkotrwałych"
+        },
+        "nonvirile": {
+          "nom": "bardziej krótkotrwałe",
+          "gen": "bardziej krótkotrwałych",
+          "dat": "bardziej krótkotrwałym",
+          "acc": "bardziej krótkotrwałe",
+          "ins": "bardziej krótkotrwałymi",
+          "loc": "bardziej krótkotrwałych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej krótkotrwały",
+          "gen": "najbardziej krótkotrwałego",
+          "dat": "najbardziej krótkotrwałemu",
+          "acc": "najbardziej krótkotrwałego",
+          "ins": "najbardziej krótkotrwałym",
+          "loc": "najbardziej krótkotrwałym"
+        },
+        "m3": {
+          "nom": "najbardziej krótkotrwały",
+          "gen": "najbardziej krótkotrwałego",
+          "dat": "najbardziej krótkotrwałemu",
+          "acc": "najbardziej krótkotrwały",
+          "ins": "najbardziej krótkotrwałym",
+          "loc": "najbardziej krótkotrwałym"
+        },
+        "f": {
+          "nom": "najbardziej krótkotrwała",
+          "gen": "najbardziej krótkotrwałej",
+          "dat": "najbardziej krótkotrwałej",
+          "acc": "najbardziej krótkotrwałą",
+          "ins": "najbardziej krótkotrwałą",
+          "loc": "najbardziej krótkotrwałej"
+        },
+        "n": {
+          "nom": "najbardziej krótkotrwałe",
+          "gen": "najbardziej krótkotrwałego",
+          "dat": "najbardziej krótkotrwałemu",
+          "acc": "najbardziej krótkotrwałe",
+          "ins": "najbardziej krótkotrwałym",
+          "loc": "najbardziej krótkotrwałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej krótkotrwali",
+          "gen": "najbardziej krótkotrwałych",
+          "dat": "najbardziej krótkotrwałym",
+          "acc": "najbardziej krótkotrwałych",
+          "ins": "najbardziej krótkotrwałymi",
+          "loc": "najbardziej krótkotrwałych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej krótkotrwałe",
+          "gen": "najbardziej krótkotrwałych",
+          "dat": "najbardziej krótkotrwałym",
+          "acc": "najbardziej krótkotrwałe",
+          "ins": "najbardziej krótkotrwałymi",
+          "loc": "najbardziej krótkotrwałych"
+        }
+      }
+    }
+  }
+}

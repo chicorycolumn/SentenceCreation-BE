@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "znudzić",
+    "verbalNoun": "znudzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "znudzony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "znudziwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "znudzi się"
+          },
+          "plural": {
+            "allPluralGenders": "znudzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "znudzę"
+          },
+          "plural": {
+            "allPluralGenders": "znudzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "znudzisz"
+          },
+          "plural": {
+            "allPluralGenders": "znudzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "znudzi"
+          },
+          "plural": {
+            "allPluralGenders": "znudzą"
+          }
+        }
+      },
+      "imperative": "znudź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "znudzono"
+          },
+          "plural": {
+            "allPluralGenders": "znudzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "znudziłem",
+            "f": "znudziłam"
+          },
+          "plural": {
+            "virile": "znudziliśmy",
+            "nonvirile": "znudziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "znudziłeś",
+            "f": "znudziłaś"
+          },
+          "plural": {
+            "virile": "znudziliście",
+            "nonvirile": "znudziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "znudził",
+            "f": "znudziła",
+            "n": "znudziło"
+          },
+          "plural": {
+            "virile": "znudzili",
+            "nonvirile": "znudziły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

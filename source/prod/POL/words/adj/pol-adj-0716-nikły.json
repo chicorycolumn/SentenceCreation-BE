@@ -1,0 +1,174 @@
+{
+  "inflections": {
+    "adverb": {
+      "isTerminus": true,
+      "normal": [
+        "nikło",
+        "nikle"
+      ],
+      "additionalInfrequent": []
+    },
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nikły",
+          "gen": "nikłego",
+          "dat": "nikłemu",
+          "acc": "nikłego",
+          "ins": "nikłym",
+          "loc": "nikłym"
+        },
+        "m3": {
+          "nom": "nikły",
+          "gen": "nikłego",
+          "dat": "nikłemu",
+          "acc": "nikły",
+          "ins": "nikłym",
+          "loc": "nikłym"
+        },
+        "f": {
+          "nom": "nikła",
+          "gen": "nikłej",
+          "dat": "nikłej",
+          "acc": "nikłą",
+          "ins": "nikłą",
+          "loc": "nikłej"
+        },
+        "n": {
+          "nom": "nikłe",
+          "gen": "nikłego",
+          "dat": "nikłemu",
+          "acc": "nikłe",
+          "ins": "nikłym",
+          "loc": "nikłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nikli",
+          "gen": "nikłych",
+          "dat": "nikłym",
+          "acc": "nikłych",
+          "ins": "nikłymi",
+          "loc": "nikłych"
+        },
+        "nonvirile": {
+          "nom": "nikłe",
+          "gen": "nikłych",
+          "dat": "nikłym",
+          "acc": "nikłe",
+          "ins": "nikłymi",
+          "loc": "nikłych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "niklejszy",
+          "gen": "niklejszego",
+          "dat": "niklejszemu",
+          "acc": "niklejszego",
+          "ins": "niklejszym",
+          "loc": "niklejszym"
+        },
+        "m3": {
+          "nom": "niklejszy",
+          "gen": "niklejszego",
+          "dat": "niklejszemu",
+          "acc": "niklejszy",
+          "ins": "niklejszym",
+          "loc": "niklejszym"
+        },
+        "f": {
+          "nom": "niklejsza",
+          "gen": "niklejszej",
+          "dat": "niklejszej",
+          "acc": "niklejszą",
+          "ins": "niklejszą",
+          "loc": "niklejszej"
+        },
+        "n": {
+          "nom": "niklejsze",
+          "gen": "niklejszego",
+          "dat": "niklejszemu",
+          "acc": "niklejsze",
+          "ins": "niklejszym",
+          "loc": "niklejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niklejsi",
+          "gen": "niklejszych",
+          "dat": "niklejszym",
+          "acc": "niklejszych",
+          "ins": "niklejszymi",
+          "loc": "niklejszych"
+        },
+        "nonvirile": {
+          "nom": "niklejsze",
+          "gen": "niklejszych",
+          "dat": "niklejszym",
+          "acc": "niklejsze",
+          "ins": "niklejszymi",
+          "loc": "niklejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najniklejszy",
+          "gen": "najniklejszego",
+          "dat": "najniklejszemu",
+          "acc": "najniklejszego",
+          "ins": "najniklejszym",
+          "loc": "najniklejszym"
+        },
+        "m3": {
+          "nom": "najniklejszy",
+          "gen": "najniklejszego",
+          "dat": "najniklejszemu",
+          "acc": "najniklejszy",
+          "ins": "najniklejszym",
+          "loc": "najniklejszym"
+        },
+        "f": {
+          "nom": "najniklejsza",
+          "gen": "najniklejszej",
+          "dat": "najniklejszej",
+          "acc": "najniklejszą",
+          "ins": "najniklejszą",
+          "loc": "najniklejszej"
+        },
+        "n": {
+          "nom": "najniklejsze",
+          "gen": "najniklejszego",
+          "dat": "najniklejszemu",
+          "acc": "najniklejsze",
+          "ins": "najniklejszym",
+          "loc": "najniklejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najniklejsi",
+          "gen": "najniklejszych",
+          "dat": "najniklejszym",
+          "acc": "najniklejszych",
+          "ins": "najniklejszymi",
+          "loc": "najniklejszych"
+        },
+        "nonvirile": {
+          "nom": "najniklejsze",
+          "gen": "najniklejszych",
+          "dat": "najniklejszym",
+          "acc": "najniklejsze",
+          "ins": "najniklejszymi",
+          "loc": "najniklejszych"
+        }
+      }
+    }
+  }
+}

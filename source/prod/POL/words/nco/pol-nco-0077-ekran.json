@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ekran",
+      "gen": "ekranu",
+      "dat": "ekranowi",
+      "acc": "ekran",
+      "ins": "ekranem",
+      "loc": "ekranie",
+      "voc": "ekranie"
+    },
+    "plural": {
+      "nom": "ekrany",
+      "gen": "ekranów",
+      "dat": "ekranom",
+      "acc": "ekrany",
+      "ins": "ekranami",
+      "loc": "ekranach",
+      "voc": "ekrany"
+    }
+  }
+}

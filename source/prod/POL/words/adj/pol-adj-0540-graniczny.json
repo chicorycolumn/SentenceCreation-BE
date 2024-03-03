@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "granicznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "graniczny",
+          "gen": "granicznego",
+          "dat": "granicznemu",
+          "acc": "granicznego",
+          "ins": "granicznym",
+          "loc": "granicznym"
+        },
+        "m3": {
+          "nom": "graniczny",
+          "gen": "granicznego",
+          "dat": "granicznemu",
+          "acc": "graniczny",
+          "ins": "granicznym",
+          "loc": "granicznym"
+        },
+        "f": {
+          "nom": "graniczna",
+          "gen": "granicznej",
+          "dat": "granicznej",
+          "acc": "graniczną",
+          "ins": "graniczną",
+          "loc": "granicznej"
+        },
+        "n": {
+          "nom": "graniczne",
+          "gen": "granicznego",
+          "dat": "granicznemu",
+          "acc": "graniczne",
+          "ins": "granicznym",
+          "loc": "granicznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "graniczni",
+          "gen": "granicznych",
+          "dat": "granicznym",
+          "acc": "granicznych",
+          "ins": "granicznymi",
+          "loc": "granicznych"
+        },
+        "nonvirile": {
+          "nom": "graniczne",
+          "gen": "granicznych",
+          "dat": "granicznym",
+          "acc": "graniczne",
+          "ins": "granicznymi",
+          "loc": "granicznych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ograniczyć",
+    "verbalNoun": "ograniczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "ograniczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "ograniczywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ograniczy się"
+          },
+          "plural": {
+            "allPluralGenders": "ograniczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ograniczę"
+          },
+          "plural": {
+            "allPluralGenders": "ograniczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ograniczysz"
+          },
+          "plural": {
+            "allPluralGenders": "ograniczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ograniczy"
+          },
+          "plural": {
+            "allPluralGenders": "ograniczą"
+          }
+        }
+      },
+      "imperative": "ogranicz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ograniczono"
+          },
+          "plural": {
+            "allPluralGenders": "ograniczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ograniczyłem",
+            "f": "ograniczyłam"
+          },
+          "plural": {
+            "virile": "ograniczyliśmy",
+            "nonvirile": "ograniczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ograniczyłeś",
+            "f": "ograniczyłaś"
+          },
+          "plural": {
+            "virile": "ograniczyliście",
+            "nonvirile": "ograniczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ograniczył",
+            "f": "ograniczyła",
+            "n": "ograniczyło"
+          },
+          "plural": {
+            "virile": "ograniczyli",
+            "nonvirile": "ograniczyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

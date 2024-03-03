@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "oznaka",
+      "gen": "oznaki",
+      "dat": "oznace",
+      "acc": "oznakę",
+      "ins": "oznaką",
+      "loc": "oznace",
+      "voc": "oznako"
+    },
+    "plural": {
+      "nom": "oznaki",
+      "gen": "oznak",
+      "dat": "oznakom",
+      "acc": "oznaki",
+      "ins": "oznakami",
+      "loc": "oznakach",
+      "voc": "oznaki"
+    }
+  }
+}

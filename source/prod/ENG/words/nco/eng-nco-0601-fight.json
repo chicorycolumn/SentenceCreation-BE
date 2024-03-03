@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "fight",
+      "gen": "fight's"
+    },
+    "plural": {
+      "nom": "fights",
+      "gen": "fights'"
+    }
+  }
+}

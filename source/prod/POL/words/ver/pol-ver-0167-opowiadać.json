@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "opowiadać",
+    "verbalNoun": "opowiadanie",
+    "activeAdjectival": "opowiadający",
+    "passiveAdjectival": "opowiadany",
+    "contemporaryAdverbial": "opowiadając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "opowiadaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opowiadano"
+          },
+          "plural": {
+            "allPluralGenders": "opowiadano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "opowiadałem",
+            "f": "opowiadałam"
+          },
+          "plural": {
+            "virile": "opowiadaliśmy",
+            "nonvirile": "opowiadałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "opowiadałeś",
+            "f": "opowiadałaś"
+          },
+          "plural": {
+            "virile": "opowiadaliście",
+            "nonvirile": "opowiadałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "opowiadał",
+            "f": "opowiadała",
+            "n": "opowiadało"
+          },
+          "plural": {
+            "virile": "opowiadali",
+            "nonvirile": "opowiadały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opowiada się"
+          },
+          "plural": {
+            "allPluralGenders": "opowiada się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "opowiadam"
+          },
+          "plural": {
+            "allPluralGenders": "opowiadamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "opowiadasz"
+          },
+          "plural": {
+            "allPluralGenders": "opowiadacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "opowiada"
+          },
+          "plural": {
+            "allPluralGenders": "opowiadają"
+          }
+        }
+      }
+    }
+  }
+}

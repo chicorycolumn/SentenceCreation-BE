@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "zimno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zimny",
+          "gen": "zimnego",
+          "dat": "zimnemu",
+          "acc": "zimnego",
+          "ins": "zimnym",
+          "loc": "zimnym"
+        },
+        "m3": {
+          "nom": "zimny",
+          "gen": "zimnego",
+          "dat": "zimnemu",
+          "acc": "zimny",
+          "ins": "zimnym",
+          "loc": "zimnym"
+        },
+        "f": {
+          "nom": "zimna",
+          "gen": "zimnej",
+          "dat": "zimnej",
+          "acc": "zimną",
+          "ins": "zimną",
+          "loc": "zimnej"
+        },
+        "n": {
+          "nom": "zimne",
+          "gen": "zimnego",
+          "dat": "zimnemu",
+          "acc": "zimne",
+          "ins": "zimnym",
+          "loc": "zimnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zimni",
+          "gen": "zimnych",
+          "dat": "zimnym",
+          "acc": "zimnych",
+          "ins": "zimnymi",
+          "loc": "zimnych"
+        },
+        "nonvirile": {
+          "nom": "zimne",
+          "gen": "zimnych",
+          "dat": "zimnym",
+          "acc": "zimne",
+          "ins": "zimnymi",
+          "loc": "zimnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "zimniejszy",
+          "gen": "zimniejszego",
+          "dat": "zimniejszemu",
+          "acc": "zimniejszego",
+          "ins": "zimniejszym",
+          "loc": "zimniejszym"
+        },
+        "m3": {
+          "nom": "zimniejszy",
+          "gen": "zimniejszego",
+          "dat": "zimniejszemu",
+          "acc": "zimniejszy",
+          "ins": "zimniejszym",
+          "loc": "zimniejszym"
+        },
+        "f": {
+          "nom": "zimniejsza",
+          "gen": "zimniejszej",
+          "dat": "zimniejszej",
+          "acc": "zimniejszą",
+          "ins": "zimniejszą",
+          "loc": "zimniejszej"
+        },
+        "n": {
+          "nom": "zimniejsze",
+          "gen": "zimniejszego",
+          "dat": "zimniejszemu",
+          "acc": "zimniejsze",
+          "ins": "zimniejszym",
+          "loc": "zimniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zimniejsi",
+          "gen": "zimniejszych",
+          "dat": "zimniejszym",
+          "acc": "zimniejszych",
+          "ins": "zimniejszymi",
+          "loc": "zimniejszych"
+        },
+        "nonvirile": {
+          "nom": "zimniejsze",
+          "gen": "zimniejszych",
+          "dat": "zimniejszym",
+          "acc": "zimniejsze",
+          "ins": "zimniejszymi",
+          "loc": "zimniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najzimniejszy",
+          "gen": "najzimniejszego",
+          "dat": "najzimniejszemu",
+          "acc": "najzimniejszego",
+          "ins": "najzimniejszym",
+          "loc": "najzimniejszym"
+        },
+        "m3": {
+          "nom": "najzimniejszy",
+          "gen": "najzimniejszego",
+          "dat": "najzimniejszemu",
+          "acc": "najzimniejszy",
+          "ins": "najzimniejszym",
+          "loc": "najzimniejszym"
+        },
+        "f": {
+          "nom": "najzimniejsza",
+          "gen": "najzimniejszej",
+          "dat": "najzimniejszej",
+          "acc": "najzimniejszą",
+          "ins": "najzimniejszą",
+          "loc": "najzimniejszej"
+        },
+        "n": {
+          "nom": "najzimniejsze",
+          "gen": "najzimniejszego",
+          "dat": "najzimniejszemu",
+          "acc": "najzimniejsze",
+          "ins": "najzimniejszym",
+          "loc": "najzimniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najzimniejsi",
+          "gen": "najzimniejszych",
+          "dat": "najzimniejszym",
+          "acc": "najzimniejszych",
+          "ins": "najzimniejszymi",
+          "loc": "najzimniejszych"
+        },
+        "nonvirile": {
+          "nom": "najzimniejsze",
+          "gen": "najzimniejszych",
+          "dat": "najzimniejszym",
+          "acc": "najzimniejsze",
+          "ins": "najzimniejszymi",
+          "loc": "najzimniejszych"
+        }
+      }
+    }
+  }
+}

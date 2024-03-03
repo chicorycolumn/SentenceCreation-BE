@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "internetowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "internetowy",
+          "gen": "internetowego",
+          "dat": "internetowemu",
+          "acc": "internetowego",
+          "ins": "internetowym",
+          "loc": "internetowym"
+        },
+        "m3": {
+          "nom": "internetowy",
+          "gen": "internetowego",
+          "dat": "internetowemu",
+          "acc": "internetowy",
+          "ins": "internetowym",
+          "loc": "internetowym"
+        },
+        "f": {
+          "nom": "internetowa",
+          "gen": "internetowej",
+          "dat": "internetowej",
+          "acc": "internetową",
+          "ins": "internetową",
+          "loc": "internetowej"
+        },
+        "n": {
+          "nom": "internetowe",
+          "gen": "internetowego",
+          "dat": "internetowemu",
+          "acc": "internetowe",
+          "ins": "internetowym",
+          "loc": "internetowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "internetowi",
+          "gen": "internetowych",
+          "dat": "internetowym",
+          "acc": "internetowych",
+          "ins": "internetowymi",
+          "loc": "internetowych"
+        },
+        "nonvirile": {
+          "nom": "internetowe",
+          "gen": "internetowych",
+          "dat": "internetowym",
+          "acc": "internetowe",
+          "ins": "internetowymi",
+          "loc": "internetowych"
+        }
+      }
+    }
+  }
+}

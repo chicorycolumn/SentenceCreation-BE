@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "kopnąć",
+    "verbalNoun": "kopnięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "kopnięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "kopnąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kopnie się"
+          },
+          "plural": {
+            "allPluralGenders": "kopnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "kopnę"
+          },
+          "plural": {
+            "allPluralGenders": "kopniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "kopniesz"
+          },
+          "plural": {
+            "allPluralGenders": "kopniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "kopnie"
+          },
+          "plural": {
+            "allPluralGenders": "kopną"
+          }
+        }
+      },
+      "imperative": "kopnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kopnięto"
+          },
+          "plural": {
+            "allPluralGenders": "kopnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "kopnąłem",
+            "f": "kopnęłam"
+          },
+          "plural": {
+            "virile": "kopnęliśmy",
+            "nonvirile": "kopnęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "kopnąłeś",
+            "f": "kopnęłaś"
+          },
+          "plural": {
+            "virile": "kopnęliście",
+            "nonvirile": "kopnęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "kopnął",
+            "f": "kopnęła",
+            "n": "kopnęło"
+          },
+          "plural": {
+            "virile": "kopnęli",
+            "nonvirile": "kopnęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wschód",
+      "gen": "wschodu",
+      "dat": "wschodowi",
+      "acc": "wschód",
+      "ins": "wschodem",
+      "loc": "wschodzie",
+      "voc": "wschodzie"
+    },
+    "plural": {
+      "nom": "wschody",
+      "gen": "wschodów",
+      "dat": "wschodom",
+      "acc": "wschody",
+      "ins": "wschodami",
+      "loc": "wschodach",
+      "voc": "wschody"
+    }
+  }
+}

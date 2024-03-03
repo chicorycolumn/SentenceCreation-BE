@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "bać",
+    "verbalNoun": "banie",
+    "activeAdjectival": "bojący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "bojąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "bój",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "bano"
+          },
+          "plural": {
+            "allPluralGenders": "bano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "bałem",
+            "f": "bałam"
+          },
+          "plural": {
+            "virile": "baliśmy",
+            "nonvirile": "bałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "bałeś",
+            "f": "bałaś"
+          },
+          "plural": {
+            "virile": "baliście",
+            "nonvirile": "bałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "bał",
+            "f": "bała",
+            "n": "bało"
+          },
+          "plural": {
+            "virile": "bali",
+            "nonvirile": "bały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "boi się"
+          },
+          "plural": {
+            "allPluralGenders": "boi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "boję"
+          },
+          "plural": {
+            "allPluralGenders": "boimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "boisz"
+          },
+          "plural": {
+            "allPluralGenders": "boicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "boi"
+          },
+          "plural": {
+            "allPluralGenders": "boją"
+          }
+        }
+      }
+    }
+  }
+}

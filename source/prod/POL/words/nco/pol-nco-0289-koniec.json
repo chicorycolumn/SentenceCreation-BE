@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "koniec",
+      "gen": "końca",
+      "dat": "końcowi",
+      "acc": "koniec",
+      "ins": "końcem",
+      "loc": "końcu",
+      "voc": "końcu"
+    },
+    "plural": {
+      "nom": "końce",
+      "gen": "końców",
+      "dat": "końcom",
+      "acc": "końce",
+      "ins": "końcami",
+      "loc": "końcach",
+      "voc": "końce"
+    }
+  }
+}

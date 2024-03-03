@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "altitude",
+      "gen": "altitude's"
+    },
+    "plural": {
+      "nom": "altitudes",
+      "gen": "altitudes'"
+    }
+  }
+}

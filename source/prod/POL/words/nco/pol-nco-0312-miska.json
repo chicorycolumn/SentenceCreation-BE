@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "miska",
+      "gen": "miski",
+      "dat": "misce",
+      "acc": "miskę",
+      "ins": "miską",
+      "loc": "misce",
+      "voc": "misko"
+    },
+    "plural": {
+      "nom": "miski",
+      "gen": "misek",
+      "dat": "miskom",
+      "acc": "miski",
+      "ins": "miskami",
+      "loc": "miskach",
+      "voc": "miski"
+    }
+  }
+}

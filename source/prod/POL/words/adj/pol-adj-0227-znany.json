@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "znany",
+          "gen": "znanego",
+          "dat": "znanemu",
+          "acc": "znanego",
+          "ins": "znanym",
+          "loc": "znanym"
+        },
+        "m3": {
+          "nom": "znany",
+          "gen": "znanego",
+          "dat": "znanemu",
+          "acc": "znany",
+          "ins": "znanym",
+          "loc": "znanym"
+        },
+        "f": {
+          "nom": "znana",
+          "gen": "znanej",
+          "dat": "znanej",
+          "acc": "znaną",
+          "ins": "znaną",
+          "loc": "znanej"
+        },
+        "n": {
+          "nom": "znane",
+          "gen": "znanego",
+          "dat": "znanemu",
+          "acc": "znane",
+          "ins": "znanym",
+          "loc": "znanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "znani",
+          "gen": "znanych",
+          "dat": "znanym",
+          "acc": "znanych",
+          "ins": "znanymi",
+          "loc": "znanych"
+        },
+        "nonvirile": {
+          "nom": "znane",
+          "gen": "znanych",
+          "dat": "znanym",
+          "acc": "znane",
+          "ins": "znanymi",
+          "loc": "znanych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej znany",
+          "gen": "bardziej znanego",
+          "dat": "bardziej znanemu",
+          "acc": "bardziej znanego",
+          "ins": "bardziej znanym",
+          "loc": "bardziej znanym"
+        },
+        "m3": {
+          "nom": "bardziej znany",
+          "gen": "bardziej znanego",
+          "dat": "bardziej znanemu",
+          "acc": "bardziej znany",
+          "ins": "bardziej znanym",
+          "loc": "bardziej znanym"
+        },
+        "f": {
+          "nom": "bardziej znana",
+          "gen": "bardziej znanej",
+          "dat": "bardziej znanej",
+          "acc": "bardziej znaną",
+          "ins": "bardziej znaną",
+          "loc": "bardziej znanej"
+        },
+        "n": {
+          "nom": "bardziej znane",
+          "gen": "bardziej znanego",
+          "dat": "bardziej znanemu",
+          "acc": "bardziej znane",
+          "ins": "bardziej znanym",
+          "loc": "bardziej znanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej znani",
+          "gen": "bardziej znanych",
+          "dat": "bardziej znanym",
+          "acc": "bardziej znanych",
+          "ins": "bardziej znanymi",
+          "loc": "bardziej znanych"
+        },
+        "nonvirile": {
+          "nom": "bardziej znane",
+          "gen": "bardziej znanych",
+          "dat": "bardziej znanym",
+          "acc": "bardziej znane",
+          "ins": "bardziej znanymi",
+          "loc": "bardziej znanych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej znany",
+          "gen": "najbardziej znanego",
+          "dat": "najbardziej znanemu",
+          "acc": "najbardziej znanego",
+          "ins": "najbardziej znanym",
+          "loc": "najbardziej znanym"
+        },
+        "m3": {
+          "nom": "najbardziej znany",
+          "gen": "najbardziej znanego",
+          "dat": "najbardziej znanemu",
+          "acc": "najbardziej znany",
+          "ins": "najbardziej znanym",
+          "loc": "najbardziej znanym"
+        },
+        "f": {
+          "nom": "najbardziej znana",
+          "gen": "najbardziej znanej",
+          "dat": "najbardziej znanej",
+          "acc": "najbardziej znaną",
+          "ins": "najbardziej znaną",
+          "loc": "najbardziej znanej"
+        },
+        "n": {
+          "nom": "najbardziej znane",
+          "gen": "najbardziej znanego",
+          "dat": "najbardziej znanemu",
+          "acc": "najbardziej znane",
+          "ins": "najbardziej znanym",
+          "loc": "najbardziej znanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej znani",
+          "gen": "najbardziej znanych",
+          "dat": "najbardziej znanym",
+          "acc": "najbardziej znanych",
+          "ins": "najbardziej znanymi",
+          "loc": "najbardziej znanych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej znane",
+          "gen": "najbardziej znanych",
+          "dat": "najbardziej znanym",
+          "acc": "najbardziej znane",
+          "ins": "najbardziej znanymi",
+          "loc": "najbardziej znanych"
+        }
+      }
+    }
+  }
+}

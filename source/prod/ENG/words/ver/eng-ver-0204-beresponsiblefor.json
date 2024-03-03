@@ -1,0 +1,15 @@
+{
+  "inflections": {
+    "infinitive": "be responsible for",
+    "v2": {
+      "isTerminus": true,
+      "normal": [
+        "was responsible for",
+        "were responsible for"
+      ]
+    },
+    "v3": "been responsible for",
+    "thirdPS": "is responsible for",
+    "gerund": "being responsible for"
+  }
+}

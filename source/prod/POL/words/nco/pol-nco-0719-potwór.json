@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "potwór",
+      "gen": "potwora",
+      "dat": "potworowi",
+      "acc": "potwora",
+      "ins": "potworem",
+      "loc": "potworze",
+      "voc": "potworze"
+    },
+    "plural": {
+      "nom": "potwory",
+      "gen": "potworów",
+      "dat": "potworom",
+      "acc": "potwory",
+      "ins": "potworami",
+      "loc": "potworach",
+      "voc": "potwory"
+    }
+  }
+}

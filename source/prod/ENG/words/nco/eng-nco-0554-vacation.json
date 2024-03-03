@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "vacation",
+      "gen": "vacation's"
+    },
+    "plural": {
+      "nom": "vacations",
+      "gen": "vacations'"
+    }
+  }
+}

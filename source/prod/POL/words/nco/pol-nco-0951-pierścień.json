@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pierścień",
+      "gen": "pierścienia",
+      "dat": "pierścieniowi",
+      "acc": "pierścień",
+      "ins": "pierścieniem",
+      "loc": "pierścieniu",
+      "voc": "pierścieniu"
+    },
+    "plural": {
+      "nom": "pierścienie",
+      "gen": "pierścieni",
+      "dat": "pierścieniom",
+      "acc": "pierścienie",
+      "ins": "pierścieniami",
+      "loc": "pierścieniach",
+      "voc": "pierścienie"
+    }
+  }
+}

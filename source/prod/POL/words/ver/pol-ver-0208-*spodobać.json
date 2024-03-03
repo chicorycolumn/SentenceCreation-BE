@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "spodobać",
+    "verbalNoun": "spodobanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "spodobawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "spodoba się"
+          },
+          "plural": {
+            "allPluralGenders": "spodoba się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "spodobam"
+          },
+          "plural": {
+            "allPluralGenders": "spodobamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "spodobasz"
+          },
+          "plural": {
+            "allPluralGenders": "spodobacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "spodoba"
+          },
+          "plural": {
+            "allPluralGenders": "spodobają"
+          }
+        }
+      },
+      "imperative": "spodobaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "spodobano"
+          },
+          "plural": {
+            "allPluralGenders": "spodobano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "spodobałem",
+            "f": "spodobałam"
+          },
+          "plural": {
+            "virile": "spodobaliśmy",
+            "nonvirile": "spodobałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "spodobałeś",
+            "f": "spodobałaś"
+          },
+          "plural": {
+            "virile": "spodobaliście",
+            "nonvirile": "spodobałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "spodobał",
+            "f": "spodobała",
+            "n": "spodobało"
+          },
+          "plural": {
+            "virile": "spodobali",
+            "nonvirile": "spodobały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

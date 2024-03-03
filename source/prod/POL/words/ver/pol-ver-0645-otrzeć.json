@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "otrzeć",
+    "verbalNoun": "otarcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "otarty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "otarłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "otrze się"
+          },
+          "plural": {
+            "allPluralGenders": "otrze się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "otrę"
+          },
+          "plural": {
+            "allPluralGenders": "otrzemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "otrzesz"
+          },
+          "plural": {
+            "allPluralGenders": "otrzecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "otrze"
+          },
+          "plural": {
+            "allPluralGenders": "otrą"
+          }
+        }
+      },
+      "imperative": "otrzyj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "otarto"
+          },
+          "plural": {
+            "allPluralGenders": "otarto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "otarłem",
+            "f": "otarłam"
+          },
+          "plural": {
+            "virile": "otarliśmy",
+            "nonvirile": "otarłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "otarłeś",
+            "f": "otarłaś"
+          },
+          "plural": {
+            "virile": "otarliście",
+            "nonvirile": "otarłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "otarł",
+            "f": "otarła",
+            "n": "otarło"
+          },
+          "plural": {
+            "virile": "otarli",
+            "nonvirile": "otarły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

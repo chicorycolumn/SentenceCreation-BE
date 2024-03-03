@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "planeta",
+      "gen": "planety",
+      "dat": "planecie",
+      "acc": "planetę",
+      "ins": "planetą",
+      "loc": "planecie",
+      "voc": "planeto"
+    },
+    "plural": {
+      "nom": "planety",
+      "gen": "planet",
+      "dat": "planetom",
+      "acc": "planety",
+      "ins": "planetami",
+      "loc": "planetach",
+      "voc": "planety"
+    }
+  }
+}

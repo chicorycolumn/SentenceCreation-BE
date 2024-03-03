@@ -1,0 +1,18 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "radius",
+      "gen": "radius's"
+    },
+    "plural": {
+      "nom": [
+        "radiuses",
+        "radii"
+      ],
+      "gen": [
+        "radiuses'",
+        "radii's"
+      ]
+    }
+  }
+}

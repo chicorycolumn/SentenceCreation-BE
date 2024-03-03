@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "interesować",
+    "verbalNoun": "interesowanie",
+    "activeAdjectival": "interesujący",
+    "passiveAdjectival": "interesowany",
+    "contemporaryAdverbial": "interesując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "interesuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "interesowano"
+          },
+          "plural": {
+            "allPluralGenders": "interesowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "interesowałem",
+            "f": "interesowałam"
+          },
+          "plural": {
+            "virile": "interesowaliśmy",
+            "nonvirile": "interesowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "interesowałeś",
+            "f": "interesowałaś"
+          },
+          "plural": {
+            "virile": "interesowaliście",
+            "nonvirile": "interesowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "interesował",
+            "f": "interesowała",
+            "n": "interesowało"
+          },
+          "plural": {
+            "virile": "interesowali",
+            "nonvirile": "interesowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "interesuje się"
+          },
+          "plural": {
+            "allPluralGenders": "interesuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "interesuję"
+          },
+          "plural": {
+            "allPluralGenders": "interesujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "interesujesz"
+          },
+          "plural": {
+            "allPluralGenders": "interesujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "interesuje"
+          },
+          "plural": {
+            "allPluralGenders": "interesują"
+          }
+        }
+      }
+    }
+  }
+}

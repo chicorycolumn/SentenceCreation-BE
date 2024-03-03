@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "węgiel",
+      "gen": "węgla",
+      "dat": "węglowi",
+      "acc": "węgiel",
+      "ins": "węglem",
+      "loc": "węglu",
+      "voc": "węglu"
+    },
+    "plural": {
+      "nom": "węgle",
+      "gen": "węgli",
+      "dat": "węglom",
+      "acc": "węgle",
+      "ins": "węglami",
+      "loc": "węglach",
+      "voc": "węgle"
+    }
+  }
+}

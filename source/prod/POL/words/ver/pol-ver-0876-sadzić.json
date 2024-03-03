@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "sadzić",
+    "verbalNoun": "sadzenie",
+    "activeAdjectival": "sadzący",
+    "passiveAdjectival": "sadzony",
+    "contemporaryAdverbial": "sadząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "sadź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "sadzono"
+          },
+          "plural": {
+            "allPluralGenders": "sadzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "sadziłem",
+            "f": "sadziłam"
+          },
+          "plural": {
+            "virile": "sadziliśmy",
+            "nonvirile": "sadziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "sadziłeś",
+            "f": "sadziłaś"
+          },
+          "plural": {
+            "virile": "sadziliście",
+            "nonvirile": "sadziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "sadził",
+            "f": "sadziła",
+            "n": "sadziło"
+          },
+          "plural": {
+            "virile": "sadzili",
+            "nonvirile": "sadziły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "sadzi się"
+          },
+          "plural": {
+            "allPluralGenders": "sadzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "sadzę"
+          },
+          "plural": {
+            "allPluralGenders": "sadzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "sadzisz"
+          },
+          "plural": {
+            "allPluralGenders": "sadzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "sadzi"
+          },
+          "plural": {
+            "allPluralGenders": "sadzą"
+          }
+        }
+      }
+    }
+  }
+}

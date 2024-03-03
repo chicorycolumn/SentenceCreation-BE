@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "piec",
+    "verbalNoun": "pieczenie",
+    "activeAdjectival": "piekący",
+    "passiveAdjectival": "pieczony",
+    "contemporaryAdverbial": "piekąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "piecz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pieczono"
+          },
+          "plural": {
+            "allPluralGenders": "pieczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "piekłem",
+            "f": "piekłam"
+          },
+          "plural": {
+            "virile": "piekliśmy",
+            "nonvirile": "piekłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "piekłeś",
+            "f": "piekłaś"
+          },
+          "plural": {
+            "virile": "piekliście",
+            "nonvirile": "piekłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "piekł",
+            "f": "piekła",
+            "n": "piekło"
+          },
+          "plural": {
+            "virile": "piekli",
+            "nonvirile": "piekły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "piecze się"
+          },
+          "plural": {
+            "allPluralGenders": "piecze się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "piekę"
+          },
+          "plural": {
+            "allPluralGenders": "pieczemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pieczesz"
+          },
+          "plural": {
+            "allPluralGenders": "pieczecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "piecze"
+          },
+          "plural": {
+            "allPluralGenders": "pieką"
+          }
+        }
+      }
+    }
+  }
+}

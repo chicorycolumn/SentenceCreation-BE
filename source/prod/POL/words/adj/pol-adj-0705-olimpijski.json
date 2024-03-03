@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "olimpijski",
+          "gen": "olimpijskiego",
+          "dat": "olimpijskiemu",
+          "acc": "olimpijskiego",
+          "ins": "olimpijskim",
+          "loc": "olimpijskim"
+        },
+        "m3": {
+          "nom": "olimpijski",
+          "gen": "olimpijskiego",
+          "dat": "olimpijskiemu",
+          "acc": "olimpijski",
+          "ins": "olimpijskim",
+          "loc": "olimpijskim"
+        },
+        "f": {
+          "nom": "olimpijska",
+          "gen": "olimpijskiej",
+          "dat": "olimpijskiej",
+          "acc": "olimpijską",
+          "ins": "olimpijską",
+          "loc": "olimpijskiej"
+        },
+        "n": {
+          "nom": "olimpijskie",
+          "gen": "olimpijskiego",
+          "dat": "olimpijskiemu",
+          "acc": "olimpijskie",
+          "ins": "olimpijskim",
+          "loc": "olimpijskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "olimpijscy",
+          "gen": "olimpijskich",
+          "dat": "olimpijskim",
+          "acc": "olimpijskich",
+          "ins": "olimpijskimi",
+          "loc": "olimpijskich"
+        },
+        "nonvirile": {
+          "nom": "olimpijskie",
+          "gen": "olimpijskich",
+          "dat": "olimpijskim",
+          "acc": "olimpijskie",
+          "ins": "olimpijskimi",
+          "loc": "olimpijskich"
+        }
+      }
+    }
+  }
+}

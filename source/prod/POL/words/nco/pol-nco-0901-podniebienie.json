@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "podniebienie",
+      "gen": "podniebienia",
+      "dat": "podniebieniu",
+      "acc": "podniebienie",
+      "ins": "podniebieniem",
+      "loc": "podniebieniu",
+      "voc": "podniebienie"
+    },
+    "plural": {
+      "nom": "podniebienia",
+      "gen": "podniebień",
+      "dat": "podniebieniom",
+      "acc": "podniebienia",
+      "ins": "podniebieniami",
+      "loc": "podniebieniach",
+      "voc": "podniebienia"
+    }
+  }
+}

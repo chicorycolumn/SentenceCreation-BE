@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "wolno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "wolny",
+          "gen": "wolnego",
+          "dat": "wolnemu",
+          "acc": "wolnego",
+          "ins": "wolnym",
+          "loc": "wolnym"
+        },
+        "m3": {
+          "nom": "wolny",
+          "gen": "wolnego",
+          "dat": "wolnemu",
+          "acc": "wolny",
+          "ins": "wolnym",
+          "loc": "wolnym"
+        },
+        "f": {
+          "nom": "wolna",
+          "gen": "wolnej",
+          "dat": "wolnej",
+          "acc": "wolną",
+          "ins": "wolną",
+          "loc": "wolnej"
+        },
+        "n": {
+          "nom": "wolne",
+          "gen": "wolnego",
+          "dat": "wolnemu",
+          "acc": "wolne",
+          "ins": "wolnym",
+          "loc": "wolnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wolni",
+          "gen": "wolnych",
+          "dat": "wolnym",
+          "acc": "wolnych",
+          "ins": "wolnymi",
+          "loc": "wolnych"
+        },
+        "nonvirile": {
+          "nom": "wolne",
+          "gen": "wolnych",
+          "dat": "wolnym",
+          "acc": "wolne",
+          "ins": "wolnymi",
+          "loc": "wolnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "wolniejszy",
+          "gen": "wolniejszego",
+          "dat": "wolniejszemu",
+          "acc": "wolniejszego",
+          "ins": "wolniejszym",
+          "loc": "wolniejszym"
+        },
+        "m3": {
+          "nom": "wolniejszy",
+          "gen": "wolniejszego",
+          "dat": "wolniejszemu",
+          "acc": "wolniejszy",
+          "ins": "wolniejszym",
+          "loc": "wolniejszym"
+        },
+        "f": {
+          "nom": "wolniejsza",
+          "gen": "wolniejszej",
+          "dat": "wolniejszej",
+          "acc": "wolniejszą",
+          "ins": "wolniejszą",
+          "loc": "wolniejszej"
+        },
+        "n": {
+          "nom": "wolniejsze",
+          "gen": "wolniejszego",
+          "dat": "wolniejszemu",
+          "acc": "wolniejsze",
+          "ins": "wolniejszym",
+          "loc": "wolniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wolniejsi",
+          "gen": "wolniejszych",
+          "dat": "wolniejszym",
+          "acc": "wolniejszych",
+          "ins": "wolniejszymi",
+          "loc": "wolniejszych"
+        },
+        "nonvirile": {
+          "nom": "wolniejsze",
+          "gen": "wolniejszych",
+          "dat": "wolniejszym",
+          "acc": "wolniejsze",
+          "ins": "wolniejszymi",
+          "loc": "wolniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najwolniejszy",
+          "gen": "najwolniejszego",
+          "dat": "najwolniejszemu",
+          "acc": "najwolniejszego",
+          "ins": "najwolniejszym",
+          "loc": "najwolniejszym"
+        },
+        "m3": {
+          "nom": "najwolniejszy",
+          "gen": "najwolniejszego",
+          "dat": "najwolniejszemu",
+          "acc": "najwolniejszy",
+          "ins": "najwolniejszym",
+          "loc": "najwolniejszym"
+        },
+        "f": {
+          "nom": "najwolniejsza",
+          "gen": "najwolniejszej",
+          "dat": "najwolniejszej",
+          "acc": "najwolniejszą",
+          "ins": "najwolniejszą",
+          "loc": "najwolniejszej"
+        },
+        "n": {
+          "nom": "najwolniejsze",
+          "gen": "najwolniejszego",
+          "dat": "najwolniejszemu",
+          "acc": "najwolniejsze",
+          "ins": "najwolniejszym",
+          "loc": "najwolniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najwolniejsi",
+          "gen": "najwolniejszych",
+          "dat": "najwolniejszym",
+          "acc": "najwolniejszych",
+          "ins": "najwolniejszymi",
+          "loc": "najwolniejszych"
+        },
+        "nonvirile": {
+          "nom": "najwolniejsze",
+          "gen": "najwolniejszych",
+          "dat": "najwolniejszym",
+          "acc": "najwolniejsze",
+          "ins": "najwolniejszymi",
+          "loc": "najwolniejszych"
+        }
+      }
+    }
+  }
+}

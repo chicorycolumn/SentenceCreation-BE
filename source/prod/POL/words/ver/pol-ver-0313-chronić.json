@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "chronić",
+    "verbalNoun": "chronienie",
+    "activeAdjectival": "chroniący",
+    "passiveAdjectival": "chroniony",
+    "contemporaryAdverbial": "chroniąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "chroń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "chroniono"
+          },
+          "plural": {
+            "allPluralGenders": "chroniono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "chroniłem",
+            "f": "chroniłam"
+          },
+          "plural": {
+            "virile": "chroniliśmy",
+            "nonvirile": "chroniłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "chroniłeś",
+            "f": "chroniłaś"
+          },
+          "plural": {
+            "virile": "chroniliście",
+            "nonvirile": "chroniłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "chronił",
+            "f": "chroniła",
+            "n": "chroniło"
+          },
+          "plural": {
+            "virile": "chronili",
+            "nonvirile": "chroniły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "chroni się"
+          },
+          "plural": {
+            "allPluralGenders": "chroni się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "chronię"
+          },
+          "plural": {
+            "allPluralGenders": "chronimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "chronisz"
+          },
+          "plural": {
+            "allPluralGenders": "chronicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "chroni"
+          },
+          "plural": {
+            "allPluralGenders": "chronią"
+          }
+        }
+      }
+    }
+  }
+}

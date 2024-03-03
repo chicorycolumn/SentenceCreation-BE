@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "myć",
+    "verbalNoun": "mycie",
+    "activeAdjectival": "myjący",
+    "passiveAdjectival": "myty",
+    "contemporaryAdverbial": "myjąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "myj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "myto"
+          },
+          "plural": {
+            "allPluralGenders": "myto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "myłem",
+            "f": "myłam"
+          },
+          "plural": {
+            "virile": "myliśmy",
+            "nonvirile": "myłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "myłeś",
+            "f": "myłaś"
+          },
+          "plural": {
+            "virile": "myliście",
+            "nonvirile": "myłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "mył",
+            "f": "myła",
+            "n": "myło"
+          },
+          "plural": {
+            "virile": "myli",
+            "nonvirile": "myły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "myje się"
+          },
+          "plural": {
+            "allPluralGenders": "myje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "myję"
+          },
+          "plural": {
+            "allPluralGenders": "myjemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "myjesz"
+          },
+          "plural": {
+            "allPluralGenders": "myjecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "myje"
+          },
+          "plural": {
+            "allPluralGenders": "myją"
+          }
+        }
+      }
+    }
+  }
+}

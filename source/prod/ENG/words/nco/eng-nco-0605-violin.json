@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "violin",
+      "gen": "violin's"
+    },
+    "plural": {
+      "nom": "violins",
+      "gen": "violins'"
+    }
+  }
+}

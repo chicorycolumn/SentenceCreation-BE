@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kwiecień",
+      "gen": "kwietnia",
+      "dat": "kwietniowi",
+      "acc": "kwiecień",
+      "ins": "kwietniem",
+      "loc": "kwietniu",
+      "voc": "kwietniu"
+    },
+    "plural": {
+      "nom": "kwietnie",
+      "gen": [
+        "kwietni",
+        "kwietniów"
+      ],
+      "dat": "kwietniom",
+      "acc": "kwietnie",
+      "ins": "kwietniami",
+      "loc": "kwietniach",
+      "voc": "kwietnie"
+    }
+  }
+}

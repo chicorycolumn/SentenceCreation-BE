@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "nazwisko",
+      "gen": "nazwiska",
+      "dat": "nazwisku",
+      "acc": "nazwisko",
+      "ins": "nazwiskiem",
+      "loc": "nazwisku",
+      "voc": "nazwisko"
+    },
+    "plural": {
+      "nom": "nazwiska",
+      "gen": "nazwisk",
+      "dat": "nazwiskom",
+      "acc": "nazwiska",
+      "ins": "nazwiskami",
+      "loc": "nazwiskach",
+      "voc": "nazwiska"
+    }
+  }
+}

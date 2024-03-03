@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "powstać",
+    "verbalNoun": "powstanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "powstawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powstanie się"
+          },
+          "plural": {
+            "allPluralGenders": "powstanie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "powstanę"
+          },
+          "plural": {
+            "allPluralGenders": "powstaniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "powstaniesz"
+          },
+          "plural": {
+            "allPluralGenders": "powstaniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "powstanie"
+          },
+          "plural": {
+            "allPluralGenders": "powstaną"
+          }
+        }
+      },
+      "imperative": "powstań",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powstano"
+          },
+          "plural": {
+            "allPluralGenders": "powstano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "powstałem",
+            "f": "powstałam"
+          },
+          "plural": {
+            "virile": "powstaliśmy",
+            "nonvirile": "powstałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "powstałeś",
+            "f": "powstałaś"
+          },
+          "plural": {
+            "virile": "powstaliście",
+            "nonvirile": "powstałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "powstał",
+            "f": "powstała",
+            "n": "powstało"
+          },
+          "plural": {
+            "virile": "powstali",
+            "nonvirile": "powstały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "masło",
+      "gen": "masła",
+      "dat": "masłu",
+      "acc": "masło",
+      "ins": "masłem",
+      "loc": "maśle",
+      "voc": "masło"
+    },
+    "plural": {
+      "nom": "masła",
+      "gen": "maseł",
+      "dat": "masłom",
+      "acc": "masła",
+      "ins": "masłami",
+      "loc": "masłach",
+      "voc": "masła"
+    }
+  }
+}

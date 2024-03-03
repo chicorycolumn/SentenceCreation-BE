@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "rodzimy",
+          "gen": "rodzimego",
+          "dat": "rodzimemu",
+          "acc": "rodzimego",
+          "ins": "rodzimym",
+          "loc": "rodzimym"
+        },
+        "m3": {
+          "nom": "rodzimy",
+          "gen": "rodzimego",
+          "dat": "rodzimemu",
+          "acc": "rodzimy",
+          "ins": "rodzimym",
+          "loc": "rodzimym"
+        },
+        "f": {
+          "nom": "rodzima",
+          "gen": "rodzimej",
+          "dat": "rodzimej",
+          "acc": "rodzimą",
+          "ins": "rodzimą",
+          "loc": "rodzimej"
+        },
+        "n": {
+          "nom": "rodzime",
+          "gen": "rodzimego",
+          "dat": "rodzimemu",
+          "acc": "rodzime",
+          "ins": "rodzimym",
+          "loc": "rodzimym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "rodzimi",
+          "gen": "rodzimych",
+          "dat": "rodzimym",
+          "acc": "rodzimych",
+          "ins": "rodzimymi",
+          "loc": "rodzimych"
+        },
+        "nonvirile": {
+          "nom": "rodzime",
+          "gen": "rodzimych",
+          "dat": "rodzimym",
+          "acc": "rodzime",
+          "ins": "rodzimymi",
+          "loc": "rodzimych"
+        }
+      }
+    }
+  }
+}

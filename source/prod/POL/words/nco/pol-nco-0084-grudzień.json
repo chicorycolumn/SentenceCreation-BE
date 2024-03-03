@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "grudzień",
+      "gen": "grudnia",
+      "dat": "grudniowi",
+      "acc": "grudzień",
+      "ins": "grudniem",
+      "loc": "grudniu",
+      "voc": "grudniu"
+    },
+    "plural": {
+      "nom": "grudnie",
+      "gen": [
+        "grudni",
+        "grudniów"
+      ],
+      "dat": "grudniom",
+      "acc": "grudnie",
+      "ins": "grudniami",
+      "loc": "grudniach",
+      "voc": "grudnie"
+    }
+  }
+}

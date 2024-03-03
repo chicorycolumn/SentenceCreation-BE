@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "rzucać",
+    "verbalNoun": "rzucanie",
+    "activeAdjectival": "rzucający",
+    "passiveAdjectival": "rzucany",
+    "contemporaryAdverbial": "rzucając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "rzucaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "rzucano"
+          },
+          "plural": {
+            "allPluralGenders": "rzucano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "rzucałem",
+            "f": "rzucałam"
+          },
+          "plural": {
+            "virile": "rzucaliśmy",
+            "nonvirile": "rzucałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "rzucałeś",
+            "f": "rzucałaś"
+          },
+          "plural": {
+            "virile": "rzucaliście",
+            "nonvirile": "rzucałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "rzucał",
+            "f": "rzucała",
+            "n": "rzucało"
+          },
+          "plural": {
+            "virile": "rzucali",
+            "nonvirile": "rzucały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "rzuca się"
+          },
+          "plural": {
+            "allPluralGenders": "rzuca się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "rzucam"
+          },
+          "plural": {
+            "allPluralGenders": "rzucamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "rzucasz"
+          },
+          "plural": {
+            "allPluralGenders": "rzucacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "rzuca"
+          },
+          "plural": {
+            "allPluralGenders": "rzucają"
+          }
+        }
+      }
+    }
+  }
+}

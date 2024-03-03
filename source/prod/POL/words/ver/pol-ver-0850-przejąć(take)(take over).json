@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przejąć",
+    "verbalNoun": "przejęcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przejęty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przejąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przejmie się"
+          },
+          "plural": {
+            "allPluralGenders": "przejmie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przejmę"
+          },
+          "plural": {
+            "allPluralGenders": "przejmiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przejmiesz"
+          },
+          "plural": {
+            "allPluralGenders": "przejmiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przejmie"
+          },
+          "plural": {
+            "allPluralGenders": "przejmą"
+          }
+        }
+      },
+      "imperative": "przejmij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przejęto"
+          },
+          "plural": {
+            "allPluralGenders": "przejęto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przejąłem",
+            "f": "przejęłam"
+          },
+          "plural": {
+            "virile": "przejęliśmy",
+            "nonvirile": "przejęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przejąłeś",
+            "f": "przejęłaś"
+          },
+          "plural": {
+            "virile": "przejęliście",
+            "nonvirile": "przejęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przejął",
+            "f": "przejęła",
+            "n": "przejęło"
+          },
+          "plural": {
+            "virile": "przejęli",
+            "nonvirile": "przejęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

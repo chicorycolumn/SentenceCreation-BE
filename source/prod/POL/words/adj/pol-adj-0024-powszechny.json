@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "powszechnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "powszechny",
+          "gen": "powszechnego",
+          "dat": "powszechnemu",
+          "acc": "powszechnego",
+          "ins": "powszechnym",
+          "loc": "powszechnym"
+        },
+        "m3": {
+          "nom": "powszechny",
+          "gen": "powszechnego",
+          "dat": "powszechnemu",
+          "acc": "powszechny",
+          "ins": "powszechnym",
+          "loc": "powszechnym"
+        },
+        "f": {
+          "nom": "powszechna",
+          "gen": "powszechnej",
+          "dat": "powszechnej",
+          "acc": "powszechną",
+          "ins": "powszechną",
+          "loc": "powszechnej"
+        },
+        "n": {
+          "nom": "powszechne",
+          "gen": "powszechnego",
+          "dat": "powszechnemu",
+          "acc": "powszechne",
+          "ins": "powszechnym",
+          "loc": "powszechnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "powszechni",
+          "gen": "powszechnych",
+          "dat": "powszechnym",
+          "acc": "powszechnych",
+          "ins": "powszechnymi",
+          "loc": "powszechnych"
+        },
+        "nonvirile": {
+          "nom": "powszechne",
+          "gen": "powszechnych",
+          "dat": "powszechnym",
+          "acc": "powszechne",
+          "ins": "powszechnymi",
+          "loc": "powszechnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "powszechniejszy",
+          "gen": "powszechniejszego",
+          "dat": "powszechniejszemu",
+          "acc": "powszechniejszego",
+          "ins": "powszechniejszym",
+          "loc": "powszechniejszym"
+        },
+        "m3": {
+          "nom": "powszechniejszy",
+          "gen": "powszechniejszego",
+          "dat": "powszechniejszemu",
+          "acc": "powszechniejszy",
+          "ins": "powszechniejszym",
+          "loc": "powszechniejszym"
+        },
+        "f": {
+          "nom": "powszechniejsza",
+          "gen": "powszechniejszej",
+          "dat": "powszechniejszej",
+          "acc": "powszechniejszą",
+          "ins": "powszechniejszą",
+          "loc": "powszechniejszej"
+        },
+        "n": {
+          "nom": "powszechniejsze",
+          "gen": "powszechniejszego",
+          "dat": "powszechniejszemu",
+          "acc": "powszechniejsze",
+          "ins": "powszechniejszym",
+          "loc": "powszechniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "powszechniejsi",
+          "gen": "powszechniejszych",
+          "dat": "powszechniejszym",
+          "acc": "powszechniejszych",
+          "ins": "powszechniejszymi",
+          "loc": "powszechniejszych"
+        },
+        "nonvirile": {
+          "nom": "powszechniejsze",
+          "gen": "powszechniejszych",
+          "dat": "powszechniejszym",
+          "acc": "powszechniejsze",
+          "ins": "powszechniejszymi",
+          "loc": "powszechniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najpowszechniejszy",
+          "gen": "najpowszechniejszego",
+          "dat": "najpowszechniejszemu",
+          "acc": "najpowszechniejszego",
+          "ins": "najpowszechniejszym",
+          "loc": "najpowszechniejszym"
+        },
+        "m3": {
+          "nom": "najpowszechniejszy",
+          "gen": "najpowszechniejszego",
+          "dat": "najpowszechniejszemu",
+          "acc": "najpowszechniejszy",
+          "ins": "najpowszechniejszym",
+          "loc": "najpowszechniejszym"
+        },
+        "f": {
+          "nom": "najpowszechniejsza",
+          "gen": "najpowszechniejszej",
+          "dat": "najpowszechniejszej",
+          "acc": "najpowszechniejszą",
+          "ins": "najpowszechniejszą",
+          "loc": "najpowszechniejszej"
+        },
+        "n": {
+          "nom": "najpowszechniejsze",
+          "gen": "najpowszechniejszego",
+          "dat": "najpowszechniejszemu",
+          "acc": "najpowszechniejsze",
+          "ins": "najpowszechniejszym",
+          "loc": "najpowszechniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najpowszechniejsi",
+          "gen": "najpowszechniejszych",
+          "dat": "najpowszechniejszym",
+          "acc": "najpowszechniejszych",
+          "ins": "najpowszechniejszymi",
+          "loc": "najpowszechniejszych"
+        },
+        "nonvirile": {
+          "nom": "najpowszechniejsze",
+          "gen": "najpowszechniejszych",
+          "dat": "najpowszechniejszym",
+          "acc": "najpowszechniejsze",
+          "ins": "najpowszechniejszymi",
+          "loc": "najpowszechniejszych"
+        }
+      }
+    }
+  }
+}

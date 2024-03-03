@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "niespotykanie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niespotykany",
+          "gen": "niespotykanego",
+          "dat": "niespotykanemu",
+          "acc": "niespotykanego",
+          "ins": "niespotykanym",
+          "loc": "niespotykanym"
+        },
+        "m3": {
+          "nom": "niespotykany",
+          "gen": "niespotykanego",
+          "dat": "niespotykanemu",
+          "acc": "niespotykany",
+          "ins": "niespotykanym",
+          "loc": "niespotykanym"
+        },
+        "f": {
+          "nom": "niespotykana",
+          "gen": "niespotykanej",
+          "dat": "niespotykanej",
+          "acc": "niespotykaną",
+          "ins": "niespotykaną",
+          "loc": "niespotykanej"
+        },
+        "n": {
+          "nom": "niespotykane",
+          "gen": "niespotykanego",
+          "dat": "niespotykanemu",
+          "acc": "niespotykane",
+          "ins": "niespotykanym",
+          "loc": "niespotykanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niespotykani",
+          "gen": "niespotykanych",
+          "dat": "niespotykanym",
+          "acc": "niespotykanych",
+          "ins": "niespotykanymi",
+          "loc": "niespotykanych"
+        },
+        "nonvirile": {
+          "nom": "niespotykane",
+          "gen": "niespotykanych",
+          "dat": "niespotykanym",
+          "acc": "niespotykane",
+          "ins": "niespotykanymi",
+          "loc": "niespotykanych"
+        }
+      }
+    }
+  }
+}

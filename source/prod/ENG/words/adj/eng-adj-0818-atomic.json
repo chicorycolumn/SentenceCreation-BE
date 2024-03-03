@@ -1,0 +1,8 @@
+{
+  "inflections": {
+    "simple": "atomic",
+    "comparative": false,
+    "superlative": false,
+    "adverb": "atomically"
+  }
+}

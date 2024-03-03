@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kuchnia",
+      "gen": "kuchni",
+      "dat": "kuchni",
+      "acc": "kuchnię",
+      "ins": "kuchnią",
+      "loc": "kuchni",
+      "voc": "kuchnio"
+    },
+    "plural": {
+      "nom": "kuchnie",
+      "gen": "kuchni",
+      "dat": "kuchniom",
+      "acc": "kuchnie",
+      "ins": "kuchniami",
+      "loc": "kuchniach",
+      "voc": "kuchnie"
+    }
+  }
+}

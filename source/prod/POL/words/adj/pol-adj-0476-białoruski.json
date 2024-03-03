@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "białoruski",
+          "gen": "białoruskiego",
+          "dat": "białoruskiemu",
+          "acc": "białoruskiego",
+          "ins": "białoruskim",
+          "loc": "białoruskim"
+        },
+        "m3": {
+          "nom": "białoruski",
+          "gen": "białoruskiego",
+          "dat": "białoruskiemu",
+          "acc": "białoruski",
+          "ins": "białoruskim",
+          "loc": "białoruskim"
+        },
+        "f": {
+          "nom": "białoruska",
+          "gen": "białoruskiej",
+          "dat": "białoruskiej",
+          "acc": "białoruską",
+          "ins": "białoruską",
+          "loc": "białoruskiej"
+        },
+        "n": {
+          "nom": "białoruskie",
+          "gen": "białoruskiego",
+          "dat": "białoruskiemu",
+          "acc": "białoruskie",
+          "ins": "białoruskim",
+          "loc": "białoruskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "białoruscy",
+          "gen": "białoruskich",
+          "dat": "białoruskim",
+          "acc": "białoruskich",
+          "ins": "białoruskimi",
+          "loc": "białoruskich"
+        },
+        "nonvirile": {
+          "nom": "białoruskie",
+          "gen": "białoruskich",
+          "dat": "białoruskim",
+          "acc": "białoruskie",
+          "ins": "białoruskimi",
+          "loc": "białoruskich"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kolczyk",
+      "gen": "kolczyka",
+      "dat": "kolczykowi",
+      "acc": "kolczyk",
+      "ins": "kolczykiem",
+      "loc": "kolczyku",
+      "voc": "kolczyku"
+    },
+    "plural": {
+      "nom": "kolczyki",
+      "gen": "kolczyków",
+      "dat": "kolczykom",
+      "acc": "kolczyki",
+      "ins": "kolczykami",
+      "loc": "kolczykach",
+      "voc": "kolczyki"
+    }
+  }
+}

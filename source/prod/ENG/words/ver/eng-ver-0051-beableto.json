@@ -1,0 +1,15 @@
+{
+  "inflections": {
+    "infinitive": "be able to",
+    "v2": {
+      "isTerminus": true,
+      "normal": [
+        "was able to",
+        "were able to"
+      ]
+    },
+    "v3": "been able to",
+    "thirdPS": "is able to",
+    "gerund": "being able to"
+  }
+}

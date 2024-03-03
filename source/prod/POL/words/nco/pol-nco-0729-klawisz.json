@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "klawisz",
+      "gen": "klawisza",
+      "dat": "klawiszowi",
+      "acc": "klawisz",
+      "ins": "klawiszem",
+      "loc": "klawiszu",
+      "voc": "klawiszu"
+    },
+    "plural": {
+      "nom": "klawisze",
+      "gen": "klawiszy",
+      "dat": "klawiszom",
+      "acc": "klawisze",
+      "ins": "klawiszami",
+      "loc": "klawiszach",
+      "voc": "klawisze"
+    }
+  }
+}

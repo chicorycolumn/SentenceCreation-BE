@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "północ",
+      "gen": "północy",
+      "dat": "północy",
+      "acc": "północ",
+      "ins": "północą",
+      "loc": "północy",
+      "voc": "północy"
+    }
+  }
+}

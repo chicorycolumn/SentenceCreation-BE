@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wątroba",
+      "gen": "wątroby",
+      "dat": "wątrobie",
+      "acc": "wątrobę",
+      "ins": "wątrobą",
+      "loc": "wątrobie",
+      "voc": "wątrobo"
+    },
+    "plural": {
+      "nom": "wątroby",
+      "gen": "wątrób",
+      "dat": "wątrobom",
+      "acc": "wątroby",
+      "ins": "wątrobami",
+      "loc": "wątrobach",
+      "voc": "wątroby"
+    }
+  }
+}

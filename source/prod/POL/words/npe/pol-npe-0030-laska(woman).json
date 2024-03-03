@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "laska",
+      "gen": "laski",
+      "dat": "lasce",
+      "acc": "laskę",
+      "ins": "laską",
+      "loc": "lasce",
+      "voc": "lasko"
+    },
+    "plural": {
+      "nom": "laski",
+      "gen": "lasek",
+      "dat": "laskom",
+      "acc": "laski",
+      "ins": "laskami",
+      "loc": "laskach",
+      "voc": "laski"
+    }
+  }
+}

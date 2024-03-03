@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sprężyna",
+      "gen": "sprężyny",
+      "dat": "sprężynie",
+      "acc": "sprężynę",
+      "ins": "sprężyną",
+      "loc": "sprężynie",
+      "voc": "sprężyno"
+    },
+    "plural": {
+      "nom": "sprężyny",
+      "gen": "sprężyn",
+      "dat": "sprężynom",
+      "acc": "sprężyny",
+      "ins": "sprężynami",
+      "loc": "sprężynach",
+      "voc": "sprężyny"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "nieprzyjemnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nieprzyjemny",
+          "gen": "nieprzyjemnego",
+          "dat": "nieprzyjemnemu",
+          "acc": "nieprzyjemnego",
+          "ins": "nieprzyjemnym",
+          "loc": "nieprzyjemnym"
+        },
+        "m3": {
+          "nom": "nieprzyjemny",
+          "gen": "nieprzyjemnego",
+          "dat": "nieprzyjemnemu",
+          "acc": "nieprzyjemny",
+          "ins": "nieprzyjemnym",
+          "loc": "nieprzyjemnym"
+        },
+        "f": {
+          "nom": "nieprzyjemna",
+          "gen": "nieprzyjemnej",
+          "dat": "nieprzyjemnej",
+          "acc": "nieprzyjemną",
+          "ins": "nieprzyjemną",
+          "loc": "nieprzyjemnej"
+        },
+        "n": {
+          "nom": "nieprzyjemne",
+          "gen": "nieprzyjemnego",
+          "dat": "nieprzyjemnemu",
+          "acc": "nieprzyjemne",
+          "ins": "nieprzyjemnym",
+          "loc": "nieprzyjemnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieprzyjemni",
+          "gen": "nieprzyjemnych",
+          "dat": "nieprzyjemnym",
+          "acc": "nieprzyjemnych",
+          "ins": "nieprzyjemnymi",
+          "loc": "nieprzyjemnych"
+        },
+        "nonvirile": {
+          "nom": "nieprzyjemne",
+          "gen": "nieprzyjemnych",
+          "dat": "nieprzyjemnym",
+          "acc": "nieprzyjemne",
+          "ins": "nieprzyjemnymi",
+          "loc": "nieprzyjemnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "nieprzyjemniejszy",
+          "gen": "nieprzyjemniejszego",
+          "dat": "nieprzyjemniejszemu",
+          "acc": "nieprzyjemniejszego",
+          "ins": "nieprzyjemniejszym",
+          "loc": "nieprzyjemniejszym"
+        },
+        "m3": {
+          "nom": "nieprzyjemniejszy",
+          "gen": "nieprzyjemniejszego",
+          "dat": "nieprzyjemniejszemu",
+          "acc": "nieprzyjemniejszy",
+          "ins": "nieprzyjemniejszym",
+          "loc": "nieprzyjemniejszym"
+        },
+        "f": {
+          "nom": "nieprzyjemniejsza",
+          "gen": "nieprzyjemniejszej",
+          "dat": "nieprzyjemniejszej",
+          "acc": "nieprzyjemniejszą",
+          "ins": "nieprzyjemniejszą",
+          "loc": "nieprzyjemniejszej"
+        },
+        "n": {
+          "nom": "nieprzyjemniejsze",
+          "gen": "nieprzyjemniejszego",
+          "dat": "nieprzyjemniejszemu",
+          "acc": "nieprzyjemniejsze",
+          "ins": "nieprzyjemniejszym",
+          "loc": "nieprzyjemniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieprzyjemniejsi",
+          "gen": "nieprzyjemniejszych",
+          "dat": "nieprzyjemniejszym",
+          "acc": "nieprzyjemniejszych",
+          "ins": "nieprzyjemniejszymi",
+          "loc": "nieprzyjemniejszych"
+        },
+        "nonvirile": {
+          "nom": "nieprzyjemniejsze",
+          "gen": "nieprzyjemniejszych",
+          "dat": "nieprzyjemniejszym",
+          "acc": "nieprzyjemniejsze",
+          "ins": "nieprzyjemniejszymi",
+          "loc": "nieprzyjemniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najnieprzyjemniejszy",
+          "gen": "najnieprzyjemniejszego",
+          "dat": "najnieprzyjemniejszemu",
+          "acc": "najnieprzyjemniejszego",
+          "ins": "najnieprzyjemniejszym",
+          "loc": "najnieprzyjemniejszym"
+        },
+        "m3": {
+          "nom": "najnieprzyjemniejszy",
+          "gen": "najnieprzyjemniejszego",
+          "dat": "najnieprzyjemniejszemu",
+          "acc": "najnieprzyjemniejszy",
+          "ins": "najnieprzyjemniejszym",
+          "loc": "najnieprzyjemniejszym"
+        },
+        "f": {
+          "nom": "najnieprzyjemniejsza",
+          "gen": "najnieprzyjemniejszej",
+          "dat": "najnieprzyjemniejszej",
+          "acc": "najnieprzyjemniejszą",
+          "ins": "najnieprzyjemniejszą",
+          "loc": "najnieprzyjemniejszej"
+        },
+        "n": {
+          "nom": "najnieprzyjemniejsze",
+          "gen": "najnieprzyjemniejszego",
+          "dat": "najnieprzyjemniejszemu",
+          "acc": "najnieprzyjemniejsze",
+          "ins": "najnieprzyjemniejszym",
+          "loc": "najnieprzyjemniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najnieprzyjemniejsi",
+          "gen": "najnieprzyjemniejszych",
+          "dat": "najnieprzyjemniejszym",
+          "acc": "najnieprzyjemniejszych",
+          "ins": "najnieprzyjemniejszymi",
+          "loc": "najnieprzyjemniejszych"
+        },
+        "nonvirile": {
+          "nom": "najnieprzyjemniejsze",
+          "gen": "najnieprzyjemniejszych",
+          "dat": "najnieprzyjemniejszym",
+          "acc": "najnieprzyjemniejsze",
+          "ins": "najnieprzyjemniejszymi",
+          "loc": "najnieprzyjemniejszych"
+        }
+      }
+    }
+  }
+}

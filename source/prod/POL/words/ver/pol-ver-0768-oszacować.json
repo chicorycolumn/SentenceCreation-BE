@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oszacować",
+    "verbalNoun": "oszacowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "oszacowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "oszacowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oszacuje się"
+          },
+          "plural": {
+            "allPluralGenders": "oszacuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oszacuję"
+          },
+          "plural": {
+            "allPluralGenders": "oszacujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oszacujesz"
+          },
+          "plural": {
+            "allPluralGenders": "oszacujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "oszacuje"
+          },
+          "plural": {
+            "allPluralGenders": "oszacują"
+          }
+        }
+      },
+      "imperative": "oszacuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oszacowano"
+          },
+          "plural": {
+            "allPluralGenders": "oszacowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oszacowałem",
+            "f": "oszacowałam"
+          },
+          "plural": {
+            "virile": "oszacowaliśmy",
+            "nonvirile": "oszacowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oszacowałeś",
+            "f": "oszacowałaś"
+          },
+          "plural": {
+            "virile": "oszacowaliście",
+            "nonvirile": "oszacowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oszacował",
+            "f": "oszacowała",
+            "n": "oszacowało"
+          },
+          "plural": {
+            "virile": "oszacowali",
+            "nonvirile": "oszacowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

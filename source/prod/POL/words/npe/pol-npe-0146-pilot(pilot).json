@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pilot",
+      "gen": "pilota",
+      "dat": "pilotowi",
+      "acc": "pilota",
+      "ins": "pilotem",
+      "loc": "pilocie",
+      "voc": "pilocie"
+    },
+    "plural": {
+      "nom": "piloci",
+      "gen": "pilotów",
+      "dat": "pilotom",
+      "acc": "pilotów",
+      "ins": "pilotami",
+      "loc": "pilotach",
+      "voc": "piloci"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oferować",
+    "verbalNoun": "oferowanie",
+    "activeAdjectival": "oferujący",
+    "passiveAdjectival": "oferowany",
+    "contemporaryAdverbial": "oferując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "oferuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oferowano"
+          },
+          "plural": {
+            "allPluralGenders": "oferowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oferowałem",
+            "f": "oferowałam"
+          },
+          "plural": {
+            "virile": "oferowaliśmy",
+            "nonvirile": "oferowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oferowałeś",
+            "f": "oferowałaś"
+          },
+          "plural": {
+            "virile": "oferowaliście",
+            "nonvirile": "oferowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oferował",
+            "f": "oferowała",
+            "n": "oferowało"
+          },
+          "plural": {
+            "virile": "oferowali",
+            "nonvirile": "oferowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oferuje się"
+          },
+          "plural": {
+            "allPluralGenders": "oferuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oferuję"
+          },
+          "plural": {
+            "allPluralGenders": "oferujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oferujesz"
+          },
+          "plural": {
+            "allPluralGenders": "oferujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "oferuje"
+          },
+          "plural": {
+            "allPluralGenders": "oferują"
+          }
+        }
+      }
+    }
+  }
+}

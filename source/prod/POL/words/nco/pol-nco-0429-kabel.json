@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kabel",
+      "gen": "kabla",
+      "dat": "kablowi",
+      "acc": "kabel",
+      "ins": "kablem",
+      "loc": "kablu",
+      "voc": "kablu"
+    },
+    "plural": {
+      "nom": "kable",
+      "gen": "kabli",
+      "dat": "kablom",
+      "acc": "kable",
+      "ins": "kablami",
+      "loc": "kablach",
+      "voc": "kable"
+    }
+  }
+}

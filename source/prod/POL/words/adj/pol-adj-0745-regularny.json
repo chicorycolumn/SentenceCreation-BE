@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "regularnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "regularny",
+          "gen": "regularnego",
+          "dat": "regularnemu",
+          "acc": "regularnego",
+          "ins": "regularnym",
+          "loc": "regularnym"
+        },
+        "m3": {
+          "nom": "regularny",
+          "gen": "regularnego",
+          "dat": "regularnemu",
+          "acc": "regularny",
+          "ins": "regularnym",
+          "loc": "regularnym"
+        },
+        "f": {
+          "nom": "regularna",
+          "gen": "regularnej",
+          "dat": "regularnej",
+          "acc": "regularną",
+          "ins": "regularną",
+          "loc": "regularnej"
+        },
+        "n": {
+          "nom": "regularne",
+          "gen": "regularnego",
+          "dat": "regularnemu",
+          "acc": "regularne",
+          "ins": "regularnym",
+          "loc": "regularnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "regularni",
+          "gen": "regularnych",
+          "dat": "regularnym",
+          "acc": "regularnych",
+          "ins": "regularnymi",
+          "loc": "regularnych"
+        },
+        "nonvirile": {
+          "nom": "regularne",
+          "gen": "regularnych",
+          "dat": "regularnym",
+          "acc": "regularne",
+          "ins": "regularnymi",
+          "loc": "regularnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "regularniejszy",
+          "gen": "regularniejszego",
+          "dat": "regularniejszemu",
+          "acc": "regularniejszego",
+          "ins": "regularniejszym",
+          "loc": "regularniejszym"
+        },
+        "m3": {
+          "nom": "regularniejszy",
+          "gen": "regularniejszego",
+          "dat": "regularniejszemu",
+          "acc": "regularniejszy",
+          "ins": "regularniejszym",
+          "loc": "regularniejszym"
+        },
+        "f": {
+          "nom": "regularniejsza",
+          "gen": "regularniejszej",
+          "dat": "regularniejszej",
+          "acc": "regularniejszą",
+          "ins": "regularniejszą",
+          "loc": "regularniejszej"
+        },
+        "n": {
+          "nom": "regularniejsze",
+          "gen": "regularniejszego",
+          "dat": "regularniejszemu",
+          "acc": "regularniejsze",
+          "ins": "regularniejszym",
+          "loc": "regularniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "regularniejsi",
+          "gen": "regularniejszych",
+          "dat": "regularniejszym",
+          "acc": "regularniejszych",
+          "ins": "regularniejszymi",
+          "loc": "regularniejszych"
+        },
+        "nonvirile": {
+          "nom": "regularniejsze",
+          "gen": "regularniejszych",
+          "dat": "regularniejszym",
+          "acc": "regularniejsze",
+          "ins": "regularniejszymi",
+          "loc": "regularniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najregularniejszy",
+          "gen": "najregularniejszego",
+          "dat": "najregularniejszemu",
+          "acc": "najregularniejszego",
+          "ins": "najregularniejszym",
+          "loc": "najregularniejszym"
+        },
+        "m3": {
+          "nom": "najregularniejszy",
+          "gen": "najregularniejszego",
+          "dat": "najregularniejszemu",
+          "acc": "najregularniejszy",
+          "ins": "najregularniejszym",
+          "loc": "najregularniejszym"
+        },
+        "f": {
+          "nom": "najregularniejsza",
+          "gen": "najregularniejszej",
+          "dat": "najregularniejszej",
+          "acc": "najregularniejszą",
+          "ins": "najregularniejszą",
+          "loc": "najregularniejszej"
+        },
+        "n": {
+          "nom": "najregularniejsze",
+          "gen": "najregularniejszego",
+          "dat": "najregularniejszemu",
+          "acc": "najregularniejsze",
+          "ins": "najregularniejszym",
+          "loc": "najregularniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najregularniejsi",
+          "gen": "najregularniejszych",
+          "dat": "najregularniejszym",
+          "acc": "najregularniejszych",
+          "ins": "najregularniejszymi",
+          "loc": "najregularniejszych"
+        },
+        "nonvirile": {
+          "nom": "najregularniejsze",
+          "gen": "najregularniejszych",
+          "dat": "najregularniejszym",
+          "acc": "najregularniejsze",
+          "ins": "najregularniejszymi",
+          "loc": "najregularniejszych"
+        }
+      }
+    }
+  }
+}

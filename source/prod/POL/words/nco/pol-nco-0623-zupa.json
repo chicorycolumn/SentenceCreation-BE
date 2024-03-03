@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zupa",
+      "gen": "zupy",
+      "dat": "zupie",
+      "acc": "zupę",
+      "ins": "zupą",
+      "loc": "zupie",
+      "voc": "zupo"
+    },
+    "plural": {
+      "nom": "zupy",
+      "gen": "zup",
+      "dat": "zupom",
+      "acc": "zupy",
+      "ins": "zupami",
+      "loc": "zupach",
+      "voc": "zupy"
+    }
+  }
+}

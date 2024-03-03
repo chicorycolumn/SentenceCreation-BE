@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "narząd",
+      "gen": "narządu",
+      "dat": "narządowi",
+      "acc": "narząd",
+      "ins": "narządem",
+      "loc": "narządzie",
+      "voc": "narządzie"
+    },
+    "plural": {
+      "nom": "narządy",
+      "gen": "narządów",
+      "dat": "narządom",
+      "acc": "narządy",
+      "ins": "narządami",
+      "loc": "narządach",
+      "voc": "narządy"
+    }
+  }
+}

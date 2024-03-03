@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "skóra",
+      "gen": "skóry",
+      "dat": "skórze",
+      "acc": "skórę",
+      "ins": "skórą",
+      "loc": "skórze",
+      "voc": "skóro"
+    },
+    "plural": {
+      "nom": "skóry",
+      "gen": "skór",
+      "dat": "skórom",
+      "acc": "skóry",
+      "ins": "skórami",
+      "loc": "skórach",
+      "voc": "skóry"
+    }
+  }
+}

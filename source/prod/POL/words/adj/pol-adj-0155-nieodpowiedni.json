@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "nieodpowiednio",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nieodpowiedni",
+          "gen": "nieodpowiedniego",
+          "dat": "nieodpowiedniemu",
+          "acc": "nieodpowiedniego",
+          "ins": "nieodpowiednim",
+          "loc": "nieodpowiednim"
+        },
+        "m3": {
+          "nom": "nieodpowiedni",
+          "gen": "nieodpowiedniego",
+          "dat": "nieodpowiedniemu",
+          "acc": "nieodpowiedni",
+          "ins": "nieodpowiednim",
+          "loc": "nieodpowiednim"
+        },
+        "f": {
+          "nom": "nieodpowiedna",
+          "gen": "nieodpowiedniej",
+          "dat": "nieodpowiedniej",
+          "acc": "nieodpowiedną",
+          "ins": "nieodpowiedną",
+          "loc": "nieodpowiedniej"
+        },
+        "n": {
+          "nom": "nieodpowiednie",
+          "gen": "nieodpowiedniego",
+          "dat": "nieodpowiedniemu",
+          "acc": "nieodpowiednie",
+          "ins": "nieodpowiednim",
+          "loc": "nieodpowiednim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieodpowiedni",
+          "gen": "nieodpowiednich",
+          "dat": "nieodpowiednim",
+          "acc": "nieodpowiednich",
+          "ins": "nieodpowiednimi",
+          "loc": "nieodpowiednich"
+        },
+        "nonvirile": {
+          "nom": "nieodpowiednie",
+          "gen": "nieodpowiednich",
+          "dat": "nieodpowiednim",
+          "acc": "nieodpowiednie",
+          "ins": "nieodpowiednimi",
+          "loc": "nieodpowiednich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej nieodpowiedni",
+          "gen": "bardziej nieodpowiedniego",
+          "dat": "bardziej nieodpowiedniemu",
+          "acc": "bardziej nieodpowiedniego",
+          "ins": "bardziej nieodpowiednim",
+          "loc": "bardziej nieodpowiednim"
+        },
+        "m3": {
+          "nom": "bardziej nieodpowiedni",
+          "gen": "bardziej nieodpowiedniego",
+          "dat": "bardziej nieodpowiedniemu",
+          "acc": "bardziej nieodpowiedni",
+          "ins": "bardziej nieodpowiednim",
+          "loc": "bardziej nieodpowiednim"
+        },
+        "f": {
+          "nom": "bardziej nieodpowiedna",
+          "gen": "bardziej nieodpowiedniej",
+          "dat": "bardziej nieodpowiedniej",
+          "acc": "bardziej nieodpowiedną",
+          "ins": "bardziej nieodpowiedną",
+          "loc": "bardziej nieodpowiedniej"
+        },
+        "n": {
+          "nom": "bardziej nieodpowiednie",
+          "gen": "bardziej nieodpowiedniego",
+          "dat": "bardziej nieodpowiedniemu",
+          "acc": "bardziej nieodpowiednie",
+          "ins": "bardziej nieodpowiednim",
+          "loc": "bardziej nieodpowiednim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej nieodpowiedni",
+          "gen": "bardziej nieodpowiednich",
+          "dat": "bardziej nieodpowiednim",
+          "acc": "bardziej nieodpowiednich",
+          "ins": "bardziej nieodpowiednimi",
+          "loc": "bardziej nieodpowiednich"
+        },
+        "nonvirile": {
+          "nom": "bardziej nieodpowiednie",
+          "gen": "bardziej nieodpowiednich",
+          "dat": "bardziej nieodpowiednim",
+          "acc": "bardziej nieodpowiednie",
+          "ins": "bardziej nieodpowiednimi",
+          "loc": "bardziej nieodpowiednich"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej nieodpowiedni",
+          "gen": "najbardziej nieodpowiedniego",
+          "dat": "najbardziej nieodpowiedniemu",
+          "acc": "najbardziej nieodpowiedniego",
+          "ins": "najbardziej nieodpowiednim",
+          "loc": "najbardziej nieodpowiednim"
+        },
+        "m3": {
+          "nom": "najbardziej nieodpowiedni",
+          "gen": "najbardziej nieodpowiedniego",
+          "dat": "najbardziej nieodpowiedniemu",
+          "acc": "najbardziej nieodpowiedni",
+          "ins": "najbardziej nieodpowiednim",
+          "loc": "najbardziej nieodpowiednim"
+        },
+        "f": {
+          "nom": "najbardziej nieodpowiedna",
+          "gen": "najbardziej nieodpowiedniej",
+          "dat": "najbardziej nieodpowiedniej",
+          "acc": "najbardziej nieodpowiedną",
+          "ins": "najbardziej nieodpowiedną",
+          "loc": "najbardziej nieodpowiedniej"
+        },
+        "n": {
+          "nom": "najbardziej nieodpowiednie",
+          "gen": "najbardziej nieodpowiedniego",
+          "dat": "najbardziej nieodpowiedniemu",
+          "acc": "najbardziej nieodpowiednie",
+          "ins": "najbardziej nieodpowiednim",
+          "loc": "najbardziej nieodpowiednim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej nieodpowiedni",
+          "gen": "najbardziej nieodpowiednich",
+          "dat": "najbardziej nieodpowiednim",
+          "acc": "najbardziej nieodpowiednich",
+          "ins": "najbardziej nieodpowiednimi",
+          "loc": "najbardziej nieodpowiednich"
+        },
+        "nonvirile": {
+          "nom": "najbardziej nieodpowiednie",
+          "gen": "najbardziej nieodpowiednich",
+          "dat": "najbardziej nieodpowiednim",
+          "acc": "najbardziej nieodpowiednie",
+          "ins": "najbardziej nieodpowiednimi",
+          "loc": "najbardziej nieodpowiednich"
+        }
+      }
+    }
+  }
+}

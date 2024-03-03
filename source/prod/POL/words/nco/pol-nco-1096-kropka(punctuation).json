@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kropka",
+      "gen": "kropki",
+      "dat": "kropce",
+      "acc": "kropkę",
+      "ins": "kropką",
+      "loc": "kropce",
+      "voc": "kropko"
+    },
+    "plural": {
+      "nom": "kropki",
+      "gen": "kropek",
+      "dat": "kropkom",
+      "acc": "kropki",
+      "ins": "kropkami",
+      "loc": "kropkach",
+      "voc": "kropki"
+    }
+  }
+}

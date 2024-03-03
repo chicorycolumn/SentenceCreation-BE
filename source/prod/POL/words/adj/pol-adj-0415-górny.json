@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "górnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "górny",
+          "gen": "górnego",
+          "dat": "górnemu",
+          "acc": "górnego",
+          "ins": "górnym",
+          "loc": "górnym"
+        },
+        "m3": {
+          "nom": "górny",
+          "gen": "górnego",
+          "dat": "górnemu",
+          "acc": "górny",
+          "ins": "górnym",
+          "loc": "górnym"
+        },
+        "f": {
+          "nom": "górna",
+          "gen": "górnej",
+          "dat": "górnej",
+          "acc": "górną",
+          "ins": "górną",
+          "loc": "górnej"
+        },
+        "n": {
+          "nom": "górne",
+          "gen": "górnego",
+          "dat": "górnemu",
+          "acc": "górne",
+          "ins": "górnym",
+          "loc": "górnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "górni",
+          "gen": "górnych",
+          "dat": "górnym",
+          "acc": "górnych",
+          "ins": "górnymi",
+          "loc": "górnych"
+        },
+        "nonvirile": {
+          "nom": "górne",
+          "gen": "górnych",
+          "dat": "górnym",
+          "acc": "górne",
+          "ins": "górnymi",
+          "loc": "górnych"
+        }
+      }
+    }
+  }
+}

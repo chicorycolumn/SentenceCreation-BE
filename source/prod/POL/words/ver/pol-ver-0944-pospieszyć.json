@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pospieszyć",
+    "verbalNoun": "pospieszenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pospieszony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pospieszywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pospieszy się"
+          },
+          "plural": {
+            "allPluralGenders": "pospieszy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pospieszę"
+          },
+          "plural": {
+            "allPluralGenders": "pospieszymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pospieszysz"
+          },
+          "plural": {
+            "allPluralGenders": "pospieszycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pospieszy"
+          },
+          "plural": {
+            "allPluralGenders": "pospieszą"
+          }
+        }
+      },
+      "imperative": "pospiesz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pospieszono"
+          },
+          "plural": {
+            "allPluralGenders": "pospieszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pospieszyłem",
+            "f": "pospieszyłam"
+          },
+          "plural": {
+            "virile": "pospieszyliśmy",
+            "nonvirile": "pospieszyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pospieszyłeś",
+            "f": "pospieszyłaś"
+          },
+          "plural": {
+            "virile": "pospieszyliście",
+            "nonvirile": "pospieszyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pospieszył",
+            "f": "pospieszyła",
+            "n": "pospieszyło"
+          },
+          "plural": {
+            "virile": "pospieszyli",
+            "nonvirile": "pospieszyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

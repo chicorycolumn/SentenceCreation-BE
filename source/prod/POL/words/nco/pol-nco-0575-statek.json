@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "statek",
+      "gen": "statku",
+      "dat": "statkowi",
+      "acc": "statek",
+      "ins": "statkiem",
+      "loc": "statku",
+      "voc": "statku"
+    },
+    "plural": {
+      "nom": "statki",
+      "gen": "statków",
+      "dat": "statkom",
+      "acc": "statki",
+      "ins": "statkami",
+      "loc": "statkach",
+      "voc": "statki"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "bujnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bujny",
+          "gen": "bujnego",
+          "dat": "bujnemu",
+          "acc": "bujnego",
+          "ins": "bujnym",
+          "loc": "bujnym"
+        },
+        "m3": {
+          "nom": "bujny",
+          "gen": "bujnego",
+          "dat": "bujnemu",
+          "acc": "bujny",
+          "ins": "bujnym",
+          "loc": "bujnym"
+        },
+        "f": {
+          "nom": "bujna",
+          "gen": "bujnej",
+          "dat": "bujnej",
+          "acc": "bujną",
+          "ins": "bujną",
+          "loc": "bujnej"
+        },
+        "n": {
+          "nom": "bujne",
+          "gen": "bujnego",
+          "dat": "bujnemu",
+          "acc": "bujne",
+          "ins": "bujnym",
+          "loc": "bujnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bujni",
+          "gen": "bujnych",
+          "dat": "bujnym",
+          "acc": "bujnych",
+          "ins": "bujnymi",
+          "loc": "bujnych"
+        },
+        "nonvirile": {
+          "nom": "bujne",
+          "gen": "bujnych",
+          "dat": "bujnym",
+          "acc": "bujne",
+          "ins": "bujnymi",
+          "loc": "bujnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bujniejszy",
+          "gen": "bujniejszego",
+          "dat": "bujniejszemu",
+          "acc": "bujniejszego",
+          "ins": "bujniejszym",
+          "loc": "bujniejszym"
+        },
+        "m3": {
+          "nom": "bujniejszy",
+          "gen": "bujniejszego",
+          "dat": "bujniejszemu",
+          "acc": "bujniejszy",
+          "ins": "bujniejszym",
+          "loc": "bujniejszym"
+        },
+        "f": {
+          "nom": "bujniejsza",
+          "gen": "bujniejszej",
+          "dat": "bujniejszej",
+          "acc": "bujniejszą",
+          "ins": "bujniejszą",
+          "loc": "bujniejszej"
+        },
+        "n": {
+          "nom": "bujniejsze",
+          "gen": "bujniejszego",
+          "dat": "bujniejszemu",
+          "acc": "bujniejsze",
+          "ins": "bujniejszym",
+          "loc": "bujniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bujniejsi",
+          "gen": "bujniejszych",
+          "dat": "bujniejszym",
+          "acc": "bujniejszych",
+          "ins": "bujniejszymi",
+          "loc": "bujniejszych"
+        },
+        "nonvirile": {
+          "nom": "bujniejsze",
+          "gen": "bujniejszych",
+          "dat": "bujniejszym",
+          "acc": "bujniejsze",
+          "ins": "bujniejszymi",
+          "loc": "bujniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbujniejszy",
+          "gen": "najbujniejszego",
+          "dat": "najbujniejszemu",
+          "acc": "najbujniejszego",
+          "ins": "najbujniejszym",
+          "loc": "najbujniejszym"
+        },
+        "m3": {
+          "nom": "najbujniejszy",
+          "gen": "najbujniejszego",
+          "dat": "najbujniejszemu",
+          "acc": "najbujniejszy",
+          "ins": "najbujniejszym",
+          "loc": "najbujniejszym"
+        },
+        "f": {
+          "nom": "najbujniejsza",
+          "gen": "najbujniejszej",
+          "dat": "najbujniejszej",
+          "acc": "najbujniejszą",
+          "ins": "najbujniejszą",
+          "loc": "najbujniejszej"
+        },
+        "n": {
+          "nom": "najbujniejsze",
+          "gen": "najbujniejszego",
+          "dat": "najbujniejszemu",
+          "acc": "najbujniejsze",
+          "ins": "najbujniejszym",
+          "loc": "najbujniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbujniejsi",
+          "gen": "najbujniejszych",
+          "dat": "najbujniejszym",
+          "acc": "najbujniejszych",
+          "ins": "najbujniejszymi",
+          "loc": "najbujniejszych"
+        },
+        "nonvirile": {
+          "nom": "najbujniejsze",
+          "gen": "najbujniejszych",
+          "dat": "najbujniejszym",
+          "acc": "najbujniejsze",
+          "ins": "najbujniejszymi",
+          "loc": "najbujniejszych"
+        }
+      }
+    }
+  }
+}

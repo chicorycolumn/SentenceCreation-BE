@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "międzynarodowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "międzynarodowy",
+          "gen": "międzynarodowego",
+          "dat": "międzynarodowemu",
+          "acc": "międzynarodowego",
+          "ins": "międzynarodowym",
+          "loc": "międzynarodowym"
+        },
+        "m3": {
+          "nom": "międzynarodowy",
+          "gen": "międzynarodowego",
+          "dat": "międzynarodowemu",
+          "acc": "międzynarodowy",
+          "ins": "międzynarodowym",
+          "loc": "międzynarodowym"
+        },
+        "f": {
+          "nom": "międzynarodowa",
+          "gen": "międzynarodowej",
+          "dat": "międzynarodowej",
+          "acc": "międzynarodową",
+          "ins": "międzynarodową",
+          "loc": "międzynarodowej"
+        },
+        "n": {
+          "nom": "międzynarodowe",
+          "gen": "międzynarodowego",
+          "dat": "międzynarodowemu",
+          "acc": "międzynarodowe",
+          "ins": "międzynarodowym",
+          "loc": "międzynarodowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "międzynarodowi",
+          "gen": "międzynarodowych",
+          "dat": "międzynarodowym",
+          "acc": "międzynarodowych",
+          "ins": "międzynarodowymi",
+          "loc": "międzynarodowych"
+        },
+        "nonvirile": {
+          "nom": "międzynarodowe",
+          "gen": "międzynarodowych",
+          "dat": "międzynarodowym",
+          "acc": "międzynarodowe",
+          "ins": "międzynarodowymi",
+          "loc": "międzynarodowych"
+        }
+      }
+    }
+  }
+}

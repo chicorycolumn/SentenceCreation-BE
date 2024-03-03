@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "towarzysko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "towarzyski",
+          "gen": "towarzyskiego",
+          "dat": "towarzyskiemu",
+          "acc": "towarzyskiego",
+          "ins": "towarzyskim",
+          "loc": "towarzyskim"
+        },
+        "m3": {
+          "nom": "towarzyski",
+          "gen": "towarzyskiego",
+          "dat": "towarzyskiemu",
+          "acc": "towarzyski",
+          "ins": "towarzyskim",
+          "loc": "towarzyskim"
+        },
+        "f": {
+          "nom": "towarzyska",
+          "gen": "towarzyskiej",
+          "dat": "towarzyskiej",
+          "acc": "towarzyską",
+          "ins": "towarzyską",
+          "loc": "towarzyskiej"
+        },
+        "n": {
+          "nom": "towarzyskie",
+          "gen": "towarzyskiego",
+          "dat": "towarzyskiemu",
+          "acc": "towarzyskie",
+          "ins": "towarzyskim",
+          "loc": "towarzyskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "towarzyscy",
+          "gen": "towarzyskich",
+          "dat": "towarzyskim",
+          "acc": "towarzyskich",
+          "ins": "towarzyskimi",
+          "loc": "towarzyskich"
+        },
+        "nonvirile": {
+          "nom": "towarzyskie",
+          "gen": "towarzyskich",
+          "dat": "towarzyskim",
+          "acc": "towarzyskie",
+          "ins": "towarzyskimi",
+          "loc": "towarzyskich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej towarzyski",
+          "gen": "bardziej towarzyskiego",
+          "dat": "bardziej towarzyskiemu",
+          "acc": "bardziej towarzyskiego",
+          "ins": "bardziej towarzyskim",
+          "loc": "bardziej towarzyskim"
+        },
+        "m3": {
+          "nom": "bardziej towarzyski",
+          "gen": "bardziej towarzyskiego",
+          "dat": "bardziej towarzyskiemu",
+          "acc": "bardziej towarzyski",
+          "ins": "bardziej towarzyskim",
+          "loc": "bardziej towarzyskim"
+        },
+        "f": {
+          "nom": "bardziej towarzyska",
+          "gen": "bardziej towarzyskiej",
+          "dat": "bardziej towarzyskiej",
+          "acc": "bardziej towarzyską",
+          "ins": "bardziej towarzyską",
+          "loc": "bardziej towarzyskiej"
+        },
+        "n": {
+          "nom": "bardziej towarzyskie",
+          "gen": "bardziej towarzyskiego",
+          "dat": "bardziej towarzyskiemu",
+          "acc": "bardziej towarzyskie",
+          "ins": "bardziej towarzyskim",
+          "loc": "bardziej towarzyskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej towarzyscy",
+          "gen": "bardziej towarzyskich",
+          "dat": "bardziej towarzyskim",
+          "acc": "bardziej towarzyskich",
+          "ins": "bardziej towarzyskimi",
+          "loc": "bardziej towarzyskich"
+        },
+        "nonvirile": {
+          "nom": "bardziej towarzyskie",
+          "gen": "bardziej towarzyskich",
+          "dat": "bardziej towarzyskim",
+          "acc": "bardziej towarzyskie",
+          "ins": "bardziej towarzyskimi",
+          "loc": "bardziej towarzyskich"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej towarzyski",
+          "gen": "najbardziej towarzyskiego",
+          "dat": "najbardziej towarzyskiemu",
+          "acc": "najbardziej towarzyskiego",
+          "ins": "najbardziej towarzyskim",
+          "loc": "najbardziej towarzyskim"
+        },
+        "m3": {
+          "nom": "najbardziej towarzyski",
+          "gen": "najbardziej towarzyskiego",
+          "dat": "najbardziej towarzyskiemu",
+          "acc": "najbardziej towarzyski",
+          "ins": "najbardziej towarzyskim",
+          "loc": "najbardziej towarzyskim"
+        },
+        "f": {
+          "nom": "najbardziej towarzyska",
+          "gen": "najbardziej towarzyskiej",
+          "dat": "najbardziej towarzyskiej",
+          "acc": "najbardziej towarzyską",
+          "ins": "najbardziej towarzyską",
+          "loc": "najbardziej towarzyskiej"
+        },
+        "n": {
+          "nom": "najbardziej towarzyskie",
+          "gen": "najbardziej towarzyskiego",
+          "dat": "najbardziej towarzyskiemu",
+          "acc": "najbardziej towarzyskie",
+          "ins": "najbardziej towarzyskim",
+          "loc": "najbardziej towarzyskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej towarzyscy",
+          "gen": "najbardziej towarzyskich",
+          "dat": "najbardziej towarzyskim",
+          "acc": "najbardziej towarzyskich",
+          "ins": "najbardziej towarzyskimi",
+          "loc": "najbardziej towarzyskich"
+        },
+        "nonvirile": {
+          "nom": "najbardziej towarzyskie",
+          "gen": "najbardziej towarzyskich",
+          "dat": "najbardziej towarzyskim",
+          "acc": "najbardziej towarzyskie",
+          "ins": "najbardziej towarzyskimi",
+          "loc": "najbardziej towarzyskich"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "fotel",
+      "gen": "fotela",
+      "dat": "fotelowi",
+      "acc": "fotel",
+      "ins": "fotelem",
+      "loc": "fotelu",
+      "voc": "fotelu"
+    },
+    "plural": {
+      "nom": "fotele",
+      "gen": [
+        "foteli",
+        "fotelów"
+      ],
+      "dat": "fotelom",
+      "acc": "fotele",
+      "ins": "fotelami",
+      "loc": "fotelach",
+      "voc": "fotele"
+    }
+  }
+}

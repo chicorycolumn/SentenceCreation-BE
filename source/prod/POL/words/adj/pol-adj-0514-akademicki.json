@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "akademicko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "akademicki",
+          "gen": "akademickiego",
+          "dat": "akademickiemu",
+          "acc": "akademickiego",
+          "ins": "akademickim",
+          "loc": "akademickim"
+        },
+        "m3": {
+          "nom": "akademicki",
+          "gen": "akademickiego",
+          "dat": "akademickiemu",
+          "acc": "akademicki",
+          "ins": "akademickim",
+          "loc": "akademickim"
+        },
+        "f": {
+          "nom": "akademicka",
+          "gen": "akademickiej",
+          "dat": "akademickiej",
+          "acc": "akademicką",
+          "ins": "akademicką",
+          "loc": "akademickiej"
+        },
+        "n": {
+          "nom": "akademickie",
+          "gen": "akademickiego",
+          "dat": "akademickiemu",
+          "acc": "akademickie",
+          "ins": "akademickim",
+          "loc": "akademickim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "akademiccy",
+          "gen": "akademickich",
+          "dat": "akademickim",
+          "acc": "akademickich",
+          "ins": "akademickimi",
+          "loc": "akademickich"
+        },
+        "nonvirile": {
+          "nom": "akademickie",
+          "gen": "akademickich",
+          "dat": "akademickim",
+          "acc": "akademickie",
+          "ins": "akademickimi",
+          "loc": "akademickich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej akademicki",
+          "gen": "bardziej akademickiego",
+          "dat": "bardziej akademickiemu",
+          "acc": "bardziej akademickiego",
+          "ins": "bardziej akademickim",
+          "loc": "bardziej akademickim"
+        },
+        "m3": {
+          "nom": "bardziej akademicki",
+          "gen": "bardziej akademickiego",
+          "dat": "bardziej akademickiemu",
+          "acc": "bardziej akademicki",
+          "ins": "bardziej akademickim",
+          "loc": "bardziej akademickim"
+        },
+        "f": {
+          "nom": "bardziej akademicka",
+          "gen": "bardziej akademickiej",
+          "dat": "bardziej akademickiej",
+          "acc": "bardziej akademicką",
+          "ins": "bardziej akademicką",
+          "loc": "bardziej akademickiej"
+        },
+        "n": {
+          "nom": "bardziej akademickie",
+          "gen": "bardziej akademickiego",
+          "dat": "bardziej akademickiemu",
+          "acc": "bardziej akademickie",
+          "ins": "bardziej akademickim",
+          "loc": "bardziej akademickim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej akademiccy",
+          "gen": "bardziej akademickich",
+          "dat": "bardziej akademickim",
+          "acc": "bardziej akademickich",
+          "ins": "bardziej akademickimi",
+          "loc": "bardziej akademickich"
+        },
+        "nonvirile": {
+          "nom": "bardziej akademickie",
+          "gen": "bardziej akademickich",
+          "dat": "bardziej akademickim",
+          "acc": "bardziej akademickie",
+          "ins": "bardziej akademickimi",
+          "loc": "bardziej akademickich"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej akademicki",
+          "gen": "najbardziej akademickiego",
+          "dat": "najbardziej akademickiemu",
+          "acc": "najbardziej akademickiego",
+          "ins": "najbardziej akademickim",
+          "loc": "najbardziej akademickim"
+        },
+        "m3": {
+          "nom": "najbardziej akademicki",
+          "gen": "najbardziej akademickiego",
+          "dat": "najbardziej akademickiemu",
+          "acc": "najbardziej akademicki",
+          "ins": "najbardziej akademickim",
+          "loc": "najbardziej akademickim"
+        },
+        "f": {
+          "nom": "najbardziej akademicka",
+          "gen": "najbardziej akademickiej",
+          "dat": "najbardziej akademickiej",
+          "acc": "najbardziej akademicką",
+          "ins": "najbardziej akademicką",
+          "loc": "najbardziej akademickiej"
+        },
+        "n": {
+          "nom": "najbardziej akademickie",
+          "gen": "najbardziej akademickiego",
+          "dat": "najbardziej akademickiemu",
+          "acc": "najbardziej akademickie",
+          "ins": "najbardziej akademickim",
+          "loc": "najbardziej akademickim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej akademiccy",
+          "gen": "najbardziej akademickich",
+          "dat": "najbardziej akademickim",
+          "acc": "najbardziej akademickich",
+          "ins": "najbardziej akademickimi",
+          "loc": "najbardziej akademickich"
+        },
+        "nonvirile": {
+          "nom": "najbardziej akademickie",
+          "gen": "najbardziej akademickich",
+          "dat": "najbardziej akademickim",
+          "acc": "najbardziej akademickie",
+          "ins": "najbardziej akademickimi",
+          "loc": "najbardziej akademickich"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "schować",
+    "verbalNoun": "schowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "schowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "schowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "schowa się"
+          },
+          "plural": {
+            "allPluralGenders": "schowa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "schowam"
+          },
+          "plural": {
+            "allPluralGenders": "schowamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "schowasz"
+          },
+          "plural": {
+            "allPluralGenders": "schowacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "schowa"
+          },
+          "plural": {
+            "allPluralGenders": "schowają"
+          }
+        }
+      },
+      "imperative": "schowaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "schowano"
+          },
+          "plural": {
+            "allPluralGenders": "schowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "schowałem",
+            "f": "schowałam"
+          },
+          "plural": {
+            "virile": "schowaliśmy",
+            "nonvirile": "schowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "schowałeś",
+            "f": "schowałaś"
+          },
+          "plural": {
+            "virile": "schowaliście",
+            "nonvirile": "schowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "schował",
+            "f": "schowała",
+            "n": "schowało"
+          },
+          "plural": {
+            "virile": "schowali",
+            "nonvirile": "schowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

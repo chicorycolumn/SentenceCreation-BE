@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "plural": {
+      "nom": "wrota",
+      "gen": "wrót",
+      "dat": "wrotom",
+      "acc": "wrota",
+      "ins": "wrotami",
+      "loc": "wrotach",
+      "voc": "wrota"
+    }
+  }
+}

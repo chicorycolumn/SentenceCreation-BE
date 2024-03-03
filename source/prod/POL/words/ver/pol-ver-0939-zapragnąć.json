@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zapragnąć",
+    "verbalNoun": "zapragnięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zapragnięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zapragnąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zapragnie się"
+          },
+          "plural": {
+            "allPluralGenders": "zapragnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zapragnę"
+          },
+          "plural": {
+            "allPluralGenders": "zapragniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zapragniesz"
+          },
+          "plural": {
+            "allPluralGenders": "zapragniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zapragnie"
+          },
+          "plural": {
+            "allPluralGenders": "zapragną"
+          }
+        }
+      },
+      "imperative": "zapragnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zapragnięto"
+          },
+          "plural": {
+            "allPluralGenders": "zapragnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zapragnąłem",
+            "f": "zapragnęłam"
+          },
+          "plural": {
+            "virile": "zapragnęliśmy",
+            "nonvirile": "zapragnęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zapragnąłeś",
+            "f": "zapragnęłaś"
+          },
+          "plural": {
+            "virile": "zapragnęliście",
+            "nonvirile": "zapragnęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zapragnął",
+            "f": "zapragnęła",
+            "n": "zapragnęło"
+          },
+          "plural": {
+            "virile": "zapragnęli",
+            "nonvirile": "zapragnęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

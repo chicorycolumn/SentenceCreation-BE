@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "doskonale",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "doskonały",
+          "gen": "doskonałego",
+          "dat": "doskonałemu",
+          "acc": "doskonałego",
+          "ins": "doskonałym",
+          "loc": "doskonałym"
+        },
+        "m3": {
+          "nom": "doskonały",
+          "gen": "doskonałego",
+          "dat": "doskonałemu",
+          "acc": "doskonały",
+          "ins": "doskonałym",
+          "loc": "doskonałym"
+        },
+        "f": {
+          "nom": "doskonała",
+          "gen": "doskonałej",
+          "dat": "doskonałej",
+          "acc": "doskonałą",
+          "ins": "doskonałą",
+          "loc": "doskonałej"
+        },
+        "n": {
+          "nom": "doskonałe",
+          "gen": "doskonałego",
+          "dat": "doskonałemu",
+          "acc": "doskonałe",
+          "ins": "doskonałym",
+          "loc": "doskonałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "doskonali",
+          "gen": "doskonałych",
+          "dat": "doskonałym",
+          "acc": "doskonałych",
+          "ins": "doskonałymi",
+          "loc": "doskonałych"
+        },
+        "nonvirile": {
+          "nom": "doskonałe",
+          "gen": "doskonałych",
+          "dat": "doskonałym",
+          "acc": "doskonałe",
+          "ins": "doskonałymi",
+          "loc": "doskonałych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszy",
+              "bardziej doskonały"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszego",
+              "bardziej doskonałego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszemu",
+              "bardziej doskonałemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszego",
+              "bardziej doskonałego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszym",
+              "bardziej doskonałym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszym",
+              "bardziej doskonałym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszy",
+              "bardziej doskonały"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszego",
+              "bardziej doskonałego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszemu",
+              "bardziej doskonałemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszy",
+              "bardziej doskonały"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszym",
+              "bardziej doskonałym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszym",
+              "bardziej doskonałym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalsza",
+              "bardziej doskonała"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszej",
+              "bardziej doskonałej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszej",
+              "bardziej doskonałej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszą",
+              "bardziej doskonałą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszą",
+              "bardziej doskonałą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszej",
+              "bardziej doskonałej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalsze",
+              "bardziej doskonałe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszego",
+              "bardziej doskonałego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszemu",
+              "bardziej doskonałemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalsze",
+              "bardziej doskonałe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszym",
+              "bardziej doskonałym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszym",
+              "bardziej doskonałym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalsi",
+              "bardziej doskonali"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszych",
+              "bardziej doskonałych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszym",
+              "bardziej doskonałym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszych",
+              "bardziej doskonałych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszymi",
+              "bardziej doskonałymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszych",
+              "bardziej doskonałych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalsze",
+              "bardziej doskonałe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszych",
+              "bardziej doskonałych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszym",
+              "bardziej doskonałym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalsze",
+              "bardziej doskonałe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszymi",
+              "bardziej doskonałymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "doskonalszych",
+              "bardziej doskonałych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszy",
+              "najbardziej doskonały"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszego",
+              "najbardziej doskonałego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszemu",
+              "najbardziej doskonałemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszego",
+              "najbardziej doskonałego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszym",
+              "najbardziej doskonałym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszym",
+              "najbardziej doskonałym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszy",
+              "najbardziej doskonały"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszego",
+              "najbardziej doskonałego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszemu",
+              "najbardziej doskonałemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszy",
+              "najbardziej doskonały"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszym",
+              "najbardziej doskonałym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszym",
+              "najbardziej doskonałym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalsza",
+              "najbardziej doskonała"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszej",
+              "najbardziej doskonałej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszej",
+              "najbardziej doskonałej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszą",
+              "najbardziej doskonałą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszą",
+              "najbardziej doskonałą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszej",
+              "najbardziej doskonałej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalsze",
+              "najbardziej doskonałe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszego",
+              "najbardziej doskonałego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszemu",
+              "najbardziej doskonałemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalsze",
+              "najbardziej doskonałe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszym",
+              "najbardziej doskonałym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszym",
+              "najbardziej doskonałym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalsi",
+              "najbardziej doskonali"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszych",
+              "najbardziej doskonałych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszym",
+              "najbardziej doskonałym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszych",
+              "najbardziej doskonałych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszymi",
+              "najbardziej doskonałymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszych",
+              "najbardziej doskonałych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalsze",
+              "najbardziej doskonałe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszych",
+              "najbardziej doskonałych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszym",
+              "najbardziej doskonałym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalsze",
+              "najbardziej doskonałe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszymi",
+              "najbardziej doskonałymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdoskonalszych",
+              "najbardziej doskonałych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

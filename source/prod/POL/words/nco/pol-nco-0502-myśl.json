@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "myśl",
+      "gen": "myśli",
+      "dat": "myśli",
+      "acc": "myśl",
+      "ins": "myślą",
+      "loc": "myśli",
+      "voc": "myśli"
+    },
+    "plural": {
+      "nom": "myśli",
+      "gen": "myśli",
+      "dat": "myślom",
+      "acc": "myśli",
+      "ins": "myślami",
+      "loc": "myślach",
+      "voc": "myśli"
+    }
+  }
+}

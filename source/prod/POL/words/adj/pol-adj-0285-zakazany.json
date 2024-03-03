@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zakazany",
+          "gen": "zakazanego",
+          "dat": "zakazanemu",
+          "acc": "zakazanego",
+          "ins": "zakazanym",
+          "loc": "zakazanym"
+        },
+        "m3": {
+          "nom": "zakazany",
+          "gen": "zakazanego",
+          "dat": "zakazanemu",
+          "acc": "zakazany",
+          "ins": "zakazanym",
+          "loc": "zakazanym"
+        },
+        "f": {
+          "nom": "zakazana",
+          "gen": "zakazanej",
+          "dat": "zakazanej",
+          "acc": "zakazaną",
+          "ins": "zakazaną",
+          "loc": "zakazanej"
+        },
+        "n": {
+          "nom": "zakazane",
+          "gen": "zakazanego",
+          "dat": "zakazanemu",
+          "acc": "zakazane",
+          "ins": "zakazanym",
+          "loc": "zakazanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zakazani",
+          "gen": "zakazanych",
+          "dat": "zakazanym",
+          "acc": "zakazanych",
+          "ins": "zakazanymi",
+          "loc": "zakazanych"
+        },
+        "nonvirile": {
+          "nom": "zakazane",
+          "gen": "zakazanych",
+          "dat": "zakazanym",
+          "acc": "zakazane",
+          "ins": "zakazanymi",
+          "loc": "zakazanych"
+        }
+      }
+    }
+  }
+}

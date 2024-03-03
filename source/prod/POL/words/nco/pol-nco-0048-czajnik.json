@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "czajnik",
+      "gen": "czajnika",
+      "dat": "czajnikowi",
+      "acc": "czajnik",
+      "ins": "czajnikiem",
+      "loc": "czajniku",
+      "voc": "czajniku"
+    },
+    "plural": {
+      "nom": "czajniki",
+      "gen": "czajników",
+      "dat": "czajnikom",
+      "acc": "czajniki",
+      "ins": "czajnikami",
+      "loc": "czajnikach",
+      "voc": "czajniki"
+    }
+  }
+}

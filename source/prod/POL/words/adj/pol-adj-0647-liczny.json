@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "licznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "liczny",
+          "gen": "licznego",
+          "dat": "licznemu",
+          "acc": "licznego",
+          "ins": "licznym",
+          "loc": "licznym"
+        },
+        "m3": {
+          "nom": "liczny",
+          "gen": "licznego",
+          "dat": "licznemu",
+          "acc": "liczny",
+          "ins": "licznym",
+          "loc": "licznym"
+        },
+        "f": {
+          "nom": "liczna",
+          "gen": "licznej",
+          "dat": "licznej",
+          "acc": "liczną",
+          "ins": "liczną",
+          "loc": "licznej"
+        },
+        "n": {
+          "nom": "liczne",
+          "gen": "licznego",
+          "dat": "licznemu",
+          "acc": "liczne",
+          "ins": "licznym",
+          "loc": "licznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "liczni",
+          "gen": "licznych",
+          "dat": "licznym",
+          "acc": "licznych",
+          "ins": "licznymi",
+          "loc": "licznych"
+        },
+        "nonvirile": {
+          "nom": "liczne",
+          "gen": "licznych",
+          "dat": "licznym",
+          "acc": "liczne",
+          "ins": "licznymi",
+          "loc": "licznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "liczniejszy",
+          "gen": "liczniejszego",
+          "dat": "liczniejszemu",
+          "acc": "liczniejszego",
+          "ins": "liczniejszym",
+          "loc": "liczniejszym"
+        },
+        "m3": {
+          "nom": "liczniejszy",
+          "gen": "liczniejszego",
+          "dat": "liczniejszemu",
+          "acc": "liczniejszy",
+          "ins": "liczniejszym",
+          "loc": "liczniejszym"
+        },
+        "f": {
+          "nom": "liczniejsza",
+          "gen": "liczniejszej",
+          "dat": "liczniejszej",
+          "acc": "liczniejszą",
+          "ins": "liczniejszą",
+          "loc": "liczniejszej"
+        },
+        "n": {
+          "nom": "liczniejsze",
+          "gen": "liczniejszego",
+          "dat": "liczniejszemu",
+          "acc": "liczniejsze",
+          "ins": "liczniejszym",
+          "loc": "liczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "liczniejsi",
+          "gen": "liczniejszych",
+          "dat": "liczniejszym",
+          "acc": "liczniejszych",
+          "ins": "liczniejszymi",
+          "loc": "liczniejszych"
+        },
+        "nonvirile": {
+          "nom": "liczniejsze",
+          "gen": "liczniejszych",
+          "dat": "liczniejszym",
+          "acc": "liczniejsze",
+          "ins": "liczniejszymi",
+          "loc": "liczniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najliczniejszy",
+          "gen": "najliczniejszego",
+          "dat": "najliczniejszemu",
+          "acc": "najliczniejszego",
+          "ins": "najliczniejszym",
+          "loc": "najliczniejszym"
+        },
+        "m3": {
+          "nom": "najliczniejszy",
+          "gen": "najliczniejszego",
+          "dat": "najliczniejszemu",
+          "acc": "najliczniejszy",
+          "ins": "najliczniejszym",
+          "loc": "najliczniejszym"
+        },
+        "f": {
+          "nom": "najliczniejsza",
+          "gen": "najliczniejszej",
+          "dat": "najliczniejszej",
+          "acc": "najliczniejszą",
+          "ins": "najliczniejszą",
+          "loc": "najliczniejszej"
+        },
+        "n": {
+          "nom": "najliczniejsze",
+          "gen": "najliczniejszego",
+          "dat": "najliczniejszemu",
+          "acc": "najliczniejsze",
+          "ins": "najliczniejszym",
+          "loc": "najliczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najliczniejsi",
+          "gen": "najliczniejszych",
+          "dat": "najliczniejszym",
+          "acc": "najliczniejszych",
+          "ins": "najliczniejszymi",
+          "loc": "najliczniejszych"
+        },
+        "nonvirile": {
+          "nom": "najliczniejsze",
+          "gen": "najliczniejszych",
+          "dat": "najliczniejszym",
+          "acc": "najliczniejsze",
+          "ins": "najliczniejszymi",
+          "loc": "najliczniejszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "zamożnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zamożny",
+          "gen": "zamożnego",
+          "dat": "zamożnemu",
+          "acc": "zamożnego",
+          "ins": "zamożnym",
+          "loc": "zamożnym"
+        },
+        "m3": {
+          "nom": "zamożny",
+          "gen": "zamożnego",
+          "dat": "zamożnemu",
+          "acc": "zamożny",
+          "ins": "zamożnym",
+          "loc": "zamożnym"
+        },
+        "f": {
+          "nom": "zamożna",
+          "gen": "zamożnej",
+          "dat": "zamożnej",
+          "acc": "zamożną",
+          "ins": "zamożną",
+          "loc": "zamożnej"
+        },
+        "n": {
+          "nom": "zamożne",
+          "gen": "zamożnego",
+          "dat": "zamożnemu",
+          "acc": "zamożne",
+          "ins": "zamożnym",
+          "loc": "zamożnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zamożni",
+          "gen": "zamożnych",
+          "dat": "zamożnym",
+          "acc": "zamożnych",
+          "ins": "zamożnymi",
+          "loc": "zamożnych"
+        },
+        "nonvirile": {
+          "nom": "zamożne",
+          "gen": "zamożnych",
+          "dat": "zamożnym",
+          "acc": "zamożne",
+          "ins": "zamożnymi",
+          "loc": "zamożnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszy",
+              "bardziej zamożny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszego",
+              "bardziej zamożnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszemu",
+              "bardziej zamożnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszego",
+              "bardziej zamożnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszym",
+              "bardziej zamożnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszym",
+              "bardziej zamożnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszy",
+              "bardziej zamożny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszego",
+              "bardziej zamożnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszemu",
+              "bardziej zamożnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszy",
+              "bardziej zamożny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszym",
+              "bardziej zamożnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszym",
+              "bardziej zamożnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejsza",
+              "bardziej zamożna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszej",
+              "bardziej zamożnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszej",
+              "bardziej zamożnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszą",
+              "bardziej zamożną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszą",
+              "bardziej zamożną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszej",
+              "bardziej zamożnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejsze",
+              "bardziej zamożne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszego",
+              "bardziej zamożnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszemu",
+              "bardziej zamożnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejsze",
+              "bardziej zamożne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszym",
+              "bardziej zamożnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszym",
+              "bardziej zamożnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejsi",
+              "bardziej zamożni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszych",
+              "bardziej zamożnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszym",
+              "bardziej zamożnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszych",
+              "bardziej zamożnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszymi",
+              "bardziej zamożnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszych",
+              "bardziej zamożnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejsze",
+              "bardziej zamożne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszych",
+              "bardziej zamożnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszym",
+              "bardziej zamożnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejsze",
+              "bardziej zamożne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszymi",
+              "bardziej zamożnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "zamożniejszych",
+              "bardziej zamożnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszy",
+              "najbardziej zamożny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszego",
+              "najbardziej zamożnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszemu",
+              "najbardziej zamożnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszego",
+              "najbardziej zamożnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszym",
+              "najbardziej zamożnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszym",
+              "najbardziej zamożnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszy",
+              "najbardziej zamożny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszego",
+              "najbardziej zamożnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszemu",
+              "najbardziej zamożnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszy",
+              "najbardziej zamożny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszym",
+              "najbardziej zamożnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszym",
+              "najbardziej zamożnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejsza",
+              "najbardziej zamożna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszej",
+              "najbardziej zamożnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszej",
+              "najbardziej zamożnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszą",
+              "najbardziej zamożną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszą",
+              "najbardziej zamożną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszej",
+              "najbardziej zamożnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejsze",
+              "najbardziej zamożne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszego",
+              "najbardziej zamożnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszemu",
+              "najbardziej zamożnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejsze",
+              "najbardziej zamożne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszym",
+              "najbardziej zamożnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszym",
+              "najbardziej zamożnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejsi",
+              "najbardziej zamożni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszych",
+              "najbardziej zamożnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszym",
+              "najbardziej zamożnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszych",
+              "najbardziej zamożnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszymi",
+              "najbardziej zamożnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszych",
+              "najbardziej zamożnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejsze",
+              "najbardziej zamożne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszych",
+              "najbardziej zamożnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszym",
+              "najbardziej zamożnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejsze",
+              "najbardziej zamożne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszymi",
+              "najbardziej zamożnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najzamożniejszych",
+              "najbardziej zamożnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

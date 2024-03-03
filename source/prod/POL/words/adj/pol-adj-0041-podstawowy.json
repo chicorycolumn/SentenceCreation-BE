@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "podstawowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "podstawowy",
+          "gen": "podstawowego",
+          "dat": "podstawowemu",
+          "acc": "podstawowego",
+          "ins": "podstawowym",
+          "loc": "podstawowym"
+        },
+        "m3": {
+          "nom": "podstawowy",
+          "gen": "podstawowego",
+          "dat": "podstawowemu",
+          "acc": "podstawowy",
+          "ins": "podstawowym",
+          "loc": "podstawowym"
+        },
+        "f": {
+          "nom": "podstawowa",
+          "gen": "podstawowej",
+          "dat": "podstawowej",
+          "acc": "podstawową",
+          "ins": "podstawową",
+          "loc": "podstawowej"
+        },
+        "n": {
+          "nom": "podstawowe",
+          "gen": "podstawowego",
+          "dat": "podstawowemu",
+          "acc": "podstawowe",
+          "ins": "podstawowym",
+          "loc": "podstawowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "podstawowi",
+          "gen": "podstawowych",
+          "dat": "podstawowym",
+          "acc": "podstawowych",
+          "ins": "podstawowymi",
+          "loc": "podstawowych"
+        },
+        "nonvirile": {
+          "nom": "podstawowe",
+          "gen": "podstawowych",
+          "dat": "podstawowym",
+          "acc": "podstawowe",
+          "ins": "podstawowymi",
+          "loc": "podstawowych"
+        }
+      }
+    }
+  }
+}

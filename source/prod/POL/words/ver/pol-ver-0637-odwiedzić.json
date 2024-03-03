@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odwiedzić",
+    "verbalNoun": "odwiedzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "odwiedzony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odwiedziwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odwiedzi się"
+          },
+          "plural": {
+            "allPluralGenders": "odwiedzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odwiedzę"
+          },
+          "plural": {
+            "allPluralGenders": "odwiedzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odwiedzisz"
+          },
+          "plural": {
+            "allPluralGenders": "odwiedzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odwiedzi"
+          },
+          "plural": {
+            "allPluralGenders": "odwiedzą"
+          }
+        }
+      },
+      "imperative": "odwiedź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odwiedzono"
+          },
+          "plural": {
+            "allPluralGenders": "odwiedzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odwiedziłem",
+            "f": "odwiedziłam"
+          },
+          "plural": {
+            "virile": "odwiedziliśmy",
+            "nonvirile": "odwiedziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odwiedziłeś",
+            "f": "odwiedziłaś"
+          },
+          "plural": {
+            "virile": "odwiedziliście",
+            "nonvirile": "odwiedziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odwiedził",
+            "f": "odwiedziła",
+            "n": "odwiedziło"
+          },
+          "plural": {
+            "virile": "odwiedzili",
+            "nonvirile": "odwiedziły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

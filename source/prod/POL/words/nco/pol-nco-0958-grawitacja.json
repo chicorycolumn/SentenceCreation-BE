@@ -1,0 +1,30 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "grawitacja",
+      "gen": "grawitacji",
+      "dat": "grawitacji",
+      "acc": "grawitację",
+      "ins": "grawitacją",
+      "loc": "grawitacji",
+      "voc": "grawitacjo"
+    },
+    "plural": {
+      "nom": "grawitacje",
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "grawitacji"
+        ],
+        "additionalInfrequent": [
+          "grawitacyj"
+        ]
+      },
+      "dat": "grawitacjom",
+      "acc": "grawitacje",
+      "ins": "grawitacjami",
+      "loc": "grawitacjach",
+      "voc": "grawitacje"
+    }
+  }
+}

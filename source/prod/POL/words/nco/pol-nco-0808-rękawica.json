@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rękawica",
+      "gen": "rękawicy",
+      "dat": "rękawicy",
+      "acc": "rękawicę",
+      "ins": "rękawicą",
+      "loc": "rękawicy",
+      "voc": "rękawico"
+    },
+    "plural": {
+      "nom": "rękawice",
+      "gen": "rękawic",
+      "dat": "rękawicom",
+      "acc": "rękawice",
+      "ins": "rękawicami",
+      "loc": "rękawicach",
+      "voc": "rękawice"
+    }
+  }
+}

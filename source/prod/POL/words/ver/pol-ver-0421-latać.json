@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "latać",
+    "verbalNoun": "latanie",
+    "activeAdjectival": "latający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "latając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "lataj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "latano"
+          },
+          "plural": {
+            "allPluralGenders": "latano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "latałem",
+            "f": "latałam"
+          },
+          "plural": {
+            "virile": "lataliśmy",
+            "nonvirile": "latałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "latałeś",
+            "f": "latałaś"
+          },
+          "plural": {
+            "virile": "lataliście",
+            "nonvirile": "latałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "latał",
+            "f": "latała",
+            "n": "latało"
+          },
+          "plural": {
+            "virile": "latali",
+            "nonvirile": "latały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "lata się"
+          },
+          "plural": {
+            "allPluralGenders": "lata się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "latam"
+          },
+          "plural": {
+            "allPluralGenders": "latamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "latasz"
+          },
+          "plural": {
+            "allPluralGenders": "latacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "lata"
+          },
+          "plural": {
+            "allPluralGenders": "latają"
+          }
+        }
+      }
+    }
+  }
+}

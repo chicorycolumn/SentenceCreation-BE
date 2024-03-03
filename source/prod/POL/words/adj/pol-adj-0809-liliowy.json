@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "liliowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "liliowy",
+          "gen": "liliowego",
+          "dat": "liliowemu",
+          "acc": "liliowego",
+          "ins": "liliowym",
+          "loc": "liliowym"
+        },
+        "m3": {
+          "nom": "liliowy",
+          "gen": "liliowego",
+          "dat": "liliowemu",
+          "acc": "liliowy",
+          "ins": "liliowym",
+          "loc": "liliowym"
+        },
+        "f": {
+          "nom": "liliowa",
+          "gen": "liliowej",
+          "dat": "liliowej",
+          "acc": "liliową",
+          "ins": "liliową",
+          "loc": "liliowej"
+        },
+        "n": {
+          "nom": "liliowe",
+          "gen": "liliowego",
+          "dat": "liliowemu",
+          "acc": "liliowe",
+          "ins": "liliowym",
+          "loc": "liliowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "liliowi",
+          "gen": "liliowych",
+          "dat": "liliowym",
+          "acc": "liliowych",
+          "ins": "liliowymi",
+          "loc": "liliowych"
+        },
+        "nonvirile": {
+          "nom": "liliowe",
+          "gen": "liliowych",
+          "dat": "liliowym",
+          "acc": "liliowe",
+          "ins": "liliowymi",
+          "loc": "liliowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "liliowszy",
+          "gen": "liliowszego",
+          "dat": "liliowszemu",
+          "acc": "liliowszego",
+          "ins": "liliowszym",
+          "loc": "liliowszym"
+        },
+        "m3": {
+          "nom": "liliowszy",
+          "gen": "liliowszego",
+          "dat": "liliowszemu",
+          "acc": "liliowszy",
+          "ins": "liliowszym",
+          "loc": "liliowszym"
+        },
+        "f": {
+          "nom": "liliowsza",
+          "gen": "liliowszej",
+          "dat": "liliowszej",
+          "acc": "liliowszą",
+          "ins": "liliowszą",
+          "loc": "liliowszej"
+        },
+        "n": {
+          "nom": "liliowsze",
+          "gen": "liliowszego",
+          "dat": "liliowszemu",
+          "acc": "liliowsze",
+          "ins": "liliowszym",
+          "loc": "liliowszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "liliowsi",
+          "gen": "liliowszych",
+          "dat": "liliowszym",
+          "acc": "liliowszych",
+          "ins": "liliowszymi",
+          "loc": "liliowszych"
+        },
+        "nonvirile": {
+          "nom": "liliowsze",
+          "gen": "liliowszych",
+          "dat": "liliowszym",
+          "acc": "liliowsze",
+          "ins": "liliowszymi",
+          "loc": "liliowszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najliliowszy",
+          "gen": "najliliowszego",
+          "dat": "najliliowszemu",
+          "acc": "najliliowszego",
+          "ins": "najliliowszym",
+          "loc": "najliliowszym"
+        },
+        "m3": {
+          "nom": "najliliowszy",
+          "gen": "najliliowszego",
+          "dat": "najliliowszemu",
+          "acc": "najliliowszy",
+          "ins": "najliliowszym",
+          "loc": "najliliowszym"
+        },
+        "f": {
+          "nom": "najliliowsza",
+          "gen": "najliliowszej",
+          "dat": "najliliowszej",
+          "acc": "najliliowszą",
+          "ins": "najliliowszą",
+          "loc": "najliliowszej"
+        },
+        "n": {
+          "nom": "najliliowsze",
+          "gen": "najliliowszego",
+          "dat": "najliliowszemu",
+          "acc": "najliliowsze",
+          "ins": "najliliowszym",
+          "loc": "najliliowszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najliliowsi",
+          "gen": "najliliowszych",
+          "dat": "najliliowszym",
+          "acc": "najliliowszych",
+          "ins": "najliliowszymi",
+          "loc": "najliliowszych"
+        },
+        "nonvirile": {
+          "nom": "najliliowsze",
+          "gen": "najliliowszych",
+          "dat": "najliliowszym",
+          "acc": "najliliowsze",
+          "ins": "najliliowszymi",
+          "loc": "najliliowszych"
+        }
+      }
+    }
+  }
+}

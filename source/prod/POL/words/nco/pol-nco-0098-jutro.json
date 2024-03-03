@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "jutro",
+      "gen": "jutra",
+      "dat": "jutru",
+      "acc": "jutro",
+      "ins": "jutrem",
+      "loc": "jutrze",
+      "voc": "jutro"
+    },
+    "plural": {
+      "nom": "jutra",
+      "gen": "jutr",
+      "dat": "jutrom",
+      "acc": "jutra",
+      "ins": "jutrami",
+      "loc": "jutrach",
+      "voc": "jutra"
+    }
+  }
+}

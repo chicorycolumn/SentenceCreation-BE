@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "bezbarwnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bezbarwny",
+          "gen": "bezbarwnego",
+          "dat": "bezbarwnemu",
+          "acc": "bezbarwnego",
+          "ins": "bezbarwnym",
+          "loc": "bezbarwnym"
+        },
+        "m3": {
+          "nom": "bezbarwny",
+          "gen": "bezbarwnego",
+          "dat": "bezbarwnemu",
+          "acc": "bezbarwny",
+          "ins": "bezbarwnym",
+          "loc": "bezbarwnym"
+        },
+        "f": {
+          "nom": "bezbarwna",
+          "gen": "bezbarwnej",
+          "dat": "bezbarwnej",
+          "acc": "bezbarwną",
+          "ins": "bezbarwną",
+          "loc": "bezbarwnej"
+        },
+        "n": {
+          "nom": "bezbarwne",
+          "gen": "bezbarwnego",
+          "dat": "bezbarwnemu",
+          "acc": "bezbarwne",
+          "ins": "bezbarwnym",
+          "loc": "bezbarwnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bezbarwni",
+          "gen": "bezbarwnych",
+          "dat": "bezbarwnym",
+          "acc": "bezbarwnych",
+          "ins": "bezbarwnymi",
+          "loc": "bezbarwnych"
+        },
+        "nonvirile": {
+          "nom": "bezbarwne",
+          "gen": "bezbarwnych",
+          "dat": "bezbarwnym",
+          "acc": "bezbarwne",
+          "ins": "bezbarwnymi",
+          "loc": "bezbarwnych"
+        }
+      }
+    }
+  }
+}

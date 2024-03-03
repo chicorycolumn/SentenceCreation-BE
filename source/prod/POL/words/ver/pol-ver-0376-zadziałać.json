@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zadziałać",
+    "verbalNoun": "zadziałanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zadziaławszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zadziała się"
+          },
+          "plural": {
+            "allPluralGenders": "zadziała się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zadziałam"
+          },
+          "plural": {
+            "allPluralGenders": "zadziałamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zadziałasz"
+          },
+          "plural": {
+            "allPluralGenders": "zadziałacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zadziała"
+          },
+          "plural": {
+            "allPluralGenders": "zadziałają"
+          }
+        }
+      },
+      "imperative": "zadziałaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zadziałano"
+          },
+          "plural": {
+            "allPluralGenders": "zadziałano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zadziałałem",
+            "f": "zadziałałam"
+          },
+          "plural": {
+            "virile": "zadziałaliśmy",
+            "nonvirile": "zadziałałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zadziałałeś",
+            "f": "zadziałałaś"
+          },
+          "plural": {
+            "virile": "zadziałaliście",
+            "nonvirile": "zadziałałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zadziałał",
+            "f": "zadziałała",
+            "n": "zadziałało"
+          },
+          "plural": {
+            "virile": "zadziałali",
+            "nonvirile": "zadziałały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

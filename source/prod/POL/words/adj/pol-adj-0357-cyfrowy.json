@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "cyfrowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "cyfrowy",
+          "gen": "cyfrowego",
+          "dat": "cyfrowemu",
+          "acc": "cyfrowego",
+          "ins": "cyfrowym",
+          "loc": "cyfrowym"
+        },
+        "m3": {
+          "nom": "cyfrowy",
+          "gen": "cyfrowego",
+          "dat": "cyfrowemu",
+          "acc": "cyfrowy",
+          "ins": "cyfrowym",
+          "loc": "cyfrowym"
+        },
+        "f": {
+          "nom": "cyfrowa",
+          "gen": "cyfrowej",
+          "dat": "cyfrowej",
+          "acc": "cyfrową",
+          "ins": "cyfrową",
+          "loc": "cyfrowej"
+        },
+        "n": {
+          "nom": "cyfrowe",
+          "gen": "cyfrowego",
+          "dat": "cyfrowemu",
+          "acc": "cyfrowe",
+          "ins": "cyfrowym",
+          "loc": "cyfrowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "cyfrowi",
+          "gen": "cyfrowych",
+          "dat": "cyfrowym",
+          "acc": "cyfrowych",
+          "ins": "cyfrowymi",
+          "loc": "cyfrowych"
+        },
+        "nonvirile": {
+          "nom": "cyfrowe",
+          "gen": "cyfrowych",
+          "dat": "cyfrowym",
+          "acc": "cyfrowe",
+          "ins": "cyfrowymi",
+          "loc": "cyfrowych"
+        }
+      }
+    }
+  }
+}

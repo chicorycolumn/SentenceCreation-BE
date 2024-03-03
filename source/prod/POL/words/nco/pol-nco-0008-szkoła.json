@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "szkoła",
+      "gen": "szkoły",
+      "dat": "szkole",
+      "acc": "szkołę",
+      "ins": "szkołą",
+      "loc": "szkole",
+      "voc": "szkoło"
+    },
+    "plural": {
+      "nom": "szkoły",
+      "gen": "szkół",
+      "dat": "szkołom",
+      "acc": "szkoły",
+      "ins": "szkołami",
+      "loc": "szkołach",
+      "voc": "szkoły"
+    }
+  }
+}

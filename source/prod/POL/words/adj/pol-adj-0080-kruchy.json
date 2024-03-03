@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "krucho",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "kruchy",
+          "gen": "kruchego",
+          "dat": "kruchemu",
+          "acc": "kruchego",
+          "ins": "kruchym",
+          "loc": "kruchym"
+        },
+        "m3": {
+          "nom": "kruchy",
+          "gen": "kruchego",
+          "dat": "kruchemu",
+          "acc": "kruchy",
+          "ins": "kruchym",
+          "loc": "kruchym"
+        },
+        "f": {
+          "nom": "krucha",
+          "gen": "kruchej",
+          "dat": "kruchej",
+          "acc": "kruchą",
+          "ins": "kruchą",
+          "loc": "kruchej"
+        },
+        "n": {
+          "nom": "kruche",
+          "gen": "kruchego",
+          "dat": "kruchemu",
+          "acc": "kruche",
+          "ins": "kruchym",
+          "loc": "kruchym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "krusi",
+          "gen": "kruchych",
+          "dat": "kruchym",
+          "acc": "kruchych",
+          "ins": "kruchymi",
+          "loc": "kruchych"
+        },
+        "nonvirile": {
+          "nom": "kruche",
+          "gen": "kruchych",
+          "dat": "kruchym",
+          "acc": "kruche",
+          "ins": "kruchymi",
+          "loc": "kruchych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "kruchszy",
+          "gen": "kruchszego",
+          "dat": "kruchszemu",
+          "acc": "kruchszego",
+          "ins": "kruchszym",
+          "loc": "kruchszym"
+        },
+        "m3": {
+          "nom": "kruchszy",
+          "gen": "kruchszego",
+          "dat": "kruchszemu",
+          "acc": "kruchszy",
+          "ins": "kruchszym",
+          "loc": "kruchszym"
+        },
+        "f": {
+          "nom": "kruchsza",
+          "gen": "kruchszej",
+          "dat": "kruchszej",
+          "acc": "kruchszą",
+          "ins": "kruchszą",
+          "loc": "kruchszej"
+        },
+        "n": {
+          "nom": "kruchsze",
+          "gen": "kruchszego",
+          "dat": "kruchszemu",
+          "acc": "kruchsze",
+          "ins": "kruchszym",
+          "loc": "kruchszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "kruchsi",
+          "gen": "kruchszych",
+          "dat": "kruchszym",
+          "acc": "kruchszych",
+          "ins": "kruchszymi",
+          "loc": "kruchszych"
+        },
+        "nonvirile": {
+          "nom": "kruchsze",
+          "gen": "kruchszych",
+          "dat": "kruchszym",
+          "acc": "kruchsze",
+          "ins": "kruchszymi",
+          "loc": "kruchszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najkruchszy",
+          "gen": "najkruchszego",
+          "dat": "najkruchszemu",
+          "acc": "najkruchszego",
+          "ins": "najkruchszym",
+          "loc": "najkruchszym"
+        },
+        "m3": {
+          "nom": "najkruchszy",
+          "gen": "najkruchszego",
+          "dat": "najkruchszemu",
+          "acc": "najkruchszy",
+          "ins": "najkruchszym",
+          "loc": "najkruchszym"
+        },
+        "f": {
+          "nom": "najkruchsza",
+          "gen": "najkruchszej",
+          "dat": "najkruchszej",
+          "acc": "najkruchszą",
+          "ins": "najkruchszą",
+          "loc": "najkruchszej"
+        },
+        "n": {
+          "nom": "najkruchsze",
+          "gen": "najkruchszego",
+          "dat": "najkruchszemu",
+          "acc": "najkruchsze",
+          "ins": "najkruchszym",
+          "loc": "najkruchszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najkruchsi",
+          "gen": "najkruchszych",
+          "dat": "najkruchszym",
+          "acc": "najkruchszych",
+          "ins": "najkruchszymi",
+          "loc": "najkruchszych"
+        },
+        "nonvirile": {
+          "nom": "najkruchsze",
+          "gen": "najkruchszych",
+          "dat": "najkruchszym",
+          "acc": "najkruchsze",
+          "ins": "najkruchszymi",
+          "loc": "najkruchszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "hotel",
+      "gen": "hotelu",
+      "dat": "hotelowi",
+      "acc": "hotel",
+      "ins": "hotelem",
+      "loc": "hotelu",
+      "voc": "hotelu"
+    },
+    "plural": {
+      "nom": "hotele",
+      "gen": [
+        "hoteli",
+        "hotelów"
+      ],
+      "dat": "hotelom",
+      "acc": "hotele",
+      "ins": "hotelami",
+      "loc": "hotelach",
+      "voc": "hotele"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "miesiąc",
+      "gen": "miesiąca",
+      "dat": "miesiącowi",
+      "acc": "miesiąc",
+      "ins": "miesiącem",
+      "loc": "miesiącu",
+      "voc": "miesiącu"
+    },
+    "plural": {
+      "nom": "miesiące",
+      "gen": "miesięcy",
+      "dat": "miesiącom",
+      "acc": "miesiące",
+      "ins": "miesiącami",
+      "loc": "miesiącach",
+      "voc": "miesiące"
+    }
+  }
+}

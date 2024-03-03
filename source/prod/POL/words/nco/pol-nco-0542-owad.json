@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "owad",
+      "gen": "owada",
+      "dat": "owadowi",
+      "acc": "owada",
+      "ins": "owadem",
+      "loc": "owadzie",
+      "voc": "owadzie"
+    },
+    "plural": {
+      "nom": "owady",
+      "gen": "owadów",
+      "dat": "owadom",
+      "acc": "owady",
+      "ins": "owadami",
+      "loc": "owadach",
+      "voc": "owady"
+    }
+  }
+}

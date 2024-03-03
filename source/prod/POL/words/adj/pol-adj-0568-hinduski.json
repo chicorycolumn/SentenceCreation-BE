@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "hinduski",
+          "gen": "hinduskiego",
+          "dat": "hinduskiemu",
+          "acc": "hinduskiego",
+          "ins": "hinduskim",
+          "loc": "hinduskim"
+        },
+        "m3": {
+          "nom": "hinduski",
+          "gen": "hinduskiego",
+          "dat": "hinduskiemu",
+          "acc": "hinduski",
+          "ins": "hinduskim",
+          "loc": "hinduskim"
+        },
+        "f": {
+          "nom": "hinduska",
+          "gen": "hinduskiej",
+          "dat": "hinduskiej",
+          "acc": "hinduską",
+          "ins": "hinduską",
+          "loc": "hinduskiej"
+        },
+        "n": {
+          "nom": "hinduskie",
+          "gen": "hinduskiego",
+          "dat": "hinduskiemu",
+          "acc": "hinduskie",
+          "ins": "hinduskim",
+          "loc": "hinduskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "hinduscy",
+          "gen": "hinduskich",
+          "dat": "hinduskim",
+          "acc": "hinduskich",
+          "ins": "hinduskimi",
+          "loc": "hinduskich"
+        },
+        "nonvirile": {
+          "nom": "hinduskie",
+          "gen": "hinduskich",
+          "dat": "hinduskim",
+          "acc": "hinduskie",
+          "ins": "hinduskimi",
+          "loc": "hinduskich"
+        }
+      }
+    }
+  }
+}

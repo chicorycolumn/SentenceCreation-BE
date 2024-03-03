@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "piłka nożna",
+      "gen": "piłki nożnej",
+      "dat": "piłce nożnej",
+      "acc": "piłkę nożną",
+      "ins": "piłką nożną",
+      "loc": "piłce nożnej",
+      "voc": "piłko nożna"
+    }
+  }
+}

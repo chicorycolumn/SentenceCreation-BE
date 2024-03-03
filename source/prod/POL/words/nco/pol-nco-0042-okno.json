@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "okno",
+      "gen": "okna",
+      "dat": "oknu",
+      "acc": "okno",
+      "ins": "oknem",
+      "loc": "oknie",
+      "voc": "okno"
+    },
+    "plural": {
+      "nom": "okna",
+      "gen": "okien",
+      "dat": "oknom",
+      "acc": "okna",
+      "ins": "oknami",
+      "loc": "oknach",
+      "voc": "okna"
+    }
+  }
+}

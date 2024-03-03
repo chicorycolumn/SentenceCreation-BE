@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "żart",
+      "gen": "żartu",
+      "dat": "żartowi",
+      "acc": "żart",
+      "ins": "żartem",
+      "loc": "żarcie",
+      "voc": "żarcie"
+    },
+    "plural": {
+      "nom": "żarty",
+      "gen": "żartów",
+      "dat": "żartom",
+      "acc": "żarty",
+      "ins": "żartami",
+      "loc": "żartach",
+      "voc": "żarty"
+    }
+  }
+}

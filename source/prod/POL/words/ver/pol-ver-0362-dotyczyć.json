@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dotyczyć",
+    "verbalNoun": "dotyczenie",
+    "activeAdjectival": "dotyczący",
+    "passiveAdjectival": "dotyczony",
+    "contemporaryAdverbial": "dotycząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dotycz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dotyczono"
+          },
+          "plural": {
+            "allPluralGenders": "dotyczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dotyczyłem",
+            "f": "dotyczyłam"
+          },
+          "plural": {
+            "virile": "dotyczyliśmy",
+            "nonvirile": "dotyczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dotyczyłeś",
+            "f": "dotyczyłaś"
+          },
+          "plural": {
+            "virile": "dotyczyliście",
+            "nonvirile": "dotyczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dotyczył",
+            "f": "dotyczyła",
+            "n": "dotyczyło"
+          },
+          "plural": {
+            "virile": "dotyczyli",
+            "nonvirile": "dotyczyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dotyczy się"
+          },
+          "plural": {
+            "allPluralGenders": "dotyczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dotyczę"
+          },
+          "plural": {
+            "allPluralGenders": "dotyczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dotyczysz"
+          },
+          "plural": {
+            "allPluralGenders": "dotyczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dotyczy"
+          },
+          "plural": {
+            "allPluralGenders": "dotyczą"
+          }
+        }
+      }
+    }
+  }
+}

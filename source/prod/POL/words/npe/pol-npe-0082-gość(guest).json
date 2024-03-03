@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gość",
+      "gen": "gościa",
+      "dat": "gościowi",
+      "acc": "gościa",
+      "ins": "gościem",
+      "loc": "gościu",
+      "voc": "gościu"
+    },
+    "plural": {
+      "nom": "goście",
+      "gen": "gości",
+      "dat": "gościom",
+      "acc": "gości",
+      "ins": "gośćmi",
+      "loc": "gościach",
+      "voc": "goście"
+    }
+  }
+}

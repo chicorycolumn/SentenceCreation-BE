@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zapach",
+      "gen": "zapachu",
+      "dat": "zapachowi",
+      "acc": "zapach",
+      "ins": "zapachem",
+      "loc": "zapachu",
+      "voc": "zapachu"
+    },
+    "plural": {
+      "nom": "zapachy",
+      "gen": "zapachów",
+      "dat": "zapachom",
+      "acc": "zapachy",
+      "ins": "zapachami",
+      "loc": "zapachach",
+      "voc": "zapachy"
+    }
+  }
+}

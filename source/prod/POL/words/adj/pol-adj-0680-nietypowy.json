@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "nietypowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nietypowy",
+          "gen": "nietypowego",
+          "dat": "nietypowemu",
+          "acc": "nietypowego",
+          "ins": "nietypowym",
+          "loc": "nietypowym"
+        },
+        "m3": {
+          "nom": "nietypowy",
+          "gen": "nietypowego",
+          "dat": "nietypowemu",
+          "acc": "nietypowy",
+          "ins": "nietypowym",
+          "loc": "nietypowym"
+        },
+        "f": {
+          "nom": "nietypowa",
+          "gen": "nietypowej",
+          "dat": "nietypowej",
+          "acc": "nietypową",
+          "ins": "nietypową",
+          "loc": "nietypowej"
+        },
+        "n": {
+          "nom": "nietypowe",
+          "gen": "nietypowego",
+          "dat": "nietypowemu",
+          "acc": "nietypowe",
+          "ins": "nietypowym",
+          "loc": "nietypowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nietypowi",
+          "gen": "nietypowych",
+          "dat": "nietypowym",
+          "acc": "nietypowych",
+          "ins": "nietypowymi",
+          "loc": "nietypowych"
+        },
+        "nonvirile": {
+          "nom": "nietypowe",
+          "gen": "nietypowych",
+          "dat": "nietypowym",
+          "acc": "nietypowe",
+          "ins": "nietypowymi",
+          "loc": "nietypowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej nietypowy",
+          "gen": "bardziej nietypowego",
+          "dat": "bardziej nietypowemu",
+          "acc": "bardziej nietypowego",
+          "ins": "bardziej nietypowym",
+          "loc": "bardziej nietypowym"
+        },
+        "m3": {
+          "nom": "bardziej nietypowy",
+          "gen": "bardziej nietypowego",
+          "dat": "bardziej nietypowemu",
+          "acc": "bardziej nietypowy",
+          "ins": "bardziej nietypowym",
+          "loc": "bardziej nietypowym"
+        },
+        "f": {
+          "nom": "bardziej nietypowa",
+          "gen": "bardziej nietypowej",
+          "dat": "bardziej nietypowej",
+          "acc": "bardziej nietypową",
+          "ins": "bardziej nietypową",
+          "loc": "bardziej nietypowej"
+        },
+        "n": {
+          "nom": "bardziej nietypowe",
+          "gen": "bardziej nietypowego",
+          "dat": "bardziej nietypowemu",
+          "acc": "bardziej nietypowe",
+          "ins": "bardziej nietypowym",
+          "loc": "bardziej nietypowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej nietypowi",
+          "gen": "bardziej nietypowych",
+          "dat": "bardziej nietypowym",
+          "acc": "bardziej nietypowych",
+          "ins": "bardziej nietypowymi",
+          "loc": "bardziej nietypowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej nietypowe",
+          "gen": "bardziej nietypowych",
+          "dat": "bardziej nietypowym",
+          "acc": "bardziej nietypowe",
+          "ins": "bardziej nietypowymi",
+          "loc": "bardziej nietypowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej nietypowy",
+          "gen": "najbardziej nietypowego",
+          "dat": "najbardziej nietypowemu",
+          "acc": "najbardziej nietypowego",
+          "ins": "najbardziej nietypowym",
+          "loc": "najbardziej nietypowym"
+        },
+        "m3": {
+          "nom": "najbardziej nietypowy",
+          "gen": "najbardziej nietypowego",
+          "dat": "najbardziej nietypowemu",
+          "acc": "najbardziej nietypowy",
+          "ins": "najbardziej nietypowym",
+          "loc": "najbardziej nietypowym"
+        },
+        "f": {
+          "nom": "najbardziej nietypowa",
+          "gen": "najbardziej nietypowej",
+          "dat": "najbardziej nietypowej",
+          "acc": "najbardziej nietypową",
+          "ins": "najbardziej nietypową",
+          "loc": "najbardziej nietypowej"
+        },
+        "n": {
+          "nom": "najbardziej nietypowe",
+          "gen": "najbardziej nietypowego",
+          "dat": "najbardziej nietypowemu",
+          "acc": "najbardziej nietypowe",
+          "ins": "najbardziej nietypowym",
+          "loc": "najbardziej nietypowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej nietypowi",
+          "gen": "najbardziej nietypowych",
+          "dat": "najbardziej nietypowym",
+          "acc": "najbardziej nietypowych",
+          "ins": "najbardziej nietypowymi",
+          "loc": "najbardziej nietypowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej nietypowe",
+          "gen": "najbardziej nietypowych",
+          "dat": "najbardziej nietypowym",
+          "acc": "najbardziej nietypowe",
+          "ins": "najbardziej nietypowymi",
+          "loc": "najbardziej nietypowych"
+        }
+      }
+    }
+  }
+}

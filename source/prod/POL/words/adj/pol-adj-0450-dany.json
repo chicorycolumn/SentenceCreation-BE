@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dany",
+          "gen": "danego",
+          "dat": "danemu",
+          "acc": "danego",
+          "ins": "danym",
+          "loc": "danym"
+        },
+        "m3": {
+          "nom": "dany",
+          "gen": "danego",
+          "dat": "danemu",
+          "acc": "dany",
+          "ins": "danym",
+          "loc": "danym"
+        },
+        "f": {
+          "nom": "dana",
+          "gen": "danej",
+          "dat": "danej",
+          "acc": "daną",
+          "ins": "daną",
+          "loc": "danej"
+        },
+        "n": {
+          "nom": "dane",
+          "gen": "danego",
+          "dat": "danemu",
+          "acc": "dane",
+          "ins": "danym",
+          "loc": "danym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dani",
+          "gen": "danych",
+          "dat": "danym",
+          "acc": "danych",
+          "ins": "danymi",
+          "loc": "danych"
+        },
+        "nonvirile": {
+          "nom": "dane",
+          "gen": "danych",
+          "dat": "danym",
+          "acc": "dane",
+          "ins": "danymi",
+          "loc": "danych"
+        }
+      }
+    }
+  }
+}

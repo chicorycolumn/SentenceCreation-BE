@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "chrząszcz",
+      "gen": "chrząszcza",
+      "dat": "chrząszczowi",
+      "acc": "chrząszcza",
+      "ins": "chrząszczem",
+      "loc": "chrząszczu",
+      "voc": "chrząszczu"
+    },
+    "plural": {
+      "nom": "chrząszcze",
+      "gen": "chrząszczy",
+      "dat": "chrząszczom",
+      "acc": "chrząszcze",
+      "ins": "chrząszczami",
+      "loc": "chrząszczach",
+      "voc": "chrząszcze"
+    }
+  }
+}

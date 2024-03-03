@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kalendarz",
+      "gen": "kalendarza",
+      "dat": "kalendarzowi",
+      "acc": "kalendarz",
+      "ins": "kalendarzem",
+      "loc": "kalendarzu",
+      "voc": "kalendarzu"
+    },
+    "plural": {
+      "nom": "kalendarze",
+      "gen": "kalendarzy",
+      "dat": "kalendarzom",
+      "acc": "kalendarze",
+      "ins": "kalendarzami",
+      "loc": "kalendarzach",
+      "voc": "kalendarze"
+    }
+  }
+}

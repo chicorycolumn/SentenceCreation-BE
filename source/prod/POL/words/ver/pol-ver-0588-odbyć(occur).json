@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odbyć",
+    "verbalNoun": "odbycie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "odbyty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odbywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odbędzie się"
+          },
+          "plural": {
+            "allPluralGenders": "odbędzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odbędę"
+          },
+          "plural": {
+            "allPluralGenders": "odbędziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odbędziesz"
+          },
+          "plural": {
+            "allPluralGenders": "odbędziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odbędzie"
+          },
+          "plural": {
+            "allPluralGenders": "odbędą"
+          }
+        }
+      },
+      "imperative": "odbądź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odbyto"
+          },
+          "plural": {
+            "allPluralGenders": "odbyto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odbyłem",
+            "f": "odbyłam"
+          },
+          "plural": {
+            "virile": "odbyliśmy",
+            "nonvirile": "odbyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odbyłeś",
+            "f": "odbyłaś"
+          },
+          "plural": {
+            "virile": "odbyliście",
+            "nonvirile": "odbyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odbył",
+            "f": "odbyła",
+            "n": "odbyło"
+          },
+          "plural": {
+            "virile": "odbyli",
+            "nonvirile": "odbyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

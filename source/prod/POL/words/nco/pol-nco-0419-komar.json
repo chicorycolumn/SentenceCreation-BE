@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "komar",
+      "gen": "komara",
+      "dat": "komarowi",
+      "acc": "komara",
+      "ins": "komarem",
+      "loc": "komarze",
+      "voc": "komarze"
+    },
+    "plural": {
+      "nom": "komary",
+      "gen": "komarów",
+      "dat": "komarom",
+      "acc": "komary",
+      "ins": "komarami",
+      "loc": "komarach",
+      "voc": "komary"
+    }
+  }
+}

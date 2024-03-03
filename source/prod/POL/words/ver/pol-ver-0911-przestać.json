@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przestać",
+    "verbalNoun": "przestanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przestawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przestanie się"
+          },
+          "plural": {
+            "allPluralGenders": "przestanie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przestanę"
+          },
+          "plural": {
+            "allPluralGenders": "przestaniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przestaniesz"
+          },
+          "plural": {
+            "allPluralGenders": "przestaniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przestanie"
+          },
+          "plural": {
+            "allPluralGenders": "przestaną"
+          }
+        }
+      },
+      "imperative": "przestań",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przestano"
+          },
+          "plural": {
+            "allPluralGenders": "przestano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przestałem",
+            "f": "przestałam"
+          },
+          "plural": {
+            "virile": "przestaliśmy",
+            "nonvirile": "przestałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przestałeś",
+            "f": "przestałaś"
+          },
+          "plural": {
+            "virile": "przestaliście",
+            "nonvirile": "przestałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przestał",
+            "f": "przestała",
+            "n": "przestało"
+          },
+          "plural": {
+            "virile": "przestali",
+            "nonvirile": "przestały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "szpinak",
+      "gen": "szpinaku",
+      "dat": "szpinakowi",
+      "acc": "szpinak",
+      "ins": "szpinakiem",
+      "loc": "szpinaku",
+      "voc": "szpinaku"
+    },
+    "plural": {
+      "nom": "szpinaki",
+      "gen": "szpinaków",
+      "dat": "szpinakom",
+      "acc": "szpinaki",
+      "ins": "szpinakami",
+      "loc": "szpinakach",
+      "voc": "szpinaki"
+    }
+  }
+}

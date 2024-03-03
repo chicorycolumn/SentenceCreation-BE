@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "prysznic",
+      "gen": [
+        "prysznica",
+        "prysznicu"
+      ],
+      "dat": "prysznicowi",
+      "acc": "prysznic",
+      "ins": "prysznicem",
+      "loc": "prysznicu",
+      "voc": "prysznicu"
+    },
+    "plural": {
+      "nom": "prysznice",
+      "gen": "pryszniców",
+      "dat": "prysznicom",
+      "acc": "prysznice",
+      "ins": "prysznicami",
+      "loc": "prysznicach",
+      "voc": "prysznice"
+    }
+  }
+}

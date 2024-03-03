@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przerazić",
+    "verbalNoun": "przerażenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przerażony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przeraziwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przerazi się"
+          },
+          "plural": {
+            "allPluralGenders": "przerazi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przerażę"
+          },
+          "plural": {
+            "allPluralGenders": "przerazimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przerazisz"
+          },
+          "plural": {
+            "allPluralGenders": "przerazicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przerazi"
+          },
+          "plural": {
+            "allPluralGenders": "przerażą"
+          }
+        }
+      },
+      "imperative": "przeraź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przerażono"
+          },
+          "plural": {
+            "allPluralGenders": "przerażono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przeraziłem",
+            "f": "przeraziłam"
+          },
+          "plural": {
+            "virile": "przeraziliśmy",
+            "nonvirile": "przeraziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przeraziłeś",
+            "f": "przeraziłaś"
+          },
+          "plural": {
+            "virile": "przeraziliście",
+            "nonvirile": "przeraziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przeraził",
+            "f": "przeraziła",
+            "n": "przeraziło"
+          },
+          "plural": {
+            "virile": "przerazili",
+            "nonvirile": "przeraziły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

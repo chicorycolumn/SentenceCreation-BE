@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "właściwość",
+      "gen": "właściwości",
+      "dat": "właściwości",
+      "acc": "właściwość",
+      "ins": "właściwością",
+      "loc": "właściwości",
+      "voc": "właściwości"
+    },
+    "plural": {
+      "nom": "właściwości",
+      "gen": "właściwości",
+      "dat": "właściwościom",
+      "acc": "właściwości",
+      "ins": "właściwościami",
+      "loc": "właściwościach",
+      "voc": "właściwości"
+    }
+  }
+}

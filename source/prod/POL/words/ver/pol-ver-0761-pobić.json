@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pobić",
+    "verbalNoun": "pobicie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pobity",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pobiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pobije się"
+          },
+          "plural": {
+            "allPluralGenders": "pobije się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pobiję"
+          },
+          "plural": {
+            "allPluralGenders": "pobijemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pobijesz"
+          },
+          "plural": {
+            "allPluralGenders": "pobijecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pobije"
+          },
+          "plural": {
+            "allPluralGenders": "pobiją"
+          }
+        }
+      },
+      "imperative": "pobij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pobito"
+          },
+          "plural": {
+            "allPluralGenders": "pobito"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pobiłem",
+            "f": "pobiłam"
+          },
+          "plural": {
+            "virile": "pobiliśmy",
+            "nonvirile": "pobiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pobiłeś",
+            "f": "pobiłaś"
+          },
+          "plural": {
+            "virile": "pobiliście",
+            "nonvirile": "pobiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pobił",
+            "f": "pobiła",
+            "n": "pobiło"
+          },
+          "plural": {
+            "virile": "pobili",
+            "nonvirile": "pobiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

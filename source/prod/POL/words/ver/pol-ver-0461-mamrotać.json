@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "mamrotać",
+    "verbalNoun": "mamrotanie",
+    "activeAdjectival": "mamroczący",
+    "passiveAdjectival": "mamrotany",
+    "contemporaryAdverbial": "mamrocząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "mamrocz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mamrotano"
+          },
+          "plural": {
+            "allPluralGenders": "mamrotano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "mamrotałem",
+            "f": "mamrotałam"
+          },
+          "plural": {
+            "virile": "mamrotaliśmy",
+            "nonvirile": "mamrotałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "mamrotałeś",
+            "f": "mamrotałaś"
+          },
+          "plural": {
+            "virile": "mamrotaliście",
+            "nonvirile": "mamrotałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "mamrotał",
+            "f": "mamrotała",
+            "n": "mamrotało"
+          },
+          "plural": {
+            "virile": "mamrotali",
+            "nonvirile": "mamrotały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mamrocze się"
+          },
+          "plural": {
+            "allPluralGenders": "mamrocze się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "mamroczę"
+          },
+          "plural": {
+            "allPluralGenders": "mamroczemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "mamroczesz"
+          },
+          "plural": {
+            "allPluralGenders": "mamroczecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "mamrocze"
+          },
+          "plural": {
+            "allPluralGenders": "mamroczą"
+          }
+        }
+      }
+    }
+  }
+}

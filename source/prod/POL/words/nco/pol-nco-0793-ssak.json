@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ssak",
+      "gen": "ssaka",
+      "dat": "ssakowi",
+      "acc": "ssaka",
+      "ins": "ssakiem",
+      "loc": "ssaku",
+      "voc": "ssaku"
+    },
+    "plural": {
+      "nom": "ssaki",
+      "gen": "ssaków",
+      "dat": "ssakom",
+      "acc": "ssaki",
+      "ins": "ssakami",
+      "loc": "ssakach",
+      "voc": "ssaki"
+    }
+  }
+}

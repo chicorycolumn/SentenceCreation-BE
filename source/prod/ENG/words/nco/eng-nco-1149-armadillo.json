@@ -1,0 +1,18 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "armadillo",
+      "gen": "armadillo's"
+    },
+    "plural": {
+      "nom": [
+        "armadillos",
+        "armadilloes"
+      ],
+      "gen": [
+        "armadillos'",
+        "armadilloes'"
+      ]
+    }
+  }
+}

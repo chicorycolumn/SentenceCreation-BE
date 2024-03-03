@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "przystojnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przystojny",
+          "gen": "przystojnego",
+          "dat": "przystojnemu",
+          "acc": "przystojnego",
+          "ins": "przystojnym",
+          "loc": "przystojnym"
+        },
+        "m3": {
+          "nom": "przystojny",
+          "gen": "przystojnego",
+          "dat": "przystojnemu",
+          "acc": "przystojny",
+          "ins": "przystojnym",
+          "loc": "przystojnym"
+        },
+        "f": {
+          "nom": "przystojna",
+          "gen": "przystojnej",
+          "dat": "przystojnej",
+          "acc": "przystojną",
+          "ins": "przystojną",
+          "loc": "przystojnej"
+        },
+        "n": {
+          "nom": "przystojne",
+          "gen": "przystojnego",
+          "dat": "przystojnemu",
+          "acc": "przystojne",
+          "ins": "przystojnym",
+          "loc": "przystojnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przystojni",
+          "gen": "przystojnych",
+          "dat": "przystojnym",
+          "acc": "przystojnych",
+          "ins": "przystojnymi",
+          "loc": "przystojnych"
+        },
+        "nonvirile": {
+          "nom": "przystojne",
+          "gen": "przystojnych",
+          "dat": "przystojnym",
+          "acc": "przystojne",
+          "ins": "przystojnymi",
+          "loc": "przystojnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "przystojniejszy",
+          "gen": "przystojniejszego",
+          "dat": "przystojniejszemu",
+          "acc": "przystojniejszego",
+          "ins": "przystojniejszym",
+          "loc": "przystojniejszym"
+        },
+        "m3": {
+          "nom": "przystojniejszy",
+          "gen": "przystojniejszego",
+          "dat": "przystojniejszemu",
+          "acc": "przystojniejszy",
+          "ins": "przystojniejszym",
+          "loc": "przystojniejszym"
+        },
+        "f": {
+          "nom": "przystojniejsza",
+          "gen": "przystojniejszej",
+          "dat": "przystojniejszej",
+          "acc": "przystojniejszą",
+          "ins": "przystojniejszą",
+          "loc": "przystojniejszej"
+        },
+        "n": {
+          "nom": "przystojniejsze",
+          "gen": "przystojniejszego",
+          "dat": "przystojniejszemu",
+          "acc": "przystojniejsze",
+          "ins": "przystojniejszym",
+          "loc": "przystojniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przystojniejsi",
+          "gen": "przystojniejszych",
+          "dat": "przystojniejszym",
+          "acc": "przystojniejszych",
+          "ins": "przystojniejszymi",
+          "loc": "przystojniejszych"
+        },
+        "nonvirile": {
+          "nom": "przystojniejsze",
+          "gen": "przystojniejszych",
+          "dat": "przystojniejszym",
+          "acc": "przystojniejsze",
+          "ins": "przystojniejszymi",
+          "loc": "przystojniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najprzystojniejszy",
+          "gen": "najprzystojniejszego",
+          "dat": "najprzystojniejszemu",
+          "acc": "najprzystojniejszego",
+          "ins": "najprzystojniejszym",
+          "loc": "najprzystojniejszym"
+        },
+        "m3": {
+          "nom": "najprzystojniejszy",
+          "gen": "najprzystojniejszego",
+          "dat": "najprzystojniejszemu",
+          "acc": "najprzystojniejszy",
+          "ins": "najprzystojniejszym",
+          "loc": "najprzystojniejszym"
+        },
+        "f": {
+          "nom": "najprzystojniejsza",
+          "gen": "najprzystojniejszej",
+          "dat": "najprzystojniejszej",
+          "acc": "najprzystojniejszą",
+          "ins": "najprzystojniejszą",
+          "loc": "najprzystojniejszej"
+        },
+        "n": {
+          "nom": "najprzystojniejsze",
+          "gen": "najprzystojniejszego",
+          "dat": "najprzystojniejszemu",
+          "acc": "najprzystojniejsze",
+          "ins": "najprzystojniejszym",
+          "loc": "najprzystojniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najprzystojniejsi",
+          "gen": "najprzystojniejszych",
+          "dat": "najprzystojniejszym",
+          "acc": "najprzystojniejszych",
+          "ins": "najprzystojniejszymi",
+          "loc": "najprzystojniejszych"
+        },
+        "nonvirile": {
+          "nom": "najprzystojniejsze",
+          "gen": "najprzystojniejszych",
+          "dat": "najprzystojniejszym",
+          "acc": "najprzystojniejsze",
+          "ins": "najprzystojniejszymi",
+          "loc": "najprzystojniejszych"
+        }
+      }
+    }
+  }
+}

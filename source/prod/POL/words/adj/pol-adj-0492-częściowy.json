@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "częściowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "częściowy",
+          "gen": "częściowego",
+          "dat": "częściowemu",
+          "acc": "częściowego",
+          "ins": "częściowym",
+          "loc": "częściowym"
+        },
+        "m3": {
+          "nom": "częściowy",
+          "gen": "częściowego",
+          "dat": "częściowemu",
+          "acc": "częściowy",
+          "ins": "częściowym",
+          "loc": "częściowym"
+        },
+        "f": {
+          "nom": "częściowa",
+          "gen": "częściowej",
+          "dat": "częściowej",
+          "acc": "częściową",
+          "ins": "częściową",
+          "loc": "częściowej"
+        },
+        "n": {
+          "nom": "częściowe",
+          "gen": "częściowego",
+          "dat": "częściowemu",
+          "acc": "częściowe",
+          "ins": "częściowym",
+          "loc": "częściowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "częściowi",
+          "gen": "częściowych",
+          "dat": "częściowym",
+          "acc": "częściowych",
+          "ins": "częściowymi",
+          "loc": "częściowych"
+        },
+        "nonvirile": {
+          "nom": "częściowe",
+          "gen": "częściowych",
+          "dat": "częściowym",
+          "acc": "częściowe",
+          "ins": "częściowymi",
+          "loc": "częściowych"
+        }
+      }
+    }
+  }
+}

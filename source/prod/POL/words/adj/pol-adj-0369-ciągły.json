@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "ciągle",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ciągły",
+          "gen": "ciągłego",
+          "dat": "ciągłemu",
+          "acc": "ciągłego",
+          "ins": "ciągłym",
+          "loc": "ciągłym"
+        },
+        "m3": {
+          "nom": "ciągły",
+          "gen": "ciągłego",
+          "dat": "ciągłemu",
+          "acc": "ciągły",
+          "ins": "ciągłym",
+          "loc": "ciągłym"
+        },
+        "f": {
+          "nom": "ciągła",
+          "gen": "ciągłej",
+          "dat": "ciągłej",
+          "acc": "ciągłą",
+          "ins": "ciągłą",
+          "loc": "ciągłej"
+        },
+        "n": {
+          "nom": "ciągłe",
+          "gen": "ciągłego",
+          "dat": "ciągłemu",
+          "acc": "ciągłe",
+          "ins": "ciągłym",
+          "loc": "ciągłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ciągli",
+          "gen": "ciągłych",
+          "dat": "ciągłym",
+          "acc": "ciągłych",
+          "ins": "ciągłymi",
+          "loc": "ciągłych"
+        },
+        "nonvirile": {
+          "nom": "ciągłe",
+          "gen": "ciągłych",
+          "dat": "ciągłym",
+          "acc": "ciągłe",
+          "ins": "ciągłymi",
+          "loc": "ciągłych"
+        }
+      }
+    }
+  }
+}

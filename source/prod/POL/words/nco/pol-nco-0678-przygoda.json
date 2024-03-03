@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przygoda",
+      "gen": "przygody",
+      "dat": "przygodzie",
+      "acc": "przygodę",
+      "ins": "przygodą",
+      "loc": "przygodzie",
+      "voc": "przygodo"
+    },
+    "plural": {
+      "nom": "przygody",
+      "gen": "przygód",
+      "dat": "przygodom",
+      "acc": "przygody",
+      "ins": "przygodami",
+      "loc": "przygodach",
+      "voc": "przygody"
+    }
+  }
+}

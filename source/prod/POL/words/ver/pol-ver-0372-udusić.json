@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "udusić",
+    "verbalNoun": "uduszenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "uduszony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "udusiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "udusi się"
+          },
+          "plural": {
+            "allPluralGenders": "udusi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "uduszę"
+          },
+          "plural": {
+            "allPluralGenders": "udusimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "udusisz"
+          },
+          "plural": {
+            "allPluralGenders": "udusicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "udusi"
+          },
+          "plural": {
+            "allPluralGenders": "uduszą"
+          }
+        }
+      },
+      "imperative": "uduś",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "uduszono"
+          },
+          "plural": {
+            "allPluralGenders": "uduszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "udusiłem",
+            "f": "udusiłam"
+          },
+          "plural": {
+            "virile": "udusiliśmy",
+            "nonvirile": "udusiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "udusiłeś",
+            "f": "udusiłaś"
+          },
+          "plural": {
+            "virile": "udusiliście",
+            "nonvirile": "udusiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "udusił",
+            "f": "udusiła",
+            "n": "udusiło"
+          },
+          "plural": {
+            "virile": "udusili",
+            "nonvirile": "udusiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

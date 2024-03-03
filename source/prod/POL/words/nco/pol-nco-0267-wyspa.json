@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wyspa",
+      "gen": "wyspy",
+      "dat": "wyspie",
+      "acc": "wyspę",
+      "ins": "wyspą",
+      "loc": "wyspie",
+      "voc": "wyspo"
+    },
+    "plural": {
+      "nom": "wyspy",
+      "gen": "wysp",
+      "dat": "wyspom",
+      "acc": "wyspy",
+      "ins": "wyspami",
+      "loc": "wyspach",
+      "voc": "wyspy"
+    }
+  }
+}

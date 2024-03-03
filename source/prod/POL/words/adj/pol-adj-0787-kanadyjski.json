@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "kanadyjski",
+          "gen": "kanadyjskiego",
+          "dat": "kanadyjskiemu",
+          "acc": "kanadyjskiego",
+          "ins": "kanadyjskim",
+          "loc": "kanadyjskim"
+        },
+        "m3": {
+          "nom": "kanadyjski",
+          "gen": "kanadyjskiego",
+          "dat": "kanadyjskiemu",
+          "acc": "kanadyjski",
+          "ins": "kanadyjskim",
+          "loc": "kanadyjskim"
+        },
+        "f": {
+          "nom": "kanadyjska",
+          "gen": "kanadyjskiej",
+          "dat": "kanadyjskiej",
+          "acc": "kanadyjską",
+          "ins": "kanadyjską",
+          "loc": "kanadyjskiej"
+        },
+        "n": {
+          "nom": "kanadyjskie",
+          "gen": "kanadyjskiego",
+          "dat": "kanadyjskiemu",
+          "acc": "kanadyjskie",
+          "ins": "kanadyjskim",
+          "loc": "kanadyjskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "kanadyjscy",
+          "gen": "kanadyjskich",
+          "dat": "kanadyjskim",
+          "acc": "kanadyjskich",
+          "ins": "kanadyjskimi",
+          "loc": "kanadyjskich"
+        },
+        "nonvirile": {
+          "nom": "kanadyjskie",
+          "gen": "kanadyjskich",
+          "dat": "kanadyjskim",
+          "acc": "kanadyjskie",
+          "ins": "kanadyjskimi",
+          "loc": "kanadyjskich"
+        }
+      }
+    }
+  }
+}

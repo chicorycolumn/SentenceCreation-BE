@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "chodzić",
+    "verbalNoun": "chodzenie",
+    "activeAdjectival": "chodzący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "chodząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "chodź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "chodzono"
+          },
+          "plural": {
+            "allPluralGenders": "chodzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "chodziłem",
+            "f": "chodziłam"
+          },
+          "plural": {
+            "virile": "chodziliśmy",
+            "nonvirile": "chodziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "chodziłeś",
+            "f": "chodziłaś"
+          },
+          "plural": {
+            "virile": "chodziliście",
+            "nonvirile": "chodziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "chodził",
+            "f": "chodziła",
+            "n": "chodziło"
+          },
+          "plural": {
+            "virile": "chodzili",
+            "nonvirile": "chodziły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "chodzi się"
+          },
+          "plural": {
+            "allPluralGenders": "chodzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "chodzę"
+          },
+          "plural": {
+            "allPluralGenders": "chodzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "chodzisz"
+          },
+          "plural": {
+            "allPluralGenders": "chodzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "chodzi"
+          },
+          "plural": {
+            "allPluralGenders": "chodzą"
+          }
+        }
+      }
+    }
+  }
+}

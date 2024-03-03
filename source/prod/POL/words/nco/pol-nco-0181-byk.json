@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "byk",
+      "gen": "byka",
+      "dat": "bykowi",
+      "acc": "byka",
+      "ins": "bykiem",
+      "loc": "byku",
+      "voc": "byku"
+    },
+    "plural": {
+      "nom": "byki",
+      "gen": "byków",
+      "dat": "bykom",
+      "acc": "byki",
+      "ins": "bykami",
+      "loc": "bykach",
+      "voc": "byki"
+    }
+  }
+}

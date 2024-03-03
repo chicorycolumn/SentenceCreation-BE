@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "radziecki",
+          "gen": "radzieckiego",
+          "dat": "radzieckiemu",
+          "acc": "radzieckiego",
+          "ins": "radzieckim",
+          "loc": "radzieckim"
+        },
+        "m3": {
+          "nom": "radziecki",
+          "gen": "radzieckiego",
+          "dat": "radzieckiemu",
+          "acc": "radziecki",
+          "ins": "radzieckim",
+          "loc": "radzieckim"
+        },
+        "f": {
+          "nom": "radziecka",
+          "gen": "radzieckiej",
+          "dat": "radzieckiej",
+          "acc": "radziecką",
+          "ins": "radziecką",
+          "loc": "radzieckiej"
+        },
+        "n": {
+          "nom": "radzieckie",
+          "gen": "radzieckiego",
+          "dat": "radzieckiemu",
+          "acc": "radzieckie",
+          "ins": "radzieckim",
+          "loc": "radzieckim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "radzieccy",
+          "gen": "radzieckich",
+          "dat": "radzieckim",
+          "acc": "radzieckich",
+          "ins": "radzieckimi",
+          "loc": "radzieckich"
+        },
+        "nonvirile": {
+          "nom": "radzieckie",
+          "gen": "radzieckich",
+          "dat": "radzieckim",
+          "acc": "radzieckie",
+          "ins": "radzieckimi",
+          "loc": "radzieckich"
+        }
+      }
+    }
+  }
+}

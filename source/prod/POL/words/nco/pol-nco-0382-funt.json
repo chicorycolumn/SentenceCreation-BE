@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "funt",
+      "gen": "funta",
+      "dat": "funtowi",
+      "acc": "funta",
+      "ins": "funtem",
+      "loc": "funcie",
+      "voc": "funcie"
+    },
+    "plural": {
+      "nom": "funty",
+      "gen": "funtów",
+      "dat": "funtom",
+      "acc": "funty",
+      "ins": "funtami",
+      "loc": "funtach",
+      "voc": "funty"
+    }
+  }
+}

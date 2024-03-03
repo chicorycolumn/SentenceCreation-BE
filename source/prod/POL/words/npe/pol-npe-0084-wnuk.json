@@ -1,0 +1,31 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wnuk",
+      "gen": "wnuka",
+      "dat": "wnukowi",
+      "acc": "wnuka",
+      "ins": "wnukiem",
+      "loc": "wnuku",
+      "voc": "wnuku"
+    },
+    "plural": {
+      "nom": [
+        "wnukowie",
+        "wnuki"
+      ],
+      "gen": "wnuków",
+      "dat": "wnukom",
+      "acc": [
+        "wnuków",
+        "wnuki"
+      ],
+      "ins": "wnukami",
+      "loc": "wnukach",
+      "voc": [
+        "wnukowie",
+        "wnuki"
+      ]
+    }
+  }
+}

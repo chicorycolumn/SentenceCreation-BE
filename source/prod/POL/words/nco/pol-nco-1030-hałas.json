@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "hałas",
+      "gen": "hałasu",
+      "dat": "hałasowi",
+      "acc": "hałas",
+      "ins": "hałasem",
+      "loc": "hałasie",
+      "voc": "hałasie"
+    },
+    "plural": {
+      "nom": "hałasy",
+      "gen": "hałasów",
+      "dat": "hałasom",
+      "acc": "hałasy",
+      "ins": "hałasami",
+      "loc": "hałasach",
+      "voc": "hałasy"
+    }
+  }
+}

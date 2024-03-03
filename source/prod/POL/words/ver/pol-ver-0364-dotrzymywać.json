@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dotrzymywać",
+    "verbalNoun": "dotrzymywanie",
+    "activeAdjectival": "dotrzymujący",
+    "passiveAdjectival": "dotrzymywany",
+    "contemporaryAdverbial": "dotrzymując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dotrzymuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dotrzymywano"
+          },
+          "plural": {
+            "allPluralGenders": "dotrzymywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dotrzymywałem",
+            "f": "dotrzymywałam"
+          },
+          "plural": {
+            "virile": "dotrzymywaliśmy",
+            "nonvirile": "dotrzymywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dotrzymywałeś",
+            "f": "dotrzymywałaś"
+          },
+          "plural": {
+            "virile": "dotrzymywaliście",
+            "nonvirile": "dotrzymywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dotrzymywał",
+            "f": "dotrzymywała",
+            "n": "dotrzymywało"
+          },
+          "plural": {
+            "virile": "dotrzymywali",
+            "nonvirile": "dotrzymywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dotrzymuje się"
+          },
+          "plural": {
+            "allPluralGenders": "dotrzymuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dotrzymuję"
+          },
+          "plural": {
+            "allPluralGenders": "dotrzymujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dotrzymujesz"
+          },
+          "plural": {
+            "allPluralGenders": "dotrzymujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dotrzymuje"
+          },
+          "plural": {
+            "allPluralGenders": "dotrzymują"
+          }
+        }
+      }
+    }
+  }
+}

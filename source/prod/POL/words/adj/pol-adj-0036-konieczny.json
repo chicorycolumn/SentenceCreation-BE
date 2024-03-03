@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "koniecznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "konieczny",
+          "gen": "koniecznego",
+          "dat": "koniecznemu",
+          "acc": "koniecznego",
+          "ins": "koniecznym",
+          "loc": "koniecznym"
+        },
+        "m3": {
+          "nom": "konieczny",
+          "gen": "koniecznego",
+          "dat": "koniecznemu",
+          "acc": "konieczny",
+          "ins": "koniecznym",
+          "loc": "koniecznym"
+        },
+        "f": {
+          "nom": "konieczna",
+          "gen": "koniecznej",
+          "dat": "koniecznej",
+          "acc": "konieczną",
+          "ins": "konieczną",
+          "loc": "koniecznej"
+        },
+        "n": {
+          "nom": "konieczne",
+          "gen": "koniecznego",
+          "dat": "koniecznemu",
+          "acc": "konieczne",
+          "ins": "koniecznym",
+          "loc": "koniecznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "konieczni",
+          "gen": "koniecznych",
+          "dat": "koniecznym",
+          "acc": "koniecznych",
+          "ins": "koniecznymi",
+          "loc": "koniecznych"
+        },
+        "nonvirile": {
+          "nom": "konieczne",
+          "gen": "koniecznych",
+          "dat": "koniecznym",
+          "acc": "konieczne",
+          "ins": "koniecznymi",
+          "loc": "koniecznych"
+        }
+      }
+    }
+  }
+}

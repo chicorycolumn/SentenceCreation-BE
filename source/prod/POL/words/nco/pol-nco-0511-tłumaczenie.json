@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "tłumaczenie",
+      "gen": "tłumaczenia",
+      "dat": "tłumaczeniu",
+      "acc": "tłumaczenie",
+      "ins": "tłumaczeniem",
+      "loc": "tłumaczeniu",
+      "voc": "tłumaczenie"
+    },
+    "plural": {
+      "nom": "tłumaczenia",
+      "gen": "tłumaczeń",
+      "dat": "tłumaczeniom",
+      "acc": "tłumaczenia",
+      "ins": "tłumaczeniami",
+      "loc": "tłumaczeniach",
+      "voc": "tłumaczenia"
+    }
+  }
+}

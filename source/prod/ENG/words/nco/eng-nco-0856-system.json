@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "system",
+      "gen": "system's"
+    },
+    "plural": {
+      "nom": "systems",
+      "gen": "systems'"
+    }
+  }
+}

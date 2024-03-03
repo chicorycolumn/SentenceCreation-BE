@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "nieciekawie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nieciekawy",
+          "gen": "nieciekawego",
+          "dat": "nieciekawemu",
+          "acc": "nieciekawego",
+          "ins": "nieciekawym",
+          "loc": "nieciekawym"
+        },
+        "m3": {
+          "nom": "nieciekawy",
+          "gen": "nieciekawego",
+          "dat": "nieciekawemu",
+          "acc": "nieciekawy",
+          "ins": "nieciekawym",
+          "loc": "nieciekawym"
+        },
+        "f": {
+          "nom": "nieciekawa",
+          "gen": "nieciekawej",
+          "dat": "nieciekawej",
+          "acc": "nieciekawą",
+          "ins": "nieciekawą",
+          "loc": "nieciekawej"
+        },
+        "n": {
+          "nom": "nieciekawe",
+          "gen": "nieciekawego",
+          "dat": "nieciekawemu",
+          "acc": "nieciekawe",
+          "ins": "nieciekawym",
+          "loc": "nieciekawym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieciekawi",
+          "gen": "nieciekawych",
+          "dat": "nieciekawym",
+          "acc": "nieciekawych",
+          "ins": "nieciekawymi",
+          "loc": "nieciekawych"
+        },
+        "nonvirile": {
+          "nom": "nieciekawe",
+          "gen": "nieciekawych",
+          "dat": "nieciekawym",
+          "acc": "nieciekawe",
+          "ins": "nieciekawymi",
+          "loc": "nieciekawych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej nieciekawy",
+          "gen": "bardziej nieciekawego",
+          "dat": "bardziej nieciekawemu",
+          "acc": "bardziej nieciekawego",
+          "ins": "bardziej nieciekawym",
+          "loc": "bardziej nieciekawym"
+        },
+        "m3": {
+          "nom": "bardziej nieciekawy",
+          "gen": "bardziej nieciekawego",
+          "dat": "bardziej nieciekawemu",
+          "acc": "bardziej nieciekawy",
+          "ins": "bardziej nieciekawym",
+          "loc": "bardziej nieciekawym"
+        },
+        "f": {
+          "nom": "bardziej nieciekawa",
+          "gen": "bardziej nieciekawej",
+          "dat": "bardziej nieciekawej",
+          "acc": "bardziej nieciekawą",
+          "ins": "bardziej nieciekawą",
+          "loc": "bardziej nieciekawej"
+        },
+        "n": {
+          "nom": "bardziej nieciekawe",
+          "gen": "bardziej nieciekawego",
+          "dat": "bardziej nieciekawemu",
+          "acc": "bardziej nieciekawe",
+          "ins": "bardziej nieciekawym",
+          "loc": "bardziej nieciekawym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej nieciekawi",
+          "gen": "bardziej nieciekawych",
+          "dat": "bardziej nieciekawym",
+          "acc": "bardziej nieciekawych",
+          "ins": "bardziej nieciekawymi",
+          "loc": "bardziej nieciekawych"
+        },
+        "nonvirile": {
+          "nom": "bardziej nieciekawe",
+          "gen": "bardziej nieciekawych",
+          "dat": "bardziej nieciekawym",
+          "acc": "bardziej nieciekawe",
+          "ins": "bardziej nieciekawymi",
+          "loc": "bardziej nieciekawych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej nieciekawy",
+          "gen": "najbardziej nieciekawego",
+          "dat": "najbardziej nieciekawemu",
+          "acc": "najbardziej nieciekawego",
+          "ins": "najbardziej nieciekawym",
+          "loc": "najbardziej nieciekawym"
+        },
+        "m3": {
+          "nom": "najbardziej nieciekawy",
+          "gen": "najbardziej nieciekawego",
+          "dat": "najbardziej nieciekawemu",
+          "acc": "najbardziej nieciekawy",
+          "ins": "najbardziej nieciekawym",
+          "loc": "najbardziej nieciekawym"
+        },
+        "f": {
+          "nom": "najbardziej nieciekawa",
+          "gen": "najbardziej nieciekawej",
+          "dat": "najbardziej nieciekawej",
+          "acc": "najbardziej nieciekawą",
+          "ins": "najbardziej nieciekawą",
+          "loc": "najbardziej nieciekawej"
+        },
+        "n": {
+          "nom": "najbardziej nieciekawe",
+          "gen": "najbardziej nieciekawego",
+          "dat": "najbardziej nieciekawemu",
+          "acc": "najbardziej nieciekawe",
+          "ins": "najbardziej nieciekawym",
+          "loc": "najbardziej nieciekawym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej nieciekawi",
+          "gen": "najbardziej nieciekawych",
+          "dat": "najbardziej nieciekawym",
+          "acc": "najbardziej nieciekawych",
+          "ins": "najbardziej nieciekawymi",
+          "loc": "najbardziej nieciekawych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej nieciekawe",
+          "gen": "najbardziej nieciekawych",
+          "dat": "najbardziej nieciekawym",
+          "acc": "najbardziej nieciekawe",
+          "ins": "najbardziej nieciekawymi",
+          "loc": "najbardziej nieciekawych"
+        }
+      }
+    }
+  }
+}

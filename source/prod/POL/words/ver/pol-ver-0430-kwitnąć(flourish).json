@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "kwitnąć",
+    "verbalNoun": "kwitnięcie",
+    "activeAdjectival": "kwitnący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "kwitnąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "kwitnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kwitnięto"
+          },
+          "plural": {
+            "allPluralGenders": "kwitnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "kwitnąłem",
+            "f": "kwitnęłam"
+          },
+          "plural": {
+            "virile": "kwitnęliśmy",
+            "nonvirile": "kwitnęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "kwitnąłeś",
+            "f": "kwitnęłaś"
+          },
+          "plural": {
+            "virile": "kwitnęliście",
+            "nonvirile": "kwitnęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "kwitnął",
+            "f": "kwitnęła",
+            "n": "kwitnęło"
+          },
+          "plural": {
+            "virile": "kwitnęli",
+            "nonvirile": "kwitnęły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kwitnie się"
+          },
+          "plural": {
+            "allPluralGenders": "kwitnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "kwitnę"
+          },
+          "plural": {
+            "allPluralGenders": "kwitniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "kwitniesz"
+          },
+          "plural": {
+            "allPluralGenders": "kwitniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "kwitnie"
+          },
+          "plural": {
+            "allPluralGenders": "kwitną"
+          }
+        }
+      }
+    }
+  }
+}

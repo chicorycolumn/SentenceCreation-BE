@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "sucho",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "suchy",
+          "gen": "suchego",
+          "dat": "suchemu",
+          "acc": "suchego",
+          "ins": "suchym",
+          "loc": "suchym"
+        },
+        "m3": {
+          "nom": "suchy",
+          "gen": "suchego",
+          "dat": "suchemu",
+          "acc": "suchy",
+          "ins": "suchym",
+          "loc": "suchym"
+        },
+        "f": {
+          "nom": "sucha",
+          "gen": "suchej",
+          "dat": "suchej",
+          "acc": "suchą",
+          "ins": "suchą",
+          "loc": "suchej"
+        },
+        "n": {
+          "nom": "suche",
+          "gen": "suchego",
+          "dat": "suchemu",
+          "acc": "suche",
+          "ins": "suchym",
+          "loc": "suchym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "susi",
+          "gen": "suchych",
+          "dat": "suchym",
+          "acc": "suchych",
+          "ins": "suchymi",
+          "loc": "suchych"
+        },
+        "nonvirile": {
+          "nom": "suche",
+          "gen": "suchych",
+          "dat": "suchym",
+          "acc": "suche",
+          "ins": "suchymi",
+          "loc": "suchych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej suchy",
+          "gen": "bardziej suchego",
+          "dat": "bardziej suchemu",
+          "acc": "bardziej suchego",
+          "ins": "bardziej suchym",
+          "loc": "bardziej suchym"
+        },
+        "m3": {
+          "nom": "bardziej suchy",
+          "gen": "bardziej suchego",
+          "dat": "bardziej suchemu",
+          "acc": "bardziej suchy",
+          "ins": "bardziej suchym",
+          "loc": "bardziej suchym"
+        },
+        "f": {
+          "nom": "bardziej sucha",
+          "gen": "bardziej suchej",
+          "dat": "bardziej suchej",
+          "acc": "bardziej suchą",
+          "ins": "bardziej suchą",
+          "loc": "bardziej suchej"
+        },
+        "n": {
+          "nom": "bardziej suche",
+          "gen": "bardziej suchego",
+          "dat": "bardziej suchemu",
+          "acc": "bardziej suche",
+          "ins": "bardziej suchym",
+          "loc": "bardziej suchym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej susi",
+          "gen": "bardziej suchych",
+          "dat": "bardziej suchym",
+          "acc": "bardziej suchych",
+          "ins": "bardziej suchymi",
+          "loc": "bardziej suchych"
+        },
+        "nonvirile": {
+          "nom": "bardziej suche",
+          "gen": "bardziej suchych",
+          "dat": "bardziej suchym",
+          "acc": "bardziej suche",
+          "ins": "bardziej suchymi",
+          "loc": "bardziej suchych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej suchy",
+          "gen": "najbardziej suchego",
+          "dat": "najbardziej suchemu",
+          "acc": "najbardziej suchego",
+          "ins": "najbardziej suchym",
+          "loc": "najbardziej suchym"
+        },
+        "m3": {
+          "nom": "najbardziej suchy",
+          "gen": "najbardziej suchego",
+          "dat": "najbardziej suchemu",
+          "acc": "najbardziej suchy",
+          "ins": "najbardziej suchym",
+          "loc": "najbardziej suchym"
+        },
+        "f": {
+          "nom": "najbardziej sucha",
+          "gen": "najbardziej suchej",
+          "dat": "najbardziej suchej",
+          "acc": "najbardziej suchą",
+          "ins": "najbardziej suchą",
+          "loc": "najbardziej suchej"
+        },
+        "n": {
+          "nom": "najbardziej suche",
+          "gen": "najbardziej suchego",
+          "dat": "najbardziej suchemu",
+          "acc": "najbardziej suche",
+          "ins": "najbardziej suchym",
+          "loc": "najbardziej suchym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej susi",
+          "gen": "najbardziej suchych",
+          "dat": "najbardziej suchym",
+          "acc": "najbardziej suchych",
+          "ins": "najbardziej suchymi",
+          "loc": "najbardziej suchych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej suche",
+          "gen": "najbardziej suchych",
+          "dat": "najbardziej suchym",
+          "acc": "najbardziej suche",
+          "ins": "najbardziej suchymi",
+          "loc": "najbardziej suchych"
+        }
+      }
+    }
+  }
+}

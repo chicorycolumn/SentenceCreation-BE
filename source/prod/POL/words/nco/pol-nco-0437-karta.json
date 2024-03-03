@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "karta",
+      "gen": "karty",
+      "dat": "karcie",
+      "acc": "kartę",
+      "ins": "kartą",
+      "loc": "karcie",
+      "voc": "karto"
+    },
+    "plural": {
+      "nom": "karty",
+      "gen": "kart",
+      "dat": "kartom",
+      "acc": "karty",
+      "ins": "kartami",
+      "loc": "kartach",
+      "voc": "karty"
+    }
+  }
+}

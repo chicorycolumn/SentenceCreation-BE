@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nalegać",
+    "verbalNoun": "naleganie",
+    "activeAdjectival": "nalegający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "nalegając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "nalegaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nalegano"
+          },
+          "plural": {
+            "allPluralGenders": "nalegano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nalegałem",
+            "f": "nalegałam"
+          },
+          "plural": {
+            "virile": "nalegaliśmy",
+            "nonvirile": "nalegałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nalegałeś",
+            "f": "nalegałaś"
+          },
+          "plural": {
+            "virile": "nalegaliście",
+            "nonvirile": "nalegałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nalegał",
+            "f": "nalegała",
+            "n": "nalegało"
+          },
+          "plural": {
+            "virile": "nalegali",
+            "nonvirile": "nalegały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nalega się"
+          },
+          "plural": {
+            "allPluralGenders": "nalega się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nalegam"
+          },
+          "plural": {
+            "allPluralGenders": "nalegamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nalegasz"
+          },
+          "plural": {
+            "allPluralGenders": "nalegacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nalega"
+          },
+          "plural": {
+            "allPluralGenders": "nalegają"
+          }
+        }
+      }
+    }
+  }
+}

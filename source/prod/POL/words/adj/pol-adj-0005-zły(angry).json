@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zły",
+          "gen": "złego",
+          "dat": "złemu",
+          "acc": "złego",
+          "ins": "złym",
+          "loc": "złym"
+        },
+        "m3": {
+          "nom": "zły",
+          "gen": "złego",
+          "dat": "złemu",
+          "acc": "zły",
+          "ins": "złym",
+          "loc": "złym"
+        },
+        "f": {
+          "nom": "zła",
+          "gen": "złej",
+          "dat": "złej",
+          "acc": "złą",
+          "ins": "złą",
+          "loc": "złej"
+        },
+        "n": {
+          "nom": "złe",
+          "gen": "złego",
+          "dat": "złemu",
+          "acc": "złe",
+          "ins": "złym",
+          "loc": "złym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "źli",
+          "gen": "złych",
+          "dat": "złym",
+          "acc": "złych",
+          "ins": "złymi",
+          "loc": "złych"
+        },
+        "nonvirile": {
+          "nom": "złe",
+          "gen": "złych",
+          "dat": "złym",
+          "acc": "złe",
+          "ins": "złymi",
+          "loc": "złych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej zły",
+          "gen": "bardziej złego",
+          "dat": "bardziej złemu",
+          "acc": "bardziej złego",
+          "ins": "bardziej złym",
+          "loc": "bardziej złym"
+        },
+        "m3": {
+          "nom": "bardziej zły",
+          "gen": "bardziej złego",
+          "dat": "bardziej złemu",
+          "acc": "bardziej zły",
+          "ins": "bardziej złym",
+          "loc": "bardziej złym"
+        },
+        "f": {
+          "nom": "bardziej zła",
+          "gen": "bardziej złej",
+          "dat": "bardziej złej",
+          "acc": "bardziej złą",
+          "ins": "bardziej złą",
+          "loc": "bardziej złej"
+        },
+        "n": {
+          "nom": "bardziej złe",
+          "gen": "bardziej złego",
+          "dat": "bardziej złemu",
+          "acc": "bardziej złe",
+          "ins": "bardziej złym",
+          "loc": "bardziej złym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej źli",
+          "gen": "bardziej złych",
+          "dat": "bardziej złym",
+          "acc": "bardziej złych",
+          "ins": "bardziej złymi",
+          "loc": "bardziej złych"
+        },
+        "nonvirile": {
+          "nom": "bardziej złe",
+          "gen": "bardziej złych",
+          "dat": "bardziej złym",
+          "acc": "bardziej złe",
+          "ins": "bardziej złymi",
+          "loc": "bardziej złych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej zły",
+          "gen": "najbardziej złego",
+          "dat": "najbardziej złemu",
+          "acc": "najbardziej złego",
+          "ins": "najbardziej złym",
+          "loc": "najbardziej złym"
+        },
+        "m3": {
+          "nom": "najbardziej zły",
+          "gen": "najbardziej złego",
+          "dat": "najbardziej złemu",
+          "acc": "najbardziej zły",
+          "ins": "najbardziej złym",
+          "loc": "najbardziej złym"
+        },
+        "f": {
+          "nom": "najbardziej zła",
+          "gen": "najbardziej złej",
+          "dat": "najbardziej złej",
+          "acc": "najbardziej złą",
+          "ins": "najbardziej złą",
+          "loc": "najbardziej złej"
+        },
+        "n": {
+          "nom": "najbardziej złe",
+          "gen": "najbardziej złego",
+          "dat": "najbardziej złemu",
+          "acc": "najbardziej złe",
+          "ins": "najbardziej złym",
+          "loc": "najbardziej złym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej źli",
+          "gen": "najbardziej złych",
+          "dat": "najbardziej złym",
+          "acc": "najbardziej złych",
+          "ins": "najbardziej złymi",
+          "loc": "najbardziej złych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej złe",
+          "gen": "najbardziej złych",
+          "dat": "najbardziej złym",
+          "acc": "najbardziej złe",
+          "ins": "najbardziej złymi",
+          "loc": "najbardziej złych"
+        }
+      }
+    }
+  }
+}

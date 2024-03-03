@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "autostop",
+      "gen": "autostopu",
+      "dat": "autostopowi",
+      "acc": "autostop",
+      "ins": "autostopem",
+      "loc": "autostopie",
+      "voc": "autostopie"
+    },
+    "plural": {
+      "nom": "autostopy",
+      "gen": "autostopów",
+      "dat": "autostopom",
+      "acc": "autostopy",
+      "ins": "autostopami",
+      "loc": "autostopach",
+      "voc": "autostopy"
+    }
+  }
+}

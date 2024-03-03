@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "warunek",
+      "gen": "warunku",
+      "dat": "warunkowi",
+      "acc": "warunek",
+      "ins": "warunkiem",
+      "loc": "warunku",
+      "voc": "warunku"
+    },
+    "plural": {
+      "nom": "warunki",
+      "gen": "warunków",
+      "dat": "warunkom",
+      "acc": "warunki",
+      "ins": "warunkami",
+      "loc": "warunkach",
+      "voc": "warunki"
+    }
+  }
+}

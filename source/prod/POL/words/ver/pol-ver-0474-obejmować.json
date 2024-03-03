@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "obejmować",
+    "verbalNoun": "obejmowanie",
+    "activeAdjectival": "obejmujący",
+    "passiveAdjectival": "obejmowany",
+    "contemporaryAdverbial": "obejmując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "obejmuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obejmowano"
+          },
+          "plural": {
+            "allPluralGenders": "obejmowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "obejmowałem",
+            "f": "obejmowałam"
+          },
+          "plural": {
+            "virile": "obejmowaliśmy",
+            "nonvirile": "obejmowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "obejmowałeś",
+            "f": "obejmowałaś"
+          },
+          "plural": {
+            "virile": "obejmowaliście",
+            "nonvirile": "obejmowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "obejmował",
+            "f": "obejmowała",
+            "n": "obejmowało"
+          },
+          "plural": {
+            "virile": "obejmowali",
+            "nonvirile": "obejmowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obejmuje się"
+          },
+          "plural": {
+            "allPluralGenders": "obejmuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "obejmuję"
+          },
+          "plural": {
+            "allPluralGenders": "obejmujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "obejmujesz"
+          },
+          "plural": {
+            "allPluralGenders": "obejmujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "obejmuje"
+          },
+          "plural": {
+            "allPluralGenders": "obejmują"
+          }
+        }
+      }
+    }
+  }
+}

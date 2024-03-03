@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "płasko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "płaski",
+          "gen": "płaskiego",
+          "dat": "płaskiemu",
+          "acc": "płaskiego",
+          "ins": "płaskim",
+          "loc": "płaskim"
+        },
+        "m3": {
+          "nom": "płaski",
+          "gen": "płaskiego",
+          "dat": "płaskiemu",
+          "acc": "płaski",
+          "ins": "płaskim",
+          "loc": "płaskim"
+        },
+        "f": {
+          "nom": "płaska",
+          "gen": "płaskiej",
+          "dat": "płaskiej",
+          "acc": "płaską",
+          "ins": "płaską",
+          "loc": "płaskiej"
+        },
+        "n": {
+          "nom": "płaskie",
+          "gen": "płaskiego",
+          "dat": "płaskiemu",
+          "acc": "płaskie",
+          "ins": "płaskim",
+          "loc": "płaskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "płascy",
+          "gen": "płaskich",
+          "dat": "płaskim",
+          "acc": "płaskich",
+          "ins": "płaskimi",
+          "loc": "płaskich"
+        },
+        "nonvirile": {
+          "nom": "płaskie",
+          "gen": "płaskich",
+          "dat": "płaskim",
+          "acc": "płaskie",
+          "ins": "płaskimi",
+          "loc": "płaskich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej płaski",
+          "gen": "bardziej płaskiego",
+          "dat": "bardziej płaskiemu",
+          "acc": "bardziej płaskiego",
+          "ins": "bardziej płaskim",
+          "loc": "bardziej płaskim"
+        },
+        "m3": {
+          "nom": "bardziej płaski",
+          "gen": "bardziej płaskiego",
+          "dat": "bardziej płaskiemu",
+          "acc": "bardziej płaski",
+          "ins": "bardziej płaskim",
+          "loc": "bardziej płaskim"
+        },
+        "f": {
+          "nom": "bardziej płaska",
+          "gen": "bardziej płaskiej",
+          "dat": "bardziej płaskiej",
+          "acc": "bardziej płaską",
+          "ins": "bardziej płaską",
+          "loc": "bardziej płaskiej"
+        },
+        "n": {
+          "nom": "bardziej płaskie",
+          "gen": "bardziej płaskiego",
+          "dat": "bardziej płaskiemu",
+          "acc": "bardziej płaskie",
+          "ins": "bardziej płaskim",
+          "loc": "bardziej płaskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej płascy",
+          "gen": "bardziej płaskich",
+          "dat": "bardziej płaskim",
+          "acc": "bardziej płaskich",
+          "ins": "bardziej płaskimi",
+          "loc": "bardziej płaskich"
+        },
+        "nonvirile": {
+          "nom": "bardziej płaskie",
+          "gen": "bardziej płaskich",
+          "dat": "bardziej płaskim",
+          "acc": "bardziej płaskie",
+          "ins": "bardziej płaskimi",
+          "loc": "bardziej płaskich"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej płaski",
+          "gen": "najbardziej płaskiego",
+          "dat": "najbardziej płaskiemu",
+          "acc": "najbardziej płaskiego",
+          "ins": "najbardziej płaskim",
+          "loc": "najbardziej płaskim"
+        },
+        "m3": {
+          "nom": "najbardziej płaski",
+          "gen": "najbardziej płaskiego",
+          "dat": "najbardziej płaskiemu",
+          "acc": "najbardziej płaski",
+          "ins": "najbardziej płaskim",
+          "loc": "najbardziej płaskim"
+        },
+        "f": {
+          "nom": "najbardziej płaska",
+          "gen": "najbardziej płaskiej",
+          "dat": "najbardziej płaskiej",
+          "acc": "najbardziej płaską",
+          "ins": "najbardziej płaską",
+          "loc": "najbardziej płaskiej"
+        },
+        "n": {
+          "nom": "najbardziej płaskie",
+          "gen": "najbardziej płaskiego",
+          "dat": "najbardziej płaskiemu",
+          "acc": "najbardziej płaskie",
+          "ins": "najbardziej płaskim",
+          "loc": "najbardziej płaskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej płascy",
+          "gen": "najbardziej płaskich",
+          "dat": "najbardziej płaskim",
+          "acc": "najbardziej płaskich",
+          "ins": "najbardziej płaskimi",
+          "loc": "najbardziej płaskich"
+        },
+        "nonvirile": {
+          "nom": "najbardziej płaskie",
+          "gen": "najbardziej płaskich",
+          "dat": "najbardziej płaskim",
+          "acc": "najbardziej płaskie",
+          "ins": "najbardziej płaskimi",
+          "loc": "najbardziej płaskich"
+        }
+      }
+    }
+  }
+}

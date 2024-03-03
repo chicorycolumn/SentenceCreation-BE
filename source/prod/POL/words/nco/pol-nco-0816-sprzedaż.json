@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sprzedaż",
+      "gen": "sprzedaży",
+      "dat": "sprzedaży",
+      "acc": "sprzedaż",
+      "ins": "sprzedażą",
+      "loc": "sprzedaży",
+      "voc": "sprzedaży"
+    },
+    "plural": {
+      "nom": "sprzedaże",
+      "gen": "sprzedaży",
+      "dat": "sprzedażom",
+      "acc": "sprzedaże",
+      "ins": "sprzedażami",
+      "loc": "sprzedażach",
+      "voc": "sprzedaże"
+    }
+  }
+}

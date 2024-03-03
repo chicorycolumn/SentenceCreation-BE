@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "błąd",
+      "gen": "błędu",
+      "dat": "błędowi",
+      "acc": "błąd",
+      "ins": "błędem",
+      "loc": "błędzie",
+      "voc": "błędzie"
+    },
+    "plural": {
+      "nom": "błędy",
+      "gen": "błędów",
+      "dat": "błędom",
+      "acc": "błędy",
+      "ins": "błędami",
+      "loc": "błędach",
+      "voc": "błędy"
+    }
+  }
+}

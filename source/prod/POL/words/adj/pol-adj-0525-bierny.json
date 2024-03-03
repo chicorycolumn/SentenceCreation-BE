@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "biernie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bierny",
+          "gen": "biernego",
+          "dat": "biernemu",
+          "acc": "biernego",
+          "ins": "biernym",
+          "loc": "biernym"
+        },
+        "m3": {
+          "nom": "bierny",
+          "gen": "biernego",
+          "dat": "biernemu",
+          "acc": "bierny",
+          "ins": "biernym",
+          "loc": "biernym"
+        },
+        "f": {
+          "nom": "bierna",
+          "gen": "biernej",
+          "dat": "biernej",
+          "acc": "bierną",
+          "ins": "bierną",
+          "loc": "biernej"
+        },
+        "n": {
+          "nom": "bierne",
+          "gen": "biernego",
+          "dat": "biernemu",
+          "acc": "bierne",
+          "ins": "biernym",
+          "loc": "biernym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bierni",
+          "gen": "biernych",
+          "dat": "biernym",
+          "acc": "biernych",
+          "ins": "biernymi",
+          "loc": "biernych"
+        },
+        "nonvirile": {
+          "nom": "bierne",
+          "gen": "biernych",
+          "dat": "biernym",
+          "acc": "bierne",
+          "ins": "biernymi",
+          "loc": "biernych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszy",
+              "bardziej bierny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszego",
+              "bardziej biernego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszemu",
+              "bardziej biernemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszego",
+              "bardziej biernego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszym",
+              "bardziej biernym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszym",
+              "bardziej biernym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszy",
+              "bardziej bierny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszego",
+              "bardziej biernego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszemu",
+              "bardziej biernemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszy",
+              "bardziej bierny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszym",
+              "bardziej biernym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszym",
+              "bardziej biernym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejsza",
+              "bardziej bierna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszej",
+              "bardziej biernej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszej",
+              "bardziej biernej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszą",
+              "bardziej bierną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszą",
+              "bardziej bierną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszej",
+              "bardziej biernej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejsze",
+              "bardziej bierne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszego",
+              "bardziej biernego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszemu",
+              "bardziej biernemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejsze",
+              "bardziej bierne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszym",
+              "bardziej biernym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszym",
+              "bardziej biernym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejsi",
+              "bardziej bierni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszych",
+              "bardziej biernych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszym",
+              "bardziej biernym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszych",
+              "bardziej biernych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszymi",
+              "bardziej biernymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszych",
+              "bardziej biernych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejsze",
+              "bardziej bierne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszych",
+              "bardziej biernych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszym",
+              "bardziej biernym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejsze",
+              "bardziej bierne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszymi",
+              "bardziej biernymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "bierniejszych",
+              "bardziej biernych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszy",
+              "najbardziej bierny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszego",
+              "najbardziej biernego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszemu",
+              "najbardziej biernemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszego",
+              "najbardziej biernego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszym",
+              "najbardziej biernym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszym",
+              "najbardziej biernym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszy",
+              "najbardziej bierny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszego",
+              "najbardziej biernego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszemu",
+              "najbardziej biernemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszy",
+              "najbardziej bierny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszym",
+              "najbardziej biernym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszym",
+              "najbardziej biernym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejsza",
+              "najbardziej bierna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszej",
+              "najbardziej biernej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszej",
+              "najbardziej biernej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszą",
+              "najbardziej bierną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszą",
+              "najbardziej bierną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszej",
+              "najbardziej biernej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejsze",
+              "najbardziej bierne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszego",
+              "najbardziej biernego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszemu",
+              "najbardziej biernemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejsze",
+              "najbardziej bierne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszym",
+              "najbardziej biernym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszym",
+              "najbardziej biernym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejsi",
+              "najbardziej bierni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszych",
+              "najbardziej biernych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszym",
+              "najbardziej biernym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszych",
+              "najbardziej biernych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszymi",
+              "najbardziej biernymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszych",
+              "najbardziej biernych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejsze",
+              "najbardziej bierne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszych",
+              "najbardziej biernych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszym",
+              "najbardziej biernym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejsze",
+              "najbardziej bierne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszymi",
+              "najbardziej biernymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najbierniejszych",
+              "najbardziej biernych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

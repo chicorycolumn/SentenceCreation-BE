@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pakować",
+    "verbalNoun": "pakowanie",
+    "activeAdjectival": "pakujący",
+    "passiveAdjectival": "pakowany",
+    "contemporaryAdverbial": "pakując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pakuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pakowano"
+          },
+          "plural": {
+            "allPluralGenders": "pakowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pakowałem",
+            "f": "pakowałam"
+          },
+          "plural": {
+            "virile": "pakowaliśmy",
+            "nonvirile": "pakowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pakowałeś",
+            "f": "pakowałaś"
+          },
+          "plural": {
+            "virile": "pakowaliście",
+            "nonvirile": "pakowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pakował",
+            "f": "pakowała",
+            "n": "pakowało"
+          },
+          "plural": {
+            "virile": "pakowali",
+            "nonvirile": "pakowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pakuje się"
+          },
+          "plural": {
+            "allPluralGenders": "pakuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pakuję"
+          },
+          "plural": {
+            "allPluralGenders": "pakujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pakujesz"
+          },
+          "plural": {
+            "allPluralGenders": "pakujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pakuje"
+          },
+          "plural": {
+            "allPluralGenders": "pakują"
+          }
+        }
+      }
+    }
+  }
+}

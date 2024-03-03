@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "emocjonalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "emocjonalny",
+          "gen": "emocjonalnego",
+          "dat": "emocjonalnemu",
+          "acc": "emocjonalnego",
+          "ins": "emocjonalnym",
+          "loc": "emocjonalnym"
+        },
+        "m3": {
+          "nom": "emocjonalny",
+          "gen": "emocjonalnego",
+          "dat": "emocjonalnemu",
+          "acc": "emocjonalny",
+          "ins": "emocjonalnym",
+          "loc": "emocjonalnym"
+        },
+        "f": {
+          "nom": "emocjonalna",
+          "gen": "emocjonalnej",
+          "dat": "emocjonalnej",
+          "acc": "emocjonalną",
+          "ins": "emocjonalną",
+          "loc": "emocjonalnej"
+        },
+        "n": {
+          "nom": "emocjonalne",
+          "gen": "emocjonalnego",
+          "dat": "emocjonalnemu",
+          "acc": "emocjonalne",
+          "ins": "emocjonalnym",
+          "loc": "emocjonalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "emocjonalni",
+          "gen": "emocjonalnych",
+          "dat": "emocjonalnym",
+          "acc": "emocjonalnych",
+          "ins": "emocjonalnymi",
+          "loc": "emocjonalnych"
+        },
+        "nonvirile": {
+          "nom": "emocjonalne",
+          "gen": "emocjonalnych",
+          "dat": "emocjonalnym",
+          "acc": "emocjonalne",
+          "ins": "emocjonalnymi",
+          "loc": "emocjonalnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej emocjonalny",
+          "gen": "bardziej emocjonalnego",
+          "dat": "bardziej emocjonalnemu",
+          "acc": "bardziej emocjonalnego",
+          "ins": "bardziej emocjonalnym",
+          "loc": "bardziej emocjonalnym"
+        },
+        "m3": {
+          "nom": "bardziej emocjonalny",
+          "gen": "bardziej emocjonalnego",
+          "dat": "bardziej emocjonalnemu",
+          "acc": "bardziej emocjonalny",
+          "ins": "bardziej emocjonalnym",
+          "loc": "bardziej emocjonalnym"
+        },
+        "f": {
+          "nom": "bardziej emocjonalna",
+          "gen": "bardziej emocjonalnej",
+          "dat": "bardziej emocjonalnej",
+          "acc": "bardziej emocjonalną",
+          "ins": "bardziej emocjonalną",
+          "loc": "bardziej emocjonalnej"
+        },
+        "n": {
+          "nom": "bardziej emocjonalne",
+          "gen": "bardziej emocjonalnego",
+          "dat": "bardziej emocjonalnemu",
+          "acc": "bardziej emocjonalne",
+          "ins": "bardziej emocjonalnym",
+          "loc": "bardziej emocjonalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej emocjonalni",
+          "gen": "bardziej emocjonalnych",
+          "dat": "bardziej emocjonalnym",
+          "acc": "bardziej emocjonalnych",
+          "ins": "bardziej emocjonalnymi",
+          "loc": "bardziej emocjonalnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej emocjonalne",
+          "gen": "bardziej emocjonalnych",
+          "dat": "bardziej emocjonalnym",
+          "acc": "bardziej emocjonalne",
+          "ins": "bardziej emocjonalnymi",
+          "loc": "bardziej emocjonalnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej emocjonalny",
+          "gen": "najbardziej emocjonalnego",
+          "dat": "najbardziej emocjonalnemu",
+          "acc": "najbardziej emocjonalnego",
+          "ins": "najbardziej emocjonalnym",
+          "loc": "najbardziej emocjonalnym"
+        },
+        "m3": {
+          "nom": "najbardziej emocjonalny",
+          "gen": "najbardziej emocjonalnego",
+          "dat": "najbardziej emocjonalnemu",
+          "acc": "najbardziej emocjonalny",
+          "ins": "najbardziej emocjonalnym",
+          "loc": "najbardziej emocjonalnym"
+        },
+        "f": {
+          "nom": "najbardziej emocjonalna",
+          "gen": "najbardziej emocjonalnej",
+          "dat": "najbardziej emocjonalnej",
+          "acc": "najbardziej emocjonalną",
+          "ins": "najbardziej emocjonalną",
+          "loc": "najbardziej emocjonalnej"
+        },
+        "n": {
+          "nom": "najbardziej emocjonalne",
+          "gen": "najbardziej emocjonalnego",
+          "dat": "najbardziej emocjonalnemu",
+          "acc": "najbardziej emocjonalne",
+          "ins": "najbardziej emocjonalnym",
+          "loc": "najbardziej emocjonalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej emocjonalni",
+          "gen": "najbardziej emocjonalnych",
+          "dat": "najbardziej emocjonalnym",
+          "acc": "najbardziej emocjonalnych",
+          "ins": "najbardziej emocjonalnymi",
+          "loc": "najbardziej emocjonalnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej emocjonalne",
+          "gen": "najbardziej emocjonalnych",
+          "dat": "najbardziej emocjonalnym",
+          "acc": "najbardziej emocjonalne",
+          "ins": "najbardziej emocjonalnymi",
+          "loc": "najbardziej emocjonalnych"
+        }
+      }
+    }
+  }
+}

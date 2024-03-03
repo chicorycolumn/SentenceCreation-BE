@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ojciec",
+      "gen": "ojca",
+      "dat": "ojcu",
+      "acc": "ojca",
+      "ins": "ojcem",
+      "loc": "ojcu",
+      "voc": "ojcze"
+    },
+    "plural": {
+      "nom": "ojcowie",
+      "gen": "ojców",
+      "dat": "ojcom",
+      "acc": "ojców",
+      "ins": "ojcami",
+      "loc": "ojcach",
+      "voc": "ojcowie"
+    }
+  }
+}

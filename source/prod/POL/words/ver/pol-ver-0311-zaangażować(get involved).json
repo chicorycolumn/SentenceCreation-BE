@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zaangażować",
+    "verbalNoun": "zaangażowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zaangażowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zaangażowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaangażuje się"
+          },
+          "plural": {
+            "allPluralGenders": "zaangażuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zaangażuję"
+          },
+          "plural": {
+            "allPluralGenders": "zaangażujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zaangażujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zaangażujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zaangażuje"
+          },
+          "plural": {
+            "allPluralGenders": "zaangażują"
+          }
+        }
+      },
+      "imperative": "zaangażuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaangażowano"
+          },
+          "plural": {
+            "allPluralGenders": "zaangażowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zaangażowałem",
+            "f": "zaangażowałam"
+          },
+          "plural": {
+            "virile": "zaangażowaliśmy",
+            "nonvirile": "zaangażowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zaangażowałeś",
+            "f": "zaangażowałaś"
+          },
+          "plural": {
+            "virile": "zaangażowaliście",
+            "nonvirile": "zaangażowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zaangażował",
+            "f": "zaangażowała",
+            "n": "zaangażowało"
+          },
+          "plural": {
+            "virile": "zaangażowali",
+            "nonvirile": "zaangażowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

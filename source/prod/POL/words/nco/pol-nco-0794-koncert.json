@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "koncert",
+      "gen": "koncertu",
+      "dat": "koncertowi",
+      "acc": "koncert",
+      "ins": "koncertem",
+      "loc": "koncercie",
+      "voc": "koncercie"
+    },
+    "plural": {
+      "nom": "koncerty",
+      "gen": "koncertów",
+      "dat": "koncertom",
+      "acc": "koncerty",
+      "ins": "koncertami",
+      "loc": "koncertach",
+      "voc": "koncerty"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "fałszywie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "fałszywy",
+          "gen": "fałszywego",
+          "dat": "fałszywemu",
+          "acc": "fałszywego",
+          "ins": "fałszywym",
+          "loc": "fałszywym"
+        },
+        "m3": {
+          "nom": "fałszywy",
+          "gen": "fałszywego",
+          "dat": "fałszywemu",
+          "acc": "fałszywy",
+          "ins": "fałszywym",
+          "loc": "fałszywym"
+        },
+        "f": {
+          "nom": "fałszywa",
+          "gen": "fałszywej",
+          "dat": "fałszywej",
+          "acc": "fałszywą",
+          "ins": "fałszywą",
+          "loc": "fałszywej"
+        },
+        "n": {
+          "nom": "fałszywe",
+          "gen": "fałszywego",
+          "dat": "fałszywemu",
+          "acc": "fałszywe",
+          "ins": "fałszywym",
+          "loc": "fałszywym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "fałszywi",
+          "gen": "fałszywych",
+          "dat": "fałszywym",
+          "acc": "fałszywych",
+          "ins": "fałszywymi",
+          "loc": "fałszywych"
+        },
+        "nonvirile": {
+          "nom": "fałszywe",
+          "gen": "fałszywych",
+          "dat": "fałszywym",
+          "acc": "fałszywe",
+          "ins": "fałszywymi",
+          "loc": "fałszywych"
+        }
+      }
+    }
+  }
+}

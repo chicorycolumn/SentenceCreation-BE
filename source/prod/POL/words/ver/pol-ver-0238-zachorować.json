@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zachorować",
+    "verbalNoun": "zachorowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zachorowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zachoruje się"
+          },
+          "plural": {
+            "allPluralGenders": "zachoruje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zachoruję"
+          },
+          "plural": {
+            "allPluralGenders": "zachorujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zachorujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zachorujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zachoruje"
+          },
+          "plural": {
+            "allPluralGenders": "zachorują"
+          }
+        }
+      },
+      "imperative": "zachoruj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zachorowano"
+          },
+          "plural": {
+            "allPluralGenders": "zachorowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zachorowałem",
+            "f": "zachorowałam"
+          },
+          "plural": {
+            "virile": "zachorowaliśmy",
+            "nonvirile": "zachorowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zachorowałeś",
+            "f": "zachorowałaś"
+          },
+          "plural": {
+            "virile": "zachorowaliście",
+            "nonvirile": "zachorowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zachorował",
+            "f": "zachorowała",
+            "n": "zachorowało"
+          },
+          "plural": {
+            "virile": "zachorowali",
+            "nonvirile": "zachorowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

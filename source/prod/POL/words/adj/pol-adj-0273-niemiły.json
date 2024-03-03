@@ -1,0 +1,174 @@
+{
+  "inflections": {
+    "adverb": {
+      "isTerminus": true,
+      "normal": [
+        "niemiło",
+        "niemile"
+      ],
+      "additionalInfrequent": []
+    },
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niemiły",
+          "gen": "niemiłego",
+          "dat": "niemiłemu",
+          "acc": "niemiłego",
+          "ins": "niemiłym",
+          "loc": "niemiłym"
+        },
+        "m3": {
+          "nom": "niemiły",
+          "gen": "niemiłego",
+          "dat": "niemiłemu",
+          "acc": "niemiły",
+          "ins": "niemiłym",
+          "loc": "niemiłym"
+        },
+        "f": {
+          "nom": "niemiła",
+          "gen": "niemiłej",
+          "dat": "niemiłej",
+          "acc": "niemiłą",
+          "ins": "niemiłą",
+          "loc": "niemiłej"
+        },
+        "n": {
+          "nom": "niemiłe",
+          "gen": "niemiłego",
+          "dat": "niemiłemu",
+          "acc": "niemiłe",
+          "ins": "niemiłym",
+          "loc": "niemiłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niemili",
+          "gen": "niemiłych",
+          "dat": "niemiłym",
+          "acc": "niemiłych",
+          "ins": "niemiłymi",
+          "loc": "niemiłych"
+        },
+        "nonvirile": {
+          "nom": "niemiłe",
+          "gen": "niemiłych",
+          "dat": "niemiłym",
+          "acc": "niemiłe",
+          "ins": "niemiłymi",
+          "loc": "niemiłych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej niemiły",
+          "gen": "bardziej niemiłego",
+          "dat": "bardziej niemiłemu",
+          "acc": "bardziej niemiłego",
+          "ins": "bardziej niemiłym",
+          "loc": "bardziej niemiłym"
+        },
+        "m3": {
+          "nom": "bardziej niemiły",
+          "gen": "bardziej niemiłego",
+          "dat": "bardziej niemiłemu",
+          "acc": "bardziej niemiły",
+          "ins": "bardziej niemiłym",
+          "loc": "bardziej niemiłym"
+        },
+        "f": {
+          "nom": "bardziej niemiła",
+          "gen": "bardziej niemiłej",
+          "dat": "bardziej niemiłej",
+          "acc": "bardziej niemiłą",
+          "ins": "bardziej niemiłą",
+          "loc": "bardziej niemiłej"
+        },
+        "n": {
+          "nom": "bardziej niemiłe",
+          "gen": "bardziej niemiłego",
+          "dat": "bardziej niemiłemu",
+          "acc": "bardziej niemiłe",
+          "ins": "bardziej niemiłym",
+          "loc": "bardziej niemiłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej niemili",
+          "gen": "bardziej niemiłych",
+          "dat": "bardziej niemiłym",
+          "acc": "bardziej niemiłych",
+          "ins": "bardziej niemiłymi",
+          "loc": "bardziej niemiłych"
+        },
+        "nonvirile": {
+          "nom": "bardziej niemiłe",
+          "gen": "bardziej niemiłych",
+          "dat": "bardziej niemiłym",
+          "acc": "bardziej niemiłe",
+          "ins": "bardziej niemiłymi",
+          "loc": "bardziej niemiłych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej niemiły",
+          "gen": "najbardziej niemiłego",
+          "dat": "najbardziej niemiłemu",
+          "acc": "najbardziej niemiłego",
+          "ins": "najbardziej niemiłym",
+          "loc": "najbardziej niemiłym"
+        },
+        "m3": {
+          "nom": "najbardziej niemiły",
+          "gen": "najbardziej niemiłego",
+          "dat": "najbardziej niemiłemu",
+          "acc": "najbardziej niemiły",
+          "ins": "najbardziej niemiłym",
+          "loc": "najbardziej niemiłym"
+        },
+        "f": {
+          "nom": "najbardziej niemiła",
+          "gen": "najbardziej niemiłej",
+          "dat": "najbardziej niemiłej",
+          "acc": "najbardziej niemiłą",
+          "ins": "najbardziej niemiłą",
+          "loc": "najbardziej niemiłej"
+        },
+        "n": {
+          "nom": "najbardziej niemiłe",
+          "gen": "najbardziej niemiłego",
+          "dat": "najbardziej niemiłemu",
+          "acc": "najbardziej niemiłe",
+          "ins": "najbardziej niemiłym",
+          "loc": "najbardziej niemiłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej niemili",
+          "gen": "najbardziej niemiłych",
+          "dat": "najbardziej niemiłym",
+          "acc": "najbardziej niemiłych",
+          "ins": "najbardziej niemiłymi",
+          "loc": "najbardziej niemiłych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej niemiłe",
+          "gen": "najbardziej niemiłych",
+          "dat": "najbardziej niemiłym",
+          "acc": "najbardziej niemiłe",
+          "ins": "najbardziej niemiłymi",
+          "loc": "najbardziej niemiłych"
+        }
+      }
+    }
+  }
+}

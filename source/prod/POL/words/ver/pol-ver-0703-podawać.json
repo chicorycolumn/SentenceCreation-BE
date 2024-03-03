@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "podawać",
+    "verbalNoun": "podawanie",
+    "activeAdjectival": "podający",
+    "passiveAdjectival": "podawany",
+    "contemporaryAdverbial": "podając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "podawaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podawano"
+          },
+          "plural": {
+            "allPluralGenders": "podawano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "podawałem",
+            "f": "podawałam"
+          },
+          "plural": {
+            "virile": "podawaliśmy",
+            "nonvirile": "podawałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podawałeś",
+            "f": "podawałaś"
+          },
+          "plural": {
+            "virile": "podawaliście",
+            "nonvirile": "podawałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podawał",
+            "f": "podawała",
+            "n": "podawało"
+          },
+          "plural": {
+            "virile": "podawali",
+            "nonvirile": "podawały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podaje się"
+          },
+          "plural": {
+            "allPluralGenders": "podaje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podaję"
+          },
+          "plural": {
+            "allPluralGenders": "podajemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podajesz"
+          },
+          "plural": {
+            "allPluralGenders": "podajecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podaje"
+          },
+          "plural": {
+            "allPluralGenders": "podają"
+          }
+        }
+      }
+    }
+  }
+}

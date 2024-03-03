@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niewielki",
+          "gen": "niewielkiego",
+          "dat": "niewielkiemu",
+          "acc": "niewielkiego",
+          "ins": "niewielkim",
+          "loc": "niewielkim"
+        },
+        "m3": {
+          "nom": "niewielki",
+          "gen": "niewielkiego",
+          "dat": "niewielkiemu",
+          "acc": "niewielki",
+          "ins": "niewielkim",
+          "loc": "niewielkim"
+        },
+        "f": {
+          "nom": "niewielka",
+          "gen": "niewielkiej",
+          "dat": "niewielkiej",
+          "acc": "niewielką",
+          "ins": "niewielką",
+          "loc": "niewielkiej"
+        },
+        "n": {
+          "nom": "niewielkie",
+          "gen": "niewielkiego",
+          "dat": "niewielkiemu",
+          "acc": "niewielkie",
+          "ins": "niewielkim",
+          "loc": "niewielkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niewielcy",
+          "gen": "niewielkich",
+          "dat": "niewielkim",
+          "acc": "niewielkich",
+          "ins": "niewielkimi",
+          "loc": "niewielkich"
+        },
+        "nonvirile": {
+          "nom": "niewielkie",
+          "gen": "niewielkich",
+          "dat": "niewielkim",
+          "acc": "niewielkie",
+          "ins": "niewielkimi",
+          "loc": "niewielkich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej niewielki",
+          "gen": "bardziej niewielkiego",
+          "dat": "bardziej niewielkiemu",
+          "acc": "bardziej niewielkiego",
+          "ins": "bardziej niewielkim",
+          "loc": "bardziej niewielkim"
+        },
+        "m3": {
+          "nom": "bardziej niewielki",
+          "gen": "bardziej niewielkiego",
+          "dat": "bardziej niewielkiemu",
+          "acc": "bardziej niewielki",
+          "ins": "bardziej niewielkim",
+          "loc": "bardziej niewielkim"
+        },
+        "f": {
+          "nom": "bardziej niewielka",
+          "gen": "bardziej niewielkiej",
+          "dat": "bardziej niewielkiej",
+          "acc": "bardziej niewielką",
+          "ins": "bardziej niewielką",
+          "loc": "bardziej niewielkiej"
+        },
+        "n": {
+          "nom": "bardziej niewielkie",
+          "gen": "bardziej niewielkiego",
+          "dat": "bardziej niewielkiemu",
+          "acc": "bardziej niewielkie",
+          "ins": "bardziej niewielkim",
+          "loc": "bardziej niewielkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej niewielcy",
+          "gen": "bardziej niewielkich",
+          "dat": "bardziej niewielkim",
+          "acc": "bardziej niewielkich",
+          "ins": "bardziej niewielkimi",
+          "loc": "bardziej niewielkich"
+        },
+        "nonvirile": {
+          "nom": "bardziej niewielkie",
+          "gen": "bardziej niewielkich",
+          "dat": "bardziej niewielkim",
+          "acc": "bardziej niewielkie",
+          "ins": "bardziej niewielkimi",
+          "loc": "bardziej niewielkich"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej niewielki",
+          "gen": "najbardziej niewielkiego",
+          "dat": "najbardziej niewielkiemu",
+          "acc": "najbardziej niewielkiego",
+          "ins": "najbardziej niewielkim",
+          "loc": "najbardziej niewielkim"
+        },
+        "m3": {
+          "nom": "najbardziej niewielki",
+          "gen": "najbardziej niewielkiego",
+          "dat": "najbardziej niewielkiemu",
+          "acc": "najbardziej niewielki",
+          "ins": "najbardziej niewielkim",
+          "loc": "najbardziej niewielkim"
+        },
+        "f": {
+          "nom": "najbardziej niewielka",
+          "gen": "najbardziej niewielkiej",
+          "dat": "najbardziej niewielkiej",
+          "acc": "najbardziej niewielką",
+          "ins": "najbardziej niewielką",
+          "loc": "najbardziej niewielkiej"
+        },
+        "n": {
+          "nom": "najbardziej niewielkie",
+          "gen": "najbardziej niewielkiego",
+          "dat": "najbardziej niewielkiemu",
+          "acc": "najbardziej niewielkie",
+          "ins": "najbardziej niewielkim",
+          "loc": "najbardziej niewielkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej niewielcy",
+          "gen": "najbardziej niewielkich",
+          "dat": "najbardziej niewielkim",
+          "acc": "najbardziej niewielkich",
+          "ins": "najbardziej niewielkimi",
+          "loc": "najbardziej niewielkich"
+        },
+        "nonvirile": {
+          "nom": "najbardziej niewielkie",
+          "gen": "najbardziej niewielkich",
+          "dat": "najbardziej niewielkim",
+          "acc": "najbardziej niewielkie",
+          "ins": "najbardziej niewielkimi",
+          "loc": "najbardziej niewielkich"
+        }
+      }
+    }
+  }
+}

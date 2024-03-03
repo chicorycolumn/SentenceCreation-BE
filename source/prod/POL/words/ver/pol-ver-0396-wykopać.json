@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wykopać",
+    "verbalNoun": "wykopanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "wykopany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "wykopawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wykopie się"
+          },
+          "plural": {
+            "allPluralGenders": "wykopie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wykopię"
+          },
+          "plural": {
+            "allPluralGenders": "wykopiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wykopiesz"
+          },
+          "plural": {
+            "allPluralGenders": "wykopiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wykopie"
+          },
+          "plural": {
+            "allPluralGenders": "wykopią"
+          }
+        }
+      },
+      "imperative": "wykop",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wykopano"
+          },
+          "plural": {
+            "allPluralGenders": "wykopano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wykopałem",
+            "f": "wykopałam"
+          },
+          "plural": {
+            "virile": "wykopaliśmy",
+            "nonvirile": "wykopałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wykopałeś",
+            "f": "wykopałaś"
+          },
+          "plural": {
+            "virile": "wykopaliście",
+            "nonvirile": "wykopałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wykopał",
+            "f": "wykopała",
+            "n": "wykopało"
+          },
+          "plural": {
+            "virile": "wykopali",
+            "nonvirile": "wykopały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

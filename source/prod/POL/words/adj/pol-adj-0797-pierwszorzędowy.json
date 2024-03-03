@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "pierwszorzędowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pierwszorzędowy",
+          "gen": "pierwszorzędowego",
+          "dat": "pierwszorzędowemu",
+          "acc": "pierwszorzędowego",
+          "ins": "pierwszorzędowym",
+          "loc": "pierwszorzędowym"
+        },
+        "m3": {
+          "nom": "pierwszorzędowy",
+          "gen": "pierwszorzędowego",
+          "dat": "pierwszorzędowemu",
+          "acc": "pierwszorzędowy",
+          "ins": "pierwszorzędowym",
+          "loc": "pierwszorzędowym"
+        },
+        "f": {
+          "nom": "pierwszorzędowa",
+          "gen": "pierwszorzędowej",
+          "dat": "pierwszorzędowej",
+          "acc": "pierwszorzędową",
+          "ins": "pierwszorzędową",
+          "loc": "pierwszorzędowej"
+        },
+        "n": {
+          "nom": "pierwszorzędowe",
+          "gen": "pierwszorzędowego",
+          "dat": "pierwszorzędowemu",
+          "acc": "pierwszorzędowe",
+          "ins": "pierwszorzędowym",
+          "loc": "pierwszorzędowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pierwszorzędowi",
+          "gen": "pierwszorzędowych",
+          "dat": "pierwszorzędowym",
+          "acc": "pierwszorzędowych",
+          "ins": "pierwszorzędowymi",
+          "loc": "pierwszorzędowych"
+        },
+        "nonvirile": {
+          "nom": "pierwszorzędowe",
+          "gen": "pierwszorzędowych",
+          "dat": "pierwszorzędowym",
+          "acc": "pierwszorzędowe",
+          "ins": "pierwszorzędowymi",
+          "loc": "pierwszorzędowych"
+        }
+      }
+    }
+  }
+}

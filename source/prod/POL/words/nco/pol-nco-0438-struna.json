@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "struna",
+      "gen": "struny",
+      "dat": "strunie",
+      "acc": "strunę",
+      "ins": "struną",
+      "loc": "strunie",
+      "voc": "struno"
+    },
+    "plural": {
+      "nom": "struny",
+      "gen": "strun",
+      "dat": "strunom",
+      "acc": "struny",
+      "ins": "strunami",
+      "loc": "strunach",
+      "voc": "struny"
+    }
+  }
+}

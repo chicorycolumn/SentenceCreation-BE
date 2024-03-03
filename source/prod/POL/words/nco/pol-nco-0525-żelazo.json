@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "żelazo",
+      "gen": "żelaza",
+      "dat": "żelazu",
+      "acc": "żelazo",
+      "ins": "żelazem",
+      "loc": "żelazie",
+      "voc": "żelazo"
+    }
+  }
+}

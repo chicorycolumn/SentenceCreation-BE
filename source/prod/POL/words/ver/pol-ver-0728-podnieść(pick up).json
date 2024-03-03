@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "podnieść",
+    "verbalNoun": "podniesienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "podniesiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "podniósłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podniesie się"
+          },
+          "plural": {
+            "allPluralGenders": "podniesie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podniosę"
+          },
+          "plural": {
+            "allPluralGenders": "podniesiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podniesiesz"
+          },
+          "plural": {
+            "allPluralGenders": "podniesiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podniesie"
+          },
+          "plural": {
+            "allPluralGenders": "podniosą"
+          }
+        }
+      },
+      "imperative": "podnieś",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podniesiono"
+          },
+          "plural": {
+            "allPluralGenders": "podniesiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "podniosłem",
+            "f": "podniosłam"
+          },
+          "plural": {
+            "virile": "podnieśliśmy",
+            "nonvirile": "podniosłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podniosłeś",
+            "f": "podniosłaś"
+          },
+          "plural": {
+            "virile": "podnieśliście",
+            "nonvirile": "podniosłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podniósł",
+            "f": "podniosła",
+            "n": "podniosło"
+          },
+          "plural": {
+            "virile": "podnieśli",
+            "nonvirile": "podniosły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

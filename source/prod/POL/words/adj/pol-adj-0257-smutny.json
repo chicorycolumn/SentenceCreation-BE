@@ -1,0 +1,175 @@
+{
+  "inflections": {
+    "adverb": {
+      "isTerminus": true,
+      "normal": [
+        "smutno"
+      ],
+      "additionalInfrequent": [
+        "smutnie"
+      ]
+    },
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "smutny",
+          "gen": "smutnego",
+          "dat": "smutnemu",
+          "acc": "smutnego",
+          "ins": "smutnym",
+          "loc": "smutnym"
+        },
+        "m3": {
+          "nom": "smutny",
+          "gen": "smutnego",
+          "dat": "smutnemu",
+          "acc": "smutny",
+          "ins": "smutnym",
+          "loc": "smutnym"
+        },
+        "f": {
+          "nom": "smutna",
+          "gen": "smutnej",
+          "dat": "smutnej",
+          "acc": "smutną",
+          "ins": "smutną",
+          "loc": "smutnej"
+        },
+        "n": {
+          "nom": "smutne",
+          "gen": "smutnego",
+          "dat": "smutnemu",
+          "acc": "smutne",
+          "ins": "smutnym",
+          "loc": "smutnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "smutni",
+          "gen": "smutnych",
+          "dat": "smutnym",
+          "acc": "smutnych",
+          "ins": "smutnymi",
+          "loc": "smutnych"
+        },
+        "nonvirile": {
+          "nom": "smutne",
+          "gen": "smutnych",
+          "dat": "smutnym",
+          "acc": "smutne",
+          "ins": "smutnymi",
+          "loc": "smutnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "smutniejszy",
+          "gen": "smutniejszego",
+          "dat": "smutniejszemu",
+          "acc": "smutniejszego",
+          "ins": "smutniejszym",
+          "loc": "smutniejszym"
+        },
+        "m3": {
+          "nom": "smutniejszy",
+          "gen": "smutniejszego",
+          "dat": "smutniejszemu",
+          "acc": "smutniejszy",
+          "ins": "smutniejszym",
+          "loc": "smutniejszym"
+        },
+        "f": {
+          "nom": "smutniejsza",
+          "gen": "smutniejszej",
+          "dat": "smutniejszej",
+          "acc": "smutniejszą",
+          "ins": "smutniejszą",
+          "loc": "smutniejszej"
+        },
+        "n": {
+          "nom": "smutniejsze",
+          "gen": "smutniejszego",
+          "dat": "smutniejszemu",
+          "acc": "smutniejsze",
+          "ins": "smutniejszym",
+          "loc": "smutniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "smutniejsi",
+          "gen": "smutniejszych",
+          "dat": "smutniejszym",
+          "acc": "smutniejszych",
+          "ins": "smutniejszymi",
+          "loc": "smutniejszych"
+        },
+        "nonvirile": {
+          "nom": "smutniejsze",
+          "gen": "smutniejszych",
+          "dat": "smutniejszym",
+          "acc": "smutniejsze",
+          "ins": "smutniejszymi",
+          "loc": "smutniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najsmutniejszy",
+          "gen": "najsmutniejszego",
+          "dat": "najsmutniejszemu",
+          "acc": "najsmutniejszego",
+          "ins": "najsmutniejszym",
+          "loc": "najsmutniejszym"
+        },
+        "m3": {
+          "nom": "najsmutniejszy",
+          "gen": "najsmutniejszego",
+          "dat": "najsmutniejszemu",
+          "acc": "najsmutniejszy",
+          "ins": "najsmutniejszym",
+          "loc": "najsmutniejszym"
+        },
+        "f": {
+          "nom": "najsmutniejsza",
+          "gen": "najsmutniejszej",
+          "dat": "najsmutniejszej",
+          "acc": "najsmutniejszą",
+          "ins": "najsmutniejszą",
+          "loc": "najsmutniejszej"
+        },
+        "n": {
+          "nom": "najsmutniejsze",
+          "gen": "najsmutniejszego",
+          "dat": "najsmutniejszemu",
+          "acc": "najsmutniejsze",
+          "ins": "najsmutniejszym",
+          "loc": "najsmutniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najsmutniejsi",
+          "gen": "najsmutniejszych",
+          "dat": "najsmutniejszym",
+          "acc": "najsmutniejszych",
+          "ins": "najsmutniejszymi",
+          "loc": "najsmutniejszych"
+        },
+        "nonvirile": {
+          "nom": "najsmutniejsze",
+          "gen": "najsmutniejszych",
+          "dat": "najsmutniejszym",
+          "acc": "najsmutniejsze",
+          "ins": "najsmutniejszymi",
+          "loc": "najsmutniejszych"
+        }
+      }
+    }
+  }
+}

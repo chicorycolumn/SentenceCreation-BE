@@ -1,0 +1,106 @@
+{
+  "inflections": {
+    "infinitive": "ryzykować",
+    "verbalNoun": "ryzykowanie",
+    "activeAdjectival": "ryzykujący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "ryzykując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "ryzykuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ryzykowano"
+          },
+          "plural": {
+            "allPluralGenders": "ryzykowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": [
+              "ryzykowałem"
+            ],
+            "f": [
+              "ryzykowałam"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "ryzykowaliśmy"
+            ],
+            "nonvirile": [
+              "ryzykowałyśmy"
+            ]
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": [
+              "ryzykowałeś"
+            ],
+            "f": [
+              "ryzykowałaś"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "ryzykowaliście"
+            ],
+            "nonvirile": [
+              "ryzykowałyście"
+            ]
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ryzykował",
+            "f": "ryzykowała",
+            "n": "ryzykowało"
+          },
+          "plural": {
+            "virile": "ryzykowali",
+            "nonvirile": "ryzykowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ryzykuje się"
+          },
+          "plural": {
+            "allPluralGenders": "ryzykuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "ryzykuję"
+          },
+          "plural": {
+            "allPluralGenders": "ryzykujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "ryzykujesz"
+          },
+          "plural": {
+            "allPluralGenders": "ryzykujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ryzykuje"
+          },
+          "plural": {
+            "allPluralGenders": "ryzykują"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "czuwać",
+    "verbalNoun": "czuwanie",
+    "activeAdjectival": "czuwający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "czuwając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "czuwaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "czuwano"
+          },
+          "plural": {
+            "allPluralGenders": "czuwano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "czuwałem",
+            "f": "czuwałam"
+          },
+          "plural": {
+            "virile": "czuwaliśmy",
+            "nonvirile": "czuwałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "czuwałeś",
+            "f": "czuwałaś"
+          },
+          "plural": {
+            "virile": "czuwaliście",
+            "nonvirile": "czuwałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "czuwał",
+            "f": "czuwała",
+            "n": "czuwało"
+          },
+          "plural": {
+            "virile": "czuwali",
+            "nonvirile": "czuwały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "czuwa się"
+          },
+          "plural": {
+            "allPluralGenders": "czuwa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "czuwam"
+          },
+          "plural": {
+            "allPluralGenders": "czuwamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "czuwasz"
+          },
+          "plural": {
+            "allPluralGenders": "czuwacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "czuwa"
+          },
+          "plural": {
+            "allPluralGenders": "czuwają"
+          }
+        }
+      }
+    }
+  }
+}

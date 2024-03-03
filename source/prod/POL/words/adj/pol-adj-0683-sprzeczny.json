@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "sprzecznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "sprzeczny",
+          "gen": "sprzecznego",
+          "dat": "sprzecznemu",
+          "acc": "sprzecznego",
+          "ins": "sprzecznym",
+          "loc": "sprzecznym"
+        },
+        "m3": {
+          "nom": "sprzeczny",
+          "gen": "sprzecznego",
+          "dat": "sprzecznemu",
+          "acc": "sprzeczny",
+          "ins": "sprzecznym",
+          "loc": "sprzecznym"
+        },
+        "f": {
+          "nom": "sprzeczna",
+          "gen": "sprzecznej",
+          "dat": "sprzecznej",
+          "acc": "sprzeczną",
+          "ins": "sprzeczną",
+          "loc": "sprzecznej"
+        },
+        "n": {
+          "nom": "sprzeczne",
+          "gen": "sprzecznego",
+          "dat": "sprzecznemu",
+          "acc": "sprzeczne",
+          "ins": "sprzecznym",
+          "loc": "sprzecznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "sprzeczni",
+          "gen": "sprzecznych",
+          "dat": "sprzecznym",
+          "acc": "sprzecznych",
+          "ins": "sprzecznymi",
+          "loc": "sprzecznych"
+        },
+        "nonvirile": {
+          "nom": "sprzeczne",
+          "gen": "sprzecznych",
+          "dat": "sprzecznym",
+          "acc": "sprzeczne",
+          "ins": "sprzecznymi",
+          "loc": "sprzecznych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oszukać",
+    "verbalNoun": "oszukanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "oszukany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "oszukawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oszuka się"
+          },
+          "plural": {
+            "allPluralGenders": "oszuka się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oszukam"
+          },
+          "plural": {
+            "allPluralGenders": "oszukamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oszukasz"
+          },
+          "plural": {
+            "allPluralGenders": "oszukacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "oszuka"
+          },
+          "plural": {
+            "allPluralGenders": "oszukają"
+          }
+        }
+      },
+      "imperative": "oszukaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oszukano"
+          },
+          "plural": {
+            "allPluralGenders": "oszukano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oszukałem",
+            "f": "oszukałam"
+          },
+          "plural": {
+            "virile": "oszukaliśmy",
+            "nonvirile": "oszukałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oszukałeś",
+            "f": "oszukałaś"
+          },
+          "plural": {
+            "virile": "oszukaliście",
+            "nonvirile": "oszukałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oszukał",
+            "f": "oszukała",
+            "n": "oszukało"
+          },
+          "plural": {
+            "virile": "oszukali",
+            "nonvirile": "oszukały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

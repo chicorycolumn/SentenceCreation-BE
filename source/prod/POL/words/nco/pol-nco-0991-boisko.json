@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "boisko",
+      "gen": "boiska",
+      "dat": "boisku",
+      "acc": "boisko",
+      "ins": "boiskiem",
+      "loc": "boisku",
+      "voc": "boisko"
+    },
+    "plural": {
+      "nom": "boiska",
+      "gen": "boisk",
+      "dat": "boiskom",
+      "acc": "boiska",
+      "ins": "boiskami",
+      "loc": "boiskach",
+      "voc": "boiska"
+    }
+  }
+}

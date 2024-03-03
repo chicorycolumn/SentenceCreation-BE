@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "Ziemia",
+      "gen": "Ziemi",
+      "dat": "Ziemi",
+      "acc": "Ziemię",
+      "ins": "Ziemią",
+      "loc": "Ziemi",
+      "voc": "Ziemio"
+    },
+    "plural": {
+      "nom": "Ziemie",
+      "gen": "Ziem",
+      "dat": "Ziemiom",
+      "acc": "Ziemie",
+      "ins": "Ziemiami",
+      "loc": "Ziemiach",
+      "voc": "Ziemie"
+    }
+  }
+}

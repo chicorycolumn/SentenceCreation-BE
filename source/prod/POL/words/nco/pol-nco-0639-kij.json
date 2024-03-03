@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kij",
+      "gen": "kija",
+      "dat": "kijowi",
+      "acc": "kij",
+      "ins": "kijem",
+      "loc": "kiju",
+      "voc": "kiju"
+    },
+    "plural": {
+      "nom": "kije",
+      "gen": "kijów",
+      "dat": "kijom",
+      "acc": "kije",
+      "ins": "kijami",
+      "loc": "kijach",
+      "voc": "kije"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "biedronka",
+      "gen": "biedronki",
+      "dat": "biedronce",
+      "acc": "biedronkę",
+      "ins": "biedronką",
+      "loc": "biedronce",
+      "voc": "biedronko"
+    },
+    "plural": {
+      "nom": "biedronki",
+      "gen": "biedronek",
+      "dat": "biedronkom",
+      "acc": "biedronki",
+      "ins": "biedronkami",
+      "loc": "biedronkach",
+      "voc": "biedronki"
+    }
+  }
+}

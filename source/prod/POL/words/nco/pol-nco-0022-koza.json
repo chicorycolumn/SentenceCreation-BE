@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "koza",
+      "gen": "kozy",
+      "dat": "kozie",
+      "acc": "kozę",
+      "ins": "kozą",
+      "loc": "kozie",
+      "voc": "kozo"
+    },
+    "plural": {
+      "nom": "kozy",
+      "gen": "kóz",
+      "dat": "kozom",
+      "acc": "kozy",
+      "ins": "kozami",
+      "loc": "kozach",
+      "voc": "kozy"
+    }
+  }
+}

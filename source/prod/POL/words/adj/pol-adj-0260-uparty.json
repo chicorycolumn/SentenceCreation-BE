@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "uparcie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "uparty",
+          "gen": "upartego",
+          "dat": "upartemu",
+          "acc": "upartego",
+          "ins": "upartym",
+          "loc": "upartym"
+        },
+        "m3": {
+          "nom": "uparty",
+          "gen": "upartego",
+          "dat": "upartemu",
+          "acc": "uparty",
+          "ins": "upartym",
+          "loc": "upartym"
+        },
+        "f": {
+          "nom": "uparta",
+          "gen": "upartej",
+          "dat": "upartej",
+          "acc": "upartą",
+          "ins": "upartą",
+          "loc": "upartej"
+        },
+        "n": {
+          "nom": "uparte",
+          "gen": "upartego",
+          "dat": "upartemu",
+          "acc": "uparte",
+          "ins": "upartym",
+          "loc": "upartym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "uparci",
+          "gen": "upartych",
+          "dat": "upartym",
+          "acc": "upartych",
+          "ins": "upartymi",
+          "loc": "upartych"
+        },
+        "nonvirile": {
+          "nom": "uparte",
+          "gen": "upartych",
+          "dat": "upartym",
+          "acc": "uparte",
+          "ins": "upartymi",
+          "loc": "upartych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej uparty",
+          "gen": "bardziej upartego",
+          "dat": "bardziej upartemu",
+          "acc": "bardziej upartego",
+          "ins": "bardziej upartym",
+          "loc": "bardziej upartym"
+        },
+        "m3": {
+          "nom": "bardziej uparty",
+          "gen": "bardziej upartego",
+          "dat": "bardziej upartemu",
+          "acc": "bardziej uparty",
+          "ins": "bardziej upartym",
+          "loc": "bardziej upartym"
+        },
+        "f": {
+          "nom": "bardziej uparta",
+          "gen": "bardziej upartej",
+          "dat": "bardziej upartej",
+          "acc": "bardziej upartą",
+          "ins": "bardziej upartą",
+          "loc": "bardziej upartej"
+        },
+        "n": {
+          "nom": "bardziej uparte",
+          "gen": "bardziej upartego",
+          "dat": "bardziej upartemu",
+          "acc": "bardziej uparte",
+          "ins": "bardziej upartym",
+          "loc": "bardziej upartym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej uparci",
+          "gen": "bardziej upartych",
+          "dat": "bardziej upartym",
+          "acc": "bardziej upartych",
+          "ins": "bardziej upartymi",
+          "loc": "bardziej upartych"
+        },
+        "nonvirile": {
+          "nom": "bardziej uparte",
+          "gen": "bardziej upartych",
+          "dat": "bardziej upartym",
+          "acc": "bardziej uparte",
+          "ins": "bardziej upartymi",
+          "loc": "bardziej upartych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej uparty",
+          "gen": "najbardziej upartego",
+          "dat": "najbardziej upartemu",
+          "acc": "najbardziej upartego",
+          "ins": "najbardziej upartym",
+          "loc": "najbardziej upartym"
+        },
+        "m3": {
+          "nom": "najbardziej uparty",
+          "gen": "najbardziej upartego",
+          "dat": "najbardziej upartemu",
+          "acc": "najbardziej uparty",
+          "ins": "najbardziej upartym",
+          "loc": "najbardziej upartym"
+        },
+        "f": {
+          "nom": "najbardziej uparta",
+          "gen": "najbardziej upartej",
+          "dat": "najbardziej upartej",
+          "acc": "najbardziej upartą",
+          "ins": "najbardziej upartą",
+          "loc": "najbardziej upartej"
+        },
+        "n": {
+          "nom": "najbardziej uparte",
+          "gen": "najbardziej upartego",
+          "dat": "najbardziej upartemu",
+          "acc": "najbardziej uparte",
+          "ins": "najbardziej upartym",
+          "loc": "najbardziej upartym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej uparci",
+          "gen": "najbardziej upartych",
+          "dat": "najbardziej upartym",
+          "acc": "najbardziej upartych",
+          "ins": "najbardziej upartymi",
+          "loc": "najbardziej upartych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej uparte",
+          "gen": "najbardziej upartych",
+          "dat": "najbardziej upartym",
+          "acc": "najbardziej uparte",
+          "ins": "najbardziej upartymi",
+          "loc": "najbardziej upartych"
+        }
+      }
+    }
+  }
+}

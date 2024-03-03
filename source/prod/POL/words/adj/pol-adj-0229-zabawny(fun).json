@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "zabawnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zabawny",
+          "gen": "zabawnego",
+          "dat": "zabawnemu",
+          "acc": "zabawnego",
+          "ins": "zabawnym",
+          "loc": "zabawnym"
+        },
+        "m3": {
+          "nom": "zabawny",
+          "gen": "zabawnego",
+          "dat": "zabawnemu",
+          "acc": "zabawny",
+          "ins": "zabawnym",
+          "loc": "zabawnym"
+        },
+        "f": {
+          "nom": "zabawna",
+          "gen": "zabawnej",
+          "dat": "zabawnej",
+          "acc": "zabawną",
+          "ins": "zabawną",
+          "loc": "zabawnej"
+        },
+        "n": {
+          "nom": "zabawne",
+          "gen": "zabawnego",
+          "dat": "zabawnemu",
+          "acc": "zabawne",
+          "ins": "zabawnym",
+          "loc": "zabawnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zabawni",
+          "gen": "zabawnych",
+          "dat": "zabawnym",
+          "acc": "zabawnych",
+          "ins": "zabawnymi",
+          "loc": "zabawnych"
+        },
+        "nonvirile": {
+          "nom": "zabawne",
+          "gen": "zabawnych",
+          "dat": "zabawnym",
+          "acc": "zabawne",
+          "ins": "zabawnymi",
+          "loc": "zabawnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "zabawniejszy",
+          "gen": "zabawniejszego",
+          "dat": "zabawniejszemu",
+          "acc": "zabawniejszego",
+          "ins": "zabawniejszym",
+          "loc": "zabawniejszym"
+        },
+        "m3": {
+          "nom": "zabawniejszy",
+          "gen": "zabawniejszego",
+          "dat": "zabawniejszemu",
+          "acc": "zabawniejszy",
+          "ins": "zabawniejszym",
+          "loc": "zabawniejszym"
+        },
+        "f": {
+          "nom": "zabawniejsza",
+          "gen": "zabawniejszej",
+          "dat": "zabawniejszej",
+          "acc": "zabawniejszą",
+          "ins": "zabawniejszą",
+          "loc": "zabawniejszej"
+        },
+        "n": {
+          "nom": "zabawniejsze",
+          "gen": "zabawniejszego",
+          "dat": "zabawniejszemu",
+          "acc": "zabawniejsze",
+          "ins": "zabawniejszym",
+          "loc": "zabawniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zabawniejsi",
+          "gen": "zabawniejszych",
+          "dat": "zabawniejszym",
+          "acc": "zabawniejszych",
+          "ins": "zabawniejszymi",
+          "loc": "zabawniejszych"
+        },
+        "nonvirile": {
+          "nom": "zabawniejsze",
+          "gen": "zabawniejszych",
+          "dat": "zabawniejszym",
+          "acc": "zabawniejsze",
+          "ins": "zabawniejszymi",
+          "loc": "zabawniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najzabawniejszy",
+          "gen": "najzabawniejszego",
+          "dat": "najzabawniejszemu",
+          "acc": "najzabawniejszego",
+          "ins": "najzabawniejszym",
+          "loc": "najzabawniejszym"
+        },
+        "m3": {
+          "nom": "najzabawniejszy",
+          "gen": "najzabawniejszego",
+          "dat": "najzabawniejszemu",
+          "acc": "najzabawniejszy",
+          "ins": "najzabawniejszym",
+          "loc": "najzabawniejszym"
+        },
+        "f": {
+          "nom": "najzabawniejsza",
+          "gen": "najzabawniejszej",
+          "dat": "najzabawniejszej",
+          "acc": "najzabawniejszą",
+          "ins": "najzabawniejszą",
+          "loc": "najzabawniejszej"
+        },
+        "n": {
+          "nom": "najzabawniejsze",
+          "gen": "najzabawniejszego",
+          "dat": "najzabawniejszemu",
+          "acc": "najzabawniejsze",
+          "ins": "najzabawniejszym",
+          "loc": "najzabawniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najzabawniejsi",
+          "gen": "najzabawniejszych",
+          "dat": "najzabawniejszym",
+          "acc": "najzabawniejszych",
+          "ins": "najzabawniejszymi",
+          "loc": "najzabawniejszych"
+        },
+        "nonvirile": {
+          "nom": "najzabawniejsze",
+          "gen": "najzabawniejszych",
+          "dat": "najzabawniejszym",
+          "acc": "najzabawniejsze",
+          "ins": "najzabawniejszymi",
+          "loc": "najzabawniejszych"
+        }
+      }
+    }
+  }
+}

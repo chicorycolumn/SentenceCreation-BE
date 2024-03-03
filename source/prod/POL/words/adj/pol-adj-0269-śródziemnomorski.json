@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "śródziemnomorski",
+          "gen": "śródziemnomorskiego",
+          "dat": "śródziemnomorskiemu",
+          "acc": "śródziemnomorskiego",
+          "ins": "śródziemnomorskim",
+          "loc": "śródziemnomorskim"
+        },
+        "m3": {
+          "nom": "śródziemnomorski",
+          "gen": "śródziemnomorskiego",
+          "dat": "śródziemnomorskiemu",
+          "acc": "śródziemnomorski",
+          "ins": "śródziemnomorskim",
+          "loc": "śródziemnomorskim"
+        },
+        "f": {
+          "nom": "śródziemnomorska",
+          "gen": "śródziemnomorskiej",
+          "dat": "śródziemnomorskiej",
+          "acc": "śródziemnomorską",
+          "ins": "śródziemnomorską",
+          "loc": "śródziemnomorskiej"
+        },
+        "n": {
+          "nom": "śródziemnomorskie",
+          "gen": "śródziemnomorskiego",
+          "dat": "śródziemnomorskiemu",
+          "acc": "śródziemnomorskie",
+          "ins": "śródziemnomorskim",
+          "loc": "śródziemnomorskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "śródziemnomorscy",
+          "gen": "śródziemnomorskich",
+          "dat": "śródziemnomorskim",
+          "acc": "śródziemnomorskich",
+          "ins": "śródziemnomorskimi",
+          "loc": "śródziemnomorskich"
+        },
+        "nonvirile": {
+          "nom": "śródziemnomorskie",
+          "gen": "śródziemnomorskich",
+          "dat": "śródziemnomorskim",
+          "acc": "śródziemnomorskie",
+          "ins": "śródziemnomorskimi",
+          "loc": "śródziemnomorskich"
+        }
+      }
+    }
+  }
+}

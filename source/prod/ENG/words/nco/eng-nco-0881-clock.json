@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "clock",
+      "gen": "clock's"
+    },
+    "plural": {
+      "nom": "clocks",
+      "gen": "clocks'"
+    }
+  }
+}

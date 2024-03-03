@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dać",
+    "verbalNoun": "danie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "dany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "dawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "da się"
+          },
+          "plural": {
+            "allPluralGenders": "da się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dam"
+          },
+          "plural": {
+            "allPluralGenders": "damy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dasz"
+          },
+          "plural": {
+            "allPluralGenders": "dacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "da"
+          },
+          "plural": {
+            "allPluralGenders": "dadzą"
+          }
+        }
+      },
+      "imperative": "daj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dano"
+          },
+          "plural": {
+            "allPluralGenders": "dano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dałem",
+            "f": "dałam"
+          },
+          "plural": {
+            "virile": "daliśmy",
+            "nonvirile": "dałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dałeś",
+            "f": "dałaś"
+          },
+          "plural": {
+            "virile": "daliście",
+            "nonvirile": "dałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dał",
+            "f": "dała",
+            "n": "dało"
+          },
+          "plural": {
+            "virile": "dali",
+            "nonvirile": "dały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

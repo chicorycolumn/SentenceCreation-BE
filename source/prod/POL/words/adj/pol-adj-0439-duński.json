@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "duński",
+          "gen": "duńskiego",
+          "dat": "duńskiemu",
+          "acc": "duńskiego",
+          "ins": "duńskim",
+          "loc": "duńskim"
+        },
+        "m3": {
+          "nom": "duński",
+          "gen": "duńskiego",
+          "dat": "duńskiemu",
+          "acc": "duński",
+          "ins": "duńskim",
+          "loc": "duńskim"
+        },
+        "f": {
+          "nom": "duńska",
+          "gen": "duńskiej",
+          "dat": "duńskiej",
+          "acc": "duńską",
+          "ins": "duńską",
+          "loc": "duńskiej"
+        },
+        "n": {
+          "nom": "duńskie",
+          "gen": "duńskiego",
+          "dat": "duńskiemu",
+          "acc": "duńskie",
+          "ins": "duńskim",
+          "loc": "duńskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "duńscy",
+          "gen": "duńskich",
+          "dat": "duńskim",
+          "acc": "duńskich",
+          "ins": "duńskimi",
+          "loc": "duńskich"
+        },
+        "nonvirile": {
+          "nom": "duńskie",
+          "gen": "duńskich",
+          "dat": "duńskim",
+          "acc": "duńskie",
+          "ins": "duńskimi",
+          "loc": "duńskich"
+        }
+      }
+    }
+  }
+}

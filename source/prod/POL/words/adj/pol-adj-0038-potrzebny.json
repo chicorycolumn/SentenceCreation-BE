@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "potrzebny",
+          "gen": "potrzebnego",
+          "dat": "potrzebnemu",
+          "acc": "potrzebnego",
+          "ins": "potrzebnym",
+          "loc": "potrzebnym"
+        },
+        "m3": {
+          "nom": "potrzebny",
+          "gen": "potrzebnego",
+          "dat": "potrzebnemu",
+          "acc": "potrzebny",
+          "ins": "potrzebnym",
+          "loc": "potrzebnym"
+        },
+        "f": {
+          "nom": "potrzebna",
+          "gen": "potrzebnej",
+          "dat": "potrzebnej",
+          "acc": "potrzebną",
+          "ins": "potrzebną",
+          "loc": "potrzebnej"
+        },
+        "n": {
+          "nom": "potrzebne",
+          "gen": "potrzebnego",
+          "dat": "potrzebnemu",
+          "acc": "potrzebne",
+          "ins": "potrzebnym",
+          "loc": "potrzebnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "potrzebni",
+          "gen": "potrzebnych",
+          "dat": "potrzebnym",
+          "acc": "potrzebnych",
+          "ins": "potrzebnymi",
+          "loc": "potrzebnych"
+        },
+        "nonvirile": {
+          "nom": "potrzebne",
+          "gen": "potrzebnych",
+          "dat": "potrzebnym",
+          "acc": "potrzebne",
+          "ins": "potrzebnymi",
+          "loc": "potrzebnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej potrzebny",
+          "gen": "bardziej potrzebnego",
+          "dat": "bardziej potrzebnemu",
+          "acc": "bardziej potrzebnego",
+          "ins": "bardziej potrzebnym",
+          "loc": "bardziej potrzebnym"
+        },
+        "m3": {
+          "nom": "bardziej potrzebny",
+          "gen": "bardziej potrzebnego",
+          "dat": "bardziej potrzebnemu",
+          "acc": "bardziej potrzebny",
+          "ins": "bardziej potrzebnym",
+          "loc": "bardziej potrzebnym"
+        },
+        "f": {
+          "nom": "bardziej potrzebna",
+          "gen": "bardziej potrzebnej",
+          "dat": "bardziej potrzebnej",
+          "acc": "bardziej potrzebną",
+          "ins": "bardziej potrzebną",
+          "loc": "bardziej potrzebnej"
+        },
+        "n": {
+          "nom": "bardziej potrzebne",
+          "gen": "bardziej potrzebnego",
+          "dat": "bardziej potrzebnemu",
+          "acc": "bardziej potrzebne",
+          "ins": "bardziej potrzebnym",
+          "loc": "bardziej potrzebnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej potrzebni",
+          "gen": "bardziej potrzebnych",
+          "dat": "bardziej potrzebnym",
+          "acc": "bardziej potrzebnych",
+          "ins": "bardziej potrzebnymi",
+          "loc": "bardziej potrzebnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej potrzebne",
+          "gen": "bardziej potrzebnych",
+          "dat": "bardziej potrzebnym",
+          "acc": "bardziej potrzebne",
+          "ins": "bardziej potrzebnymi",
+          "loc": "bardziej potrzebnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej potrzebny",
+          "gen": "najbardziej potrzebnego",
+          "dat": "najbardziej potrzebnemu",
+          "acc": "najbardziej potrzebnego",
+          "ins": "najbardziej potrzebnym",
+          "loc": "najbardziej potrzebnym"
+        },
+        "m3": {
+          "nom": "najbardziej potrzebny",
+          "gen": "najbardziej potrzebnego",
+          "dat": "najbardziej potrzebnemu",
+          "acc": "najbardziej potrzebny",
+          "ins": "najbardziej potrzebnym",
+          "loc": "najbardziej potrzebnym"
+        },
+        "f": {
+          "nom": "najbardziej potrzebna",
+          "gen": "najbardziej potrzebnej",
+          "dat": "najbardziej potrzebnej",
+          "acc": "najbardziej potrzebną",
+          "ins": "najbardziej potrzebną",
+          "loc": "najbardziej potrzebnej"
+        },
+        "n": {
+          "nom": "najbardziej potrzebne",
+          "gen": "najbardziej potrzebnego",
+          "dat": "najbardziej potrzebnemu",
+          "acc": "najbardziej potrzebne",
+          "ins": "najbardziej potrzebnym",
+          "loc": "najbardziej potrzebnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej potrzebni",
+          "gen": "najbardziej potrzebnych",
+          "dat": "najbardziej potrzebnym",
+          "acc": "najbardziej potrzebnych",
+          "ins": "najbardziej potrzebnymi",
+          "loc": "najbardziej potrzebnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej potrzebne",
+          "gen": "najbardziej potrzebnych",
+          "dat": "najbardziej potrzebnym",
+          "acc": "najbardziej potrzebne",
+          "ins": "najbardziej potrzebnymi",
+          "loc": "najbardziej potrzebnych"
+        }
+      }
+    }
+  }
+}

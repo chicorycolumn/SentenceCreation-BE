@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sukienka",
+      "gen": "sukienki",
+      "dat": "sukience",
+      "acc": "sukienkę",
+      "ins": "sukienką",
+      "loc": "sukience",
+      "voc": "sukienko"
+    },
+    "plural": {
+      "nom": "sukienki",
+      "gen": "sukienek",
+      "dat": "sukienkom",
+      "acc": "sukienki",
+      "ins": "sukienkami",
+      "loc": "sukienkach",
+      "voc": "sukienki"
+    }
+  }
+}

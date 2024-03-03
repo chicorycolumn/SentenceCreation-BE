@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "krótko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "krótki",
+          "gen": "krótkiego",
+          "dat": "krótkiemu",
+          "acc": "krótkiego",
+          "ins": "krótkim",
+          "loc": "krótkim"
+        },
+        "m3": {
+          "nom": "krótki",
+          "gen": "krótkiego",
+          "dat": "krótkiemu",
+          "acc": "krótki",
+          "ins": "krótkim",
+          "loc": "krótkim"
+        },
+        "f": {
+          "nom": "krótka",
+          "gen": "krótkiej",
+          "dat": "krótkiej",
+          "acc": "krótką",
+          "ins": "krótką",
+          "loc": "krótkiej"
+        },
+        "n": {
+          "nom": "krótkie",
+          "gen": "krótkiego",
+          "dat": "krótkiemu",
+          "acc": "krótkie",
+          "ins": "krótkim",
+          "loc": "krótkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "krótcy",
+          "gen": "krótkich",
+          "dat": "krótkim",
+          "acc": "krótkich",
+          "ins": "krótkimi",
+          "loc": "krótkich"
+        },
+        "nonvirile": {
+          "nom": "krótkie",
+          "gen": "krótkich",
+          "dat": "krótkim",
+          "acc": "krótkie",
+          "ins": "krótkimi",
+          "loc": "krótkich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "krótszy",
+          "gen": "krótszego",
+          "dat": "krótszemu",
+          "acc": "krótszego",
+          "ins": "krótszym",
+          "loc": "krótszym"
+        },
+        "m3": {
+          "nom": "krótszy",
+          "gen": "krótszego",
+          "dat": "krótszemu",
+          "acc": "krótszy",
+          "ins": "krótszym",
+          "loc": "krótszym"
+        },
+        "f": {
+          "nom": "krótsza",
+          "gen": "krótszej",
+          "dat": "krótszej",
+          "acc": "krótszą",
+          "ins": "krótszą",
+          "loc": "krótszej"
+        },
+        "n": {
+          "nom": "krótsze",
+          "gen": "krótszego",
+          "dat": "krótszemu",
+          "acc": "krótsze",
+          "ins": "krótszym",
+          "loc": "krótszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "krótsi",
+          "gen": "krótszych",
+          "dat": "krótszym",
+          "acc": "krótszych",
+          "ins": "krótszymi",
+          "loc": "krótszych"
+        },
+        "nonvirile": {
+          "nom": "krótsze",
+          "gen": "krótszych",
+          "dat": "krótszym",
+          "acc": "krótsze",
+          "ins": "krótszymi",
+          "loc": "krótszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najkrótszy",
+          "gen": "najkrótszego",
+          "dat": "najkrótszemu",
+          "acc": "najkrótszego",
+          "ins": "najkrótszym",
+          "loc": "najkrótszym"
+        },
+        "m3": {
+          "nom": "najkrótszy",
+          "gen": "najkrótszego",
+          "dat": "najkrótszemu",
+          "acc": "najkrótszy",
+          "ins": "najkrótszym",
+          "loc": "najkrótszym"
+        },
+        "f": {
+          "nom": "najkrótsza",
+          "gen": "najkrótszej",
+          "dat": "najkrótszej",
+          "acc": "najkrótszą",
+          "ins": "najkrótszą",
+          "loc": "najkrótszej"
+        },
+        "n": {
+          "nom": "najkrótsze",
+          "gen": "najkrótszego",
+          "dat": "najkrótszemu",
+          "acc": "najkrótsze",
+          "ins": "najkrótszym",
+          "loc": "najkrótszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najkrótsi",
+          "gen": "najkrótszych",
+          "dat": "najkrótszym",
+          "acc": "najkrótszych",
+          "ins": "najkrótszymi",
+          "loc": "najkrótszych"
+        },
+        "nonvirile": {
+          "nom": "najkrótsze",
+          "gen": "najkrótszych",
+          "dat": "najkrótszym",
+          "acc": "najkrótsze",
+          "ins": "najkrótszymi",
+          "loc": "najkrótszych"
+        }
+      }
+    }
+  }
+}

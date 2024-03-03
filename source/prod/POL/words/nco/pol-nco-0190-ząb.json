@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ząb",
+      "gen": "zęba",
+      "dat": "zębowi",
+      "acc": "ząb",
+      "ins": "zębem",
+      "loc": "zębie",
+      "voc": "zębie"
+    },
+    "plural": {
+      "nom": "zęby",
+      "gen": "zębów",
+      "dat": "zębom",
+      "acc": "zęby",
+      "ins": "zębami",
+      "loc": "zębach",
+      "voc": "zęby"
+    }
+  }
+}

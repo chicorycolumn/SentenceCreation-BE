@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "opuszczać",
+    "verbalNoun": "opuszczanie",
+    "activeAdjectival": "opuszczający",
+    "passiveAdjectival": "opuszczany",
+    "contemporaryAdverbial": "opuszczając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "opuszczaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opuszczano"
+          },
+          "plural": {
+            "allPluralGenders": "opuszczano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "opuszczałem",
+            "f": "opuszczałam"
+          },
+          "plural": {
+            "virile": "opuszczaliśmy",
+            "nonvirile": "opuszczałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "opuszczałeś",
+            "f": "opuszczałaś"
+          },
+          "plural": {
+            "virile": "opuszczaliście",
+            "nonvirile": "opuszczałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "opuszczał",
+            "f": "opuszczała",
+            "n": "opuszczało"
+          },
+          "plural": {
+            "virile": "opuszczali",
+            "nonvirile": "opuszczały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opuszcza się"
+          },
+          "plural": {
+            "allPluralGenders": "opuszcza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "opuszczam"
+          },
+          "plural": {
+            "allPluralGenders": "opuszczamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "opuszczasz"
+          },
+          "plural": {
+            "allPluralGenders": "opuszczacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "opuszcza"
+          },
+          "plural": {
+            "allPluralGenders": "opuszczają"
+          }
+        }
+      }
+    }
+  }
+}

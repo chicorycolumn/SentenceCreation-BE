@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "damsko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "damski",
+          "gen": "damskiego",
+          "dat": "damskiemu",
+          "acc": "damskiego",
+          "ins": "damskim",
+          "loc": "damskim"
+        },
+        "m3": {
+          "nom": "damski",
+          "gen": "damskiego",
+          "dat": "damskiemu",
+          "acc": "damski",
+          "ins": "damskim",
+          "loc": "damskim"
+        },
+        "f": {
+          "nom": "damska",
+          "gen": "damskiej",
+          "dat": "damskiej",
+          "acc": "damską",
+          "ins": "damską",
+          "loc": "damskiej"
+        },
+        "n": {
+          "nom": "damskie",
+          "gen": "damskiego",
+          "dat": "damskiemu",
+          "acc": "damskie",
+          "ins": "damskim",
+          "loc": "damskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "damscy",
+          "gen": "damskich",
+          "dat": "damskim",
+          "acc": "damskich",
+          "ins": "damskimi",
+          "loc": "damskich"
+        },
+        "nonvirile": {
+          "nom": "damskie",
+          "gen": "damskich",
+          "dat": "damskim",
+          "acc": "damskie",
+          "ins": "damskimi",
+          "loc": "damskich"
+        }
+      }
+    }
+  }
+}

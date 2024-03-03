@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cytryna",
+      "gen": "cytryny",
+      "dat": "cytrynie",
+      "acc": "cytrynę",
+      "ins": "cytryną",
+      "loc": "cytrynie",
+      "voc": "cytryno"
+    },
+    "plural": {
+      "nom": "cytryny",
+      "gen": "cytryn",
+      "dat": "cytrynom",
+      "acc": "cytryny",
+      "ins": "cytrynami",
+      "loc": "cytrynach",
+      "voc": "cytryny"
+    }
+  }
+}

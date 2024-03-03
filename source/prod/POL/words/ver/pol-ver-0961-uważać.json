@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "uważać",
+    "verbalNoun": "uważanie",
+    "activeAdjectival": "uważający",
+    "passiveAdjectival": "uważany",
+    "contemporaryAdverbial": "uważając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "uważaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "uważano"
+          },
+          "plural": {
+            "allPluralGenders": "uważano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "uważałem",
+            "f": "uważałam"
+          },
+          "plural": {
+            "virile": "uważaliśmy",
+            "nonvirile": "uważałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "uważałeś",
+            "f": "uważałaś"
+          },
+          "plural": {
+            "virile": "uważaliście",
+            "nonvirile": "uważałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "uważał",
+            "f": "uważała",
+            "n": "uważało"
+          },
+          "plural": {
+            "virile": "uważali",
+            "nonvirile": "uważały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "uważa się"
+          },
+          "plural": {
+            "allPluralGenders": "uważa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "uważam"
+          },
+          "plural": {
+            "allPluralGenders": "uważamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "uważasz"
+          },
+          "plural": {
+            "allPluralGenders": "uważacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "uważa"
+          },
+          "plural": {
+            "allPluralGenders": "uważają"
+          }
+        }
+      }
+    }
+  }
+}

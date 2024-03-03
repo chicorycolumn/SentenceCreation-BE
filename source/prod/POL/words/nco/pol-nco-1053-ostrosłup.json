@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ostrosłup",
+      "gen": "ostrosłupa",
+      "dat": "ostrosłupowi",
+      "acc": "ostrosłup",
+      "ins": "ostrosłupem",
+      "loc": "ostrosłupie",
+      "voc": "ostrosłupie"
+    },
+    "plural": {
+      "nom": "ostrosłupy",
+      "gen": "ostrosłupów",
+      "dat": "ostrosłupom",
+      "acc": "ostrosłupy",
+      "ins": "ostrosłupami",
+      "loc": "ostrosłupach",
+      "voc": "ostrosłupy"
+    }
+  }
+}

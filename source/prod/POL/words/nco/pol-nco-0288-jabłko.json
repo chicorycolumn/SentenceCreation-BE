@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "jabłko",
+      "gen": "jabłka",
+      "dat": "jabłku",
+      "acc": "jabłko",
+      "ins": "jabłkiem",
+      "loc": "jabłku",
+      "voc": "jabłko"
+    },
+    "plural": {
+      "nom": "jabłka",
+      "gen": "jabłek",
+      "dat": "jabłkom",
+      "acc": "jabłka",
+      "ins": "jabłkami",
+      "loc": "jabłkach",
+      "voc": "jabłka"
+    }
+  }
+}

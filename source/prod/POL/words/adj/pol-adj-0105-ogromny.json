@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "ogromnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ogromny",
+          "gen": "ogromnego",
+          "dat": "ogromnemu",
+          "acc": "ogromnego",
+          "ins": "ogromnym",
+          "loc": "ogromnym"
+        },
+        "m3": {
+          "nom": "ogromny",
+          "gen": "ogromnego",
+          "dat": "ogromnemu",
+          "acc": "ogromny",
+          "ins": "ogromnym",
+          "loc": "ogromnym"
+        },
+        "f": {
+          "nom": "ogromna",
+          "gen": "ogromnej",
+          "dat": "ogromnej",
+          "acc": "ogromną",
+          "ins": "ogromną",
+          "loc": "ogromnej"
+        },
+        "n": {
+          "nom": "ogromne",
+          "gen": "ogromnego",
+          "dat": "ogromnemu",
+          "acc": "ogromne",
+          "ins": "ogromnym",
+          "loc": "ogromnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ogromni",
+          "gen": "ogromnych",
+          "dat": "ogromnym",
+          "acc": "ogromnych",
+          "ins": "ogromnymi",
+          "loc": "ogromnych"
+        },
+        "nonvirile": {
+          "nom": "ogromne",
+          "gen": "ogromnych",
+          "dat": "ogromnym",
+          "acc": "ogromne",
+          "ins": "ogromnymi",
+          "loc": "ogromnych"
+        }
+      }
+    }
+  }
+}

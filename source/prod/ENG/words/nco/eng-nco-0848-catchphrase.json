@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "catchphrase",
+      "gen": "catchphrase's"
+    },
+    "plural": {
+      "nom": "catchphrases",
+      "gen": "catchphrases'"
+    }
+  }
+}

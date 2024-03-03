@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dostęp",
+      "gen": "dostępu",
+      "dat": "dostępowi",
+      "acc": "dostęp",
+      "ins": "dostępem",
+      "loc": "dostępie",
+      "voc": "dostępie"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "ostatecznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ostateczny",
+          "gen": "ostatecznego",
+          "dat": "ostatecznemu",
+          "acc": "ostatecznego",
+          "ins": "ostatecznym",
+          "loc": "ostatecznym"
+        },
+        "m3": {
+          "nom": "ostateczny",
+          "gen": "ostatecznego",
+          "dat": "ostatecznemu",
+          "acc": "ostateczny",
+          "ins": "ostatecznym",
+          "loc": "ostatecznym"
+        },
+        "f": {
+          "nom": "ostateczna",
+          "gen": "ostatecznej",
+          "dat": "ostatecznej",
+          "acc": "ostateczną",
+          "ins": "ostateczną",
+          "loc": "ostatecznej"
+        },
+        "n": {
+          "nom": "ostateczne",
+          "gen": "ostatecznego",
+          "dat": "ostatecznemu",
+          "acc": "ostateczne",
+          "ins": "ostatecznym",
+          "loc": "ostatecznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ostateczni",
+          "gen": "ostatecznych",
+          "dat": "ostatecznym",
+          "acc": "ostatecznych",
+          "ins": "ostatecznymi",
+          "loc": "ostatecznych"
+        },
+        "nonvirile": {
+          "nom": "ostateczne",
+          "gen": "ostatecznych",
+          "dat": "ostatecznym",
+          "acc": "ostateczne",
+          "ins": "ostatecznymi",
+          "loc": "ostatecznych"
+        }
+      }
+    }
+  }
+}

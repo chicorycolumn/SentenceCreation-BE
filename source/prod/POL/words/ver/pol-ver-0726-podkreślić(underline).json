@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "podkreślić",
+    "verbalNoun": "podkreślenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "podkreśliwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podkreśli się"
+          },
+          "plural": {
+            "allPluralGenders": "podkreśli się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podkreślę"
+          },
+          "plural": {
+            "allPluralGenders": "podkreślimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podkreślisz"
+          },
+          "plural": {
+            "allPluralGenders": "podkreślicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podkreśli"
+          },
+          "plural": {
+            "allPluralGenders": "podkreślą"
+          }
+        }
+      },
+      "imperative": "podkreśl",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podkreślono"
+          },
+          "plural": {
+            "allPluralGenders": "podkreślono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "podkreśliłem",
+            "f": "podkreśliłam"
+          },
+          "plural": {
+            "virile": "podkreśliliśmy",
+            "nonvirile": "podkreśliłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podkreśliłeś",
+            "f": "podkreśliłaś"
+          },
+          "plural": {
+            "virile": "podkreśliliście",
+            "nonvirile": "podkreśliłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podkreślił",
+            "f": "podkreśliła",
+            "n": "podkreśliło"
+          },
+          "plural": {
+            "virile": "podkreślili",
+            "nonvirile": "podkreśliły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

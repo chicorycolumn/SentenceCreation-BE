@@ -1,0 +1,8 @@
+{
+  "inflections": {
+    "simple": "pretty",
+    "comparative": "prettier",
+    "superlative": "prettiest",
+    "adverb": "prettily"
+  }
+}

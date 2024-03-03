@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "obywatel",
+      "gen": "obywatela",
+      "dat": "obywatelowi",
+      "acc": "obywatela",
+      "ins": "obywatelem",
+      "loc": "obywatelu",
+      "voc": "obywatelu"
+    },
+    "plural": {
+      "nom": "obywatele",
+      "gen": "obywateli",
+      "dat": "obywatelom",
+      "acc": "obywateli",
+      "ins": "obywatelami",
+      "loc": "obywatelach",
+      "voc": "obywatele"
+    }
+  }
+}

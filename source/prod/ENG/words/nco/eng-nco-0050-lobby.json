@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lobby",
+      "gen": "lobby's"
+    },
+    "plural": {
+      "nom": "lobbies",
+      "gen": "lobbies'"
+    }
+  }
+}

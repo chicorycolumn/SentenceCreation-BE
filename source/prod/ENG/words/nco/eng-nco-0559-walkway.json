@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "walkway",
+      "gen": "walkway's"
+    },
+    "plural": {
+      "nom": "walkways",
+      "gen": "walkways'"
+    }
+  }
+}

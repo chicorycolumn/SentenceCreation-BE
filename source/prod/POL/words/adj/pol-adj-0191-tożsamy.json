@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "tożsamo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "tożsamy",
+          "gen": "tożsamego",
+          "dat": "tożsamemu",
+          "acc": "tożsamego",
+          "ins": "tożsamym",
+          "loc": "tożsamym"
+        },
+        "m3": {
+          "nom": "tożsamy",
+          "gen": "tożsamego",
+          "dat": "tożsamemu",
+          "acc": "tożsamy",
+          "ins": "tożsamym",
+          "loc": "tożsamym"
+        },
+        "f": {
+          "nom": "tożsama",
+          "gen": "tożsamej",
+          "dat": "tożsamej",
+          "acc": "tożsamą",
+          "ins": "tożsamą",
+          "loc": "tożsamej"
+        },
+        "n": {
+          "nom": "tożsame",
+          "gen": "tożsamego",
+          "dat": "tożsamemu",
+          "acc": "tożsame",
+          "ins": "tożsamym",
+          "loc": "tożsamym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "tożsami",
+          "gen": "tożsamych",
+          "dat": "tożsamym",
+          "acc": "tożsamych",
+          "ins": "tożsamymi",
+          "loc": "tożsamych"
+        },
+        "nonvirile": {
+          "nom": "tożsame",
+          "gen": "tożsamych",
+          "dat": "tożsamym",
+          "acc": "tożsame",
+          "ins": "tożsamymi",
+          "loc": "tożsamych"
+        }
+      }
+    }
+  }
+}

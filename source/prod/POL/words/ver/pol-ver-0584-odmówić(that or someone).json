@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odmówić",
+    "verbalNoun": "odmówienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "odmówiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odmówiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odmówi się"
+          },
+          "plural": {
+            "allPluralGenders": "odmówi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odmówię"
+          },
+          "plural": {
+            "allPluralGenders": "odmówimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odmówisz"
+          },
+          "plural": {
+            "allPluralGenders": "odmówicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odmówi"
+          },
+          "plural": {
+            "allPluralGenders": "odmówią"
+          }
+        }
+      },
+      "imperative": "odmów",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odmówiono"
+          },
+          "plural": {
+            "allPluralGenders": "odmówiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odmówiłem",
+            "f": "odmówiłam"
+          },
+          "plural": {
+            "virile": "odmówiliśmy",
+            "nonvirile": "odmówiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odmówiłeś",
+            "f": "odmówiłaś"
+          },
+          "plural": {
+            "virile": "odmówiliście",
+            "nonvirile": "odmówiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odmówił",
+            "f": "odmówiła",
+            "n": "odmówiło"
+          },
+          "plural": {
+            "virile": "odmówili",
+            "nonvirile": "odmówiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odlecieć",
+    "verbalNoun": "odlecenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odleciawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odleci się"
+          },
+          "plural": {
+            "allPluralGenders": "odleci się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odlecę"
+          },
+          "plural": {
+            "allPluralGenders": "odlecimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odlecisz"
+          },
+          "plural": {
+            "allPluralGenders": "odlecicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odleci"
+          },
+          "plural": {
+            "allPluralGenders": "odlecą"
+          }
+        }
+      },
+      "imperative": "odleć",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odleciano"
+          },
+          "plural": {
+            "allPluralGenders": "odleciano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odleciałem",
+            "f": "odleciałam"
+          },
+          "plural": {
+            "virile": "odlecieliśmy",
+            "nonvirile": "odleciałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odleciałeś",
+            "f": "odleciałaś"
+          },
+          "plural": {
+            "virile": "odlecieliście",
+            "nonvirile": "odleciałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odleciał",
+            "f": "odleciała",
+            "n": "odleciało"
+          },
+          "plural": {
+            "virile": "odlecieli",
+            "nonvirile": "odleciały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

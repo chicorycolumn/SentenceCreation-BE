@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "wąsko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "wąski",
+          "gen": "wąskiego",
+          "dat": "wąskiemu",
+          "acc": "wąskiego",
+          "ins": "wąskim",
+          "loc": "wąskim"
+        },
+        "m3": {
+          "nom": "wąski",
+          "gen": "wąskiego",
+          "dat": "wąskiemu",
+          "acc": "wąski",
+          "ins": "wąskim",
+          "loc": "wąskim"
+        },
+        "f": {
+          "nom": "wąska",
+          "gen": "wąskiej",
+          "dat": "wąskiej",
+          "acc": "wąską",
+          "ins": "wąską",
+          "loc": "wąskiej"
+        },
+        "n": {
+          "nom": "wąskie",
+          "gen": "wąskiego",
+          "dat": "wąskiemu",
+          "acc": "wąskie",
+          "ins": "wąskim",
+          "loc": "wąskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wąscy",
+          "gen": "wąskich",
+          "dat": "wąskim",
+          "acc": "wąskich",
+          "ins": "wąskimi",
+          "loc": "wąskich"
+        },
+        "nonvirile": {
+          "nom": "wąskie",
+          "gen": "wąskich",
+          "dat": "wąskim",
+          "acc": "wąskie",
+          "ins": "wąskimi",
+          "loc": "wąskich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "węższy",
+          "gen": "węższego",
+          "dat": "węższemu",
+          "acc": "węższego",
+          "ins": "węższym",
+          "loc": "węższym"
+        },
+        "m3": {
+          "nom": "węższy",
+          "gen": "węższego",
+          "dat": "węższemu",
+          "acc": "węższy",
+          "ins": "węższym",
+          "loc": "węższym"
+        },
+        "f": {
+          "nom": "węższa",
+          "gen": "węższej",
+          "dat": "węższej",
+          "acc": "węższą",
+          "ins": "węższą",
+          "loc": "węższej"
+        },
+        "n": {
+          "nom": "węższe",
+          "gen": "węższego",
+          "dat": "węższemu",
+          "acc": "węższe",
+          "ins": "węższym",
+          "loc": "węższym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wężsi",
+          "gen": "węższych",
+          "dat": "węższym",
+          "acc": "węższych",
+          "ins": "węższymi",
+          "loc": "węższych"
+        },
+        "nonvirile": {
+          "nom": "węższe",
+          "gen": "węższych",
+          "dat": "węższym",
+          "acc": "węższe",
+          "ins": "węższymi",
+          "loc": "węższych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najwęższy",
+          "gen": "najwęższego",
+          "dat": "najwęższemu",
+          "acc": "najwęższego",
+          "ins": "najwęższym",
+          "loc": "najwęższym"
+        },
+        "m3": {
+          "nom": "najwęższy",
+          "gen": "najwęższego",
+          "dat": "najwęższemu",
+          "acc": "najwęższy",
+          "ins": "najwęższym",
+          "loc": "najwęższym"
+        },
+        "f": {
+          "nom": "najwęższa",
+          "gen": "najwęższej",
+          "dat": "najwęższej",
+          "acc": "najwęższą",
+          "ins": "najwęższą",
+          "loc": "najwęższej"
+        },
+        "n": {
+          "nom": "najwęższe",
+          "gen": "najwęższego",
+          "dat": "najwęższemu",
+          "acc": "najwęższe",
+          "ins": "najwęższym",
+          "loc": "najwęższym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najwężsi",
+          "gen": "najwęższych",
+          "dat": "najwęższym",
+          "acc": "najwęższych",
+          "ins": "najwęższymi",
+          "loc": "najwęższych"
+        },
+        "nonvirile": {
+          "nom": "najwęższe",
+          "gen": "najwęższych",
+          "dat": "najwęższym",
+          "acc": "najwęższe",
+          "ins": "najwęższymi",
+          "loc": "najwęższych"
+        }
+      }
+    }
+  }
+}

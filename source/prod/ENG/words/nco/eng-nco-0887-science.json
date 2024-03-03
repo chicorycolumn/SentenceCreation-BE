@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "science",
+      "gen": "science's"
+    },
+    "plural": {
+      "nom": "sciences",
+      "gen": "sciences'"
+    }
+  }
+}

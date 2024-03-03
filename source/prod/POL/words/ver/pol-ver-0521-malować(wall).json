@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "malować",
+    "verbalNoun": "malowanie",
+    "activeAdjectival": "malujący",
+    "passiveAdjectival": "malowany",
+    "contemporaryAdverbial": "malując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "maluj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "malowano"
+          },
+          "plural": {
+            "allPluralGenders": "malowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "malowałem",
+            "f": "malowałam"
+          },
+          "plural": {
+            "virile": "malowaliśmy",
+            "nonvirile": "malowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "malowałeś",
+            "f": "malowałaś"
+          },
+          "plural": {
+            "virile": "malowaliście",
+            "nonvirile": "malowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "malował",
+            "f": "malowała",
+            "n": "malowało"
+          },
+          "plural": {
+            "virile": "malowali",
+            "nonvirile": "malowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "maluje się"
+          },
+          "plural": {
+            "allPluralGenders": "maluje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "maluję"
+          },
+          "plural": {
+            "allPluralGenders": "malujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "malujesz"
+          },
+          "plural": {
+            "allPluralGenders": "malujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "maluje"
+          },
+          "plural": {
+            "allPluralGenders": "malują"
+          }
+        }
+      }
+    }
+  }
+}

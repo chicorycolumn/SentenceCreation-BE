@@ -1,0 +1,30 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "spiżarnia",
+      "gen": "spiżarni",
+      "dat": "spiżarni",
+      "acc": "spiżarnię",
+      "ins": "spiżarnią",
+      "loc": "spiżarni",
+      "voc": "spiżarnio"
+    },
+    "plural": {
+      "nom": "spiżarnie",
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "spiżarni"
+        ],
+        "additionalInfrequent": [
+          "spiżarń"
+        ]
+      },
+      "dat": "spiżarniom",
+      "acc": "spiżarnie",
+      "ins": "spiżarniami",
+      "loc": "spiżarniach",
+      "voc": "spiżarnie"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zapytać",
+    "verbalNoun": "zapytanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zapytany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zapytawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zapyta się"
+          },
+          "plural": {
+            "allPluralGenders": "zapyta się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zapytam"
+          },
+          "plural": {
+            "allPluralGenders": "zapytamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zapytasz"
+          },
+          "plural": {
+            "allPluralGenders": "zapytacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zapyta"
+          },
+          "plural": {
+            "allPluralGenders": "zapytają"
+          }
+        }
+      },
+      "imperative": "zapytaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zapytano"
+          },
+          "plural": {
+            "allPluralGenders": "zapytano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zapytałem",
+            "f": "zapytałam"
+          },
+          "plural": {
+            "virile": "zapytaliśmy",
+            "nonvirile": "zapytałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zapytałeś",
+            "f": "zapytałaś"
+          },
+          "plural": {
+            "virile": "zapytaliście",
+            "nonvirile": "zapytałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zapytał",
+            "f": "zapytała",
+            "n": "zapytało"
+          },
+          "plural": {
+            "virile": "zapytali",
+            "nonvirile": "zapytały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

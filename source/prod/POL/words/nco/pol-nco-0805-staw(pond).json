@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "staw",
+      "gen": "stawu",
+      "dat": "stawowi",
+      "acc": "staw",
+      "ins": "stawem",
+      "loc": "stawie",
+      "voc": "stawie"
+    },
+    "plural": {
+      "nom": "stawy",
+      "gen": "stawów",
+      "dat": "stawom",
+      "acc": "stawy",
+      "ins": "stawami",
+      "loc": "stawach",
+      "voc": "stawy"
+    }
+  }
+}

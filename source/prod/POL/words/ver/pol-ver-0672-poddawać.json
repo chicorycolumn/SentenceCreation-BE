@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "poddawać",
+    "verbalNoun": "poddawanie",
+    "activeAdjectival": "poddający",
+    "passiveAdjectival": "poddawany",
+    "contemporaryAdverbial": "poddając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "poddawaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poddawano"
+          },
+          "plural": {
+            "allPluralGenders": "poddawano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "poddawałem",
+            "f": "poddawałam"
+          },
+          "plural": {
+            "virile": "poddawaliśmy",
+            "nonvirile": "poddawałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "poddawałeś",
+            "f": "poddawałaś"
+          },
+          "plural": {
+            "virile": "poddawaliście",
+            "nonvirile": "poddawałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "poddawał",
+            "f": "poddawała",
+            "n": "poddawało"
+          },
+          "plural": {
+            "virile": "poddawali",
+            "nonvirile": "poddawały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poddaje się"
+          },
+          "plural": {
+            "allPluralGenders": "poddaje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "poddaję"
+          },
+          "plural": {
+            "allPluralGenders": "poddajemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "poddajesz"
+          },
+          "plural": {
+            "allPluralGenders": "poddajecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "poddaje"
+          },
+          "plural": {
+            "allPluralGenders": "poddają"
+          }
+        }
+      }
+    }
+  }
+}

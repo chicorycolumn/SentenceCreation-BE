@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "osioł",
+      "gen": "osła",
+      "dat": [
+        "osłu",
+        "osłowi"
+      ],
+      "acc": "osła",
+      "ins": "osłem",
+      "loc": "ośle",
+      "voc": "ośle"
+    },
+    "plural": {
+      "nom": "osły",
+      "gen": "osłów",
+      "dat": "osłom",
+      "acc": "osły",
+      "ins": "osłami",
+      "loc": "osłach",
+      "voc": "osły"
+    }
+  }
+}

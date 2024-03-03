@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "tarcza",
+      "gen": "tarczy",
+      "dat": "tarczy",
+      "acc": "tarczę",
+      "ins": "tarczą",
+      "loc": "tarczy",
+      "voc": "tarczo"
+    },
+    "plural": {
+      "nom": "tarcze",
+      "gen": "tarcz",
+      "dat": "tarczom",
+      "acc": "tarcze",
+      "ins": "tarczami",
+      "loc": "tarczach",
+      "voc": "tarcze"
+    }
+  }
+}

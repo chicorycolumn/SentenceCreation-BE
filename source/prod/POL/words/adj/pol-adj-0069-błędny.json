@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "błędnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "błędny",
+          "gen": "błędnego",
+          "dat": "błędnemu",
+          "acc": "błędnego",
+          "ins": "błędnym",
+          "loc": "błędnym"
+        },
+        "m3": {
+          "nom": "błędny",
+          "gen": "błędnego",
+          "dat": "błędnemu",
+          "acc": "błędny",
+          "ins": "błędnym",
+          "loc": "błędnym"
+        },
+        "f": {
+          "nom": "błędna",
+          "gen": "błędnej",
+          "dat": "błędnej",
+          "acc": "błędną",
+          "ins": "błędną",
+          "loc": "błędnej"
+        },
+        "n": {
+          "nom": "błędne",
+          "gen": "błędnego",
+          "dat": "błędnemu",
+          "acc": "błędne",
+          "ins": "błędnym",
+          "loc": "błędnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "błędni",
+          "gen": "błędnych",
+          "dat": "błędnym",
+          "acc": "błędnych",
+          "ins": "błędnymi",
+          "loc": "błędnych"
+        },
+        "nonvirile": {
+          "nom": "błędne",
+          "gen": "błędnych",
+          "dat": "błędnym",
+          "acc": "błędne",
+          "ins": "błędnymi",
+          "loc": "błędnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej błędny",
+          "gen": "bardziej błędnego",
+          "dat": "bardziej błędnemu",
+          "acc": "bardziej błędnego",
+          "ins": "bardziej błędnym",
+          "loc": "bardziej błędnym"
+        },
+        "m3": {
+          "nom": "bardziej błędny",
+          "gen": "bardziej błędnego",
+          "dat": "bardziej błędnemu",
+          "acc": "bardziej błędny",
+          "ins": "bardziej błędnym",
+          "loc": "bardziej błędnym"
+        },
+        "f": {
+          "nom": "bardziej błędna",
+          "gen": "bardziej błędnej",
+          "dat": "bardziej błędnej",
+          "acc": "bardziej błędną",
+          "ins": "bardziej błędną",
+          "loc": "bardziej błędnej"
+        },
+        "n": {
+          "nom": "bardziej błędne",
+          "gen": "bardziej błędnego",
+          "dat": "bardziej błędnemu",
+          "acc": "bardziej błędne",
+          "ins": "bardziej błędnym",
+          "loc": "bardziej błędnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej błędni",
+          "gen": "bardziej błędnych",
+          "dat": "bardziej błędnym",
+          "acc": "bardziej błędnych",
+          "ins": "bardziej błędnymi",
+          "loc": "bardziej błędnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej błędne",
+          "gen": "bardziej błędnych",
+          "dat": "bardziej błędnym",
+          "acc": "bardziej błędne",
+          "ins": "bardziej błędnymi",
+          "loc": "bardziej błędnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej błędny",
+          "gen": "najbardziej błędnego",
+          "dat": "najbardziej błędnemu",
+          "acc": "najbardziej błędnego",
+          "ins": "najbardziej błędnym",
+          "loc": "najbardziej błędnym"
+        },
+        "m3": {
+          "nom": "najbardziej błędny",
+          "gen": "najbardziej błędnego",
+          "dat": "najbardziej błędnemu",
+          "acc": "najbardziej błędny",
+          "ins": "najbardziej błędnym",
+          "loc": "najbardziej błędnym"
+        },
+        "f": {
+          "nom": "najbardziej błędna",
+          "gen": "najbardziej błędnej",
+          "dat": "najbardziej błędnej",
+          "acc": "najbardziej błędną",
+          "ins": "najbardziej błędną",
+          "loc": "najbardziej błędnej"
+        },
+        "n": {
+          "nom": "najbardziej błędne",
+          "gen": "najbardziej błędnego",
+          "dat": "najbardziej błędnemu",
+          "acc": "najbardziej błędne",
+          "ins": "najbardziej błędnym",
+          "loc": "najbardziej błędnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej błędni",
+          "gen": "najbardziej błędnych",
+          "dat": "najbardziej błędnym",
+          "acc": "najbardziej błędnych",
+          "ins": "najbardziej błędnymi",
+          "loc": "najbardziej błędnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej błędne",
+          "gen": "najbardziej błędnych",
+          "dat": "najbardziej błędnym",
+          "acc": "najbardziej błędne",
+          "ins": "najbardziej błędnymi",
+          "loc": "najbardziej błędnych"
+        }
+      }
+    }
+  }
+}

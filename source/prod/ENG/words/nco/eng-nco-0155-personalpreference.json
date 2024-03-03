@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "personal preference",
+      "gen": "personal preference's"
+    },
+    "plural": {
+      "nom": "personal preferences",
+      "gen": "personal preferences'"
+    }
+  }
+}

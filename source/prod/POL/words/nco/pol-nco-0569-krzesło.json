@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "krzesło",
+      "gen": "krzesła",
+      "dat": "krzesłu",
+      "acc": "krzesło",
+      "ins": "krzesłem",
+      "loc": "krześle",
+      "voc": "krzesło"
+    },
+    "plural": {
+      "nom": "krzesła",
+      "gen": "krzeseł",
+      "dat": "krzesłom",
+      "acc": "krzesła",
+      "ins": "krzesłami",
+      "loc": "krzesłach",
+      "voc": "krzesła"
+    }
+  }
+}

@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "dziko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dziki",
+          "gen": "dzikiego",
+          "dat": "dzikiemu",
+          "acc": "dzikiego",
+          "ins": "dzikim",
+          "loc": "dzikim"
+        },
+        "m3": {
+          "nom": "dziki",
+          "gen": "dzikiego",
+          "dat": "dzikiemu",
+          "acc": "dziki",
+          "ins": "dzikim",
+          "loc": "dzikim"
+        },
+        "f": {
+          "nom": "dzika",
+          "gen": "dzikiej",
+          "dat": "dzikiej",
+          "acc": "dziką",
+          "ins": "dziką",
+          "loc": "dzikiej"
+        },
+        "n": {
+          "nom": "dzikie",
+          "gen": "dzikiego",
+          "dat": "dzikiemu",
+          "acc": "dzikie",
+          "ins": "dzikim",
+          "loc": "dzikim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dzicy",
+          "gen": "dzikich",
+          "dat": "dzikim",
+          "acc": "dzikich",
+          "ins": "dzikimi",
+          "loc": "dzikich"
+        },
+        "nonvirile": {
+          "nom": "dzikie",
+          "gen": "dzikich",
+          "dat": "dzikim",
+          "acc": "dzikie",
+          "ins": "dzikimi",
+          "loc": "dzikich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszy",
+              "bardziej dziki"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszego",
+              "bardziej dzikiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszemu",
+              "bardziej dzikiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszego",
+              "bardziej dzikiego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszym",
+              "bardziej dzikim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszym",
+              "bardziej dzikim"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszy",
+              "bardziej dziki"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszego",
+              "bardziej dzikiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszemu",
+              "bardziej dzikiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszy",
+              "bardziej dziki"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszym",
+              "bardziej dzikim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszym",
+              "bardziej dzikim"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "dziksza",
+              "bardziej dzika"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszej",
+              "bardziej dzikiej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszej",
+              "bardziej dzikiej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszą",
+              "bardziej dziką"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszą",
+              "bardziej dziką"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszej",
+              "bardziej dzikiej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "dziksze",
+              "bardziej dzikie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszego",
+              "bardziej dzikiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszemu",
+              "bardziej dzikiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "dziksze",
+              "bardziej dzikie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszym",
+              "bardziej dzikim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszym",
+              "bardziej dzikim"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "dziksi",
+              "bardziej dzicy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszych",
+              "bardziej dzikich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszym",
+              "bardziej dzikim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszych",
+              "bardziej dzikich"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszymi",
+              "bardziej dzikimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszych",
+              "bardziej dzikich"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "dziksze",
+              "bardziej dzikie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszych",
+              "bardziej dzikich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszym",
+              "bardziej dzikim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "dziksze",
+              "bardziej dzikie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszymi",
+              "bardziej dzikimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "dzikszych",
+              "bardziej dzikich"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszy",
+              "najbardziej dziki"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszego",
+              "najbardziej dzikiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszemu",
+              "najbardziej dzikiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszego",
+              "najbardziej dzikiego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszym",
+              "najbardziej dzikim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszym",
+              "najbardziej dzikim"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszy",
+              "najbardziej dziki"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszego",
+              "najbardziej dzikiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszemu",
+              "najbardziej dzikiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszy",
+              "najbardziej dziki"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszym",
+              "najbardziej dzikim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszym",
+              "najbardziej dzikim"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdziksza",
+              "najbardziej dzika"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszej",
+              "najbardziej dzikiej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszej",
+              "najbardziej dzikiej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszą",
+              "najbardziej dziką"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszą",
+              "najbardziej dziką"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszej",
+              "najbardziej dzikiej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdziksze",
+              "najbardziej dzikie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszego",
+              "najbardziej dzikiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszemu",
+              "najbardziej dzikiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdziksze",
+              "najbardziej dzikie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszym",
+              "najbardziej dzikim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszym",
+              "najbardziej dzikim"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdziksi",
+              "najbardziej dzicy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszych",
+              "najbardziej dzikich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszym",
+              "najbardziej dzikim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszych",
+              "najbardziej dzikich"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszymi",
+              "najbardziej dzikimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszych",
+              "najbardziej dzikich"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdziksze",
+              "najbardziej dzikie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszych",
+              "najbardziej dzikich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszym",
+              "najbardziej dzikim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdziksze",
+              "najbardziej dzikie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszymi",
+              "najbardziej dzikimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdzikszych",
+              "najbardziej dzikich"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

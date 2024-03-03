@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "młotek",
+      "gen": "młotka",
+      "dat": "młotkowi",
+      "acc": "młotek",
+      "ins": "młotkiem",
+      "loc": "młotku",
+      "voc": "młotku"
+    },
+    "plural": {
+      "nom": "młotki",
+      "gen": "młotków",
+      "dat": "młotkom",
+      "acc": "młotki",
+      "ins": "młotkami",
+      "loc": "młotkach",
+      "voc": "młotki"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "styczeń",
+      "gen": "stycznia",
+      "dat": "styczniowi",
+      "acc": "styczeń",
+      "ins": "styczniem",
+      "loc": "styczniu",
+      "voc": "styczniu"
+    },
+    "plural": {
+      "nom": "stycznie",
+      "gen": [
+        "styczniów",
+        "styczni"
+      ],
+      "dat": "styczniom",
+      "acc": "stycznie",
+      "ins": "styczniami",
+      "loc": "styczniach",
+      "voc": "stycznie"
+    }
+  }
+}

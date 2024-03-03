@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "niewidzialnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niewidzialny",
+          "gen": "niewidzialnego",
+          "dat": "niewidzialnemu",
+          "acc": "niewidzialnego",
+          "ins": "niewidzialnym",
+          "loc": "niewidzialnym"
+        },
+        "m3": {
+          "nom": "niewidzialny",
+          "gen": "niewidzialnego",
+          "dat": "niewidzialnemu",
+          "acc": "niewidzialny",
+          "ins": "niewidzialnym",
+          "loc": "niewidzialnym"
+        },
+        "f": {
+          "nom": "niewidzialna",
+          "gen": "niewidzialnej",
+          "dat": "niewidzialnej",
+          "acc": "niewidzialną",
+          "ins": "niewidzialną",
+          "loc": "niewidzialnej"
+        },
+        "n": {
+          "nom": "niewidzialne",
+          "gen": "niewidzialnego",
+          "dat": "niewidzialnemu",
+          "acc": "niewidzialne",
+          "ins": "niewidzialnym",
+          "loc": "niewidzialnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niewidzialni",
+          "gen": "niewidzialnych",
+          "dat": "niewidzialnym",
+          "acc": "niewidzialnych",
+          "ins": "niewidzialnymi",
+          "loc": "niewidzialnych"
+        },
+        "nonvirile": {
+          "nom": "niewidzialne",
+          "gen": "niewidzialnych",
+          "dat": "niewidzialnym",
+          "acc": "niewidzialne",
+          "ins": "niewidzialnymi",
+          "loc": "niewidzialnych"
+        }
+      }
+    }
+  }
+}

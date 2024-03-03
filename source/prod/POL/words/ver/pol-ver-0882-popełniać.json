@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "popełniać",
+    "verbalNoun": "popełnianie",
+    "activeAdjectival": "popełniający",
+    "passiveAdjectival": "popełniany",
+    "contemporaryAdverbial": "popełniając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "popełniaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "popełniano"
+          },
+          "plural": {
+            "allPluralGenders": "popełniano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "popełniałem",
+            "f": "popełniałam"
+          },
+          "plural": {
+            "virile": "popełnialiśmy",
+            "nonvirile": "popełniałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "popełniałeś",
+            "f": "popełniałaś"
+          },
+          "plural": {
+            "virile": "popełnialiście",
+            "nonvirile": "popełniałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "popełniał",
+            "f": "popełniała",
+            "n": "popełniało"
+          },
+          "plural": {
+            "virile": "popełniali",
+            "nonvirile": "popełniały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "popełnia się"
+          },
+          "plural": {
+            "allPluralGenders": "popełnia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "popełniam"
+          },
+          "plural": {
+            "allPluralGenders": "popełniamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "popełniasz"
+          },
+          "plural": {
+            "allPluralGenders": "popełniacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "popełnia"
+          },
+          "plural": {
+            "allPluralGenders": "popełniają"
+          }
+        }
+      }
+    }
+  }
+}

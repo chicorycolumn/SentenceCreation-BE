@@ -1,0 +1,31 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dzień",
+      "gen": "dnia",
+      "dat": "dniowi",
+      "acc": "dzień",
+      "ins": "dniem",
+      "loc": "dniu",
+      "voc": "dniu"
+    },
+    "plural": {
+      "nom": [
+        "dni",
+        "dnie"
+      ],
+      "gen": "dni",
+      "dat": "dniom",
+      "acc": [
+        "dni",
+        "dnie"
+      ],
+      "ins": "dniami",
+      "loc": "dniach",
+      "voc": [
+        "dni",
+        "dnie"
+      ]
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wchodzić",
+    "verbalNoun": "wchodzenie",
+    "activeAdjectival": "wchodzący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "wchodząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "wchodź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wchodzono"
+          },
+          "plural": {
+            "allPluralGenders": "wchodzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wchodziłem",
+            "f": "wchodziłam"
+          },
+          "plural": {
+            "virile": "wchodziliśmy",
+            "nonvirile": "wchodziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wchodziłeś",
+            "f": "wchodziłaś"
+          },
+          "plural": {
+            "virile": "wchodziliście",
+            "nonvirile": "wchodziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wchodził",
+            "f": "wchodziła",
+            "n": "wchodziło"
+          },
+          "plural": {
+            "virile": "wchodzili",
+            "nonvirile": "wchodziły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wchodzi się"
+          },
+          "plural": {
+            "allPluralGenders": "wchodzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wchodzę"
+          },
+          "plural": {
+            "allPluralGenders": "wchodzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wchodzisz"
+          },
+          "plural": {
+            "allPluralGenders": "wchodzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wchodzi"
+          },
+          "plural": {
+            "allPluralGenders": "wchodzą"
+          }
+        }
+      }
+    }
+  }
+}

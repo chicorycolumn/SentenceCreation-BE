@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "chudo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "chudy",
+          "gen": "chudego",
+          "dat": "chudemu",
+          "acc": "chudego",
+          "ins": "chudym",
+          "loc": "chudym"
+        },
+        "m3": {
+          "nom": "chudy",
+          "gen": "chudego",
+          "dat": "chudemu",
+          "acc": "chudy",
+          "ins": "chudym",
+          "loc": "chudym"
+        },
+        "f": {
+          "nom": "chuda",
+          "gen": "chudej",
+          "dat": "chudej",
+          "acc": "chudą",
+          "ins": "chudą",
+          "loc": "chudej"
+        },
+        "n": {
+          "nom": "chude",
+          "gen": "chudego",
+          "dat": "chudemu",
+          "acc": "chude",
+          "ins": "chudym",
+          "loc": "chudym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "chudzi",
+          "gen": "chudych",
+          "dat": "chudym",
+          "acc": "chudych",
+          "ins": "chudymi",
+          "loc": "chudych"
+        },
+        "nonvirile": {
+          "nom": "chude",
+          "gen": "chudych",
+          "dat": "chudym",
+          "acc": "chude",
+          "ins": "chudymi",
+          "loc": "chudych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "chudszy",
+          "gen": "chudszego",
+          "dat": "chudszemu",
+          "acc": "chudszego",
+          "ins": "chudszym",
+          "loc": "chudszym"
+        },
+        "m3": {
+          "nom": "chudszy",
+          "gen": "chudszego",
+          "dat": "chudszemu",
+          "acc": "chudszy",
+          "ins": "chudszym",
+          "loc": "chudszym"
+        },
+        "f": {
+          "nom": "chudsza",
+          "gen": "chudszej",
+          "dat": "chudszej",
+          "acc": "chudszą",
+          "ins": "chudszą",
+          "loc": "chudszej"
+        },
+        "n": {
+          "nom": "chudsze",
+          "gen": "chudszego",
+          "dat": "chudszemu",
+          "acc": "chudsze",
+          "ins": "chudszym",
+          "loc": "chudszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "chudsi",
+          "gen": "chudszych",
+          "dat": "chudszym",
+          "acc": "chudszych",
+          "ins": "chudszymi",
+          "loc": "chudszych"
+        },
+        "nonvirile": {
+          "nom": "chudsze",
+          "gen": "chudszych",
+          "dat": "chudszym",
+          "acc": "chudsze",
+          "ins": "chudszymi",
+          "loc": "chudszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najchudszy",
+          "gen": "najchudszego",
+          "dat": "najchudszemu",
+          "acc": "najchudszego",
+          "ins": "najchudszym",
+          "loc": "najchudszym"
+        },
+        "m3": {
+          "nom": "najchudszy",
+          "gen": "najchudszego",
+          "dat": "najchudszemu",
+          "acc": "najchudszy",
+          "ins": "najchudszym",
+          "loc": "najchudszym"
+        },
+        "f": {
+          "nom": "najchudsza",
+          "gen": "najchudszej",
+          "dat": "najchudszej",
+          "acc": "najchudszą",
+          "ins": "najchudszą",
+          "loc": "najchudszej"
+        },
+        "n": {
+          "nom": "najchudsze",
+          "gen": "najchudszego",
+          "dat": "najchudszemu",
+          "acc": "najchudsze",
+          "ins": "najchudszym",
+          "loc": "najchudszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najchudsi",
+          "gen": "najchudszych",
+          "dat": "najchudszym",
+          "acc": "najchudszych",
+          "ins": "najchudszymi",
+          "loc": "najchudszych"
+        },
+        "nonvirile": {
+          "nom": "najchudsze",
+          "gen": "najchudszych",
+          "dat": "najchudszym",
+          "acc": "najchudsze",
+          "ins": "najchudszymi",
+          "loc": "najchudszych"
+        }
+      }
+    }
+  }
+}

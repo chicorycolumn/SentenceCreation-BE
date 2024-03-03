@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "czysto",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "czysty",
+          "gen": "czystego",
+          "dat": "czystemu",
+          "acc": "czystego",
+          "ins": "czystym",
+          "loc": "czystym"
+        },
+        "m3": {
+          "nom": "czysty",
+          "gen": "czystego",
+          "dat": "czystemu",
+          "acc": "czysty",
+          "ins": "czystym",
+          "loc": "czystym"
+        },
+        "f": {
+          "nom": "czysta",
+          "gen": "czystej",
+          "dat": "czystej",
+          "acc": "czystą",
+          "ins": "czystą",
+          "loc": "czystej"
+        },
+        "n": {
+          "nom": "czyste",
+          "gen": "czystego",
+          "dat": "czystemu",
+          "acc": "czyste",
+          "ins": "czystym",
+          "loc": "czystym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "czyści",
+          "gen": "czystych",
+          "dat": "czystym",
+          "acc": "czystych",
+          "ins": "czystymi",
+          "loc": "czystych"
+        },
+        "nonvirile": {
+          "nom": "czyste",
+          "gen": "czystych",
+          "dat": "czystym",
+          "acc": "czyste",
+          "ins": "czystymi",
+          "loc": "czystych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "czystszy",
+              "czyściejszy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "czystszego",
+              "czyściejszego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "czystszemu",
+              "czyściejszemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "czystszego",
+              "czyściejszego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "czystszym",
+              "czyściejszym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "czystszym",
+              "czyściejszym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "czystszy",
+              "czyściejszy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "czystszego",
+              "czyściejszego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "czystszemu",
+              "czyściejszemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "czystszy",
+              "czyściejszy"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "czystszym",
+              "czyściejszym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "czystszym",
+              "czyściejszym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "czystsza",
+              "czyściejsza"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "czystszej",
+              "czyściejszej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "czystszej",
+              "czyściejszej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "czystszą",
+              "czyściejszą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "czystszą",
+              "czyściejszą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "czystszej",
+              "czyściejszej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "czystsze",
+              "czyściejsze"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "czystszego",
+              "czyściejszego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "czystszemu",
+              "czyściejszemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "czystsze",
+              "czyściejsze"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "czystszym",
+              "czyściejszym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "czystszym",
+              "czyściejszym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "czystsi",
+              "czyściejsi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "czystszych",
+              "czyściejszych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "czystszym",
+              "czyściejszym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "czystszych",
+              "czyściejszych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "czystszymi",
+              "czyściejszymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "czystszych",
+              "czyściejszych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "czystsze",
+              "czyściejsze"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "czystszych",
+              "czyściejszych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "czystszym",
+              "czyściejszym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "czystsze",
+              "czyściejsze"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "czystszymi",
+              "czyściejszymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "czystszych",
+              "czyściejszych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszy",
+              "najczyściejszy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszego",
+              "najczyściejszego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszemu",
+              "najczyściejszemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszego",
+              "najczyściejszego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszym",
+              "najczyściejszym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszym",
+              "najczyściejszym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszy",
+              "najczyściejszy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszego",
+              "najczyściejszego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszemu",
+              "najczyściejszemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszy",
+              "najczyściejszy"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszym",
+              "najczyściejszym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszym",
+              "najczyściejszym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najczystsza",
+              "najczyściejsza"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszej",
+              "najczyściejszej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszej",
+              "najczyściejszej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszą",
+              "najczyściejszą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszą",
+              "najczyściejszą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszej",
+              "najczyściejszej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najczystsze",
+              "najczyściejsze"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszego",
+              "najczyściejszego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszemu",
+              "najczyściejszemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najczystsze",
+              "najczyściejsze"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszym",
+              "najczyściejszym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszym",
+              "najczyściejszym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najczystsi",
+              "najczyściejsi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszych",
+              "najczyściejszych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszym",
+              "najczyściejszym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszych",
+              "najczyściejszych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszymi",
+              "najczyściejszymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszych",
+              "najczyściejszych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najczystsze",
+              "najczyściejsze"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszych",
+              "najczyściejszych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszym",
+              "najczyściejszym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najczystsze",
+              "najczyściejsze"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszymi",
+              "najczyściejszymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najczystszych",
+              "najczyściejszych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

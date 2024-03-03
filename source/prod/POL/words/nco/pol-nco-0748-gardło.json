@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gardło",
+      "gen": "gardła",
+      "dat": "gardłu",
+      "acc": "gardło",
+      "ins": "gardłem",
+      "loc": "gardle",
+      "voc": "gardło"
+    },
+    "plural": {
+      "nom": "gardła",
+      "gen": "gardeł",
+      "dat": "gardłom",
+      "acc": "gardła",
+      "ins": "gardłami",
+      "loc": "gardłach",
+      "voc": "gardła"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oczyścić",
+    "verbalNoun": "oczyszczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "oczyszczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "oczyściwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oczyści się"
+          },
+          "plural": {
+            "allPluralGenders": "oczyści się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oczyszczę"
+          },
+          "plural": {
+            "allPluralGenders": "oczyścimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oczyścisz"
+          },
+          "plural": {
+            "allPluralGenders": "oczyścicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "oczyści"
+          },
+          "plural": {
+            "allPluralGenders": "oczyszczą"
+          }
+        }
+      },
+      "imperative": "oczyść",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oczyszczono"
+          },
+          "plural": {
+            "allPluralGenders": "oczyszczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oczyściłem",
+            "f": "oczyściłam"
+          },
+          "plural": {
+            "virile": "oczyściliśmy",
+            "nonvirile": "oczyściłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oczyściłeś",
+            "f": "oczyściłaś"
+          },
+          "plural": {
+            "virile": "oczyściliście",
+            "nonvirile": "oczyściłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oczyścił",
+            "f": "oczyściła",
+            "n": "oczyściło"
+          },
+          "plural": {
+            "virile": "oczyścili",
+            "nonvirile": "oczyściły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "obawiać",
+    "verbalNoun": "obawianie",
+    "activeAdjectival": "obawiający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "obawiając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "obawiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obawiano"
+          },
+          "plural": {
+            "allPluralGenders": "obawiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "obawiałem",
+            "f": "obawiałam"
+          },
+          "plural": {
+            "virile": "obawialiśmy",
+            "nonvirile": "obawiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "obawiałeś",
+            "f": "obawiałaś"
+          },
+          "plural": {
+            "virile": "obawialiście",
+            "nonvirile": "obawiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "obawiał",
+            "f": "obawiała",
+            "n": "obawiało"
+          },
+          "plural": {
+            "virile": "obawiali",
+            "nonvirile": "obawiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obawia się"
+          },
+          "plural": {
+            "allPluralGenders": "obawia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "obawiam"
+          },
+          "plural": {
+            "allPluralGenders": "obawiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "obawiasz"
+          },
+          "plural": {
+            "allPluralGenders": "obawiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "obawia"
+          },
+          "plural": {
+            "allPluralGenders": "obawiają"
+          }
+        }
+      }
+    }
+  }
+}

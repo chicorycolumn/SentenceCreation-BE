@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "bocznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "boczny",
+          "gen": "bocznego",
+          "dat": "bocznemu",
+          "acc": "bocznego",
+          "ins": "bocznym",
+          "loc": "bocznym"
+        },
+        "m3": {
+          "nom": "boczny",
+          "gen": "bocznego",
+          "dat": "bocznemu",
+          "acc": "boczny",
+          "ins": "bocznym",
+          "loc": "bocznym"
+        },
+        "f": {
+          "nom": "boczna",
+          "gen": "bocznej",
+          "dat": "bocznej",
+          "acc": "boczną",
+          "ins": "boczną",
+          "loc": "bocznej"
+        },
+        "n": {
+          "nom": "boczne",
+          "gen": "bocznego",
+          "dat": "bocznemu",
+          "acc": "boczne",
+          "ins": "bocznym",
+          "loc": "bocznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "boczni",
+          "gen": "bocznych",
+          "dat": "bocznym",
+          "acc": "bocznych",
+          "ins": "bocznymi",
+          "loc": "bocznych"
+        },
+        "nonvirile": {
+          "nom": "boczne",
+          "gen": "bocznych",
+          "dat": "bocznym",
+          "acc": "boczne",
+          "ins": "bocznymi",
+          "loc": "bocznych"
+        }
+      }
+    }
+  }
+}

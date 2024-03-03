@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "pierwotnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pierwotny",
+          "gen": "pierwotnego",
+          "dat": "pierwotnemu",
+          "acc": "pierwotnego",
+          "ins": "pierwotnym",
+          "loc": "pierwotnym"
+        },
+        "m3": {
+          "nom": "pierwotny",
+          "gen": "pierwotnego",
+          "dat": "pierwotnemu",
+          "acc": "pierwotny",
+          "ins": "pierwotnym",
+          "loc": "pierwotnym"
+        },
+        "f": {
+          "nom": "pierwotna",
+          "gen": "pierwotnej",
+          "dat": "pierwotnej",
+          "acc": "pierwotną",
+          "ins": "pierwotną",
+          "loc": "pierwotnej"
+        },
+        "n": {
+          "nom": "pierwotne",
+          "gen": "pierwotnego",
+          "dat": "pierwotnemu",
+          "acc": "pierwotne",
+          "ins": "pierwotnym",
+          "loc": "pierwotnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pierwotni",
+          "gen": "pierwotnych",
+          "dat": "pierwotnym",
+          "acc": "pierwotnych",
+          "ins": "pierwotnymi",
+          "loc": "pierwotnych"
+        },
+        "nonvirile": {
+          "nom": "pierwotne",
+          "gen": "pierwotnych",
+          "dat": "pierwotnym",
+          "acc": "pierwotne",
+          "ins": "pierwotnymi",
+          "loc": "pierwotnych"
+        }
+      }
+    }
+  }
+}

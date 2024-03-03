@@ -1,0 +1,106 @@
+{
+  "inflections": {
+    "infinitive": "wystąpić",
+    "verbalNoun": "wystąpienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "wystąpiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wystąpi się"
+          },
+          "plural": {
+            "allPluralGenders": "wystąpi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "wystąpię"
+          },
+          "plural": {
+            "allPluralGenders": "wystąpimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "wystąpisz"
+          },
+          "plural": {
+            "allPluralGenders": "wystąpicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wystąpi"
+          },
+          "plural": {
+            "allPluralGenders": "wystąpią"
+          }
+        }
+      },
+      "imperative": "wystąp",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wystąpiono"
+          },
+          "plural": {
+            "allPluralGenders": "wystąpiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": [
+              "wystąpiłem"
+            ],
+            "f": [
+              "wystąpiłam"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "wystąpiliśmy"
+            ],
+            "nonvirile": [
+              "wystąpiłyśmy"
+            ]
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": [
+              "wystąpiłeś"
+            ],
+            "f": [
+              "wystąpiłaś"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "wystąpiliście"
+            ],
+            "nonvirile": [
+              "wystąpiłyście"
+            ]
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wystąpił",
+            "f": "wystąpiła",
+            "n": "wystąpiło"
+          },
+          "plural": {
+            "virile": "wystąpili",
+            "nonvirile": "wystąpiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

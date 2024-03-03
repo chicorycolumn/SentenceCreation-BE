@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "małpa",
+      "gen": "małpy",
+      "dat": "małpie",
+      "acc": "małpę",
+      "ins": "małpą",
+      "loc": "małpie",
+      "voc": "małpo"
+    },
+    "plural": {
+      "nom": "małpy",
+      "gen": "małp",
+      "dat": "małpom",
+      "acc": "małpy",
+      "ins": "małpami",
+      "loc": "małpach",
+      "voc": "małpy"
+    }
+  }
+}

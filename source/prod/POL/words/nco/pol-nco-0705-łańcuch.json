@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "łańcuch",
+      "gen": "łańcucha",
+      "dat": "łańcuchowi",
+      "acc": "łańcuch",
+      "ins": "łańcuchem",
+      "loc": "łańcuchu",
+      "voc": "łańcuchu"
+    },
+    "plural": {
+      "nom": "łańcuchy",
+      "gen": "łańcuchów",
+      "dat": "łańcuchom",
+      "acc": "łańcuchy",
+      "ins": "łańcuchami",
+      "loc": "łańcuchach",
+      "voc": "łańcuchy"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "machine",
+      "gen": "machine's"
+    },
+    "plural": {
+      "nom": "machines",
+      "gen": "machines'"
+    }
+  }
+}

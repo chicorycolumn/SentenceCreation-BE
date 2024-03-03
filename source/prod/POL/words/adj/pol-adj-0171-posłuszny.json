@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "posłusznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "posłuszny",
+          "gen": "posłusznego",
+          "dat": "posłusznemu",
+          "acc": "posłusznego",
+          "ins": "posłusznym",
+          "loc": "posłusznym"
+        },
+        "m3": {
+          "nom": "posłuszny",
+          "gen": "posłusznego",
+          "dat": "posłusznemu",
+          "acc": "posłuszny",
+          "ins": "posłusznym",
+          "loc": "posłusznym"
+        },
+        "f": {
+          "nom": "posłuszna",
+          "gen": "posłusznej",
+          "dat": "posłusznej",
+          "acc": "posłuszną",
+          "ins": "posłuszną",
+          "loc": "posłusznej"
+        },
+        "n": {
+          "nom": "posłuszne",
+          "gen": "posłusznego",
+          "dat": "posłusznemu",
+          "acc": "posłuszne",
+          "ins": "posłusznym",
+          "loc": "posłusznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "posłuszni",
+          "gen": "posłusznych",
+          "dat": "posłusznym",
+          "acc": "posłusznych",
+          "ins": "posłusznymi",
+          "loc": "posłusznych"
+        },
+        "nonvirile": {
+          "nom": "posłuszne",
+          "gen": "posłusznych",
+          "dat": "posłusznym",
+          "acc": "posłuszne",
+          "ins": "posłusznymi",
+          "loc": "posłusznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "posłuszniejszy",
+          "gen": "posłuszniejszego",
+          "dat": "posłuszniejszemu",
+          "acc": "posłuszniejszego",
+          "ins": "posłuszniejszym",
+          "loc": "posłuszniejszym"
+        },
+        "m3": {
+          "nom": "posłuszniejszy",
+          "gen": "posłuszniejszego",
+          "dat": "posłuszniejszemu",
+          "acc": "posłuszniejszy",
+          "ins": "posłuszniejszym",
+          "loc": "posłuszniejszym"
+        },
+        "f": {
+          "nom": "posłuszniejsza",
+          "gen": "posłuszniejszej",
+          "dat": "posłuszniejszej",
+          "acc": "posłuszniejszą",
+          "ins": "posłuszniejszą",
+          "loc": "posłuszniejszej"
+        },
+        "n": {
+          "nom": "posłuszniejsze",
+          "gen": "posłuszniejszego",
+          "dat": "posłuszniejszemu",
+          "acc": "posłuszniejsze",
+          "ins": "posłuszniejszym",
+          "loc": "posłuszniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "posłuszniejsi",
+          "gen": "posłuszniejszych",
+          "dat": "posłuszniejszym",
+          "acc": "posłuszniejszych",
+          "ins": "posłuszniejszymi",
+          "loc": "posłuszniejszych"
+        },
+        "nonvirile": {
+          "nom": "posłuszniejsze",
+          "gen": "posłuszniejszych",
+          "dat": "posłuszniejszym",
+          "acc": "posłuszniejsze",
+          "ins": "posłuszniejszymi",
+          "loc": "posłuszniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najposłuszniejszy",
+          "gen": "najposłuszniejszego",
+          "dat": "najposłuszniejszemu",
+          "acc": "najposłuszniejszego",
+          "ins": "najposłuszniejszym",
+          "loc": "najposłuszniejszym"
+        },
+        "m3": {
+          "nom": "najposłuszniejszy",
+          "gen": "najposłuszniejszego",
+          "dat": "najposłuszniejszemu",
+          "acc": "najposłuszniejszy",
+          "ins": "najposłuszniejszym",
+          "loc": "najposłuszniejszym"
+        },
+        "f": {
+          "nom": "najposłuszniejsza",
+          "gen": "najposłuszniejszej",
+          "dat": "najposłuszniejszej",
+          "acc": "najposłuszniejszą",
+          "ins": "najposłuszniejszą",
+          "loc": "najposłuszniejszej"
+        },
+        "n": {
+          "nom": "najposłuszniejsze",
+          "gen": "najposłuszniejszego",
+          "dat": "najposłuszniejszemu",
+          "acc": "najposłuszniejsze",
+          "ins": "najposłuszniejszym",
+          "loc": "najposłuszniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najposłuszniejsi",
+          "gen": "najposłuszniejszych",
+          "dat": "najposłuszniejszym",
+          "acc": "najposłuszniejszych",
+          "ins": "najposłuszniejszymi",
+          "loc": "najposłuszniejszych"
+        },
+        "nonvirile": {
+          "nom": "najposłuszniejsze",
+          "gen": "najposłuszniejszych",
+          "dat": "najposłuszniejszym",
+          "acc": "najposłuszniejsze",
+          "ins": "najposłuszniejszymi",
+          "loc": "najposłuszniejszych"
+        }
+      }
+    }
+  }
+}

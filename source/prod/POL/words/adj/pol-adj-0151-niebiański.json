@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niebiańsko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niebiański",
+          "gen": "niebiańskiego",
+          "dat": "niebiańskiemu",
+          "acc": "niebiańskiego",
+          "ins": "niebiańskim",
+          "loc": "niebiańskim"
+        },
+        "m3": {
+          "nom": "niebiański",
+          "gen": "niebiańskiego",
+          "dat": "niebiańskiemu",
+          "acc": "niebiański",
+          "ins": "niebiańskim",
+          "loc": "niebiańskim"
+        },
+        "f": {
+          "nom": "niebiańska",
+          "gen": "niebiańskiej",
+          "dat": "niebiańskiej",
+          "acc": "niebiańską",
+          "ins": "niebiańską",
+          "loc": "niebiańskiej"
+        },
+        "n": {
+          "nom": "niebiańskie",
+          "gen": "niebiańskiego",
+          "dat": "niebiańskiemu",
+          "acc": "niebiańskie",
+          "ins": "niebiańskim",
+          "loc": "niebiańskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niebiańscy",
+          "gen": "niebiańskich",
+          "dat": "niebiańskim",
+          "acc": "niebiańskich",
+          "ins": "niebiańskimi",
+          "loc": "niebiańskich"
+        },
+        "nonvirile": {
+          "nom": "niebiańskie",
+          "gen": "niebiańskich",
+          "dat": "niebiańskim",
+          "acc": "niebiańskie",
+          "ins": "niebiańskimi",
+          "loc": "niebiańskich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej niebiański",
+          "gen": "bardziej niebiańskiego",
+          "dat": "bardziej niebiańskiemu",
+          "acc": "bardziej niebiańskiego",
+          "ins": "bardziej niebiańskim",
+          "loc": "bardziej niebiańskim"
+        },
+        "m3": {
+          "nom": "bardziej niebiański",
+          "gen": "bardziej niebiańskiego",
+          "dat": "bardziej niebiańskiemu",
+          "acc": "bardziej niebiański",
+          "ins": "bardziej niebiańskim",
+          "loc": "bardziej niebiańskim"
+        },
+        "f": {
+          "nom": "bardziej niebiańska",
+          "gen": "bardziej niebiańskiej",
+          "dat": "bardziej niebiańskiej",
+          "acc": "bardziej niebiańską",
+          "ins": "bardziej niebiańską",
+          "loc": "bardziej niebiańskiej"
+        },
+        "n": {
+          "nom": "bardziej niebiańskie",
+          "gen": "bardziej niebiańskiego",
+          "dat": "bardziej niebiańskiemu",
+          "acc": "bardziej niebiańskie",
+          "ins": "bardziej niebiańskim",
+          "loc": "bardziej niebiańskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej niebiańscy",
+          "gen": "bardziej niebiańskich",
+          "dat": "bardziej niebiańskim",
+          "acc": "bardziej niebiańskich",
+          "ins": "bardziej niebiańskimi",
+          "loc": "bardziej niebiańskich"
+        },
+        "nonvirile": {
+          "nom": "bardziej niebiańskie",
+          "gen": "bardziej niebiańskich",
+          "dat": "bardziej niebiańskim",
+          "acc": "bardziej niebiańskie",
+          "ins": "bardziej niebiańskimi",
+          "loc": "bardziej niebiańskich"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej niebiański",
+          "gen": "najbardziej niebiańskiego",
+          "dat": "najbardziej niebiańskiemu",
+          "acc": "najbardziej niebiańskiego",
+          "ins": "najbardziej niebiańskim",
+          "loc": "najbardziej niebiańskim"
+        },
+        "m3": {
+          "nom": "najbardziej niebiański",
+          "gen": "najbardziej niebiańskiego",
+          "dat": "najbardziej niebiańskiemu",
+          "acc": "najbardziej niebiański",
+          "ins": "najbardziej niebiańskim",
+          "loc": "najbardziej niebiańskim"
+        },
+        "f": {
+          "nom": "najbardziej niebiańska",
+          "gen": "najbardziej niebiańskiej",
+          "dat": "najbardziej niebiańskiej",
+          "acc": "najbardziej niebiańską",
+          "ins": "najbardziej niebiańską",
+          "loc": "najbardziej niebiańskiej"
+        },
+        "n": {
+          "nom": "najbardziej niebiańskie",
+          "gen": "najbardziej niebiańskiego",
+          "dat": "najbardziej niebiańskiemu",
+          "acc": "najbardziej niebiańskie",
+          "ins": "najbardziej niebiańskim",
+          "loc": "najbardziej niebiańskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej niebiańscy",
+          "gen": "najbardziej niebiańskich",
+          "dat": "najbardziej niebiańskim",
+          "acc": "najbardziej niebiańskich",
+          "ins": "najbardziej niebiańskimi",
+          "loc": "najbardziej niebiańskich"
+        },
+        "nonvirile": {
+          "nom": "najbardziej niebiańskie",
+          "gen": "najbardziej niebiańskich",
+          "dat": "najbardziej niebiańskim",
+          "acc": "najbardziej niebiańskie",
+          "ins": "najbardziej niebiańskimi",
+          "loc": "najbardziej niebiańskich"
+        }
+      }
+    }
+  }
+}

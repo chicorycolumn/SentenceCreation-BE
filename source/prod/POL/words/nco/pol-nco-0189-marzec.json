@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "marzec",
+      "gen": "marca",
+      "dat": "marcowi",
+      "acc": "marzec",
+      "ins": "marcem",
+      "loc": "marcu",
+      "voc": "marcu"
+    },
+    "plural": {
+      "nom": "marce",
+      "gen": "marców",
+      "dat": "marcom",
+      "acc": "marce",
+      "ins": "marcami",
+      "loc": "marcach",
+      "voc": "marce"
+    }
+  }
+}

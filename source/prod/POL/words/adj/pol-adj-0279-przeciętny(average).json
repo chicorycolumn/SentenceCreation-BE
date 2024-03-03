@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "przeciętnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przeciętny",
+          "gen": "przeciętnego",
+          "dat": "przeciętnemu",
+          "acc": "przeciętnego",
+          "ins": "przeciętnym",
+          "loc": "przeciętnym"
+        },
+        "m3": {
+          "nom": "przeciętny",
+          "gen": "przeciętnego",
+          "dat": "przeciętnemu",
+          "acc": "przeciętny",
+          "ins": "przeciętnym",
+          "loc": "przeciętnym"
+        },
+        "f": {
+          "nom": "przeciętna",
+          "gen": "przeciętnej",
+          "dat": "przeciętnej",
+          "acc": "przeciętną",
+          "ins": "przeciętną",
+          "loc": "przeciętnej"
+        },
+        "n": {
+          "nom": "przeciętne",
+          "gen": "przeciętnego",
+          "dat": "przeciętnemu",
+          "acc": "przeciętne",
+          "ins": "przeciętnym",
+          "loc": "przeciętnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przeciętni",
+          "gen": "przeciętnych",
+          "dat": "przeciętnym",
+          "acc": "przeciętnych",
+          "ins": "przeciętnymi",
+          "loc": "przeciętnych"
+        },
+        "nonvirile": {
+          "nom": "przeciętne",
+          "gen": "przeciętnych",
+          "dat": "przeciętnym",
+          "acc": "przeciętne",
+          "ins": "przeciętnymi",
+          "loc": "przeciętnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszy",
+              "bardziej przeciętny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszego",
+              "bardziej przeciętnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszemu",
+              "bardziej przeciętnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszego",
+              "bardziej przeciętnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszym",
+              "bardziej przeciętnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszym",
+              "bardziej przeciętnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszy",
+              "bardziej przeciętny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszego",
+              "bardziej przeciętnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszemu",
+              "bardziej przeciętnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszy",
+              "bardziej przeciętny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszym",
+              "bardziej przeciętnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszym",
+              "bardziej przeciętnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejsza",
+              "bardziej przeciętna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszej",
+              "bardziej przeciętnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszej",
+              "bardziej przeciętnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszą",
+              "bardziej przeciętną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszą",
+              "bardziej przeciętną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszej",
+              "bardziej przeciętnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejsze",
+              "bardziej przeciętne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszego",
+              "bardziej przeciętnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszemu",
+              "bardziej przeciętnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejsze",
+              "bardziej przeciętne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszym",
+              "bardziej przeciętnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszym",
+              "bardziej przeciętnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejsi",
+              "bardziej przeciętni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszych",
+              "bardziej przeciętnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszym",
+              "bardziej przeciętnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszych",
+              "bardziej przeciętnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszymi",
+              "bardziej przeciętnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszych",
+              "bardziej przeciętnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejsze",
+              "bardziej przeciętne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszych",
+              "bardziej przeciętnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszym",
+              "bardziej przeciętnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejsze",
+              "bardziej przeciętne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszymi",
+              "bardziej przeciętnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "przeciętniejszych",
+              "bardziej przeciętnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszy",
+              "najbardziej przeciętny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszego",
+              "najbardziej przeciętnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszemu",
+              "najbardziej przeciętnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszego",
+              "najbardziej przeciętnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszym",
+              "najbardziej przeciętnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszym",
+              "najbardziej przeciętnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszy",
+              "najbardziej przeciętny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszego",
+              "najbardziej przeciętnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszemu",
+              "najbardziej przeciętnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszy",
+              "najbardziej przeciętny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszym",
+              "najbardziej przeciętnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszym",
+              "najbardziej przeciętnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejsza",
+              "najbardziej przeciętna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszej",
+              "najbardziej przeciętnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszej",
+              "najbardziej przeciętnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszą",
+              "najbardziej przeciętną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszą",
+              "najbardziej przeciętną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszej",
+              "najbardziej przeciętnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejsze",
+              "najbardziej przeciętne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszego",
+              "najbardziej przeciętnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszemu",
+              "najbardziej przeciętnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejsze",
+              "najbardziej przeciętne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszym",
+              "najbardziej przeciętnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszym",
+              "najbardziej przeciętnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejsi",
+              "najbardziej przeciętni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszych",
+              "najbardziej przeciętnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszym",
+              "najbardziej przeciętnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszych",
+              "najbardziej przeciętnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszymi",
+              "najbardziej przeciętnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszych",
+              "najbardziej przeciętnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejsze",
+              "najbardziej przeciętne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszych",
+              "najbardziej przeciętnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszym",
+              "najbardziej przeciętnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejsze",
+              "najbardziej przeciętne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszymi",
+              "najbardziej przeciętnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzeciętniejszych",
+              "najbardziej przeciętnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

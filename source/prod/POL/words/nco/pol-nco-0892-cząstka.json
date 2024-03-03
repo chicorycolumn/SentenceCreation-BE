@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cząstka",
+      "gen": "cząstki",
+      "dat": "cząstce",
+      "acc": "cząstkę",
+      "ins": "cząstką",
+      "loc": "cząstce",
+      "voc": "cząstko"
+    },
+    "plural": {
+      "nom": "cząstki",
+      "gen": "cząstek",
+      "dat": "cząstkom",
+      "acc": "cząstki",
+      "ins": "cząstkami",
+      "loc": "cząstkach",
+      "voc": "cząstki"
+    }
+  }
+}

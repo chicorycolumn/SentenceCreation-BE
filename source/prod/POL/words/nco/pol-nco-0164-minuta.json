@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "minuta",
+      "gen": "minuty",
+      "dat": "minucie",
+      "acc": "minutę",
+      "ins": "minutą",
+      "loc": "minucie",
+      "voc": "minuto"
+    },
+    "plural": {
+      "nom": "minuty",
+      "gen": "minut",
+      "dat": "minutom",
+      "acc": "minuty",
+      "ins": "minutami",
+      "loc": "minutach",
+      "voc": "minuty"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "należeć",
+    "verbalNoun": "należenie",
+    "activeAdjectival": "należący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "należąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "należ",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "należano"
+          },
+          "plural": {
+            "allPluralGenders": "należano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "należałem",
+            "f": "należałam"
+          },
+          "plural": {
+            "virile": "należeliśmy",
+            "nonvirile": "należałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "należałeś",
+            "f": "należałaś"
+          },
+          "plural": {
+            "virile": "należeliście",
+            "nonvirile": "należałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "należał",
+            "f": "należała",
+            "n": "należało"
+          },
+          "plural": {
+            "virile": "należeli",
+            "nonvirile": "należały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "należy się"
+          },
+          "plural": {
+            "allPluralGenders": "należy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "należę"
+          },
+          "plural": {
+            "allPluralGenders": "należymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "należysz"
+          },
+          "plural": {
+            "allPluralGenders": "należycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "należy"
+          },
+          "plural": {
+            "allPluralGenders": "należą"
+          }
+        }
+      }
+    }
+  }
+}

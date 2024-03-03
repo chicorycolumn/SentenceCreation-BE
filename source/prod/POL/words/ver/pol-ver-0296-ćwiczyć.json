@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ćwiczyć",
+    "verbalNoun": "ćwiczenie",
+    "activeAdjectival": "ćwiczący",
+    "passiveAdjectival": "ćwiczony",
+    "contemporaryAdverbial": "ćwicząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "ćwicz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ćwiczono"
+          },
+          "plural": {
+            "allPluralGenders": "ćwiczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ćwiczyłem",
+            "f": "ćwiczyłam"
+          },
+          "plural": {
+            "virile": "ćwiczyliśmy",
+            "nonvirile": "ćwiczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ćwiczyłeś",
+            "f": "ćwiczyłaś"
+          },
+          "plural": {
+            "virile": "ćwiczyliście",
+            "nonvirile": "ćwiczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ćwiczył",
+            "f": "ćwiczyła",
+            "n": "ćwiczyło"
+          },
+          "plural": {
+            "virile": "ćwiczyli",
+            "nonvirile": "ćwiczyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ćwiczy się"
+          },
+          "plural": {
+            "allPluralGenders": "ćwiczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ćwiczę"
+          },
+          "plural": {
+            "allPluralGenders": "ćwiczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ćwiczysz"
+          },
+          "plural": {
+            "allPluralGenders": "ćwiczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ćwiczy"
+          },
+          "plural": {
+            "allPluralGenders": "ćwiczą"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kuzyn",
+      "gen": "kuzyna",
+      "dat": "kuzynowi",
+      "acc": "kuzyna",
+      "ins": "kuzynem",
+      "loc": "kuzynie",
+      "voc": "kuzynie"
+    },
+    "plural": {
+      "nom": "kuzyni",
+      "gen": "kuzynów",
+      "dat": "kuzynom",
+      "acc": "kuzynów",
+      "ins": "kuzynami",
+      "loc": "kuzynach",
+      "voc": "kuzyni"
+    }
+  }
+}

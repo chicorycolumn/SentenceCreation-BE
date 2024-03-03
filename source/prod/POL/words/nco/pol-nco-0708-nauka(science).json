@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "nauka",
+      "gen": "nauki",
+      "dat": "nauce",
+      "acc": "naukę",
+      "ins": "nauką",
+      "loc": "nauce",
+      "voc": "nauko"
+    },
+    "plural": {
+      "nom": "nauki",
+      "gen": "nauk",
+      "dat": "naukom",
+      "acc": "nauki",
+      "ins": "naukami",
+      "loc": "naukach",
+      "voc": "nauki"
+    }
+  }
+}

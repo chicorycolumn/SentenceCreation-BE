@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odsuwać",
+    "verbalNoun": "odsuwanie",
+    "activeAdjectival": "odsuwający",
+    "passiveAdjectival": "odsuwany",
+    "contemporaryAdverbial": "odsuwając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odsuwaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odsuwano"
+          },
+          "plural": {
+            "allPluralGenders": "odsuwano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odsuwałem",
+            "f": "odsuwałam"
+          },
+          "plural": {
+            "virile": "odsuwaliśmy",
+            "nonvirile": "odsuwałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odsuwałeś",
+            "f": "odsuwałaś"
+          },
+          "plural": {
+            "virile": "odsuwaliście",
+            "nonvirile": "odsuwałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odsuwał",
+            "f": "odsuwała",
+            "n": "odsuwało"
+          },
+          "plural": {
+            "virile": "odsuwali",
+            "nonvirile": "odsuwały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odsuwa się"
+          },
+          "plural": {
+            "allPluralGenders": "odsuwa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odsuwam"
+          },
+          "plural": {
+            "allPluralGenders": "odsuwamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odsuwasz"
+          },
+          "plural": {
+            "allPluralGenders": "odsuwacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odsuwa"
+          },
+          "plural": {
+            "allPluralGenders": "odsuwają"
+          }
+        }
+      }
+    }
+  }
+}

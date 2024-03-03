@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "exchange",
+      "gen": "exchange's"
+    },
+    "plural": {
+      "nom": "exchanges",
+      "gen": "exchanges'"
+    }
+  }
+}

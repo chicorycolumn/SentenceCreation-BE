@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "złoto",
+      "gen": "złota",
+      "dat": "złotu",
+      "acc": "złoto",
+      "ins": "złotem",
+      "loc": "złocie",
+      "voc": "złoto"
+    },
+    "plural": {
+      "nom": "złota",
+      "gen": "złot",
+      "dat": "złotom",
+      "acc": "złota",
+      "ins": "złotami",
+      "loc": "złotach",
+      "voc": "złota"
+    }
+  }
+}

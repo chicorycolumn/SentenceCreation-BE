@@ -1,0 +1,106 @@
+{
+  "inflections": {
+    "infinitive": "wyszkolić",
+    "verbalNoun": "wyszkolenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "wyszkolony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "wyszkoliwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wyszkoli się"
+          },
+          "plural": {
+            "allPluralGenders": "wyszkoli się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "wyszkolę"
+          },
+          "plural": {
+            "allPluralGenders": "wyszkolimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "wyszkolisz"
+          },
+          "plural": {
+            "allPluralGenders": "wyszkolicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wyszkoli"
+          },
+          "plural": {
+            "allPluralGenders": "wyszkolą"
+          }
+        }
+      },
+      "imperative": "wyszkol",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wyszkolono"
+          },
+          "plural": {
+            "allPluralGenders": "wyszkolono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": [
+              "wyszkoliłem"
+            ],
+            "f": [
+              "wyszkoliłam"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "wyszkoliliśmy"
+            ],
+            "nonvirile": [
+              "wyszkoliłyśmy"
+            ]
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": [
+              "wyszkoliłeś"
+            ],
+            "f": [
+              "wyszkoliłaś"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "wyszkoliliście"
+            ],
+            "nonvirile": [
+              "wyszkoliłyście"
+            ]
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wyszkolił",
+            "f": "wyszkoliła",
+            "n": "wyszkoliło"
+          },
+          "plural": {
+            "virile": "wyszkolili",
+            "nonvirile": "wyszkoliły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

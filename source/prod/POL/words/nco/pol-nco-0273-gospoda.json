@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gospoda",
+      "gen": "gospody",
+      "dat": "gospodzie",
+      "acc": "gospodę",
+      "ins": "gospodą",
+      "loc": "gospodzie",
+      "voc": "gospodo"
+    },
+    "plural": {
+      "nom": "gospody",
+      "gen": "gospód",
+      "dat": "gospodom",
+      "acc": "gospody",
+      "ins": "gospodami",
+      "loc": "gospodach",
+      "voc": "gospody"
+    }
+  }
+}

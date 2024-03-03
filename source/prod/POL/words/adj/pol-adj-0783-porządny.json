@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "porządnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "porządny",
+          "gen": "porządnego",
+          "dat": "porządnemu",
+          "acc": "porządnego",
+          "ins": "porządnym",
+          "loc": "porządnym"
+        },
+        "m3": {
+          "nom": "porządny",
+          "gen": "porządnego",
+          "dat": "porządnemu",
+          "acc": "porządny",
+          "ins": "porządnym",
+          "loc": "porządnym"
+        },
+        "f": {
+          "nom": "porządna",
+          "gen": "porządnej",
+          "dat": "porządnej",
+          "acc": "porządną",
+          "ins": "porządną",
+          "loc": "porządnej"
+        },
+        "n": {
+          "nom": "porządne",
+          "gen": "porządnego",
+          "dat": "porządnemu",
+          "acc": "porządne",
+          "ins": "porządnym",
+          "loc": "porządnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "porządni",
+          "gen": "porządnych",
+          "dat": "porządnym",
+          "acc": "porządnych",
+          "ins": "porządnymi",
+          "loc": "porządnych"
+        },
+        "nonvirile": {
+          "nom": "porządne",
+          "gen": "porządnych",
+          "dat": "porządnym",
+          "acc": "porządne",
+          "ins": "porządnymi",
+          "loc": "porządnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "porządniejszy",
+          "gen": "porządniejszego",
+          "dat": "porządniejszemu",
+          "acc": "porządniejszego",
+          "ins": "porządniejszym",
+          "loc": "porządniejszym"
+        },
+        "m3": {
+          "nom": "porządniejszy",
+          "gen": "porządniejszego",
+          "dat": "porządniejszemu",
+          "acc": "porządniejszy",
+          "ins": "porządniejszym",
+          "loc": "porządniejszym"
+        },
+        "f": {
+          "nom": "porządniejsza",
+          "gen": "porządniejszej",
+          "dat": "porządniejszej",
+          "acc": "porządniejszą",
+          "ins": "porządniejszą",
+          "loc": "porządniejszej"
+        },
+        "n": {
+          "nom": "porządniejsze",
+          "gen": "porządniejszego",
+          "dat": "porządniejszemu",
+          "acc": "porządniejsze",
+          "ins": "porządniejszym",
+          "loc": "porządniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "porządniejsi",
+          "gen": "porządniejszych",
+          "dat": "porządniejszym",
+          "acc": "porządniejszych",
+          "ins": "porządniejszymi",
+          "loc": "porządniejszych"
+        },
+        "nonvirile": {
+          "nom": "porządniejsze",
+          "gen": "porządniejszych",
+          "dat": "porządniejszym",
+          "acc": "porządniejsze",
+          "ins": "porządniejszymi",
+          "loc": "porządniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najporządniejszy",
+          "gen": "najporządniejszego",
+          "dat": "najporządniejszemu",
+          "acc": "najporządniejszego",
+          "ins": "najporządniejszym",
+          "loc": "najporządniejszym"
+        },
+        "m3": {
+          "nom": "najporządniejszy",
+          "gen": "najporządniejszego",
+          "dat": "najporządniejszemu",
+          "acc": "najporządniejszy",
+          "ins": "najporządniejszym",
+          "loc": "najporządniejszym"
+        },
+        "f": {
+          "nom": "najporządniejsza",
+          "gen": "najporządniejszej",
+          "dat": "najporządniejszej",
+          "acc": "najporządniejszą",
+          "ins": "najporządniejszą",
+          "loc": "najporządniejszej"
+        },
+        "n": {
+          "nom": "najporządniejsze",
+          "gen": "najporządniejszego",
+          "dat": "najporządniejszemu",
+          "acc": "najporządniejsze",
+          "ins": "najporządniejszym",
+          "loc": "najporządniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najporządniejsi",
+          "gen": "najporządniejszych",
+          "dat": "najporządniejszym",
+          "acc": "najporządniejszych",
+          "ins": "najporządniejszymi",
+          "loc": "najporządniejszych"
+        },
+        "nonvirile": {
+          "nom": "najporządniejsze",
+          "gen": "najporządniejszych",
+          "dat": "najporządniejszym",
+          "acc": "najporządniejsze",
+          "ins": "najporządniejszymi",
+          "loc": "najporządniejszych"
+        }
+      }
+    }
+  }
+}

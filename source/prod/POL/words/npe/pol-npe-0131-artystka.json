@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "artystka",
+      "gen": "artystki",
+      "dat": "artystce",
+      "acc": "artystkę",
+      "ins": "artystką",
+      "loc": "artystce",
+      "voc": "artystko"
+    },
+    "plural": {
+      "nom": "artystki",
+      "gen": "artystek",
+      "dat": "artystkom",
+      "acc": "artystki",
+      "ins": "artystkami",
+      "loc": "artystkach",
+      "voc": "artystki"
+    }
+  }
+}

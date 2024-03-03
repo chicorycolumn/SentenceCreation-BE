@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "project",
+      "gen": "project's"
+    },
+    "plural": {
+      "nom": "projects",
+      "gen": "projects'"
+    }
+  }
+}

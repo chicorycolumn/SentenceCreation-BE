@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "krem",
+      "gen": "kremu",
+      "dat": "kremowi",
+      "acc": "krem",
+      "ins": "kremem",
+      "loc": "kremie",
+      "voc": "kremie"
+    },
+    "plural": {
+      "nom": "kremy",
+      "gen": "kremów",
+      "dat": "kremom",
+      "acc": "kremy",
+      "ins": "kremami",
+      "loc": "kremach",
+      "voc": "kremy"
+    }
+  }
+}

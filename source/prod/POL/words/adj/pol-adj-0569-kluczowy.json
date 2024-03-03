@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "kluczowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "kluczowy",
+          "gen": "kluczowego",
+          "dat": "kluczowemu",
+          "acc": "kluczowego",
+          "ins": "kluczowym",
+          "loc": "kluczowym"
+        },
+        "m3": {
+          "nom": "kluczowy",
+          "gen": "kluczowego",
+          "dat": "kluczowemu",
+          "acc": "kluczowy",
+          "ins": "kluczowym",
+          "loc": "kluczowym"
+        },
+        "f": {
+          "nom": "kluczowa",
+          "gen": "kluczowej",
+          "dat": "kluczowej",
+          "acc": "kluczową",
+          "ins": "kluczową",
+          "loc": "kluczowej"
+        },
+        "n": {
+          "nom": "kluczowe",
+          "gen": "kluczowego",
+          "dat": "kluczowemu",
+          "acc": "kluczowe",
+          "ins": "kluczowym",
+          "loc": "kluczowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "kluczowi",
+          "gen": "kluczowych",
+          "dat": "kluczowym",
+          "acc": "kluczowych",
+          "ins": "kluczowymi",
+          "loc": "kluczowych"
+        },
+        "nonvirile": {
+          "nom": "kluczowe",
+          "gen": "kluczowych",
+          "dat": "kluczowym",
+          "acc": "kluczowe",
+          "ins": "kluczowymi",
+          "loc": "kluczowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej kluczowy",
+          "gen": "bardziej kluczowego",
+          "dat": "bardziej kluczowemu",
+          "acc": "bardziej kluczowego",
+          "ins": "bardziej kluczowym",
+          "loc": "bardziej kluczowym"
+        },
+        "m3": {
+          "nom": "bardziej kluczowy",
+          "gen": "bardziej kluczowego",
+          "dat": "bardziej kluczowemu",
+          "acc": "bardziej kluczowy",
+          "ins": "bardziej kluczowym",
+          "loc": "bardziej kluczowym"
+        },
+        "f": {
+          "nom": "bardziej kluczowa",
+          "gen": "bardziej kluczowej",
+          "dat": "bardziej kluczowej",
+          "acc": "bardziej kluczową",
+          "ins": "bardziej kluczową",
+          "loc": "bardziej kluczowej"
+        },
+        "n": {
+          "nom": "bardziej kluczowe",
+          "gen": "bardziej kluczowego",
+          "dat": "bardziej kluczowemu",
+          "acc": "bardziej kluczowe",
+          "ins": "bardziej kluczowym",
+          "loc": "bardziej kluczowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej kluczowi",
+          "gen": "bardziej kluczowych",
+          "dat": "bardziej kluczowym",
+          "acc": "bardziej kluczowych",
+          "ins": "bardziej kluczowymi",
+          "loc": "bardziej kluczowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej kluczowe",
+          "gen": "bardziej kluczowych",
+          "dat": "bardziej kluczowym",
+          "acc": "bardziej kluczowe",
+          "ins": "bardziej kluczowymi",
+          "loc": "bardziej kluczowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej kluczowy",
+          "gen": "najbardziej kluczowego",
+          "dat": "najbardziej kluczowemu",
+          "acc": "najbardziej kluczowego",
+          "ins": "najbardziej kluczowym",
+          "loc": "najbardziej kluczowym"
+        },
+        "m3": {
+          "nom": "najbardziej kluczowy",
+          "gen": "najbardziej kluczowego",
+          "dat": "najbardziej kluczowemu",
+          "acc": "najbardziej kluczowy",
+          "ins": "najbardziej kluczowym",
+          "loc": "najbardziej kluczowym"
+        },
+        "f": {
+          "nom": "najbardziej kluczowa",
+          "gen": "najbardziej kluczowej",
+          "dat": "najbardziej kluczowej",
+          "acc": "najbardziej kluczową",
+          "ins": "najbardziej kluczową",
+          "loc": "najbardziej kluczowej"
+        },
+        "n": {
+          "nom": "najbardziej kluczowe",
+          "gen": "najbardziej kluczowego",
+          "dat": "najbardziej kluczowemu",
+          "acc": "najbardziej kluczowe",
+          "ins": "najbardziej kluczowym",
+          "loc": "najbardziej kluczowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej kluczowi",
+          "gen": "najbardziej kluczowych",
+          "dat": "najbardziej kluczowym",
+          "acc": "najbardziej kluczowych",
+          "ins": "najbardziej kluczowymi",
+          "loc": "najbardziej kluczowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej kluczowe",
+          "gen": "najbardziej kluczowych",
+          "dat": "najbardziej kluczowym",
+          "acc": "najbardziej kluczowe",
+          "ins": "najbardziej kluczowymi",
+          "loc": "najbardziej kluczowych"
+        }
+      }
+    }
+  }
+}

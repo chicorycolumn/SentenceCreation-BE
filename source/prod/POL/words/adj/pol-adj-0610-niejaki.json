@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "niejako",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niejaki",
+          "gen": "niejakiego",
+          "dat": "niejakiemu",
+          "acc": "niejakiego",
+          "ins": "niejakim",
+          "loc": "niejakim"
+        },
+        "m3": {
+          "nom": "niejaki",
+          "gen": "niejakiego",
+          "dat": "niejakiemu",
+          "acc": "niejaki",
+          "ins": "niejakim",
+          "loc": "niejakim"
+        },
+        "f": {
+          "nom": "niejaka",
+          "gen": "niejakiej",
+          "dat": "niejakiej",
+          "acc": "niejaką",
+          "ins": "niejaką",
+          "loc": "niejakiej"
+        },
+        "n": {
+          "nom": "niejakie",
+          "gen": "niejakiego",
+          "dat": "niejakiemu",
+          "acc": "niejakie",
+          "ins": "niejakim",
+          "loc": "niejakim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niejacy",
+          "gen": "niejakich",
+          "dat": "niejakim",
+          "acc": "niejakich",
+          "ins": "niejakimi",
+          "loc": "niejakich"
+        },
+        "nonvirile": {
+          "nom": "niejakie",
+          "gen": "niejakich",
+          "dat": "niejakim",
+          "acc": "niejakie",
+          "ins": "niejakimi",
+          "loc": "niejakich"
+        }
+      }
+    }
+  }
+}

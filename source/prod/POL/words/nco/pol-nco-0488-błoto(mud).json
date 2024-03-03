@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "błoto",
+      "gen": "błota",
+      "dat": "błotu",
+      "acc": "błoto",
+      "ins": "błotem",
+      "loc": "błocie",
+      "voc": "błoto"
+    },
+    "plural": {
+      "nom": "błota",
+      "gen": "błot",
+      "dat": "błotom",
+      "acc": "błota",
+      "ins": "błotami",
+      "loc": "błotach",
+      "voc": "błota"
+    }
+  }
+}

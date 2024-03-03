@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "nastrój",
+      "gen": "nastroju",
+      "dat": "nastrojowi",
+      "acc": "nastrój",
+      "ins": "nastrojem",
+      "loc": "nastroju",
+      "voc": "nastroju"
+    },
+    "plural": {
+      "nom": "nastroje",
+      "gen": "nastrojów",
+      "dat": "nastrojom",
+      "acc": "nastroje",
+      "ins": "nastrojami",
+      "loc": "nastrojach",
+      "voc": "nastroje"
+    }
+  }
+}

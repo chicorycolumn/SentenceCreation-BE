@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "parter",
+      "gen": "parteru",
+      "dat": "parterowi",
+      "acc": "parter",
+      "ins": "parterem",
+      "loc": "parterze",
+      "voc": "parterze"
+    },
+    "plural": {
+      "nom": "partery",
+      "gen": "parterów",
+      "dat": "parterom",
+      "acc": "partery",
+      "ins": "parterami",
+      "loc": "parterach",
+      "voc": "partery"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "konewka",
+      "gen": "konewki",
+      "dat": "konewce",
+      "acc": "konewkę",
+      "ins": "konewką",
+      "loc": "konewce",
+      "voc": "konewko"
+    },
+    "plural": {
+      "nom": "konewki",
+      "gen": "konewek",
+      "dat": "konewkom",
+      "acc": "konewki",
+      "ins": "konewkami",
+      "loc": "konewkach",
+      "voc": "konewki"
+    }
+  }
+}

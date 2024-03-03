@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "alarm",
+      "gen": "alarmu",
+      "dat": "alarmowi",
+      "acc": "alarm",
+      "ins": "alarmem",
+      "loc": "alarmie",
+      "voc": "alarmie"
+    },
+    "plural": {
+      "nom": "alarmy",
+      "gen": "alarmów",
+      "dat": "alarmom",
+      "acc": "alarmy",
+      "ins": "alarmami",
+      "loc": "alarmach",
+      "voc": "alarmy"
+    }
+  }
+}

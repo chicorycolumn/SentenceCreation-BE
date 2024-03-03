@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kciuk",
+      "gen": "kciuka",
+      "dat": "kciukowi",
+      "acc": "kciuk",
+      "ins": "kciukiem",
+      "loc": "kciuku",
+      "voc": "kciuku"
+    },
+    "plural": {
+      "nom": "kciuki",
+      "gen": "kciuków",
+      "dat": "kciukom",
+      "acc": "kciuki",
+      "ins": "kciukami",
+      "loc": "kciukach",
+      "voc": "kciuki"
+    }
+  }
+}

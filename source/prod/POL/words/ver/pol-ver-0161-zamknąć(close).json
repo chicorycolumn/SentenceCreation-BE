@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zamknąć",
+    "verbalNoun": "zamknięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zamknięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zamknąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zamknie się"
+          },
+          "plural": {
+            "allPluralGenders": "zamknie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zamknę"
+          },
+          "plural": {
+            "allPluralGenders": "zamkniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zamkniesz"
+          },
+          "plural": {
+            "allPluralGenders": "zamkniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zamknie"
+          },
+          "plural": {
+            "allPluralGenders": "zamkną"
+          }
+        }
+      },
+      "imperative": "zamknij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zamknięto"
+          },
+          "plural": {
+            "allPluralGenders": "zamknięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zamknąłem",
+            "f": "zamknęłam"
+          },
+          "plural": {
+            "virile": "zamknęliśmy",
+            "nonvirile": "zamknęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zamknąłeś",
+            "f": "zamknęłaś"
+          },
+          "plural": {
+            "virile": "zamknęliście",
+            "nonvirile": "zamknęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zamknął",
+            "f": "zamknęła",
+            "n": "zamknęło"
+          },
+          "plural": {
+            "virile": "zamknęli",
+            "nonvirile": "zamknęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

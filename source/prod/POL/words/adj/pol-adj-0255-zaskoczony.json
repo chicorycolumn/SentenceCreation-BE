@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zaskoczony",
+          "gen": "zaskoczonego",
+          "dat": "zaskoczonemu",
+          "acc": "zaskoczonego",
+          "ins": "zaskoczonym",
+          "loc": "zaskoczonym"
+        },
+        "m3": {
+          "nom": "zaskoczony",
+          "gen": "zaskoczonego",
+          "dat": "zaskoczonemu",
+          "acc": "zaskoczony",
+          "ins": "zaskoczonym",
+          "loc": "zaskoczonym"
+        },
+        "f": {
+          "nom": "zaskoczona",
+          "gen": "zaskoczonej",
+          "dat": "zaskoczonej",
+          "acc": "zaskoczoną",
+          "ins": "zaskoczoną",
+          "loc": "zaskoczonej"
+        },
+        "n": {
+          "nom": "zaskoczone",
+          "gen": "zaskoczonego",
+          "dat": "zaskoczonemu",
+          "acc": "zaskoczone",
+          "ins": "zaskoczonym",
+          "loc": "zaskoczonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zaskoczeni",
+          "gen": "zaskoczonych",
+          "dat": "zaskoczonym",
+          "acc": "zaskoczonych",
+          "ins": "zaskoczonymi",
+          "loc": "zaskoczonych"
+        },
+        "nonvirile": {
+          "nom": "zaskoczone",
+          "gen": "zaskoczonych",
+          "dat": "zaskoczonym",
+          "acc": "zaskoczone",
+          "ins": "zaskoczonymi",
+          "loc": "zaskoczonych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej zaskoczony",
+          "gen": "bardziej zaskoczonego",
+          "dat": "bardziej zaskoczonemu",
+          "acc": "bardziej zaskoczonego",
+          "ins": "bardziej zaskoczonym",
+          "loc": "bardziej zaskoczonym"
+        },
+        "m3": {
+          "nom": "bardziej zaskoczony",
+          "gen": "bardziej zaskoczonego",
+          "dat": "bardziej zaskoczonemu",
+          "acc": "bardziej zaskoczony",
+          "ins": "bardziej zaskoczonym",
+          "loc": "bardziej zaskoczonym"
+        },
+        "f": {
+          "nom": "bardziej zaskoczona",
+          "gen": "bardziej zaskoczonej",
+          "dat": "bardziej zaskoczonej",
+          "acc": "bardziej zaskoczoną",
+          "ins": "bardziej zaskoczoną",
+          "loc": "bardziej zaskoczonej"
+        },
+        "n": {
+          "nom": "bardziej zaskoczone",
+          "gen": "bardziej zaskoczonego",
+          "dat": "bardziej zaskoczonemu",
+          "acc": "bardziej zaskoczone",
+          "ins": "bardziej zaskoczonym",
+          "loc": "bardziej zaskoczonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej zaskoczeni",
+          "gen": "bardziej zaskoczonych",
+          "dat": "bardziej zaskoczonym",
+          "acc": "bardziej zaskoczonych",
+          "ins": "bardziej zaskoczonymi",
+          "loc": "bardziej zaskoczonych"
+        },
+        "nonvirile": {
+          "nom": "bardziej zaskoczone",
+          "gen": "bardziej zaskoczonych",
+          "dat": "bardziej zaskoczonym",
+          "acc": "bardziej zaskoczone",
+          "ins": "bardziej zaskoczonymi",
+          "loc": "bardziej zaskoczonych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej zaskoczony",
+          "gen": "najbardziej zaskoczonego",
+          "dat": "najbardziej zaskoczonemu",
+          "acc": "najbardziej zaskoczonego",
+          "ins": "najbardziej zaskoczonym",
+          "loc": "najbardziej zaskoczonym"
+        },
+        "m3": {
+          "nom": "najbardziej zaskoczony",
+          "gen": "najbardziej zaskoczonego",
+          "dat": "najbardziej zaskoczonemu",
+          "acc": "najbardziej zaskoczony",
+          "ins": "najbardziej zaskoczonym",
+          "loc": "najbardziej zaskoczonym"
+        },
+        "f": {
+          "nom": "najbardziej zaskoczona",
+          "gen": "najbardziej zaskoczonej",
+          "dat": "najbardziej zaskoczonej",
+          "acc": "najbardziej zaskoczoną",
+          "ins": "najbardziej zaskoczoną",
+          "loc": "najbardziej zaskoczonej"
+        },
+        "n": {
+          "nom": "najbardziej zaskoczone",
+          "gen": "najbardziej zaskoczonego",
+          "dat": "najbardziej zaskoczonemu",
+          "acc": "najbardziej zaskoczone",
+          "ins": "najbardziej zaskoczonym",
+          "loc": "najbardziej zaskoczonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej zaskoczeni",
+          "gen": "najbardziej zaskoczonych",
+          "dat": "najbardziej zaskoczonym",
+          "acc": "najbardziej zaskoczonych",
+          "ins": "najbardziej zaskoczonymi",
+          "loc": "najbardziej zaskoczonych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej zaskoczone",
+          "gen": "najbardziej zaskoczonych",
+          "dat": "najbardziej zaskoczonym",
+          "acc": "najbardziej zaskoczone",
+          "ins": "najbardziej zaskoczonymi",
+          "loc": "najbardziej zaskoczonych"
+        }
+      }
+    }
+  }
+}

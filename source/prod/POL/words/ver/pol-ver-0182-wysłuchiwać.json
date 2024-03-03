@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wysłuchiwać",
+    "verbalNoun": "wysłuchiwanie",
+    "activeAdjectival": "wysłuchujący",
+    "passiveAdjectival": "wysłuchiwany",
+    "contemporaryAdverbial": "wysłuchując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "wysłuchuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wysłuchiwano"
+          },
+          "plural": {
+            "allPluralGenders": "wysłuchiwano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wysłuchiwałem",
+            "f": "wysłuchiwałam"
+          },
+          "plural": {
+            "virile": "wysłuchiwaliśmy",
+            "nonvirile": "wysłuchiwałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wysłuchiwałeś",
+            "f": "wysłuchiwałaś"
+          },
+          "plural": {
+            "virile": "wysłuchiwaliście",
+            "nonvirile": "wysłuchiwałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wysłuchiwał",
+            "f": "wysłuchiwała",
+            "n": "wysłuchiwało"
+          },
+          "plural": {
+            "virile": "wysłuchiwali",
+            "nonvirile": "wysłuchiwały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wysłuchuje się"
+          },
+          "plural": {
+            "allPluralGenders": "wysłuchuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wysłuchuję"
+          },
+          "plural": {
+            "allPluralGenders": "wysłuchujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wysłuchujesz"
+          },
+          "plural": {
+            "allPluralGenders": "wysłuchujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wysłuchuje"
+          },
+          "plural": {
+            "allPluralGenders": "wysłuchują"
+          }
+        }
+      }
+    }
+  }
+}

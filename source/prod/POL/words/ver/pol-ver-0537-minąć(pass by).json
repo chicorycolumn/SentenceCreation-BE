@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "minąć",
+    "verbalNoun": "minięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "minięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "minąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "minie się"
+          },
+          "plural": {
+            "allPluralGenders": "minie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "minę"
+          },
+          "plural": {
+            "allPluralGenders": "miniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "miniesz"
+          },
+          "plural": {
+            "allPluralGenders": "miniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "minie"
+          },
+          "plural": {
+            "allPluralGenders": "miną"
+          }
+        }
+      },
+      "imperative": "miń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "minięto"
+          },
+          "plural": {
+            "allPluralGenders": "minięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "minąłem",
+            "f": "minęłam"
+          },
+          "plural": {
+            "virile": "minęliśmy",
+            "nonvirile": "minęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "minąłeś",
+            "f": "minęłaś"
+          },
+          "plural": {
+            "virile": "minęliście",
+            "nonvirile": "minęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "minął",
+            "f": "minęła",
+            "n": "minęło"
+          },
+          "plural": {
+            "virile": "minęli",
+            "nonvirile": "minęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

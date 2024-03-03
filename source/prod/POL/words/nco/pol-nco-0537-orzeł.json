@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "orzeł",
+      "gen": "orła",
+      "dat": [
+        "orłu",
+        "orłowi"
+      ],
+      "acc": "orła",
+      "ins": "orłem",
+      "loc": "orle",
+      "voc": "orle"
+    },
+    "plural": {
+      "nom": "orły",
+      "gen": "orłów",
+      "dat": "orłom",
+      "acc": "orły",
+      "ins": "orłami",
+      "loc": "orłach",
+      "voc": "orły"
+    }
+  }
+}

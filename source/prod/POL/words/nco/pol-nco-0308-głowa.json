@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "głowa",
+      "gen": "głowy",
+      "dat": "głowie",
+      "acc": "głowę",
+      "ins": "głową",
+      "loc": "głowie",
+      "voc": "głowo"
+    },
+    "plural": {
+      "nom": "głowy",
+      "gen": "głów",
+      "dat": "głowom",
+      "acc": "głowy",
+      "ins": "głowami",
+      "loc": "głowach",
+      "voc": "głowy"
+    }
+  }
+}

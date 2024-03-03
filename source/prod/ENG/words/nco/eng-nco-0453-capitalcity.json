@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "capital city",
+      "gen": "capital city's"
+    },
+    "plural": {
+      "nom": "capital cities",
+      "gen": "capital cities'"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "portfel",
+      "gen": [
+        "portfela",
+        "portfelu"
+      ],
+      "dat": "portfelowi",
+      "acc": "portfel",
+      "ins": "portfelem",
+      "loc": "portfelu",
+      "voc": "portfelu"
+    },
+    "plural": {
+      "nom": "portfele",
+      "gen": [
+        "portfeli",
+        "portfelów"
+      ],
+      "dat": "portfelom",
+      "acc": "portfele",
+      "ins": "portfelami",
+      "loc": "portfelach",
+      "voc": "portfele"
+    }
+  }
+}

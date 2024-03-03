@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ośmielić",
+    "verbalNoun": "ośmielenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "ośmielony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "ośmieliwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ośmieli się"
+          },
+          "plural": {
+            "allPluralGenders": "ośmieli się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ośmielę"
+          },
+          "plural": {
+            "allPluralGenders": "ośmielimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ośmielisz"
+          },
+          "plural": {
+            "allPluralGenders": "ośmielicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ośmieli"
+          },
+          "plural": {
+            "allPluralGenders": "ośmielą"
+          }
+        }
+      },
+      "imperative": "ośmiel",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ośmielono"
+          },
+          "plural": {
+            "allPluralGenders": "ośmielono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ośmieliłem",
+            "f": "ośmieliłam"
+          },
+          "plural": {
+            "virile": "ośmieliliśmy",
+            "nonvirile": "ośmieliłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ośmieliłeś",
+            "f": "ośmieliłaś"
+          },
+          "plural": {
+            "virile": "ośmieliliście",
+            "nonvirile": "ośmieliłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ośmielił",
+            "f": "ośmieliła",
+            "n": "ośmieliło"
+          },
+          "plural": {
+            "virile": "ośmielili",
+            "nonvirile": "ośmieliły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

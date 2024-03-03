@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "namawiać",
+    "verbalNoun": "namawianie",
+    "activeAdjectival": "namawiający",
+    "passiveAdjectival": "namawiany",
+    "contemporaryAdverbial": "namawiając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "namawiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "namawiano"
+          },
+          "plural": {
+            "allPluralGenders": "namawiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "namawiałem",
+            "f": "namawiałam"
+          },
+          "plural": {
+            "virile": "namawialiśmy",
+            "nonvirile": "namawiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "namawiałeś",
+            "f": "namawiałaś"
+          },
+          "plural": {
+            "virile": "namawialiście",
+            "nonvirile": "namawiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "namawiał",
+            "f": "namawiała",
+            "n": "namawiało"
+          },
+          "plural": {
+            "virile": "namawiali",
+            "nonvirile": "namawiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "namawia się"
+          },
+          "plural": {
+            "allPluralGenders": "namawia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "namawiam"
+          },
+          "plural": {
+            "allPluralGenders": "namawiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "namawiasz"
+          },
+          "plural": {
+            "allPluralGenders": "namawiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "namawia"
+          },
+          "plural": {
+            "allPluralGenders": "namawiają"
+          }
+        }
+      }
+    }
+  }
+}

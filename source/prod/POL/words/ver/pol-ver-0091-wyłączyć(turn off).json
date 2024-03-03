@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wyłączyć",
+    "verbalNoun": "wyłączenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "wyłączony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "wyłączywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wyłączy się"
+          },
+          "plural": {
+            "allPluralGenders": "wyłączy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wyłączę"
+          },
+          "plural": {
+            "allPluralGenders": "wyłączymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wyłączysz"
+          },
+          "plural": {
+            "allPluralGenders": "wyłączycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wyłączy"
+          },
+          "plural": {
+            "allPluralGenders": "wyłączą"
+          }
+        }
+      },
+      "imperative": "wyłącz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wyłączono"
+          },
+          "plural": {
+            "allPluralGenders": "wyłączono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wyłączyłem",
+            "f": "wyłączyłam"
+          },
+          "plural": {
+            "virile": "wyłączyliśmy",
+            "nonvirile": "wyłączyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wyłączyłeś",
+            "f": "wyłączyłaś"
+          },
+          "plural": {
+            "virile": "wyłączyliście",
+            "nonvirile": "wyłączyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wyłączył",
+            "f": "wyłączyła",
+            "n": "wyłączyło"
+          },
+          "plural": {
+            "virile": "wyłączyli",
+            "nonvirile": "wyłączyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

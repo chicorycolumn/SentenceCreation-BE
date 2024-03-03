@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "lekko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "lekki",
+          "gen": "lekkiego",
+          "dat": "lekkiemu",
+          "acc": "lekkiego",
+          "ins": "lekkim",
+          "loc": "lekkim"
+        },
+        "m3": {
+          "nom": "lekki",
+          "gen": "lekkiego",
+          "dat": "lekkiemu",
+          "acc": "lekki",
+          "ins": "lekkim",
+          "loc": "lekkim"
+        },
+        "f": {
+          "nom": "lekka",
+          "gen": "lekkiej",
+          "dat": "lekkiej",
+          "acc": "lekką",
+          "ins": "lekką",
+          "loc": "lekkiej"
+        },
+        "n": {
+          "nom": "lekkie",
+          "gen": "lekkiego",
+          "dat": "lekkiemu",
+          "acc": "lekkie",
+          "ins": "lekkim",
+          "loc": "lekkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "lekcy",
+          "gen": "lekkich",
+          "dat": "lekkim",
+          "acc": "lekkich",
+          "ins": "lekkimi",
+          "loc": "lekkich"
+        },
+        "nonvirile": {
+          "nom": "lekkie",
+          "gen": "lekkich",
+          "dat": "lekkim",
+          "acc": "lekkie",
+          "ins": "lekkimi",
+          "loc": "lekkich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "lżejszy",
+          "gen": "lżejszego",
+          "dat": "lżejszemu",
+          "acc": "lżejszego",
+          "ins": "lżejszym",
+          "loc": "lżejszym"
+        },
+        "m3": {
+          "nom": "lżejszy",
+          "gen": "lżejszego",
+          "dat": "lżejszemu",
+          "acc": "lżejszy",
+          "ins": "lżejszym",
+          "loc": "lżejszym"
+        },
+        "f": {
+          "nom": "lżejsza",
+          "gen": "lżejszej",
+          "dat": "lżejszej",
+          "acc": "lżejszą",
+          "ins": "lżejszą",
+          "loc": "lżejszej"
+        },
+        "n": {
+          "nom": "lżejsze",
+          "gen": "lżejszego",
+          "dat": "lżejszemu",
+          "acc": "lżejsze",
+          "ins": "lżejszym",
+          "loc": "lżejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "lżejsi",
+          "gen": "lżejszych",
+          "dat": "lżejszym",
+          "acc": "lżejszych",
+          "ins": "lżejszymi",
+          "loc": "lżejszych"
+        },
+        "nonvirile": {
+          "nom": "lżejsze",
+          "gen": "lżejszych",
+          "dat": "lżejszym",
+          "acc": "lżejsze",
+          "ins": "lżejszymi",
+          "loc": "lżejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najlżejszy",
+          "gen": "najlżejszego",
+          "dat": "najlżejszemu",
+          "acc": "najlżejszego",
+          "ins": "najlżejszym",
+          "loc": "najlżejszym"
+        },
+        "m3": {
+          "nom": "najlżejszy",
+          "gen": "najlżejszego",
+          "dat": "najlżejszemu",
+          "acc": "najlżejszy",
+          "ins": "najlżejszym",
+          "loc": "najlżejszym"
+        },
+        "f": {
+          "nom": "najlżejsza",
+          "gen": "najlżejszej",
+          "dat": "najlżejszej",
+          "acc": "najlżejszą",
+          "ins": "najlżejszą",
+          "loc": "najlżejszej"
+        },
+        "n": {
+          "nom": "najlżejsze",
+          "gen": "najlżejszego",
+          "dat": "najlżejszemu",
+          "acc": "najlżejsze",
+          "ins": "najlżejszym",
+          "loc": "najlżejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najlżejsi",
+          "gen": "najlżejszych",
+          "dat": "najlżejszym",
+          "acc": "najlżejszych",
+          "ins": "najlżejszymi",
+          "loc": "najlżejszych"
+        },
+        "nonvirile": {
+          "nom": "najlżejsze",
+          "gen": "najlżejszych",
+          "dat": "najlżejszym",
+          "acc": "najlżejsze",
+          "ins": "najlżejszymi",
+          "loc": "najlżejszych"
+        }
+      }
+    }
+  }
+}

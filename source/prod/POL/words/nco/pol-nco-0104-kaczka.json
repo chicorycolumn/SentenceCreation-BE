@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kaczka",
+      "gen": "kaczki",
+      "dat": "kaczce",
+      "acc": "kaczkę",
+      "ins": "kaczką",
+      "loc": "kaczce",
+      "voc": "kaczko"
+    },
+    "plural": {
+      "nom": "kaczki",
+      "gen": "kaczek",
+      "dat": "kaczkom",
+      "acc": "kaczki",
+      "ins": "kaczkami",
+      "loc": "kaczkach",
+      "voc": "kaczki"
+    }
+  }
+}

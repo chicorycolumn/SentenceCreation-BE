@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niepewnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niepewny",
+          "gen": "niepewnego",
+          "dat": "niepewnemu",
+          "acc": "niepewnego",
+          "ins": "niepewnym",
+          "loc": "niepewnym"
+        },
+        "m3": {
+          "nom": "niepewny",
+          "gen": "niepewnego",
+          "dat": "niepewnemu",
+          "acc": "niepewny",
+          "ins": "niepewnym",
+          "loc": "niepewnym"
+        },
+        "f": {
+          "nom": "niepewna",
+          "gen": "niepewnej",
+          "dat": "niepewnej",
+          "acc": "niepewną",
+          "ins": "niepewną",
+          "loc": "niepewnej"
+        },
+        "n": {
+          "nom": "niepewne",
+          "gen": "niepewnego",
+          "dat": "niepewnemu",
+          "acc": "niepewne",
+          "ins": "niepewnym",
+          "loc": "niepewnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niepewni",
+          "gen": "niepewnych",
+          "dat": "niepewnym",
+          "acc": "niepewnych",
+          "ins": "niepewnymi",
+          "loc": "niepewnych"
+        },
+        "nonvirile": {
+          "nom": "niepewne",
+          "gen": "niepewnych",
+          "dat": "niepewnym",
+          "acc": "niepewne",
+          "ins": "niepewnymi",
+          "loc": "niepewnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej niepewny",
+          "gen": "bardziej niepewnego",
+          "dat": "bardziej niepewnemu",
+          "acc": "bardziej niepewnego",
+          "ins": "bardziej niepewnym",
+          "loc": "bardziej niepewnym"
+        },
+        "m3": {
+          "nom": "bardziej niepewny",
+          "gen": "bardziej niepewnego",
+          "dat": "bardziej niepewnemu",
+          "acc": "bardziej niepewny",
+          "ins": "bardziej niepewnym",
+          "loc": "bardziej niepewnym"
+        },
+        "f": {
+          "nom": "bardziej niepewna",
+          "gen": "bardziej niepewnej",
+          "dat": "bardziej niepewnej",
+          "acc": "bardziej niepewną",
+          "ins": "bardziej niepewną",
+          "loc": "bardziej niepewnej"
+        },
+        "n": {
+          "nom": "bardziej niepewne",
+          "gen": "bardziej niepewnego",
+          "dat": "bardziej niepewnemu",
+          "acc": "bardziej niepewne",
+          "ins": "bardziej niepewnym",
+          "loc": "bardziej niepewnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej niepewni",
+          "gen": "bardziej niepewnych",
+          "dat": "bardziej niepewnym",
+          "acc": "bardziej niepewnych",
+          "ins": "bardziej niepewnymi",
+          "loc": "bardziej niepewnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej niepewne",
+          "gen": "bardziej niepewnych",
+          "dat": "bardziej niepewnym",
+          "acc": "bardziej niepewne",
+          "ins": "bardziej niepewnymi",
+          "loc": "bardziej niepewnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej niepewny",
+          "gen": "najbardziej niepewnego",
+          "dat": "najbardziej niepewnemu",
+          "acc": "najbardziej niepewnego",
+          "ins": "najbardziej niepewnym",
+          "loc": "najbardziej niepewnym"
+        },
+        "m3": {
+          "nom": "najbardziej niepewny",
+          "gen": "najbardziej niepewnego",
+          "dat": "najbardziej niepewnemu",
+          "acc": "najbardziej niepewny",
+          "ins": "najbardziej niepewnym",
+          "loc": "najbardziej niepewnym"
+        },
+        "f": {
+          "nom": "najbardziej niepewna",
+          "gen": "najbardziej niepewnej",
+          "dat": "najbardziej niepewnej",
+          "acc": "najbardziej niepewną",
+          "ins": "najbardziej niepewną",
+          "loc": "najbardziej niepewnej"
+        },
+        "n": {
+          "nom": "najbardziej niepewne",
+          "gen": "najbardziej niepewnego",
+          "dat": "najbardziej niepewnemu",
+          "acc": "najbardziej niepewne",
+          "ins": "najbardziej niepewnym",
+          "loc": "najbardziej niepewnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej niepewni",
+          "gen": "najbardziej niepewnych",
+          "dat": "najbardziej niepewnym",
+          "acc": "najbardziej niepewnych",
+          "ins": "najbardziej niepewnymi",
+          "loc": "najbardziej niepewnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej niepewne",
+          "gen": "najbardziej niepewnych",
+          "dat": "najbardziej niepewnym",
+          "acc": "najbardziej niepewne",
+          "ins": "najbardziej niepewnymi",
+          "loc": "najbardziej niepewnych"
+        }
+      }
+    }
+  }
+}

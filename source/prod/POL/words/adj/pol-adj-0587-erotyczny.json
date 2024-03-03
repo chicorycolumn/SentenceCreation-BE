@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "erotycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "erotyczny",
+          "gen": "erotycznego",
+          "dat": "erotycznemu",
+          "acc": "erotycznego",
+          "ins": "erotycznym",
+          "loc": "erotycznym"
+        },
+        "m3": {
+          "nom": "erotyczny",
+          "gen": "erotycznego",
+          "dat": "erotycznemu",
+          "acc": "erotyczny",
+          "ins": "erotycznym",
+          "loc": "erotycznym"
+        },
+        "f": {
+          "nom": "erotyczna",
+          "gen": "erotycznej",
+          "dat": "erotycznej",
+          "acc": "erotyczną",
+          "ins": "erotyczną",
+          "loc": "erotycznej"
+        },
+        "n": {
+          "nom": "erotyczne",
+          "gen": "erotycznego",
+          "dat": "erotycznemu",
+          "acc": "erotyczne",
+          "ins": "erotycznym",
+          "loc": "erotycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "erotyczni",
+          "gen": "erotycznych",
+          "dat": "erotycznym",
+          "acc": "erotycznych",
+          "ins": "erotycznymi",
+          "loc": "erotycznych"
+        },
+        "nonvirile": {
+          "nom": "erotyczne",
+          "gen": "erotycznych",
+          "dat": "erotycznym",
+          "acc": "erotyczne",
+          "ins": "erotycznymi",
+          "loc": "erotycznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej erotyczny",
+          "gen": "bardziej erotycznego",
+          "dat": "bardziej erotycznemu",
+          "acc": "bardziej erotycznego",
+          "ins": "bardziej erotycznym",
+          "loc": "bardziej erotycznym"
+        },
+        "m3": {
+          "nom": "bardziej erotyczny",
+          "gen": "bardziej erotycznego",
+          "dat": "bardziej erotycznemu",
+          "acc": "bardziej erotyczny",
+          "ins": "bardziej erotycznym",
+          "loc": "bardziej erotycznym"
+        },
+        "f": {
+          "nom": "bardziej erotyczna",
+          "gen": "bardziej erotycznej",
+          "dat": "bardziej erotycznej",
+          "acc": "bardziej erotyczną",
+          "ins": "bardziej erotyczną",
+          "loc": "bardziej erotycznej"
+        },
+        "n": {
+          "nom": "bardziej erotyczne",
+          "gen": "bardziej erotycznego",
+          "dat": "bardziej erotycznemu",
+          "acc": "bardziej erotyczne",
+          "ins": "bardziej erotycznym",
+          "loc": "bardziej erotycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej erotyczni",
+          "gen": "bardziej erotycznych",
+          "dat": "bardziej erotycznym",
+          "acc": "bardziej erotycznych",
+          "ins": "bardziej erotycznymi",
+          "loc": "bardziej erotycznych"
+        },
+        "nonvirile": {
+          "nom": "bardziej erotyczne",
+          "gen": "bardziej erotycznych",
+          "dat": "bardziej erotycznym",
+          "acc": "bardziej erotyczne",
+          "ins": "bardziej erotycznymi",
+          "loc": "bardziej erotycznych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej erotyczny",
+          "gen": "najbardziej erotycznego",
+          "dat": "najbardziej erotycznemu",
+          "acc": "najbardziej erotycznego",
+          "ins": "najbardziej erotycznym",
+          "loc": "najbardziej erotycznym"
+        },
+        "m3": {
+          "nom": "najbardziej erotyczny",
+          "gen": "najbardziej erotycznego",
+          "dat": "najbardziej erotycznemu",
+          "acc": "najbardziej erotyczny",
+          "ins": "najbardziej erotycznym",
+          "loc": "najbardziej erotycznym"
+        },
+        "f": {
+          "nom": "najbardziej erotyczna",
+          "gen": "najbardziej erotycznej",
+          "dat": "najbardziej erotycznej",
+          "acc": "najbardziej erotyczną",
+          "ins": "najbardziej erotyczną",
+          "loc": "najbardziej erotycznej"
+        },
+        "n": {
+          "nom": "najbardziej erotyczne",
+          "gen": "najbardziej erotycznego",
+          "dat": "najbardziej erotycznemu",
+          "acc": "najbardziej erotyczne",
+          "ins": "najbardziej erotycznym",
+          "loc": "najbardziej erotycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej erotyczni",
+          "gen": "najbardziej erotycznych",
+          "dat": "najbardziej erotycznym",
+          "acc": "najbardziej erotycznych",
+          "ins": "najbardziej erotycznymi",
+          "loc": "najbardziej erotycznych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej erotyczne",
+          "gen": "najbardziej erotycznych",
+          "dat": "najbardziej erotycznym",
+          "acc": "najbardziej erotyczne",
+          "ins": "najbardziej erotycznymi",
+          "loc": "najbardziej erotycznych"
+        }
+      }
+    }
+  }
+}

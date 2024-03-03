@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "dojrzale",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dojrzały",
+          "gen": "dojrzałego",
+          "dat": "dojrzałemu",
+          "acc": "dojrzałego",
+          "ins": "dojrzałym",
+          "loc": "dojrzałym"
+        },
+        "m3": {
+          "nom": "dojrzały",
+          "gen": "dojrzałego",
+          "dat": "dojrzałemu",
+          "acc": "dojrzały",
+          "ins": "dojrzałym",
+          "loc": "dojrzałym"
+        },
+        "f": {
+          "nom": "dojrzała",
+          "gen": "dojrzałej",
+          "dat": "dojrzałej",
+          "acc": "dojrzałą",
+          "ins": "dojrzałą",
+          "loc": "dojrzałej"
+        },
+        "n": {
+          "nom": "dojrzałe",
+          "gen": "dojrzałego",
+          "dat": "dojrzałemu",
+          "acc": "dojrzałe",
+          "ins": "dojrzałym",
+          "loc": "dojrzałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dojrzali",
+          "gen": "dojrzałych",
+          "dat": "dojrzałym",
+          "acc": "dojrzałych",
+          "ins": "dojrzałymi",
+          "loc": "dojrzałych"
+        },
+        "nonvirile": {
+          "nom": "dojrzałe",
+          "gen": "dojrzałych",
+          "dat": "dojrzałym",
+          "acc": "dojrzałe",
+          "ins": "dojrzałymi",
+          "loc": "dojrzałych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszy",
+              "bardziej dojrzały"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszego",
+              "bardziej dojrzałego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszemu",
+              "bardziej dojrzałemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszego",
+              "bardziej dojrzałego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszym",
+              "bardziej dojrzałym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszym",
+              "bardziej dojrzałym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszy",
+              "bardziej dojrzały"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszego",
+              "bardziej dojrzałego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszemu",
+              "bardziej dojrzałemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszy",
+              "bardziej dojrzały"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszym",
+              "bardziej dojrzałym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszym",
+              "bardziej dojrzałym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalsza",
+              "bardziej dojrzała"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszej",
+              "bardziej dojrzałej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszej",
+              "bardziej dojrzałej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszą",
+              "bardziej dojrzałą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszą",
+              "bardziej dojrzałą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszej",
+              "bardziej dojrzałej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalsze",
+              "bardziej dojrzałe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszego",
+              "bardziej dojrzałego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszemu",
+              "bardziej dojrzałemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalsze",
+              "bardziej dojrzałe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszym",
+              "bardziej dojrzałym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszym",
+              "bardziej dojrzałym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalsi",
+              "bardziej dojrzali"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszych",
+              "bardziej dojrzałych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszym",
+              "bardziej dojrzałym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszych",
+              "bardziej dojrzałych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszymi",
+              "bardziej dojrzałymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszych",
+              "bardziej dojrzałych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalsze",
+              "bardziej dojrzałe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszych",
+              "bardziej dojrzałych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszym",
+              "bardziej dojrzałym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalsze",
+              "bardziej dojrzałe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszymi",
+              "bardziej dojrzałymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "dojrzalszych",
+              "bardziej dojrzałych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszy",
+              "najbardziej dojrzały"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszego",
+              "najbardziej dojrzałego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszemu",
+              "najbardziej dojrzałemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszego",
+              "najbardziej dojrzałego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszym",
+              "najbardziej dojrzałym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszym",
+              "najbardziej dojrzałym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszy",
+              "najbardziej dojrzały"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszego",
+              "najbardziej dojrzałego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszemu",
+              "najbardziej dojrzałemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszy",
+              "najbardziej dojrzały"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszym",
+              "najbardziej dojrzałym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszym",
+              "najbardziej dojrzałym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalsza",
+              "najbardziej dojrzała"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszej",
+              "najbardziej dojrzałej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszej",
+              "najbardziej dojrzałej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszą",
+              "najbardziej dojrzałą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszą",
+              "najbardziej dojrzałą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszej",
+              "najbardziej dojrzałej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalsze",
+              "najbardziej dojrzałe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszego",
+              "najbardziej dojrzałego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszemu",
+              "najbardziej dojrzałemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalsze",
+              "najbardziej dojrzałe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszym",
+              "najbardziej dojrzałym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszym",
+              "najbardziej dojrzałym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalsi",
+              "najbardziej dojrzali"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszych",
+              "najbardziej dojrzałych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszym",
+              "najbardziej dojrzałym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszych",
+              "najbardziej dojrzałych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszymi",
+              "najbardziej dojrzałymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszych",
+              "najbardziej dojrzałych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalsze",
+              "najbardziej dojrzałe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszych",
+              "najbardziej dojrzałych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszym",
+              "najbardziej dojrzałym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalsze",
+              "najbardziej dojrzałe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszymi",
+              "najbardziej dojrzałymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdojrzalszych",
+              "najbardziej dojrzałych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

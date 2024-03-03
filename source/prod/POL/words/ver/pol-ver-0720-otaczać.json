@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "otaczać",
+    "verbalNoun": "otaczanie",
+    "activeAdjectival": "otaczający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "otaczając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "otaczaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "otaczano"
+          },
+          "plural": {
+            "allPluralGenders": "otaczano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "otaczałem",
+            "f": "otaczałam"
+          },
+          "plural": {
+            "virile": "otaczaliśmy",
+            "nonvirile": "otaczałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "otaczałeś",
+            "f": "otaczałaś"
+          },
+          "plural": {
+            "virile": "otaczaliście",
+            "nonvirile": "otaczałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "otaczał",
+            "f": "otaczała",
+            "n": "otaczało"
+          },
+          "plural": {
+            "virile": "otaczali",
+            "nonvirile": "otaczały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "otacza się"
+          },
+          "plural": {
+            "allPluralGenders": "otacza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "otaczam"
+          },
+          "plural": {
+            "allPluralGenders": "otaczamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "otaczasz"
+          },
+          "plural": {
+            "allPluralGenders": "otaczacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "otacza"
+          },
+          "plural": {
+            "allPluralGenders": "otaczają"
+          }
+        }
+      }
+    }
+  }
+}

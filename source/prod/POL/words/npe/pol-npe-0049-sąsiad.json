@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sąsiad",
+      "gen": "sąsiada",
+      "dat": "sąsiadowi",
+      "acc": "sąsiada",
+      "ins": "sąsiadem",
+      "loc": "sąsiedzie",
+      "voc": "sąsiedzie"
+    },
+    "plural": {
+      "nom": "sąsiedzi",
+      "gen": "sąsiadów",
+      "dat": "sąsiadom",
+      "acc": "sąsiadów",
+      "ins": "sąsiadami",
+      "loc": "sąsiadach",
+      "voc": "sąsiedzi"
+    }
+  }
+}

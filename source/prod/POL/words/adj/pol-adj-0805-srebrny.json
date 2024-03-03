@@ -1,0 +1,174 @@
+{
+  "inflections": {
+    "adverb": {
+      "isTerminus": true,
+      "normal": [
+        "srebrnie",
+        "srebrno"
+      ],
+      "additionalInfrequent": []
+    },
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "srebrny",
+          "gen": "srebrnego",
+          "dat": "srebrnemu",
+          "acc": "srebrnego",
+          "ins": "srebrnym",
+          "loc": "srebrnym"
+        },
+        "m3": {
+          "nom": "srebrny",
+          "gen": "srebrnego",
+          "dat": "srebrnemu",
+          "acc": "srebrny",
+          "ins": "srebrnym",
+          "loc": "srebrnym"
+        },
+        "f": {
+          "nom": "srebrna",
+          "gen": "srebrnej",
+          "dat": "srebrnej",
+          "acc": "srebrną",
+          "ins": "srebrną",
+          "loc": "srebrnej"
+        },
+        "n": {
+          "nom": "srebrne",
+          "gen": "srebrnego",
+          "dat": "srebrnemu",
+          "acc": "srebrne",
+          "ins": "srebrnym",
+          "loc": "srebrnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "srebrni",
+          "gen": "srebrnych",
+          "dat": "srebrnym",
+          "acc": "srebrnych",
+          "ins": "srebrnymi",
+          "loc": "srebrnych"
+        },
+        "nonvirile": {
+          "nom": "srebrne",
+          "gen": "srebrnych",
+          "dat": "srebrnym",
+          "acc": "srebrne",
+          "ins": "srebrnymi",
+          "loc": "srebrnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej srebrny",
+          "gen": "bardziej srebrnego",
+          "dat": "bardziej srebrnemu",
+          "acc": "bardziej srebrnego",
+          "ins": "bardziej srebrnym",
+          "loc": "bardziej srebrnym"
+        },
+        "m3": {
+          "nom": "bardziej srebrny",
+          "gen": "bardziej srebrnego",
+          "dat": "bardziej srebrnemu",
+          "acc": "bardziej srebrny",
+          "ins": "bardziej srebrnym",
+          "loc": "bardziej srebrnym"
+        },
+        "f": {
+          "nom": "bardziej srebrna",
+          "gen": "bardziej srebrnej",
+          "dat": "bardziej srebrnej",
+          "acc": "bardziej srebrną",
+          "ins": "bardziej srebrną",
+          "loc": "bardziej srebrnej"
+        },
+        "n": {
+          "nom": "bardziej srebrne",
+          "gen": "bardziej srebrnego",
+          "dat": "bardziej srebrnemu",
+          "acc": "bardziej srebrne",
+          "ins": "bardziej srebrnym",
+          "loc": "bardziej srebrnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej srebrni",
+          "gen": "bardziej srebrnych",
+          "dat": "bardziej srebrnym",
+          "acc": "bardziej srebrnych",
+          "ins": "bardziej srebrnymi",
+          "loc": "bardziej srebrnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej srebrne",
+          "gen": "bardziej srebrnych",
+          "dat": "bardziej srebrnym",
+          "acc": "bardziej srebrne",
+          "ins": "bardziej srebrnymi",
+          "loc": "bardziej srebrnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej srebrny",
+          "gen": "najbardziej srebrnego",
+          "dat": "najbardziej srebrnemu",
+          "acc": "najbardziej srebrnego",
+          "ins": "najbardziej srebrnym",
+          "loc": "najbardziej srebrnym"
+        },
+        "m3": {
+          "nom": "najbardziej srebrny",
+          "gen": "najbardziej srebrnego",
+          "dat": "najbardziej srebrnemu",
+          "acc": "najbardziej srebrny",
+          "ins": "najbardziej srebrnym",
+          "loc": "najbardziej srebrnym"
+        },
+        "f": {
+          "nom": "najbardziej srebrna",
+          "gen": "najbardziej srebrnej",
+          "dat": "najbardziej srebrnej",
+          "acc": "najbardziej srebrną",
+          "ins": "najbardziej srebrną",
+          "loc": "najbardziej srebrnej"
+        },
+        "n": {
+          "nom": "najbardziej srebrne",
+          "gen": "najbardziej srebrnego",
+          "dat": "najbardziej srebrnemu",
+          "acc": "najbardziej srebrne",
+          "ins": "najbardziej srebrnym",
+          "loc": "najbardziej srebrnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej srebrni",
+          "gen": "najbardziej srebrnych",
+          "dat": "najbardziej srebrnym",
+          "acc": "najbardziej srebrnych",
+          "ins": "najbardziej srebrnymi",
+          "loc": "najbardziej srebrnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej srebrne",
+          "gen": "najbardziej srebrnych",
+          "dat": "najbardziej srebrnym",
+          "acc": "najbardziej srebrne",
+          "ins": "najbardziej srebrnymi",
+          "loc": "najbardziej srebrnych"
+        }
+      }
+    }
+  }
+}

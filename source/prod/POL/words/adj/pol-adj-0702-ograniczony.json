@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ograniczony",
+          "gen": "ograniczonego",
+          "dat": "ograniczonemu",
+          "acc": "ograniczonego",
+          "ins": "ograniczonym",
+          "loc": "ograniczonym"
+        },
+        "m3": {
+          "nom": "ograniczony",
+          "gen": "ograniczonego",
+          "dat": "ograniczonemu",
+          "acc": "ograniczony",
+          "ins": "ograniczonym",
+          "loc": "ograniczonym"
+        },
+        "f": {
+          "nom": "ograniczona",
+          "gen": "ograniczonej",
+          "dat": "ograniczonej",
+          "acc": "ograniczoną",
+          "ins": "ograniczoną",
+          "loc": "ograniczonej"
+        },
+        "n": {
+          "nom": "ograniczone",
+          "gen": "ograniczonego",
+          "dat": "ograniczonemu",
+          "acc": "ograniczone",
+          "ins": "ograniczonym",
+          "loc": "ograniczonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ograniczeni",
+          "gen": "ograniczonych",
+          "dat": "ograniczonym",
+          "acc": "ograniczonych",
+          "ins": "ograniczonymi",
+          "loc": "ograniczonych"
+        },
+        "nonvirile": {
+          "nom": "ograniczone",
+          "gen": "ograniczonych",
+          "dat": "ograniczonym",
+          "acc": "ograniczone",
+          "ins": "ograniczonymi",
+          "loc": "ograniczonych"
+        }
+      }
+    }
+  }
+}

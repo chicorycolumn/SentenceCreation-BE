@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pamiętać",
+    "verbalNoun": "pamiętanie",
+    "activeAdjectival": "pamiętający",
+    "passiveAdjectival": "pamiętany",
+    "contemporaryAdverbial": "pamiętając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pamiętaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pamiętano"
+          },
+          "plural": {
+            "allPluralGenders": "pamiętano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pamiętałem",
+            "f": "pamiętałam"
+          },
+          "plural": {
+            "virile": "pamiętaliśmy",
+            "nonvirile": "pamiętałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pamiętałeś",
+            "f": "pamiętałaś"
+          },
+          "plural": {
+            "virile": "pamiętaliście",
+            "nonvirile": "pamiętałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pamiętał",
+            "f": "pamiętała",
+            "n": "pamiętało"
+          },
+          "plural": {
+            "virile": "pamiętali",
+            "nonvirile": "pamiętały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pamięta się"
+          },
+          "plural": {
+            "allPluralGenders": "pamięta się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pamiętam"
+          },
+          "plural": {
+            "allPluralGenders": "pamiętamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pamiętasz"
+          },
+          "plural": {
+            "allPluralGenders": "pamiętacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pamięta"
+          },
+          "plural": {
+            "allPluralGenders": "pamiętają"
+          }
+        }
+      }
+    }
+  }
+}

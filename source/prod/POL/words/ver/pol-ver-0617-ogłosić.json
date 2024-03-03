@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ogłosić",
+    "verbalNoun": "ogłoszenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "ogłoszony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "ogłosiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ogłosi się"
+          },
+          "plural": {
+            "allPluralGenders": "ogłosi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ogłoszę"
+          },
+          "plural": {
+            "allPluralGenders": "ogłosimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ogłosisz"
+          },
+          "plural": {
+            "allPluralGenders": "ogłosicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ogłosi"
+          },
+          "plural": {
+            "allPluralGenders": "ogłoszą"
+          }
+        }
+      },
+      "imperative": "ogłoś",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ogłoszono"
+          },
+          "plural": {
+            "allPluralGenders": "ogłoszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ogłosiłem",
+            "f": "ogłosiłam"
+          },
+          "plural": {
+            "virile": "ogłosiliśmy",
+            "nonvirile": "ogłosiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ogłosiłeś",
+            "f": "ogłosiłaś"
+          },
+          "plural": {
+            "virile": "ogłosiliście",
+            "nonvirile": "ogłosiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ogłosił",
+            "f": "ogłosiła",
+            "n": "ogłosiło"
+          },
+          "plural": {
+            "virile": "ogłosili",
+            "nonvirile": "ogłosiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

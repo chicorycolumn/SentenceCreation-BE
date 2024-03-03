@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "analogowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "analogowy",
+          "gen": "analogowego",
+          "dat": "analogowemu",
+          "acc": "analogowego",
+          "ins": "analogowym",
+          "loc": "analogowym"
+        },
+        "m3": {
+          "nom": "analogowy",
+          "gen": "analogowego",
+          "dat": "analogowemu",
+          "acc": "analogowy",
+          "ins": "analogowym",
+          "loc": "analogowym"
+        },
+        "f": {
+          "nom": "analogowa",
+          "gen": "analogowej",
+          "dat": "analogowej",
+          "acc": "analogową",
+          "ins": "analogową",
+          "loc": "analogowej"
+        },
+        "n": {
+          "nom": "analogowe",
+          "gen": "analogowego",
+          "dat": "analogowemu",
+          "acc": "analogowe",
+          "ins": "analogowym",
+          "loc": "analogowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "analogowi",
+          "gen": "analogowych",
+          "dat": "analogowym",
+          "acc": "analogowych",
+          "ins": "analogowymi",
+          "loc": "analogowych"
+        },
+        "nonvirile": {
+          "nom": "analogowe",
+          "gen": "analogowych",
+          "dat": "analogowym",
+          "acc": "analogowe",
+          "ins": "analogowymi",
+          "loc": "analogowych"
+        }
+      }
+    }
+  }
+}

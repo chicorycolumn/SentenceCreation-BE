@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "umrzeć",
+    "verbalNoun": "umarcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "umarły",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "umarłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "umrze się"
+          },
+          "plural": {
+            "allPluralGenders": "umrze się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "umrę"
+          },
+          "plural": {
+            "allPluralGenders": "umrzemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "umrzesz"
+          },
+          "plural": {
+            "allPluralGenders": "umrzecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "umrze"
+          },
+          "plural": {
+            "allPluralGenders": "umrą"
+          }
+        }
+      },
+      "imperative": "umrzyj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "umarto"
+          },
+          "plural": {
+            "allPluralGenders": "umarto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "umarłem",
+            "f": "umarłam"
+          },
+          "plural": {
+            "virile": "umarliśmy",
+            "nonvirile": "umarłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "umarłeś",
+            "f": "umarłaś"
+          },
+          "plural": {
+            "virile": "umarliście",
+            "nonvirile": "umarłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "umarł",
+            "f": "umarła",
+            "n": "umarło"
+          },
+          "plural": {
+            "virile": "umarli",
+            "nonvirile": "umarły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

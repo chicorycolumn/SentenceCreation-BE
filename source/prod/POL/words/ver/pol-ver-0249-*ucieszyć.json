@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ucieszyć",
+    "verbalNoun": "ucieszenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "ucieszony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "ucieszywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ucieszy się"
+          },
+          "plural": {
+            "allPluralGenders": "ucieszy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ucieszę"
+          },
+          "plural": {
+            "allPluralGenders": "ucieszymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ucieszysz"
+          },
+          "plural": {
+            "allPluralGenders": "ucieszycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ucieszy"
+          },
+          "plural": {
+            "allPluralGenders": "ucieszą"
+          }
+        }
+      },
+      "imperative": "uciesz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ucieszono"
+          },
+          "plural": {
+            "allPluralGenders": "ucieszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ucieszyłem",
+            "f": "ucieszyłam"
+          },
+          "plural": {
+            "virile": "ucieszyliśmy",
+            "nonvirile": "ucieszyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ucieszyłeś",
+            "f": "ucieszyłaś"
+          },
+          "plural": {
+            "virile": "ucieszyliście",
+            "nonvirile": "ucieszyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ucieszył",
+            "f": "ucieszyła",
+            "n": "ucieszyło"
+          },
+          "plural": {
+            "virile": "ucieszyli",
+            "nonvirile": "ucieszyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

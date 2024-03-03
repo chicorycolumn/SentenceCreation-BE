@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "punkt",
+      "gen": "punktu",
+      "dat": "punktowi",
+      "acc": "punkt",
+      "ins": "punktem",
+      "loc": "punkcie",
+      "voc": "punkcie"
+    },
+    "plural": {
+      "nom": "punkty",
+      "gen": "punktów",
+      "dat": "punktom",
+      "acc": "punkty",
+      "ins": "punktami",
+      "loc": "punktach",
+      "voc": "punkty"
+    }
+  }
+}

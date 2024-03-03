@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niewyraźnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niewyraźny",
+          "gen": "niewyraźnego",
+          "dat": "niewyraźnemu",
+          "acc": "niewyraźnego",
+          "ins": "niewyraźnym",
+          "loc": "niewyraźnym"
+        },
+        "m3": {
+          "nom": "niewyraźny",
+          "gen": "niewyraźnego",
+          "dat": "niewyraźnemu",
+          "acc": "niewyraźny",
+          "ins": "niewyraźnym",
+          "loc": "niewyraźnym"
+        },
+        "f": {
+          "nom": "niewyraźna",
+          "gen": "niewyraźnej",
+          "dat": "niewyraźnej",
+          "acc": "niewyraźną",
+          "ins": "niewyraźną",
+          "loc": "niewyraźnej"
+        },
+        "n": {
+          "nom": "niewyraźne",
+          "gen": "niewyraźnego",
+          "dat": "niewyraźnemu",
+          "acc": "niewyraźne",
+          "ins": "niewyraźnym",
+          "loc": "niewyraźnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niewyraźni",
+          "gen": "niewyraźnych",
+          "dat": "niewyraźnym",
+          "acc": "niewyraźnych",
+          "ins": "niewyraźnymi",
+          "loc": "niewyraźnych"
+        },
+        "nonvirile": {
+          "nom": "niewyraźne",
+          "gen": "niewyraźnych",
+          "dat": "niewyraźnym",
+          "acc": "niewyraźne",
+          "ins": "niewyraźnymi",
+          "loc": "niewyraźnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej niewyraźny",
+          "gen": "bardziej niewyraźnego",
+          "dat": "bardziej niewyraźnemu",
+          "acc": "bardziej niewyraźnego",
+          "ins": "bardziej niewyraźnym",
+          "loc": "bardziej niewyraźnym"
+        },
+        "m3": {
+          "nom": "bardziej niewyraźny",
+          "gen": "bardziej niewyraźnego",
+          "dat": "bardziej niewyraźnemu",
+          "acc": "bardziej niewyraźny",
+          "ins": "bardziej niewyraźnym",
+          "loc": "bardziej niewyraźnym"
+        },
+        "f": {
+          "nom": "bardziej niewyraźna",
+          "gen": "bardziej niewyraźnej",
+          "dat": "bardziej niewyraźnej",
+          "acc": "bardziej niewyraźną",
+          "ins": "bardziej niewyraźną",
+          "loc": "bardziej niewyraźnej"
+        },
+        "n": {
+          "nom": "bardziej niewyraźne",
+          "gen": "bardziej niewyraźnego",
+          "dat": "bardziej niewyraźnemu",
+          "acc": "bardziej niewyraźne",
+          "ins": "bardziej niewyraźnym",
+          "loc": "bardziej niewyraźnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej niewyraźni",
+          "gen": "bardziej niewyraźnych",
+          "dat": "bardziej niewyraźnym",
+          "acc": "bardziej niewyraźnych",
+          "ins": "bardziej niewyraźnymi",
+          "loc": "bardziej niewyraźnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej niewyraźne",
+          "gen": "bardziej niewyraźnych",
+          "dat": "bardziej niewyraźnym",
+          "acc": "bardziej niewyraźne",
+          "ins": "bardziej niewyraźnymi",
+          "loc": "bardziej niewyraźnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej niewyraźny",
+          "gen": "najbardziej niewyraźnego",
+          "dat": "najbardziej niewyraźnemu",
+          "acc": "najbardziej niewyraźnego",
+          "ins": "najbardziej niewyraźnym",
+          "loc": "najbardziej niewyraźnym"
+        },
+        "m3": {
+          "nom": "najbardziej niewyraźny",
+          "gen": "najbardziej niewyraźnego",
+          "dat": "najbardziej niewyraźnemu",
+          "acc": "najbardziej niewyraźny",
+          "ins": "najbardziej niewyraźnym",
+          "loc": "najbardziej niewyraźnym"
+        },
+        "f": {
+          "nom": "najbardziej niewyraźna",
+          "gen": "najbardziej niewyraźnej",
+          "dat": "najbardziej niewyraźnej",
+          "acc": "najbardziej niewyraźną",
+          "ins": "najbardziej niewyraźną",
+          "loc": "najbardziej niewyraźnej"
+        },
+        "n": {
+          "nom": "najbardziej niewyraźne",
+          "gen": "najbardziej niewyraźnego",
+          "dat": "najbardziej niewyraźnemu",
+          "acc": "najbardziej niewyraźne",
+          "ins": "najbardziej niewyraźnym",
+          "loc": "najbardziej niewyraźnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej niewyraźni",
+          "gen": "najbardziej niewyraźnych",
+          "dat": "najbardziej niewyraźnym",
+          "acc": "najbardziej niewyraźnych",
+          "ins": "najbardziej niewyraźnymi",
+          "loc": "najbardziej niewyraźnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej niewyraźne",
+          "gen": "najbardziej niewyraźnych",
+          "dat": "najbardziej niewyraźnym",
+          "acc": "najbardziej niewyraźne",
+          "ins": "najbardziej niewyraźnymi",
+          "loc": "najbardziej niewyraźnych"
+        }
+      }
+    }
+  }
+}

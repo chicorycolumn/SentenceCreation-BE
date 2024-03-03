@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "błysnąć",
+    "verbalNoun": "błyśnięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "błysnąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "błyśnie się"
+          },
+          "plural": {
+            "allPluralGenders": "błyśnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "błysnę"
+          },
+          "plural": {
+            "allPluralGenders": "błyśniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "błyśniesz"
+          },
+          "plural": {
+            "allPluralGenders": "błyśniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "błyśnie"
+          },
+          "plural": {
+            "allPluralGenders": "błysną"
+          }
+        }
+      },
+      "imperative": "błyśnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "błyśnięto"
+          },
+          "plural": {
+            "allPluralGenders": "błyśnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "błysnąłem",
+            "f": "błysnęłam"
+          },
+          "plural": {
+            "virile": "błysnęliśmy",
+            "nonvirile": "błysnęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "błysnąłeś",
+            "f": "błysnęłaś"
+          },
+          "plural": {
+            "virile": "błysnęliście",
+            "nonvirile": "błysnęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "błysnął",
+            "f": "błysnęła",
+            "n": "błysnęło"
+          },
+          "plural": {
+            "virile": "błysnęli",
+            "nonvirile": "błysnęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

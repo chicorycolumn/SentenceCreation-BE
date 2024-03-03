@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "faktycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "faktyczny",
+          "gen": "faktycznego",
+          "dat": "faktycznemu",
+          "acc": "faktycznego",
+          "ins": "faktycznym",
+          "loc": "faktycznym"
+        },
+        "m3": {
+          "nom": "faktyczny",
+          "gen": "faktycznego",
+          "dat": "faktycznemu",
+          "acc": "faktyczny",
+          "ins": "faktycznym",
+          "loc": "faktycznym"
+        },
+        "f": {
+          "nom": "faktyczna",
+          "gen": "faktycznej",
+          "dat": "faktycznej",
+          "acc": "faktyczną",
+          "ins": "faktyczną",
+          "loc": "faktycznej"
+        },
+        "n": {
+          "nom": "faktyczne",
+          "gen": "faktycznego",
+          "dat": "faktycznemu",
+          "acc": "faktyczne",
+          "ins": "faktycznym",
+          "loc": "faktycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "faktyczni",
+          "gen": "faktycznych",
+          "dat": "faktycznym",
+          "acc": "faktycznych",
+          "ins": "faktycznymi",
+          "loc": "faktycznych"
+        },
+        "nonvirile": {
+          "nom": "faktyczne",
+          "gen": "faktycznych",
+          "dat": "faktycznym",
+          "acc": "faktyczne",
+          "ins": "faktycznymi",
+          "loc": "faktycznych"
+        }
+      }
+    }
+  }
+}

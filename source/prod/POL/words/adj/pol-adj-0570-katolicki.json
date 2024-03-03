@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "katolicki",
+          "gen": "katolickiego",
+          "dat": "katolickiemu",
+          "acc": "katolickiego",
+          "ins": "katolickim",
+          "loc": "katolickim"
+        },
+        "m3": {
+          "nom": "katolicki",
+          "gen": "katolickiego",
+          "dat": "katolickiemu",
+          "acc": "katolicki",
+          "ins": "katolickim",
+          "loc": "katolickim"
+        },
+        "f": {
+          "nom": "katolicka",
+          "gen": "katolickiej",
+          "dat": "katolickiej",
+          "acc": "katolicką",
+          "ins": "katolicką",
+          "loc": "katolickiej"
+        },
+        "n": {
+          "nom": "katolickie",
+          "gen": "katolickiego",
+          "dat": "katolickiemu",
+          "acc": "katolickie",
+          "ins": "katolickim",
+          "loc": "katolickim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "katoliccy",
+          "gen": "katolickich",
+          "dat": "katolickim",
+          "acc": "katolickich",
+          "ins": "katolickimi",
+          "loc": "katolickich"
+        },
+        "nonvirile": {
+          "nom": "katolickie",
+          "gen": "katolickich",
+          "dat": "katolickim",
+          "acc": "katolickie",
+          "ins": "katolickimi",
+          "loc": "katolickich"
+        }
+      }
+    }
+  }
+}

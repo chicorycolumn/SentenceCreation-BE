@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "disappointment",
+      "gen": "disappointment's"
+    },
+    "plural": {
+      "nom": "disappointments",
+      "gen": "disappointments'"
+    }
+  }
+}

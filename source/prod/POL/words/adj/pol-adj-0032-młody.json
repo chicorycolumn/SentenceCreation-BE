@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "młodo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "młody",
+          "gen": "młodego",
+          "dat": "młodemu",
+          "acc": "młodego",
+          "ins": "młodym",
+          "loc": "młodym"
+        },
+        "m3": {
+          "nom": "młody",
+          "gen": "młodego",
+          "dat": "młodemu",
+          "acc": "młody",
+          "ins": "młodym",
+          "loc": "młodym"
+        },
+        "f": {
+          "nom": "młoda",
+          "gen": "młodej",
+          "dat": "młodej",
+          "acc": "młodą",
+          "ins": "młodą",
+          "loc": "młodej"
+        },
+        "n": {
+          "nom": "młode",
+          "gen": "młodego",
+          "dat": "młodemu",
+          "acc": "młode",
+          "ins": "młodym",
+          "loc": "młodym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "młodzi",
+          "gen": "młodych",
+          "dat": "młodym",
+          "acc": "młodych",
+          "ins": "młodymi",
+          "loc": "młodych"
+        },
+        "nonvirile": {
+          "nom": "młode",
+          "gen": "młodych",
+          "dat": "młodym",
+          "acc": "młode",
+          "ins": "młodymi",
+          "loc": "młodych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "młodszy",
+          "gen": "młodszego",
+          "dat": "młodszemu",
+          "acc": "młodszego",
+          "ins": "młodszym",
+          "loc": "młodszym"
+        },
+        "m3": {
+          "nom": "młodszy",
+          "gen": "młodszego",
+          "dat": "młodszemu",
+          "acc": "młodszy",
+          "ins": "młodszym",
+          "loc": "młodszym"
+        },
+        "f": {
+          "nom": "młodsza",
+          "gen": "młodszej",
+          "dat": "młodszej",
+          "acc": "młodszą",
+          "ins": "młodszą",
+          "loc": "młodszej"
+        },
+        "n": {
+          "nom": "młodsze",
+          "gen": "młodszego",
+          "dat": "młodszemu",
+          "acc": "młodsze",
+          "ins": "młodszym",
+          "loc": "młodszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "młodsi",
+          "gen": "młodszych",
+          "dat": "młodszym",
+          "acc": "młodszych",
+          "ins": "młodszymi",
+          "loc": "młodszych"
+        },
+        "nonvirile": {
+          "nom": "młodsze",
+          "gen": "młodszych",
+          "dat": "młodszym",
+          "acc": "młodsze",
+          "ins": "młodszymi",
+          "loc": "młodszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najmłodszy",
+          "gen": "najmłodszego",
+          "dat": "najmłodszemu",
+          "acc": "najmłodszego",
+          "ins": "najmłodszym",
+          "loc": "najmłodszym"
+        },
+        "m3": {
+          "nom": "najmłodszy",
+          "gen": "najmłodszego",
+          "dat": "najmłodszemu",
+          "acc": "najmłodszy",
+          "ins": "najmłodszym",
+          "loc": "najmłodszym"
+        },
+        "f": {
+          "nom": "najmłodsza",
+          "gen": "najmłodszej",
+          "dat": "najmłodszej",
+          "acc": "najmłodszą",
+          "ins": "najmłodszą",
+          "loc": "najmłodszej"
+        },
+        "n": {
+          "nom": "najmłodsze",
+          "gen": "najmłodszego",
+          "dat": "najmłodszemu",
+          "acc": "najmłodsze",
+          "ins": "najmłodszym",
+          "loc": "najmłodszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najmłodsi",
+          "gen": "najmłodszych",
+          "dat": "najmłodszym",
+          "acc": "najmłodszych",
+          "ins": "najmłodszymi",
+          "loc": "najmłodszych"
+        },
+        "nonvirile": {
+          "nom": "najmłodsze",
+          "gen": "najmłodszych",
+          "dat": "najmłodszym",
+          "acc": "najmłodsze",
+          "ins": "najmłodszymi",
+          "loc": "najmłodszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pomidor",
+      "gen": "pomidora",
+      "dat": "pomidorowi",
+      "acc": [
+        "pomidor",
+        "pomidora"
+      ],
+      "ins": "pomidorem",
+      "loc": "pomidorze",
+      "voc": "pomidorze"
+    },
+    "plural": {
+      "nom": "pomidory",
+      "gen": "pomidorów",
+      "dat": "pomidorom",
+      "acc": "pomidory",
+      "ins": "pomidorami",
+      "loc": "pomidorach",
+      "voc": "pomidory"
+    }
+  }
+}

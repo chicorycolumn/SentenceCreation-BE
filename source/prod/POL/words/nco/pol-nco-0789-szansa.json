@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "szansa",
+      "gen": "szansy",
+      "dat": "szansie",
+      "acc": "szansę",
+      "ins": "szansą",
+      "loc": "szansie",
+      "voc": "szanso"
+    },
+    "plural": {
+      "nom": "szanse",
+      "gen": "szans",
+      "dat": "szansom",
+      "acc": "szanse",
+      "ins": "szansami",
+      "loc": "szansach",
+      "voc": "szanse"
+    }
+  }
+}

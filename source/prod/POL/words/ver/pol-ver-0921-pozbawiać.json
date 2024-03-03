@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pozbawiać",
+    "verbalNoun": "pozbawianie",
+    "activeAdjectival": "pozbawiający",
+    "passiveAdjectival": "pozbawiany",
+    "contemporaryAdverbial": "pozbawiając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pozbawiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pozbawiano"
+          },
+          "plural": {
+            "allPluralGenders": "pozbawiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pozbawiałem",
+            "f": "pozbawiałam"
+          },
+          "plural": {
+            "virile": "pozbawialiśmy",
+            "nonvirile": "pozbawiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pozbawiałeś",
+            "f": "pozbawiałaś"
+          },
+          "plural": {
+            "virile": "pozbawialiście",
+            "nonvirile": "pozbawiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pozbawiał",
+            "f": "pozbawiała",
+            "n": "pozbawiało"
+          },
+          "plural": {
+            "virile": "pozbawiali",
+            "nonvirile": "pozbawiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pozbawia się"
+          },
+          "plural": {
+            "allPluralGenders": "pozbawia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pozbawiam"
+          },
+          "plural": {
+            "allPluralGenders": "pozbawiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pozbawiasz"
+          },
+          "plural": {
+            "allPluralGenders": "pozbawiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pozbawia"
+          },
+          "plural": {
+            "allPluralGenders": "pozbawiają"
+          }
+        }
+      }
+    }
+  }
+}

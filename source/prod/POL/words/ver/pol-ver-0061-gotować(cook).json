@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "gotować",
+    "verbalNoun": "gotowanie",
+    "activeAdjectival": "gotujący",
+    "passiveAdjectival": "gotowany",
+    "contemporaryAdverbial": "gotując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "gotuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "gotowano"
+          },
+          "plural": {
+            "allPluralGenders": "gotowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "gotowałem",
+            "f": "gotowałam"
+          },
+          "plural": {
+            "virile": "gotowaliśmy",
+            "nonvirile": "gotowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "gotowałeś",
+            "f": "gotowałaś"
+          },
+          "plural": {
+            "virile": "gotowaliście",
+            "nonvirile": "gotowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "gotował",
+            "f": "gotowała",
+            "n": "gotowało"
+          },
+          "plural": {
+            "virile": "gotowali",
+            "nonvirile": "gotowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "gotuje się"
+          },
+          "plural": {
+            "allPluralGenders": "gotuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "gotuję"
+          },
+          "plural": {
+            "allPluralGenders": "gotujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "gotujesz"
+          },
+          "plural": {
+            "allPluralGenders": "gotujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "gotuje"
+          },
+          "plural": {
+            "allPluralGenders": "gotują"
+          }
+        }
+      }
+    }
+  }
+}

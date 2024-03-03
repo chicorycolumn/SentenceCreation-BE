@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "mało",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "mały",
+          "gen": "małego",
+          "dat": "małemu",
+          "acc": "małego",
+          "ins": "małym",
+          "loc": "małym"
+        },
+        "m3": {
+          "nom": "mały",
+          "gen": "małego",
+          "dat": "małemu",
+          "acc": "mały",
+          "ins": "małym",
+          "loc": "małym"
+        },
+        "f": {
+          "nom": "mała",
+          "gen": "małej",
+          "dat": "małej",
+          "acc": "małą",
+          "ins": "małą",
+          "loc": "małej"
+        },
+        "n": {
+          "nom": "małe",
+          "gen": "małego",
+          "dat": "małemu",
+          "acc": "małe",
+          "ins": "małym",
+          "loc": "małym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "mali",
+          "gen": "małych",
+          "dat": "małym",
+          "acc": "małych",
+          "ins": "małymi",
+          "loc": "małych"
+        },
+        "nonvirile": {
+          "nom": "małe",
+          "gen": "małych",
+          "dat": "małym",
+          "acc": "małe",
+          "ins": "małymi",
+          "loc": "małych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "mniejszy",
+          "gen": "mniejszego",
+          "dat": "mniejszemu",
+          "acc": "mniejszego",
+          "ins": "mniejszym",
+          "loc": "mniejszym"
+        },
+        "m3": {
+          "nom": "mniejszy",
+          "gen": "mniejszego",
+          "dat": "mniejszemu",
+          "acc": "mniejszy",
+          "ins": "mniejszym",
+          "loc": "mniejszym"
+        },
+        "f": {
+          "nom": "mniejsza",
+          "gen": "mniejszej",
+          "dat": "mniejszej",
+          "acc": "mniejszą",
+          "ins": "mniejszą",
+          "loc": "mniejszej"
+        },
+        "n": {
+          "nom": "mniejsze",
+          "gen": "mniejszego",
+          "dat": "mniejszemu",
+          "acc": "mniejsze",
+          "ins": "mniejszym",
+          "loc": "mniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "mniejsi",
+          "gen": "mniejszych",
+          "dat": "mniejszym",
+          "acc": "mniejszych",
+          "ins": "mniejszymi",
+          "loc": "mniejszych"
+        },
+        "nonvirile": {
+          "nom": "mniejsze",
+          "gen": "mniejszych",
+          "dat": "mniejszym",
+          "acc": "mniejsze",
+          "ins": "mniejszymi",
+          "loc": "mniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najmniejszy",
+          "gen": "najmniejszego",
+          "dat": "najmniejszemu",
+          "acc": "najmniejszego",
+          "ins": "najmniejszym",
+          "loc": "najmniejszym"
+        },
+        "m3": {
+          "nom": "najmniejszy",
+          "gen": "najmniejszego",
+          "dat": "najmniejszemu",
+          "acc": "najmniejszy",
+          "ins": "najmniejszym",
+          "loc": "najmniejszym"
+        },
+        "f": {
+          "nom": "najmniejsza",
+          "gen": "najmniejszej",
+          "dat": "najmniejszej",
+          "acc": "najmniejszą",
+          "ins": "najmniejszą",
+          "loc": "najmniejszej"
+        },
+        "n": {
+          "nom": "najmniejsze",
+          "gen": "najmniejszego",
+          "dat": "najmniejszemu",
+          "acc": "najmniejsze",
+          "ins": "najmniejszym",
+          "loc": "najmniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najmniejsi",
+          "gen": "najmniejszych",
+          "dat": "najmniejszym",
+          "acc": "najmniejszych",
+          "ins": "najmniejszymi",
+          "loc": "najmniejszych"
+        },
+        "nonvirile": {
+          "nom": "najmniejsze",
+          "gen": "najmniejszych",
+          "dat": "najmniejszym",
+          "acc": "najmniejsze",
+          "ins": "najmniejszymi",
+          "loc": "najmniejszych"
+        }
+      }
+    }
+  }
+}

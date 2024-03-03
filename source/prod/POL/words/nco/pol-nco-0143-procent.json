@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "procent",
+      "gen": "procenta, procentu",
+      "dat": "procentowi",
+      "acc": "procent",
+      "ins": "procentem",
+      "loc": "procencie",
+      "voc": "procencie"
+    },
+    "plural": {
+      "nom": "procenty",
+      "gen": "procentów",
+      "dat": "procentom",
+      "acc": "procenty",
+      "ins": "procentami",
+      "loc": "procentach",
+      "voc": "procenty"
+    }
+  }
+}

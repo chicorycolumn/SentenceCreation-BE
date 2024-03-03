@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pencil case",
+      "gen": "pencil case's"
+    },
+    "plural": {
+      "nom": "pencil cases",
+      "gen": "pencil cases'"
+    }
+  }
+}

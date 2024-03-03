@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "zdrowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zdrowy",
+          "gen": "zdrowego",
+          "dat": "zdrowemu",
+          "acc": "zdrowego",
+          "ins": "zdrowym",
+          "loc": "zdrowym"
+        },
+        "m3": {
+          "nom": "zdrowy",
+          "gen": "zdrowego",
+          "dat": "zdrowemu",
+          "acc": "zdrowy",
+          "ins": "zdrowym",
+          "loc": "zdrowym"
+        },
+        "f": {
+          "nom": "zdrowa",
+          "gen": "zdrowej",
+          "dat": "zdrowej",
+          "acc": "zdrową",
+          "ins": "zdrową",
+          "loc": "zdrowej"
+        },
+        "n": {
+          "nom": "zdrowe",
+          "gen": "zdrowego",
+          "dat": "zdrowemu",
+          "acc": "zdrowe",
+          "ins": "zdrowym",
+          "loc": "zdrowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zdrowi",
+          "gen": "zdrowych",
+          "dat": "zdrowym",
+          "acc": "zdrowych",
+          "ins": "zdrowymi",
+          "loc": "zdrowych"
+        },
+        "nonvirile": {
+          "nom": "zdrowe",
+          "gen": "zdrowych",
+          "dat": "zdrowym",
+          "acc": "zdrowe",
+          "ins": "zdrowymi",
+          "loc": "zdrowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "zdrowszy",
+          "gen": "zdrowszego",
+          "dat": "zdrowszemu",
+          "acc": "zdrowszego",
+          "ins": "zdrowszym",
+          "loc": "zdrowszym"
+        },
+        "m3": {
+          "nom": "zdrowszy",
+          "gen": "zdrowszego",
+          "dat": "zdrowszemu",
+          "acc": "zdrowszy",
+          "ins": "zdrowszym",
+          "loc": "zdrowszym"
+        },
+        "f": {
+          "nom": "zdrowsza",
+          "gen": "zdrowszej",
+          "dat": "zdrowszej",
+          "acc": "zdrowszą",
+          "ins": "zdrowszą",
+          "loc": "zdrowszej"
+        },
+        "n": {
+          "nom": "zdrowsze",
+          "gen": "zdrowszego",
+          "dat": "zdrowszemu",
+          "acc": "zdrowsze",
+          "ins": "zdrowszym",
+          "loc": "zdrowszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zdrowsi",
+          "gen": "zdrowszych",
+          "dat": "zdrowszym",
+          "acc": "zdrowszych",
+          "ins": "zdrowszymi",
+          "loc": "zdrowszych"
+        },
+        "nonvirile": {
+          "nom": "zdrowsze",
+          "gen": "zdrowszych",
+          "dat": "zdrowszym",
+          "acc": "zdrowsze",
+          "ins": "zdrowszymi",
+          "loc": "zdrowszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najzdrowszy",
+          "gen": "najzdrowszego",
+          "dat": "najzdrowszemu",
+          "acc": "najzdrowszego",
+          "ins": "najzdrowszym",
+          "loc": "najzdrowszym"
+        },
+        "m3": {
+          "nom": "najzdrowszy",
+          "gen": "najzdrowszego",
+          "dat": "najzdrowszemu",
+          "acc": "najzdrowszy",
+          "ins": "najzdrowszym",
+          "loc": "najzdrowszym"
+        },
+        "f": {
+          "nom": "najzdrowsza",
+          "gen": "najzdrowszej",
+          "dat": "najzdrowszej",
+          "acc": "najzdrowszą",
+          "ins": "najzdrowszą",
+          "loc": "najzdrowszej"
+        },
+        "n": {
+          "nom": "najzdrowsze",
+          "gen": "najzdrowszego",
+          "dat": "najzdrowszemu",
+          "acc": "najzdrowsze",
+          "ins": "najzdrowszym",
+          "loc": "najzdrowszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najzdrowsi",
+          "gen": "najzdrowszych",
+          "dat": "najzdrowszym",
+          "acc": "najzdrowszych",
+          "ins": "najzdrowszymi",
+          "loc": "najzdrowszych"
+        },
+        "nonvirile": {
+          "nom": "najzdrowsze",
+          "gen": "najzdrowszych",
+          "dat": "najzdrowszym",
+          "acc": "najzdrowsze",
+          "ins": "najzdrowszymi",
+          "loc": "najzdrowszych"
+        }
+      }
+    }
+  }
+}

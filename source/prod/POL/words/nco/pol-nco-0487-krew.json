@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "krew",
+      "gen": "krwi",
+      "dat": "krwi",
+      "acc": "krew",
+      "ins": "krwią",
+      "loc": "krwi",
+      "voc": "krwi"
+    }
+  }
+}

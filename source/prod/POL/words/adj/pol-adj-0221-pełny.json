@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "pełno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pełny",
+          "gen": "pełnego",
+          "dat": "pełnemu",
+          "acc": "pełnego",
+          "ins": "pełnym",
+          "loc": "pełnym"
+        },
+        "m3": {
+          "nom": "pełny",
+          "gen": "pełnego",
+          "dat": "pełnemu",
+          "acc": "pełny",
+          "ins": "pełnym",
+          "loc": "pełnym"
+        },
+        "f": {
+          "nom": "pełna",
+          "gen": "pełnej",
+          "dat": "pełnej",
+          "acc": "pełną",
+          "ins": "pełną",
+          "loc": "pełnej"
+        },
+        "n": {
+          "nom": "pełne",
+          "gen": "pełnego",
+          "dat": "pełnemu",
+          "acc": "pełne",
+          "ins": "pełnym",
+          "loc": "pełnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pełni",
+          "gen": "pełnych",
+          "dat": "pełnym",
+          "acc": "pełnych",
+          "ins": "pełnymi",
+          "loc": "pełnych"
+        },
+        "nonvirile": {
+          "nom": "pełne",
+          "gen": "pełnych",
+          "dat": "pełnym",
+          "acc": "pełne",
+          "ins": "pełnymi",
+          "loc": "pełnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "pełniejszy",
+          "gen": "pełniejszego",
+          "dat": "pełniejszemu",
+          "acc": "pełniejszego",
+          "ins": "pełniejszym",
+          "loc": "pełniejszym"
+        },
+        "m3": {
+          "nom": "pełniejszy",
+          "gen": "pełniejszego",
+          "dat": "pełniejszemu",
+          "acc": "pełniejszy",
+          "ins": "pełniejszym",
+          "loc": "pełniejszym"
+        },
+        "f": {
+          "nom": "pełniejsza",
+          "gen": "pełniejszej",
+          "dat": "pełniejszej",
+          "acc": "pełniejszą",
+          "ins": "pełniejszą",
+          "loc": "pełniejszej"
+        },
+        "n": {
+          "nom": "pełniejsze",
+          "gen": "pełniejszego",
+          "dat": "pełniejszemu",
+          "acc": "pełniejsze",
+          "ins": "pełniejszym",
+          "loc": "pełniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pełniejsi",
+          "gen": "pełniejszych",
+          "dat": "pełniejszym",
+          "acc": "pełniejszych",
+          "ins": "pełniejszymi",
+          "loc": "pełniejszych"
+        },
+        "nonvirile": {
+          "nom": "pełniejsze",
+          "gen": "pełniejszych",
+          "dat": "pełniejszym",
+          "acc": "pełniejsze",
+          "ins": "pełniejszymi",
+          "loc": "pełniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najpełniejszy",
+          "gen": "najpełniejszego",
+          "dat": "najpełniejszemu",
+          "acc": "najpełniejszego",
+          "ins": "najpełniejszym",
+          "loc": "najpełniejszym"
+        },
+        "m3": {
+          "nom": "najpełniejszy",
+          "gen": "najpełniejszego",
+          "dat": "najpełniejszemu",
+          "acc": "najpełniejszy",
+          "ins": "najpełniejszym",
+          "loc": "najpełniejszym"
+        },
+        "f": {
+          "nom": "najpełniejsza",
+          "gen": "najpełniejszej",
+          "dat": "najpełniejszej",
+          "acc": "najpełniejszą",
+          "ins": "najpełniejszą",
+          "loc": "najpełniejszej"
+        },
+        "n": {
+          "nom": "najpełniejsze",
+          "gen": "najpełniejszego",
+          "dat": "najpełniejszemu",
+          "acc": "najpełniejsze",
+          "ins": "najpełniejszym",
+          "loc": "najpełniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najpełniejsi",
+          "gen": "najpełniejszych",
+          "dat": "najpełniejszym",
+          "acc": "najpełniejszych",
+          "ins": "najpełniejszymi",
+          "loc": "najpełniejszych"
+        },
+        "nonvirile": {
+          "nom": "najpełniejsze",
+          "gen": "najpełniejszych",
+          "dat": "najpełniejszym",
+          "acc": "najpełniejsze",
+          "ins": "najpełniejszymi",
+          "loc": "najpełniejszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wymamrotać",
+    "verbalNoun": "wymamrotanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "wymamrotany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "wymamrotawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wymamrocze się"
+          },
+          "plural": {
+            "allPluralGenders": "wymamrocze się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wymamroczę"
+          },
+          "plural": {
+            "allPluralGenders": "wymamroczemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wymamroczesz"
+          },
+          "plural": {
+            "allPluralGenders": "wymamroczecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wymamrocze"
+          },
+          "plural": {
+            "allPluralGenders": "wymamroczą"
+          }
+        }
+      },
+      "imperative": "wymamrocz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wymamrotano"
+          },
+          "plural": {
+            "allPluralGenders": "wymamrotano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wymamrotałem",
+            "f": "wymamrotałam"
+          },
+          "plural": {
+            "virile": "wymamrotaliśmy",
+            "nonvirile": "wymamrotałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wymamrotałeś",
+            "f": "wymamrotałaś"
+          },
+          "plural": {
+            "virile": "wymamrotaliście",
+            "nonvirile": "wymamrotałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wymamrotał",
+            "f": "wymamrotała",
+            "n": "wymamrotało"
+          },
+          "plural": {
+            "virile": "wymamrotali",
+            "nonvirile": "wymamrotały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

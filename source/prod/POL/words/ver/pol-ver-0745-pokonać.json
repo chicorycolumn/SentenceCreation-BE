@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pokonać",
+    "verbalNoun": "pokonanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pokonany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pokonawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pokona się"
+          },
+          "plural": {
+            "allPluralGenders": "pokona się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pokonam"
+          },
+          "plural": {
+            "allPluralGenders": "pokonamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pokonasz"
+          },
+          "plural": {
+            "allPluralGenders": "pokonacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pokona"
+          },
+          "plural": {
+            "allPluralGenders": "pokonają"
+          }
+        }
+      },
+      "imperative": "pokonaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pokonano"
+          },
+          "plural": {
+            "allPluralGenders": "pokonano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pokonałem",
+            "f": "pokonałam"
+          },
+          "plural": {
+            "virile": "pokonaliśmy",
+            "nonvirile": "pokonałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pokonałeś",
+            "f": "pokonałaś"
+          },
+          "plural": {
+            "virile": "pokonaliście",
+            "nonvirile": "pokonałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pokonał",
+            "f": "pokonała",
+            "n": "pokonało"
+          },
+          "plural": {
+            "virile": "pokonali",
+            "nonvirile": "pokonały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

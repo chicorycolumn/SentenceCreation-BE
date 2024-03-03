@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gniazdko",
+      "gen": "gniazdka",
+      "dat": "gniazdku",
+      "acc": "gniazdko",
+      "ins": "gniazdkiem",
+      "loc": "gniazdku",
+      "voc": "gniazdko"
+    },
+    "plural": {
+      "nom": "gniazdka",
+      "gen": "gniazdek",
+      "dat": "gniazdkom",
+      "acc": "gniazdka",
+      "ins": "gniazdkami",
+      "loc": "gniazdkach",
+      "voc": "gniazdka"
+    }
+  }
+}

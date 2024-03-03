@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "bawić",
+    "verbalNoun": "bawienie",
+    "activeAdjectival": "bawiący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "bawiąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "baw",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "bawiono"
+          },
+          "plural": {
+            "allPluralGenders": "bawiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "bawiłem",
+            "f": "bawiłam"
+          },
+          "plural": {
+            "virile": "bawiliśmy",
+            "nonvirile": "bawiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "bawiłeś",
+            "f": "bawiłaś"
+          },
+          "plural": {
+            "virile": "bawiliście",
+            "nonvirile": "bawiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "bawił",
+            "f": "bawiła",
+            "n": "bawiło"
+          },
+          "plural": {
+            "virile": "bawili",
+            "nonvirile": "bawiły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "bawi się"
+          },
+          "plural": {
+            "allPluralGenders": "bawi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "bawię"
+          },
+          "plural": {
+            "allPluralGenders": "bawimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "bawisz"
+          },
+          "plural": {
+            "allPluralGenders": "bawicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "bawi"
+          },
+          "plural": {
+            "allPluralGenders": "bawią"
+          }
+        }
+      }
+    }
+  }
+}

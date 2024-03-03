@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "konserwatywnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "konserwatywny",
+          "gen": "konserwatywnego",
+          "dat": "konserwatywnemu",
+          "acc": "konserwatywnego",
+          "ins": "konserwatywnym",
+          "loc": "konserwatywnym"
+        },
+        "m3": {
+          "nom": "konserwatywny",
+          "gen": "konserwatywnego",
+          "dat": "konserwatywnemu",
+          "acc": "konserwatywny",
+          "ins": "konserwatywnym",
+          "loc": "konserwatywnym"
+        },
+        "f": {
+          "nom": "konserwatywna",
+          "gen": "konserwatywnej",
+          "dat": "konserwatywnej",
+          "acc": "konserwatywną",
+          "ins": "konserwatywną",
+          "loc": "konserwatywnej"
+        },
+        "n": {
+          "nom": "konserwatywne",
+          "gen": "konserwatywnego",
+          "dat": "konserwatywnemu",
+          "acc": "konserwatywne",
+          "ins": "konserwatywnym",
+          "loc": "konserwatywnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "konserwatywni",
+          "gen": "konserwatywnych",
+          "dat": "konserwatywnym",
+          "acc": "konserwatywnych",
+          "ins": "konserwatywnymi",
+          "loc": "konserwatywnych"
+        },
+        "nonvirile": {
+          "nom": "konserwatywne",
+          "gen": "konserwatywnych",
+          "dat": "konserwatywnym",
+          "acc": "konserwatywne",
+          "ins": "konserwatywnymi",
+          "loc": "konserwatywnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej konserwatywny",
+          "gen": "bardziej konserwatywnego",
+          "dat": "bardziej konserwatywnemu",
+          "acc": "bardziej konserwatywnego",
+          "ins": "bardziej konserwatywnym",
+          "loc": "bardziej konserwatywnym"
+        },
+        "m3": {
+          "nom": "bardziej konserwatywny",
+          "gen": "bardziej konserwatywnego",
+          "dat": "bardziej konserwatywnemu",
+          "acc": "bardziej konserwatywny",
+          "ins": "bardziej konserwatywnym",
+          "loc": "bardziej konserwatywnym"
+        },
+        "f": {
+          "nom": "bardziej konserwatywna",
+          "gen": "bardziej konserwatywnej",
+          "dat": "bardziej konserwatywnej",
+          "acc": "bardziej konserwatywną",
+          "ins": "bardziej konserwatywną",
+          "loc": "bardziej konserwatywnej"
+        },
+        "n": {
+          "nom": "bardziej konserwatywne",
+          "gen": "bardziej konserwatywnego",
+          "dat": "bardziej konserwatywnemu",
+          "acc": "bardziej konserwatywne",
+          "ins": "bardziej konserwatywnym",
+          "loc": "bardziej konserwatywnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej konserwatywni",
+          "gen": "bardziej konserwatywnych",
+          "dat": "bardziej konserwatywnym",
+          "acc": "bardziej konserwatywnych",
+          "ins": "bardziej konserwatywnymi",
+          "loc": "bardziej konserwatywnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej konserwatywne",
+          "gen": "bardziej konserwatywnych",
+          "dat": "bardziej konserwatywnym",
+          "acc": "bardziej konserwatywne",
+          "ins": "bardziej konserwatywnymi",
+          "loc": "bardziej konserwatywnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej konserwatywny",
+          "gen": "najbardziej konserwatywnego",
+          "dat": "najbardziej konserwatywnemu",
+          "acc": "najbardziej konserwatywnego",
+          "ins": "najbardziej konserwatywnym",
+          "loc": "najbardziej konserwatywnym"
+        },
+        "m3": {
+          "nom": "najbardziej konserwatywny",
+          "gen": "najbardziej konserwatywnego",
+          "dat": "najbardziej konserwatywnemu",
+          "acc": "najbardziej konserwatywny",
+          "ins": "najbardziej konserwatywnym",
+          "loc": "najbardziej konserwatywnym"
+        },
+        "f": {
+          "nom": "najbardziej konserwatywna",
+          "gen": "najbardziej konserwatywnej",
+          "dat": "najbardziej konserwatywnej",
+          "acc": "najbardziej konserwatywną",
+          "ins": "najbardziej konserwatywną",
+          "loc": "najbardziej konserwatywnej"
+        },
+        "n": {
+          "nom": "najbardziej konserwatywne",
+          "gen": "najbardziej konserwatywnego",
+          "dat": "najbardziej konserwatywnemu",
+          "acc": "najbardziej konserwatywne",
+          "ins": "najbardziej konserwatywnym",
+          "loc": "najbardziej konserwatywnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej konserwatywni",
+          "gen": "najbardziej konserwatywnych",
+          "dat": "najbardziej konserwatywnym",
+          "acc": "najbardziej konserwatywnych",
+          "ins": "najbardziej konserwatywnymi",
+          "loc": "najbardziej konserwatywnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej konserwatywne",
+          "gen": "najbardziej konserwatywnych",
+          "dat": "najbardziej konserwatywnym",
+          "acc": "najbardziej konserwatywne",
+          "ins": "najbardziej konserwatywnymi",
+          "loc": "najbardziej konserwatywnych"
+        }
+      }
+    }
+  }
+}

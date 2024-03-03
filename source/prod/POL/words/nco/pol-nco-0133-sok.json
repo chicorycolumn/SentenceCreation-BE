@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sok",
+      "gen": "soku",
+      "dat": "sokowi",
+      "acc": "sok",
+      "ins": "sokiem",
+      "loc": "soku",
+      "voc": "soku"
+    },
+    "plural": {
+      "nom": "soki",
+      "gen": "soków",
+      "dat": "sokom",
+      "acc": "soki",
+      "ins": "sokami",
+      "loc": "sokach",
+      "voc": "soki"
+    }
+  }
+}

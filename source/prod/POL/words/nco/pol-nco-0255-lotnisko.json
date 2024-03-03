@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lotnisko",
+      "gen": "lotniska",
+      "dat": "lotnisku",
+      "acc": "lotnisko",
+      "ins": "lotniskiem",
+      "loc": "lotnisku",
+      "voc": "lotnisko"
+    },
+    "plural": {
+      "nom": "lotniska",
+      "gen": "lotnisk",
+      "dat": "lotniskom",
+      "acc": "lotniska",
+      "ins": "lotniskami",
+      "loc": "lotniskach",
+      "voc": "lotniska"
+    }
+  }
+}

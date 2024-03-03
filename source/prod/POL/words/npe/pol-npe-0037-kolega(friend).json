@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kolega",
+      "gen": "kolegi",
+      "dat": "koledze",
+      "acc": "kolegę",
+      "ins": "kolegą",
+      "loc": "koledze",
+      "voc": "kolego"
+    },
+    "plural": {
+      "nom": "koledzy",
+      "gen": "kolegów",
+      "dat": "kolegom",
+      "acc": "kolegów",
+      "ins": "kolegami",
+      "loc": "kolegach",
+      "voc": "koledzy"
+    }
+  }
+}

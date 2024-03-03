@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mysz",
+      "gen": "myszy",
+      "dat": "myszy",
+      "acc": "mysz",
+      "ins": "myszą",
+      "loc": "myszy",
+      "voc": "myszy"
+    },
+    "plural": {
+      "nom": "myszy",
+      "gen": "myszy",
+      "dat": "myszom",
+      "acc": "myszy",
+      "ins": "myszami",
+      "loc": "myszach",
+      "voc": "myszy"
+    }
+  }
+}

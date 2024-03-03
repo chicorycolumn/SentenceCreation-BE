@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "oficjalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "oficjalny",
+          "gen": "oficjalnego",
+          "dat": "oficjalnemu",
+          "acc": "oficjalnego",
+          "ins": "oficjalnym",
+          "loc": "oficjalnym"
+        },
+        "m3": {
+          "nom": "oficjalny",
+          "gen": "oficjalnego",
+          "dat": "oficjalnemu",
+          "acc": "oficjalny",
+          "ins": "oficjalnym",
+          "loc": "oficjalnym"
+        },
+        "f": {
+          "nom": "oficjalna",
+          "gen": "oficjalnej",
+          "dat": "oficjalnej",
+          "acc": "oficjalną",
+          "ins": "oficjalną",
+          "loc": "oficjalnej"
+        },
+        "n": {
+          "nom": "oficjalne",
+          "gen": "oficjalnego",
+          "dat": "oficjalnemu",
+          "acc": "oficjalne",
+          "ins": "oficjalnym",
+          "loc": "oficjalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "oficjalni",
+          "gen": "oficjalnych",
+          "dat": "oficjalnym",
+          "acc": "oficjalnych",
+          "ins": "oficjalnymi",
+          "loc": "oficjalnych"
+        },
+        "nonvirile": {
+          "nom": "oficjalne",
+          "gen": "oficjalnych",
+          "dat": "oficjalnym",
+          "acc": "oficjalne",
+          "ins": "oficjalnymi",
+          "loc": "oficjalnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej oficjalny",
+          "gen": "bardziej oficjalnego",
+          "dat": "bardziej oficjalnemu",
+          "acc": "bardziej oficjalnego",
+          "ins": "bardziej oficjalnym",
+          "loc": "bardziej oficjalnym"
+        },
+        "m3": {
+          "nom": "bardziej oficjalny",
+          "gen": "bardziej oficjalnego",
+          "dat": "bardziej oficjalnemu",
+          "acc": "bardziej oficjalny",
+          "ins": "bardziej oficjalnym",
+          "loc": "bardziej oficjalnym"
+        },
+        "f": {
+          "nom": "bardziej oficjalna",
+          "gen": "bardziej oficjalnej",
+          "dat": "bardziej oficjalnej",
+          "acc": "bardziej oficjalną",
+          "ins": "bardziej oficjalną",
+          "loc": "bardziej oficjalnej"
+        },
+        "n": {
+          "nom": "bardziej oficjalne",
+          "gen": "bardziej oficjalnego",
+          "dat": "bardziej oficjalnemu",
+          "acc": "bardziej oficjalne",
+          "ins": "bardziej oficjalnym",
+          "loc": "bardziej oficjalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej oficjalni",
+          "gen": "bardziej oficjalnych",
+          "dat": "bardziej oficjalnym",
+          "acc": "bardziej oficjalnych",
+          "ins": "bardziej oficjalnymi",
+          "loc": "bardziej oficjalnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej oficjalne",
+          "gen": "bardziej oficjalnych",
+          "dat": "bardziej oficjalnym",
+          "acc": "bardziej oficjalne",
+          "ins": "bardziej oficjalnymi",
+          "loc": "bardziej oficjalnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej oficjalny",
+          "gen": "najbardziej oficjalnego",
+          "dat": "najbardziej oficjalnemu",
+          "acc": "najbardziej oficjalnego",
+          "ins": "najbardziej oficjalnym",
+          "loc": "najbardziej oficjalnym"
+        },
+        "m3": {
+          "nom": "najbardziej oficjalny",
+          "gen": "najbardziej oficjalnego",
+          "dat": "najbardziej oficjalnemu",
+          "acc": "najbardziej oficjalny",
+          "ins": "najbardziej oficjalnym",
+          "loc": "najbardziej oficjalnym"
+        },
+        "f": {
+          "nom": "najbardziej oficjalna",
+          "gen": "najbardziej oficjalnej",
+          "dat": "najbardziej oficjalnej",
+          "acc": "najbardziej oficjalną",
+          "ins": "najbardziej oficjalną",
+          "loc": "najbardziej oficjalnej"
+        },
+        "n": {
+          "nom": "najbardziej oficjalne",
+          "gen": "najbardziej oficjalnego",
+          "dat": "najbardziej oficjalnemu",
+          "acc": "najbardziej oficjalne",
+          "ins": "najbardziej oficjalnym",
+          "loc": "najbardziej oficjalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej oficjalni",
+          "gen": "najbardziej oficjalnych",
+          "dat": "najbardziej oficjalnym",
+          "acc": "najbardziej oficjalnych",
+          "ins": "najbardziej oficjalnymi",
+          "loc": "najbardziej oficjalnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej oficjalne",
+          "gen": "najbardziej oficjalnych",
+          "dat": "najbardziej oficjalnym",
+          "acc": "najbardziej oficjalne",
+          "ins": "najbardziej oficjalnymi",
+          "loc": "najbardziej oficjalnych"
+        }
+      }
+    }
+  }
+}

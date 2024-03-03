@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gazeta",
+      "gen": "gazety",
+      "dat": "gazecie",
+      "acc": "gazetę",
+      "ins": "gazetą",
+      "loc": "gazecie",
+      "voc": "gazeto"
+    },
+    "plural": {
+      "nom": "gazety",
+      "gen": "gazet",
+      "dat": "gazetom",
+      "acc": "gazety",
+      "ins": "gazetami",
+      "loc": "gazetach",
+      "voc": "gazety"
+    }
+  }
+}

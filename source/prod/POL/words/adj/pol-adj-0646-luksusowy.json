@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "luksusowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "luksusowy",
+          "gen": "luksusowego",
+          "dat": "luksusowemu",
+          "acc": "luksusowego",
+          "ins": "luksusowym",
+          "loc": "luksusowym"
+        },
+        "m3": {
+          "nom": "luksusowy",
+          "gen": "luksusowego",
+          "dat": "luksusowemu",
+          "acc": "luksusowy",
+          "ins": "luksusowym",
+          "loc": "luksusowym"
+        },
+        "f": {
+          "nom": "luksusowa",
+          "gen": "luksusowej",
+          "dat": "luksusowej",
+          "acc": "luksusową",
+          "ins": "luksusową",
+          "loc": "luksusowej"
+        },
+        "n": {
+          "nom": "luksusowe",
+          "gen": "luksusowego",
+          "dat": "luksusowemu",
+          "acc": "luksusowe",
+          "ins": "luksusowym",
+          "loc": "luksusowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "luksusowi",
+          "gen": "luksusowych",
+          "dat": "luksusowym",
+          "acc": "luksusowych",
+          "ins": "luksusowymi",
+          "loc": "luksusowych"
+        },
+        "nonvirile": {
+          "nom": "luksusowe",
+          "gen": "luksusowych",
+          "dat": "luksusowym",
+          "acc": "luksusowe",
+          "ins": "luksusowymi",
+          "loc": "luksusowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej luksusowy",
+          "gen": "bardziej luksusowego",
+          "dat": "bardziej luksusowemu",
+          "acc": "bardziej luksusowego",
+          "ins": "bardziej luksusowym",
+          "loc": "bardziej luksusowym"
+        },
+        "m3": {
+          "nom": "bardziej luksusowy",
+          "gen": "bardziej luksusowego",
+          "dat": "bardziej luksusowemu",
+          "acc": "bardziej luksusowy",
+          "ins": "bardziej luksusowym",
+          "loc": "bardziej luksusowym"
+        },
+        "f": {
+          "nom": "bardziej luksusowa",
+          "gen": "bardziej luksusowej",
+          "dat": "bardziej luksusowej",
+          "acc": "bardziej luksusową",
+          "ins": "bardziej luksusową",
+          "loc": "bardziej luksusowej"
+        },
+        "n": {
+          "nom": "bardziej luksusowe",
+          "gen": "bardziej luksusowego",
+          "dat": "bardziej luksusowemu",
+          "acc": "bardziej luksusowe",
+          "ins": "bardziej luksusowym",
+          "loc": "bardziej luksusowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej luksusowi",
+          "gen": "bardziej luksusowych",
+          "dat": "bardziej luksusowym",
+          "acc": "bardziej luksusowych",
+          "ins": "bardziej luksusowymi",
+          "loc": "bardziej luksusowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej luksusowe",
+          "gen": "bardziej luksusowych",
+          "dat": "bardziej luksusowym",
+          "acc": "bardziej luksusowe",
+          "ins": "bardziej luksusowymi",
+          "loc": "bardziej luksusowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej luksusowy",
+          "gen": "najbardziej luksusowego",
+          "dat": "najbardziej luksusowemu",
+          "acc": "najbardziej luksusowego",
+          "ins": "najbardziej luksusowym",
+          "loc": "najbardziej luksusowym"
+        },
+        "m3": {
+          "nom": "najbardziej luksusowy",
+          "gen": "najbardziej luksusowego",
+          "dat": "najbardziej luksusowemu",
+          "acc": "najbardziej luksusowy",
+          "ins": "najbardziej luksusowym",
+          "loc": "najbardziej luksusowym"
+        },
+        "f": {
+          "nom": "najbardziej luksusowa",
+          "gen": "najbardziej luksusowej",
+          "dat": "najbardziej luksusowej",
+          "acc": "najbardziej luksusową",
+          "ins": "najbardziej luksusową",
+          "loc": "najbardziej luksusowej"
+        },
+        "n": {
+          "nom": "najbardziej luksusowe",
+          "gen": "najbardziej luksusowego",
+          "dat": "najbardziej luksusowemu",
+          "acc": "najbardziej luksusowe",
+          "ins": "najbardziej luksusowym",
+          "loc": "najbardziej luksusowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej luksusowi",
+          "gen": "najbardziej luksusowych",
+          "dat": "najbardziej luksusowym",
+          "acc": "najbardziej luksusowych",
+          "ins": "najbardziej luksusowymi",
+          "loc": "najbardziej luksusowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej luksusowe",
+          "gen": "najbardziej luksusowych",
+          "dat": "najbardziej luksusowym",
+          "acc": "najbardziej luksusowe",
+          "ins": "najbardziej luksusowymi",
+          "loc": "najbardziej luksusowych"
+        }
+      }
+    }
+  }
+}

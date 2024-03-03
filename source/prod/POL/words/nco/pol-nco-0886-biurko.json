@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "biurko",
+      "gen": "biurka",
+      "dat": "biurku",
+      "acc": "biurko",
+      "ins": "biurkiem",
+      "loc": "biurku",
+      "voc": "biurko"
+    },
+    "plural": {
+      "nom": "biurka",
+      "gen": "biurek",
+      "dat": "biurkom",
+      "acc": "biurka",
+      "ins": "biurkami",
+      "loc": "biurkach",
+      "voc": "biurka"
+    }
+  }
+}

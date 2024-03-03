@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "powitać",
+    "verbalNoun": "powitanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "powitany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "powitawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powita się"
+          },
+          "plural": {
+            "allPluralGenders": "powita się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "powitam"
+          },
+          "plural": {
+            "allPluralGenders": "powitamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "powitasz"
+          },
+          "plural": {
+            "allPluralGenders": "powitacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "powita"
+          },
+          "plural": {
+            "allPluralGenders": "powitają"
+          }
+        }
+      },
+      "imperative": "powitaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powitano"
+          },
+          "plural": {
+            "allPluralGenders": "powitano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "powitałem",
+            "f": "powitałam"
+          },
+          "plural": {
+            "virile": "powitaliśmy",
+            "nonvirile": "powitałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "powitałeś",
+            "f": "powitałaś"
+          },
+          "plural": {
+            "virile": "powitaliście",
+            "nonvirile": "powitałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "powitał",
+            "f": "powitała",
+            "n": "powitało"
+          },
+          "plural": {
+            "virile": "powitali",
+            "nonvirile": "powitały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "budowlany",
+          "gen": "budowlanego",
+          "dat": "budowlanemu",
+          "acc": "budowlanego",
+          "ins": "budowlanym",
+          "loc": "budowlanym"
+        },
+        "m3": {
+          "nom": "budowlany",
+          "gen": "budowlanego",
+          "dat": "budowlanemu",
+          "acc": "budowlany",
+          "ins": "budowlanym",
+          "loc": "budowlanym"
+        },
+        "f": {
+          "nom": "budowlana",
+          "gen": "budowlanej",
+          "dat": "budowlanej",
+          "acc": "budowlaną",
+          "ins": "budowlaną",
+          "loc": "budowlanej"
+        },
+        "n": {
+          "nom": "budowlane",
+          "gen": "budowlanego",
+          "dat": "budowlanemu",
+          "acc": "budowlane",
+          "ins": "budowlanym",
+          "loc": "budowlanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "budowlani",
+          "gen": "budowlanych",
+          "dat": "budowlanym",
+          "acc": "budowlanych",
+          "ins": "budowlanymi",
+          "loc": "budowlanych"
+        },
+        "nonvirile": {
+          "nom": "budowlane",
+          "gen": "budowlanych",
+          "dat": "budowlanym",
+          "acc": "budowlane",
+          "ins": "budowlanymi",
+          "loc": "budowlanych"
+        }
+      }
+    }
+  }
+}

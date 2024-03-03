@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "narzeczona",
+      "gen": "narzeczonej",
+      "dat": "narzeczonej",
+      "acc": "narzeczoną",
+      "ins": "narzeczoną",
+      "loc": "narzeczonej",
+      "voc": "narzeczona"
+    },
+    "plural": {
+      "nom": "narzeczone",
+      "gen": "narzeczonych",
+      "dat": "narzeczonym",
+      "acc": "narzeczone",
+      "ins": "narzeczonymi",
+      "loc": "narzeczonych",
+      "voc": "narzeczone"
+    }
+  }
+}

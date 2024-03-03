@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "oddzielnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "oddzielny",
+          "gen": "oddzielnego",
+          "dat": "oddzielnemu",
+          "acc": "oddzielnego",
+          "ins": "oddzielnym",
+          "loc": "oddzielnym"
+        },
+        "m3": {
+          "nom": "oddzielny",
+          "gen": "oddzielnego",
+          "dat": "oddzielnemu",
+          "acc": "oddzielny",
+          "ins": "oddzielnym",
+          "loc": "oddzielnym"
+        },
+        "f": {
+          "nom": "oddzielna",
+          "gen": "oddzielnej",
+          "dat": "oddzielnej",
+          "acc": "oddzielną",
+          "ins": "oddzielną",
+          "loc": "oddzielnej"
+        },
+        "n": {
+          "nom": "oddzielne",
+          "gen": "oddzielnego",
+          "dat": "oddzielnemu",
+          "acc": "oddzielne",
+          "ins": "oddzielnym",
+          "loc": "oddzielnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "oddzielni",
+          "gen": "oddzielnych",
+          "dat": "oddzielnym",
+          "acc": "oddzielnych",
+          "ins": "oddzielnymi",
+          "loc": "oddzielnych"
+        },
+        "nonvirile": {
+          "nom": "oddzielne",
+          "gen": "oddzielnych",
+          "dat": "oddzielnym",
+          "acc": "oddzielne",
+          "ins": "oddzielnymi",
+          "loc": "oddzielnych"
+        }
+      }
+    }
+  }
+}

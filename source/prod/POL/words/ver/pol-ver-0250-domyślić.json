@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "domyślić",
+    "verbalNoun": "domyślenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "domyśliwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "domyśli się"
+          },
+          "plural": {
+            "allPluralGenders": "domyśli się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "domyślę"
+          },
+          "plural": {
+            "allPluralGenders": "domyślimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "domyślisz"
+          },
+          "plural": {
+            "allPluralGenders": "domyślicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "domyśli"
+          },
+          "plural": {
+            "allPluralGenders": "domyślą"
+          }
+        }
+      },
+      "imperative": "domyśl",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "domyślono"
+          },
+          "plural": {
+            "allPluralGenders": "domyślono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "domyśliłem",
+            "f": "domyśliłam"
+          },
+          "plural": {
+            "virile": "domyśliliśmy",
+            "nonvirile": "domyśliłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "domyśliłeś",
+            "f": "domyśliłaś"
+          },
+          "plural": {
+            "virile": "domyśliliście",
+            "nonvirile": "domyśliłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "domyślił",
+            "f": "domyśliła",
+            "n": "domyśliło"
+          },
+          "plural": {
+            "virile": "domyślili",
+            "nonvirile": "domyśliły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

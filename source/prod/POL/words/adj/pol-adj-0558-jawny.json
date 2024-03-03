@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "jawnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "jawny",
+          "gen": "jawnego",
+          "dat": "jawnemu",
+          "acc": "jawnego",
+          "ins": "jawnym",
+          "loc": "jawnym"
+        },
+        "m3": {
+          "nom": "jawny",
+          "gen": "jawnego",
+          "dat": "jawnemu",
+          "acc": "jawny",
+          "ins": "jawnym",
+          "loc": "jawnym"
+        },
+        "f": {
+          "nom": "jawna",
+          "gen": "jawnej",
+          "dat": "jawnej",
+          "acc": "jawną",
+          "ins": "jawną",
+          "loc": "jawnej"
+        },
+        "n": {
+          "nom": "jawne",
+          "gen": "jawnego",
+          "dat": "jawnemu",
+          "acc": "jawne",
+          "ins": "jawnym",
+          "loc": "jawnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "jawni",
+          "gen": "jawnych",
+          "dat": "jawnym",
+          "acc": "jawnych",
+          "ins": "jawnymi",
+          "loc": "jawnych"
+        },
+        "nonvirile": {
+          "nom": "jawne",
+          "gen": "jawnych",
+          "dat": "jawnym",
+          "acc": "jawne",
+          "ins": "jawnymi",
+          "loc": "jawnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszy",
+              "bardziej jawny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszego",
+              "bardziej jawnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszemu",
+              "bardziej jawnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszego",
+              "bardziej jawnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszym",
+              "bardziej jawnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszym",
+              "bardziej jawnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszy",
+              "bardziej jawny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszego",
+              "bardziej jawnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszemu",
+              "bardziej jawnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszy",
+              "bardziej jawny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszym",
+              "bardziej jawnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszym",
+              "bardziej jawnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejsza",
+              "bardziej jawna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszej",
+              "bardziej jawnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszej",
+              "bardziej jawnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszą",
+              "bardziej jawną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszą",
+              "bardziej jawną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszej",
+              "bardziej jawnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejsze",
+              "bardziej jawne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszego",
+              "bardziej jawnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszemu",
+              "bardziej jawnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejsze",
+              "bardziej jawne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszym",
+              "bardziej jawnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszym",
+              "bardziej jawnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejsi",
+              "bardziej jawni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszych",
+              "bardziej jawnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszym",
+              "bardziej jawnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszych",
+              "bardziej jawnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszymi",
+              "bardziej jawnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszych",
+              "bardziej jawnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejsze",
+              "bardziej jawne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszych",
+              "bardziej jawnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszym",
+              "bardziej jawnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejsze",
+              "bardziej jawne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszymi",
+              "bardziej jawnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "jawniejszych",
+              "bardziej jawnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszy",
+              "najbardziej jawny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszego",
+              "najbardziej jawnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszemu",
+              "najbardziej jawnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszego",
+              "najbardziej jawnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszym",
+              "najbardziej jawnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszym",
+              "najbardziej jawnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszy",
+              "najbardziej jawny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszego",
+              "najbardziej jawnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszemu",
+              "najbardziej jawnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszy",
+              "najbardziej jawny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszym",
+              "najbardziej jawnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszym",
+              "najbardziej jawnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejsza",
+              "najbardziej jawna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszej",
+              "najbardziej jawnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszej",
+              "najbardziej jawnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszą",
+              "najbardziej jawną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszą",
+              "najbardziej jawną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszej",
+              "najbardziej jawnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejsze",
+              "najbardziej jawne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszego",
+              "najbardziej jawnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszemu",
+              "najbardziej jawnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejsze",
+              "najbardziej jawne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszym",
+              "najbardziej jawnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszym",
+              "najbardziej jawnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejsi",
+              "najbardziej jawni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszych",
+              "najbardziej jawnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszym",
+              "najbardziej jawnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszych",
+              "najbardziej jawnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszymi",
+              "najbardziej jawnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszych",
+              "najbardziej jawnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejsze",
+              "najbardziej jawne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszych",
+              "najbardziej jawnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszym",
+              "najbardziej jawnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejsze",
+              "najbardziej jawne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszymi",
+              "najbardziej jawnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najjawniejszych",
+              "najbardziej jawnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

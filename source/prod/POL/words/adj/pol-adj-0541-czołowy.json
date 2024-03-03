@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "czołowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "czołowy",
+          "gen": "czołowego",
+          "dat": "czołowemu",
+          "acc": "czołowego",
+          "ins": "czołowym",
+          "loc": "czołowym"
+        },
+        "m3": {
+          "nom": "czołowy",
+          "gen": "czołowego",
+          "dat": "czołowemu",
+          "acc": "czołowy",
+          "ins": "czołowym",
+          "loc": "czołowym"
+        },
+        "f": {
+          "nom": "czołowa",
+          "gen": "czołowej",
+          "dat": "czołowej",
+          "acc": "czołową",
+          "ins": "czołową",
+          "loc": "czołowej"
+        },
+        "n": {
+          "nom": "czołowe",
+          "gen": "czołowego",
+          "dat": "czołowemu",
+          "acc": "czołowe",
+          "ins": "czołowym",
+          "loc": "czołowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "czołowi",
+          "gen": "czołowych",
+          "dat": "czołowym",
+          "acc": "czołowych",
+          "ins": "czołowymi",
+          "loc": "czołowych"
+        },
+        "nonvirile": {
+          "nom": "czołowe",
+          "gen": "czołowych",
+          "dat": "czołowym",
+          "acc": "czołowe",
+          "ins": "czołowymi",
+          "loc": "czołowych"
+        }
+      }
+    }
+  }
+}

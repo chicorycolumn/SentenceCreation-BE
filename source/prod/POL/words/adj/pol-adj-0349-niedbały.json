@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niedbale",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niedbały",
+          "gen": "niedbałego",
+          "dat": "niedbałemu",
+          "acc": "niedbałego",
+          "ins": "niedbałym",
+          "loc": "niedbałym"
+        },
+        "m3": {
+          "nom": "niedbały",
+          "gen": "niedbałego",
+          "dat": "niedbałemu",
+          "acc": "niedbały",
+          "ins": "niedbałym",
+          "loc": "niedbałym"
+        },
+        "f": {
+          "nom": "niedbała",
+          "gen": "niedbałej",
+          "dat": "niedbałej",
+          "acc": "niedbałą",
+          "ins": "niedbałą",
+          "loc": "niedbałej"
+        },
+        "n": {
+          "nom": "niedbałe",
+          "gen": "niedbałego",
+          "dat": "niedbałemu",
+          "acc": "niedbałe",
+          "ins": "niedbałym",
+          "loc": "niedbałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niedbali",
+          "gen": "niedbałych",
+          "dat": "niedbałym",
+          "acc": "niedbałych",
+          "ins": "niedbałymi",
+          "loc": "niedbałych"
+        },
+        "nonvirile": {
+          "nom": "niedbałe",
+          "gen": "niedbałych",
+          "dat": "niedbałym",
+          "acc": "niedbałe",
+          "ins": "niedbałymi",
+          "loc": "niedbałych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej niedbały",
+          "gen": "bardziej niedbałego",
+          "dat": "bardziej niedbałemu",
+          "acc": "bardziej niedbałego",
+          "ins": "bardziej niedbałym",
+          "loc": "bardziej niedbałym"
+        },
+        "m3": {
+          "nom": "bardziej niedbały",
+          "gen": "bardziej niedbałego",
+          "dat": "bardziej niedbałemu",
+          "acc": "bardziej niedbały",
+          "ins": "bardziej niedbałym",
+          "loc": "bardziej niedbałym"
+        },
+        "f": {
+          "nom": "bardziej niedbała",
+          "gen": "bardziej niedbałej",
+          "dat": "bardziej niedbałej",
+          "acc": "bardziej niedbałą",
+          "ins": "bardziej niedbałą",
+          "loc": "bardziej niedbałej"
+        },
+        "n": {
+          "nom": "bardziej niedbałe",
+          "gen": "bardziej niedbałego",
+          "dat": "bardziej niedbałemu",
+          "acc": "bardziej niedbałe",
+          "ins": "bardziej niedbałym",
+          "loc": "bardziej niedbałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej niedbali",
+          "gen": "bardziej niedbałych",
+          "dat": "bardziej niedbałym",
+          "acc": "bardziej niedbałych",
+          "ins": "bardziej niedbałymi",
+          "loc": "bardziej niedbałych"
+        },
+        "nonvirile": {
+          "nom": "bardziej niedbałe",
+          "gen": "bardziej niedbałych",
+          "dat": "bardziej niedbałym",
+          "acc": "bardziej niedbałe",
+          "ins": "bardziej niedbałymi",
+          "loc": "bardziej niedbałych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej niedbały",
+          "gen": "najbardziej niedbałego",
+          "dat": "najbardziej niedbałemu",
+          "acc": "najbardziej niedbałego",
+          "ins": "najbardziej niedbałym",
+          "loc": "najbardziej niedbałym"
+        },
+        "m3": {
+          "nom": "najbardziej niedbały",
+          "gen": "najbardziej niedbałego",
+          "dat": "najbardziej niedbałemu",
+          "acc": "najbardziej niedbały",
+          "ins": "najbardziej niedbałym",
+          "loc": "najbardziej niedbałym"
+        },
+        "f": {
+          "nom": "najbardziej niedbała",
+          "gen": "najbardziej niedbałej",
+          "dat": "najbardziej niedbałej",
+          "acc": "najbardziej niedbałą",
+          "ins": "najbardziej niedbałą",
+          "loc": "najbardziej niedbałej"
+        },
+        "n": {
+          "nom": "najbardziej niedbałe",
+          "gen": "najbardziej niedbałego",
+          "dat": "najbardziej niedbałemu",
+          "acc": "najbardziej niedbałe",
+          "ins": "najbardziej niedbałym",
+          "loc": "najbardziej niedbałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej niedbali",
+          "gen": "najbardziej niedbałych",
+          "dat": "najbardziej niedbałym",
+          "acc": "najbardziej niedbałych",
+          "ins": "najbardziej niedbałymi",
+          "loc": "najbardziej niedbałych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej niedbałe",
+          "gen": "najbardziej niedbałych",
+          "dat": "najbardziej niedbałym",
+          "acc": "najbardziej niedbałe",
+          "ins": "najbardziej niedbałymi",
+          "loc": "najbardziej niedbałych"
+        }
+      }
+    }
+  }
+}

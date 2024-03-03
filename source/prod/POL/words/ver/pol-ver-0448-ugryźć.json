@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ugryźć",
+    "verbalNoun": "ugryzienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "ugryziony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "ugryzłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ugryzie się"
+          },
+          "plural": {
+            "allPluralGenders": "ugryzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ugryzę"
+          },
+          "plural": {
+            "allPluralGenders": "ugryziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ugryziesz"
+          },
+          "plural": {
+            "allPluralGenders": "ugryziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ugryzie"
+          },
+          "plural": {
+            "allPluralGenders": "ugryzą"
+          }
+        }
+      },
+      "imperative": "ugryź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ugryziono"
+          },
+          "plural": {
+            "allPluralGenders": "ugryziono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ugryzłem",
+            "f": "ugryzłam"
+          },
+          "plural": {
+            "virile": "ugryźliśmy",
+            "nonvirile": "ugryzłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ugryzłeś",
+            "f": "ugryzłaś"
+          },
+          "plural": {
+            "virile": "ugryźliście",
+            "nonvirile": "ugryzłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ugryzł",
+            "f": "ugryzła",
+            "n": "ugryzło"
+          },
+          "plural": {
+            "virile": "ugryźli",
+            "nonvirile": "ugryzły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "gorąco",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "gorący",
+          "gen": "gorącego",
+          "dat": "gorącemu",
+          "acc": "gorącego",
+          "ins": "gorącym",
+          "loc": "gorącym"
+        },
+        "m3": {
+          "nom": "gorący",
+          "gen": "gorącego",
+          "dat": "gorącemu",
+          "acc": "gorący",
+          "ins": "gorącym",
+          "loc": "gorącym"
+        },
+        "f": {
+          "nom": "gorąca",
+          "gen": "gorącej",
+          "dat": "gorącej",
+          "acc": "gorącą",
+          "ins": "gorącą",
+          "loc": "gorącej"
+        },
+        "n": {
+          "nom": "gorące",
+          "gen": "gorącego",
+          "dat": "gorącemu",
+          "acc": "gorące",
+          "ins": "gorącym",
+          "loc": "gorącym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "gorący",
+          "gen": "gorących",
+          "dat": "gorącym",
+          "acc": "gorących",
+          "ins": "gorącymi",
+          "loc": "gorących"
+        },
+        "nonvirile": {
+          "nom": "gorące",
+          "gen": "gorących",
+          "dat": "gorącym",
+          "acc": "gorące",
+          "ins": "gorącymi",
+          "loc": "gorących"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "gorętszy",
+          "gen": "gorętszego",
+          "dat": "gorętszemu",
+          "acc": "gorętszego",
+          "ins": "gorętszym",
+          "loc": "gorętszym"
+        },
+        "m3": {
+          "nom": "gorętszy",
+          "gen": "gorętszego",
+          "dat": "gorętszemu",
+          "acc": "gorętszy",
+          "ins": "gorętszym",
+          "loc": "gorętszym"
+        },
+        "f": {
+          "nom": "gorętsza",
+          "gen": "gorętszej",
+          "dat": "gorętszej",
+          "acc": "gorętszą",
+          "ins": "gorętszą",
+          "loc": "gorętszej"
+        },
+        "n": {
+          "nom": "gorętsze",
+          "gen": "gorętszego",
+          "dat": "gorętszemu",
+          "acc": "gorętsze",
+          "ins": "gorętszym",
+          "loc": "gorętszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "gorętsi",
+          "gen": "gorętszych",
+          "dat": "gorętszym",
+          "acc": "gorętszych",
+          "ins": "gorętszymi",
+          "loc": "gorętszych"
+        },
+        "nonvirile": {
+          "nom": "gorętsze",
+          "gen": "gorętszych",
+          "dat": "gorętszym",
+          "acc": "gorętsze",
+          "ins": "gorętszymi",
+          "loc": "gorętszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najgorętszy",
+          "gen": "najgorętszego",
+          "dat": "najgorętszemu",
+          "acc": "najgorętszego",
+          "ins": "najgorętszym",
+          "loc": "najgorętszym"
+        },
+        "m3": {
+          "nom": "najgorętszy",
+          "gen": "najgorętszego",
+          "dat": "najgorętszemu",
+          "acc": "najgorętszy",
+          "ins": "najgorętszym",
+          "loc": "najgorętszym"
+        },
+        "f": {
+          "nom": "najgorętsza",
+          "gen": "najgorętszej",
+          "dat": "najgorętszej",
+          "acc": "najgorętszą",
+          "ins": "najgorętszą",
+          "loc": "najgorętszej"
+        },
+        "n": {
+          "nom": "najgorętsze",
+          "gen": "najgorętszego",
+          "dat": "najgorętszemu",
+          "acc": "najgorętsze",
+          "ins": "najgorętszym",
+          "loc": "najgorętszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najgorętsi",
+          "gen": "najgorętszych",
+          "dat": "najgorętszym",
+          "acc": "najgorętszych",
+          "ins": "najgorętszymi",
+          "loc": "najgorętszych"
+        },
+        "nonvirile": {
+          "nom": "najgorętsze",
+          "gen": "najgorętszych",
+          "dat": "najgorętszym",
+          "acc": "najgorętsze",
+          "ins": "najgorętszymi",
+          "loc": "najgorętszych"
+        }
+      }
+    }
+  }
+}

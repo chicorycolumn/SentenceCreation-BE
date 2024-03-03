@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odebrać",
+    "verbalNoun": "odebranie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "odebrany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odebrawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odbierze się"
+          },
+          "plural": {
+            "allPluralGenders": "odbierze się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odbiorę"
+          },
+          "plural": {
+            "allPluralGenders": "odbierzemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odbierzesz"
+          },
+          "plural": {
+            "allPluralGenders": "odbierzecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odbierze"
+          },
+          "plural": {
+            "allPluralGenders": "odbiorą"
+          }
+        }
+      },
+      "imperative": "odbierz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odebrano"
+          },
+          "plural": {
+            "allPluralGenders": "odebrano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odebrałem",
+            "f": "odebrałam"
+          },
+          "plural": {
+            "virile": "odebraliśmy",
+            "nonvirile": "odebrałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odebrałeś",
+            "f": "odebrałaś"
+          },
+          "plural": {
+            "virile": "odebraliście",
+            "nonvirile": "odebrałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odebrał",
+            "f": "odebrała",
+            "n": "odebrało"
+          },
+          "plural": {
+            "virile": "odebrali",
+            "nonvirile": "odebrały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

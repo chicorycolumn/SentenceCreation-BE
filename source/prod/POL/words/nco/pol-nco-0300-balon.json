@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "balon",
+      "gen": "balonu",
+      "dat": "balonowi",
+      "acc": "balon",
+      "ins": "balonem",
+      "loc": "balonie",
+      "voc": "balonie"
+    },
+    "plural": {
+      "nom": "balony",
+      "gen": "balonów",
+      "dat": "balonom",
+      "acc": "balony",
+      "ins": "balonami",
+      "loc": "balonach",
+      "voc": "balony"
+    }
+  }
+}

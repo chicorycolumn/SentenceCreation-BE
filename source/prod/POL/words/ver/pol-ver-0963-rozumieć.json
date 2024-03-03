@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "rozumieć",
+    "verbalNoun": "rozumienie",
+    "activeAdjectival": "rozumiejący",
+    "passiveAdjectival": "rozumiany",
+    "contemporaryAdverbial": "rozumiejąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "rozumiej",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "rozumiano"
+          },
+          "plural": {
+            "allPluralGenders": "rozumiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "rozumiałem",
+            "f": "rozumiałam"
+          },
+          "plural": {
+            "virile": "rozumieliśmy",
+            "nonvirile": "rozumiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "rozumiałeś",
+            "f": "rozumiałaś"
+          },
+          "plural": {
+            "virile": "rozumieliście",
+            "nonvirile": "rozumiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "rozumiał",
+            "f": "rozumiała",
+            "n": "rozumiało"
+          },
+          "plural": {
+            "virile": "rozumieli",
+            "nonvirile": "rozumiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "rozumie się"
+          },
+          "plural": {
+            "allPluralGenders": "rozumie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "rozumiem"
+          },
+          "plural": {
+            "allPluralGenders": "rozumiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "rozumiesz"
+          },
+          "plural": {
+            "allPluralGenders": "rozumiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "rozumie"
+          },
+          "plural": {
+            "allPluralGenders": "rozumieją"
+          }
+        }
+      }
+    }
+  }
+}

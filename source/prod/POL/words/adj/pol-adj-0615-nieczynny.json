@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "nieczynnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nieczynny",
+          "gen": "nieczynnego",
+          "dat": "nieczynnemu",
+          "acc": "nieczynnego",
+          "ins": "nieczynnym",
+          "loc": "nieczynnym"
+        },
+        "m3": {
+          "nom": "nieczynny",
+          "gen": "nieczynnego",
+          "dat": "nieczynnemu",
+          "acc": "nieczynny",
+          "ins": "nieczynnym",
+          "loc": "nieczynnym"
+        },
+        "f": {
+          "nom": "nieczynna",
+          "gen": "nieczynnej",
+          "dat": "nieczynnej",
+          "acc": "nieczynną",
+          "ins": "nieczynną",
+          "loc": "nieczynnej"
+        },
+        "n": {
+          "nom": "nieczynne",
+          "gen": "nieczynnego",
+          "dat": "nieczynnemu",
+          "acc": "nieczynne",
+          "ins": "nieczynnym",
+          "loc": "nieczynnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieczynni",
+          "gen": "nieczynnych",
+          "dat": "nieczynnym",
+          "acc": "nieczynnych",
+          "ins": "nieczynnymi",
+          "loc": "nieczynnych"
+        },
+        "nonvirile": {
+          "nom": "nieczynne",
+          "gen": "nieczynnych",
+          "dat": "nieczynnym",
+          "acc": "nieczynne",
+          "ins": "nieczynnymi",
+          "loc": "nieczynnych"
+        }
+      }
+    }
+  }
+}

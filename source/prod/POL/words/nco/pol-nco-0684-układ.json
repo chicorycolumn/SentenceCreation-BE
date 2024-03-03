@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "układ",
+      "gen": "układu",
+      "dat": "układowi",
+      "acc": "układ",
+      "ins": "układem",
+      "loc": "układzie",
+      "voc": "układzie"
+    },
+    "plural": {
+      "nom": "układy",
+      "gen": "układów",
+      "dat": "układom",
+      "acc": "układy",
+      "ins": "układami",
+      "loc": "układach",
+      "voc": "układy"
+    }
+  }
+}

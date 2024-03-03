@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "narciarski",
+          "gen": "narciarskiego",
+          "dat": "narciarskiemu",
+          "acc": "narciarskiego",
+          "ins": "narciarskim",
+          "loc": "narciarskim"
+        },
+        "m3": {
+          "nom": "narciarski",
+          "gen": "narciarskiego",
+          "dat": "narciarskiemu",
+          "acc": "narciarski",
+          "ins": "narciarskim",
+          "loc": "narciarskim"
+        },
+        "f": {
+          "nom": "narciarska",
+          "gen": "narciarskiej",
+          "dat": "narciarskiej",
+          "acc": "narciarską",
+          "ins": "narciarską",
+          "loc": "narciarskiej"
+        },
+        "n": {
+          "nom": "narciarskie",
+          "gen": "narciarskiego",
+          "dat": "narciarskiemu",
+          "acc": "narciarskie",
+          "ins": "narciarskim",
+          "loc": "narciarskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "narciarscy",
+          "gen": "narciarskich",
+          "dat": "narciarskim",
+          "acc": "narciarskich",
+          "ins": "narciarskimi",
+          "loc": "narciarskich"
+        },
+        "nonvirile": {
+          "nom": "narciarskie",
+          "gen": "narciarskich",
+          "dat": "narciarskim",
+          "acc": "narciarskie",
+          "ins": "narciarskimi",
+          "loc": "narciarskich"
+        }
+      }
+    }
+  }
+}

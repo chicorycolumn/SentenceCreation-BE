@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "handwriting",
+      "gen": "handwriting's"
+    },
+    "plural": {
+      "nom": "handwritings",
+      "gen": "handwritings'"
+    }
+  }
+}

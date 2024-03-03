@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "plural": {
+      "nom": "plecy",
+      "gen": "pleców",
+      "dat": "plecom",
+      "acc": "plecy",
+      "ins": "plecami",
+      "loc": "plecach",
+      "voc": "plecy"
+    }
+  }
+}

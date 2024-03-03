@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "teleskop",
+      "gen": "teleskopu",
+      "dat": "teleskopowi",
+      "acc": "teleskop",
+      "ins": "teleskopem",
+      "loc": "teleskopie",
+      "voc": "teleskopie"
+    },
+    "plural": {
+      "nom": "teleskopy",
+      "gen": "teleskopów",
+      "dat": "teleskopom",
+      "acc": "teleskopy",
+      "ins": "teleskopami",
+      "loc": "teleskopach",
+      "voc": "teleskopy"
+    }
+  }
+}

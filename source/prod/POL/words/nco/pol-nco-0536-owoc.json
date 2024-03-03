@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "owoc",
+      "gen": "owocu",
+      "dat": "owocowi",
+      "acc": "owoc",
+      "ins": "owocem",
+      "loc": "owocu",
+      "voc": "owocu"
+    },
+    "plural": {
+      "nom": "owoce",
+      "gen": "owoców",
+      "dat": "owocom",
+      "acc": "owoce",
+      "ins": "owocami",
+      "loc": "owocach",
+      "voc": "owoce"
+    }
+  }
+}

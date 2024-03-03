@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pingwin",
+      "gen": "pingwina",
+      "dat": "pingwinowi",
+      "acc": "pingwina",
+      "ins": "pingwinem",
+      "loc": "pingwinie",
+      "voc": "pingwinie"
+    },
+    "plural": {
+      "nom": "pingwiny",
+      "gen": "pingwinów",
+      "dat": "pingwinom",
+      "acc": "pingwiny",
+      "ins": "pingwinami",
+      "loc": "pingwinach",
+      "voc": "pingwiny"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "napaść",
+    "verbalNoun": "napadnięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "napadnięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "napadłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "napadnie się"
+          },
+          "plural": {
+            "allPluralGenders": "napadnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "napadnę"
+          },
+          "plural": {
+            "allPluralGenders": "napadniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "napadniesz"
+          },
+          "plural": {
+            "allPluralGenders": "napadniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "napadnie"
+          },
+          "plural": {
+            "allPluralGenders": "napadną"
+          }
+        }
+      },
+      "imperative": "napadnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "napadnięto"
+          },
+          "plural": {
+            "allPluralGenders": "napadnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "napadłem",
+            "f": "napadłam"
+          },
+          "plural": {
+            "virile": "napadliśmy",
+            "nonvirile": "napadłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "napadłeś",
+            "f": "napadłaś"
+          },
+          "plural": {
+            "virile": "napadliście",
+            "nonvirile": "napadłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "napadł",
+            "f": "napadła",
+            "n": "napadło"
+          },
+          "plural": {
+            "virile": "napadli",
+            "nonvirile": "napadły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "królik",
+      "gen": "królika",
+      "dat": "królikowi",
+      "acc": "królika",
+      "ins": "królikiem",
+      "loc": "króliku",
+      "voc": "króliku"
+    },
+    "plural": {
+      "nom": "króliki",
+      "gen": "królików",
+      "dat": "królikom",
+      "acc": "króliki",
+      "ins": "królikami",
+      "loc": "królikach",
+      "voc": "króliki"
+    }
+  }
+}

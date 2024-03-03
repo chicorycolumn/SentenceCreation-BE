@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ocalić",
+    "verbalNoun": "ocalenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "ocalony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "ocaliwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ocali się"
+          },
+          "plural": {
+            "allPluralGenders": "ocali się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ocalę"
+          },
+          "plural": {
+            "allPluralGenders": "ocalimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ocalisz"
+          },
+          "plural": {
+            "allPluralGenders": "ocalicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ocali"
+          },
+          "plural": {
+            "allPluralGenders": "ocalą"
+          }
+        }
+      },
+      "imperative": "ocal",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ocalono"
+          },
+          "plural": {
+            "allPluralGenders": "ocalono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ocaliłem",
+            "f": "ocaliłam"
+          },
+          "plural": {
+            "virile": "ocaliliśmy",
+            "nonvirile": "ocaliłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ocaliłeś",
+            "f": "ocaliłaś"
+          },
+          "plural": {
+            "virile": "ocaliliście",
+            "nonvirile": "ocaliłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ocalił",
+            "f": "ocaliła",
+            "n": "ocaliło"
+          },
+          "plural": {
+            "virile": "ocalili",
+            "nonvirile": "ocaliły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

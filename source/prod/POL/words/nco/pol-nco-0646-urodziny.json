@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "plural": {
+      "nom": "urodziny",
+      "gen": "urodzin",
+      "dat": "urodzinom",
+      "acc": "urodziny",
+      "ins": "urodzinami",
+      "loc": "urodzinach",
+      "voc": "urodziny"
+    }
+  }
+}

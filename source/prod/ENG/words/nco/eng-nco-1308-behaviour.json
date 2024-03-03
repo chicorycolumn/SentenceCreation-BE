@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "behaviour",
+      "gen": "behaviour's"
+    },
+    "plural": {
+      "nom": "behaviours",
+      "gen": "behaviours'"
+    }
+  }
+}

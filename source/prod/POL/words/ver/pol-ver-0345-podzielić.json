@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "podzielić",
+    "verbalNoun": "podzielenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "podzielony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "podzieliwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podzieli się"
+          },
+          "plural": {
+            "allPluralGenders": "podzieli się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podzielę"
+          },
+          "plural": {
+            "allPluralGenders": "podzielimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podzielisz"
+          },
+          "plural": {
+            "allPluralGenders": "podzielicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podzieli"
+          },
+          "plural": {
+            "allPluralGenders": "podzielą"
+          }
+        }
+      },
+      "imperative": "podziel",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podzielono"
+          },
+          "plural": {
+            "allPluralGenders": "podzielono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "podzieliłem",
+            "f": "podzieliłam"
+          },
+          "plural": {
+            "virile": "podzieliliśmy",
+            "nonvirile": "podzieliłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podzieliłeś",
+            "f": "podzieliłaś"
+          },
+          "plural": {
+            "virile": "podzieliliście",
+            "nonvirile": "podzieliłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podzielił",
+            "f": "podzieliła",
+            "n": "podzieliło"
+          },
+          "plural": {
+            "virile": "podzielili",
+            "nonvirile": "podzieliły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

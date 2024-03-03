@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "imię",
+      "gen": "imienia",
+      "dat": "imieniu",
+      "acc": "imię",
+      "ins": "imieniem",
+      "loc": "imieniu",
+      "voc": "imię"
+    },
+    "plural": {
+      "nom": "imiona",
+      "gen": "imion",
+      "dat": "imionom",
+      "acc": "imiona",
+      "ins": "imionami",
+      "loc": "imionach",
+      "voc": "imiona"
+    }
+  }
+}

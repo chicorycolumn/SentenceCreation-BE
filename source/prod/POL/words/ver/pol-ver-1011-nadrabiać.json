@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nadrabiać",
+    "verbalNoun": "nadrabianie",
+    "activeAdjectival": "nadrabiający",
+    "passiveAdjectival": "nadrabiany",
+    "contemporaryAdverbial": "nadrabiając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "nadrabiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nadrabiano"
+          },
+          "plural": {
+            "allPluralGenders": "nadrabiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nadrabiałem",
+            "f": "nadrabiałam"
+          },
+          "plural": {
+            "virile": "nadrabialiśmy",
+            "nonvirile": "nadrabiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nadrabiałeś",
+            "f": "nadrabiałaś"
+          },
+          "plural": {
+            "virile": "nadrabialiście",
+            "nonvirile": "nadrabiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nadrabiał",
+            "f": "nadrabiała",
+            "n": "nadrabiało"
+          },
+          "plural": {
+            "virile": "nadrabiali",
+            "nonvirile": "nadrabiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nadrabia się"
+          },
+          "plural": {
+            "allPluralGenders": "nadrabia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nadrabiam"
+          },
+          "plural": {
+            "allPluralGenders": "nadrabiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nadrabiasz"
+          },
+          "plural": {
+            "allPluralGenders": "nadrabiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nadrabia"
+          },
+          "plural": {
+            "allPluralGenders": "nadrabiają"
+          }
+        }
+      }
+    }
+  }
+}

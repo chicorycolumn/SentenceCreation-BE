@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "detektyw",
+      "gen": "detektywa",
+      "dat": "detektywowi",
+      "acc": "detektywa",
+      "ins": "detektywem",
+      "loc": "detektywie",
+      "voc": "detektywie"
+    },
+    "plural": {
+      "nom": "detektywi",
+      "gen": "detektywów",
+      "dat": "detektywom",
+      "acc": "detektywów",
+      "ins": "detektywami",
+      "loc": "detektywach",
+      "voc": "detektywi"
+    }
+  }
+}

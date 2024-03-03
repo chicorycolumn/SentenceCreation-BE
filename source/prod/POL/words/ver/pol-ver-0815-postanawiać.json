@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "postanawiać",
+    "verbalNoun": "postanawianie",
+    "activeAdjectival": "postanawiający",
+    "passiveAdjectival": "postanawiany",
+    "contemporaryAdverbial": "postanawiając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "postanawiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "postanawiano"
+          },
+          "plural": {
+            "allPluralGenders": "postanawiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "postanawiałem",
+            "f": "postanawiałam"
+          },
+          "plural": {
+            "virile": "postanawialiśmy",
+            "nonvirile": "postanawiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "postanawiałeś",
+            "f": "postanawiałaś"
+          },
+          "plural": {
+            "virile": "postanawialiście",
+            "nonvirile": "postanawiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "postanawiał",
+            "f": "postanawiała",
+            "n": "postanawiało"
+          },
+          "plural": {
+            "virile": "postanawiali",
+            "nonvirile": "postanawiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "postanawia się"
+          },
+          "plural": {
+            "allPluralGenders": "postanawia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "postanawiam"
+          },
+          "plural": {
+            "allPluralGenders": "postanawiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "postanawiasz"
+          },
+          "plural": {
+            "allPluralGenders": "postanawiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "postanawia"
+          },
+          "plural": {
+            "allPluralGenders": "postanawiają"
+          }
+        }
+      }
+    }
+  }
+}

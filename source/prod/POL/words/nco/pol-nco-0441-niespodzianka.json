@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "niespodzianka",
+      "gen": "niespodzianki",
+      "dat": "niespodziance",
+      "acc": "niespodziankę",
+      "ins": "niespodzianką",
+      "loc": "niespodziance",
+      "voc": "niespodzianko"
+    },
+    "plural": {
+      "nom": "niespodzianki",
+      "gen": "niespodzianek",
+      "dat": "niespodziankom",
+      "acc": "niespodzianki",
+      "ins": "niespodziankami",
+      "loc": "niespodziankach",
+      "voc": "niespodzianki"
+    }
+  }
+}

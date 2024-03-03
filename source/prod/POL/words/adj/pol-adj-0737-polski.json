@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "polsko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "polski",
+          "gen": "polskiego",
+          "dat": "polskiemu",
+          "acc": "polskiego",
+          "ins": "polskim",
+          "loc": "polskim"
+        },
+        "m3": {
+          "nom": "polski",
+          "gen": "polskiego",
+          "dat": "polskiemu",
+          "acc": "polski",
+          "ins": "polskim",
+          "loc": "polskim"
+        },
+        "f": {
+          "nom": "polska",
+          "gen": "polskiej",
+          "dat": "polskiej",
+          "acc": "polską",
+          "ins": "polską",
+          "loc": "polskiej"
+        },
+        "n": {
+          "nom": "polskie",
+          "gen": "polskiego",
+          "dat": "polskiemu",
+          "acc": "polskie",
+          "ins": "polskim",
+          "loc": "polskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "polscy",
+          "gen": "polskich",
+          "dat": "polskim",
+          "acc": "polskich",
+          "ins": "polskimi",
+          "loc": "polskich"
+        },
+        "nonvirile": {
+          "nom": "polskie",
+          "gen": "polskich",
+          "dat": "polskim",
+          "acc": "polskie",
+          "ins": "polskimi",
+          "loc": "polskich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej polski",
+          "gen": "bardziej polskiego",
+          "dat": "bardziej polskiemu",
+          "acc": "bardziej polskiego",
+          "ins": "bardziej polskim",
+          "loc": "bardziej polskim"
+        },
+        "m3": {
+          "nom": "bardziej polski",
+          "gen": "bardziej polskiego",
+          "dat": "bardziej polskiemu",
+          "acc": "bardziej polski",
+          "ins": "bardziej polskim",
+          "loc": "bardziej polskim"
+        },
+        "f": {
+          "nom": "bardziej polska",
+          "gen": "bardziej polskiej",
+          "dat": "bardziej polskiej",
+          "acc": "bardziej polską",
+          "ins": "bardziej polską",
+          "loc": "bardziej polskiej"
+        },
+        "n": {
+          "nom": "bardziej polskie",
+          "gen": "bardziej polskiego",
+          "dat": "bardziej polskiemu",
+          "acc": "bardziej polskie",
+          "ins": "bardziej polskim",
+          "loc": "bardziej polskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej polscy",
+          "gen": "bardziej polskich",
+          "dat": "bardziej polskim",
+          "acc": "bardziej polskich",
+          "ins": "bardziej polskimi",
+          "loc": "bardziej polskich"
+        },
+        "nonvirile": {
+          "nom": "bardziej polskie",
+          "gen": "bardziej polskich",
+          "dat": "bardziej polskim",
+          "acc": "bardziej polskie",
+          "ins": "bardziej polskimi",
+          "loc": "bardziej polskich"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej polski",
+          "gen": "najbardziej polskiego",
+          "dat": "najbardziej polskiemu",
+          "acc": "najbardziej polskiego",
+          "ins": "najbardziej polskim",
+          "loc": "najbardziej polskim"
+        },
+        "m3": {
+          "nom": "najbardziej polski",
+          "gen": "najbardziej polskiego",
+          "dat": "najbardziej polskiemu",
+          "acc": "najbardziej polski",
+          "ins": "najbardziej polskim",
+          "loc": "najbardziej polskim"
+        },
+        "f": {
+          "nom": "najbardziej polska",
+          "gen": "najbardziej polskiej",
+          "dat": "najbardziej polskiej",
+          "acc": "najbardziej polską",
+          "ins": "najbardziej polską",
+          "loc": "najbardziej polskiej"
+        },
+        "n": {
+          "nom": "najbardziej polskie",
+          "gen": "najbardziej polskiego",
+          "dat": "najbardziej polskiemu",
+          "acc": "najbardziej polskie",
+          "ins": "najbardziej polskim",
+          "loc": "najbardziej polskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej polscy",
+          "gen": "najbardziej polskich",
+          "dat": "najbardziej polskim",
+          "acc": "najbardziej polskich",
+          "ins": "najbardziej polskimi",
+          "loc": "najbardziej polskich"
+        },
+        "nonvirile": {
+          "nom": "najbardziej polskie",
+          "gen": "najbardziej polskich",
+          "dat": "najbardziej polskim",
+          "acc": "najbardziej polskie",
+          "ins": "najbardziej polskimi",
+          "loc": "najbardziej polskich"
+        }
+      }
+    }
+  }
+}

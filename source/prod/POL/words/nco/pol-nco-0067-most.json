@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "most",
+      "gen": "mostu",
+      "dat": "mostowi",
+      "acc": "most",
+      "ins": "mostem",
+      "loc": "moście",
+      "voc": "moście"
+    },
+    "plural": {
+      "nom": "mosty",
+      "gen": "mostów",
+      "dat": "mostom",
+      "acc": "mosty",
+      "ins": "mostami",
+      "loc": "mostach",
+      "voc": "mosty"
+    }
+  }
+}

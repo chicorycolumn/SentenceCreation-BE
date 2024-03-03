@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pan",
+      "gen": "pana",
+      "dat": "panu",
+      "acc": "pana",
+      "ins": "panem",
+      "loc": "panu",
+      "voc": "panie"
+    },
+    "plural": {
+      "nom": "panowie",
+      "gen": "panów",
+      "dat": "panom",
+      "acc": "panów",
+      "ins": "panami",
+      "loc": "panach",
+      "voc": "panowie"
+    }
+  }
+}

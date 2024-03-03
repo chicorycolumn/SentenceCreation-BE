@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "górski",
+          "gen": "górskiego",
+          "dat": "górskiemu",
+          "acc": "górskiego",
+          "ins": "górskim",
+          "loc": "górskim"
+        },
+        "m3": {
+          "nom": "górski",
+          "gen": "górskiego",
+          "dat": "górskiemu",
+          "acc": "górski",
+          "ins": "górskim",
+          "loc": "górskim"
+        },
+        "f": {
+          "nom": "górska",
+          "gen": "górskiej",
+          "dat": "górskiej",
+          "acc": "górską",
+          "ins": "górską",
+          "loc": "górskiej"
+        },
+        "n": {
+          "nom": "górskie",
+          "gen": "górskiego",
+          "dat": "górskiemu",
+          "acc": "górskie",
+          "ins": "górskim",
+          "loc": "górskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "górscy",
+          "gen": "górskich",
+          "dat": "górskim",
+          "acc": "górskich",
+          "ins": "górskimi",
+          "loc": "górskich"
+        },
+        "nonvirile": {
+          "nom": "górskie",
+          "gen": "górskich",
+          "dat": "górskim",
+          "acc": "górskie",
+          "ins": "górskimi",
+          "loc": "górskich"
+        }
+      }
+    }
+  }
+}

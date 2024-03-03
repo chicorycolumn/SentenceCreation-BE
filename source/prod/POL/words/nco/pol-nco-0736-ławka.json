@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ławka",
+      "gen": "ławki",
+      "dat": "ławce",
+      "acc": "ławkę",
+      "ins": "ławką",
+      "loc": "ławce",
+      "voc": "ławko"
+    },
+    "plural": {
+      "nom": "ławki",
+      "gen": "ławek",
+      "dat": "ławkom",
+      "acc": "ławki",
+      "ins": "ławkami",
+      "loc": "ławkach",
+      "voc": "ławki"
+    }
+  }
+}

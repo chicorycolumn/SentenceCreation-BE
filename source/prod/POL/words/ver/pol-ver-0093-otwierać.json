@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "otwierać",
+    "verbalNoun": "otwieranie",
+    "activeAdjectival": "otwierający",
+    "passiveAdjectival": "otwierany",
+    "contemporaryAdverbial": "otwierając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "otwieraj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "otwierano"
+          },
+          "plural": {
+            "allPluralGenders": "otwierano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "otwierałem",
+            "f": "otwierałam"
+          },
+          "plural": {
+            "virile": "otwieraliśmy",
+            "nonvirile": "otwierałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "otwierałeś",
+            "f": "otwierałaś"
+          },
+          "plural": {
+            "virile": "otwieraliście",
+            "nonvirile": "otwierałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "otwierał",
+            "f": "otwierała",
+            "n": "otwierało"
+          },
+          "plural": {
+            "virile": "otwierali",
+            "nonvirile": "otwierały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "otwiera się"
+          },
+          "plural": {
+            "allPluralGenders": "otwiera się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "otwieram"
+          },
+          "plural": {
+            "allPluralGenders": "otwieramy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "otwierasz"
+          },
+          "plural": {
+            "allPluralGenders": "otwieracie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "otwiera"
+          },
+          "plural": {
+            "allPluralGenders": "otwierają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odkładać",
+    "verbalNoun": "odkładanie",
+    "activeAdjectival": "odkładający",
+    "passiveAdjectival": "odkładany",
+    "contemporaryAdverbial": "odkładając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odkładaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odkładano"
+          },
+          "plural": {
+            "allPluralGenders": "odkładano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odkładałem",
+            "f": "odkładałam"
+          },
+          "plural": {
+            "virile": "odkładaliśmy",
+            "nonvirile": "odkładałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odkładałeś",
+            "f": "odkładałaś"
+          },
+          "plural": {
+            "virile": "odkładaliście",
+            "nonvirile": "odkładałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odkładał",
+            "f": "odkładała",
+            "n": "odkładało"
+          },
+          "plural": {
+            "virile": "odkładali",
+            "nonvirile": "odkładały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odkłada się"
+          },
+          "plural": {
+            "allPluralGenders": "odkłada się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odkładam"
+          },
+          "plural": {
+            "allPluralGenders": "odkładamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odkładasz"
+          },
+          "plural": {
+            "allPluralGenders": "odkładacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odkłada"
+          },
+          "plural": {
+            "allPluralGenders": "odkładają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dopuszczać",
+    "verbalNoun": "dopuszczanie",
+    "activeAdjectival": "dopuszczający",
+    "passiveAdjectival": "dopuszczany",
+    "contemporaryAdverbial": "dopuszczając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dopuszczaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dopuszczano"
+          },
+          "plural": {
+            "allPluralGenders": "dopuszczano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dopuszczałem",
+            "f": "dopuszczałam"
+          },
+          "plural": {
+            "virile": "dopuszczaliśmy",
+            "nonvirile": "dopuszczałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dopuszczałeś",
+            "f": "dopuszczałaś"
+          },
+          "plural": {
+            "virile": "dopuszczaliście",
+            "nonvirile": "dopuszczałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dopuszczał",
+            "f": "dopuszczała",
+            "n": "dopuszczało"
+          },
+          "plural": {
+            "virile": "dopuszczali",
+            "nonvirile": "dopuszczały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dopuszcza się"
+          },
+          "plural": {
+            "allPluralGenders": "dopuszcza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dopuszczam"
+          },
+          "plural": {
+            "allPluralGenders": "dopuszczamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dopuszczasz"
+          },
+          "plural": {
+            "allPluralGenders": "dopuszczacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dopuszcza"
+          },
+          "plural": {
+            "allPluralGenders": "dopuszczają"
+          }
+        }
+      }
+    }
+  }
+}

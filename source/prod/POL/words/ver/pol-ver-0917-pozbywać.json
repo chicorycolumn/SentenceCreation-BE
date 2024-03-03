@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pozbywać",
+    "verbalNoun": "pozbywanie",
+    "activeAdjectival": "pozbywający",
+    "passiveAdjectival": "pozbywany",
+    "contemporaryAdverbial": "pozbywając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pozbywaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pozbywano"
+          },
+          "plural": {
+            "allPluralGenders": "pozbywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pozbywałem",
+            "f": "pozbywałam"
+          },
+          "plural": {
+            "virile": "pozbywaliśmy",
+            "nonvirile": "pozbywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pozbywałeś",
+            "f": "pozbywałaś"
+          },
+          "plural": {
+            "virile": "pozbywaliście",
+            "nonvirile": "pozbywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pozbywał",
+            "f": "pozbywała",
+            "n": "pozbywało"
+          },
+          "plural": {
+            "virile": "pozbywali",
+            "nonvirile": "pozbywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pozbywa się"
+          },
+          "plural": {
+            "allPluralGenders": "pozbywa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pozbywam"
+          },
+          "plural": {
+            "allPluralGenders": "pozbywamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pozbywasz"
+          },
+          "plural": {
+            "allPluralGenders": "pozbywacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pozbywa"
+          },
+          "plural": {
+            "allPluralGenders": "pozbywają"
+          }
+        }
+      }
+    }
+  }
+}

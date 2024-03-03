@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niebezpiecznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niebezpieczny",
+          "gen": "niebezpiecznego",
+          "dat": "niebezpiecznemu",
+          "acc": "niebezpiecznego",
+          "ins": "niebezpiecznym",
+          "loc": "niebezpiecznym"
+        },
+        "m3": {
+          "nom": "niebezpieczny",
+          "gen": "niebezpiecznego",
+          "dat": "niebezpiecznemu",
+          "acc": "niebezpieczny",
+          "ins": "niebezpiecznym",
+          "loc": "niebezpiecznym"
+        },
+        "f": {
+          "nom": "niebezpieczna",
+          "gen": "niebezpiecznej",
+          "dat": "niebezpiecznej",
+          "acc": "niebezpieczną",
+          "ins": "niebezpieczną",
+          "loc": "niebezpiecznej"
+        },
+        "n": {
+          "nom": "niebezpieczne",
+          "gen": "niebezpiecznego",
+          "dat": "niebezpiecznemu",
+          "acc": "niebezpieczne",
+          "ins": "niebezpiecznym",
+          "loc": "niebezpiecznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niebezpieczni",
+          "gen": "niebezpiecznych",
+          "dat": "niebezpiecznym",
+          "acc": "niebezpiecznych",
+          "ins": "niebezpiecznymi",
+          "loc": "niebezpiecznych"
+        },
+        "nonvirile": {
+          "nom": "niebezpieczne",
+          "gen": "niebezpiecznych",
+          "dat": "niebezpiecznym",
+          "acc": "niebezpieczne",
+          "ins": "niebezpiecznymi",
+          "loc": "niebezpiecznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "niebezpieczniejszy",
+          "gen": "niebezpieczniejszego",
+          "dat": "niebezpieczniejszemu",
+          "acc": "niebezpieczniejszego",
+          "ins": "niebezpieczniejszym",
+          "loc": "niebezpieczniejszym"
+        },
+        "m3": {
+          "nom": "niebezpieczniejszy",
+          "gen": "niebezpieczniejszego",
+          "dat": "niebezpieczniejszemu",
+          "acc": "niebezpieczniejszy",
+          "ins": "niebezpieczniejszym",
+          "loc": "niebezpieczniejszym"
+        },
+        "f": {
+          "nom": "niebezpieczniejsza",
+          "gen": "niebezpieczniejszej",
+          "dat": "niebezpieczniejszej",
+          "acc": "niebezpieczniejszą",
+          "ins": "niebezpieczniejszą",
+          "loc": "niebezpieczniejszej"
+        },
+        "n": {
+          "nom": "niebezpieczniejsze",
+          "gen": "niebezpieczniejszego",
+          "dat": "niebezpieczniejszemu",
+          "acc": "niebezpieczniejsze",
+          "ins": "niebezpieczniejszym",
+          "loc": "niebezpieczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niebezpieczniejsi",
+          "gen": "niebezpieczniejszych",
+          "dat": "niebezpieczniejszym",
+          "acc": "niebezpieczniejszych",
+          "ins": "niebezpieczniejszymi",
+          "loc": "niebezpieczniejszych"
+        },
+        "nonvirile": {
+          "nom": "niebezpieczniejsze",
+          "gen": "niebezpieczniejszych",
+          "dat": "niebezpieczniejszym",
+          "acc": "niebezpieczniejsze",
+          "ins": "niebezpieczniejszymi",
+          "loc": "niebezpieczniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najniebezpieczniejszy",
+          "gen": "najniebezpieczniejszego",
+          "dat": "najniebezpieczniejszemu",
+          "acc": "najniebezpieczniejszego",
+          "ins": "najniebezpieczniejszym",
+          "loc": "najniebezpieczniejszym"
+        },
+        "m3": {
+          "nom": "najniebezpieczniejszy",
+          "gen": "najniebezpieczniejszego",
+          "dat": "najniebezpieczniejszemu",
+          "acc": "najniebezpieczniejszy",
+          "ins": "najniebezpieczniejszym",
+          "loc": "najniebezpieczniejszym"
+        },
+        "f": {
+          "nom": "najniebezpieczniejsza",
+          "gen": "najniebezpieczniejszej",
+          "dat": "najniebezpieczniejszej",
+          "acc": "najniebezpieczniejszą",
+          "ins": "najniebezpieczniejszą",
+          "loc": "najniebezpieczniejszej"
+        },
+        "n": {
+          "nom": "najniebezpieczniejsze",
+          "gen": "najniebezpieczniejszego",
+          "dat": "najniebezpieczniejszemu",
+          "acc": "najniebezpieczniejsze",
+          "ins": "najniebezpieczniejszym",
+          "loc": "najniebezpieczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najniebezpieczniejsi",
+          "gen": "najniebezpieczniejszych",
+          "dat": "najniebezpieczniejszym",
+          "acc": "najniebezpieczniejszych",
+          "ins": "najniebezpieczniejszymi",
+          "loc": "najniebezpieczniejszych"
+        },
+        "nonvirile": {
+          "nom": "najniebezpieczniejsze",
+          "gen": "najniebezpieczniejszych",
+          "dat": "najniebezpieczniejszym",
+          "acc": "najniebezpieczniejsze",
+          "ins": "najniebezpieczniejszymi",
+          "loc": "najniebezpieczniejszych"
+        }
+      }
+    }
+  }
+}

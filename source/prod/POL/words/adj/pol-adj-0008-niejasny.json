@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niejasno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niejasny",
+          "gen": "niejasnego",
+          "dat": "niejasnemu",
+          "acc": "niejasnego",
+          "ins": "niejasnym",
+          "loc": "niejasnym"
+        },
+        "m3": {
+          "nom": "niejasny",
+          "gen": "niejasnego",
+          "dat": "niejasnemu",
+          "acc": "niejasny",
+          "ins": "niejasnym",
+          "loc": "niejasnym"
+        },
+        "f": {
+          "nom": "niejasna",
+          "gen": "niejasnej",
+          "dat": "niejasnej",
+          "acc": "niejasną",
+          "ins": "niejasną",
+          "loc": "niejasnej"
+        },
+        "n": {
+          "nom": "niejasne",
+          "gen": "niejasnego",
+          "dat": "niejasnemu",
+          "acc": "niejasne",
+          "ins": "niejasnym",
+          "loc": "niejasnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niejaśni",
+          "gen": "niejasnych",
+          "dat": "niejasnym",
+          "acc": "niejasnych",
+          "ins": "niejasnymi",
+          "loc": "niejasnych"
+        },
+        "nonvirile": {
+          "nom": "niejasne",
+          "gen": "niejasnych",
+          "dat": "niejasnym",
+          "acc": "niejasne",
+          "ins": "niejasnymi",
+          "loc": "niejasnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej niejasny",
+          "gen": "bardziej niejasnego",
+          "dat": "bardziej niejasnemu",
+          "acc": "bardziej niejasnego",
+          "ins": "bardziej niejasnym",
+          "loc": "bardziej niejasnym"
+        },
+        "m3": {
+          "nom": "bardziej niejasny",
+          "gen": "bardziej niejasnego",
+          "dat": "bardziej niejasnemu",
+          "acc": "bardziej niejasny",
+          "ins": "bardziej niejasnym",
+          "loc": "bardziej niejasnym"
+        },
+        "f": {
+          "nom": "bardziej niejasna",
+          "gen": "bardziej niejasnej",
+          "dat": "bardziej niejasnej",
+          "acc": "bardziej niejasną",
+          "ins": "bardziej niejasną",
+          "loc": "bardziej niejasnej"
+        },
+        "n": {
+          "nom": "bardziej niejasne",
+          "gen": "bardziej niejasnego",
+          "dat": "bardziej niejasnemu",
+          "acc": "bardziej niejasne",
+          "ins": "bardziej niejasnym",
+          "loc": "bardziej niejasnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej niejaśni",
+          "gen": "bardziej niejasnych",
+          "dat": "bardziej niejasnym",
+          "acc": "bardziej niejasnych",
+          "ins": "bardziej niejasnymi",
+          "loc": "bardziej niejasnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej niejasne",
+          "gen": "bardziej niejasnych",
+          "dat": "bardziej niejasnym",
+          "acc": "bardziej niejasne",
+          "ins": "bardziej niejasnymi",
+          "loc": "bardziej niejasnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej niejasny",
+          "gen": "najbardziej niejasnego",
+          "dat": "najbardziej niejasnemu",
+          "acc": "najbardziej niejasnego",
+          "ins": "najbardziej niejasnym",
+          "loc": "najbardziej niejasnym"
+        },
+        "m3": {
+          "nom": "najbardziej niejasny",
+          "gen": "najbardziej niejasnego",
+          "dat": "najbardziej niejasnemu",
+          "acc": "najbardziej niejasny",
+          "ins": "najbardziej niejasnym",
+          "loc": "najbardziej niejasnym"
+        },
+        "f": {
+          "nom": "najbardziej niejasna",
+          "gen": "najbardziej niejasnej",
+          "dat": "najbardziej niejasnej",
+          "acc": "najbardziej niejasną",
+          "ins": "najbardziej niejasną",
+          "loc": "najbardziej niejasnej"
+        },
+        "n": {
+          "nom": "najbardziej niejasne",
+          "gen": "najbardziej niejasnego",
+          "dat": "najbardziej niejasnemu",
+          "acc": "najbardziej niejasne",
+          "ins": "najbardziej niejasnym",
+          "loc": "najbardziej niejasnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej niejaśni",
+          "gen": "najbardziej niejasnych",
+          "dat": "najbardziej niejasnym",
+          "acc": "najbardziej niejasnych",
+          "ins": "najbardziej niejasnymi",
+          "loc": "najbardziej niejasnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej niejasne",
+          "gen": "najbardziej niejasnych",
+          "dat": "najbardziej niejasnym",
+          "acc": "najbardziej niejasne",
+          "ins": "najbardziej niejasnymi",
+          "loc": "najbardziej niejasnych"
+        }
+      }
+    }
+  }
+}

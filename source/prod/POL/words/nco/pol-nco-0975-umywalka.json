@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "umywalka",
+      "gen": "umywalki",
+      "dat": "umywalce",
+      "acc": "umywalkę",
+      "ins": "umywalką",
+      "loc": "umywalce",
+      "voc": "umywalko"
+    },
+    "plural": {
+      "nom": "umywalki",
+      "gen": "umywalek",
+      "dat": "umywalkom",
+      "acc": "umywalki",
+      "ins": "umywalkami",
+      "loc": "umywalkach",
+      "voc": "umywalki"
+    }
+  }
+}

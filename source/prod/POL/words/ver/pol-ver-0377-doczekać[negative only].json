@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "doczekać",
+    "verbalNoun": "doczekanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "doczekany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "doczekawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "doczeka się"
+          },
+          "plural": {
+            "allPluralGenders": "doczeka się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "doczekam"
+          },
+          "plural": {
+            "allPluralGenders": "doczekamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "doczekasz"
+          },
+          "plural": {
+            "allPluralGenders": "doczekacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "doczeka"
+          },
+          "plural": {
+            "allPluralGenders": "doczekają"
+          }
+        }
+      },
+      "imperative": "doczekaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "doczekano"
+          },
+          "plural": {
+            "allPluralGenders": "doczekano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "doczekałem",
+            "f": "doczekałam"
+          },
+          "plural": {
+            "virile": "doczekaliśmy",
+            "nonvirile": "doczekałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "doczekałeś",
+            "f": "doczekałaś"
+          },
+          "plural": {
+            "virile": "doczekaliście",
+            "nonvirile": "doczekałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "doczekał",
+            "f": "doczekała",
+            "n": "doczekało"
+          },
+          "plural": {
+            "virile": "doczekali",
+            "nonvirile": "doczekały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

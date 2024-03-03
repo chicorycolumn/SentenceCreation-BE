@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oskarżać",
+    "verbalNoun": "oskarżanie",
+    "activeAdjectival": "oskarżający",
+    "passiveAdjectival": "oskarżany",
+    "contemporaryAdverbial": "oskarżając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "oskarżaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oskarżano"
+          },
+          "plural": {
+            "allPluralGenders": "oskarżano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oskarżałem",
+            "f": "oskarżałam"
+          },
+          "plural": {
+            "virile": "oskarżaliśmy",
+            "nonvirile": "oskarżałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oskarżałeś",
+            "f": "oskarżałaś"
+          },
+          "plural": {
+            "virile": "oskarżaliście",
+            "nonvirile": "oskarżałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oskarżał",
+            "f": "oskarżała",
+            "n": "oskarżało"
+          },
+          "plural": {
+            "virile": "oskarżali",
+            "nonvirile": "oskarżały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oskarża się"
+          },
+          "plural": {
+            "allPluralGenders": "oskarża się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oskarżam"
+          },
+          "plural": {
+            "allPluralGenders": "oskarżamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oskarżasz"
+          },
+          "plural": {
+            "allPluralGenders": "oskarżacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "oskarża"
+          },
+          "plural": {
+            "allPluralGenders": "oskarżają"
+          }
+        }
+      }
+    }
+  }
+}

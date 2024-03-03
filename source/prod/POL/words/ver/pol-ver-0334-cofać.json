@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "cofać",
+    "verbalNoun": "cofanie",
+    "activeAdjectival": "cofający",
+    "passiveAdjectival": "cofany",
+    "contemporaryAdverbial": "cofając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "cofaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "cofano"
+          },
+          "plural": {
+            "allPluralGenders": "cofano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "cofałem",
+            "f": "cofałam"
+          },
+          "plural": {
+            "virile": "cofaliśmy",
+            "nonvirile": "cofałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "cofałeś",
+            "f": "cofałaś"
+          },
+          "plural": {
+            "virile": "cofaliście",
+            "nonvirile": "cofałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "cofał",
+            "f": "cofała",
+            "n": "cofało"
+          },
+          "plural": {
+            "virile": "cofali",
+            "nonvirile": "cofały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "cofa się"
+          },
+          "plural": {
+            "allPluralGenders": "cofa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "cofam"
+          },
+          "plural": {
+            "allPluralGenders": "cofamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "cofasz"
+          },
+          "plural": {
+            "allPluralGenders": "cofacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "cofa"
+          },
+          "plural": {
+            "allPluralGenders": "cofają"
+          }
+        }
+      }
+    }
+  }
+}

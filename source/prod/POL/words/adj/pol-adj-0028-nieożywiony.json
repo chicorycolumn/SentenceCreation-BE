@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nieożywiony",
+          "gen": "nieożywionego",
+          "dat": "nieożywionemu",
+          "acc": "nieożywionego",
+          "ins": "nieożywionym",
+          "loc": "nieożywionym"
+        },
+        "m3": {
+          "nom": "nieożywiony",
+          "gen": "nieożywionego",
+          "dat": "nieożywionemu",
+          "acc": "nieożywiony",
+          "ins": "nieożywionym",
+          "loc": "nieożywionym"
+        },
+        "f": {
+          "nom": "nieożywiona",
+          "gen": "nieożywionej",
+          "dat": "nieożywionej",
+          "acc": "nieożywioną",
+          "ins": "nieożywioną",
+          "loc": "nieożywionej"
+        },
+        "n": {
+          "nom": "nieożywione",
+          "gen": "nieożywionego",
+          "dat": "nieożywionemu",
+          "acc": "nieożywione",
+          "ins": "nieożywionym",
+          "loc": "nieożywionym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieożywioni",
+          "gen": "nieożywionych",
+          "dat": "nieożywionym",
+          "acc": "nieożywionych",
+          "ins": "nieożywionymi",
+          "loc": "nieożywionych"
+        },
+        "nonvirile": {
+          "nom": "nieożywione",
+          "gen": "nieożywionych",
+          "dat": "nieożywionym",
+          "acc": "nieożywione",
+          "ins": "nieożywionymi",
+          "loc": "nieożywionych"
+        }
+      }
+    }
+  }
+}

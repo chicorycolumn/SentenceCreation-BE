@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zakładać",
+    "verbalNoun": "zakładanie",
+    "activeAdjectival": "zakładający",
+    "passiveAdjectival": "zakładany",
+    "contemporaryAdverbial": "zakładając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "zakładaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zakładano"
+          },
+          "plural": {
+            "allPluralGenders": "zakładano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zakładałem",
+            "f": "zakładałam"
+          },
+          "plural": {
+            "virile": "zakładaliśmy",
+            "nonvirile": "zakładałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zakładałeś",
+            "f": "zakładałaś"
+          },
+          "plural": {
+            "virile": "zakładaliście",
+            "nonvirile": "zakładałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zakładał",
+            "f": "zakładała",
+            "n": "zakładało"
+          },
+          "plural": {
+            "virile": "zakładali",
+            "nonvirile": "zakładały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zakłada się"
+          },
+          "plural": {
+            "allPluralGenders": "zakłada się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zakładam"
+          },
+          "plural": {
+            "allPluralGenders": "zakładamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zakładasz"
+          },
+          "plural": {
+            "allPluralGenders": "zakładacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zakłada"
+          },
+          "plural": {
+            "allPluralGenders": "zakładają"
+          }
+        }
+      }
+    }
+  }
+}

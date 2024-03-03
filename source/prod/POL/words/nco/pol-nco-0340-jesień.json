@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "jesień",
+      "gen": "jesieni",
+      "dat": "jesieni",
+      "acc": "jesień",
+      "ins": "jesienią",
+      "loc": "jesieni",
+      "voc": "jesieni"
+    },
+    "plural": {
+      "nom": "jesienie",
+      "gen": "jesieni",
+      "dat": "jesieniom",
+      "acc": "jesienie",
+      "ins": "jesieniami",
+      "loc": "jesieniach",
+      "voc": "jesienie"
+    }
+  }
+}

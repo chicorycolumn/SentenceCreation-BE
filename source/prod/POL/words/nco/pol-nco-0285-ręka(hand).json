@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ręka",
+      "gen": "ręki",
+      "dat": "ręce",
+      "acc": "rękę",
+      "ins": "ręką",
+      "loc": "ręce",
+      "voc": "ręko"
+    },
+    "plural": {
+      "nom": "ręce",
+      "gen": "rąk",
+      "dat": "rękom",
+      "acc": "ręce",
+      "ins": [
+        "rękami",
+        "rękoma"
+      ],
+      "loc": [
+        "rękach",
+        "ręku"
+      ],
+      "voc": "ręce"
+    }
+  }
+}

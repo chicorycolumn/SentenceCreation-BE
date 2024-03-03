@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "docenić",
+    "verbalNoun": "docenienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "doceniony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "doceniwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "doceni się"
+          },
+          "plural": {
+            "allPluralGenders": "doceni się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "docenię"
+          },
+          "plural": {
+            "allPluralGenders": "docenimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "docenisz"
+          },
+          "plural": {
+            "allPluralGenders": "docenicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "doceni"
+          },
+          "plural": {
+            "allPluralGenders": "docenią"
+          }
+        }
+      },
+      "imperative": "doceń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "doceniono"
+          },
+          "plural": {
+            "allPluralGenders": "doceniono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "doceniłem",
+            "f": "doceniłam"
+          },
+          "plural": {
+            "virile": "doceniliśmy",
+            "nonvirile": "doceniłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "doceniłeś",
+            "f": "doceniłaś"
+          },
+          "plural": {
+            "virile": "doceniliście",
+            "nonvirile": "doceniłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "docenił",
+            "f": "doceniła",
+            "n": "doceniło"
+          },
+          "plural": {
+            "virile": "docenili",
+            "nonvirile": "doceniły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

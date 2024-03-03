@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "poniedziałek",
+      "gen": "poniedziałku",
+      "dat": "poniedziałkowi",
+      "acc": "poniedziałek",
+      "ins": "poniedziałkiem",
+      "loc": "poniedziałku",
+      "voc": "poniedziałku"
+    },
+    "plural": {
+      "nom": "poniedziałki",
+      "gen": "poniedziałków",
+      "dat": "poniedziałkom",
+      "acc": "poniedziałki",
+      "ins": "poniedziałkami",
+      "loc": "poniedziałkach",
+      "voc": "poniedziałki"
+    }
+  }
+}

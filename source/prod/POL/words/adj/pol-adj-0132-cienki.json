@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "cienko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "cienki",
+          "gen": "cienkiego",
+          "dat": "cienkiemu",
+          "acc": "cienkiego",
+          "ins": "cienkim",
+          "loc": "cienkim"
+        },
+        "m3": {
+          "nom": "cienki",
+          "gen": "cienkiego",
+          "dat": "cienkiemu",
+          "acc": "cienki",
+          "ins": "cienkim",
+          "loc": "cienkim"
+        },
+        "f": {
+          "nom": "cienka",
+          "gen": "cienkiej",
+          "dat": "cienkiej",
+          "acc": "cienką",
+          "ins": "cienką",
+          "loc": "cienkiej"
+        },
+        "n": {
+          "nom": "cienkie",
+          "gen": "cienkiego",
+          "dat": "cienkiemu",
+          "acc": "cienkie",
+          "ins": "cienkim",
+          "loc": "cienkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ciency",
+          "gen": "cienkich",
+          "dat": "cienkim",
+          "acc": "cienkich",
+          "ins": "cienkimi",
+          "loc": "cienkich"
+        },
+        "nonvirile": {
+          "nom": "cienkie",
+          "gen": "cienkich",
+          "dat": "cienkim",
+          "acc": "cienkie",
+          "ins": "cienkimi",
+          "loc": "cienkich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "cieńszy",
+          "gen": "cieńszego",
+          "dat": "cieńszemu",
+          "acc": "cieńszego",
+          "ins": "cieńszym",
+          "loc": "cieńszym"
+        },
+        "m3": {
+          "nom": "cieńszy",
+          "gen": "cieńszego",
+          "dat": "cieńszemu",
+          "acc": "cieńszy",
+          "ins": "cieńszym",
+          "loc": "cieńszym"
+        },
+        "f": {
+          "nom": "cieńsza",
+          "gen": "cieńszej",
+          "dat": "cieńszej",
+          "acc": "cieńszą",
+          "ins": "cieńszą",
+          "loc": "cieńszej"
+        },
+        "n": {
+          "nom": "cieńsze",
+          "gen": "cieńszego",
+          "dat": "cieńszemu",
+          "acc": "cieńsze",
+          "ins": "cieńszym",
+          "loc": "cieńszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "cieńsi",
+          "gen": "cieńszych",
+          "dat": "cieńszym",
+          "acc": "cieńszych",
+          "ins": "cieńszymi",
+          "loc": "cieńszych"
+        },
+        "nonvirile": {
+          "nom": "cieńsze",
+          "gen": "cieńszych",
+          "dat": "cieńszym",
+          "acc": "cieńsze",
+          "ins": "cieńszymi",
+          "loc": "cieńszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najcieńszy",
+          "gen": "najcieńszego",
+          "dat": "najcieńszemu",
+          "acc": "najcieńszego",
+          "ins": "najcieńszym",
+          "loc": "najcieńszym"
+        },
+        "m3": {
+          "nom": "najcieńszy",
+          "gen": "najcieńszego",
+          "dat": "najcieńszemu",
+          "acc": "najcieńszy",
+          "ins": "najcieńszym",
+          "loc": "najcieńszym"
+        },
+        "f": {
+          "nom": "najcieńsza",
+          "gen": "najcieńszej",
+          "dat": "najcieńszej",
+          "acc": "najcieńszą",
+          "ins": "najcieńszą",
+          "loc": "najcieńszej"
+        },
+        "n": {
+          "nom": "najcieńsze",
+          "gen": "najcieńszego",
+          "dat": "najcieńszemu",
+          "acc": "najcieńsze",
+          "ins": "najcieńszym",
+          "loc": "najcieńszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najcieńsi",
+          "gen": "najcieńszych",
+          "dat": "najcieńszym",
+          "acc": "najcieńszych",
+          "ins": "najcieńszymi",
+          "loc": "najcieńszych"
+        },
+        "nonvirile": {
+          "nom": "najcieńsze",
+          "gen": "najcieńszych",
+          "dat": "najcieńszym",
+          "acc": "najcieńsze",
+          "ins": "najcieńszymi",
+          "loc": "najcieńszych"
+        }
+      }
+    }
+  }
+}

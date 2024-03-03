@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "rzeczywiście",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "rzeczywisty",
+          "gen": "rzeczywistego",
+          "dat": "rzeczywistemu",
+          "acc": "rzeczywistego",
+          "ins": "rzeczywistym",
+          "loc": "rzeczywistym"
+        },
+        "m3": {
+          "nom": "rzeczywisty",
+          "gen": "rzeczywistego",
+          "dat": "rzeczywistemu",
+          "acc": "rzeczywisty",
+          "ins": "rzeczywistym",
+          "loc": "rzeczywistym"
+        },
+        "f": {
+          "nom": "rzeczywista",
+          "gen": "rzeczywistej",
+          "dat": "rzeczywistej",
+          "acc": "rzeczywistą",
+          "ins": "rzeczywistą",
+          "loc": "rzeczywistej"
+        },
+        "n": {
+          "nom": "rzeczywiste",
+          "gen": "rzeczywistego",
+          "dat": "rzeczywistemu",
+          "acc": "rzeczywiste",
+          "ins": "rzeczywistym",
+          "loc": "rzeczywistym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "rzeczywiści",
+          "gen": "rzeczywistych",
+          "dat": "rzeczywistym",
+          "acc": "rzeczywistych",
+          "ins": "rzeczywistymi",
+          "loc": "rzeczywistych"
+        },
+        "nonvirile": {
+          "nom": "rzeczywiste",
+          "gen": "rzeczywistych",
+          "dat": "rzeczywistym",
+          "acc": "rzeczywiste",
+          "ins": "rzeczywistymi",
+          "loc": "rzeczywistych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej rzeczywisty",
+          "gen": "bardziej rzeczywistego",
+          "dat": "bardziej rzeczywistemu",
+          "acc": "bardziej rzeczywistego",
+          "ins": "bardziej rzeczywistym",
+          "loc": "bardziej rzeczywistym"
+        },
+        "m3": {
+          "nom": "bardziej rzeczywisty",
+          "gen": "bardziej rzeczywistego",
+          "dat": "bardziej rzeczywistemu",
+          "acc": "bardziej rzeczywisty",
+          "ins": "bardziej rzeczywistym",
+          "loc": "bardziej rzeczywistym"
+        },
+        "f": {
+          "nom": "bardziej rzeczywista",
+          "gen": "bardziej rzeczywistej",
+          "dat": "bardziej rzeczywistej",
+          "acc": "bardziej rzeczywistą",
+          "ins": "bardziej rzeczywistą",
+          "loc": "bardziej rzeczywistej"
+        },
+        "n": {
+          "nom": "bardziej rzeczywiste",
+          "gen": "bardziej rzeczywistego",
+          "dat": "bardziej rzeczywistemu",
+          "acc": "bardziej rzeczywiste",
+          "ins": "bardziej rzeczywistym",
+          "loc": "bardziej rzeczywistym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej rzeczywiści",
+          "gen": "bardziej rzeczywistych",
+          "dat": "bardziej rzeczywistym",
+          "acc": "bardziej rzeczywistych",
+          "ins": "bardziej rzeczywistymi",
+          "loc": "bardziej rzeczywistych"
+        },
+        "nonvirile": {
+          "nom": "bardziej rzeczywiste",
+          "gen": "bardziej rzeczywistych",
+          "dat": "bardziej rzeczywistym",
+          "acc": "bardziej rzeczywiste",
+          "ins": "bardziej rzeczywistymi",
+          "loc": "bardziej rzeczywistych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej rzeczywisty",
+          "gen": "najbardziej rzeczywistego",
+          "dat": "najbardziej rzeczywistemu",
+          "acc": "najbardziej rzeczywistego",
+          "ins": "najbardziej rzeczywistym",
+          "loc": "najbardziej rzeczywistym"
+        },
+        "m3": {
+          "nom": "najbardziej rzeczywisty",
+          "gen": "najbardziej rzeczywistego",
+          "dat": "najbardziej rzeczywistemu",
+          "acc": "najbardziej rzeczywisty",
+          "ins": "najbardziej rzeczywistym",
+          "loc": "najbardziej rzeczywistym"
+        },
+        "f": {
+          "nom": "najbardziej rzeczywista",
+          "gen": "najbardziej rzeczywistej",
+          "dat": "najbardziej rzeczywistej",
+          "acc": "najbardziej rzeczywistą",
+          "ins": "najbardziej rzeczywistą",
+          "loc": "najbardziej rzeczywistej"
+        },
+        "n": {
+          "nom": "najbardziej rzeczywiste",
+          "gen": "najbardziej rzeczywistego",
+          "dat": "najbardziej rzeczywistemu",
+          "acc": "najbardziej rzeczywiste",
+          "ins": "najbardziej rzeczywistym",
+          "loc": "najbardziej rzeczywistym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej rzeczywiści",
+          "gen": "najbardziej rzeczywistych",
+          "dat": "najbardziej rzeczywistym",
+          "acc": "najbardziej rzeczywistych",
+          "ins": "najbardziej rzeczywistymi",
+          "loc": "najbardziej rzeczywistych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej rzeczywiste",
+          "gen": "najbardziej rzeczywistych",
+          "dat": "najbardziej rzeczywistym",
+          "acc": "najbardziej rzeczywiste",
+          "ins": "najbardziej rzeczywistymi",
+          "loc": "najbardziej rzeczywistych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ogon",
+      "gen": "ogona",
+      "dat": "ogonowi",
+      "acc": "ogon",
+      "ins": "ogonem",
+      "loc": "ogonie",
+      "voc": "ogonie"
+    },
+    "plural": {
+      "nom": "ogony",
+      "gen": "ogonów",
+      "dat": "ogonom",
+      "acc": "ogony",
+      "ins": "ogonami",
+      "loc": "ogonach",
+      "voc": "ogony"
+    }
+  }
+}

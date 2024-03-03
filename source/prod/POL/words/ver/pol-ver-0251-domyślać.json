@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "domyślać",
+    "verbalNoun": "domyślanie",
+    "activeAdjectival": "domyślający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "domyślając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "domyślaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "domyślano"
+          },
+          "plural": {
+            "allPluralGenders": "domyślano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "domyślałem",
+            "f": "domyślałam"
+          },
+          "plural": {
+            "virile": "domyślaliśmy",
+            "nonvirile": "domyślałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "domyślałeś",
+            "f": "domyślałaś"
+          },
+          "plural": {
+            "virile": "domyślaliście",
+            "nonvirile": "domyślałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "domyślał",
+            "f": "domyślała",
+            "n": "domyślało"
+          },
+          "plural": {
+            "virile": "domyślali",
+            "nonvirile": "domyślały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "domyśla się"
+          },
+          "plural": {
+            "allPluralGenders": "domyśla się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "domyślam"
+          },
+          "plural": {
+            "allPluralGenders": "domyślamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "domyślasz"
+          },
+          "plural": {
+            "allPluralGenders": "domyślacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "domyśla"
+          },
+          "plural": {
+            "allPluralGenders": "domyślają"
+          }
+        }
+      }
+    }
+  }
+}

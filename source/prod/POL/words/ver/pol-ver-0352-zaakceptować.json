@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zaakceptować",
+    "verbalNoun": "zaakceptowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zaakceptowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zaakceptowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaakceptuje się"
+          },
+          "plural": {
+            "allPluralGenders": "zaakceptuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zaakceptuję"
+          },
+          "plural": {
+            "allPluralGenders": "zaakceptujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zaakceptujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zaakceptujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zaakceptuje"
+          },
+          "plural": {
+            "allPluralGenders": "zaakceptują"
+          }
+        }
+      },
+      "imperative": "zaakceptuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaakceptowano"
+          },
+          "plural": {
+            "allPluralGenders": "zaakceptowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zaakceptowałem",
+            "f": "zaakceptowałam"
+          },
+          "plural": {
+            "virile": "zaakceptowaliśmy",
+            "nonvirile": "zaakceptowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zaakceptowałeś",
+            "f": "zaakceptowałaś"
+          },
+          "plural": {
+            "virile": "zaakceptowaliście",
+            "nonvirile": "zaakceptowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zaakceptował",
+            "f": "zaakceptowała",
+            "n": "zaakceptowało"
+          },
+          "plural": {
+            "virile": "zaakceptowali",
+            "nonvirile": "zaakceptowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

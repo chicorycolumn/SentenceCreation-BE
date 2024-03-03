@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "przemysłowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przemysłowy",
+          "gen": "przemysłowego",
+          "dat": "przemysłowemu",
+          "acc": "przemysłowego",
+          "ins": "przemysłowym",
+          "loc": "przemysłowym"
+        },
+        "m3": {
+          "nom": "przemysłowy",
+          "gen": "przemysłowego",
+          "dat": "przemysłowemu",
+          "acc": "przemysłowy",
+          "ins": "przemysłowym",
+          "loc": "przemysłowym"
+        },
+        "f": {
+          "nom": "przemysłowa",
+          "gen": "przemysłowej",
+          "dat": "przemysłowej",
+          "acc": "przemysłową",
+          "ins": "przemysłową",
+          "loc": "przemysłowej"
+        },
+        "n": {
+          "nom": "przemysłowe",
+          "gen": "przemysłowego",
+          "dat": "przemysłowemu",
+          "acc": "przemysłowe",
+          "ins": "przemysłowym",
+          "loc": "przemysłowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przemysłowi",
+          "gen": "przemysłowych",
+          "dat": "przemysłowym",
+          "acc": "przemysłowych",
+          "ins": "przemysłowymi",
+          "loc": "przemysłowych"
+        },
+        "nonvirile": {
+          "nom": "przemysłowe",
+          "gen": "przemysłowych",
+          "dat": "przemysłowym",
+          "acc": "przemysłowe",
+          "ins": "przemysłowymi",
+          "loc": "przemysłowych"
+        }
+      }
+    }
+  }
+}

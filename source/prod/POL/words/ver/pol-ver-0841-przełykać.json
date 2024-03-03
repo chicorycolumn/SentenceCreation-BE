@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przełykać",
+    "verbalNoun": "przełykanie",
+    "activeAdjectival": "przełykający",
+    "passiveAdjectival": "przełykany",
+    "contemporaryAdverbial": "przełykając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przełykaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przełykano"
+          },
+          "plural": {
+            "allPluralGenders": "przełykano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przełykałem",
+            "f": "przełykałam"
+          },
+          "plural": {
+            "virile": "przełykaliśmy",
+            "nonvirile": "przełykałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przełykałeś",
+            "f": "przełykałaś"
+          },
+          "plural": {
+            "virile": "przełykaliście",
+            "nonvirile": "przełykałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przełykał",
+            "f": "przełykała",
+            "n": "przełykało"
+          },
+          "plural": {
+            "virile": "przełykali",
+            "nonvirile": "przełykały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przełyka się"
+          },
+          "plural": {
+            "allPluralGenders": "przełyka się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przełykam"
+          },
+          "plural": {
+            "allPluralGenders": "przełykamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przełykasz"
+          },
+          "plural": {
+            "allPluralGenders": "przełykacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przełyka"
+          },
+          "plural": {
+            "allPluralGenders": "przełykają"
+          }
+        }
+      }
+    }
+  }
+}

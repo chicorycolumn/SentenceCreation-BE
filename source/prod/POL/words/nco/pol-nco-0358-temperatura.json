@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "temperatura",
+      "gen": "temperatury",
+      "dat": "temperaturze",
+      "acc": "temperaturę",
+      "ins": "temperaturą",
+      "loc": "temperaturze",
+      "voc": "temperaturo"
+    },
+    "plural": {
+      "nom": "temperatury",
+      "gen": "temperatur",
+      "dat": "temperaturom",
+      "acc": "temperatury",
+      "ins": "temperaturami",
+      "loc": "temperaturach",
+      "voc": "temperatury"
+    }
+  }
+}

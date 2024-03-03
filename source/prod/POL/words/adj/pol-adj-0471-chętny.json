@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "chętnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "chętny",
+          "gen": "chętnego",
+          "dat": "chętnemu",
+          "acc": "chętnego",
+          "ins": "chętnym",
+          "loc": "chętnym"
+        },
+        "m3": {
+          "nom": "chętny",
+          "gen": "chętnego",
+          "dat": "chętnemu",
+          "acc": "chętny",
+          "ins": "chętnym",
+          "loc": "chętnym"
+        },
+        "f": {
+          "nom": "chętna",
+          "gen": "chętnej",
+          "dat": "chętnej",
+          "acc": "chętną",
+          "ins": "chętną",
+          "loc": "chętnej"
+        },
+        "n": {
+          "nom": "chętne",
+          "gen": "chętnego",
+          "dat": "chętnemu",
+          "acc": "chętne",
+          "ins": "chętnym",
+          "loc": "chętnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "chętni",
+          "gen": "chętnych",
+          "dat": "chętnym",
+          "acc": "chętnych",
+          "ins": "chętnymi",
+          "loc": "chętnych"
+        },
+        "nonvirile": {
+          "nom": "chętne",
+          "gen": "chętnych",
+          "dat": "chętnym",
+          "acc": "chętne",
+          "ins": "chętnymi",
+          "loc": "chętnych"
+        }
+      }
+    }
+  }
+}

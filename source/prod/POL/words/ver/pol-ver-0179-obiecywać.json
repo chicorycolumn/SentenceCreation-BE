@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "obiecywać",
+    "verbalNoun": "obiecywanie",
+    "activeAdjectival": "obiecujący",
+    "passiveAdjectival": "obiecywany",
+    "contemporaryAdverbial": "obiecując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "obiecuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obiecywano"
+          },
+          "plural": {
+            "allPluralGenders": "obiecywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "obiecywałem",
+            "f": "obiecywałam"
+          },
+          "plural": {
+            "virile": "obiecywaliśmy",
+            "nonvirile": "obiecywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "obiecywałeś",
+            "f": "obiecywałaś"
+          },
+          "plural": {
+            "virile": "obiecywaliście",
+            "nonvirile": "obiecywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "obiecywał",
+            "f": "obiecywała",
+            "n": "obiecywało"
+          },
+          "plural": {
+            "virile": "obiecywali",
+            "nonvirile": "obiecywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obiecuje się"
+          },
+          "plural": {
+            "allPluralGenders": "obiecuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "obiecuję"
+          },
+          "plural": {
+            "allPluralGenders": "obiecujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "obiecujesz"
+          },
+          "plural": {
+            "allPluralGenders": "obiecujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "obiecuje"
+          },
+          "plural": {
+            "allPluralGenders": "obiecują"
+          }
+        }
+      }
+    }
+  }
+}

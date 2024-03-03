@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "forehead",
+      "gen": "forehead's"
+    },
+    "plural": {
+      "nom": "foreheads",
+      "gen": "foreheads'"
+    }
+  }
+}

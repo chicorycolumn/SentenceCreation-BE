@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "dowolnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dowolny",
+          "gen": "dowolnego",
+          "dat": "dowolnemu",
+          "acc": "dowolnego",
+          "ins": "dowolnym",
+          "loc": "dowolnym"
+        },
+        "m3": {
+          "nom": "dowolny",
+          "gen": "dowolnego",
+          "dat": "dowolnemu",
+          "acc": "dowolny",
+          "ins": "dowolnym",
+          "loc": "dowolnym"
+        },
+        "f": {
+          "nom": "dowolna",
+          "gen": "dowolnej",
+          "dat": "dowolnej",
+          "acc": "dowolną",
+          "ins": "dowolną",
+          "loc": "dowolnej"
+        },
+        "n": {
+          "nom": "dowolne",
+          "gen": "dowolnego",
+          "dat": "dowolnemu",
+          "acc": "dowolne",
+          "ins": "dowolnym",
+          "loc": "dowolnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dowolni",
+          "gen": "dowolnych",
+          "dat": "dowolnym",
+          "acc": "dowolnych",
+          "ins": "dowolnymi",
+          "loc": "dowolnych"
+        },
+        "nonvirile": {
+          "nom": "dowolne",
+          "gen": "dowolnych",
+          "dat": "dowolnym",
+          "acc": "dowolne",
+          "ins": "dowolnymi",
+          "loc": "dowolnych"
+        }
+      }
+    }
+  }
+}

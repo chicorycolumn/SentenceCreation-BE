@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zdenerwowany",
+          "gen": "zdenerwowanego",
+          "dat": "zdenerwowanemu",
+          "acc": "zdenerwowanego",
+          "ins": "zdenerwowanym",
+          "loc": "zdenerwowanym"
+        },
+        "m3": {
+          "nom": "zdenerwowany",
+          "gen": "zdenerwowanego",
+          "dat": "zdenerwowanemu",
+          "acc": "zdenerwowany",
+          "ins": "zdenerwowanym",
+          "loc": "zdenerwowanym"
+        },
+        "f": {
+          "nom": "zdenerwowana",
+          "gen": "zdenerwowanej",
+          "dat": "zdenerwowanej",
+          "acc": "zdenerwowaną",
+          "ins": "zdenerwowaną",
+          "loc": "zdenerwowanej"
+        },
+        "n": {
+          "nom": "zdenerwowane",
+          "gen": "zdenerwowanego",
+          "dat": "zdenerwowanemu",
+          "acc": "zdenerwowane",
+          "ins": "zdenerwowanym",
+          "loc": "zdenerwowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zdenerwowani",
+          "gen": "zdenerwowanych",
+          "dat": "zdenerwowanym",
+          "acc": "zdenerwowanych",
+          "ins": "zdenerwowanymi",
+          "loc": "zdenerwowanych"
+        },
+        "nonvirile": {
+          "nom": "zdenerwowane",
+          "gen": "zdenerwowanych",
+          "dat": "zdenerwowanym",
+          "acc": "zdenerwowane",
+          "ins": "zdenerwowanymi",
+          "loc": "zdenerwowanych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej zdenerwowany",
+          "gen": "bardziej zdenerwowanego",
+          "dat": "bardziej zdenerwowanemu",
+          "acc": "bardziej zdenerwowanego",
+          "ins": "bardziej zdenerwowanym",
+          "loc": "bardziej zdenerwowanym"
+        },
+        "m3": {
+          "nom": "bardziej zdenerwowany",
+          "gen": "bardziej zdenerwowanego",
+          "dat": "bardziej zdenerwowanemu",
+          "acc": "bardziej zdenerwowany",
+          "ins": "bardziej zdenerwowanym",
+          "loc": "bardziej zdenerwowanym"
+        },
+        "f": {
+          "nom": "bardziej zdenerwowana",
+          "gen": "bardziej zdenerwowanej",
+          "dat": "bardziej zdenerwowanej",
+          "acc": "bardziej zdenerwowaną",
+          "ins": "bardziej zdenerwowaną",
+          "loc": "bardziej zdenerwowanej"
+        },
+        "n": {
+          "nom": "bardziej zdenerwowane",
+          "gen": "bardziej zdenerwowanego",
+          "dat": "bardziej zdenerwowanemu",
+          "acc": "bardziej zdenerwowane",
+          "ins": "bardziej zdenerwowanym",
+          "loc": "bardziej zdenerwowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej zdenerwowani",
+          "gen": "bardziej zdenerwowanych",
+          "dat": "bardziej zdenerwowanym",
+          "acc": "bardziej zdenerwowanych",
+          "ins": "bardziej zdenerwowanymi",
+          "loc": "bardziej zdenerwowanych"
+        },
+        "nonvirile": {
+          "nom": "bardziej zdenerwowane",
+          "gen": "bardziej zdenerwowanych",
+          "dat": "bardziej zdenerwowanym",
+          "acc": "bardziej zdenerwowane",
+          "ins": "bardziej zdenerwowanymi",
+          "loc": "bardziej zdenerwowanych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej zdenerwowany",
+          "gen": "najbardziej zdenerwowanego",
+          "dat": "najbardziej zdenerwowanemu",
+          "acc": "najbardziej zdenerwowanego",
+          "ins": "najbardziej zdenerwowanym",
+          "loc": "najbardziej zdenerwowanym"
+        },
+        "m3": {
+          "nom": "najbardziej zdenerwowany",
+          "gen": "najbardziej zdenerwowanego",
+          "dat": "najbardziej zdenerwowanemu",
+          "acc": "najbardziej zdenerwowany",
+          "ins": "najbardziej zdenerwowanym",
+          "loc": "najbardziej zdenerwowanym"
+        },
+        "f": {
+          "nom": "najbardziej zdenerwowana",
+          "gen": "najbardziej zdenerwowanej",
+          "dat": "najbardziej zdenerwowanej",
+          "acc": "najbardziej zdenerwowaną",
+          "ins": "najbardziej zdenerwowaną",
+          "loc": "najbardziej zdenerwowanej"
+        },
+        "n": {
+          "nom": "najbardziej zdenerwowane",
+          "gen": "najbardziej zdenerwowanego",
+          "dat": "najbardziej zdenerwowanemu",
+          "acc": "najbardziej zdenerwowane",
+          "ins": "najbardziej zdenerwowanym",
+          "loc": "najbardziej zdenerwowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej zdenerwowani",
+          "gen": "najbardziej zdenerwowanych",
+          "dat": "najbardziej zdenerwowanym",
+          "acc": "najbardziej zdenerwowanych",
+          "ins": "najbardziej zdenerwowanymi",
+          "loc": "najbardziej zdenerwowanych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej zdenerwowane",
+          "gen": "najbardziej zdenerwowanych",
+          "dat": "najbardziej zdenerwowanym",
+          "acc": "najbardziej zdenerwowane",
+          "ins": "najbardziej zdenerwowanymi",
+          "loc": "najbardziej zdenerwowanych"
+        }
+      }
+    }
+  }
+}

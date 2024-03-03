@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ciepło",
+      "gen": "ciepła",
+      "dat": "ciepłu",
+      "acc": "ciepło",
+      "ins": "ciepłem",
+      "loc": "cieple",
+      "voc": "ciepło"
+    }
+  }
+}

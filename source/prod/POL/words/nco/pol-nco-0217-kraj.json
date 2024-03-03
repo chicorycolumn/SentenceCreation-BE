@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kraj",
+      "gen": "kraju",
+      "dat": "krajowi",
+      "acc": "kraj",
+      "ins": "krajem",
+      "loc": "kraju",
+      "voc": "kraju"
+    },
+    "plural": {
+      "nom": "kraje",
+      "gen": "krajów",
+      "dat": "krajom",
+      "acc": "kraje",
+      "ins": "krajami",
+      "loc": "krajach",
+      "voc": "kraje"
+    }
+  }
+}

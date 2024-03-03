@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "niedostępnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niedostępny",
+          "gen": "niedostępnego",
+          "dat": "niedostępnemu",
+          "acc": "niedostępnego",
+          "ins": "niedostępnym",
+          "loc": "niedostępnym"
+        },
+        "m3": {
+          "nom": "niedostępny",
+          "gen": "niedostępnego",
+          "dat": "niedostępnemu",
+          "acc": "niedostępny",
+          "ins": "niedostępnym",
+          "loc": "niedostępnym"
+        },
+        "f": {
+          "nom": "niedostępna",
+          "gen": "niedostępnej",
+          "dat": "niedostępnej",
+          "acc": "niedostępną",
+          "ins": "niedostępną",
+          "loc": "niedostępnej"
+        },
+        "n": {
+          "nom": "niedostępne",
+          "gen": "niedostępnego",
+          "dat": "niedostępnemu",
+          "acc": "niedostępne",
+          "ins": "niedostępnym",
+          "loc": "niedostępnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niedostępni",
+          "gen": "niedostępnych",
+          "dat": "niedostępnym",
+          "acc": "niedostępnych",
+          "ins": "niedostępnymi",
+          "loc": "niedostępnych"
+        },
+        "nonvirile": {
+          "nom": "niedostępne",
+          "gen": "niedostępnych",
+          "dat": "niedostępnym",
+          "acc": "niedostępne",
+          "ins": "niedostępnymi",
+          "loc": "niedostępnych"
+        }
+      }
+    }
+  }
+}

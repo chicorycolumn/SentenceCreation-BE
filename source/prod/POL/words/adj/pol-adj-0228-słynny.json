@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "słynnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "słynny",
+          "gen": "słynnego",
+          "dat": "słynnemu",
+          "acc": "słynnego",
+          "ins": "słynnym",
+          "loc": "słynnym"
+        },
+        "m3": {
+          "nom": "słynny",
+          "gen": "słynnego",
+          "dat": "słynnemu",
+          "acc": "słynny",
+          "ins": "słynnym",
+          "loc": "słynnym"
+        },
+        "f": {
+          "nom": "słynna",
+          "gen": "słynnej",
+          "dat": "słynnej",
+          "acc": "słynną",
+          "ins": "słynną",
+          "loc": "słynnej"
+        },
+        "n": {
+          "nom": "słynne",
+          "gen": "słynnego",
+          "dat": "słynnemu",
+          "acc": "słynne",
+          "ins": "słynnym",
+          "loc": "słynnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "słynni",
+          "gen": "słynnych",
+          "dat": "słynnym",
+          "acc": "słynnych",
+          "ins": "słynnymi",
+          "loc": "słynnych"
+        },
+        "nonvirile": {
+          "nom": "słynne",
+          "gen": "słynnych",
+          "dat": "słynnym",
+          "acc": "słynne",
+          "ins": "słynnymi",
+          "loc": "słynnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "słynniejszy",
+          "gen": "słynniejszego",
+          "dat": "słynniejszemu",
+          "acc": "słynniejszego",
+          "ins": "słynniejszym",
+          "loc": "słynniejszym"
+        },
+        "m3": {
+          "nom": "słynniejszy",
+          "gen": "słynniejszego",
+          "dat": "słynniejszemu",
+          "acc": "słynniejszy",
+          "ins": "słynniejszym",
+          "loc": "słynniejszym"
+        },
+        "f": {
+          "nom": "słynniejsza",
+          "gen": "słynniejszej",
+          "dat": "słynniejszej",
+          "acc": "słynniejszą",
+          "ins": "słynniejszą",
+          "loc": "słynniejszej"
+        },
+        "n": {
+          "nom": "słynniejsze",
+          "gen": "słynniejszego",
+          "dat": "słynniejszemu",
+          "acc": "słynniejsze",
+          "ins": "słynniejszym",
+          "loc": "słynniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "słynniejsi",
+          "gen": "słynniejszych",
+          "dat": "słynniejszym",
+          "acc": "słynniejszych",
+          "ins": "słynniejszymi",
+          "loc": "słynniejszych"
+        },
+        "nonvirile": {
+          "nom": "słynniejsze",
+          "gen": "słynniejszych",
+          "dat": "słynniejszym",
+          "acc": "słynniejsze",
+          "ins": "słynniejszymi",
+          "loc": "słynniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najsłynniejszy",
+          "gen": "najsłynniejszego",
+          "dat": "najsłynniejszemu",
+          "acc": "najsłynniejszego",
+          "ins": "najsłynniejszym",
+          "loc": "najsłynniejszym"
+        },
+        "m3": {
+          "nom": "najsłynniejszy",
+          "gen": "najsłynniejszego",
+          "dat": "najsłynniejszemu",
+          "acc": "najsłynniejszy",
+          "ins": "najsłynniejszym",
+          "loc": "najsłynniejszym"
+        },
+        "f": {
+          "nom": "najsłynniejsza",
+          "gen": "najsłynniejszej",
+          "dat": "najsłynniejszej",
+          "acc": "najsłynniejszą",
+          "ins": "najsłynniejszą",
+          "loc": "najsłynniejszej"
+        },
+        "n": {
+          "nom": "najsłynniejsze",
+          "gen": "najsłynniejszego",
+          "dat": "najsłynniejszemu",
+          "acc": "najsłynniejsze",
+          "ins": "najsłynniejszym",
+          "loc": "najsłynniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najsłynniejsi",
+          "gen": "najsłynniejszych",
+          "dat": "najsłynniejszym",
+          "acc": "najsłynniejszych",
+          "ins": "najsłynniejszymi",
+          "loc": "najsłynniejszych"
+        },
+        "nonvirile": {
+          "nom": "najsłynniejsze",
+          "gen": "najsłynniejszych",
+          "dat": "najsłynniejszym",
+          "acc": "najsłynniejsze",
+          "ins": "najsłynniejszymi",
+          "loc": "najsłynniejszych"
+        }
+      }
+    }
+  }
+}

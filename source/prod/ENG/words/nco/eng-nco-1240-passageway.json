@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "passageway",
+      "gen": "passageway's"
+    },
+    "plural": {
+      "nom": "passageways",
+      "gen": "passageways'"
+    }
+  }
+}

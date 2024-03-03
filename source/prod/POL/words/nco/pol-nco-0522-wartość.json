@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wartość",
+      "gen": "wartości",
+      "dat": "wartości",
+      "acc": "wartość",
+      "ins": "wartością",
+      "loc": "wartości",
+      "voc": "wartości"
+    },
+    "plural": {
+      "nom": "wartości",
+      "gen": "wartości",
+      "dat": "wartościom",
+      "acc": "wartości",
+      "ins": "wartościami",
+      "loc": "wartościach",
+      "voc": "wartości"
+    }
+  }
+}

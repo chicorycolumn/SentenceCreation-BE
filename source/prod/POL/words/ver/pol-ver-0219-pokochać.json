@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pokochać",
+    "verbalNoun": "pokochanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pokochany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pokochawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pokocha się"
+          },
+          "plural": {
+            "allPluralGenders": "pokocha się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pokocham"
+          },
+          "plural": {
+            "allPluralGenders": "pokochamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pokochasz"
+          },
+          "plural": {
+            "allPluralGenders": "pokochacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pokocha"
+          },
+          "plural": {
+            "allPluralGenders": "pokochają"
+          }
+        }
+      },
+      "imperative": "pokochaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pokochano"
+          },
+          "plural": {
+            "allPluralGenders": "pokochano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pokochałem",
+            "f": "pokochałam"
+          },
+          "plural": {
+            "virile": "pokochaliśmy",
+            "nonvirile": "pokochałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pokochałeś",
+            "f": "pokochałaś"
+          },
+          "plural": {
+            "virile": "pokochaliście",
+            "nonvirile": "pokochałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pokochał",
+            "f": "pokochała",
+            "n": "pokochało"
+          },
+          "plural": {
+            "virile": "pokochali",
+            "nonvirile": "pokochały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

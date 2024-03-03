@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "lazurowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "lazurowy",
+          "gen": "lazurowego",
+          "dat": "lazurowemu",
+          "acc": "lazurowego",
+          "ins": "lazurowym",
+          "loc": "lazurowym"
+        },
+        "m3": {
+          "nom": "lazurowy",
+          "gen": "lazurowego",
+          "dat": "lazurowemu",
+          "acc": "lazurowy",
+          "ins": "lazurowym",
+          "loc": "lazurowym"
+        },
+        "f": {
+          "nom": "lazurowa",
+          "gen": "lazurowej",
+          "dat": "lazurowej",
+          "acc": "lazurową",
+          "ins": "lazurową",
+          "loc": "lazurowej"
+        },
+        "n": {
+          "nom": "lazurowe",
+          "gen": "lazurowego",
+          "dat": "lazurowemu",
+          "acc": "lazurowe",
+          "ins": "lazurowym",
+          "loc": "lazurowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "lazurowi",
+          "gen": "lazurowych",
+          "dat": "lazurowym",
+          "acc": "lazurowych",
+          "ins": "lazurowymi",
+          "loc": "lazurowych"
+        },
+        "nonvirile": {
+          "nom": "lazurowe",
+          "gen": "lazurowych",
+          "dat": "lazurowym",
+          "acc": "lazurowe",
+          "ins": "lazurowymi",
+          "loc": "lazurowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej lazurowy",
+          "gen": "bardziej lazurowego",
+          "dat": "bardziej lazurowemu",
+          "acc": "bardziej lazurowego",
+          "ins": "bardziej lazurowym",
+          "loc": "bardziej lazurowym"
+        },
+        "m3": {
+          "nom": "bardziej lazurowy",
+          "gen": "bardziej lazurowego",
+          "dat": "bardziej lazurowemu",
+          "acc": "bardziej lazurowy",
+          "ins": "bardziej lazurowym",
+          "loc": "bardziej lazurowym"
+        },
+        "f": {
+          "nom": "bardziej lazurowa",
+          "gen": "bardziej lazurowej",
+          "dat": "bardziej lazurowej",
+          "acc": "bardziej lazurową",
+          "ins": "bardziej lazurową",
+          "loc": "bardziej lazurowej"
+        },
+        "n": {
+          "nom": "bardziej lazurowe",
+          "gen": "bardziej lazurowego",
+          "dat": "bardziej lazurowemu",
+          "acc": "bardziej lazurowe",
+          "ins": "bardziej lazurowym",
+          "loc": "bardziej lazurowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej lazurowi",
+          "gen": "bardziej lazurowych",
+          "dat": "bardziej lazurowym",
+          "acc": "bardziej lazurowych",
+          "ins": "bardziej lazurowymi",
+          "loc": "bardziej lazurowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej lazurowe",
+          "gen": "bardziej lazurowych",
+          "dat": "bardziej lazurowym",
+          "acc": "bardziej lazurowe",
+          "ins": "bardziej lazurowymi",
+          "loc": "bardziej lazurowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej lazurowy",
+          "gen": "najbardziej lazurowego",
+          "dat": "najbardziej lazurowemu",
+          "acc": "najbardziej lazurowego",
+          "ins": "najbardziej lazurowym",
+          "loc": "najbardziej lazurowym"
+        },
+        "m3": {
+          "nom": "najbardziej lazurowy",
+          "gen": "najbardziej lazurowego",
+          "dat": "najbardziej lazurowemu",
+          "acc": "najbardziej lazurowy",
+          "ins": "najbardziej lazurowym",
+          "loc": "najbardziej lazurowym"
+        },
+        "f": {
+          "nom": "najbardziej lazurowa",
+          "gen": "najbardziej lazurowej",
+          "dat": "najbardziej lazurowej",
+          "acc": "najbardziej lazurową",
+          "ins": "najbardziej lazurową",
+          "loc": "najbardziej lazurowej"
+        },
+        "n": {
+          "nom": "najbardziej lazurowe",
+          "gen": "najbardziej lazurowego",
+          "dat": "najbardziej lazurowemu",
+          "acc": "najbardziej lazurowe",
+          "ins": "najbardziej lazurowym",
+          "loc": "najbardziej lazurowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej lazurowi",
+          "gen": "najbardziej lazurowych",
+          "dat": "najbardziej lazurowym",
+          "acc": "najbardziej lazurowych",
+          "ins": "najbardziej lazurowymi",
+          "loc": "najbardziej lazurowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej lazurowe",
+          "gen": "najbardziej lazurowych",
+          "dat": "najbardziej lazurowym",
+          "acc": "najbardziej lazurowe",
+          "ins": "najbardziej lazurowymi",
+          "loc": "najbardziej lazurowych"
+        }
+      }
+    }
+  }
+}

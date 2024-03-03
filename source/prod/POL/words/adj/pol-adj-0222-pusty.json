@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "pusto",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pusty",
+          "gen": "pustego",
+          "dat": "pustemu",
+          "acc": "pustego",
+          "ins": "pustym",
+          "loc": "pustym"
+        },
+        "m3": {
+          "nom": "pusty",
+          "gen": "pustego",
+          "dat": "pustemu",
+          "acc": "pusty",
+          "ins": "pustym",
+          "loc": "pustym"
+        },
+        "f": {
+          "nom": "pusta",
+          "gen": "pustej",
+          "dat": "pustej",
+          "acc": "pustą",
+          "ins": "pustą",
+          "loc": "pustej"
+        },
+        "n": {
+          "nom": "puste",
+          "gen": "pustego",
+          "dat": "pustemu",
+          "acc": "puste",
+          "ins": "pustym",
+          "loc": "pustym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "puści",
+          "gen": "pustych",
+          "dat": "pustym",
+          "acc": "pustych",
+          "ins": "pustymi",
+          "loc": "pustych"
+        },
+        "nonvirile": {
+          "nom": "puste",
+          "gen": "pustych",
+          "dat": "pustym",
+          "acc": "puste",
+          "ins": "pustymi",
+          "loc": "pustych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej pusty",
+          "gen": "bardziej pustego",
+          "dat": "bardziej pustemu",
+          "acc": "bardziej pustego",
+          "ins": "bardziej pustym",
+          "loc": "bardziej pustym"
+        },
+        "m3": {
+          "nom": "bardziej pusty",
+          "gen": "bardziej pustego",
+          "dat": "bardziej pustemu",
+          "acc": "bardziej pusty",
+          "ins": "bardziej pustym",
+          "loc": "bardziej pustym"
+        },
+        "f": {
+          "nom": "bardziej pusta",
+          "gen": "bardziej pustej",
+          "dat": "bardziej pustej",
+          "acc": "bardziej pustą",
+          "ins": "bardziej pustą",
+          "loc": "bardziej pustej"
+        },
+        "n": {
+          "nom": "bardziej puste",
+          "gen": "bardziej pustego",
+          "dat": "bardziej pustemu",
+          "acc": "bardziej puste",
+          "ins": "bardziej pustym",
+          "loc": "bardziej pustym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej puści",
+          "gen": "bardziej pustych",
+          "dat": "bardziej pustym",
+          "acc": "bardziej pustych",
+          "ins": "bardziej pustymi",
+          "loc": "bardziej pustych"
+        },
+        "nonvirile": {
+          "nom": "bardziej puste",
+          "gen": "bardziej pustych",
+          "dat": "bardziej pustym",
+          "acc": "bardziej puste",
+          "ins": "bardziej pustymi",
+          "loc": "bardziej pustych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej pusty",
+          "gen": "najbardziej pustego",
+          "dat": "najbardziej pustemu",
+          "acc": "najbardziej pustego",
+          "ins": "najbardziej pustym",
+          "loc": "najbardziej pustym"
+        },
+        "m3": {
+          "nom": "najbardziej pusty",
+          "gen": "najbardziej pustego",
+          "dat": "najbardziej pustemu",
+          "acc": "najbardziej pusty",
+          "ins": "najbardziej pustym",
+          "loc": "najbardziej pustym"
+        },
+        "f": {
+          "nom": "najbardziej pusta",
+          "gen": "najbardziej pustej",
+          "dat": "najbardziej pustej",
+          "acc": "najbardziej pustą",
+          "ins": "najbardziej pustą",
+          "loc": "najbardziej pustej"
+        },
+        "n": {
+          "nom": "najbardziej puste",
+          "gen": "najbardziej pustego",
+          "dat": "najbardziej pustemu",
+          "acc": "najbardziej puste",
+          "ins": "najbardziej pustym",
+          "loc": "najbardziej pustym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej puści",
+          "gen": "najbardziej pustych",
+          "dat": "najbardziej pustym",
+          "acc": "najbardziej pustych",
+          "ins": "najbardziej pustymi",
+          "loc": "najbardziej pustych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej puste",
+          "gen": "najbardziej pustych",
+          "dat": "najbardziej pustym",
+          "acc": "najbardziej puste",
+          "ins": "najbardziej pustymi",
+          "loc": "najbardziej pustych"
+        }
+      }
+    }
+  }
+}

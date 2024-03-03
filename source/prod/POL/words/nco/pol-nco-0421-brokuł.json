@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "brokuł",
+      "gen": "brokułu",
+      "dat": "brokułowi",
+      "acc": "brokuł",
+      "ins": "brokułem",
+      "loc": "brokule",
+      "voc": "brokule"
+    },
+    "plural": {
+      "nom": "brokuły",
+      "gen": "brokułów",
+      "dat": "brokułom",
+      "acc": "brokuły",
+      "ins": "brokułami",
+      "loc": "brokułach",
+      "voc": "brokuły"
+    }
+  }
+}

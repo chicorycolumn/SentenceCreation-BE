@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "szaleć",
+    "verbalNoun": "szalenie",
+    "activeAdjectival": "szalejący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "szalejąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "szalej",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "szalano"
+          },
+          "plural": {
+            "allPluralGenders": "szalano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "szalałem",
+            "f": "szalałam"
+          },
+          "plural": {
+            "virile": "szaleliśmy",
+            "nonvirile": "szalałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "szalałeś",
+            "f": "szalałaś"
+          },
+          "plural": {
+            "virile": "szaleliście",
+            "nonvirile": "szalałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "szalał",
+            "f": "szalała",
+            "n": "szalało"
+          },
+          "plural": {
+            "virile": "szaleli",
+            "nonvirile": "szalały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "szaleje się"
+          },
+          "plural": {
+            "allPluralGenders": "szaleje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "szaleję"
+          },
+          "plural": {
+            "allPluralGenders": "szalejemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "szalejesz"
+          },
+          "plural": {
+            "allPluralGenders": "szalejecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "szaleje"
+          },
+          "plural": {
+            "allPluralGenders": "szaleją"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "potwierdzać",
+    "verbalNoun": "potwierdzanie",
+    "activeAdjectival": "potwierdzający",
+    "passiveAdjectival": "potwierdzany",
+    "contemporaryAdverbial": "potwierdzając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "potwierdzaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "potwierdzano"
+          },
+          "plural": {
+            "allPluralGenders": "potwierdzano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "potwierdzałem",
+            "f": "potwierdzałam"
+          },
+          "plural": {
+            "virile": "potwierdzaliśmy",
+            "nonvirile": "potwierdzałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "potwierdzałeś",
+            "f": "potwierdzałaś"
+          },
+          "plural": {
+            "virile": "potwierdzaliście",
+            "nonvirile": "potwierdzałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "potwierdzał",
+            "f": "potwierdzała",
+            "n": "potwierdzało"
+          },
+          "plural": {
+            "virile": "potwierdzali",
+            "nonvirile": "potwierdzały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "potwierdza się"
+          },
+          "plural": {
+            "allPluralGenders": "potwierdza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "potwierdzam"
+          },
+          "plural": {
+            "allPluralGenders": "potwierdzamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "potwierdzasz"
+          },
+          "plural": {
+            "allPluralGenders": "potwierdzacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "potwierdza"
+          },
+          "plural": {
+            "allPluralGenders": "potwierdzają"
+          }
+        }
+      }
+    }
+  }
+}

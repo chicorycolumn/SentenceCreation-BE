@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "nieoczekiwanie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nieoczekiwany",
+          "gen": "nieoczekiwanego",
+          "dat": "nieoczekiwanemu",
+          "acc": "nieoczekiwanego",
+          "ins": "nieoczekiwanym",
+          "loc": "nieoczekiwanym"
+        },
+        "m3": {
+          "nom": "nieoczekiwany",
+          "gen": "nieoczekiwanego",
+          "dat": "nieoczekiwanemu",
+          "acc": "nieoczekiwany",
+          "ins": "nieoczekiwanym",
+          "loc": "nieoczekiwanym"
+        },
+        "f": {
+          "nom": "nieoczekiwana",
+          "gen": "nieoczekiwanej",
+          "dat": "nieoczekiwanej",
+          "acc": "nieoczekiwaną",
+          "ins": "nieoczekiwaną",
+          "loc": "nieoczekiwanej"
+        },
+        "n": {
+          "nom": "nieoczekiwane",
+          "gen": "nieoczekiwanego",
+          "dat": "nieoczekiwanemu",
+          "acc": "nieoczekiwane",
+          "ins": "nieoczekiwanym",
+          "loc": "nieoczekiwanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieoczekiwani",
+          "gen": "nieoczekiwanych",
+          "dat": "nieoczekiwanym",
+          "acc": "nieoczekiwanych",
+          "ins": "nieoczekiwanymi",
+          "loc": "nieoczekiwanych"
+        },
+        "nonvirile": {
+          "nom": "nieoczekiwane",
+          "gen": "nieoczekiwanych",
+          "dat": "nieoczekiwanym",
+          "acc": "nieoczekiwane",
+          "ins": "nieoczekiwanymi",
+          "loc": "nieoczekiwanych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "November",
+      "gen": "November's"
+    },
+    "plural": {
+      "nom": "Novembers",
+      "gen": "Novembers'"
+    }
+  }
+}

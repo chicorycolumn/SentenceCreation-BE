@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ściana",
+      "gen": "ściany",
+      "dat": "ścianie",
+      "acc": "ścianę",
+      "ins": "ścianą",
+      "loc": "ścianie",
+      "voc": "ściano"
+    },
+    "plural": {
+      "nom": "ściany",
+      "gen": "ścian",
+      "dat": "ścianom",
+      "acc": "ściany",
+      "ins": "ścianami",
+      "loc": "ścianach",
+      "voc": "ściany"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "szczepionka",
+      "gen": "szczepionki",
+      "dat": "szczepionce",
+      "acc": "szczepionkę",
+      "ins": "szczepionką",
+      "loc": "szczepionce",
+      "voc": "szczepionko"
+    },
+    "plural": {
+      "nom": "szczepionki",
+      "gen": "szczepionek",
+      "dat": "szczepionkom",
+      "acc": "szczepionki",
+      "ins": "szczepionkami",
+      "loc": "szczepionkach",
+      "voc": "szczepionki"
+    }
+  }
+}

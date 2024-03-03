@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "universe",
+      "gen": "universe's"
+    },
+    "plural": {
+      "nom": "universes",
+      "gen": "universes'"
+    }
+  }
+}

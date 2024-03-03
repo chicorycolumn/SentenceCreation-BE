@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "znudzony",
+          "gen": "znudzonego",
+          "dat": "znudzonemu",
+          "acc": "znudzonego",
+          "ins": "znudzonym",
+          "loc": "znudzonym"
+        },
+        "m3": {
+          "nom": "znudzony",
+          "gen": "znudzonego",
+          "dat": "znudzonemu",
+          "acc": "znudzony",
+          "ins": "znudzonym",
+          "loc": "znudzonym"
+        },
+        "f": {
+          "nom": "znudzona",
+          "gen": "znudzonej",
+          "dat": "znudzonej",
+          "acc": "znudzoną",
+          "ins": "znudzoną",
+          "loc": "znudzonej"
+        },
+        "n": {
+          "nom": "znudzone",
+          "gen": "znudzonego",
+          "dat": "znudzonemu",
+          "acc": "znudzone",
+          "ins": "znudzonym",
+          "loc": "znudzonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "znudzeni",
+          "gen": "znudzonych",
+          "dat": "znudzonym",
+          "acc": "znudzonych",
+          "ins": "znudzonymi",
+          "loc": "znudzonych"
+        },
+        "nonvirile": {
+          "nom": "znudzone",
+          "gen": "znudzonych",
+          "dat": "znudzonym",
+          "acc": "znudzone",
+          "ins": "znudzonymi",
+          "loc": "znudzonych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej znudzony",
+          "gen": "bardziej znudzonego",
+          "dat": "bardziej znudzonemu",
+          "acc": "bardziej znudzonego",
+          "ins": "bardziej znudzonym",
+          "loc": "bardziej znudzonym"
+        },
+        "m3": {
+          "nom": "bardziej znudzony",
+          "gen": "bardziej znudzonego",
+          "dat": "bardziej znudzonemu",
+          "acc": "bardziej znudzony",
+          "ins": "bardziej znudzonym",
+          "loc": "bardziej znudzonym"
+        },
+        "f": {
+          "nom": "bardziej znudzona",
+          "gen": "bardziej znudzonej",
+          "dat": "bardziej znudzonej",
+          "acc": "bardziej znudzoną",
+          "ins": "bardziej znudzoną",
+          "loc": "bardziej znudzonej"
+        },
+        "n": {
+          "nom": "bardziej znudzone",
+          "gen": "bardziej znudzonego",
+          "dat": "bardziej znudzonemu",
+          "acc": "bardziej znudzone",
+          "ins": "bardziej znudzonym",
+          "loc": "bardziej znudzonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej znudzeni",
+          "gen": "bardziej znudzonych",
+          "dat": "bardziej znudzonym",
+          "acc": "bardziej znudzonych",
+          "ins": "bardziej znudzonymi",
+          "loc": "bardziej znudzonych"
+        },
+        "nonvirile": {
+          "nom": "bardziej znudzone",
+          "gen": "bardziej znudzonych",
+          "dat": "bardziej znudzonym",
+          "acc": "bardziej znudzone",
+          "ins": "bardziej znudzonymi",
+          "loc": "bardziej znudzonych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej znudzony",
+          "gen": "najbardziej znudzonego",
+          "dat": "najbardziej znudzonemu",
+          "acc": "najbardziej znudzonego",
+          "ins": "najbardziej znudzonym",
+          "loc": "najbardziej znudzonym"
+        },
+        "m3": {
+          "nom": "najbardziej znudzony",
+          "gen": "najbardziej znudzonego",
+          "dat": "najbardziej znudzonemu",
+          "acc": "najbardziej znudzony",
+          "ins": "najbardziej znudzonym",
+          "loc": "najbardziej znudzonym"
+        },
+        "f": {
+          "nom": "najbardziej znudzona",
+          "gen": "najbardziej znudzonej",
+          "dat": "najbardziej znudzonej",
+          "acc": "najbardziej znudzoną",
+          "ins": "najbardziej znudzoną",
+          "loc": "najbardziej znudzonej"
+        },
+        "n": {
+          "nom": "najbardziej znudzone",
+          "gen": "najbardziej znudzonego",
+          "dat": "najbardziej znudzonemu",
+          "acc": "najbardziej znudzone",
+          "ins": "najbardziej znudzonym",
+          "loc": "najbardziej znudzonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej znudzeni",
+          "gen": "najbardziej znudzonych",
+          "dat": "najbardziej znudzonym",
+          "acc": "najbardziej znudzonych",
+          "ins": "najbardziej znudzonymi",
+          "loc": "najbardziej znudzonych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej znudzone",
+          "gen": "najbardziej znudzonych",
+          "dat": "najbardziej znudzonym",
+          "acc": "najbardziej znudzone",
+          "ins": "najbardziej znudzonymi",
+          "loc": "najbardziej znudzonych"
+        }
+      }
+    }
+  }
+}

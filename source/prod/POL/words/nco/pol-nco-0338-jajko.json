@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "jajko",
+      "gen": "jajka",
+      "dat": "jajku",
+      "acc": "jajko",
+      "ins": "jajkiem",
+      "loc": "jajku",
+      "voc": "jajko"
+    },
+    "plural": {
+      "nom": "jajka",
+      "gen": "jajek",
+      "dat": "jajkom",
+      "acc": "jajka",
+      "ins": "jajkami",
+      "loc": "jajkach",
+      "voc": "jajka"
+    }
+  }
+}

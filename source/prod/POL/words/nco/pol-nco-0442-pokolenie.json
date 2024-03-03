@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pokolenie",
+      "gen": "pokolenia",
+      "dat": "pokoleniu",
+      "acc": "pokolenie",
+      "ins": "pokoleniem",
+      "loc": "pokoleniu",
+      "voc": "pokolenie"
+    },
+    "plural": {
+      "nom": "pokolenia",
+      "gen": "pokoleń",
+      "dat": "pokoleniom",
+      "acc": "pokolenia",
+      "ins": "pokoleniami",
+      "loc": "pokoleniach",
+      "voc": "pokolenia"
+    }
+  }
+}

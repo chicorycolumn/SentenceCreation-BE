@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przemykać",
+    "verbalNoun": "przemykanie",
+    "activeAdjectival": "przemykający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "przemykając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przemykaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przemykano"
+          },
+          "plural": {
+            "allPluralGenders": "przemykano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przemykałem",
+            "f": "przemykałam"
+          },
+          "plural": {
+            "virile": "przemykaliśmy",
+            "nonvirile": "przemykałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przemykałeś",
+            "f": "przemykałaś"
+          },
+          "plural": {
+            "virile": "przemykaliście",
+            "nonvirile": "przemykałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przemykał",
+            "f": "przemykała",
+            "n": "przemykało"
+          },
+          "plural": {
+            "virile": "przemykali",
+            "nonvirile": "przemykały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przemyka się"
+          },
+          "plural": {
+            "allPluralGenders": "przemyka się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przemykam"
+          },
+          "plural": {
+            "allPluralGenders": "przemykamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przemykasz"
+          },
+          "plural": {
+            "allPluralGenders": "przemykacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przemyka"
+          },
+          "plural": {
+            "allPluralGenders": "przemykają"
+          }
+        }
+      }
+    }
+  }
+}

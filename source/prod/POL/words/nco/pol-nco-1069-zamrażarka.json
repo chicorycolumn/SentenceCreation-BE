@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zamrażarka",
+      "gen": "zamrażarki",
+      "dat": "zamrażarce",
+      "acc": "zamrażarkę",
+      "ins": "zamrażarką",
+      "loc": "zamrażarce",
+      "voc": "zamrażarko"
+    },
+    "plural": {
+      "nom": "zamrażarki",
+      "gen": "zamrażarek",
+      "dat": "zamrażarkom",
+      "acc": "zamrażarki",
+      "ins": "zamrażarkami",
+      "loc": "zamrażarkach",
+      "voc": "zamrażarki"
+    }
+  }
+}

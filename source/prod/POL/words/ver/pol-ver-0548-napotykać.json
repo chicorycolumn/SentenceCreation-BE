@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "napotykać",
+    "verbalNoun": "napotykanie",
+    "activeAdjectival": "napotykający",
+    "passiveAdjectival": "napotykany",
+    "contemporaryAdverbial": "napotykając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "napotykaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "napotykano"
+          },
+          "plural": {
+            "allPluralGenders": "napotykano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "napotykałem",
+            "f": "napotykałam"
+          },
+          "plural": {
+            "virile": "napotykaliśmy",
+            "nonvirile": "napotykałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "napotykałeś",
+            "f": "napotykałaś"
+          },
+          "plural": {
+            "virile": "napotykaliście",
+            "nonvirile": "napotykałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "napotykał",
+            "f": "napotykała",
+            "n": "napotykało"
+          },
+          "plural": {
+            "virile": "napotykali",
+            "nonvirile": "napotykały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "napotyka się"
+          },
+          "plural": {
+            "allPluralGenders": "napotyka się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "napotykam"
+          },
+          "plural": {
+            "allPluralGenders": "napotykamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "napotykasz"
+          },
+          "plural": {
+            "allPluralGenders": "napotykacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "napotyka"
+          },
+          "plural": {
+            "allPluralGenders": "napotykają"
+          }
+        }
+      }
+    }
+  }
+}

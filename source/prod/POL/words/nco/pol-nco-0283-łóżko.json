@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "łóżko",
+      "gen": "łóżka",
+      "dat": "łóżku",
+      "acc": "łóżko",
+      "ins": "łóżkiem",
+      "loc": "łóżku",
+      "voc": "łóżko"
+    },
+    "plural": {
+      "nom": "łóżka",
+      "gen": "łóżek",
+      "dat": "łóżkom",
+      "acc": "łóżka",
+      "ins": "łóżkami",
+      "loc": "łóżkach",
+      "voc": "łóżka"
+    }
+  }
+}

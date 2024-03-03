@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "maszyna",
+      "gen": "maszyny",
+      "dat": "maszynie",
+      "acc": "maszynę",
+      "ins": "maszyną",
+      "loc": "maszynie",
+      "voc": "maszyno"
+    },
+    "plural": {
+      "nom": "maszyny",
+      "gen": "maszyn",
+      "dat": "maszynom",
+      "acc": "maszyny",
+      "ins": "maszynami",
+      "loc": "maszynach",
+      "voc": "maszyny"
+    }
+  }
+}

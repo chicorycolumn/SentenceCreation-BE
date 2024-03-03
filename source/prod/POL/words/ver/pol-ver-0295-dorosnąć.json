@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dorosnąć",
+    "verbalNoun": "dorośnięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "dorósłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dorośnie się"
+          },
+          "plural": {
+            "allPluralGenders": "dorośnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dorosnę"
+          },
+          "plural": {
+            "allPluralGenders": "dorośniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dorośniesz"
+          },
+          "plural": {
+            "allPluralGenders": "dorośniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dorośnie"
+          },
+          "plural": {
+            "allPluralGenders": "dorosną"
+          }
+        }
+      },
+      "imperative": "dorośnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dorośnięto"
+          },
+          "plural": {
+            "allPluralGenders": "dorośnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dorosłem",
+            "f": "dorosłam"
+          },
+          "plural": {
+            "virile": "dorośliśmy",
+            "nonvirile": "dorosłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dorosłeś",
+            "f": "dorosłaś"
+          },
+          "plural": {
+            "virile": "dorośliście",
+            "nonvirile": "dorosłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dorósł",
+            "f": "dorosła",
+            "n": "dorosło"
+          },
+          "plural": {
+            "virile": "dorośli",
+            "nonvirile": "dorosły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wulkan",
+      "gen": "wulkanu",
+      "dat": "wulkanowi",
+      "acc": "wulkan",
+      "ins": "wulkanem",
+      "loc": "wulkanie",
+      "voc": "wulkanie"
+    },
+    "plural": {
+      "nom": "wulkany",
+      "gen": "wulkanów",
+      "dat": "wulkanom",
+      "acc": "wulkany",
+      "ins": "wulkanami",
+      "loc": "wulkanach",
+      "voc": "wulkany"
+    }
+  }
+}

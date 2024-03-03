@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "komórka",
+      "gen": "komórki",
+      "dat": "komórce",
+      "acc": "komórkę",
+      "ins": "komórką",
+      "loc": "komórce",
+      "voc": "komórko"
+    },
+    "plural": {
+      "nom": "komórki",
+      "gen": "komórek",
+      "dat": "komórkom",
+      "acc": "komórki",
+      "ins": "komórkami",
+      "loc": "komórkach",
+      "voc": "komórki"
+    }
+  }
+}

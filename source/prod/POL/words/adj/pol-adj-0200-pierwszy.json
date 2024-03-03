@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pierwszy",
+          "gen": "pierwszego",
+          "dat": "pierwszemu",
+          "acc": "pierwszego",
+          "ins": "pierwszym",
+          "loc": "pierwszym"
+        },
+        "m3": {
+          "nom": "pierwszy",
+          "gen": "pierwszego",
+          "dat": "pierwszemu",
+          "acc": "pierwszy",
+          "ins": "pierwszym",
+          "loc": "pierwszym"
+        },
+        "f": {
+          "nom": "pierwsza",
+          "gen": "pierwszej",
+          "dat": "pierwszej",
+          "acc": "pierwszą",
+          "ins": "pierwszą",
+          "loc": "pierwszej"
+        },
+        "n": {
+          "nom": "pierwsze",
+          "gen": "pierwszego",
+          "dat": "pierwszemu",
+          "acc": "pierwsze",
+          "ins": "pierwszym",
+          "loc": "pierwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pierwsi",
+          "gen": "pierwszych",
+          "dat": "pierwszym",
+          "acc": "pierwszych",
+          "ins": "pierwszymi",
+          "loc": "pierwszych"
+        },
+        "nonvirile": {
+          "nom": "pierwsze",
+          "gen": "pierwszych",
+          "dat": "pierwszym",
+          "acc": "pierwsze",
+          "ins": "pierwszymi",
+          "loc": "pierwszych"
+        }
+      }
+    }
+  }
+}

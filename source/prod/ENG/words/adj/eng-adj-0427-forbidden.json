@@ -1,0 +1,8 @@
+{
+  "inflections": {
+    "simple": "forbidden",
+    "comparative": "more forbidden",
+    "superlative": "the most forbidden",
+    "adverb": false
+  }
+}

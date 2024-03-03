@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "czuć",
+    "verbalNoun": "czucie",
+    "activeAdjectival": "czujący",
+    "passiveAdjectival": "czuty",
+    "contemporaryAdverbial": "czując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "czuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "czuto"
+          },
+          "plural": {
+            "allPluralGenders": "czuto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "czułem",
+            "f": "czułam"
+          },
+          "plural": {
+            "virile": "czuliśmy",
+            "nonvirile": "czułyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "czułeś",
+            "f": "czułaś"
+          },
+          "plural": {
+            "virile": "czuliście",
+            "nonvirile": "czułyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "czuł",
+            "f": "czuła",
+            "n": "czuło"
+          },
+          "plural": {
+            "virile": "czuli",
+            "nonvirile": "czuły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "czuje się"
+          },
+          "plural": {
+            "allPluralGenders": "czuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "czuję"
+          },
+          "plural": {
+            "allPluralGenders": "czujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "czujesz"
+          },
+          "plural": {
+            "allPluralGenders": "czujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "czuje"
+          },
+          "plural": {
+            "allPluralGenders": "czują"
+          }
+        }
+      }
+    }
+  }
+}

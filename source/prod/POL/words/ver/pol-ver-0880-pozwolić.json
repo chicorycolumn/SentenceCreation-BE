@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pozwolić",
+    "verbalNoun": "pozwolenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pozwoliwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pozwoli się"
+          },
+          "plural": {
+            "allPluralGenders": "pozwoli się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pozwolę"
+          },
+          "plural": {
+            "allPluralGenders": "pozwolimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pozwolisz"
+          },
+          "plural": {
+            "allPluralGenders": "pozwolicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pozwoli"
+          },
+          "plural": {
+            "allPluralGenders": "pozwolą"
+          }
+        }
+      },
+      "imperative": "pozwól",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pozwolono"
+          },
+          "plural": {
+            "allPluralGenders": "pozwolono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pozwoliłem",
+            "f": "pozwoliłam"
+          },
+          "plural": {
+            "virile": "pozwoliliśmy",
+            "nonvirile": "pozwoliłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pozwoliłeś",
+            "f": "pozwoliłaś"
+          },
+          "plural": {
+            "virile": "pozwoliliście",
+            "nonvirile": "pozwoliłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pozwolił",
+            "f": "pozwoliła",
+            "n": "pozwoliło"
+          },
+          "plural": {
+            "virile": "pozwolili",
+            "nonvirile": "pozwoliły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

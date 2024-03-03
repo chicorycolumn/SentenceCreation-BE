@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pozwalać",
+    "verbalNoun": "pozwalanie",
+    "activeAdjectival": "pozwalający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "pozwalając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pozwalaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pozwalano"
+          },
+          "plural": {
+            "allPluralGenders": "pozwalano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pozwalałem",
+            "f": "pozwalałam"
+          },
+          "plural": {
+            "virile": "pozwalaliśmy",
+            "nonvirile": "pozwalałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pozwalałeś",
+            "f": "pozwalałaś"
+          },
+          "plural": {
+            "virile": "pozwalaliście",
+            "nonvirile": "pozwalałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pozwalał",
+            "f": "pozwalała",
+            "n": "pozwalało"
+          },
+          "plural": {
+            "virile": "pozwalali",
+            "nonvirile": "pozwalały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pozwala się"
+          },
+          "plural": {
+            "allPluralGenders": "pozwala się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pozwalam"
+          },
+          "plural": {
+            "allPluralGenders": "pozwalamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pozwalasz"
+          },
+          "plural": {
+            "allPluralGenders": "pozwalacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pozwala"
+          },
+          "plural": {
+            "allPluralGenders": "pozwalają"
+          }
+        }
+      }
+    }
+  }
+}

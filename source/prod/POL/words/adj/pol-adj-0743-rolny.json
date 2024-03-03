@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "rolny",
+          "gen": "rolnego",
+          "dat": "rolnemu",
+          "acc": "rolnego",
+          "ins": "rolnym",
+          "loc": "rolnym"
+        },
+        "m3": {
+          "nom": "rolny",
+          "gen": "rolnego",
+          "dat": "rolnemu",
+          "acc": "rolny",
+          "ins": "rolnym",
+          "loc": "rolnym"
+        },
+        "f": {
+          "nom": "rolna",
+          "gen": "rolnej",
+          "dat": "rolnej",
+          "acc": "rolną",
+          "ins": "rolną",
+          "loc": "rolnej"
+        },
+        "n": {
+          "nom": "rolne",
+          "gen": "rolnego",
+          "dat": "rolnemu",
+          "acc": "rolne",
+          "ins": "rolnym",
+          "loc": "rolnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "rolni",
+          "gen": "rolnych",
+          "dat": "rolnym",
+          "acc": "rolnych",
+          "ins": "rolnymi",
+          "loc": "rolnych"
+        },
+        "nonvirile": {
+          "nom": "rolne",
+          "gen": "rolnych",
+          "dat": "rolnym",
+          "acc": "rolne",
+          "ins": "rolnymi",
+          "loc": "rolnych"
+        }
+      }
+    }
+  }
+}

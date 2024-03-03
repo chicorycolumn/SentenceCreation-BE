@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "niedaleko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niedaleki",
+          "gen": "niedalekiego",
+          "dat": "niedalekiemu",
+          "acc": "niedalekiego",
+          "ins": "niedalekim",
+          "loc": "niedalekim"
+        },
+        "m3": {
+          "nom": "niedaleki",
+          "gen": "niedalekiego",
+          "dat": "niedalekiemu",
+          "acc": "niedaleki",
+          "ins": "niedalekim",
+          "loc": "niedalekim"
+        },
+        "f": {
+          "nom": "niedaleka",
+          "gen": "niedalekiej",
+          "dat": "niedalekiej",
+          "acc": "niedaleką",
+          "ins": "niedaleką",
+          "loc": "niedalekiej"
+        },
+        "n": {
+          "nom": "niedalekie",
+          "gen": "niedalekiego",
+          "dat": "niedalekiemu",
+          "acc": "niedalekie",
+          "ins": "niedalekim",
+          "loc": "niedalekim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niedalecy",
+          "gen": "niedalekich",
+          "dat": "niedalekim",
+          "acc": "niedalekich",
+          "ins": "niedalekimi",
+          "loc": "niedalekich"
+        },
+        "nonvirile": {
+          "nom": "niedalekie",
+          "gen": "niedalekich",
+          "dat": "niedalekim",
+          "acc": "niedalekie",
+          "ins": "niedalekimi",
+          "loc": "niedalekich"
+        }
+      }
+    }
+  }
+}

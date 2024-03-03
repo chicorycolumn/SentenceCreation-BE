@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kradzież",
+      "gen": "kradzieży",
+      "dat": "kradzieży",
+      "acc": "kradzież",
+      "ins": "kradzieżą",
+      "loc": "kradzieży",
+      "voc": "kradzieży"
+    },
+    "plural": {
+      "nom": "kradzieże",
+      "gen": "kradzieży",
+      "dat": "kradzieżom",
+      "acc": "kradzieże",
+      "ins": "kradzieżami",
+      "loc": "kradzieżach",
+      "voc": "kradzieże"
+    }
+  }
+}

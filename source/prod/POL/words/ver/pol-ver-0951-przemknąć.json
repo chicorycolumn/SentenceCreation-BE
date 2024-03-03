@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przemknąć",
+    "verbalNoun": "przemknięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przemknąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przemknie się"
+          },
+          "plural": {
+            "allPluralGenders": "przemknie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przemknę"
+          },
+          "plural": {
+            "allPluralGenders": "przemkniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przemkniesz"
+          },
+          "plural": {
+            "allPluralGenders": "przemkniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przemknie"
+          },
+          "plural": {
+            "allPluralGenders": "przemkną"
+          }
+        }
+      },
+      "imperative": "przemknij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przemknięto"
+          },
+          "plural": {
+            "allPluralGenders": "przemknięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przemknąłem",
+            "f": "przemknęłam"
+          },
+          "plural": {
+            "virile": "przemknęliśmy",
+            "nonvirile": "przemknęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przemknąłeś",
+            "f": "przemknęłaś"
+          },
+          "plural": {
+            "virile": "przemknęliście",
+            "nonvirile": "przemknęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przemknął",
+            "f": "przemknęła",
+            "n": "przemknęło"
+          },
+          "plural": {
+            "virile": "przemknęli",
+            "nonvirile": "przemknęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "porannie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "poranny",
+          "gen": "porannego",
+          "dat": "porannemu",
+          "acc": "porannego",
+          "ins": "porannym",
+          "loc": "porannym"
+        },
+        "m3": {
+          "nom": "poranny",
+          "gen": "porannego",
+          "dat": "porannemu",
+          "acc": "poranny",
+          "ins": "porannym",
+          "loc": "porannym"
+        },
+        "f": {
+          "nom": "poranna",
+          "gen": "porannej",
+          "dat": "porannej",
+          "acc": "poranną",
+          "ins": "poranną",
+          "loc": "porannej"
+        },
+        "n": {
+          "nom": "poranne",
+          "gen": "porannego",
+          "dat": "porannemu",
+          "acc": "poranne",
+          "ins": "porannym",
+          "loc": "porannym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "poranni",
+          "gen": "porannych",
+          "dat": "porannym",
+          "acc": "porannych",
+          "ins": "porannymi",
+          "loc": "porannych"
+        },
+        "nonvirile": {
+          "nom": "poranne",
+          "gen": "porannych",
+          "dat": "porannym",
+          "acc": "poranne",
+          "ins": "porannymi",
+          "loc": "porannych"
+        }
+      }
+    }
+  }
+}

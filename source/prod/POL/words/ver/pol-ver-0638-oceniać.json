@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oceniać",
+    "verbalNoun": "ocenianie",
+    "activeAdjectival": "oceniający",
+    "passiveAdjectival": "oceniany",
+    "contemporaryAdverbial": "oceniając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "oceniaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oceniano"
+          },
+          "plural": {
+            "allPluralGenders": "oceniano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oceniałem",
+            "f": "oceniałam"
+          },
+          "plural": {
+            "virile": "ocenialiśmy",
+            "nonvirile": "oceniałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oceniałeś",
+            "f": "oceniałaś"
+          },
+          "plural": {
+            "virile": "ocenialiście",
+            "nonvirile": "oceniałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oceniał",
+            "f": "oceniała",
+            "n": "oceniało"
+          },
+          "plural": {
+            "virile": "oceniali",
+            "nonvirile": "oceniały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ocenia się"
+          },
+          "plural": {
+            "allPluralGenders": "ocenia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oceniam"
+          },
+          "plural": {
+            "allPluralGenders": "oceniamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oceniasz"
+          },
+          "plural": {
+            "allPluralGenders": "oceniacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ocenia"
+          },
+          "plural": {
+            "allPluralGenders": "oceniają"
+          }
+        }
+      }
+    }
+  }
+}

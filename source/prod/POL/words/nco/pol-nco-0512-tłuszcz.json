@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "tłuszcz",
+      "gen": "tłuszczu",
+      "dat": "tłuszczowi",
+      "acc": "tłuszcz",
+      "ins": "tłuszczem",
+      "loc": "tłuszczu",
+      "voc": "tłuszczu"
+    },
+    "plural": {
+      "nom": "tłuszcze",
+      "gen": "tłuszczów",
+      "dat": "tłuszczom",
+      "acc": "tłuszcze",
+      "ins": "tłuszczami",
+      "loc": "tłuszczach",
+      "voc": "tłuszcze"
+    }
+  }
+}

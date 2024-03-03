@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "samiec",
+      "gen": "samca",
+      "dat": "samcowi",
+      "acc": "samca",
+      "ins": "samcem",
+      "loc": "samcu",
+      "voc": "samcu"
+    },
+    "plural": {
+      "nom": "samce",
+      "gen": "samców",
+      "dat": "samcom",
+      "acc": "samce",
+      "ins": "samcami",
+      "loc": "samcach",
+      "voc": "samce"
+    }
+  }
+}

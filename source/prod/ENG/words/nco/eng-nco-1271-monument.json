@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "monument",
+      "gen": "monument's"
+    },
+    "plural": {
+      "nom": "monuments",
+      "gen": "monuments'"
+    }
+  }
+}

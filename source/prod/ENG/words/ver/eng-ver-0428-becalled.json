@@ -1,0 +1,15 @@
+{
+  "inflections": {
+    "infinitive": "be called",
+    "v2": {
+      "isTerminus": true,
+      "normal": [
+        "was called",
+        "were called"
+      ]
+    },
+    "v3": "been called",
+    "thirdPS": "is called",
+    "gerund": "being called"
+  }
+}

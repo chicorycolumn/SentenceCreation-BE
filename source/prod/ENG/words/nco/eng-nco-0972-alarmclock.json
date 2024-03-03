@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "alarm clock",
+      "gen": "alarm clock's"
+    },
+    "plural": {
+      "nom": "alarm clocks",
+      "gen": "alarm clocks'"
+    }
+  }
+}

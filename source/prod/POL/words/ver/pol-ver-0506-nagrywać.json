@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nagrywać",
+    "verbalNoun": "nagrywanie",
+    "activeAdjectival": "nagrywający",
+    "passiveAdjectival": "nagrywany",
+    "contemporaryAdverbial": "nagrywając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "nagrywaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nagrywano"
+          },
+          "plural": {
+            "allPluralGenders": "nagrywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nagrywałem",
+            "f": "nagrywałam"
+          },
+          "plural": {
+            "virile": "nagrywaliśmy",
+            "nonvirile": "nagrywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nagrywałeś",
+            "f": "nagrywałaś"
+          },
+          "plural": {
+            "virile": "nagrywaliście",
+            "nonvirile": "nagrywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nagrywał",
+            "f": "nagrywała",
+            "n": "nagrywało"
+          },
+          "plural": {
+            "virile": "nagrywali",
+            "nonvirile": "nagrywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nagrywa się"
+          },
+          "plural": {
+            "allPluralGenders": "nagrywa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nagrywam"
+          },
+          "plural": {
+            "allPluralGenders": "nagrywamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nagrywasz"
+          },
+          "plural": {
+            "allPluralGenders": "nagrywacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nagrywa"
+          },
+          "plural": {
+            "allPluralGenders": "nagrywają"
+          }
+        }
+      }
+    }
+  }
+}

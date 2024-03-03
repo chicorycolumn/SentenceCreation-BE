@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wyłączać",
+    "verbalNoun": "wyłączanie",
+    "activeAdjectival": "wyłączający",
+    "passiveAdjectival": "wyłączany",
+    "contemporaryAdverbial": "wyłączając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "wyłączaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wyłączano"
+          },
+          "plural": {
+            "allPluralGenders": "wyłączano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wyłączałem",
+            "f": "wyłączałam"
+          },
+          "plural": {
+            "virile": "wyłączaliśmy",
+            "nonvirile": "wyłączałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wyłączałeś",
+            "f": "wyłączałaś"
+          },
+          "plural": {
+            "virile": "wyłączaliście",
+            "nonvirile": "wyłączałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wyłączał",
+            "f": "wyłączała",
+            "n": "wyłączało"
+          },
+          "plural": {
+            "virile": "wyłączali",
+            "nonvirile": "wyłączały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wyłącza się"
+          },
+          "plural": {
+            "allPluralGenders": "wyłącza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wyłączam"
+          },
+          "plural": {
+            "allPluralGenders": "wyłączamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wyłączasz"
+          },
+          "plural": {
+            "allPluralGenders": "wyłączacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wyłącza"
+          },
+          "plural": {
+            "allPluralGenders": "wyłączają"
+          }
+        }
+      }
+    }
+  }
+}

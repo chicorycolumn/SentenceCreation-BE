@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "body",
+      "gen": "body's"
+    },
+    "plural": {
+      "nom": "bodies",
+      "gen": "bodies'"
+    }
+  }
+}

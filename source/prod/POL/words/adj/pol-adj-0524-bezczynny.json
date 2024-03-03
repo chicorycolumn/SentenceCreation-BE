@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "bezczynnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bezczynny",
+          "gen": "bezczynnego",
+          "dat": "bezczynnemu",
+          "acc": "bezczynnego",
+          "ins": "bezczynnym",
+          "loc": "bezczynnym"
+        },
+        "m3": {
+          "nom": "bezczynny",
+          "gen": "bezczynnego",
+          "dat": "bezczynnemu",
+          "acc": "bezczynny",
+          "ins": "bezczynnym",
+          "loc": "bezczynnym"
+        },
+        "f": {
+          "nom": "bezczynna",
+          "gen": "bezczynnej",
+          "dat": "bezczynnej",
+          "acc": "bezczynną",
+          "ins": "bezczynną",
+          "loc": "bezczynnej"
+        },
+        "n": {
+          "nom": "bezczynne",
+          "gen": "bezczynnego",
+          "dat": "bezczynnemu",
+          "acc": "bezczynne",
+          "ins": "bezczynnym",
+          "loc": "bezczynnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bezczynni",
+          "gen": "bezczynnych",
+          "dat": "bezczynnym",
+          "acc": "bezczynnych",
+          "ins": "bezczynnymi",
+          "loc": "bezczynnych"
+        },
+        "nonvirile": {
+          "nom": "bezczynne",
+          "gen": "bezczynnych",
+          "dat": "bezczynnym",
+          "acc": "bezczynne",
+          "ins": "bezczynnymi",
+          "loc": "bezczynnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej bezczynny",
+          "gen": "bardziej bezczynnego",
+          "dat": "bardziej bezczynnemu",
+          "acc": "bardziej bezczynnego",
+          "ins": "bardziej bezczynnym",
+          "loc": "bardziej bezczynnym"
+        },
+        "m3": {
+          "nom": "bardziej bezczynny",
+          "gen": "bardziej bezczynnego",
+          "dat": "bardziej bezczynnemu",
+          "acc": "bardziej bezczynny",
+          "ins": "bardziej bezczynnym",
+          "loc": "bardziej bezczynnym"
+        },
+        "f": {
+          "nom": "bardziej bezczynna",
+          "gen": "bardziej bezczynnej",
+          "dat": "bardziej bezczynnej",
+          "acc": "bardziej bezczynną",
+          "ins": "bardziej bezczynną",
+          "loc": "bardziej bezczynnej"
+        },
+        "n": {
+          "nom": "bardziej bezczynne",
+          "gen": "bardziej bezczynnego",
+          "dat": "bardziej bezczynnemu",
+          "acc": "bardziej bezczynne",
+          "ins": "bardziej bezczynnym",
+          "loc": "bardziej bezczynnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej bezczynni",
+          "gen": "bardziej bezczynnych",
+          "dat": "bardziej bezczynnym",
+          "acc": "bardziej bezczynnych",
+          "ins": "bardziej bezczynnymi",
+          "loc": "bardziej bezczynnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej bezczynne",
+          "gen": "bardziej bezczynnych",
+          "dat": "bardziej bezczynnym",
+          "acc": "bardziej bezczynne",
+          "ins": "bardziej bezczynnymi",
+          "loc": "bardziej bezczynnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej bezczynny",
+          "gen": "najbardziej bezczynnego",
+          "dat": "najbardziej bezczynnemu",
+          "acc": "najbardziej bezczynnego",
+          "ins": "najbardziej bezczynnym",
+          "loc": "najbardziej bezczynnym"
+        },
+        "m3": {
+          "nom": "najbardziej bezczynny",
+          "gen": "najbardziej bezczynnego",
+          "dat": "najbardziej bezczynnemu",
+          "acc": "najbardziej bezczynny",
+          "ins": "najbardziej bezczynnym",
+          "loc": "najbardziej bezczynnym"
+        },
+        "f": {
+          "nom": "najbardziej bezczynna",
+          "gen": "najbardziej bezczynnej",
+          "dat": "najbardziej bezczynnej",
+          "acc": "najbardziej bezczynną",
+          "ins": "najbardziej bezczynną",
+          "loc": "najbardziej bezczynnej"
+        },
+        "n": {
+          "nom": "najbardziej bezczynne",
+          "gen": "najbardziej bezczynnego",
+          "dat": "najbardziej bezczynnemu",
+          "acc": "najbardziej bezczynne",
+          "ins": "najbardziej bezczynnym",
+          "loc": "najbardziej bezczynnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej bezczynni",
+          "gen": "najbardziej bezczynnych",
+          "dat": "najbardziej bezczynnym",
+          "acc": "najbardziej bezczynnych",
+          "ins": "najbardziej bezczynnymi",
+          "loc": "najbardziej bezczynnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej bezczynne",
+          "gen": "najbardziej bezczynnych",
+          "dat": "najbardziej bezczynnym",
+          "acc": "najbardziej bezczynne",
+          "ins": "najbardziej bezczynnymi",
+          "loc": "najbardziej bezczynnych"
+        }
+      }
+    }
+  }
+}

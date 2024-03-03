@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "potocznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "potoczny",
+          "gen": "potocznego",
+          "dat": "potocznemu",
+          "acc": "potocznego",
+          "ins": "potocznym",
+          "loc": "potocznym"
+        },
+        "m3": {
+          "nom": "potoczny",
+          "gen": "potocznego",
+          "dat": "potocznemu",
+          "acc": "potoczny",
+          "ins": "potocznym",
+          "loc": "potocznym"
+        },
+        "f": {
+          "nom": "potoczna",
+          "gen": "potocznej",
+          "dat": "potocznej",
+          "acc": "potoczną",
+          "ins": "potoczną",
+          "loc": "potocznej"
+        },
+        "n": {
+          "nom": "potoczne",
+          "gen": "potocznego",
+          "dat": "potocznemu",
+          "acc": "potoczne",
+          "ins": "potocznym",
+          "loc": "potocznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "potoczni",
+          "gen": "potocznych",
+          "dat": "potocznym",
+          "acc": "potocznych",
+          "ins": "potocznymi",
+          "loc": "potocznych"
+        },
+        "nonvirile": {
+          "nom": "potoczne",
+          "gen": "potocznych",
+          "dat": "potocznym",
+          "acc": "potoczne",
+          "ins": "potocznymi",
+          "loc": "potocznych"
+        }
+      }
+    }
+  }
+}

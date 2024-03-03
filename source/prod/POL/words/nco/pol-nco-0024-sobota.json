@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sobota",
+      "gen": "soboty",
+      "dat": "sobocie",
+      "acc": "sobotę",
+      "ins": "sobotą",
+      "loc": "sobocie",
+      "voc": "soboto"
+    },
+    "plural": {
+      "nom": "soboty",
+      "gen": "sobót",
+      "dat": "sobotom",
+      "acc": "soboty",
+      "ins": "sobotami",
+      "loc": "sobotach",
+      "voc": "soboty"
+    }
+  }
+}

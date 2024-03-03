@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pytanie",
+      "gen": "pytania",
+      "dat": "pytaniu",
+      "acc": "pytanie",
+      "ins": "pytaniem",
+      "loc": "pytaniu",
+      "voc": "pytanie"
+    },
+    "plural": {
+      "nom": "pytania",
+      "gen": "pytań",
+      "dat": "pytaniom",
+      "acc": "pytania",
+      "ins": "pytaniami",
+      "loc": "pytaniach",
+      "voc": "pytania"
+    }
+  }
+}

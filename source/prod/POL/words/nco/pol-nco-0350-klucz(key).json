@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "klucz",
+      "gen": "klucza",
+      "dat": "kluczowi",
+      "acc": "klucz",
+      "ins": "kluczem",
+      "loc": "kluczu",
+      "voc": "kluczu"
+    },
+    "plural": {
+      "nom": "klucze",
+      "gen": "kluczy",
+      "dat": "kluczom",
+      "acc": "klucze",
+      "ins": "kluczami",
+      "loc": "kluczach",
+      "voc": "klucze"
+    }
+  }
+}

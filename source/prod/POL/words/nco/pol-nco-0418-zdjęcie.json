@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zdjęcie",
+      "gen": "zdjęcia",
+      "dat": "zdjęciu",
+      "acc": "zdjęcie",
+      "ins": "zdjęciem",
+      "loc": "zdjęciu",
+      "voc": "zdjęcie"
+    },
+    "plural": {
+      "nom": "zdjęcia",
+      "gen": "zdjęć",
+      "dat": "zdjęciom",
+      "acc": "zdjęcia",
+      "ins": "zdjęciami",
+      "loc": "zdjęciach",
+      "voc": "zdjęcia"
+    }
+  }
+}

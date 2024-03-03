@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pogłaskać",
+    "verbalNoun": "pogłaskanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pogłaskany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pogłaskawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pogłaszcze się"
+          },
+          "plural": {
+            "allPluralGenders": "pogłaszcze się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pogłaszczę"
+          },
+          "plural": {
+            "allPluralGenders": "pogłaszczemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pogłaszczesz"
+          },
+          "plural": {
+            "allPluralGenders": "pogłaszczecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pogłaszcze"
+          },
+          "plural": {
+            "allPluralGenders": "pogłaszczą"
+          }
+        }
+      },
+      "imperative": "pogłaszcz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pogłaskano"
+          },
+          "plural": {
+            "allPluralGenders": "pogłaskano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pogłaskałem",
+            "f": "pogłaskałam"
+          },
+          "plural": {
+            "virile": "pogłaskaliśmy",
+            "nonvirile": "pogłaskałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pogłaskałeś",
+            "f": "pogłaskałaś"
+          },
+          "plural": {
+            "virile": "pogłaskaliście",
+            "nonvirile": "pogłaskałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pogłaskał",
+            "f": "pogłaskała",
+            "n": "pogłaskało"
+          },
+          "plural": {
+            "virile": "pogłaskali",
+            "nonvirile": "pogłaskały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

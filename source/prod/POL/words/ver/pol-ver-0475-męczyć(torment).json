@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "męczyć",
+    "verbalNoun": "męczenie",
+    "activeAdjectival": "męczący",
+    "passiveAdjectival": "męczony",
+    "contemporaryAdverbial": "męcząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "męcz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "męczono"
+          },
+          "plural": {
+            "allPluralGenders": "męczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "męczyłem",
+            "f": "męczyłam"
+          },
+          "plural": {
+            "virile": "męczyliśmy",
+            "nonvirile": "męczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "męczyłeś",
+            "f": "męczyłaś"
+          },
+          "plural": {
+            "virile": "męczyliście",
+            "nonvirile": "męczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "męczył",
+            "f": "męczyła",
+            "n": "męczyło"
+          },
+          "plural": {
+            "virile": "męczyli",
+            "nonvirile": "męczyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "męczy się"
+          },
+          "plural": {
+            "allPluralGenders": "męczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "męczę"
+          },
+          "plural": {
+            "allPluralGenders": "męczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "męczysz"
+          },
+          "plural": {
+            "allPluralGenders": "męczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "męczy"
+          },
+          "plural": {
+            "allPluralGenders": "męczą"
+          }
+        }
+      }
+    }
+  }
+}

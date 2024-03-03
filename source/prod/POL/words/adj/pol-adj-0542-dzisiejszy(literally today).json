@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dzisiejszy",
+          "gen": "dzisiejszego",
+          "dat": "dzisiejszemu",
+          "acc": "dzisiejszego",
+          "ins": "dzisiejszym",
+          "loc": "dzisiejszym"
+        },
+        "m3": {
+          "nom": "dzisiejszy",
+          "gen": "dzisiejszego",
+          "dat": "dzisiejszemu",
+          "acc": "dzisiejszy",
+          "ins": "dzisiejszym",
+          "loc": "dzisiejszym"
+        },
+        "f": {
+          "nom": "dzisiejsza",
+          "gen": "dzisiejszej",
+          "dat": "dzisiejszej",
+          "acc": "dzisiejszą",
+          "ins": "dzisiejszą",
+          "loc": "dzisiejszej"
+        },
+        "n": {
+          "nom": "dzisiejsze",
+          "gen": "dzisiejszego",
+          "dat": "dzisiejszemu",
+          "acc": "dzisiejsze",
+          "ins": "dzisiejszym",
+          "loc": "dzisiejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dzisiejsi",
+          "gen": "dzisiejszych",
+          "dat": "dzisiejszym",
+          "acc": "dzisiejszych",
+          "ins": "dzisiejszymi",
+          "loc": "dzisiejszych"
+        },
+        "nonvirile": {
+          "nom": "dzisiejsze",
+          "gen": "dzisiejszych",
+          "dat": "dzisiejszym",
+          "acc": "dzisiejsze",
+          "ins": "dzisiejszymi",
+          "loc": "dzisiejszych"
+        }
+      }
+    }
+  }
+}

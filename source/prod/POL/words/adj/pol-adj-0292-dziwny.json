@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "dziwnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dziwny",
+          "gen": "dziwnego",
+          "dat": "dziwnemu",
+          "acc": "dziwnego",
+          "ins": "dziwnym",
+          "loc": "dziwnym"
+        },
+        "m3": {
+          "nom": "dziwny",
+          "gen": "dziwnego",
+          "dat": "dziwnemu",
+          "acc": "dziwny",
+          "ins": "dziwnym",
+          "loc": "dziwnym"
+        },
+        "f": {
+          "nom": "dziwna",
+          "gen": "dziwnej",
+          "dat": "dziwnej",
+          "acc": "dziwną",
+          "ins": "dziwną",
+          "loc": "dziwnej"
+        },
+        "n": {
+          "nom": "dziwne",
+          "gen": "dziwnego",
+          "dat": "dziwnemu",
+          "acc": "dziwne",
+          "ins": "dziwnym",
+          "loc": "dziwnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dziwni",
+          "gen": "dziwnych",
+          "dat": "dziwnym",
+          "acc": "dziwnych",
+          "ins": "dziwnymi",
+          "loc": "dziwnych"
+        },
+        "nonvirile": {
+          "nom": "dziwne",
+          "gen": "dziwnych",
+          "dat": "dziwnym",
+          "acc": "dziwne",
+          "ins": "dziwnymi",
+          "loc": "dziwnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "dziwniejszy",
+          "gen": "dziwniejszego",
+          "dat": "dziwniejszemu",
+          "acc": "dziwniejszego",
+          "ins": "dziwniejszym",
+          "loc": "dziwniejszym"
+        },
+        "m3": {
+          "nom": "dziwniejszy",
+          "gen": "dziwniejszego",
+          "dat": "dziwniejszemu",
+          "acc": "dziwniejszy",
+          "ins": "dziwniejszym",
+          "loc": "dziwniejszym"
+        },
+        "f": {
+          "nom": "dziwniejsza",
+          "gen": "dziwniejszej",
+          "dat": "dziwniejszej",
+          "acc": "dziwniejszą",
+          "ins": "dziwniejszą",
+          "loc": "dziwniejszej"
+        },
+        "n": {
+          "nom": "dziwniejsze",
+          "gen": "dziwniejszego",
+          "dat": "dziwniejszemu",
+          "acc": "dziwniejsze",
+          "ins": "dziwniejszym",
+          "loc": "dziwniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dziwniejsi",
+          "gen": "dziwniejszych",
+          "dat": "dziwniejszym",
+          "acc": "dziwniejszych",
+          "ins": "dziwniejszymi",
+          "loc": "dziwniejszych"
+        },
+        "nonvirile": {
+          "nom": "dziwniejsze",
+          "gen": "dziwniejszych",
+          "dat": "dziwniejszym",
+          "acc": "dziwniejsze",
+          "ins": "dziwniejszymi",
+          "loc": "dziwniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najdziwniejszy",
+          "gen": "najdziwniejszego",
+          "dat": "najdziwniejszemu",
+          "acc": "najdziwniejszego",
+          "ins": "najdziwniejszym",
+          "loc": "najdziwniejszym"
+        },
+        "m3": {
+          "nom": "najdziwniejszy",
+          "gen": "najdziwniejszego",
+          "dat": "najdziwniejszemu",
+          "acc": "najdziwniejszy",
+          "ins": "najdziwniejszym",
+          "loc": "najdziwniejszym"
+        },
+        "f": {
+          "nom": "najdziwniejsza",
+          "gen": "najdziwniejszej",
+          "dat": "najdziwniejszej",
+          "acc": "najdziwniejszą",
+          "ins": "najdziwniejszą",
+          "loc": "najdziwniejszej"
+        },
+        "n": {
+          "nom": "najdziwniejsze",
+          "gen": "najdziwniejszego",
+          "dat": "najdziwniejszemu",
+          "acc": "najdziwniejsze",
+          "ins": "najdziwniejszym",
+          "loc": "najdziwniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najdziwniejsi",
+          "gen": "najdziwniejszych",
+          "dat": "najdziwniejszym",
+          "acc": "najdziwniejszych",
+          "ins": "najdziwniejszymi",
+          "loc": "najdziwniejszych"
+        },
+        "nonvirile": {
+          "nom": "najdziwniejsze",
+          "gen": "najdziwniejszych",
+          "dat": "najdziwniejszym",
+          "acc": "najdziwniejsze",
+          "ins": "najdziwniejszymi",
+          "loc": "najdziwniejszych"
+        }
+      }
+    }
+  }
+}

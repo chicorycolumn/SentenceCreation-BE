@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "plecak",
+      "gen": "plecaka",
+      "dat": "plecakowi",
+      "acc": "plecak",
+      "ins": "plecakiem",
+      "loc": "plecaku",
+      "voc": "plecaku"
+    },
+    "plural": {
+      "nom": "plecaki",
+      "gen": "plecaków",
+      "dat": "plecakom",
+      "acc": "plecaki",
+      "ins": "plecakami",
+      "loc": "plecakach",
+      "voc": "plecaki"
+    }
+  }
+}

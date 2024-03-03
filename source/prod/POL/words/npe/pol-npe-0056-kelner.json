@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kelner",
+      "gen": "kelnera",
+      "dat": "kelnerowi",
+      "acc": "kelnera",
+      "ins": "kelnerem",
+      "loc": "kelnerze",
+      "voc": "kelnerze"
+    },
+    "plural": {
+      "nom": "kelnerzy",
+      "gen": "kelnerów",
+      "dat": "kelnerom",
+      "acc": "kelnerów",
+      "ins": "kelnerami",
+      "loc": "kelnerach",
+      "voc": "kelnerzy"
+    }
+  }
+}

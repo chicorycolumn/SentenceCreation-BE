@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "airport",
+      "gen": "airport's"
+    },
+    "plural": {
+      "nom": "airports",
+      "gen": "airports'"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wstęp",
+      "gen": "wstępu",
+      "dat": "wstępowi",
+      "acc": "wstęp",
+      "ins": "wstępem",
+      "loc": "wstępie",
+      "voc": "wstępie"
+    },
+    "plural": {
+      "nom": "wstępy",
+      "gen": "wstępów",
+      "dat": "wstępom",
+      "acc": "wstępy",
+      "ins": "wstępami",
+      "loc": "wstępach",
+      "voc": "wstępy"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "biznesowy",
+          "gen": "biznesowego",
+          "dat": "biznesowemu",
+          "acc": "biznesowego",
+          "ins": "biznesowym",
+          "loc": "biznesowym"
+        },
+        "m3": {
+          "nom": "biznesowy",
+          "gen": "biznesowego",
+          "dat": "biznesowemu",
+          "acc": "biznesowy",
+          "ins": "biznesowym",
+          "loc": "biznesowym"
+        },
+        "f": {
+          "nom": "biznesowa",
+          "gen": "biznesowej",
+          "dat": "biznesowej",
+          "acc": "biznesową",
+          "ins": "biznesową",
+          "loc": "biznesowej"
+        },
+        "n": {
+          "nom": "biznesowe",
+          "gen": "biznesowego",
+          "dat": "biznesowemu",
+          "acc": "biznesowe",
+          "ins": "biznesowym",
+          "loc": "biznesowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "biznesowi",
+          "gen": "biznesowych",
+          "dat": "biznesowym",
+          "acc": "biznesowych",
+          "ins": "biznesowymi",
+          "loc": "biznesowych"
+        },
+        "nonvirile": {
+          "nom": "biznesowe",
+          "gen": "biznesowych",
+          "dat": "biznesowym",
+          "acc": "biznesowe",
+          "ins": "biznesowymi",
+          "loc": "biznesowych"
+        }
+      }
+    }
+  }
+}

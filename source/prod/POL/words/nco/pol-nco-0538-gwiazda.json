@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gwiazda",
+      "gen": "gwiazdy",
+      "dat": "gwieździe",
+      "acc": "gwiazdę",
+      "ins": "gwiazdą",
+      "loc": "gwieździe",
+      "voc": "gwiazdo"
+    },
+    "plural": {
+      "nom": "gwiazdy",
+      "gen": "gwiazd",
+      "dat": "gwiazdom",
+      "acc": "gwiazdy",
+      "ins": "gwiazdami",
+      "loc": "gwiazdach",
+      "voc": "gwiazdy"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "medycyna",
+      "gen": "medycyny",
+      "dat": "medycynie",
+      "acc": "medycynę",
+      "ins": "medycyną",
+      "loc": "medycynie",
+      "voc": "medycyno"
+    }
+  }
+}

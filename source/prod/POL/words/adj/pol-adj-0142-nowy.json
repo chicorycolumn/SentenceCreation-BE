@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "nowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nowy",
+          "gen": "nowego",
+          "dat": "nowemu",
+          "acc": "nowego",
+          "ins": "nowym",
+          "loc": "nowym"
+        },
+        "m3": {
+          "nom": "nowy",
+          "gen": "nowego",
+          "dat": "nowemu",
+          "acc": "nowy",
+          "ins": "nowym",
+          "loc": "nowym"
+        },
+        "f": {
+          "nom": "nowa",
+          "gen": "nowej",
+          "dat": "nowej",
+          "acc": "nową",
+          "ins": "nową",
+          "loc": "nowej"
+        },
+        "n": {
+          "nom": "nowe",
+          "gen": "nowego",
+          "dat": "nowemu",
+          "acc": "nowe",
+          "ins": "nowym",
+          "loc": "nowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nowi",
+          "gen": "nowych",
+          "dat": "nowym",
+          "acc": "nowych",
+          "ins": "nowymi",
+          "loc": "nowych"
+        },
+        "nonvirile": {
+          "nom": "nowe",
+          "gen": "nowych",
+          "dat": "nowym",
+          "acc": "nowe",
+          "ins": "nowymi",
+          "loc": "nowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "nowszy",
+          "gen": "nowszego",
+          "dat": "nowszemu",
+          "acc": "nowszego",
+          "ins": "nowszym",
+          "loc": "nowszym"
+        },
+        "m3": {
+          "nom": "nowszy",
+          "gen": "nowszego",
+          "dat": "nowszemu",
+          "acc": "nowszy",
+          "ins": "nowszym",
+          "loc": "nowszym"
+        },
+        "f": {
+          "nom": "nowsza",
+          "gen": "nowszej",
+          "dat": "nowszej",
+          "acc": "nowszą",
+          "ins": "nowszą",
+          "loc": "nowszej"
+        },
+        "n": {
+          "nom": "nowsze",
+          "gen": "nowszego",
+          "dat": "nowszemu",
+          "acc": "nowsze",
+          "ins": "nowszym",
+          "loc": "nowszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nowsi",
+          "gen": "nowszych",
+          "dat": "nowszym",
+          "acc": "nowszych",
+          "ins": "nowszymi",
+          "loc": "nowszych"
+        },
+        "nonvirile": {
+          "nom": "nowsze",
+          "gen": "nowszych",
+          "dat": "nowszym",
+          "acc": "nowsze",
+          "ins": "nowszymi",
+          "loc": "nowszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najnowszy",
+          "gen": "najnowszego",
+          "dat": "najnowszemu",
+          "acc": "najnowszego",
+          "ins": "najnowszym",
+          "loc": "najnowszym"
+        },
+        "m3": {
+          "nom": "najnowszy",
+          "gen": "najnowszego",
+          "dat": "najnowszemu",
+          "acc": "najnowszy",
+          "ins": "najnowszym",
+          "loc": "najnowszym"
+        },
+        "f": {
+          "nom": "najnowsza",
+          "gen": "najnowszej",
+          "dat": "najnowszej",
+          "acc": "najnowszą",
+          "ins": "najnowszą",
+          "loc": "najnowszej"
+        },
+        "n": {
+          "nom": "najnowsze",
+          "gen": "najnowszego",
+          "dat": "najnowszemu",
+          "acc": "najnowsze",
+          "ins": "najnowszym",
+          "loc": "najnowszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najnowsi",
+          "gen": "najnowszych",
+          "dat": "najnowszym",
+          "acc": "najnowszych",
+          "ins": "najnowszymi",
+          "loc": "najnowszych"
+        },
+        "nonvirile": {
+          "nom": "najnowsze",
+          "gen": "najnowszych",
+          "dat": "najnowszym",
+          "acc": "najnowsze",
+          "ins": "najnowszymi",
+          "loc": "najnowszych"
+        }
+      }
+    }
+  }
+}

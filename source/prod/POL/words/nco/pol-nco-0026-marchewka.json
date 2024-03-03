@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "marchewka",
+      "gen": "marchewki",
+      "dat": "marchewce",
+      "acc": "marchewkę",
+      "ins": "marchewką",
+      "loc": "marchewce",
+      "voc": "marchewko"
+    },
+    "plural": {
+      "nom": "marchewki",
+      "gen": "marchewek",
+      "dat": "marchewkom",
+      "acc": "marchewki",
+      "ins": "marchewkami",
+      "loc": "marchewkach",
+      "voc": "marchewki"
+    }
+  }
+}

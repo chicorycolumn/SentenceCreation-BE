@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "drób",
+      "gen": "drobiu",
+      "dat": "drobiowi",
+      "acc": "drób",
+      "ins": "drobiem",
+      "loc": "drobiu",
+      "voc": "drobiu"
+    }
+  }
+}

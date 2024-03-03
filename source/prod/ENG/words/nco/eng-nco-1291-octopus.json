@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "octopus",
+      "gen": "octopus's"
+    },
+    "plural": {
+      "nom": "octopuses",
+      "gen": "octopuses'"
+    }
+  }
+}

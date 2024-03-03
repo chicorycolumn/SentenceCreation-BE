@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dojrzewać",
+    "verbalNoun": "dojrzewanie",
+    "activeAdjectival": "dojrzewający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "dojrzewając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dojrzewaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dojrzewano"
+          },
+          "plural": {
+            "allPluralGenders": "dojrzewano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dojrzewałem",
+            "f": "dojrzewałam"
+          },
+          "plural": {
+            "virile": "dojrzewaliśmy",
+            "nonvirile": "dojrzewałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dojrzewałeś",
+            "f": "dojrzewałaś"
+          },
+          "plural": {
+            "virile": "dojrzewaliście",
+            "nonvirile": "dojrzewałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dojrzewał",
+            "f": "dojrzewała",
+            "n": "dojrzewało"
+          },
+          "plural": {
+            "virile": "dojrzewali",
+            "nonvirile": "dojrzewały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dojrzewa się"
+          },
+          "plural": {
+            "allPluralGenders": "dojrzewa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dojrzewam"
+          },
+          "plural": {
+            "allPluralGenders": "dojrzewamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dojrzewasz"
+          },
+          "plural": {
+            "allPluralGenders": "dojrzewacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dojrzewa"
+          },
+          "plural": {
+            "allPluralGenders": "dojrzewają"
+          }
+        }
+      }
+    }
+  }
+}

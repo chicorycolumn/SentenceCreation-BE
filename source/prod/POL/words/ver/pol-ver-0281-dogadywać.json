@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dogadywać",
+    "verbalNoun": "dogadywanie",
+    "activeAdjectival": "dogadujący",
+    "passiveAdjectival": "dogadywany",
+    "contemporaryAdverbial": "dogadując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dogaduj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dogadywano"
+          },
+          "plural": {
+            "allPluralGenders": "dogadywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dogadywałem",
+            "f": "dogadywałam"
+          },
+          "plural": {
+            "virile": "dogadywaliśmy",
+            "nonvirile": "dogadywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dogadywałeś",
+            "f": "dogadywałaś"
+          },
+          "plural": {
+            "virile": "dogadywaliście",
+            "nonvirile": "dogadywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dogadywał",
+            "f": "dogadywała",
+            "n": "dogadywało"
+          },
+          "plural": {
+            "virile": "dogadywali",
+            "nonvirile": "dogadywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dogaduje się"
+          },
+          "plural": {
+            "allPluralGenders": "dogaduje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dogaduję"
+          },
+          "plural": {
+            "allPluralGenders": "dogadujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dogadujesz"
+          },
+          "plural": {
+            "allPluralGenders": "dogadujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dogaduje"
+          },
+          "plural": {
+            "allPluralGenders": "dogadują"
+          }
+        }
+      }
+    }
+  }
+}

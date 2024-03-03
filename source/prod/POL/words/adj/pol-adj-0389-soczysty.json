@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "soczyście",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "soczysty",
+          "gen": "soczystego",
+          "dat": "soczystemu",
+          "acc": "soczystego",
+          "ins": "soczystym",
+          "loc": "soczystym"
+        },
+        "m3": {
+          "nom": "soczysty",
+          "gen": "soczystego",
+          "dat": "soczystemu",
+          "acc": "soczysty",
+          "ins": "soczystym",
+          "loc": "soczystym"
+        },
+        "f": {
+          "nom": "soczysta",
+          "gen": "soczystej",
+          "dat": "soczystej",
+          "acc": "soczystą",
+          "ins": "soczystą",
+          "loc": "soczystej"
+        },
+        "n": {
+          "nom": "soczyste",
+          "gen": "soczystego",
+          "dat": "soczystemu",
+          "acc": "soczyste",
+          "ins": "soczystym",
+          "loc": "soczystym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "soczyści",
+          "gen": "soczystych",
+          "dat": "soczystym",
+          "acc": "soczystych",
+          "ins": "soczystymi",
+          "loc": "soczystych"
+        },
+        "nonvirile": {
+          "nom": "soczyste",
+          "gen": "soczystych",
+          "dat": "soczystym",
+          "acc": "soczyste",
+          "ins": "soczystymi",
+          "loc": "soczystych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "soczystszy",
+          "gen": "soczystszego",
+          "dat": "soczystszemu",
+          "acc": "soczystszego",
+          "ins": "soczystszym",
+          "loc": "soczystszym"
+        },
+        "m3": {
+          "nom": "soczystszy",
+          "gen": "soczystszego",
+          "dat": "soczystszemu",
+          "acc": "soczystszy",
+          "ins": "soczystszym",
+          "loc": "soczystszym"
+        },
+        "f": {
+          "nom": "soczystsza",
+          "gen": "soczystszej",
+          "dat": "soczystszej",
+          "acc": "soczystszą",
+          "ins": "soczystszą",
+          "loc": "soczystszej"
+        },
+        "n": {
+          "nom": "soczystsze",
+          "gen": "soczystszego",
+          "dat": "soczystszemu",
+          "acc": "soczystsze",
+          "ins": "soczystszym",
+          "loc": "soczystszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "soczystsi",
+          "gen": "soczystszych",
+          "dat": "soczystszym",
+          "acc": "soczystszych",
+          "ins": "soczystszymi",
+          "loc": "soczystszych"
+        },
+        "nonvirile": {
+          "nom": "soczystsze",
+          "gen": "soczystszych",
+          "dat": "soczystszym",
+          "acc": "soczystsze",
+          "ins": "soczystszymi",
+          "loc": "soczystszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najsoczystszy",
+          "gen": "najsoczystszego",
+          "dat": "najsoczystszemu",
+          "acc": "najsoczystszego",
+          "ins": "najsoczystszym",
+          "loc": "najsoczystszym"
+        },
+        "m3": {
+          "nom": "najsoczystszy",
+          "gen": "najsoczystszego",
+          "dat": "najsoczystszemu",
+          "acc": "najsoczystszy",
+          "ins": "najsoczystszym",
+          "loc": "najsoczystszym"
+        },
+        "f": {
+          "nom": "najsoczystsza",
+          "gen": "najsoczystszej",
+          "dat": "najsoczystszej",
+          "acc": "najsoczystszą",
+          "ins": "najsoczystszą",
+          "loc": "najsoczystszej"
+        },
+        "n": {
+          "nom": "najsoczystsze",
+          "gen": "najsoczystszego",
+          "dat": "najsoczystszemu",
+          "acc": "najsoczystsze",
+          "ins": "najsoczystszym",
+          "loc": "najsoczystszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najsoczystsi",
+          "gen": "najsoczystszych",
+          "dat": "najsoczystszym",
+          "acc": "najsoczystszych",
+          "ins": "najsoczystszymi",
+          "loc": "najsoczystszych"
+        },
+        "nonvirile": {
+          "nom": "najsoczystsze",
+          "gen": "najsoczystszych",
+          "dat": "najsoczystszym",
+          "acc": "najsoczystsze",
+          "ins": "najsoczystszymi",
+          "loc": "najsoczystszych"
+        }
+      }
+    }
+  }
+}

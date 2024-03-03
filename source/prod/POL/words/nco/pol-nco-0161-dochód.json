@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dochód",
+      "gen": "dochodu",
+      "dat": "dochodowi",
+      "acc": "dochód",
+      "ins": "dochodem",
+      "loc": "dochodzie",
+      "voc": "dochodzie"
+    },
+    "plural": {
+      "nom": "dochody",
+      "gen": "dochodów",
+      "dat": "dochodom",
+      "acc": "dochody",
+      "ins": "dochodami",
+      "loc": "dochodach",
+      "voc": "dochody"
+    }
+  }
+}

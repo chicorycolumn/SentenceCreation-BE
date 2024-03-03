@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zaoferować",
+    "verbalNoun": "zaoferowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zaoferowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zaoferowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaoferuje się"
+          },
+          "plural": {
+            "allPluralGenders": "zaoferuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zaoferuję"
+          },
+          "plural": {
+            "allPluralGenders": "zaoferujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zaoferujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zaoferujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zaoferuje"
+          },
+          "plural": {
+            "allPluralGenders": "zaoferują"
+          }
+        }
+      },
+      "imperative": "zaoferuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaoferowano"
+          },
+          "plural": {
+            "allPluralGenders": "zaoferowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zaoferowałem",
+            "f": "zaoferowałam"
+          },
+          "plural": {
+            "virile": "zaoferowaliśmy",
+            "nonvirile": "zaoferowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zaoferowałeś",
+            "f": "zaoferowałaś"
+          },
+          "plural": {
+            "virile": "zaoferowaliście",
+            "nonvirile": "zaoferowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zaoferował",
+            "f": "zaoferowała",
+            "n": "zaoferowało"
+          },
+          "plural": {
+            "virile": "zaoferowali",
+            "nonvirile": "zaoferowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

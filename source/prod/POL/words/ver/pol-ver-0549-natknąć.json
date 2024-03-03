@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "natknąć",
+    "verbalNoun": "natknięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "natknąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "natknie się"
+          },
+          "plural": {
+            "allPluralGenders": "natknie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "natknę"
+          },
+          "plural": {
+            "allPluralGenders": "natkniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "natkniesz"
+          },
+          "plural": {
+            "allPluralGenders": "natkniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "natknie"
+          },
+          "plural": {
+            "allPluralGenders": "natkną"
+          }
+        }
+      },
+      "imperative": "natknij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "natknięto"
+          },
+          "plural": {
+            "allPluralGenders": "natknięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "natknąłem",
+            "f": "natknęłam"
+          },
+          "plural": {
+            "virile": "natknęliśmy",
+            "nonvirile": "natknęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "natknąłeś",
+            "f": "natknęłaś"
+          },
+          "plural": {
+            "virile": "natknęliście",
+            "nonvirile": "natknęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "natknął",
+            "f": "natknęła",
+            "n": "natknęło"
+          },
+          "plural": {
+            "virile": "natknęli",
+            "nonvirile": "natknęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

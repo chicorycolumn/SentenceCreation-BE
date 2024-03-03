@@ -1,0 +1,15 @@
+{
+  "inflections": {
+    "infinitive": "be afraid of",
+    "v2": {
+      "isTerminus": true,
+      "normal": [
+        "was afraid of",
+        "were afraid of"
+      ]
+    },
+    "v3": "been afraid of",
+    "thirdPS": "is afraid of",
+    "gerund": "being afraid of"
+  }
+}

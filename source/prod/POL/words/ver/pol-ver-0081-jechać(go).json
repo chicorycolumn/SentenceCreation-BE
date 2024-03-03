@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "jechać",
+    "verbalNoun": "jechanie",
+    "activeAdjectival": "jadący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "jadąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "jedź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "jechano"
+          },
+          "plural": {
+            "allPluralGenders": "jechano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "jechałem",
+            "f": "jechałam"
+          },
+          "plural": {
+            "virile": "jechaliśmy",
+            "nonvirile": "jechałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "jechałeś",
+            "f": "jechałaś"
+          },
+          "plural": {
+            "virile": "jechaliście",
+            "nonvirile": "jechałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "jechał",
+            "f": "jechała",
+            "n": "jechało"
+          },
+          "plural": {
+            "virile": "jechali",
+            "nonvirile": "jechały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "jedzie się"
+          },
+          "plural": {
+            "allPluralGenders": "jedzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "jadę"
+          },
+          "plural": {
+            "allPluralGenders": "jedziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "jedziesz"
+          },
+          "plural": {
+            "allPluralGenders": "jedziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "jedzie"
+          },
+          "plural": {
+            "allPluralGenders": "jadą"
+          }
+        }
+      }
+    }
+  }
+}

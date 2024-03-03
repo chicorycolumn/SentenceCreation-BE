@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "dziecięco",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dziecięcy",
+          "gen": "dziecięcego",
+          "dat": "dziecięcemu",
+          "acc": "dziecięcego",
+          "ins": "dziecięcym",
+          "loc": "dziecięcym"
+        },
+        "m3": {
+          "nom": "dziecięcy",
+          "gen": "dziecięcego",
+          "dat": "dziecięcemu",
+          "acc": "dziecięcy",
+          "ins": "dziecięcym",
+          "loc": "dziecięcym"
+        },
+        "f": {
+          "nom": "dziecięca",
+          "gen": "dziecięcej",
+          "dat": "dziecięcej",
+          "acc": "dziecięcą",
+          "ins": "dziecięcą",
+          "loc": "dziecięcej"
+        },
+        "n": {
+          "nom": "dziecięce",
+          "gen": "dziecięcego",
+          "dat": "dziecięcemu",
+          "acc": "dziecięce",
+          "ins": "dziecięcym",
+          "loc": "dziecięcym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dziecięcy",
+          "gen": "dziecięcych",
+          "dat": "dziecięcym",
+          "acc": "dziecięcych",
+          "ins": "dziecięcymi",
+          "loc": "dziecięcych"
+        },
+        "nonvirile": {
+          "nom": "dziecięce",
+          "gen": "dziecięcych",
+          "dat": "dziecięcym",
+          "acc": "dziecięce",
+          "ins": "dziecięcymi",
+          "loc": "dziecięcych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej dziecięcy",
+          "gen": "bardziej dziecięcego",
+          "dat": "bardziej dziecięcemu",
+          "acc": "bardziej dziecięcego",
+          "ins": "bardziej dziecięcym",
+          "loc": "bardziej dziecięcym"
+        },
+        "m3": {
+          "nom": "bardziej dziecięcy",
+          "gen": "bardziej dziecięcego",
+          "dat": "bardziej dziecięcemu",
+          "acc": "bardziej dziecięcy",
+          "ins": "bardziej dziecięcym",
+          "loc": "bardziej dziecięcym"
+        },
+        "f": {
+          "nom": "bardziej dziecięca",
+          "gen": "bardziej dziecięcej",
+          "dat": "bardziej dziecięcej",
+          "acc": "bardziej dziecięcą",
+          "ins": "bardziej dziecięcą",
+          "loc": "bardziej dziecięcej"
+        },
+        "n": {
+          "nom": "bardziej dziecięce",
+          "gen": "bardziej dziecięcego",
+          "dat": "bardziej dziecięcemu",
+          "acc": "bardziej dziecięce",
+          "ins": "bardziej dziecięcym",
+          "loc": "bardziej dziecięcym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej dziecięcy",
+          "gen": "bardziej dziecięcych",
+          "dat": "bardziej dziecięcym",
+          "acc": "bardziej dziecięcych",
+          "ins": "bardziej dziecięcymi",
+          "loc": "bardziej dziecięcych"
+        },
+        "nonvirile": {
+          "nom": "bardziej dziecięce",
+          "gen": "bardziej dziecięcych",
+          "dat": "bardziej dziecięcym",
+          "acc": "bardziej dziecięce",
+          "ins": "bardziej dziecięcymi",
+          "loc": "bardziej dziecięcych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej dziecięcy",
+          "gen": "najbardziej dziecięcego",
+          "dat": "najbardziej dziecięcemu",
+          "acc": "najbardziej dziecięcego",
+          "ins": "najbardziej dziecięcym",
+          "loc": "najbardziej dziecięcym"
+        },
+        "m3": {
+          "nom": "najbardziej dziecięcy",
+          "gen": "najbardziej dziecięcego",
+          "dat": "najbardziej dziecięcemu",
+          "acc": "najbardziej dziecięcy",
+          "ins": "najbardziej dziecięcym",
+          "loc": "najbardziej dziecięcym"
+        },
+        "f": {
+          "nom": "najbardziej dziecięca",
+          "gen": "najbardziej dziecięcej",
+          "dat": "najbardziej dziecięcej",
+          "acc": "najbardziej dziecięcą",
+          "ins": "najbardziej dziecięcą",
+          "loc": "najbardziej dziecięcej"
+        },
+        "n": {
+          "nom": "najbardziej dziecięce",
+          "gen": "najbardziej dziecięcego",
+          "dat": "najbardziej dziecięcemu",
+          "acc": "najbardziej dziecięce",
+          "ins": "najbardziej dziecięcym",
+          "loc": "najbardziej dziecięcym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej dziecięcy",
+          "gen": "najbardziej dziecięcych",
+          "dat": "najbardziej dziecięcym",
+          "acc": "najbardziej dziecięcych",
+          "ins": "najbardziej dziecięcymi",
+          "loc": "najbardziej dziecięcych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej dziecięce",
+          "gen": "najbardziej dziecięcych",
+          "dat": "najbardziej dziecięcym",
+          "acc": "najbardziej dziecięce",
+          "ins": "najbardziej dziecięcymi",
+          "loc": "najbardziej dziecięcych"
+        }
+      }
+    }
+  }
+}

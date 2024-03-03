@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ciągnąć",
+    "verbalNoun": "ciągnięcie",
+    "activeAdjectival": "ciągnący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "ciągnąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "ciągnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ciągnięto"
+          },
+          "plural": {
+            "allPluralGenders": "ciągnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ciągnąłem",
+            "f": "ciągnęłam"
+          },
+          "plural": {
+            "virile": "ciągnęliśmy",
+            "nonvirile": "ciągnęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ciągnąłeś",
+            "f": "ciągnęłaś"
+          },
+          "plural": {
+            "virile": "ciągnęliście",
+            "nonvirile": "ciągnęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ciągnął",
+            "f": "ciągnęła",
+            "n": "ciągnęło"
+          },
+          "plural": {
+            "virile": "ciągnęli",
+            "nonvirile": "ciągnęły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ciągnie się"
+          },
+          "plural": {
+            "allPluralGenders": "ciągnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ciągnę"
+          },
+          "plural": {
+            "allPluralGenders": "ciągniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ciągniesz"
+          },
+          "plural": {
+            "allPluralGenders": "ciągniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ciągnie"
+          },
+          "plural": {
+            "allPluralGenders": "ciągną"
+          }
+        }
+      }
+    }
+  }
+}

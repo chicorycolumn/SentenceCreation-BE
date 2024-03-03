@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "polubić",
+    "verbalNoun": "polubienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "polubiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "polubiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "polubi się"
+          },
+          "plural": {
+            "allPluralGenders": "polubi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "polubię"
+          },
+          "plural": {
+            "allPluralGenders": "polubimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "polubisz"
+          },
+          "plural": {
+            "allPluralGenders": "polubicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "polubi"
+          },
+          "plural": {
+            "allPluralGenders": "polubią"
+          }
+        }
+      },
+      "imperative": "polub",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "polubiono"
+          },
+          "plural": {
+            "allPluralGenders": "polubiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "polubiłem",
+            "f": "polubiłam"
+          },
+          "plural": {
+            "virile": "polubiliśmy",
+            "nonvirile": "polubiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "polubiłeś",
+            "f": "polubiłaś"
+          },
+          "plural": {
+            "virile": "polubiliście",
+            "nonvirile": "polubiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "polubił",
+            "f": "polubiła",
+            "n": "polubiło"
+          },
+          "plural": {
+            "virile": "polubili",
+            "nonvirile": "polubiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

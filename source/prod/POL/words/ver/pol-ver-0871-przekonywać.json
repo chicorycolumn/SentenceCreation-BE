@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przekonywać",
+    "verbalNoun": "przekonywanie",
+    "activeAdjectival": "przekonujący",
+    "passiveAdjectival": "przekonywany",
+    "contemporaryAdverbial": "przekonując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przekonuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przekonywano"
+          },
+          "plural": {
+            "allPluralGenders": "przekonywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przekonywałem",
+            "f": "przekonywałam"
+          },
+          "plural": {
+            "virile": "przekonywaliśmy",
+            "nonvirile": "przekonywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przekonywałeś",
+            "f": "przekonywałaś"
+          },
+          "plural": {
+            "virile": "przekonywaliście",
+            "nonvirile": "przekonywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przekonywał",
+            "f": "przekonywała",
+            "n": "przekonywało"
+          },
+          "plural": {
+            "virile": "przekonywali",
+            "nonvirile": "przekonywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przekonuje się"
+          },
+          "plural": {
+            "allPluralGenders": "przekonuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przekonuję"
+          },
+          "plural": {
+            "allPluralGenders": "przekonujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przekonujesz"
+          },
+          "plural": {
+            "allPluralGenders": "przekonujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przekonuje"
+          },
+          "plural": {
+            "allPluralGenders": "przekonują"
+          }
+        }
+      }
+    }
+  }
+}

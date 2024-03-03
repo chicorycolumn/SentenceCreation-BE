@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wieprzowina",
+      "gen": "wieprzowiny",
+      "dat": "wieprzowinie",
+      "acc": "wieprzowinę",
+      "ins": "wieprzowiną",
+      "loc": "wieprzowinie",
+      "voc": "wieprzowino"
+    }
+  }
+}

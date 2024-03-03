@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "czerwiec",
+      "gen": "czerwca",
+      "dat": "czerwcowi",
+      "acc": "czerwiec",
+      "ins": "czerwcem",
+      "loc": "czerwcu",
+      "voc": "czerwcu"
+    },
+    "plural": {
+      "nom": "czerwce",
+      "gen": "czerwców",
+      "dat": "czerwcom",
+      "acc": "czerwce",
+      "ins": "czerwcami",
+      "loc": "czerwcach",
+      "voc": "czerwce"
+    }
+  }
+}

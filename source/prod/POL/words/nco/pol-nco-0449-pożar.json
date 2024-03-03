@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pożar",
+      "gen": "pożaru",
+      "dat": "pożarowi",
+      "acc": "pożar",
+      "ins": "pożarem",
+      "loc": "pożarze",
+      "voc": "pożarze"
+    },
+    "plural": {
+      "nom": "pożary",
+      "gen": "pożarów",
+      "dat": "pożarom",
+      "acc": "pożary",
+      "ins": "pożarami",
+      "loc": "pożarach",
+      "voc": "pożary"
+    }
+  }
+}

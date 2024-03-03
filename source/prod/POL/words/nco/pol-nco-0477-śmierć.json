@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "śmierć",
+      "gen": "śmierci",
+      "dat": "śmierci",
+      "acc": "śmierć",
+      "ins": "śmiercią",
+      "loc": "śmierci",
+      "voc": "śmierci"
+    },
+    "plural": {
+      "nom": "śmierci",
+      "gen": "śmierci",
+      "dat": "śmierciom",
+      "acc": "śmierci",
+      "ins": "śmierciami",
+      "loc": "śmierciach",
+      "voc": "śmierci"
+    }
+  }
+}

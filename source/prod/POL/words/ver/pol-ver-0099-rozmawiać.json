@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "rozmawiać",
+    "verbalNoun": "rozmawianie",
+    "activeAdjectival": "rozmawiający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "rozmawiając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "rozmawiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "rozmawiano"
+          },
+          "plural": {
+            "allPluralGenders": "rozmawiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "rozmawiałem",
+            "f": "rozmawiałam"
+          },
+          "plural": {
+            "virile": "rozmawialiśmy",
+            "nonvirile": "rozmawiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "rozmawiałeś",
+            "f": "rozmawiałaś"
+          },
+          "plural": {
+            "virile": "rozmawialiście",
+            "nonvirile": "rozmawiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "rozmawiał",
+            "f": "rozmawiała",
+            "n": "rozmawiało"
+          },
+          "plural": {
+            "virile": "rozmawiali",
+            "nonvirile": "rozmawiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "rozmawia się"
+          },
+          "plural": {
+            "allPluralGenders": "rozmawia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "rozmawiam"
+          },
+          "plural": {
+            "allPluralGenders": "rozmawiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "rozmawiasz"
+          },
+          "plural": {
+            "allPluralGenders": "rozmawiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "rozmawia"
+          },
+          "plural": {
+            "allPluralGenders": "rozmawiają"
+          }
+        }
+      }
+    }
+  }
+}

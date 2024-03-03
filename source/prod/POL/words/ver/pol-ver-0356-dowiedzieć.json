@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dowiedzieć",
+    "verbalNoun": "dowiedzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "dowiedziawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dowie się"
+          },
+          "plural": {
+            "allPluralGenders": "dowie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dowiem"
+          },
+          "plural": {
+            "allPluralGenders": "dowiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dowiesz"
+          },
+          "plural": {
+            "allPluralGenders": "dowiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dowie"
+          },
+          "plural": {
+            "allPluralGenders": "dowiedzą"
+          }
+        }
+      },
+      "imperative": "dowiedz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dowiedziano"
+          },
+          "plural": {
+            "allPluralGenders": "dowiedziano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dowiedziałem",
+            "f": "dowiedziałam"
+          },
+          "plural": {
+            "virile": "dowiedzieliśmy",
+            "nonvirile": "dowiedziałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dowiedziałeś",
+            "f": "dowiedziałaś"
+          },
+          "plural": {
+            "virile": "dowiedzieliście",
+            "nonvirile": "dowiedziałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dowiedział",
+            "f": "dowiedziała",
+            "n": "dowiedziało"
+          },
+          "plural": {
+            "virile": "dowiedzieli",
+            "nonvirile": "dowiedziały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

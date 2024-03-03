@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oddać",
+    "verbalNoun": "oddanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "oddany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "oddawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odda się"
+          },
+          "plural": {
+            "allPluralGenders": "odda się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oddam"
+          },
+          "plural": {
+            "allPluralGenders": "oddamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oddasz"
+          },
+          "plural": {
+            "allPluralGenders": "oddacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odda"
+          },
+          "plural": {
+            "allPluralGenders": "oddadzą"
+          }
+        }
+      },
+      "imperative": "oddaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oddano"
+          },
+          "plural": {
+            "allPluralGenders": "oddano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oddałem",
+            "f": "oddałam"
+          },
+          "plural": {
+            "virile": "oddaliśmy",
+            "nonvirile": "oddałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oddałeś",
+            "f": "oddałaś"
+          },
+          "plural": {
+            "virile": "oddaliście",
+            "nonvirile": "oddałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oddał",
+            "f": "oddała",
+            "n": "oddało"
+          },
+          "plural": {
+            "virile": "oddali",
+            "nonvirile": "oddały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

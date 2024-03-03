@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "krążyć",
+    "verbalNoun": "krążenie",
+    "activeAdjectival": "krążący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "krążąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "krąż",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "krążono"
+          },
+          "plural": {
+            "allPluralGenders": "krążono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "krążyłem",
+            "f": "krążyłam"
+          },
+          "plural": {
+            "virile": "krążyliśmy",
+            "nonvirile": "krążyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "krążyłeś",
+            "f": "krążyłaś"
+          },
+          "plural": {
+            "virile": "krążyliście",
+            "nonvirile": "krążyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "krążył",
+            "f": "krążyła",
+            "n": "krążyło"
+          },
+          "plural": {
+            "virile": "krążyli",
+            "nonvirile": "krążyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "krąży się"
+          },
+          "plural": {
+            "allPluralGenders": "krąży się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "krążę"
+          },
+          "plural": {
+            "allPluralGenders": "krążymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "krążysz"
+          },
+          "plural": {
+            "allPluralGenders": "krążycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "krąży"
+          },
+          "plural": {
+            "allPluralGenders": "krążą"
+          }
+        }
+      }
+    }
+  }
+}

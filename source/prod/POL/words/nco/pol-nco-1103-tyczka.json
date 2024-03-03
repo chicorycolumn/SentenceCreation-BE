@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "tyczka",
+      "gen": "tyczki",
+      "dat": "tyczce",
+      "acc": "tyczkę",
+      "ins": "tyczką",
+      "loc": "tyczce",
+      "voc": "tyczko"
+    },
+    "plural": {
+      "nom": "tyczki",
+      "gen": "tyczek",
+      "dat": "tyczkom",
+      "acc": "tyczki",
+      "ins": "tyczkami",
+      "loc": "tyczkach",
+      "voc": "tyczki"
+    }
+  }
+}

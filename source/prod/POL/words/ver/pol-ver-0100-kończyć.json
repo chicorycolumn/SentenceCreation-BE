@@ -1,0 +1,81 @@
+{
+  "inflections": {
+    "infinitive": "kończyć",
+    "activeAdjectival": "kończący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "kończąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "kończ",
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "kończyłem",
+            "f": "kończyłam"
+          },
+          "plural": {
+            "virile": "kończyliśmy",
+            "nonvirile": "kończyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "kończyłeś",
+            "f": "kończyłaś"
+          },
+          "plural": {
+            "virile": "kończyliście",
+            "nonvirile": "kończyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "kończył",
+            "f": "kończyła",
+            "n": "kończyło"
+          },
+          "plural": {
+            "virile": "kończyli",
+            "nonvirile": "kończyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kończy się"
+          },
+          "plural": {
+            "allPluralGenders": "kończy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "kończę"
+          },
+          "plural": {
+            "allPluralGenders": "kończymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "kończysz"
+          },
+          "plural": {
+            "allPluralGenders": "kończycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "kończy"
+          },
+          "plural": {
+            "allPluralGenders": "kończą"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "śmietana",
+      "gen": "śmietany",
+      "dat": "śmietanie",
+      "acc": "śmietanę",
+      "ins": "śmietaną",
+      "loc": "śmietanie",
+      "voc": "śmietano"
+    },
+    "plural": {
+      "nom": "śmietany",
+      "gen": "śmietan",
+      "dat": "śmietanom",
+      "acc": "śmietany",
+      "ins": "śmietanami",
+      "loc": "śmietanach",
+      "voc": "śmietany"
+    }
+  }
+}

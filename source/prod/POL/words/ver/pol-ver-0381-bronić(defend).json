@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "bronić",
+    "verbalNoun": "bronienie",
+    "activeAdjectival": "broniący",
+    "passiveAdjectival": "broniony",
+    "contemporaryAdverbial": "broniąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "broń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "broniono"
+          },
+          "plural": {
+            "allPluralGenders": "broniono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "broniłem",
+            "f": "broniłam"
+          },
+          "plural": {
+            "virile": "broniliśmy",
+            "nonvirile": "broniłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "broniłeś",
+            "f": "broniłaś"
+          },
+          "plural": {
+            "virile": "broniliście",
+            "nonvirile": "broniłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "bronił",
+            "f": "broniła",
+            "n": "broniło"
+          },
+          "plural": {
+            "virile": "bronili",
+            "nonvirile": "broniły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "broni się"
+          },
+          "plural": {
+            "allPluralGenders": "broni się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "bronię"
+          },
+          "plural": {
+            "allPluralGenders": "bronimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "bronisz"
+          },
+          "plural": {
+            "allPluralGenders": "bronicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "broni"
+          },
+          "plural": {
+            "allPluralGenders": "bronią"
+          }
+        }
+      }
+    }
+  }
+}

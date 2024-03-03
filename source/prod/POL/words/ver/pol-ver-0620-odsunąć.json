@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odsunąć",
+    "verbalNoun": "odsunięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "odsunięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odsunąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odsunie się"
+          },
+          "plural": {
+            "allPluralGenders": "odsunie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odsunę"
+          },
+          "plural": {
+            "allPluralGenders": "odsuniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odsuniesz"
+          },
+          "plural": {
+            "allPluralGenders": "odsuniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odsunie"
+          },
+          "plural": {
+            "allPluralGenders": "odsuną"
+          }
+        }
+      },
+      "imperative": "odsuń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odsunięto"
+          },
+          "plural": {
+            "allPluralGenders": "odsunięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odsunąłem",
+            "f": "odsunęłam"
+          },
+          "plural": {
+            "virile": "odsunęliśmy",
+            "nonvirile": "odsunęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odsunąłeś",
+            "f": "odsunęłaś"
+          },
+          "plural": {
+            "virile": "odsunęliście",
+            "nonvirile": "odsunęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odsunął",
+            "f": "odsunęła",
+            "n": "odsunęło"
+          },
+          "plural": {
+            "virile": "odsunęli",
+            "nonvirile": "odsunęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

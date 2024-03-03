@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rzeczownik",
+      "gen": "rzeczownika",
+      "dat": "rzeczownikowi",
+      "acc": "rzeczownik",
+      "ins": "rzeczownikiem",
+      "loc": "rzeczowniku",
+      "voc": "rzeczowniku"
+    },
+    "plural": {
+      "nom": "rzeczowniki",
+      "gen": "rzeczowników",
+      "dat": "rzeczownikom",
+      "acc": "rzeczowniki",
+      "ins": "rzeczownikami",
+      "loc": "rzeczownikach",
+      "voc": "rzeczowniki"
+    }
+  }
+}

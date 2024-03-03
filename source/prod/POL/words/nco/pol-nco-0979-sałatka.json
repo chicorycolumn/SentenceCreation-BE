@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sałatka",
+      "gen": "sałatki",
+      "dat": "sałatce",
+      "acc": "sałatkę",
+      "ins": "sałatką",
+      "loc": "sałatce",
+      "voc": "sałatko"
+    },
+    "plural": {
+      "nom": "sałatki",
+      "gen": "sałatek",
+      "dat": "sałatkom",
+      "acc": "sałatki",
+      "ins": "sałatkami",
+      "loc": "sałatkach",
+      "voc": "sałatki"
+    }
+  }
+}

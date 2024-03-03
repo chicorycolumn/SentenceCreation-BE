@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "przeciwnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przeciwny",
+          "gen": "przeciwnego",
+          "dat": "przeciwnemu",
+          "acc": "przeciwnego",
+          "ins": "przeciwnym",
+          "loc": "przeciwnym"
+        },
+        "m3": {
+          "nom": "przeciwny",
+          "gen": "przeciwnego",
+          "dat": "przeciwnemu",
+          "acc": "przeciwny",
+          "ins": "przeciwnym",
+          "loc": "przeciwnym"
+        },
+        "f": {
+          "nom": "przeciwna",
+          "gen": "przeciwnej",
+          "dat": "przeciwnej",
+          "acc": "przeciwną",
+          "ins": "przeciwną",
+          "loc": "przeciwnej"
+        },
+        "n": {
+          "nom": "przeciwne",
+          "gen": "przeciwnego",
+          "dat": "przeciwnemu",
+          "acc": "przeciwne",
+          "ins": "przeciwnym",
+          "loc": "przeciwnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przeciwni",
+          "gen": "przeciwnych",
+          "dat": "przeciwnym",
+          "acc": "przeciwnych",
+          "ins": "przeciwnymi",
+          "loc": "przeciwnych"
+        },
+        "nonvirile": {
+          "nom": "przeciwne",
+          "gen": "przeciwnych",
+          "dat": "przeciwnym",
+          "acc": "przeciwne",
+          "ins": "przeciwnymi",
+          "loc": "przeciwnych"
+        }
+      }
+    }
+  }
+}

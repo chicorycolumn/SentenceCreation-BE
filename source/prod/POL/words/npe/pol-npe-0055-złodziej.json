@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "złodziej",
+      "gen": "złodzieja",
+      "dat": "złodziejowi",
+      "acc": "złodzieja",
+      "ins": "złodziejem",
+      "loc": "złodzieju",
+      "voc": "złodzieju"
+    },
+    "plural": {
+      "nom": "złodzieje",
+      "gen": [
+        "złodziei",
+        "złodziejów"
+      ],
+      "dat": "złodziejom",
+      "acc": [
+        "złodziei",
+        "złodziejów"
+      ],
+      "ins": "złodziejami",
+      "loc": "złodziejach",
+      "voc": "złodzieje"
+    }
+  }
+}

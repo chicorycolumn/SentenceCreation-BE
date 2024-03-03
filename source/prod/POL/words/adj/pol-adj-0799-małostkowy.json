@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "małostkowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "małostkowy",
+          "gen": "małostkowego",
+          "dat": "małostkowemu",
+          "acc": "małostkowego",
+          "ins": "małostkowym",
+          "loc": "małostkowym"
+        },
+        "m3": {
+          "nom": "małostkowy",
+          "gen": "małostkowego",
+          "dat": "małostkowemu",
+          "acc": "małostkowy",
+          "ins": "małostkowym",
+          "loc": "małostkowym"
+        },
+        "f": {
+          "nom": "małostkowa",
+          "gen": "małostkowej",
+          "dat": "małostkowej",
+          "acc": "małostkową",
+          "ins": "małostkową",
+          "loc": "małostkowej"
+        },
+        "n": {
+          "nom": "małostkowe",
+          "gen": "małostkowego",
+          "dat": "małostkowemu",
+          "acc": "małostkowe",
+          "ins": "małostkowym",
+          "loc": "małostkowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "małostkowi",
+          "gen": "małostkowych",
+          "dat": "małostkowym",
+          "acc": "małostkowych",
+          "ins": "małostkowymi",
+          "loc": "małostkowych"
+        },
+        "nonvirile": {
+          "nom": "małostkowe",
+          "gen": "małostkowych",
+          "dat": "małostkowym",
+          "acc": "małostkowe",
+          "ins": "małostkowymi",
+          "loc": "małostkowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej małostkowy",
+          "gen": "bardziej małostkowego",
+          "dat": "bardziej małostkowemu",
+          "acc": "bardziej małostkowego",
+          "ins": "bardziej małostkowym",
+          "loc": "bardziej małostkowym"
+        },
+        "m3": {
+          "nom": "bardziej małostkowy",
+          "gen": "bardziej małostkowego",
+          "dat": "bardziej małostkowemu",
+          "acc": "bardziej małostkowy",
+          "ins": "bardziej małostkowym",
+          "loc": "bardziej małostkowym"
+        },
+        "f": {
+          "nom": "bardziej małostkowa",
+          "gen": "bardziej małostkowej",
+          "dat": "bardziej małostkowej",
+          "acc": "bardziej małostkową",
+          "ins": "bardziej małostkową",
+          "loc": "bardziej małostkowej"
+        },
+        "n": {
+          "nom": "bardziej małostkowe",
+          "gen": "bardziej małostkowego",
+          "dat": "bardziej małostkowemu",
+          "acc": "bardziej małostkowe",
+          "ins": "bardziej małostkowym",
+          "loc": "bardziej małostkowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej małostkowi",
+          "gen": "bardziej małostkowych",
+          "dat": "bardziej małostkowym",
+          "acc": "bardziej małostkowych",
+          "ins": "bardziej małostkowymi",
+          "loc": "bardziej małostkowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej małostkowe",
+          "gen": "bardziej małostkowych",
+          "dat": "bardziej małostkowym",
+          "acc": "bardziej małostkowe",
+          "ins": "bardziej małostkowymi",
+          "loc": "bardziej małostkowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej małostkowy",
+          "gen": "najbardziej małostkowego",
+          "dat": "najbardziej małostkowemu",
+          "acc": "najbardziej małostkowego",
+          "ins": "najbardziej małostkowym",
+          "loc": "najbardziej małostkowym"
+        },
+        "m3": {
+          "nom": "najbardziej małostkowy",
+          "gen": "najbardziej małostkowego",
+          "dat": "najbardziej małostkowemu",
+          "acc": "najbardziej małostkowy",
+          "ins": "najbardziej małostkowym",
+          "loc": "najbardziej małostkowym"
+        },
+        "f": {
+          "nom": "najbardziej małostkowa",
+          "gen": "najbardziej małostkowej",
+          "dat": "najbardziej małostkowej",
+          "acc": "najbardziej małostkową",
+          "ins": "najbardziej małostkową",
+          "loc": "najbardziej małostkowej"
+        },
+        "n": {
+          "nom": "najbardziej małostkowe",
+          "gen": "najbardziej małostkowego",
+          "dat": "najbardziej małostkowemu",
+          "acc": "najbardziej małostkowe",
+          "ins": "najbardziej małostkowym",
+          "loc": "najbardziej małostkowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej małostkowi",
+          "gen": "najbardziej małostkowych",
+          "dat": "najbardziej małostkowym",
+          "acc": "najbardziej małostkowych",
+          "ins": "najbardziej małostkowymi",
+          "loc": "najbardziej małostkowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej małostkowe",
+          "gen": "najbardziej małostkowych",
+          "dat": "najbardziej małostkowym",
+          "acc": "najbardziej małostkowe",
+          "ins": "najbardziej małostkowymi",
+          "loc": "najbardziej małostkowych"
+        }
+      }
+    }
+  }
+}

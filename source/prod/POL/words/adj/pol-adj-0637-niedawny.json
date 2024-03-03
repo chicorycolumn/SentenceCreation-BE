@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "niedawno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niedawny",
+          "gen": "niedawnego",
+          "dat": "niedawnemu",
+          "acc": "niedawnego",
+          "ins": "niedawnym",
+          "loc": "niedawnym"
+        },
+        "m3": {
+          "nom": "niedawny",
+          "gen": "niedawnego",
+          "dat": "niedawnemu",
+          "acc": "niedawny",
+          "ins": "niedawnym",
+          "loc": "niedawnym"
+        },
+        "f": {
+          "nom": "niedawna",
+          "gen": "niedawnej",
+          "dat": "niedawnej",
+          "acc": "niedawną",
+          "ins": "niedawną",
+          "loc": "niedawnej"
+        },
+        "n": {
+          "nom": "niedawne",
+          "gen": "niedawnego",
+          "dat": "niedawnemu",
+          "acc": "niedawne",
+          "ins": "niedawnym",
+          "loc": "niedawnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niedawni",
+          "gen": "niedawnych",
+          "dat": "niedawnym",
+          "acc": "niedawnych",
+          "ins": "niedawnymi",
+          "loc": "niedawnych"
+        },
+        "nonvirile": {
+          "nom": "niedawne",
+          "gen": "niedawnych",
+          "dat": "niedawnym",
+          "acc": "niedawne",
+          "ins": "niedawnymi",
+          "loc": "niedawnych"
+        }
+      }
+    }
+  }
+}

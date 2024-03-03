@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "poduszka",
+      "gen": "poduszki",
+      "dat": "poduszce",
+      "acc": "poduszkę",
+      "ins": "poduszką",
+      "loc": "poduszce",
+      "voc": "poduszko"
+    },
+    "plural": {
+      "nom": "poduszki",
+      "gen": "poduszek",
+      "dat": "poduszkom",
+      "acc": "poduszki",
+      "ins": "poduszkami",
+      "loc": "poduszkach",
+      "voc": "poduszki"
+    }
+  }
+}

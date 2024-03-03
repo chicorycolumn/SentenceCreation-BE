@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "efekt",
+      "gen": "efektu",
+      "dat": "efektowi",
+      "acc": "efekt",
+      "ins": "efektem",
+      "loc": "efekcie",
+      "voc": "efekcie"
+    },
+    "plural": {
+      "nom": "efekty",
+      "gen": "efektów",
+      "dat": "efektom",
+      "acc": "efekty",
+      "ins": "efektami",
+      "loc": "efektach",
+      "voc": "efekty"
+    }
+  }
+}

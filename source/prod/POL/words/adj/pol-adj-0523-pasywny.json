@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "pasywnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pasywny",
+          "gen": "pasywnego",
+          "dat": "pasywnemu",
+          "acc": "pasywnego",
+          "ins": "pasywnym",
+          "loc": "pasywnym"
+        },
+        "m3": {
+          "nom": "pasywny",
+          "gen": "pasywnego",
+          "dat": "pasywnemu",
+          "acc": "pasywny",
+          "ins": "pasywnym",
+          "loc": "pasywnym"
+        },
+        "f": {
+          "nom": "pasywna",
+          "gen": "pasywnej",
+          "dat": "pasywnej",
+          "acc": "pasywną",
+          "ins": "pasywną",
+          "loc": "pasywnej"
+        },
+        "n": {
+          "nom": "pasywne",
+          "gen": "pasywnego",
+          "dat": "pasywnemu",
+          "acc": "pasywne",
+          "ins": "pasywnym",
+          "loc": "pasywnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pasywni",
+          "gen": "pasywnych",
+          "dat": "pasywnym",
+          "acc": "pasywnych",
+          "ins": "pasywnymi",
+          "loc": "pasywnych"
+        },
+        "nonvirile": {
+          "nom": "pasywne",
+          "gen": "pasywnych",
+          "dat": "pasywnym",
+          "acc": "pasywne",
+          "ins": "pasywnymi",
+          "loc": "pasywnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej pasywny",
+          "gen": "bardziej pasywnego",
+          "dat": "bardziej pasywnemu",
+          "acc": "bardziej pasywnego",
+          "ins": "bardziej pasywnym",
+          "loc": "bardziej pasywnym"
+        },
+        "m3": {
+          "nom": "bardziej pasywny",
+          "gen": "bardziej pasywnego",
+          "dat": "bardziej pasywnemu",
+          "acc": "bardziej pasywny",
+          "ins": "bardziej pasywnym",
+          "loc": "bardziej pasywnym"
+        },
+        "f": {
+          "nom": "bardziej pasywna",
+          "gen": "bardziej pasywnej",
+          "dat": "bardziej pasywnej",
+          "acc": "bardziej pasywną",
+          "ins": "bardziej pasywną",
+          "loc": "bardziej pasywnej"
+        },
+        "n": {
+          "nom": "bardziej pasywne",
+          "gen": "bardziej pasywnego",
+          "dat": "bardziej pasywnemu",
+          "acc": "bardziej pasywne",
+          "ins": "bardziej pasywnym",
+          "loc": "bardziej pasywnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej pasywni",
+          "gen": "bardziej pasywnych",
+          "dat": "bardziej pasywnym",
+          "acc": "bardziej pasywnych",
+          "ins": "bardziej pasywnymi",
+          "loc": "bardziej pasywnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej pasywne",
+          "gen": "bardziej pasywnych",
+          "dat": "bardziej pasywnym",
+          "acc": "bardziej pasywne",
+          "ins": "bardziej pasywnymi",
+          "loc": "bardziej pasywnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej pasywny",
+          "gen": "najbardziej pasywnego",
+          "dat": "najbardziej pasywnemu",
+          "acc": "najbardziej pasywnego",
+          "ins": "najbardziej pasywnym",
+          "loc": "najbardziej pasywnym"
+        },
+        "m3": {
+          "nom": "najbardziej pasywny",
+          "gen": "najbardziej pasywnego",
+          "dat": "najbardziej pasywnemu",
+          "acc": "najbardziej pasywny",
+          "ins": "najbardziej pasywnym",
+          "loc": "najbardziej pasywnym"
+        },
+        "f": {
+          "nom": "najbardziej pasywna",
+          "gen": "najbardziej pasywnej",
+          "dat": "najbardziej pasywnej",
+          "acc": "najbardziej pasywną",
+          "ins": "najbardziej pasywną",
+          "loc": "najbardziej pasywnej"
+        },
+        "n": {
+          "nom": "najbardziej pasywne",
+          "gen": "najbardziej pasywnego",
+          "dat": "najbardziej pasywnemu",
+          "acc": "najbardziej pasywne",
+          "ins": "najbardziej pasywnym",
+          "loc": "najbardziej pasywnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej pasywni",
+          "gen": "najbardziej pasywnych",
+          "dat": "najbardziej pasywnym",
+          "acc": "najbardziej pasywnych",
+          "ins": "najbardziej pasywnymi",
+          "loc": "najbardziej pasywnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej pasywne",
+          "gen": "najbardziej pasywnych",
+          "dat": "najbardziej pasywnym",
+          "acc": "najbardziej pasywne",
+          "ins": "najbardziej pasywnymi",
+          "loc": "najbardziej pasywnych"
+        }
+      }
+    }
+  }
+}

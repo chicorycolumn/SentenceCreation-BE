@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "domowy",
+          "gen": "domowego",
+          "dat": "domowemu",
+          "acc": "domowego",
+          "ins": "domowym",
+          "loc": "domowym"
+        },
+        "m3": {
+          "nom": "domowy",
+          "gen": "domowego",
+          "dat": "domowemu",
+          "acc": "domowy",
+          "ins": "domowym",
+          "loc": "domowym"
+        },
+        "f": {
+          "nom": "domowa",
+          "gen": "domowej",
+          "dat": "domowej",
+          "acc": "domową",
+          "ins": "domową",
+          "loc": "domowej"
+        },
+        "n": {
+          "nom": "domowe",
+          "gen": "domowego",
+          "dat": "domowemu",
+          "acc": "domowe",
+          "ins": "domowym",
+          "loc": "domowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "domowi",
+          "gen": "domowych",
+          "dat": "domowym",
+          "acc": "domowych",
+          "ins": "domowymi",
+          "loc": "domowych"
+        },
+        "nonvirile": {
+          "nom": "domowe",
+          "gen": "domowych",
+          "dat": "domowym",
+          "acc": "domowe",
+          "ins": "domowymi",
+          "loc": "domowych"
+        }
+      }
+    }
+  }
+}

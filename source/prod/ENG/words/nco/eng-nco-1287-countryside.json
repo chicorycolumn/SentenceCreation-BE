@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "countryside",
+      "gen": "countryside's"
+    },
+    "plural": {
+      "nom": "countrysides",
+      "gen": "countrysides'"
+    }
+  }
+}

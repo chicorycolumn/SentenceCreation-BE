@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rekin",
+      "gen": "rekina",
+      "dat": "rekinowi",
+      "acc": "rekina",
+      "ins": "rekinem",
+      "loc": "rekinie",
+      "voc": "rekinie"
+    },
+    "plural": {
+      "nom": "rekiny",
+      "gen": "rekinów",
+      "dat": "rekinom",
+      "acc": "rekiny",
+      "ins": "rekinami",
+      "loc": "rekinach",
+      "voc": "rekiny"
+    }
+  }
+}

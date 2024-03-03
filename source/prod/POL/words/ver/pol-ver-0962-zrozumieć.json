@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zrozumieć",
+    "verbalNoun": "zrozumienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zrozumiany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zrozumiawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zrozumie się"
+          },
+          "plural": {
+            "allPluralGenders": "zrozumie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zrozumiem"
+          },
+          "plural": {
+            "allPluralGenders": "zrozumiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zrozumiesz"
+          },
+          "plural": {
+            "allPluralGenders": "zrozumiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zrozumie"
+          },
+          "plural": {
+            "allPluralGenders": "zrozumieją"
+          }
+        }
+      },
+      "imperative": "zrozum",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zrozumiano"
+          },
+          "plural": {
+            "allPluralGenders": "zrozumiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zrozumiałem",
+            "f": "zrozumiałam"
+          },
+          "plural": {
+            "virile": "zrozumieliśmy",
+            "nonvirile": "zrozumiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zrozumiałeś",
+            "f": "zrozumiałaś"
+          },
+          "plural": {
+            "virile": "zrozumieliście",
+            "nonvirile": "zrozumiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zrozumiał",
+            "f": "zrozumiała",
+            "n": "zrozumiało"
+          },
+          "plural": {
+            "virile": "zrozumieli",
+            "nonvirile": "zrozumiały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

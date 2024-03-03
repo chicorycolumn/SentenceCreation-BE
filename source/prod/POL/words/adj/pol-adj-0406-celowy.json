@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "celowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "celowy",
+          "gen": "celowego",
+          "dat": "celowemu",
+          "acc": "celowego",
+          "ins": "celowym",
+          "loc": "celowym"
+        },
+        "m3": {
+          "nom": "celowy",
+          "gen": "celowego",
+          "dat": "celowemu",
+          "acc": "celowy",
+          "ins": "celowym",
+          "loc": "celowym"
+        },
+        "f": {
+          "nom": "celowa",
+          "gen": "celowej",
+          "dat": "celowej",
+          "acc": "celową",
+          "ins": "celową",
+          "loc": "celowej"
+        },
+        "n": {
+          "nom": "celowe",
+          "gen": "celowego",
+          "dat": "celowemu",
+          "acc": "celowe",
+          "ins": "celowym",
+          "loc": "celowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "celowi",
+          "gen": "celowych",
+          "dat": "celowym",
+          "acc": "celowych",
+          "ins": "celowymi",
+          "loc": "celowych"
+        },
+        "nonvirile": {
+          "nom": "celowe",
+          "gen": "celowych",
+          "dat": "celowym",
+          "acc": "celowe",
+          "ins": "celowymi",
+          "loc": "celowych"
+        }
+      }
+    }
+  }
+}

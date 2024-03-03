@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przekazywać",
+    "verbalNoun": "przekazywanie",
+    "activeAdjectival": "przekazujący",
+    "passiveAdjectival": "przekazywany",
+    "contemporaryAdverbial": "przekazując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przekazuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przekazywano"
+          },
+          "plural": {
+            "allPluralGenders": "przekazywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przekazywałem",
+            "f": "przekazywałam"
+          },
+          "plural": {
+            "virile": "przekazywaliśmy",
+            "nonvirile": "przekazywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przekazywałeś",
+            "f": "przekazywałaś"
+          },
+          "plural": {
+            "virile": "przekazywaliście",
+            "nonvirile": "przekazywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przekazywał",
+            "f": "przekazywała",
+            "n": "przekazywało"
+          },
+          "plural": {
+            "virile": "przekazywali",
+            "nonvirile": "przekazywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przekazuje się"
+          },
+          "plural": {
+            "allPluralGenders": "przekazuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przekazuję"
+          },
+          "plural": {
+            "allPluralGenders": "przekazujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przekazujesz"
+          },
+          "plural": {
+            "allPluralGenders": "przekazujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przekazuje"
+          },
+          "plural": {
+            "allPluralGenders": "przekazują"
+          }
+        }
+      }
+    }
+  }
+}

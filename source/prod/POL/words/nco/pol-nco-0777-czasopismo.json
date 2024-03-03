@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "czasopismo",
+      "gen": "czasopisma",
+      "dat": "czasopismu",
+      "acc": "czasopismo",
+      "ins": "czasopismem",
+      "loc": "czasopiśmie",
+      "voc": "czasopismo"
+    },
+    "plural": {
+      "nom": "czasopisma",
+      "gen": "czasopism",
+      "dat": "czasopismom",
+      "acc": "czasopisma",
+      "ins": "czasopismami",
+      "loc": "czasopismach",
+      "voc": "czasopisma"
+    }
+  }
+}

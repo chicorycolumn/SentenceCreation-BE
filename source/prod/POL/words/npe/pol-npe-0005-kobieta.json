@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kobieta",
+      "gen": "kobiety",
+      "dat": "kobiecie",
+      "acc": "kobietę",
+      "ins": "kobietą",
+      "loc": "kobiecie",
+      "voc": "kobieto"
+    },
+    "plural": {
+      "nom": "kobiety",
+      "gen": "kobiet",
+      "dat": "kobietom",
+      "acc": "kobiety",
+      "ins": "kobietami",
+      "loc": "kobietach",
+      "voc": "kobiety"
+    }
+  }
+}

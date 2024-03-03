@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "bark",
+      "gen": "barku",
+      "dat": "barkowi",
+      "acc": "bark",
+      "ins": "barkiem",
+      "loc": "barku",
+      "voc": "barku"
+    },
+    "plural": {
+      "nom": "barki",
+      "gen": "barków",
+      "dat": "barkom",
+      "acc": "barki",
+      "ins": "barkami",
+      "loc": "barkach",
+      "voc": "barki"
+    }
+  }
+}

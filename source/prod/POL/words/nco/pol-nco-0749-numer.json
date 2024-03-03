@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "numer",
+      "gen": "numeru",
+      "dat": "numerowi",
+      "acc": "numer",
+      "ins": "numerem",
+      "loc": "numerze",
+      "voc": "numerze"
+    },
+    "plural": {
+      "nom": "numery",
+      "gen": "numerów",
+      "dat": "numerom",
+      "acc": "numery",
+      "ins": "numerami",
+      "loc": "numerach",
+      "voc": "numery"
+    }
+  }
+}

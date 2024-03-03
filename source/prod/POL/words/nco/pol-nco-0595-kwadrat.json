@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kwadrat",
+      "gen": "kwadratu",
+      "dat": "kwadratowi",
+      "acc": "kwadrat",
+      "ins": "kwadratem",
+      "loc": "kwadracie",
+      "voc": "kwadracie"
+    },
+    "plural": {
+      "nom": "kwadraty",
+      "gen": "kwadratów",
+      "dat": "kwadratom",
+      "acc": "kwadraty",
+      "ins": "kwadratami",
+      "loc": "kwadratach",
+      "voc": "kwadraty"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odwoływać",
+    "verbalNoun": "odwoływanie",
+    "activeAdjectival": "odwołujący",
+    "passiveAdjectival": "odwoływany",
+    "contemporaryAdverbial": "odwołując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odwołuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odwoływano"
+          },
+          "plural": {
+            "allPluralGenders": "odwoływano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odwoływałem",
+            "f": "odwoływałam"
+          },
+          "plural": {
+            "virile": "odwoływaliśmy",
+            "nonvirile": "odwoływałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odwoływałeś",
+            "f": "odwoływałaś"
+          },
+          "plural": {
+            "virile": "odwoływaliście",
+            "nonvirile": "odwoływałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odwoływał",
+            "f": "odwoływała",
+            "n": "odwoływało"
+          },
+          "plural": {
+            "virile": "odwoływali",
+            "nonvirile": "odwoływały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odwołuje się"
+          },
+          "plural": {
+            "allPluralGenders": "odwołuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odwołuję"
+          },
+          "plural": {
+            "allPluralGenders": "odwołujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odwołujesz"
+          },
+          "plural": {
+            "allPluralGenders": "odwołujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odwołuje"
+          },
+          "plural": {
+            "allPluralGenders": "odwołują"
+          }
+        }
+      }
+    }
+  }
+}

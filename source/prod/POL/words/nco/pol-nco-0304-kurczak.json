@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kurczak",
+      "gen": "kurczaka",
+      "dat": "kurczakowi",
+      "acc": "kurczaka",
+      "ins": "kurczakiem",
+      "loc": "kurczaku",
+      "voc": "kurczaku"
+    },
+    "plural": {
+      "nom": "kurczaki",
+      "gen": "kurczaków",
+      "dat": "kurczakom",
+      "acc": "kurczaki",
+      "ins": "kurczakami",
+      "loc": "kurczakach",
+      "voc": "kurczaki"
+    }
+  }
+}

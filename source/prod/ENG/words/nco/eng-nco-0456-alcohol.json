@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "alcohol",
+      "gen": "alcohol's"
+    },
+    "plural": {
+      "nom": "alcohols",
+      "gen": "alcohols'"
+    }
+  }
+}

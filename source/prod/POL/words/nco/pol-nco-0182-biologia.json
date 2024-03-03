@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "biologia",
+      "gen": "biologii",
+      "dat": "biologii",
+      "acc": "biologię",
+      "ins": "biologią",
+      "loc": "biologii",
+      "voc": "biologio"
+    }
+  }
+}

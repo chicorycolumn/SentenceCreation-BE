@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "niemowlę",
+      "gen": "niemowlęcia",
+      "dat": "niemowlęciu",
+      "acc": "niemowlę",
+      "ins": "niemowlęciem",
+      "loc": "niemowlęciu",
+      "voc": "niemowlę"
+    },
+    "plural": {
+      "nom": "niemowlęta",
+      "gen": "niemowląt",
+      "dat": "niemowlętom",
+      "acc": "niemowlęta",
+      "ins": "niemowlętami",
+      "loc": "niemowlętach",
+      "voc": "niemowlęta"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kolej",
+      "gen": "kolei",
+      "dat": "kolei",
+      "acc": "kolej",
+      "ins": "koleją",
+      "loc": "kolei",
+      "voc": "kolei"
+    },
+    "plural": {
+      "nom": "koleje",
+      "gen": "kolei",
+      "dat": "kolejom",
+      "acc": "koleje",
+      "ins": "kolejami",
+      "loc": "kolejach",
+      "voc": "koleje"
+    }
+  }
+}

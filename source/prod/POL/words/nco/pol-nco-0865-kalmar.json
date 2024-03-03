@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kalmar",
+      "gen": "kalmara",
+      "dat": "kalmarowi",
+      "acc": "kalmara",
+      "ins": "kalmarem",
+      "loc": "kalmarze",
+      "voc": "kalmarze"
+    },
+    "plural": {
+      "nom": "kalmary",
+      "gen": "kalmarów",
+      "dat": "kalmarom",
+      "acc": "kalmary",
+      "ins": "kalmarami",
+      "loc": "kalmarach",
+      "voc": "kalmary"
+    }
+  }
+}

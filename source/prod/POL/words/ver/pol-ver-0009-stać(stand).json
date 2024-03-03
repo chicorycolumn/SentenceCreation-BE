@@ -1,0 +1,82 @@
+{
+  "inflections": {
+    "infinitive": "stać",
+    "verbalNoun": "stanie",
+    "activeAdjectival": "stojący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "stojąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "stój",
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "stałem",
+            "f": "stałam"
+          },
+          "plural": {
+            "virile": "staliśmy",
+            "nonvirile": "stałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "stałeś",
+            "f": "stałaś"
+          },
+          "plural": {
+            "virile": "staliście",
+            "nonvirile": "stałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "stał",
+            "f": "stała",
+            "n": "stało"
+          },
+          "plural": {
+            "virile": "stali",
+            "nonvirile": "stały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "stoi się"
+          },
+          "plural": {
+            "allPluralGenders": "stoi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "stoję"
+          },
+          "plural": {
+            "allPluralGenders": "stoimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "stoisz"
+          },
+          "plural": {
+            "allPluralGenders": "stoicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "stoi"
+          },
+          "plural": {
+            "allPluralGenders": "stoją"
+          }
+        }
+      }
+    }
+  }
+}

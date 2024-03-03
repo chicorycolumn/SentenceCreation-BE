@@ -1,0 +1,18 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "volcano",
+      "gen": "volcano's"
+    },
+    "plural": {
+      "nom": [
+        "volcanoes",
+        "volcanos"
+      ],
+      "gen": [
+        "volcanoes'",
+        "volcanos'"
+      ]
+    }
+  }
+}

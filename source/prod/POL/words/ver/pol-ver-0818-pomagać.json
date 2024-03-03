@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pomagać",
+    "verbalNoun": "pomaganie",
+    "activeAdjectival": "pomagający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "pomagając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pomagaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pomagano"
+          },
+          "plural": {
+            "allPluralGenders": "pomagano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pomagałem",
+            "f": "pomagałam"
+          },
+          "plural": {
+            "virile": "pomagaliśmy",
+            "nonvirile": "pomagałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pomagałeś",
+            "f": "pomagałaś"
+          },
+          "plural": {
+            "virile": "pomagaliście",
+            "nonvirile": "pomagałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pomagał",
+            "f": "pomagała",
+            "n": "pomagało"
+          },
+          "plural": {
+            "virile": "pomagali",
+            "nonvirile": "pomagały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pomaga się"
+          },
+          "plural": {
+            "allPluralGenders": "pomaga się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pomagam"
+          },
+          "plural": {
+            "allPluralGenders": "pomagamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pomagasz"
+          },
+          "plural": {
+            "allPluralGenders": "pomagacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pomaga"
+          },
+          "plural": {
+            "allPluralGenders": "pomagają"
+          }
+        }
+      }
+    }
+  }
+}

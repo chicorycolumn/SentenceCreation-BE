@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "uwielbić",
+    "verbalNoun": "uwielbienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "uwielbiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "uwielbiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "uwielbi się"
+          },
+          "plural": {
+            "allPluralGenders": "uwielbi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "uwielbię"
+          },
+          "plural": {
+            "allPluralGenders": "uwielbimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "uwielbisz"
+          },
+          "plural": {
+            "allPluralGenders": "uwielbicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "uwielbi"
+          },
+          "plural": {
+            "allPluralGenders": "uwielbią"
+          }
+        }
+      },
+      "imperative": "uwielbij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "uwielbiono"
+          },
+          "plural": {
+            "allPluralGenders": "uwielbiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "uwielbiłem",
+            "f": "uwielbiłam"
+          },
+          "plural": {
+            "virile": "uwielbiliśmy",
+            "nonvirile": "uwielbiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "uwielbiłeś",
+            "f": "uwielbiłaś"
+          },
+          "plural": {
+            "virile": "uwielbiliście",
+            "nonvirile": "uwielbiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "uwielbił",
+            "f": "uwielbiła",
+            "n": "uwielbiło"
+          },
+          "plural": {
+            "virile": "uwielbili",
+            "nonvirile": "uwielbiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

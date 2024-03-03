@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "niepoprawnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niepoprawny",
+          "gen": "niepoprawnego",
+          "dat": "niepoprawnemu",
+          "acc": "niepoprawnego",
+          "ins": "niepoprawnym",
+          "loc": "niepoprawnym"
+        },
+        "m3": {
+          "nom": "niepoprawny",
+          "gen": "niepoprawnego",
+          "dat": "niepoprawnemu",
+          "acc": "niepoprawny",
+          "ins": "niepoprawnym",
+          "loc": "niepoprawnym"
+        },
+        "f": {
+          "nom": "niepoprawna",
+          "gen": "niepoprawnej",
+          "dat": "niepoprawnej",
+          "acc": "niepoprawną",
+          "ins": "niepoprawną",
+          "loc": "niepoprawnej"
+        },
+        "n": {
+          "nom": "niepoprawne",
+          "gen": "niepoprawnego",
+          "dat": "niepoprawnemu",
+          "acc": "niepoprawne",
+          "ins": "niepoprawnym",
+          "loc": "niepoprawnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niepoprawni",
+          "gen": "niepoprawnych",
+          "dat": "niepoprawnym",
+          "acc": "niepoprawnych",
+          "ins": "niepoprawnymi",
+          "loc": "niepoprawnych"
+        },
+        "nonvirile": {
+          "nom": "niepoprawne",
+          "gen": "niepoprawnych",
+          "dat": "niepoprawnym",
+          "acc": "niepoprawne",
+          "ins": "niepoprawnymi",
+          "loc": "niepoprawnych"
+        }
+      }
+    }
+  }
+}

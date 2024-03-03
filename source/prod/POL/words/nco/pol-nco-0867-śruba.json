@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "śruba",
+      "gen": "śruby",
+      "dat": "śrubie",
+      "acc": "śrubę",
+      "ins": "śrubą",
+      "loc": "śrubie",
+      "voc": "śrubo"
+    },
+    "plural": {
+      "nom": "śruby",
+      "gen": "śrub",
+      "dat": "śrubom",
+      "acc": "śruby",
+      "ins": "śrubami",
+      "loc": "śrubach",
+      "voc": "śruby"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "telephone",
+      "gen": "telephone's"
+    },
+    "plural": {
+      "nom": "telephones",
+      "gen": "telephones'"
+    }
+  }
+}

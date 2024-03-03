@@ -1,0 +1,30 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "policja",
+      "gen": "policji",
+      "dat": "policji",
+      "acc": "policję",
+      "ins": "policją",
+      "loc": "policji",
+      "voc": "policjo"
+    },
+    "plural": {
+      "nom": "policje",
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "policji"
+        ],
+        "additionalInfrequent": [
+          "policyj"
+        ]
+      },
+      "dat": "policjom",
+      "acc": "policje",
+      "ins": "policjami",
+      "loc": "policjach",
+      "voc": "policje"
+    }
+  }
+}

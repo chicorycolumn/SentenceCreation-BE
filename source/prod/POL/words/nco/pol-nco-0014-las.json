@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "las",
+      "gen": "lasu",
+      "dat": "lasowi",
+      "acc": "las",
+      "ins": "lasem",
+      "loc": "lesie",
+      "voc": "lesie"
+    },
+    "plural": {
+      "nom": "lasy",
+      "gen": "lasów",
+      "dat": "lasom",
+      "acc": "lasy",
+      "ins": "lasami",
+      "loc": "lasach",
+      "voc": "lasy"
+    }
+  }
+}

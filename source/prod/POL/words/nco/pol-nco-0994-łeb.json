@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "łeb",
+      "gen": "łba",
+      "dat": "łbu",
+      "acc": "łeb",
+      "ins": "łbem",
+      "loc": "łbie",
+      "voc": "łbie"
+    },
+    "plural": {
+      "nom": "łby",
+      "gen": "łbów",
+      "dat": "łbom",
+      "acc": "łby",
+      "ins": "łbami",
+      "loc": "łbach",
+      "voc": "łby"
+    }
+  }
+}

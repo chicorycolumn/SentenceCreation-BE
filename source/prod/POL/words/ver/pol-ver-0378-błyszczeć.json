@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "błyszczeć",
+    "verbalNoun": "błyszczenie",
+    "activeAdjectival": "błyszczący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "błyszcząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "błyszcz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "błyszczano"
+          },
+          "plural": {
+            "allPluralGenders": "błyszczano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "błyszczałem",
+            "f": "błyszczałam"
+          },
+          "plural": {
+            "virile": "błyszczeliśmy",
+            "nonvirile": "błyszczałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "błyszczałeś",
+            "f": "błyszczałaś"
+          },
+          "plural": {
+            "virile": "błyszczeliście",
+            "nonvirile": "błyszczałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "błyszczał",
+            "f": "błyszczała",
+            "n": "błyszczało"
+          },
+          "plural": {
+            "virile": "błyszczeli",
+            "nonvirile": "błyszczały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "błyszczy się"
+          },
+          "plural": {
+            "allPluralGenders": "błyszczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "błyszczę"
+          },
+          "plural": {
+            "allPluralGenders": "błyszczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "błyszczysz"
+          },
+          "plural": {
+            "allPluralGenders": "błyszczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "błyszczy"
+          },
+          "plural": {
+            "allPluralGenders": "błyszczą"
+          }
+        }
+      }
+    }
+  }
+}

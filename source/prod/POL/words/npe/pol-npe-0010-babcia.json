@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "babcia",
+      "gen": "babci",
+      "dat": "babci",
+      "acc": "babcię",
+      "ins": "babcią",
+      "loc": "babci",
+      "voc": "babciu"
+    },
+    "plural": {
+      "nom": "babcie",
+      "gen": "babć",
+      "dat": "babciom",
+      "acc": "babcie",
+      "ins": "babciami",
+      "loc": "babciach",
+      "voc": "babcie"
+    }
+  }
+}

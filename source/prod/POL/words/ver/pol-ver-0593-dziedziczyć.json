@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dziedziczyć",
+    "verbalNoun": "dziedziczenie",
+    "activeAdjectival": "dziedziczący",
+    "passiveAdjectival": "dziedziczony",
+    "contemporaryAdverbial": "dziedzicząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dziedzicz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dziedziczono"
+          },
+          "plural": {
+            "allPluralGenders": "dziedziczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dziedziczyłem",
+            "f": "dziedziczyłam"
+          },
+          "plural": {
+            "virile": "dziedziczyliśmy",
+            "nonvirile": "dziedziczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dziedziczyłeś",
+            "f": "dziedziczyłaś"
+          },
+          "plural": {
+            "virile": "dziedziczyliście",
+            "nonvirile": "dziedziczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dziedziczył",
+            "f": "dziedziczyła",
+            "n": "dziedziczyło"
+          },
+          "plural": {
+            "virile": "dziedziczyli",
+            "nonvirile": "dziedziczyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dziedziczy się"
+          },
+          "plural": {
+            "allPluralGenders": "dziedziczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dziedziczę"
+          },
+          "plural": {
+            "allPluralGenders": "dziedziczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dziedziczysz"
+          },
+          "plural": {
+            "allPluralGenders": "dziedziczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dziedziczy"
+          },
+          "plural": {
+            "allPluralGenders": "dziedziczą"
+          }
+        }
+      }
+    }
+  }
+}

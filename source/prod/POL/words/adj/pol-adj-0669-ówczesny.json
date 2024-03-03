@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "ówcześnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ówczesny",
+          "gen": "ówczesnego",
+          "dat": "ówczesnemu",
+          "acc": "ówczesnego",
+          "ins": "ówczesnym",
+          "loc": "ówczesnym"
+        },
+        "m3": {
+          "nom": "ówczesny",
+          "gen": "ówczesnego",
+          "dat": "ówczesnemu",
+          "acc": "ówczesny",
+          "ins": "ówczesnym",
+          "loc": "ówczesnym"
+        },
+        "f": {
+          "nom": "ówczesna",
+          "gen": "ówczesnej",
+          "dat": "ówczesnej",
+          "acc": "ówczesną",
+          "ins": "ówczesną",
+          "loc": "ówczesnej"
+        },
+        "n": {
+          "nom": "ówczesne",
+          "gen": "ówczesnego",
+          "dat": "ówczesnemu",
+          "acc": "ówczesne",
+          "ins": "ówczesnym",
+          "loc": "ówczesnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ówcześni",
+          "gen": "ówczesnych",
+          "dat": "ówczesnym",
+          "acc": "ówczesnych",
+          "ins": "ówczesnymi",
+          "loc": "ówczesnych"
+        },
+        "nonvirile": {
+          "nom": "ówczesne",
+          "gen": "ówczesnych",
+          "dat": "ówczesnym",
+          "acc": "ówczesne",
+          "ins": "ówczesnymi",
+          "loc": "ówczesnych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "doświadczyć",
+    "verbalNoun": "doświadczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "doświadczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "doświadczywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "doświadczy się"
+          },
+          "plural": {
+            "allPluralGenders": "doświadczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "doświadczę"
+          },
+          "plural": {
+            "allPluralGenders": "doświadczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "doświadczysz"
+          },
+          "plural": {
+            "allPluralGenders": "doświadczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "doświadczy"
+          },
+          "plural": {
+            "allPluralGenders": "doświadczą"
+          }
+        }
+      },
+      "imperative": "doświadcz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "doświadczono"
+          },
+          "plural": {
+            "allPluralGenders": "doświadczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "doświadczyłem",
+            "f": "doświadczyłam"
+          },
+          "plural": {
+            "virile": "doświadczyliśmy",
+            "nonvirile": "doświadczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "doświadczyłeś",
+            "f": "doświadczyłaś"
+          },
+          "plural": {
+            "virile": "doświadczyliście",
+            "nonvirile": "doświadczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "doświadczył",
+            "f": "doświadczyła",
+            "n": "doświadczyło"
+          },
+          "plural": {
+            "virile": "doświadczyli",
+            "nonvirile": "doświadczyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

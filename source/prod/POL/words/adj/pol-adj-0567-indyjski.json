@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "indyjski",
+          "gen": "indyjskiego",
+          "dat": "indyjskiemu",
+          "acc": "indyjskiego",
+          "ins": "indyjskim",
+          "loc": "indyjskim"
+        },
+        "m3": {
+          "nom": "indyjski",
+          "gen": "indyjskiego",
+          "dat": "indyjskiemu",
+          "acc": "indyjski",
+          "ins": "indyjskim",
+          "loc": "indyjskim"
+        },
+        "f": {
+          "nom": "indyjska",
+          "gen": "indyjskiej",
+          "dat": "indyjskiej",
+          "acc": "indyjską",
+          "ins": "indyjską",
+          "loc": "indyjskiej"
+        },
+        "n": {
+          "nom": "indyjskie",
+          "gen": "indyjskiego",
+          "dat": "indyjskiemu",
+          "acc": "indyjskie",
+          "ins": "indyjskim",
+          "loc": "indyjskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "indyjscy",
+          "gen": "indyjskich",
+          "dat": "indyjskim",
+          "acc": "indyjskich",
+          "ins": "indyjskimi",
+          "loc": "indyjskich"
+        },
+        "nonvirile": {
+          "nom": "indyjskie",
+          "gen": "indyjskich",
+          "dat": "indyjskim",
+          "acc": "indyjskie",
+          "ins": "indyjskimi",
+          "loc": "indyjskich"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "topór",
+      "gen": "topora",
+      "dat": "toporowi",
+      "acc": "topór",
+      "ins": "toporem",
+      "loc": "toporze",
+      "voc": "toporze"
+    },
+    "plural": {
+      "nom": "topory",
+      "gen": "toporów",
+      "dat": "toporom",
+      "acc": "topory",
+      "ins": "toporami",
+      "loc": "toporach",
+      "voc": "topory"
+    }
+  }
+}

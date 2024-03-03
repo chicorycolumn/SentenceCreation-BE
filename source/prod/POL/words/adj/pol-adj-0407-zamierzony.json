@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zamierzony",
+          "gen": "zamierzonego",
+          "dat": "zamierzonemu",
+          "acc": "zamierzonego",
+          "ins": "zamierzonym",
+          "loc": "zamierzonym"
+        },
+        "m3": {
+          "nom": "zamierzony",
+          "gen": "zamierzonego",
+          "dat": "zamierzonemu",
+          "acc": "zamierzony",
+          "ins": "zamierzonym",
+          "loc": "zamierzonym"
+        },
+        "f": {
+          "nom": "zamierzona",
+          "gen": "zamierzonej",
+          "dat": "zamierzonej",
+          "acc": "zamierzoną",
+          "ins": "zamierzoną",
+          "loc": "zamierzonej"
+        },
+        "n": {
+          "nom": "zamierzone",
+          "gen": "zamierzonego",
+          "dat": "zamierzonemu",
+          "acc": "zamierzone",
+          "ins": "zamierzonym",
+          "loc": "zamierzonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zamierzeni",
+          "gen": "zamierzonych",
+          "dat": "zamierzonym",
+          "acc": "zamierzonych",
+          "ins": "zamierzonymi",
+          "loc": "zamierzonych"
+        },
+        "nonvirile": {
+          "nom": "zamierzone",
+          "gen": "zamierzonych",
+          "dat": "zamierzonym",
+          "acc": "zamierzone",
+          "ins": "zamierzonymi",
+          "loc": "zamierzonych"
+        }
+      }
+    }
+  }
+}

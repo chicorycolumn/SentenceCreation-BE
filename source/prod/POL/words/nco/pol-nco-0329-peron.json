@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "peron",
+      "gen": "peronu",
+      "dat": "peronowi",
+      "acc": "peron",
+      "ins": "peronem",
+      "loc": "peronie",
+      "voc": "peronie"
+    },
+    "plural": {
+      "nom": "perony",
+      "gen": "peronów",
+      "dat": "peronom",
+      "acc": "perony",
+      "ins": "peronami",
+      "loc": "peronach",
+      "voc": "perony"
+    }
+  }
+}

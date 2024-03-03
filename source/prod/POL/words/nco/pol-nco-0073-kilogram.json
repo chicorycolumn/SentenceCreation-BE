@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kilogram",
+      "gen": "kilograma",
+      "dat": "kilogramowi",
+      "acc": "kilogram",
+      "ins": "kilogramem",
+      "loc": "kilogramie",
+      "voc": "kilogramie"
+    },
+    "plural": {
+      "nom": "kilogramy",
+      "gen": "kilogramów",
+      "dat": "kilogramom",
+      "acc": "kilogramy",
+      "ins": "kilogramami",
+      "loc": "kilogramach",
+      "voc": "kilogramy"
+    }
+  }
+}

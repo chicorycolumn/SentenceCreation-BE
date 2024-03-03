@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wiadro",
+      "gen": "wiadra",
+      "dat": "wiadru",
+      "acc": "wiadro",
+      "ins": "wiadrem",
+      "loc": "wiadrze",
+      "voc": "wiadro"
+    },
+    "plural": {
+      "nom": "wiadra",
+      "gen": "wiader",
+      "dat": "wiadrom",
+      "acc": "wiadra",
+      "ins": "wiadrami",
+      "loc": "wiadrach",
+      "voc": "wiadra"
+    }
+  }
+}

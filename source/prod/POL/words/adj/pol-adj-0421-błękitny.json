@@ -1,0 +1,174 @@
+{
+  "inflections": {
+    "adverb": {
+      "isTerminus": true,
+      "normal": [
+        "błękitnie",
+        "błękitno"
+      ],
+      "additionalInfrequent": []
+    },
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "błękitny",
+          "gen": "błękitnego",
+          "dat": "błękitnemu",
+          "acc": "błękitnego",
+          "ins": "błękitnym",
+          "loc": "błękitnym"
+        },
+        "m3": {
+          "nom": "błękitny",
+          "gen": "błękitnego",
+          "dat": "błękitnemu",
+          "acc": "błękitny",
+          "ins": "błękitnym",
+          "loc": "błękitnym"
+        },
+        "f": {
+          "nom": "błękitna",
+          "gen": "błękitnej",
+          "dat": "błękitnej",
+          "acc": "błękitną",
+          "ins": "błękitną",
+          "loc": "błękitnej"
+        },
+        "n": {
+          "nom": "błękitne",
+          "gen": "błękitnego",
+          "dat": "błękitnemu",
+          "acc": "błękitne",
+          "ins": "błękitnym",
+          "loc": "błękitnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "błękitni",
+          "gen": "błękitnych",
+          "dat": "błękitnym",
+          "acc": "błękitnych",
+          "ins": "błękitnymi",
+          "loc": "błękitnych"
+        },
+        "nonvirile": {
+          "nom": "błękitne",
+          "gen": "błękitnych",
+          "dat": "błękitnym",
+          "acc": "błękitne",
+          "ins": "błękitnymi",
+          "loc": "błękitnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "błękitniejszy",
+          "gen": "błękitniejszego",
+          "dat": "błękitniejszemu",
+          "acc": "błękitniejszego",
+          "ins": "błękitniejszym",
+          "loc": "błękitniejszym"
+        },
+        "m3": {
+          "nom": "błękitniejszy",
+          "gen": "błękitniejszego",
+          "dat": "błękitniejszemu",
+          "acc": "błękitniejszy",
+          "ins": "błękitniejszym",
+          "loc": "błękitniejszym"
+        },
+        "f": {
+          "nom": "błękitniejsza",
+          "gen": "błękitniejszej",
+          "dat": "błękitniejszej",
+          "acc": "błękitniejszą",
+          "ins": "błękitniejszą",
+          "loc": "błękitniejszej"
+        },
+        "n": {
+          "nom": "błękitniejsze",
+          "gen": "błękitniejszego",
+          "dat": "błękitniejszemu",
+          "acc": "błękitniejsze",
+          "ins": "błękitniejszym",
+          "loc": "błękitniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "błękitniejsi",
+          "gen": "błękitniejszych",
+          "dat": "błękitniejszym",
+          "acc": "błękitniejszych",
+          "ins": "błękitniejszymi",
+          "loc": "błękitniejszych"
+        },
+        "nonvirile": {
+          "nom": "błękitniejsze",
+          "gen": "błękitniejszych",
+          "dat": "błękitniejszym",
+          "acc": "błękitniejsze",
+          "ins": "błękitniejszymi",
+          "loc": "błękitniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbłękitniejszy",
+          "gen": "najbłękitniejszego",
+          "dat": "najbłękitniejszemu",
+          "acc": "najbłękitniejszego",
+          "ins": "najbłękitniejszym",
+          "loc": "najbłękitniejszym"
+        },
+        "m3": {
+          "nom": "najbłękitniejszy",
+          "gen": "najbłękitniejszego",
+          "dat": "najbłękitniejszemu",
+          "acc": "najbłękitniejszy",
+          "ins": "najbłękitniejszym",
+          "loc": "najbłękitniejszym"
+        },
+        "f": {
+          "nom": "najbłękitniejsza",
+          "gen": "najbłękitniejszej",
+          "dat": "najbłękitniejszej",
+          "acc": "najbłękitniejszą",
+          "ins": "najbłękitniejszą",
+          "loc": "najbłękitniejszej"
+        },
+        "n": {
+          "nom": "najbłękitniejsze",
+          "gen": "najbłękitniejszego",
+          "dat": "najbłękitniejszemu",
+          "acc": "najbłękitniejsze",
+          "ins": "najbłękitniejszym",
+          "loc": "najbłękitniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbłękitniejsi",
+          "gen": "najbłękitniejszych",
+          "dat": "najbłękitniejszym",
+          "acc": "najbłękitniejszych",
+          "ins": "najbłękitniejszymi",
+          "loc": "najbłękitniejszych"
+        },
+        "nonvirile": {
+          "nom": "najbłękitniejsze",
+          "gen": "najbłękitniejszych",
+          "dat": "najbłękitniejszym",
+          "acc": "najbłękitniejsze",
+          "ins": "najbłękitniejszymi",
+          "loc": "najbłękitniejszych"
+        }
+      }
+    }
+  }
+}

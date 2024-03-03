@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "docierać",
+    "verbalNoun": "docieranie",
+    "activeAdjectival": "docierający",
+    "passiveAdjectival": "docierany",
+    "contemporaryAdverbial": "docierając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "docieraj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "docierano"
+          },
+          "plural": {
+            "allPluralGenders": "docierano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "docierałem",
+            "f": "docierałam"
+          },
+          "plural": {
+            "virile": "docieraliśmy",
+            "nonvirile": "docierałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "docierałeś",
+            "f": "docierałaś"
+          },
+          "plural": {
+            "virile": "docieraliście",
+            "nonvirile": "docierałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "docierał",
+            "f": "docierała",
+            "n": "docierało"
+          },
+          "plural": {
+            "virile": "docierali",
+            "nonvirile": "docierały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dociera się"
+          },
+          "plural": {
+            "allPluralGenders": "dociera się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "docieram"
+          },
+          "plural": {
+            "allPluralGenders": "docieramy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "docierasz"
+          },
+          "plural": {
+            "allPluralGenders": "docieracie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dociera"
+          },
+          "plural": {
+            "allPluralGenders": "docierają"
+          }
+        }
+      }
+    }
+  }
+}

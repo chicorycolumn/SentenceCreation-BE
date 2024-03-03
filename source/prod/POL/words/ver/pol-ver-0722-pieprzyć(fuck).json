@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pieprzyć",
+    "verbalNoun": "pieprzenie",
+    "activeAdjectival": "pieprzący",
+    "passiveAdjectival": "pieprzony",
+    "contemporaryAdverbial": "pieprząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pieprz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pieprzono"
+          },
+          "plural": {
+            "allPluralGenders": "pieprzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pieprzyłem",
+            "f": "pieprzyłam"
+          },
+          "plural": {
+            "virile": "pieprzyliśmy",
+            "nonvirile": "pieprzyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pieprzyłeś",
+            "f": "pieprzyłaś"
+          },
+          "plural": {
+            "virile": "pieprzyliście",
+            "nonvirile": "pieprzyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pieprzył",
+            "f": "pieprzyła",
+            "n": "pieprzyło"
+          },
+          "plural": {
+            "virile": "pieprzyli",
+            "nonvirile": "pieprzyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pieprzy się"
+          },
+          "plural": {
+            "allPluralGenders": "pieprzy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pieprzę"
+          },
+          "plural": {
+            "allPluralGenders": "pieprzymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pieprzysz"
+          },
+          "plural": {
+            "allPluralGenders": "pieprzycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pieprzy"
+          },
+          "plural": {
+            "allPluralGenders": "pieprzą"
+          }
+        }
+      }
+    }
+  }
+}

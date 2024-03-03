@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "szczęśliwie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "szczęśliwy",
+          "gen": "szczęśliwego",
+          "dat": "szczęśliwemu",
+          "acc": "szczęśliwego",
+          "ins": "szczęśliwym",
+          "loc": "szczęśliwym"
+        },
+        "m3": {
+          "nom": "szczęśliwy",
+          "gen": "szczęśliwego",
+          "dat": "szczęśliwemu",
+          "acc": "szczęśliwy",
+          "ins": "szczęśliwym",
+          "loc": "szczęśliwym"
+        },
+        "f": {
+          "nom": "szczęśliwa",
+          "gen": "szczęśliwej",
+          "dat": "szczęśliwej",
+          "acc": "szczęśliwą",
+          "ins": "szczęśliwą",
+          "loc": "szczęśliwej"
+        },
+        "n": {
+          "nom": "szczęśliwe",
+          "gen": "szczęśliwego",
+          "dat": "szczęśliwemu",
+          "acc": "szczęśliwe",
+          "ins": "szczęśliwym",
+          "loc": "szczęśliwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "szczęśliwi",
+          "gen": "szczęśliwych",
+          "dat": "szczęśliwym",
+          "acc": "szczęśliwych",
+          "ins": "szczęśliwymi",
+          "loc": "szczęśliwych"
+        },
+        "nonvirile": {
+          "nom": "szczęśliwe",
+          "gen": "szczęśliwych",
+          "dat": "szczęśliwym",
+          "acc": "szczęśliwe",
+          "ins": "szczęśliwymi",
+          "loc": "szczęśliwych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "szczęśliwszy",
+          "gen": "szczęśliwszego",
+          "dat": "szczęśliwszemu",
+          "acc": "szczęśliwszego",
+          "ins": "szczęśliwszym",
+          "loc": "szczęśliwszym"
+        },
+        "m3": {
+          "nom": "szczęśliwszy",
+          "gen": "szczęśliwszego",
+          "dat": "szczęśliwszemu",
+          "acc": "szczęśliwszy",
+          "ins": "szczęśliwszym",
+          "loc": "szczęśliwszym"
+        },
+        "f": {
+          "nom": "szczęśliwsza",
+          "gen": "szczęśliwszej",
+          "dat": "szczęśliwszej",
+          "acc": "szczęśliwszą",
+          "ins": "szczęśliwszą",
+          "loc": "szczęśliwszej"
+        },
+        "n": {
+          "nom": "szczęśliwsze",
+          "gen": "szczęśliwszego",
+          "dat": "szczęśliwszemu",
+          "acc": "szczęśliwsze",
+          "ins": "szczęśliwszym",
+          "loc": "szczęśliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "szczęśliwsi",
+          "gen": "szczęśliwszych",
+          "dat": "szczęśliwszym",
+          "acc": "szczęśliwszych",
+          "ins": "szczęśliwszymi",
+          "loc": "szczęśliwszych"
+        },
+        "nonvirile": {
+          "nom": "szczęśliwsze",
+          "gen": "szczęśliwszych",
+          "dat": "szczęśliwszym",
+          "acc": "szczęśliwsze",
+          "ins": "szczęśliwszymi",
+          "loc": "szczęśliwszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najszczęśliwszy",
+          "gen": "najszczęśliwszego",
+          "dat": "najszczęśliwszemu",
+          "acc": "najszczęśliwszego",
+          "ins": "najszczęśliwszym",
+          "loc": "najszczęśliwszym"
+        },
+        "m3": {
+          "nom": "najszczęśliwszy",
+          "gen": "najszczęśliwszego",
+          "dat": "najszczęśliwszemu",
+          "acc": "najszczęśliwszy",
+          "ins": "najszczęśliwszym",
+          "loc": "najszczęśliwszym"
+        },
+        "f": {
+          "nom": "najszczęśliwsza",
+          "gen": "najszczęśliwszej",
+          "dat": "najszczęśliwszej",
+          "acc": "najszczęśliwszą",
+          "ins": "najszczęśliwszą",
+          "loc": "najszczęśliwszej"
+        },
+        "n": {
+          "nom": "najszczęśliwsze",
+          "gen": "najszczęśliwszego",
+          "dat": "najszczęśliwszemu",
+          "acc": "najszczęśliwsze",
+          "ins": "najszczęśliwszym",
+          "loc": "najszczęśliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najszczęśliwsi",
+          "gen": "najszczęśliwszych",
+          "dat": "najszczęśliwszym",
+          "acc": "najszczęśliwszych",
+          "ins": "najszczęśliwszymi",
+          "loc": "najszczęśliwszych"
+        },
+        "nonvirile": {
+          "nom": "najszczęśliwsze",
+          "gen": "najszczęśliwszych",
+          "dat": "najszczęśliwszym",
+          "acc": "najszczęśliwsze",
+          "ins": "najszczęśliwszymi",
+          "loc": "najszczęśliwszych"
+        }
+      }
+    }
+  }
+}

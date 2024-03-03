@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "woda",
+      "gen": "wody",
+      "dat": "wodzie",
+      "acc": "wodę",
+      "ins": "wodą",
+      "loc": "wodzie",
+      "voc": "wodo"
+    },
+    "plural": {
+      "nom": "wody",
+      "gen": "wód",
+      "dat": "wodom",
+      "acc": "wody",
+      "ins": "wodami",
+      "loc": "wodach",
+      "voc": "wody"
+    }
+  }
+}

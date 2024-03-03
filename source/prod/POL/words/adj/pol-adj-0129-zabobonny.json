@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "zabobonnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zabobonny",
+          "gen": "zabobonnego",
+          "dat": "zabobonnemu",
+          "acc": "zabobonnego",
+          "ins": "zabobonnym",
+          "loc": "zabobonnym"
+        },
+        "m3": {
+          "nom": "zabobonny",
+          "gen": "zabobonnego",
+          "dat": "zabobonnemu",
+          "acc": "zabobonny",
+          "ins": "zabobonnym",
+          "loc": "zabobonnym"
+        },
+        "f": {
+          "nom": "zabobonna",
+          "gen": "zabobonnej",
+          "dat": "zabobonnej",
+          "acc": "zabobonną",
+          "ins": "zabobonną",
+          "loc": "zabobonnej"
+        },
+        "n": {
+          "nom": "zabobonne",
+          "gen": "zabobonnego",
+          "dat": "zabobonnemu",
+          "acc": "zabobonne",
+          "ins": "zabobonnym",
+          "loc": "zabobonnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zabobonni",
+          "gen": "zabobonnych",
+          "dat": "zabobonnym",
+          "acc": "zabobonnych",
+          "ins": "zabobonnymi",
+          "loc": "zabobonnych"
+        },
+        "nonvirile": {
+          "nom": "zabobonne",
+          "gen": "zabobonnych",
+          "dat": "zabobonnym",
+          "acc": "zabobonne",
+          "ins": "zabobonnymi",
+          "loc": "zabobonnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej zabobonny",
+          "gen": "bardziej zabobonnego",
+          "dat": "bardziej zabobonnemu",
+          "acc": "bardziej zabobonnego",
+          "ins": "bardziej zabobonnym",
+          "loc": "bardziej zabobonnym"
+        },
+        "m3": {
+          "nom": "bardziej zabobonny",
+          "gen": "bardziej zabobonnego",
+          "dat": "bardziej zabobonnemu",
+          "acc": "bardziej zabobonny",
+          "ins": "bardziej zabobonnym",
+          "loc": "bardziej zabobonnym"
+        },
+        "f": {
+          "nom": "bardziej zabobonna",
+          "gen": "bardziej zabobonnej",
+          "dat": "bardziej zabobonnej",
+          "acc": "bardziej zabobonną",
+          "ins": "bardziej zabobonną",
+          "loc": "bardziej zabobonnej"
+        },
+        "n": {
+          "nom": "bardziej zabobonne",
+          "gen": "bardziej zabobonnego",
+          "dat": "bardziej zabobonnemu",
+          "acc": "bardziej zabobonne",
+          "ins": "bardziej zabobonnym",
+          "loc": "bardziej zabobonnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej zabobonni",
+          "gen": "bardziej zabobonnych",
+          "dat": "bardziej zabobonnym",
+          "acc": "bardziej zabobonnych",
+          "ins": "bardziej zabobonnymi",
+          "loc": "bardziej zabobonnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej zabobonne",
+          "gen": "bardziej zabobonnych",
+          "dat": "bardziej zabobonnym",
+          "acc": "bardziej zabobonne",
+          "ins": "bardziej zabobonnymi",
+          "loc": "bardziej zabobonnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej zabobonny",
+          "gen": "najbardziej zabobonnego",
+          "dat": "najbardziej zabobonnemu",
+          "acc": "najbardziej zabobonnego",
+          "ins": "najbardziej zabobonnym",
+          "loc": "najbardziej zabobonnym"
+        },
+        "m3": {
+          "nom": "najbardziej zabobonny",
+          "gen": "najbardziej zabobonnego",
+          "dat": "najbardziej zabobonnemu",
+          "acc": "najbardziej zabobonny",
+          "ins": "najbardziej zabobonnym",
+          "loc": "najbardziej zabobonnym"
+        },
+        "f": {
+          "nom": "najbardziej zabobonna",
+          "gen": "najbardziej zabobonnej",
+          "dat": "najbardziej zabobonnej",
+          "acc": "najbardziej zabobonną",
+          "ins": "najbardziej zabobonną",
+          "loc": "najbardziej zabobonnej"
+        },
+        "n": {
+          "nom": "najbardziej zabobonne",
+          "gen": "najbardziej zabobonnego",
+          "dat": "najbardziej zabobonnemu",
+          "acc": "najbardziej zabobonne",
+          "ins": "najbardziej zabobonnym",
+          "loc": "najbardziej zabobonnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej zabobonni",
+          "gen": "najbardziej zabobonnych",
+          "dat": "najbardziej zabobonnym",
+          "acc": "najbardziej zabobonnych",
+          "ins": "najbardziej zabobonnymi",
+          "loc": "najbardziej zabobonnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej zabobonne",
+          "gen": "najbardziej zabobonnych",
+          "dat": "najbardziej zabobonnym",
+          "acc": "najbardziej zabobonne",
+          "ins": "najbardziej zabobonnymi",
+          "loc": "najbardziej zabobonnych"
+        }
+      }
+    }
+  }
+}

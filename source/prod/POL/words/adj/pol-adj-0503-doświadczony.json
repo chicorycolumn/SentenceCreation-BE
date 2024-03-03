@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "doświadczony",
+          "gen": "doświadczonego",
+          "dat": "doświadczonemu",
+          "acc": "doświadczonego",
+          "ins": "doświadczonym",
+          "loc": "doświadczonym"
+        },
+        "m3": {
+          "nom": "doświadczony",
+          "gen": "doświadczonego",
+          "dat": "doświadczonemu",
+          "acc": "doświadczony",
+          "ins": "doświadczonym",
+          "loc": "doświadczonym"
+        },
+        "f": {
+          "nom": "doświadczona",
+          "gen": "doświadczonej",
+          "dat": "doświadczonej",
+          "acc": "doświadczoną",
+          "ins": "doświadczoną",
+          "loc": "doświadczonej"
+        },
+        "n": {
+          "nom": "doświadczone",
+          "gen": "doświadczonego",
+          "dat": "doświadczonemu",
+          "acc": "doświadczone",
+          "ins": "doświadczonym",
+          "loc": "doświadczonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "doświadczeni",
+          "gen": "doświadczonych",
+          "dat": "doświadczonym",
+          "acc": "doświadczonych",
+          "ins": "doświadczonymi",
+          "loc": "doświadczonych"
+        },
+        "nonvirile": {
+          "nom": "doświadczone",
+          "gen": "doświadczonych",
+          "dat": "doświadczonym",
+          "acc": "doświadczone",
+          "ins": "doświadczonymi",
+          "loc": "doświadczonych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej doświadczony",
+          "gen": "bardziej doświadczonego",
+          "dat": "bardziej doświadczonemu",
+          "acc": "bardziej doświadczonego",
+          "ins": "bardziej doświadczonym",
+          "loc": "bardziej doświadczonym"
+        },
+        "m3": {
+          "nom": "bardziej doświadczony",
+          "gen": "bardziej doświadczonego",
+          "dat": "bardziej doświadczonemu",
+          "acc": "bardziej doświadczony",
+          "ins": "bardziej doświadczonym",
+          "loc": "bardziej doświadczonym"
+        },
+        "f": {
+          "nom": "bardziej doświadczona",
+          "gen": "bardziej doświadczonej",
+          "dat": "bardziej doświadczonej",
+          "acc": "bardziej doświadczoną",
+          "ins": "bardziej doświadczoną",
+          "loc": "bardziej doświadczonej"
+        },
+        "n": {
+          "nom": "bardziej doświadczone",
+          "gen": "bardziej doświadczonego",
+          "dat": "bardziej doświadczonemu",
+          "acc": "bardziej doświadczone",
+          "ins": "bardziej doświadczonym",
+          "loc": "bardziej doświadczonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej doświadczeni",
+          "gen": "bardziej doświadczonych",
+          "dat": "bardziej doświadczonym",
+          "acc": "bardziej doświadczonych",
+          "ins": "bardziej doświadczonymi",
+          "loc": "bardziej doświadczonych"
+        },
+        "nonvirile": {
+          "nom": "bardziej doświadczone",
+          "gen": "bardziej doświadczonych",
+          "dat": "bardziej doświadczonym",
+          "acc": "bardziej doświadczone",
+          "ins": "bardziej doświadczonymi",
+          "loc": "bardziej doświadczonych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej doświadczony",
+          "gen": "najbardziej doświadczonego",
+          "dat": "najbardziej doświadczonemu",
+          "acc": "najbardziej doświadczonego",
+          "ins": "najbardziej doświadczonym",
+          "loc": "najbardziej doświadczonym"
+        },
+        "m3": {
+          "nom": "najbardziej doświadczony",
+          "gen": "najbardziej doświadczonego",
+          "dat": "najbardziej doświadczonemu",
+          "acc": "najbardziej doświadczony",
+          "ins": "najbardziej doświadczonym",
+          "loc": "najbardziej doświadczonym"
+        },
+        "f": {
+          "nom": "najbardziej doświadczona",
+          "gen": "najbardziej doświadczonej",
+          "dat": "najbardziej doświadczonej",
+          "acc": "najbardziej doświadczoną",
+          "ins": "najbardziej doświadczoną",
+          "loc": "najbardziej doświadczonej"
+        },
+        "n": {
+          "nom": "najbardziej doświadczone",
+          "gen": "najbardziej doświadczonego",
+          "dat": "najbardziej doświadczonemu",
+          "acc": "najbardziej doświadczone",
+          "ins": "najbardziej doświadczonym",
+          "loc": "najbardziej doświadczonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej doświadczeni",
+          "gen": "najbardziej doświadczonych",
+          "dat": "najbardziej doświadczonym",
+          "acc": "najbardziej doświadczonych",
+          "ins": "najbardziej doświadczonymi",
+          "loc": "najbardziej doświadczonych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej doświadczone",
+          "gen": "najbardziej doświadczonych",
+          "dat": "najbardziej doświadczonym",
+          "acc": "najbardziej doświadczone",
+          "ins": "najbardziej doświadczonymi",
+          "loc": "najbardziej doświadczonych"
+        }
+      }
+    }
+  }
+}

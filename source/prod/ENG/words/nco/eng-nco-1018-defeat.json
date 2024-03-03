@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "defeat",
+      "gen": "defeat's"
+    },
+    "plural": {
+      "nom": "defeats",
+      "gen": "defeats'"
+    }
+  }
+}

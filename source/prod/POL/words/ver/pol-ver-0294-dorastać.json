@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dorastać",
+    "verbalNoun": "dorastanie",
+    "activeAdjectival": "dorastający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "dorastając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dorastaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dorastano"
+          },
+          "plural": {
+            "allPluralGenders": "dorastano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dorastałem",
+            "f": "dorastałam"
+          },
+          "plural": {
+            "virile": "dorastaliśmy",
+            "nonvirile": "dorastałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dorastałeś",
+            "f": "dorastałaś"
+          },
+          "plural": {
+            "virile": "dorastaliście",
+            "nonvirile": "dorastałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dorastał",
+            "f": "dorastała",
+            "n": "dorastało"
+          },
+          "plural": {
+            "virile": "dorastali",
+            "nonvirile": "dorastały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dorasta się"
+          },
+          "plural": {
+            "allPluralGenders": "dorasta się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dorastam"
+          },
+          "plural": {
+            "allPluralGenders": "dorastamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dorastasz"
+          },
+          "plural": {
+            "allPluralGenders": "dorastacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dorasta"
+          },
+          "plural": {
+            "allPluralGenders": "dorastają"
+          }
+        }
+      }
+    }
+  }
+}

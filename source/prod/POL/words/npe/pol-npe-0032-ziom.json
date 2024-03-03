@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ziom",
+      "gen": "zioma",
+      "dat": "ziomowi",
+      "acc": "zioma",
+      "ins": "ziomem",
+      "loc": "ziomie",
+      "voc": "ziomie"
+    },
+    "plural": {
+      "nom": "ziomy",
+      "gen": "ziomów",
+      "dat": "ziomom",
+      "acc": "ziomów",
+      "ins": "ziomami",
+      "loc": "ziomach",
+      "voc": "ziomy"
+    }
+  }
+}

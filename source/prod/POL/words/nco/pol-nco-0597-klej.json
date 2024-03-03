@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "klej",
+      "gen": "kleju",
+      "dat": "klejowi",
+      "acc": "klej",
+      "ins": "klejem",
+      "loc": "kleju",
+      "voc": "kleju"
+    },
+    "plural": {
+      "nom": "kleje",
+      "gen": "klejów",
+      "dat": "klejom",
+      "acc": "kleje",
+      "ins": "klejami",
+      "loc": "klejach",
+      "voc": "kleje"
+    }
+  }
+}

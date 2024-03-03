@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przekształcać",
+    "verbalNoun": "przekształcanie",
+    "activeAdjectival": "przekształcający",
+    "passiveAdjectival": "przekształcany",
+    "contemporaryAdverbial": "przekształcając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przekształcaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przekształcano"
+          },
+          "plural": {
+            "allPluralGenders": "przekształcano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przekształcałem",
+            "f": "przekształcałam"
+          },
+          "plural": {
+            "virile": "przekształcaliśmy",
+            "nonvirile": "przekształcałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przekształcałeś",
+            "f": "przekształcałaś"
+          },
+          "plural": {
+            "virile": "przekształcaliście",
+            "nonvirile": "przekształcałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przekształcał",
+            "f": "przekształcała",
+            "n": "przekształcało"
+          },
+          "plural": {
+            "virile": "przekształcali",
+            "nonvirile": "przekształcały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przekształca się"
+          },
+          "plural": {
+            "allPluralGenders": "przekształca się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przekształcam"
+          },
+          "plural": {
+            "allPluralGenders": "przekształcamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przekształcasz"
+          },
+          "plural": {
+            "allPluralGenders": "przekształcacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przekształca"
+          },
+          "plural": {
+            "allPluralGenders": "przekształcają"
+          }
+        }
+      }
+    }
+  }
+}

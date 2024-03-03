@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "żałować",
+    "verbalNoun": "żałowanie",
+    "activeAdjectival": "żałujący",
+    "passiveAdjectival": "żałowany",
+    "contemporaryAdverbial": "żałując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "żałuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "żałowano"
+          },
+          "plural": {
+            "allPluralGenders": "żałowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "żałowałem",
+            "f": "żałowałam"
+          },
+          "plural": {
+            "virile": "żałowaliśmy",
+            "nonvirile": "żałowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "żałowałeś",
+            "f": "żałowałaś"
+          },
+          "plural": {
+            "virile": "żałowaliście",
+            "nonvirile": "żałowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "żałował",
+            "f": "żałowała",
+            "n": "żałowało"
+          },
+          "plural": {
+            "virile": "żałowali",
+            "nonvirile": "żałowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "żałuje się"
+          },
+          "plural": {
+            "allPluralGenders": "żałuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "żałuję"
+          },
+          "plural": {
+            "allPluralGenders": "żałujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "żałujesz"
+          },
+          "plural": {
+            "allPluralGenders": "żałujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "żałuje"
+          },
+          "plural": {
+            "allPluralGenders": "żałują"
+          }
+        }
+      }
+    }
+  }
+}

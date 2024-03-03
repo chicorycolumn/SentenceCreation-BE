@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "bezbronnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bezbronny",
+          "gen": "bezbronnego",
+          "dat": "bezbronnemu",
+          "acc": "bezbronnego",
+          "ins": "bezbronnym",
+          "loc": "bezbronnym"
+        },
+        "m3": {
+          "nom": "bezbronny",
+          "gen": "bezbronnego",
+          "dat": "bezbronnemu",
+          "acc": "bezbronny",
+          "ins": "bezbronnym",
+          "loc": "bezbronnym"
+        },
+        "f": {
+          "nom": "bezbronna",
+          "gen": "bezbronnej",
+          "dat": "bezbronnej",
+          "acc": "bezbronną",
+          "ins": "bezbronną",
+          "loc": "bezbronnej"
+        },
+        "n": {
+          "nom": "bezbronne",
+          "gen": "bezbronnego",
+          "dat": "bezbronnemu",
+          "acc": "bezbronne",
+          "ins": "bezbronnym",
+          "loc": "bezbronnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bezbronni",
+          "gen": "bezbronnych",
+          "dat": "bezbronnym",
+          "acc": "bezbronnych",
+          "ins": "bezbronnymi",
+          "loc": "bezbronnych"
+        },
+        "nonvirile": {
+          "nom": "bezbronne",
+          "gen": "bezbronnych",
+          "dat": "bezbronnym",
+          "acc": "bezbronne",
+          "ins": "bezbronnymi",
+          "loc": "bezbronnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej bezbronny",
+          "gen": "bardziej bezbronnego",
+          "dat": "bardziej bezbronnemu",
+          "acc": "bardziej bezbronnego",
+          "ins": "bardziej bezbronnym",
+          "loc": "bardziej bezbronnym"
+        },
+        "m3": {
+          "nom": "bardziej bezbronny",
+          "gen": "bardziej bezbronnego",
+          "dat": "bardziej bezbronnemu",
+          "acc": "bardziej bezbronny",
+          "ins": "bardziej bezbronnym",
+          "loc": "bardziej bezbronnym"
+        },
+        "f": {
+          "nom": "bardziej bezbronna",
+          "gen": "bardziej bezbronnej",
+          "dat": "bardziej bezbronnej",
+          "acc": "bardziej bezbronną",
+          "ins": "bardziej bezbronną",
+          "loc": "bardziej bezbronnej"
+        },
+        "n": {
+          "nom": "bardziej bezbronne",
+          "gen": "bardziej bezbronnego",
+          "dat": "bardziej bezbronnemu",
+          "acc": "bardziej bezbronne",
+          "ins": "bardziej bezbronnym",
+          "loc": "bardziej bezbronnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej bezbronni",
+          "gen": "bardziej bezbronnych",
+          "dat": "bardziej bezbronnym",
+          "acc": "bardziej bezbronnych",
+          "ins": "bardziej bezbronnymi",
+          "loc": "bardziej bezbronnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej bezbronne",
+          "gen": "bardziej bezbronnych",
+          "dat": "bardziej bezbronnym",
+          "acc": "bardziej bezbronne",
+          "ins": "bardziej bezbronnymi",
+          "loc": "bardziej bezbronnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej bezbronny",
+          "gen": "najbardziej bezbronnego",
+          "dat": "najbardziej bezbronnemu",
+          "acc": "najbardziej bezbronnego",
+          "ins": "najbardziej bezbronnym",
+          "loc": "najbardziej bezbronnym"
+        },
+        "m3": {
+          "nom": "najbardziej bezbronny",
+          "gen": "najbardziej bezbronnego",
+          "dat": "najbardziej bezbronnemu",
+          "acc": "najbardziej bezbronny",
+          "ins": "najbardziej bezbronnym",
+          "loc": "najbardziej bezbronnym"
+        },
+        "f": {
+          "nom": "najbardziej bezbronna",
+          "gen": "najbardziej bezbronnej",
+          "dat": "najbardziej bezbronnej",
+          "acc": "najbardziej bezbronną",
+          "ins": "najbardziej bezbronną",
+          "loc": "najbardziej bezbronnej"
+        },
+        "n": {
+          "nom": "najbardziej bezbronne",
+          "gen": "najbardziej bezbronnego",
+          "dat": "najbardziej bezbronnemu",
+          "acc": "najbardziej bezbronne",
+          "ins": "najbardziej bezbronnym",
+          "loc": "najbardziej bezbronnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej bezbronni",
+          "gen": "najbardziej bezbronnych",
+          "dat": "najbardziej bezbronnym",
+          "acc": "najbardziej bezbronnych",
+          "ins": "najbardziej bezbronnymi",
+          "loc": "najbardziej bezbronnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej bezbronne",
+          "gen": "najbardziej bezbronnych",
+          "dat": "najbardziej bezbronnym",
+          "acc": "najbardziej bezbronne",
+          "ins": "najbardziej bezbronnymi",
+          "loc": "najbardziej bezbronnych"
+        }
+      }
+    }
+  }
+}

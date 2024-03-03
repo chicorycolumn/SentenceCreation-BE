@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "culture",
+      "gen": "culture's"
+    },
+    "plural": {
+      "nom": "cultures",
+      "gen": "cultures'"
+    }
+  }
+}

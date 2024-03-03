@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ćwiczenie",
+      "gen": "ćwiczenia",
+      "dat": "ćwiczeniu",
+      "acc": "ćwiczenie",
+      "ins": "ćwiczeniem",
+      "loc": "ćwiczeniu",
+      "voc": "ćwiczenie"
+    },
+    "plural": {
+      "nom": "ćwiczenia",
+      "gen": "ćwiczeń",
+      "dat": "ćwiczeniom",
+      "acc": "ćwiczenia",
+      "ins": "ćwiczeniami",
+      "loc": "ćwiczeniach",
+      "voc": "ćwiczenia"
+    }
+  }
+}

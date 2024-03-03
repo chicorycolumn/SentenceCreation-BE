@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "siarka",
+      "gen": "siarki",
+      "dat": "siarce",
+      "acc": "siarkę",
+      "ins": "siarką",
+      "loc": "siarce",
+      "voc": "siarko"
+    }
+  }
+}

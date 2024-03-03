@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "natura",
+      "gen": "natury",
+      "dat": "naturze",
+      "acc": "naturę",
+      "ins": "naturą",
+      "loc": "naturze",
+      "voc": "naturo"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "powiedzieć",
+    "verbalNoun": "powiedzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "powiedziany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "powiedziawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powie się"
+          },
+          "plural": {
+            "allPluralGenders": "powie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "powiem"
+          },
+          "plural": {
+            "allPluralGenders": "powiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "powiesz"
+          },
+          "plural": {
+            "allPluralGenders": "powiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "powie"
+          },
+          "plural": {
+            "allPluralGenders": "powiedzą"
+          }
+        }
+      },
+      "imperative": "powiedz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powiedziano"
+          },
+          "plural": {
+            "allPluralGenders": "powiedziano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "powiedziałem",
+            "f": "powiedziałam"
+          },
+          "plural": {
+            "virile": "powiedzieliśmy",
+            "nonvirile": "powiedziałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "powiedziałeś",
+            "f": "powiedziałaś"
+          },
+          "plural": {
+            "virile": "powiedzieliście",
+            "nonvirile": "powiedziałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "powiedział",
+            "f": "powiedziała",
+            "n": "powiedziało"
+          },
+          "plural": {
+            "virile": "powiedzieli",
+            "nonvirile": "powiedziały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "szorstko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "szorstki",
+          "gen": "szorstkiego",
+          "dat": "szorstkiemu",
+          "acc": "szorstkiego",
+          "ins": "szorstkim",
+          "loc": "szorstkim"
+        },
+        "m3": {
+          "nom": "szorstki",
+          "gen": "szorstkiego",
+          "dat": "szorstkiemu",
+          "acc": "szorstki",
+          "ins": "szorstkim",
+          "loc": "szorstkim"
+        },
+        "f": {
+          "nom": "szorstka",
+          "gen": "szorstkiej",
+          "dat": "szorstkiej",
+          "acc": "szorstką",
+          "ins": "szorstką",
+          "loc": "szorstkiej"
+        },
+        "n": {
+          "nom": "szorstkie",
+          "gen": "szorstkiego",
+          "dat": "szorstkiemu",
+          "acc": "szorstkie",
+          "ins": "szorstkim",
+          "loc": "szorstkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "szorstcy",
+          "gen": "szorstkich",
+          "dat": "szorstkim",
+          "acc": "szorstkich",
+          "ins": "szorstkimi",
+          "loc": "szorstkich"
+        },
+        "nonvirile": {
+          "nom": "szorstkie",
+          "gen": "szorstkich",
+          "dat": "szorstkim",
+          "acc": "szorstkie",
+          "ins": "szorstkimi",
+          "loc": "szorstkich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej szorstki",
+          "gen": "bardziej szorstkiego",
+          "dat": "bardziej szorstkiemu",
+          "acc": "bardziej szorstkiego",
+          "ins": "bardziej szorstkim",
+          "loc": "bardziej szorstkim"
+        },
+        "m3": {
+          "nom": "bardziej szorstki",
+          "gen": "bardziej szorstkiego",
+          "dat": "bardziej szorstkiemu",
+          "acc": "bardziej szorstki",
+          "ins": "bardziej szorstkim",
+          "loc": "bardziej szorstkim"
+        },
+        "f": {
+          "nom": "bardziej szorstka",
+          "gen": "bardziej szorstkiej",
+          "dat": "bardziej szorstkiej",
+          "acc": "bardziej szorstką",
+          "ins": "bardziej szorstką",
+          "loc": "bardziej szorstkiej"
+        },
+        "n": {
+          "nom": "bardziej szorstkie",
+          "gen": "bardziej szorstkiego",
+          "dat": "bardziej szorstkiemu",
+          "acc": "bardziej szorstkie",
+          "ins": "bardziej szorstkim",
+          "loc": "bardziej szorstkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej szorstcy",
+          "gen": "bardziej szorstkich",
+          "dat": "bardziej szorstkim",
+          "acc": "bardziej szorstkich",
+          "ins": "bardziej szorstkimi",
+          "loc": "bardziej szorstkich"
+        },
+        "nonvirile": {
+          "nom": "bardziej szorstkie",
+          "gen": "bardziej szorstkich",
+          "dat": "bardziej szorstkim",
+          "acc": "bardziej szorstkie",
+          "ins": "bardziej szorstkimi",
+          "loc": "bardziej szorstkich"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej szorstki",
+          "gen": "najbardziej szorstkiego",
+          "dat": "najbardziej szorstkiemu",
+          "acc": "najbardziej szorstkiego",
+          "ins": "najbardziej szorstkim",
+          "loc": "najbardziej szorstkim"
+        },
+        "m3": {
+          "nom": "najbardziej szorstki",
+          "gen": "najbardziej szorstkiego",
+          "dat": "najbardziej szorstkiemu",
+          "acc": "najbardziej szorstki",
+          "ins": "najbardziej szorstkim",
+          "loc": "najbardziej szorstkim"
+        },
+        "f": {
+          "nom": "najbardziej szorstka",
+          "gen": "najbardziej szorstkiej",
+          "dat": "najbardziej szorstkiej",
+          "acc": "najbardziej szorstką",
+          "ins": "najbardziej szorstką",
+          "loc": "najbardziej szorstkiej"
+        },
+        "n": {
+          "nom": "najbardziej szorstkie",
+          "gen": "najbardziej szorstkiego",
+          "dat": "najbardziej szorstkiemu",
+          "acc": "najbardziej szorstkie",
+          "ins": "najbardziej szorstkim",
+          "loc": "najbardziej szorstkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej szorstcy",
+          "gen": "najbardziej szorstkich",
+          "dat": "najbardziej szorstkim",
+          "acc": "najbardziej szorstkich",
+          "ins": "najbardziej szorstkimi",
+          "loc": "najbardziej szorstkich"
+        },
+        "nonvirile": {
+          "nom": "najbardziej szorstkie",
+          "gen": "najbardziej szorstkich",
+          "dat": "najbardziej szorstkim",
+          "acc": "najbardziej szorstkie",
+          "ins": "najbardziej szorstkimi",
+          "loc": "najbardziej szorstkich"
+        }
+      }
+    }
+  }
+}

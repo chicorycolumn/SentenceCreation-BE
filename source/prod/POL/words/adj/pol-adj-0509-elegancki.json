@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "elegancko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "elegancki",
+          "gen": "eleganckiego",
+          "dat": "eleganckiemu",
+          "acc": "eleganckiego",
+          "ins": "eleganckim",
+          "loc": "eleganckim"
+        },
+        "m3": {
+          "nom": "elegancki",
+          "gen": "eleganckiego",
+          "dat": "eleganckiemu",
+          "acc": "elegancki",
+          "ins": "eleganckim",
+          "loc": "eleganckim"
+        },
+        "f": {
+          "nom": "elegancka",
+          "gen": "eleganckiej",
+          "dat": "eleganckiej",
+          "acc": "elegancką",
+          "ins": "elegancką",
+          "loc": "eleganckiej"
+        },
+        "n": {
+          "nom": "eleganckie",
+          "gen": "eleganckiego",
+          "dat": "eleganckiemu",
+          "acc": "eleganckie",
+          "ins": "eleganckim",
+          "loc": "eleganckim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "eleganccy",
+          "gen": "eleganckich",
+          "dat": "eleganckim",
+          "acc": "eleganckich",
+          "ins": "eleganckimi",
+          "loc": "eleganckich"
+        },
+        "nonvirile": {
+          "nom": "eleganckie",
+          "gen": "eleganckich",
+          "dat": "eleganckim",
+          "acc": "eleganckie",
+          "ins": "eleganckimi",
+          "loc": "eleganckich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej elegancki",
+          "gen": "bardziej eleganckiego",
+          "dat": "bardziej eleganckiemu",
+          "acc": "bardziej eleganckiego",
+          "ins": "bardziej eleganckim",
+          "loc": "bardziej eleganckim"
+        },
+        "m3": {
+          "nom": "bardziej elegancki",
+          "gen": "bardziej eleganckiego",
+          "dat": "bardziej eleganckiemu",
+          "acc": "bardziej elegancki",
+          "ins": "bardziej eleganckim",
+          "loc": "bardziej eleganckim"
+        },
+        "f": {
+          "nom": "bardziej elegancka",
+          "gen": "bardziej eleganckiej",
+          "dat": "bardziej eleganckiej",
+          "acc": "bardziej elegancką",
+          "ins": "bardziej elegancką",
+          "loc": "bardziej eleganckiej"
+        },
+        "n": {
+          "nom": "bardziej eleganckie",
+          "gen": "bardziej eleganckiego",
+          "dat": "bardziej eleganckiemu",
+          "acc": "bardziej eleganckie",
+          "ins": "bardziej eleganckim",
+          "loc": "bardziej eleganckim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej eleganccy",
+          "gen": "bardziej eleganckich",
+          "dat": "bardziej eleganckim",
+          "acc": "bardziej eleganckich",
+          "ins": "bardziej eleganckimi",
+          "loc": "bardziej eleganckich"
+        },
+        "nonvirile": {
+          "nom": "bardziej eleganckie",
+          "gen": "bardziej eleganckich",
+          "dat": "bardziej eleganckim",
+          "acc": "bardziej eleganckie",
+          "ins": "bardziej eleganckimi",
+          "loc": "bardziej eleganckich"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej elegancki",
+          "gen": "najbardziej eleganckiego",
+          "dat": "najbardziej eleganckiemu",
+          "acc": "najbardziej eleganckiego",
+          "ins": "najbardziej eleganckim",
+          "loc": "najbardziej eleganckim"
+        },
+        "m3": {
+          "nom": "najbardziej elegancki",
+          "gen": "najbardziej eleganckiego",
+          "dat": "najbardziej eleganckiemu",
+          "acc": "najbardziej elegancki",
+          "ins": "najbardziej eleganckim",
+          "loc": "najbardziej eleganckim"
+        },
+        "f": {
+          "nom": "najbardziej elegancka",
+          "gen": "najbardziej eleganckiej",
+          "dat": "najbardziej eleganckiej",
+          "acc": "najbardziej elegancką",
+          "ins": "najbardziej elegancką",
+          "loc": "najbardziej eleganckiej"
+        },
+        "n": {
+          "nom": "najbardziej eleganckie",
+          "gen": "najbardziej eleganckiego",
+          "dat": "najbardziej eleganckiemu",
+          "acc": "najbardziej eleganckie",
+          "ins": "najbardziej eleganckim",
+          "loc": "najbardziej eleganckim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej eleganccy",
+          "gen": "najbardziej eleganckich",
+          "dat": "najbardziej eleganckim",
+          "acc": "najbardziej eleganckich",
+          "ins": "najbardziej eleganckimi",
+          "loc": "najbardziej eleganckich"
+        },
+        "nonvirile": {
+          "nom": "najbardziej eleganckie",
+          "gen": "najbardziej eleganckich",
+          "dat": "najbardziej eleganckim",
+          "acc": "najbardziej eleganckie",
+          "ins": "najbardziej eleganckimi",
+          "loc": "najbardziej eleganckich"
+        }
+      }
+    }
+  }
+}

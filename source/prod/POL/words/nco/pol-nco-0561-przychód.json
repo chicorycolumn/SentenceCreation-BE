@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przychód",
+      "gen": "przychodu",
+      "dat": "przychodowi",
+      "acc": "przychód",
+      "ins": "przychodem",
+      "loc": "przychodzie",
+      "voc": "przychodzie"
+    },
+    "plural": {
+      "nom": "przychody",
+      "gen": "przychodów",
+      "dat": "przychodom",
+      "acc": "przychody",
+      "ins": "przychodami",
+      "loc": "przychodach",
+      "voc": "przychody"
+    }
+  }
+}

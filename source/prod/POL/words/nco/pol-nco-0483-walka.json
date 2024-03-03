@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "walka",
+      "gen": "walki",
+      "dat": "walce",
+      "acc": "walkę",
+      "ins": "walką",
+      "loc": "walce",
+      "voc": "walko"
+    },
+    "plural": {
+      "nom": "walki",
+      "gen": "walk",
+      "dat": "walkom",
+      "acc": "walki",
+      "ins": "walkami",
+      "loc": "walkach",
+      "voc": "walki"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "papier",
+      "gen": "papieru",
+      "dat": "papierowi",
+      "acc": "papier",
+      "ins": "papierem",
+      "loc": "papierze",
+      "voc": "papierze"
+    }
+  }
+}

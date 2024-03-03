@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "popiół",
+      "gen": "popiołu",
+      "dat": "popiołowi",
+      "acc": "popiół",
+      "ins": "popiołem",
+      "loc": "popiele",
+      "voc": "popiele"
+    },
+    "plural": {
+      "nom": "popioły",
+      "gen": "popiołów",
+      "dat": "popiołom",
+      "acc": "popioły",
+      "ins": "popiołami",
+      "loc": "popiołach",
+      "voc": "popioły"
+    }
+  }
+}

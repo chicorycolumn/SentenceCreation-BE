@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "laboratorium",
+      "gen": "laboratorium",
+      "dat": "laboratorium",
+      "acc": "laboratorium",
+      "ins": "laboratorium",
+      "loc": "laboratorium",
+      "voc": "laboratorium"
+    },
+    "plural": {
+      "nom": "laboratoria",
+      "gen": "laboratoriów",
+      "dat": "laboratoriom",
+      "acc": "laboratoria",
+      "ins": "laboratoriami",
+      "loc": "laboratoriach",
+      "voc": "laboratoria"
+    }
+  }
+}

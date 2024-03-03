@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "niedźwiedź",
+      "gen": "niedźwiedzia",
+      "dat": "niedźwiedziowi",
+      "acc": "niedźwiedzia",
+      "ins": "niedźwiedziem",
+      "loc": "niedźwiedziu",
+      "voc": "niedźwiedziu"
+    },
+    "plural": {
+      "nom": "niedźwiedzie",
+      "gen": "niedźwiedzi",
+      "dat": "niedźwiedziom",
+      "acc": "niedźwiedzie",
+      "ins": "niedźwiedziami",
+      "loc": "niedźwiedziach",
+      "voc": "niedźwiedzie"
+    }
+  }
+}

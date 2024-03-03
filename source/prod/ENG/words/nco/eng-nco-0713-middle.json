@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "middle",
+      "gen": "middle's"
+    },
+    "plural": {
+      "nom": "middles",
+      "gen": "middles'"
+    }
+  }
+}

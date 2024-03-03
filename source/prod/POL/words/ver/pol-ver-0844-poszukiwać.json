@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "poszukiwać",
+    "verbalNoun": "poszukiwanie",
+    "activeAdjectival": "poszukujący",
+    "passiveAdjectival": "poszukiwany",
+    "contemporaryAdverbial": "poszukując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "poszukuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poszukiwano"
+          },
+          "plural": {
+            "allPluralGenders": "poszukiwano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "poszukiwałem",
+            "f": "poszukiwałam"
+          },
+          "plural": {
+            "virile": "poszukiwaliśmy",
+            "nonvirile": "poszukiwałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "poszukiwałeś",
+            "f": "poszukiwałaś"
+          },
+          "plural": {
+            "virile": "poszukiwaliście",
+            "nonvirile": "poszukiwałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "poszukiwał",
+            "f": "poszukiwała",
+            "n": "poszukiwało"
+          },
+          "plural": {
+            "virile": "poszukiwali",
+            "nonvirile": "poszukiwały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poszukuje się"
+          },
+          "plural": {
+            "allPluralGenders": "poszukuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "poszukuję"
+          },
+          "plural": {
+            "allPluralGenders": "poszukujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "poszukujesz"
+          },
+          "plural": {
+            "allPluralGenders": "poszukujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "poszukuje"
+          },
+          "plural": {
+            "allPluralGenders": "poszukują"
+          }
+        }
+      }
+    }
+  }
+}

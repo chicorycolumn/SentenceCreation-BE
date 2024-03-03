@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "garnitur",
+      "gen": "garnituru",
+      "dat": "garniturowi",
+      "acc": "garnitur",
+      "ins": "garniturem",
+      "loc": "garniturze",
+      "voc": "garniturze"
+    },
+    "plural": {
+      "nom": "garnitury",
+      "gen": "garniturów",
+      "dat": "garniturom",
+      "acc": "garnitury",
+      "ins": "garniturami",
+      "loc": "garniturach",
+      "voc": "garnitury"
+    }
+  }
+}

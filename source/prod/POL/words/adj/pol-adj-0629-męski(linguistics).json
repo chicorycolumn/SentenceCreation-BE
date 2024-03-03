@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "męsko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "męski",
+          "gen": "męskiego",
+          "dat": "męskiemu",
+          "acc": "męskiego",
+          "ins": "męskim",
+          "loc": "męskim"
+        },
+        "m3": {
+          "nom": "męski",
+          "gen": "męskiego",
+          "dat": "męskiemu",
+          "acc": "męski",
+          "ins": "męskim",
+          "loc": "męskim"
+        },
+        "f": {
+          "nom": "męska",
+          "gen": "męskiej",
+          "dat": "męskiej",
+          "acc": "męską",
+          "ins": "męską",
+          "loc": "męskiej"
+        },
+        "n": {
+          "nom": "męskie",
+          "gen": "męskiego",
+          "dat": "męskiemu",
+          "acc": "męskie",
+          "ins": "męskim",
+          "loc": "męskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "męscy",
+          "gen": "męskich",
+          "dat": "męskim",
+          "acc": "męskich",
+          "ins": "męskimi",
+          "loc": "męskich"
+        },
+        "nonvirile": {
+          "nom": "męskie",
+          "gen": "męskich",
+          "dat": "męskim",
+          "acc": "męskie",
+          "ins": "męskimi",
+          "loc": "męskich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "męższy",
+              "bardziej męski"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "męższego",
+              "bardziej męskiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "męższemu",
+              "bardziej męskiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "męższego",
+              "bardziej męskiego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "męższym",
+              "bardziej męskim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "męższym",
+              "bardziej męskim"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "męższy",
+              "bardziej męski"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "męższego",
+              "bardziej męskiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "męższemu",
+              "bardziej męskiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "męższy",
+              "bardziej męski"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "męższym",
+              "bardziej męskim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "męższym",
+              "bardziej męskim"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "męższa",
+              "bardziej męska"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "męższej",
+              "bardziej męskiej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "męższej",
+              "bardziej męskiej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "męższą",
+              "bardziej męską"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "męższą",
+              "bardziej męską"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "męższej",
+              "bardziej męskiej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "męższe",
+              "bardziej męskie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "męższego",
+              "bardziej męskiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "męższemu",
+              "bardziej męskiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "męższe",
+              "bardziej męskie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "męższym",
+              "bardziej męskim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "męższym",
+              "bardziej męskim"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "mężsi",
+              "bardziej męscy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "męższych",
+              "bardziej męskich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "męższym",
+              "bardziej męskim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "męższych",
+              "bardziej męskich"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "męższymi",
+              "bardziej męskimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "męższych",
+              "bardziej męskich"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "męższe",
+              "bardziej męskie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "męższych",
+              "bardziej męskich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "męższym",
+              "bardziej męskim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "męższe",
+              "bardziej męskie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "męższymi",
+              "bardziej męskimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "męższych",
+              "bardziej męskich"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższy",
+              "najbardziej męski"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższego",
+              "najbardziej męskiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższemu",
+              "najbardziej męskiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższego",
+              "najbardziej męskiego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższym",
+              "najbardziej męskim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższym",
+              "najbardziej męskim"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższy",
+              "najbardziej męski"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższego",
+              "najbardziej męskiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższemu",
+              "najbardziej męskiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższy",
+              "najbardziej męski"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższym",
+              "najbardziej męskim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższym",
+              "najbardziej męskim"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższa",
+              "najbardziej męska"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższej",
+              "najbardziej męskiej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższej",
+              "najbardziej męskiej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższą",
+              "najbardziej męską"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższą",
+              "najbardziej męską"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższej",
+              "najbardziej męskiej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższe",
+              "najbardziej męskie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższego",
+              "najbardziej męskiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższemu",
+              "najbardziej męskiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższe",
+              "najbardziej męskie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższym",
+              "najbardziej męskim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższym",
+              "najbardziej męskim"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najmężsi",
+              "najbardziej męscy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższych",
+              "najbardziej męskich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższym",
+              "najbardziej męskim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższych",
+              "najbardziej męskich"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższymi",
+              "najbardziej męskimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższych",
+              "najbardziej męskich"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższe",
+              "najbardziej męskie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższych",
+              "najbardziej męskich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższym",
+              "najbardziej męskim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższe",
+              "najbardziej męskie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższymi",
+              "najbardziej męskimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najmęższych",
+              "najbardziej męskich"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odliczać",
+    "verbalNoun": "odliczanie",
+    "activeAdjectival": "odliczający",
+    "passiveAdjectival": "odliczany",
+    "contemporaryAdverbial": "odliczając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odliczaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odliczano"
+          },
+          "plural": {
+            "allPluralGenders": "odliczano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odliczałem",
+            "f": "odliczałam"
+          },
+          "plural": {
+            "virile": "odliczaliśmy",
+            "nonvirile": "odliczałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odliczałeś",
+            "f": "odliczałaś"
+          },
+          "plural": {
+            "virile": "odliczaliście",
+            "nonvirile": "odliczałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odliczał",
+            "f": "odliczała",
+            "n": "odliczało"
+          },
+          "plural": {
+            "virile": "odliczali",
+            "nonvirile": "odliczały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odlicza się"
+          },
+          "plural": {
+            "allPluralGenders": "odlicza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odliczam"
+          },
+          "plural": {
+            "allPluralGenders": "odliczamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odliczasz"
+          },
+          "plural": {
+            "allPluralGenders": "odliczacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odlicza"
+          },
+          "plural": {
+            "allPluralGenders": "odliczają"
+          }
+        }
+      }
+    }
+  }
+}

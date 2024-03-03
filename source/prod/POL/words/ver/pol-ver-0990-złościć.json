@@ -1,0 +1,106 @@
+{
+  "inflections": {
+    "infinitive": "złościć",
+    "verbalNoun": "złoszczenie",
+    "activeAdjectival": "złoszczący",
+    "passiveAdjectival": "złoszczony",
+    "contemporaryAdverbial": "złoszcząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "złość",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "złoszczono"
+          },
+          "plural": {
+            "allPluralGenders": "złoszczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": [
+              "złościłem"
+            ],
+            "f": [
+              "złościłam"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "złościliśmy"
+            ],
+            "nonvirile": [
+              "złościłyśmy"
+            ]
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": [
+              "złościłeś"
+            ],
+            "f": [
+              "złościłaś"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "złościliście"
+            ],
+            "nonvirile": [
+              "złościłyście"
+            ]
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "złościł",
+            "f": "złościła",
+            "n": "złościło"
+          },
+          "plural": {
+            "virile": "złościli",
+            "nonvirile": "złościły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "złości się"
+          },
+          "plural": {
+            "allPluralGenders": "złości się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "złoszczę"
+          },
+          "plural": {
+            "allPluralGenders": "złościmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "złościsz"
+          },
+          "plural": {
+            "allPluralGenders": "złościcie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "złości"
+          },
+          "plural": {
+            "allPluralGenders": "złoszczą"
+          }
+        }
+      }
+    }
+  }
+}

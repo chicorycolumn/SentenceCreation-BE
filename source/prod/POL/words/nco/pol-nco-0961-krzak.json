@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "krzak",
+      "gen": "krzaka",
+      "dat": "krzakowi",
+      "acc": "krzak",
+      "ins": "krzakiem",
+      "loc": "krzaku",
+      "voc": "krzaku"
+    },
+    "plural": {
+      "nom": "krzaki",
+      "gen": "krzaków",
+      "dat": "krzakom",
+      "acc": "krzaki",
+      "ins": "krzakami",
+      "loc": "krzakach",
+      "voc": "krzaki"
+    }
+  }
+}

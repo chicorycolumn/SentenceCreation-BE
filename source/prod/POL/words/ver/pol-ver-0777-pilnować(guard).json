@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pilnować",
+    "verbalNoun": "pilnowanie",
+    "activeAdjectival": "pilnujący",
+    "passiveAdjectival": "pilnowany",
+    "contemporaryAdverbial": "pilnując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pilnuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pilnowano"
+          },
+          "plural": {
+            "allPluralGenders": "pilnowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pilnowałem",
+            "f": "pilnowałam"
+          },
+          "plural": {
+            "virile": "pilnowaliśmy",
+            "nonvirile": "pilnowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pilnowałeś",
+            "f": "pilnowałaś"
+          },
+          "plural": {
+            "virile": "pilnowaliście",
+            "nonvirile": "pilnowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pilnował",
+            "f": "pilnowała",
+            "n": "pilnowało"
+          },
+          "plural": {
+            "virile": "pilnowali",
+            "nonvirile": "pilnowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pilnuje się"
+          },
+          "plural": {
+            "allPluralGenders": "pilnuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pilnuję"
+          },
+          "plural": {
+            "allPluralGenders": "pilnujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pilnujesz"
+          },
+          "plural": {
+            "allPluralGenders": "pilnujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pilnuje"
+          },
+          "plural": {
+            "allPluralGenders": "pilnują"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "bath robe",
+      "gen": "bath robe's"
+    },
+    "plural": {
+      "nom": "bath robes",
+      "gen": "bath robes'"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "zrozumiale",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zrozumiały",
+          "gen": "zrozumiałego",
+          "dat": "zrozumiałemu",
+          "acc": "zrozumiałego",
+          "ins": "zrozumiałym",
+          "loc": "zrozumiałym"
+        },
+        "m3": {
+          "nom": "zrozumiały",
+          "gen": "zrozumiałego",
+          "dat": "zrozumiałemu",
+          "acc": "zrozumiały",
+          "ins": "zrozumiałym",
+          "loc": "zrozumiałym"
+        },
+        "f": {
+          "nom": "zrozumiała",
+          "gen": "zrozumiałej",
+          "dat": "zrozumiałej",
+          "acc": "zrozumiałą",
+          "ins": "zrozumiałą",
+          "loc": "zrozumiałej"
+        },
+        "n": {
+          "nom": "zrozumiałe",
+          "gen": "zrozumiałego",
+          "dat": "zrozumiałemu",
+          "acc": "zrozumiałe",
+          "ins": "zrozumiałym",
+          "loc": "zrozumiałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zrozumiali",
+          "gen": "zrozumiałych",
+          "dat": "zrozumiałym",
+          "acc": "zrozumiałych",
+          "ins": "zrozumiałymi",
+          "loc": "zrozumiałych"
+        },
+        "nonvirile": {
+          "nom": "zrozumiałe",
+          "gen": "zrozumiałych",
+          "dat": "zrozumiałym",
+          "acc": "zrozumiałe",
+          "ins": "zrozumiałymi",
+          "loc": "zrozumiałych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej zrozumiały",
+          "gen": "bardziej zrozumiałego",
+          "dat": "bardziej zrozumiałemu",
+          "acc": "bardziej zrozumiałego",
+          "ins": "bardziej zrozumiałym",
+          "loc": "bardziej zrozumiałym"
+        },
+        "m3": {
+          "nom": "bardziej zrozumiały",
+          "gen": "bardziej zrozumiałego",
+          "dat": "bardziej zrozumiałemu",
+          "acc": "bardziej zrozumiały",
+          "ins": "bardziej zrozumiałym",
+          "loc": "bardziej zrozumiałym"
+        },
+        "f": {
+          "nom": "bardziej zrozumiała",
+          "gen": "bardziej zrozumiałej",
+          "dat": "bardziej zrozumiałej",
+          "acc": "bardziej zrozumiałą",
+          "ins": "bardziej zrozumiałą",
+          "loc": "bardziej zrozumiałej"
+        },
+        "n": {
+          "nom": "bardziej zrozumiałe",
+          "gen": "bardziej zrozumiałego",
+          "dat": "bardziej zrozumiałemu",
+          "acc": "bardziej zrozumiałe",
+          "ins": "bardziej zrozumiałym",
+          "loc": "bardziej zrozumiałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej zrozumiali",
+          "gen": "bardziej zrozumiałych",
+          "dat": "bardziej zrozumiałym",
+          "acc": "bardziej zrozumiałych",
+          "ins": "bardziej zrozumiałymi",
+          "loc": "bardziej zrozumiałych"
+        },
+        "nonvirile": {
+          "nom": "bardziej zrozumiałe",
+          "gen": "bardziej zrozumiałych",
+          "dat": "bardziej zrozumiałym",
+          "acc": "bardziej zrozumiałe",
+          "ins": "bardziej zrozumiałymi",
+          "loc": "bardziej zrozumiałych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej zrozumiały",
+          "gen": "najbardziej zrozumiałego",
+          "dat": "najbardziej zrozumiałemu",
+          "acc": "najbardziej zrozumiałego",
+          "ins": "najbardziej zrozumiałym",
+          "loc": "najbardziej zrozumiałym"
+        },
+        "m3": {
+          "nom": "najbardziej zrozumiały",
+          "gen": "najbardziej zrozumiałego",
+          "dat": "najbardziej zrozumiałemu",
+          "acc": "najbardziej zrozumiały",
+          "ins": "najbardziej zrozumiałym",
+          "loc": "najbardziej zrozumiałym"
+        },
+        "f": {
+          "nom": "najbardziej zrozumiała",
+          "gen": "najbardziej zrozumiałej",
+          "dat": "najbardziej zrozumiałej",
+          "acc": "najbardziej zrozumiałą",
+          "ins": "najbardziej zrozumiałą",
+          "loc": "najbardziej zrozumiałej"
+        },
+        "n": {
+          "nom": "najbardziej zrozumiałe",
+          "gen": "najbardziej zrozumiałego",
+          "dat": "najbardziej zrozumiałemu",
+          "acc": "najbardziej zrozumiałe",
+          "ins": "najbardziej zrozumiałym",
+          "loc": "najbardziej zrozumiałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej zrozumiali",
+          "gen": "najbardziej zrozumiałych",
+          "dat": "najbardziej zrozumiałym",
+          "acc": "najbardziej zrozumiałych",
+          "ins": "najbardziej zrozumiałymi",
+          "loc": "najbardziej zrozumiałych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej zrozumiałe",
+          "gen": "najbardziej zrozumiałych",
+          "dat": "najbardziej zrozumiałym",
+          "acc": "najbardziej zrozumiałe",
+          "ins": "najbardziej zrozumiałymi",
+          "loc": "najbardziej zrozumiałych"
+        }
+      }
+    }
+  }
+}

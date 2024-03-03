@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "przyjaźnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przyjazny",
+          "gen": "przyjaznego",
+          "dat": "przyjaznemu",
+          "acc": "przyjaznego",
+          "ins": "przyjaznym",
+          "loc": "przyjaznym"
+        },
+        "m3": {
+          "nom": "przyjazny",
+          "gen": "przyjaznego",
+          "dat": "przyjaznemu",
+          "acc": "przyjazny",
+          "ins": "przyjaznym",
+          "loc": "przyjaznym"
+        },
+        "f": {
+          "nom": "przyjazna",
+          "gen": "przyjaznej",
+          "dat": "przyjaznej",
+          "acc": "przyjazną",
+          "ins": "przyjazną",
+          "loc": "przyjaznej"
+        },
+        "n": {
+          "nom": "przyjazne",
+          "gen": "przyjaznego",
+          "dat": "przyjaznemu",
+          "acc": "przyjazne",
+          "ins": "przyjaznym",
+          "loc": "przyjaznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przyjaźni",
+          "gen": "przyjaznych",
+          "dat": "przyjaznym",
+          "acc": "przyjaznych",
+          "ins": "przyjaznymi",
+          "loc": "przyjaznych"
+        },
+        "nonvirile": {
+          "nom": "przyjazne",
+          "gen": "przyjaznych",
+          "dat": "przyjaznym",
+          "acc": "przyjazne",
+          "ins": "przyjaznymi",
+          "loc": "przyjaznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszy",
+              "bardziej przyjazny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszego",
+              "bardziej przyjaznego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszemu",
+              "bardziej przyjaznemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszego",
+              "bardziej przyjaznego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszym",
+              "bardziej przyjaznym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszym",
+              "bardziej przyjaznym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszy",
+              "bardziej przyjazny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszego",
+              "bardziej przyjaznego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszemu",
+              "bardziej przyjaznemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszy",
+              "bardziej przyjazny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszym",
+              "bardziej przyjaznym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszym",
+              "bardziej przyjaznym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejsza",
+              "bardziej przyjazna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszej",
+              "bardziej przyjaznej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszej",
+              "bardziej przyjaznej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszą",
+              "bardziej przyjazną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszą",
+              "bardziej przyjazną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszej",
+              "bardziej przyjaznej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejsze",
+              "bardziej przyjazne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszego",
+              "bardziej przyjaznego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszemu",
+              "bardziej przyjaznemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejsze",
+              "bardziej przyjazne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszym",
+              "bardziej przyjaznym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszym",
+              "bardziej przyjaznym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejsi",
+              "bardziej przyjaźni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszych",
+              "bardziej przyjaznych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszym",
+              "bardziej przyjaznym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszych",
+              "bardziej przyjaznych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszymi",
+              "bardziej przyjaznymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszych",
+              "bardziej przyjaznych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejsze",
+              "bardziej przyjazne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszych",
+              "bardziej przyjaznych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszym",
+              "bardziej przyjaznym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejsze",
+              "bardziej przyjazne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszymi",
+              "bardziej przyjaznymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "przyjaźniejszych",
+              "bardziej przyjaznych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszy",
+              "najbardziej przyjazny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszego",
+              "najbardziej przyjaznego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszemu",
+              "najbardziej przyjaznemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszego",
+              "najbardziej przyjaznego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszym",
+              "najbardziej przyjaznym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszym",
+              "najbardziej przyjaznym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszy",
+              "najbardziej przyjazny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszego",
+              "najbardziej przyjaznego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszemu",
+              "najbardziej przyjaznemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszy",
+              "najbardziej przyjazny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszym",
+              "najbardziej przyjaznym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszym",
+              "najbardziej przyjaznym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejsza",
+              "najbardziej przyjazna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszej",
+              "najbardziej przyjaznej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszej",
+              "najbardziej przyjaznej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszą",
+              "najbardziej przyjazną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszą",
+              "najbardziej przyjazną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszej",
+              "najbardziej przyjaznej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejsze",
+              "najbardziej przyjazne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszego",
+              "najbardziej przyjaznego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszemu",
+              "najbardziej przyjaznemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejsze",
+              "najbardziej przyjazne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszym",
+              "najbardziej przyjaznym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszym",
+              "najbardziej przyjaznym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejsi",
+              "najbardziej przyjaźni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszych",
+              "najbardziej przyjaznych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszym",
+              "najbardziej przyjaznym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszych",
+              "najbardziej przyjaznych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszymi",
+              "najbardziej przyjaznymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszych",
+              "najbardziej przyjaznych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejsze",
+              "najbardziej przyjazne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszych",
+              "najbardziej przyjaznych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszym",
+              "najbardziej przyjaznym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejsze",
+              "najbardziej przyjazne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszymi",
+              "najbardziej przyjaznymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprzyjaźniejszych",
+              "najbardziej przyjaznych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

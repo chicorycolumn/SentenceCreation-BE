@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ćma",
+      "gen": "ćmy",
+      "dat": "ćmie",
+      "acc": "ćmę",
+      "ins": "ćmą",
+      "loc": "ćmie",
+      "voc": "ćmo"
+    },
+    "plural": {
+      "nom": "ćmy",
+      "gen": "ciem",
+      "dat": "ćmom",
+      "acc": "ćmy",
+      "ins": "ćmami",
+      "loc": "ćmach",
+      "voc": "ćmy"
+    }
+  }
+}

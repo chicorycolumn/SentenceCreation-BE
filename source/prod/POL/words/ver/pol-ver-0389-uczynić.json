@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "uczynić",
+    "verbalNoun": "uczynienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "uczyniony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "uczyniwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "uczyni się"
+          },
+          "plural": {
+            "allPluralGenders": "uczyni się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "uczynię"
+          },
+          "plural": {
+            "allPluralGenders": "uczynimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "uczynisz"
+          },
+          "plural": {
+            "allPluralGenders": "uczynicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "uczyni"
+          },
+          "plural": {
+            "allPluralGenders": "uczynią"
+          }
+        }
+      },
+      "imperative": "uczyń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "uczyniono"
+          },
+          "plural": {
+            "allPluralGenders": "uczyniono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "uczyniłem",
+            "f": "uczyniłam"
+          },
+          "plural": {
+            "virile": "uczyniliśmy",
+            "nonvirile": "uczyniłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "uczyniłeś",
+            "f": "uczyniłaś"
+          },
+          "plural": {
+            "virile": "uczyniliście",
+            "nonvirile": "uczyniłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "uczynił",
+            "f": "uczyniła",
+            "n": "uczyniło"
+          },
+          "plural": {
+            "virile": "uczynili",
+            "nonvirile": "uczyniły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

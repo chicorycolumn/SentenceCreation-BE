@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "giełdowy",
+          "gen": "giełdowego",
+          "dat": "giełdowemu",
+          "acc": "giełdowego",
+          "ins": "giełdowym",
+          "loc": "giełdowym"
+        },
+        "m3": {
+          "nom": "giełdowy",
+          "gen": "giełdowego",
+          "dat": "giełdowemu",
+          "acc": "giełdowy",
+          "ins": "giełdowym",
+          "loc": "giełdowym"
+        },
+        "f": {
+          "nom": "giełdowa",
+          "gen": "giełdowej",
+          "dat": "giełdowej",
+          "acc": "giełdową",
+          "ins": "giełdową",
+          "loc": "giełdowej"
+        },
+        "n": {
+          "nom": "giełdowe",
+          "gen": "giełdowego",
+          "dat": "giełdowemu",
+          "acc": "giełdowe",
+          "ins": "giełdowym",
+          "loc": "giełdowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "giełdowi",
+          "gen": "giełdowych",
+          "dat": "giełdowym",
+          "acc": "giełdowych",
+          "ins": "giełdowymi",
+          "loc": "giełdowych"
+        },
+        "nonvirile": {
+          "nom": "giełdowe",
+          "gen": "giełdowych",
+          "dat": "giełdowym",
+          "acc": "giełdowe",
+          "ins": "giełdowymi",
+          "loc": "giełdowych"
+        }
+      }
+    }
+  }
+}

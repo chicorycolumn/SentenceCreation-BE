@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "baza",
+      "gen": "bazy",
+      "dat": "bazie",
+      "acc": "bazę",
+      "ins": "bazą",
+      "loc": "bazie",
+      "voc": "bazo"
+    },
+    "plural": {
+      "nom": "bazy",
+      "gen": "baz",
+      "dat": "bazom",
+      "acc": "bazy",
+      "ins": "bazami",
+      "loc": "bazach",
+      "voc": "bazy"
+    }
+  }
+}

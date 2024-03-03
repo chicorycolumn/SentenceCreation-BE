@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przegrać",
+    "verbalNoun": "przegranie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przegrany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przegrawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przegra się"
+          },
+          "plural": {
+            "allPluralGenders": "przegra się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przegram"
+          },
+          "plural": {
+            "allPluralGenders": "przegramy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przegrasz"
+          },
+          "plural": {
+            "allPluralGenders": "przegracie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przegra"
+          },
+          "plural": {
+            "allPluralGenders": "przegrają"
+          }
+        }
+      },
+      "imperative": "przegraj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przegrano"
+          },
+          "plural": {
+            "allPluralGenders": "przegrano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przegrałem",
+            "f": "przegrałam"
+          },
+          "plural": {
+            "virile": "przegraliśmy",
+            "nonvirile": "przegrałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przegrałeś",
+            "f": "przegrałaś"
+          },
+          "plural": {
+            "virile": "przegraliście",
+            "nonvirile": "przegrałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przegrał",
+            "f": "przegrała",
+            "n": "przegrało"
+          },
+          "plural": {
+            "virile": "przegrali",
+            "nonvirile": "przegrały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

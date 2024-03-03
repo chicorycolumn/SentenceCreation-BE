@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nauczyć",
+    "verbalNoun": "nauczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "nauczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "nauczywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nauczy się"
+          },
+          "plural": {
+            "allPluralGenders": "nauczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nauczę"
+          },
+          "plural": {
+            "allPluralGenders": "nauczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nauczysz"
+          },
+          "plural": {
+            "allPluralGenders": "nauczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nauczy"
+          },
+          "plural": {
+            "allPluralGenders": "nauczą"
+          }
+        }
+      },
+      "imperative": "naucz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nauczono"
+          },
+          "plural": {
+            "allPluralGenders": "nauczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nauczyłem",
+            "f": "nauczyłam"
+          },
+          "plural": {
+            "virile": "nauczyliśmy",
+            "nonvirile": "nauczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nauczyłeś",
+            "f": "nauczyłaś"
+          },
+          "plural": {
+            "virile": "nauczyliście",
+            "nonvirile": "nauczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nauczył",
+            "f": "nauczyła",
+            "n": "nauczyło"
+          },
+          "plural": {
+            "virile": "nauczyli",
+            "nonvirile": "nauczyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

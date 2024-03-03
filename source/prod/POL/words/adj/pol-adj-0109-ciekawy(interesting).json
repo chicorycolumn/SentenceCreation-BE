@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "ciekawie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ciekawy",
+          "gen": "ciekawego",
+          "dat": "ciekawemu",
+          "acc": "ciekawego",
+          "ins": "ciekawym",
+          "loc": "ciekawym"
+        },
+        "m3": {
+          "nom": "ciekawy",
+          "gen": "ciekawego",
+          "dat": "ciekawemu",
+          "acc": "ciekawy",
+          "ins": "ciekawym",
+          "loc": "ciekawym"
+        },
+        "f": {
+          "nom": "ciekawa",
+          "gen": "ciekawej",
+          "dat": "ciekawej",
+          "acc": "ciekawą",
+          "ins": "ciekawą",
+          "loc": "ciekawej"
+        },
+        "n": {
+          "nom": "ciekawe",
+          "gen": "ciekawego",
+          "dat": "ciekawemu",
+          "acc": "ciekawe",
+          "ins": "ciekawym",
+          "loc": "ciekawym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ciekawi",
+          "gen": "ciekawych",
+          "dat": "ciekawym",
+          "acc": "ciekawych",
+          "ins": "ciekawymi",
+          "loc": "ciekawych"
+        },
+        "nonvirile": {
+          "nom": "ciekawe",
+          "gen": "ciekawych",
+          "dat": "ciekawym",
+          "acc": "ciekawe",
+          "ins": "ciekawymi",
+          "loc": "ciekawych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "ciekawszy",
+          "gen": "ciekawszego",
+          "dat": "ciekawszemu",
+          "acc": "ciekawszego",
+          "ins": "ciekawszym",
+          "loc": "ciekawszym"
+        },
+        "m3": {
+          "nom": "ciekawszy",
+          "gen": "ciekawszego",
+          "dat": "ciekawszemu",
+          "acc": "ciekawszy",
+          "ins": "ciekawszym",
+          "loc": "ciekawszym"
+        },
+        "f": {
+          "nom": "ciekawsza",
+          "gen": "ciekawszej",
+          "dat": "ciekawszej",
+          "acc": "ciekawszą",
+          "ins": "ciekawszą",
+          "loc": "ciekawszej"
+        },
+        "n": {
+          "nom": "ciekawsze",
+          "gen": "ciekawszego",
+          "dat": "ciekawszemu",
+          "acc": "ciekawsze",
+          "ins": "ciekawszym",
+          "loc": "ciekawszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ciekawsi",
+          "gen": "ciekawszych",
+          "dat": "ciekawszym",
+          "acc": "ciekawszych",
+          "ins": "ciekawszymi",
+          "loc": "ciekawszych"
+        },
+        "nonvirile": {
+          "nom": "ciekawsze",
+          "gen": "ciekawszych",
+          "dat": "ciekawszym",
+          "acc": "ciekawsze",
+          "ins": "ciekawszymi",
+          "loc": "ciekawszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najciekawszy",
+          "gen": "najciekawszego",
+          "dat": "najciekawszemu",
+          "acc": "najciekawszego",
+          "ins": "najciekawszym",
+          "loc": "najciekawszym"
+        },
+        "m3": {
+          "nom": "najciekawszy",
+          "gen": "najciekawszego",
+          "dat": "najciekawszemu",
+          "acc": "najciekawszy",
+          "ins": "najciekawszym",
+          "loc": "najciekawszym"
+        },
+        "f": {
+          "nom": "najciekawsza",
+          "gen": "najciekawszej",
+          "dat": "najciekawszej",
+          "acc": "najciekawszą",
+          "ins": "najciekawszą",
+          "loc": "najciekawszej"
+        },
+        "n": {
+          "nom": "najciekawsze",
+          "gen": "najciekawszego",
+          "dat": "najciekawszemu",
+          "acc": "najciekawsze",
+          "ins": "najciekawszym",
+          "loc": "najciekawszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najciekawsi",
+          "gen": "najciekawszych",
+          "dat": "najciekawszym",
+          "acc": "najciekawszych",
+          "ins": "najciekawszymi",
+          "loc": "najciekawszych"
+        },
+        "nonvirile": {
+          "nom": "najciekawsze",
+          "gen": "najciekawszych",
+          "dat": "najciekawszym",
+          "acc": "najciekawsze",
+          "ins": "najciekawszymi",
+          "loc": "najciekawszych"
+        }
+      }
+    }
+  }
+}

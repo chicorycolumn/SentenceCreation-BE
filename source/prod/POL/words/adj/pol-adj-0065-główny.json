@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "głównie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "główny",
+          "gen": "głównego",
+          "dat": "głównemu",
+          "acc": "głównego",
+          "ins": "głównym",
+          "loc": "głównym"
+        },
+        "m3": {
+          "nom": "główny",
+          "gen": "głównego",
+          "dat": "głównemu",
+          "acc": "główny",
+          "ins": "głównym",
+          "loc": "głównym"
+        },
+        "f": {
+          "nom": "główna",
+          "gen": "głównej",
+          "dat": "głównej",
+          "acc": "główną",
+          "ins": "główną",
+          "loc": "głównej"
+        },
+        "n": {
+          "nom": "główne",
+          "gen": "głównego",
+          "dat": "głównemu",
+          "acc": "główne",
+          "ins": "głównym",
+          "loc": "głównym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "główni",
+          "gen": "głównych",
+          "dat": "głównym",
+          "acc": "głównych",
+          "ins": "głównymi",
+          "loc": "głównych"
+        },
+        "nonvirile": {
+          "nom": "główne",
+          "gen": "głównych",
+          "dat": "głównym",
+          "acc": "główne",
+          "ins": "głównymi",
+          "loc": "głównych"
+        }
+      }
+    }
+  }
+}

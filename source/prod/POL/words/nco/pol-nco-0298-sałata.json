@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sałata",
+      "gen": "sałaty",
+      "dat": "sałacie",
+      "acc": "sałatę",
+      "ins": "sałatą",
+      "loc": "sałacie",
+      "voc": "sałato"
+    },
+    "plural": {
+      "nom": "sałaty",
+      "gen": "sałat",
+      "dat": "sałatom",
+      "acc": "sałaty",
+      "ins": "sałatami",
+      "loc": "sałatach",
+      "voc": "sałaty"
+    }
+  }
+}

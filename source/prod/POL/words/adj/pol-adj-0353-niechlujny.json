@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niechlujnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niechlujny",
+          "gen": "niechlujnego",
+          "dat": "niechlujnemu",
+          "acc": "niechlujnego",
+          "ins": "niechlujnym",
+          "loc": "niechlujnym"
+        },
+        "m3": {
+          "nom": "niechlujny",
+          "gen": "niechlujnego",
+          "dat": "niechlujnemu",
+          "acc": "niechlujny",
+          "ins": "niechlujnym",
+          "loc": "niechlujnym"
+        },
+        "f": {
+          "nom": "niechlujna",
+          "gen": "niechlujnej",
+          "dat": "niechlujnej",
+          "acc": "niechlujną",
+          "ins": "niechlujną",
+          "loc": "niechlujnej"
+        },
+        "n": {
+          "nom": "niechlujne",
+          "gen": "niechlujnego",
+          "dat": "niechlujnemu",
+          "acc": "niechlujne",
+          "ins": "niechlujnym",
+          "loc": "niechlujnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niechlujni",
+          "gen": "niechlujnych",
+          "dat": "niechlujnym",
+          "acc": "niechlujnych",
+          "ins": "niechlujnymi",
+          "loc": "niechlujnych"
+        },
+        "nonvirile": {
+          "nom": "niechlujne",
+          "gen": "niechlujnych",
+          "dat": "niechlujnym",
+          "acc": "niechlujne",
+          "ins": "niechlujnymi",
+          "loc": "niechlujnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej niechlujny",
+          "gen": "bardziej niechlujnego",
+          "dat": "bardziej niechlujnemu",
+          "acc": "bardziej niechlujnego",
+          "ins": "bardziej niechlujnym",
+          "loc": "bardziej niechlujnym"
+        },
+        "m3": {
+          "nom": "bardziej niechlujny",
+          "gen": "bardziej niechlujnego",
+          "dat": "bardziej niechlujnemu",
+          "acc": "bardziej niechlujny",
+          "ins": "bardziej niechlujnym",
+          "loc": "bardziej niechlujnym"
+        },
+        "f": {
+          "nom": "bardziej niechlujna",
+          "gen": "bardziej niechlujnej",
+          "dat": "bardziej niechlujnej",
+          "acc": "bardziej niechlujną",
+          "ins": "bardziej niechlujną",
+          "loc": "bardziej niechlujnej"
+        },
+        "n": {
+          "nom": "bardziej niechlujne",
+          "gen": "bardziej niechlujnego",
+          "dat": "bardziej niechlujnemu",
+          "acc": "bardziej niechlujne",
+          "ins": "bardziej niechlujnym",
+          "loc": "bardziej niechlujnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej niechlujni",
+          "gen": "bardziej niechlujnych",
+          "dat": "bardziej niechlujnym",
+          "acc": "bardziej niechlujnych",
+          "ins": "bardziej niechlujnymi",
+          "loc": "bardziej niechlujnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej niechlujne",
+          "gen": "bardziej niechlujnych",
+          "dat": "bardziej niechlujnym",
+          "acc": "bardziej niechlujne",
+          "ins": "bardziej niechlujnymi",
+          "loc": "bardziej niechlujnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej niechlujny",
+          "gen": "najbardziej niechlujnego",
+          "dat": "najbardziej niechlujnemu",
+          "acc": "najbardziej niechlujnego",
+          "ins": "najbardziej niechlujnym",
+          "loc": "najbardziej niechlujnym"
+        },
+        "m3": {
+          "nom": "najbardziej niechlujny",
+          "gen": "najbardziej niechlujnego",
+          "dat": "najbardziej niechlujnemu",
+          "acc": "najbardziej niechlujny",
+          "ins": "najbardziej niechlujnym",
+          "loc": "najbardziej niechlujnym"
+        },
+        "f": {
+          "nom": "najbardziej niechlujna",
+          "gen": "najbardziej niechlujnej",
+          "dat": "najbardziej niechlujnej",
+          "acc": "najbardziej niechlujną",
+          "ins": "najbardziej niechlujną",
+          "loc": "najbardziej niechlujnej"
+        },
+        "n": {
+          "nom": "najbardziej niechlujne",
+          "gen": "najbardziej niechlujnego",
+          "dat": "najbardziej niechlujnemu",
+          "acc": "najbardziej niechlujne",
+          "ins": "najbardziej niechlujnym",
+          "loc": "najbardziej niechlujnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej niechlujni",
+          "gen": "najbardziej niechlujnych",
+          "dat": "najbardziej niechlujnym",
+          "acc": "najbardziej niechlujnych",
+          "ins": "najbardziej niechlujnymi",
+          "loc": "najbardziej niechlujnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej niechlujne",
+          "gen": "najbardziej niechlujnych",
+          "dat": "najbardziej niechlujnym",
+          "acc": "najbardziej niechlujne",
+          "ins": "najbardziej niechlujnymi",
+          "loc": "najbardziej niechlujnych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niegodziwie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niegodziwy",
+          "gen": "niegodziwego",
+          "dat": "niegodziwemu",
+          "acc": "niegodziwego",
+          "ins": "niegodziwym",
+          "loc": "niegodziwym"
+        },
+        "m3": {
+          "nom": "niegodziwy",
+          "gen": "niegodziwego",
+          "dat": "niegodziwemu",
+          "acc": "niegodziwy",
+          "ins": "niegodziwym",
+          "loc": "niegodziwym"
+        },
+        "f": {
+          "nom": "niegodziwa",
+          "gen": "niegodziwej",
+          "dat": "niegodziwej",
+          "acc": "niegodziwą",
+          "ins": "niegodziwą",
+          "loc": "niegodziwej"
+        },
+        "n": {
+          "nom": "niegodziwe",
+          "gen": "niegodziwego",
+          "dat": "niegodziwemu",
+          "acc": "niegodziwe",
+          "ins": "niegodziwym",
+          "loc": "niegodziwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niegodziwi",
+          "gen": "niegodziwych",
+          "dat": "niegodziwym",
+          "acc": "niegodziwych",
+          "ins": "niegodziwymi",
+          "loc": "niegodziwych"
+        },
+        "nonvirile": {
+          "nom": "niegodziwe",
+          "gen": "niegodziwych",
+          "dat": "niegodziwym",
+          "acc": "niegodziwe",
+          "ins": "niegodziwymi",
+          "loc": "niegodziwych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej niegodziwy",
+          "gen": "bardziej niegodziwego",
+          "dat": "bardziej niegodziwemu",
+          "acc": "bardziej niegodziwego",
+          "ins": "bardziej niegodziwym",
+          "loc": "bardziej niegodziwym"
+        },
+        "m3": {
+          "nom": "bardziej niegodziwy",
+          "gen": "bardziej niegodziwego",
+          "dat": "bardziej niegodziwemu",
+          "acc": "bardziej niegodziwy",
+          "ins": "bardziej niegodziwym",
+          "loc": "bardziej niegodziwym"
+        },
+        "f": {
+          "nom": "bardziej niegodziwa",
+          "gen": "bardziej niegodziwej",
+          "dat": "bardziej niegodziwej",
+          "acc": "bardziej niegodziwą",
+          "ins": "bardziej niegodziwą",
+          "loc": "bardziej niegodziwej"
+        },
+        "n": {
+          "nom": "bardziej niegodziwe",
+          "gen": "bardziej niegodziwego",
+          "dat": "bardziej niegodziwemu",
+          "acc": "bardziej niegodziwe",
+          "ins": "bardziej niegodziwym",
+          "loc": "bardziej niegodziwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej niegodziwi",
+          "gen": "bardziej niegodziwych",
+          "dat": "bardziej niegodziwym",
+          "acc": "bardziej niegodziwych",
+          "ins": "bardziej niegodziwymi",
+          "loc": "bardziej niegodziwych"
+        },
+        "nonvirile": {
+          "nom": "bardziej niegodziwe",
+          "gen": "bardziej niegodziwych",
+          "dat": "bardziej niegodziwym",
+          "acc": "bardziej niegodziwe",
+          "ins": "bardziej niegodziwymi",
+          "loc": "bardziej niegodziwych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej niegodziwy",
+          "gen": "najbardziej niegodziwego",
+          "dat": "najbardziej niegodziwemu",
+          "acc": "najbardziej niegodziwego",
+          "ins": "najbardziej niegodziwym",
+          "loc": "najbardziej niegodziwym"
+        },
+        "m3": {
+          "nom": "najbardziej niegodziwy",
+          "gen": "najbardziej niegodziwego",
+          "dat": "najbardziej niegodziwemu",
+          "acc": "najbardziej niegodziwy",
+          "ins": "najbardziej niegodziwym",
+          "loc": "najbardziej niegodziwym"
+        },
+        "f": {
+          "nom": "najbardziej niegodziwa",
+          "gen": "najbardziej niegodziwej",
+          "dat": "najbardziej niegodziwej",
+          "acc": "najbardziej niegodziwą",
+          "ins": "najbardziej niegodziwą",
+          "loc": "najbardziej niegodziwej"
+        },
+        "n": {
+          "nom": "najbardziej niegodziwe",
+          "gen": "najbardziej niegodziwego",
+          "dat": "najbardziej niegodziwemu",
+          "acc": "najbardziej niegodziwe",
+          "ins": "najbardziej niegodziwym",
+          "loc": "najbardziej niegodziwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej niegodziwi",
+          "gen": "najbardziej niegodziwych",
+          "dat": "najbardziej niegodziwym",
+          "acc": "najbardziej niegodziwych",
+          "ins": "najbardziej niegodziwymi",
+          "loc": "najbardziej niegodziwych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej niegodziwe",
+          "gen": "najbardziej niegodziwych",
+          "dat": "najbardziej niegodziwym",
+          "acc": "najbardziej niegodziwe",
+          "ins": "najbardziej niegodziwymi",
+          "loc": "najbardziej niegodziwych"
+        }
+      }
+    }
+  }
+}

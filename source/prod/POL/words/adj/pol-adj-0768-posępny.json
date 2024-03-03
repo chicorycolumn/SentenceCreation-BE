@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "posępnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "posępny",
+          "gen": "posępnego",
+          "dat": "posępnemu",
+          "acc": "posępnego",
+          "ins": "posępnym",
+          "loc": "posępnym"
+        },
+        "m3": {
+          "nom": "posępny",
+          "gen": "posępnego",
+          "dat": "posępnemu",
+          "acc": "posępny",
+          "ins": "posępnym",
+          "loc": "posępnym"
+        },
+        "f": {
+          "nom": "posępna",
+          "gen": "posępnej",
+          "dat": "posępnej",
+          "acc": "posępną",
+          "ins": "posępną",
+          "loc": "posępnej"
+        },
+        "n": {
+          "nom": "posępne",
+          "gen": "posępnego",
+          "dat": "posępnemu",
+          "acc": "posępne",
+          "ins": "posępnym",
+          "loc": "posępnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "posępni",
+          "gen": "posępnych",
+          "dat": "posępnym",
+          "acc": "posępnych",
+          "ins": "posępnymi",
+          "loc": "posępnych"
+        },
+        "nonvirile": {
+          "nom": "posępne",
+          "gen": "posępnych",
+          "dat": "posępnym",
+          "acc": "posępne",
+          "ins": "posępnymi",
+          "loc": "posępnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "posępniejszy",
+          "gen": "posępniejszego",
+          "dat": "posępniejszemu",
+          "acc": "posępniejszego",
+          "ins": "posępniejszym",
+          "loc": "posępniejszym"
+        },
+        "m3": {
+          "nom": "posępniejszy",
+          "gen": "posępniejszego",
+          "dat": "posępniejszemu",
+          "acc": "posępniejszy",
+          "ins": "posępniejszym",
+          "loc": "posępniejszym"
+        },
+        "f": {
+          "nom": "posępniejsza",
+          "gen": "posępniejszej",
+          "dat": "posępniejszej",
+          "acc": "posępniejszą",
+          "ins": "posępniejszą",
+          "loc": "posępniejszej"
+        },
+        "n": {
+          "nom": "posępniejsze",
+          "gen": "posępniejszego",
+          "dat": "posępniejszemu",
+          "acc": "posępniejsze",
+          "ins": "posępniejszym",
+          "loc": "posępniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "posępniejsi",
+          "gen": "posępniejszych",
+          "dat": "posępniejszym",
+          "acc": "posępniejszych",
+          "ins": "posępniejszymi",
+          "loc": "posępniejszych"
+        },
+        "nonvirile": {
+          "nom": "posępniejsze",
+          "gen": "posępniejszych",
+          "dat": "posępniejszym",
+          "acc": "posępniejsze",
+          "ins": "posępniejszymi",
+          "loc": "posępniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najposępniejszy",
+          "gen": "najposępniejszego",
+          "dat": "najposępniejszemu",
+          "acc": "najposępniejszego",
+          "ins": "najposępniejszym",
+          "loc": "najposępniejszym"
+        },
+        "m3": {
+          "nom": "najposępniejszy",
+          "gen": "najposępniejszego",
+          "dat": "najposępniejszemu",
+          "acc": "najposępniejszy",
+          "ins": "najposępniejszym",
+          "loc": "najposępniejszym"
+        },
+        "f": {
+          "nom": "najposępniejsza",
+          "gen": "najposępniejszej",
+          "dat": "najposępniejszej",
+          "acc": "najposępniejszą",
+          "ins": "najposępniejszą",
+          "loc": "najposępniejszej"
+        },
+        "n": {
+          "nom": "najposępniejsze",
+          "gen": "najposępniejszego",
+          "dat": "najposępniejszemu",
+          "acc": "najposępniejsze",
+          "ins": "najposępniejszym",
+          "loc": "najposępniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najposępniejsi",
+          "gen": "najposępniejszych",
+          "dat": "najposępniejszym",
+          "acc": "najposępniejszych",
+          "ins": "najposępniejszymi",
+          "loc": "najposępniejszych"
+        },
+        "nonvirile": {
+          "nom": "najposępniejsze",
+          "gen": "najposępniejszych",
+          "dat": "najposępniejszym",
+          "acc": "najposępniejsze",
+          "ins": "najposępniejszymi",
+          "loc": "najposępniejszych"
+        }
+      }
+    }
+  }
+}

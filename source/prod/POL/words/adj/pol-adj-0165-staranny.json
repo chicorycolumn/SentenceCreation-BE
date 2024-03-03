@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "starannie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "staranny",
+          "gen": "starannego",
+          "dat": "starannemu",
+          "acc": "starannego",
+          "ins": "starannym",
+          "loc": "starannym"
+        },
+        "m3": {
+          "nom": "staranny",
+          "gen": "starannego",
+          "dat": "starannemu",
+          "acc": "staranny",
+          "ins": "starannym",
+          "loc": "starannym"
+        },
+        "f": {
+          "nom": "staranna",
+          "gen": "starannej",
+          "dat": "starannej",
+          "acc": "staranną",
+          "ins": "staranną",
+          "loc": "starannej"
+        },
+        "n": {
+          "nom": "staranne",
+          "gen": "starannego",
+          "dat": "starannemu",
+          "acc": "staranne",
+          "ins": "starannym",
+          "loc": "starannym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "staranni",
+          "gen": "starannych",
+          "dat": "starannym",
+          "acc": "starannych",
+          "ins": "starannymi",
+          "loc": "starannych"
+        },
+        "nonvirile": {
+          "nom": "staranne",
+          "gen": "starannych",
+          "dat": "starannym",
+          "acc": "staranne",
+          "ins": "starannymi",
+          "loc": "starannych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "staranniejszy",
+          "gen": "staranniejszego",
+          "dat": "staranniejszemu",
+          "acc": "staranniejszego",
+          "ins": "staranniejszym",
+          "loc": "staranniejszym"
+        },
+        "m3": {
+          "nom": "staranniejszy",
+          "gen": "staranniejszego",
+          "dat": "staranniejszemu",
+          "acc": "staranniejszy",
+          "ins": "staranniejszym",
+          "loc": "staranniejszym"
+        },
+        "f": {
+          "nom": "staranniejsza",
+          "gen": "staranniejszej",
+          "dat": "staranniejszej",
+          "acc": "staranniejszą",
+          "ins": "staranniejszą",
+          "loc": "staranniejszej"
+        },
+        "n": {
+          "nom": "staranniejsze",
+          "gen": "staranniejszego",
+          "dat": "staranniejszemu",
+          "acc": "staranniejsze",
+          "ins": "staranniejszym",
+          "loc": "staranniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "staranniejsi",
+          "gen": "staranniejszych",
+          "dat": "staranniejszym",
+          "acc": "staranniejszych",
+          "ins": "staranniejszymi",
+          "loc": "staranniejszych"
+        },
+        "nonvirile": {
+          "nom": "staranniejsze",
+          "gen": "staranniejszych",
+          "dat": "staranniejszym",
+          "acc": "staranniejsze",
+          "ins": "staranniejszymi",
+          "loc": "staranniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najstaranniejszy",
+          "gen": "najstaranniejszego",
+          "dat": "najstaranniejszemu",
+          "acc": "najstaranniejszego",
+          "ins": "najstaranniejszym",
+          "loc": "najstaranniejszym"
+        },
+        "m3": {
+          "nom": "najstaranniejszy",
+          "gen": "najstaranniejszego",
+          "dat": "najstaranniejszemu",
+          "acc": "najstaranniejszy",
+          "ins": "najstaranniejszym",
+          "loc": "najstaranniejszym"
+        },
+        "f": {
+          "nom": "najstaranniejsza",
+          "gen": "najstaranniejszej",
+          "dat": "najstaranniejszej",
+          "acc": "najstaranniejszą",
+          "ins": "najstaranniejszą",
+          "loc": "najstaranniejszej"
+        },
+        "n": {
+          "nom": "najstaranniejsze",
+          "gen": "najstaranniejszego",
+          "dat": "najstaranniejszemu",
+          "acc": "najstaranniejsze",
+          "ins": "najstaranniejszym",
+          "loc": "najstaranniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najstaranniejsi",
+          "gen": "najstaranniejszych",
+          "dat": "najstaranniejszym",
+          "acc": "najstaranniejszych",
+          "ins": "najstaranniejszymi",
+          "loc": "najstaranniejszych"
+        },
+        "nonvirile": {
+          "nom": "najstaranniejsze",
+          "gen": "najstaranniejszych",
+          "dat": "najstaranniejszym",
+          "acc": "najstaranniejsze",
+          "ins": "najstaranniejszymi",
+          "loc": "najstaranniejszych"
+        }
+      }
+    }
+  }
+}

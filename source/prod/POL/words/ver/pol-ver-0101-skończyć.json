@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "skończyć",
+    "verbalNoun": "skończenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "skończony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "skończywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "skończy się"
+          },
+          "plural": {
+            "allPluralGenders": "skończy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "skończę"
+          },
+          "plural": {
+            "allPluralGenders": "skończymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "skończysz"
+          },
+          "plural": {
+            "allPluralGenders": "skończycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "skończy"
+          },
+          "plural": {
+            "allPluralGenders": "skończą"
+          }
+        }
+      },
+      "imperative": "skończ",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "skończono"
+          },
+          "plural": {
+            "allPluralGenders": "skończono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "skończyłem",
+            "f": "skończyłam"
+          },
+          "plural": {
+            "virile": "skończyliśmy",
+            "nonvirile": "skończyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "skończyłeś",
+            "f": "skończyłaś"
+          },
+          "plural": {
+            "virile": "skończyliście",
+            "nonvirile": "skończyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "skończył",
+            "f": "skończyła",
+            "n": "skończyło"
+          },
+          "plural": {
+            "virile": "skończyli",
+            "nonvirile": "skończyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

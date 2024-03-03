@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "poprosić",
+    "verbalNoun": "poproszenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "poproszony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "poprosiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poprosi się"
+          },
+          "plural": {
+            "allPluralGenders": "poprosi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "poproszę"
+          },
+          "plural": {
+            "allPluralGenders": "poprosimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "poprosisz"
+          },
+          "plural": {
+            "allPluralGenders": "poprosicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "poprosi"
+          },
+          "plural": {
+            "allPluralGenders": "poproszą"
+          }
+        }
+      },
+      "imperative": "poproś",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poproszono"
+          },
+          "plural": {
+            "allPluralGenders": "poproszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "poprosiłem",
+            "f": "poprosiłam"
+          },
+          "plural": {
+            "virile": "poprosiliśmy",
+            "nonvirile": "poprosiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "poprosiłeś",
+            "f": "poprosiłaś"
+          },
+          "plural": {
+            "virile": "poprosiliście",
+            "nonvirile": "poprosiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "poprosił",
+            "f": "poprosiła",
+            "n": "poprosiło"
+          },
+          "plural": {
+            "virile": "poprosili",
+            "nonvirile": "poprosiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cień",
+      "gen": "cienia",
+      "dat": "cieniowi",
+      "acc": "cień",
+      "ins": "cieniem",
+      "loc": "cieniu",
+      "voc": "cieniu"
+    },
+    "plural": {
+      "nom": "cienie",
+      "gen": [
+        "cieni",
+        "cieniów"
+      ],
+      "dat": "cieniom",
+      "acc": "cienie",
+      "ins": "cieniami",
+      "loc": "cieniach",
+      "voc": "cienie"
+    }
+  }
+}

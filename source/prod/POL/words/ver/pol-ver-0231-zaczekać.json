@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zaczekać",
+    "verbalNoun": "zaczekanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zaczekawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaczeka się"
+          },
+          "plural": {
+            "allPluralGenders": "zaczeka się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zaczekam"
+          },
+          "plural": {
+            "allPluralGenders": "zaczekamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zaczekasz"
+          },
+          "plural": {
+            "allPluralGenders": "zaczekacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zaczeka"
+          },
+          "plural": {
+            "allPluralGenders": "zaczekają"
+          }
+        }
+      },
+      "imperative": "zaczekaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaczekano"
+          },
+          "plural": {
+            "allPluralGenders": "zaczekano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zaczekałem",
+            "f": "zaczekałam"
+          },
+          "plural": {
+            "virile": "zaczekaliśmy",
+            "nonvirile": "zaczekałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zaczekałeś",
+            "f": "zaczekałaś"
+          },
+          "plural": {
+            "virile": "zaczekaliście",
+            "nonvirile": "zaczekałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zaczekał",
+            "f": "zaczekała",
+            "n": "zaczekało"
+          },
+          "plural": {
+            "virile": "zaczekali",
+            "nonvirile": "zaczekały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

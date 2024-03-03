@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "znieść",
+    "verbalNoun": "zniesienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zniesiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zniósłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zniesie się"
+          },
+          "plural": {
+            "allPluralGenders": "zniesie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zniosę"
+          },
+          "plural": {
+            "allPluralGenders": "zniesiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zniesiesz"
+          },
+          "plural": {
+            "allPluralGenders": "zniesiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zniesie"
+          },
+          "plural": {
+            "allPluralGenders": "zniosą"
+          }
+        }
+      },
+      "imperative": "znieś",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zniesiono"
+          },
+          "plural": {
+            "allPluralGenders": "zniesiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zniosłem",
+            "f": "zniosłam"
+          },
+          "plural": {
+            "virile": "znieśliśmy",
+            "nonvirile": "zniosłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zniosłeś",
+            "f": "zniosłaś"
+          },
+          "plural": {
+            "virile": "znieśliście",
+            "nonvirile": "zniosłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zniósł",
+            "f": "zniosła",
+            "n": "zniosło"
+          },
+          "plural": {
+            "virile": "znieśli",
+            "nonvirile": "zniosły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

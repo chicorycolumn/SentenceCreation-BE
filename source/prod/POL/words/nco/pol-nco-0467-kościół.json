@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kościół",
+      "gen": "kościoła",
+      "dat": "kościołowi",
+      "acc": "kościół",
+      "ins": "kościołem",
+      "loc": "kościele",
+      "voc": "kościele"
+    },
+    "plural": {
+      "nom": "kościoły",
+      "gen": "kościołów",
+      "dat": "kościołom",
+      "acc": "kościoły",
+      "ins": "kościołami",
+      "loc": "kościołach",
+      "voc": "kościoły"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "spokój",
+      "gen": "spokoju",
+      "dat": "spokojowi",
+      "acc": "spokój",
+      "ins": "spokojem",
+      "loc": "spokoju",
+      "voc": "spokoju"
+    },
+    "plural": {
+      "nom": "spokoje",
+      "gen": "spokojów",
+      "dat": "spokojom",
+      "acc": "spokoje",
+      "ins": "spokojami",
+      "loc": "spokojach",
+      "voc": "spokoje"
+    }
+  }
+}

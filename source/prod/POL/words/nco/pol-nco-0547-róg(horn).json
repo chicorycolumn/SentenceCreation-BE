@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "róg",
+      "gen": "rogu",
+      "dat": "rogowi",
+      "acc": "róg",
+      "ins": "rogiem",
+      "loc": "rogu",
+      "voc": "rogu"
+    },
+    "plural": {
+      "nom": "rogi",
+      "gen": "rogów",
+      "dat": "rogom",
+      "acc": "rogi",
+      "ins": "rogami",
+      "loc": "rogach",
+      "voc": "rogi"
+    }
+  }
+}

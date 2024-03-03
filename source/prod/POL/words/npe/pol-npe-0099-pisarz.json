@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pisarz",
+      "gen": "pisarza",
+      "dat": "pisarzowi",
+      "acc": "pisarza",
+      "ins": "pisarzem",
+      "loc": "pisarzu",
+      "voc": "pisarzu"
+    },
+    "plural": {
+      "nom": "pisarze",
+      "gen": "pisarzy",
+      "dat": "pisarzom",
+      "acc": "pisarzy",
+      "ins": "pisarzami",
+      "loc": "pisarzach",
+      "voc": "pisarze"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "leniwie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "leniwy",
+          "gen": "leniwego",
+          "dat": "leniwemu",
+          "acc": "leniwego",
+          "ins": "leniwym",
+          "loc": "leniwym"
+        },
+        "m3": {
+          "nom": "leniwy",
+          "gen": "leniwego",
+          "dat": "leniwemu",
+          "acc": "leniwy",
+          "ins": "leniwym",
+          "loc": "leniwym"
+        },
+        "f": {
+          "nom": "leniwa",
+          "gen": "leniwej",
+          "dat": "leniwej",
+          "acc": "leniwą",
+          "ins": "leniwą",
+          "loc": "leniwej"
+        },
+        "n": {
+          "nom": "leniwe",
+          "gen": "leniwego",
+          "dat": "leniwemu",
+          "acc": "leniwe",
+          "ins": "leniwym",
+          "loc": "leniwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "leniwi",
+          "gen": "leniwych",
+          "dat": "leniwym",
+          "acc": "leniwych",
+          "ins": "leniwymi",
+          "loc": "leniwych"
+        },
+        "nonvirile": {
+          "nom": "leniwe",
+          "gen": "leniwych",
+          "dat": "leniwym",
+          "acc": "leniwe",
+          "ins": "leniwymi",
+          "loc": "leniwych"
+        }
+      }
+    }
+  }
+}

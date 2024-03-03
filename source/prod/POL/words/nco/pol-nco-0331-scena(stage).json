@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "scena",
+      "gen": "sceny",
+      "dat": "scenie",
+      "acc": "scenę",
+      "ins": "sceną",
+      "loc": "scenie",
+      "voc": "sceno"
+    },
+    "plural": {
+      "nom": "sceny",
+      "gen": "scen",
+      "dat": "scenom",
+      "acc": "sceny",
+      "ins": "scenami",
+      "loc": "scenach",
+      "voc": "sceny"
+    }
+  }
+}

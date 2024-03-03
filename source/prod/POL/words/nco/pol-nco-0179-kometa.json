@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kometa",
+      "gen": "komety",
+      "dat": "komecie",
+      "acc": "kometę",
+      "ins": "kometą",
+      "loc": "komecie",
+      "voc": "kometo"
+    },
+    "plural": {
+      "nom": "komety",
+      "gen": "komet",
+      "dat": "kometom",
+      "acc": "komety",
+      "ins": "kometami",
+      "loc": "kometach",
+      "voc": "komety"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zabrzmieć",
+    "verbalNoun": "zabrzmienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zabrzmiawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zabrzmi się"
+          },
+          "plural": {
+            "allPluralGenders": "zabrzmi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zabrzmię"
+          },
+          "plural": {
+            "allPluralGenders": "zabrzmimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zabrzmisz"
+          },
+          "plural": {
+            "allPluralGenders": "zabrzmicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zabrzmi"
+          },
+          "plural": {
+            "allPluralGenders": "zabrzmią"
+          }
+        }
+      },
+      "imperative": "zabrzmij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zabrzmiano"
+          },
+          "plural": {
+            "allPluralGenders": "zabrzmiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zabrzmiałem",
+            "f": "zabrzmiałam"
+          },
+          "plural": {
+            "virile": "zabrzmieliśmy",
+            "nonvirile": "zabrzmiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zabrzmiałeś",
+            "f": "zabrzmiałaś"
+          },
+          "plural": {
+            "virile": "zabrzmieliście",
+            "nonvirile": "zabrzmiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zabrzmiał",
+            "f": "zabrzmiała",
+            "n": "zabrzmiało"
+          },
+          "plural": {
+            "virile": "zabrzmieli",
+            "nonvirile": "zabrzmiały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

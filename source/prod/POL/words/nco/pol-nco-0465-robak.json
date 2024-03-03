@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "robak",
+      "gen": "robaka",
+      "dat": "robakowi",
+      "acc": "robaka",
+      "ins": "robakiem",
+      "loc": "robaku",
+      "voc": "robaku"
+    },
+    "plural": {
+      "nom": "robaki",
+      "gen": "robaków",
+      "dat": "robakom",
+      "acc": "robaki",
+      "ins": "robakami",
+      "loc": "robakach",
+      "voc": "robaki"
+    }
+  }
+}

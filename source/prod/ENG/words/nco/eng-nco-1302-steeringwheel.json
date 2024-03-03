@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "steering wheel",
+      "gen": "steering wheel's"
+    },
+    "plural": {
+      "nom": "steering wheels",
+      "gen": "steering wheels'"
+    }
+  }
+}

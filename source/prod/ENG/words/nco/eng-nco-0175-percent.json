@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "percent",
+      "gen": "percent's"
+    },
+    "plural": {
+      "nom": "percents",
+      "gen": "percents'"
+    }
+  }
+}

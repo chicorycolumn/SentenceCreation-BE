@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "malarstwo",
+      "gen": "malarstwa",
+      "dat": "malarstwu",
+      "acc": "malarstwo",
+      "ins": "malarstwem",
+      "loc": "malarstwie",
+      "voc": "malarstwo"
+    }
+  }
+}

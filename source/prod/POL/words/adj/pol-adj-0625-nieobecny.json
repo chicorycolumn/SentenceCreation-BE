@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nieobecny",
+          "gen": "nieobecnego",
+          "dat": "nieobecnemu",
+          "acc": "nieobecnego",
+          "ins": "nieobecnym",
+          "loc": "nieobecnym"
+        },
+        "m3": {
+          "nom": "nieobecny",
+          "gen": "nieobecnego",
+          "dat": "nieobecnemu",
+          "acc": "nieobecny",
+          "ins": "nieobecnym",
+          "loc": "nieobecnym"
+        },
+        "f": {
+          "nom": "nieobecna",
+          "gen": "nieobecnej",
+          "dat": "nieobecnej",
+          "acc": "nieobecną",
+          "ins": "nieobecną",
+          "loc": "nieobecnej"
+        },
+        "n": {
+          "nom": "nieobecne",
+          "gen": "nieobecnego",
+          "dat": "nieobecnemu",
+          "acc": "nieobecne",
+          "ins": "nieobecnym",
+          "loc": "nieobecnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieobecni",
+          "gen": "nieobecnych",
+          "dat": "nieobecnym",
+          "acc": "nieobecnych",
+          "ins": "nieobecnymi",
+          "loc": "nieobecnych"
+        },
+        "nonvirile": {
+          "nom": "nieobecne",
+          "gen": "nieobecnych",
+          "dat": "nieobecnym",
+          "acc": "nieobecne",
+          "ins": "nieobecnymi",
+          "loc": "nieobecnych"
+        }
+      }
+    }
+  }
+}

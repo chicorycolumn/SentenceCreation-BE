@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "kraść",
+    "verbalNoun": "kradzenie",
+    "activeAdjectival": "kradnący",
+    "passiveAdjectival": "kradziony",
+    "contemporaryAdverbial": "kradnąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "kradnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kradziono"
+          },
+          "plural": {
+            "allPluralGenders": "kradziono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "kradłem",
+            "f": "kradłam"
+          },
+          "plural": {
+            "virile": "kradliśmy",
+            "nonvirile": "kradłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "kradłeś",
+            "f": "kradłaś"
+          },
+          "plural": {
+            "virile": "kradliście",
+            "nonvirile": "kradłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "kradł",
+            "f": "kradła",
+            "n": "kradło"
+          },
+          "plural": {
+            "virile": "kradli",
+            "nonvirile": "kradły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kradnie się"
+          },
+          "plural": {
+            "allPluralGenders": "kradnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "kradnę"
+          },
+          "plural": {
+            "allPluralGenders": "kradniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "kradniesz"
+          },
+          "plural": {
+            "allPluralGenders": "kradniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "kradnie"
+          },
+          "plural": {
+            "allPluralGenders": "kradną"
+          }
+        }
+      }
+    }
+  }
+}

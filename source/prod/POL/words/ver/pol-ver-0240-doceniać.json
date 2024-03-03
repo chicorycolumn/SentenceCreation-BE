@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "doceniać",
+    "verbalNoun": "docenianie",
+    "activeAdjectival": "doceniający",
+    "passiveAdjectival": "doceniany",
+    "contemporaryAdverbial": "doceniając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "doceniaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "doceniano"
+          },
+          "plural": {
+            "allPluralGenders": "doceniano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "doceniałem",
+            "f": "doceniałam"
+          },
+          "plural": {
+            "virile": "docenialiśmy",
+            "nonvirile": "doceniałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "doceniałeś",
+            "f": "doceniałaś"
+          },
+          "plural": {
+            "virile": "docenialiście",
+            "nonvirile": "doceniałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "doceniał",
+            "f": "doceniała",
+            "n": "doceniało"
+          },
+          "plural": {
+            "virile": "doceniali",
+            "nonvirile": "doceniały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "docenia się"
+          },
+          "plural": {
+            "allPluralGenders": "docenia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "doceniam"
+          },
+          "plural": {
+            "allPluralGenders": "doceniamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "doceniasz"
+          },
+          "plural": {
+            "allPluralGenders": "doceniacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "docenia"
+          },
+          "plural": {
+            "allPluralGenders": "doceniają"
+          }
+        }
+      }
+    }
+  }
+}

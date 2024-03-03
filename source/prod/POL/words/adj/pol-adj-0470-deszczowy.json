@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "deszczowy",
+          "gen": "deszczowego",
+          "dat": "deszczowemu",
+          "acc": "deszczowego",
+          "ins": "deszczowym",
+          "loc": "deszczowym"
+        },
+        "m3": {
+          "nom": "deszczowy",
+          "gen": "deszczowego",
+          "dat": "deszczowemu",
+          "acc": "deszczowy",
+          "ins": "deszczowym",
+          "loc": "deszczowym"
+        },
+        "f": {
+          "nom": "deszczowa",
+          "gen": "deszczowej",
+          "dat": "deszczowej",
+          "acc": "deszczową",
+          "ins": "deszczową",
+          "loc": "deszczowej"
+        },
+        "n": {
+          "nom": "deszczowe",
+          "gen": "deszczowego",
+          "dat": "deszczowemu",
+          "acc": "deszczowe",
+          "ins": "deszczowym",
+          "loc": "deszczowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "deszczowi",
+          "gen": "deszczowych",
+          "dat": "deszczowym",
+          "acc": "deszczowych",
+          "ins": "deszczowymi",
+          "loc": "deszczowych"
+        },
+        "nonvirile": {
+          "nom": "deszczowe",
+          "gen": "deszczowych",
+          "dat": "deszczowym",
+          "acc": "deszczowe",
+          "ins": "deszczowymi",
+          "loc": "deszczowych"
+        }
+      }
+    }
+  }
+}

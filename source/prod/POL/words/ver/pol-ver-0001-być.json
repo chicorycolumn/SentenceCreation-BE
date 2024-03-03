@@ -1,0 +1,139 @@
+{
+  "inflections": {
+    "infinitive": "być",
+    "verbalNoun": "bycie",
+    "activeAdjectival": "będący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "będąc",
+    "anteriorAdverbial": "bywszy",
+    "verbal": {
+      "conditional": {
+        "1per": {
+          "singular": {
+            "m": "byłbym",
+            "f": "byłabym"
+          },
+          "plural": {
+            "virile": "bylibyśmy",
+            "nonvirile": "byłybyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "byłbyś",
+            "f": "byłabyś"
+          },
+          "plural": {
+            "virile": "bylibyście",
+            "nonvirile": "byłybyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "byłby",
+            "f": "byłaby",
+            "n": "byłoby"
+          },
+          "plural": {
+            "virile": "byliby",
+            "nonvirile": "byłyby"
+          }
+        }
+      },
+      "future": {
+        "1per": {
+          "singular": {
+            "allSingularGenders": "będę"
+          },
+          "plural": {
+            "allPluralGenders": "będziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "będziesz"
+          },
+          "plural": {
+            "allPluralGenders": "będziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "będzie"
+          },
+          "plural": {
+            "allPluralGenders": "będą"
+          }
+        }
+      },
+      "imperative": "bądź",
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "byłem",
+            "f": "byłam"
+          },
+          "plural": {
+            "virile": "byliśmy",
+            "nonvirile": "byłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "byłeś",
+            "f": "byłaś"
+          },
+          "plural": {
+            "virile": "byliście",
+            "nonvirile": "byłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "był",
+            "f": "była",
+            "n": "było"
+          },
+          "plural": {
+            "virile": "byli",
+            "nonvirile": "były"
+          }
+        }
+      },
+      "present": {
+        "1per": {
+          "singular": {
+            "allSingularGenders": [
+              "jestem"
+            ]
+          },
+          "plural": {
+            "allPluralGenders": [
+              "jesteśmy"
+            ]
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": [
+              "jesteś"
+            ]
+          },
+          "plural": {
+            "allPluralGenders": [
+              "jesteście"
+            ]
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "jest"
+          },
+          "plural": {
+            "allPluralGenders": "są"
+          }
+        }
+      }
+    }
+  }
+}

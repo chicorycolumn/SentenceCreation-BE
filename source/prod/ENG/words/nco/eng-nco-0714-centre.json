@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "centre",
+      "gen": "centre's"
+    },
+    "plural": {
+      "nom": "centres",
+      "gen": "centres'"
+    }
+  }
+}

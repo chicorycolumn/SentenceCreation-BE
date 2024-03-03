@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "apteka",
+      "gen": "apteki",
+      "dat": "aptece",
+      "acc": "aptekę",
+      "ins": "apteką",
+      "loc": "aptece",
+      "voc": "apteko"
+    },
+    "plural": {
+      "nom": "apteki",
+      "gen": "aptek",
+      "dat": "aptekom",
+      "acc": "apteki",
+      "ins": "aptekami",
+      "loc": "aptekach",
+      "voc": "apteki"
+    }
+  }
+}

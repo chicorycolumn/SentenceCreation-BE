@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "trucizna",
+      "gen": "trucizny",
+      "dat": "truciźnie",
+      "acc": "truciznę",
+      "ins": "trucizną",
+      "loc": "truciźnie",
+      "voc": "trucizno"
+    },
+    "plural": {
+      "nom": "trucizny",
+      "gen": "trucizn",
+      "dat": "truciznom",
+      "acc": "trucizny",
+      "ins": "truciznami",
+      "loc": "truciznach",
+      "voc": "trucizny"
+    }
+  }
+}

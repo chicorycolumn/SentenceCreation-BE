@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "betonowy",
+          "gen": "betonowego",
+          "dat": "betonowemu",
+          "acc": "betonowego",
+          "ins": "betonowym",
+          "loc": "betonowym"
+        },
+        "m3": {
+          "nom": "betonowy",
+          "gen": "betonowego",
+          "dat": "betonowemu",
+          "acc": "betonowy",
+          "ins": "betonowym",
+          "loc": "betonowym"
+        },
+        "f": {
+          "nom": "betonowa",
+          "gen": "betonowej",
+          "dat": "betonowej",
+          "acc": "betonową",
+          "ins": "betonową",
+          "loc": "betonowej"
+        },
+        "n": {
+          "nom": "betonowe",
+          "gen": "betonowego",
+          "dat": "betonowemu",
+          "acc": "betonowe",
+          "ins": "betonowym",
+          "loc": "betonowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "betonowi",
+          "gen": "betonowych",
+          "dat": "betonowym",
+          "acc": "betonowych",
+          "ins": "betonowymi",
+          "loc": "betonowych"
+        },
+        "nonvirile": {
+          "nom": "betonowe",
+          "gen": "betonowych",
+          "dat": "betonowym",
+          "acc": "betonowe",
+          "ins": "betonowymi",
+          "loc": "betonowych"
+        }
+      }
+    }
+  }
+}

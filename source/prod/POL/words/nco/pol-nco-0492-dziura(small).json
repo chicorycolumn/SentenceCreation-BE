@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dziura",
+      "gen": "dziury",
+      "dat": "dziurze",
+      "acc": "dziurę",
+      "ins": "dziurą",
+      "loc": "dziurze",
+      "voc": "dziuro"
+    },
+    "plural": {
+      "nom": "dziury",
+      "gen": "dziur",
+      "dat": "dziurom",
+      "acc": "dziury",
+      "ins": "dziurami",
+      "loc": "dziurach",
+      "voc": "dziury"
+    }
+  }
+}

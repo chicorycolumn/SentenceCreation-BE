@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dyplom",
+      "gen": "dyplomu",
+      "dat": "dyplomowi",
+      "acc": "dyplom",
+      "ins": "dyplomem",
+      "loc": "dyplomie",
+      "voc": "dyplomie"
+    },
+    "plural": {
+      "nom": "dyplomy",
+      "gen": "dyplomów",
+      "dat": "dyplomom",
+      "acc": "dyplomy",
+      "ins": "dyplomami",
+      "loc": "dyplomach",
+      "voc": "dyplomy"
+    }
+  }
+}

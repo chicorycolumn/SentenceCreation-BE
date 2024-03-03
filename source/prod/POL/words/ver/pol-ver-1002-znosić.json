@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "znosić",
+    "verbalNoun": "znoszenie",
+    "activeAdjectival": "znoszący",
+    "passiveAdjectival": "znoszony",
+    "contemporaryAdverbial": "znosząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "znoś",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "znoszono"
+          },
+          "plural": {
+            "allPluralGenders": "znoszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "znosiłem",
+            "f": "znosiłam"
+          },
+          "plural": {
+            "virile": "znosiliśmy",
+            "nonvirile": "znosiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "znosiłeś",
+            "f": "znosiłaś"
+          },
+          "plural": {
+            "virile": "znosiliście",
+            "nonvirile": "znosiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "znosił",
+            "f": "znosiła",
+            "n": "znosiło"
+          },
+          "plural": {
+            "virile": "znosili",
+            "nonvirile": "znosiły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "znosi się"
+          },
+          "plural": {
+            "allPluralGenders": "znosi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "znoszę"
+          },
+          "plural": {
+            "allPluralGenders": "znosimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "znosisz"
+          },
+          "plural": {
+            "allPluralGenders": "znosicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "znosi"
+          },
+          "plural": {
+            "allPluralGenders": "znoszą"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zmiana",
+      "gen": "zmiany",
+      "dat": "zmianie",
+      "acc": "zmianę",
+      "ins": "zmianą",
+      "loc": "zmianie",
+      "voc": "zmiano"
+    },
+    "plural": {
+      "nom": "zmiany",
+      "gen": "zmian",
+      "dat": "zmianom",
+      "acc": "zmiany",
+      "ins": "zmianami",
+      "loc": "zmianach",
+      "voc": "zmiany"
+    }
+  }
+}

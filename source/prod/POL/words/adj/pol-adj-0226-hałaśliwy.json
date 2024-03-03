@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "hałaśliwie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "hałaśliwy",
+          "gen": "hałaśliwego",
+          "dat": "hałaśliwemu",
+          "acc": "hałaśliwego",
+          "ins": "hałaśliwym",
+          "loc": "hałaśliwym"
+        },
+        "m3": {
+          "nom": "hałaśliwy",
+          "gen": "hałaśliwego",
+          "dat": "hałaśliwemu",
+          "acc": "hałaśliwy",
+          "ins": "hałaśliwym",
+          "loc": "hałaśliwym"
+        },
+        "f": {
+          "nom": "hałaśliwa",
+          "gen": "hałaśliwej",
+          "dat": "hałaśliwej",
+          "acc": "hałaśliwą",
+          "ins": "hałaśliwą",
+          "loc": "hałaśliwej"
+        },
+        "n": {
+          "nom": "hałaśliwe",
+          "gen": "hałaśliwego",
+          "dat": "hałaśliwemu",
+          "acc": "hałaśliwe",
+          "ins": "hałaśliwym",
+          "loc": "hałaśliwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "hałaśliwi",
+          "gen": "hałaśliwych",
+          "dat": "hałaśliwym",
+          "acc": "hałaśliwych",
+          "ins": "hałaśliwymi",
+          "loc": "hałaśliwych"
+        },
+        "nonvirile": {
+          "nom": "hałaśliwe",
+          "gen": "hałaśliwych",
+          "dat": "hałaśliwym",
+          "acc": "hałaśliwe",
+          "ins": "hałaśliwymi",
+          "loc": "hałaśliwych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "hałaśliwszy",
+          "gen": "hałaśliwszego",
+          "dat": "hałaśliwszemu",
+          "acc": "hałaśliwszego",
+          "ins": "hałaśliwszym",
+          "loc": "hałaśliwszym"
+        },
+        "m3": {
+          "nom": "hałaśliwszy",
+          "gen": "hałaśliwszego",
+          "dat": "hałaśliwszemu",
+          "acc": "hałaśliwszy",
+          "ins": "hałaśliwszym",
+          "loc": "hałaśliwszym"
+        },
+        "f": {
+          "nom": "hałaśliwsza",
+          "gen": "hałaśliwszej",
+          "dat": "hałaśliwszej",
+          "acc": "hałaśliwszą",
+          "ins": "hałaśliwszą",
+          "loc": "hałaśliwszej"
+        },
+        "n": {
+          "nom": "hałaśliwsze",
+          "gen": "hałaśliwszego",
+          "dat": "hałaśliwszemu",
+          "acc": "hałaśliwsze",
+          "ins": "hałaśliwszym",
+          "loc": "hałaśliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "hałaśliwsi",
+          "gen": "hałaśliwszych",
+          "dat": "hałaśliwszym",
+          "acc": "hałaśliwszych",
+          "ins": "hałaśliwszymi",
+          "loc": "hałaśliwszych"
+        },
+        "nonvirile": {
+          "nom": "hałaśliwsze",
+          "gen": "hałaśliwszych",
+          "dat": "hałaśliwszym",
+          "acc": "hałaśliwsze",
+          "ins": "hałaśliwszymi",
+          "loc": "hałaśliwszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najhałaśliwszy",
+          "gen": "najhałaśliwszego",
+          "dat": "najhałaśliwszemu",
+          "acc": "najhałaśliwszego",
+          "ins": "najhałaśliwszym",
+          "loc": "najhałaśliwszym"
+        },
+        "m3": {
+          "nom": "najhałaśliwszy",
+          "gen": "najhałaśliwszego",
+          "dat": "najhałaśliwszemu",
+          "acc": "najhałaśliwszy",
+          "ins": "najhałaśliwszym",
+          "loc": "najhałaśliwszym"
+        },
+        "f": {
+          "nom": "najhałaśliwsza",
+          "gen": "najhałaśliwszej",
+          "dat": "najhałaśliwszej",
+          "acc": "najhałaśliwszą",
+          "ins": "najhałaśliwszą",
+          "loc": "najhałaśliwszej"
+        },
+        "n": {
+          "nom": "najhałaśliwsze",
+          "gen": "najhałaśliwszego",
+          "dat": "najhałaśliwszemu",
+          "acc": "najhałaśliwsze",
+          "ins": "najhałaśliwszym",
+          "loc": "najhałaśliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najhałaśliwsi",
+          "gen": "najhałaśliwszych",
+          "dat": "najhałaśliwszym",
+          "acc": "najhałaśliwszych",
+          "ins": "najhałaśliwszymi",
+          "loc": "najhałaśliwszych"
+        },
+        "nonvirile": {
+          "nom": "najhałaśliwsze",
+          "gen": "najhałaśliwszych",
+          "dat": "najhałaśliwszym",
+          "acc": "najhałaśliwsze",
+          "ins": "najhałaśliwszymi",
+          "loc": "najhałaśliwszych"
+        }
+      }
+    }
+  }
+}

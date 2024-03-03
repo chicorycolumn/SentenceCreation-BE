@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "drzewo",
+      "gen": "drzewa",
+      "dat": "drzewu",
+      "acc": "drzewo",
+      "ins": "drzewem",
+      "loc": "drzewie",
+      "voc": "drzewo"
+    },
+    "plural": {
+      "nom": "drzewa",
+      "gen": "drzew",
+      "dat": "drzewom",
+      "acc": "drzewa",
+      "ins": "drzewami",
+      "loc": "drzewach",
+      "voc": "drzewa"
+    }
+  }
+}

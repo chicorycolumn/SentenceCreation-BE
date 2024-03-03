@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "słownik",
+      "gen": "słownika",
+      "dat": "słownikowi",
+      "acc": "słownik",
+      "ins": "słownikiem",
+      "loc": "słowniku",
+      "voc": "słowniku"
+    },
+    "plural": {
+      "nom": "słowniki",
+      "gen": "słowników",
+      "dat": "słownikom",
+      "acc": "słowniki",
+      "ins": "słownikami",
+      "loc": "słownikach",
+      "voc": "słowniki"
+    }
+  }
+}

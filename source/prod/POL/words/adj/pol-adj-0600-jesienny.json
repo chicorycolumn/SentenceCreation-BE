@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "jesiennie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "jesienny",
+          "gen": "jesiennego",
+          "dat": "jesiennemu",
+          "acc": "jesiennego",
+          "ins": "jesiennym",
+          "loc": "jesiennym"
+        },
+        "m3": {
+          "nom": "jesienny",
+          "gen": "jesiennego",
+          "dat": "jesiennemu",
+          "acc": "jesienny",
+          "ins": "jesiennym",
+          "loc": "jesiennym"
+        },
+        "f": {
+          "nom": "jesienna",
+          "gen": "jesiennej",
+          "dat": "jesiennej",
+          "acc": "jesienną",
+          "ins": "jesienną",
+          "loc": "jesiennej"
+        },
+        "n": {
+          "nom": "jesienne",
+          "gen": "jesiennego",
+          "dat": "jesiennemu",
+          "acc": "jesienne",
+          "ins": "jesiennym",
+          "loc": "jesiennym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "jesienni",
+          "gen": "jesiennych",
+          "dat": "jesiennym",
+          "acc": "jesiennych",
+          "ins": "jesiennymi",
+          "loc": "jesiennych"
+        },
+        "nonvirile": {
+          "nom": "jesienne",
+          "gen": "jesiennych",
+          "dat": "jesiennym",
+          "acc": "jesienne",
+          "ins": "jesiennymi",
+          "loc": "jesiennych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "flu",
+      "gen": "flu's"
+    },
+    "plural": {
+      "nom": "flus",
+      "gen": "flus'"
+    }
+  }
+}

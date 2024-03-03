@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "park",
+      "gen": "parku",
+      "dat": "parkowi",
+      "acc": "park",
+      "ins": "parkiem",
+      "loc": "parku",
+      "voc": "parku"
+    },
+    "plural": {
+      "nom": "parki",
+      "gen": "parków",
+      "dat": "parkom",
+      "acc": "parki",
+      "ins": "parkami",
+      "loc": "parkach",
+      "voc": "parki"
+    }
+  }
+}

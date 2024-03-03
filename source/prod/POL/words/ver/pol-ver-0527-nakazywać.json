@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nakazywać",
+    "verbalNoun": "nakazywanie",
+    "activeAdjectival": "nakazujący",
+    "passiveAdjectival": "nakazywany",
+    "contemporaryAdverbial": "nakazując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "nakazuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nakazywano"
+          },
+          "plural": {
+            "allPluralGenders": "nakazywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nakazywałem",
+            "f": "nakazywałam"
+          },
+          "plural": {
+            "virile": "nakazywaliśmy",
+            "nonvirile": "nakazywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nakazywałeś",
+            "f": "nakazywałaś"
+          },
+          "plural": {
+            "virile": "nakazywaliście",
+            "nonvirile": "nakazywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nakazywał",
+            "f": "nakazywała",
+            "n": "nakazywało"
+          },
+          "plural": {
+            "virile": "nakazywali",
+            "nonvirile": "nakazywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nakazuje się"
+          },
+          "plural": {
+            "allPluralGenders": "nakazuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nakazuję"
+          },
+          "plural": {
+            "allPluralGenders": "nakazujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nakazujesz"
+          },
+          "plural": {
+            "allPluralGenders": "nakazujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nakazuje"
+          },
+          "plural": {
+            "allPluralGenders": "nakazują"
+          }
+        }
+      }
+    }
+  }
+}

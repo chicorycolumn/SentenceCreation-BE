@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mżawka",
+      "gen": "mżawki",
+      "dat": "mżawce",
+      "acc": "mżawkę",
+      "ins": "mżawką",
+      "loc": "mżawce",
+      "voc": "mżawko"
+    },
+    "plural": {
+      "nom": "mżawki",
+      "gen": "mżawek",
+      "dat": "mżawkom",
+      "acc": "mżawki",
+      "ins": "mżawkami",
+      "loc": "mżawkach",
+      "voc": "mżawki"
+    }
+  }
+}

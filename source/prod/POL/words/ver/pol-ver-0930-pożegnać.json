@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pożegnać",
+    "verbalNoun": "pożegnanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pożegnany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pożegnawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pożegna się"
+          },
+          "plural": {
+            "allPluralGenders": "pożegna się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pożegnam"
+          },
+          "plural": {
+            "allPluralGenders": "pożegnamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pożegnasz"
+          },
+          "plural": {
+            "allPluralGenders": "pożegnacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pożegna"
+          },
+          "plural": {
+            "allPluralGenders": "pożegnają"
+          }
+        }
+      },
+      "imperative": "pożegnaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pożegnano"
+          },
+          "plural": {
+            "allPluralGenders": "pożegnano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pożegnałem",
+            "f": "pożegnałam"
+          },
+          "plural": {
+            "virile": "pożegnaliśmy",
+            "nonvirile": "pożegnałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pożegnałeś",
+            "f": "pożegnałaś"
+          },
+          "plural": {
+            "virile": "pożegnaliście",
+            "nonvirile": "pożegnałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pożegnał",
+            "f": "pożegnała",
+            "n": "pożegnało"
+          },
+          "plural": {
+            "virile": "pożegnali",
+            "nonvirile": "pożegnały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

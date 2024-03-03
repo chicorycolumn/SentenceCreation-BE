@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przynosić",
+    "verbalNoun": "przynoszenie",
+    "activeAdjectival": "przynoszący",
+    "passiveAdjectival": "przynoszony",
+    "contemporaryAdverbial": "przynosząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przynoś",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przynoszono"
+          },
+          "plural": {
+            "allPluralGenders": "przynoszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przynosiłem",
+            "f": "przynosiłam"
+          },
+          "plural": {
+            "virile": "przynosiliśmy",
+            "nonvirile": "przynosiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przynosiłeś",
+            "f": "przynosiłaś"
+          },
+          "plural": {
+            "virile": "przynosiliście",
+            "nonvirile": "przynosiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przynosił",
+            "f": "przynosiła",
+            "n": "przynosiło"
+          },
+          "plural": {
+            "virile": "przynosili",
+            "nonvirile": "przynosiły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przynosi się"
+          },
+          "plural": {
+            "allPluralGenders": "przynosi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przynoszę"
+          },
+          "plural": {
+            "allPluralGenders": "przynosimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przynosisz"
+          },
+          "plural": {
+            "allPluralGenders": "przynosicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przynosi"
+          },
+          "plural": {
+            "allPluralGenders": "przynoszą"
+          }
+        }
+      }
+    }
+  }
+}

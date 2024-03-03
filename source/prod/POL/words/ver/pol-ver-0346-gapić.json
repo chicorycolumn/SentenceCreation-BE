@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "gapić",
+    "verbalNoun": "gapienie",
+    "activeAdjectival": "gapiący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "gapiąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "gap",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "gapiono"
+          },
+          "plural": {
+            "allPluralGenders": "gapiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "gapiłem",
+            "f": "gapiłam"
+          },
+          "plural": {
+            "virile": "gapiliśmy",
+            "nonvirile": "gapiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "gapiłeś",
+            "f": "gapiłaś"
+          },
+          "plural": {
+            "virile": "gapiliście",
+            "nonvirile": "gapiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "gapił",
+            "f": "gapiła",
+            "n": "gapiło"
+          },
+          "plural": {
+            "virile": "gapili",
+            "nonvirile": "gapiły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "gapi się"
+          },
+          "plural": {
+            "allPluralGenders": "gapi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "gapię"
+          },
+          "plural": {
+            "allPluralGenders": "gapimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "gapisz"
+          },
+          "plural": {
+            "allPluralGenders": "gapicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "gapi"
+          },
+          "plural": {
+            "allPluralGenders": "gapią"
+          }
+        }
+      }
+    }
+  }
+}

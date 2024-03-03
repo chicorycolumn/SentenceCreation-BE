@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "otwór",
+      "gen": "otworu",
+      "dat": "otworowi",
+      "acc": "otwór",
+      "ins": "otworem",
+      "loc": "otworze",
+      "voc": "otworze"
+    },
+    "plural": {
+      "nom": "otwory",
+      "gen": "otworów",
+      "dat": "otworom",
+      "acc": "otwory",
+      "ins": "otworami",
+      "loc": "otworach",
+      "voc": "otwory"
+    }
+  }
+}

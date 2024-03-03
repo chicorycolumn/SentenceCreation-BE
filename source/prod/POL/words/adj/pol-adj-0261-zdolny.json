@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "zdolnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zdolny",
+          "gen": "zdolnego",
+          "dat": "zdolnemu",
+          "acc": "zdolnego",
+          "ins": "zdolnym",
+          "loc": "zdolnym"
+        },
+        "m3": {
+          "nom": "zdolny",
+          "gen": "zdolnego",
+          "dat": "zdolnemu",
+          "acc": "zdolny",
+          "ins": "zdolnym",
+          "loc": "zdolnym"
+        },
+        "f": {
+          "nom": "zdolna",
+          "gen": "zdolnej",
+          "dat": "zdolnej",
+          "acc": "zdolną",
+          "ins": "zdolną",
+          "loc": "zdolnej"
+        },
+        "n": {
+          "nom": "zdolne",
+          "gen": "zdolnego",
+          "dat": "zdolnemu",
+          "acc": "zdolne",
+          "ins": "zdolnym",
+          "loc": "zdolnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zdolni",
+          "gen": "zdolnych",
+          "dat": "zdolnym",
+          "acc": "zdolnych",
+          "ins": "zdolnymi",
+          "loc": "zdolnych"
+        },
+        "nonvirile": {
+          "nom": "zdolne",
+          "gen": "zdolnych",
+          "dat": "zdolnym",
+          "acc": "zdolne",
+          "ins": "zdolnymi",
+          "loc": "zdolnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "zdolniejszy",
+          "gen": "zdolniejszego",
+          "dat": "zdolniejszemu",
+          "acc": "zdolniejszego",
+          "ins": "zdolniejszym",
+          "loc": "zdolniejszym"
+        },
+        "m3": {
+          "nom": "zdolniejszy",
+          "gen": "zdolniejszego",
+          "dat": "zdolniejszemu",
+          "acc": "zdolniejszy",
+          "ins": "zdolniejszym",
+          "loc": "zdolniejszym"
+        },
+        "f": {
+          "nom": "zdolniejsza",
+          "gen": "zdolniejszej",
+          "dat": "zdolniejszej",
+          "acc": "zdolniejszą",
+          "ins": "zdolniejszą",
+          "loc": "zdolniejszej"
+        },
+        "n": {
+          "nom": "zdolniejsze",
+          "gen": "zdolniejszego",
+          "dat": "zdolniejszemu",
+          "acc": "zdolniejsze",
+          "ins": "zdolniejszym",
+          "loc": "zdolniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zdolniejsi",
+          "gen": "zdolniejszych",
+          "dat": "zdolniejszym",
+          "acc": "zdolniejszych",
+          "ins": "zdolniejszymi",
+          "loc": "zdolniejszych"
+        },
+        "nonvirile": {
+          "nom": "zdolniejsze",
+          "gen": "zdolniejszych",
+          "dat": "zdolniejszym",
+          "acc": "zdolniejsze",
+          "ins": "zdolniejszymi",
+          "loc": "zdolniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najzdolniejszy",
+          "gen": "najzdolniejszego",
+          "dat": "najzdolniejszemu",
+          "acc": "najzdolniejszego",
+          "ins": "najzdolniejszym",
+          "loc": "najzdolniejszym"
+        },
+        "m3": {
+          "nom": "najzdolniejszy",
+          "gen": "najzdolniejszego",
+          "dat": "najzdolniejszemu",
+          "acc": "najzdolniejszy",
+          "ins": "najzdolniejszym",
+          "loc": "najzdolniejszym"
+        },
+        "f": {
+          "nom": "najzdolniejsza",
+          "gen": "najzdolniejszej",
+          "dat": "najzdolniejszej",
+          "acc": "najzdolniejszą",
+          "ins": "najzdolniejszą",
+          "loc": "najzdolniejszej"
+        },
+        "n": {
+          "nom": "najzdolniejsze",
+          "gen": "najzdolniejszego",
+          "dat": "najzdolniejszemu",
+          "acc": "najzdolniejsze",
+          "ins": "najzdolniejszym",
+          "loc": "najzdolniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najzdolniejsi",
+          "gen": "najzdolniejszych",
+          "dat": "najzdolniejszym",
+          "acc": "najzdolniejszych",
+          "ins": "najzdolniejszymi",
+          "loc": "najzdolniejszych"
+        },
+        "nonvirile": {
+          "nom": "najzdolniejsze",
+          "gen": "najzdolniejszych",
+          "dat": "najzdolniejszym",
+          "acc": "najzdolniejsze",
+          "ins": "najzdolniejszymi",
+          "loc": "najzdolniejszych"
+        }
+      }
+    }
+  }
+}

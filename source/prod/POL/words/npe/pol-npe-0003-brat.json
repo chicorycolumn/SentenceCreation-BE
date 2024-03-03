@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "brat",
+      "gen": "brata",
+      "dat": "bratu",
+      "acc": "brata",
+      "ins": "bratem",
+      "loc": "bracie",
+      "voc": "bracie"
+    },
+    "plural": {
+      "nom": "bracia",
+      "gen": "braci",
+      "dat": "braciom",
+      "acc": "braci",
+      "ins": "braćmi",
+      "loc": "braciach",
+      "voc": "bracia"
+    }
+  }
+}

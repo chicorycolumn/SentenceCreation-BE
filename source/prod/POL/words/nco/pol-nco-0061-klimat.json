@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "klimat",
+      "gen": "klimatu",
+      "dat": "klimatowi",
+      "acc": "klimat",
+      "ins": "klimatem",
+      "loc": "klimacie",
+      "voc": "klimacie"
+    },
+    "plural": {
+      "nom": "klimaty",
+      "gen": "klimatów",
+      "dat": "klimatom",
+      "acc": "klimaty",
+      "ins": "klimatami",
+      "loc": "klimatach",
+      "voc": "klimaty"
+    }
+  }
+}

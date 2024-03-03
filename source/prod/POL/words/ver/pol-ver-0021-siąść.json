@@ -1,0 +1,81 @@
+{
+  "inflections": {
+    "infinitive": "siąść",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "siadłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "siądzie się"
+          },
+          "plural": {
+            "allPluralGenders": "siądzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "siądę"
+          },
+          "plural": {
+            "allPluralGenders": "siądziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "siądziesz"
+          },
+          "plural": {
+            "allPluralGenders": "siądziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "siądzie"
+          },
+          "plural": {
+            "allPluralGenders": "siądą"
+          }
+        }
+      },
+      "imperative": "siądź",
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "siadłem",
+            "f": "siadłam"
+          },
+          "plural": {
+            "virile": "siedliśmy",
+            "nonvirile": "siadłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "siadłeś",
+            "f": "siadłaś"
+          },
+          "plural": {
+            "virile": "siedliście",
+            "nonvirile": "siadłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "siadł",
+            "f": "siadła",
+            "n": "siadło"
+          },
+          "plural": {
+            "virile": "siedli",
+            "nonvirile": "siadły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

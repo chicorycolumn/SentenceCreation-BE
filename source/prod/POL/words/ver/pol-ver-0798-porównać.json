@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "porównać",
+    "verbalNoun": "porównanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "porównany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "porównawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "porówna się"
+          },
+          "plural": {
+            "allPluralGenders": "porówna się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "porównam"
+          },
+          "plural": {
+            "allPluralGenders": "porównamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "porównasz"
+          },
+          "plural": {
+            "allPluralGenders": "porównacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "porówna"
+          },
+          "plural": {
+            "allPluralGenders": "porównają"
+          }
+        }
+      },
+      "imperative": "porównaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "porównano"
+          },
+          "plural": {
+            "allPluralGenders": "porównano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "porównałem",
+            "f": "porównałam"
+          },
+          "plural": {
+            "virile": "porównaliśmy",
+            "nonvirile": "porównałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "porównałeś",
+            "f": "porównałaś"
+          },
+          "plural": {
+            "virile": "porównaliście",
+            "nonvirile": "porównałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "porównał",
+            "f": "porównała",
+            "n": "porównało"
+          },
+          "plural": {
+            "virile": "porównali",
+            "nonvirile": "porównały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

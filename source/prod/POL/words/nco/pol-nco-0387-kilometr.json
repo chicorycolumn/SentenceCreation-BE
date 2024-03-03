@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kilometr",
+      "gen": "kilometra",
+      "dat": "kilometrowi",
+      "acc": "kilometr",
+      "ins": "kilometrem",
+      "loc": "kilometrze",
+      "voc": "kilometrze"
+    },
+    "plural": {
+      "nom": "kilometry",
+      "gen": "kilometrów",
+      "dat": "kilometrom",
+      "acc": "kilometry",
+      "ins": "kilometrami",
+      "loc": "kilometrach",
+      "voc": "kilometry"
+    }
+  }
+}

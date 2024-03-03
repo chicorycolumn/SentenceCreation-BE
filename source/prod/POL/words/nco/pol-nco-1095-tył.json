@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "tył",
+      "gen": "tyłu",
+      "dat": "tyłowi",
+      "acc": "tył",
+      "ins": "tyłem",
+      "loc": "tyle",
+      "voc": "tyle"
+    },
+    "plural": {
+      "nom": "tyły",
+      "gen": "tyłów",
+      "dat": "tyłom",
+      "acc": "tyły",
+      "ins": "tyłami",
+      "loc": "tyłach",
+      "voc": "tyły"
+    }
+  }
+}

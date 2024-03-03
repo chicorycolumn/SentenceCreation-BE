@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "alternatywnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "alternatywny",
+          "gen": "alternatywnego",
+          "dat": "alternatywnemu",
+          "acc": "alternatywnego",
+          "ins": "alternatywnym",
+          "loc": "alternatywnym"
+        },
+        "m3": {
+          "nom": "alternatywny",
+          "gen": "alternatywnego",
+          "dat": "alternatywnemu",
+          "acc": "alternatywny",
+          "ins": "alternatywnym",
+          "loc": "alternatywnym"
+        },
+        "f": {
+          "nom": "alternatywna",
+          "gen": "alternatywnej",
+          "dat": "alternatywnej",
+          "acc": "alternatywną",
+          "ins": "alternatywną",
+          "loc": "alternatywnej"
+        },
+        "n": {
+          "nom": "alternatywne",
+          "gen": "alternatywnego",
+          "dat": "alternatywnemu",
+          "acc": "alternatywne",
+          "ins": "alternatywnym",
+          "loc": "alternatywnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "alternatywni",
+          "gen": "alternatywnych",
+          "dat": "alternatywnym",
+          "acc": "alternatywnych",
+          "ins": "alternatywnymi",
+          "loc": "alternatywnych"
+        },
+        "nonvirile": {
+          "nom": "alternatywne",
+          "gen": "alternatywnych",
+          "dat": "alternatywnym",
+          "acc": "alternatywne",
+          "ins": "alternatywnymi",
+          "loc": "alternatywnych"
+        }
+      }
+    }
+  }
+}

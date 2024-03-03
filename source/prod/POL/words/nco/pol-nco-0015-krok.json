@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "krok",
+      "gen": "kroku",
+      "dat": "krokowi",
+      "acc": "krok",
+      "ins": "krokiem",
+      "loc": "kroku",
+      "voc": "kroku"
+    },
+    "plural": {
+      "nom": "kroki",
+      "gen": "kroków",
+      "dat": "krokom",
+      "acc": "kroki",
+      "ins": "krokami",
+      "loc": "krokach",
+      "voc": "kroki"
+    }
+  }
+}

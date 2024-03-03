@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gorączka",
+      "gen": "gorączki",
+      "dat": "gorączce",
+      "acc": "gorączkę",
+      "ins": "gorączką",
+      "loc": "gorączce",
+      "voc": "gorączko"
+    },
+    "plural": {
+      "nom": "gorączki",
+      "gen": "gorączek",
+      "dat": "gorączkom",
+      "acc": "gorączki",
+      "ins": "gorączkami",
+      "loc": "gorączkach",
+      "voc": "gorączki"
+    }
+  }
+}

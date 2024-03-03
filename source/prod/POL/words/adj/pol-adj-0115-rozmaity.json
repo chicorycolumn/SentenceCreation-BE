@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "rozmaicie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "rozmaity",
+          "gen": "rozmaitego",
+          "dat": "rozmaitemu",
+          "acc": "rozmaitego",
+          "ins": "rozmaitym",
+          "loc": "rozmaitym"
+        },
+        "m3": {
+          "nom": "rozmaity",
+          "gen": "rozmaitego",
+          "dat": "rozmaitemu",
+          "acc": "rozmaity",
+          "ins": "rozmaitym",
+          "loc": "rozmaitym"
+        },
+        "f": {
+          "nom": "rozmaita",
+          "gen": "rozmaitej",
+          "dat": "rozmaitej",
+          "acc": "rozmaitą",
+          "ins": "rozmaitą",
+          "loc": "rozmaitej"
+        },
+        "n": {
+          "nom": "rozmaite",
+          "gen": "rozmaitego",
+          "dat": "rozmaitemu",
+          "acc": "rozmaite",
+          "ins": "rozmaitym",
+          "loc": "rozmaitym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "rozmaici",
+          "gen": "rozmaitych",
+          "dat": "rozmaitym",
+          "acc": "rozmaitych",
+          "ins": "rozmaitymi",
+          "loc": "rozmaitych"
+        },
+        "nonvirile": {
+          "nom": "rozmaite",
+          "gen": "rozmaitych",
+          "dat": "rozmaitym",
+          "acc": "rozmaite",
+          "ins": "rozmaitymi",
+          "loc": "rozmaitych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "rozmaitszy",
+          "gen": "rozmaitszego",
+          "dat": "rozmaitszemu",
+          "acc": "rozmaitszego",
+          "ins": "rozmaitszym",
+          "loc": "rozmaitszym"
+        },
+        "m3": {
+          "nom": "rozmaitszy",
+          "gen": "rozmaitszego",
+          "dat": "rozmaitszemu",
+          "acc": "rozmaitszy",
+          "ins": "rozmaitszym",
+          "loc": "rozmaitszym"
+        },
+        "f": {
+          "nom": "rozmaitsza",
+          "gen": "rozmaitszej",
+          "dat": "rozmaitszej",
+          "acc": "rozmaitszą",
+          "ins": "rozmaitszą",
+          "loc": "rozmaitszej"
+        },
+        "n": {
+          "nom": "rozmaitsze",
+          "gen": "rozmaitszego",
+          "dat": "rozmaitszemu",
+          "acc": "rozmaitsze",
+          "ins": "rozmaitszym",
+          "loc": "rozmaitszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "rozmaitsi",
+          "gen": "rozmaitszych",
+          "dat": "rozmaitszym",
+          "acc": "rozmaitszych",
+          "ins": "rozmaitszymi",
+          "loc": "rozmaitszych"
+        },
+        "nonvirile": {
+          "nom": "rozmaitsze",
+          "gen": "rozmaitszych",
+          "dat": "rozmaitszym",
+          "acc": "rozmaitsze",
+          "ins": "rozmaitszymi",
+          "loc": "rozmaitszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najrozmaitszy",
+          "gen": "najrozmaitszego",
+          "dat": "najrozmaitszemu",
+          "acc": "najrozmaitszego",
+          "ins": "najrozmaitszym",
+          "loc": "najrozmaitszym"
+        },
+        "m3": {
+          "nom": "najrozmaitszy",
+          "gen": "najrozmaitszego",
+          "dat": "najrozmaitszemu",
+          "acc": "najrozmaitszy",
+          "ins": "najrozmaitszym",
+          "loc": "najrozmaitszym"
+        },
+        "f": {
+          "nom": "najrozmaitsza",
+          "gen": "najrozmaitszej",
+          "dat": "najrozmaitszej",
+          "acc": "najrozmaitszą",
+          "ins": "najrozmaitszą",
+          "loc": "najrozmaitszej"
+        },
+        "n": {
+          "nom": "najrozmaitsze",
+          "gen": "najrozmaitszego",
+          "dat": "najrozmaitszemu",
+          "acc": "najrozmaitsze",
+          "ins": "najrozmaitszym",
+          "loc": "najrozmaitszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najrozmaitsi",
+          "gen": "najrozmaitszych",
+          "dat": "najrozmaitszym",
+          "acc": "najrozmaitszych",
+          "ins": "najrozmaitszymi",
+          "loc": "najrozmaitszych"
+        },
+        "nonvirile": {
+          "nom": "najrozmaitsze",
+          "gen": "najrozmaitszych",
+          "dat": "najrozmaitszym",
+          "acc": "najrozmaitsze",
+          "ins": "najrozmaitszymi",
+          "loc": "najrozmaitszych"
+        }
+      }
+    }
+  }
+}

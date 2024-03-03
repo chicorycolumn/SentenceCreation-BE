@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zapamiętywać",
+    "verbalNoun": "zapamiętywanie",
+    "activeAdjectival": "zapamiętujący",
+    "passiveAdjectival": "zapamiętywany",
+    "contemporaryAdverbial": "zapamiętując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "zapamiętuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zapamiętywano"
+          },
+          "plural": {
+            "allPluralGenders": "zapamiętywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zapamiętywałem",
+            "f": "zapamiętywałam"
+          },
+          "plural": {
+            "virile": "zapamiętywaliśmy",
+            "nonvirile": "zapamiętywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zapamiętywałeś",
+            "f": "zapamiętywałaś"
+          },
+          "plural": {
+            "virile": "zapamiętywaliście",
+            "nonvirile": "zapamiętywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zapamiętywał",
+            "f": "zapamiętywała",
+            "n": "zapamiętywało"
+          },
+          "plural": {
+            "virile": "zapamiętywali",
+            "nonvirile": "zapamiętywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zapamiętuje się"
+          },
+          "plural": {
+            "allPluralGenders": "zapamiętuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zapamiętuję"
+          },
+          "plural": {
+            "allPluralGenders": "zapamiętujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zapamiętujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zapamiętujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zapamiętuje"
+          },
+          "plural": {
+            "allPluralGenders": "zapamiętują"
+          }
+        }
+      }
+    }
+  }
+}

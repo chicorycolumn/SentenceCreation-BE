@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bankowy",
+          "gen": "bankowego",
+          "dat": "bankowemu",
+          "acc": "bankowego",
+          "ins": "bankowym",
+          "loc": "bankowym"
+        },
+        "m3": {
+          "nom": "bankowy",
+          "gen": "bankowego",
+          "dat": "bankowemu",
+          "acc": "bankowy",
+          "ins": "bankowym",
+          "loc": "bankowym"
+        },
+        "f": {
+          "nom": "bankowa",
+          "gen": "bankowej",
+          "dat": "bankowej",
+          "acc": "bankową",
+          "ins": "bankową",
+          "loc": "bankowej"
+        },
+        "n": {
+          "nom": "bankowe",
+          "gen": "bankowego",
+          "dat": "bankowemu",
+          "acc": "bankowe",
+          "ins": "bankowym",
+          "loc": "bankowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bankowi",
+          "gen": "bankowych",
+          "dat": "bankowym",
+          "acc": "bankowych",
+          "ins": "bankowymi",
+          "loc": "bankowych"
+        },
+        "nonvirile": {
+          "nom": "bankowe",
+          "gen": "bankowych",
+          "dat": "bankowym",
+          "acc": "bankowe",
+          "ins": "bankowymi",
+          "loc": "bankowych"
+        }
+      }
+    }
+  }
+}

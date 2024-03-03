@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "podle",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "podły",
+          "gen": "podłego",
+          "dat": "podłemu",
+          "acc": "podłego",
+          "ins": "podłym",
+          "loc": "podłym"
+        },
+        "m3": {
+          "nom": "podły",
+          "gen": "podłego",
+          "dat": "podłemu",
+          "acc": "podły",
+          "ins": "podłym",
+          "loc": "podłym"
+        },
+        "f": {
+          "nom": "podła",
+          "gen": "podłej",
+          "dat": "podłej",
+          "acc": "podłą",
+          "ins": "podłą",
+          "loc": "podłej"
+        },
+        "n": {
+          "nom": "podłe",
+          "gen": "podłego",
+          "dat": "podłemu",
+          "acc": "podłe",
+          "ins": "podłym",
+          "loc": "podłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "podli",
+          "gen": "podłych",
+          "dat": "podłym",
+          "acc": "podłych",
+          "ins": "podłymi",
+          "loc": "podłych"
+        },
+        "nonvirile": {
+          "nom": "podłe",
+          "gen": "podłych",
+          "dat": "podłym",
+          "acc": "podłe",
+          "ins": "podłymi",
+          "loc": "podłych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "podlejszy",
+          "gen": "podlejszego",
+          "dat": "podlejszemu",
+          "acc": "podlejszego",
+          "ins": "podlejszym",
+          "loc": "podlejszym"
+        },
+        "m3": {
+          "nom": "podlejszy",
+          "gen": "podlejszego",
+          "dat": "podlejszemu",
+          "acc": "podlejszy",
+          "ins": "podlejszym",
+          "loc": "podlejszym"
+        },
+        "f": {
+          "nom": "podlejsza",
+          "gen": "podlejszej",
+          "dat": "podlejszej",
+          "acc": "podlejszą",
+          "ins": "podlejszą",
+          "loc": "podlejszej"
+        },
+        "n": {
+          "nom": "podlejsze",
+          "gen": "podlejszego",
+          "dat": "podlejszemu",
+          "acc": "podlejsze",
+          "ins": "podlejszym",
+          "loc": "podlejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "podlejsi",
+          "gen": "podlejszych",
+          "dat": "podlejszym",
+          "acc": "podlejszych",
+          "ins": "podlejszymi",
+          "loc": "podlejszych"
+        },
+        "nonvirile": {
+          "nom": "podlejsze",
+          "gen": "podlejszych",
+          "dat": "podlejszym",
+          "acc": "podlejsze",
+          "ins": "podlejszymi",
+          "loc": "podlejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najpodlejszy",
+          "gen": "najpodlejszego",
+          "dat": "najpodlejszemu",
+          "acc": "najpodlejszego",
+          "ins": "najpodlejszym",
+          "loc": "najpodlejszym"
+        },
+        "m3": {
+          "nom": "najpodlejszy",
+          "gen": "najpodlejszego",
+          "dat": "najpodlejszemu",
+          "acc": "najpodlejszy",
+          "ins": "najpodlejszym",
+          "loc": "najpodlejszym"
+        },
+        "f": {
+          "nom": "najpodlejsza",
+          "gen": "najpodlejszej",
+          "dat": "najpodlejszej",
+          "acc": "najpodlejszą",
+          "ins": "najpodlejszą",
+          "loc": "najpodlejszej"
+        },
+        "n": {
+          "nom": "najpodlejsze",
+          "gen": "najpodlejszego",
+          "dat": "najpodlejszemu",
+          "acc": "najpodlejsze",
+          "ins": "najpodlejszym",
+          "loc": "najpodlejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najpodlejsi",
+          "gen": "najpodlejszych",
+          "dat": "najpodlejszym",
+          "acc": "najpodlejszych",
+          "ins": "najpodlejszymi",
+          "loc": "najpodlejszych"
+        },
+        "nonvirile": {
+          "nom": "najpodlejsze",
+          "gen": "najpodlejszych",
+          "dat": "najpodlejszym",
+          "acc": "najpodlejsze",
+          "ins": "najpodlejszymi",
+          "loc": "najpodlejszych"
+        }
+      }
+    }
+  }
+}

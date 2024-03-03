@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ptak",
+      "gen": "ptaka",
+      "dat": "ptakowi",
+      "acc": "ptaka",
+      "ins": "ptakiem",
+      "loc": "ptaku",
+      "voc": "ptaku"
+    },
+    "plural": {
+      "nom": "ptaki",
+      "gen": "ptaków",
+      "dat": "ptakom",
+      "acc": "ptaki",
+      "ins": "ptakami",
+      "loc": "ptakach",
+      "voc": "ptaki"
+    }
+  }
+}

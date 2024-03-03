@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "jasno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "jasny",
+          "gen": "jasnego",
+          "dat": "jasnemu",
+          "acc": "jasnego",
+          "ins": "jasnym",
+          "loc": "jasnym"
+        },
+        "m3": {
+          "nom": "jasny",
+          "gen": "jasnego",
+          "dat": "jasnemu",
+          "acc": "jasny",
+          "ins": "jasnym",
+          "loc": "jasnym"
+        },
+        "f": {
+          "nom": "jasna",
+          "gen": "jasnej",
+          "dat": "jasnej",
+          "acc": "jasną",
+          "ins": "jasną",
+          "loc": "jasnej"
+        },
+        "n": {
+          "nom": "jasne",
+          "gen": "jasnego",
+          "dat": "jasnemu",
+          "acc": "jasne",
+          "ins": "jasnym",
+          "loc": "jasnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "jaśni",
+          "gen": "jasnych",
+          "dat": "jasnym",
+          "acc": "jasnych",
+          "ins": "jasnymi",
+          "loc": "jasnych"
+        },
+        "nonvirile": {
+          "nom": "jasne",
+          "gen": "jasnych",
+          "dat": "jasnym",
+          "acc": "jasne",
+          "ins": "jasnymi",
+          "loc": "jasnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "jaśniejszy",
+          "gen": "jaśniejszego",
+          "dat": "jaśniejszemu",
+          "acc": "jaśniejszego",
+          "ins": "jaśniejszym",
+          "loc": "jaśniejszym"
+        },
+        "m3": {
+          "nom": "jaśniejszy",
+          "gen": "jaśniejszego",
+          "dat": "jaśniejszemu",
+          "acc": "jaśniejszy",
+          "ins": "jaśniejszym",
+          "loc": "jaśniejszym"
+        },
+        "f": {
+          "nom": "jaśniejsza",
+          "gen": "jaśniejszej",
+          "dat": "jaśniejszej",
+          "acc": "jaśniejszą",
+          "ins": "jaśniejszą",
+          "loc": "jaśniejszej"
+        },
+        "n": {
+          "nom": "jaśniejsze",
+          "gen": "jaśniejszego",
+          "dat": "jaśniejszemu",
+          "acc": "jaśniejsze",
+          "ins": "jaśniejszym",
+          "loc": "jaśniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "jaśniejsi",
+          "gen": "jaśniejszych",
+          "dat": "jaśniejszym",
+          "acc": "jaśniejszych",
+          "ins": "jaśniejszymi",
+          "loc": "jaśniejszych"
+        },
+        "nonvirile": {
+          "nom": "jaśniejsze",
+          "gen": "jaśniejszych",
+          "dat": "jaśniejszym",
+          "acc": "jaśniejsze",
+          "ins": "jaśniejszymi",
+          "loc": "jaśniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najjaśniejszy",
+          "gen": "najjaśniejszego",
+          "dat": "najjaśniejszemu",
+          "acc": "najjaśniejszego",
+          "ins": "najjaśniejszym",
+          "loc": "najjaśniejszym"
+        },
+        "m3": {
+          "nom": "najjaśniejszy",
+          "gen": "najjaśniejszego",
+          "dat": "najjaśniejszemu",
+          "acc": "najjaśniejszy",
+          "ins": "najjaśniejszym",
+          "loc": "najjaśniejszym"
+        },
+        "f": {
+          "nom": "najjaśniejsza",
+          "gen": "najjaśniejszej",
+          "dat": "najjaśniejszej",
+          "acc": "najjaśniejszą",
+          "ins": "najjaśniejszą",
+          "loc": "najjaśniejszej"
+        },
+        "n": {
+          "nom": "najjaśniejsze",
+          "gen": "najjaśniejszego",
+          "dat": "najjaśniejszemu",
+          "acc": "najjaśniejsze",
+          "ins": "najjaśniejszym",
+          "loc": "najjaśniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najjaśniejsi",
+          "gen": "najjaśniejszych",
+          "dat": "najjaśniejszym",
+          "acc": "najjaśniejszych",
+          "ins": "najjaśniejszymi",
+          "loc": "najjaśniejszych"
+        },
+        "nonvirile": {
+          "nom": "najjaśniejsze",
+          "gen": "najjaśniejszych",
+          "dat": "najjaśniejszym",
+          "acc": "najjaśniejsze",
+          "ins": "najjaśniejszymi",
+          "loc": "najjaśniejszych"
+        }
+      }
+    }
+  }
+}

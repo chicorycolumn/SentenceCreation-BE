@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pobierać",
+    "verbalNoun": "pobieranie",
+    "activeAdjectival": "pobierający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "pobierając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pobieraj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pobierano"
+          },
+          "plural": {
+            "allPluralGenders": "pobierano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pobierałem",
+            "f": "pobierałam"
+          },
+          "plural": {
+            "virile": "pobieraliśmy",
+            "nonvirile": "pobierałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pobierałeś",
+            "f": "pobierałaś"
+          },
+          "plural": {
+            "virile": "pobieraliście",
+            "nonvirile": "pobierałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pobierał",
+            "f": "pobierała",
+            "n": "pobierało"
+          },
+          "plural": {
+            "virile": "pobierali",
+            "nonvirile": "pobierały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pobiera się"
+          },
+          "plural": {
+            "allPluralGenders": "pobiera się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pobieram"
+          },
+          "plural": {
+            "allPluralGenders": "pobieramy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pobierasz"
+          },
+          "plural": {
+            "allPluralGenders": "pobieracie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pobiera"
+          },
+          "plural": {
+            "allPluralGenders": "pobierają"
+          }
+        }
+      }
+    }
+  }
+}

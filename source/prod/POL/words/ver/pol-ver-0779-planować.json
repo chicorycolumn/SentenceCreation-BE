@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "planować",
+    "verbalNoun": "planowanie",
+    "activeAdjectival": "planujący",
+    "passiveAdjectival": "planowany",
+    "contemporaryAdverbial": "planując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "planuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "planowano"
+          },
+          "plural": {
+            "allPluralGenders": "planowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "planowałem",
+            "f": "planowałam"
+          },
+          "plural": {
+            "virile": "planowaliśmy",
+            "nonvirile": "planowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "planowałeś",
+            "f": "planowałaś"
+          },
+          "plural": {
+            "virile": "planowaliście",
+            "nonvirile": "planowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "planował",
+            "f": "planowała",
+            "n": "planowało"
+          },
+          "plural": {
+            "virile": "planowali",
+            "nonvirile": "planowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "planuje się"
+          },
+          "plural": {
+            "allPluralGenders": "planuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "planuję"
+          },
+          "plural": {
+            "allPluralGenders": "planujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "planujesz"
+          },
+          "plural": {
+            "allPluralGenders": "planujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "planuje"
+          },
+          "plural": {
+            "allPluralGenders": "planują"
+          }
+        }
+      }
+    }
+  }
+}

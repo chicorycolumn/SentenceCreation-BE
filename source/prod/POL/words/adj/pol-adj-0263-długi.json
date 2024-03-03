@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "długo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "długi",
+          "gen": "długiego",
+          "dat": "długiemu",
+          "acc": "długiego",
+          "ins": "długim",
+          "loc": "długim"
+        },
+        "m3": {
+          "nom": "długi",
+          "gen": "długiego",
+          "dat": "długiemu",
+          "acc": "długi",
+          "ins": "długim",
+          "loc": "długim"
+        },
+        "f": {
+          "nom": "długa",
+          "gen": "długiej",
+          "dat": "długiej",
+          "acc": "długą",
+          "ins": "długą",
+          "loc": "długiej"
+        },
+        "n": {
+          "nom": "długie",
+          "gen": "długiego",
+          "dat": "długiemu",
+          "acc": "długie",
+          "ins": "długim",
+          "loc": "długim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dłudzy",
+          "gen": "długich",
+          "dat": "długim",
+          "acc": "długich",
+          "ins": "długimi",
+          "loc": "długich"
+        },
+        "nonvirile": {
+          "nom": "długie",
+          "gen": "długich",
+          "dat": "długim",
+          "acc": "długie",
+          "ins": "długimi",
+          "loc": "długich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "dłuższy",
+          "gen": "dłuższego",
+          "dat": "dłuższemu",
+          "acc": "dłuższego",
+          "ins": "dłuższym",
+          "loc": "dłuższym"
+        },
+        "m3": {
+          "nom": "dłuższy",
+          "gen": "dłuższego",
+          "dat": "dłuższemu",
+          "acc": "dłuższy",
+          "ins": "dłuższym",
+          "loc": "dłuższym"
+        },
+        "f": {
+          "nom": "dłuższa",
+          "gen": "dłuższej",
+          "dat": "dłuższej",
+          "acc": "dłuższą",
+          "ins": "dłuższą",
+          "loc": "dłuższej"
+        },
+        "n": {
+          "nom": "dłuższe",
+          "gen": "dłuższego",
+          "dat": "dłuższemu",
+          "acc": "dłuższe",
+          "ins": "dłuższym",
+          "loc": "dłuższym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dłużsi",
+          "gen": "dłuższych",
+          "dat": "dłuższym",
+          "acc": "dłuższych",
+          "ins": "dłuższymi",
+          "loc": "dłuższych"
+        },
+        "nonvirile": {
+          "nom": "dłuższe",
+          "gen": "dłuższych",
+          "dat": "dłuższym",
+          "acc": "dłuższe",
+          "ins": "dłuższymi",
+          "loc": "dłuższych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najdłuższy",
+          "gen": "najdłuższego",
+          "dat": "najdłuższemu",
+          "acc": "najdłuższego",
+          "ins": "najdłuższym",
+          "loc": "najdłuższym"
+        },
+        "m3": {
+          "nom": "najdłuższy",
+          "gen": "najdłuższego",
+          "dat": "najdłuższemu",
+          "acc": "najdłuższy",
+          "ins": "najdłuższym",
+          "loc": "najdłuższym"
+        },
+        "f": {
+          "nom": "najdłuższa",
+          "gen": "najdłuższej",
+          "dat": "najdłuższej",
+          "acc": "najdłuższą",
+          "ins": "najdłuższą",
+          "loc": "najdłuższej"
+        },
+        "n": {
+          "nom": "najdłuższe",
+          "gen": "najdłuższego",
+          "dat": "najdłuższemu",
+          "acc": "najdłuższe",
+          "ins": "najdłuższym",
+          "loc": "najdłuższym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najdłużsi",
+          "gen": "najdłuższych",
+          "dat": "najdłuższym",
+          "acc": "najdłuższych",
+          "ins": "najdłuższymi",
+          "loc": "najdłuższych"
+        },
+        "nonvirile": {
+          "nom": "najdłuższe",
+          "gen": "najdłuższych",
+          "dat": "najdłuższym",
+          "acc": "najdłuższe",
+          "ins": "najdłuższymi",
+          "loc": "najdłuższych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pisać",
+    "verbalNoun": "pisanie",
+    "activeAdjectival": "piszący",
+    "passiveAdjectival": "pisany",
+    "contemporaryAdverbial": "pisząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pisz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pisano"
+          },
+          "plural": {
+            "allPluralGenders": "pisano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pisałem",
+            "f": "pisałam"
+          },
+          "plural": {
+            "virile": "pisaliśmy",
+            "nonvirile": "pisałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pisałeś",
+            "f": "pisałaś"
+          },
+          "plural": {
+            "virile": "pisaliście",
+            "nonvirile": "pisałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pisał",
+            "f": "pisała",
+            "n": "pisało"
+          },
+          "plural": {
+            "virile": "pisali",
+            "nonvirile": "pisały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pisze się"
+          },
+          "plural": {
+            "allPluralGenders": "pisze się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "piszę"
+          },
+          "plural": {
+            "allPluralGenders": "piszemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "piszesz"
+          },
+          "plural": {
+            "allPluralGenders": "piszecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pisze"
+          },
+          "plural": {
+            "allPluralGenders": "piszą"
+          }
+        }
+      }
+    }
+  }
+}

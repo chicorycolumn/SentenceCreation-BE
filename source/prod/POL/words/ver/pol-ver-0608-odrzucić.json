@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odrzucić",
+    "verbalNoun": "odrzucenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odrzuciwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odrzuci się"
+          },
+          "plural": {
+            "allPluralGenders": "odrzuci się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odrzucę"
+          },
+          "plural": {
+            "allPluralGenders": "odrzucimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odrzucisz"
+          },
+          "plural": {
+            "allPluralGenders": "odrzucicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odrzuci"
+          },
+          "plural": {
+            "allPluralGenders": "odrzucą"
+          }
+        }
+      },
+      "imperative": "odrzuć",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odrzucono"
+          },
+          "plural": {
+            "allPluralGenders": "odrzucono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odrzuciłem",
+            "f": "odrzuciłam"
+          },
+          "plural": {
+            "virile": "odrzuciliśmy",
+            "nonvirile": "odrzuciłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odrzuciłeś",
+            "f": "odrzuciłaś"
+          },
+          "plural": {
+            "virile": "odrzuciliście",
+            "nonvirile": "odrzuciłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odrzucił",
+            "f": "odrzuciła",
+            "n": "odrzuciło"
+          },
+          "plural": {
+            "virile": "odrzucili",
+            "nonvirile": "odrzuciły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "morze",
+      "gen": "morza",
+      "dat": "morzu",
+      "acc": "morze",
+      "ins": "morzem",
+      "loc": "morzu",
+      "voc": "morze"
+    },
+    "plural": {
+      "nom": "morza",
+      "gen": "mórz",
+      "dat": "morzom",
+      "acc": "morza",
+      "ins": "morzami",
+      "loc": "morzach",
+      "voc": "morza"
+    }
+  }
+}

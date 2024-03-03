@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "tradycyjnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "tradycyjny",
+          "gen": "tradycyjnego",
+          "dat": "tradycyjnemu",
+          "acc": "tradycyjnego",
+          "ins": "tradycyjnym",
+          "loc": "tradycyjnym"
+        },
+        "m3": {
+          "nom": "tradycyjny",
+          "gen": "tradycyjnego",
+          "dat": "tradycyjnemu",
+          "acc": "tradycyjny",
+          "ins": "tradycyjnym",
+          "loc": "tradycyjnym"
+        },
+        "f": {
+          "nom": "tradycyjna",
+          "gen": "tradycyjnej",
+          "dat": "tradycyjnej",
+          "acc": "tradycyjną",
+          "ins": "tradycyjną",
+          "loc": "tradycyjnej"
+        },
+        "n": {
+          "nom": "tradycyjne",
+          "gen": "tradycyjnego",
+          "dat": "tradycyjnemu",
+          "acc": "tradycyjne",
+          "ins": "tradycyjnym",
+          "loc": "tradycyjnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "tradycyjni",
+          "gen": "tradycyjnych",
+          "dat": "tradycyjnym",
+          "acc": "tradycyjnych",
+          "ins": "tradycyjnymi",
+          "loc": "tradycyjnych"
+        },
+        "nonvirile": {
+          "nom": "tradycyjne",
+          "gen": "tradycyjnych",
+          "dat": "tradycyjnym",
+          "acc": "tradycyjne",
+          "ins": "tradycyjnymi",
+          "loc": "tradycyjnych"
+        }
+      }
+    }
+  }
+}

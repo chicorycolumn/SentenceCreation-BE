@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "fortuna",
+      "gen": "fortuny",
+      "dat": "fortunie",
+      "acc": "fortunę",
+      "ins": "fortuną",
+      "loc": "fortunie",
+      "voc": "fortuno"
+    },
+    "plural": {
+      "nom": "fortuny",
+      "gen": "fortun",
+      "dat": "fortunom",
+      "acc": "fortuny",
+      "ins": "fortunami",
+      "loc": "fortunach",
+      "voc": "fortuny"
+    }
+  }
+}

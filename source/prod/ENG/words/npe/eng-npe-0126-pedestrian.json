@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pedestrian",
+      "gen": "pedestrian's"
+    },
+    "plural": {
+      "nom": "pedestrians",
+      "gen": "pedestrians'"
+    }
+  }
+}

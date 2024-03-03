@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "jagoda",
+      "gen": "jagody",
+      "dat": "jagodzie",
+      "acc": "jagodę",
+      "ins": "jagodą",
+      "loc": "jagodzie",
+      "voc": "jagodo"
+    },
+    "plural": {
+      "nom": "jagody",
+      "gen": "jagód",
+      "dat": "jagodom",
+      "acc": "jagody",
+      "ins": "jagodami",
+      "loc": "jagodach",
+      "voc": "jagody"
+    }
+  }
+}

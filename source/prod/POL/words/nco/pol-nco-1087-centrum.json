@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "centrum",
+      "gen": "centrum",
+      "dat": "centrum",
+      "acc": "centrum",
+      "ins": "centrum",
+      "loc": "centrum",
+      "voc": "centrum"
+    },
+    "plural": {
+      "nom": "centra",
+      "gen": "centrów",
+      "dat": "centrom",
+      "acc": "centra",
+      "ins": "centrami",
+      "loc": "centrach",
+      "voc": "centra"
+    }
+  }
+}

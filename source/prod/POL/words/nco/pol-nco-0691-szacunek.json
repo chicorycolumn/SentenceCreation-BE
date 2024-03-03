@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "szacunek",
+      "gen": "szacunku",
+      "dat": "szacunkowi",
+      "acc": "szacunek",
+      "ins": "szacunkiem",
+      "loc": "szacunku",
+      "voc": "szacunku"
+    },
+    "plural": {
+      "nom": "szacunki",
+      "gen": "szacunków",
+      "dat": "szacunkom",
+      "acc": "szacunki",
+      "ins": "szacunkami",
+      "loc": "szacunkach",
+      "voc": "szacunki"
+    }
+  }
+}

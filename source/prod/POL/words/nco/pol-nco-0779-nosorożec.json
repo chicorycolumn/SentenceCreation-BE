@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "nosorożec",
+      "gen": "nosorożca",
+      "dat": "nosorożcowi",
+      "acc": "nosorożca",
+      "ins": "nosorożcem",
+      "loc": "nosorożcu",
+      "voc": "nosorożcu"
+    },
+    "plural": {
+      "nom": "nosorożce",
+      "gen": "nosorożców",
+      "dat": "nosorożcom",
+      "acc": "nosorożce",
+      "ins": "nosorożcami",
+      "loc": "nosorożcach",
+      "voc": "nosorożce"
+    }
+  }
+}

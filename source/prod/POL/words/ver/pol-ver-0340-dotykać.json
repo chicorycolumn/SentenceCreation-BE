@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dotykać",
+    "verbalNoun": "dotykanie",
+    "activeAdjectival": "dotykający",
+    "passiveAdjectival": "dotykany",
+    "contemporaryAdverbial": "dotykając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dotykaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dotykano"
+          },
+          "plural": {
+            "allPluralGenders": "dotykano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dotykałem",
+            "f": "dotykałam"
+          },
+          "plural": {
+            "virile": "dotykaliśmy",
+            "nonvirile": "dotykałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dotykałeś",
+            "f": "dotykałaś"
+          },
+          "plural": {
+            "virile": "dotykaliście",
+            "nonvirile": "dotykałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dotykał",
+            "f": "dotykała",
+            "n": "dotykało"
+          },
+          "plural": {
+            "virile": "dotykali",
+            "nonvirile": "dotykały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dotyka się"
+          },
+          "plural": {
+            "allPluralGenders": "dotyka się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dotykam"
+          },
+          "plural": {
+            "allPluralGenders": "dotykamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dotykasz"
+          },
+          "plural": {
+            "allPluralGenders": "dotykacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dotyka"
+          },
+          "plural": {
+            "allPluralGenders": "dotykają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "nieprawidłowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nieprawidłowy",
+          "gen": "nieprawidłowego",
+          "dat": "nieprawidłowemu",
+          "acc": "nieprawidłowego",
+          "ins": "nieprawidłowym",
+          "loc": "nieprawidłowym"
+        },
+        "m3": {
+          "nom": "nieprawidłowy",
+          "gen": "nieprawidłowego",
+          "dat": "nieprawidłowemu",
+          "acc": "nieprawidłowy",
+          "ins": "nieprawidłowym",
+          "loc": "nieprawidłowym"
+        },
+        "f": {
+          "nom": "nieprawidłowa",
+          "gen": "nieprawidłowej",
+          "dat": "nieprawidłowej",
+          "acc": "nieprawidłową",
+          "ins": "nieprawidłową",
+          "loc": "nieprawidłowej"
+        },
+        "n": {
+          "nom": "nieprawidłowe",
+          "gen": "nieprawidłowego",
+          "dat": "nieprawidłowemu",
+          "acc": "nieprawidłowe",
+          "ins": "nieprawidłowym",
+          "loc": "nieprawidłowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieprawidłowi",
+          "gen": "nieprawidłowych",
+          "dat": "nieprawidłowym",
+          "acc": "nieprawidłowych",
+          "ins": "nieprawidłowymi",
+          "loc": "nieprawidłowych"
+        },
+        "nonvirile": {
+          "nom": "nieprawidłowe",
+          "gen": "nieprawidłowych",
+          "dat": "nieprawidłowym",
+          "acc": "nieprawidłowe",
+          "ins": "nieprawidłowymi",
+          "loc": "nieprawidłowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej nieprawidłowy",
+          "gen": "bardziej nieprawidłowego",
+          "dat": "bardziej nieprawidłowemu",
+          "acc": "bardziej nieprawidłowego",
+          "ins": "bardziej nieprawidłowym",
+          "loc": "bardziej nieprawidłowym"
+        },
+        "m3": {
+          "nom": "bardziej nieprawidłowy",
+          "gen": "bardziej nieprawidłowego",
+          "dat": "bardziej nieprawidłowemu",
+          "acc": "bardziej nieprawidłowy",
+          "ins": "bardziej nieprawidłowym",
+          "loc": "bardziej nieprawidłowym"
+        },
+        "f": {
+          "nom": "bardziej nieprawidłowa",
+          "gen": "bardziej nieprawidłowej",
+          "dat": "bardziej nieprawidłowej",
+          "acc": "bardziej nieprawidłową",
+          "ins": "bardziej nieprawidłową",
+          "loc": "bardziej nieprawidłowej"
+        },
+        "n": {
+          "nom": "bardziej nieprawidłowe",
+          "gen": "bardziej nieprawidłowego",
+          "dat": "bardziej nieprawidłowemu",
+          "acc": "bardziej nieprawidłowe",
+          "ins": "bardziej nieprawidłowym",
+          "loc": "bardziej nieprawidłowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej nieprawidłowi",
+          "gen": "bardziej nieprawidłowych",
+          "dat": "bardziej nieprawidłowym",
+          "acc": "bardziej nieprawidłowych",
+          "ins": "bardziej nieprawidłowymi",
+          "loc": "bardziej nieprawidłowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej nieprawidłowe",
+          "gen": "bardziej nieprawidłowych",
+          "dat": "bardziej nieprawidłowym",
+          "acc": "bardziej nieprawidłowe",
+          "ins": "bardziej nieprawidłowymi",
+          "loc": "bardziej nieprawidłowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej nieprawidłowy",
+          "gen": "najbardziej nieprawidłowego",
+          "dat": "najbardziej nieprawidłowemu",
+          "acc": "najbardziej nieprawidłowego",
+          "ins": "najbardziej nieprawidłowym",
+          "loc": "najbardziej nieprawidłowym"
+        },
+        "m3": {
+          "nom": "najbardziej nieprawidłowy",
+          "gen": "najbardziej nieprawidłowego",
+          "dat": "najbardziej nieprawidłowemu",
+          "acc": "najbardziej nieprawidłowy",
+          "ins": "najbardziej nieprawidłowym",
+          "loc": "najbardziej nieprawidłowym"
+        },
+        "f": {
+          "nom": "najbardziej nieprawidłowa",
+          "gen": "najbardziej nieprawidłowej",
+          "dat": "najbardziej nieprawidłowej",
+          "acc": "najbardziej nieprawidłową",
+          "ins": "najbardziej nieprawidłową",
+          "loc": "najbardziej nieprawidłowej"
+        },
+        "n": {
+          "nom": "najbardziej nieprawidłowe",
+          "gen": "najbardziej nieprawidłowego",
+          "dat": "najbardziej nieprawidłowemu",
+          "acc": "najbardziej nieprawidłowe",
+          "ins": "najbardziej nieprawidłowym",
+          "loc": "najbardziej nieprawidłowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej nieprawidłowi",
+          "gen": "najbardziej nieprawidłowych",
+          "dat": "najbardziej nieprawidłowym",
+          "acc": "najbardziej nieprawidłowych",
+          "ins": "najbardziej nieprawidłowymi",
+          "loc": "najbardziej nieprawidłowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej nieprawidłowe",
+          "gen": "najbardziej nieprawidłowych",
+          "dat": "najbardziej nieprawidłowym",
+          "acc": "najbardziej nieprawidłowe",
+          "ins": "najbardziej nieprawidłowymi",
+          "loc": "najbardziej nieprawidłowych"
+        }
+      }
+    }
+  }
+}

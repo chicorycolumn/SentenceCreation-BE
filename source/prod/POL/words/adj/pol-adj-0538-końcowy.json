@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "końcowy",
+          "gen": "końcowego",
+          "dat": "końcowemu",
+          "acc": "końcowego",
+          "ins": "końcowym",
+          "loc": "końcowym"
+        },
+        "m3": {
+          "nom": "końcowy",
+          "gen": "końcowego",
+          "dat": "końcowemu",
+          "acc": "końcowy",
+          "ins": "końcowym",
+          "loc": "końcowym"
+        },
+        "f": {
+          "nom": "końcowa",
+          "gen": "końcowej",
+          "dat": "końcowej",
+          "acc": "końcową",
+          "ins": "końcową",
+          "loc": "końcowej"
+        },
+        "n": {
+          "nom": "końcowe",
+          "gen": "końcowego",
+          "dat": "końcowemu",
+          "acc": "końcowe",
+          "ins": "końcowym",
+          "loc": "końcowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "końcowi",
+          "gen": "końcowych",
+          "dat": "końcowym",
+          "acc": "końcowych",
+          "ins": "końcowymi",
+          "loc": "końcowych"
+        },
+        "nonvirile": {
+          "nom": "końcowe",
+          "gen": "końcowych",
+          "dat": "końcowym",
+          "acc": "końcowe",
+          "ins": "końcowymi",
+          "loc": "końcowych"
+        }
+      }
+    }
+  }
+}

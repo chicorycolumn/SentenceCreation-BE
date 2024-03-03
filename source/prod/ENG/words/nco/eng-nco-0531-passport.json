@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "passport",
+      "gen": "passport's"
+    },
+    "plural": {
+      "nom": "passports",
+      "gen": "passports'"
+    }
+  }
+}

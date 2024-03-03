@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odjechać",
+    "verbalNoun": "odjechanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odjechawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odjedzie się"
+          },
+          "plural": {
+            "allPluralGenders": "odjedzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odjadę"
+          },
+          "plural": {
+            "allPluralGenders": "odjedziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odjedziesz"
+          },
+          "plural": {
+            "allPluralGenders": "odjedziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odjedzie"
+          },
+          "plural": {
+            "allPluralGenders": "odjadą"
+          }
+        }
+      },
+      "imperative": "odjedź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odjechano"
+          },
+          "plural": {
+            "allPluralGenders": "odjechano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odjechałem",
+            "f": "odjechałam"
+          },
+          "plural": {
+            "virile": "odjechaliśmy",
+            "nonvirile": "odjechałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odjechałeś",
+            "f": "odjechałaś"
+          },
+          "plural": {
+            "virile": "odjechaliście",
+            "nonvirile": "odjechałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odjechał",
+            "f": "odjechała",
+            "n": "odjechało"
+          },
+          "plural": {
+            "virile": "odjechali",
+            "nonvirile": "odjechały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

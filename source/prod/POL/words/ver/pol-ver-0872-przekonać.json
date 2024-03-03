@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przekonać",
+    "verbalNoun": "przekonanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przekonany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przekonawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przekona się"
+          },
+          "plural": {
+            "allPluralGenders": "przekona się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przekonam"
+          },
+          "plural": {
+            "allPluralGenders": "przekonamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przekonasz"
+          },
+          "plural": {
+            "allPluralGenders": "przekonacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przekona"
+          },
+          "plural": {
+            "allPluralGenders": "przekonają"
+          }
+        }
+      },
+      "imperative": "przekonaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przekonano"
+          },
+          "plural": {
+            "allPluralGenders": "przekonano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przekonałem",
+            "f": "przekonałam"
+          },
+          "plural": {
+            "virile": "przekonaliśmy",
+            "nonvirile": "przekonałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przekonałeś",
+            "f": "przekonałaś"
+          },
+          "plural": {
+            "virile": "przekonaliście",
+            "nonvirile": "przekonałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przekonał",
+            "f": "przekonała",
+            "n": "przekonało"
+          },
+          "plural": {
+            "virile": "przekonali",
+            "nonvirile": "przekonały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "lśnić",
+    "verbalNoun": "lśnienie",
+    "activeAdjectival": "lśniący",
+    "passiveAdjectival": "lśniony",
+    "contemporaryAdverbial": "lśniąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "lśnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "lśniono"
+          },
+          "plural": {
+            "allPluralGenders": "lśniono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "lśniłem",
+            "f": "lśniłam"
+          },
+          "plural": {
+            "virile": "lśniliśmy",
+            "nonvirile": "lśniłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "lśniłeś",
+            "f": "lśniłaś"
+          },
+          "plural": {
+            "virile": "lśniliście",
+            "nonvirile": "lśniłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "lśnił",
+            "f": "lśniła",
+            "n": "lśniło"
+          },
+          "plural": {
+            "virile": "lśnili",
+            "nonvirile": "lśniły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "lśni się"
+          },
+          "plural": {
+            "allPluralGenders": "lśni się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "lśnię"
+          },
+          "plural": {
+            "allPluralGenders": "lśnimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "lśnisz"
+          },
+          "plural": {
+            "allPluralGenders": "lśnicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "lśni"
+          },
+          "plural": {
+            "allPluralGenders": "lśnią"
+          }
+        }
+      }
+    }
+  }
+}

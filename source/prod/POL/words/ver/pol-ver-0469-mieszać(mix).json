@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "mieszać",
+    "verbalNoun": "mieszanie",
+    "activeAdjectival": "mieszający",
+    "passiveAdjectival": "mieszany",
+    "contemporaryAdverbial": "mieszając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "mieszaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mieszano"
+          },
+          "plural": {
+            "allPluralGenders": "mieszano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "mieszałem",
+            "f": "mieszałam"
+          },
+          "plural": {
+            "virile": "mieszaliśmy",
+            "nonvirile": "mieszałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "mieszałeś",
+            "f": "mieszałaś"
+          },
+          "plural": {
+            "virile": "mieszaliście",
+            "nonvirile": "mieszałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "mieszał",
+            "f": "mieszała",
+            "n": "mieszało"
+          },
+          "plural": {
+            "virile": "mieszali",
+            "nonvirile": "mieszały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "miesza się"
+          },
+          "plural": {
+            "allPluralGenders": "miesza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "mieszam"
+          },
+          "plural": {
+            "allPluralGenders": "mieszamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "mieszasz"
+          },
+          "plural": {
+            "allPluralGenders": "mieszacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "miesza"
+          },
+          "plural": {
+            "allPluralGenders": "mieszają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "economy",
+      "gen": "economy's"
+    },
+    "plural": {
+      "nom": "economies",
+      "gen": "economies'"
+    }
+  }
+}

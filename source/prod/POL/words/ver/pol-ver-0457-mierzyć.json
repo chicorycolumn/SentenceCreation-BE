@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "mierzyć",
+    "verbalNoun": "mierzenie",
+    "activeAdjectival": "mierzący",
+    "passiveAdjectival": "mierzony",
+    "contemporaryAdverbial": "mierząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "mierz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mierzono"
+          },
+          "plural": {
+            "allPluralGenders": "mierzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "mierzyłem",
+            "f": "mierzyłam"
+          },
+          "plural": {
+            "virile": "mierzyliśmy",
+            "nonvirile": "mierzyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "mierzyłeś",
+            "f": "mierzyłaś"
+          },
+          "plural": {
+            "virile": "mierzyliście",
+            "nonvirile": "mierzyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "mierzył",
+            "f": "mierzyła",
+            "n": "mierzyło"
+          },
+          "plural": {
+            "virile": "mierzyli",
+            "nonvirile": "mierzyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mierzy się"
+          },
+          "plural": {
+            "allPluralGenders": "mierzy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "mierzę"
+          },
+          "plural": {
+            "allPluralGenders": "mierzymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "mierzysz"
+          },
+          "plural": {
+            "allPluralGenders": "mierzycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "mierzy"
+          },
+          "plural": {
+            "allPluralGenders": "mierzą"
+          }
+        }
+      }
+    }
+  }
+}

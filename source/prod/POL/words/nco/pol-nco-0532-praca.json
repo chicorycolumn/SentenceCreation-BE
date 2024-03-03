@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "praca",
+      "gen": "pracy",
+      "dat": "pracy",
+      "acc": "pracę",
+      "ins": "pracą",
+      "loc": "pracy",
+      "voc": "praco"
+    },
+    "plural": {
+      "nom": "prace",
+      "gen": "prac",
+      "dat": "pracom",
+      "acc": "prace",
+      "ins": "pracami",
+      "loc": "pracach",
+      "voc": "prace"
+    }
+  }
+}

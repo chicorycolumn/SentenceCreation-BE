@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rack",
+      "gen": "rack's"
+    },
+    "plural": {
+      "nom": "racks",
+      "gen": "racks'"
+    }
+  }
+}

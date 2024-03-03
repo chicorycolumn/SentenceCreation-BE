@@ -1,0 +1,8 @@
+{
+  "inflections": {
+    "simple": "exact",
+    "comparative": "more exact",
+    "superlative": "the most exact",
+    "adverb": "exactly"
+  }
+}

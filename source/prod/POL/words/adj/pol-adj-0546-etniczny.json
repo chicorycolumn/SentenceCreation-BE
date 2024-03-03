@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "etnicznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "etniczny",
+          "gen": "etnicznego",
+          "dat": "etnicznemu",
+          "acc": "etnicznego",
+          "ins": "etnicznym",
+          "loc": "etnicznym"
+        },
+        "m3": {
+          "nom": "etniczny",
+          "gen": "etnicznego",
+          "dat": "etnicznemu",
+          "acc": "etniczny",
+          "ins": "etnicznym",
+          "loc": "etnicznym"
+        },
+        "f": {
+          "nom": "etniczna",
+          "gen": "etnicznej",
+          "dat": "etnicznej",
+          "acc": "etniczną",
+          "ins": "etniczną",
+          "loc": "etnicznej"
+        },
+        "n": {
+          "nom": "etniczne",
+          "gen": "etnicznego",
+          "dat": "etnicznemu",
+          "acc": "etniczne",
+          "ins": "etnicznym",
+          "loc": "etnicznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "etniczni",
+          "gen": "etnicznych",
+          "dat": "etnicznym",
+          "acc": "etnicznych",
+          "ins": "etnicznymi",
+          "loc": "etnicznych"
+        },
+        "nonvirile": {
+          "nom": "etniczne",
+          "gen": "etnicznych",
+          "dat": "etnicznym",
+          "acc": "etniczne",
+          "ins": "etnicznymi",
+          "loc": "etnicznych"
+        }
+      }
+    }
+  }
+}

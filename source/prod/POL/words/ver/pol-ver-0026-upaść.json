@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "upaść",
+    "verbalNoun": "upasienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "upasiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "upasłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "upasie się"
+          },
+          "plural": {
+            "allPluralGenders": "upasie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "upasę"
+          },
+          "plural": {
+            "allPluralGenders": "upasiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "upasiesz"
+          },
+          "plural": {
+            "allPluralGenders": "upasiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "upasie"
+          },
+          "plural": {
+            "allPluralGenders": "upasą"
+          }
+        }
+      },
+      "imperative": "upaś",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "upasiono"
+          },
+          "plural": {
+            "allPluralGenders": "upasiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "upasłem",
+            "f": "upasłam"
+          },
+          "plural": {
+            "virile": "upaśliśmy",
+            "nonvirile": "upasłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "upasłeś",
+            "f": "upasłaś"
+          },
+          "plural": {
+            "virile": "upaśliście",
+            "nonvirile": "upasłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "upasł",
+            "f": "upasła",
+            "n": "upasło"
+          },
+          "plural": {
+            "virile": "upaśli",
+            "nonvirile": "upasły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

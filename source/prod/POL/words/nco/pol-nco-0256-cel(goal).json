@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cel",
+      "gen": "celu",
+      "dat": "celowi",
+      "acc": "cel",
+      "ins": "celem",
+      "loc": "celu",
+      "voc": "celu"
+    },
+    "plural": {
+      "nom": "cele",
+      "gen": [
+        "celi",
+        "celów"
+      ],
+      "dat": "celom",
+      "acc": "cele",
+      "ins": "celami",
+      "loc": "celach",
+      "voc": "cele"
+    }
+  }
+}

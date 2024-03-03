@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "krwawo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "krwawy",
+          "gen": "krwawego",
+          "dat": "krwawemu",
+          "acc": "krwawego",
+          "ins": "krwawym",
+          "loc": "krwawym"
+        },
+        "m3": {
+          "nom": "krwawy",
+          "gen": "krwawego",
+          "dat": "krwawemu",
+          "acc": "krwawy",
+          "ins": "krwawym",
+          "loc": "krwawym"
+        },
+        "f": {
+          "nom": "krwawa",
+          "gen": "krwawej",
+          "dat": "krwawej",
+          "acc": "krwawą",
+          "ins": "krwawą",
+          "loc": "krwawej"
+        },
+        "n": {
+          "nom": "krwawe",
+          "gen": "krwawego",
+          "dat": "krwawemu",
+          "acc": "krwawe",
+          "ins": "krwawym",
+          "loc": "krwawym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "krwawi",
+          "gen": "krwawych",
+          "dat": "krwawym",
+          "acc": "krwawych",
+          "ins": "krwawymi",
+          "loc": "krwawych"
+        },
+        "nonvirile": {
+          "nom": "krwawe",
+          "gen": "krwawych",
+          "dat": "krwawym",
+          "acc": "krwawe",
+          "ins": "krwawymi",
+          "loc": "krwawych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej krwawy",
+          "gen": "bardziej krwawego",
+          "dat": "bardziej krwawemu",
+          "acc": "bardziej krwawego",
+          "ins": "bardziej krwawym",
+          "loc": "bardziej krwawym"
+        },
+        "m3": {
+          "nom": "bardziej krwawy",
+          "gen": "bardziej krwawego",
+          "dat": "bardziej krwawemu",
+          "acc": "bardziej krwawy",
+          "ins": "bardziej krwawym",
+          "loc": "bardziej krwawym"
+        },
+        "f": {
+          "nom": "bardziej krwawa",
+          "gen": "bardziej krwawej",
+          "dat": "bardziej krwawej",
+          "acc": "bardziej krwawą",
+          "ins": "bardziej krwawą",
+          "loc": "bardziej krwawej"
+        },
+        "n": {
+          "nom": "bardziej krwawe",
+          "gen": "bardziej krwawego",
+          "dat": "bardziej krwawemu",
+          "acc": "bardziej krwawe",
+          "ins": "bardziej krwawym",
+          "loc": "bardziej krwawym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej krwawi",
+          "gen": "bardziej krwawych",
+          "dat": "bardziej krwawym",
+          "acc": "bardziej krwawych",
+          "ins": "bardziej krwawymi",
+          "loc": "bardziej krwawych"
+        },
+        "nonvirile": {
+          "nom": "bardziej krwawe",
+          "gen": "bardziej krwawych",
+          "dat": "bardziej krwawym",
+          "acc": "bardziej krwawe",
+          "ins": "bardziej krwawymi",
+          "loc": "bardziej krwawych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej krwawy",
+          "gen": "najbardziej krwawego",
+          "dat": "najbardziej krwawemu",
+          "acc": "najbardziej krwawego",
+          "ins": "najbardziej krwawym",
+          "loc": "najbardziej krwawym"
+        },
+        "m3": {
+          "nom": "najbardziej krwawy",
+          "gen": "najbardziej krwawego",
+          "dat": "najbardziej krwawemu",
+          "acc": "najbardziej krwawy",
+          "ins": "najbardziej krwawym",
+          "loc": "najbardziej krwawym"
+        },
+        "f": {
+          "nom": "najbardziej krwawa",
+          "gen": "najbardziej krwawej",
+          "dat": "najbardziej krwawej",
+          "acc": "najbardziej krwawą",
+          "ins": "najbardziej krwawą",
+          "loc": "najbardziej krwawej"
+        },
+        "n": {
+          "nom": "najbardziej krwawe",
+          "gen": "najbardziej krwawego",
+          "dat": "najbardziej krwawemu",
+          "acc": "najbardziej krwawe",
+          "ins": "najbardziej krwawym",
+          "loc": "najbardziej krwawym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej krwawi",
+          "gen": "najbardziej krwawych",
+          "dat": "najbardziej krwawym",
+          "acc": "najbardziej krwawych",
+          "ins": "najbardziej krwawymi",
+          "loc": "najbardziej krwawych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej krwawe",
+          "gen": "najbardziej krwawych",
+          "dat": "najbardziej krwawym",
+          "acc": "najbardziej krwawe",
+          "ins": "najbardziej krwawymi",
+          "loc": "najbardziej krwawych"
+        }
+      }
+    }
+  }
+}

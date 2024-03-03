@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "protein",
+      "gen": "protein's"
+    },
+    "plural": {
+      "nom": "proteins",
+      "gen": "proteins'"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "posługiwać",
+    "verbalNoun": "posługiwanie",
+    "activeAdjectival": "posługujący",
+    "passiveAdjectival": "posługiwany",
+    "contemporaryAdverbial": "posługując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "posługuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "posługiwano"
+          },
+          "plural": {
+            "allPluralGenders": "posługiwano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "posługiwałem",
+            "f": "posługiwałam"
+          },
+          "plural": {
+            "virile": "posługiwaliśmy",
+            "nonvirile": "posługiwałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "posługiwałeś",
+            "f": "posługiwałaś"
+          },
+          "plural": {
+            "virile": "posługiwaliście",
+            "nonvirile": "posługiwałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "posługiwał",
+            "f": "posługiwała",
+            "n": "posługiwało"
+          },
+          "plural": {
+            "virile": "posługiwali",
+            "nonvirile": "posługiwały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "posługuje się"
+          },
+          "plural": {
+            "allPluralGenders": "posługuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "posługuję"
+          },
+          "plural": {
+            "allPluralGenders": "posługujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "posługujesz"
+          },
+          "plural": {
+            "allPluralGenders": "posługujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "posługuje"
+          },
+          "plural": {
+            "allPluralGenders": "posługują"
+          }
+        }
+      }
+    }
+  }
+}

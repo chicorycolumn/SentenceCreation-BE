@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "różnica",
+      "gen": "różnicy",
+      "dat": "różnicy",
+      "acc": "różnicę",
+      "ins": "różnicą",
+      "loc": "różnicy",
+      "voc": "różnico"
+    },
+    "plural": {
+      "nom": "różnice",
+      "gen": "różnic",
+      "dat": "różnicom",
+      "acc": "różnice",
+      "ins": "różnicami",
+      "loc": "różnicach",
+      "voc": "różnice"
+    }
+  }
+}

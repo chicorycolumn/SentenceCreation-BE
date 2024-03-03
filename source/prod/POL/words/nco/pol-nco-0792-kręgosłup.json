@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kręgosłup",
+      "gen": "kręgosłupa",
+      "dat": "kręgosłupowi",
+      "acc": "kręgosłup",
+      "ins": "kręgosłupem",
+      "loc": "kręgosłupie",
+      "voc": "kręgosłupie"
+    },
+    "plural": {
+      "nom": "kręgosłupy",
+      "gen": "kręgosłupów",
+      "dat": "kręgosłupom",
+      "acc": "kręgosłupy",
+      "ins": "kręgosłupami",
+      "loc": "kręgosłupach",
+      "voc": "kręgosłupy"
+    }
+  }
+}

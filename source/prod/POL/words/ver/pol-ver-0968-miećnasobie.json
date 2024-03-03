@@ -1,0 +1,89 @@
+{
+  "inflections": {
+    "infinitive": "mieć na sobie",
+    "activeAdjectival": "mający na sobie",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "mając na sobie",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "miej na sobie",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "miano na sobie"
+          },
+          "plural": {
+            "allPluralGenders": "miano na sobie"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "miałem na sobie na sobie",
+            "f": "miałam na sobie na sobie"
+          },
+          "plural": {
+            "virile": "mieliśmy na sobie na sobie",
+            "nonvirile": "miałyśmy na sobie na sobie"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "miałeś na sobie",
+            "f": "miałaś na sobie"
+          },
+          "plural": {
+            "virile": "mieliście na sobie",
+            "nonvirile": "miałyście na sobie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "miał na sobie",
+            "f": "miała na sobie",
+            "n": "miało na sobie"
+          },
+          "plural": {
+            "virile": "mieli na sobie",
+            "nonvirile": "miały na sobie"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ma się na sobie"
+          },
+          "plural": {
+            "allPluralGenders": "ma się na sobie"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "mam na sobie"
+          },
+          "plural": {
+            "allPluralGenders": "mamy na sobie"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "masz na sobie"
+          },
+          "plural": {
+            "allPluralGenders": "macie na sobie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ma na sobie"
+          },
+          "plural": {
+            "allPluralGenders": "mają na sobie"
+          }
+        }
+      }
+    }
+  }
+}

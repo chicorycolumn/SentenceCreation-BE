@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zaprotestować",
+    "verbalNoun": "zaprotestowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zaprotestowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaprotestuje się"
+          },
+          "plural": {
+            "allPluralGenders": "zaprotestuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zaprotestuję"
+          },
+          "plural": {
+            "allPluralGenders": "zaprotestujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zaprotestujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zaprotestujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zaprotestuje"
+          },
+          "plural": {
+            "allPluralGenders": "zaprotestują"
+          }
+        }
+      },
+      "imperative": "zaprotestuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaprotestowano"
+          },
+          "plural": {
+            "allPluralGenders": "zaprotestowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zaprotestowałem",
+            "f": "zaprotestowałam"
+          },
+          "plural": {
+            "virile": "zaprotestowaliśmy",
+            "nonvirile": "zaprotestowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zaprotestowałeś",
+            "f": "zaprotestowałaś"
+          },
+          "plural": {
+            "virile": "zaprotestowaliście",
+            "nonvirile": "zaprotestowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zaprotestował",
+            "f": "zaprotestowała",
+            "n": "zaprotestowało"
+          },
+          "plural": {
+            "virile": "zaprotestowali",
+            "nonvirile": "zaprotestowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

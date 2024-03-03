@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "cudzy",
+          "gen": "cudzego",
+          "dat": "cudzemu",
+          "acc": "cudzego",
+          "ins": "cudzym",
+          "loc": "cudzym"
+        },
+        "m3": {
+          "nom": "cudzy",
+          "gen": "cudzego",
+          "dat": "cudzemu",
+          "acc": "cudzy",
+          "ins": "cudzym",
+          "loc": "cudzym"
+        },
+        "f": {
+          "nom": "cudza",
+          "gen": "cudzej",
+          "dat": "cudzej",
+          "acc": "cudzą",
+          "ins": "cudzą",
+          "loc": "cudzej"
+        },
+        "n": {
+          "nom": "cudze",
+          "gen": "cudzego",
+          "dat": "cudzemu",
+          "acc": "cudze",
+          "ins": "cudzym",
+          "loc": "cudzym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "cudzy",
+          "gen": "cudzych",
+          "dat": "cudzym",
+          "acc": "cudzych",
+          "ins": "cudzymi",
+          "loc": "cudzych"
+        },
+        "nonvirile": {
+          "nom": "cudze",
+          "gen": "cudzych",
+          "dat": "cudzym",
+          "acc": "cudze",
+          "ins": "cudzymi",
+          "loc": "cudzych"
+        }
+      }
+    }
+  }
+}

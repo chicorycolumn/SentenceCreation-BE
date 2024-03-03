@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "fountain pen",
+      "gen": "fountain pen's"
+    },
+    "plural": {
+      "nom": "fountain pens",
+      "gen": "fountain pens'"
+    }
+  }
+}

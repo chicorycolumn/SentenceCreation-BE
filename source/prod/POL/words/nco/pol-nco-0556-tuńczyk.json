@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "tuńczyk",
+      "gen": "tuńczyka",
+      "dat": "tuńczykowi",
+      "acc": "tuńczyka",
+      "ins": "tuńczykiem",
+      "loc": "tuńczyku",
+      "voc": "tuńczyku"
+    },
+    "plural": {
+      "nom": "tuńczyki",
+      "gen": "tuńczyków",
+      "dat": "tuńczykom",
+      "acc": "tuńczyki",
+      "ins": "tuńczykami",
+      "loc": "tuńczykach",
+      "voc": "tuńczyki"
+    }
+  }
+}

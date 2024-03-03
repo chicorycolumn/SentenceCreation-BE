@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "smok",
+      "gen": "smoka",
+      "dat": "smokowi",
+      "acc": "smoka",
+      "ins": "smokiem",
+      "loc": "smoku",
+      "voc": "smoku"
+    },
+    "plural": {
+      "nom": "smoki",
+      "gen": "smoków",
+      "dat": "smokom",
+      "acc": "smoki",
+      "ins": "smokami",
+      "loc": "smokach",
+      "voc": "smoki"
+    }
+  }
+}

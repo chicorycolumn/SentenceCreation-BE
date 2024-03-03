@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nabyć",
+    "verbalNoun": "nabycie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "nabyty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "nabywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nabędzie się"
+          },
+          "plural": {
+            "allPluralGenders": "nabędzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nabędę"
+          },
+          "plural": {
+            "allPluralGenders": "nabędziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nabędziesz"
+          },
+          "plural": {
+            "allPluralGenders": "nabędziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nabędzie"
+          },
+          "plural": {
+            "allPluralGenders": "nabędą"
+          }
+        }
+      },
+      "imperative": "nabądź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nabyto"
+          },
+          "plural": {
+            "allPluralGenders": "nabyto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nabyłem",
+            "f": "nabyłam"
+          },
+          "plural": {
+            "virile": "nabyliśmy",
+            "nonvirile": "nabyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nabyłeś",
+            "f": "nabyłaś"
+          },
+          "plural": {
+            "virile": "nabyliście",
+            "nonvirile": "nabyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nabył",
+            "f": "nabyła",
+            "n": "nabyło"
+          },
+          "plural": {
+            "virile": "nabyli",
+            "nonvirile": "nabyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

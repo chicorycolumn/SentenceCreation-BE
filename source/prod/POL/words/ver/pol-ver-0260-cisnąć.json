@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "cisnąć",
+    "verbalNoun": "ciśnięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "ciśnięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "cisnąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ciśnie się"
+          },
+          "plural": {
+            "allPluralGenders": "ciśnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "cisnę"
+          },
+          "plural": {
+            "allPluralGenders": "ciśniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ciśniesz"
+          },
+          "plural": {
+            "allPluralGenders": "ciśniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ciśnie"
+          },
+          "plural": {
+            "allPluralGenders": "cisną"
+          }
+        }
+      },
+      "imperative": "ciśnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ciśnięto"
+          },
+          "plural": {
+            "allPluralGenders": "ciśnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "cisnąłem",
+            "f": "cisnęłam"
+          },
+          "plural": {
+            "virile": "cisnęliśmy",
+            "nonvirile": "cisnęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "cisnąłeś",
+            "f": "cisnęłaś"
+          },
+          "plural": {
+            "virile": "cisnęliście",
+            "nonvirile": "cisnęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "cisnął",
+            "f": "cisnęła",
+            "n": "cisnęło"
+          },
+          "plural": {
+            "virile": "cisnęli",
+            "nonvirile": "cisnęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

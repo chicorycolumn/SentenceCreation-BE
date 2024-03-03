@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "lubić",
+    "verbalNoun": "lubienie",
+    "activeAdjectival": "lubiący",
+    "passiveAdjectival": "lubiany",
+    "contemporaryAdverbial": "lubiąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "lub",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "lubiano"
+          },
+          "plural": {
+            "allPluralGenders": "lubiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "lubiłem",
+            "f": "lubiłam"
+          },
+          "plural": {
+            "virile": "lubiliśmy",
+            "nonvirile": "lubiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "lubiłeś",
+            "f": "lubiłaś"
+          },
+          "plural": {
+            "virile": "lubiliście",
+            "nonvirile": "lubiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "lubił",
+            "f": "lubiła",
+            "n": "lubiło"
+          },
+          "plural": {
+            "virile": "lubili",
+            "nonvirile": "lubiły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "lubi się"
+          },
+          "plural": {
+            "allPluralGenders": "lubi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "lubię"
+          },
+          "plural": {
+            "allPluralGenders": "lubimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "lubisz"
+          },
+          "plural": {
+            "allPluralGenders": "lubicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "lubi"
+          },
+          "plural": {
+            "allPluralGenders": "lubią"
+          }
+        }
+      }
+    }
+  }
+}

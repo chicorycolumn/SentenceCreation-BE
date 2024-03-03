@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "income",
+      "gen": "income's"
+    },
+    "plural": {
+      "nom": "incomes",
+      "gen": "incomes'"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "okres",
+      "gen": "okresu",
+      "dat": "okresowi",
+      "acc": "okres",
+      "ins": "okresem",
+      "loc": "okresie",
+      "voc": "okresie"
+    },
+    "plural": {
+      "nom": "okresy",
+      "gen": "okresów",
+      "dat": "okresom",
+      "acc": "okresy",
+      "ins": "okresami",
+      "loc": "okresach",
+      "voc": "okresy"
+    }
+  }
+}

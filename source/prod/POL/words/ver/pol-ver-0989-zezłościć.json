@@ -1,0 +1,106 @@
+{
+  "inflections": {
+    "infinitive": "zezłościć",
+    "verbalNoun": "zezłoszczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zezłoszczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zezłościwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zezłości się"
+          },
+          "plural": {
+            "allPluralGenders": "zezłości się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "zezłoszczę"
+          },
+          "plural": {
+            "allPluralGenders": "zezłościmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "zezłościsz"
+          },
+          "plural": {
+            "allPluralGenders": "zezłościcie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zezłości"
+          },
+          "plural": {
+            "allPluralGenders": "zezłoszczą"
+          }
+        }
+      },
+      "imperative": "zezłość",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zezłoszczono"
+          },
+          "plural": {
+            "allPluralGenders": "zezłoszczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": [
+              "zezłościłem"
+            ],
+            "f": [
+              "zezłościłam"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "zezłościliśmy"
+            ],
+            "nonvirile": [
+              "zezłościłyśmy"
+            ]
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": [
+              "zezłościłeś"
+            ],
+            "f": [
+              "zezłościłaś"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "zezłościliście"
+            ],
+            "nonvirile": [
+              "zezłościłyście"
+            ]
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zezłościł",
+            "f": "zezłościła",
+            "n": "zezłościło"
+          },
+          "plural": {
+            "virile": "zezłościli",
+            "nonvirile": "zezłościły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

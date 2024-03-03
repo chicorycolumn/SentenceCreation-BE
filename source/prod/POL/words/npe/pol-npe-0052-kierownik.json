@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kierownik",
+      "gen": "kierownika",
+      "dat": "kierownikowi",
+      "acc": "kierownika",
+      "ins": "kierownikiem",
+      "loc": "kierowniku",
+      "voc": "kierowniku"
+    },
+    "plural": {
+      "nom": "kierownicy",
+      "gen": "kierowników",
+      "dat": "kierownikom",
+      "acc": "kierowników",
+      "ins": "kierownikami",
+      "loc": "kierownikach",
+      "voc": "kierownicy"
+    }
+  }
+}

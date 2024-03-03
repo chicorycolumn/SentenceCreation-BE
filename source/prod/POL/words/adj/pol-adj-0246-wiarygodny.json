@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "wiarygodnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "wiarygodny",
+          "gen": "wiarygodnego",
+          "dat": "wiarygodnemu",
+          "acc": "wiarygodnego",
+          "ins": "wiarygodnym",
+          "loc": "wiarygodnym"
+        },
+        "m3": {
+          "nom": "wiarygodny",
+          "gen": "wiarygodnego",
+          "dat": "wiarygodnemu",
+          "acc": "wiarygodny",
+          "ins": "wiarygodnym",
+          "loc": "wiarygodnym"
+        },
+        "f": {
+          "nom": "wiarygodna",
+          "gen": "wiarygodnej",
+          "dat": "wiarygodnej",
+          "acc": "wiarygodną",
+          "ins": "wiarygodną",
+          "loc": "wiarygodnej"
+        },
+        "n": {
+          "nom": "wiarygodne",
+          "gen": "wiarygodnego",
+          "dat": "wiarygodnemu",
+          "acc": "wiarygodne",
+          "ins": "wiarygodnym",
+          "loc": "wiarygodnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wiarygodni",
+          "gen": "wiarygodnych",
+          "dat": "wiarygodnym",
+          "acc": "wiarygodnych",
+          "ins": "wiarygodnymi",
+          "loc": "wiarygodnych"
+        },
+        "nonvirile": {
+          "nom": "wiarygodne",
+          "gen": "wiarygodnych",
+          "dat": "wiarygodnym",
+          "acc": "wiarygodne",
+          "ins": "wiarygodnymi",
+          "loc": "wiarygodnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "wiarygodniejszy",
+          "gen": "wiarygodniejszego",
+          "dat": "wiarygodniejszemu",
+          "acc": "wiarygodniejszego",
+          "ins": "wiarygodniejszym",
+          "loc": "wiarygodniejszym"
+        },
+        "m3": {
+          "nom": "wiarygodniejszy",
+          "gen": "wiarygodniejszego",
+          "dat": "wiarygodniejszemu",
+          "acc": "wiarygodniejszy",
+          "ins": "wiarygodniejszym",
+          "loc": "wiarygodniejszym"
+        },
+        "f": {
+          "nom": "wiarygodniejsza",
+          "gen": "wiarygodniejszej",
+          "dat": "wiarygodniejszej",
+          "acc": "wiarygodniejszą",
+          "ins": "wiarygodniejszą",
+          "loc": "wiarygodniejszej"
+        },
+        "n": {
+          "nom": "wiarygodniejsze",
+          "gen": "wiarygodniejszego",
+          "dat": "wiarygodniejszemu",
+          "acc": "wiarygodniejsze",
+          "ins": "wiarygodniejszym",
+          "loc": "wiarygodniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wiarygodniejsi",
+          "gen": "wiarygodniejszych",
+          "dat": "wiarygodniejszym",
+          "acc": "wiarygodniejszych",
+          "ins": "wiarygodniejszymi",
+          "loc": "wiarygodniejszych"
+        },
+        "nonvirile": {
+          "nom": "wiarygodniejsze",
+          "gen": "wiarygodniejszych",
+          "dat": "wiarygodniejszym",
+          "acc": "wiarygodniejsze",
+          "ins": "wiarygodniejszymi",
+          "loc": "wiarygodniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najwiarygodniejszy",
+          "gen": "najwiarygodniejszego",
+          "dat": "najwiarygodniejszemu",
+          "acc": "najwiarygodniejszego",
+          "ins": "najwiarygodniejszym",
+          "loc": "najwiarygodniejszym"
+        },
+        "m3": {
+          "nom": "najwiarygodniejszy",
+          "gen": "najwiarygodniejszego",
+          "dat": "najwiarygodniejszemu",
+          "acc": "najwiarygodniejszy",
+          "ins": "najwiarygodniejszym",
+          "loc": "najwiarygodniejszym"
+        },
+        "f": {
+          "nom": "najwiarygodniejsza",
+          "gen": "najwiarygodniejszej",
+          "dat": "najwiarygodniejszej",
+          "acc": "najwiarygodniejszą",
+          "ins": "najwiarygodniejszą",
+          "loc": "najwiarygodniejszej"
+        },
+        "n": {
+          "nom": "najwiarygodniejsze",
+          "gen": "najwiarygodniejszego",
+          "dat": "najwiarygodniejszemu",
+          "acc": "najwiarygodniejsze",
+          "ins": "najwiarygodniejszym",
+          "loc": "najwiarygodniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najwiarygodniejsi",
+          "gen": "najwiarygodniejszych",
+          "dat": "najwiarygodniejszym",
+          "acc": "najwiarygodniejszych",
+          "ins": "najwiarygodniejszymi",
+          "loc": "najwiarygodniejszych"
+        },
+        "nonvirile": {
+          "nom": "najwiarygodniejsze",
+          "gen": "najwiarygodniejszych",
+          "dat": "najwiarygodniejszym",
+          "acc": "najwiarygodniejsze",
+          "ins": "najwiarygodniejszymi",
+          "loc": "najwiarygodniejszych"
+        }
+      }
+    }
+  }
+}

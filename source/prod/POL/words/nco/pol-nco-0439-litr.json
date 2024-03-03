@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "litr",
+      "gen": "litra",
+      "dat": "litrowi",
+      "acc": "litr",
+      "ins": "litrem",
+      "loc": "litrze",
+      "voc": "litrze"
+    },
+    "plural": {
+      "nom": "litry",
+      "gen": "litrów",
+      "dat": "litrom",
+      "acc": "litry",
+      "ins": "litrami",
+      "loc": "litrach",
+      "voc": "litry"
+    }
+  }
+}

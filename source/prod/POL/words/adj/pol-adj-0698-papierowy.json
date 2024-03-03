@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "papierowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "papierowy",
+          "gen": "papierowego",
+          "dat": "papierowemu",
+          "acc": "papierowego",
+          "ins": "papierowym",
+          "loc": "papierowym"
+        },
+        "m3": {
+          "nom": "papierowy",
+          "gen": "papierowego",
+          "dat": "papierowemu",
+          "acc": "papierowy",
+          "ins": "papierowym",
+          "loc": "papierowym"
+        },
+        "f": {
+          "nom": "papierowa",
+          "gen": "papierowej",
+          "dat": "papierowej",
+          "acc": "papierową",
+          "ins": "papierową",
+          "loc": "papierowej"
+        },
+        "n": {
+          "nom": "papierowe",
+          "gen": "papierowego",
+          "dat": "papierowemu",
+          "acc": "papierowe",
+          "ins": "papierowym",
+          "loc": "papierowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "papierowi",
+          "gen": "papierowych",
+          "dat": "papierowym",
+          "acc": "papierowych",
+          "ins": "papierowymi",
+          "loc": "papierowych"
+        },
+        "nonvirile": {
+          "nom": "papierowe",
+          "gen": "papierowych",
+          "dat": "papierowym",
+          "acc": "papierowe",
+          "ins": "papierowymi",
+          "loc": "papierowych"
+        }
+      }
+    }
+  }
+}

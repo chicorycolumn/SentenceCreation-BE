@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "skrzydło",
+      "gen": "skrzydła",
+      "dat": "skrzydłu",
+      "acc": "skrzydło",
+      "ins": "skrzydłem",
+      "loc": "skrzydle",
+      "voc": "skrzydło"
+    },
+    "plural": {
+      "nom": "skrzydła",
+      "gen": "skrzydeł",
+      "dat": "skrzydłom",
+      "acc": "skrzydła",
+      "ins": "skrzydłami",
+      "loc": "skrzydłach",
+      "voc": "skrzydła"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "miniony",
+          "gen": "minionego",
+          "dat": "minionemu",
+          "acc": "minionego",
+          "ins": "minionym",
+          "loc": "minionym"
+        },
+        "m3": {
+          "nom": "miniony",
+          "gen": "minionego",
+          "dat": "minionemu",
+          "acc": "miniony",
+          "ins": "minionym",
+          "loc": "minionym"
+        },
+        "f": {
+          "nom": "miniona",
+          "gen": "minionej",
+          "dat": "minionej",
+          "acc": "minioną",
+          "ins": "minioną",
+          "loc": "minionej"
+        },
+        "n": {
+          "nom": "minione",
+          "gen": "minionego",
+          "dat": "minionemu",
+          "acc": "minione",
+          "ins": "minionym",
+          "loc": "minionym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "minieni",
+          "gen": "minionych",
+          "dat": "minionym",
+          "acc": "minionych",
+          "ins": "minionymi",
+          "loc": "minionych"
+        },
+        "nonvirile": {
+          "nom": "minione",
+          "gen": "minionych",
+          "dat": "minionym",
+          "acc": "minione",
+          "ins": "minionymi",
+          "loc": "minionych"
+        }
+      }
+    }
+  }
+}

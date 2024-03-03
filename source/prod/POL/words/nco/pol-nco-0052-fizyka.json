@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "fizyka",
+      "gen": "fizyki",
+      "dat": "fizyce",
+      "acc": "fizykę",
+      "ins": "fizyką",
+      "loc": "fizyce",
+      "voc": "fizyko"
+    },
+    "plural": {
+      "nom": "fizyki",
+      "gen": "fizyk",
+      "dat": "fizykom",
+      "acc": "fizyki",
+      "ins": "fizykami",
+      "loc": "fizykach",
+      "voc": "fizyki"
+    }
+  }
+}

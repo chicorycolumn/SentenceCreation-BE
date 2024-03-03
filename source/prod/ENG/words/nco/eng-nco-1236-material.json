@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "material",
+      "gen": "material's"
+    },
+    "plural": {
+      "nom": "materials",
+      "gen": "materials'"
+    }
+  }
+}

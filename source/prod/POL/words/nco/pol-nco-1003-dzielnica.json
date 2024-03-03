@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dzielnica",
+      "gen": "dzielnicy",
+      "dat": "dzielnicy",
+      "acc": "dzielnicę",
+      "ins": "dzielnicą",
+      "loc": "dzielnicy",
+      "voc": "dzielnico"
+    },
+    "plural": {
+      "nom": "dzielnice",
+      "gen": "dzielnic",
+      "dat": "dzielnicom",
+      "acc": "dzielnice",
+      "ins": "dzielnicami",
+      "loc": "dzielnicach",
+      "voc": "dzielnice"
+    }
+  }
+}

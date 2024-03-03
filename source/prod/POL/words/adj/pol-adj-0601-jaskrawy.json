@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "jaskrawie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "jaskrawy",
+          "gen": "jaskrawego",
+          "dat": "jaskrawemu",
+          "acc": "jaskrawego",
+          "ins": "jaskrawym",
+          "loc": "jaskrawym"
+        },
+        "m3": {
+          "nom": "jaskrawy",
+          "gen": "jaskrawego",
+          "dat": "jaskrawemu",
+          "acc": "jaskrawy",
+          "ins": "jaskrawym",
+          "loc": "jaskrawym"
+        },
+        "f": {
+          "nom": "jaskrawa",
+          "gen": "jaskrawej",
+          "dat": "jaskrawej",
+          "acc": "jaskrawą",
+          "ins": "jaskrawą",
+          "loc": "jaskrawej"
+        },
+        "n": {
+          "nom": "jaskrawe",
+          "gen": "jaskrawego",
+          "dat": "jaskrawemu",
+          "acc": "jaskrawe",
+          "ins": "jaskrawym",
+          "loc": "jaskrawym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "jaskrawi",
+          "gen": "jaskrawych",
+          "dat": "jaskrawym",
+          "acc": "jaskrawych",
+          "ins": "jaskrawymi",
+          "loc": "jaskrawych"
+        },
+        "nonvirile": {
+          "nom": "jaskrawe",
+          "gen": "jaskrawych",
+          "dat": "jaskrawym",
+          "acc": "jaskrawe",
+          "ins": "jaskrawymi",
+          "loc": "jaskrawych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszy",
+              "bardziej jaskrawy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszego",
+              "bardziej jaskrawego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszemu",
+              "bardziej jaskrawemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszego",
+              "bardziej jaskrawego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszym",
+              "bardziej jaskrawym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszym",
+              "bardziej jaskrawym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszy",
+              "bardziej jaskrawy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszego",
+              "bardziej jaskrawego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszemu",
+              "bardziej jaskrawemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszy",
+              "bardziej jaskrawy"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszym",
+              "bardziej jaskrawym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszym",
+              "bardziej jaskrawym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawsza",
+              "bardziej jaskrawa"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszej",
+              "bardziej jaskrawej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszej",
+              "bardziej jaskrawej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszą",
+              "bardziej jaskrawą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszą",
+              "bardziej jaskrawą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszej",
+              "bardziej jaskrawej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawsze",
+              "bardziej jaskrawe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszego",
+              "bardziej jaskrawego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszemu",
+              "bardziej jaskrawemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawsze",
+              "bardziej jaskrawe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszym",
+              "bardziej jaskrawym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszym",
+              "bardziej jaskrawym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawsi",
+              "bardziej jaskrawi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszych",
+              "bardziej jaskrawych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszym",
+              "bardziej jaskrawym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszych",
+              "bardziej jaskrawych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszymi",
+              "bardziej jaskrawymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszych",
+              "bardziej jaskrawych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawsze",
+              "bardziej jaskrawe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszych",
+              "bardziej jaskrawych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszym",
+              "bardziej jaskrawym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawsze",
+              "bardziej jaskrawe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszymi",
+              "bardziej jaskrawymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "jaskrawszych",
+              "bardziej jaskrawych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszy",
+              "najbardziej jaskrawy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszego",
+              "najbardziej jaskrawego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszemu",
+              "najbardziej jaskrawemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszego",
+              "najbardziej jaskrawego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszym",
+              "najbardziej jaskrawym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszym",
+              "najbardziej jaskrawym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszy",
+              "najbardziej jaskrawy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszego",
+              "najbardziej jaskrawego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszemu",
+              "najbardziej jaskrawemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszy",
+              "najbardziej jaskrawy"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszym",
+              "najbardziej jaskrawym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszym",
+              "najbardziej jaskrawym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawsza",
+              "najbardziej jaskrawa"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszej",
+              "najbardziej jaskrawej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszej",
+              "najbardziej jaskrawej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszą",
+              "najbardziej jaskrawą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszą",
+              "najbardziej jaskrawą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszej",
+              "najbardziej jaskrawej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawsze",
+              "najbardziej jaskrawe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszego",
+              "najbardziej jaskrawego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszemu",
+              "najbardziej jaskrawemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawsze",
+              "najbardziej jaskrawe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszym",
+              "najbardziej jaskrawym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszym",
+              "najbardziej jaskrawym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawsi",
+              "najbardziej jaskrawi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszych",
+              "najbardziej jaskrawych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszym",
+              "najbardziej jaskrawym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszych",
+              "najbardziej jaskrawych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszymi",
+              "najbardziej jaskrawymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszych",
+              "najbardziej jaskrawych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawsze",
+              "najbardziej jaskrawe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszych",
+              "najbardziej jaskrawych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszym",
+              "najbardziej jaskrawym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawsze",
+              "najbardziej jaskrawe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszymi",
+              "najbardziej jaskrawymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najjaskrawszych",
+              "najbardziej jaskrawych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pralka",
+      "gen": "pralki",
+      "dat": "pralce",
+      "acc": "pralkę",
+      "ins": "pralką",
+      "loc": "pralce",
+      "voc": "pralko"
+    },
+    "plural": {
+      "nom": "pralki",
+      "gen": "pralek",
+      "dat": "pralkom",
+      "acc": "pralki",
+      "ins": "pralkami",
+      "loc": "pralkach",
+      "voc": "pralki"
+    }
+  }
+}

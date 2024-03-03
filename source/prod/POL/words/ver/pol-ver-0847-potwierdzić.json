@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "potwierdzić",
+    "verbalNoun": "potwierdzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "potwierdzony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "potwierdziwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "potwierdzi się"
+          },
+          "plural": {
+            "allPluralGenders": "potwierdzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "potwierdzę"
+          },
+          "plural": {
+            "allPluralGenders": "potwierdzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "potwierdzisz"
+          },
+          "plural": {
+            "allPluralGenders": "potwierdzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "potwierdzi"
+          },
+          "plural": {
+            "allPluralGenders": "potwierdzą"
+          }
+        }
+      },
+      "imperative": "potwierdź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "potwierdzono"
+          },
+          "plural": {
+            "allPluralGenders": "potwierdzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "potwierdziłem",
+            "f": "potwierdziłam"
+          },
+          "plural": {
+            "virile": "potwierdziliśmy",
+            "nonvirile": "potwierdziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "potwierdziłeś",
+            "f": "potwierdziłaś"
+          },
+          "plural": {
+            "virile": "potwierdziliście",
+            "nonvirile": "potwierdziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "potwierdził",
+            "f": "potwierdziła",
+            "n": "potwierdziło"
+          },
+          "plural": {
+            "virile": "potwierdzili",
+            "nonvirile": "potwierdziły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

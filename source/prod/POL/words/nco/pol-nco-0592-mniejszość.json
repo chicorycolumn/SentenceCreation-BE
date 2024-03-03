@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mniejszość",
+      "gen": "mniejszości",
+      "dat": "mniejszości",
+      "acc": "mniejszość",
+      "ins": "mniejszością",
+      "loc": "mniejszości",
+      "voc": "mniejszości"
+    },
+    "plural": {
+      "nom": "mniejszości",
+      "gen": "mniejszości",
+      "dat": "mniejszościom",
+      "acc": "mniejszości",
+      "ins": "mniejszościami",
+      "loc": "mniejszościach",
+      "voc": "mniejszości"
+    }
+  }
+}

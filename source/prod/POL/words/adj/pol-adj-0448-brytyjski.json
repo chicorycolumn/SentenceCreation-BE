@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "brytyjski",
+          "gen": "brytyjskiego",
+          "dat": "brytyjskiemu",
+          "acc": "brytyjskiego",
+          "ins": "brytyjskim",
+          "loc": "brytyjskim"
+        },
+        "m3": {
+          "nom": "brytyjski",
+          "gen": "brytyjskiego",
+          "dat": "brytyjskiemu",
+          "acc": "brytyjski",
+          "ins": "brytyjskim",
+          "loc": "brytyjskim"
+        },
+        "f": {
+          "nom": "brytyjska",
+          "gen": "brytyjskiej",
+          "dat": "brytyjskiej",
+          "acc": "brytyjską",
+          "ins": "brytyjską",
+          "loc": "brytyjskiej"
+        },
+        "n": {
+          "nom": "brytyjskie",
+          "gen": "brytyjskiego",
+          "dat": "brytyjskiemu",
+          "acc": "brytyjskie",
+          "ins": "brytyjskim",
+          "loc": "brytyjskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "brytyjscy",
+          "gen": "brytyjskich",
+          "dat": "brytyjskim",
+          "acc": "brytyjskich",
+          "ins": "brytyjskimi",
+          "loc": "brytyjskich"
+        },
+        "nonvirile": {
+          "nom": "brytyjskie",
+          "gen": "brytyjskich",
+          "dat": "brytyjskim",
+          "acc": "brytyjskie",
+          "ins": "brytyjskimi",
+          "loc": "brytyjskich"
+        }
+      }
+    }
+  }
+}

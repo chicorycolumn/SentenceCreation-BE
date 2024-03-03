@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zainwestować",
+    "verbalNoun": "zainwestowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zainwestowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zainwestowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zainwestuje się"
+          },
+          "plural": {
+            "allPluralGenders": "zainwestuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zainwestuję"
+          },
+          "plural": {
+            "allPluralGenders": "zainwestujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zainwestujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zainwestujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zainwestuje"
+          },
+          "plural": {
+            "allPluralGenders": "zainwestują"
+          }
+        }
+      },
+      "imperative": "zainwestuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zainwestowano"
+          },
+          "plural": {
+            "allPluralGenders": "zainwestowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zainwestowałem",
+            "f": "zainwestowałam"
+          },
+          "plural": {
+            "virile": "zainwestowaliśmy",
+            "nonvirile": "zainwestowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zainwestowałeś",
+            "f": "zainwestowałaś"
+          },
+          "plural": {
+            "virile": "zainwestowaliście",
+            "nonvirile": "zainwestowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zainwestował",
+            "f": "zainwestowała",
+            "n": "zainwestowało"
+          },
+          "plural": {
+            "virile": "zainwestowali",
+            "nonvirile": "zainwestowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

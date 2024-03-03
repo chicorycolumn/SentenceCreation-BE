@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "psychologicznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "psychologiczny",
+          "gen": "psychologicznego",
+          "dat": "psychologicznemu",
+          "acc": "psychologicznego",
+          "ins": "psychologicznym",
+          "loc": "psychologicznym"
+        },
+        "m3": {
+          "nom": "psychologiczny",
+          "gen": "psychologicznego",
+          "dat": "psychologicznemu",
+          "acc": "psychologiczny",
+          "ins": "psychologicznym",
+          "loc": "psychologicznym"
+        },
+        "f": {
+          "nom": "psychologiczna",
+          "gen": "psychologicznej",
+          "dat": "psychologicznej",
+          "acc": "psychologiczną",
+          "ins": "psychologiczną",
+          "loc": "psychologicznej"
+        },
+        "n": {
+          "nom": "psychologiczne",
+          "gen": "psychologicznego",
+          "dat": "psychologicznemu",
+          "acc": "psychologiczne",
+          "ins": "psychologicznym",
+          "loc": "psychologicznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "psychologiczni",
+          "gen": "psychologicznych",
+          "dat": "psychologicznym",
+          "acc": "psychologicznych",
+          "ins": "psychologicznymi",
+          "loc": "psychologicznych"
+        },
+        "nonvirile": {
+          "nom": "psychologiczne",
+          "gen": "psychologicznych",
+          "dat": "psychologicznym",
+          "acc": "psychologiczne",
+          "ins": "psychologicznymi",
+          "loc": "psychologicznych"
+        }
+      }
+    }
+  }
+}

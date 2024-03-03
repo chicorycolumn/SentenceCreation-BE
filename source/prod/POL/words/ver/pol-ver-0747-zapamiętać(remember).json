@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zapamiętać",
+    "verbalNoun": "zapamiętanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zapamiętawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zapamięta się"
+          },
+          "plural": {
+            "allPluralGenders": "zapamięta się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zapamiętam"
+          },
+          "plural": {
+            "allPluralGenders": "zapamiętamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zapamiętasz"
+          },
+          "plural": {
+            "allPluralGenders": "zapamiętacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zapamięta"
+          },
+          "plural": {
+            "allPluralGenders": "zapamiętają"
+          }
+        }
+      },
+      "imperative": "zapamiętaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zapamiętano"
+          },
+          "plural": {
+            "allPluralGenders": "zapamiętano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zapamiętałem",
+            "f": "zapamiętałam"
+          },
+          "plural": {
+            "virile": "zapamiętaliśmy",
+            "nonvirile": "zapamiętałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zapamiętałeś",
+            "f": "zapamiętałaś"
+          },
+          "plural": {
+            "virile": "zapamiętaliście",
+            "nonvirile": "zapamiętałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zapamiętał",
+            "f": "zapamiętała",
+            "n": "zapamiętało"
+          },
+          "plural": {
+            "virile": "zapamiętali",
+            "nonvirile": "zapamiętały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

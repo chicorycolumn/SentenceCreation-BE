@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "studentka",
+      "gen": "studentki",
+      "dat": "studentce",
+      "acc": "studentkę",
+      "ins": "studentką",
+      "loc": "studentce",
+      "voc": "studentko"
+    },
+    "plural": {
+      "nom": "studentki",
+      "gen": "studentek",
+      "dat": "studentkom",
+      "acc": "studentki",
+      "ins": "studentkami",
+      "loc": "studentkach",
+      "voc": "studentki"
+    }
+  }
+}

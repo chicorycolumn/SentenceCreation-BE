@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dowiadywać",
+    "verbalNoun": "dowiadywanie",
+    "activeAdjectival": "dowiadujący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "dowiadując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dowiaduj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dowiadywano"
+          },
+          "plural": {
+            "allPluralGenders": "dowiadywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dowiadywałem",
+            "f": "dowiadywałam"
+          },
+          "plural": {
+            "virile": "dowiadywaliśmy",
+            "nonvirile": "dowiadywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dowiadywałeś",
+            "f": "dowiadywałaś"
+          },
+          "plural": {
+            "virile": "dowiadywaliście",
+            "nonvirile": "dowiadywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dowiadywał",
+            "f": "dowiadywała",
+            "n": "dowiadywało"
+          },
+          "plural": {
+            "virile": "dowiadywali",
+            "nonvirile": "dowiadywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dowiaduje się"
+          },
+          "plural": {
+            "allPluralGenders": "dowiaduje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dowiaduję"
+          },
+          "plural": {
+            "allPluralGenders": "dowiadujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dowiadujesz"
+          },
+          "plural": {
+            "allPluralGenders": "dowiadujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dowiaduje"
+          },
+          "plural": {
+            "allPluralGenders": "dowiadują"
+          }
+        }
+      }
+    }
+  }
+}

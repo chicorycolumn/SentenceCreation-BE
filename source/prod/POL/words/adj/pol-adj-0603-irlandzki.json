@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "irlandzki",
+          "gen": "irlandzkiego",
+          "dat": "irlandzkiemu",
+          "acc": "irlandzkiego",
+          "ins": "irlandzkim",
+          "loc": "irlandzkim"
+        },
+        "m3": {
+          "nom": "irlandzki",
+          "gen": "irlandzkiego",
+          "dat": "irlandzkiemu",
+          "acc": "irlandzki",
+          "ins": "irlandzkim",
+          "loc": "irlandzkim"
+        },
+        "f": {
+          "nom": "irlandzka",
+          "gen": "irlandzkiej",
+          "dat": "irlandzkiej",
+          "acc": "irlandzką",
+          "ins": "irlandzką",
+          "loc": "irlandzkiej"
+        },
+        "n": {
+          "nom": "irlandzkie",
+          "gen": "irlandzkiego",
+          "dat": "irlandzkiemu",
+          "acc": "irlandzkie",
+          "ins": "irlandzkim",
+          "loc": "irlandzkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "irlandzcy",
+          "gen": "irlandzkich",
+          "dat": "irlandzkim",
+          "acc": "irlandzkich",
+          "ins": "irlandzkimi",
+          "loc": "irlandzkich"
+        },
+        "nonvirile": {
+          "nom": "irlandzkie",
+          "gen": "irlandzkich",
+          "dat": "irlandzkim",
+          "acc": "irlandzkie",
+          "ins": "irlandzkimi",
+          "loc": "irlandzkich"
+        }
+      }
+    }
+  }
+}

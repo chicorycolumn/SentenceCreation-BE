@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pochwa",
+      "gen": "pochwy",
+      "dat": "pochwie",
+      "acc": "pochwę",
+      "ins": "pochwą",
+      "loc": "pochwie",
+      "voc": "pochwo"
+    },
+    "plural": {
+      "nom": "pochwy",
+      "gen": "pochew",
+      "dat": "pochwom",
+      "acc": "pochwy",
+      "ins": "pochwami",
+      "loc": "pochwach",
+      "voc": "pochwy"
+    }
+  }
+}

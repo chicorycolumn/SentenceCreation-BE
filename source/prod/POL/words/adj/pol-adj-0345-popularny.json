@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "popularnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "popularny",
+          "gen": "popularnego",
+          "dat": "popularnemu",
+          "acc": "popularnego",
+          "ins": "popularnym",
+          "loc": "popularnym"
+        },
+        "m3": {
+          "nom": "popularny",
+          "gen": "popularnego",
+          "dat": "popularnemu",
+          "acc": "popularny",
+          "ins": "popularnym",
+          "loc": "popularnym"
+        },
+        "f": {
+          "nom": "popularna",
+          "gen": "popularnej",
+          "dat": "popularnej",
+          "acc": "popularną",
+          "ins": "popularną",
+          "loc": "popularnej"
+        },
+        "n": {
+          "nom": "popularne",
+          "gen": "popularnego",
+          "dat": "popularnemu",
+          "acc": "popularne",
+          "ins": "popularnym",
+          "loc": "popularnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "popularni",
+          "gen": "popularnych",
+          "dat": "popularnym",
+          "acc": "popularnych",
+          "ins": "popularnymi",
+          "loc": "popularnych"
+        },
+        "nonvirile": {
+          "nom": "popularne",
+          "gen": "popularnych",
+          "dat": "popularnym",
+          "acc": "popularne",
+          "ins": "popularnymi",
+          "loc": "popularnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "popularniejszy",
+          "gen": "popularniejszego",
+          "dat": "popularniejszemu",
+          "acc": "popularniejszego",
+          "ins": "popularniejszym",
+          "loc": "popularniejszym"
+        },
+        "m3": {
+          "nom": "popularniejszy",
+          "gen": "popularniejszego",
+          "dat": "popularniejszemu",
+          "acc": "popularniejszy",
+          "ins": "popularniejszym",
+          "loc": "popularniejszym"
+        },
+        "f": {
+          "nom": "popularniejsza",
+          "gen": "popularniejszej",
+          "dat": "popularniejszej",
+          "acc": "popularniejszą",
+          "ins": "popularniejszą",
+          "loc": "popularniejszej"
+        },
+        "n": {
+          "nom": "popularniejsze",
+          "gen": "popularniejszego",
+          "dat": "popularniejszemu",
+          "acc": "popularniejsze",
+          "ins": "popularniejszym",
+          "loc": "popularniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "popularniejsi",
+          "gen": "popularniejszych",
+          "dat": "popularniejszym",
+          "acc": "popularniejszych",
+          "ins": "popularniejszymi",
+          "loc": "popularniejszych"
+        },
+        "nonvirile": {
+          "nom": "popularniejsze",
+          "gen": "popularniejszych",
+          "dat": "popularniejszym",
+          "acc": "popularniejsze",
+          "ins": "popularniejszymi",
+          "loc": "popularniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najpopularniejszy",
+          "gen": "najpopularniejszego",
+          "dat": "najpopularniejszemu",
+          "acc": "najpopularniejszego",
+          "ins": "najpopularniejszym",
+          "loc": "najpopularniejszym"
+        },
+        "m3": {
+          "nom": "najpopularniejszy",
+          "gen": "najpopularniejszego",
+          "dat": "najpopularniejszemu",
+          "acc": "najpopularniejszy",
+          "ins": "najpopularniejszym",
+          "loc": "najpopularniejszym"
+        },
+        "f": {
+          "nom": "najpopularniejsza",
+          "gen": "najpopularniejszej",
+          "dat": "najpopularniejszej",
+          "acc": "najpopularniejszą",
+          "ins": "najpopularniejszą",
+          "loc": "najpopularniejszej"
+        },
+        "n": {
+          "nom": "najpopularniejsze",
+          "gen": "najpopularniejszego",
+          "dat": "najpopularniejszemu",
+          "acc": "najpopularniejsze",
+          "ins": "najpopularniejszym",
+          "loc": "najpopularniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najpopularniejsi",
+          "gen": "najpopularniejszych",
+          "dat": "najpopularniejszym",
+          "acc": "najpopularniejszych",
+          "ins": "najpopularniejszymi",
+          "loc": "najpopularniejszych"
+        },
+        "nonvirile": {
+          "nom": "najpopularniejsze",
+          "gen": "najpopularniejszych",
+          "dat": "najpopularniejszym",
+          "acc": "najpopularniejsze",
+          "ins": "najpopularniejszymi",
+          "loc": "najpopularniejszych"
+        }
+      }
+    }
+  }
+}

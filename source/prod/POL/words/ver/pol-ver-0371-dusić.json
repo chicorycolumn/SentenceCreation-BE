@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dusić",
+    "verbalNoun": "duszenie",
+    "activeAdjectival": "duszący",
+    "passiveAdjectival": "duszony",
+    "contemporaryAdverbial": "dusząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "duś",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "duszono"
+          },
+          "plural": {
+            "allPluralGenders": "duszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dusiłem",
+            "f": "dusiłam"
+          },
+          "plural": {
+            "virile": "dusiliśmy",
+            "nonvirile": "dusiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dusiłeś",
+            "f": "dusiłaś"
+          },
+          "plural": {
+            "virile": "dusiliście",
+            "nonvirile": "dusiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dusił",
+            "f": "dusiła",
+            "n": "dusiło"
+          },
+          "plural": {
+            "virile": "dusili",
+            "nonvirile": "dusiły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dusi się"
+          },
+          "plural": {
+            "allPluralGenders": "dusi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "duszę"
+          },
+          "plural": {
+            "allPluralGenders": "dusimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dusisz"
+          },
+          "plural": {
+            "allPluralGenders": "dusicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dusi"
+          },
+          "plural": {
+            "allPluralGenders": "duszą"
+          }
+        }
+      }
+    }
+  }
+}

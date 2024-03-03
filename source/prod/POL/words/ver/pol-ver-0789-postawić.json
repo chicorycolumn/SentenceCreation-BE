@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "postawić",
+    "verbalNoun": "postawienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "postawiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "postawiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "postawi się"
+          },
+          "plural": {
+            "allPluralGenders": "postawi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "postawię"
+          },
+          "plural": {
+            "allPluralGenders": "postawimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "postawisz"
+          },
+          "plural": {
+            "allPluralGenders": "postawicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "postawi"
+          },
+          "plural": {
+            "allPluralGenders": "postawią"
+          }
+        }
+      },
+      "imperative": "postaw",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "postawiono"
+          },
+          "plural": {
+            "allPluralGenders": "postawiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "postawiłem",
+            "f": "postawiłam"
+          },
+          "plural": {
+            "virile": "postawiliśmy",
+            "nonvirile": "postawiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "postawiłeś",
+            "f": "postawiłaś"
+          },
+          "plural": {
+            "virile": "postawiliście",
+            "nonvirile": "postawiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "postawił",
+            "f": "postawiła",
+            "n": "postawiło"
+          },
+          "plural": {
+            "virile": "postawili",
+            "nonvirile": "postawiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

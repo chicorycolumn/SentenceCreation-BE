@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "ściśle",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ścisły",
+          "gen": "ścisłego",
+          "dat": "ścisłemu",
+          "acc": "ścisłego",
+          "ins": "ścisłym",
+          "loc": "ścisłym"
+        },
+        "m3": {
+          "nom": "ścisły",
+          "gen": "ścisłego",
+          "dat": "ścisłemu",
+          "acc": "ścisły",
+          "ins": "ścisłym",
+          "loc": "ścisłym"
+        },
+        "f": {
+          "nom": "ścisła",
+          "gen": "ścisłej",
+          "dat": "ścisłej",
+          "acc": "ścisłą",
+          "ins": "ścisłą",
+          "loc": "ścisłej"
+        },
+        "n": {
+          "nom": "ścisłe",
+          "gen": "ścisłego",
+          "dat": "ścisłemu",
+          "acc": "ścisłe",
+          "ins": "ścisłym",
+          "loc": "ścisłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ściśli",
+          "gen": "ścisłych",
+          "dat": "ścisłym",
+          "acc": "ścisłych",
+          "ins": "ścisłymi",
+          "loc": "ścisłych"
+        },
+        "nonvirile": {
+          "nom": "ścisłe",
+          "gen": "ścisłych",
+          "dat": "ścisłym",
+          "acc": "ścisłe",
+          "ins": "ścisłymi",
+          "loc": "ścisłych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszy",
+              "bardziej ścisły"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszego",
+              "bardziej ścisłego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszemu",
+              "bardziej ścisłemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszego",
+              "bardziej ścisłego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszym",
+              "bardziej ścisłym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszym",
+              "bardziej ścisłym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszy",
+              "bardziej ścisły"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszego",
+              "bardziej ścisłego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszemu",
+              "bardziej ścisłemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszy",
+              "bardziej ścisły"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszym",
+              "bardziej ścisłym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszym",
+              "bardziej ścisłym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejsza",
+              "bardziej ścisła"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszej",
+              "bardziej ścisłej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszej",
+              "bardziej ścisłej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszą",
+              "bardziej ścisłą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszą",
+              "bardziej ścisłą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszej",
+              "bardziej ścisłej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejsze",
+              "bardziej ścisłe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszego",
+              "bardziej ścisłego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszemu",
+              "bardziej ścisłemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejsze",
+              "bardziej ścisłe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszym",
+              "bardziej ścisłym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszym",
+              "bardziej ścisłym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejsi",
+              "bardziej ściśli"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszych",
+              "bardziej ścisłych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszym",
+              "bardziej ścisłym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszych",
+              "bardziej ścisłych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszymi",
+              "bardziej ścisłymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszych",
+              "bardziej ścisłych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejsze",
+              "bardziej ścisłe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszych",
+              "bardziej ścisłych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszym",
+              "bardziej ścisłym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejsze",
+              "bardziej ścisłe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszymi",
+              "bardziej ścisłymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "ściślejszych",
+              "bardziej ścisłych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszy",
+              "najbardziej ścisły"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszego",
+              "najbardziej ścisłego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszemu",
+              "najbardziej ścisłemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszego",
+              "najbardziej ścisłego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszym",
+              "najbardziej ścisłym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszym",
+              "najbardziej ścisłym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszy",
+              "najbardziej ścisły"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszego",
+              "najbardziej ścisłego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszemu",
+              "najbardziej ścisłemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszy",
+              "najbardziej ścisły"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszym",
+              "najbardziej ścisłym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszym",
+              "najbardziej ścisłym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejsza",
+              "najbardziej ścisła"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszej",
+              "najbardziej ścisłej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszej",
+              "najbardziej ścisłej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszą",
+              "najbardziej ścisłą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszą",
+              "najbardziej ścisłą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszej",
+              "najbardziej ścisłej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejsze",
+              "najbardziej ścisłe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszego",
+              "najbardziej ścisłego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszemu",
+              "najbardziej ścisłemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejsze",
+              "najbardziej ścisłe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszym",
+              "najbardziej ścisłym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszym",
+              "najbardziej ścisłym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejsi",
+              "najbardziej ściśli"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszych",
+              "najbardziej ścisłych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszym",
+              "najbardziej ścisłym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszych",
+              "najbardziej ścisłych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszymi",
+              "najbardziej ścisłymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszych",
+              "najbardziej ścisłych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejsze",
+              "najbardziej ścisłe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszych",
+              "najbardziej ścisłych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszym",
+              "najbardziej ścisłym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejsze",
+              "najbardziej ścisłe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszymi",
+              "najbardziej ścisłymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najściślejszych",
+              "najbardziej ścisłych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

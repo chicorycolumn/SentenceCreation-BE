@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "padać",
+    "verbalNoun": "padanie",
+    "activeAdjectival": "padający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "padając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "padaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "padano"
+          },
+          "plural": {
+            "allPluralGenders": "padano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "padałem",
+            "f": "padałam"
+          },
+          "plural": {
+            "virile": "padaliśmy",
+            "nonvirile": "padałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "padałeś",
+            "f": "padałaś"
+          },
+          "plural": {
+            "virile": "padaliście",
+            "nonvirile": "padałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "padał",
+            "f": "padała",
+            "n": "padało"
+          },
+          "plural": {
+            "virile": "padali",
+            "nonvirile": "padały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pada się"
+          },
+          "plural": {
+            "allPluralGenders": "pada się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "padam"
+          },
+          "plural": {
+            "allPluralGenders": "padamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "padasz"
+          },
+          "plural": {
+            "allPluralGenders": "padacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pada"
+          },
+          "plural": {
+            "allPluralGenders": "padają"
+          }
+        }
+      }
+    }
+  }
+}

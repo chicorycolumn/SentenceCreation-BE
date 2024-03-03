@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kawiarnia",
+      "gen": "kawiarni",
+      "dat": "kawiarni",
+      "acc": "kawiarnię",
+      "ins": "kawiarnią",
+      "loc": "kawiarni",
+      "voc": "kawiarnio"
+    },
+    "plural": {
+      "nom": "kawiarnie",
+      "gen": [
+        "kawiarni",
+        "kawiarń"
+      ],
+      "dat": "kawiarniom",
+      "acc": "kawiarnie",
+      "ins": "kawiarniami",
+      "loc": "kawiarniach",
+      "voc": "kawiarnie"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ugotować",
+    "verbalNoun": "ugotowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "ugotowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "ugotowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ugotuje się"
+          },
+          "plural": {
+            "allPluralGenders": "ugotuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ugotuję"
+          },
+          "plural": {
+            "allPluralGenders": "ugotujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ugotujesz"
+          },
+          "plural": {
+            "allPluralGenders": "ugotujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ugotuje"
+          },
+          "plural": {
+            "allPluralGenders": "ugotują"
+          }
+        }
+      },
+      "imperative": "ugotuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ugotowano"
+          },
+          "plural": {
+            "allPluralGenders": "ugotowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ugotowałem",
+            "f": "ugotowałam"
+          },
+          "plural": {
+            "virile": "ugotowaliśmy",
+            "nonvirile": "ugotowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ugotowałeś",
+            "f": "ugotowałaś"
+          },
+          "plural": {
+            "virile": "ugotowaliście",
+            "nonvirile": "ugotowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ugotował",
+            "f": "ugotowała",
+            "n": "ugotowało"
+          },
+          "plural": {
+            "virile": "ugotowali",
+            "nonvirile": "ugotowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

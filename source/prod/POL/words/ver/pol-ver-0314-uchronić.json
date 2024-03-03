@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "uchronić",
+    "verbalNoun": "uchronienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "uchroniony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "uchroniwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "uchroni się"
+          },
+          "plural": {
+            "allPluralGenders": "uchroni się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "uchronię"
+          },
+          "plural": {
+            "allPluralGenders": "uchronimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "uchronisz"
+          },
+          "plural": {
+            "allPluralGenders": "uchronicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "uchroni"
+          },
+          "plural": {
+            "allPluralGenders": "uchronią"
+          }
+        }
+      },
+      "imperative": "uchroń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "uchroniono"
+          },
+          "plural": {
+            "allPluralGenders": "uchroniono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "uchroniłem",
+            "f": "uchroniłam"
+          },
+          "plural": {
+            "virile": "uchroniliśmy",
+            "nonvirile": "uchroniłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "uchroniłeś",
+            "f": "uchroniłaś"
+          },
+          "plural": {
+            "virile": "uchroniliście",
+            "nonvirile": "uchroniłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "uchronił",
+            "f": "uchroniła",
+            "n": "uchroniło"
+          },
+          "plural": {
+            "virile": "uchronili",
+            "nonvirile": "uchroniły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

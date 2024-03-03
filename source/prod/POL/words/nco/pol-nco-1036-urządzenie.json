@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "urządzenie",
+      "gen": "urządzenia",
+      "dat": "urządzeniu",
+      "acc": "urządzenie",
+      "ins": "urządzeniem",
+      "loc": "urządzeniu",
+      "voc": "urządzenie"
+    },
+    "plural": {
+      "nom": "urządzenia",
+      "gen": "urządzeń",
+      "dat": "urządzeniom",
+      "acc": "urządzenia",
+      "ins": "urządzeniami",
+      "loc": "urządzeniach",
+      "voc": "urządzenia"
+    }
+  }
+}

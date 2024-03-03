@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "drogowy",
+          "gen": "drogowego",
+          "dat": "drogowemu",
+          "acc": "drogowego",
+          "ins": "drogowym",
+          "loc": "drogowym"
+        },
+        "m3": {
+          "nom": "drogowy",
+          "gen": "drogowego",
+          "dat": "drogowemu",
+          "acc": "drogowy",
+          "ins": "drogowym",
+          "loc": "drogowym"
+        },
+        "f": {
+          "nom": "drogowa",
+          "gen": "drogowej",
+          "dat": "drogowej",
+          "acc": "drogową",
+          "ins": "drogową",
+          "loc": "drogowej"
+        },
+        "n": {
+          "nom": "drogowe",
+          "gen": "drogowego",
+          "dat": "drogowemu",
+          "acc": "drogowe",
+          "ins": "drogowym",
+          "loc": "drogowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "drogowi",
+          "gen": "drogowych",
+          "dat": "drogowym",
+          "acc": "drogowych",
+          "ins": "drogowymi",
+          "loc": "drogowych"
+        },
+        "nonvirile": {
+          "nom": "drogowe",
+          "gen": "drogowych",
+          "dat": "drogowym",
+          "acc": "drogowe",
+          "ins": "drogowymi",
+          "loc": "drogowych"
+        }
+      }
+    }
+  }
+}

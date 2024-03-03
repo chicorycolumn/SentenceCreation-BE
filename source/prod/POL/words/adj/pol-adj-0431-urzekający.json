@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "urzekająco",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "urzekający",
+          "gen": "urzekającego",
+          "dat": "urzekającemu",
+          "acc": "urzekającego",
+          "ins": "urzekającym",
+          "loc": "urzekającym"
+        },
+        "m3": {
+          "nom": "urzekający",
+          "gen": "urzekającego",
+          "dat": "urzekającemu",
+          "acc": "urzekający",
+          "ins": "urzekającym",
+          "loc": "urzekającym"
+        },
+        "f": {
+          "nom": "urzekająca",
+          "gen": "urzekającej",
+          "dat": "urzekającej",
+          "acc": "urzekającą",
+          "ins": "urzekającą",
+          "loc": "urzekającej"
+        },
+        "n": {
+          "nom": "urzekające",
+          "gen": "urzekającego",
+          "dat": "urzekającemu",
+          "acc": "urzekające",
+          "ins": "urzekającym",
+          "loc": "urzekającym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "urzekający",
+          "gen": "urzekających",
+          "dat": "urzekającym",
+          "acc": "urzekających",
+          "ins": "urzekającymi",
+          "loc": "urzekających"
+        },
+        "nonvirile": {
+          "nom": "urzekające",
+          "gen": "urzekających",
+          "dat": "urzekającym",
+          "acc": "urzekające",
+          "ins": "urzekającymi",
+          "loc": "urzekających"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej urzekający",
+          "gen": "bardziej urzekającego",
+          "dat": "bardziej urzekającemu",
+          "acc": "bardziej urzekającego",
+          "ins": "bardziej urzekającym",
+          "loc": "bardziej urzekającym"
+        },
+        "m3": {
+          "nom": "bardziej urzekający",
+          "gen": "bardziej urzekającego",
+          "dat": "bardziej urzekającemu",
+          "acc": "bardziej urzekający",
+          "ins": "bardziej urzekającym",
+          "loc": "bardziej urzekającym"
+        },
+        "f": {
+          "nom": "bardziej urzekająca",
+          "gen": "bardziej urzekającej",
+          "dat": "bardziej urzekającej",
+          "acc": "bardziej urzekającą",
+          "ins": "bardziej urzekającą",
+          "loc": "bardziej urzekającej"
+        },
+        "n": {
+          "nom": "bardziej urzekające",
+          "gen": "bardziej urzekającego",
+          "dat": "bardziej urzekającemu",
+          "acc": "bardziej urzekające",
+          "ins": "bardziej urzekającym",
+          "loc": "bardziej urzekającym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej urzekający",
+          "gen": "bardziej urzekających",
+          "dat": "bardziej urzekającym",
+          "acc": "bardziej urzekających",
+          "ins": "bardziej urzekającymi",
+          "loc": "bardziej urzekających"
+        },
+        "nonvirile": {
+          "nom": "bardziej urzekające",
+          "gen": "bardziej urzekających",
+          "dat": "bardziej urzekającym",
+          "acc": "bardziej urzekające",
+          "ins": "bardziej urzekającymi",
+          "loc": "bardziej urzekających"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej urzekający",
+          "gen": "najbardziej urzekającego",
+          "dat": "najbardziej urzekającemu",
+          "acc": "najbardziej urzekającego",
+          "ins": "najbardziej urzekającym",
+          "loc": "najbardziej urzekającym"
+        },
+        "m3": {
+          "nom": "najbardziej urzekający",
+          "gen": "najbardziej urzekającego",
+          "dat": "najbardziej urzekającemu",
+          "acc": "najbardziej urzekający",
+          "ins": "najbardziej urzekającym",
+          "loc": "najbardziej urzekającym"
+        },
+        "f": {
+          "nom": "najbardziej urzekająca",
+          "gen": "najbardziej urzekającej",
+          "dat": "najbardziej urzekającej",
+          "acc": "najbardziej urzekającą",
+          "ins": "najbardziej urzekającą",
+          "loc": "najbardziej urzekającej"
+        },
+        "n": {
+          "nom": "najbardziej urzekające",
+          "gen": "najbardziej urzekającego",
+          "dat": "najbardziej urzekającemu",
+          "acc": "najbardziej urzekające",
+          "ins": "najbardziej urzekającym",
+          "loc": "najbardziej urzekającym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej urzekający",
+          "gen": "najbardziej urzekających",
+          "dat": "najbardziej urzekającym",
+          "acc": "najbardziej urzekających",
+          "ins": "najbardziej urzekającymi",
+          "loc": "najbardziej urzekających"
+        },
+        "nonvirile": {
+          "nom": "najbardziej urzekające",
+          "gen": "najbardziej urzekających",
+          "dat": "najbardziej urzekającym",
+          "acc": "najbardziej urzekające",
+          "ins": "najbardziej urzekającymi",
+          "loc": "najbardziej urzekających"
+        }
+      }
+    }
+  }
+}

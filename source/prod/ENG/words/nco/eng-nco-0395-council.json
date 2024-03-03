@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "council",
+      "gen": "council's"
+    },
+    "plural": {
+      "nom": "councils",
+      "gen": "councils'"
+    }
+  }
+}

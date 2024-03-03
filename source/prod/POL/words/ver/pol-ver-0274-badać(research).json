@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "badać",
+    "verbalNoun": "badanie",
+    "activeAdjectival": "badający",
+    "passiveAdjectival": "badany",
+    "contemporaryAdverbial": "badając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "badaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "badano"
+          },
+          "plural": {
+            "allPluralGenders": "badano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "badałem",
+            "f": "badałam"
+          },
+          "plural": {
+            "virile": "badaliśmy",
+            "nonvirile": "badałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "badałeś",
+            "f": "badałaś"
+          },
+          "plural": {
+            "virile": "badaliście",
+            "nonvirile": "badałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "badał",
+            "f": "badała",
+            "n": "badało"
+          },
+          "plural": {
+            "virile": "badali",
+            "nonvirile": "badały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "bada się"
+          },
+          "plural": {
+            "allPluralGenders": "bada się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "badam"
+          },
+          "plural": {
+            "allPluralGenders": "badamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "badasz"
+          },
+          "plural": {
+            "allPluralGenders": "badacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "bada"
+          },
+          "plural": {
+            "allPluralGenders": "badają"
+          }
+        }
+      }
+    }
+  }
+}

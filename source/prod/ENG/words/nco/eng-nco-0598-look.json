@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "look",
+      "gen": "look's"
+    },
+    "plural": {
+      "nom": "looks",
+      "gen": "looks'"
+    }
+  }
+}

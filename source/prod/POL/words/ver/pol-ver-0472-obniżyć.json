@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "obniżyć",
+    "verbalNoun": "obniżenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "obniżony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "obniżywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obniży się"
+          },
+          "plural": {
+            "allPluralGenders": "obniży się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "obniżę"
+          },
+          "plural": {
+            "allPluralGenders": "obniżymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "obniżysz"
+          },
+          "plural": {
+            "allPluralGenders": "obniżycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "obniży"
+          },
+          "plural": {
+            "allPluralGenders": "obniżą"
+          }
+        }
+      },
+      "imperative": "obniż",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obniżono"
+          },
+          "plural": {
+            "allPluralGenders": "obniżono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "obniżyłem",
+            "f": "obniżyłam"
+          },
+          "plural": {
+            "virile": "obniżyliśmy",
+            "nonvirile": "obniżyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "obniżyłeś",
+            "f": "obniżyłaś"
+          },
+          "plural": {
+            "virile": "obniżyliście",
+            "nonvirile": "obniżyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "obniżył",
+            "f": "obniżyła",
+            "n": "obniżyło"
+          },
+          "plural": {
+            "virile": "obniżyli",
+            "nonvirile": "obniżyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

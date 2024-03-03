@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "postanowić",
+    "verbalNoun": "postanowienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "postanowiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "postanowiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "postanowi się"
+          },
+          "plural": {
+            "allPluralGenders": "postanowi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "postanowię"
+          },
+          "plural": {
+            "allPluralGenders": "postanowimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "postanowisz"
+          },
+          "plural": {
+            "allPluralGenders": "postanowicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "postanowi"
+          },
+          "plural": {
+            "allPluralGenders": "postanowią"
+          }
+        }
+      },
+      "imperative": "postanów",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "postanowiono"
+          },
+          "plural": {
+            "allPluralGenders": "postanowiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "postanowiłem",
+            "f": "postanowiłam"
+          },
+          "plural": {
+            "virile": "postanowiliśmy",
+            "nonvirile": "postanowiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "postanowiłeś",
+            "f": "postanowiłaś"
+          },
+          "plural": {
+            "virile": "postanowiliście",
+            "nonvirile": "postanowiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "postanowił",
+            "f": "postanowiła",
+            "n": "postanowiło"
+          },
+          "plural": {
+            "virile": "postanowili",
+            "nonvirile": "postanowiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

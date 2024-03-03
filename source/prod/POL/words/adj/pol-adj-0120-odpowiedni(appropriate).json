@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "odpowiednio",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "odpowiedni",
+          "gen": "odpowiedniego",
+          "dat": "odpowiedniemu",
+          "acc": "odpowiedniego",
+          "ins": "odpowiednim",
+          "loc": "odpowiednim"
+        },
+        "m3": {
+          "nom": "odpowiedni",
+          "gen": "odpowiedniego",
+          "dat": "odpowiedniemu",
+          "acc": "odpowiedni",
+          "ins": "odpowiednim",
+          "loc": "odpowiednim"
+        },
+        "f": {
+          "nom": "odpowiedna",
+          "gen": "odpowiedniej",
+          "dat": "odpowiedniej",
+          "acc": "odpowiedną",
+          "ins": "odpowiedną",
+          "loc": "odpowiedniej"
+        },
+        "n": {
+          "nom": "odpowiednie",
+          "gen": "odpowiedniego",
+          "dat": "odpowiedniemu",
+          "acc": "odpowiednie",
+          "ins": "odpowiednim",
+          "loc": "odpowiednim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "odpowiedni",
+          "gen": "odpowiednich",
+          "dat": "odpowiednim",
+          "acc": "odpowiednich",
+          "ins": "odpowiednimi",
+          "loc": "odpowiednich"
+        },
+        "nonvirile": {
+          "nom": "odpowiednie",
+          "gen": "odpowiednich",
+          "dat": "odpowiednim",
+          "acc": "odpowiednie",
+          "ins": "odpowiednimi",
+          "loc": "odpowiednich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszy",
+              "bardziej odpowiedni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszego",
+              "bardziej odpowiedniego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszemu",
+              "bardziej odpowiedniemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszego",
+              "bardziej odpowiedniego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszym",
+              "bardziej odpowiednim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszym",
+              "bardziej odpowiednim"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszy",
+              "bardziej odpowiedni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszego",
+              "bardziej odpowiedniego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszemu",
+              "bardziej odpowiedniemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszy",
+              "bardziej odpowiedni"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszym",
+              "bardziej odpowiednim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszym",
+              "bardziej odpowiednim"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejsza",
+              "bardziej odpowiedna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszej",
+              "bardziej odpowiedniej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszej",
+              "bardziej odpowiedniej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszą",
+              "bardziej odpowiedną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszą",
+              "bardziej odpowiedną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszej",
+              "bardziej odpowiedniej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejsze",
+              "bardziej odpowiednie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszego",
+              "bardziej odpowiedniego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszemu",
+              "bardziej odpowiedniemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejsze",
+              "bardziej odpowiednie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszym",
+              "bardziej odpowiednim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszym",
+              "bardziej odpowiednim"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejsi",
+              "bardziej odpowiedni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszych",
+              "bardziej odpowiednich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszym",
+              "bardziej odpowiednim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszych",
+              "bardziej odpowiednich"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszymi",
+              "bardziej odpowiednimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszych",
+              "bardziej odpowiednich"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejsze",
+              "bardziej odpowiednie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszych",
+              "bardziej odpowiednich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszym",
+              "bardziej odpowiednim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejsze",
+              "bardziej odpowiednie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszymi",
+              "bardziej odpowiednimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "odpowiedniejszych",
+              "bardziej odpowiednich"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszy",
+              "najbardziej odpowiedni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszego",
+              "najbardziej odpowiedniego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszemu",
+              "najbardziej odpowiedniemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszego",
+              "najbardziej odpowiedniego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszym",
+              "najbardziej odpowiednim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszym",
+              "najbardziej odpowiednim"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszy",
+              "najbardziej odpowiedni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszego",
+              "najbardziej odpowiedniego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszemu",
+              "najbardziej odpowiedniemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszy",
+              "najbardziej odpowiedni"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszym",
+              "najbardziej odpowiednim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszym",
+              "najbardziej odpowiednim"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejsza",
+              "najbardziej odpowiedna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszej",
+              "najbardziej odpowiedniej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszej",
+              "najbardziej odpowiedniej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszą",
+              "najbardziej odpowiedną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszą",
+              "najbardziej odpowiedną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszej",
+              "najbardziej odpowiedniej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejsze",
+              "najbardziej odpowiednie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszego",
+              "najbardziej odpowiedniego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszemu",
+              "najbardziej odpowiedniemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejsze",
+              "najbardziej odpowiednie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszym",
+              "najbardziej odpowiednim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszym",
+              "najbardziej odpowiednim"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejsi",
+              "najbardziej odpowiedni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszych",
+              "najbardziej odpowiednich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszym",
+              "najbardziej odpowiednim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszych",
+              "najbardziej odpowiednich"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszymi",
+              "najbardziej odpowiednimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszych",
+              "najbardziej odpowiednich"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejsze",
+              "najbardziej odpowiednie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszych",
+              "najbardziej odpowiednich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszym",
+              "najbardziej odpowiednim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejsze",
+              "najbardziej odpowiednie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszymi",
+              "najbardziej odpowiednimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najodpowiedniejszych",
+              "najbardziej odpowiednich"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

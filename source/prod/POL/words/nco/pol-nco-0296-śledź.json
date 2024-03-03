@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "śledź",
+      "gen": "śledzia",
+      "dat": "śledziowi",
+      "acc": "śledzia",
+      "ins": "śledziem",
+      "loc": "śledziu",
+      "voc": "śledziu"
+    },
+    "plural": {
+      "nom": "śledzie",
+      "gen": "śledzi",
+      "dat": "śledziom",
+      "acc": "śledzie",
+      "ins": "śledziami",
+      "loc": "śledziach",
+      "voc": "śledzie"
+    }
+  }
+}

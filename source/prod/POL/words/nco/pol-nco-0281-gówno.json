@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gówno",
+      "gen": "gówna",
+      "dat": "gównu",
+      "acc": "gówno",
+      "ins": "gównem",
+      "loc": "gównie",
+      "voc": "gówno"
+    },
+    "plural": {
+      "nom": "gówna",
+      "gen": "gówien",
+      "dat": "gównom",
+      "acc": "gówna",
+      "ins": "gównami",
+      "loc": "gównach",
+      "voc": "gówna"
+    }
+  }
+}

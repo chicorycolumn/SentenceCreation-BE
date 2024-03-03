@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "computer",
+      "gen": "computer's"
+    },
+    "plural": {
+      "nom": "computers",
+      "gen": "computers'"
+    }
+  }
+}

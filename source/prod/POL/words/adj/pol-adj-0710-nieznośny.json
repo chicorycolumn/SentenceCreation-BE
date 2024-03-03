@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "nieznośnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nieznośny",
+          "gen": "nieznośnego",
+          "dat": "nieznośnemu",
+          "acc": "nieznośnego",
+          "ins": "nieznośnym",
+          "loc": "nieznośnym"
+        },
+        "m3": {
+          "nom": "nieznośny",
+          "gen": "nieznośnego",
+          "dat": "nieznośnemu",
+          "acc": "nieznośny",
+          "ins": "nieznośnym",
+          "loc": "nieznośnym"
+        },
+        "f": {
+          "nom": "nieznośna",
+          "gen": "nieznośnej",
+          "dat": "nieznośnej",
+          "acc": "nieznośną",
+          "ins": "nieznośną",
+          "loc": "nieznośnej"
+        },
+        "n": {
+          "nom": "nieznośne",
+          "gen": "nieznośnego",
+          "dat": "nieznośnemu",
+          "acc": "nieznośne",
+          "ins": "nieznośnym",
+          "loc": "nieznośnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieznośni",
+          "gen": "nieznośnych",
+          "dat": "nieznośnym",
+          "acc": "nieznośnych",
+          "ins": "nieznośnymi",
+          "loc": "nieznośnych"
+        },
+        "nonvirile": {
+          "nom": "nieznośne",
+          "gen": "nieznośnych",
+          "dat": "nieznośnym",
+          "acc": "nieznośne",
+          "ins": "nieznośnymi",
+          "loc": "nieznośnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej nieznośny",
+          "gen": "bardziej nieznośnego",
+          "dat": "bardziej nieznośnemu",
+          "acc": "bardziej nieznośnego",
+          "ins": "bardziej nieznośnym",
+          "loc": "bardziej nieznośnym"
+        },
+        "m3": {
+          "nom": "bardziej nieznośny",
+          "gen": "bardziej nieznośnego",
+          "dat": "bardziej nieznośnemu",
+          "acc": "bardziej nieznośny",
+          "ins": "bardziej nieznośnym",
+          "loc": "bardziej nieznośnym"
+        },
+        "f": {
+          "nom": "bardziej nieznośna",
+          "gen": "bardziej nieznośnej",
+          "dat": "bardziej nieznośnej",
+          "acc": "bardziej nieznośną",
+          "ins": "bardziej nieznośną",
+          "loc": "bardziej nieznośnej"
+        },
+        "n": {
+          "nom": "bardziej nieznośne",
+          "gen": "bardziej nieznośnego",
+          "dat": "bardziej nieznośnemu",
+          "acc": "bardziej nieznośne",
+          "ins": "bardziej nieznośnym",
+          "loc": "bardziej nieznośnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej nieznośni",
+          "gen": "bardziej nieznośnych",
+          "dat": "bardziej nieznośnym",
+          "acc": "bardziej nieznośnych",
+          "ins": "bardziej nieznośnymi",
+          "loc": "bardziej nieznośnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej nieznośne",
+          "gen": "bardziej nieznośnych",
+          "dat": "bardziej nieznośnym",
+          "acc": "bardziej nieznośne",
+          "ins": "bardziej nieznośnymi",
+          "loc": "bardziej nieznośnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej nieznośny",
+          "gen": "najbardziej nieznośnego",
+          "dat": "najbardziej nieznośnemu",
+          "acc": "najbardziej nieznośnego",
+          "ins": "najbardziej nieznośnym",
+          "loc": "najbardziej nieznośnym"
+        },
+        "m3": {
+          "nom": "najbardziej nieznośny",
+          "gen": "najbardziej nieznośnego",
+          "dat": "najbardziej nieznośnemu",
+          "acc": "najbardziej nieznośny",
+          "ins": "najbardziej nieznośnym",
+          "loc": "najbardziej nieznośnym"
+        },
+        "f": {
+          "nom": "najbardziej nieznośna",
+          "gen": "najbardziej nieznośnej",
+          "dat": "najbardziej nieznośnej",
+          "acc": "najbardziej nieznośną",
+          "ins": "najbardziej nieznośną",
+          "loc": "najbardziej nieznośnej"
+        },
+        "n": {
+          "nom": "najbardziej nieznośne",
+          "gen": "najbardziej nieznośnego",
+          "dat": "najbardziej nieznośnemu",
+          "acc": "najbardziej nieznośne",
+          "ins": "najbardziej nieznośnym",
+          "loc": "najbardziej nieznośnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej nieznośni",
+          "gen": "najbardziej nieznośnych",
+          "dat": "najbardziej nieznośnym",
+          "acc": "najbardziej nieznośnych",
+          "ins": "najbardziej nieznośnymi",
+          "loc": "najbardziej nieznośnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej nieznośne",
+          "gen": "najbardziej nieznośnych",
+          "dat": "najbardziej nieznośnym",
+          "acc": "najbardziej nieznośne",
+          "ins": "najbardziej nieznośnymi",
+          "loc": "najbardziej nieznośnych"
+        }
+      }
+    }
+  }
+}

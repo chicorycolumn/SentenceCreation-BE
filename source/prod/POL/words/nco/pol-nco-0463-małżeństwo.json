@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "małżeństwo",
+      "gen": "małżeństwa",
+      "dat": "małżeństwu",
+      "acc": "małżeństwo",
+      "ins": "małżeństwem",
+      "loc": "małżeństwie",
+      "voc": "małżeństwo"
+    },
+    "plural": {
+      "nom": "małżeństwa",
+      "gen": "małżeństw",
+      "dat": "małżeństwom",
+      "acc": "małżeństwa",
+      "ins": "małżeństwami",
+      "loc": "małżeństwach",
+      "voc": "małżeństwa"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "seks",
+      "gen": "seksu",
+      "dat": "seksowi",
+      "acc": "seks",
+      "ins": "seksem",
+      "loc": "seksie",
+      "voc": "seksie"
+    }
+  }
+}

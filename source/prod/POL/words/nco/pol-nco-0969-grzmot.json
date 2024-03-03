@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "grzmot",
+      "gen": "grzmotu",
+      "dat": "grzmotowi",
+      "acc": "grzmot",
+      "ins": "grzmotem",
+      "loc": "grzmocie",
+      "voc": "grzmocie"
+    },
+    "plural": {
+      "nom": "grzmoty",
+      "gen": "grzmotów",
+      "dat": "grzmotom",
+      "acc": "grzmoty",
+      "ins": "grzmotami",
+      "loc": "grzmotach",
+      "voc": "grzmoty"
+    }
+  }
+}

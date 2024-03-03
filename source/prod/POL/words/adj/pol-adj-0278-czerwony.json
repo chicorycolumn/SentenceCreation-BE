@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "czerwono",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "czerwony",
+          "gen": "czerwonego",
+          "dat": "czerwonemu",
+          "acc": "czerwonego",
+          "ins": "czerwonym",
+          "loc": "czerwonym"
+        },
+        "m3": {
+          "nom": "czerwony",
+          "gen": "czerwonego",
+          "dat": "czerwonemu",
+          "acc": "czerwony",
+          "ins": "czerwonym",
+          "loc": "czerwonym"
+        },
+        "f": {
+          "nom": "czerwona",
+          "gen": "czerwonej",
+          "dat": "czerwonej",
+          "acc": "czerwoną",
+          "ins": "czerwoną",
+          "loc": "czerwonej"
+        },
+        "n": {
+          "nom": "czerwone",
+          "gen": "czerwonego",
+          "dat": "czerwonemu",
+          "acc": "czerwone",
+          "ins": "czerwonym",
+          "loc": "czerwonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "czerwoni",
+          "gen": "czerwonych",
+          "dat": "czerwonym",
+          "acc": "czerwonych",
+          "ins": "czerwonymi",
+          "loc": "czerwonych"
+        },
+        "nonvirile": {
+          "nom": "czerwone",
+          "gen": "czerwonych",
+          "dat": "czerwonym",
+          "acc": "czerwone",
+          "ins": "czerwonymi",
+          "loc": "czerwonych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszy",
+              "bardziej czerwony"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszego",
+              "bardziej czerwonego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszemu",
+              "bardziej czerwonemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszego",
+              "bardziej czerwonego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszym",
+              "bardziej czerwonym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszym",
+              "bardziej czerwonym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszy",
+              "bardziej czerwony"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszego",
+              "bardziej czerwonego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszemu",
+              "bardziej czerwonemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszy",
+              "bardziej czerwony"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszym",
+              "bardziej czerwonym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszym",
+              "bardziej czerwonym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńsza",
+              "bardziej czerwona"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszej",
+              "bardziej czerwonej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszej",
+              "bardziej czerwonej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszą",
+              "bardziej czerwoną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszą",
+              "bardziej czerwoną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszej",
+              "bardziej czerwonej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńsze",
+              "bardziej czerwone"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszego",
+              "bardziej czerwonego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszemu",
+              "bardziej czerwonemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńsze",
+              "bardziej czerwone"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszym",
+              "bardziej czerwonym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszym",
+              "bardziej czerwonym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńsi",
+              "bardziej czerwoni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszych",
+              "bardziej czerwonych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszym",
+              "bardziej czerwonym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszych",
+              "bardziej czerwonych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszymi",
+              "bardziej czerwonymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszych",
+              "bardziej czerwonych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńsze",
+              "bardziej czerwone"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszych",
+              "bardziej czerwonych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszym",
+              "bardziej czerwonym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńsze",
+              "bardziej czerwone"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszymi",
+              "bardziej czerwonymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "czerwieńszych",
+              "bardziej czerwonych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszy",
+              "najbardziej czerwony"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszego",
+              "najbardziej czerwonego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszemu",
+              "najbardziej czerwonemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszego",
+              "najbardziej czerwonego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszym",
+              "najbardziej czerwonym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszym",
+              "najbardziej czerwonym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszy",
+              "najbardziej czerwony"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszego",
+              "najbardziej czerwonego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszemu",
+              "najbardziej czerwonemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszy",
+              "najbardziej czerwony"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszym",
+              "najbardziej czerwonym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszym",
+              "najbardziej czerwonym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńsza",
+              "najbardziej czerwona"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszej",
+              "najbardziej czerwonej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszej",
+              "najbardziej czerwonej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszą",
+              "najbardziej czerwoną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszą",
+              "najbardziej czerwoną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszej",
+              "najbardziej czerwonej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńsze",
+              "najbardziej czerwone"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszego",
+              "najbardziej czerwonego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszemu",
+              "najbardziej czerwonemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńsze",
+              "najbardziej czerwone"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszym",
+              "najbardziej czerwonym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszym",
+              "najbardziej czerwonym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńsi",
+              "najbardziej czerwoni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszych",
+              "najbardziej czerwonych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszym",
+              "najbardziej czerwonym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszych",
+              "najbardziej czerwonych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszymi",
+              "najbardziej czerwonymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszych",
+              "najbardziej czerwonych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńsze",
+              "najbardziej czerwone"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszych",
+              "najbardziej czerwonych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszym",
+              "najbardziej czerwonym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńsze",
+              "najbardziej czerwone"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszymi",
+              "najbardziej czerwonymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najczerwieńszych",
+              "najbardziej czerwonych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

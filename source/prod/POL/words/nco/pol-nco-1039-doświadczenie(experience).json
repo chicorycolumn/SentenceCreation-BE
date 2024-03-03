@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "doświadczenie",
+      "gen": "doświadczenia",
+      "dat": "doświadczeniu",
+      "acc": "doświadczenie",
+      "ins": "doświadczeniem",
+      "loc": "doświadczeniu",
+      "voc": "doświadczenie"
+    },
+    "plural": {
+      "nom": "doświadczenia",
+      "gen": "doświadczeń",
+      "dat": "doświadczeniom",
+      "acc": "doświadczenia",
+      "ins": "doświadczeniami",
+      "loc": "doświadczeniach",
+      "voc": "doświadczenia"
+    }
+  }
+}

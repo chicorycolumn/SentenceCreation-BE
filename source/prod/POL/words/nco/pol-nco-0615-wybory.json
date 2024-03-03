@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "plural": {
+      "nom": "wybory",
+      "gen": "wyborów",
+      "dat": "wyborom",
+      "acc": "wybory",
+      "ins": "wyborami",
+      "loc": "wyborach",
+      "voc": "wybory"
+    }
+  }
+}

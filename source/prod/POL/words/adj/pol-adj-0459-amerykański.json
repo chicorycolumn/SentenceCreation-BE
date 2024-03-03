@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "amerykański",
+          "gen": "amerykańskiego",
+          "dat": "amerykańskiemu",
+          "acc": "amerykańskiego",
+          "ins": "amerykańskim",
+          "loc": "amerykańskim"
+        },
+        "m3": {
+          "nom": "amerykański",
+          "gen": "amerykańskiego",
+          "dat": "amerykańskiemu",
+          "acc": "amerykański",
+          "ins": "amerykańskim",
+          "loc": "amerykańskim"
+        },
+        "f": {
+          "nom": "amerykańska",
+          "gen": "amerykańskiej",
+          "dat": "amerykańskiej",
+          "acc": "amerykańską",
+          "ins": "amerykańską",
+          "loc": "amerykańskiej"
+        },
+        "n": {
+          "nom": "amerykańskie",
+          "gen": "amerykańskiego",
+          "dat": "amerykańskiemu",
+          "acc": "amerykańskie",
+          "ins": "amerykańskim",
+          "loc": "amerykańskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "amerykańscy",
+          "gen": "amerykańskich",
+          "dat": "amerykańskim",
+          "acc": "amerykańskich",
+          "ins": "amerykańskimi",
+          "loc": "amerykańskich"
+        },
+        "nonvirile": {
+          "nom": "amerykańskie",
+          "gen": "amerykańskich",
+          "dat": "amerykańskim",
+          "acc": "amerykańskie",
+          "ins": "amerykańskimi",
+          "loc": "amerykańskich"
+        }
+      }
+    }
+  }
+}

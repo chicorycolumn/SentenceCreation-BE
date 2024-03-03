@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "reklama",
+      "gen": "reklamy",
+      "dat": "reklamie",
+      "acc": "reklamę",
+      "ins": "reklamą",
+      "loc": "reklamie",
+      "voc": "reklamo"
+    },
+    "plural": {
+      "nom": "reklamy",
+      "gen": "reklam",
+      "dat": "reklamom",
+      "acc": "reklamy",
+      "ins": "reklamami",
+      "loc": "reklamach",
+      "voc": "reklamy"
+    }
+  }
+}

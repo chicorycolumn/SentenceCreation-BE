@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "kierować",
+    "verbalNoun": "kierowanie",
+    "activeAdjectival": "kierujący",
+    "passiveAdjectival": "kierowany",
+    "contemporaryAdverbial": "kierując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "kieruj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kierowano"
+          },
+          "plural": {
+            "allPluralGenders": "kierowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "kierowałem",
+            "f": "kierowałam"
+          },
+          "plural": {
+            "virile": "kierowaliśmy",
+            "nonvirile": "kierowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "kierowałeś",
+            "f": "kierowałaś"
+          },
+          "plural": {
+            "virile": "kierowaliście",
+            "nonvirile": "kierowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "kierował",
+            "f": "kierowała",
+            "n": "kierowało"
+          },
+          "plural": {
+            "virile": "kierowali",
+            "nonvirile": "kierowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kieruje się"
+          },
+          "plural": {
+            "allPluralGenders": "kieruje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "kieruję"
+          },
+          "plural": {
+            "allPluralGenders": "kierujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "kierujesz"
+          },
+          "plural": {
+            "allPluralGenders": "kierujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "kieruje"
+          },
+          "plural": {
+            "allPluralGenders": "kierują"
+          }
+        }
+      }
+    }
+  }
+}

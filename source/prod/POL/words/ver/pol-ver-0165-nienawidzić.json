@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nienawidzić",
+    "verbalNoun": "nienawidzenie",
+    "activeAdjectival": "nienawidzący",
+    "passiveAdjectival": "nienawidzony",
+    "contemporaryAdverbial": "nienawidząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "nienawidź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nienawidzono"
+          },
+          "plural": {
+            "allPluralGenders": "nienawidzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nienawidziłem",
+            "f": "nienawidziłam"
+          },
+          "plural": {
+            "virile": "nienawidziliśmy",
+            "nonvirile": "nienawidziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nienawidziłeś",
+            "f": "nienawidziłaś"
+          },
+          "plural": {
+            "virile": "nienawidziliście",
+            "nonvirile": "nienawidziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nienawidził",
+            "f": "nienawidziła",
+            "n": "nienawidziło"
+          },
+          "plural": {
+            "virile": "nienawidzili",
+            "nonvirile": "nienawidziły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nienawidzi się"
+          },
+          "plural": {
+            "allPluralGenders": "nienawidzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nienawidzę"
+          },
+          "plural": {
+            "allPluralGenders": "nienawidzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nienawidzisz"
+          },
+          "plural": {
+            "allPluralGenders": "nienawidzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nienawidzi"
+          },
+          "plural": {
+            "allPluralGenders": "nienawidzą"
+          }
+        }
+      }
+    }
+  }
+}

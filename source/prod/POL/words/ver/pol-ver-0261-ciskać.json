@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ciskać",
+    "verbalNoun": "ciskanie",
+    "activeAdjectival": "ciskający",
+    "passiveAdjectival": "ciskany",
+    "contemporaryAdverbial": "ciskając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "ciskaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ciskano"
+          },
+          "plural": {
+            "allPluralGenders": "ciskano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ciskałem",
+            "f": "ciskałam"
+          },
+          "plural": {
+            "virile": "ciskaliśmy",
+            "nonvirile": "ciskałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ciskałeś",
+            "f": "ciskałaś"
+          },
+          "plural": {
+            "virile": "ciskaliście",
+            "nonvirile": "ciskałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ciskał",
+            "f": "ciskała",
+            "n": "ciskało"
+          },
+          "plural": {
+            "virile": "ciskali",
+            "nonvirile": "ciskały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ciska się"
+          },
+          "plural": {
+            "allPluralGenders": "ciska się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ciskam"
+          },
+          "plural": {
+            "allPluralGenders": "ciskamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ciskasz"
+          },
+          "plural": {
+            "allPluralGenders": "ciskacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ciska"
+          },
+          "plural": {
+            "allPluralGenders": "ciskają"
+          }
+        }
+      }
+    }
+  }
+}

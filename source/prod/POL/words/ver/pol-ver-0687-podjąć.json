@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "podjąć",
+    "verbalNoun": "podjęcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "podjęty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "podjąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podejmie się"
+          },
+          "plural": {
+            "allPluralGenders": "podejmie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podejmę"
+          },
+          "plural": {
+            "allPluralGenders": "podejmiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podejmiesz"
+          },
+          "plural": {
+            "allPluralGenders": "podejmiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podejmie"
+          },
+          "plural": {
+            "allPluralGenders": "podejmą"
+          }
+        }
+      },
+      "imperative": "podejmij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podjęto"
+          },
+          "plural": {
+            "allPluralGenders": "podjęto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "podjąłem",
+            "f": "podjęłam"
+          },
+          "plural": {
+            "virile": "podjęliśmy",
+            "nonvirile": "podjęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podjąłeś",
+            "f": "podjęłaś"
+          },
+          "plural": {
+            "virile": "podjęliście",
+            "nonvirile": "podjęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podjął",
+            "f": "podjęła",
+            "n": "podjęło"
+          },
+          "plural": {
+            "virile": "podjęli",
+            "nonvirile": "podjęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

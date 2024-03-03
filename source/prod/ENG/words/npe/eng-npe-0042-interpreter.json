@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "interpreter",
+      "gen": "interpreter's"
+    },
+    "plural": {
+      "nom": "interpreters",
+      "gen": "interpreters'"
+    }
+  }
+}

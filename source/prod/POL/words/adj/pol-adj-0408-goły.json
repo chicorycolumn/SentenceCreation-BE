@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "goło",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "goły",
+          "gen": "gołego",
+          "dat": "gołemu",
+          "acc": "gołego",
+          "ins": "gołym",
+          "loc": "gołym"
+        },
+        "m3": {
+          "nom": "goły",
+          "gen": "gołego",
+          "dat": "gołemu",
+          "acc": "goły",
+          "ins": "gołym",
+          "loc": "gołym"
+        },
+        "f": {
+          "nom": "goła",
+          "gen": "gołej",
+          "dat": "gołej",
+          "acc": "gołą",
+          "ins": "gołą",
+          "loc": "gołej"
+        },
+        "n": {
+          "nom": "gołe",
+          "gen": "gołego",
+          "dat": "gołemu",
+          "acc": "gołe",
+          "ins": "gołym",
+          "loc": "gołym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "goli",
+          "gen": "gołych",
+          "dat": "gołym",
+          "acc": "gołych",
+          "ins": "gołymi",
+          "loc": "gołych"
+        },
+        "nonvirile": {
+          "nom": "gołe",
+          "gen": "gołych",
+          "dat": "gołym",
+          "acc": "gołe",
+          "ins": "gołymi",
+          "loc": "gołych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej goły",
+          "gen": "bardziej gołego",
+          "dat": "bardziej gołemu",
+          "acc": "bardziej gołego",
+          "ins": "bardziej gołym",
+          "loc": "bardziej gołym"
+        },
+        "m3": {
+          "nom": "bardziej goły",
+          "gen": "bardziej gołego",
+          "dat": "bardziej gołemu",
+          "acc": "bardziej goły",
+          "ins": "bardziej gołym",
+          "loc": "bardziej gołym"
+        },
+        "f": {
+          "nom": "bardziej goła",
+          "gen": "bardziej gołej",
+          "dat": "bardziej gołej",
+          "acc": "bardziej gołą",
+          "ins": "bardziej gołą",
+          "loc": "bardziej gołej"
+        },
+        "n": {
+          "nom": "bardziej gołe",
+          "gen": "bardziej gołego",
+          "dat": "bardziej gołemu",
+          "acc": "bardziej gołe",
+          "ins": "bardziej gołym",
+          "loc": "bardziej gołym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej goli",
+          "gen": "bardziej gołych",
+          "dat": "bardziej gołym",
+          "acc": "bardziej gołych",
+          "ins": "bardziej gołymi",
+          "loc": "bardziej gołych"
+        },
+        "nonvirile": {
+          "nom": "bardziej gołe",
+          "gen": "bardziej gołych",
+          "dat": "bardziej gołym",
+          "acc": "bardziej gołe",
+          "ins": "bardziej gołymi",
+          "loc": "bardziej gołych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej goły",
+          "gen": "najbardziej gołego",
+          "dat": "najbardziej gołemu",
+          "acc": "najbardziej gołego",
+          "ins": "najbardziej gołym",
+          "loc": "najbardziej gołym"
+        },
+        "m3": {
+          "nom": "najbardziej goły",
+          "gen": "najbardziej gołego",
+          "dat": "najbardziej gołemu",
+          "acc": "najbardziej goły",
+          "ins": "najbardziej gołym",
+          "loc": "najbardziej gołym"
+        },
+        "f": {
+          "nom": "najbardziej goła",
+          "gen": "najbardziej gołej",
+          "dat": "najbardziej gołej",
+          "acc": "najbardziej gołą",
+          "ins": "najbardziej gołą",
+          "loc": "najbardziej gołej"
+        },
+        "n": {
+          "nom": "najbardziej gołe",
+          "gen": "najbardziej gołego",
+          "dat": "najbardziej gołemu",
+          "acc": "najbardziej gołe",
+          "ins": "najbardziej gołym",
+          "loc": "najbardziej gołym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej goli",
+          "gen": "najbardziej gołych",
+          "dat": "najbardziej gołym",
+          "acc": "najbardziej gołych",
+          "ins": "najbardziej gołymi",
+          "loc": "najbardziej gołych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej gołe",
+          "gen": "najbardziej gołych",
+          "dat": "najbardziej gołym",
+          "acc": "najbardziej gołe",
+          "ins": "najbardziej gołymi",
+          "loc": "najbardziej gołych"
+        }
+      }
+    }
+  }
+}

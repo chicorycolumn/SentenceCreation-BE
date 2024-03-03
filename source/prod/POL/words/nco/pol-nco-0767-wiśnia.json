@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wiśnia",
+      "gen": "wiśni",
+      "dat": "wiśni",
+      "acc": "wiśnię",
+      "ins": "wiśnią",
+      "loc": "wiśni",
+      "voc": "wiśnio"
+    },
+    "plural": {
+      "nom": "wiśnie",
+      "gen": "wiśni",
+      "dat": "wiśniom",
+      "acc": "wiśnie",
+      "ins": "wiśniami",
+      "loc": "wiśniach",
+      "voc": "wiśnie"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "remainder",
+      "gen": "remainder's"
+    },
+    "plural": {
+      "nom": "remainders",
+      "gen": "remainders'"
+    }
+  }
+}

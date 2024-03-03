@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "partnerka",
+      "gen": "partnerki",
+      "dat": "partnerce",
+      "acc": "partnerkę",
+      "ins": "partnerką",
+      "loc": "partnerce",
+      "voc": "partnerko"
+    },
+    "plural": {
+      "nom": "partnerki",
+      "gen": "partnerek",
+      "dat": "partnerkom",
+      "acc": "partnerki",
+      "ins": "partnerkami",
+      "loc": "partnerkach",
+      "voc": "partnerki"
+    }
+  }
+}

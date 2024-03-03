@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przegrywać",
+    "verbalNoun": "przegrywanie",
+    "activeAdjectival": "przegrywający",
+    "passiveAdjectival": "przegrywany",
+    "contemporaryAdverbial": "przegrywając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przegrywaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przegrywano"
+          },
+          "plural": {
+            "allPluralGenders": "przegrywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przegrywałem",
+            "f": "przegrywałam"
+          },
+          "plural": {
+            "virile": "przegrywaliśmy",
+            "nonvirile": "przegrywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przegrywałeś",
+            "f": "przegrywałaś"
+          },
+          "plural": {
+            "virile": "przegrywaliście",
+            "nonvirile": "przegrywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przegrywał",
+            "f": "przegrywała",
+            "n": "przegrywało"
+          },
+          "plural": {
+            "virile": "przegrywali",
+            "nonvirile": "przegrywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przegrywa się"
+          },
+          "plural": {
+            "allPluralGenders": "przegrywa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przegrywam"
+          },
+          "plural": {
+            "allPluralGenders": "przegrywamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przegrywasz"
+          },
+          "plural": {
+            "allPluralGenders": "przegrywacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przegrywa"
+          },
+          "plural": {
+            "allPluralGenders": "przegrywają"
+          }
+        }
+      }
+    }
+  }
+}

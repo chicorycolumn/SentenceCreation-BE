@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nakazać",
+    "verbalNoun": "nakazanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "nakazany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "nakazawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nakaże się"
+          },
+          "plural": {
+            "allPluralGenders": "nakaże się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nakażę"
+          },
+          "plural": {
+            "allPluralGenders": "nakażemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nakażesz"
+          },
+          "plural": {
+            "allPluralGenders": "nakażecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nakaże"
+          },
+          "plural": {
+            "allPluralGenders": "nakażą"
+          }
+        }
+      },
+      "imperative": "nakaż",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nakazano"
+          },
+          "plural": {
+            "allPluralGenders": "nakazano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nakazałem",
+            "f": "nakazałam"
+          },
+          "plural": {
+            "virile": "nakazaliśmy",
+            "nonvirile": "nakazałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nakazałeś",
+            "f": "nakazałaś"
+          },
+          "plural": {
+            "virile": "nakazaliście",
+            "nonvirile": "nakazałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nakazał",
+            "f": "nakazała",
+            "n": "nakazało"
+          },
+          "plural": {
+            "virile": "nakazali",
+            "nonvirile": "nakazały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

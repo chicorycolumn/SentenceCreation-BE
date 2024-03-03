@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "skutek",
+      "gen": "skutku",
+      "dat": "skutkowi",
+      "acc": "skutek",
+      "ins": "skutkiem",
+      "loc": "skutku",
+      "voc": "skutku"
+    },
+    "plural": {
+      "nom": "skutki",
+      "gen": "skutków",
+      "dat": "skutkom",
+      "acc": "skutki",
+      "ins": "skutkami",
+      "loc": "skutkach",
+      "voc": "skutki"
+    }
+  }
+}

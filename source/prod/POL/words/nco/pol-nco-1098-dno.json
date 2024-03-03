@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dno",
+      "gen": "dna",
+      "dat": "dnu",
+      "acc": "dno",
+      "ins": "dnem",
+      "loc": "dnie",
+      "voc": "dno"
+    },
+    "plural": {
+      "nom": "dna",
+      "gen": "den",
+      "dat": "dnom",
+      "acc": "dna",
+      "ins": "dnami",
+      "loc": "dnach",
+      "voc": "dna"
+    }
+  }
+}

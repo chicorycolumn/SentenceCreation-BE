@@ -1,0 +1,15 @@
+{
+  "inflections": {
+    "infinitive": "be annoyed",
+    "v2": {
+      "isTerminus": true,
+      "normal": [
+        "was annoyed",
+        "were annoyed"
+      ]
+    },
+    "v3": "been annoyed",
+    "thirdPS": "is annoyed",
+    "gerund": "being annoyed"
+  }
+}

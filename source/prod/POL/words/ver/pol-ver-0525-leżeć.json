@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "leżeć",
+    "verbalNoun": "leżenie",
+    "activeAdjectival": "leżący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "leżąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "leż",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "leżano"
+          },
+          "plural": {
+            "allPluralGenders": "leżano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "leżałem",
+            "f": "leżałam"
+          },
+          "plural": {
+            "virile": "leżeliśmy",
+            "nonvirile": "leżałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "leżałeś",
+            "f": "leżałaś"
+          },
+          "plural": {
+            "virile": "leżeliście",
+            "nonvirile": "leżałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "leżał",
+            "f": "leżała",
+            "n": "leżało"
+          },
+          "plural": {
+            "virile": "leżeli",
+            "nonvirile": "leżały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "leży się"
+          },
+          "plural": {
+            "allPluralGenders": "leży się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "leżę"
+          },
+          "plural": {
+            "allPluralGenders": "leżymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "leżysz"
+          },
+          "plural": {
+            "allPluralGenders": "leżycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "leży"
+          },
+          "plural": {
+            "allPluralGenders": "leżą"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "prosić",
+    "verbalNoun": "proszenie",
+    "activeAdjectival": "proszący",
+    "passiveAdjectival": "proszony",
+    "contemporaryAdverbial": "prosząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "proś",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "proszono"
+          },
+          "plural": {
+            "allPluralGenders": "proszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "prosiłem",
+            "f": "prosiłam"
+          },
+          "plural": {
+            "virile": "prosiliśmy",
+            "nonvirile": "prosiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "prosiłeś",
+            "f": "prosiłaś"
+          },
+          "plural": {
+            "virile": "prosiliście",
+            "nonvirile": "prosiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "prosił",
+            "f": "prosiła",
+            "n": "prosiło"
+          },
+          "plural": {
+            "virile": "prosili",
+            "nonvirile": "prosiły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "prosi się"
+          },
+          "plural": {
+            "allPluralGenders": "prosi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "proszę"
+          },
+          "plural": {
+            "allPluralGenders": "prosimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "prosisz"
+          },
+          "plural": {
+            "allPluralGenders": "prosicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "prosi"
+          },
+          "plural": {
+            "allPluralGenders": "proszą"
+          }
+        }
+      }
+    }
+  }
+}

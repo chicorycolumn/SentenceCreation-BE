@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "way in",
+      "gen": "way in's"
+    },
+    "plural": {
+      "nom": "ways in",
+      "gen": "ways in'"
+    }
+  }
+}

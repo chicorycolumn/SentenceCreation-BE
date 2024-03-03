@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "month",
+      "gen": "month's"
+    },
+    "plural": {
+      "nom": "months",
+      "gen": "months'"
+    }
+  }
+}

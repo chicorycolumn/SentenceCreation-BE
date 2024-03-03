@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "krokodyl",
+      "gen": "krokodyla",
+      "dat": "krokodylowi",
+      "acc": "krokodyla",
+      "ins": "krokodylem",
+      "loc": "krokodylu",
+      "voc": "krokodylu"
+    },
+    "plural": {
+      "nom": "krokodyle",
+      "gen": "krokodyli",
+      "dat": "krokodylom",
+      "acc": "krokodyle",
+      "ins": "krokodylami",
+      "loc": "krokodylach",
+      "voc": "krokodyle"
+    }
+  }
+}

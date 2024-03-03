@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "plaża",
+      "gen": "plaży",
+      "dat": "plaży",
+      "acc": "plażę",
+      "ins": "plażą",
+      "loc": "plaży",
+      "voc": "plażo"
+    },
+    "plural": {
+      "nom": "plaże",
+      "gen": "plaż",
+      "dat": "plażom",
+      "acc": "plaże",
+      "ins": "plażami",
+      "loc": "plażach",
+      "voc": "plaże"
+    }
+  }
+}

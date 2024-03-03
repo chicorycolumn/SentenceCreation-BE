@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "żebro",
+      "gen": "żebra",
+      "dat": "żebru",
+      "acc": "żebro",
+      "ins": "żebrem",
+      "loc": "żebrze",
+      "voc": "żebro"
+    },
+    "plural": {
+      "nom": "żebra",
+      "gen": "żeber",
+      "dat": "żebrom",
+      "acc": "żebra",
+      "ins": "żebrami",
+      "loc": "żebrach",
+      "voc": "żebra"
+    }
+  }
+}

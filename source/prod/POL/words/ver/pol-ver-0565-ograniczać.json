@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ograniczać",
+    "verbalNoun": "ograniczanie",
+    "activeAdjectival": "ograniczający",
+    "passiveAdjectival": "ograniczany",
+    "contemporaryAdverbial": "ograniczając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "ograniczaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ograniczano"
+          },
+          "plural": {
+            "allPluralGenders": "ograniczano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ograniczałem",
+            "f": "ograniczałam"
+          },
+          "plural": {
+            "virile": "ograniczaliśmy",
+            "nonvirile": "ograniczałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ograniczałeś",
+            "f": "ograniczałaś"
+          },
+          "plural": {
+            "virile": "ograniczaliście",
+            "nonvirile": "ograniczałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ograniczał",
+            "f": "ograniczała",
+            "n": "ograniczało"
+          },
+          "plural": {
+            "virile": "ograniczali",
+            "nonvirile": "ograniczały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ogranicza się"
+          },
+          "plural": {
+            "allPluralGenders": "ogranicza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ograniczam"
+          },
+          "plural": {
+            "allPluralGenders": "ograniczamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ograniczasz"
+          },
+          "plural": {
+            "allPluralGenders": "ograniczacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ogranicza"
+          },
+          "plural": {
+            "allPluralGenders": "ograniczają"
+          }
+        }
+      }
+    }
+  }
+}

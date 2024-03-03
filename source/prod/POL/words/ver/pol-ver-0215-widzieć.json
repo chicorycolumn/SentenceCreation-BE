@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "widzieć",
+    "verbalNoun": "widzenie",
+    "activeAdjectival": "widzący",
+    "passiveAdjectival": "widziany",
+    "contemporaryAdverbial": "widząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "widź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "widziano"
+          },
+          "plural": {
+            "allPluralGenders": "widziano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "widziałem",
+            "f": "widziałam"
+          },
+          "plural": {
+            "virile": "widzieliśmy",
+            "nonvirile": "widziałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "widziałeś",
+            "f": "widziałaś"
+          },
+          "plural": {
+            "virile": "widzieliście",
+            "nonvirile": "widziałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "widział",
+            "f": "widziała",
+            "n": "widziało"
+          },
+          "plural": {
+            "virile": "widzieli",
+            "nonvirile": "widziały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "widzi się"
+          },
+          "plural": {
+            "allPluralGenders": "widzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "widzę"
+          },
+          "plural": {
+            "allPluralGenders": "widzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "widzisz"
+          },
+          "plural": {
+            "allPluralGenders": "widzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "widzi"
+          },
+          "plural": {
+            "allPluralGenders": "widzą"
+          }
+        }
+      }
+    }
+  }
+}

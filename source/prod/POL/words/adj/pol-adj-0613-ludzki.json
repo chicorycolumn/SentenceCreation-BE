@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "ludzko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ludzki",
+          "gen": "ludzkiego",
+          "dat": "ludzkiemu",
+          "acc": "ludzkiego",
+          "ins": "ludzkim",
+          "loc": "ludzkim"
+        },
+        "m3": {
+          "nom": "ludzki",
+          "gen": "ludzkiego",
+          "dat": "ludzkiemu",
+          "acc": "ludzki",
+          "ins": "ludzkim",
+          "loc": "ludzkim"
+        },
+        "f": {
+          "nom": "ludzka",
+          "gen": "ludzkiej",
+          "dat": "ludzkiej",
+          "acc": "ludzką",
+          "ins": "ludzką",
+          "loc": "ludzkiej"
+        },
+        "n": {
+          "nom": "ludzkie",
+          "gen": "ludzkiego",
+          "dat": "ludzkiemu",
+          "acc": "ludzkie",
+          "ins": "ludzkim",
+          "loc": "ludzkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ludzcy",
+          "gen": "ludzkich",
+          "dat": "ludzkim",
+          "acc": "ludzkich",
+          "ins": "ludzkimi",
+          "loc": "ludzkich"
+        },
+        "nonvirile": {
+          "nom": "ludzkie",
+          "gen": "ludzkich",
+          "dat": "ludzkim",
+          "acc": "ludzkie",
+          "ins": "ludzkimi",
+          "loc": "ludzkich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej ludzki",
+          "gen": "bardziej ludzkiego",
+          "dat": "bardziej ludzkiemu",
+          "acc": "bardziej ludzkiego",
+          "ins": "bardziej ludzkim",
+          "loc": "bardziej ludzkim"
+        },
+        "m3": {
+          "nom": "bardziej ludzki",
+          "gen": "bardziej ludzkiego",
+          "dat": "bardziej ludzkiemu",
+          "acc": "bardziej ludzki",
+          "ins": "bardziej ludzkim",
+          "loc": "bardziej ludzkim"
+        },
+        "f": {
+          "nom": "bardziej ludzka",
+          "gen": "bardziej ludzkiej",
+          "dat": "bardziej ludzkiej",
+          "acc": "bardziej ludzką",
+          "ins": "bardziej ludzką",
+          "loc": "bardziej ludzkiej"
+        },
+        "n": {
+          "nom": "bardziej ludzkie",
+          "gen": "bardziej ludzkiego",
+          "dat": "bardziej ludzkiemu",
+          "acc": "bardziej ludzkie",
+          "ins": "bardziej ludzkim",
+          "loc": "bardziej ludzkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej ludzcy",
+          "gen": "bardziej ludzkich",
+          "dat": "bardziej ludzkim",
+          "acc": "bardziej ludzkich",
+          "ins": "bardziej ludzkimi",
+          "loc": "bardziej ludzkich"
+        },
+        "nonvirile": {
+          "nom": "bardziej ludzkie",
+          "gen": "bardziej ludzkich",
+          "dat": "bardziej ludzkim",
+          "acc": "bardziej ludzkie",
+          "ins": "bardziej ludzkimi",
+          "loc": "bardziej ludzkich"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej ludzki",
+          "gen": "najbardziej ludzkiego",
+          "dat": "najbardziej ludzkiemu",
+          "acc": "najbardziej ludzkiego",
+          "ins": "najbardziej ludzkim",
+          "loc": "najbardziej ludzkim"
+        },
+        "m3": {
+          "nom": "najbardziej ludzki",
+          "gen": "najbardziej ludzkiego",
+          "dat": "najbardziej ludzkiemu",
+          "acc": "najbardziej ludzki",
+          "ins": "najbardziej ludzkim",
+          "loc": "najbardziej ludzkim"
+        },
+        "f": {
+          "nom": "najbardziej ludzka",
+          "gen": "najbardziej ludzkiej",
+          "dat": "najbardziej ludzkiej",
+          "acc": "najbardziej ludzką",
+          "ins": "najbardziej ludzką",
+          "loc": "najbardziej ludzkiej"
+        },
+        "n": {
+          "nom": "najbardziej ludzkie",
+          "gen": "najbardziej ludzkiego",
+          "dat": "najbardziej ludzkiemu",
+          "acc": "najbardziej ludzkie",
+          "ins": "najbardziej ludzkim",
+          "loc": "najbardziej ludzkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej ludzcy",
+          "gen": "najbardziej ludzkich",
+          "dat": "najbardziej ludzkim",
+          "acc": "najbardziej ludzkich",
+          "ins": "najbardziej ludzkimi",
+          "loc": "najbardziej ludzkich"
+        },
+        "nonvirile": {
+          "nom": "najbardziej ludzkie",
+          "gen": "najbardziej ludzkich",
+          "dat": "najbardziej ludzkim",
+          "acc": "najbardziej ludzkie",
+          "ins": "najbardziej ludzkimi",
+          "loc": "najbardziej ludzkich"
+        }
+      }
+    }
+  }
+}

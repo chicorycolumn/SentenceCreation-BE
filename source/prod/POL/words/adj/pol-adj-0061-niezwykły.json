@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niezwykle",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niezwykły",
+          "gen": "niezwykłego",
+          "dat": "niezwykłemu",
+          "acc": "niezwykłego",
+          "ins": "niezwykłym",
+          "loc": "niezwykłym"
+        },
+        "m3": {
+          "nom": "niezwykły",
+          "gen": "niezwykłego",
+          "dat": "niezwykłemu",
+          "acc": "niezwykły",
+          "ins": "niezwykłym",
+          "loc": "niezwykłym"
+        },
+        "f": {
+          "nom": "niezwykła",
+          "gen": "niezwykłej",
+          "dat": "niezwykłej",
+          "acc": "niezwykłą",
+          "ins": "niezwykłą",
+          "loc": "niezwykłej"
+        },
+        "n": {
+          "nom": "niezwykłe",
+          "gen": "niezwykłego",
+          "dat": "niezwykłemu",
+          "acc": "niezwykłe",
+          "ins": "niezwykłym",
+          "loc": "niezwykłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niezwykli",
+          "gen": "niezwykłych",
+          "dat": "niezwykłym",
+          "acc": "niezwykłych",
+          "ins": "niezwykłymi",
+          "loc": "niezwykłych"
+        },
+        "nonvirile": {
+          "nom": "niezwykłe",
+          "gen": "niezwykłych",
+          "dat": "niezwykłym",
+          "acc": "niezwykłe",
+          "ins": "niezwykłymi",
+          "loc": "niezwykłych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "niezwyklejszy",
+          "gen": "niezwyklejszego",
+          "dat": "niezwyklejszemu",
+          "acc": "niezwyklejszego",
+          "ins": "niezwyklejszym",
+          "loc": "niezwyklejszym"
+        },
+        "m3": {
+          "nom": "niezwyklejszy",
+          "gen": "niezwyklejszego",
+          "dat": "niezwyklejszemu",
+          "acc": "niezwyklejszy",
+          "ins": "niezwyklejszym",
+          "loc": "niezwyklejszym"
+        },
+        "f": {
+          "nom": "niezwyklejsza",
+          "gen": "niezwyklejszej",
+          "dat": "niezwyklejszej",
+          "acc": "niezwyklejszą",
+          "ins": "niezwyklejszą",
+          "loc": "niezwyklejszej"
+        },
+        "n": {
+          "nom": "niezwyklejsze",
+          "gen": "niezwyklejszego",
+          "dat": "niezwyklejszemu",
+          "acc": "niezwyklejsze",
+          "ins": "niezwyklejszym",
+          "loc": "niezwyklejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niezwyklejsi",
+          "gen": "niezwyklejszych",
+          "dat": "niezwyklejszym",
+          "acc": "niezwyklejszych",
+          "ins": "niezwyklejszymi",
+          "loc": "niezwyklejszych"
+        },
+        "nonvirile": {
+          "nom": "niezwyklejsze",
+          "gen": "niezwyklejszych",
+          "dat": "niezwyklejszym",
+          "acc": "niezwyklejsze",
+          "ins": "niezwyklejszymi",
+          "loc": "niezwyklejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najniezwyklejszy",
+          "gen": "najniezwyklejszego",
+          "dat": "najniezwyklejszemu",
+          "acc": "najniezwyklejszego",
+          "ins": "najniezwyklejszym",
+          "loc": "najniezwyklejszym"
+        },
+        "m3": {
+          "nom": "najniezwyklejszy",
+          "gen": "najniezwyklejszego",
+          "dat": "najniezwyklejszemu",
+          "acc": "najniezwyklejszy",
+          "ins": "najniezwyklejszym",
+          "loc": "najniezwyklejszym"
+        },
+        "f": {
+          "nom": "najniezwyklejsza",
+          "gen": "najniezwyklejszej",
+          "dat": "najniezwyklejszej",
+          "acc": "najniezwyklejszą",
+          "ins": "najniezwyklejszą",
+          "loc": "najniezwyklejszej"
+        },
+        "n": {
+          "nom": "najniezwyklejsze",
+          "gen": "najniezwyklejszego",
+          "dat": "najniezwyklejszemu",
+          "acc": "najniezwyklejsze",
+          "ins": "najniezwyklejszym",
+          "loc": "najniezwyklejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najniezwyklejsi",
+          "gen": "najniezwyklejszych",
+          "dat": "najniezwyklejszym",
+          "acc": "najniezwyklejszych",
+          "ins": "najniezwyklejszymi",
+          "loc": "najniezwyklejszych"
+        },
+        "nonvirile": {
+          "nom": "najniezwyklejsze",
+          "gen": "najniezwyklejszych",
+          "dat": "najniezwyklejszym",
+          "acc": "najniezwyklejsze",
+          "ins": "najniezwyklejszymi",
+          "loc": "najniezwyklejszych"
+        }
+      }
+    }
+  }
+}

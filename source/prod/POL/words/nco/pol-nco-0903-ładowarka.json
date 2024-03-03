@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ładowarka",
+      "gen": "ładowarki",
+      "dat": "ładowarce",
+      "acc": "ładowarkę",
+      "ins": "ładowarką",
+      "loc": "ładowarce",
+      "voc": "ładowarko"
+    },
+    "plural": {
+      "nom": "ładowarki",
+      "gen": "ładowarek",
+      "dat": "ładowarkom",
+      "acc": "ładowarki",
+      "ins": "ładowarkami",
+      "loc": "ładowarkach",
+      "voc": "ładowarki"
+    }
+  }
+}

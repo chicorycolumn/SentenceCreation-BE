@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "piwo",
+      "gen": "piwa",
+      "dat": "piwu",
+      "acc": "piwo",
+      "ins": "piwem",
+      "loc": "piwie",
+      "voc": "piwo"
+    },
+    "plural": {
+      "nom": "piwa",
+      "gen": "piw",
+      "dat": "piwom",
+      "acc": "piwa",
+      "ins": "piwami",
+      "loc": "piwach",
+      "voc": "piwa"
+    }
+  }
+}

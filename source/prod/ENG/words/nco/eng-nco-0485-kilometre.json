@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kilometre",
+      "gen": "kilometre's"
+    },
+    "plural": {
+      "nom": "kilometres",
+      "gen": "kilometres'"
+    }
+  }
+}

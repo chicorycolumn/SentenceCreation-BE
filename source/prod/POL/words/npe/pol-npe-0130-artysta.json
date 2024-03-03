@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "artysta",
+      "gen": "artysty",
+      "dat": "artyście",
+      "acc": "artystę",
+      "ins": "artystą",
+      "loc": "artyście",
+      "voc": "artysto"
+    },
+    "plural": {
+      "nom": "artyści",
+      "gen": "artystów",
+      "dat": "artystom",
+      "acc": "artystów",
+      "ins": "artystami",
+      "loc": "artystach",
+      "voc": "artyści"
+    }
+  }
+}

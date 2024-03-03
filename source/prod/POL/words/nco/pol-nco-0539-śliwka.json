@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "śliwka",
+      "gen": "śliwki",
+      "dat": "śliwce",
+      "acc": "śliwkę",
+      "ins": "śliwką",
+      "loc": "śliwce",
+      "voc": "śliwko"
+    },
+    "plural": {
+      "nom": "śliwki",
+      "gen": "śliwek",
+      "dat": "śliwkom",
+      "acc": "śliwki",
+      "ins": "śliwkami",
+      "loc": "śliwkach",
+      "voc": "śliwki"
+    }
+  }
+}

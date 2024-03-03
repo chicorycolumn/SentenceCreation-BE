@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "naturalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "naturalny",
+          "gen": "naturalnego",
+          "dat": "naturalnemu",
+          "acc": "naturalnego",
+          "ins": "naturalnym",
+          "loc": "naturalnym"
+        },
+        "m3": {
+          "nom": "naturalny",
+          "gen": "naturalnego",
+          "dat": "naturalnemu",
+          "acc": "naturalny",
+          "ins": "naturalnym",
+          "loc": "naturalnym"
+        },
+        "f": {
+          "nom": "naturalna",
+          "gen": "naturalnej",
+          "dat": "naturalnej",
+          "acc": "naturalną",
+          "ins": "naturalną",
+          "loc": "naturalnej"
+        },
+        "n": {
+          "nom": "naturalne",
+          "gen": "naturalnego",
+          "dat": "naturalnemu",
+          "acc": "naturalne",
+          "ins": "naturalnym",
+          "loc": "naturalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "naturalni",
+          "gen": "naturalnych",
+          "dat": "naturalnym",
+          "acc": "naturalnych",
+          "ins": "naturalnymi",
+          "loc": "naturalnych"
+        },
+        "nonvirile": {
+          "nom": "naturalne",
+          "gen": "naturalnych",
+          "dat": "naturalnym",
+          "acc": "naturalne",
+          "ins": "naturalnymi",
+          "loc": "naturalnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszy",
+              "bardziej naturalny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszego",
+              "bardziej naturalnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszemu",
+              "bardziej naturalnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszego",
+              "bardziej naturalnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszym",
+              "bardziej naturalnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszym",
+              "bardziej naturalnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszy",
+              "bardziej naturalny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszego",
+              "bardziej naturalnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszemu",
+              "bardziej naturalnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszy",
+              "bardziej naturalny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszym",
+              "bardziej naturalnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszym",
+              "bardziej naturalnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejsza",
+              "bardziej naturalna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszej",
+              "bardziej naturalnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszej",
+              "bardziej naturalnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszą",
+              "bardziej naturalną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszą",
+              "bardziej naturalną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszej",
+              "bardziej naturalnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejsze",
+              "bardziej naturalne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszego",
+              "bardziej naturalnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszemu",
+              "bardziej naturalnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejsze",
+              "bardziej naturalne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszym",
+              "bardziej naturalnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszym",
+              "bardziej naturalnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejsi",
+              "bardziej naturalni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszych",
+              "bardziej naturalnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszym",
+              "bardziej naturalnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszych",
+              "bardziej naturalnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszymi",
+              "bardziej naturalnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszych",
+              "bardziej naturalnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejsze",
+              "bardziej naturalne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszych",
+              "bardziej naturalnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszym",
+              "bardziej naturalnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejsze",
+              "bardziej naturalne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszymi",
+              "bardziej naturalnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "naturalniejszych",
+              "bardziej naturalnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszy",
+              "najbardziej naturalny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszego",
+              "najbardziej naturalnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszemu",
+              "najbardziej naturalnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszego",
+              "najbardziej naturalnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszym",
+              "najbardziej naturalnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszym",
+              "najbardziej naturalnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszy",
+              "najbardziej naturalny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszego",
+              "najbardziej naturalnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszemu",
+              "najbardziej naturalnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszy",
+              "najbardziej naturalny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszym",
+              "najbardziej naturalnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszym",
+              "najbardziej naturalnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejsza",
+              "najbardziej naturalna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszej",
+              "najbardziej naturalnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszej",
+              "najbardziej naturalnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszą",
+              "najbardziej naturalną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszą",
+              "najbardziej naturalną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszej",
+              "najbardziej naturalnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejsze",
+              "najbardziej naturalne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszego",
+              "najbardziej naturalnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszemu",
+              "najbardziej naturalnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejsze",
+              "najbardziej naturalne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszym",
+              "najbardziej naturalnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszym",
+              "najbardziej naturalnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejsi",
+              "najbardziej naturalni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszych",
+              "najbardziej naturalnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszym",
+              "najbardziej naturalnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszych",
+              "najbardziej naturalnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszymi",
+              "najbardziej naturalnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszych",
+              "najbardziej naturalnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejsze",
+              "najbardziej naturalne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszych",
+              "najbardziej naturalnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszym",
+              "najbardziej naturalnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejsze",
+              "najbardziej naturalne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszymi",
+              "najbardziej naturalnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najnaturalniejszych",
+              "najbardziej naturalnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

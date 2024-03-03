@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pozostawać",
+    "verbalNoun": "pozostawanie",
+    "activeAdjectival": "pozostający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "pozostając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pozostawaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pozostawano"
+          },
+          "plural": {
+            "allPluralGenders": "pozostawano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pozostawałem",
+            "f": "pozostawałam"
+          },
+          "plural": {
+            "virile": "pozostawaliśmy",
+            "nonvirile": "pozostawałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pozostawałeś",
+            "f": "pozostawałaś"
+          },
+          "plural": {
+            "virile": "pozostawaliście",
+            "nonvirile": "pozostawałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pozostawał",
+            "f": "pozostawała",
+            "n": "pozostawało"
+          },
+          "plural": {
+            "virile": "pozostawali",
+            "nonvirile": "pozostawały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pozostaje się"
+          },
+          "plural": {
+            "allPluralGenders": "pozostaje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pozostaję"
+          },
+          "plural": {
+            "allPluralGenders": "pozostajemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pozostajesz"
+          },
+          "plural": {
+            "allPluralGenders": "pozostajecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pozostaje"
+          },
+          "plural": {
+            "allPluralGenders": "pozostają"
+          }
+        }
+      }
+    }
+  }
+}

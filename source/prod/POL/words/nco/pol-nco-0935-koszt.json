@@ -1,0 +1,31 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "koszt",
+      "gen": "kosztu",
+      "dat": "kosztowi",
+      "acc": "koszt",
+      "ins": "kosztem",
+      "loc": "koszcie",
+      "voc": "koszcie"
+    },
+    "plural": {
+      "nom": [
+        "koszty",
+        "koszta"
+      ],
+      "gen": "kosztów",
+      "dat": "kosztom",
+      "acc": [
+        "koszty",
+        "koszta"
+      ],
+      "ins": "kosztami",
+      "loc": "kosztach",
+      "voc": [
+        "koszty",
+        "koszta"
+      ]
+    }
+  }
+}

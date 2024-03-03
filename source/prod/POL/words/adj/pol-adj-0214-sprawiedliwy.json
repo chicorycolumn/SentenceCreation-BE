@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "sprawiedliwie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "sprawiedliwy",
+          "gen": "sprawiedliwego",
+          "dat": "sprawiedliwemu",
+          "acc": "sprawiedliwego",
+          "ins": "sprawiedliwym",
+          "loc": "sprawiedliwym"
+        },
+        "m3": {
+          "nom": "sprawiedliwy",
+          "gen": "sprawiedliwego",
+          "dat": "sprawiedliwemu",
+          "acc": "sprawiedliwy",
+          "ins": "sprawiedliwym",
+          "loc": "sprawiedliwym"
+        },
+        "f": {
+          "nom": "sprawiedliwa",
+          "gen": "sprawiedliwej",
+          "dat": "sprawiedliwej",
+          "acc": "sprawiedliwą",
+          "ins": "sprawiedliwą",
+          "loc": "sprawiedliwej"
+        },
+        "n": {
+          "nom": "sprawiedliwe",
+          "gen": "sprawiedliwego",
+          "dat": "sprawiedliwemu",
+          "acc": "sprawiedliwe",
+          "ins": "sprawiedliwym",
+          "loc": "sprawiedliwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "sprawiedliwi",
+          "gen": "sprawiedliwych",
+          "dat": "sprawiedliwym",
+          "acc": "sprawiedliwych",
+          "ins": "sprawiedliwymi",
+          "loc": "sprawiedliwych"
+        },
+        "nonvirile": {
+          "nom": "sprawiedliwe",
+          "gen": "sprawiedliwych",
+          "dat": "sprawiedliwym",
+          "acc": "sprawiedliwe",
+          "ins": "sprawiedliwymi",
+          "loc": "sprawiedliwych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "sprawiedliwszy",
+          "gen": "sprawiedliwszego",
+          "dat": "sprawiedliwszemu",
+          "acc": "sprawiedliwszego",
+          "ins": "sprawiedliwszym",
+          "loc": "sprawiedliwszym"
+        },
+        "m3": {
+          "nom": "sprawiedliwszy",
+          "gen": "sprawiedliwszego",
+          "dat": "sprawiedliwszemu",
+          "acc": "sprawiedliwszy",
+          "ins": "sprawiedliwszym",
+          "loc": "sprawiedliwszym"
+        },
+        "f": {
+          "nom": "sprawiedliwsza",
+          "gen": "sprawiedliwszej",
+          "dat": "sprawiedliwszej",
+          "acc": "sprawiedliwszą",
+          "ins": "sprawiedliwszą",
+          "loc": "sprawiedliwszej"
+        },
+        "n": {
+          "nom": "sprawiedliwsze",
+          "gen": "sprawiedliwszego",
+          "dat": "sprawiedliwszemu",
+          "acc": "sprawiedliwsze",
+          "ins": "sprawiedliwszym",
+          "loc": "sprawiedliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "sprawiedliwsi",
+          "gen": "sprawiedliwszych",
+          "dat": "sprawiedliwszym",
+          "acc": "sprawiedliwszych",
+          "ins": "sprawiedliwszymi",
+          "loc": "sprawiedliwszych"
+        },
+        "nonvirile": {
+          "nom": "sprawiedliwsze",
+          "gen": "sprawiedliwszych",
+          "dat": "sprawiedliwszym",
+          "acc": "sprawiedliwsze",
+          "ins": "sprawiedliwszymi",
+          "loc": "sprawiedliwszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najsprawiedliwszy",
+          "gen": "najsprawiedliwszego",
+          "dat": "najsprawiedliwszemu",
+          "acc": "najsprawiedliwszego",
+          "ins": "najsprawiedliwszym",
+          "loc": "najsprawiedliwszym"
+        },
+        "m3": {
+          "nom": "najsprawiedliwszy",
+          "gen": "najsprawiedliwszego",
+          "dat": "najsprawiedliwszemu",
+          "acc": "najsprawiedliwszy",
+          "ins": "najsprawiedliwszym",
+          "loc": "najsprawiedliwszym"
+        },
+        "f": {
+          "nom": "najsprawiedliwsza",
+          "gen": "najsprawiedliwszej",
+          "dat": "najsprawiedliwszej",
+          "acc": "najsprawiedliwszą",
+          "ins": "najsprawiedliwszą",
+          "loc": "najsprawiedliwszej"
+        },
+        "n": {
+          "nom": "najsprawiedliwsze",
+          "gen": "najsprawiedliwszego",
+          "dat": "najsprawiedliwszemu",
+          "acc": "najsprawiedliwsze",
+          "ins": "najsprawiedliwszym",
+          "loc": "najsprawiedliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najsprawiedliwsi",
+          "gen": "najsprawiedliwszych",
+          "dat": "najsprawiedliwszym",
+          "acc": "najsprawiedliwszych",
+          "ins": "najsprawiedliwszymi",
+          "loc": "najsprawiedliwszych"
+        },
+        "nonvirile": {
+          "nom": "najsprawiedliwsze",
+          "gen": "najsprawiedliwszych",
+          "dat": "najsprawiedliwszym",
+          "acc": "najsprawiedliwsze",
+          "ins": "najsprawiedliwszymi",
+          "loc": "najsprawiedliwszych"
+        }
+      }
+    }
+  }
+}

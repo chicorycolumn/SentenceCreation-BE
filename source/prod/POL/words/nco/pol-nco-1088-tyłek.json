@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "tyłek",
+      "gen": "tyłka",
+      "dat": "tyłkowi",
+      "acc": "tyłek",
+      "ins": "tyłkiem",
+      "loc": "tyłku",
+      "voc": "tyłku"
+    },
+    "plural": {
+      "nom": "tyłki",
+      "gen": "tyłków",
+      "dat": "tyłkom",
+      "acc": "tyłki",
+      "ins": "tyłkami",
+      "loc": "tyłkach",
+      "voc": "tyłki"
+    }
+  }
+}

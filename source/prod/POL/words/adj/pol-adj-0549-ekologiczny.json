@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "ekologicznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ekologiczny",
+          "gen": "ekologicznego",
+          "dat": "ekologicznemu",
+          "acc": "ekologicznego",
+          "ins": "ekologicznym",
+          "loc": "ekologicznym"
+        },
+        "m3": {
+          "nom": "ekologiczny",
+          "gen": "ekologicznego",
+          "dat": "ekologicznemu",
+          "acc": "ekologiczny",
+          "ins": "ekologicznym",
+          "loc": "ekologicznym"
+        },
+        "f": {
+          "nom": "ekologiczna",
+          "gen": "ekologicznej",
+          "dat": "ekologicznej",
+          "acc": "ekologiczną",
+          "ins": "ekologiczną",
+          "loc": "ekologicznej"
+        },
+        "n": {
+          "nom": "ekologiczne",
+          "gen": "ekologicznego",
+          "dat": "ekologicznemu",
+          "acc": "ekologiczne",
+          "ins": "ekologicznym",
+          "loc": "ekologicznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ekologiczni",
+          "gen": "ekologicznych",
+          "dat": "ekologicznym",
+          "acc": "ekologicznych",
+          "ins": "ekologicznymi",
+          "loc": "ekologicznych"
+        },
+        "nonvirile": {
+          "nom": "ekologiczne",
+          "gen": "ekologicznych",
+          "dat": "ekologicznym",
+          "acc": "ekologiczne",
+          "ins": "ekologicznymi",
+          "loc": "ekologicznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszy",
+              "bardziej ekologiczny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszego",
+              "bardziej ekologicznego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszemu",
+              "bardziej ekologicznemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszego",
+              "bardziej ekologicznego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszym",
+              "bardziej ekologicznym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszym",
+              "bardziej ekologicznym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszy",
+              "bardziej ekologiczny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszego",
+              "bardziej ekologicznego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszemu",
+              "bardziej ekologicznemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszy",
+              "bardziej ekologiczny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszym",
+              "bardziej ekologicznym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszym",
+              "bardziej ekologicznym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejsza",
+              "bardziej ekologiczna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszej",
+              "bardziej ekologicznej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszej",
+              "bardziej ekologicznej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszą",
+              "bardziej ekologiczną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszą",
+              "bardziej ekologiczną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszej",
+              "bardziej ekologicznej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejsze",
+              "bardziej ekologiczne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszego",
+              "bardziej ekologicznego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszemu",
+              "bardziej ekologicznemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejsze",
+              "bardziej ekologiczne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszym",
+              "bardziej ekologicznym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszym",
+              "bardziej ekologicznym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejsi",
+              "bardziej ekologiczni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszych",
+              "bardziej ekologicznych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszym",
+              "bardziej ekologicznym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszych",
+              "bardziej ekologicznych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszymi",
+              "bardziej ekologicznymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszych",
+              "bardziej ekologicznych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejsze",
+              "bardziej ekologiczne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszych",
+              "bardziej ekologicznych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszym",
+              "bardziej ekologicznym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejsze",
+              "bardziej ekologiczne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszymi",
+              "bardziej ekologicznymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "ekologiczniejszych",
+              "bardziej ekologicznych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszy",
+              "najbardziej ekologiczny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszego",
+              "najbardziej ekologicznego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszemu",
+              "najbardziej ekologicznemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszego",
+              "najbardziej ekologicznego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszym",
+              "najbardziej ekologicznym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszym",
+              "najbardziej ekologicznym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszy",
+              "najbardziej ekologiczny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszego",
+              "najbardziej ekologicznego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszemu",
+              "najbardziej ekologicznemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszy",
+              "najbardziej ekologiczny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszym",
+              "najbardziej ekologicznym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszym",
+              "najbardziej ekologicznym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejsza",
+              "najbardziej ekologiczna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszej",
+              "najbardziej ekologicznej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszej",
+              "najbardziej ekologicznej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszą",
+              "najbardziej ekologiczną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszą",
+              "najbardziej ekologiczną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszej",
+              "najbardziej ekologicznej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejsze",
+              "najbardziej ekologiczne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszego",
+              "najbardziej ekologicznego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszemu",
+              "najbardziej ekologicznemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejsze",
+              "najbardziej ekologiczne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszym",
+              "najbardziej ekologicznym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszym",
+              "najbardziej ekologicznym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejsi",
+              "najbardziej ekologiczni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszych",
+              "najbardziej ekologicznych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszym",
+              "najbardziej ekologicznym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszych",
+              "najbardziej ekologicznych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszymi",
+              "najbardziej ekologicznymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszych",
+              "najbardziej ekologicznych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejsze",
+              "najbardziej ekologiczne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszych",
+              "najbardziej ekologicznych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszym",
+              "najbardziej ekologicznym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejsze",
+              "najbardziej ekologiczne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszymi",
+              "najbardziej ekologicznymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najekologiczniejszych",
+              "najbardziej ekologicznych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

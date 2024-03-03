@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "plural": {
+      "nom": "zakupy",
+      "gen": "zakupów",
+      "dat": "zakupom",
+      "acc": "zakupy",
+      "ins": "zakupami",
+      "loc": "zakupach",
+      "voc": "zakupy"
+    }
+  }
+}

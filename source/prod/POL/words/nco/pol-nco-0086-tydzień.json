@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "tydzień",
+      "gen": "tygodnia",
+      "dat": "tygodniowi",
+      "acc": "tydzień",
+      "ins": "tygodniem",
+      "loc": "tygodniu",
+      "voc": "tygodniu"
+    },
+    "plural": {
+      "nom": "tygodnie",
+      "gen": "tygodni",
+      "dat": "tygodniom",
+      "acc": "tygodnie",
+      "ins": "tygodniami",
+      "loc": "tygodniach",
+      "voc": "tygodnie"
+    }
+  }
+}

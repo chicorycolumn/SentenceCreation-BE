@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "customer",
+      "gen": "customer's"
+    },
+    "plural": {
+      "nom": "customers",
+      "gen": "customers'"
+    }
+  }
+}

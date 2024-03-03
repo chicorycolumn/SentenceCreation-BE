@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "źle",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zły",
+          "gen": "złego",
+          "dat": "złemu",
+          "acc": "złego",
+          "ins": "złym",
+          "loc": "złym"
+        },
+        "m3": {
+          "nom": "zły",
+          "gen": "złego",
+          "dat": "złemu",
+          "acc": "zły",
+          "ins": "złym",
+          "loc": "złym"
+        },
+        "f": {
+          "nom": "zła",
+          "gen": "złej",
+          "dat": "złej",
+          "acc": "złą",
+          "ins": "złą",
+          "loc": "złej"
+        },
+        "n": {
+          "nom": "złe",
+          "gen": "złego",
+          "dat": "złemu",
+          "acc": "złe",
+          "ins": "złym",
+          "loc": "złym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "źli",
+          "gen": "złych",
+          "dat": "złym",
+          "acc": "złych",
+          "ins": "złymi",
+          "loc": "złych"
+        },
+        "nonvirile": {
+          "nom": "złe",
+          "gen": "złych",
+          "dat": "złym",
+          "acc": "złe",
+          "ins": "złymi",
+          "loc": "złych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "gorszy",
+          "gen": "gorszego",
+          "dat": "gorszemu",
+          "acc": "gorszego",
+          "ins": "gorszym",
+          "loc": "gorszym"
+        },
+        "m3": {
+          "nom": "gorszy",
+          "gen": "gorszego",
+          "dat": "gorszemu",
+          "acc": "gorszy",
+          "ins": "gorszym",
+          "loc": "gorszym"
+        },
+        "f": {
+          "nom": "gorsza",
+          "gen": "gorszej",
+          "dat": "gorszej",
+          "acc": "gorszą",
+          "ins": "gorszą",
+          "loc": "gorszej"
+        },
+        "n": {
+          "nom": "gorsze",
+          "gen": "gorszego",
+          "dat": "gorszemu",
+          "acc": "gorsze",
+          "ins": "gorszym",
+          "loc": "gorszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "gorsi",
+          "gen": "gorszych",
+          "dat": "gorszym",
+          "acc": "gorszych",
+          "ins": "gorszymi",
+          "loc": "gorszych"
+        },
+        "nonvirile": {
+          "nom": "gorsze",
+          "gen": "gorszych",
+          "dat": "gorszym",
+          "acc": "gorsze",
+          "ins": "gorszymi",
+          "loc": "gorszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najgorszy",
+          "gen": "najgorszego",
+          "dat": "najgorszemu",
+          "acc": "najgorszego",
+          "ins": "najgorszym",
+          "loc": "najgorszym"
+        },
+        "m3": {
+          "nom": "najgorszy",
+          "gen": "najgorszego",
+          "dat": "najgorszemu",
+          "acc": "najgorszy",
+          "ins": "najgorszym",
+          "loc": "najgorszym"
+        },
+        "f": {
+          "nom": "najgorsza",
+          "gen": "najgorszej",
+          "dat": "najgorszej",
+          "acc": "najgorszą",
+          "ins": "najgorszą",
+          "loc": "najgorszej"
+        },
+        "n": {
+          "nom": "najgorsze",
+          "gen": "najgorszego",
+          "dat": "najgorszemu",
+          "acc": "najgorsze",
+          "ins": "najgorszym",
+          "loc": "najgorszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najgorsi",
+          "gen": "najgorszych",
+          "dat": "najgorszym",
+          "acc": "najgorszych",
+          "ins": "najgorszymi",
+          "loc": "najgorszych"
+        },
+        "nonvirile": {
+          "nom": "najgorsze",
+          "gen": "najgorszych",
+          "dat": "najgorszym",
+          "acc": "najgorsze",
+          "ins": "najgorszymi",
+          "loc": "najgorszych"
+        }
+      }
+    }
+  }
+}

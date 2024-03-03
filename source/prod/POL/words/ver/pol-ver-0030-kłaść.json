@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "kłaść",
+    "verbalNoun": "kładzenie",
+    "activeAdjectival": "kładący",
+    "passiveAdjectival": "kładziony",
+    "contemporaryAdverbial": "kładąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "kładź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kładziono"
+          },
+          "plural": {
+            "allPluralGenders": "kładziono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "kładłem",
+            "f": "kładłam"
+          },
+          "plural": {
+            "virile": "kładliśmy",
+            "nonvirile": "kładłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "kładłeś",
+            "f": "kładłaś"
+          },
+          "plural": {
+            "virile": "kładliście",
+            "nonvirile": "kładłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "kładł",
+            "f": "kładła",
+            "n": "kładło"
+          },
+          "plural": {
+            "virile": "kładli",
+            "nonvirile": "kładły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kładzie się"
+          },
+          "plural": {
+            "allPluralGenders": "kładzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "kładę"
+          },
+          "plural": {
+            "allPluralGenders": "kładziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "kładziesz"
+          },
+          "plural": {
+            "allPluralGenders": "kładziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "kładzie"
+          },
+          "plural": {
+            "allPluralGenders": "kładą"
+          }
+        }
+      }
+    }
+  }
+}

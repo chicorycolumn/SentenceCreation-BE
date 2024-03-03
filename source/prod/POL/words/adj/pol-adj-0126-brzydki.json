@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "brzydko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "brzydki",
+          "gen": "brzydkiego",
+          "dat": "brzydkiemu",
+          "acc": "brzydkiego",
+          "ins": "brzydkim",
+          "loc": "brzydkim"
+        },
+        "m3": {
+          "nom": "brzydki",
+          "gen": "brzydkiego",
+          "dat": "brzydkiemu",
+          "acc": "brzydki",
+          "ins": "brzydkim",
+          "loc": "brzydkim"
+        },
+        "f": {
+          "nom": "brzydka",
+          "gen": "brzydkiej",
+          "dat": "brzydkiej",
+          "acc": "brzydką",
+          "ins": "brzydką",
+          "loc": "brzydkiej"
+        },
+        "n": {
+          "nom": "brzydkie",
+          "gen": "brzydkiego",
+          "dat": "brzydkiemu",
+          "acc": "brzydkie",
+          "ins": "brzydkim",
+          "loc": "brzydkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "brzydcy",
+          "gen": "brzydkich",
+          "dat": "brzydkim",
+          "acc": "brzydkich",
+          "ins": "brzydkimi",
+          "loc": "brzydkich"
+        },
+        "nonvirile": {
+          "nom": "brzydkie",
+          "gen": "brzydkich",
+          "dat": "brzydkim",
+          "acc": "brzydkie",
+          "ins": "brzydkimi",
+          "loc": "brzydkich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "brzydszy",
+          "gen": "brzydszego",
+          "dat": "brzydszemu",
+          "acc": "brzydszego",
+          "ins": "brzydszym",
+          "loc": "brzydszym"
+        },
+        "m3": {
+          "nom": "brzydszy",
+          "gen": "brzydszego",
+          "dat": "brzydszemu",
+          "acc": "brzydszy",
+          "ins": "brzydszym",
+          "loc": "brzydszym"
+        },
+        "f": {
+          "nom": "brzydsza",
+          "gen": "brzydszej",
+          "dat": "brzydszej",
+          "acc": "brzydszą",
+          "ins": "brzydszą",
+          "loc": "brzydszej"
+        },
+        "n": {
+          "nom": "brzydsze",
+          "gen": "brzydszego",
+          "dat": "brzydszemu",
+          "acc": "brzydsze",
+          "ins": "brzydszym",
+          "loc": "brzydszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "brzydsi",
+          "gen": "brzydszych",
+          "dat": "brzydszym",
+          "acc": "brzydszych",
+          "ins": "brzydszymi",
+          "loc": "brzydszych"
+        },
+        "nonvirile": {
+          "nom": "brzydsze",
+          "gen": "brzydszych",
+          "dat": "brzydszym",
+          "acc": "brzydsze",
+          "ins": "brzydszymi",
+          "loc": "brzydszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbrzydszy",
+          "gen": "najbrzydszego",
+          "dat": "najbrzydszemu",
+          "acc": "najbrzydszego",
+          "ins": "najbrzydszym",
+          "loc": "najbrzydszym"
+        },
+        "m3": {
+          "nom": "najbrzydszy",
+          "gen": "najbrzydszego",
+          "dat": "najbrzydszemu",
+          "acc": "najbrzydszy",
+          "ins": "najbrzydszym",
+          "loc": "najbrzydszym"
+        },
+        "f": {
+          "nom": "najbrzydsza",
+          "gen": "najbrzydszej",
+          "dat": "najbrzydszej",
+          "acc": "najbrzydszą",
+          "ins": "najbrzydszą",
+          "loc": "najbrzydszej"
+        },
+        "n": {
+          "nom": "najbrzydsze",
+          "gen": "najbrzydszego",
+          "dat": "najbrzydszemu",
+          "acc": "najbrzydsze",
+          "ins": "najbrzydszym",
+          "loc": "najbrzydszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbrzydsi",
+          "gen": "najbrzydszych",
+          "dat": "najbrzydszym",
+          "acc": "najbrzydszych",
+          "ins": "najbrzydszymi",
+          "loc": "najbrzydszych"
+        },
+        "nonvirile": {
+          "nom": "najbrzydsze",
+          "gen": "najbrzydszych",
+          "dat": "najbrzydszym",
+          "acc": "najbrzydsze",
+          "ins": "najbrzydszymi",
+          "loc": "najbrzydszych"
+        }
+      }
+    }
+  }
+}

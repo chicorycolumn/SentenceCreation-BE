@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "stage",
+      "gen": "stage's"
+    },
+    "plural": {
+      "nom": "stages",
+      "gen": "stages'"
+    }
+  }
+}

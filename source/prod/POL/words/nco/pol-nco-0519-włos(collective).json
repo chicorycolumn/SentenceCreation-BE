@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "plural": {
+      "nom": "włosy",
+      "gen": "włosów",
+      "dat": "włosom",
+      "acc": "włosy",
+      "ins": "włosami",
+      "loc": "włosach",
+      "voc": "włosy"
+    }
+  }
+}

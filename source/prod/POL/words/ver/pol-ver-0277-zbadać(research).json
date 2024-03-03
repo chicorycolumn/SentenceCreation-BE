@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zbadać",
+    "verbalNoun": "zbadanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zbadany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zbadawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zbada się"
+          },
+          "plural": {
+            "allPluralGenders": "zbada się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zbadam"
+          },
+          "plural": {
+            "allPluralGenders": "zbadamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zbadasz"
+          },
+          "plural": {
+            "allPluralGenders": "zbadacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zbada"
+          },
+          "plural": {
+            "allPluralGenders": "zbadają"
+          }
+        }
+      },
+      "imperative": "zbadaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zbadano"
+          },
+          "plural": {
+            "allPluralGenders": "zbadano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zbadałem",
+            "f": "zbadałam"
+          },
+          "plural": {
+            "virile": "zbadaliśmy",
+            "nonvirile": "zbadałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zbadałeś",
+            "f": "zbadałaś"
+          },
+          "plural": {
+            "virile": "zbadaliście",
+            "nonvirile": "zbadałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zbadał",
+            "f": "zbadała",
+            "n": "zbadało"
+          },
+          "plural": {
+            "virile": "zbadali",
+            "nonvirile": "zbadały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

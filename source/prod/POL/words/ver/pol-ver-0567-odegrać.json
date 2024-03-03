@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odegrać",
+    "verbalNoun": "odegranie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "odegrany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odegrawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odegra się"
+          },
+          "plural": {
+            "allPluralGenders": "odegra się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odegram"
+          },
+          "plural": {
+            "allPluralGenders": "odegramy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odegrasz"
+          },
+          "plural": {
+            "allPluralGenders": "odegracie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odegra"
+          },
+          "plural": {
+            "allPluralGenders": "odegrają"
+          }
+        }
+      },
+      "imperative": "odegraj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odegrano"
+          },
+          "plural": {
+            "allPluralGenders": "odegrano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odegrałem",
+            "f": "odegrałam"
+          },
+          "plural": {
+            "virile": "odegraliśmy",
+            "nonvirile": "odegrałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odegrałeś",
+            "f": "odegrałaś"
+          },
+          "plural": {
+            "virile": "odegraliście",
+            "nonvirile": "odegrałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odegrał",
+            "f": "odegrała",
+            "n": "odegrało"
+          },
+          "plural": {
+            "virile": "odegrali",
+            "nonvirile": "odegrały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

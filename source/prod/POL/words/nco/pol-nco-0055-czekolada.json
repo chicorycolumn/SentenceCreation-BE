@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "czekolada",
+      "gen": "czekolady",
+      "dat": "czekoladzie",
+      "acc": "czekoladę",
+      "ins": "czekoladą",
+      "loc": "czekoladzie",
+      "voc": "czekolado"
+    },
+    "plural": {
+      "nom": "czekolady",
+      "gen": "czekolad",
+      "dat": "czekoladom",
+      "acc": "czekolady",
+      "ins": "czekoladami",
+      "loc": "czekoladach",
+      "voc": "czekolady"
+    }
+  }
+}

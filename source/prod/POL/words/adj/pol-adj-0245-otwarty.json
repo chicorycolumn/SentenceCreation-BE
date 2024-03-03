@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "otwarcie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "otwarty",
+          "gen": "otwartego",
+          "dat": "otwartemu",
+          "acc": "otwartego",
+          "ins": "otwartym",
+          "loc": "otwartym"
+        },
+        "m3": {
+          "nom": "otwarty",
+          "gen": "otwartego",
+          "dat": "otwartemu",
+          "acc": "otwarty",
+          "ins": "otwartym",
+          "loc": "otwartym"
+        },
+        "f": {
+          "nom": "otwarta",
+          "gen": "otwartej",
+          "dat": "otwartej",
+          "acc": "otwartą",
+          "ins": "otwartą",
+          "loc": "otwartej"
+        },
+        "n": {
+          "nom": "otwarte",
+          "gen": "otwartego",
+          "dat": "otwartemu",
+          "acc": "otwarte",
+          "ins": "otwartym",
+          "loc": "otwartym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "otwarci",
+          "gen": "otwartych",
+          "dat": "otwartym",
+          "acc": "otwartych",
+          "ins": "otwartymi",
+          "loc": "otwartych"
+        },
+        "nonvirile": {
+          "nom": "otwarte",
+          "gen": "otwartych",
+          "dat": "otwartym",
+          "acc": "otwarte",
+          "ins": "otwartymi",
+          "loc": "otwartych"
+        }
+      }
+    }
+  }
+}

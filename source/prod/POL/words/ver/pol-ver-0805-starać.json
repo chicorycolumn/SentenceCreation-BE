@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "starać",
+    "verbalNoun": "staranie",
+    "activeAdjectival": "starający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "starając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "staraj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "starano"
+          },
+          "plural": {
+            "allPluralGenders": "starano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "starałem",
+            "f": "starałam"
+          },
+          "plural": {
+            "virile": "staraliśmy",
+            "nonvirile": "starałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "starałeś",
+            "f": "starałaś"
+          },
+          "plural": {
+            "virile": "staraliście",
+            "nonvirile": "starałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "starał",
+            "f": "starała",
+            "n": "starało"
+          },
+          "plural": {
+            "virile": "starali",
+            "nonvirile": "starały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "stara się"
+          },
+          "plural": {
+            "allPluralGenders": "stara się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "staram"
+          },
+          "plural": {
+            "allPluralGenders": "staramy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "starasz"
+          },
+          "plural": {
+            "allPluralGenders": "staracie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "stara"
+          },
+          "plural": {
+            "allPluralGenders": "starają"
+          }
+        }
+      }
+    }
+  }
+}

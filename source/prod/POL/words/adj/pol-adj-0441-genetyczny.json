@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "genetycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "genetyczny",
+          "gen": "genetycznego",
+          "dat": "genetycznemu",
+          "acc": "genetycznego",
+          "ins": "genetycznym",
+          "loc": "genetycznym"
+        },
+        "m3": {
+          "nom": "genetyczny",
+          "gen": "genetycznego",
+          "dat": "genetycznemu",
+          "acc": "genetyczny",
+          "ins": "genetycznym",
+          "loc": "genetycznym"
+        },
+        "f": {
+          "nom": "genetyczna",
+          "gen": "genetycznej",
+          "dat": "genetycznej",
+          "acc": "genetyczną",
+          "ins": "genetyczną",
+          "loc": "genetycznej"
+        },
+        "n": {
+          "nom": "genetyczne",
+          "gen": "genetycznego",
+          "dat": "genetycznemu",
+          "acc": "genetyczne",
+          "ins": "genetycznym",
+          "loc": "genetycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "genetyczni",
+          "gen": "genetycznych",
+          "dat": "genetycznym",
+          "acc": "genetycznych",
+          "ins": "genetycznymi",
+          "loc": "genetycznych"
+        },
+        "nonvirile": {
+          "nom": "genetyczne",
+          "gen": "genetycznych",
+          "dat": "genetycznym",
+          "acc": "genetyczne",
+          "ins": "genetycznymi",
+          "loc": "genetycznych"
+        }
+      }
+    }
+  }
+}

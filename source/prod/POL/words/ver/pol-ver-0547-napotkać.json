@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "napotkać",
+    "verbalNoun": "napotkanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "napotkany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "napotkawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "napotka się"
+          },
+          "plural": {
+            "allPluralGenders": "napotka się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "napotkam"
+          },
+          "plural": {
+            "allPluralGenders": "napotkamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "napotkasz"
+          },
+          "plural": {
+            "allPluralGenders": "napotkacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "napotka"
+          },
+          "plural": {
+            "allPluralGenders": "napotkają"
+          }
+        }
+      },
+      "imperative": "napotkaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "napotkano"
+          },
+          "plural": {
+            "allPluralGenders": "napotkano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "napotkałem",
+            "f": "napotkałam"
+          },
+          "plural": {
+            "virile": "napotkaliśmy",
+            "nonvirile": "napotkałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "napotkałeś",
+            "f": "napotkałaś"
+          },
+          "plural": {
+            "virile": "napotkaliście",
+            "nonvirile": "napotkałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "napotkał",
+            "f": "napotkała",
+            "n": "napotkało"
+          },
+          "plural": {
+            "virile": "napotkali",
+            "nonvirile": "napotkały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

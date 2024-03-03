@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "podróżować",
+    "verbalNoun": "podróżowanie",
+    "activeAdjectival": "podróżujący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "podróżując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "podróżuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podróżowano"
+          },
+          "plural": {
+            "allPluralGenders": "podróżowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "podróżowałem",
+            "f": "podróżowałam"
+          },
+          "plural": {
+            "virile": "podróżowaliśmy",
+            "nonvirile": "podróżowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podróżowałeś",
+            "f": "podróżowałaś"
+          },
+          "plural": {
+            "virile": "podróżowaliście",
+            "nonvirile": "podróżowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podróżował",
+            "f": "podróżowała",
+            "n": "podróżowało"
+          },
+          "plural": {
+            "virile": "podróżowali",
+            "nonvirile": "podróżowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podróżuje się"
+          },
+          "plural": {
+            "allPluralGenders": "podróżuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podróżuję"
+          },
+          "plural": {
+            "allPluralGenders": "podróżujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podróżujesz"
+          },
+          "plural": {
+            "allPluralGenders": "podróżujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podróżuje"
+          },
+          "plural": {
+            "allPluralGenders": "podróżują"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "powód",
+      "gen": "powodu",
+      "dat": "powodowi",
+      "acc": "powód",
+      "ins": "powodem",
+      "loc": "powodzie",
+      "voc": "powodzie"
+    },
+    "plural": {
+      "nom": "powody",
+      "gen": "powodów",
+      "dat": "powodom",
+      "acc": "powody",
+      "ins": "powodami",
+      "loc": "powodach",
+      "voc": "powody"
+    }
+  }
+}

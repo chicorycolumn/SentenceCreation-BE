@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wychodzić",
+    "verbalNoun": "wychodzenie",
+    "activeAdjectival": "wychodzący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "wychodząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "wychodź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wychodzono"
+          },
+          "plural": {
+            "allPluralGenders": "wychodzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wychodziłem",
+            "f": "wychodziłam"
+          },
+          "plural": {
+            "virile": "wychodziliśmy",
+            "nonvirile": "wychodziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wychodziłeś",
+            "f": "wychodziłaś"
+          },
+          "plural": {
+            "virile": "wychodziliście",
+            "nonvirile": "wychodziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wychodził",
+            "f": "wychodziła",
+            "n": "wychodziło"
+          },
+          "plural": {
+            "virile": "wychodzili",
+            "nonvirile": "wychodziły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wychodzi się"
+          },
+          "plural": {
+            "allPluralGenders": "wychodzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wychodzę"
+          },
+          "plural": {
+            "allPluralGenders": "wychodzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wychodzisz"
+          },
+          "plural": {
+            "allPluralGenders": "wychodzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wychodzi"
+          },
+          "plural": {
+            "allPluralGenders": "wychodzą"
+          }
+        }
+      }
+    }
+  }
+}

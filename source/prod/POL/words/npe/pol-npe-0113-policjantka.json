@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "policjantka",
+      "gen": "policjantki",
+      "dat": "policjantce",
+      "acc": "policjantkę",
+      "ins": "policjantką",
+      "loc": "policjantce",
+      "voc": "policjantko"
+    },
+    "plural": {
+      "nom": "policjantki",
+      "gen": "policjantek",
+      "dat": "policjantkom",
+      "acc": "policjantki",
+      "ins": "policjantkami",
+      "loc": "policjantkach",
+      "voc": "policjantki"
+    }
+  }
+}

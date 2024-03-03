@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "ciepło",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ciepły",
+          "gen": "ciepłego",
+          "dat": "ciepłemu",
+          "acc": "ciepłego",
+          "ins": "ciepłym",
+          "loc": "ciepłym"
+        },
+        "m3": {
+          "nom": "ciepły",
+          "gen": "ciepłego",
+          "dat": "ciepłemu",
+          "acc": "ciepły",
+          "ins": "ciepłym",
+          "loc": "ciepłym"
+        },
+        "f": {
+          "nom": "ciepła",
+          "gen": "ciepłej",
+          "dat": "ciepłej",
+          "acc": "ciepłą",
+          "ins": "ciepłą",
+          "loc": "ciepłej"
+        },
+        "n": {
+          "nom": "ciepłe",
+          "gen": "ciepłego",
+          "dat": "ciepłemu",
+          "acc": "ciepłe",
+          "ins": "ciepłym",
+          "loc": "ciepłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ciepli",
+          "gen": "ciepłych",
+          "dat": "ciepłym",
+          "acc": "ciepłych",
+          "ins": "ciepłymi",
+          "loc": "ciepłych"
+        },
+        "nonvirile": {
+          "nom": "ciepłe",
+          "gen": "ciepłych",
+          "dat": "ciepłym",
+          "acc": "ciepłe",
+          "ins": "ciepłymi",
+          "loc": "ciepłych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "cieplejszy",
+          "gen": "cieplejszego",
+          "dat": "cieplejszemu",
+          "acc": "cieplejszego",
+          "ins": "cieplejszym",
+          "loc": "cieplejszym"
+        },
+        "m3": {
+          "nom": "cieplejszy",
+          "gen": "cieplejszego",
+          "dat": "cieplejszemu",
+          "acc": "cieplejszy",
+          "ins": "cieplejszym",
+          "loc": "cieplejszym"
+        },
+        "f": {
+          "nom": "cieplejsza",
+          "gen": "cieplejszej",
+          "dat": "cieplejszej",
+          "acc": "cieplejszą",
+          "ins": "cieplejszą",
+          "loc": "cieplejszej"
+        },
+        "n": {
+          "nom": "cieplejsze",
+          "gen": "cieplejszego",
+          "dat": "cieplejszemu",
+          "acc": "cieplejsze",
+          "ins": "cieplejszym",
+          "loc": "cieplejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "cieplejsi",
+          "gen": "cieplejszych",
+          "dat": "cieplejszym",
+          "acc": "cieplejszych",
+          "ins": "cieplejszymi",
+          "loc": "cieplejszych"
+        },
+        "nonvirile": {
+          "nom": "cieplejsze",
+          "gen": "cieplejszych",
+          "dat": "cieplejszym",
+          "acc": "cieplejsze",
+          "ins": "cieplejszymi",
+          "loc": "cieplejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najcieplejszy",
+          "gen": "najcieplejszego",
+          "dat": "najcieplejszemu",
+          "acc": "najcieplejszego",
+          "ins": "najcieplejszym",
+          "loc": "najcieplejszym"
+        },
+        "m3": {
+          "nom": "najcieplejszy",
+          "gen": "najcieplejszego",
+          "dat": "najcieplejszemu",
+          "acc": "najcieplejszy",
+          "ins": "najcieplejszym",
+          "loc": "najcieplejszym"
+        },
+        "f": {
+          "nom": "najcieplejsza",
+          "gen": "najcieplejszej",
+          "dat": "najcieplejszej",
+          "acc": "najcieplejszą",
+          "ins": "najcieplejszą",
+          "loc": "najcieplejszej"
+        },
+        "n": {
+          "nom": "najcieplejsze",
+          "gen": "najcieplejszego",
+          "dat": "najcieplejszemu",
+          "acc": "najcieplejsze",
+          "ins": "najcieplejszym",
+          "loc": "najcieplejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najcieplejsi",
+          "gen": "najcieplejszych",
+          "dat": "najcieplejszym",
+          "acc": "najcieplejszych",
+          "ins": "najcieplejszymi",
+          "loc": "najcieplejszych"
+        },
+        "nonvirile": {
+          "nom": "najcieplejsze",
+          "gen": "najcieplejszych",
+          "dat": "najcieplejszym",
+          "acc": "najcieplejsze",
+          "ins": "najcieplejszymi",
+          "loc": "najcieplejszych"
+        }
+      }
+    }
+  }
+}

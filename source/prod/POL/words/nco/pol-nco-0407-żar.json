@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "żar",
+      "gen": "żaru",
+      "dat": "żarowi",
+      "acc": "żar",
+      "ins": "żarem",
+      "loc": "żarze",
+      "voc": "żarze"
+    },
+    "plural": {
+      "nom": "żary",
+      "gen": "żarów",
+      "dat": "żarom",
+      "acc": "żary",
+      "ins": "żarami",
+      "loc": "żarach",
+      "voc": "żary"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ciastko",
+      "gen": "ciastka",
+      "dat": "ciastku",
+      "acc": "ciastko",
+      "ins": "ciastkiem",
+      "loc": "ciastku",
+      "voc": "ciastko"
+    },
+    "plural": {
+      "nom": "ciastka",
+      "gen": "ciastek",
+      "dat": "ciastkom",
+      "acc": "ciastka",
+      "ins": "ciastkami",
+      "loc": "ciastkach",
+      "voc": "ciastka"
+    }
+  }
+}

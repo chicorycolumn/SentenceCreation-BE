@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "chirurg",
+      "gen": "chirurga",
+      "dat": "chirurgowi",
+      "acc": "chirurga",
+      "ins": "chirurgiem",
+      "loc": "chirurgu",
+      "voc": "chirurgu"
+    },
+    "plural": {
+      "nom": "chirurdzy",
+      "gen": "chirurgów",
+      "dat": "chirurgom",
+      "acc": "chirurgów",
+      "ins": "chirurgami",
+      "loc": "chirurgach",
+      "voc": "chirurdzy"
+    }
+  }
+}

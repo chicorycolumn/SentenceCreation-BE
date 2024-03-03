@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "noc",
+      "gen": "nocy",
+      "dat": "nocy",
+      "acc": "noc",
+      "ins": "nocą",
+      "loc": "nocy",
+      "voc": "nocy"
+    },
+    "plural": {
+      "nom": "noce",
+      "gen": "nocy",
+      "dat": "nocom",
+      "acc": "noce",
+      "ins": "nocami",
+      "loc": "nocach",
+      "voc": "noce"
+    }
+  }
+}

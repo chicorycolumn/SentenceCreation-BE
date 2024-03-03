@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "mrocznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "mroczny",
+          "gen": "mrocznego",
+          "dat": "mrocznemu",
+          "acc": "mrocznego",
+          "ins": "mrocznym",
+          "loc": "mrocznym"
+        },
+        "m3": {
+          "nom": "mroczny",
+          "gen": "mrocznego",
+          "dat": "mrocznemu",
+          "acc": "mroczny",
+          "ins": "mrocznym",
+          "loc": "mrocznym"
+        },
+        "f": {
+          "nom": "mroczna",
+          "gen": "mrocznej",
+          "dat": "mrocznej",
+          "acc": "mroczną",
+          "ins": "mroczną",
+          "loc": "mrocznej"
+        },
+        "n": {
+          "nom": "mroczne",
+          "gen": "mrocznego",
+          "dat": "mrocznemu",
+          "acc": "mroczne",
+          "ins": "mrocznym",
+          "loc": "mrocznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "mroczni",
+          "gen": "mrocznych",
+          "dat": "mrocznym",
+          "acc": "mrocznych",
+          "ins": "mrocznymi",
+          "loc": "mrocznych"
+        },
+        "nonvirile": {
+          "nom": "mroczne",
+          "gen": "mrocznych",
+          "dat": "mrocznym",
+          "acc": "mroczne",
+          "ins": "mrocznymi",
+          "loc": "mrocznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "mroczniejszy",
+          "gen": "mroczniejszego",
+          "dat": "mroczniejszemu",
+          "acc": "mroczniejszego",
+          "ins": "mroczniejszym",
+          "loc": "mroczniejszym"
+        },
+        "m3": {
+          "nom": "mroczniejszy",
+          "gen": "mroczniejszego",
+          "dat": "mroczniejszemu",
+          "acc": "mroczniejszy",
+          "ins": "mroczniejszym",
+          "loc": "mroczniejszym"
+        },
+        "f": {
+          "nom": "mroczniejsza",
+          "gen": "mroczniejszej",
+          "dat": "mroczniejszej",
+          "acc": "mroczniejszą",
+          "ins": "mroczniejszą",
+          "loc": "mroczniejszej"
+        },
+        "n": {
+          "nom": "mroczniejsze",
+          "gen": "mroczniejszego",
+          "dat": "mroczniejszemu",
+          "acc": "mroczniejsze",
+          "ins": "mroczniejszym",
+          "loc": "mroczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "mroczniejsi",
+          "gen": "mroczniejszych",
+          "dat": "mroczniejszym",
+          "acc": "mroczniejszych",
+          "ins": "mroczniejszymi",
+          "loc": "mroczniejszych"
+        },
+        "nonvirile": {
+          "nom": "mroczniejsze",
+          "gen": "mroczniejszych",
+          "dat": "mroczniejszym",
+          "acc": "mroczniejsze",
+          "ins": "mroczniejszymi",
+          "loc": "mroczniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najmroczniejszy",
+          "gen": "najmroczniejszego",
+          "dat": "najmroczniejszemu",
+          "acc": "najmroczniejszego",
+          "ins": "najmroczniejszym",
+          "loc": "najmroczniejszym"
+        },
+        "m3": {
+          "nom": "najmroczniejszy",
+          "gen": "najmroczniejszego",
+          "dat": "najmroczniejszemu",
+          "acc": "najmroczniejszy",
+          "ins": "najmroczniejszym",
+          "loc": "najmroczniejszym"
+        },
+        "f": {
+          "nom": "najmroczniejsza",
+          "gen": "najmroczniejszej",
+          "dat": "najmroczniejszej",
+          "acc": "najmroczniejszą",
+          "ins": "najmroczniejszą",
+          "loc": "najmroczniejszej"
+        },
+        "n": {
+          "nom": "najmroczniejsze",
+          "gen": "najmroczniejszego",
+          "dat": "najmroczniejszemu",
+          "acc": "najmroczniejsze",
+          "ins": "najmroczniejszym",
+          "loc": "najmroczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najmroczniejsi",
+          "gen": "najmroczniejszych",
+          "dat": "najmroczniejszym",
+          "acc": "najmroczniejszych",
+          "ins": "najmroczniejszymi",
+          "loc": "najmroczniejszych"
+        },
+        "nonvirile": {
+          "nom": "najmroczniejsze",
+          "gen": "najmroczniejszych",
+          "dat": "najmroczniejszym",
+          "acc": "najmroczniejsze",
+          "ins": "najmroczniejszymi",
+          "loc": "najmroczniejszych"
+        }
+      }
+    }
+  }
+}

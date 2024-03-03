@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "tandetnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "tandetny",
+          "gen": "tandetnego",
+          "dat": "tandetnemu",
+          "acc": "tandetnego",
+          "ins": "tandetnym",
+          "loc": "tandetnym"
+        },
+        "m3": {
+          "nom": "tandetny",
+          "gen": "tandetnego",
+          "dat": "tandetnemu",
+          "acc": "tandetny",
+          "ins": "tandetnym",
+          "loc": "tandetnym"
+        },
+        "f": {
+          "nom": "tandetna",
+          "gen": "tandetnej",
+          "dat": "tandetnej",
+          "acc": "tandetną",
+          "ins": "tandetną",
+          "loc": "tandetnej"
+        },
+        "n": {
+          "nom": "tandetne",
+          "gen": "tandetnego",
+          "dat": "tandetnemu",
+          "acc": "tandetne",
+          "ins": "tandetnym",
+          "loc": "tandetnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "tandetni",
+          "gen": "tandetnych",
+          "dat": "tandetnym",
+          "acc": "tandetnych",
+          "ins": "tandetnymi",
+          "loc": "tandetnych"
+        },
+        "nonvirile": {
+          "nom": "tandetne",
+          "gen": "tandetnych",
+          "dat": "tandetnym",
+          "acc": "tandetne",
+          "ins": "tandetnymi",
+          "loc": "tandetnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej tandetny",
+          "gen": "bardziej tandetnego",
+          "dat": "bardziej tandetnemu",
+          "acc": "bardziej tandetnego",
+          "ins": "bardziej tandetnym",
+          "loc": "bardziej tandetnym"
+        },
+        "m3": {
+          "nom": "bardziej tandetny",
+          "gen": "bardziej tandetnego",
+          "dat": "bardziej tandetnemu",
+          "acc": "bardziej tandetny",
+          "ins": "bardziej tandetnym",
+          "loc": "bardziej tandetnym"
+        },
+        "f": {
+          "nom": "bardziej tandetna",
+          "gen": "bardziej tandetnej",
+          "dat": "bardziej tandetnej",
+          "acc": "bardziej tandetną",
+          "ins": "bardziej tandetną",
+          "loc": "bardziej tandetnej"
+        },
+        "n": {
+          "nom": "bardziej tandetne",
+          "gen": "bardziej tandetnego",
+          "dat": "bardziej tandetnemu",
+          "acc": "bardziej tandetne",
+          "ins": "bardziej tandetnym",
+          "loc": "bardziej tandetnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej tandetni",
+          "gen": "bardziej tandetnych",
+          "dat": "bardziej tandetnym",
+          "acc": "bardziej tandetnych",
+          "ins": "bardziej tandetnymi",
+          "loc": "bardziej tandetnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej tandetne",
+          "gen": "bardziej tandetnych",
+          "dat": "bardziej tandetnym",
+          "acc": "bardziej tandetne",
+          "ins": "bardziej tandetnymi",
+          "loc": "bardziej tandetnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej tandetny",
+          "gen": "najbardziej tandetnego",
+          "dat": "najbardziej tandetnemu",
+          "acc": "najbardziej tandetnego",
+          "ins": "najbardziej tandetnym",
+          "loc": "najbardziej tandetnym"
+        },
+        "m3": {
+          "nom": "najbardziej tandetny",
+          "gen": "najbardziej tandetnego",
+          "dat": "najbardziej tandetnemu",
+          "acc": "najbardziej tandetny",
+          "ins": "najbardziej tandetnym",
+          "loc": "najbardziej tandetnym"
+        },
+        "f": {
+          "nom": "najbardziej tandetna",
+          "gen": "najbardziej tandetnej",
+          "dat": "najbardziej tandetnej",
+          "acc": "najbardziej tandetną",
+          "ins": "najbardziej tandetną",
+          "loc": "najbardziej tandetnej"
+        },
+        "n": {
+          "nom": "najbardziej tandetne",
+          "gen": "najbardziej tandetnego",
+          "dat": "najbardziej tandetnemu",
+          "acc": "najbardziej tandetne",
+          "ins": "najbardziej tandetnym",
+          "loc": "najbardziej tandetnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej tandetni",
+          "gen": "najbardziej tandetnych",
+          "dat": "najbardziej tandetnym",
+          "acc": "najbardziej tandetnych",
+          "ins": "najbardziej tandetnymi",
+          "loc": "najbardziej tandetnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej tandetne",
+          "gen": "najbardziej tandetnych",
+          "dat": "najbardziej tandetnym",
+          "acc": "najbardziej tandetne",
+          "ins": "najbardziej tandetnymi",
+          "loc": "najbardziej tandetnych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "magazine",
+      "gen": "magazine's"
+    },
+    "plural": {
+      "nom": "magazines",
+      "gen": "magazines'"
+    }
+  }
+}

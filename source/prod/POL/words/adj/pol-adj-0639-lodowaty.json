@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "lodowato",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "lodowaty",
+          "gen": "lodowatego",
+          "dat": "lodowatemu",
+          "acc": "lodowatego",
+          "ins": "lodowatym",
+          "loc": "lodowatym"
+        },
+        "m3": {
+          "nom": "lodowaty",
+          "gen": "lodowatego",
+          "dat": "lodowatemu",
+          "acc": "lodowaty",
+          "ins": "lodowatym",
+          "loc": "lodowatym"
+        },
+        "f": {
+          "nom": "lodowata",
+          "gen": "lodowatej",
+          "dat": "lodowatej",
+          "acc": "lodowatą",
+          "ins": "lodowatą",
+          "loc": "lodowatej"
+        },
+        "n": {
+          "nom": "lodowate",
+          "gen": "lodowatego",
+          "dat": "lodowatemu",
+          "acc": "lodowate",
+          "ins": "lodowatym",
+          "loc": "lodowatym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "lodowaci",
+          "gen": "lodowatych",
+          "dat": "lodowatym",
+          "acc": "lodowatych",
+          "ins": "lodowatymi",
+          "loc": "lodowatych"
+        },
+        "nonvirile": {
+          "nom": "lodowate",
+          "gen": "lodowatych",
+          "dat": "lodowatym",
+          "acc": "lodowate",
+          "ins": "lodowatymi",
+          "loc": "lodowatych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej lodowaty",
+          "gen": "bardziej lodowatego",
+          "dat": "bardziej lodowatemu",
+          "acc": "bardziej lodowatego",
+          "ins": "bardziej lodowatym",
+          "loc": "bardziej lodowatym"
+        },
+        "m3": {
+          "nom": "bardziej lodowaty",
+          "gen": "bardziej lodowatego",
+          "dat": "bardziej lodowatemu",
+          "acc": "bardziej lodowaty",
+          "ins": "bardziej lodowatym",
+          "loc": "bardziej lodowatym"
+        },
+        "f": {
+          "nom": "bardziej lodowata",
+          "gen": "bardziej lodowatej",
+          "dat": "bardziej lodowatej",
+          "acc": "bardziej lodowatą",
+          "ins": "bardziej lodowatą",
+          "loc": "bardziej lodowatej"
+        },
+        "n": {
+          "nom": "bardziej lodowate",
+          "gen": "bardziej lodowatego",
+          "dat": "bardziej lodowatemu",
+          "acc": "bardziej lodowate",
+          "ins": "bardziej lodowatym",
+          "loc": "bardziej lodowatym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej lodowaci",
+          "gen": "bardziej lodowatych",
+          "dat": "bardziej lodowatym",
+          "acc": "bardziej lodowatych",
+          "ins": "bardziej lodowatymi",
+          "loc": "bardziej lodowatych"
+        },
+        "nonvirile": {
+          "nom": "bardziej lodowate",
+          "gen": "bardziej lodowatych",
+          "dat": "bardziej lodowatym",
+          "acc": "bardziej lodowate",
+          "ins": "bardziej lodowatymi",
+          "loc": "bardziej lodowatych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej lodowaty",
+          "gen": "najbardziej lodowatego",
+          "dat": "najbardziej lodowatemu",
+          "acc": "najbardziej lodowatego",
+          "ins": "najbardziej lodowatym",
+          "loc": "najbardziej lodowatym"
+        },
+        "m3": {
+          "nom": "najbardziej lodowaty",
+          "gen": "najbardziej lodowatego",
+          "dat": "najbardziej lodowatemu",
+          "acc": "najbardziej lodowaty",
+          "ins": "najbardziej lodowatym",
+          "loc": "najbardziej lodowatym"
+        },
+        "f": {
+          "nom": "najbardziej lodowata",
+          "gen": "najbardziej lodowatej",
+          "dat": "najbardziej lodowatej",
+          "acc": "najbardziej lodowatą",
+          "ins": "najbardziej lodowatą",
+          "loc": "najbardziej lodowatej"
+        },
+        "n": {
+          "nom": "najbardziej lodowate",
+          "gen": "najbardziej lodowatego",
+          "dat": "najbardziej lodowatemu",
+          "acc": "najbardziej lodowate",
+          "ins": "najbardziej lodowatym",
+          "loc": "najbardziej lodowatym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej lodowaci",
+          "gen": "najbardziej lodowatych",
+          "dat": "najbardziej lodowatym",
+          "acc": "najbardziej lodowatych",
+          "ins": "najbardziej lodowatymi",
+          "loc": "najbardziej lodowatych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej lodowate",
+          "gen": "najbardziej lodowatych",
+          "dat": "najbardziej lodowatym",
+          "acc": "najbardziej lodowate",
+          "ins": "najbardziej lodowatymi",
+          "loc": "najbardziej lodowatych"
+        }
+      }
+    }
+  }
+}

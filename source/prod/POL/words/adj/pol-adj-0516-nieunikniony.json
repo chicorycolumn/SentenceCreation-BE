@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "nieuniknienie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nieunikniony",
+          "gen": "nieuniknionego",
+          "dat": "nieuniknionemu",
+          "acc": "nieuniknionego",
+          "ins": "nieuniknionym",
+          "loc": "nieuniknionym"
+        },
+        "m3": {
+          "nom": "nieunikniony",
+          "gen": "nieuniknionego",
+          "dat": "nieuniknionemu",
+          "acc": "nieunikniony",
+          "ins": "nieuniknionym",
+          "loc": "nieuniknionym"
+        },
+        "f": {
+          "nom": "nieunikniona",
+          "gen": "nieuniknionej",
+          "dat": "nieuniknionej",
+          "acc": "nieuniknioną",
+          "ins": "nieuniknioną",
+          "loc": "nieuniknionej"
+        },
+        "n": {
+          "nom": "nieuniknione",
+          "gen": "nieuniknionego",
+          "dat": "nieuniknionemu",
+          "acc": "nieuniknione",
+          "ins": "nieuniknionym",
+          "loc": "nieuniknionym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieuniknieni",
+          "gen": "nieuniknionych",
+          "dat": "nieuniknionym",
+          "acc": "nieuniknionych",
+          "ins": "nieuniknionymi",
+          "loc": "nieuniknionych"
+        },
+        "nonvirile": {
+          "nom": "nieuniknione",
+          "gen": "nieuniknionych",
+          "dat": "nieuniknionym",
+          "acc": "nieuniknione",
+          "ins": "nieuniknionymi",
+          "loc": "nieuniknionych"
+        }
+      }
+    }
+  }
+}

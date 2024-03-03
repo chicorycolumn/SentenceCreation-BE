@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "printing",
+      "gen": "printing's"
+    },
+    "plural": {
+      "nom": "printings",
+      "gen": "printings'"
+    }
+  }
+}

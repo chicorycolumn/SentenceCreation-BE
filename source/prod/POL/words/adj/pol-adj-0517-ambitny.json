@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "ambitnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ambitny",
+          "gen": "ambitnego",
+          "dat": "ambitnemu",
+          "acc": "ambitnego",
+          "ins": "ambitnym",
+          "loc": "ambitnym"
+        },
+        "m3": {
+          "nom": "ambitny",
+          "gen": "ambitnego",
+          "dat": "ambitnemu",
+          "acc": "ambitny",
+          "ins": "ambitnym",
+          "loc": "ambitnym"
+        },
+        "f": {
+          "nom": "ambitna",
+          "gen": "ambitnej",
+          "dat": "ambitnej",
+          "acc": "ambitną",
+          "ins": "ambitną",
+          "loc": "ambitnej"
+        },
+        "n": {
+          "nom": "ambitne",
+          "gen": "ambitnego",
+          "dat": "ambitnemu",
+          "acc": "ambitne",
+          "ins": "ambitnym",
+          "loc": "ambitnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ambitni",
+          "gen": "ambitnych",
+          "dat": "ambitnym",
+          "acc": "ambitnych",
+          "ins": "ambitnymi",
+          "loc": "ambitnych"
+        },
+        "nonvirile": {
+          "nom": "ambitne",
+          "gen": "ambitnych",
+          "dat": "ambitnym",
+          "acc": "ambitne",
+          "ins": "ambitnymi",
+          "loc": "ambitnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "ambitniejszy",
+          "gen": "ambitniejszego",
+          "dat": "ambitniejszemu",
+          "acc": "ambitniejszego",
+          "ins": "ambitniejszym",
+          "loc": "ambitniejszym"
+        },
+        "m3": {
+          "nom": "ambitniejszy",
+          "gen": "ambitniejszego",
+          "dat": "ambitniejszemu",
+          "acc": "ambitniejszy",
+          "ins": "ambitniejszym",
+          "loc": "ambitniejszym"
+        },
+        "f": {
+          "nom": "ambitniejsza",
+          "gen": "ambitniejszej",
+          "dat": "ambitniejszej",
+          "acc": "ambitniejszą",
+          "ins": "ambitniejszą",
+          "loc": "ambitniejszej"
+        },
+        "n": {
+          "nom": "ambitniejsze",
+          "gen": "ambitniejszego",
+          "dat": "ambitniejszemu",
+          "acc": "ambitniejsze",
+          "ins": "ambitniejszym",
+          "loc": "ambitniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ambitniejsi",
+          "gen": "ambitniejszych",
+          "dat": "ambitniejszym",
+          "acc": "ambitniejszych",
+          "ins": "ambitniejszymi",
+          "loc": "ambitniejszych"
+        },
+        "nonvirile": {
+          "nom": "ambitniejsze",
+          "gen": "ambitniejszych",
+          "dat": "ambitniejszym",
+          "acc": "ambitniejsze",
+          "ins": "ambitniejszymi",
+          "loc": "ambitniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najambitniejszy",
+          "gen": "najambitniejszego",
+          "dat": "najambitniejszemu",
+          "acc": "najambitniejszego",
+          "ins": "najambitniejszym",
+          "loc": "najambitniejszym"
+        },
+        "m3": {
+          "nom": "najambitniejszy",
+          "gen": "najambitniejszego",
+          "dat": "najambitniejszemu",
+          "acc": "najambitniejszy",
+          "ins": "najambitniejszym",
+          "loc": "najambitniejszym"
+        },
+        "f": {
+          "nom": "najambitniejsza",
+          "gen": "najambitniejszej",
+          "dat": "najambitniejszej",
+          "acc": "najambitniejszą",
+          "ins": "najambitniejszą",
+          "loc": "najambitniejszej"
+        },
+        "n": {
+          "nom": "najambitniejsze",
+          "gen": "najambitniejszego",
+          "dat": "najambitniejszemu",
+          "acc": "najambitniejsze",
+          "ins": "najambitniejszym",
+          "loc": "najambitniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najambitniejsi",
+          "gen": "najambitniejszych",
+          "dat": "najambitniejszym",
+          "acc": "najambitniejszych",
+          "ins": "najambitniejszymi",
+          "loc": "najambitniejszych"
+        },
+        "nonvirile": {
+          "nom": "najambitniejsze",
+          "gen": "najambitniejszych",
+          "dat": "najambitniejszym",
+          "acc": "najambitniejsze",
+          "ins": "najambitniejszymi",
+          "loc": "najambitniejszych"
+        }
+      }
+    }
+  }
+}

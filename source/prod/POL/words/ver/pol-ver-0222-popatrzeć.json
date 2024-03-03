@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "popatrzeć",
+    "verbalNoun": "popatrzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "popatrzawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "popatrzy się"
+          },
+          "plural": {
+            "allPluralGenders": "popatrzy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "popatrzę"
+          },
+          "plural": {
+            "allPluralGenders": "popatrzymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "popatrzysz"
+          },
+          "plural": {
+            "allPluralGenders": "popatrzycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "popatrzy"
+          },
+          "plural": {
+            "allPluralGenders": "popatrzą"
+          }
+        }
+      },
+      "imperative": "popatrz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "popatrzano"
+          },
+          "plural": {
+            "allPluralGenders": "popatrzano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "popatrzałem",
+            "f": "popatrzałam"
+          },
+          "plural": {
+            "virile": "popatrzeliśmy",
+            "nonvirile": "popatrzałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "popatrzałeś",
+            "f": "popatrzałaś"
+          },
+          "plural": {
+            "virile": "popatrzeliście",
+            "nonvirile": "popatrzałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "popatrzał",
+            "f": "popatrzała",
+            "n": "popatrzało"
+          },
+          "plural": {
+            "virile": "popatrzeli",
+            "nonvirile": "popatrzały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

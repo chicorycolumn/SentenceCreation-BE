@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zdrowie",
+      "gen": "zdrowia",
+      "dat": "zdrowiu",
+      "acc": "zdrowie",
+      "ins": "zdrowiem",
+      "loc": "zdrowiu",
+      "voc": "zdrowie"
+    }
+  }
+}

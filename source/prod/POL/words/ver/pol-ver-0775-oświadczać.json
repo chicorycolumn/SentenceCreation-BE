@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oświadczać",
+    "verbalNoun": "oświadczanie",
+    "activeAdjectival": "oświadczający",
+    "passiveAdjectival": "oświadczany",
+    "contemporaryAdverbial": "oświadczając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "oświadczaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oświadczano"
+          },
+          "plural": {
+            "allPluralGenders": "oświadczano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oświadczałem",
+            "f": "oświadczałam"
+          },
+          "plural": {
+            "virile": "oświadczaliśmy",
+            "nonvirile": "oświadczałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oświadczałeś",
+            "f": "oświadczałaś"
+          },
+          "plural": {
+            "virile": "oświadczaliście",
+            "nonvirile": "oświadczałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oświadczał",
+            "f": "oświadczała",
+            "n": "oświadczało"
+          },
+          "plural": {
+            "virile": "oświadczali",
+            "nonvirile": "oświadczały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oświadcza się"
+          },
+          "plural": {
+            "allPluralGenders": "oświadcza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oświadczam"
+          },
+          "plural": {
+            "allPluralGenders": "oświadczamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oświadczasz"
+          },
+          "plural": {
+            "allPluralGenders": "oświadczacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "oświadcza"
+          },
+          "plural": {
+            "allPluralGenders": "oświadczają"
+          }
+        }
+      }
+    }
+  }
+}

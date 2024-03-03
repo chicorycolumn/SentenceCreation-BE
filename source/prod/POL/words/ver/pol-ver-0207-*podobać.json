@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "podobać",
+    "verbalNoun": "podobanie",
+    "activeAdjectival": "podobający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "podobając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "podobaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podobano"
+          },
+          "plural": {
+            "allPluralGenders": "podobano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "podobałem",
+            "f": "podobałam"
+          },
+          "plural": {
+            "virile": "podobaliśmy",
+            "nonvirile": "podobałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podobałeś",
+            "f": "podobałaś"
+          },
+          "plural": {
+            "virile": "podobaliście",
+            "nonvirile": "podobałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podobał",
+            "f": "podobała",
+            "n": "podobało"
+          },
+          "plural": {
+            "virile": "podobali",
+            "nonvirile": "podobały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podoba się"
+          },
+          "plural": {
+            "allPluralGenders": "podoba się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podobam"
+          },
+          "plural": {
+            "allPluralGenders": "podobamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podobasz"
+          },
+          "plural": {
+            "allPluralGenders": "podobacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podoba"
+          },
+          "plural": {
+            "allPluralGenders": "podobają"
+          }
+        }
+      }
+    }
+  }
+}

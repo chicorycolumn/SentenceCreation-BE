@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pochwalić",
+    "verbalNoun": "pochwalenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pochwalony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pochwaliwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pochwali się"
+          },
+          "plural": {
+            "allPluralGenders": "pochwali się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pochwalę"
+          },
+          "plural": {
+            "allPluralGenders": "pochwalimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pochwalisz"
+          },
+          "plural": {
+            "allPluralGenders": "pochwalicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pochwali"
+          },
+          "plural": {
+            "allPluralGenders": "pochwalą"
+          }
+        }
+      },
+      "imperative": "pochwal",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pochwalono"
+          },
+          "plural": {
+            "allPluralGenders": "pochwalono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pochwaliłem",
+            "f": "pochwaliłam"
+          },
+          "plural": {
+            "virile": "pochwaliliśmy",
+            "nonvirile": "pochwaliłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pochwaliłeś",
+            "f": "pochwaliłaś"
+          },
+          "plural": {
+            "virile": "pochwaliliście",
+            "nonvirile": "pochwaliłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pochwalił",
+            "f": "pochwaliła",
+            "n": "pochwaliło"
+          },
+          "plural": {
+            "virile": "pochwalili",
+            "nonvirile": "pochwaliły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

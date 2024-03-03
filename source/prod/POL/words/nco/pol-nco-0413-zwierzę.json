@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zwierzę",
+      "gen": "zwierzęcia",
+      "dat": "zwierzęciu",
+      "acc": "zwierzę",
+      "ins": "zwierzęciem",
+      "loc": "zwierzęciu",
+      "voc": "zwierzę"
+    },
+    "plural": {
+      "nom": "zwierzęta",
+      "gen": "zwierząt",
+      "dat": "zwierzętom",
+      "acc": "zwierzęta",
+      "ins": "zwierzętami",
+      "loc": "zwierzętach",
+      "voc": "zwierzęta"
+    }
+  }
+}

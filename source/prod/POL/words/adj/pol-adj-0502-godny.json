@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "godnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "godny",
+          "gen": "godnego",
+          "dat": "godnemu",
+          "acc": "godnego",
+          "ins": "godnym",
+          "loc": "godnym"
+        },
+        "m3": {
+          "nom": "godny",
+          "gen": "godnego",
+          "dat": "godnemu",
+          "acc": "godny",
+          "ins": "godnym",
+          "loc": "godnym"
+        },
+        "f": {
+          "nom": "godna",
+          "gen": "godnej",
+          "dat": "godnej",
+          "acc": "godną",
+          "ins": "godną",
+          "loc": "godnej"
+        },
+        "n": {
+          "nom": "godne",
+          "gen": "godnego",
+          "dat": "godnemu",
+          "acc": "godne",
+          "ins": "godnym",
+          "loc": "godnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "godni",
+          "gen": "godnych",
+          "dat": "godnym",
+          "acc": "godnych",
+          "ins": "godnymi",
+          "loc": "godnych"
+        },
+        "nonvirile": {
+          "nom": "godne",
+          "gen": "godnych",
+          "dat": "godnym",
+          "acc": "godne",
+          "ins": "godnymi",
+          "loc": "godnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "godniejszy",
+          "gen": "godniejszego",
+          "dat": "godniejszemu",
+          "acc": "godniejszego",
+          "ins": "godniejszym",
+          "loc": "godniejszym"
+        },
+        "m3": {
+          "nom": "godniejszy",
+          "gen": "godniejszego",
+          "dat": "godniejszemu",
+          "acc": "godniejszy",
+          "ins": "godniejszym",
+          "loc": "godniejszym"
+        },
+        "f": {
+          "nom": "godniejsza",
+          "gen": "godniejszej",
+          "dat": "godniejszej",
+          "acc": "godniejszą",
+          "ins": "godniejszą",
+          "loc": "godniejszej"
+        },
+        "n": {
+          "nom": "godniejsze",
+          "gen": "godniejszego",
+          "dat": "godniejszemu",
+          "acc": "godniejsze",
+          "ins": "godniejszym",
+          "loc": "godniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "godniejsi",
+          "gen": "godniejszych",
+          "dat": "godniejszym",
+          "acc": "godniejszych",
+          "ins": "godniejszymi",
+          "loc": "godniejszych"
+        },
+        "nonvirile": {
+          "nom": "godniejsze",
+          "gen": "godniejszych",
+          "dat": "godniejszym",
+          "acc": "godniejsze",
+          "ins": "godniejszymi",
+          "loc": "godniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najgodniejszy",
+          "gen": "najgodniejszego",
+          "dat": "najgodniejszemu",
+          "acc": "najgodniejszego",
+          "ins": "najgodniejszym",
+          "loc": "najgodniejszym"
+        },
+        "m3": {
+          "nom": "najgodniejszy",
+          "gen": "najgodniejszego",
+          "dat": "najgodniejszemu",
+          "acc": "najgodniejszy",
+          "ins": "najgodniejszym",
+          "loc": "najgodniejszym"
+        },
+        "f": {
+          "nom": "najgodniejsza",
+          "gen": "najgodniejszej",
+          "dat": "najgodniejszej",
+          "acc": "najgodniejszą",
+          "ins": "najgodniejszą",
+          "loc": "najgodniejszej"
+        },
+        "n": {
+          "nom": "najgodniejsze",
+          "gen": "najgodniejszego",
+          "dat": "najgodniejszemu",
+          "acc": "najgodniejsze",
+          "ins": "najgodniejszym",
+          "loc": "najgodniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najgodniejsi",
+          "gen": "najgodniejszych",
+          "dat": "najgodniejszym",
+          "acc": "najgodniejszych",
+          "ins": "najgodniejszymi",
+          "loc": "najgodniejszych"
+        },
+        "nonvirile": {
+          "nom": "najgodniejsze",
+          "gen": "najgodniejszych",
+          "dat": "najgodniejszym",
+          "acc": "najgodniejsze",
+          "ins": "najgodniejszymi",
+          "loc": "najgodniejszych"
+        }
+      }
+    }
+  }
+}

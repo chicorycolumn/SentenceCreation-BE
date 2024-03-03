@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "odcinek",
+      "gen": "odcinka",
+      "dat": "odcinkowi",
+      "acc": "odcinek",
+      "ins": "odcinkiem",
+      "loc": "odcinku",
+      "voc": "odcinku"
+    },
+    "plural": {
+      "nom": "odcinki",
+      "gen": "odcinków",
+      "dat": "odcinkom",
+      "acc": "odcinki",
+      "ins": "odcinkami",
+      "loc": "odcinkach",
+      "voc": "odcinki"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zapalenie",
+      "gen": "zapalenia",
+      "dat": "zapaleniu",
+      "acc": "zapalenie",
+      "ins": "zapaleniem",
+      "loc": "zapaleniu",
+      "voc": "zapalenie"
+    },
+    "plural": {
+      "nom": "zapalenia",
+      "gen": "zapaleń",
+      "dat": "zapaleniom",
+      "acc": "zapalenia",
+      "ins": "zapaleniami",
+      "loc": "zapaleniach",
+      "voc": "zapalenia"
+    }
+  }
+}

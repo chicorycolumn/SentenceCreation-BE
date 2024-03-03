@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "powietrznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "powietrzny",
+          "gen": "powietrznego",
+          "dat": "powietrznemu",
+          "acc": "powietrznego",
+          "ins": "powietrznym",
+          "loc": "powietrznym"
+        },
+        "m3": {
+          "nom": "powietrzny",
+          "gen": "powietrznego",
+          "dat": "powietrznemu",
+          "acc": "powietrzny",
+          "ins": "powietrznym",
+          "loc": "powietrznym"
+        },
+        "f": {
+          "nom": "powietrzna",
+          "gen": "powietrznej",
+          "dat": "powietrznej",
+          "acc": "powietrzną",
+          "ins": "powietrzną",
+          "loc": "powietrznej"
+        },
+        "n": {
+          "nom": "powietrzne",
+          "gen": "powietrznego",
+          "dat": "powietrznemu",
+          "acc": "powietrzne",
+          "ins": "powietrznym",
+          "loc": "powietrznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "powietrzni",
+          "gen": "powietrznych",
+          "dat": "powietrznym",
+          "acc": "powietrznych",
+          "ins": "powietrznymi",
+          "loc": "powietrznych"
+        },
+        "nonvirile": {
+          "nom": "powietrzne",
+          "gen": "powietrznych",
+          "dat": "powietrznym",
+          "acc": "powietrzne",
+          "ins": "powietrznymi",
+          "loc": "powietrznych"
+        }
+      }
+    }
+  }
+}

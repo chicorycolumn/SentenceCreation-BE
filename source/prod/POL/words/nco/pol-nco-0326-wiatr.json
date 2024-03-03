@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wiatr",
+      "gen": "wiatru",
+      "dat": "wiatrowi",
+      "acc": "wiatr",
+      "ins": "wiatrem",
+      "loc": "wietrze",
+      "voc": "wietrze"
+    },
+    "plural": {
+      "nom": "wiatry",
+      "gen": "wiatrów",
+      "dat": "wiatrom",
+      "acc": "wiatry",
+      "ins": "wiatrami",
+      "loc": "wiatrach",
+      "voc": "wiatry"
+    }
+  }
+}

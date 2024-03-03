@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "świnia",
+      "gen": "świni",
+      "dat": "świni",
+      "acc": "świnię",
+      "ins": "świnią",
+      "loc": "świni",
+      "voc": "świnio"
+    },
+    "plural": {
+      "nom": "świnie",
+      "gen": "świń",
+      "dat": "świniom",
+      "acc": "świnie",
+      "ins": "świniami",
+      "loc": "świniach",
+      "voc": "świnie"
+    }
+  }
+}

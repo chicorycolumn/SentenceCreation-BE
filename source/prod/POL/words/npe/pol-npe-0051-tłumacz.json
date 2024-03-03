@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "tłumacz",
+      "gen": "tłumacza",
+      "dat": "tłumaczowi",
+      "acc": "tłumacza",
+      "ins": "tłumaczem",
+      "loc": "tłumaczu",
+      "voc": "tłumaczu"
+    },
+    "plural": {
+      "nom": "tłumacze",
+      "gen": "tłumaczy",
+      "dat": "tłumaczom",
+      "acc": "tłumaczy",
+      "ins": "tłumaczami",
+      "loc": "tłumaczach",
+      "voc": "tłumacze"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "atakować",
+    "verbalNoun": "atakowanie",
+    "activeAdjectival": "atakujący",
+    "passiveAdjectival": "atakowany",
+    "contemporaryAdverbial": "atakując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "atakuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "atakowano"
+          },
+          "plural": {
+            "allPluralGenders": "atakowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "atakowałem",
+            "f": "atakowałam"
+          },
+          "plural": {
+            "virile": "atakowaliśmy",
+            "nonvirile": "atakowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "atakowałeś",
+            "f": "atakowałaś"
+          },
+          "plural": {
+            "virile": "atakowaliście",
+            "nonvirile": "atakowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "atakował",
+            "f": "atakowała",
+            "n": "atakowało"
+          },
+          "plural": {
+            "virile": "atakowali",
+            "nonvirile": "atakowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "atakuje się"
+          },
+          "plural": {
+            "allPluralGenders": "atakuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "atakuję"
+          },
+          "plural": {
+            "allPluralGenders": "atakujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "atakujesz"
+          },
+          "plural": {
+            "allPluralGenders": "atakujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "atakuje"
+          },
+          "plural": {
+            "allPluralGenders": "atakują"
+          }
+        }
+      }
+    }
+  }
+}

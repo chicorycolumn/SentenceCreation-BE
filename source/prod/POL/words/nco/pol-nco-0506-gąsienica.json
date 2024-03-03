@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gąsienica",
+      "gen": "gąsienicy",
+      "dat": "gąsienicy",
+      "acc": "gąsienicę",
+      "ins": "gąsienicą",
+      "loc": "gąsienicy",
+      "voc": "gąsienico"
+    },
+    "plural": {
+      "nom": "gąsienice",
+      "gen": "gąsienic",
+      "dat": "gąsienicom",
+      "acc": "gąsienice",
+      "ins": "gąsienicami",
+      "loc": "gąsienicach",
+      "voc": "gąsienice"
+    }
+  }
+}

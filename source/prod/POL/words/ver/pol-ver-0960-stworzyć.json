@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "stworzyć",
+    "verbalNoun": "stworzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "stworzony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "stworzywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "stworzy się"
+          },
+          "plural": {
+            "allPluralGenders": "stworzy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "stworzę"
+          },
+          "plural": {
+            "allPluralGenders": "stworzymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "stworzysz"
+          },
+          "plural": {
+            "allPluralGenders": "stworzycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "stworzy"
+          },
+          "plural": {
+            "allPluralGenders": "stworzą"
+          }
+        }
+      },
+      "imperative": "stwórz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "stworzono"
+          },
+          "plural": {
+            "allPluralGenders": "stworzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "stworzyłem",
+            "f": "stworzyłam"
+          },
+          "plural": {
+            "virile": "stworzyliśmy",
+            "nonvirile": "stworzyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "stworzyłeś",
+            "f": "stworzyłaś"
+          },
+          "plural": {
+            "virile": "stworzyliście",
+            "nonvirile": "stworzyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "stworzył",
+            "f": "stworzyła",
+            "n": "stworzyło"
+          },
+          "plural": {
+            "virile": "stworzyli",
+            "nonvirile": "stworzyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

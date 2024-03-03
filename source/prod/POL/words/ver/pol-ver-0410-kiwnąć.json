@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "kiwnąć",
+    "verbalNoun": "kiwnięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "kiwnięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "kiwnąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kiwnie się"
+          },
+          "plural": {
+            "allPluralGenders": "kiwnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "kiwnę"
+          },
+          "plural": {
+            "allPluralGenders": "kiwniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "kiwniesz"
+          },
+          "plural": {
+            "allPluralGenders": "kiwniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "kiwnie"
+          },
+          "plural": {
+            "allPluralGenders": "kiwną"
+          }
+        }
+      },
+      "imperative": "kiwnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kiwnięto"
+          },
+          "plural": {
+            "allPluralGenders": "kiwnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "kiwnąłem",
+            "f": "kiwnęłam"
+          },
+          "plural": {
+            "virile": "kiwnęliśmy",
+            "nonvirile": "kiwnęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "kiwnąłeś",
+            "f": "kiwnęłaś"
+          },
+          "plural": {
+            "virile": "kiwnęliście",
+            "nonvirile": "kiwnęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "kiwnął",
+            "f": "kiwnęła",
+            "n": "kiwnęło"
+          },
+          "plural": {
+            "virile": "kiwnęli",
+            "nonvirile": "kiwnęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

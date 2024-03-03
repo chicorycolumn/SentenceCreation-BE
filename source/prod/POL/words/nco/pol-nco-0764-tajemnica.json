@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "tajemnica",
+      "gen": "tajemnicy",
+      "dat": "tajemnicy",
+      "acc": "tajemnicę",
+      "ins": "tajemnicą",
+      "loc": "tajemnicy",
+      "voc": "tajemnico"
+    },
+    "plural": {
+      "nom": "tajemnice",
+      "gen": "tajemnic",
+      "dat": "tajemnicom",
+      "acc": "tajemnice",
+      "ins": "tajemnicami",
+      "loc": "tajemnicach",
+      "voc": "tajemnice"
+    }
+  }
+}

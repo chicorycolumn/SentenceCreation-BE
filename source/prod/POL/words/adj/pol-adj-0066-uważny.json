@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "uważnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "uważny",
+          "gen": "uważnego",
+          "dat": "uważnemu",
+          "acc": "uważnego",
+          "ins": "uważnym",
+          "loc": "uważnym"
+        },
+        "m3": {
+          "nom": "uważny",
+          "gen": "uważnego",
+          "dat": "uważnemu",
+          "acc": "uważny",
+          "ins": "uważnym",
+          "loc": "uważnym"
+        },
+        "f": {
+          "nom": "uważna",
+          "gen": "uważnej",
+          "dat": "uważnej",
+          "acc": "uważną",
+          "ins": "uważną",
+          "loc": "uważnej"
+        },
+        "n": {
+          "nom": "uważne",
+          "gen": "uważnego",
+          "dat": "uważnemu",
+          "acc": "uważne",
+          "ins": "uważnym",
+          "loc": "uważnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "uważni",
+          "gen": "uważnych",
+          "dat": "uważnym",
+          "acc": "uważnych",
+          "ins": "uważnymi",
+          "loc": "uważnych"
+        },
+        "nonvirile": {
+          "nom": "uważne",
+          "gen": "uważnych",
+          "dat": "uważnym",
+          "acc": "uważne",
+          "ins": "uważnymi",
+          "loc": "uważnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej uważny",
+          "gen": "bardziej uważnego",
+          "dat": "bardziej uważnemu",
+          "acc": "bardziej uważnego",
+          "ins": "bardziej uważnym",
+          "loc": "bardziej uważnym"
+        },
+        "m3": {
+          "nom": "bardziej uważny",
+          "gen": "bardziej uważnego",
+          "dat": "bardziej uważnemu",
+          "acc": "bardziej uważny",
+          "ins": "bardziej uważnym",
+          "loc": "bardziej uważnym"
+        },
+        "f": {
+          "nom": "bardziej uważna",
+          "gen": "bardziej uważnej",
+          "dat": "bardziej uważnej",
+          "acc": "bardziej uważną",
+          "ins": "bardziej uważną",
+          "loc": "bardziej uważnej"
+        },
+        "n": {
+          "nom": "bardziej uważne",
+          "gen": "bardziej uważnego",
+          "dat": "bardziej uważnemu",
+          "acc": "bardziej uważne",
+          "ins": "bardziej uważnym",
+          "loc": "bardziej uważnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej uważni",
+          "gen": "bardziej uważnych",
+          "dat": "bardziej uważnym",
+          "acc": "bardziej uważnych",
+          "ins": "bardziej uważnymi",
+          "loc": "bardziej uważnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej uważne",
+          "gen": "bardziej uważnych",
+          "dat": "bardziej uważnym",
+          "acc": "bardziej uważne",
+          "ins": "bardziej uważnymi",
+          "loc": "bardziej uważnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej uważny",
+          "gen": "najbardziej uważnego",
+          "dat": "najbardziej uważnemu",
+          "acc": "najbardziej uważnego",
+          "ins": "najbardziej uważnym",
+          "loc": "najbardziej uważnym"
+        },
+        "m3": {
+          "nom": "najbardziej uważny",
+          "gen": "najbardziej uważnego",
+          "dat": "najbardziej uważnemu",
+          "acc": "najbardziej uważny",
+          "ins": "najbardziej uważnym",
+          "loc": "najbardziej uważnym"
+        },
+        "f": {
+          "nom": "najbardziej uważna",
+          "gen": "najbardziej uważnej",
+          "dat": "najbardziej uważnej",
+          "acc": "najbardziej uważną",
+          "ins": "najbardziej uważną",
+          "loc": "najbardziej uważnej"
+        },
+        "n": {
+          "nom": "najbardziej uważne",
+          "gen": "najbardziej uważnego",
+          "dat": "najbardziej uważnemu",
+          "acc": "najbardziej uważne",
+          "ins": "najbardziej uważnym",
+          "loc": "najbardziej uważnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej uważni",
+          "gen": "najbardziej uważnych",
+          "dat": "najbardziej uważnym",
+          "acc": "najbardziej uważnych",
+          "ins": "najbardziej uważnymi",
+          "loc": "najbardziej uważnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej uważne",
+          "gen": "najbardziej uważnych",
+          "dat": "najbardziej uważnym",
+          "acc": "najbardziej uważne",
+          "ins": "najbardziej uważnymi",
+          "loc": "najbardziej uważnych"
+        }
+      }
+    }
+  }
+}

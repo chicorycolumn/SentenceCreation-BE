@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oznajmić",
+    "verbalNoun": "oznajmienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "oznajmiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "oznajmiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oznajmi się"
+          },
+          "plural": {
+            "allPluralGenders": "oznajmi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oznajmię"
+          },
+          "plural": {
+            "allPluralGenders": "oznajmimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oznajmisz"
+          },
+          "plural": {
+            "allPluralGenders": "oznajmicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "oznajmi"
+          },
+          "plural": {
+            "allPluralGenders": "oznajmią"
+          }
+        }
+      },
+      "imperative": "oznajmij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oznajmiono"
+          },
+          "plural": {
+            "allPluralGenders": "oznajmiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oznajmiłem",
+            "f": "oznajmiłam"
+          },
+          "plural": {
+            "virile": "oznajmiliśmy",
+            "nonvirile": "oznajmiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oznajmiłeś",
+            "f": "oznajmiłaś"
+          },
+          "plural": {
+            "virile": "oznajmiliście",
+            "nonvirile": "oznajmiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oznajmił",
+            "f": "oznajmiła",
+            "n": "oznajmiło"
+          },
+          "plural": {
+            "virile": "oznajmili",
+            "nonvirile": "oznajmiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

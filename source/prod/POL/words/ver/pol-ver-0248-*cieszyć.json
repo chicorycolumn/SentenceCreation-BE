@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "cieszyć",
+    "verbalNoun": "cieszenie",
+    "activeAdjectival": "cieszący",
+    "passiveAdjectival": "cieszony",
+    "contemporaryAdverbial": "ciesząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "ciesz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "cieszono"
+          },
+          "plural": {
+            "allPluralGenders": "cieszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "cieszyłem",
+            "f": "cieszyłam"
+          },
+          "plural": {
+            "virile": "cieszyliśmy",
+            "nonvirile": "cieszyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "cieszyłeś",
+            "f": "cieszyłaś"
+          },
+          "plural": {
+            "virile": "cieszyliście",
+            "nonvirile": "cieszyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "cieszył",
+            "f": "cieszyła",
+            "n": "cieszyło"
+          },
+          "plural": {
+            "virile": "cieszyli",
+            "nonvirile": "cieszyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "cieszy się"
+          },
+          "plural": {
+            "allPluralGenders": "cieszy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "cieszę"
+          },
+          "plural": {
+            "allPluralGenders": "cieszymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "cieszysz"
+          },
+          "plural": {
+            "allPluralGenders": "cieszycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "cieszy"
+          },
+          "plural": {
+            "allPluralGenders": "cieszą"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oprzeć",
+    "verbalNoun": "oparcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "oparty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "oparłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oprze się"
+          },
+          "plural": {
+            "allPluralGenders": "oprze się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oprę"
+          },
+          "plural": {
+            "allPluralGenders": "oprzemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oprzesz"
+          },
+          "plural": {
+            "allPluralGenders": "oprzecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "oprze"
+          },
+          "plural": {
+            "allPluralGenders": "oprą"
+          }
+        }
+      },
+      "imperative": "oprzyj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oparto"
+          },
+          "plural": {
+            "allPluralGenders": "oparto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oparłem",
+            "f": "oparłam"
+          },
+          "plural": {
+            "virile": "oparliśmy",
+            "nonvirile": "oparłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oparłeś",
+            "f": "oparłaś"
+          },
+          "plural": {
+            "virile": "oparliście",
+            "nonvirile": "oparłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oparł",
+            "f": "oparła",
+            "n": "oparło"
+          },
+          "plural": {
+            "virile": "oparli",
+            "nonvirile": "oparły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

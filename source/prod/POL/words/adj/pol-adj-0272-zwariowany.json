@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "zwariowanie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zwariowany",
+          "gen": "zwariowanego",
+          "dat": "zwariowanemu",
+          "acc": "zwariowanego",
+          "ins": "zwariowanym",
+          "loc": "zwariowanym"
+        },
+        "m3": {
+          "nom": "zwariowany",
+          "gen": "zwariowanego",
+          "dat": "zwariowanemu",
+          "acc": "zwariowany",
+          "ins": "zwariowanym",
+          "loc": "zwariowanym"
+        },
+        "f": {
+          "nom": "zwariowana",
+          "gen": "zwariowanej",
+          "dat": "zwariowanej",
+          "acc": "zwariowaną",
+          "ins": "zwariowaną",
+          "loc": "zwariowanej"
+        },
+        "n": {
+          "nom": "zwariowane",
+          "gen": "zwariowanego",
+          "dat": "zwariowanemu",
+          "acc": "zwariowane",
+          "ins": "zwariowanym",
+          "loc": "zwariowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zwariowani",
+          "gen": "zwariowanych",
+          "dat": "zwariowanym",
+          "acc": "zwariowanych",
+          "ins": "zwariowanymi",
+          "loc": "zwariowanych"
+        },
+        "nonvirile": {
+          "nom": "zwariowane",
+          "gen": "zwariowanych",
+          "dat": "zwariowanym",
+          "acc": "zwariowane",
+          "ins": "zwariowanymi",
+          "loc": "zwariowanych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej zwariowany",
+          "gen": "bardziej zwariowanego",
+          "dat": "bardziej zwariowanemu",
+          "acc": "bardziej zwariowanego",
+          "ins": "bardziej zwariowanym",
+          "loc": "bardziej zwariowanym"
+        },
+        "m3": {
+          "nom": "bardziej zwariowany",
+          "gen": "bardziej zwariowanego",
+          "dat": "bardziej zwariowanemu",
+          "acc": "bardziej zwariowany",
+          "ins": "bardziej zwariowanym",
+          "loc": "bardziej zwariowanym"
+        },
+        "f": {
+          "nom": "bardziej zwariowana",
+          "gen": "bardziej zwariowanej",
+          "dat": "bardziej zwariowanej",
+          "acc": "bardziej zwariowaną",
+          "ins": "bardziej zwariowaną",
+          "loc": "bardziej zwariowanej"
+        },
+        "n": {
+          "nom": "bardziej zwariowane",
+          "gen": "bardziej zwariowanego",
+          "dat": "bardziej zwariowanemu",
+          "acc": "bardziej zwariowane",
+          "ins": "bardziej zwariowanym",
+          "loc": "bardziej zwariowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej zwariowani",
+          "gen": "bardziej zwariowanych",
+          "dat": "bardziej zwariowanym",
+          "acc": "bardziej zwariowanych",
+          "ins": "bardziej zwariowanymi",
+          "loc": "bardziej zwariowanych"
+        },
+        "nonvirile": {
+          "nom": "bardziej zwariowane",
+          "gen": "bardziej zwariowanych",
+          "dat": "bardziej zwariowanym",
+          "acc": "bardziej zwariowane",
+          "ins": "bardziej zwariowanymi",
+          "loc": "bardziej zwariowanych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej zwariowany",
+          "gen": "najbardziej zwariowanego",
+          "dat": "najbardziej zwariowanemu",
+          "acc": "najbardziej zwariowanego",
+          "ins": "najbardziej zwariowanym",
+          "loc": "najbardziej zwariowanym"
+        },
+        "m3": {
+          "nom": "najbardziej zwariowany",
+          "gen": "najbardziej zwariowanego",
+          "dat": "najbardziej zwariowanemu",
+          "acc": "najbardziej zwariowany",
+          "ins": "najbardziej zwariowanym",
+          "loc": "najbardziej zwariowanym"
+        },
+        "f": {
+          "nom": "najbardziej zwariowana",
+          "gen": "najbardziej zwariowanej",
+          "dat": "najbardziej zwariowanej",
+          "acc": "najbardziej zwariowaną",
+          "ins": "najbardziej zwariowaną",
+          "loc": "najbardziej zwariowanej"
+        },
+        "n": {
+          "nom": "najbardziej zwariowane",
+          "gen": "najbardziej zwariowanego",
+          "dat": "najbardziej zwariowanemu",
+          "acc": "najbardziej zwariowane",
+          "ins": "najbardziej zwariowanym",
+          "loc": "najbardziej zwariowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej zwariowani",
+          "gen": "najbardziej zwariowanych",
+          "dat": "najbardziej zwariowanym",
+          "acc": "najbardziej zwariowanych",
+          "ins": "najbardziej zwariowanymi",
+          "loc": "najbardziej zwariowanych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej zwariowane",
+          "gen": "najbardziej zwariowanych",
+          "dat": "najbardziej zwariowanym",
+          "acc": "najbardziej zwariowane",
+          "ins": "najbardziej zwariowanymi",
+          "loc": "najbardziej zwariowanych"
+        }
+      }
+    }
+  }
+}

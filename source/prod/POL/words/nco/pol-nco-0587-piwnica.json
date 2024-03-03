@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "piwnica",
+      "gen": "piwnicy",
+      "dat": "piwnicy",
+      "acc": "piwnicę",
+      "ins": "piwnicą",
+      "loc": "piwnicy",
+      "voc": "piwnico"
+    },
+    "plural": {
+      "nom": "piwnice",
+      "gen": "piwnic",
+      "dat": "piwnicom",
+      "acc": "piwnice",
+      "ins": "piwnicami",
+      "loc": "piwnicach",
+      "voc": "piwnice"
+    }
+  }
+}

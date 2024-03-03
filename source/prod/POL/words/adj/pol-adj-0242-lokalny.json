@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "lokalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "lokalny",
+          "gen": "lokalnego",
+          "dat": "lokalnemu",
+          "acc": "lokalnego",
+          "ins": "lokalnym",
+          "loc": "lokalnym"
+        },
+        "m3": {
+          "nom": "lokalny",
+          "gen": "lokalnego",
+          "dat": "lokalnemu",
+          "acc": "lokalny",
+          "ins": "lokalnym",
+          "loc": "lokalnym"
+        },
+        "f": {
+          "nom": "lokalna",
+          "gen": "lokalnej",
+          "dat": "lokalnej",
+          "acc": "lokalną",
+          "ins": "lokalną",
+          "loc": "lokalnej"
+        },
+        "n": {
+          "nom": "lokalne",
+          "gen": "lokalnego",
+          "dat": "lokalnemu",
+          "acc": "lokalne",
+          "ins": "lokalnym",
+          "loc": "lokalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "lokalni",
+          "gen": "lokalnych",
+          "dat": "lokalnym",
+          "acc": "lokalnych",
+          "ins": "lokalnymi",
+          "loc": "lokalnych"
+        },
+        "nonvirile": {
+          "nom": "lokalne",
+          "gen": "lokalnych",
+          "dat": "lokalnym",
+          "acc": "lokalne",
+          "ins": "lokalnymi",
+          "loc": "lokalnych"
+        }
+      }
+    }
+  }
+}

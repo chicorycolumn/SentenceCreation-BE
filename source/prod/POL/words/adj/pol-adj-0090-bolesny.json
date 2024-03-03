@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "boleśnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bolesny",
+          "gen": "bolesnego",
+          "dat": "bolesnemu",
+          "acc": "bolesnego",
+          "ins": "bolesnym",
+          "loc": "bolesnym"
+        },
+        "m3": {
+          "nom": "bolesny",
+          "gen": "bolesnego",
+          "dat": "bolesnemu",
+          "acc": "bolesny",
+          "ins": "bolesnym",
+          "loc": "bolesnym"
+        },
+        "f": {
+          "nom": "bolesna",
+          "gen": "bolesnej",
+          "dat": "bolesnej",
+          "acc": "bolesną",
+          "ins": "bolesną",
+          "loc": "bolesnej"
+        },
+        "n": {
+          "nom": "bolesne",
+          "gen": "bolesnego",
+          "dat": "bolesnemu",
+          "acc": "bolesne",
+          "ins": "bolesnym",
+          "loc": "bolesnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "boleśni",
+          "gen": "bolesnych",
+          "dat": "bolesnym",
+          "acc": "bolesnych",
+          "ins": "bolesnymi",
+          "loc": "bolesnych"
+        },
+        "nonvirile": {
+          "nom": "bolesne",
+          "gen": "bolesnych",
+          "dat": "bolesnym",
+          "acc": "bolesne",
+          "ins": "bolesnymi",
+          "loc": "bolesnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej bolesny",
+          "gen": "bardziej bolesnego",
+          "dat": "bardziej bolesnemu",
+          "acc": "bardziej bolesnego",
+          "ins": "bardziej bolesnym",
+          "loc": "bardziej bolesnym"
+        },
+        "m3": {
+          "nom": "bardziej bolesny",
+          "gen": "bardziej bolesnego",
+          "dat": "bardziej bolesnemu",
+          "acc": "bardziej bolesny",
+          "ins": "bardziej bolesnym",
+          "loc": "bardziej bolesnym"
+        },
+        "f": {
+          "nom": "bardziej bolesna",
+          "gen": "bardziej bolesnej",
+          "dat": "bardziej bolesnej",
+          "acc": "bardziej bolesną",
+          "ins": "bardziej bolesną",
+          "loc": "bardziej bolesnej"
+        },
+        "n": {
+          "nom": "bardziej bolesne",
+          "gen": "bardziej bolesnego",
+          "dat": "bardziej bolesnemu",
+          "acc": "bardziej bolesne",
+          "ins": "bardziej bolesnym",
+          "loc": "bardziej bolesnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej boleśni",
+          "gen": "bardziej bolesnych",
+          "dat": "bardziej bolesnym",
+          "acc": "bardziej bolesnych",
+          "ins": "bardziej bolesnymi",
+          "loc": "bardziej bolesnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej bolesne",
+          "gen": "bardziej bolesnych",
+          "dat": "bardziej bolesnym",
+          "acc": "bardziej bolesne",
+          "ins": "bardziej bolesnymi",
+          "loc": "bardziej bolesnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej bolesny",
+          "gen": "najbardziej bolesnego",
+          "dat": "najbardziej bolesnemu",
+          "acc": "najbardziej bolesnego",
+          "ins": "najbardziej bolesnym",
+          "loc": "najbardziej bolesnym"
+        },
+        "m3": {
+          "nom": "najbardziej bolesny",
+          "gen": "najbardziej bolesnego",
+          "dat": "najbardziej bolesnemu",
+          "acc": "najbardziej bolesny",
+          "ins": "najbardziej bolesnym",
+          "loc": "najbardziej bolesnym"
+        },
+        "f": {
+          "nom": "najbardziej bolesna",
+          "gen": "najbardziej bolesnej",
+          "dat": "najbardziej bolesnej",
+          "acc": "najbardziej bolesną",
+          "ins": "najbardziej bolesną",
+          "loc": "najbardziej bolesnej"
+        },
+        "n": {
+          "nom": "najbardziej bolesne",
+          "gen": "najbardziej bolesnego",
+          "dat": "najbardziej bolesnemu",
+          "acc": "najbardziej bolesne",
+          "ins": "najbardziej bolesnym",
+          "loc": "najbardziej bolesnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej boleśni",
+          "gen": "najbardziej bolesnych",
+          "dat": "najbardziej bolesnym",
+          "acc": "najbardziej bolesnych",
+          "ins": "najbardziej bolesnymi",
+          "loc": "najbardziej bolesnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej bolesne",
+          "gen": "najbardziej bolesnych",
+          "dat": "najbardziej bolesnym",
+          "acc": "najbardziej bolesne",
+          "ins": "najbardziej bolesnymi",
+          "loc": "najbardziej bolesnych"
+        }
+      }
+    }
+  }
+}

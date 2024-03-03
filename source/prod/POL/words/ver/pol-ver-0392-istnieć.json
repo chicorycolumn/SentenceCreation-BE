@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "istnieć",
+    "verbalNoun": "istnienie",
+    "activeAdjectival": "istniejący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "istniejąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "istniej",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "istniano"
+          },
+          "plural": {
+            "allPluralGenders": "istniano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "istniałem",
+            "f": "istniałam"
+          },
+          "plural": {
+            "virile": "istnieliśmy",
+            "nonvirile": "istniałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "istniałeś",
+            "f": "istniałaś"
+          },
+          "plural": {
+            "virile": "istnieliście",
+            "nonvirile": "istniałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "istniał",
+            "f": "istniała",
+            "n": "istniało"
+          },
+          "plural": {
+            "virile": "istnieli",
+            "nonvirile": "istniały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "istnieje się"
+          },
+          "plural": {
+            "allPluralGenders": "istnieje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "istnieję"
+          },
+          "plural": {
+            "allPluralGenders": "istniejemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "istniejesz"
+          },
+          "plural": {
+            "allPluralGenders": "istniejecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "istnieje"
+          },
+          "plural": {
+            "allPluralGenders": "istnieją"
+          }
+        }
+      }
+    }
+  }
+}

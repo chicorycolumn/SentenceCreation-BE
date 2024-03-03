@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wrak",
+      "gen": [
+        "wraka",
+        "wraku"
+      ],
+      "dat": "wrakowi",
+      "acc": "wrak",
+      "ins": "wrakiem",
+      "loc": "wraku",
+      "voc": "wraku"
+    },
+    "plural": {
+      "nom": "wraki",
+      "gen": "wraków",
+      "dat": "wrakom",
+      "acc": "wraki",
+      "ins": "wrakami",
+      "loc": "wrakach",
+      "voc": "wraki"
+    }
+  }
+}

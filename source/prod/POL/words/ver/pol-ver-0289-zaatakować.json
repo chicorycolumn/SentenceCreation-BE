@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zaatakować",
+    "verbalNoun": "zaatakowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zaatakowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zaatakowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaatakuje się"
+          },
+          "plural": {
+            "allPluralGenders": "zaatakuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zaatakuję"
+          },
+          "plural": {
+            "allPluralGenders": "zaatakujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zaatakujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zaatakujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zaatakuje"
+          },
+          "plural": {
+            "allPluralGenders": "zaatakują"
+          }
+        }
+      },
+      "imperative": "zaatakuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaatakowano"
+          },
+          "plural": {
+            "allPluralGenders": "zaatakowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zaatakowałem",
+            "f": "zaatakowałam"
+          },
+          "plural": {
+            "virile": "zaatakowaliśmy",
+            "nonvirile": "zaatakowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zaatakowałeś",
+            "f": "zaatakowałaś"
+          },
+          "plural": {
+            "virile": "zaatakowaliście",
+            "nonvirile": "zaatakowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zaatakował",
+            "f": "zaatakowała",
+            "n": "zaatakowało"
+          },
+          "plural": {
+            "virile": "zaatakowali",
+            "nonvirile": "zaatakowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

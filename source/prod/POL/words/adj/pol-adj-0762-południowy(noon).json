@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "południowy",
+          "gen": "południowego",
+          "dat": "południowemu",
+          "acc": "południowego",
+          "ins": "południowym",
+          "loc": "południowym"
+        },
+        "m3": {
+          "nom": "południowy",
+          "gen": "południowego",
+          "dat": "południowemu",
+          "acc": "południowy",
+          "ins": "południowym",
+          "loc": "południowym"
+        },
+        "f": {
+          "nom": "południowa",
+          "gen": "południowej",
+          "dat": "południowej",
+          "acc": "południową",
+          "ins": "południową",
+          "loc": "południowej"
+        },
+        "n": {
+          "nom": "południowe",
+          "gen": "południowego",
+          "dat": "południowemu",
+          "acc": "południowe",
+          "ins": "południowym",
+          "loc": "południowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "południowi",
+          "gen": "południowych",
+          "dat": "południowym",
+          "acc": "południowych",
+          "ins": "południowymi",
+          "loc": "południowych"
+        },
+        "nonvirile": {
+          "nom": "południowe",
+          "gen": "południowych",
+          "dat": "południowym",
+          "acc": "południowe",
+          "ins": "południowymi",
+          "loc": "południowych"
+        }
+      }
+    }
+  }
+}

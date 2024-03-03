@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przestraszyć",
+    "verbalNoun": "przestraszenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przestraszony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przestraszywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przestraszy się"
+          },
+          "plural": {
+            "allPluralGenders": "przestraszy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przestraszę"
+          },
+          "plural": {
+            "allPluralGenders": "przestraszymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przestraszysz"
+          },
+          "plural": {
+            "allPluralGenders": "przestraszycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przestraszy"
+          },
+          "plural": {
+            "allPluralGenders": "przestraszą"
+          }
+        }
+      },
+      "imperative": "przestrasz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przestraszono"
+          },
+          "plural": {
+            "allPluralGenders": "przestraszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przestraszyłem",
+            "f": "przestraszyłam"
+          },
+          "plural": {
+            "virile": "przestraszyliśmy",
+            "nonvirile": "przestraszyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przestraszyłeś",
+            "f": "przestraszyłaś"
+          },
+          "plural": {
+            "virile": "przestraszyliście",
+            "nonvirile": "przestraszyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przestraszył",
+            "f": "przestraszyła",
+            "n": "przestraszyło"
+          },
+          "plural": {
+            "virile": "przestraszyli",
+            "nonvirile": "przestraszyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

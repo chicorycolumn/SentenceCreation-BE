@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cal",
+      "gen": "cala",
+      "dat": "calowi",
+      "acc": "cal",
+      "ins": "calem",
+      "loc": "calu",
+      "voc": "calu"
+    },
+    "plural": {
+      "nom": "cale",
+      "gen": "cali",
+      "dat": "calom",
+      "acc": "cale",
+      "ins": "calami",
+      "loc": "calach",
+      "voc": "cale"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sekunda",
+      "gen": "sekundy",
+      "dat": "sekundzie",
+      "acc": "sekundę",
+      "ins": "sekundą",
+      "loc": "sekundzie",
+      "voc": "sekundo"
+    },
+    "plural": {
+      "nom": "sekundy",
+      "gen": "sekund",
+      "dat": "sekundom",
+      "acc": "sekundy",
+      "ins": "sekundami",
+      "loc": "sekundach",
+      "voc": "sekundy"
+    }
+  }
+}

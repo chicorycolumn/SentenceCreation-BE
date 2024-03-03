@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zagwarantować",
+    "verbalNoun": "zagwarantowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zagwarantowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zagwarantowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zagwarantuje się"
+          },
+          "plural": {
+            "allPluralGenders": "zagwarantuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zagwarantuję"
+          },
+          "plural": {
+            "allPluralGenders": "zagwarantujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zagwarantujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zagwarantujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zagwarantuje"
+          },
+          "plural": {
+            "allPluralGenders": "zagwarantują"
+          }
+        }
+      },
+      "imperative": "zagwarantuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zagwarantowano"
+          },
+          "plural": {
+            "allPluralGenders": "zagwarantowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zagwarantowałem",
+            "f": "zagwarantowałam"
+          },
+          "plural": {
+            "virile": "zagwarantowaliśmy",
+            "nonvirile": "zagwarantowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zagwarantowałeś",
+            "f": "zagwarantowałaś"
+          },
+          "plural": {
+            "virile": "zagwarantowaliście",
+            "nonvirile": "zagwarantowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zagwarantował",
+            "f": "zagwarantowała",
+            "n": "zagwarantowało"
+          },
+          "plural": {
+            "virile": "zagwarantowali",
+            "nonvirile": "zagwarantowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

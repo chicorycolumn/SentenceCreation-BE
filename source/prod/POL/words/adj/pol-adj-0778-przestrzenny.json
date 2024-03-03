@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "przestrzennie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przestrzenny",
+          "gen": "przestrzennego",
+          "dat": "przestrzennemu",
+          "acc": "przestrzennego",
+          "ins": "przestrzennym",
+          "loc": "przestrzennym"
+        },
+        "m3": {
+          "nom": "przestrzenny",
+          "gen": "przestrzennego",
+          "dat": "przestrzennemu",
+          "acc": "przestrzenny",
+          "ins": "przestrzennym",
+          "loc": "przestrzennym"
+        },
+        "f": {
+          "nom": "przestrzenna",
+          "gen": "przestrzennej",
+          "dat": "przestrzennej",
+          "acc": "przestrzenną",
+          "ins": "przestrzenną",
+          "loc": "przestrzennej"
+        },
+        "n": {
+          "nom": "przestrzenne",
+          "gen": "przestrzennego",
+          "dat": "przestrzennemu",
+          "acc": "przestrzenne",
+          "ins": "przestrzennym",
+          "loc": "przestrzennym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przestrzenni",
+          "gen": "przestrzennych",
+          "dat": "przestrzennym",
+          "acc": "przestrzennych",
+          "ins": "przestrzennymi",
+          "loc": "przestrzennych"
+        },
+        "nonvirile": {
+          "nom": "przestrzenne",
+          "gen": "przestrzennych",
+          "dat": "przestrzennym",
+          "acc": "przestrzenne",
+          "ins": "przestrzennymi",
+          "loc": "przestrzennych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej przestrzenny",
+          "gen": "bardziej przestrzennego",
+          "dat": "bardziej przestrzennemu",
+          "acc": "bardziej przestrzennego",
+          "ins": "bardziej przestrzennym",
+          "loc": "bardziej przestrzennym"
+        },
+        "m3": {
+          "nom": "bardziej przestrzenny",
+          "gen": "bardziej przestrzennego",
+          "dat": "bardziej przestrzennemu",
+          "acc": "bardziej przestrzenny",
+          "ins": "bardziej przestrzennym",
+          "loc": "bardziej przestrzennym"
+        },
+        "f": {
+          "nom": "bardziej przestrzenna",
+          "gen": "bardziej przestrzennej",
+          "dat": "bardziej przestrzennej",
+          "acc": "bardziej przestrzenną",
+          "ins": "bardziej przestrzenną",
+          "loc": "bardziej przestrzennej"
+        },
+        "n": {
+          "nom": "bardziej przestrzenne",
+          "gen": "bardziej przestrzennego",
+          "dat": "bardziej przestrzennemu",
+          "acc": "bardziej przestrzenne",
+          "ins": "bardziej przestrzennym",
+          "loc": "bardziej przestrzennym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej przestrzenni",
+          "gen": "bardziej przestrzennych",
+          "dat": "bardziej przestrzennym",
+          "acc": "bardziej przestrzennych",
+          "ins": "bardziej przestrzennymi",
+          "loc": "bardziej przestrzennych"
+        },
+        "nonvirile": {
+          "nom": "bardziej przestrzenne",
+          "gen": "bardziej przestrzennych",
+          "dat": "bardziej przestrzennym",
+          "acc": "bardziej przestrzenne",
+          "ins": "bardziej przestrzennymi",
+          "loc": "bardziej przestrzennych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej przestrzenny",
+          "gen": "najbardziej przestrzennego",
+          "dat": "najbardziej przestrzennemu",
+          "acc": "najbardziej przestrzennego",
+          "ins": "najbardziej przestrzennym",
+          "loc": "najbardziej przestrzennym"
+        },
+        "m3": {
+          "nom": "najbardziej przestrzenny",
+          "gen": "najbardziej przestrzennego",
+          "dat": "najbardziej przestrzennemu",
+          "acc": "najbardziej przestrzenny",
+          "ins": "najbardziej przestrzennym",
+          "loc": "najbardziej przestrzennym"
+        },
+        "f": {
+          "nom": "najbardziej przestrzenna",
+          "gen": "najbardziej przestrzennej",
+          "dat": "najbardziej przestrzennej",
+          "acc": "najbardziej przestrzenną",
+          "ins": "najbardziej przestrzenną",
+          "loc": "najbardziej przestrzennej"
+        },
+        "n": {
+          "nom": "najbardziej przestrzenne",
+          "gen": "najbardziej przestrzennego",
+          "dat": "najbardziej przestrzennemu",
+          "acc": "najbardziej przestrzenne",
+          "ins": "najbardziej przestrzennym",
+          "loc": "najbardziej przestrzennym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej przestrzenni",
+          "gen": "najbardziej przestrzennych",
+          "dat": "najbardziej przestrzennym",
+          "acc": "najbardziej przestrzennych",
+          "ins": "najbardziej przestrzennymi",
+          "loc": "najbardziej przestrzennych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej przestrzenne",
+          "gen": "najbardziej przestrzennych",
+          "dat": "najbardziej przestrzennym",
+          "acc": "najbardziej przestrzenne",
+          "ins": "najbardziej przestrzennymi",
+          "loc": "najbardziej przestrzennych"
+        }
+      }
+    }
+  }
+}

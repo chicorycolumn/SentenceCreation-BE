@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ręcznik",
+      "gen": "ręcznika",
+      "dat": "ręcznikowi",
+      "acc": "ręcznik",
+      "ins": "ręcznikiem",
+      "loc": "ręczniku",
+      "voc": "ręczniku"
+    },
+    "plural": {
+      "nom": "ręczniki",
+      "gen": "ręczników",
+      "dat": "ręcznikom",
+      "acc": "ręczniki",
+      "ins": "ręcznikami",
+      "loc": "ręcznikach",
+      "voc": "ręczniki"
+    }
+  }
+}

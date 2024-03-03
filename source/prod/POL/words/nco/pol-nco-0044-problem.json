@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "problem",
+      "gen": "problemu",
+      "dat": "problemowi",
+      "acc": "problem",
+      "ins": "problemem",
+      "loc": "problemie",
+      "voc": "problemie"
+    },
+    "plural": {
+      "nom": "problemy",
+      "gen": "problemów",
+      "dat": "problemom",
+      "acc": "problemy",
+      "ins": "problemami",
+      "loc": "problemach",
+      "voc": "problemy"
+    }
+  }
+}

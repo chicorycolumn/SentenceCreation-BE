@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "całkowicie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "całkowity",
+          "gen": "całkowitego",
+          "dat": "całkowitemu",
+          "acc": "całkowitego",
+          "ins": "całkowitym",
+          "loc": "całkowitym"
+        },
+        "m3": {
+          "nom": "całkowity",
+          "gen": "całkowitego",
+          "dat": "całkowitemu",
+          "acc": "całkowity",
+          "ins": "całkowitym",
+          "loc": "całkowitym"
+        },
+        "f": {
+          "nom": "całkowita",
+          "gen": "całkowitej",
+          "dat": "całkowitej",
+          "acc": "całkowitą",
+          "ins": "całkowitą",
+          "loc": "całkowitej"
+        },
+        "n": {
+          "nom": "całkowite",
+          "gen": "całkowitego",
+          "dat": "całkowitemu",
+          "acc": "całkowite",
+          "ins": "całkowitym",
+          "loc": "całkowitym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "całkowici",
+          "gen": "całkowitych",
+          "dat": "całkowitym",
+          "acc": "całkowitych",
+          "ins": "całkowitymi",
+          "loc": "całkowitych"
+        },
+        "nonvirile": {
+          "nom": "całkowite",
+          "gen": "całkowitych",
+          "dat": "całkowitym",
+          "acc": "całkowite",
+          "ins": "całkowitymi",
+          "loc": "całkowitych"
+        }
+      }
+    }
+  }
+}

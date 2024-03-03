@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "jaskinia",
+      "gen": "jaskini",
+      "dat": "jaskini",
+      "acc": "jaskinię",
+      "ins": "jaskinią",
+      "loc": "jaskini",
+      "voc": "jaskinio"
+    },
+    "plural": {
+      "nom": "jaskinie",
+      "gen": "jaskiń",
+      "dat": "jaskiniom",
+      "acc": "jaskinie",
+      "ins": "jaskiniami",
+      "loc": "jaskiniach",
+      "voc": "jaskinie"
+    }
+  }
+}

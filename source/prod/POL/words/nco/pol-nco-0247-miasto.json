@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "miasto",
+      "gen": "miasta",
+      "dat": "miastu",
+      "acc": "miasto",
+      "ins": "miastem",
+      "loc": "mieście",
+      "voc": "miasto"
+    },
+    "plural": {
+      "nom": "miasta",
+      "gen": "miast",
+      "dat": "miastom",
+      "acc": "miasta",
+      "ins": "miastami",
+      "loc": "miastach",
+      "voc": "miasta"
+    }
+  }
+}

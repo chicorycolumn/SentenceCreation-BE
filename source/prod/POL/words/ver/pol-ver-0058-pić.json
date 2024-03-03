@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pić",
+    "verbalNoun": "picie",
+    "activeAdjectival": "pijący",
+    "passiveAdjectival": "pity",
+    "contemporaryAdverbial": "pijąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pito"
+          },
+          "plural": {
+            "allPluralGenders": "pito"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "piłem",
+            "f": "piłam"
+          },
+          "plural": {
+            "virile": "piliśmy",
+            "nonvirile": "piłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "piłeś",
+            "f": "piłaś"
+          },
+          "plural": {
+            "virile": "piliście",
+            "nonvirile": "piłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pił",
+            "f": "piła",
+            "n": "piło"
+          },
+          "plural": {
+            "virile": "pili",
+            "nonvirile": "piły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pije się"
+          },
+          "plural": {
+            "allPluralGenders": "pije się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "piję"
+          },
+          "plural": {
+            "allPluralGenders": "pijemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pijesz"
+          },
+          "plural": {
+            "allPluralGenders": "pijecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pije"
+          },
+          "plural": {
+            "allPluralGenders": "piją"
+          }
+        }
+      }
+    }
+  }
+}

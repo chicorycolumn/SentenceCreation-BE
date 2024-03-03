@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "przednio",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przedni",
+          "gen": "przedniego",
+          "dat": "przedniemu",
+          "acc": "przedniego",
+          "ins": "przednim",
+          "loc": "przednim"
+        },
+        "m3": {
+          "nom": "przedni",
+          "gen": "przedniego",
+          "dat": "przedniemu",
+          "acc": "przedni",
+          "ins": "przednim",
+          "loc": "przednim"
+        },
+        "f": {
+          "nom": "przedna",
+          "gen": "przedniej",
+          "dat": "przedniej",
+          "acc": "przedną",
+          "ins": "przedną",
+          "loc": "przedniej"
+        },
+        "n": {
+          "nom": "przednie",
+          "gen": "przedniego",
+          "dat": "przedniemu",
+          "acc": "przednie",
+          "ins": "przednim",
+          "loc": "przednim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przedni",
+          "gen": "przednich",
+          "dat": "przednim",
+          "acc": "przednich",
+          "ins": "przednimi",
+          "loc": "przednich"
+        },
+        "nonvirile": {
+          "nom": "przednie",
+          "gen": "przednich",
+          "dat": "przednim",
+          "acc": "przednie",
+          "ins": "przednimi",
+          "loc": "przednich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "przedniejszy",
+          "gen": "przedniejszego",
+          "dat": "przedniejszemu",
+          "acc": "przedniejszego",
+          "ins": "przedniejszym",
+          "loc": "przedniejszym"
+        },
+        "m3": {
+          "nom": "przedniejszy",
+          "gen": "przedniejszego",
+          "dat": "przedniejszemu",
+          "acc": "przedniejszy",
+          "ins": "przedniejszym",
+          "loc": "przedniejszym"
+        },
+        "f": {
+          "nom": "przedniejsza",
+          "gen": "przedniejszej",
+          "dat": "przedniejszej",
+          "acc": "przedniejszą",
+          "ins": "przedniejszą",
+          "loc": "przedniejszej"
+        },
+        "n": {
+          "nom": "przedniejsze",
+          "gen": "przedniejszego",
+          "dat": "przedniejszemu",
+          "acc": "przedniejsze",
+          "ins": "przedniejszym",
+          "loc": "przedniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przedniejsi",
+          "gen": "przedniejszych",
+          "dat": "przedniejszym",
+          "acc": "przedniejszych",
+          "ins": "przedniejszymi",
+          "loc": "przedniejszych"
+        },
+        "nonvirile": {
+          "nom": "przedniejsze",
+          "gen": "przedniejszych",
+          "dat": "przedniejszym",
+          "acc": "przedniejsze",
+          "ins": "przedniejszymi",
+          "loc": "przedniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najprzedniejszy",
+          "gen": "najprzedniejszego",
+          "dat": "najprzedniejszemu",
+          "acc": "najprzedniejszego",
+          "ins": "najprzedniejszym",
+          "loc": "najprzedniejszym"
+        },
+        "m3": {
+          "nom": "najprzedniejszy",
+          "gen": "najprzedniejszego",
+          "dat": "najprzedniejszemu",
+          "acc": "najprzedniejszy",
+          "ins": "najprzedniejszym",
+          "loc": "najprzedniejszym"
+        },
+        "f": {
+          "nom": "najprzedniejsza",
+          "gen": "najprzedniejszej",
+          "dat": "najprzedniejszej",
+          "acc": "najprzedniejszą",
+          "ins": "najprzedniejszą",
+          "loc": "najprzedniejszej"
+        },
+        "n": {
+          "nom": "najprzedniejsze",
+          "gen": "najprzedniejszego",
+          "dat": "najprzedniejszemu",
+          "acc": "najprzedniejsze",
+          "ins": "najprzedniejszym",
+          "loc": "najprzedniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najprzedniejsi",
+          "gen": "najprzedniejszych",
+          "dat": "najprzedniejszym",
+          "acc": "najprzedniejszych",
+          "ins": "najprzedniejszymi",
+          "loc": "najprzedniejszych"
+        },
+        "nonvirile": {
+          "nom": "najprzedniejsze",
+          "gen": "najprzedniejszych",
+          "dat": "najprzedniejszym",
+          "acc": "najprzedniejsze",
+          "ins": "najprzedniejszymi",
+          "loc": "najprzedniejszych"
+        }
+      }
+    }
+  }
+}

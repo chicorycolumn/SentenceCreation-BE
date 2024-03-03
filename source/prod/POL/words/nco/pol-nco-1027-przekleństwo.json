@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przekleństwo",
+      "gen": "przekleństwa",
+      "dat": "przekleństwu",
+      "acc": "przekleństwo",
+      "ins": "przekleństwem",
+      "loc": "przekleństwie",
+      "voc": "przekleństwo"
+    },
+    "plural": {
+      "nom": "przekleństwa",
+      "gen": "przekleństw",
+      "dat": "przekleństwom",
+      "acc": "przekleństwa",
+      "ins": "przekleństwami",
+      "loc": "przekleństwach",
+      "voc": "przekleństwa"
+    }
+  }
+}

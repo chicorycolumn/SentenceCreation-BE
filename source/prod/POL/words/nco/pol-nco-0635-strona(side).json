@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "strona",
+      "gen": "strony",
+      "dat": "stronie",
+      "acc": "stronę",
+      "ins": "stroną",
+      "loc": "stronie",
+      "voc": "strono"
+    },
+    "plural": {
+      "nom": "strony",
+      "gen": "stron",
+      "dat": "stronom",
+      "acc": "strony",
+      "ins": "stronami",
+      "loc": "stronach",
+      "voc": "strony"
+    }
+  }
+}

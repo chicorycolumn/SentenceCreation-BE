@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wizyta",
+      "gen": "wizyty",
+      "dat": "wizycie",
+      "acc": "wizytę",
+      "ins": "wizytą",
+      "loc": "wizycie",
+      "voc": "wizyto"
+    },
+    "plural": {
+      "nom": "wizyty",
+      "gen": "wizyt",
+      "dat": "wizytom",
+      "acc": "wizyty",
+      "ins": "wizytami",
+      "loc": "wizytach",
+      "voc": "wizyty"
+    }
+  }
+}

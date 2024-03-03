@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "szczur",
+      "gen": "szczura",
+      "dat": "szczurowi",
+      "acc": "szczura",
+      "ins": "szczurem",
+      "loc": "szczurze",
+      "voc": "szczurze"
+    },
+    "plural": {
+      "nom": "szczury",
+      "gen": "szczurów",
+      "dat": "szczurom",
+      "acc": "szczury",
+      "ins": "szczurami",
+      "loc": "szczurach",
+      "voc": "szczury"
+    }
+  }
+}

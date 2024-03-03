@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "grosz",
+      "gen": "grosza",
+      "dat": "groszowi",
+      "acc": "grosza",
+      "ins": "groszem",
+      "loc": "groszu",
+      "voc": "groszu"
+    },
+    "plural": {
+      "nom": "grosze",
+      "gen": "groszy",
+      "dat": "groszom",
+      "acc": "grosze",
+      "ins": "groszami",
+      "loc": "groszach",
+      "voc": "grosze"
+    }
+  }
+}

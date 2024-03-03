@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zbiór",
+      "gen": "zbioru",
+      "dat": "zbiorowi",
+      "acc": "zbiór",
+      "ins": "zbiorem",
+      "loc": "zbiorze",
+      "voc": "zbiorze"
+    },
+    "plural": {
+      "nom": "zbiory",
+      "gen": "zbiorów",
+      "dat": "zbiorom",
+      "acc": "zbiory",
+      "ins": "zbiorami",
+      "loc": "zbiorach",
+      "voc": "zbiory"
+    }
+  }
+}

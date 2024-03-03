@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "wrogo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "wrogi",
+          "gen": "wrogiego",
+          "dat": "wrogiemu",
+          "acc": "wrogiego",
+          "ins": "wrogim",
+          "loc": "wrogim"
+        },
+        "m3": {
+          "nom": "wrogi",
+          "gen": "wrogiego",
+          "dat": "wrogiemu",
+          "acc": "wrogi",
+          "ins": "wrogim",
+          "loc": "wrogim"
+        },
+        "f": {
+          "nom": "wroga",
+          "gen": "wrogiej",
+          "dat": "wrogiej",
+          "acc": "wrogą",
+          "ins": "wrogą",
+          "loc": "wrogiej"
+        },
+        "n": {
+          "nom": "wrogie",
+          "gen": "wrogiego",
+          "dat": "wrogiemu",
+          "acc": "wrogie",
+          "ins": "wrogim",
+          "loc": "wrogim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wrodzy",
+          "gen": "wrogich",
+          "dat": "wrogim",
+          "acc": "wrogich",
+          "ins": "wrogimi",
+          "loc": "wrogich"
+        },
+        "nonvirile": {
+          "nom": "wrogie",
+          "gen": "wrogich",
+          "dat": "wrogim",
+          "acc": "wrogie",
+          "ins": "wrogimi",
+          "loc": "wrogich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej wrogi",
+          "gen": "bardziej wrogiego",
+          "dat": "bardziej wrogiemu",
+          "acc": "bardziej wrogiego",
+          "ins": "bardziej wrogim",
+          "loc": "bardziej wrogim"
+        },
+        "m3": {
+          "nom": "bardziej wrogi",
+          "gen": "bardziej wrogiego",
+          "dat": "bardziej wrogiemu",
+          "acc": "bardziej wrogi",
+          "ins": "bardziej wrogim",
+          "loc": "bardziej wrogim"
+        },
+        "f": {
+          "nom": "bardziej wroga",
+          "gen": "bardziej wrogiej",
+          "dat": "bardziej wrogiej",
+          "acc": "bardziej wrogą",
+          "ins": "bardziej wrogą",
+          "loc": "bardziej wrogiej"
+        },
+        "n": {
+          "nom": "bardziej wrogie",
+          "gen": "bardziej wrogiego",
+          "dat": "bardziej wrogiemu",
+          "acc": "bardziej wrogie",
+          "ins": "bardziej wrogim",
+          "loc": "bardziej wrogim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej wrodzy",
+          "gen": "bardziej wrogich",
+          "dat": "bardziej wrogim",
+          "acc": "bardziej wrogich",
+          "ins": "bardziej wrogimi",
+          "loc": "bardziej wrogich"
+        },
+        "nonvirile": {
+          "nom": "bardziej wrogie",
+          "gen": "bardziej wrogich",
+          "dat": "bardziej wrogim",
+          "acc": "bardziej wrogie",
+          "ins": "bardziej wrogimi",
+          "loc": "bardziej wrogich"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej wrogi",
+          "gen": "najbardziej wrogiego",
+          "dat": "najbardziej wrogiemu",
+          "acc": "najbardziej wrogiego",
+          "ins": "najbardziej wrogim",
+          "loc": "najbardziej wrogim"
+        },
+        "m3": {
+          "nom": "najbardziej wrogi",
+          "gen": "najbardziej wrogiego",
+          "dat": "najbardziej wrogiemu",
+          "acc": "najbardziej wrogi",
+          "ins": "najbardziej wrogim",
+          "loc": "najbardziej wrogim"
+        },
+        "f": {
+          "nom": "najbardziej wroga",
+          "gen": "najbardziej wrogiej",
+          "dat": "najbardziej wrogiej",
+          "acc": "najbardziej wrogą",
+          "ins": "najbardziej wrogą",
+          "loc": "najbardziej wrogiej"
+        },
+        "n": {
+          "nom": "najbardziej wrogie",
+          "gen": "najbardziej wrogiego",
+          "dat": "najbardziej wrogiemu",
+          "acc": "najbardziej wrogie",
+          "ins": "najbardziej wrogim",
+          "loc": "najbardziej wrogim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej wrodzy",
+          "gen": "najbardziej wrogich",
+          "dat": "najbardziej wrogim",
+          "acc": "najbardziej wrogich",
+          "ins": "najbardziej wrogimi",
+          "loc": "najbardziej wrogich"
+        },
+        "nonvirile": {
+          "nom": "najbardziej wrogie",
+          "gen": "najbardziej wrogich",
+          "dat": "najbardziej wrogim",
+          "acc": "najbardziej wrogie",
+          "ins": "najbardziej wrogimi",
+          "loc": "najbardziej wrogich"
+        }
+      }
+    }
+  }
+}

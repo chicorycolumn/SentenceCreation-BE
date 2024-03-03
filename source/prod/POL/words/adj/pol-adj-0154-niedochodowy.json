@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niedochodowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niedochodowy",
+          "gen": "niedochodowego",
+          "dat": "niedochodowemu",
+          "acc": "niedochodowego",
+          "ins": "niedochodowym",
+          "loc": "niedochodowym"
+        },
+        "m3": {
+          "nom": "niedochodowy",
+          "gen": "niedochodowego",
+          "dat": "niedochodowemu",
+          "acc": "niedochodowy",
+          "ins": "niedochodowym",
+          "loc": "niedochodowym"
+        },
+        "f": {
+          "nom": "niedochodowa",
+          "gen": "niedochodowej",
+          "dat": "niedochodowej",
+          "acc": "niedochodową",
+          "ins": "niedochodową",
+          "loc": "niedochodowej"
+        },
+        "n": {
+          "nom": "niedochodowe",
+          "gen": "niedochodowego",
+          "dat": "niedochodowemu",
+          "acc": "niedochodowe",
+          "ins": "niedochodowym",
+          "loc": "niedochodowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niedochodowi",
+          "gen": "niedochodowych",
+          "dat": "niedochodowym",
+          "acc": "niedochodowych",
+          "ins": "niedochodowymi",
+          "loc": "niedochodowych"
+        },
+        "nonvirile": {
+          "nom": "niedochodowe",
+          "gen": "niedochodowych",
+          "dat": "niedochodowym",
+          "acc": "niedochodowe",
+          "ins": "niedochodowymi",
+          "loc": "niedochodowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej niedochodowy",
+          "gen": "bardziej niedochodowego",
+          "dat": "bardziej niedochodowemu",
+          "acc": "bardziej niedochodowego",
+          "ins": "bardziej niedochodowym",
+          "loc": "bardziej niedochodowym"
+        },
+        "m3": {
+          "nom": "bardziej niedochodowy",
+          "gen": "bardziej niedochodowego",
+          "dat": "bardziej niedochodowemu",
+          "acc": "bardziej niedochodowy",
+          "ins": "bardziej niedochodowym",
+          "loc": "bardziej niedochodowym"
+        },
+        "f": {
+          "nom": "bardziej niedochodowa",
+          "gen": "bardziej niedochodowej",
+          "dat": "bardziej niedochodowej",
+          "acc": "bardziej niedochodową",
+          "ins": "bardziej niedochodową",
+          "loc": "bardziej niedochodowej"
+        },
+        "n": {
+          "nom": "bardziej niedochodowe",
+          "gen": "bardziej niedochodowego",
+          "dat": "bardziej niedochodowemu",
+          "acc": "bardziej niedochodowe",
+          "ins": "bardziej niedochodowym",
+          "loc": "bardziej niedochodowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej niedochodowi",
+          "gen": "bardziej niedochodowych",
+          "dat": "bardziej niedochodowym",
+          "acc": "bardziej niedochodowych",
+          "ins": "bardziej niedochodowymi",
+          "loc": "bardziej niedochodowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej niedochodowe",
+          "gen": "bardziej niedochodowych",
+          "dat": "bardziej niedochodowym",
+          "acc": "bardziej niedochodowe",
+          "ins": "bardziej niedochodowymi",
+          "loc": "bardziej niedochodowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej niedochodowy",
+          "gen": "najbardziej niedochodowego",
+          "dat": "najbardziej niedochodowemu",
+          "acc": "najbardziej niedochodowego",
+          "ins": "najbardziej niedochodowym",
+          "loc": "najbardziej niedochodowym"
+        },
+        "m3": {
+          "nom": "najbardziej niedochodowy",
+          "gen": "najbardziej niedochodowego",
+          "dat": "najbardziej niedochodowemu",
+          "acc": "najbardziej niedochodowy",
+          "ins": "najbardziej niedochodowym",
+          "loc": "najbardziej niedochodowym"
+        },
+        "f": {
+          "nom": "najbardziej niedochodowa",
+          "gen": "najbardziej niedochodowej",
+          "dat": "najbardziej niedochodowej",
+          "acc": "najbardziej niedochodową",
+          "ins": "najbardziej niedochodową",
+          "loc": "najbardziej niedochodowej"
+        },
+        "n": {
+          "nom": "najbardziej niedochodowe",
+          "gen": "najbardziej niedochodowego",
+          "dat": "najbardziej niedochodowemu",
+          "acc": "najbardziej niedochodowe",
+          "ins": "najbardziej niedochodowym",
+          "loc": "najbardziej niedochodowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej niedochodowi",
+          "gen": "najbardziej niedochodowych",
+          "dat": "najbardziej niedochodowym",
+          "acc": "najbardziej niedochodowych",
+          "ins": "najbardziej niedochodowymi",
+          "loc": "najbardziej niedochodowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej niedochodowe",
+          "gen": "najbardziej niedochodowych",
+          "dat": "najbardziej niedochodowym",
+          "acc": "najbardziej niedochodowe",
+          "ins": "najbardziej niedochodowymi",
+          "loc": "najbardziej niedochodowych"
+        }
+      }
+    }
+  }
+}

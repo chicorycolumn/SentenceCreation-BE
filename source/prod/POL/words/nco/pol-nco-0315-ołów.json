@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ołów",
+      "gen": "ołowiu",
+      "dat": "ołowiowi",
+      "acc": "ołów",
+      "ins": "ołowiem",
+      "loc": "ołowiu",
+      "voc": "ołowiu"
+    }
+  }
+}

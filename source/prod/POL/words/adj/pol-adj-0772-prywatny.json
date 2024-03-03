@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "prywatnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "prywatny",
+          "gen": "prywatnego",
+          "dat": "prywatnemu",
+          "acc": "prywatnego",
+          "ins": "prywatnym",
+          "loc": "prywatnym"
+        },
+        "m3": {
+          "nom": "prywatny",
+          "gen": "prywatnego",
+          "dat": "prywatnemu",
+          "acc": "prywatny",
+          "ins": "prywatnym",
+          "loc": "prywatnym"
+        },
+        "f": {
+          "nom": "prywatna",
+          "gen": "prywatnej",
+          "dat": "prywatnej",
+          "acc": "prywatną",
+          "ins": "prywatną",
+          "loc": "prywatnej"
+        },
+        "n": {
+          "nom": "prywatne",
+          "gen": "prywatnego",
+          "dat": "prywatnemu",
+          "acc": "prywatne",
+          "ins": "prywatnym",
+          "loc": "prywatnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "prywatni",
+          "gen": "prywatnych",
+          "dat": "prywatnym",
+          "acc": "prywatnych",
+          "ins": "prywatnymi",
+          "loc": "prywatnych"
+        },
+        "nonvirile": {
+          "nom": "prywatne",
+          "gen": "prywatnych",
+          "dat": "prywatnym",
+          "acc": "prywatne",
+          "ins": "prywatnymi",
+          "loc": "prywatnych"
+        }
+      }
+    }
+  }
+}

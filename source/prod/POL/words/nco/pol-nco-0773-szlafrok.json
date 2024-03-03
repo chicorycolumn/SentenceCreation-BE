@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "szlafrok",
+      "gen": "szlafroku",
+      "dat": "szlafrokowi",
+      "acc": "szlafrok",
+      "ins": "szlafrokiem",
+      "loc": "szlafroku",
+      "voc": "szlafroku"
+    },
+    "plural": {
+      "nom": "szlafroki",
+      "gen": "szlafroków",
+      "dat": "szlafrokom",
+      "acc": "szlafroki",
+      "ins": "szlafrokami",
+      "loc": "szlafrokach",
+      "voc": "szlafroki"
+    }
+  }
+}

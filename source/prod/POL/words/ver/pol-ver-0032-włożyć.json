@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "włożyć",
+    "verbalNoun": "włożenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "włożony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "włożywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "włoży się"
+          },
+          "plural": {
+            "allPluralGenders": "włoży się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "włożę"
+          },
+          "plural": {
+            "allPluralGenders": "włożymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "włożysz"
+          },
+          "plural": {
+            "allPluralGenders": "włożycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "włoży"
+          },
+          "plural": {
+            "allPluralGenders": "włożą"
+          }
+        }
+      },
+      "imperative": "włóż",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "włożono"
+          },
+          "plural": {
+            "allPluralGenders": "włożono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "włożyłem",
+            "f": "włożyłam"
+          },
+          "plural": {
+            "virile": "włożyliśmy",
+            "nonvirile": "włożyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "włożyłeś",
+            "f": "włożyłaś"
+          },
+          "plural": {
+            "virile": "włożyliście",
+            "nonvirile": "włożyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "włożył",
+            "f": "włożyła",
+            "n": "włożyło"
+          },
+          "plural": {
+            "virile": "włożyli",
+            "nonvirile": "włożyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "porównywać",
+    "verbalNoun": "porównywanie",
+    "activeAdjectival": "porównujący",
+    "passiveAdjectival": "porównywany",
+    "contemporaryAdverbial": "porównując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "porównuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "porównywano"
+          },
+          "plural": {
+            "allPluralGenders": "porównywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "porównywałem",
+            "f": "porównywałam"
+          },
+          "plural": {
+            "virile": "porównywaliśmy",
+            "nonvirile": "porównywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "porównywałeś",
+            "f": "porównywałaś"
+          },
+          "plural": {
+            "virile": "porównywaliście",
+            "nonvirile": "porównywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "porównywał",
+            "f": "porównywała",
+            "n": "porównywało"
+          },
+          "plural": {
+            "virile": "porównywali",
+            "nonvirile": "porównywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "porównuje się"
+          },
+          "plural": {
+            "allPluralGenders": "porównuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "porównuję"
+          },
+          "plural": {
+            "allPluralGenders": "porównujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "porównujesz"
+          },
+          "plural": {
+            "allPluralGenders": "porównujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "porównuje"
+          },
+          "plural": {
+            "allPluralGenders": "porównują"
+          }
+        }
+      }
+    }
+  }
+}

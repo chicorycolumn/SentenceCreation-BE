@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "border",
+      "gen": "border's"
+    },
+    "plural": {
+      "nom": "borders",
+      "gen": "borders'"
+    }
+  }
+}

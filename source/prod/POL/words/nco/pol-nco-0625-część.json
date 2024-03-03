@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "część",
+      "gen": "części",
+      "dat": "części",
+      "acc": "część",
+      "ins": "częścią",
+      "loc": "części",
+      "voc": "części"
+    },
+    "plural": {
+      "nom": "części",
+      "gen": "części",
+      "dat": "częściom",
+      "acc": "części",
+      "ins": "częściami",
+      "loc": "częściach",
+      "voc": "części"
+    }
+  }
+}

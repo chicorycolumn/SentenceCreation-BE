@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "więzienie",
+      "gen": "więzienia",
+      "dat": "więzieniu",
+      "acc": "więzienie",
+      "ins": "więzieniem",
+      "loc": "więzieniu",
+      "voc": "więzienie"
+    },
+    "plural": {
+      "nom": "więzienia",
+      "gen": "więzień",
+      "dat": "więzieniom",
+      "acc": "więzienia",
+      "ins": "więzieniami",
+      "loc": "więzieniach",
+      "voc": "więzienia"
+    }
+  }
+}

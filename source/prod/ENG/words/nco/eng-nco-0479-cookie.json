@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cookie",
+      "gen": "cookie's"
+    },
+    "plural": {
+      "nom": "cookies",
+      "gen": "cookies'"
+    }
+  }
+}

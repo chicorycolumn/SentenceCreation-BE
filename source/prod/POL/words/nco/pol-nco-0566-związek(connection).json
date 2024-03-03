@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "związek",
+      "gen": "związku",
+      "dat": "związkowi",
+      "acc": "związek",
+      "ins": "związkiem",
+      "loc": "związku",
+      "voc": "związku"
+    },
+    "plural": {
+      "nom": "związki",
+      "gen": "związków",
+      "dat": "związkom",
+      "acc": "związki",
+      "ins": "związkami",
+      "loc": "związkach",
+      "voc": "związki"
+    }
+  }
+}

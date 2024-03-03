@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "microscope",
+      "gen": "microscope's"
+    },
+    "plural": {
+      "nom": "microscopes",
+      "gen": "microscopes'"
+    }
+  }
+}

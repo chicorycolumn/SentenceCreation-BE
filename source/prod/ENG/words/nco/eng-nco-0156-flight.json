@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "flight",
+      "gen": "flight's"
+    },
+    "plural": {
+      "nom": "flights",
+      "gen": "flights'"
+    }
+  }
+}

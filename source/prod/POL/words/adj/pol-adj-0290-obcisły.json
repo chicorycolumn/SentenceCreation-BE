@@ -1,0 +1,606 @@
+{
+  "inflections": {
+    "adverb": {
+      "isTerminus": true,
+      "normal": [
+        "obciśle",
+        "obcisło"
+      ],
+      "additionalInfrequent": []
+    },
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "obcisły",
+          "gen": "obcisłego",
+          "dat": "obcisłemu",
+          "acc": "obcisłego",
+          "ins": "obcisłym",
+          "loc": "obcisłym"
+        },
+        "m3": {
+          "nom": "obcisły",
+          "gen": "obcisłego",
+          "dat": "obcisłemu",
+          "acc": "obcisły",
+          "ins": "obcisłym",
+          "loc": "obcisłym"
+        },
+        "f": {
+          "nom": "obcisła",
+          "gen": "obcisłej",
+          "dat": "obcisłej",
+          "acc": "obcisłą",
+          "ins": "obcisłą",
+          "loc": "obcisłej"
+        },
+        "n": {
+          "nom": "obcisłe",
+          "gen": "obcisłego",
+          "dat": "obcisłemu",
+          "acc": "obcisłe",
+          "ins": "obcisłym",
+          "loc": "obcisłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "obciśli",
+          "gen": "obcisłych",
+          "dat": "obcisłym",
+          "acc": "obcisłych",
+          "ins": "obcisłymi",
+          "loc": "obcisłych"
+        },
+        "nonvirile": {
+          "nom": "obcisłe",
+          "gen": "obcisłych",
+          "dat": "obcisłym",
+          "acc": "obcisłe",
+          "ins": "obcisłymi",
+          "loc": "obcisłych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszy",
+              "bardziej obcisły"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszego",
+              "bardziej obcisłego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszemu",
+              "bardziej obcisłemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszego",
+              "bardziej obcisłego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszym",
+              "bardziej obcisłym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszym",
+              "bardziej obcisłym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszy",
+              "bardziej obcisły"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszego",
+              "bardziej obcisłego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszemu",
+              "bardziej obcisłemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszy",
+              "bardziej obcisły"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszym",
+              "bardziej obcisłym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszym",
+              "bardziej obcisłym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejsza",
+              "bardziej obcisła"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszej",
+              "bardziej obcisłej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszej",
+              "bardziej obcisłej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszą",
+              "bardziej obcisłą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszą",
+              "bardziej obcisłą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszej",
+              "bardziej obcisłej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejsze",
+              "bardziej obcisłe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszego",
+              "bardziej obcisłego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszemu",
+              "bardziej obcisłemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejsze",
+              "bardziej obcisłe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszym",
+              "bardziej obcisłym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszym",
+              "bardziej obcisłym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejsi",
+              "bardziej obciśli"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszych",
+              "bardziej obcisłych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszym",
+              "bardziej obcisłym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszych",
+              "bardziej obcisłych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszymi",
+              "bardziej obcisłymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszych",
+              "bardziej obcisłych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejsze",
+              "bardziej obcisłe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszych",
+              "bardziej obcisłych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszym",
+              "bardziej obcisłym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejsze",
+              "bardziej obcisłe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszymi",
+              "bardziej obcisłymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "obciślejszych",
+              "bardziej obcisłych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszy",
+              "najbardziej obcisły"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszego",
+              "najbardziej obcisłego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszemu",
+              "najbardziej obcisłemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszego",
+              "najbardziej obcisłego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszym",
+              "najbardziej obcisłym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszym",
+              "najbardziej obcisłym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszy",
+              "najbardziej obcisły"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszego",
+              "najbardziej obcisłego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszemu",
+              "najbardziej obcisłemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszy",
+              "najbardziej obcisły"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszym",
+              "najbardziej obcisłym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszym",
+              "najbardziej obcisłym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejsza",
+              "najbardziej obcisła"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszej",
+              "najbardziej obcisłej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszej",
+              "najbardziej obcisłej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszą",
+              "najbardziej obcisłą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszą",
+              "najbardziej obcisłą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszej",
+              "najbardziej obcisłej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejsze",
+              "najbardziej obcisłe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszego",
+              "najbardziej obcisłego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszemu",
+              "najbardziej obcisłemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejsze",
+              "najbardziej obcisłe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszym",
+              "najbardziej obcisłym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszym",
+              "najbardziej obcisłym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejsi",
+              "najbardziej obciśli"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszych",
+              "najbardziej obcisłych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszym",
+              "najbardziej obcisłym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszych",
+              "najbardziej obcisłych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszymi",
+              "najbardziej obcisłymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszych",
+              "najbardziej obcisłych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejsze",
+              "najbardziej obcisłe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszych",
+              "najbardziej obcisłych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszym",
+              "najbardziej obcisłym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejsze",
+              "najbardziej obcisłe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszymi",
+              "najbardziej obcisłymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najobciślejszych",
+              "najbardziej obcisłych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

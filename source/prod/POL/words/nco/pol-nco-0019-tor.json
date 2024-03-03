@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "tor",
+      "gen": "toru",
+      "dat": "torowi",
+      "acc": "tor",
+      "ins": "torem",
+      "loc": "torze",
+      "voc": "torze"
+    },
+    "plural": {
+      "nom": "tory",
+      "gen": "torów",
+      "dat": "torom",
+      "acc": "tory",
+      "ins": "torami",
+      "loc": "torach",
+      "voc": "tory"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "posprzątać",
+    "verbalNoun": "posprzątanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "posprzątany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "posprzątawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "posprząta się"
+          },
+          "plural": {
+            "allPluralGenders": "posprząta się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "posprzątam"
+          },
+          "plural": {
+            "allPluralGenders": "posprzątamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "posprzątasz"
+          },
+          "plural": {
+            "allPluralGenders": "posprzątacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "posprząta"
+          },
+          "plural": {
+            "allPluralGenders": "posprzątają"
+          }
+        }
+      },
+      "imperative": "posprzątaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "posprzątano"
+          },
+          "plural": {
+            "allPluralGenders": "posprzątano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "posprzątałem",
+            "f": "posprzątałam"
+          },
+          "plural": {
+            "virile": "posprzątaliśmy",
+            "nonvirile": "posprzątałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "posprzątałeś",
+            "f": "posprzątałaś"
+          },
+          "plural": {
+            "virile": "posprzątaliście",
+            "nonvirile": "posprzątałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "posprzątał",
+            "f": "posprzątała",
+            "n": "posprzątało"
+          },
+          "plural": {
+            "virile": "posprzątali",
+            "nonvirile": "posprzątały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

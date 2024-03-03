@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "brutalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "brutalny",
+          "gen": "brutalnego",
+          "dat": "brutalnemu",
+          "acc": "brutalnego",
+          "ins": "brutalnym",
+          "loc": "brutalnym"
+        },
+        "m3": {
+          "nom": "brutalny",
+          "gen": "brutalnego",
+          "dat": "brutalnemu",
+          "acc": "brutalny",
+          "ins": "brutalnym",
+          "loc": "brutalnym"
+        },
+        "f": {
+          "nom": "brutalna",
+          "gen": "brutalnej",
+          "dat": "brutalnej",
+          "acc": "brutalną",
+          "ins": "brutalną",
+          "loc": "brutalnej"
+        },
+        "n": {
+          "nom": "brutalne",
+          "gen": "brutalnego",
+          "dat": "brutalnemu",
+          "acc": "brutalne",
+          "ins": "brutalnym",
+          "loc": "brutalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "brutalni",
+          "gen": "brutalnych",
+          "dat": "brutalnym",
+          "acc": "brutalnych",
+          "ins": "brutalnymi",
+          "loc": "brutalnych"
+        },
+        "nonvirile": {
+          "nom": "brutalne",
+          "gen": "brutalnych",
+          "dat": "brutalnym",
+          "acc": "brutalne",
+          "ins": "brutalnymi",
+          "loc": "brutalnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "brutalniejszy",
+          "gen": "brutalniejszego",
+          "dat": "brutalniejszemu",
+          "acc": "brutalniejszego",
+          "ins": "brutalniejszym",
+          "loc": "brutalniejszym"
+        },
+        "m3": {
+          "nom": "brutalniejszy",
+          "gen": "brutalniejszego",
+          "dat": "brutalniejszemu",
+          "acc": "brutalniejszy",
+          "ins": "brutalniejszym",
+          "loc": "brutalniejszym"
+        },
+        "f": {
+          "nom": "brutalniejsza",
+          "gen": "brutalniejszej",
+          "dat": "brutalniejszej",
+          "acc": "brutalniejszą",
+          "ins": "brutalniejszą",
+          "loc": "brutalniejszej"
+        },
+        "n": {
+          "nom": "brutalniejsze",
+          "gen": "brutalniejszego",
+          "dat": "brutalniejszemu",
+          "acc": "brutalniejsze",
+          "ins": "brutalniejszym",
+          "loc": "brutalniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "brutalniejsi",
+          "gen": "brutalniejszych",
+          "dat": "brutalniejszym",
+          "acc": "brutalniejszych",
+          "ins": "brutalniejszymi",
+          "loc": "brutalniejszych"
+        },
+        "nonvirile": {
+          "nom": "brutalniejsze",
+          "gen": "brutalniejszych",
+          "dat": "brutalniejszym",
+          "acc": "brutalniejsze",
+          "ins": "brutalniejszymi",
+          "loc": "brutalniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbrutalniejszy",
+          "gen": "najbrutalniejszego",
+          "dat": "najbrutalniejszemu",
+          "acc": "najbrutalniejszego",
+          "ins": "najbrutalniejszym",
+          "loc": "najbrutalniejszym"
+        },
+        "m3": {
+          "nom": "najbrutalniejszy",
+          "gen": "najbrutalniejszego",
+          "dat": "najbrutalniejszemu",
+          "acc": "najbrutalniejszy",
+          "ins": "najbrutalniejszym",
+          "loc": "najbrutalniejszym"
+        },
+        "f": {
+          "nom": "najbrutalniejsza",
+          "gen": "najbrutalniejszej",
+          "dat": "najbrutalniejszej",
+          "acc": "najbrutalniejszą",
+          "ins": "najbrutalniejszą",
+          "loc": "najbrutalniejszej"
+        },
+        "n": {
+          "nom": "najbrutalniejsze",
+          "gen": "najbrutalniejszego",
+          "dat": "najbrutalniejszemu",
+          "acc": "najbrutalniejsze",
+          "ins": "najbrutalniejszym",
+          "loc": "najbrutalniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbrutalniejsi",
+          "gen": "najbrutalniejszych",
+          "dat": "najbrutalniejszym",
+          "acc": "najbrutalniejszych",
+          "ins": "najbrutalniejszymi",
+          "loc": "najbrutalniejszych"
+        },
+        "nonvirile": {
+          "nom": "najbrutalniejsze",
+          "gen": "najbrutalniejszych",
+          "dat": "najbrutalniejszym",
+          "acc": "najbrutalniejsze",
+          "ins": "najbrutalniejszymi",
+          "loc": "najbrutalniejszych"
+        }
+      }
+    }
+  }
+}

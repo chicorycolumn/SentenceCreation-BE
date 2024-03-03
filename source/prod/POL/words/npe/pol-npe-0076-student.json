@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "student",
+      "gen": "studenta",
+      "dat": "studentowi",
+      "acc": "studenta",
+      "ins": "studentem",
+      "loc": "studencie",
+      "voc": "studencie"
+    },
+    "plural": {
+      "nom": "studenci",
+      "gen": "studentów",
+      "dat": "studentom",
+      "acc": "studentów",
+      "ins": "studentami",
+      "loc": "studentach",
+      "voc": "studenci"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "laundromat",
+      "gen": "laundromat's"
+    },
+    "plural": {
+      "nom": "laundromats",
+      "gen": "laundromats'"
+    }
+  }
+}

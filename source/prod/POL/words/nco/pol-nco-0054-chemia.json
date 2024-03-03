@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "chemia",
+      "gen": "chemii",
+      "dat": "chemii",
+      "acc": "chemię",
+      "ins": "chemią",
+      "loc": "chemii",
+      "voc": "chemio"
+    }
+  }
+}

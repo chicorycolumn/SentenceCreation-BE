@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "naukowiec",
+      "gen": "naukowca",
+      "dat": "naukowcowi",
+      "acc": "naukowca",
+      "ins": "naukowcem",
+      "loc": "naukowcu",
+      "voc": "naukowcze"
+    },
+    "plural": {
+      "nom": "naukowcy",
+      "gen": "naukowców",
+      "dat": "naukowcom",
+      "acc": "naukowców",
+      "ins": "naukowcami",
+      "loc": "naukowcach",
+      "voc": "naukowcy"
+    }
+  }
+}

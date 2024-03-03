@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przeciągać",
+    "verbalNoun": "przeciąganie",
+    "activeAdjectival": "przeciągający",
+    "passiveAdjectival": "przeciągany",
+    "contemporaryAdverbial": "przeciągając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przeciągaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeciągano"
+          },
+          "plural": {
+            "allPluralGenders": "przeciągano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przeciągałem",
+            "f": "przeciągałam"
+          },
+          "plural": {
+            "virile": "przeciągaliśmy",
+            "nonvirile": "przeciągałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przeciągałeś",
+            "f": "przeciągałaś"
+          },
+          "plural": {
+            "virile": "przeciągaliście",
+            "nonvirile": "przeciągałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przeciągał",
+            "f": "przeciągała",
+            "n": "przeciągało"
+          },
+          "plural": {
+            "virile": "przeciągali",
+            "nonvirile": "przeciągały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeciąga się"
+          },
+          "plural": {
+            "allPluralGenders": "przeciąga się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przeciągam"
+          },
+          "plural": {
+            "allPluralGenders": "przeciągamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przeciągasz"
+          },
+          "plural": {
+            "allPluralGenders": "przeciągacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przeciąga"
+          },
+          "plural": {
+            "allPluralGenders": "przeciągają"
+          }
+        }
+      }
+    }
+  }
+}

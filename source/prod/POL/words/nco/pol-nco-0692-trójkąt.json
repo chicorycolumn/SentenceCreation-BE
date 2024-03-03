@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "trójkąt",
+      "gen": "trójkąta",
+      "dat": "trójkątowi",
+      "acc": "trójkąt",
+      "ins": "trójkątem",
+      "loc": "trójkącie",
+      "voc": "trójkącie"
+    },
+    "plural": {
+      "nom": "trójkąty",
+      "gen": "trójkątów",
+      "dat": "trójkątom",
+      "acc": "trójkąty",
+      "ins": "trójkątami",
+      "loc": "trójkątach",
+      "voc": "trójkąty"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przekląć",
+    "verbalNoun": "przeklęcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przeklęty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przeklnąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeklnie się"
+          },
+          "plural": {
+            "allPluralGenders": "przeklnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przeklnę"
+          },
+          "plural": {
+            "allPluralGenders": "przeklniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przeklniesz"
+          },
+          "plural": {
+            "allPluralGenders": "przeklniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przeklnie"
+          },
+          "plural": {
+            "allPluralGenders": "przeklną"
+          }
+        }
+      },
+      "imperative": "przeklnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeklęto"
+          },
+          "plural": {
+            "allPluralGenders": "przeklęto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przekląłem",
+            "f": "przeklęłam"
+          },
+          "plural": {
+            "virile": "przeklęliśmy",
+            "nonvirile": "przeklęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przekląłeś",
+            "f": "przeklęłaś"
+          },
+          "plural": {
+            "virile": "przeklęliście",
+            "nonvirile": "przeklęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przeklął",
+            "f": "przeklęła",
+            "n": "przeklęło"
+          },
+          "plural": {
+            "virile": "przeklęli",
+            "nonvirile": "przeklęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

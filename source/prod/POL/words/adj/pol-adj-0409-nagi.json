@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "nago",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nagi",
+          "gen": "nagiego",
+          "dat": "nagiemu",
+          "acc": "nagiego",
+          "ins": "nagim",
+          "loc": "nagim"
+        },
+        "m3": {
+          "nom": "nagi",
+          "gen": "nagiego",
+          "dat": "nagiemu",
+          "acc": "nagi",
+          "ins": "nagim",
+          "loc": "nagim"
+        },
+        "f": {
+          "nom": "naga",
+          "gen": "nagiej",
+          "dat": "nagiej",
+          "acc": "nagą",
+          "ins": "nagą",
+          "loc": "nagiej"
+        },
+        "n": {
+          "nom": "nagie",
+          "gen": "nagiego",
+          "dat": "nagiemu",
+          "acc": "nagie",
+          "ins": "nagim",
+          "loc": "nagim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nadzy",
+          "gen": "nagich",
+          "dat": "nagim",
+          "acc": "nagich",
+          "ins": "nagimi",
+          "loc": "nagich"
+        },
+        "nonvirile": {
+          "nom": "nagie",
+          "gen": "nagich",
+          "dat": "nagim",
+          "acc": "nagie",
+          "ins": "nagimi",
+          "loc": "nagich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej nagi",
+          "gen": "bardziej nagiego",
+          "dat": "bardziej nagiemu",
+          "acc": "bardziej nagiego",
+          "ins": "bardziej nagim",
+          "loc": "bardziej nagim"
+        },
+        "m3": {
+          "nom": "bardziej nagi",
+          "gen": "bardziej nagiego",
+          "dat": "bardziej nagiemu",
+          "acc": "bardziej nagi",
+          "ins": "bardziej nagim",
+          "loc": "bardziej nagim"
+        },
+        "f": {
+          "nom": "bardziej naga",
+          "gen": "bardziej nagiej",
+          "dat": "bardziej nagiej",
+          "acc": "bardziej nagą",
+          "ins": "bardziej nagą",
+          "loc": "bardziej nagiej"
+        },
+        "n": {
+          "nom": "bardziej nagie",
+          "gen": "bardziej nagiego",
+          "dat": "bardziej nagiemu",
+          "acc": "bardziej nagie",
+          "ins": "bardziej nagim",
+          "loc": "bardziej nagim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej nadzy",
+          "gen": "bardziej nagich",
+          "dat": "bardziej nagim",
+          "acc": "bardziej nagich",
+          "ins": "bardziej nagimi",
+          "loc": "bardziej nagich"
+        },
+        "nonvirile": {
+          "nom": "bardziej nagie",
+          "gen": "bardziej nagich",
+          "dat": "bardziej nagim",
+          "acc": "bardziej nagie",
+          "ins": "bardziej nagimi",
+          "loc": "bardziej nagich"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej nagi",
+          "gen": "najbardziej nagiego",
+          "dat": "najbardziej nagiemu",
+          "acc": "najbardziej nagiego",
+          "ins": "najbardziej nagim",
+          "loc": "najbardziej nagim"
+        },
+        "m3": {
+          "nom": "najbardziej nagi",
+          "gen": "najbardziej nagiego",
+          "dat": "najbardziej nagiemu",
+          "acc": "najbardziej nagi",
+          "ins": "najbardziej nagim",
+          "loc": "najbardziej nagim"
+        },
+        "f": {
+          "nom": "najbardziej naga",
+          "gen": "najbardziej nagiej",
+          "dat": "najbardziej nagiej",
+          "acc": "najbardziej nagą",
+          "ins": "najbardziej nagą",
+          "loc": "najbardziej nagiej"
+        },
+        "n": {
+          "nom": "najbardziej nagie",
+          "gen": "najbardziej nagiego",
+          "dat": "najbardziej nagiemu",
+          "acc": "najbardziej nagie",
+          "ins": "najbardziej nagim",
+          "loc": "najbardziej nagim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej nadzy",
+          "gen": "najbardziej nagich",
+          "dat": "najbardziej nagim",
+          "acc": "najbardziej nagich",
+          "ins": "najbardziej nagimi",
+          "loc": "najbardziej nagich"
+        },
+        "nonvirile": {
+          "nom": "najbardziej nagie",
+          "gen": "najbardziej nagich",
+          "dat": "najbardziej nagim",
+          "acc": "najbardziej nagie",
+          "ins": "najbardziej nagimi",
+          "loc": "najbardziej nagich"
+        }
+      }
+    }
+  }
+}

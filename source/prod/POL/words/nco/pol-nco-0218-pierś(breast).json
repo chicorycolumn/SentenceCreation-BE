@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pierś",
+      "gen": "piersi",
+      "dat": "piersi",
+      "acc": "pierś",
+      "ins": "piersią",
+      "loc": "piersi",
+      "voc": "piersi"
+    },
+    "plural": {
+      "nom": "piersi",
+      "gen": "piersi",
+      "dat": "piersiom",
+      "acc": "piersi",
+      "ins": "piersiami",
+      "loc": "piersiach",
+      "voc": "piersi"
+    }
+  }
+}

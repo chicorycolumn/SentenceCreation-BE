@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oszukiwać",
+    "verbalNoun": "oszukiwanie",
+    "activeAdjectival": "oszukujący",
+    "passiveAdjectival": "oszukiwany",
+    "contemporaryAdverbial": "oszukując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "oszukuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oszukiwano"
+          },
+          "plural": {
+            "allPluralGenders": "oszukiwano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oszukiwałem",
+            "f": "oszukiwałam"
+          },
+          "plural": {
+            "virile": "oszukiwaliśmy",
+            "nonvirile": "oszukiwałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oszukiwałeś",
+            "f": "oszukiwałaś"
+          },
+          "plural": {
+            "virile": "oszukiwaliście",
+            "nonvirile": "oszukiwałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oszukiwał",
+            "f": "oszukiwała",
+            "n": "oszukiwało"
+          },
+          "plural": {
+            "virile": "oszukiwali",
+            "nonvirile": "oszukiwały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oszukuje się"
+          },
+          "plural": {
+            "allPluralGenders": "oszukuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oszukuję"
+          },
+          "plural": {
+            "allPluralGenders": "oszukujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oszukujesz"
+          },
+          "plural": {
+            "allPluralGenders": "oszukujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "oszukuje"
+          },
+          "plural": {
+            "allPluralGenders": "oszukują"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "miecz",
+      "gen": "miecza",
+      "dat": "mieczowi",
+      "acc": "miecz",
+      "ins": "mieczem",
+      "loc": "mieczu",
+      "voc": "mieczu"
+    },
+    "plural": {
+      "nom": "miecze",
+      "gen": [
+        "mieczy",
+        "mieczów"
+      ],
+      "dat": "mieczom",
+      "acc": "miecze",
+      "ins": "mieczami",
+      "loc": "mieczach",
+      "voc": "miecze"
+    }
+  }
+}

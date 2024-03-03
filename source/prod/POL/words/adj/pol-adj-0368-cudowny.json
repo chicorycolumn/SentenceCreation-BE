@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "cudownie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "cudowny",
+          "gen": "cudownego",
+          "dat": "cudownemu",
+          "acc": "cudownego",
+          "ins": "cudownym",
+          "loc": "cudownym"
+        },
+        "m3": {
+          "nom": "cudowny",
+          "gen": "cudownego",
+          "dat": "cudownemu",
+          "acc": "cudowny",
+          "ins": "cudownym",
+          "loc": "cudownym"
+        },
+        "f": {
+          "nom": "cudowna",
+          "gen": "cudownej",
+          "dat": "cudownej",
+          "acc": "cudowną",
+          "ins": "cudowną",
+          "loc": "cudownej"
+        },
+        "n": {
+          "nom": "cudowne",
+          "gen": "cudownego",
+          "dat": "cudownemu",
+          "acc": "cudowne",
+          "ins": "cudownym",
+          "loc": "cudownym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "cudowni",
+          "gen": "cudownych",
+          "dat": "cudownym",
+          "acc": "cudownych",
+          "ins": "cudownymi",
+          "loc": "cudownych"
+        },
+        "nonvirile": {
+          "nom": "cudowne",
+          "gen": "cudownych",
+          "dat": "cudownym",
+          "acc": "cudowne",
+          "ins": "cudownymi",
+          "loc": "cudownych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszy",
+              "bardziej cudowny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszego",
+              "bardziej cudownego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszemu",
+              "bardziej cudownemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszego",
+              "bardziej cudownego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszym",
+              "bardziej cudownym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszym",
+              "bardziej cudownym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszy",
+              "bardziej cudowny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszego",
+              "bardziej cudownego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszemu",
+              "bardziej cudownemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszy",
+              "bardziej cudowny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszym",
+              "bardziej cudownym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszym",
+              "bardziej cudownym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejsza",
+              "bardziej cudowna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszej",
+              "bardziej cudownej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszej",
+              "bardziej cudownej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszą",
+              "bardziej cudowną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszą",
+              "bardziej cudowną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszej",
+              "bardziej cudownej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejsze",
+              "bardziej cudowne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszego",
+              "bardziej cudownego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszemu",
+              "bardziej cudownemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejsze",
+              "bardziej cudowne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszym",
+              "bardziej cudownym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszym",
+              "bardziej cudownym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejsi",
+              "bardziej cudowni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszych",
+              "bardziej cudownych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszym",
+              "bardziej cudownym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszych",
+              "bardziej cudownych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszymi",
+              "bardziej cudownymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszych",
+              "bardziej cudownych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejsze",
+              "bardziej cudowne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszych",
+              "bardziej cudownych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszym",
+              "bardziej cudownym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejsze",
+              "bardziej cudowne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszymi",
+              "bardziej cudownymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "cudowniejszych",
+              "bardziej cudownych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszy",
+              "najbardziej cudowny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszego",
+              "najbardziej cudownego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszemu",
+              "najbardziej cudownemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszego",
+              "najbardziej cudownego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszym",
+              "najbardziej cudownym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszym",
+              "najbardziej cudownym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszy",
+              "najbardziej cudowny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszego",
+              "najbardziej cudownego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszemu",
+              "najbardziej cudownemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszy",
+              "najbardziej cudowny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszym",
+              "najbardziej cudownym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszym",
+              "najbardziej cudownym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejsza",
+              "najbardziej cudowna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszej",
+              "najbardziej cudownej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszej",
+              "najbardziej cudownej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszą",
+              "najbardziej cudowną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszą",
+              "najbardziej cudowną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszej",
+              "najbardziej cudownej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejsze",
+              "najbardziej cudowne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszego",
+              "najbardziej cudownego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszemu",
+              "najbardziej cudownemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejsze",
+              "najbardziej cudowne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszym",
+              "najbardziej cudownym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszym",
+              "najbardziej cudownym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejsi",
+              "najbardziej cudowni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszych",
+              "najbardziej cudownych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszym",
+              "najbardziej cudownym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszych",
+              "najbardziej cudownych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszymi",
+              "najbardziej cudownymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszych",
+              "najbardziej cudownych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejsze",
+              "najbardziej cudowne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszych",
+              "najbardziej cudownych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszym",
+              "najbardziej cudownym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejsze",
+              "najbardziej cudowne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszymi",
+              "najbardziej cudownymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najcudowniejszych",
+              "najbardziej cudownych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

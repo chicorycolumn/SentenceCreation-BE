@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "asteroida",
+      "gen": "asteroidy",
+      "dat": "asteroidzie",
+      "acc": "asteroidę",
+      "ins": "asteroidą",
+      "loc": "asteroidzie",
+      "voc": "asteroido"
+    },
+    "plural": {
+      "nom": "asteroidy",
+      "gen": "asteroid",
+      "dat": "asteroidom",
+      "acc": "asteroidy",
+      "ins": "asteroidami",
+      "loc": "asteroidach",
+      "voc": "asteroidy"
+    }
+  }
+}

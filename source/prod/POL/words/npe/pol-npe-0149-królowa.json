@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "królowa",
+      "gen": "królowej",
+      "dat": "królowej",
+      "acc": "królową",
+      "ins": "królową",
+      "loc": "królowej",
+      "voc": "królowo"
+    },
+    "plural": {
+      "nom": "królowe",
+      "gen": "królowych",
+      "dat": "królowym",
+      "acc": "królowe",
+      "ins": "królowymi",
+      "loc": "królowych",
+      "voc": "królowe"
+    }
+  }
+}

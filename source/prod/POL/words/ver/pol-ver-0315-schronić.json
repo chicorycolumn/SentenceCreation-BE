@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "schronić",
+    "verbalNoun": "schronienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "schroniony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "schroniwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "schroni się"
+          },
+          "plural": {
+            "allPluralGenders": "schroni się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "schronię"
+          },
+          "plural": {
+            "allPluralGenders": "schronimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "schronisz"
+          },
+          "plural": {
+            "allPluralGenders": "schronicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "schroni"
+          },
+          "plural": {
+            "allPluralGenders": "schronią"
+          }
+        }
+      },
+      "imperative": "schroń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "schroniono"
+          },
+          "plural": {
+            "allPluralGenders": "schroniono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "schroniłem",
+            "f": "schroniłam"
+          },
+          "plural": {
+            "virile": "schroniliśmy",
+            "nonvirile": "schroniłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "schroniłeś",
+            "f": "schroniłaś"
+          },
+          "plural": {
+            "virile": "schroniliście",
+            "nonvirile": "schroniłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "schronił",
+            "f": "schroniła",
+            "n": "schroniło"
+          },
+          "plural": {
+            "virile": "schronili",
+            "nonvirile": "schroniły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

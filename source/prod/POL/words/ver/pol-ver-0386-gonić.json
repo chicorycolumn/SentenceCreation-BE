@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "gonić",
+    "verbalNoun": "gonienie",
+    "activeAdjectival": "goniący",
+    "passiveAdjectival": "goniony",
+    "contemporaryAdverbial": "goniąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "goń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "goniono"
+          },
+          "plural": {
+            "allPluralGenders": "goniono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "goniłem",
+            "f": "goniłam"
+          },
+          "plural": {
+            "virile": "goniliśmy",
+            "nonvirile": "goniłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "goniłeś",
+            "f": "goniłaś"
+          },
+          "plural": {
+            "virile": "goniliście",
+            "nonvirile": "goniłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "gonił",
+            "f": "goniła",
+            "n": "goniło"
+          },
+          "plural": {
+            "virile": "gonili",
+            "nonvirile": "goniły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "goni się"
+          },
+          "plural": {
+            "allPluralGenders": "goni się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "gonię"
+          },
+          "plural": {
+            "allPluralGenders": "gonimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "gonisz"
+          },
+          "plural": {
+            "allPluralGenders": "gonicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "goni"
+          },
+          "plural": {
+            "allPluralGenders": "gonią"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "inflections": {
+    "adverb": {
+      "isTerminus": true,
+      "normal": [
+        "nudno"
+      ],
+      "additionalInfrequent": [
+        "nudnie"
+      ]
+    },
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nudny",
+          "gen": "nudnego",
+          "dat": "nudnemu",
+          "acc": "nudnego",
+          "ins": "nudnym",
+          "loc": "nudnym"
+        },
+        "m3": {
+          "nom": "nudny",
+          "gen": "nudnego",
+          "dat": "nudnemu",
+          "acc": "nudny",
+          "ins": "nudnym",
+          "loc": "nudnym"
+        },
+        "f": {
+          "nom": "nudna",
+          "gen": "nudnej",
+          "dat": "nudnej",
+          "acc": "nudną",
+          "ins": "nudną",
+          "loc": "nudnej"
+        },
+        "n": {
+          "nom": "nudne",
+          "gen": "nudnego",
+          "dat": "nudnemu",
+          "acc": "nudne",
+          "ins": "nudnym",
+          "loc": "nudnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nudni",
+          "gen": "nudnych",
+          "dat": "nudnym",
+          "acc": "nudnych",
+          "ins": "nudnymi",
+          "loc": "nudnych"
+        },
+        "nonvirile": {
+          "nom": "nudne",
+          "gen": "nudnych",
+          "dat": "nudnym",
+          "acc": "nudne",
+          "ins": "nudnymi",
+          "loc": "nudnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "nudniejszy",
+          "gen": "nudniejszego",
+          "dat": "nudniejszemu",
+          "acc": "nudniejszego",
+          "ins": "nudniejszym",
+          "loc": "nudniejszym"
+        },
+        "m3": {
+          "nom": "nudniejszy",
+          "gen": "nudniejszego",
+          "dat": "nudniejszemu",
+          "acc": "nudniejszy",
+          "ins": "nudniejszym",
+          "loc": "nudniejszym"
+        },
+        "f": {
+          "nom": "nudniejsza",
+          "gen": "nudniejszej",
+          "dat": "nudniejszej",
+          "acc": "nudniejszą",
+          "ins": "nudniejszą",
+          "loc": "nudniejszej"
+        },
+        "n": {
+          "nom": "nudniejsze",
+          "gen": "nudniejszego",
+          "dat": "nudniejszemu",
+          "acc": "nudniejsze",
+          "ins": "nudniejszym",
+          "loc": "nudniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nudniejsi",
+          "gen": "nudniejszych",
+          "dat": "nudniejszym",
+          "acc": "nudniejszych",
+          "ins": "nudniejszymi",
+          "loc": "nudniejszych"
+        },
+        "nonvirile": {
+          "nom": "nudniejsze",
+          "gen": "nudniejszych",
+          "dat": "nudniejszym",
+          "acc": "nudniejsze",
+          "ins": "nudniejszymi",
+          "loc": "nudniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najnudniejszy",
+          "gen": "najnudniejszego",
+          "dat": "najnudniejszemu",
+          "acc": "najnudniejszego",
+          "ins": "najnudniejszym",
+          "loc": "najnudniejszym"
+        },
+        "m3": {
+          "nom": "najnudniejszy",
+          "gen": "najnudniejszego",
+          "dat": "najnudniejszemu",
+          "acc": "najnudniejszy",
+          "ins": "najnudniejszym",
+          "loc": "najnudniejszym"
+        },
+        "f": {
+          "nom": "najnudniejsza",
+          "gen": "najnudniejszej",
+          "dat": "najnudniejszej",
+          "acc": "najnudniejszą",
+          "ins": "najnudniejszą",
+          "loc": "najnudniejszej"
+        },
+        "n": {
+          "nom": "najnudniejsze",
+          "gen": "najnudniejszego",
+          "dat": "najnudniejszemu",
+          "acc": "najnudniejsze",
+          "ins": "najnudniejszym",
+          "loc": "najnudniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najnudniejsi",
+          "gen": "najnudniejszych",
+          "dat": "najnudniejszym",
+          "acc": "najnudniejszych",
+          "ins": "najnudniejszymi",
+          "loc": "najnudniejszych"
+        },
+        "nonvirile": {
+          "nom": "najnudniejsze",
+          "gen": "najnudniejszych",
+          "dat": "najnudniejszym",
+          "acc": "najnudniejsze",
+          "ins": "najnudniejszymi",
+          "loc": "najnudniejszych"
+        }
+      }
+    }
+  }
+}

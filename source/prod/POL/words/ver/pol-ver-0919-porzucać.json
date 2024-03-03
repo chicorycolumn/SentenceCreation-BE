@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "porzucać",
+    "verbalNoun": "porzucanie",
+    "activeAdjectival": "porzucający",
+    "passiveAdjectival": "porzucany",
+    "contemporaryAdverbial": "porzucając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "porzucaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "porzucano"
+          },
+          "plural": {
+            "allPluralGenders": "porzucano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "porzucałem",
+            "f": "porzucałam"
+          },
+          "plural": {
+            "virile": "porzucaliśmy",
+            "nonvirile": "porzucałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "porzucałeś",
+            "f": "porzucałaś"
+          },
+          "plural": {
+            "virile": "porzucaliście",
+            "nonvirile": "porzucałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "porzucał",
+            "f": "porzucała",
+            "n": "porzucało"
+          },
+          "plural": {
+            "virile": "porzucali",
+            "nonvirile": "porzucały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "porzuca się"
+          },
+          "plural": {
+            "allPluralGenders": "porzuca się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "porzucam"
+          },
+          "plural": {
+            "allPluralGenders": "porzucamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "porzucasz"
+          },
+          "plural": {
+            "allPluralGenders": "porzucacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "porzuca"
+          },
+          "plural": {
+            "allPluralGenders": "porzucają"
+          }
+        }
+      }
+    }
+  }
+}

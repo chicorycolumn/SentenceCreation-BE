@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "colleague",
+      "gen": "colleague's"
+    },
+    "plural": {
+      "nom": "colleagues",
+      "gen": "colleagues'"
+    }
+  }
+}

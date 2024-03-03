@@ -1,0 +1,15 @@
+{
+  "inflections": {
+    "infinitive": "be sorry",
+    "v2": {
+      "isTerminus": true,
+      "normal": [
+        "was sorry",
+        "were sorry"
+      ]
+    },
+    "v3": "been sorry",
+    "thirdPS": "is sorry",
+    "gerund": "being sorry"
+  }
+}

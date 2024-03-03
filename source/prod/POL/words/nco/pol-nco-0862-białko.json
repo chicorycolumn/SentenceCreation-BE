@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "białko",
+      "gen": "białka",
+      "dat": "białku",
+      "acc": "białko",
+      "ins": "białkiem",
+      "loc": "białku",
+      "voc": "białko"
+    },
+    "plural": {
+      "nom": "białka",
+      "gen": "białek",
+      "dat": "białkom",
+      "acc": "białka",
+      "ins": "białkami",
+      "loc": "białkach",
+      "voc": "białka"
+    }
+  }
+}

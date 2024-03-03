@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rectangle",
+      "gen": "rectangle's"
+    },
+    "plural": {
+      "nom": "rectangles",
+      "gen": "rectangles'"
+    }
+  }
+}

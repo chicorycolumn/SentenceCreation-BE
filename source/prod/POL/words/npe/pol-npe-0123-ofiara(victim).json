@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ofiara",
+      "gen": "ofiary",
+      "dat": "ofierze",
+      "acc": "ofiarę",
+      "ins": "ofiarą",
+      "loc": "ofierze",
+      "voc": "ofiaro"
+    },
+    "plural": {
+      "nom": "ofiary",
+      "gen": "ofiar",
+      "dat": "ofiarom",
+      "acc": "ofiary",
+      "ins": "ofiarami",
+      "loc": "ofiarach",
+      "voc": "ofiary"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "błagać",
+    "verbalNoun": "błaganie",
+    "activeAdjectival": "błagający",
+    "passiveAdjectival": "błagany",
+    "contemporaryAdverbial": "błagając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "błagaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "błagano"
+          },
+          "plural": {
+            "allPluralGenders": "błagano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "błagałem",
+            "f": "błagałam"
+          },
+          "plural": {
+            "virile": "błagaliśmy",
+            "nonvirile": "błagałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "błagałeś",
+            "f": "błagałaś"
+          },
+          "plural": {
+            "virile": "błagaliście",
+            "nonvirile": "błagałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "błagał",
+            "f": "błagała",
+            "n": "błagało"
+          },
+          "plural": {
+            "virile": "błagali",
+            "nonvirile": "błagały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "błaga się"
+          },
+          "plural": {
+            "allPluralGenders": "błaga się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "błagam"
+          },
+          "plural": {
+            "allPluralGenders": "błagamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "błagasz"
+          },
+          "plural": {
+            "allPluralGenders": "błagacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "błaga"
+          },
+          "plural": {
+            "allPluralGenders": "błagają"
+          }
+        }
+      }
+    }
+  }
+}

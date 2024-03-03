@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przeczytać",
+    "verbalNoun": "przeczytanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przeczytany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przeczytawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeczyta się"
+          },
+          "plural": {
+            "allPluralGenders": "przeczyta się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przeczytam"
+          },
+          "plural": {
+            "allPluralGenders": "przeczytamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przeczytasz"
+          },
+          "plural": {
+            "allPluralGenders": "przeczytacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przeczyta"
+          },
+          "plural": {
+            "allPluralGenders": "przeczytają"
+          }
+        }
+      },
+      "imperative": "przeczytaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeczytano"
+          },
+          "plural": {
+            "allPluralGenders": "przeczytano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przeczytałem",
+            "f": "przeczytałam"
+          },
+          "plural": {
+            "virile": "przeczytaliśmy",
+            "nonvirile": "przeczytałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przeczytałeś",
+            "f": "przeczytałaś"
+          },
+          "plural": {
+            "virile": "przeczytaliście",
+            "nonvirile": "przeczytałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przeczytał",
+            "f": "przeczytała",
+            "n": "przeczytało"
+          },
+          "plural": {
+            "virile": "przeczytali",
+            "nonvirile": "przeczytały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

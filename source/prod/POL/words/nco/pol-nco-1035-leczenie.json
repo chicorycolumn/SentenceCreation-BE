@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "leczenie",
+      "gen": "leczenia",
+      "dat": "leczeniu",
+      "acc": "leczenie",
+      "ins": "leczeniem",
+      "loc": "leczeniu",
+      "voc": "leczenie"
+    }
+  }
+}

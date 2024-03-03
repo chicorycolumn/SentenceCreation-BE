@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "osobowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "osobowy",
+          "gen": "osobowego",
+          "dat": "osobowemu",
+          "acc": "osobowego",
+          "ins": "osobowym",
+          "loc": "osobowym"
+        },
+        "m3": {
+          "nom": "osobowy",
+          "gen": "osobowego",
+          "dat": "osobowemu",
+          "acc": "osobowy",
+          "ins": "osobowym",
+          "loc": "osobowym"
+        },
+        "f": {
+          "nom": "osobowa",
+          "gen": "osobowej",
+          "dat": "osobowej",
+          "acc": "osobową",
+          "ins": "osobową",
+          "loc": "osobowej"
+        },
+        "n": {
+          "nom": "osobowe",
+          "gen": "osobowego",
+          "dat": "osobowemu",
+          "acc": "osobowe",
+          "ins": "osobowym",
+          "loc": "osobowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "osobowi",
+          "gen": "osobowych",
+          "dat": "osobowym",
+          "acc": "osobowych",
+          "ins": "osobowymi",
+          "loc": "osobowych"
+        },
+        "nonvirile": {
+          "nom": "osobowe",
+          "gen": "osobowych",
+          "dat": "osobowym",
+          "acc": "osobowe",
+          "ins": "osobowymi",
+          "loc": "osobowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej osobowy",
+          "gen": "bardziej osobowego",
+          "dat": "bardziej osobowemu",
+          "acc": "bardziej osobowego",
+          "ins": "bardziej osobowym",
+          "loc": "bardziej osobowym"
+        },
+        "m3": {
+          "nom": "bardziej osobowy",
+          "gen": "bardziej osobowego",
+          "dat": "bardziej osobowemu",
+          "acc": "bardziej osobowy",
+          "ins": "bardziej osobowym",
+          "loc": "bardziej osobowym"
+        },
+        "f": {
+          "nom": "bardziej osobowa",
+          "gen": "bardziej osobowej",
+          "dat": "bardziej osobowej",
+          "acc": "bardziej osobową",
+          "ins": "bardziej osobową",
+          "loc": "bardziej osobowej"
+        },
+        "n": {
+          "nom": "bardziej osobowe",
+          "gen": "bardziej osobowego",
+          "dat": "bardziej osobowemu",
+          "acc": "bardziej osobowe",
+          "ins": "bardziej osobowym",
+          "loc": "bardziej osobowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej osobowi",
+          "gen": "bardziej osobowych",
+          "dat": "bardziej osobowym",
+          "acc": "bardziej osobowych",
+          "ins": "bardziej osobowymi",
+          "loc": "bardziej osobowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej osobowe",
+          "gen": "bardziej osobowych",
+          "dat": "bardziej osobowym",
+          "acc": "bardziej osobowe",
+          "ins": "bardziej osobowymi",
+          "loc": "bardziej osobowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej osobowy",
+          "gen": "najbardziej osobowego",
+          "dat": "najbardziej osobowemu",
+          "acc": "najbardziej osobowego",
+          "ins": "najbardziej osobowym",
+          "loc": "najbardziej osobowym"
+        },
+        "m3": {
+          "nom": "najbardziej osobowy",
+          "gen": "najbardziej osobowego",
+          "dat": "najbardziej osobowemu",
+          "acc": "najbardziej osobowy",
+          "ins": "najbardziej osobowym",
+          "loc": "najbardziej osobowym"
+        },
+        "f": {
+          "nom": "najbardziej osobowa",
+          "gen": "najbardziej osobowej",
+          "dat": "najbardziej osobowej",
+          "acc": "najbardziej osobową",
+          "ins": "najbardziej osobową",
+          "loc": "najbardziej osobowej"
+        },
+        "n": {
+          "nom": "najbardziej osobowe",
+          "gen": "najbardziej osobowego",
+          "dat": "najbardziej osobowemu",
+          "acc": "najbardziej osobowe",
+          "ins": "najbardziej osobowym",
+          "loc": "najbardziej osobowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej osobowi",
+          "gen": "najbardziej osobowych",
+          "dat": "najbardziej osobowym",
+          "acc": "najbardziej osobowych",
+          "ins": "najbardziej osobowymi",
+          "loc": "najbardziej osobowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej osobowe",
+          "gen": "najbardziej osobowych",
+          "dat": "najbardziej osobowym",
+          "acc": "najbardziej osobowe",
+          "ins": "najbardziej osobowymi",
+          "loc": "najbardziej osobowych"
+        }
+      }
+    }
+  }
+}

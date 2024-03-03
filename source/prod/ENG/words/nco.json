@@ -1,0 +1,9335 @@
+[
+  {
+    "lemma": "book",
+    "id": "eng-nco-0001-book",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "spoon",
+    "id": "eng-nco-0002-spoon",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "glass",
+    "id": "eng-nco-0003-glass(tumbler)",
+    "register": 0,
+    "frequency": 1,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "object",
+      "emoji": "📦"
+    }
+  },
+  {
+    "lemma": "glass",
+    "id": "eng-nco-0004-glass(material)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "material",
+      "emoji": "👚"
+    },
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "spring",
+    "id": "eng-nco-0005-spring(season)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "time",
+      "emoji": "🕒"
+    }
+  },
+  {
+    "lemma": "spring",
+    "id": "eng-nco-0006-spring(metal)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "metal",
+      "emoji": "🛠️"
+    }
+  },
+  {
+    "lemma": "onion",
+    "id": "eng-nco-0007-onion",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "tea",
+    "id": "eng-nco-0008-tea",
+    "register": 0,
+    "frequency": 1,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "tower",
+    "id": "eng-nco-0009-tower",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "school",
+    "id": "eng-nco-0010-school",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "telephone",
+    "id": "eng-nco-0011-telephone",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "table",
+    "id": "eng-nco-0012-table",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "flower",
+    "id": "eng-nco-0013-flower",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "lamp",
+    "id": "eng-nco-0014-lamp",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "light",
+    "id": "eng-nco-0015-light(lamp)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "technology",
+      "emoji": "💻"
+    }
+  },
+  {
+    "lemma": "light",
+    "id": "eng-nco-0016-light(photons)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "physics",
+      "emoji": "☄️"
+    },
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "vodka",
+    "id": "eng-nco-0017-vodka",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "forest",
+    "id": "eng-nco-0018-forest",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "step",
+    "id": "eng-nco-0019-step",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "month",
+    "id": "eng-nco-0020-month",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "dictionary",
+    "id": "eng-nco-0021-dictionary",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "vocabulary",
+    "id": "eng-nco-0022-vocabulary",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "track",
+    "id": "eng-nco-0023-track",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "rail",
+    "id": "eng-nco-0024-rail",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "mountain",
+    "id": "eng-nco-0025-mountain",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "top",
+    "id": "eng-nco-0026-top",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "goat",
+    "id": "eng-nco-0027-goat",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "coin",
+    "id": "eng-nco-0028-coin",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "Saturday",
+    "id": "eng-nco-0029-Saturday",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "zloty",
+    "id": "eng-nco-0030-zloty",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "carrot",
+    "id": "eng-nco-0031-carrot",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "cheese",
+    "id": "eng-nco-0032-cheese",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "cabbage",
+    "id": "eng-nco-0033-cabbage",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "kale",
+    "id": "eng-nco-0034-kale",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "raspberry",
+    "id": "eng-nco-0035-raspberry",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "rubber",
+    "id": "eng-nco-0036-rubber(material)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "material",
+      "emoji": "👚"
+    },
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "rubber",
+    "id": "eng-nco-0037-rubber(eraser)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "object",
+      "emoji": "📦"
+    }
+  },
+  {
+    "lemma": "chewing gum",
+    "id": "eng-nco-0038-chewinggum",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "way",
+    "id": "eng-nco-0039-way(method)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "💭"
+    }
+  },
+  {
+    "lemma": "way",
+    "id": "eng-nco-0040-way(direction)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "direction",
+      "emoji": "📍"
+    }
+  },
+  {
+    "lemma": "road",
+    "id": "eng-nco-0041-road",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "cat",
+    "id": "eng-nco-0042-cat",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "fox",
+    "id": "eng-nco-0043-fox",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "bird",
+    "id": "eng-nco-0044-bird",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "wolf",
+    "id": "eng-nco-0045-wolf",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "tongue",
+    "id": "eng-nco-0046-tongue",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "language",
+    "id": "eng-nco-0047-language",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "hall",
+    "id": "eng-nco-0048-hall",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "hallway",
+    "id": "eng-nco-0049-hallway",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "lobby",
+    "id": "eng-nco-0050-lobby",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "moment",
+    "id": "eng-nco-0051-moment",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "window",
+    "id": "eng-nco-0052-window",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "radio",
+    "id": "eng-nco-0053-radio",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "problem",
+    "id": "eng-nco-0054-problem",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "hen",
+    "id": "eng-nco-0055-hen",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "street",
+    "id": "eng-nco-0056-street",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "paper",
+    "id": "eng-nco-0057-paper",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "kettle",
+    "id": "eng-nco-0058-kettle",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "teapot",
+    "id": "eng-nco-0059-teapot",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "knife",
+    "id": "eng-nco-0060-knife",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "computer",
+    "id": "eng-nco-0061-computer",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "hospital",
+    "id": "eng-nco-0062-hospital",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "physics",
+    "id": "eng-nco-0063-physics",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "mathematics",
+    "id": "eng-nco-0064-mathematics",
+    "register": 0,
+    "frequency": 3,
+    "additionalSpellings": [
+      "math",
+      "maths"
+    ],
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "chemistry",
+    "id": "eng-nco-0065-chemistry",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "chocolate",
+    "id": "eng-nco-0066-chocolate",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "winter",
+    "id": "eng-nco-0067-winter",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "floor",
+    "id": "eng-nco-0068-floor(!ceiling)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "not ceiling",
+      "emoji": "🛋️"
+    }
+  },
+  {
+    "lemma": "floor",
+    "id": "eng-nco-0069-floor(storey)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "eg ground floor",
+      "emoji": "🏢"
+    }
+  },
+  {
+    "lemma": "building",
+    "id": "eng-nco-0070-building",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "wall",
+    "id": "eng-nco-0071-wall",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "map",
+    "id": "eng-nco-0072-map",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "climate",
+    "id": "eng-nco-0073-climate",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "year",
+    "id": "eng-nco-0074-year",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "state",
+    "id": "eng-nco-0075-state(condition)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "🧠"
+    }
+  },
+  {
+    "lemma": "state",
+    "id": "eng-nco-0076-state(political entity)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "geographic place",
+      "emoji": "⛰️"
+    }
+  },
+  {
+    "lemma": "fate",
+    "id": "eng-nco-0077-fate",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "boom",
+    "id": "eng-nco-0078-boom",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "bang",
+    "id": "eng-nco-0079-bang",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "crash",
+    "id": "eng-nco-0080-crash",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "rumble",
+    "id": "eng-nco-0081-rumble",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "bridge",
+    "id": "eng-nco-0082-bridge",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "side",
+    "id": "eng-nco-0083-side",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "nature",
+    "id": "eng-nco-0084-nature",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "home",
+    "id": "eng-nco-0085-home",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "house",
+    "id": "eng-nco-0086-house",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "Sunday",
+    "id": "eng-nco-0087-Sunday",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "water",
+    "id": "eng-nco-0088-water",
+    "register": 0,
+    "frequency": 1,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "kilogram",
+    "id": "eng-nco-0089-kilogram",
+    "register": 0,
+    "frequency": 3,
+    "additionalSpellings": [
+      "kilo"
+    ]
+  },
+  {
+    "lemma": "port",
+    "id": "eng-nco-0090-port",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "harbour",
+    "id": "eng-nco-0091-harbour",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "ocean",
+    "id": "eng-nco-0092-ocean",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "bath",
+    "id": "eng-nco-0093-bath",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "bathtub",
+    "id": "eng-nco-0094-bathtub",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "screen",
+    "id": "eng-nco-0095-screen",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "list",
+    "id": "eng-nco-0096-list",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "May",
+    "id": "eng-nco-0097-May",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "sofa",
+    "id": "eng-nco-0098-sofa",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "stairs",
+    "id": "eng-nco-0099-stairs",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumPlurale": true
+  },
+  {
+    "lemma": "stairway",
+    "id": "eng-nco-0100-stairway",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "ground",
+    "id": "eng-nco-0101-ground",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "alarm",
+    "id": "eng-nco-0102-alarm",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "December",
+    "id": "eng-nco-0103-December",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "myth",
+    "id": "eng-nco-0104-myth",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "week",
+    "id": "eng-nco-0105-week",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "gift",
+    "id": "eng-nco-0106-gift",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "remote control",
+    "id": "eng-nco-0107-remotecontrol",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "Monday",
+    "id": "eng-nco-0108-Monday",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "paradise",
+    "id": "eng-nco-0109-paradise",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "heaven",
+    "id": "eng-nco-0110-heaven",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "miracle",
+    "id": "eng-nco-0111-miracle",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "ceiling",
+    "id": "eng-nco-0112-ceiling",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "summer",
+    "id": "eng-nco-0113-summer",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "spark",
+    "id": "eng-nco-0114-spark",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "paint",
+    "id": "eng-nco-0115-paint",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "hitchhiking",
+    "id": "eng-nco-0116-hitchhiking",
+    "register": 0,
+    "frequency": 5,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "silver",
+    "id": "eng-nco-0117-silver",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "tomorrow",
+    "id": "eng-nco-0118-tomorrow",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "snow",
+    "id": "eng-nco-0119-snow",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "elephant",
+    "id": "eng-nco-0120-elephant",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "energy",
+    "id": "eng-nco-0121-energy",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "sun",
+    "id": "eng-nco-0122-sun",
+    "register": 0,
+    "frequency": 1,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "helium",
+    "id": "eng-nco-0123-helium",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "duck",
+    "id": "eng-nco-0124-duck",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "lotion",
+    "id": "eng-nco-0125-lotion",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "guitar",
+    "id": "eng-nco-0126-guitar",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "fortune",
+    "id": "eng-nco-0127-fortune",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "ant",
+    "id": "eng-nco-0128-ant",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "stroll",
+    "id": "eng-nco-0129-stroll",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "walk",
+    "id": "eng-nco-0130-walk",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "ball",
+    "id": "eng-nco-0131-ball(shape)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "💭"
+    }
+  },
+  {
+    "lemma": "ball",
+    "id": "eng-nco-0132-ball(object)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "object",
+      "emoji": "📦"
+    }
+  },
+  {
+    "lemma": "sphere",
+    "id": "eng-nco-0133-sphere",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "bullet",
+    "id": "eng-nco-0134-bullet",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "punishment",
+    "id": "eng-nco-0135-punishment",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "penalty",
+    "id": "eng-nco-0136-penalty",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "dust",
+    "id": "eng-nco-0137-dust",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "medicine",
+    "id": "eng-nco-0138-medicine(medication)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "medical",
+      "emoji": "🩺"
+    },
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "medicine",
+    "id": "eng-nco-0139-medicine(field)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "field of study",
+      "emoji": "🧠"
+    },
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "earthworm",
+    "id": "eng-nco-0140-earthworm",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "dream",
+    "id": "eng-nco-0141-dream(sleeping)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "sleep",
+      "emoji": "💤"
+    }
+  },
+  {
+    "lemma": "dream",
+    "id": "eng-nco-0142-dream(hope)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "for future",
+      "emoji": "🤔"
+    }
+  },
+  {
+    "lemma": "sleep",
+    "id": "eng-nco-0143-sleep",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "length",
+    "id": "eng-nco-0144-length",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "duration",
+    "id": "eng-nco-0145-duration",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "fork",
+    "id": "eng-nco-0146-fork",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "letter",
+    "id": "eng-nco-0147-letter(postal)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "object",
+      "emoji": "📦"
+    }
+  },
+  {
+    "lemma": "letter",
+    "id": "eng-nco-0148-letter(alphabet)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "linguistics",
+      "emoji": "🔤"
+    }
+  },
+  {
+    "lemma": "bank",
+    "id": "eng-nco-0149-bank(financial)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "money",
+      "emoji": "💵"
+    }
+  },
+  {
+    "lemma": "bank",
+    "id": "eng-nco-0150-bank(river)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "nature",
+      "emoji": "🌳"
+    }
+  },
+  {
+    "lemma": "coat",
+    "id": "eng-nco-0151-coat",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "truth",
+    "id": "eng-nco-0152-truth",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "taste",
+    "id": "eng-nco-0153-taste(preference)",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "psychological",
+      "emoji": "🧠"
+    }
+  },
+  {
+    "lemma": "taste",
+    "id": "eng-nco-0154-taste(flavour)",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "food",
+      "emoji": "🍲"
+    }
+  },
+  {
+    "lemma": "personal preference",
+    "id": "eng-nco-0155-personalpreference",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "flight",
+    "id": "eng-nco-0156-flight",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "horse",
+    "id": "eng-nco-0157-horse",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "salt",
+    "id": "eng-nco-0158-salt",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "cow",
+    "id": "eng-nco-0159-cow",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "hotel",
+    "id": "eng-nco-0160-hotel",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "product",
+    "id": "eng-nco-0161-product",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "sign",
+    "id": "eng-nco-0162-sign(concrete)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "object",
+      "emoji": "📦"
+    }
+  },
+  {
+    "lemma": "sign",
+    "id": "eng-nco-0163-sign(abstract)",
+    "register": 0,
+    "frequency": 5,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "💭"
+    }
+  },
+  {
+    "lemma": "mark",
+    "id": "eng-nco-0164-mark",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "symbol",
+    "id": "eng-nco-0165-symbol",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "juice",
+    "id": "eng-nco-0166-juice",
+    "register": 0,
+    "frequency": 1,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "butter",
+    "id": "eng-nco-0167-butter",
+    "register": 0,
+    "frequency": 1,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "yoghurt",
+    "id": "eng-nco-0168-yoghurt",
+    "additionalSpellings": [
+      "yogurt"
+    ],
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "night",
+    "id": "eng-nco-0169-night",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "eye",
+    "id": "eng-nco-0170-eye",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "oxygen",
+    "id": "eng-nco-0171-oxygen",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "sex",
+    "id": "eng-nco-0172-sex",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "marijuana",
+    "id": "eng-nco-0173-marijuana",
+    "register": 6,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "tree",
+    "id": "eng-nco-0174-tree",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "percent",
+    "id": "eng-nco-0175-percent",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "wine",
+    "id": "eng-nco-0176-wine",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "cash desk",
+    "id": "eng-nco-0177-cashdesk",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "checkout",
+    "id": "eng-nco-0178-checkout",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "cash register",
+    "id": "eng-nco-0179-cashregister",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "till",
+    "id": "eng-nco-0180-till",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "money",
+    "id": "eng-nco-0181-money",
+    "register": 6,
+    "frequency": 1,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "weather",
+    "id": "eng-nco-0182-weather",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "handwriting",
+    "id": "eng-nco-0183-handwriting",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "fuck",
+    "id": "eng-nco-0184-fuck",
+    "register": 8,
+    "frequency": 3
+  },
+  {
+    "lemma": "cement",
+    "id": "eng-nco-0185-cement",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "coffee",
+    "id": "eng-nco-0186-coffee",
+    "register": 0,
+    "frequency": 1,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "honey bee",
+    "id": "eng-nco-0187-honeybee",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "bee",
+    "id": "eng-nco-0188-bee",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "soil",
+    "id": "eng-nco-0189-soil",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "ear",
+    "id": "eng-nco-0190-ear",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "November",
+    "id": "eng-nco-0191-November",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "telescope",
+    "id": "eng-nco-0192-telescope",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "pyramid",
+    "id": "eng-nco-0193-pyramid(egypt)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "location",
+      "emoji": "📍"
+    }
+  },
+  {
+    "lemma": "pyramid",
+    "id": "eng-nco-0194-pyramid(shape)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "💭"
+    }
+  },
+  {
+    "lemma": "sock",
+    "id": "eng-nco-0195-sock",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "leg",
+    "id": "eng-nco-0196-leg",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "microscope",
+    "id": "eng-nco-0197-microscope",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "income",
+    "id": "eng-nco-0198-income",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "height",
+    "id": "eng-nco-0199-height(altitude)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "💭"
+    }
+  },
+  {
+    "lemma": "height",
+    "id": "eng-nco-0200-height(personal)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    }
+  },
+  {
+    "lemma": "altitude",
+    "id": "eng-nco-0201-altitude",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "minute",
+    "id": "eng-nco-0202-minute",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "Thursday",
+    "id": "eng-nco-0203-Thursday",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "Friday",
+    "id": "eng-nco-0204-Friday",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "love",
+    "id": "eng-nco-0205-love(concept)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": false,
+      "text": "abstract",
+      "emoji": "💭"
+    },
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "charity",
+    "id": "eng-nco-0206-charity",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "culture",
+    "id": "eng-nco-0207-culture",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "Tuesday",
+    "id": "eng-nco-0208-Tuesday",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "tabletop",
+    "id": "eng-nco-0209-tabletop",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "countertop",
+    "id": "eng-nco-0210-countertop",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "counter",
+    "id": "eng-nco-0211-counter",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "price",
+    "id": "eng-nco-0212-price(in a shop)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "money",
+      "emoji": "💵"
+    }
+  },
+  {
+    "lemma": "price",
+    "id": "eng-nco-0213-price(abstract)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "💭"
+    }
+  },
+  {
+    "lemma": "pride",
+    "id": "eng-nco-0214-pride",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "planet",
+    "id": "eng-nco-0215-planet",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "park",
+    "id": "eng-nco-0216-park",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "description",
+    "id": "eng-nco-0217-description",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "blender",
+    "id": "eng-nco-0218-blender",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "uranium",
+    "id": "eng-nco-0219-uranium",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "Wednesday",
+    "id": "eng-nco-0220-Wednesday",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "comet",
+    "id": "eng-nco-0221-comet",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "board",
+    "id": "eng-nco-0222-board(plank)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "material",
+      "emoji": "👚"
+    }
+  },
+  {
+    "lemma": "board",
+    "id": "eng-nco-0223-board(council)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    }
+  },
+  {
+    "lemma": "plank",
+    "id": "eng-nco-0224-plank",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "bull",
+    "id": "eng-nco-0225-bull",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "biology",
+    "id": "eng-nco-0226-biology",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "picture",
+    "id": "eng-nco-0227-picture(general)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "💭"
+    }
+  },
+  {
+    "lemma": "picture",
+    "id": "eng-nco-0228-picture(painting)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "object",
+      "emoji": "📦"
+    }
+  },
+  {
+    "lemma": "image",
+    "id": "eng-nco-0229-image",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "painting",
+    "id": "eng-nco-0230-painting",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "forename",
+    "id": "eng-nco-0231-forename",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "given name",
+    "id": "eng-nco-0232-givenname",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "christian name",
+    "id": "eng-nco-0233-christianname",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "first name",
+    "id": "eng-nco-0234-firstname",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "name",
+    "id": "eng-nco-0235-name",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "family",
+    "id": "eng-nco-0236-family",
+    "register": 0,
+    "frequency": 1,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "example",
+    "id": "eng-nco-0237-example",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "morning",
+    "id": "eng-nco-0238-morning",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "March",
+    "id": "eng-nco-0239-March",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "tooth",
+    "id": "eng-nco-0240-tooth",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "wave",
+    "id": "eng-nco-0241-wave",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "second",
+    "id": "eng-nco-0242-second",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "June",
+    "id": "eng-nco-0243-June",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "milk",
+    "id": "eng-nco-0244-milk",
+    "register": 0,
+    "frequency": 1,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "law",
+    "id": "eng-nco-0245-law",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "right",
+    "id": "eng-nco-0246-right",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "body",
+    "id": "eng-nco-0247-body",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "gold",
+    "id": "eng-nco-0248-gold",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "colour",
+    "id": "eng-nco-0249-colour",
+    "register": 0,
+    "frequency": 1,
+    "additionalSpellings": [
+      "color"
+    ],
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "nitrogen",
+    "id": "eng-nco-0250-nitrogen",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "time",
+    "id": "eng-nco-0251-time(seconds)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "time",
+      "emoji": "🕒"
+    },
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "time",
+    "id": "eng-nco-0252-time(instance)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "instance",
+      "emoji": "⚪"
+    }
+  },
+  {
+    "lemma": "day",
+    "id": "eng-nco-0253-day(one day)",
+    "register": 0,
+    "frequency": 1,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "24 hours",
+      "emoji": "📅"
+    }
+  },
+  {
+    "lemma": "day",
+    "id": "eng-nco-0254-day(daytime)",
+    "register": 0,
+    "frequency": 1,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "daytime",
+      "emoji": "🌄"
+    },
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "daytime",
+    "id": "eng-nco-0255-daytime",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "dollar",
+    "id": "eng-nco-0256-dollar",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "chance",
+    "id": "eng-nco-0257-chance",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "occasion",
+    "id": "eng-nco-0258-occasion",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "opportunity",
+    "id": "eng-nco-0259-opportunity",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "cap",
+    "id": "eng-nco-0260-cap",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "weight",
+    "id": "eng-nco-0261-weight(physical)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "physical",
+      "emoji": "🪨"
+    },
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "weight",
+    "id": "eng-nco-0262-weight(importance)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "💭"
+    },
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "importance",
+    "id": "eng-nco-0263-importance",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "vinegar",
+    "id": "eng-nco-0264-vinegar",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "accident",
+    "id": "eng-nco-0265-accident",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "event",
+    "id": "eng-nco-0266-event",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "cake",
+    "id": "eng-nco-0267-cake",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "pie",
+    "id": "eng-nco-0268-pie",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "dough",
+    "id": "eng-nco-0269-dough",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "batter",
+    "id": "eng-nco-0270-batter",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "essay",
+    "id": "eng-nco-0271-essay",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "October",
+    "id": "eng-nco-0272-October",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "country",
+    "id": "eng-nco-0273-country(nation)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "nation",
+      "emoji": "🗾"
+    }
+  },
+  {
+    "lemma": "country",
+    "id": "eng-nco-0274-country(countryside)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "general location",
+      "emoji": "🏞️"
+    }
+  },
+  {
+    "lemma": "breast",
+    "id": "eng-nco-0275-breast",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "chest",
+    "id": "eng-nco-0276-chest",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "September",
+    "id": "eng-nco-0277-September",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "July",
+    "id": "eng-nco-0278-July",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "heart",
+    "id": "eng-nco-0279-heart",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "concrete",
+    "id": "eng-nco-0280-concrete",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "lift",
+    "id": "eng-nco-0281-lift",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "elevator",
+    "id": "eng-nco-0282-elevator",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "cloud",
+    "id": "eng-nco-0283-cloud",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "help",
+    "id": "eng-nco-0284-help",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "aid",
+    "id": "eng-nco-0285-aid",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "assistance",
+    "id": "eng-nco-0286-assistance",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "cucumber",
+    "id": "eng-nco-0287-cucumber",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "dragon",
+    "id": "eng-nco-0288-dragon",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "mouth",
+    "id": "eng-nco-0289-mouth",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "evening",
+    "id": "eng-nco-0290-evening",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "fish",
+    "id": "eng-nco-0291-fish",
+    "register": 0,
+    "frequency": 1,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "border",
+    "id": "eng-nco-0292-border(national)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "nation",
+      "emoji": "🗾"
+    }
+  },
+  {
+    "lemma": "border",
+    "id": "eng-nco-0293-border(abstract)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "💭"
+    }
+  },
+  {
+    "lemma": "frontier",
+    "id": "eng-nco-0294-frontier",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "limit",
+    "id": "eng-nco-0295-limit",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "breakfast",
+    "id": "eng-nco-0296-breakfast",
+    "register": 0,
+    "frequency": 1,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "leaf",
+    "id": "eng-nco-0297-leaf",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "silt",
+    "id": "eng-nco-0298-silt",
+    "register": 0,
+    "frequency": 5,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "mud",
+    "id": "eng-nco-0299-mud",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 1,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "deer",
+    "id": "eng-nco-0300-deer",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "stag",
+    "id": "eng-nco-0301-stag",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "cancer",
+    "id": "eng-nco-0302-cancer",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "bread",
+    "id": "eng-nco-0303-bread",
+    "register": 0,
+    "frequency": 1,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "area",
+    "id": "eng-nco-0304-area",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "domain",
+    "id": "eng-nco-0305-domain",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "region",
+    "id": "eng-nco-0306-region",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "beard",
+    "id": "eng-nco-0307-beard",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "cream",
+    "id": "eng-nco-0308-cream(lotion)",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "medical",
+      "emoji": "🩺"
+    }
+  },
+  {
+    "lemma": "cream",
+    "id": "eng-nco-0309-cream(food)",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "food",
+      "emoji": "🍲"
+    }
+  },
+  {
+    "lemma": "door",
+    "id": "eng-nco-0310-door",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "cinema",
+    "id": "eng-nco-0311-cinema",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "coconut",
+    "id": "eng-nco-0312-coconut",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "rain",
+    "id": "eng-nco-0313-rain",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "city",
+    "id": "eng-nco-0314-city",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "town",
+    "id": "eng-nco-0315-town",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "August",
+    "id": "eng-nco-0316-August",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "dirt",
+    "id": "eng-nco-0317-dirt",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "filth",
+    "id": "eng-nco-0318-filth",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "grime",
+    "id": "eng-nco-0319-grime",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "flavour",
+    "id": "eng-nco-0320-flavour",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "berry",
+    "id": "eng-nco-0321-berry",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "fog",
+    "id": "eng-nco-0322-fog",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "mist",
+    "id": "eng-nco-0323-mist",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "seagull",
+    "id": "eng-nco-0324-seagull",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "ice",
+    "id": "eng-nco-0325-ice",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "airport",
+    "id": "eng-nco-0326-airport",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "goal",
+    "id": "eng-nco-0327-goal",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "aim",
+    "id": "eng-nco-0328-aim",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "objective",
+    "id": "eng-nco-0329-objective",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "target",
+    "id": "eng-nco-0330-target(abstract)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "💭"
+    }
+  },
+  {
+    "lemma": "target",
+    "id": "eng-nco-0331-target(physical)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "physical",
+      "emoji": "🪨"
+    }
+  },
+  {
+    "lemma": "destination",
+    "id": "eng-nco-0332-destination",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "age",
+    "id": "eng-nco-0333-age",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "century",
+    "id": "eng-nco-0334-century",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "swan",
+    "id": "eng-nco-0335-swan",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "wasp",
+    "id": "eng-nco-0336-wasp",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "fable",
+    "id": "eng-nco-0337-fable",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "fairy tale",
+    "id": "eng-nco-0338-fairytale",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "cartoon",
+    "id": "eng-nco-0339-cartoon",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "bone",
+    "id": "eng-nco-0340-bone",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "printing",
+    "id": "eng-nco-0341-printing",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "print",
+    "id": "eng-nco-0342-print",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "blanket",
+    "id": "eng-nco-0343-blanket",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "tablecloth",
+    "id": "eng-nco-0344-tablecloth",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "island",
+    "id": "eng-nco-0345-island",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "basket",
+    "id": "eng-nco-0346-basket",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "bin",
+    "id": "eng-nco-0347-bin",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "trashcan",
+    "id": "eng-nco-0348-trashcan",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "January",
+    "id": "eng-nco-0349-January",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "beetle",
+    "id": "eng-nco-0350-beetle",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "pancake",
+    "id": "eng-nco-0351-pancake",
+    "register": 0,
+    "frequency": 5,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "crepe",
+    "id": "eng-nco-0352-crepe",
+    "register": 0,
+    "frequency": 5,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "inn",
+    "id": "eng-nco-0353-inn",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "inch",
+    "id": "eng-nco-0354-inch",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "document",
+    "id": "eng-nco-0355-document",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "hive",
+    "id": "eng-nco-0356-hive",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "beehive",
+    "id": "eng-nco-0357-beehive",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "blackbird",
+    "id": "eng-nco-0358-blackbird",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "April",
+    "id": "eng-nco-0359-April",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "surname",
+    "id": "eng-nco-0360-surname",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "last name",
+    "id": "eng-nco-0361-lastname",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "family name",
+    "id": "eng-nco-0362-familyname",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "shit",
+    "id": "eng-nco-0363-shit",
+    "register": 8,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "piece of shit",
+    "id": "eng-nco-0364-pieceofshit",
+    "register": 8,
+    "frequency": 4
+  },
+  {
+    "lemma": "celery",
+    "id": "eng-nco-0365-celery",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "celeriac",
+    "id": "eng-nco-0366-celeriac",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "bed",
+    "id": "eng-nco-0367-bed",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "sound",
+    "id": "eng-nco-0368-sound",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "hand",
+    "id": "eng-nco-0369-hand",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "arm",
+    "id": "eng-nco-0370-arm",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "camel",
+    "id": "eng-nco-0371-camel",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "apple",
+    "id": "eng-nco-0372-apple",
+    "register": 0,
+    "frequency": 1,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "end",
+    "id": "eng-nco-0373-end",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "flea",
+    "id": "eng-nco-0374-flea",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "penny",
+    "id": "eng-nco-0375-penny",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "sky",
+    "id": "eng-nco-0376-sky",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "train",
+    "id": "eng-nco-0377-train",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "lunch",
+    "id": "eng-nco-0378-lunch",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "herring",
+    "id": "eng-nco-0379-herring",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "metre",
+    "id": "eng-nco-0380-metre",
+    "register": 0,
+    "frequency": 3,
+    "additionalSpellings": [
+      "meter"
+    ]
+  },
+  {
+    "lemma": "lettuce",
+    "id": "eng-nco-0381-lettuce",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "pumpkin",
+    "id": "eng-nco-0382-pumpkin",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "balloon",
+    "id": "eng-nco-0383-balloon",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "word",
+    "id": "eng-nco-0384-word",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "moth",
+    "id": "eng-nco-0385-moth",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "air",
+    "id": "eng-nco-0386-air",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 1,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "chicken",
+    "id": "eng-nco-0387-chicken",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "chick",
+    "id": "eng-nco-0388-chick(bird)",
+    "register": 0,
+    "frequency": 5,
+    "allohomInfo": {
+      "singleWordtype": false,
+      "text": "animal",
+      "emoji": "🐕"
+    }
+  },
+  {
+    "lemma": "axe",
+    "id": "eng-nco-0389-axe",
+    "register": 0,
+    "frequency": 4,
+    "additionalSpellings": [
+      "ax"
+    ]
+  },
+  {
+    "lemma": "aeroplane",
+    "id": "eng-nco-0390-aeroplane",
+    "additionalSpellings": [
+      "airplane"
+    ],
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "plane",
+    "id": "eng-nco-0391-plane",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "beer",
+    "id": "eng-nco-0392-beer",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "head",
+    "id": "eng-nco-0393-head",
+    "register": 6,
+    "frequency": 2
+  },
+  {
+    "lemma": "lemon",
+    "id": "eng-nco-0394-lemon",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "council",
+    "id": "eng-nco-0395-council",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "advice",
+    "id": "eng-nco-0396-advice",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "bowl",
+    "id": "eng-nco-0397-bowl",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "potato",
+    "id": "eng-nco-0398-potato",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "motorcycle",
+    "id": "eng-nco-0399-motorcycle",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "lead",
+    "id": "eng-nco-0400-lead(metal)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "chemical",
+      "emoji": "🧪"
+    },
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "lead",
+    "id": "eng-nco-0401-lead(leash)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "animal",
+      "emoji": "🐕"
+    }
+  },
+  {
+    "lemma": "plant",
+    "id": "eng-nco-0402-plant(plantae)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "nature",
+      "emoji": "🌳️"
+    }
+  },
+  {
+    "lemma": "plant",
+    "id": "eng-nco-0403-plant(factory)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "location",
+      "emoji": "📍"
+    }
+  },
+  {
+    "lemma": "leash",
+    "id": "eng-nco-0404-leash",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "sword",
+    "id": "eng-nco-0405-sword",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "crab",
+    "id": "eng-nco-0406-crab",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "stroke",
+    "id": "eng-nco-0407-stroke",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "cold",
+    "id": "eng-nco-0408-cold(coldness)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "temperature",
+      "emoji": "🌡️"
+    },
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "cold",
+    "id": "eng-nco-0409-cold(common cold)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "medical",
+      "emoji": "🩺"
+    }
+  },
+  {
+    "lemma": "coldness",
+    "id": "eng-nco-0410-coldness",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "smoke",
+    "id": "eng-nco-0411-smoke",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "wood",
+    "id": "eng-nco-0412-wood",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "fear",
+    "id": "eng-nco-0413-fear",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "fever",
+    "id": "eng-nco-0414-fever",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "wind",
+    "id": "eng-nco-0415-wind",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "effect",
+    "id": "eng-nco-0416-effect",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "result",
+    "id": "eng-nco-0417-result",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "consequence",
+    "id": "eng-nco-0418-consequence",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "fame",
+    "id": "eng-nco-0419-fame",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "platform",
+    "id": "eng-nco-0420-platform",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "orange",
+    "id": "eng-nco-0421-orange",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "stage",
+    "id": "eng-nco-0422-stage(theatre)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "theatre",
+      "emoji": "🎭"
+    }
+  },
+  {
+    "lemma": "stage",
+    "id": "eng-nco-0423-stage(step)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "💭"
+    }
+  },
+  {
+    "lemma": "scene",
+    "id": "eng-nco-0424-scene",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "beach",
+    "id": "eng-nco-0425-beach",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "circle",
+    "id": "eng-nco-0426-circle",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "wheel",
+    "id": "eng-nco-0427-wheel",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "pain",
+    "id": "eng-nco-0428-pain",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "ache",
+    "id": "eng-nco-0429-ache",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "garlic",
+    "id": "eng-nco-0430-garlic",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "egg",
+    "id": "eng-nco-0431-egg",
+    "register": 0,
+    "frequency": 1,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "bucket",
+    "id": "eng-nco-0432-bucket",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "autumn",
+    "id": "eng-nco-0433-autumn",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "fire",
+    "id": "eng-nco-0434-fire",
+    "register": 0,
+    "frequency": 1,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "cauliflower",
+    "id": "eng-nco-0435-cauliflower",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "honey",
+    "id": "eng-nco-0436-honey(bees)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": false,
+      "text": "food",
+      "emoji": "🍲"
+    },
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "suitcase",
+    "id": "eng-nco-0437-suitcase",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "source",
+    "id": "eng-nco-0438-source",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "tortoise",
+    "id": "eng-nco-0439-tortoise",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "turtle",
+    "id": "eng-nco-0440-turtle",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "acid",
+    "id": "eng-nco-0441-acid",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "cockroach",
+    "id": "eng-nco-0442-cockroach",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "key",
+    "id": "eng-nco-0443-key(door)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "object",
+      "emoji": "📦"
+    }
+  },
+  {
+    "lemma": "key",
+    "id": "eng-nco-0444-key(computer)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "computing",
+      "emoji": "💻"
+    }
+  },
+  {
+    "lemma": "spanner",
+    "id": "eng-nco-0445-spanner",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "wrench",
+    "id": "eng-nco-0446-wrench",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "hedgehog",
+    "id": "eng-nco-0447-hedgehog",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "palm",
+    "id": "eng-nco-0448-palm",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "course",
+    "id": "eng-nco-0449-course(learning)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "school",
+      "emoji": "🎒"
+    }
+  },
+  {
+    "lemma": "course",
+    "id": "eng-nco-0450-course(meal)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "food",
+      "emoji": "🍲"
+    }
+  },
+  {
+    "lemma": "ticket",
+    "id": "eng-nco-0451-ticket",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "capital",
+    "id": "eng-nco-0452-capital",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "capital city",
+    "id": "eng-nco-0453-capitalcity",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "tail",
+    "id": "eng-nco-0454-tail",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "temperature",
+    "id": "eng-nco-0455-temperature",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "alcohol",
+    "id": "eng-nco-0456-alcohol",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "feather",
+    "id": "eng-nco-0457-feather",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "fountain pen",
+    "id": "eng-nco-0458-fountainpen",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "desire",
+    "id": "eng-nco-0459-desire",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "will",
+    "id": "eng-nco-0460-will",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "willingness",
+    "id": "eng-nco-0461-willingness",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "sauce",
+    "id": "eng-nco-0462-sauce",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "gravy",
+    "id": "eng-nco-0463-gravy",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "moose",
+    "id": "eng-nco-0464-moose",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "elk",
+    "id": "eng-nco-0465-elk",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "lake",
+    "id": "eng-nco-0466-lake",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "badger",
+    "id": "eng-nco-0467-badger",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "pencil",
+    "id": "eng-nco-0468-pencil",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "error",
+    "id": "eng-nco-0469-error",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "mistake",
+    "id": "eng-nco-0470-mistake",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "snake",
+    "id": "eng-nco-0471-snake",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "hose",
+    "id": "eng-nco-0472-hose",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "mirror",
+    "id": "eng-nco-0473-mirror",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "sea",
+    "id": "eng-nco-0474-sea",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "salmon",
+    "id": "eng-nco-0475-salmon",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "cure",
+    "id": "eng-nco-0476-cure",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "car",
+    "id": "eng-nco-0477-car",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "museum",
+    "id": "eng-nco-0478-museum",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "cookie",
+    "id": "eng-nco-0479-cookie",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "biscuit",
+    "id": "eng-nco-0480-biscuit",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "pound",
+    "id": "eng-nco-0481-pound",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "shoulder",
+    "id": "eng-nco-0482-shoulder",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "comma",
+    "id": "eng-nco-0483-comma",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "hell",
+    "id": "eng-nco-0484-hell",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "kilometre",
+    "id": "eng-nco-0485-kilometre",
+    "register": 0,
+    "frequency": 3,
+    "additionalSpellings": [
+      "kilometer"
+    ]
+  },
+  {
+    "lemma": "weapon",
+    "id": "eng-nco-0486-weapon",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "gun",
+    "id": "eng-nco-0487-gun",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "ghost",
+    "id": "eng-nco-0488-ghost",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "spirit",
+    "id": "eng-nco-0489-spirit",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "mouse",
+    "id": "eng-nco-0490-mouse(animal)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "animal",
+      "emoji": "🐕"
+    }
+  },
+  {
+    "lemma": "mouse",
+    "id": "eng-nco-0491-mouse(computer)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "computing",
+      "emoji": "💻"
+    }
+  },
+  {
+    "lemma": "present",
+    "id": "eng-nco-0492-present",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "noun",
+    "id": "eng-nco-0493-noun",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "tomato",
+    "id": "eng-nco-0494-tomato",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "order",
+    "id": "eng-nco-0495-order",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "sequence",
+    "id": "eng-nco-0496-sequence",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "thing",
+    "id": "eng-nco-0497-thing",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "hatchet",
+    "id": "eng-nco-0498-hatchet",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "brain",
+    "id": "eng-nco-0499-brain",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "branch",
+    "id": "eng-nco-0500-branch",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "factory",
+    "id": "eng-nco-0501-factory",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "bet",
+    "id": "eng-nco-0502-bet",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "wager",
+    "id": "eng-nco-0503-wager",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "bear",
+    "id": "eng-nco-0504-bear",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2,
+    "allohomInfo": {
+      "singleWordtype": false,
+      "text": "animal",
+      "emoji": "🐕"
+    }
+  },
+  {
+    "lemma": "parrot",
+    "id": "eng-nco-0505-parrot",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "project",
+    "id": "eng-nco-0506-project",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "design",
+    "id": "eng-nco-0507-design",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "heat",
+    "id": "eng-nco-0508-heat",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "lock",
+    "id": "eng-nco-0509-lock",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "castle",
+    "id": "eng-nco-0510-castle",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "beaver",
+    "id": "eng-nco-0511-beaver",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "crow",
+    "id": "eng-nco-0512-crow",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "oil",
+    "id": "eng-nco-0513-oil",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "animal",
+    "id": "eng-nco-0514-animal",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "owl",
+    "id": "eng-nco-0515-owl",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "world",
+    "id": "eng-nco-0516-world",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "photograph",
+    "id": "eng-nco-0517-photograph",
+    "register": 0,
+    "frequency": 3,
+    "additionalSpellings": [
+      "photo"
+    ]
+  },
+  {
+    "lemma": "mosquito",
+    "id": "eng-nco-0518-mosquito",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "motorway",
+    "id": "eng-nco-0519-motorway",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "freeway",
+    "id": "eng-nco-0520-freeway",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "highway",
+    "id": "eng-nco-0521-highway",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "broccoli",
+    "id": "eng-nco-0522-broccoli",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "terrain",
+    "id": "eng-nco-0523-terrain",
+    "register": 0,
+    "frequency": 5,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "exit",
+    "id": "eng-nco-0524-exit",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "way out",
+    "id": "eng-nco-0525-wayout",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "strawberry",
+    "id": "eng-nco-0526-strawberry",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "sponge",
+    "id": "eng-nco-0527-sponge",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "hammer",
+    "id": "eng-nco-0528-hammer",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "strength",
+    "id": "eng-nco-0529-strength",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "force",
+    "id": "eng-nco-0530-force",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "passport",
+    "id": "eng-nco-0531-passport",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "cable",
+    "id": "eng-nco-0532-cable",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "spinach",
+    "id": "eng-nco-0533-spinach",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "storm",
+    "id": "eng-nco-0534-storm",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "thunderstorm",
+    "id": "eng-nco-0535-thunderstorm",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "turnip",
+    "id": "eng-nco-0536-turnip",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "bat",
+    "id": "eng-nco-0537-bat(animal)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "animal",
+      "emoji": "🐕"
+    }
+  },
+  {
+    "lemma": "bat",
+    "id": "eng-nco-0538-bat(sports)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "games/sports",
+      "emoji": "🎲"
+    }
+  },
+  {
+    "lemma": "phase",
+    "id": "eng-nco-0539-phase",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "society",
+    "id": "eng-nco-0540-society",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "mackerel",
+    "id": "eng-nco-0541-mackerel",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "card",
+    "id": "eng-nco-0542-card",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "string",
+    "id": "eng-nco-0543-string",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "litre",
+    "id": "eng-nco-0544-litre",
+    "register": 0,
+    "frequency": 3,
+    "additionalSpellings": [
+      "liter"
+    ]
+  },
+  {
+    "lemma": "hope",
+    "id": "eng-nco-0545-hope",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "surprise",
+    "id": "eng-nco-0546-surprise",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "generation",
+    "id": "eng-nco-0547-generation",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "crossroad",
+    "id": "eng-nco-0548-crossroad",
+    "register": 0,
+    "frequency": 4,
+    "additionalSpellings": [
+      "crossroads"
+    ]
+  },
+  {
+    "lemma": "rice",
+    "id": "eng-nco-0549-rice",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "thumb",
+    "id": "eng-nco-0550-thumb",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "bicycle",
+    "id": "eng-nco-0551-bicycle",
+    "register": 0,
+    "frequency": 2,
+    "additionalSpellings": [
+      "bike"
+    ]
+  },
+  {
+    "lemma": "cod",
+    "id": "eng-nco-0552-cod",
+    "register": 0,
+    "frequency": 5,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "holiday",
+    "id": "eng-nco-0553-holiday",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "vacation",
+    "id": "eng-nco-0554-vacation",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "answer",
+    "id": "eng-nco-0555-answer",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "trail",
+    "id": "eng-nco-0556-trail",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "path",
+    "id": "eng-nco-0557-path",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "footpath",
+    "id": "eng-nco-0558-footpath",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "walkway",
+    "id": "eng-nco-0559-walkway",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "suicide",
+    "id": "eng-nco-0560-suicide",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "courgette",
+    "id": "eng-nco-0561-courgette",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "zucchini",
+    "id": "eng-nco-0562-zucchini",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "verb",
+    "id": "eng-nco-0563-verb",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "grass",
+    "id": "eng-nco-0564-grass",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "attic",
+    "id": "eng-nco-0565-attic",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "jump",
+    "id": "eng-nco-0566-jump",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "leap",
+    "id": "eng-nco-0567-leap",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "garden",
+    "id": "eng-nco-0568-garden",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "soap",
+    "id": "eng-nco-0569-soap",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "wing",
+    "id": "eng-nco-0570-wing",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "message",
+    "id": "eng-nco-0571-message",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "piece of news",
+    "id": "eng-nco-0572-pieceofnews",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "marriage",
+    "id": "eng-nco-0573-marriage(concept)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "💭"
+    }
+  },
+  {
+    "lemma": "marriage",
+    "id": "eng-nco-0574-marriage(wedding)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "event",
+      "emoji": "📅️"
+    }
+  },
+  {
+    "lemma": "married couple",
+    "id": "eng-nco-0575-marriedcouple",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "worm",
+    "id": "eng-nco-0576-worm",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "bug",
+    "id": "eng-nco-0577-bug",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "frog",
+    "id": "eng-nco-0578-frog",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "church",
+    "id": "eng-nco-0579-church",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "root",
+    "id": "eng-nco-0580-root",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "row",
+    "id": "eng-nco-0581-row",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "government",
+    "id": "eng-nco-0582-government",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "hole",
+    "id": "eng-nco-0583-hole(small)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "small",
+      "emoji": "🔹"
+    }
+  },
+  {
+    "lemma": "hole",
+    "id": "eng-nco-0584-hole(large)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "large",
+      "emoji": "🔷"
+    }
+  },
+  {
+    "lemma": "period",
+    "id": "eng-nco-0585-period(time)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "time",
+      "emoji": "🕒"
+    }
+  },
+  {
+    "lemma": "period",
+    "id": "eng-nco-0586-period(menstrual)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "medical",
+      "emoji": "🩺"
+    }
+  },
+  {
+    "lemma": "period",
+    "id": "eng-nco-0587-period(punctuation)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "linguistics",
+      "emoji": "🔤"
+    }
+  },
+  {
+    "lemma": "full stop",
+    "id": "eng-nco-0588-fullstop",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "storey",
+    "id": "eng-nco-0589-storey",
+    "register": 0,
+    "frequency": 4,
+    "additionalSpellings": [
+      "story"
+    ]
+  },
+  {
+    "lemma": "basis",
+    "id": "eng-nco-0590-basis",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "base",
+    "id": "eng-nco-0591-base",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "death",
+    "id": "eng-nco-0592-death",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "railway",
+    "id": "eng-nco-0593-railway",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "railroad",
+    "id": "eng-nco-0594-railroad",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "turn",
+    "id": "eng-nco-0595-turn",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "pepper",
+    "id": "eng-nco-0596-pepper",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "river",
+    "id": "eng-nco-0597-river",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "look",
+    "id": "eng-nco-0598-look",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "appearance",
+    "id": "eng-nco-0599-appearance",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "combat",
+    "id": "eng-nco-0600-combat",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "fight",
+    "id": "eng-nco-0601-fight",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "struggle",
+    "id": "eng-nco-0602-struggle",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "pharmacy",
+    "id": "eng-nco-0603-pharmacy",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "goose",
+    "id": "eng-nco-0604-goose",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "violin",
+    "id": "eng-nco-0605-violin",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "blood",
+    "id": "eng-nco-0606-blood",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "marsh",
+    "id": "eng-nco-0607-marsh",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "swamp",
+    "id": "eng-nco-0608-swamp",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "lentil",
+    "id": "eng-nco-0609-lentil",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "moon",
+    "id": "eng-nco-0610-moon",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "pit",
+    "id": "eng-nco-0611-pit",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "bell pepper",
+    "id": "eng-nco-0612-bellpepper",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "paprika",
+    "id": "eng-nco-0613-paprika",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "skin",
+    "id": "eng-nco-0614-skin",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "leather",
+    "id": "eng-nco-0615-leather",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "hour",
+    "id": "eng-nco-0616-hour",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "Earth",
+    "id": "eng-nco-0617-Earth",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "earth",
+    "id": "eng-nco-0618-earth",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "land",
+    "id": "eng-nco-0619-land",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "thought",
+    "id": "eng-nco-0620-thought",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "pleasure",
+    "id": "eng-nco-0621-pleasure",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "room",
+    "id": "eng-nco-0622-room(of house)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "location",
+      "emoji": "📍"
+    }
+  },
+  {
+    "lemma": "room",
+    "id": "eng-nco-0623-room(space)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "quantifiable",
+      "emoji": "⚪"
+    },
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "peace",
+    "id": "eng-nco-0624-peace",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "caterpillar",
+    "id": "eng-nco-0625-caterpillar",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "rest",
+    "id": "eng-nco-0626-rest",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "remainder",
+    "id": "eng-nco-0627-remainder",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "vagina",
+    "id": "eng-nco-0628-vagina",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "shop",
+    "id": "eng-nco-0629-shop",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "store",
+    "id": "eng-nco-0630-store",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "bronze",
+    "id": "eng-nco-0631-bronze",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "translation",
+    "id": "eng-nco-0632-translation",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "fat",
+    "id": "eng-nco-0633-fat",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "item",
+    "id": "eng-nco-0634-item",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "subject",
+    "id": "eng-nco-0635-subject(topic)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "general",
+      "emoji": "🔲"
+    }
+  },
+  {
+    "lemma": "object",
+    "id": "eng-nco-0636-object",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "boar",
+    "id": "eng-nco-0637-boar",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "future",
+    "id": "eng-nco-0638-future",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "ash",
+    "id": "eng-nco-0639-ash",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "meat",
+    "id": "eng-nco-0640-meat",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "hair",
+    "id": "eng-nco-0641-hair(human, one hair)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    }
+  },
+  {
+    "lemma": "hair",
+    "id": "eng-nco-0642-hair(human, collective)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    },
+    "tantumSingulare": true,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "hair",
+    "id": "eng-nco-0643-hair(fur)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "animal",
+      "emoji": "🐕"
+    },
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "stomach",
+    "id": "eng-nco-0644-stomach",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "sand",
+    "id": "eng-nco-0645-sand",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "value",
+    "id": "eng-nco-0646-value",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "monkey",
+    "id": "eng-nco-0647-monkey",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "ape",
+    "id": "eng-nco-0648-ape",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "at sign",
+    "id": "eng-nco-0649-atsign",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "iron",
+    "id": "eng-nco-0650-iron",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "copper",
+    "id": "eng-nco-0651-copper",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "prison",
+    "id": "eng-nco-0652-prison",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "jail",
+    "id": "eng-nco-0653-jail",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "nut",
+    "id": "eng-nco-0654-nut",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "belly",
+    "id": "eng-nco-0655-belly",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "abdomen",
+    "id": "eng-nco-0656-abdomen",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "shape",
+    "id": "eng-nco-0657-shape",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "form",
+    "id": "eng-nco-0658-form",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "radish",
+    "id": "eng-nco-0659-radish",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "work",
+    "id": "eng-nco-0660-work",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "job",
+    "id": "eng-nco-0661-job(profession)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "employment",
+      "emoji": "🏢"
+    }
+  },
+  {
+    "lemma": "job",
+    "id": "eng-nco-0662-job(task)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "general",
+      "emoji": "🔲"
+    }
+  },
+  {
+    "lemma": "art",
+    "id": "eng-nco-0663-art",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "tax",
+    "id": "eng-nco-0664-tax",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "fruit",
+    "id": "eng-nco-0665-fruit",
+    "register": 0,
+    "frequency": 1,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "eagle",
+    "id": "eng-nco-0666-eagle",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "star",
+    "id": "eng-nco-0667-star",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "plum",
+    "id": "eng-nco-0668-plum",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "village",
+    "id": "eng-nco-0669-village",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "insect",
+    "id": "eng-nco-0670-insect",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "face",
+    "id": "eng-nco-0671-face",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "topic",
+    "id": "eng-nco-0672-topic",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "nation",
+    "id": "eng-nco-0673-nation",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "comb",
+    "id": "eng-nco-0674-comb",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "horn",
+    "id": "eng-nco-0675-horn",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "corner",
+    "id": "eng-nco-0676-corner",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "watering can",
+    "id": "eng-nco-0677-wateringcan",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "number",
+    "id": "eng-nco-0678-number(general)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "mathematical",
+      "emoji": "🧮"
+    }
+  },
+  {
+    "lemma": "number",
+    "id": "eng-nco-0679-number(phone)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "technology",
+      "emoji": "💻"
+    }
+  },
+  {
+    "lemma": "neck",
+    "id": "eng-nco-0680-neck",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "signature",
+    "id": "eng-nco-0681-signature",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "bullying",
+    "id": "eng-nco-0682-bullying",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "eel",
+    "id": "eng-nco-0683-eel",
+    "register": 0,
+    "frequency": 5,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "bookshop",
+    "id": "eng-nco-0684-bookshop",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "bookstore",
+    "id": "eng-nco-0685-bookstore",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "tuna",
+    "id": "eng-nco-0686-tuna",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "watch",
+    "id": "eng-nco-0687-watch",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "profession",
+    "id": "eng-nco-0688-profession",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "occupation",
+    "id": "eng-nco-0689-occupation",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "disappointment",
+    "id": "eng-nco-0690-disappointment",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "grape",
+    "id": "eng-nco-0691-grape",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "quantity",
+    "id": "eng-nco-0692-quantity",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "amount",
+    "id": "eng-nco-0693-amount",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "property",
+    "id": "eng-nco-0694-property(building)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "location",
+      "emoji": "📍"
+    }
+  },
+  {
+    "lemma": "property",
+    "id": "eng-nco-0695-property(possessions)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "object",
+      "emoji": "📦"
+    },
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "poison",
+    "id": "eng-nco-0696-poison",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "relation",
+    "id": "eng-nco-0697-relation",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "relationship",
+    "id": "eng-nco-0698-relationship(connection)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "💭"
+    }
+  },
+  {
+    "lemma": "relationship",
+    "id": "eng-nco-0699-relationship(romantic)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "romantic",
+      "emoji": "💕"
+    }
+  },
+  {
+    "lemma": "connection",
+    "id": "eng-nco-0700-connection",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "bond",
+    "id": "eng-nco-0701-bond",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "compound",
+    "id": "eng-nco-0702-compound",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "substance",
+    "id": "eng-nco-0703-substance",
+    "register": 0,
+    "frequency": 5,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "chair",
+    "id": "eng-nco-0704-chair",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "information",
+    "id": "eng-nco-0705-information",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "fungus",
+    "id": "eng-nco-0706-fungus",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "mushroom",
+    "id": "eng-nco-0707-mushroom",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "movement",
+    "id": "eng-nco-0708-movement",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "motion",
+    "id": "eng-nco-0709-motion",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "move",
+    "id": "eng-nco-0710-move",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "traffic",
+    "id": "eng-nco-0711-traffic",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "ship",
+    "id": "eng-nco-0712-ship",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "middle",
+    "id": "eng-nco-0713-middle",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "centre",
+    "id": "eng-nco-0714-centre",
+    "register": 0,
+    "frequency": 3,
+    "additionalSpellings": [
+      "center"
+    ]
+  },
+  {
+    "lemma": "city centre",
+    "id": "eng-nco-0715-citycentre",
+    "register": 0,
+    "frequency": 3,
+    "additionalSpellings": [
+      "city center"
+    ]
+  },
+  {
+    "lemma": "means",
+    "id": "eng-nco-0716-means",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumPlurale": true
+  },
+  {
+    "lemma": "donkey",
+    "id": "eng-nco-0717-donkey",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "majority",
+    "id": "eng-nco-0718-majority",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "mail",
+    "id": "eng-nco-0719-mail",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "post",
+    "id": "eng-nco-0720-post(mail)",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "mail",
+      "emoji": "✉"
+    },
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "post",
+    "id": "eng-nco-0721-post(eg wooden)",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "pole",
+      "emoji": "💈"
+    },
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "post office",
+    "id": "eng-nco-0722-postoffice",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "research",
+    "id": "eng-nco-0723-research",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "examination",
+    "id": "eng-nco-0724-examination",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "test",
+    "id": "eng-nco-0725-test",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "investigation",
+    "id": "eng-nco-0726-investigation",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "commercial",
+    "id": "eng-nco-0727-commercial",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "advertisement",
+    "id": "eng-nco-0728-advertisement",
+    "register": 0,
+    "frequency": 4,
+    "additionalSpellings": [
+      "advert",
+      "ad"
+    ],
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "hat",
+    "id": "eng-nco-0729-hat",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "question",
+    "id": "eng-nco-0730-question",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "cellar",
+    "id": "eng-nco-0731-cellar",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "basement",
+    "id": "eng-nco-0732-basement",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "penguin",
+    "id": "eng-nco-0733-penguin",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "kitchen",
+    "id": "eng-nco-0734-kitchen",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "life",
+    "id": "eng-nco-0735-life",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "pigeon",
+    "id": "eng-nco-0736-pigeon",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "dove",
+    "id": "eng-nco-0737-dove",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "minority",
+    "id": "eng-nco-0738-minority",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "place",
+    "id": "eng-nco-0739-place",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "space",
+    "id": "eng-nco-0740-space",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "square",
+    "id": "eng-nco-0741-square",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "briefcase",
+    "id": "eng-nco-0742-briefcase",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "case",
+    "id": "eng-nco-0743-case(luggage)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "transport",
+      "emoji": "🚢️️"
+    }
+  },
+  {
+    "lemma": "case",
+    "id": "eng-nco-0744-case(matter)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "💭"
+    }
+  },
+  {
+    "lemma": "glue",
+    "id": "eng-nco-0745-glue",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "newspaper",
+    "id": "eng-nco-0746-newspaper",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "tights",
+    "id": "eng-nco-0747-tights",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumPlurale": true
+  },
+  {
+    "lemma": "pantyhose",
+    "id": "eng-nco-0748-pantyhose",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumPlurale": true
+  },
+  {
+    "lemma": "attention",
+    "id": "eng-nco-0749-attention",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "ladybird",
+    "id": "eng-nco-0750-ladybird",
+    "additionalSpellings": [
+      "ladybug"
+    ],
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "dryer",
+    "id": "eng-nco-0751-dryer",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "bell",
+    "id": "eng-nco-0752-bell",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "volcano",
+    "id": "eng-nco-0753-volcano",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "pear",
+    "id": "eng-nco-0754-pear",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "sandwich",
+    "id": "eng-nco-0755-sandwich",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "cigarette",
+    "id": "eng-nco-0756-cigarette",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "woodpecker",
+    "id": "eng-nco-0757-woodpecker",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "scissors",
+    "id": "eng-nco-0758-scissors",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumPlurale": true
+  },
+  {
+    "lemma": "shirt",
+    "id": "eng-nco-0759-shirt",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "cell",
+    "id": "eng-nco-0760-cell",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "cell phone",
+    "id": "eng-nco-0761-cellphone",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "mobile phone",
+    "id": "eng-nco-0762-mobilephone",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "election",
+    "id": "eng-nco-0763-election",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "briefs",
+    "id": "eng-nco-0764-briefs",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumPlurale": true
+  },
+  {
+    "lemma": "panties",
+    "id": "eng-nco-0765-panties",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumPlurale": true
+  },
+  {
+    "lemma": "underwear",
+    "id": "eng-nco-0766-underwear",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "sheep",
+    "id": "eng-nco-0767-sheep",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "cotton wool",
+    "id": "eng-nco-0768-cottonwool",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "blackberry",
+    "id": "eng-nco-0769-blackberry",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "trousers",
+    "id": "eng-nco-0770-trousers",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumPlurale": true
+  },
+  {
+    "lemma": "pants",
+    "id": "eng-nco-0771-pants(trousers)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "trousers",
+      "emoji": "👖"
+    },
+    "_lacking": true,
+    "tantumPlurale": true
+  },
+  {
+    "lemma": "pants",
+    "id": "eng-nco-0772-pants(underwear)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "underwear",
+      "emoji": "🩲"
+    },
+    "_lacking": true,
+    "tantumPlurale": true
+  },
+  {
+    "lemma": "touch",
+    "id": "eng-nco-0773-touch",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "soup",
+    "id": "eng-nco-0774-soup",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "cube",
+    "id": "eng-nco-0775-cube",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "part",
+    "id": "eng-nco-0776-part",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "piece",
+    "id": "eng-nco-0777-piece(part)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "💭"
+    }
+  },
+  {
+    "lemma": "piece",
+    "id": "eng-nco-0778-piece(chunk)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "object",
+      "emoji": "📦"
+    }
+  },
+  {
+    "lemma": "stone",
+    "id": "eng-nco-0779-stone",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "liver",
+    "id": "eng-nco-0780-liver",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "fridge",
+    "id": "eng-nco-0781-fridge",
+    "register": 0,
+    "frequency": 2,
+    "additionalSpellings": [
+      "refrigerator"
+    ]
+  },
+  {
+    "lemma": "arrow",
+    "id": "eng-nco-0782-arrow",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "degree",
+    "id": "eng-nco-0783-degree(temperature)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "temperature",
+      "emoji": "🌡️"
+    }
+  },
+  {
+    "lemma": "degree",
+    "id": "eng-nco-0784-degree(diploma)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "school",
+      "emoji": "🎒"
+    }
+  },
+  {
+    "lemma": "drawer",
+    "id": "eng-nco-0785-drawer",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "food",
+    "id": "eng-nco-0786-food",
+    "register": 0,
+    "frequency": 1,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "butterfly",
+    "id": "eng-nco-0787-butterfly",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "page",
+    "id": "eng-nco-0788-page",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "toilet",
+    "id": "eng-nco-0789-toilet",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "condition",
+    "id": "eng-nco-0790-condition",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "term",
+    "id": "eng-nco-0791-term(condition)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "law/justice",
+      "emoji": "⚖️"
+    }
+  },
+  {
+    "lemma": "term",
+    "id": "eng-nco-0792-term(word)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "linguistics",
+      "emoji": "🔤"
+    }
+  },
+  {
+    "lemma": "stick",
+    "id": "eng-nco-0793-stick",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "cue",
+    "id": "eng-nco-0794-cue",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "club",
+    "id": "eng-nco-0795-club",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "change",
+    "id": "eng-nco-0796-change",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "shift",
+    "id": "eng-nco-0797-shift",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "sentence",
+    "id": "eng-nco-0798-sentence",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "opinion",
+    "id": "eng-nco-0799-opinion",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "forehead",
+    "id": "eng-nco-0800-forehead",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "point",
+    "id": "eng-nco-0801-point",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "birthday",
+    "id": "eng-nco-0802-birthday",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "calendar",
+    "id": "eng-nco-0803-calendar",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "bottle",
+    "id": "eng-nco-0804-bottle",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "situation",
+    "id": "eng-nco-0805-situation",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "kiss",
+    "id": "eng-nco-0806-kiss",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "issue",
+    "id": "eng-nco-0807-issue",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "affair",
+    "id": "eng-nco-0808-affair",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "matter",
+    "id": "eng-nco-0809-matter",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "business",
+    "id": "eng-nco-0810-business",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "choice",
+    "id": "eng-nco-0811-choice",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "back",
+    "id": "eng-nco-0812-back(bodypart)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "body",
+      "emoji": "🧍"
+    }
+  },
+  {
+    "lemma": "back",
+    "id": "eng-nco-0813-back(spatial)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "location",
+      "emoji": "📍"
+    }
+  },
+  {
+    "lemma": "front",
+    "id": "eng-nco-0814-front",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "bottom",
+    "id": "eng-nco-0815-bottom(spatial)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "location",
+      "emoji": "📍"
+    }
+  },
+  {
+    "lemma": "bottom",
+    "id": "eng-nco-0816-bottom(bodypart)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "body",
+      "emoji": "🧍"
+    }
+  },
+  {
+    "lemma": "arse",
+    "id": "eng-nco-0817-arse",
+    "register": 6,
+    "frequency": 2
+  },
+  {
+    "lemma": "butt",
+    "id": "eng-nco-0818-butt",
+    "register": 6,
+    "frequency": 2
+  },
+  {
+    "lemma": "bum",
+    "id": "eng-nco-0819-bum",
+    "register": 6,
+    "frequency": 2
+  },
+  {
+    "lemma": "flood",
+    "id": "eng-nco-0820-flood",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "meal",
+    "id": "eng-nco-0821-meal",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "washing machine",
+    "id": "eng-nco-0822-washingmachine",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "bathroom",
+    "id": "eng-nco-0823-bathroom",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "attack",
+    "id": "eng-nco-0824-attack",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "robbery",
+    "id": "eng-nco-0825-robbery",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "bedroom",
+    "id": "eng-nco-0826-bedroom",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "cooker",
+    "id": "eng-nco-0827-cooker",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "stove",
+    "id": "eng-nco-0828-stove",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "oven",
+    "id": "eng-nco-0829-oven",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "beginning",
+    "id": "eng-nco-0830-beginning",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "launderette",
+    "id": "eng-nco-0831-launderette",
+    "register": 0,
+    "frequency": 3,
+    "additionalSpellings": [
+      "laundrette"
+    ]
+  },
+  {
+    "lemma": "laundromat",
+    "id": "eng-nco-0832-laundromat",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "balance",
+    "id": "eng-nco-0833-balance",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "smell",
+    "id": "eng-nco-0834-smell",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "odour",
+    "id": "eng-nco-0835-odour",
+    "register": 0,
+    "frequency": 4,
+    "additionalSpellings": [
+      "odor"
+    ],
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "snail",
+    "id": "eng-nco-0836-snail",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "slug",
+    "id": "eng-nco-0837-slug",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "boat",
+    "id": "eng-nco-0838-boat",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "lion",
+    "id": "eng-nco-0839-lion",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "calcium",
+    "id": "eng-nco-0840-calcium",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "tiger",
+    "id": "eng-nco-0841-tiger",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "character",
+    "id": "eng-nco-0842-character",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "lizard",
+    "id": "eng-nco-0843-lizard",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "button",
+    "id": "eng-nco-0844-button",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "cathedral",
+    "id": "eng-nco-0845-cathedral",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "password",
+    "id": "eng-nco-0846-password",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "slogan",
+    "id": "eng-nco-0847-slogan",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "catchphrase",
+    "id": "eng-nco-0848-catchphrase",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "adventure",
+    "id": "eng-nco-0849-adventure",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "dessert",
+    "id": "eng-nco-0850-dessert",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "method",
+    "id": "eng-nco-0851-method",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "mercury",
+    "id": "eng-nco-0852-mercury",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "noon",
+    "id": "eng-nco-0853-noon",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "midday",
+    "id": "eng-nco-0854-midday",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "south",
+    "id": "eng-nco-0855-south",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "system",
+    "id": "eng-nco-0856-system",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "radius",
+    "id": "eng-nco-0857-radius",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "ray",
+    "id": "eng-nco-0858-ray",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "beam",
+    "id": "eng-nco-0859-beam(light)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "physics",
+      "emoji": "☄️"
+    }
+  },
+  {
+    "lemma": "beam",
+    "id": "eng-nco-0860-beam(wood)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "material",
+      "emoji": "👚"
+    }
+  },
+  {
+    "lemma": "giraffe",
+    "id": "eng-nco-0861-giraffe",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "evidence",
+    "id": "eng-nco-0862-evidence",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "proof",
+    "id": "eng-nco-0863-proof",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "sulphur",
+    "id": "eng-nco-0864-sulphur",
+    "register": 0,
+    "frequency": 4,
+    "additionalSpellings": [
+      "sulfur"
+    ],
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "laughter",
+    "id": "eng-nco-0865-laughter",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "laugh",
+    "id": "eng-nco-0866-laugh",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "respect",
+    "id": "eng-nco-0867-respect",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "triangle",
+    "id": "eng-nco-0868-triangle",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "bakery",
+    "id": "eng-nco-0869-bakery",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "shovel",
+    "id": "eng-nco-0870-shovel",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "spade",
+    "id": "eng-nco-0871-spade",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "squirrel",
+    "id": "eng-nco-0872-squirrel",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "luggage",
+    "id": "eng-nco-0873-luggage",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "baggage",
+    "id": "eng-nco-0874-baggage",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "addition",
+    "id": "eng-nco-0875-addition",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "add-on",
+    "id": "eng-nco-0876-addon",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "additive",
+    "id": "eng-nco-0877-additive",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "guilt",
+    "id": "eng-nco-0878-guilt",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "fault",
+    "id": "eng-nco-0879-fault",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "duty",
+    "id": "eng-nco-0880-duty",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "clock",
+    "id": "eng-nco-0881-clock",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "lawn",
+    "id": "eng-nco-0882-lawn",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "station",
+    "id": "eng-nco-0883-station",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "chain",
+    "id": "eng-nco-0884-chain",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "crocodile",
+    "id": "eng-nco-0885-crocodile",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "machine",
+    "id": "eng-nco-0886-machine",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "science",
+    "id": "eng-nco-0887-science",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "learning",
+    "id": "eng-nco-0888-learning",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "study",
+    "id": "eng-nco-0889-study",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "spider",
+    "id": "eng-nco-0890-spider",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "joke",
+    "id": "eng-nco-0891-joke",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "rust",
+    "id": "eng-nco-0892-rust",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "kind",
+    "id": "eng-nco-0893-kind",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "type",
+    "id": "eng-nco-0894-type",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "sort",
+    "id": "eng-nco-0895-sort",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "gender",
+    "id": "eng-nco-0896-gender",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "shower",
+    "id": "eng-nco-0897-shower",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "lens",
+    "id": "eng-nco-0898-lens",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "illness",
+    "id": "eng-nco-0899-illness",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "sickness",
+    "id": "eng-nco-0900-sickness",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "disease",
+    "id": "eng-nco-0901-disease",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "monster",
+    "id": "eng-nco-0902-monster",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "shopping",
+    "id": "eng-nco-0903-shopping",
+    "register": 0,
+    "frequency": 1,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "hip",
+    "id": "eng-nco-0904-hip",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "fun",
+    "id": "eng-nco-0905-fun",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "rabbit",
+    "id": "eng-nco-0906-rabbit",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "war",
+    "id": "eng-nco-0907-war",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "truck",
+    "id": "eng-nco-0908-truck",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "lorry",
+    "id": "eng-nco-0909-lorry",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "nationality",
+    "id": "eng-nco-0910-nationality",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "coast",
+    "id": "eng-nco-0911-coast",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "shoreline",
+    "id": "eng-nco-0912-shoreline",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "wallet",
+    "id": "eng-nco-0913-wallet",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "bow",
+    "id": "eng-nco-0914-bow(for arrow)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "object",
+      "emoji": "📦"
+    }
+  },
+  {
+    "lemma": "bow",
+    "id": "eng-nco-0915-bow(decoration)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "clothes",
+      "emoji": "👚"
+    }
+  },
+  {
+    "lemma": "arch",
+    "id": "eng-nco-0916-arch",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "tear",
+    "id": "eng-nco-0917-tear",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "Christmas tree",
+    "id": "eng-nco-0918-Christmastree",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "thread",
+    "id": "eng-nco-0919-thread",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "court",
+    "id": "eng-nco-0920-court",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "bench",
+    "id": "eng-nco-0921-bench",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "sunset",
+    "id": "eng-nco-0922-sunset",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "west",
+    "id": "eng-nco-0923-west",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "inflammation",
+    "id": "eng-nco-0924-inflammation",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "belief",
+    "id": "eng-nco-0925-belief",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "faith",
+    "id": "eng-nco-0926-faith",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "anger",
+    "id": "eng-nco-0927-anger",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "rage",
+    "id": "eng-nco-0928-rage",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "bumblebee",
+    "id": "eng-nco-0929-bumblebee",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "exchange",
+    "id": "eng-nco-0930-exchange",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "lie",
+    "id": "eng-nco-0931-lie",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "difference",
+    "id": "eng-nco-0932-difference",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "carbon",
+    "id": "eng-nco-0933-carbon",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "coal",
+    "id": "eng-nco-0934-coal",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "throat",
+    "id": "eng-nco-0935-throat",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "screwdriver",
+    "id": "eng-nco-0936-screwdriver",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "guide",
+    "id": "eng-nco-0937-guide",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "meaning",
+    "id": "eng-nco-0938-meaning",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "bonfire",
+    "id": "eng-nco-0939-bonfire",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "campfire",
+    "id": "eng-nco-0940-campfire",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "rat",
+    "id": "eng-nco-0941-rat",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "shark",
+    "id": "eng-nco-0942-shark",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "cave",
+    "id": "eng-nco-0943-cave",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "cavern",
+    "id": "eng-nco-0944-cavern",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "pig",
+    "id": "eng-nco-0945-pig",
+    "register": 0,
+    "frequency": 1,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "rib",
+    "id": "eng-nco-0946-rib",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "avalanche",
+    "id": "eng-nco-0947-avalanche",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "armchair",
+    "id": "eng-nco-0948-armchair",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "chlorine",
+    "id": "eng-nco-0949-chlorine",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "silicon",
+    "id": "eng-nco-0950-silicon",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "secret",
+    "id": "eng-nco-0951-secret",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "mystery",
+    "id": "eng-nco-0952-mystery",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "song",
+    "id": "eng-nco-0953-song",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "cherry",
+    "id": "eng-nco-0954-cherry",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "hydrogen",
+    "id": "eng-nco-0955-hydrogen",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "sunrise",
+    "id": "eng-nco-0956-sunrise",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "east",
+    "id": "eng-nco-0957-east",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "midnight",
+    "id": "eng-nco-0958-midnight",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "north",
+    "id": "eng-nco-0959-north",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "bath robe",
+    "id": "eng-nco-0960-bathrobe",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "dressing gown",
+    "id": "eng-nco-0961-dressinggown",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "province",
+    "id": "eng-nco-0962-province",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "decade",
+    "id": "eng-nco-0963-decade",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "position",
+    "id": "eng-nco-0964-position",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "location",
+    "id": "eng-nco-0965-location",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "magazine",
+    "id": "eng-nco-0966-magazine",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "underpants",
+    "id": "eng-nco-0967-underpants",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumPlurale": true
+  },
+  {
+    "lemma": "rhinoceros",
+    "id": "eng-nco-0968-rhinoceros",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "plate",
+    "id": "eng-nco-0969-plate",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "taxi",
+    "id": "eng-nco-0970-taxi",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "rectangle",
+    "id": "eng-nco-0971-rectangle",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "alarm clock",
+    "id": "eng-nco-0972-alarmclock",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "mattress",
+    "id": "eng-nco-0973-mattress",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "dragonfly",
+    "id": "eng-nco-0974-dragonfly",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "wall socket",
+    "id": "eng-nco-0975-wallsocket",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "socket",
+    "id": "eng-nco-0976-socket(electrical)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "technology",
+      "emoji": "💻"
+    }
+  },
+  {
+    "lemma": "socket",
+    "id": "eng-nco-0977-socket(general)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "general",
+      "emoji": "🔲"
+    }
+  },
+  {
+    "lemma": "power outlet",
+    "id": "eng-nco-0978-poweroutlet",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "jeans",
+    "id": "eng-nco-0979-jeans",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumPlurale": true
+  },
+  {
+    "lemma": "ballpoint pen",
+    "id": "eng-nco-0980-ballpointpen",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "pen",
+    "id": "eng-nco-0981-pen",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "sardine",
+    "id": "eng-nco-0982-sardine",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "television",
+    "id": "eng-nco-0983-television",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "TV",
+    "id": "eng-nco-0984-TV",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "spine",
+    "id": "eng-nco-0985-spine",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "backbone",
+    "id": "eng-nco-0986-backbone",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "mammal",
+    "id": "eng-nco-0987-mammal",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "concert",
+    "id": "eng-nco-0988-concert",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "mosque",
+    "id": "eng-nco-0989-mosque",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "sense of smell",
+    "id": "eng-nco-0990-senseofsmell",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "dairy",
+    "id": "eng-nco-0991-dairy",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "hatred",
+    "id": "eng-nco-0992-hatred",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "hate",
+    "id": "eng-nco-0993-hate",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "bandage",
+    "id": "eng-nco-0994-bandage",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "bill",
+    "id": "eng-nco-0995-bill",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "check",
+    "id": "eng-nco-0996-check",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "account",
+    "id": "eng-nco-0997-account",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "receipt",
+    "id": "eng-nco-0998-receipt",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "tattoo",
+    "id": "eng-nco-0999-tattoo",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "homicide",
+    "id": "eng-nco-1000-homicide",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "murder",
+    "id": "eng-nco-1001-murder",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "killing",
+    "id": "eng-nco-1002-killing",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "pond",
+    "id": "eng-nco-1003-pond",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "joint",
+    "id": "eng-nco-1004-joint",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "rule",
+    "id": "eng-nco-1005-rule",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "glove",
+    "id": "eng-nco-1006-glove",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "jacket",
+    "id": "eng-nco-1007-jacket",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "level",
+    "id": "eng-nco-1008-level",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "influence",
+    "id": "eng-nco-1009-influence",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "asteroid",
+    "id": "eng-nco-1010-asteroid",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "engine",
+    "id": "eng-nco-1011-engine",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "industry",
+    "id": "eng-nco-1012-industry",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "sale",
+    "id": "eng-nco-1013-sale",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "sculpture",
+    "id": "eng-nco-1014-sculpture",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "fence",
+    "id": "eng-nco-1015-fence",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "hare",
+    "id": "eng-nco-1016-hare",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "failure",
+    "id": "eng-nco-1017-failure",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "defeat",
+    "id": "eng-nco-1018-defeat",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "disaster",
+    "id": "eng-nco-1019-disaster",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "set",
+    "id": "eng-nco-1020-set",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "collection",
+    "id": "eng-nco-1021-collection",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "reason",
+    "id": "eng-nco-1022-reason",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "cause",
+    "id": "eng-nco-1023-cause",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "ambulance",
+    "id": "eng-nco-1024-ambulance",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "protection",
+    "id": "eng-nco-1025-protection",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "calm",
+    "id": "eng-nco-1026-calm",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "calmness",
+    "id": "eng-nco-1027-calmness",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "tranquility",
+    "id": "eng-nco-1028-tranquility",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "quiet",
+    "id": "eng-nco-1029-quiet",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "box",
+    "id": "eng-nco-1030-box",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "shipwreck",
+    "id": "eng-nco-1031-shipwreck",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "wreck",
+    "id": "eng-nco-1032-wreck",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "wreckage",
+    "id": "eng-nco-1033-wreckage",
+    "register": 0,
+    "frequency": 5,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "music",
+    "id": "eng-nco-1034-music",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "cane",
+    "id": "eng-nco-1035-cane",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "walking stick",
+    "id": "eng-nco-1036-walkingstick",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "banknote",
+    "id": "eng-nco-1037-banknote",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "nightmare",
+    "id": "eng-nco-1038-nightmare",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "desert",
+    "id": "eng-nco-1039-desert",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "warmth",
+    "id": "eng-nco-1040-warmth",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "species",
+    "id": "eng-nco-1041-species",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "genre",
+    "id": "eng-nco-1042-genre",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "skeleton",
+    "id": "eng-nco-1043-skeleton",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "direction",
+    "id": "eng-nco-1044-direction",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "dress",
+    "id": "eng-nco-1045-dress",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "tissue",
+    "id": "eng-nco-1046-tissue",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "shadow",
+    "id": "eng-nco-1047-shadow",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "cannon",
+    "id": "eng-nco-1048-cannon",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "sense",
+    "id": "eng-nco-1049-sense",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "pavement",
+    "id": "eng-nco-1050-pavement",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "sidewalk",
+    "id": "eng-nco-1051-sidewalk",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "crime",
+    "id": "eng-nco-1052-crime",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "light bulb",
+    "id": "eng-nco-1053-lightbulb",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "bulb",
+    "id": "eng-nco-1054-bulb",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "toy",
+    "id": "eng-nco-1055-toy",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "company",
+    "id": "eng-nco-1056-company",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "corporation",
+    "id": "eng-nco-1057-corporation",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "cross",
+    "id": "eng-nco-1058-cross",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "entrance",
+    "id": "eng-nco-1059-entrance",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "entry",
+    "id": "eng-nco-1060-entry(doorway)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "location",
+      "emoji": "📍"
+    }
+  },
+  {
+    "lemma": "entry",
+    "id": "eng-nco-1061-entry(concept)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "💭"
+    }
+  },
+  {
+    "lemma": "way in",
+    "id": "eng-nco-1062-wayin",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "nail",
+    "id": "eng-nco-1063-nail",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "skirt",
+    "id": "eng-nco-1064-skirt",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "suit",
+    "id": "eng-nco-1065-suit",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "otter",
+    "id": "eng-nco-1066-otter",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "theft",
+    "id": "eng-nco-1067-theft",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "roof",
+    "id": "eng-nco-1068-roof",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "whale",
+    "id": "eng-nco-1069-whale",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "theatre",
+    "id": "eng-nco-1070-theatre",
+    "register": 0,
+    "frequency": 2,
+    "additionalSpellings": [
+      "theater"
+    ]
+  },
+  {
+    "lemma": "route",
+    "id": "eng-nco-1071-route",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "idea",
+    "id": "eng-nco-1072-idea",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "protein",
+    "id": "eng-nco-1073-protein",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "kidney",
+    "id": "eng-nco-1074-kidney",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "shrub",
+    "id": "eng-nco-1075-shrub",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "bush",
+    "id": "eng-nco-1076-bush",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "squid",
+    "id": "eng-nco-1077-squid",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "mugging",
+    "id": "eng-nco-1078-mugging",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "bolt",
+    "id": "eng-nco-1079-bolt",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "screw",
+    "id": "eng-nco-1080-screw",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "class",
+    "id": "eng-nco-1081-class(event)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "event",
+      "emoji": "📅️"
+    }
+  },
+  {
+    "lemma": "class",
+    "id": "eng-nco-1082-class(room)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "location",
+      "emoji": "📍"
+    }
+  },
+  {
+    "lemma": "carpet",
+    "id": "eng-nco-1083-carpet",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "wedding",
+    "id": "eng-nco-1084-wedding",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "depression",
+    "id": "eng-nco-1085-depression",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "unicorn",
+    "id": "eng-nco-1086-unicorn",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "nerve",
+    "id": "eng-nco-1087-nerve",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "success",
+    "id": "eng-nco-1088-success",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "broom",
+    "id": "eng-nco-1089-broom",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "hamster",
+    "id": "eng-nco-1090-hamster",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "maize",
+    "id": "eng-nco-1091-maize",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "corn",
+    "id": "eng-nco-1092-corn",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "skull",
+    "id": "eng-nco-1093-skull",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "pressure",
+    "id": "eng-nco-1094-pressure",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "supper",
+    "id": "eng-nco-1095-supper",
+    "register": 0,
+    "frequency": 1,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "dinner",
+    "id": "eng-nco-1096-dinner",
+    "register": 0,
+    "frequency": 1,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "office",
+    "id": "eng-nco-1097-office",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "scarf",
+    "id": "eng-nco-1098-scarf",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "earring",
+    "id": "eng-nco-1099-earring",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "desk",
+    "id": "eng-nco-1100-desk",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "bag",
+    "id": "eng-nco-1101-bag",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "palace",
+    "id": "eng-nco-1102-palace",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "health",
+    "id": "eng-nco-1103-health",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "hoodie",
+    "id": "eng-nco-1104-hoodie",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "sweatshirt",
+    "id": "eng-nco-1105-sweatshirt",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "petrol",
+    "id": "eng-nco-1106-petrol",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "gasoline",
+    "id": "eng-nco-1107-gasoline",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "particle",
+    "id": "eng-nco-1108-particle",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "grave",
+    "id": "eng-nco-1109-grave",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "tomb",
+    "id": "eng-nco-1110-tomb",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "detail",
+    "id": "eng-nco-1111-detail",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "garage",
+    "id": "eng-nco-1112-garage",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "shield",
+    "id": "eng-nco-1113-shield",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "fact",
+    "id": "eng-nco-1114-fact",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "switch",
+    "id": "eng-nco-1115-switch",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "palate",
+    "id": "eng-nco-1116-palate",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "settlement",
+    "id": "eng-nco-1117-settlement",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "charger",
+    "id": "eng-nco-1118-charger",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "half",
+    "id": "eng-nco-1119-half",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "mould",
+    "id": "eng-nco-1120-mould",
+    "register": 0,
+    "frequency": 3,
+    "additionalSpellings": [
+      "mold"
+    ],
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "access",
+    "id": "eng-nco-1121-access",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "gate",
+    "id": "eng-nco-1122-gate",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "lobster",
+    "id": "eng-nco-1123-lobster",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "episode",
+    "id": "eng-nco-1124-episode",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "roadway",
+    "id": "eng-nco-1125-roadway",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "carriageway",
+    "id": "eng-nco-1126-carriageway",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "agreement",
+    "id": "eng-nco-1127-agreement",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "consent",
+    "id": "eng-nco-1128-consent",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "backpack",
+    "id": "eng-nco-1129-backpack",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "rucksack",
+    "id": "eng-nco-1130-rucksack",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "offence",
+    "id": "eng-nco-1131-offence",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "felony",
+    "id": "eng-nco-1132-felony",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "brass",
+    "id": "eng-nco-1133-brass",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "t-shirt",
+    "id": "eng-nco-1134-tshirt",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "terrace",
+    "id": "eng-nco-1135-terrace",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "beef",
+    "id": "eng-nco-1136-beef",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "risk",
+    "id": "eng-nco-1137-risk",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "exercise",
+    "id": "eng-nco-1138-exercise(physical)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "body",
+      "emoji": "🧍"
+    },
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "exercise",
+    "id": "eng-nco-1139-exercise(drill)",
+    "register": 0,
+    "frequency": 5,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "event",
+      "emoji": "📅️"
+    }
+  },
+  {
+    "lemma": "drill",
+    "id": "eng-nco-1140-drill(exercise)",
+    "register": 0,
+    "frequency": 5,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "event",
+      "emoji": "📅️"
+    }
+  },
+  {
+    "lemma": "drill",
+    "id": "eng-nco-1141-drill(tool)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "technology",
+      "emoji": "💻"
+    }
+  },
+  {
+    "lemma": "dish",
+    "id": "eng-nco-1142-dish",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "darkness",
+    "id": "eng-nco-1143-darkness",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "dusk",
+    "id": "eng-nco-1144-dusk",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "nightfall",
+    "id": "eng-nco-1145-nightfall",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "danger",
+    "id": "eng-nco-1146-danger",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "pork",
+    "id": "eng-nco-1147-pork",
+    "register": 0,
+    "frequency": 2,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "shrimp",
+    "id": "eng-nco-1148-shrimp",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "armadillo",
+    "id": "eng-nco-1149-armadillo",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "battleship",
+    "id": "eng-nco-1150-battleship",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "friendship",
+    "id": "eng-nco-1151-friendship",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "ground floor",
+    "id": "eng-nco-1152-groundfloor",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "corridor",
+    "id": "eng-nco-1153-corridor",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "cost",
+    "id": "eng-nco-1154-cost",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "towel",
+    "id": "eng-nco-1155-towel",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "brush",
+    "id": "eng-nco-1156-brush",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "politics",
+    "id": "eng-nco-1157-politics",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "policy",
+    "id": "eng-nco-1158-policy",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "wardrobe",
+    "id": "eng-nco-1159-wardrobe",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "closet",
+    "id": "eng-nco-1160-closet",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "cabinet",
+    "id": "eng-nco-1161-cabinet",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "locker",
+    "id": "eng-nco-1162-locker",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "cupboard",
+    "id": "eng-nco-1163-cupboard",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "cough",
+    "id": "eng-nco-1164-cough",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "diploma",
+    "id": "eng-nco-1165-diploma",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "certificate",
+    "id": "eng-nco-1166-certificate",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "café",
+    "id": "eng-nco-1167-café",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "coffee shop",
+    "id": "eng-nco-1168-coffeeshop",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "chin",
+    "id": "eng-nco-1169-chin",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "trouble",
+    "id": "eng-nco-1170-trouble",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "doughnut",
+    "id": "eng-nco-1171-doughnut",
+    "register": 0,
+    "frequency": 3,
+    "additionalSpellings": [
+      "donut"
+    ]
+  },
+  {
+    "lemma": "ring",
+    "id": "eng-nco-1172-ring",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "stink",
+    "id": "eng-nco-1173-stink",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "stench",
+    "id": "eng-nco-1174-stench",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "influenza",
+    "id": "eng-nco-1175-influenza",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "flu",
+    "id": "eng-nco-1176-flu",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "massage",
+    "id": "eng-nco-1177-massage",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "flour",
+    "id": "eng-nco-1178-flour",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "sheet",
+    "id": "eng-nco-1179-sheet",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "bedsheet",
+    "id": "eng-nco-1180-bedsheet",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "gravity",
+    "id": "eng-nco-1181-gravity",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "sketch",
+    "id": "eng-nco-1182-sketch",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "draft",
+    "id": "eng-nco-1183-draft",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "fur",
+    "id": "eng-nco-1184-fur",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "ice skate",
+    "id": "eng-nco-1185-iceskate",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "riddle",
+    "id": "eng-nco-1186-riddle",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "puzzle",
+    "id": "eng-nco-1187-puzzle",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "enigma",
+    "id": "eng-nco-1188-enigma",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "cranberry",
+    "id": "eng-nco-1189-cranberry",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "mood",
+    "id": "eng-nco-1190-mood",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "atmosphere",
+    "id": "eng-nco-1191-atmosphere",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "sink",
+    "id": "eng-nco-1192-sink",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "wash basin",
+    "id": "eng-nco-1193-washbasin",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "blackboard",
+    "id": "eng-nco-1194-blackboard",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "chalkboard",
+    "id": "eng-nco-1195-chalkboard",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "whiteboard",
+    "id": "eng-nco-1196-whiteboard",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "thunder",
+    "id": "eng-nco-1197-thunder",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "tape",
+    "id": "eng-nco-1198-tape",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "admission",
+    "id": "eng-nco-1199-admission",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "lightning bolt",
+    "id": "eng-nco-1200-lightningbolt",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "bolt of lightning",
+    "id": "eng-nco-1201-boltoflightning",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "lightning",
+    "id": "eng-nco-1202-lightning",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "knot",
+    "id": "eng-nco-1203-knot",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "bread roll",
+    "id": "eng-nco-1204-breadroll",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "roll",
+    "id": "eng-nco-1205-roll",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "pencil case",
+    "id": "eng-nco-1206-pencilcase",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "horseradish",
+    "id": "eng-nco-1207-horseradish",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "sloth",
+    "id": "eng-nco-1208-sloth",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "salad",
+    "id": "eng-nco-1209-salad",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "bean",
+    "id": "eng-nco-1210-bean",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "dot",
+    "id": "eng-nco-1211-dot",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "line",
+    "id": "eng-nco-1212-line(shape)",
+    "register": 0,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "💭"
+    }
+  },
+  {
+    "lemma": "line",
+    "id": "eng-nco-1213-line(queue)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    }
+  },
+  {
+    "lemma": "ruler",
+    "id": "eng-nco-1214-ruler",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "pillow",
+    "id": "eng-nco-1215-pillow",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "cushion",
+    "id": "eng-nco-1216-cushion",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "rainbow",
+    "id": "eng-nco-1217-rainbow",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "identity",
+    "id": "eng-nco-1218-identity",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "party",
+    "id": "eng-nco-1219-party",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "birth",
+    "id": "eng-nco-1220-birth",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "delivery",
+    "id": "eng-nco-1221-delivery(birth)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "medical",
+      "emoji": "🩺"
+    }
+  },
+  {
+    "lemma": "delivery",
+    "id": "eng-nco-1222-delivery(logistics)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "logistics",
+      "emoji": "📦"
+    }
+  },
+  {
+    "lemma": "shipment",
+    "id": "eng-nco-1223-shipment",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "bit",
+    "id": "eng-nco-1224-bit",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "eraser",
+    "id": "eng-nco-1225-eraser",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "elastic band",
+    "id": "eng-nco-1226-elasticband",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "rubber band",
+    "id": "eng-nco-1227-rubberband",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "pitch",
+    "id": "eng-nco-1228-pitch",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "field",
+    "id": "eng-nco-1229-field",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "predator",
+    "id": "eng-nco-1230-predator",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "population",
+    "id": "eng-nco-1231-population",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "poultry",
+    "id": "eng-nco-1232-poultry",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "shelf",
+    "id": "eng-nco-1233-shelf",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "visit",
+    "id": "eng-nco-1234-visit",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "appointment",
+    "id": "eng-nco-1235-appointment",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "material",
+    "id": "eng-nco-1236-material",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "fabric",
+    "id": "eng-nco-1237-fabric",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "transition",
+    "id": "eng-nco-1238-transition",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "passage",
+    "id": "eng-nco-1239-passage",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "passageway",
+    "id": "eng-nco-1240-passageway",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "crossing",
+    "id": "eng-nco-1241-crossing",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "dark",
+    "id": "eng-nco-1242-dark",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "gloom",
+    "id": "eng-nco-1243-gloom",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "borough",
+    "id": "eng-nco-1244-borough",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "district",
+    "id": "eng-nco-1245-district",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "quarter",
+    "id": "eng-nco-1246-quarter",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "neighbourhood",
+    "id": "eng-nco-1247-neighbourhood",
+    "register": 0,
+    "frequency": 3,
+    "additionalSpellings": [
+      "neighborhood"
+    ]
+  },
+  {
+    "lemma": "pipe",
+    "id": "eng-nco-1248-pipe(tobacco)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "drug",
+      "emoji": "🚬️️️"
+    }
+  },
+  {
+    "lemma": "pipe",
+    "id": "eng-nco-1249-pipe(general)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "general",
+      "emoji": "🔲"
+    }
+  },
+  {
+    "lemma": "snorkel",
+    "id": "eng-nco-1250-snorkel",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "deadline",
+    "id": "eng-nco-1251-deadline",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "journey",
+    "id": "eng-nco-1252-journey",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "travel",
+    "id": "eng-nco-1253-travel",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "trip",
+    "id": "eng-nco-1254-trip",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "tube",
+    "id": "eng-nco-1255-tube",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "knowledge",
+    "id": "eng-nco-1256-knowledge",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "herb",
+    "id": "eng-nco-1257-herb",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "cannabis",
+    "id": "eng-nco-1258-cannabis",
+    "register": 6,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "weed",
+    "id": "eng-nco-1259-weed(cannabis)",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "drug",
+      "emoji": "💊"
+    },
+    "register": 6,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "weed",
+    "id": "eng-nco-1260-weed(plant)",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "nature",
+      "emoji": "🌳️"
+    },
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "cage",
+    "id": "eng-nco-1261-cage",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "task",
+    "id": "eng-nco-1262-task",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "assignment",
+    "id": "eng-nco-1263-assignment",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "errand",
+    "id": "eng-nco-1264-errand",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "decision",
+    "id": "eng-nco-1265-decision",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "comforter",
+    "id": "eng-nco-1266-comforter",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "quilt",
+    "id": "eng-nco-1267-quilt",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "duvet",
+    "id": "eng-nco-1268-duvet",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "wire",
+    "id": "eng-nco-1269-wire",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "knitting needle",
+    "id": "eng-nco-1270-knittingneedle",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "monument",
+    "id": "eng-nco-1271-monument",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "tourism",
+    "id": "eng-nco-1272-tourism",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "infection",
+    "id": "eng-nco-1273-infection",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "nest",
+    "id": "eng-nco-1274-nest",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "slot",
+    "id": "eng-nco-1275-slot",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "drawing",
+    "id": "eng-nco-1276-drawing",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "swear word",
+    "id": "eng-nco-1277-swearword",
+    "register": 8,
+    "frequency": 4
+  },
+  {
+    "lemma": "curse word",
+    "id": "eng-nco-1278-curseword",
+    "register": 8,
+    "frequency": 4
+  },
+  {
+    "lemma": "armour",
+    "id": "eng-nco-1279-armour",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "notebook",
+    "id": "eng-nco-1280-notebook",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "exercise book",
+    "id": "eng-nco-1281-exercisebook",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "noise",
+    "id": "eng-nco-1282-noise",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "racket",
+    "id": "eng-nco-1283-racket",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "din",
+    "id": "eng-nco-1284-din",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "distance",
+    "id": "eng-nco-1285-distance",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "landscape",
+    "id": "eng-nco-1286-landscape",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "countryside",
+    "id": "eng-nco-1287-countryside",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "title",
+    "id": "eng-nco-1288-title",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "treatment",
+    "id": "eng-nco-1289-treatment",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "device",
+    "id": "eng-nco-1290-device",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "octopus",
+    "id": "eng-nco-1291-octopus",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "experience",
+    "id": "eng-nco-1292-experience",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "experiment",
+    "id": "eng-nco-1293-experiment",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "meeting",
+    "id": "eng-nco-1294-meeting",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "reaction",
+    "id": "eng-nco-1295-reaction",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "rack",
+    "id": "eng-nco-1296-rack",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "bookcase",
+    "id": "eng-nco-1297-bookcase",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "anxiety",
+    "id": "eng-nco-1298-anxiety",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "cry",
+    "id": "eng-nco-1299-cry",
+    "register": 0,
+    "frequency": 5
+  },
+  {
+    "lemma": "organ",
+    "id": "eng-nco-1300-organ",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "size",
+    "id": "eng-nco-1301-size",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "steering wheel",
+    "id": "eng-nco-1302-steeringwheel",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "handlebar",
+    "id": "eng-nco-1303-handlebar",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "fluid",
+    "id": "eng-nco-1304-fluid",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "liquid",
+    "id": "eng-nco-1305-liquid",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "dishwasher",
+    "id": "eng-nco-1306-dishwasher",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "queue",
+    "id": "eng-nco-1307-queue",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "behaviour",
+    "id": "eng-nco-1308-behaviour",
+    "register": 0,
+    "frequency": 3,
+    "additionalSpellings": [
+      "behavior"
+    ],
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "jellyfish",
+    "id": "eng-nco-1309-jellyfish",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "expression",
+    "id": "eng-nco-1310-expression",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "drought",
+    "id": "eng-nco-1311-drought",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "universe",
+    "id": "eng-nco-1312-universe",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "laboratory",
+    "id": "eng-nco-1313-laboratory",
+    "register": 0,
+    "frequency": 4,
+    "additionalSpellings": [
+      "lab"
+    ]
+  },
+  {
+    "lemma": "economy",
+    "id": "eng-nco-1314-economy",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "deodorant",
+    "id": "eng-nco-1315-deodorant",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "vaccination",
+    "id": "eng-nco-1316-vaccination",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "vaccine",
+    "id": "eng-nco-1317-vaccine",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "drizzle",
+    "id": "eng-nco-1318-drizzle",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "threat",
+    "id": "eng-nco-1319-threat",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "freezer",
+    "id": "eng-nco-1320-freezer",
+    "register": 0,
+    "frequency": 2
+  },
+  {
+    "lemma": "exhibition",
+    "id": "eng-nco-1321-exhibition",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "hiccup",
+    "id": "eng-nco-1322-hiccup",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "pantry",
+    "id": "eng-nco-1323-pantry",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "larder",
+    "id": "eng-nco-1324-larder",
+    "register": 0,
+    "frequency": 4
+  },
+  {
+    "lemma": "doubt",
+    "id": "eng-nco-1325-doubt",
+    "register": 0,
+    "frequency": 3,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "shampoo",
+    "id": "eng-nco-1326-shampoo",
+    "register": 0,
+    "frequency": 2,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "diabetes",
+    "id": "eng-nco-1327-diabetes",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "contents",
+    "id": "eng-nco-1328-contents",
+    "register": 0,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumPlurale": true
+  },
+  {
+    "lemma": "play",
+    "id": "eng-nco-1329-play",
+    "register": 0,
+    "frequency": 3
+  },
+  {
+    "lemma": "sacrifice",
+    "id": "eng-nco-1330-sacrifice",
+    "register": 0,
+    "frequency": 4,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "football",
+    "id": "eng-nco-1331-football(ball)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "object",
+      "emoji": "📦"
+    }
+  },
+  {
+    "lemma": "football",
+    "id": "eng-nco-1332-football(sport)",
+    "register": 0,
+    "frequency": 3,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "games/sports",
+      "emoji": "🎲"
+    },
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "soccer",
+    "id": "eng-nco-1333-soccer",
+    "register": 0,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "rainfall",
+    "id": "eng-nco-1334-rainfall",
+    "register": 0,
+    "frequency": 5,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "pole",
+    "id": "eng-nco-1335-pole(eg metal)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "long stick",
+      "emoji": "💈"
+    }
+  },
+  {
+    "lemma": "pole",
+    "id": "eng-nco-1336-pole(eg North)",
+    "register": 0,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "direction",
+      "emoji": "🧭"
+    }
+  }
+]

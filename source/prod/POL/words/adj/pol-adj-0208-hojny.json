@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "hojnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "hojny",
+          "gen": "hojnego",
+          "dat": "hojnemu",
+          "acc": "hojnego",
+          "ins": "hojnym",
+          "loc": "hojnym"
+        },
+        "m3": {
+          "nom": "hojny",
+          "gen": "hojnego",
+          "dat": "hojnemu",
+          "acc": "hojny",
+          "ins": "hojnym",
+          "loc": "hojnym"
+        },
+        "f": {
+          "nom": "hojna",
+          "gen": "hojnej",
+          "dat": "hojnej",
+          "acc": "hojną",
+          "ins": "hojną",
+          "loc": "hojnej"
+        },
+        "n": {
+          "nom": "hojne",
+          "gen": "hojnego",
+          "dat": "hojnemu",
+          "acc": "hojne",
+          "ins": "hojnym",
+          "loc": "hojnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "hojni",
+          "gen": "hojnych",
+          "dat": "hojnym",
+          "acc": "hojnych",
+          "ins": "hojnymi",
+          "loc": "hojnych"
+        },
+        "nonvirile": {
+          "nom": "hojne",
+          "gen": "hojnych",
+          "dat": "hojnym",
+          "acc": "hojne",
+          "ins": "hojnymi",
+          "loc": "hojnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "hojniejszy",
+          "gen": "hojniejszego",
+          "dat": "hojniejszemu",
+          "acc": "hojniejszego",
+          "ins": "hojniejszym",
+          "loc": "hojniejszym"
+        },
+        "m3": {
+          "nom": "hojniejszy",
+          "gen": "hojniejszego",
+          "dat": "hojniejszemu",
+          "acc": "hojniejszy",
+          "ins": "hojniejszym",
+          "loc": "hojniejszym"
+        },
+        "f": {
+          "nom": "hojniejsza",
+          "gen": "hojniejszej",
+          "dat": "hojniejszej",
+          "acc": "hojniejszą",
+          "ins": "hojniejszą",
+          "loc": "hojniejszej"
+        },
+        "n": {
+          "nom": "hojniejsze",
+          "gen": "hojniejszego",
+          "dat": "hojniejszemu",
+          "acc": "hojniejsze",
+          "ins": "hojniejszym",
+          "loc": "hojniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "hojniejsi",
+          "gen": "hojniejszych",
+          "dat": "hojniejszym",
+          "acc": "hojniejszych",
+          "ins": "hojniejszymi",
+          "loc": "hojniejszych"
+        },
+        "nonvirile": {
+          "nom": "hojniejsze",
+          "gen": "hojniejszych",
+          "dat": "hojniejszym",
+          "acc": "hojniejsze",
+          "ins": "hojniejszymi",
+          "loc": "hojniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najhojniejszy",
+          "gen": "najhojniejszego",
+          "dat": "najhojniejszemu",
+          "acc": "najhojniejszego",
+          "ins": "najhojniejszym",
+          "loc": "najhojniejszym"
+        },
+        "m3": {
+          "nom": "najhojniejszy",
+          "gen": "najhojniejszego",
+          "dat": "najhojniejszemu",
+          "acc": "najhojniejszy",
+          "ins": "najhojniejszym",
+          "loc": "najhojniejszym"
+        },
+        "f": {
+          "nom": "najhojniejsza",
+          "gen": "najhojniejszej",
+          "dat": "najhojniejszej",
+          "acc": "najhojniejszą",
+          "ins": "najhojniejszą",
+          "loc": "najhojniejszej"
+        },
+        "n": {
+          "nom": "najhojniejsze",
+          "gen": "najhojniejszego",
+          "dat": "najhojniejszemu",
+          "acc": "najhojniejsze",
+          "ins": "najhojniejszym",
+          "loc": "najhojniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najhojniejsi",
+          "gen": "najhojniejszych",
+          "dat": "najhojniejszym",
+          "acc": "najhojniejszych",
+          "ins": "najhojniejszymi",
+          "loc": "najhojniejszych"
+        },
+        "nonvirile": {
+          "nom": "najhojniejsze",
+          "gen": "najhojniejszych",
+          "dat": "najhojniejszym",
+          "acc": "najhojniejsze",
+          "ins": "najhojniejszymi",
+          "loc": "najhojniejszych"
+        }
+      }
+    }
+  }
+}

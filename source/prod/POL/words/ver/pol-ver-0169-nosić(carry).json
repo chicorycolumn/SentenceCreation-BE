@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nosić",
+    "verbalNoun": "noszenie",
+    "activeAdjectival": "noszący",
+    "passiveAdjectival": "noszony",
+    "contemporaryAdverbial": "nosząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "noś",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "noszono"
+          },
+          "plural": {
+            "allPluralGenders": "noszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nosiłem",
+            "f": "nosiłam"
+          },
+          "plural": {
+            "virile": "nosiliśmy",
+            "nonvirile": "nosiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nosiłeś",
+            "f": "nosiłaś"
+          },
+          "plural": {
+            "virile": "nosiliście",
+            "nonvirile": "nosiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nosił",
+            "f": "nosiła",
+            "n": "nosiło"
+          },
+          "plural": {
+            "virile": "nosili",
+            "nonvirile": "nosiły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nosi się"
+          },
+          "plural": {
+            "allPluralGenders": "nosi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "noszę"
+          },
+          "plural": {
+            "allPluralGenders": "nosimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nosisz"
+          },
+          "plural": {
+            "allPluralGenders": "nosicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nosi"
+          },
+          "plural": {
+            "allPluralGenders": "noszą"
+          }
+        }
+      }
+    }
+  }
+}

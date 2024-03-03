@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wujek",
+      "gen": "wujka",
+      "dat": "wujkowi",
+      "acc": "wujka",
+      "ins": "wujkiem",
+      "loc": "wujku",
+      "voc": "wujku"
+    },
+    "plural": {
+      "nom": "wujkowie",
+      "gen": "wujków",
+      "dat": "wujkom",
+      "acc": "wujków",
+      "ins": "wujkami",
+      "loc": "wujkach",
+      "voc": "wujkowie"
+    }
+  }
+}

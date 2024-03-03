@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "świetnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "świetny",
+          "gen": "świetnego",
+          "dat": "świetnemu",
+          "acc": "świetnego",
+          "ins": "świetnym",
+          "loc": "świetnym"
+        },
+        "m3": {
+          "nom": "świetny",
+          "gen": "świetnego",
+          "dat": "świetnemu",
+          "acc": "świetny",
+          "ins": "świetnym",
+          "loc": "świetnym"
+        },
+        "f": {
+          "nom": "świetna",
+          "gen": "świetnej",
+          "dat": "świetnej",
+          "acc": "świetną",
+          "ins": "świetną",
+          "loc": "świetnej"
+        },
+        "n": {
+          "nom": "świetne",
+          "gen": "świetnego",
+          "dat": "świetnemu",
+          "acc": "świetne",
+          "ins": "świetnym",
+          "loc": "świetnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "świetni",
+          "gen": "świetnych",
+          "dat": "świetnym",
+          "acc": "świetnych",
+          "ins": "świetnymi",
+          "loc": "świetnych"
+        },
+        "nonvirile": {
+          "nom": "świetne",
+          "gen": "świetnych",
+          "dat": "świetnym",
+          "acc": "świetne",
+          "ins": "świetnymi",
+          "loc": "świetnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "świetniejszy",
+          "gen": "świetniejszego",
+          "dat": "świetniejszemu",
+          "acc": "świetniejszego",
+          "ins": "świetniejszym",
+          "loc": "świetniejszym"
+        },
+        "m3": {
+          "nom": "świetniejszy",
+          "gen": "świetniejszego",
+          "dat": "świetniejszemu",
+          "acc": "świetniejszy",
+          "ins": "świetniejszym",
+          "loc": "świetniejszym"
+        },
+        "f": {
+          "nom": "świetniejsza",
+          "gen": "świetniejszej",
+          "dat": "świetniejszej",
+          "acc": "świetniejszą",
+          "ins": "świetniejszą",
+          "loc": "świetniejszej"
+        },
+        "n": {
+          "nom": "świetniejsze",
+          "gen": "świetniejszego",
+          "dat": "świetniejszemu",
+          "acc": "świetniejsze",
+          "ins": "świetniejszym",
+          "loc": "świetniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "świetniejsi",
+          "gen": "świetniejszych",
+          "dat": "świetniejszym",
+          "acc": "świetniejszych",
+          "ins": "świetniejszymi",
+          "loc": "świetniejszych"
+        },
+        "nonvirile": {
+          "nom": "świetniejsze",
+          "gen": "świetniejszych",
+          "dat": "świetniejszym",
+          "acc": "świetniejsze",
+          "ins": "świetniejszymi",
+          "loc": "świetniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najświetniejszy",
+          "gen": "najświetniejszego",
+          "dat": "najświetniejszemu",
+          "acc": "najświetniejszego",
+          "ins": "najświetniejszym",
+          "loc": "najświetniejszym"
+        },
+        "m3": {
+          "nom": "najświetniejszy",
+          "gen": "najświetniejszego",
+          "dat": "najświetniejszemu",
+          "acc": "najświetniejszy",
+          "ins": "najświetniejszym",
+          "loc": "najświetniejszym"
+        },
+        "f": {
+          "nom": "najświetniejsza",
+          "gen": "najświetniejszej",
+          "dat": "najświetniejszej",
+          "acc": "najświetniejszą",
+          "ins": "najświetniejszą",
+          "loc": "najświetniejszej"
+        },
+        "n": {
+          "nom": "najświetniejsze",
+          "gen": "najświetniejszego",
+          "dat": "najświetniejszemu",
+          "acc": "najświetniejsze",
+          "ins": "najświetniejszym",
+          "loc": "najświetniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najświetniejsi",
+          "gen": "najświetniejszych",
+          "dat": "najświetniejszym",
+          "acc": "najświetniejszych",
+          "ins": "najświetniejszymi",
+          "loc": "najświetniejszych"
+        },
+        "nonvirile": {
+          "nom": "najświetniejsze",
+          "gen": "najświetniejszych",
+          "dat": "najświetniejszym",
+          "acc": "najświetniejsze",
+          "ins": "najświetniejszymi",
+          "loc": "najświetniejszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gleba",
+      "gen": "gleby",
+      "dat": "glebie",
+      "acc": "glebę",
+      "ins": "glebą",
+      "loc": "glebie",
+      "voc": "glebo"
+    },
+    "plural": {
+      "nom": "gleby",
+      "gen": "gleb",
+      "dat": "glebom",
+      "acc": "gleby",
+      "ins": "glebami",
+      "loc": "glebach",
+      "voc": "gleby"
+    }
+  }
+}

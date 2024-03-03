@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "skryć",
+    "verbalNoun": "skrycie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "skryty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "skrywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "skryje się"
+          },
+          "plural": {
+            "allPluralGenders": "skryje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "skryję"
+          },
+          "plural": {
+            "allPluralGenders": "skryjemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "skryjesz"
+          },
+          "plural": {
+            "allPluralGenders": "skryjecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "skryje"
+          },
+          "plural": {
+            "allPluralGenders": "skryją"
+          }
+        }
+      },
+      "imperative": "skryj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "skryto"
+          },
+          "plural": {
+            "allPluralGenders": "skryto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "skryłem",
+            "f": "skryłam"
+          },
+          "plural": {
+            "virile": "skryliśmy",
+            "nonvirile": "skryłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "skryłeś",
+            "f": "skryłaś"
+          },
+          "plural": {
+            "virile": "skryliście",
+            "nonvirile": "skryłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "skrył",
+            "f": "skryła",
+            "n": "skryło"
+          },
+          "plural": {
+            "virile": "skryli",
+            "nonvirile": "skryły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

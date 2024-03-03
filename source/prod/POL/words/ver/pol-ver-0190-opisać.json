@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "opisać",
+    "verbalNoun": "opisanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "opisany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "opisawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opisze się"
+          },
+          "plural": {
+            "allPluralGenders": "opisze się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "opiszę"
+          },
+          "plural": {
+            "allPluralGenders": "opiszemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "opiszesz"
+          },
+          "plural": {
+            "allPluralGenders": "opiszecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "opisze"
+          },
+          "plural": {
+            "allPluralGenders": "opiszą"
+          }
+        }
+      },
+      "imperative": "opisz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opisano"
+          },
+          "plural": {
+            "allPluralGenders": "opisano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "opisałem",
+            "f": "opisałam"
+          },
+          "plural": {
+            "virile": "opisaliśmy",
+            "nonvirile": "opisałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "opisałeś",
+            "f": "opisałaś"
+          },
+          "plural": {
+            "virile": "opisaliście",
+            "nonvirile": "opisałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "opisał",
+            "f": "opisała",
+            "n": "opisało"
+          },
+          "plural": {
+            "virile": "opisali",
+            "nonvirile": "opisały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

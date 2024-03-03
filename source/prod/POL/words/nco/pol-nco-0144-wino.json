@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wino",
+      "gen": "wina",
+      "dat": "winu",
+      "acc": "wino",
+      "ins": "winem",
+      "loc": "winie",
+      "voc": "wino"
+    },
+    "plural": {
+      "nom": "wina",
+      "gen": "win",
+      "dat": "winom",
+      "acc": "wina",
+      "ins": "winami",
+      "loc": "winach",
+      "voc": "wina"
+    }
+  }
+}

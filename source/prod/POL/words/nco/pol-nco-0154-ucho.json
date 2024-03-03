@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ucho",
+      "gen": "ucha",
+      "dat": "uchu",
+      "acc": "ucho",
+      "ins": "uchem",
+      "loc": "uchu",
+      "voc": "ucho"
+    },
+    "plural": {
+      "nom": "uszy",
+      "gen": [
+        "uszu",
+        "uszów"
+      ],
+      "dat": "uszom",
+      "acc": "uszy",
+      "ins": [
+        "uszami",
+        "uszyma"
+      ],
+      "loc": "uszach",
+      "voc": "uszy"
+    }
+  }
+}

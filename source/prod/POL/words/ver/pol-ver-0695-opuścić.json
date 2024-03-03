@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "opuścić",
+    "verbalNoun": "opuszczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "opuszczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "opuściwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opuści się"
+          },
+          "plural": {
+            "allPluralGenders": "opuści się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "opuszczę"
+          },
+          "plural": {
+            "allPluralGenders": "opuścimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "opuścisz"
+          },
+          "plural": {
+            "allPluralGenders": "opuścicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "opuści"
+          },
+          "plural": {
+            "allPluralGenders": "opuszczą"
+          }
+        }
+      },
+      "imperative": "opuść",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opuszczono"
+          },
+          "plural": {
+            "allPluralGenders": "opuszczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "opuściłem",
+            "f": "opuściłam"
+          },
+          "plural": {
+            "virile": "opuściliśmy",
+            "nonvirile": "opuściłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "opuściłeś",
+            "f": "opuściłaś"
+          },
+          "plural": {
+            "virile": "opuściliście",
+            "nonvirile": "opuściłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "opuścił",
+            "f": "opuściła",
+            "n": "opuściło"
+          },
+          "plural": {
+            "virile": "opuścili",
+            "nonvirile": "opuściły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

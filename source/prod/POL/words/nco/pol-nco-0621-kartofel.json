@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kartofel",
+      "gen": "kartofla",
+      "dat": "kartoflowi",
+      "acc": "kartofel",
+      "ins": "kartoflem",
+      "loc": "kartoflu",
+      "voc": "kartoflu"
+    },
+    "plural": {
+      "nom": "kartofle",
+      "gen": "kartofli",
+      "dat": "kartoflom",
+      "acc": "kartofle",
+      "ins": "kartoflami",
+      "loc": "kartoflach",
+      "voc": "kartofle"
+    }
+  }
+}

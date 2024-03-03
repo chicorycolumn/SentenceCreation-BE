@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przekładać",
+    "verbalNoun": "przekładanie",
+    "activeAdjectival": "przekładający",
+    "passiveAdjectival": "przekładany",
+    "contemporaryAdverbial": "przekładając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przekładaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przekładano"
+          },
+          "plural": {
+            "allPluralGenders": "przekładano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przekładałem",
+            "f": "przekładałam"
+          },
+          "plural": {
+            "virile": "przekładaliśmy",
+            "nonvirile": "przekładałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przekładałeś",
+            "f": "przekładałaś"
+          },
+          "plural": {
+            "virile": "przekładaliście",
+            "nonvirile": "przekładałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przekładał",
+            "f": "przekładała",
+            "n": "przekładało"
+          },
+          "plural": {
+            "virile": "przekładali",
+            "nonvirile": "przekładały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przekłada się"
+          },
+          "plural": {
+            "allPluralGenders": "przekłada się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przekładam"
+          },
+          "plural": {
+            "allPluralGenders": "przekładamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przekładasz"
+          },
+          "plural": {
+            "allPluralGenders": "przekładacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przekłada"
+          },
+          "plural": {
+            "allPluralGenders": "przekładają"
+          }
+        }
+      }
+    }
+  }
+}

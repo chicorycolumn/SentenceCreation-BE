@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wstać",
+    "verbalNoun": "wstanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "wstawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wstanie się"
+          },
+          "plural": {
+            "allPluralGenders": "wstanie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wstanę"
+          },
+          "plural": {
+            "allPluralGenders": "wstaniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wstaniesz"
+          },
+          "plural": {
+            "allPluralGenders": "wstaniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wstanie"
+          },
+          "plural": {
+            "allPluralGenders": "wstaną"
+          }
+        }
+      },
+      "imperative": "wstań",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wstano"
+          },
+          "plural": {
+            "allPluralGenders": "wstano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wstałem",
+            "f": "wstałam"
+          },
+          "plural": {
+            "virile": "wstaliśmy",
+            "nonvirile": "wstałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wstałeś",
+            "f": "wstałaś"
+          },
+          "plural": {
+            "virile": "wstaliście",
+            "nonvirile": "wstałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wstał",
+            "f": "wstała",
+            "n": "wstało"
+          },
+          "plural": {
+            "virile": "wstali",
+            "nonvirile": "wstały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

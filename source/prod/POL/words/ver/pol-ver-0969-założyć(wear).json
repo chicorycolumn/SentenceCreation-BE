@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "założyć",
+    "verbalNoun": "założenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "założony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "założywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "założy się"
+          },
+          "plural": {
+            "allPluralGenders": "założy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "założę"
+          },
+          "plural": {
+            "allPluralGenders": "założymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "założysz"
+          },
+          "plural": {
+            "allPluralGenders": "założycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "założy"
+          },
+          "plural": {
+            "allPluralGenders": "założą"
+          }
+        }
+      },
+      "imperative": "załóż",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "założono"
+          },
+          "plural": {
+            "allPluralGenders": "założono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "założyłem",
+            "f": "założyłam"
+          },
+          "plural": {
+            "virile": "założyliśmy",
+            "nonvirile": "założyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "założyłeś",
+            "f": "założyłaś"
+          },
+          "plural": {
+            "virile": "założyliście",
+            "nonvirile": "założyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "założył",
+            "f": "założyła",
+            "n": "założyło"
+          },
+          "plural": {
+            "virile": "założyli",
+            "nonvirile": "założyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

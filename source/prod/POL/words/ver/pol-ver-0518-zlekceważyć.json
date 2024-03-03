@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zlekceważyć",
+    "verbalNoun": "zlekceważenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zlekceważony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zlekceważywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zlekceważy się"
+          },
+          "plural": {
+            "allPluralGenders": "zlekceważy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zlekceważę"
+          },
+          "plural": {
+            "allPluralGenders": "zlekceważymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zlekceważysz"
+          },
+          "plural": {
+            "allPluralGenders": "zlekceważycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zlekceważy"
+          },
+          "plural": {
+            "allPluralGenders": "zlekceważą"
+          }
+        }
+      },
+      "imperative": "zlekceważ",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zlekceważono"
+          },
+          "plural": {
+            "allPluralGenders": "zlekceważono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zlekceważyłem",
+            "f": "zlekceważyłam"
+          },
+          "plural": {
+            "virile": "zlekceważyliśmy",
+            "nonvirile": "zlekceważyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zlekceważyłeś",
+            "f": "zlekceważyłaś"
+          },
+          "plural": {
+            "virile": "zlekceważyliście",
+            "nonvirile": "zlekceważyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zlekceważył",
+            "f": "zlekceważyła",
+            "n": "zlekceważyło"
+          },
+          "plural": {
+            "virile": "zlekceważyli",
+            "nonvirile": "zlekceważyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

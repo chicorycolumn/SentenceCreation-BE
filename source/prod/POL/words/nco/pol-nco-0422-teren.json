@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "teren",
+      "gen": "terenu",
+      "dat": "terenowi",
+      "acc": "teren",
+      "ins": "terenem",
+      "loc": "terenie",
+      "voc": "terenie"
+    },
+    "plural": {
+      "nom": "tereny",
+      "gen": "terenów",
+      "dat": "terenom",
+      "acc": "tereny",
+      "ins": "terenami",
+      "loc": "terenach",
+      "voc": "tereny"
+    }
+  }
+}

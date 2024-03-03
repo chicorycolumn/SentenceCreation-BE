@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "niespodziewanie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niespodziewany",
+          "gen": "niespodziewanego",
+          "dat": "niespodziewanemu",
+          "acc": "niespodziewanego",
+          "ins": "niespodziewanym",
+          "loc": "niespodziewanym"
+        },
+        "m3": {
+          "nom": "niespodziewany",
+          "gen": "niespodziewanego",
+          "dat": "niespodziewanemu",
+          "acc": "niespodziewany",
+          "ins": "niespodziewanym",
+          "loc": "niespodziewanym"
+        },
+        "f": {
+          "nom": "niespodziewana",
+          "gen": "niespodziewanej",
+          "dat": "niespodziewanej",
+          "acc": "niespodziewaną",
+          "ins": "niespodziewaną",
+          "loc": "niespodziewanej"
+        },
+        "n": {
+          "nom": "niespodziewane",
+          "gen": "niespodziewanego",
+          "dat": "niespodziewanemu",
+          "acc": "niespodziewane",
+          "ins": "niespodziewanym",
+          "loc": "niespodziewanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niespodziewani",
+          "gen": "niespodziewanych",
+          "dat": "niespodziewanym",
+          "acc": "niespodziewanych",
+          "ins": "niespodziewanymi",
+          "loc": "niespodziewanych"
+        },
+        "nonvirile": {
+          "nom": "niespodziewane",
+          "gen": "niespodziewanych",
+          "dat": "niespodziewanym",
+          "acc": "niespodziewane",
+          "ins": "niespodziewanymi",
+          "loc": "niespodziewanych"
+        }
+      }
+    }
+  }
+}

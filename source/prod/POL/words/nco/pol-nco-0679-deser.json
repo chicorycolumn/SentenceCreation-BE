@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "deser",
+      "gen": "deseru",
+      "dat": "deserowi",
+      "acc": "deser",
+      "ins": "deserem",
+      "loc": "deserze",
+      "voc": "deserze"
+    },
+    "plural": {
+      "nom": "desery",
+      "gen": "deserów",
+      "dat": "deserom",
+      "acc": "desery",
+      "ins": "deserami",
+      "loc": "deserach",
+      "voc": "desery"
+    }
+  }
+}

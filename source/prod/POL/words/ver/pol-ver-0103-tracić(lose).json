@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "tracić",
+    "verbalNoun": "tracenie",
+    "activeAdjectival": "tracący",
+    "passiveAdjectival": "tracony",
+    "contemporaryAdverbial": "tracąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "trać",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "tracono"
+          },
+          "plural": {
+            "allPluralGenders": "tracono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "traciłem",
+            "f": "traciłam"
+          },
+          "plural": {
+            "virile": "traciliśmy",
+            "nonvirile": "traciłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "traciłeś",
+            "f": "traciłaś"
+          },
+          "plural": {
+            "virile": "traciliście",
+            "nonvirile": "traciłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "tracił",
+            "f": "traciła",
+            "n": "traciło"
+          },
+          "plural": {
+            "virile": "tracili",
+            "nonvirile": "traciły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "traci się"
+          },
+          "plural": {
+            "allPluralGenders": "traci się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "tracę"
+          },
+          "plural": {
+            "allPluralGenders": "tracimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "tracisz"
+          },
+          "plural": {
+            "allPluralGenders": "tracicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "traci"
+          },
+          "plural": {
+            "allPluralGenders": "tracą"
+          }
+        }
+      }
+    }
+  }
+}

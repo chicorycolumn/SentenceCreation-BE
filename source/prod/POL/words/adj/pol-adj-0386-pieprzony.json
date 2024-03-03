@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pieprzony",
+          "gen": "pieprzonego",
+          "dat": "pieprzonemu",
+          "acc": "pieprzonego",
+          "ins": "pieprzonym",
+          "loc": "pieprzonym"
+        },
+        "m3": {
+          "nom": "pieprzony",
+          "gen": "pieprzonego",
+          "dat": "pieprzonemu",
+          "acc": "pieprzony",
+          "ins": "pieprzonym",
+          "loc": "pieprzonym"
+        },
+        "f": {
+          "nom": "pieprzona",
+          "gen": "pieprzonej",
+          "dat": "pieprzonej",
+          "acc": "pieprzoną",
+          "ins": "pieprzoną",
+          "loc": "pieprzonej"
+        },
+        "n": {
+          "nom": "pieprzone",
+          "gen": "pieprzonego",
+          "dat": "pieprzonemu",
+          "acc": "pieprzone",
+          "ins": "pieprzonym",
+          "loc": "pieprzonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pieprzeni",
+          "gen": "pieprzonych",
+          "dat": "pieprzonym",
+          "acc": "pieprzonych",
+          "ins": "pieprzonymi",
+          "loc": "pieprzonych"
+        },
+        "nonvirile": {
+          "nom": "pieprzone",
+          "gen": "pieprzonych",
+          "dat": "pieprzonym",
+          "acc": "pieprzone",
+          "ins": "pieprzonymi",
+          "loc": "pieprzonych"
+        }
+      }
+    }
+  }
+}

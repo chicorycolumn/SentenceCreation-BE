@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zapytywać",
+    "verbalNoun": "zapytywanie",
+    "activeAdjectival": "zapytujący",
+    "passiveAdjectival": "zapytywany",
+    "contemporaryAdverbial": "zapytując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "zapytuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zapytywano"
+          },
+          "plural": {
+            "allPluralGenders": "zapytywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zapytywałem",
+            "f": "zapytywałam"
+          },
+          "plural": {
+            "virile": "zapytywaliśmy",
+            "nonvirile": "zapytywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zapytywałeś",
+            "f": "zapytywałaś"
+          },
+          "plural": {
+            "virile": "zapytywaliście",
+            "nonvirile": "zapytywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zapytywał",
+            "f": "zapytywała",
+            "n": "zapytywało"
+          },
+          "plural": {
+            "virile": "zapytywali",
+            "nonvirile": "zapytywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zapytuje się"
+          },
+          "plural": {
+            "allPluralGenders": "zapytuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zapytuję"
+          },
+          "plural": {
+            "allPluralGenders": "zapytujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zapytujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zapytujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zapytuje"
+          },
+          "plural": {
+            "allPluralGenders": "zapytują"
+          }
+        }
+      }
+    }
+  }
+}

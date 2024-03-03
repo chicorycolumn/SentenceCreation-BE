@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wielbłąd",
+      "gen": "wielbłąda",
+      "dat": "wielbłądowi",
+      "acc": "wielbłąda",
+      "ins": "wielbłądem",
+      "loc": "wielbłądzie",
+      "voc": "wielbłądzie"
+    },
+    "plural": {
+      "nom": "wielbłądy",
+      "gen": "wielbłądów",
+      "dat": "wielbłądom",
+      "acc": "wielbłądy",
+      "ins": "wielbłądami",
+      "loc": "wielbłądach",
+      "voc": "wielbłądy"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "society",
+      "gen": "society's"
+    },
+    "plural": {
+      "nom": "societies",
+      "gen": "societies'"
+    }
+  }
+}

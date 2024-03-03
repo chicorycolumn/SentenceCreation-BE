@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "mokro",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "mokry",
+          "gen": "mokrego",
+          "dat": "mokremu",
+          "acc": "mokrego",
+          "ins": "mokrym",
+          "loc": "mokrym"
+        },
+        "m3": {
+          "nom": "mokry",
+          "gen": "mokrego",
+          "dat": "mokremu",
+          "acc": "mokry",
+          "ins": "mokrym",
+          "loc": "mokrym"
+        },
+        "f": {
+          "nom": "mokra",
+          "gen": "mokrej",
+          "dat": "mokrej",
+          "acc": "mokrą",
+          "ins": "mokrą",
+          "loc": "mokrej"
+        },
+        "n": {
+          "nom": "mokre",
+          "gen": "mokrego",
+          "dat": "mokremu",
+          "acc": "mokre",
+          "ins": "mokrym",
+          "loc": "mokrym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "mokrzy",
+          "gen": "mokrych",
+          "dat": "mokrym",
+          "acc": "mokrych",
+          "ins": "mokrymi",
+          "loc": "mokrych"
+        },
+        "nonvirile": {
+          "nom": "mokre",
+          "gen": "mokrych",
+          "dat": "mokrym",
+          "acc": "mokre",
+          "ins": "mokrymi",
+          "loc": "mokrych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej mokry",
+          "gen": "bardziej mokrego",
+          "dat": "bardziej mokremu",
+          "acc": "bardziej mokrego",
+          "ins": "bardziej mokrym",
+          "loc": "bardziej mokrym"
+        },
+        "m3": {
+          "nom": "bardziej mokry",
+          "gen": "bardziej mokrego",
+          "dat": "bardziej mokremu",
+          "acc": "bardziej mokry",
+          "ins": "bardziej mokrym",
+          "loc": "bardziej mokrym"
+        },
+        "f": {
+          "nom": "bardziej mokra",
+          "gen": "bardziej mokrej",
+          "dat": "bardziej mokrej",
+          "acc": "bardziej mokrą",
+          "ins": "bardziej mokrą",
+          "loc": "bardziej mokrej"
+        },
+        "n": {
+          "nom": "bardziej mokre",
+          "gen": "bardziej mokrego",
+          "dat": "bardziej mokremu",
+          "acc": "bardziej mokre",
+          "ins": "bardziej mokrym",
+          "loc": "bardziej mokrym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej mokrzy",
+          "gen": "bardziej mokrych",
+          "dat": "bardziej mokrym",
+          "acc": "bardziej mokrych",
+          "ins": "bardziej mokrymi",
+          "loc": "bardziej mokrych"
+        },
+        "nonvirile": {
+          "nom": "bardziej mokre",
+          "gen": "bardziej mokrych",
+          "dat": "bardziej mokrym",
+          "acc": "bardziej mokre",
+          "ins": "bardziej mokrymi",
+          "loc": "bardziej mokrych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej mokry",
+          "gen": "najbardziej mokrego",
+          "dat": "najbardziej mokremu",
+          "acc": "najbardziej mokrego",
+          "ins": "najbardziej mokrym",
+          "loc": "najbardziej mokrym"
+        },
+        "m3": {
+          "nom": "najbardziej mokry",
+          "gen": "najbardziej mokrego",
+          "dat": "najbardziej mokremu",
+          "acc": "najbardziej mokry",
+          "ins": "najbardziej mokrym",
+          "loc": "najbardziej mokrym"
+        },
+        "f": {
+          "nom": "najbardziej mokra",
+          "gen": "najbardziej mokrej",
+          "dat": "najbardziej mokrej",
+          "acc": "najbardziej mokrą",
+          "ins": "najbardziej mokrą",
+          "loc": "najbardziej mokrej"
+        },
+        "n": {
+          "nom": "najbardziej mokre",
+          "gen": "najbardziej mokrego",
+          "dat": "najbardziej mokremu",
+          "acc": "najbardziej mokre",
+          "ins": "najbardziej mokrym",
+          "loc": "najbardziej mokrym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej mokrzy",
+          "gen": "najbardziej mokrych",
+          "dat": "najbardziej mokrym",
+          "acc": "najbardziej mokrych",
+          "ins": "najbardziej mokrymi",
+          "loc": "najbardziej mokrych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej mokre",
+          "gen": "najbardziej mokrych",
+          "dat": "najbardziej mokrym",
+          "acc": "najbardziej mokre",
+          "ins": "najbardziej mokrymi",
+          "loc": "najbardziej mokrych"
+        }
+      }
+    }
+  }
+}

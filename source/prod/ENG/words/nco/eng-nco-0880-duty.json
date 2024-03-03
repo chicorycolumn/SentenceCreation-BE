@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "duty",
+      "gen": "duty's"
+    },
+    "plural": {
+      "nom": "duties",
+      "gen": "duties'"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "prawo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "prawy",
+          "gen": "prawego",
+          "dat": "prawemu",
+          "acc": "prawego",
+          "ins": "prawym",
+          "loc": "prawym"
+        },
+        "m3": {
+          "nom": "prawy",
+          "gen": "prawego",
+          "dat": "prawemu",
+          "acc": "prawy",
+          "ins": "prawym",
+          "loc": "prawym"
+        },
+        "f": {
+          "nom": "prawa",
+          "gen": "prawej",
+          "dat": "prawej",
+          "acc": "prawą",
+          "ins": "prawą",
+          "loc": "prawej"
+        },
+        "n": {
+          "nom": "prawe",
+          "gen": "prawego",
+          "dat": "prawemu",
+          "acc": "prawe",
+          "ins": "prawym",
+          "loc": "prawym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "prawi",
+          "gen": "prawych",
+          "dat": "prawym",
+          "acc": "prawych",
+          "ins": "prawymi",
+          "loc": "prawych"
+        },
+        "nonvirile": {
+          "nom": "prawe",
+          "gen": "prawych",
+          "dat": "prawym",
+          "acc": "prawe",
+          "ins": "prawymi",
+          "loc": "prawych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej prawy",
+          "gen": "bardziej prawego",
+          "dat": "bardziej prawemu",
+          "acc": "bardziej prawego",
+          "ins": "bardziej prawym",
+          "loc": "bardziej prawym"
+        },
+        "m3": {
+          "nom": "bardziej prawy",
+          "gen": "bardziej prawego",
+          "dat": "bardziej prawemu",
+          "acc": "bardziej prawy",
+          "ins": "bardziej prawym",
+          "loc": "bardziej prawym"
+        },
+        "f": {
+          "nom": "bardziej prawa",
+          "gen": "bardziej prawej",
+          "dat": "bardziej prawej",
+          "acc": "bardziej prawą",
+          "ins": "bardziej prawą",
+          "loc": "bardziej prawej"
+        },
+        "n": {
+          "nom": "bardziej prawe",
+          "gen": "bardziej prawego",
+          "dat": "bardziej prawemu",
+          "acc": "bardziej prawe",
+          "ins": "bardziej prawym",
+          "loc": "bardziej prawym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej prawi",
+          "gen": "bardziej prawych",
+          "dat": "bardziej prawym",
+          "acc": "bardziej prawych",
+          "ins": "bardziej prawymi",
+          "loc": "bardziej prawych"
+        },
+        "nonvirile": {
+          "nom": "bardziej prawe",
+          "gen": "bardziej prawych",
+          "dat": "bardziej prawym",
+          "acc": "bardziej prawe",
+          "ins": "bardziej prawymi",
+          "loc": "bardziej prawych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej prawy",
+          "gen": "najbardziej prawego",
+          "dat": "najbardziej prawemu",
+          "acc": "najbardziej prawego",
+          "ins": "najbardziej prawym",
+          "loc": "najbardziej prawym"
+        },
+        "m3": {
+          "nom": "najbardziej prawy",
+          "gen": "najbardziej prawego",
+          "dat": "najbardziej prawemu",
+          "acc": "najbardziej prawy",
+          "ins": "najbardziej prawym",
+          "loc": "najbardziej prawym"
+        },
+        "f": {
+          "nom": "najbardziej prawa",
+          "gen": "najbardziej prawej",
+          "dat": "najbardziej prawej",
+          "acc": "najbardziej prawą",
+          "ins": "najbardziej prawą",
+          "loc": "najbardziej prawej"
+        },
+        "n": {
+          "nom": "najbardziej prawe",
+          "gen": "najbardziej prawego",
+          "dat": "najbardziej prawemu",
+          "acc": "najbardziej prawe",
+          "ins": "najbardziej prawym",
+          "loc": "najbardziej prawym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej prawi",
+          "gen": "najbardziej prawych",
+          "dat": "najbardziej prawym",
+          "acc": "najbardziej prawych",
+          "ins": "najbardziej prawymi",
+          "loc": "najbardziej prawych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej prawe",
+          "gen": "najbardziej prawych",
+          "dat": "najbardziej prawym",
+          "acc": "najbardziej prawe",
+          "ins": "najbardziej prawymi",
+          "loc": "najbardziej prawych"
+        }
+      }
+    }
+  }
+}

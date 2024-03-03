@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "relationship",
+      "gen": "relationship's"
+    },
+    "plural": {
+      "nom": "relationships",
+      "gen": "relationships'"
+    }
+  }
+}

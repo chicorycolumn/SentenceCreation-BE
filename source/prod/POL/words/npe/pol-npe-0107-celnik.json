@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "celnik",
+      "gen": "celnika",
+      "dat": "celnikowi",
+      "acc": "celnika",
+      "ins": "celnikiem",
+      "loc": "celniku",
+      "voc": "celniku"
+    },
+    "plural": {
+      "nom": "celnicy",
+      "gen": "celników",
+      "dat": "celnikom",
+      "acc": "celników",
+      "ins": "celnikami",
+      "loc": "celnikach",
+      "voc": "celnicy"
+    }
+  }
+}

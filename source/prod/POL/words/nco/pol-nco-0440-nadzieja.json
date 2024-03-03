@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "nadzieja",
+      "gen": "nadziei",
+      "dat": "nadziei",
+      "acc": "nadzieję",
+      "ins": "nadzieją",
+      "loc": "nadziei",
+      "voc": "nadziejo"
+    },
+    "plural": {
+      "nom": "nadzieje",
+      "gen": "nadziei",
+      "dat": "nadziejom",
+      "acc": "nadzieje",
+      "ins": "nadziejami",
+      "loc": "nadziejach",
+      "voc": "nadzieje"
+    }
+  }
+}

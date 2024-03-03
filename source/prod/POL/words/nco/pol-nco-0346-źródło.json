@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "źródło",
+      "gen": "źródła",
+      "dat": "źródłu",
+      "acc": "źródło",
+      "ins": "źródłem",
+      "loc": "źródle",
+      "voc": "źródło"
+    },
+    "plural": {
+      "nom": "źródła",
+      "gen": "źródeł",
+      "dat": "źródłom",
+      "acc": "źródła",
+      "ins": "źródłami",
+      "loc": "źródłach",
+      "voc": "źródła"
+    }
+  }
+}

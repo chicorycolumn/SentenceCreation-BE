@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "hoodie",
+      "gen": "hoodie's"
+    },
+    "plural": {
+      "nom": "hoodies",
+      "gen": "hoodies'"
+    }
+  }
+}

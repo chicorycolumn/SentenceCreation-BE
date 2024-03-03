@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "żywo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "żywy",
+          "gen": "żywego",
+          "dat": "żywemu",
+          "acc": "żywego",
+          "ins": "żywym",
+          "loc": "żywym"
+        },
+        "m3": {
+          "nom": "żywy",
+          "gen": "żywego",
+          "dat": "żywemu",
+          "acc": "żywy",
+          "ins": "żywym",
+          "loc": "żywym"
+        },
+        "f": {
+          "nom": "żywa",
+          "gen": "żywej",
+          "dat": "żywej",
+          "acc": "żywą",
+          "ins": "żywą",
+          "loc": "żywej"
+        },
+        "n": {
+          "nom": "żywe",
+          "gen": "żywego",
+          "dat": "żywemu",
+          "acc": "żywe",
+          "ins": "żywym",
+          "loc": "żywym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "żywi",
+          "gen": "żywych",
+          "dat": "żywym",
+          "acc": "żywych",
+          "ins": "żywymi",
+          "loc": "żywych"
+        },
+        "nonvirile": {
+          "nom": "żywe",
+          "gen": "żywych",
+          "dat": "żywym",
+          "acc": "żywe",
+          "ins": "żywymi",
+          "loc": "żywych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "żywszy",
+              "bardziej żywy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "żywszego",
+              "bardziej żywego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "żywszemu",
+              "bardziej żywemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "żywszego",
+              "bardziej żywego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "żywszym",
+              "bardziej żywym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "żywszym",
+              "bardziej żywym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "żywszy",
+              "bardziej żywy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "żywszego",
+              "bardziej żywego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "żywszemu",
+              "bardziej żywemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "żywszy",
+              "bardziej żywy"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "żywszym",
+              "bardziej żywym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "żywszym",
+              "bardziej żywym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "żywsza",
+              "bardziej żywa"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "żywszej",
+              "bardziej żywej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "żywszej",
+              "bardziej żywej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "żywszą",
+              "bardziej żywą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "żywszą",
+              "bardziej żywą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "żywszej",
+              "bardziej żywej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "żywsze",
+              "bardziej żywe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "żywszego",
+              "bardziej żywego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "żywszemu",
+              "bardziej żywemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "żywsze",
+              "bardziej żywe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "żywszym",
+              "bardziej żywym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "żywszym",
+              "bardziej żywym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "żywsi",
+              "bardziej żywi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "żywszych",
+              "bardziej żywych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "żywszym",
+              "bardziej żywym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "żywszych",
+              "bardziej żywych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "żywszymi",
+              "bardziej żywymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "żywszych",
+              "bardziej żywych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "żywsze",
+              "bardziej żywe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "żywszych",
+              "bardziej żywych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "żywszym",
+              "bardziej żywym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "żywsze",
+              "bardziej żywe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "żywszymi",
+              "bardziej żywymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "żywszych",
+              "bardziej żywych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszy",
+              "najbardziej żywy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszego",
+              "najbardziej żywego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszemu",
+              "najbardziej żywemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszego",
+              "najbardziej żywego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszym",
+              "najbardziej żywym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszym",
+              "najbardziej żywym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszy",
+              "najbardziej żywy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszego",
+              "najbardziej żywego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszemu",
+              "najbardziej żywemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszy",
+              "najbardziej żywy"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszym",
+              "najbardziej żywym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszym",
+              "najbardziej żywym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najżywsza",
+              "najbardziej żywa"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszej",
+              "najbardziej żywej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszej",
+              "najbardziej żywej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszą",
+              "najbardziej żywą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszą",
+              "najbardziej żywą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszej",
+              "najbardziej żywej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najżywsze",
+              "najbardziej żywe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszego",
+              "najbardziej żywego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszemu",
+              "najbardziej żywemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najżywsze",
+              "najbardziej żywe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszym",
+              "najbardziej żywym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszym",
+              "najbardziej żywym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najżywsi",
+              "najbardziej żywi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszych",
+              "najbardziej żywych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszym",
+              "najbardziej żywym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszych",
+              "najbardziej żywych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszymi",
+              "najbardziej żywymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszych",
+              "najbardziej żywych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najżywsze",
+              "najbardziej żywe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszych",
+              "najbardziej żywych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszym",
+              "najbardziej żywym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najżywsze",
+              "najbardziej żywe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszymi",
+              "najbardziej żywymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najżywszych",
+              "najbardziej żywych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

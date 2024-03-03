@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kołdra",
+      "gen": "kołdry",
+      "dat": "kołdrze",
+      "acc": "kołdrę",
+      "ins": "kołdrą",
+      "loc": "kołdrze",
+      "voc": "kołdro"
+    },
+    "plural": {
+      "nom": "kołdry",
+      "gen": "kołder",
+      "dat": "kołdrom",
+      "acc": "kołdry",
+      "ins": "kołdrami",
+      "loc": "kołdrach",
+      "voc": "kołdry"
+    }
+  }
+}

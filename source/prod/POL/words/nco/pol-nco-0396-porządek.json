@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "porządek",
+      "gen": "porządku",
+      "dat": "porządkowi",
+      "acc": "porządek",
+      "ins": "porządkiem",
+      "loc": "porządku",
+      "voc": "porządku"
+    },
+    "plural": {
+      "nom": "porządki",
+      "gen": "porządków",
+      "dat": "porządkom",
+      "acc": "porządki",
+      "ins": "porządkami",
+      "loc": "porządkach",
+      "voc": "porządki"
+    }
+  }
+}

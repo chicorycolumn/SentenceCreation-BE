@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "vaccination",
+      "gen": "vaccination's"
+    },
+    "plural": {
+      "nom": "vaccinations",
+      "gen": "vaccinations'"
+    }
+  }
+}

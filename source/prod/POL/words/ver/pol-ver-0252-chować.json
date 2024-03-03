@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "chować",
+    "verbalNoun": "chowanie",
+    "activeAdjectival": "chowający",
+    "passiveAdjectival": "chowany",
+    "contemporaryAdverbial": "chowając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "chowaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "chowano"
+          },
+          "plural": {
+            "allPluralGenders": "chowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "chowałem",
+            "f": "chowałam"
+          },
+          "plural": {
+            "virile": "chowaliśmy",
+            "nonvirile": "chowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "chowałeś",
+            "f": "chowałaś"
+          },
+          "plural": {
+            "virile": "chowaliście",
+            "nonvirile": "chowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "chował",
+            "f": "chowała",
+            "n": "chowało"
+          },
+          "plural": {
+            "virile": "chowali",
+            "nonvirile": "chowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "chowa się"
+          },
+          "plural": {
+            "allPluralGenders": "chowa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "chowam"
+          },
+          "plural": {
+            "allPluralGenders": "chowamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "chowasz"
+          },
+          "plural": {
+            "allPluralGenders": "chowacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "chowa"
+          },
+          "plural": {
+            "allPluralGenders": "chowają"
+          }
+        }
+      }
+    }
+  }
+}

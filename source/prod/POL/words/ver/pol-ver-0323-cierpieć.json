@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "cierpieć",
+    "verbalNoun": "cierpienie",
+    "activeAdjectival": "cierpiący",
+    "passiveAdjectival": "cierpiany",
+    "contemporaryAdverbial": "cierpiąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "cierp",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "cierpiano"
+          },
+          "plural": {
+            "allPluralGenders": "cierpiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "cierpiałem",
+            "f": "cierpiałam"
+          },
+          "plural": {
+            "virile": "cierpieliśmy",
+            "nonvirile": "cierpiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "cierpiałeś",
+            "f": "cierpiałaś"
+          },
+          "plural": {
+            "virile": "cierpieliście",
+            "nonvirile": "cierpiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "cierpiał",
+            "f": "cierpiała",
+            "n": "cierpiało"
+          },
+          "plural": {
+            "virile": "cierpieli",
+            "nonvirile": "cierpiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "cierpi się"
+          },
+          "plural": {
+            "allPluralGenders": "cierpi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "cierpię"
+          },
+          "plural": {
+            "allPluralGenders": "cierpimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "cierpisz"
+          },
+          "plural": {
+            "allPluralGenders": "cierpicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "cierpi"
+          },
+          "plural": {
+            "allPluralGenders": "cierpią"
+          }
+        }
+      }
+    }
+  }
+}

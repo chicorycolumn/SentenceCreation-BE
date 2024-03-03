@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zainteresować",
+    "verbalNoun": "zainteresowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zainteresowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zainteresowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zainteresuje się"
+          },
+          "plural": {
+            "allPluralGenders": "zainteresuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zainteresuję"
+          },
+          "plural": {
+            "allPluralGenders": "zainteresujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zainteresujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zainteresujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zainteresuje"
+          },
+          "plural": {
+            "allPluralGenders": "zainteresują"
+          }
+        }
+      },
+      "imperative": "zainteresuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zainteresowano"
+          },
+          "plural": {
+            "allPluralGenders": "zainteresowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zainteresowałem",
+            "f": "zainteresowałam"
+          },
+          "plural": {
+            "virile": "zainteresowaliśmy",
+            "nonvirile": "zainteresowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zainteresowałeś",
+            "f": "zainteresowałaś"
+          },
+          "plural": {
+            "virile": "zainteresowaliście",
+            "nonvirile": "zainteresowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zainteresował",
+            "f": "zainteresowała",
+            "n": "zainteresowało"
+          },
+          "plural": {
+            "virile": "zainteresowali",
+            "nonvirile": "zainteresowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

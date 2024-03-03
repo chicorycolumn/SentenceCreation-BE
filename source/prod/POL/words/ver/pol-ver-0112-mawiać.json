@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "mawiać",
+    "verbalNoun": "mawianie",
+    "activeAdjectival": "mawiający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "mawiając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "mawiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mawiano"
+          },
+          "plural": {
+            "allPluralGenders": "mawiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "mawiałem",
+            "f": "mawiałam"
+          },
+          "plural": {
+            "virile": "mawialiśmy",
+            "nonvirile": "mawiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "mawiałeś",
+            "f": "mawiałaś"
+          },
+          "plural": {
+            "virile": "mawialiście",
+            "nonvirile": "mawiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "mawiał",
+            "f": "mawiała",
+            "n": "mawiało"
+          },
+          "plural": {
+            "virile": "mawiali",
+            "nonvirile": "mawiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mawia się"
+          },
+          "plural": {
+            "allPluralGenders": "mawia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "mawiam"
+          },
+          "plural": {
+            "allPluralGenders": "mawiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "mawiasz"
+          },
+          "plural": {
+            "allPluralGenders": "mawiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "mawia"
+          },
+          "plural": {
+            "allPluralGenders": "mawiają"
+          }
+        }
+      }
+    }
+  }
+}

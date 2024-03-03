@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "płacić",
+    "verbalNoun": "płacenie",
+    "activeAdjectival": "płacący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "płacąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "płać",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "płacono"
+          },
+          "plural": {
+            "allPluralGenders": "płacono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "płaciłem",
+            "f": "płaciłam"
+          },
+          "plural": {
+            "virile": "płaciliśmy",
+            "nonvirile": "płaciłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "płaciłeś",
+            "f": "płaciłaś"
+          },
+          "plural": {
+            "virile": "płaciliście",
+            "nonvirile": "płaciłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "płacił",
+            "f": "płaciła",
+            "n": "płaciło"
+          },
+          "plural": {
+            "virile": "płacili",
+            "nonvirile": "płaciły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "płaci się"
+          },
+          "plural": {
+            "allPluralGenders": "płaci się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "płacę"
+          },
+          "plural": {
+            "allPluralGenders": "płacimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "płacisz"
+          },
+          "plural": {
+            "allPluralGenders": "płacicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "płaci"
+          },
+          "plural": {
+            "allPluralGenders": "płacą"
+          }
+        }
+      }
+    }
+  }
+}

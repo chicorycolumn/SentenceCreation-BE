@@ -1,0 +1,174 @@
+{
+  "inflections": {
+    "adverb": {
+      "isTerminus": true,
+      "normal": [
+        "nijak",
+        "nijako"
+      ],
+      "additionalInfrequent": []
+    },
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nijaki",
+          "gen": "nijakiego",
+          "dat": "nijakiemu",
+          "acc": "nijakiego",
+          "ins": "nijakim",
+          "loc": "nijakim"
+        },
+        "m3": {
+          "nom": "nijaki",
+          "gen": "nijakiego",
+          "dat": "nijakiemu",
+          "acc": "nijaki",
+          "ins": "nijakim",
+          "loc": "nijakim"
+        },
+        "f": {
+          "nom": "nijaka",
+          "gen": "nijakiej",
+          "dat": "nijakiej",
+          "acc": "nijaką",
+          "ins": "nijaką",
+          "loc": "nijakiej"
+        },
+        "n": {
+          "nom": "nijakie",
+          "gen": "nijakiego",
+          "dat": "nijakiemu",
+          "acc": "nijakie",
+          "ins": "nijakim",
+          "loc": "nijakim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nijacy",
+          "gen": "nijakich",
+          "dat": "nijakim",
+          "acc": "nijakich",
+          "ins": "nijakimi",
+          "loc": "nijakich"
+        },
+        "nonvirile": {
+          "nom": "nijakie",
+          "gen": "nijakich",
+          "dat": "nijakim",
+          "acc": "nijakie",
+          "ins": "nijakimi",
+          "loc": "nijakich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej nijaki",
+          "gen": "bardziej nijakiego",
+          "dat": "bardziej nijakiemu",
+          "acc": "bardziej nijakiego",
+          "ins": "bardziej nijakim",
+          "loc": "bardziej nijakim"
+        },
+        "m3": {
+          "nom": "bardziej nijaki",
+          "gen": "bardziej nijakiego",
+          "dat": "bardziej nijakiemu",
+          "acc": "bardziej nijaki",
+          "ins": "bardziej nijakim",
+          "loc": "bardziej nijakim"
+        },
+        "f": {
+          "nom": "bardziej nijaka",
+          "gen": "bardziej nijakiej",
+          "dat": "bardziej nijakiej",
+          "acc": "bardziej nijaką",
+          "ins": "bardziej nijaką",
+          "loc": "bardziej nijakiej"
+        },
+        "n": {
+          "nom": "bardziej nijakie",
+          "gen": "bardziej nijakiego",
+          "dat": "bardziej nijakiemu",
+          "acc": "bardziej nijakie",
+          "ins": "bardziej nijakim",
+          "loc": "bardziej nijakim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej nijacy",
+          "gen": "bardziej nijakich",
+          "dat": "bardziej nijakim",
+          "acc": "bardziej nijakich",
+          "ins": "bardziej nijakimi",
+          "loc": "bardziej nijakich"
+        },
+        "nonvirile": {
+          "nom": "bardziej nijakie",
+          "gen": "bardziej nijakich",
+          "dat": "bardziej nijakim",
+          "acc": "bardziej nijakie",
+          "ins": "bardziej nijakimi",
+          "loc": "bardziej nijakich"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej nijaki",
+          "gen": "najbardziej nijakiego",
+          "dat": "najbardziej nijakiemu",
+          "acc": "najbardziej nijakiego",
+          "ins": "najbardziej nijakim",
+          "loc": "najbardziej nijakim"
+        },
+        "m3": {
+          "nom": "najbardziej nijaki",
+          "gen": "najbardziej nijakiego",
+          "dat": "najbardziej nijakiemu",
+          "acc": "najbardziej nijaki",
+          "ins": "najbardziej nijakim",
+          "loc": "najbardziej nijakim"
+        },
+        "f": {
+          "nom": "najbardziej nijaka",
+          "gen": "najbardziej nijakiej",
+          "dat": "najbardziej nijakiej",
+          "acc": "najbardziej nijaką",
+          "ins": "najbardziej nijaką",
+          "loc": "najbardziej nijakiej"
+        },
+        "n": {
+          "nom": "najbardziej nijakie",
+          "gen": "najbardziej nijakiego",
+          "dat": "najbardziej nijakiemu",
+          "acc": "najbardziej nijakie",
+          "ins": "najbardziej nijakim",
+          "loc": "najbardziej nijakim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej nijacy",
+          "gen": "najbardziej nijakich",
+          "dat": "najbardziej nijakim",
+          "acc": "najbardziej nijakich",
+          "ins": "najbardziej nijakimi",
+          "loc": "najbardziej nijakich"
+        },
+        "nonvirile": {
+          "nom": "najbardziej nijakie",
+          "gen": "najbardziej nijakich",
+          "dat": "najbardziej nijakim",
+          "acc": "najbardziej nijakie",
+          "ins": "najbardziej nijakimi",
+          "loc": "najbardziej nijakich"
+        }
+      }
+    }
+  }
+}

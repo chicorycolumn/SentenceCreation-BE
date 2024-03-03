@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "polityk",
+      "gen": "polityka",
+      "dat": "politykowi",
+      "acc": "polityka",
+      "ins": "politykiem",
+      "loc": "polityku",
+      "voc": "polityku"
+    },
+    "plural": {
+      "nom": "politycy",
+      "gen": "polityków",
+      "dat": "politykom",
+      "acc": "polityków",
+      "ins": "politykami",
+      "loc": "politykach",
+      "voc": "politycy"
+    }
+  }
+}

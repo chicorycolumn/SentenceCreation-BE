@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "comma",
+      "gen": "comma's"
+    },
+    "plural": {
+      "nom": "commas",
+      "gen": "commas'"
+    }
+  }
+}

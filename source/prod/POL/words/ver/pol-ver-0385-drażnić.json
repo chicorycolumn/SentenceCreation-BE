@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "drażnić",
+    "verbalNoun": "drażnienie",
+    "activeAdjectival": "drażniący",
+    "passiveAdjectival": "drażniony",
+    "contemporaryAdverbial": "drażniąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "drażń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "drażniono"
+          },
+          "plural": {
+            "allPluralGenders": "drażniono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "drażniłem",
+            "f": "drażniłam"
+          },
+          "plural": {
+            "virile": "drażniliśmy",
+            "nonvirile": "drażniłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "drażniłeś",
+            "f": "drażniłaś"
+          },
+          "plural": {
+            "virile": "drażniliście",
+            "nonvirile": "drażniłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "drażnił",
+            "f": "drażniła",
+            "n": "drażniło"
+          },
+          "plural": {
+            "virile": "drażnili",
+            "nonvirile": "drażniły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "drażni się"
+          },
+          "plural": {
+            "allPluralGenders": "drażni się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "drażnię"
+          },
+          "plural": {
+            "allPluralGenders": "drażnimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "drażnisz"
+          },
+          "plural": {
+            "allPluralGenders": "drażnicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "drażni"
+          },
+          "plural": {
+            "allPluralGenders": "drażnią"
+          }
+        }
+      }
+    }
+  }
+}

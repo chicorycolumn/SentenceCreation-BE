@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "akceptować",
+    "verbalNoun": "akceptowanie",
+    "activeAdjectival": "akceptujący",
+    "passiveAdjectival": "akceptowany",
+    "contemporaryAdverbial": "akceptując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "akceptuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "akceptowano"
+          },
+          "plural": {
+            "allPluralGenders": "akceptowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "akceptowałem",
+            "f": "akceptowałam"
+          },
+          "plural": {
+            "virile": "akceptowaliśmy",
+            "nonvirile": "akceptowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "akceptowałeś",
+            "f": "akceptowałaś"
+          },
+          "plural": {
+            "virile": "akceptowaliście",
+            "nonvirile": "akceptowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "akceptował",
+            "f": "akceptowała",
+            "n": "akceptowało"
+          },
+          "plural": {
+            "virile": "akceptowali",
+            "nonvirile": "akceptowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "akceptuje się"
+          },
+          "plural": {
+            "allPluralGenders": "akceptuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "akceptuję"
+          },
+          "plural": {
+            "allPluralGenders": "akceptujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "akceptujesz"
+          },
+          "plural": {
+            "allPluralGenders": "akceptujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "akceptuje"
+          },
+          "plural": {
+            "allPluralGenders": "akceptują"
+          }
+        }
+      }
+    }
+  }
+}

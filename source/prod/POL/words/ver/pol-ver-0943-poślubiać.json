@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "poślubiać",
+    "verbalNoun": "poślubianie",
+    "activeAdjectival": "poślubiający",
+    "passiveAdjectival": "poślubiany",
+    "contemporaryAdverbial": "poślubiając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "poślubiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poślubiano"
+          },
+          "plural": {
+            "allPluralGenders": "poślubiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "poślubiałem",
+            "f": "poślubiałam"
+          },
+          "plural": {
+            "virile": "poślubialiśmy",
+            "nonvirile": "poślubiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "poślubiałeś",
+            "f": "poślubiałaś"
+          },
+          "plural": {
+            "virile": "poślubialiście",
+            "nonvirile": "poślubiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "poślubiał",
+            "f": "poślubiała",
+            "n": "poślubiało"
+          },
+          "plural": {
+            "virile": "poślubiali",
+            "nonvirile": "poślubiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poślubia się"
+          },
+          "plural": {
+            "allPluralGenders": "poślubia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "poślubiam"
+          },
+          "plural": {
+            "allPluralGenders": "poślubiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "poślubiasz"
+          },
+          "plural": {
+            "allPluralGenders": "poślubiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "poślubia"
+          },
+          "plural": {
+            "allPluralGenders": "poślubiają"
+          }
+        }
+      }
+    }
+  }
+}

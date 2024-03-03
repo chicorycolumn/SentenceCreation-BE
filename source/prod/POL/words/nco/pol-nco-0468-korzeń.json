@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "korzeń",
+      "gen": "korzenia",
+      "dat": "korzeniowi",
+      "acc": "korzeń",
+      "ins": "korzeniem",
+      "loc": "korzeniu",
+      "voc": "korzeniu"
+    },
+    "plural": {
+      "nom": "korzenie",
+      "gen": "korzeni",
+      "dat": "korzeniom",
+      "acc": "korzenie",
+      "ins": "korzeniami",
+      "loc": "korzeniach",
+      "voc": "korzenie"
+    }
+  }
+}

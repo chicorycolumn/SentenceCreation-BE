@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rycerz",
+      "gen": "rycerza",
+      "dat": "rycerzowi",
+      "acc": "rycerza",
+      "ins": "rycerzem",
+      "loc": "rycerzu",
+      "voc": "rycerzu"
+    },
+    "plural": {
+      "nom": "rycerze",
+      "gen": "rycerzy",
+      "dat": "rycerzom",
+      "acc": "rycerzy",
+      "ins": "rycerzami",
+      "loc": "rycerzach",
+      "voc": "rycerze"
+    }
+  }
+}

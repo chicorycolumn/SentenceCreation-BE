@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "chewing gum",
+      "gen": "chewing gum's"
+    },
+    "plural": {
+      "nom": "chewing gums",
+      "gen": "chewing gums'"
+    }
+  }
+}

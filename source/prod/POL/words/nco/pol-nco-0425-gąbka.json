@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gąbka",
+      "gen": "gąbki",
+      "dat": "gąbce",
+      "acc": "gąbkę",
+      "ins": "gąbką",
+      "loc": "gąbce",
+      "voc": "gąbko"
+    },
+    "plural": {
+      "nom": "gąbki",
+      "gen": "gąbek",
+      "dat": "gąbkom",
+      "acc": "gąbki",
+      "ins": "gąbkami",
+      "loc": "gąbkach",
+      "voc": "gąbki"
+    }
+  }
+}

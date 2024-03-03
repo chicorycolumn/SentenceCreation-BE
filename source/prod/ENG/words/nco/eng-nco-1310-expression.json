@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "expression",
+      "gen": "expression's"
+    },
+    "plural": {
+      "nom": "expressions",
+      "gen": "expressions'"
+    }
+  }
+}

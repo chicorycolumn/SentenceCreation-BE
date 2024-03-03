@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "położenie",
+      "gen": "położenia",
+      "dat": "położeniu",
+      "acc": "położenie",
+      "ins": "położeniem",
+      "loc": "położeniu",
+      "voc": "położenie"
+    },
+    "plural": {
+      "nom": "położenia",
+      "gen": "położeń",
+      "dat": "położeniom",
+      "acc": "położenia",
+      "ins": "położeniami",
+      "loc": "położeniach",
+      "voc": "położenia"
+    }
+  }
+}

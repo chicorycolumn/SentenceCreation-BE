@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przestawać",
+    "verbalNoun": "przestawanie",
+    "activeAdjectival": "przestający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "przestając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przestawaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przestawano"
+          },
+          "plural": {
+            "allPluralGenders": "przestawano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przestawałem",
+            "f": "przestawałam"
+          },
+          "plural": {
+            "virile": "przestawaliśmy",
+            "nonvirile": "przestawałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przestawałeś",
+            "f": "przestawałaś"
+          },
+          "plural": {
+            "virile": "przestawaliście",
+            "nonvirile": "przestawałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przestawał",
+            "f": "przestawała",
+            "n": "przestawało"
+          },
+          "plural": {
+            "virile": "przestawali",
+            "nonvirile": "przestawały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przestaje się"
+          },
+          "plural": {
+            "allPluralGenders": "przestaje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przestaję"
+          },
+          "plural": {
+            "allPluralGenders": "przestajemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przestajesz"
+          },
+          "plural": {
+            "allPluralGenders": "przestajecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przestaje"
+          },
+          "plural": {
+            "allPluralGenders": "przestają"
+          }
+        }
+      }
+    }
+  }
+}

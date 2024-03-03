@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "piramida",
+      "gen": "piramidy",
+      "dat": "piramidzie",
+      "acc": "piramidę",
+      "ins": "piramidą",
+      "loc": "piramidzie",
+      "voc": "piramido"
+    },
+    "plural": {
+      "nom": "piramidy",
+      "gen": "piramid",
+      "dat": "piramidom",
+      "acc": "piramidy",
+      "ins": "piramidami",
+      "loc": "piramidach",
+      "voc": "piramidy"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "podrywać",
+    "verbalNoun": "podrywanie",
+    "activeAdjectival": "podrywający",
+    "passiveAdjectival": "podrywany",
+    "contemporaryAdverbial": "podrywając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "podrywaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podrywano"
+          },
+          "plural": {
+            "allPluralGenders": "podrywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "podrywałem",
+            "f": "podrywałam"
+          },
+          "plural": {
+            "virile": "podrywaliśmy",
+            "nonvirile": "podrywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podrywałeś",
+            "f": "podrywałaś"
+          },
+          "plural": {
+            "virile": "podrywaliście",
+            "nonvirile": "podrywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podrywał",
+            "f": "podrywała",
+            "n": "podrywało"
+          },
+          "plural": {
+            "virile": "podrywali",
+            "nonvirile": "podrywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podrywa się"
+          },
+          "plural": {
+            "allPluralGenders": "podrywa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podrywam"
+          },
+          "plural": {
+            "allPluralGenders": "podrywamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podrywasz"
+          },
+          "plural": {
+            "allPluralGenders": "podrywacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podrywa"
+          },
+          "plural": {
+            "allPluralGenders": "podrywają"
+          }
+        }
+      }
+    }
+  }
+}

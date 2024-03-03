@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "okazać",
+    "verbalNoun": "okazanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "okazany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "okazawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "okaże się"
+          },
+          "plural": {
+            "allPluralGenders": "okaże się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "okażę"
+          },
+          "plural": {
+            "allPluralGenders": "okażemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "okażesz"
+          },
+          "plural": {
+            "allPluralGenders": "okażecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "okaże"
+          },
+          "plural": {
+            "allPluralGenders": "okażą"
+          }
+        }
+      },
+      "imperative": "okaż",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "okazano"
+          },
+          "plural": {
+            "allPluralGenders": "okazano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "okazałem",
+            "f": "okazałam"
+          },
+          "plural": {
+            "virile": "okazaliśmy",
+            "nonvirile": "okazałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "okazałeś",
+            "f": "okazałaś"
+          },
+          "plural": {
+            "virile": "okazaliście",
+            "nonvirile": "okazałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "okazał",
+            "f": "okazała",
+            "n": "okazało"
+          },
+          "plural": {
+            "virile": "okazali",
+            "nonvirile": "okazały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

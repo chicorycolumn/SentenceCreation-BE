@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "tajnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "tajny",
+          "gen": "tajnego",
+          "dat": "tajnemu",
+          "acc": "tajnego",
+          "ins": "tajnym",
+          "loc": "tajnym"
+        },
+        "m3": {
+          "nom": "tajny",
+          "gen": "tajnego",
+          "dat": "tajnemu",
+          "acc": "tajny",
+          "ins": "tajnym",
+          "loc": "tajnym"
+        },
+        "f": {
+          "nom": "tajna",
+          "gen": "tajnej",
+          "dat": "tajnej",
+          "acc": "tajną",
+          "ins": "tajną",
+          "loc": "tajnej"
+        },
+        "n": {
+          "nom": "tajne",
+          "gen": "tajnego",
+          "dat": "tajnemu",
+          "acc": "tajne",
+          "ins": "tajnym",
+          "loc": "tajnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "tajni",
+          "gen": "tajnych",
+          "dat": "tajnym",
+          "acc": "tajnych",
+          "ins": "tajnymi",
+          "loc": "tajnych"
+        },
+        "nonvirile": {
+          "nom": "tajne",
+          "gen": "tajnych",
+          "dat": "tajnym",
+          "acc": "tajne",
+          "ins": "tajnymi",
+          "loc": "tajnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "tajniejszy",
+          "gen": "tajniejszego",
+          "dat": "tajniejszemu",
+          "acc": "tajniejszego",
+          "ins": "tajniejszym",
+          "loc": "tajniejszym"
+        },
+        "m3": {
+          "nom": "tajniejszy",
+          "gen": "tajniejszego",
+          "dat": "tajniejszemu",
+          "acc": "tajniejszy",
+          "ins": "tajniejszym",
+          "loc": "tajniejszym"
+        },
+        "f": {
+          "nom": "tajniejsza",
+          "gen": "tajniejszej",
+          "dat": "tajniejszej",
+          "acc": "tajniejszą",
+          "ins": "tajniejszą",
+          "loc": "tajniejszej"
+        },
+        "n": {
+          "nom": "tajniejsze",
+          "gen": "tajniejszego",
+          "dat": "tajniejszemu",
+          "acc": "tajniejsze",
+          "ins": "tajniejszym",
+          "loc": "tajniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "tajniejsi",
+          "gen": "tajniejszych",
+          "dat": "tajniejszym",
+          "acc": "tajniejszych",
+          "ins": "tajniejszymi",
+          "loc": "tajniejszych"
+        },
+        "nonvirile": {
+          "nom": "tajniejsze",
+          "gen": "tajniejszych",
+          "dat": "tajniejszym",
+          "acc": "tajniejsze",
+          "ins": "tajniejszymi",
+          "loc": "tajniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najtajniejszy",
+          "gen": "najtajniejszego",
+          "dat": "najtajniejszemu",
+          "acc": "najtajniejszego",
+          "ins": "najtajniejszym",
+          "loc": "najtajniejszym"
+        },
+        "m3": {
+          "nom": "najtajniejszy",
+          "gen": "najtajniejszego",
+          "dat": "najtajniejszemu",
+          "acc": "najtajniejszy",
+          "ins": "najtajniejszym",
+          "loc": "najtajniejszym"
+        },
+        "f": {
+          "nom": "najtajniejsza",
+          "gen": "najtajniejszej",
+          "dat": "najtajniejszej",
+          "acc": "najtajniejszą",
+          "ins": "najtajniejszą",
+          "loc": "najtajniejszej"
+        },
+        "n": {
+          "nom": "najtajniejsze",
+          "gen": "najtajniejszego",
+          "dat": "najtajniejszemu",
+          "acc": "najtajniejsze",
+          "ins": "najtajniejszym",
+          "loc": "najtajniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najtajniejsi",
+          "gen": "najtajniejszych",
+          "dat": "najtajniejszym",
+          "acc": "najtajniejszych",
+          "ins": "najtajniejszymi",
+          "loc": "najtajniejszych"
+        },
+        "nonvirile": {
+          "nom": "najtajniejsze",
+          "gen": "najtajniejszych",
+          "dat": "najtajniejszym",
+          "acc": "najtajniejsze",
+          "ins": "najtajniejszymi",
+          "loc": "najtajniejszych"
+        }
+      }
+    }
+  }
+}

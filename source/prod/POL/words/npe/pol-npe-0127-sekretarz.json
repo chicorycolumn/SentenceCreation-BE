@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sekretarz",
+      "gen": "sekretarza",
+      "dat": "sekretarzowi",
+      "acc": "sekretarza",
+      "ins": "sekretarzem",
+      "loc": "sekretarzu",
+      "voc": "sekretarzu"
+    },
+    "plural": {
+      "nom": "sekretarze",
+      "gen": "sekretarzy",
+      "dat": "sekretarzom",
+      "acc": "sekretarzy",
+      "ins": "sekretarzami",
+      "loc": "sekretarzach",
+      "voc": "sekretarze"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "area",
+      "gen": "area's"
+    },
+    "plural": {
+      "nom": "areas",
+      "gen": "areas'"
+    }
+  }
+}

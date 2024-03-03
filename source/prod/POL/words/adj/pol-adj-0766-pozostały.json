@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "pozostale",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pozostały",
+          "gen": "pozostałego",
+          "dat": "pozostałemu",
+          "acc": "pozostałego",
+          "ins": "pozostałym",
+          "loc": "pozostałym"
+        },
+        "m3": {
+          "nom": "pozostały",
+          "gen": "pozostałego",
+          "dat": "pozostałemu",
+          "acc": "pozostały",
+          "ins": "pozostałym",
+          "loc": "pozostałym"
+        },
+        "f": {
+          "nom": "pozostała",
+          "gen": "pozostałej",
+          "dat": "pozostałej",
+          "acc": "pozostałą",
+          "ins": "pozostałą",
+          "loc": "pozostałej"
+        },
+        "n": {
+          "nom": "pozostałe",
+          "gen": "pozostałego",
+          "dat": "pozostałemu",
+          "acc": "pozostałe",
+          "ins": "pozostałym",
+          "loc": "pozostałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pozostali",
+          "gen": "pozostałych",
+          "dat": "pozostałym",
+          "acc": "pozostałych",
+          "ins": "pozostałymi",
+          "loc": "pozostałych"
+        },
+        "nonvirile": {
+          "nom": "pozostałe",
+          "gen": "pozostałych",
+          "dat": "pozostałym",
+          "acc": "pozostałe",
+          "ins": "pozostałymi",
+          "loc": "pozostałych"
+        }
+      }
+    }
+  }
+}

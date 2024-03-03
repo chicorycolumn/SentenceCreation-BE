@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odrzec",
+    "verbalNoun": "odrzeczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "odrzeczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odrzeknąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odrzeknie się"
+          },
+          "plural": {
+            "allPluralGenders": "odrzeknie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odrzeknę"
+          },
+          "plural": {
+            "allPluralGenders": "odrzekniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odrzekniesz"
+          },
+          "plural": {
+            "allPluralGenders": "odrzekniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odrzeknie"
+          },
+          "plural": {
+            "allPluralGenders": "odrzekną"
+          }
+        }
+      },
+      "imperative": "odrzeknij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odrzeknięto"
+          },
+          "plural": {
+            "allPluralGenders": "odrzeknięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odrzekłem",
+            "f": "odrzekłam"
+          },
+          "plural": {
+            "virile": "odrzekliśmy",
+            "nonvirile": "odrzekłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odrzekłeś",
+            "f": "odrzekłaś"
+          },
+          "plural": {
+            "virile": "odrzekliście",
+            "nonvirile": "odrzekłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odrzekł",
+            "f": "odrzekła",
+            "n": "odrzekło"
+          },
+          "plural": {
+            "virile": "odrzekli",
+            "nonvirile": "odrzekły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

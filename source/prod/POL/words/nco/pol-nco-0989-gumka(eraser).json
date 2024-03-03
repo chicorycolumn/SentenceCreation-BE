@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gumka",
+      "gen": "gumki",
+      "dat": "gumce",
+      "acc": "gumkę",
+      "ins": "gumką",
+      "loc": "gumce",
+      "voc": "gumko"
+    },
+    "plural": {
+      "nom": "gumki",
+      "gen": "gumek",
+      "dat": "gumkom",
+      "acc": "gumki",
+      "ins": "gumkami",
+      "loc": "gumkach",
+      "voc": "gumki"
+    }
+  }
+}

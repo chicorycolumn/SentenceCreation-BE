@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "szafka",
+      "gen": "szafki",
+      "dat": "szafce",
+      "acc": "szafkę",
+      "ins": "szafką",
+      "loc": "szafce",
+      "voc": "szafko"
+    },
+    "plural": {
+      "nom": "szafki",
+      "gen": "szafek",
+      "dat": "szafkom",
+      "acc": "szafki",
+      "ins": "szafkami",
+      "loc": "szafkach",
+      "voc": "szafki"
+    }
+  }
+}

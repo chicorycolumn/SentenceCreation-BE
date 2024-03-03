@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "logicznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "logiczny",
+          "gen": "logicznego",
+          "dat": "logicznemu",
+          "acc": "logicznego",
+          "ins": "logicznym",
+          "loc": "logicznym"
+        },
+        "m3": {
+          "nom": "logiczny",
+          "gen": "logicznego",
+          "dat": "logicznemu",
+          "acc": "logiczny",
+          "ins": "logicznym",
+          "loc": "logicznym"
+        },
+        "f": {
+          "nom": "logiczna",
+          "gen": "logicznej",
+          "dat": "logicznej",
+          "acc": "logiczną",
+          "ins": "logiczną",
+          "loc": "logicznej"
+        },
+        "n": {
+          "nom": "logiczne",
+          "gen": "logicznego",
+          "dat": "logicznemu",
+          "acc": "logiczne",
+          "ins": "logicznym",
+          "loc": "logicznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "logiczni",
+          "gen": "logicznych",
+          "dat": "logicznym",
+          "acc": "logicznych",
+          "ins": "logicznymi",
+          "loc": "logicznych"
+        },
+        "nonvirile": {
+          "nom": "logiczne",
+          "gen": "logicznych",
+          "dat": "logicznym",
+          "acc": "logiczne",
+          "ins": "logicznymi",
+          "loc": "logicznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej logiczny",
+          "gen": "bardziej logicznego",
+          "dat": "bardziej logicznemu",
+          "acc": "bardziej logicznego",
+          "ins": "bardziej logicznym",
+          "loc": "bardziej logicznym"
+        },
+        "m3": {
+          "nom": "bardziej logiczny",
+          "gen": "bardziej logicznego",
+          "dat": "bardziej logicznemu",
+          "acc": "bardziej logiczny",
+          "ins": "bardziej logicznym",
+          "loc": "bardziej logicznym"
+        },
+        "f": {
+          "nom": "bardziej logiczna",
+          "gen": "bardziej logicznej",
+          "dat": "bardziej logicznej",
+          "acc": "bardziej logiczną",
+          "ins": "bardziej logiczną",
+          "loc": "bardziej logicznej"
+        },
+        "n": {
+          "nom": "bardziej logiczne",
+          "gen": "bardziej logicznego",
+          "dat": "bardziej logicznemu",
+          "acc": "bardziej logiczne",
+          "ins": "bardziej logicznym",
+          "loc": "bardziej logicznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej logiczni",
+          "gen": "bardziej logicznych",
+          "dat": "bardziej logicznym",
+          "acc": "bardziej logicznych",
+          "ins": "bardziej logicznymi",
+          "loc": "bardziej logicznych"
+        },
+        "nonvirile": {
+          "nom": "bardziej logiczne",
+          "gen": "bardziej logicznych",
+          "dat": "bardziej logicznym",
+          "acc": "bardziej logiczne",
+          "ins": "bardziej logicznymi",
+          "loc": "bardziej logicznych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej logiczny",
+          "gen": "najbardziej logicznego",
+          "dat": "najbardziej logicznemu",
+          "acc": "najbardziej logicznego",
+          "ins": "najbardziej logicznym",
+          "loc": "najbardziej logicznym"
+        },
+        "m3": {
+          "nom": "najbardziej logiczny",
+          "gen": "najbardziej logicznego",
+          "dat": "najbardziej logicznemu",
+          "acc": "najbardziej logiczny",
+          "ins": "najbardziej logicznym",
+          "loc": "najbardziej logicznym"
+        },
+        "f": {
+          "nom": "najbardziej logiczna",
+          "gen": "najbardziej logicznej",
+          "dat": "najbardziej logicznej",
+          "acc": "najbardziej logiczną",
+          "ins": "najbardziej logiczną",
+          "loc": "najbardziej logicznej"
+        },
+        "n": {
+          "nom": "najbardziej logiczne",
+          "gen": "najbardziej logicznego",
+          "dat": "najbardziej logicznemu",
+          "acc": "najbardziej logiczne",
+          "ins": "najbardziej logicznym",
+          "loc": "najbardziej logicznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej logiczni",
+          "gen": "najbardziej logicznych",
+          "dat": "najbardziej logicznym",
+          "acc": "najbardziej logicznych",
+          "ins": "najbardziej logicznymi",
+          "loc": "najbardziej logicznych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej logiczne",
+          "gen": "najbardziej logicznych",
+          "dat": "najbardziej logicznym",
+          "acc": "najbardziej logiczne",
+          "ins": "najbardziej logicznymi",
+          "loc": "najbardziej logicznych"
+        }
+      }
+    }
+  }
+}

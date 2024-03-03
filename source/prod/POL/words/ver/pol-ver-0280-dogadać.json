@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dogadać",
+    "verbalNoun": "dogadanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "dogadany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "dogadawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dogada się"
+          },
+          "plural": {
+            "allPluralGenders": "dogada się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dogadam"
+          },
+          "plural": {
+            "allPluralGenders": "dogadamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dogadasz"
+          },
+          "plural": {
+            "allPluralGenders": "dogadacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dogada"
+          },
+          "plural": {
+            "allPluralGenders": "dogadają"
+          }
+        }
+      },
+      "imperative": "dogadaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dogadano"
+          },
+          "plural": {
+            "allPluralGenders": "dogadano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dogadałem",
+            "f": "dogadałam"
+          },
+          "plural": {
+            "virile": "dogadaliśmy",
+            "nonvirile": "dogadałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dogadałeś",
+            "f": "dogadałaś"
+          },
+          "plural": {
+            "virile": "dogadaliście",
+            "nonvirile": "dogadałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dogadał",
+            "f": "dogadała",
+            "n": "dogadało"
+          },
+          "plural": {
+            "virile": "dogadali",
+            "nonvirile": "dogadały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odkryć",
+    "verbalNoun": "odkrycie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "odkryty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odkrywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odkryje się"
+          },
+          "plural": {
+            "allPluralGenders": "odkryje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odkryję"
+          },
+          "plural": {
+            "allPluralGenders": "odkryjemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odkryjesz"
+          },
+          "plural": {
+            "allPluralGenders": "odkryjecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odkryje"
+          },
+          "plural": {
+            "allPluralGenders": "odkryją"
+          }
+        }
+      },
+      "imperative": "odkryj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odkryto"
+          },
+          "plural": {
+            "allPluralGenders": "odkryto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odkryłem",
+            "f": "odkryłam"
+          },
+          "plural": {
+            "virile": "odkryliśmy",
+            "nonvirile": "odkryłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odkryłeś",
+            "f": "odkryłaś"
+          },
+          "plural": {
+            "virile": "odkryliście",
+            "nonvirile": "odkryłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odkrył",
+            "f": "odkryła",
+            "n": "odkryło"
+          },
+          "plural": {
+            "virile": "odkryli",
+            "nonvirile": "odkryły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

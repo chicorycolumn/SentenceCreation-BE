@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niezawodnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niezawodny",
+          "gen": "niezawodnego",
+          "dat": "niezawodnemu",
+          "acc": "niezawodnego",
+          "ins": "niezawodnym",
+          "loc": "niezawodnym"
+        },
+        "m3": {
+          "nom": "niezawodny",
+          "gen": "niezawodnego",
+          "dat": "niezawodnemu",
+          "acc": "niezawodny",
+          "ins": "niezawodnym",
+          "loc": "niezawodnym"
+        },
+        "f": {
+          "nom": "niezawodna",
+          "gen": "niezawodnej",
+          "dat": "niezawodnej",
+          "acc": "niezawodną",
+          "ins": "niezawodną",
+          "loc": "niezawodnej"
+        },
+        "n": {
+          "nom": "niezawodne",
+          "gen": "niezawodnego",
+          "dat": "niezawodnemu",
+          "acc": "niezawodne",
+          "ins": "niezawodnym",
+          "loc": "niezawodnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niezawodni",
+          "gen": "niezawodnych",
+          "dat": "niezawodnym",
+          "acc": "niezawodnych",
+          "ins": "niezawodnymi",
+          "loc": "niezawodnych"
+        },
+        "nonvirile": {
+          "nom": "niezawodne",
+          "gen": "niezawodnych",
+          "dat": "niezawodnym",
+          "acc": "niezawodne",
+          "ins": "niezawodnymi",
+          "loc": "niezawodnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej niezawodny",
+          "gen": "bardziej niezawodnego",
+          "dat": "bardziej niezawodnemu",
+          "acc": "bardziej niezawodnego",
+          "ins": "bardziej niezawodnym",
+          "loc": "bardziej niezawodnym"
+        },
+        "m3": {
+          "nom": "bardziej niezawodny",
+          "gen": "bardziej niezawodnego",
+          "dat": "bardziej niezawodnemu",
+          "acc": "bardziej niezawodny",
+          "ins": "bardziej niezawodnym",
+          "loc": "bardziej niezawodnym"
+        },
+        "f": {
+          "nom": "bardziej niezawodna",
+          "gen": "bardziej niezawodnej",
+          "dat": "bardziej niezawodnej",
+          "acc": "bardziej niezawodną",
+          "ins": "bardziej niezawodną",
+          "loc": "bardziej niezawodnej"
+        },
+        "n": {
+          "nom": "bardziej niezawodne",
+          "gen": "bardziej niezawodnego",
+          "dat": "bardziej niezawodnemu",
+          "acc": "bardziej niezawodne",
+          "ins": "bardziej niezawodnym",
+          "loc": "bardziej niezawodnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej niezawodni",
+          "gen": "bardziej niezawodnych",
+          "dat": "bardziej niezawodnym",
+          "acc": "bardziej niezawodnych",
+          "ins": "bardziej niezawodnymi",
+          "loc": "bardziej niezawodnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej niezawodne",
+          "gen": "bardziej niezawodnych",
+          "dat": "bardziej niezawodnym",
+          "acc": "bardziej niezawodne",
+          "ins": "bardziej niezawodnymi",
+          "loc": "bardziej niezawodnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej niezawodny",
+          "gen": "najbardziej niezawodnego",
+          "dat": "najbardziej niezawodnemu",
+          "acc": "najbardziej niezawodnego",
+          "ins": "najbardziej niezawodnym",
+          "loc": "najbardziej niezawodnym"
+        },
+        "m3": {
+          "nom": "najbardziej niezawodny",
+          "gen": "najbardziej niezawodnego",
+          "dat": "najbardziej niezawodnemu",
+          "acc": "najbardziej niezawodny",
+          "ins": "najbardziej niezawodnym",
+          "loc": "najbardziej niezawodnym"
+        },
+        "f": {
+          "nom": "najbardziej niezawodna",
+          "gen": "najbardziej niezawodnej",
+          "dat": "najbardziej niezawodnej",
+          "acc": "najbardziej niezawodną",
+          "ins": "najbardziej niezawodną",
+          "loc": "najbardziej niezawodnej"
+        },
+        "n": {
+          "nom": "najbardziej niezawodne",
+          "gen": "najbardziej niezawodnego",
+          "dat": "najbardziej niezawodnemu",
+          "acc": "najbardziej niezawodne",
+          "ins": "najbardziej niezawodnym",
+          "loc": "najbardziej niezawodnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej niezawodni",
+          "gen": "najbardziej niezawodnych",
+          "dat": "najbardziej niezawodnym",
+          "acc": "najbardziej niezawodnych",
+          "ins": "najbardziej niezawodnymi",
+          "loc": "najbardziej niezawodnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej niezawodne",
+          "gen": "najbardziej niezawodnych",
+          "dat": "najbardziej niezawodnym",
+          "acc": "najbardziej niezawodne",
+          "ins": "najbardziej niezawodnymi",
+          "loc": "najbardziej niezawodnych"
+        }
+      }
+    }
+  }
+}

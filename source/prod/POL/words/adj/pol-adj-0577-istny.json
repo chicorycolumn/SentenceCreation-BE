@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "istnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "istny",
+          "gen": "istnego",
+          "dat": "istnemu",
+          "acc": "istnego",
+          "ins": "istnym",
+          "loc": "istnym"
+        },
+        "m3": {
+          "nom": "istny",
+          "gen": "istnego",
+          "dat": "istnemu",
+          "acc": "istny",
+          "ins": "istnym",
+          "loc": "istnym"
+        },
+        "f": {
+          "nom": "istna",
+          "gen": "istnej",
+          "dat": "istnej",
+          "acc": "istną",
+          "ins": "istną",
+          "loc": "istnej"
+        },
+        "n": {
+          "nom": "istne",
+          "gen": "istnego",
+          "dat": "istnemu",
+          "acc": "istne",
+          "ins": "istnym",
+          "loc": "istnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "istni",
+          "gen": "istnych",
+          "dat": "istnym",
+          "acc": "istnych",
+          "ins": "istnymi",
+          "loc": "istnych"
+        },
+        "nonvirile": {
+          "nom": "istne",
+          "gen": "istnych",
+          "dat": "istnym",
+          "acc": "istne",
+          "ins": "istnymi",
+          "loc": "istnych"
+        }
+      }
+    }
+  }
+}

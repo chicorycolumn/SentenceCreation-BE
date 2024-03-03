@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "nastolatek",
+      "gen": "nastolatka",
+      "dat": "nastolatkowi",
+      "acc": "nastolatka",
+      "ins": "nastolatkiem",
+      "loc": "nastolatku",
+      "voc": "nastolatku"
+    },
+    "plural": {
+      "nom": "nastolatki",
+      "gen": "nastolatków",
+      "dat": "nastolatkom",
+      "acc": "nastolatków",
+      "ins": "nastolatkami",
+      "loc": "nastolatkach",
+      "voc": "nastolatki"
+    }
+  }
+}

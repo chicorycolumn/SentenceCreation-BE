@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przebrać",
+    "verbalNoun": "przebranie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przebrany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przebrawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przebierze się"
+          },
+          "plural": {
+            "allPluralGenders": "przebierze się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przebiorę"
+          },
+          "plural": {
+            "allPluralGenders": "przebierzemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przebierzesz"
+          },
+          "plural": {
+            "allPluralGenders": "przebierzecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przebierze"
+          },
+          "plural": {
+            "allPluralGenders": "przebiorą"
+          }
+        }
+      },
+      "imperative": "przebierz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przebrano"
+          },
+          "plural": {
+            "allPluralGenders": "przebrano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przebrałem",
+            "f": "przebrałam"
+          },
+          "plural": {
+            "virile": "przebraliśmy",
+            "nonvirile": "przebrałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przebrałeś",
+            "f": "przebrałaś"
+          },
+          "plural": {
+            "virile": "przebraliście",
+            "nonvirile": "przebrałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przebrał",
+            "f": "przebrała",
+            "n": "przebrało"
+          },
+          "plural": {
+            "virile": "przebrali",
+            "nonvirile": "przebrały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

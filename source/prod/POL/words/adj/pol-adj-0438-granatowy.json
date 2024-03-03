@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "granatowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "granatowy",
+          "gen": "granatowego",
+          "dat": "granatowemu",
+          "acc": "granatowego",
+          "ins": "granatowym",
+          "loc": "granatowym"
+        },
+        "m3": {
+          "nom": "granatowy",
+          "gen": "granatowego",
+          "dat": "granatowemu",
+          "acc": "granatowy",
+          "ins": "granatowym",
+          "loc": "granatowym"
+        },
+        "f": {
+          "nom": "granatowa",
+          "gen": "granatowej",
+          "dat": "granatowej",
+          "acc": "granatową",
+          "ins": "granatową",
+          "loc": "granatowej"
+        },
+        "n": {
+          "nom": "granatowe",
+          "gen": "granatowego",
+          "dat": "granatowemu",
+          "acc": "granatowe",
+          "ins": "granatowym",
+          "loc": "granatowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "granatowi",
+          "gen": "granatowych",
+          "dat": "granatowym",
+          "acc": "granatowych",
+          "ins": "granatowymi",
+          "loc": "granatowych"
+        },
+        "nonvirile": {
+          "nom": "granatowe",
+          "gen": "granatowych",
+          "dat": "granatowym",
+          "acc": "granatowe",
+          "ins": "granatowymi",
+          "loc": "granatowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej granatowy",
+          "gen": "bardziej granatowego",
+          "dat": "bardziej granatowemu",
+          "acc": "bardziej granatowego",
+          "ins": "bardziej granatowym",
+          "loc": "bardziej granatowym"
+        },
+        "m3": {
+          "nom": "bardziej granatowy",
+          "gen": "bardziej granatowego",
+          "dat": "bardziej granatowemu",
+          "acc": "bardziej granatowy",
+          "ins": "bardziej granatowym",
+          "loc": "bardziej granatowym"
+        },
+        "f": {
+          "nom": "bardziej granatowa",
+          "gen": "bardziej granatowej",
+          "dat": "bardziej granatowej",
+          "acc": "bardziej granatową",
+          "ins": "bardziej granatową",
+          "loc": "bardziej granatowej"
+        },
+        "n": {
+          "nom": "bardziej granatowe",
+          "gen": "bardziej granatowego",
+          "dat": "bardziej granatowemu",
+          "acc": "bardziej granatowe",
+          "ins": "bardziej granatowym",
+          "loc": "bardziej granatowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej granatowi",
+          "gen": "bardziej granatowych",
+          "dat": "bardziej granatowym",
+          "acc": "bardziej granatowych",
+          "ins": "bardziej granatowymi",
+          "loc": "bardziej granatowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej granatowe",
+          "gen": "bardziej granatowych",
+          "dat": "bardziej granatowym",
+          "acc": "bardziej granatowe",
+          "ins": "bardziej granatowymi",
+          "loc": "bardziej granatowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej granatowy",
+          "gen": "najbardziej granatowego",
+          "dat": "najbardziej granatowemu",
+          "acc": "najbardziej granatowego",
+          "ins": "najbardziej granatowym",
+          "loc": "najbardziej granatowym"
+        },
+        "m3": {
+          "nom": "najbardziej granatowy",
+          "gen": "najbardziej granatowego",
+          "dat": "najbardziej granatowemu",
+          "acc": "najbardziej granatowy",
+          "ins": "najbardziej granatowym",
+          "loc": "najbardziej granatowym"
+        },
+        "f": {
+          "nom": "najbardziej granatowa",
+          "gen": "najbardziej granatowej",
+          "dat": "najbardziej granatowej",
+          "acc": "najbardziej granatową",
+          "ins": "najbardziej granatową",
+          "loc": "najbardziej granatowej"
+        },
+        "n": {
+          "nom": "najbardziej granatowe",
+          "gen": "najbardziej granatowego",
+          "dat": "najbardziej granatowemu",
+          "acc": "najbardziej granatowe",
+          "ins": "najbardziej granatowym",
+          "loc": "najbardziej granatowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej granatowi",
+          "gen": "najbardziej granatowych",
+          "dat": "najbardziej granatowym",
+          "acc": "najbardziej granatowych",
+          "ins": "najbardziej granatowymi",
+          "loc": "najbardziej granatowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej granatowe",
+          "gen": "najbardziej granatowych",
+          "dat": "najbardziej granatowym",
+          "acc": "najbardziej granatowe",
+          "ins": "najbardziej granatowymi",
+          "loc": "najbardziej granatowych"
+        }
+      }
+    }
+  }
+}

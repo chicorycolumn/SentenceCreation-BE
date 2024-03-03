@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odbijać",
+    "verbalNoun": "odbijanie",
+    "activeAdjectival": "odbijający",
+    "passiveAdjectival": "odbijany",
+    "contemporaryAdverbial": "odbijając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odbijaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odbijano"
+          },
+          "plural": {
+            "allPluralGenders": "odbijano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odbijałem",
+            "f": "odbijałam"
+          },
+          "plural": {
+            "virile": "odbijaliśmy",
+            "nonvirile": "odbijałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odbijałeś",
+            "f": "odbijałaś"
+          },
+          "plural": {
+            "virile": "odbijaliście",
+            "nonvirile": "odbijałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odbijał",
+            "f": "odbijała",
+            "n": "odbijało"
+          },
+          "plural": {
+            "virile": "odbijali",
+            "nonvirile": "odbijały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odbija się"
+          },
+          "plural": {
+            "allPluralGenders": "odbija się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odbijam"
+          },
+          "plural": {
+            "allPluralGenders": "odbijamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odbijasz"
+          },
+          "plural": {
+            "allPluralGenders": "odbijacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odbija"
+          },
+          "plural": {
+            "allPluralGenders": "odbijają"
+          }
+        }
+      }
+    }
+  }
+}

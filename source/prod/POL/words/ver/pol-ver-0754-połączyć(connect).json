@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "połączyć",
+    "verbalNoun": "połączenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "połączony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "połączywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "połączy się"
+          },
+          "plural": {
+            "allPluralGenders": "połączy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "połączę"
+          },
+          "plural": {
+            "allPluralGenders": "połączymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "połączysz"
+          },
+          "plural": {
+            "allPluralGenders": "połączycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "połączy"
+          },
+          "plural": {
+            "allPluralGenders": "połączą"
+          }
+        }
+      },
+      "imperative": "połącz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "połączono"
+          },
+          "plural": {
+            "allPluralGenders": "połączono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "połączyłem",
+            "f": "połączyłam"
+          },
+          "plural": {
+            "virile": "połączyliśmy",
+            "nonvirile": "połączyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "połączyłeś",
+            "f": "połączyłaś"
+          },
+          "plural": {
+            "virile": "połączyliście",
+            "nonvirile": "połączyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "połączył",
+            "f": "połączyła",
+            "n": "połączyło"
+          },
+          "plural": {
+            "virile": "połączyli",
+            "nonvirile": "połączyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

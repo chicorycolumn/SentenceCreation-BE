@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przyjaźń",
+      "gen": "przyjaźni",
+      "dat": "przyjaźni",
+      "acc": "przyjaźń",
+      "ins": "przyjaźnią",
+      "loc": "przyjaźni",
+      "voc": "przyjaźni"
+    },
+    "plural": {
+      "nom": "przyjaźnie",
+      "gen": "przyjaźni",
+      "dat": "przyjaźniom",
+      "acc": "przyjaźnie",
+      "ins": "przyjaźniami",
+      "loc": "przyjaźniach",
+      "voc": "przyjaźnie"
+    }
+  }
+}

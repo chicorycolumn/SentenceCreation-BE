@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "szaro",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "szary",
+          "gen": "szarego",
+          "dat": "szaremu",
+          "acc": "szarego",
+          "ins": "szarym",
+          "loc": "szarym"
+        },
+        "m3": {
+          "nom": "szary",
+          "gen": "szarego",
+          "dat": "szaremu",
+          "acc": "szary",
+          "ins": "szarym",
+          "loc": "szarym"
+        },
+        "f": {
+          "nom": "szara",
+          "gen": "szarej",
+          "dat": "szarej",
+          "acc": "szarą",
+          "ins": "szarą",
+          "loc": "szarej"
+        },
+        "n": {
+          "nom": "szare",
+          "gen": "szarego",
+          "dat": "szaremu",
+          "acc": "szare",
+          "ins": "szarym",
+          "loc": "szarym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "szarzy",
+          "gen": "szarych",
+          "dat": "szarym",
+          "acc": "szarych",
+          "ins": "szarymi",
+          "loc": "szarych"
+        },
+        "nonvirile": {
+          "nom": "szare",
+          "gen": "szarych",
+          "dat": "szarym",
+          "acc": "szare",
+          "ins": "szarymi",
+          "loc": "szarych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej szary",
+          "gen": "bardziej szarego",
+          "dat": "bardziej szaremu",
+          "acc": "bardziej szarego",
+          "ins": "bardziej szarym",
+          "loc": "bardziej szarym"
+        },
+        "m3": {
+          "nom": "bardziej szary",
+          "gen": "bardziej szarego",
+          "dat": "bardziej szaremu",
+          "acc": "bardziej szary",
+          "ins": "bardziej szarym",
+          "loc": "bardziej szarym"
+        },
+        "f": {
+          "nom": "bardziej szara",
+          "gen": "bardziej szarej",
+          "dat": "bardziej szarej",
+          "acc": "bardziej szarą",
+          "ins": "bardziej szarą",
+          "loc": "bardziej szarej"
+        },
+        "n": {
+          "nom": "bardziej szare",
+          "gen": "bardziej szarego",
+          "dat": "bardziej szaremu",
+          "acc": "bardziej szare",
+          "ins": "bardziej szarym",
+          "loc": "bardziej szarym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej szarzy",
+          "gen": "bardziej szarych",
+          "dat": "bardziej szarym",
+          "acc": "bardziej szarych",
+          "ins": "bardziej szarymi",
+          "loc": "bardziej szarych"
+        },
+        "nonvirile": {
+          "nom": "bardziej szare",
+          "gen": "bardziej szarych",
+          "dat": "bardziej szarym",
+          "acc": "bardziej szare",
+          "ins": "bardziej szarymi",
+          "loc": "bardziej szarych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej szary",
+          "gen": "najbardziej szarego",
+          "dat": "najbardziej szaremu",
+          "acc": "najbardziej szarego",
+          "ins": "najbardziej szarym",
+          "loc": "najbardziej szarym"
+        },
+        "m3": {
+          "nom": "najbardziej szary",
+          "gen": "najbardziej szarego",
+          "dat": "najbardziej szaremu",
+          "acc": "najbardziej szary",
+          "ins": "najbardziej szarym",
+          "loc": "najbardziej szarym"
+        },
+        "f": {
+          "nom": "najbardziej szara",
+          "gen": "najbardziej szarej",
+          "dat": "najbardziej szarej",
+          "acc": "najbardziej szarą",
+          "ins": "najbardziej szarą",
+          "loc": "najbardziej szarej"
+        },
+        "n": {
+          "nom": "najbardziej szare",
+          "gen": "najbardziej szarego",
+          "dat": "najbardziej szaremu",
+          "acc": "najbardziej szare",
+          "ins": "najbardziej szarym",
+          "loc": "najbardziej szarym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej szarzy",
+          "gen": "najbardziej szarych",
+          "dat": "najbardziej szarym",
+          "acc": "najbardziej szarych",
+          "ins": "najbardziej szarymi",
+          "loc": "najbardziej szarych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej szare",
+          "gen": "najbardziej szarych",
+          "dat": "najbardziej szarym",
+          "acc": "najbardziej szare",
+          "ins": "najbardziej szarymi",
+          "loc": "najbardziej szarych"
+        }
+      }
+    }
+  }
+}

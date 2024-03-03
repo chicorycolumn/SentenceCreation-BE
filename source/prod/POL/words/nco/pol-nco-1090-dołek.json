@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dołek",
+      "gen": "dołka",
+      "dat": "dołkowi",
+      "acc": "dołek",
+      "ins": "dołkiem",
+      "loc": "dołku",
+      "voc": "dołku"
+    },
+    "plural": {
+      "nom": "dołki",
+      "gen": "dołków",
+      "dat": "dołkom",
+      "acc": "dołki",
+      "ins": "dołkami",
+      "loc": "dołkach",
+      "voc": "dołki"
+    }
+  }
+}

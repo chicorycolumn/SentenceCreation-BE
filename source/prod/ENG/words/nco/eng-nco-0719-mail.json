@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mail",
+      "gen": "mail's"
+    },
+    "plural": {
+      "nom": "mail",
+      "gen": "mail's"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "obszernie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "obszerny",
+          "gen": "obszernego",
+          "dat": "obszernemu",
+          "acc": "obszernego",
+          "ins": "obszernym",
+          "loc": "obszernym"
+        },
+        "m3": {
+          "nom": "obszerny",
+          "gen": "obszernego",
+          "dat": "obszernemu",
+          "acc": "obszerny",
+          "ins": "obszernym",
+          "loc": "obszernym"
+        },
+        "f": {
+          "nom": "obszerna",
+          "gen": "obszernej",
+          "dat": "obszernej",
+          "acc": "obszerną",
+          "ins": "obszerną",
+          "loc": "obszernej"
+        },
+        "n": {
+          "nom": "obszerne",
+          "gen": "obszernego",
+          "dat": "obszernemu",
+          "acc": "obszerne",
+          "ins": "obszernym",
+          "loc": "obszernym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "obszerni",
+          "gen": "obszernych",
+          "dat": "obszernym",
+          "acc": "obszernych",
+          "ins": "obszernymi",
+          "loc": "obszernych"
+        },
+        "nonvirile": {
+          "nom": "obszerne",
+          "gen": "obszernych",
+          "dat": "obszernym",
+          "acc": "obszerne",
+          "ins": "obszernymi",
+          "loc": "obszernych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "obszerniejszy",
+          "gen": "obszerniejszego",
+          "dat": "obszerniejszemu",
+          "acc": "obszerniejszego",
+          "ins": "obszerniejszym",
+          "loc": "obszerniejszym"
+        },
+        "m3": {
+          "nom": "obszerniejszy",
+          "gen": "obszerniejszego",
+          "dat": "obszerniejszemu",
+          "acc": "obszerniejszy",
+          "ins": "obszerniejszym",
+          "loc": "obszerniejszym"
+        },
+        "f": {
+          "nom": "obszerniejsza",
+          "gen": "obszerniejszej",
+          "dat": "obszerniejszej",
+          "acc": "obszerniejszą",
+          "ins": "obszerniejszą",
+          "loc": "obszerniejszej"
+        },
+        "n": {
+          "nom": "obszerniejsze",
+          "gen": "obszerniejszego",
+          "dat": "obszerniejszemu",
+          "acc": "obszerniejsze",
+          "ins": "obszerniejszym",
+          "loc": "obszerniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "obszerniejsi",
+          "gen": "obszerniejszych",
+          "dat": "obszerniejszym",
+          "acc": "obszerniejszych",
+          "ins": "obszerniejszymi",
+          "loc": "obszerniejszych"
+        },
+        "nonvirile": {
+          "nom": "obszerniejsze",
+          "gen": "obszerniejszych",
+          "dat": "obszerniejszym",
+          "acc": "obszerniejsze",
+          "ins": "obszerniejszymi",
+          "loc": "obszerniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najobszerniejszy",
+          "gen": "najobszerniejszego",
+          "dat": "najobszerniejszemu",
+          "acc": "najobszerniejszego",
+          "ins": "najobszerniejszym",
+          "loc": "najobszerniejszym"
+        },
+        "m3": {
+          "nom": "najobszerniejszy",
+          "gen": "najobszerniejszego",
+          "dat": "najobszerniejszemu",
+          "acc": "najobszerniejszy",
+          "ins": "najobszerniejszym",
+          "loc": "najobszerniejszym"
+        },
+        "f": {
+          "nom": "najobszerniejsza",
+          "gen": "najobszerniejszej",
+          "dat": "najobszerniejszej",
+          "acc": "najobszerniejszą",
+          "ins": "najobszerniejszą",
+          "loc": "najobszerniejszej"
+        },
+        "n": {
+          "nom": "najobszerniejsze",
+          "gen": "najobszerniejszego",
+          "dat": "najobszerniejszemu",
+          "acc": "najobszerniejsze",
+          "ins": "najobszerniejszym",
+          "loc": "najobszerniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najobszerniejsi",
+          "gen": "najobszerniejszych",
+          "dat": "najobszerniejszym",
+          "acc": "najobszerniejszych",
+          "ins": "najobszerniejszymi",
+          "loc": "najobszerniejszych"
+        },
+        "nonvirile": {
+          "nom": "najobszerniejsze",
+          "gen": "najobszerniejszych",
+          "dat": "najobszerniejszym",
+          "acc": "najobszerniejsze",
+          "ins": "najobszerniejszymi",
+          "loc": "najobszerniejszych"
+        }
+      }
+    }
+  }
+}

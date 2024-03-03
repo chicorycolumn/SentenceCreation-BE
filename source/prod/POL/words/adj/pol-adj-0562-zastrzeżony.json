@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zastrzeżony",
+          "gen": "zastrzeżonego",
+          "dat": "zastrzeżonemu",
+          "acc": "zastrzeżonego",
+          "ins": "zastrzeżonym",
+          "loc": "zastrzeżonym"
+        },
+        "m3": {
+          "nom": "zastrzeżony",
+          "gen": "zastrzeżonego",
+          "dat": "zastrzeżonemu",
+          "acc": "zastrzeżony",
+          "ins": "zastrzeżonym",
+          "loc": "zastrzeżonym"
+        },
+        "f": {
+          "nom": "zastrzeżona",
+          "gen": "zastrzeżonej",
+          "dat": "zastrzeżonej",
+          "acc": "zastrzeżoną",
+          "ins": "zastrzeżoną",
+          "loc": "zastrzeżonej"
+        },
+        "n": {
+          "nom": "zastrzeżone",
+          "gen": "zastrzeżonego",
+          "dat": "zastrzeżonemu",
+          "acc": "zastrzeżone",
+          "ins": "zastrzeżonym",
+          "loc": "zastrzeżonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zastrzeżeni",
+          "gen": "zastrzeżonych",
+          "dat": "zastrzeżonym",
+          "acc": "zastrzeżonych",
+          "ins": "zastrzeżonymi",
+          "loc": "zastrzeżonych"
+        },
+        "nonvirile": {
+          "nom": "zastrzeżone",
+          "gen": "zastrzeżonych",
+          "dat": "zastrzeżonym",
+          "acc": "zastrzeżone",
+          "ins": "zastrzeżonymi",
+          "loc": "zastrzeżonych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej zastrzeżony",
+          "gen": "bardziej zastrzeżonego",
+          "dat": "bardziej zastrzeżonemu",
+          "acc": "bardziej zastrzeżonego",
+          "ins": "bardziej zastrzeżonym",
+          "loc": "bardziej zastrzeżonym"
+        },
+        "m3": {
+          "nom": "bardziej zastrzeżony",
+          "gen": "bardziej zastrzeżonego",
+          "dat": "bardziej zastrzeżonemu",
+          "acc": "bardziej zastrzeżony",
+          "ins": "bardziej zastrzeżonym",
+          "loc": "bardziej zastrzeżonym"
+        },
+        "f": {
+          "nom": "bardziej zastrzeżona",
+          "gen": "bardziej zastrzeżonej",
+          "dat": "bardziej zastrzeżonej",
+          "acc": "bardziej zastrzeżoną",
+          "ins": "bardziej zastrzeżoną",
+          "loc": "bardziej zastrzeżonej"
+        },
+        "n": {
+          "nom": "bardziej zastrzeżone",
+          "gen": "bardziej zastrzeżonego",
+          "dat": "bardziej zastrzeżonemu",
+          "acc": "bardziej zastrzeżone",
+          "ins": "bardziej zastrzeżonym",
+          "loc": "bardziej zastrzeżonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej zastrzeżeni",
+          "gen": "bardziej zastrzeżonych",
+          "dat": "bardziej zastrzeżonym",
+          "acc": "bardziej zastrzeżonych",
+          "ins": "bardziej zastrzeżonymi",
+          "loc": "bardziej zastrzeżonych"
+        },
+        "nonvirile": {
+          "nom": "bardziej zastrzeżone",
+          "gen": "bardziej zastrzeżonych",
+          "dat": "bardziej zastrzeżonym",
+          "acc": "bardziej zastrzeżone",
+          "ins": "bardziej zastrzeżonymi",
+          "loc": "bardziej zastrzeżonych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej zastrzeżony",
+          "gen": "najbardziej zastrzeżonego",
+          "dat": "najbardziej zastrzeżonemu",
+          "acc": "najbardziej zastrzeżonego",
+          "ins": "najbardziej zastrzeżonym",
+          "loc": "najbardziej zastrzeżonym"
+        },
+        "m3": {
+          "nom": "najbardziej zastrzeżony",
+          "gen": "najbardziej zastrzeżonego",
+          "dat": "najbardziej zastrzeżonemu",
+          "acc": "najbardziej zastrzeżony",
+          "ins": "najbardziej zastrzeżonym",
+          "loc": "najbardziej zastrzeżonym"
+        },
+        "f": {
+          "nom": "najbardziej zastrzeżona",
+          "gen": "najbardziej zastrzeżonej",
+          "dat": "najbardziej zastrzeżonej",
+          "acc": "najbardziej zastrzeżoną",
+          "ins": "najbardziej zastrzeżoną",
+          "loc": "najbardziej zastrzeżonej"
+        },
+        "n": {
+          "nom": "najbardziej zastrzeżone",
+          "gen": "najbardziej zastrzeżonego",
+          "dat": "najbardziej zastrzeżonemu",
+          "acc": "najbardziej zastrzeżone",
+          "ins": "najbardziej zastrzeżonym",
+          "loc": "najbardziej zastrzeżonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej zastrzeżeni",
+          "gen": "najbardziej zastrzeżonych",
+          "dat": "najbardziej zastrzeżonym",
+          "acc": "najbardziej zastrzeżonych",
+          "ins": "najbardziej zastrzeżonymi",
+          "loc": "najbardziej zastrzeżonych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej zastrzeżone",
+          "gen": "najbardziej zastrzeżonych",
+          "dat": "najbardziej zastrzeżonym",
+          "acc": "najbardziej zastrzeżone",
+          "ins": "najbardziej zastrzeżonymi",
+          "loc": "najbardziej zastrzeżonych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "konkurencyjnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "konkurencyjny",
+          "gen": "konkurencyjnego",
+          "dat": "konkurencyjnemu",
+          "acc": "konkurencyjnego",
+          "ins": "konkurencyjnym",
+          "loc": "konkurencyjnym"
+        },
+        "m3": {
+          "nom": "konkurencyjny",
+          "gen": "konkurencyjnego",
+          "dat": "konkurencyjnemu",
+          "acc": "konkurencyjny",
+          "ins": "konkurencyjnym",
+          "loc": "konkurencyjnym"
+        },
+        "f": {
+          "nom": "konkurencyjna",
+          "gen": "konkurencyjnej",
+          "dat": "konkurencyjnej",
+          "acc": "konkurencyjną",
+          "ins": "konkurencyjną",
+          "loc": "konkurencyjnej"
+        },
+        "n": {
+          "nom": "konkurencyjne",
+          "gen": "konkurencyjnego",
+          "dat": "konkurencyjnemu",
+          "acc": "konkurencyjne",
+          "ins": "konkurencyjnym",
+          "loc": "konkurencyjnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "konkurencyjni",
+          "gen": "konkurencyjnych",
+          "dat": "konkurencyjnym",
+          "acc": "konkurencyjnych",
+          "ins": "konkurencyjnymi",
+          "loc": "konkurencyjnych"
+        },
+        "nonvirile": {
+          "nom": "konkurencyjne",
+          "gen": "konkurencyjnych",
+          "dat": "konkurencyjnym",
+          "acc": "konkurencyjne",
+          "ins": "konkurencyjnymi",
+          "loc": "konkurencyjnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej konkurencyjny",
+          "gen": "bardziej konkurencyjnego",
+          "dat": "bardziej konkurencyjnemu",
+          "acc": "bardziej konkurencyjnego",
+          "ins": "bardziej konkurencyjnym",
+          "loc": "bardziej konkurencyjnym"
+        },
+        "m3": {
+          "nom": "bardziej konkurencyjny",
+          "gen": "bardziej konkurencyjnego",
+          "dat": "bardziej konkurencyjnemu",
+          "acc": "bardziej konkurencyjny",
+          "ins": "bardziej konkurencyjnym",
+          "loc": "bardziej konkurencyjnym"
+        },
+        "f": {
+          "nom": "bardziej konkurencyjna",
+          "gen": "bardziej konkurencyjnej",
+          "dat": "bardziej konkurencyjnej",
+          "acc": "bardziej konkurencyjną",
+          "ins": "bardziej konkurencyjną",
+          "loc": "bardziej konkurencyjnej"
+        },
+        "n": {
+          "nom": "bardziej konkurencyjne",
+          "gen": "bardziej konkurencyjnego",
+          "dat": "bardziej konkurencyjnemu",
+          "acc": "bardziej konkurencyjne",
+          "ins": "bardziej konkurencyjnym",
+          "loc": "bardziej konkurencyjnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej konkurencyjni",
+          "gen": "bardziej konkurencyjnych",
+          "dat": "bardziej konkurencyjnym",
+          "acc": "bardziej konkurencyjnych",
+          "ins": "bardziej konkurencyjnymi",
+          "loc": "bardziej konkurencyjnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej konkurencyjne",
+          "gen": "bardziej konkurencyjnych",
+          "dat": "bardziej konkurencyjnym",
+          "acc": "bardziej konkurencyjne",
+          "ins": "bardziej konkurencyjnymi",
+          "loc": "bardziej konkurencyjnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej konkurencyjny",
+          "gen": "najbardziej konkurencyjnego",
+          "dat": "najbardziej konkurencyjnemu",
+          "acc": "najbardziej konkurencyjnego",
+          "ins": "najbardziej konkurencyjnym",
+          "loc": "najbardziej konkurencyjnym"
+        },
+        "m3": {
+          "nom": "najbardziej konkurencyjny",
+          "gen": "najbardziej konkurencyjnego",
+          "dat": "najbardziej konkurencyjnemu",
+          "acc": "najbardziej konkurencyjny",
+          "ins": "najbardziej konkurencyjnym",
+          "loc": "najbardziej konkurencyjnym"
+        },
+        "f": {
+          "nom": "najbardziej konkurencyjna",
+          "gen": "najbardziej konkurencyjnej",
+          "dat": "najbardziej konkurencyjnej",
+          "acc": "najbardziej konkurencyjną",
+          "ins": "najbardziej konkurencyjną",
+          "loc": "najbardziej konkurencyjnej"
+        },
+        "n": {
+          "nom": "najbardziej konkurencyjne",
+          "gen": "najbardziej konkurencyjnego",
+          "dat": "najbardziej konkurencyjnemu",
+          "acc": "najbardziej konkurencyjne",
+          "ins": "najbardziej konkurencyjnym",
+          "loc": "najbardziej konkurencyjnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej konkurencyjni",
+          "gen": "najbardziej konkurencyjnych",
+          "dat": "najbardziej konkurencyjnym",
+          "acc": "najbardziej konkurencyjnych",
+          "ins": "najbardziej konkurencyjnymi",
+          "loc": "najbardziej konkurencyjnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej konkurencyjne",
+          "gen": "najbardziej konkurencyjnych",
+          "dat": "najbardziej konkurencyjnym",
+          "acc": "najbardziej konkurencyjne",
+          "ins": "najbardziej konkurencyjnymi",
+          "loc": "najbardziej konkurencyjnych"
+        }
+      }
+    }
+  }
+}

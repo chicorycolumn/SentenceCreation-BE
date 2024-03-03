@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wysłuchać",
+    "verbalNoun": "wysłuchanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "wysłuchany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "wysłuchawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wysłucha się"
+          },
+          "plural": {
+            "allPluralGenders": "wysłucha się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wysłucham"
+          },
+          "plural": {
+            "allPluralGenders": "wysłuchamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wysłuchasz"
+          },
+          "plural": {
+            "allPluralGenders": "wysłuchacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wysłucha"
+          },
+          "plural": {
+            "allPluralGenders": "wysłuchają"
+          }
+        }
+      },
+      "imperative": "wysłuchaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wysłuchano"
+          },
+          "plural": {
+            "allPluralGenders": "wysłuchano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wysłuchałem",
+            "f": "wysłuchałam"
+          },
+          "plural": {
+            "virile": "wysłuchaliśmy",
+            "nonvirile": "wysłuchałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wysłuchałeś",
+            "f": "wysłuchałaś"
+          },
+          "plural": {
+            "virile": "wysłuchaliście",
+            "nonvirile": "wysłuchałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wysłuchał",
+            "f": "wysłuchała",
+            "n": "wysłuchało"
+          },
+          "plural": {
+            "virile": "wysłuchali",
+            "nonvirile": "wysłuchały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

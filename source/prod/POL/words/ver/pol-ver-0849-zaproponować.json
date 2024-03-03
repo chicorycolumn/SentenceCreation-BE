@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zaproponować",
+    "verbalNoun": "zaproponowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zaproponowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zaproponowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaproponuje się"
+          },
+          "plural": {
+            "allPluralGenders": "zaproponuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zaproponuję"
+          },
+          "plural": {
+            "allPluralGenders": "zaproponujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zaproponujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zaproponujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zaproponuje"
+          },
+          "plural": {
+            "allPluralGenders": "zaproponują"
+          }
+        }
+      },
+      "imperative": "zaproponuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaproponowano"
+          },
+          "plural": {
+            "allPluralGenders": "zaproponowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zaproponowałem",
+            "f": "zaproponowałam"
+          },
+          "plural": {
+            "virile": "zaproponowaliśmy",
+            "nonvirile": "zaproponowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zaproponowałeś",
+            "f": "zaproponowałaś"
+          },
+          "plural": {
+            "virile": "zaproponowaliście",
+            "nonvirile": "zaproponowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zaproponował",
+            "f": "zaproponowała",
+            "n": "zaproponowało"
+          },
+          "plural": {
+            "virile": "zaproponowali",
+            "nonvirile": "zaproponowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

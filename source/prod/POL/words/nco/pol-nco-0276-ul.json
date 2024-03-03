@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ul",
+      "gen": "ula",
+      "dat": "ulowi",
+      "acc": "ul",
+      "ins": "ulem",
+      "loc": "ulu",
+      "voc": "ulu"
+    },
+    "plural": {
+      "nom": "ule",
+      "gen": [
+        "uli",
+        "ulów"
+      ],
+      "dat": "ulom",
+      "acc": "ule",
+      "ins": "ulami",
+      "loc": "ulach",
+      "voc": "ule"
+    }
+  }
+}

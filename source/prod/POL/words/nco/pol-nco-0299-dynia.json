@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dynia",
+      "gen": "dyni",
+      "dat": "dyni",
+      "acc": "dynię",
+      "ins": "dynią",
+      "loc": "dyni",
+      "voc": "dynio"
+    },
+    "plural": {
+      "nom": "dynie",
+      "gen": "dyń",
+      "dat": "dyniom",
+      "acc": "dynie",
+      "ins": "dyniami",
+      "loc": "dyniach",
+      "voc": "dynie"
+    }
+  }
+}

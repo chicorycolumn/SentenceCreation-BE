@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "facet",
+      "gen": "faceta",
+      "dat": "facetowi",
+      "acc": "faceta",
+      "ins": "facetem",
+      "loc": "facecie",
+      "voc": "facecie"
+    },
+    "plural": {
+      "nom": "faceci",
+      "gen": "facetów",
+      "dat": "facetom",
+      "acc": "facetów",
+      "ins": "facetami",
+      "loc": "facetach",
+      "voc": "faceci"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "październik",
+      "gen": "października",
+      "dat": "październikowi",
+      "acc": "październik",
+      "ins": "październikiem",
+      "loc": "październiku",
+      "voc": "październiku"
+    },
+    "plural": {
+      "nom": "październiki",
+      "gen": "październików",
+      "dat": "październikom",
+      "acc": "październiki",
+      "ins": "październikami",
+      "loc": "październikach",
+      "voc": "październiki"
+    }
+  }
+}

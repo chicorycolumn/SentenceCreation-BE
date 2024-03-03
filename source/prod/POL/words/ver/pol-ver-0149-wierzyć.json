@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wierzyć",
+    "verbalNoun": "wierzenie",
+    "activeAdjectival": "wierzący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "wierząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "wierz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wierzono"
+          },
+          "plural": {
+            "allPluralGenders": "wierzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wierzyłem",
+            "f": "wierzyłam"
+          },
+          "plural": {
+            "virile": "wierzyliśmy",
+            "nonvirile": "wierzyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wierzyłeś",
+            "f": "wierzyłaś"
+          },
+          "plural": {
+            "virile": "wierzyliście",
+            "nonvirile": "wierzyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wierzył",
+            "f": "wierzyła",
+            "n": "wierzyło"
+          },
+          "plural": {
+            "virile": "wierzyli",
+            "nonvirile": "wierzyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wierzy się"
+          },
+          "plural": {
+            "allPluralGenders": "wierzy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wierzę"
+          },
+          "plural": {
+            "allPluralGenders": "wierzymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wierzysz"
+          },
+          "plural": {
+            "allPluralGenders": "wierzycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wierzy"
+          },
+          "plural": {
+            "allPluralGenders": "wierzą"
+          }
+        }
+      }
+    }
+  }
+}

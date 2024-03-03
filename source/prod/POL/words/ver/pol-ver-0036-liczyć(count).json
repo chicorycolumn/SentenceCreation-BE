@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "liczyć",
+    "verbalNoun": "liczenie",
+    "activeAdjectival": "liczący",
+    "passiveAdjectival": "liczony",
+    "contemporaryAdverbial": "licząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "licz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "liczono"
+          },
+          "plural": {
+            "allPluralGenders": "liczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "liczyłem",
+            "f": "liczyłam"
+          },
+          "plural": {
+            "virile": "liczyliśmy",
+            "nonvirile": "liczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "liczyłeś",
+            "f": "liczyłaś"
+          },
+          "plural": {
+            "virile": "liczyliście",
+            "nonvirile": "liczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "liczył",
+            "f": "liczyła",
+            "n": "liczyło"
+          },
+          "plural": {
+            "virile": "liczyli",
+            "nonvirile": "liczyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "liczy się"
+          },
+          "plural": {
+            "allPluralGenders": "liczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "liczę"
+          },
+          "plural": {
+            "allPluralGenders": "liczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "liczysz"
+          },
+          "plural": {
+            "allPluralGenders": "liczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "liczy"
+          },
+          "plural": {
+            "allPluralGenders": "liczą"
+          }
+        }
+      }
+    }
+  }
+}

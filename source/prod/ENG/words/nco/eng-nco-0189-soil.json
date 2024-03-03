@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "soil",
+      "gen": "soil's"
+    },
+    "plural": {
+      "nom": "soils",
+      "gen": "soils'"
+    }
+  }
+}

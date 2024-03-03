@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "interesująco",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "interesujący",
+          "gen": "interesującego",
+          "dat": "interesującemu",
+          "acc": "interesującego",
+          "ins": "interesującym",
+          "loc": "interesującym"
+        },
+        "m3": {
+          "nom": "interesujący",
+          "gen": "interesującego",
+          "dat": "interesującemu",
+          "acc": "interesujący",
+          "ins": "interesującym",
+          "loc": "interesującym"
+        },
+        "f": {
+          "nom": "interesująca",
+          "gen": "interesującej",
+          "dat": "interesującej",
+          "acc": "interesującą",
+          "ins": "interesującą",
+          "loc": "interesującej"
+        },
+        "n": {
+          "nom": "interesujące",
+          "gen": "interesującego",
+          "dat": "interesującemu",
+          "acc": "interesujące",
+          "ins": "interesującym",
+          "loc": "interesującym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "interesujący",
+          "gen": "interesujących",
+          "dat": "interesującym",
+          "acc": "interesujących",
+          "ins": "interesującymi",
+          "loc": "interesujących"
+        },
+        "nonvirile": {
+          "nom": "interesujące",
+          "gen": "interesujących",
+          "dat": "interesującym",
+          "acc": "interesujące",
+          "ins": "interesującymi",
+          "loc": "interesujących"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej interesujący",
+          "gen": "bardziej interesującego",
+          "dat": "bardziej interesującemu",
+          "acc": "bardziej interesującego",
+          "ins": "bardziej interesującym",
+          "loc": "bardziej interesującym"
+        },
+        "m3": {
+          "nom": "bardziej interesujący",
+          "gen": "bardziej interesującego",
+          "dat": "bardziej interesującemu",
+          "acc": "bardziej interesujący",
+          "ins": "bardziej interesującym",
+          "loc": "bardziej interesującym"
+        },
+        "f": {
+          "nom": "bardziej interesująca",
+          "gen": "bardziej interesującej",
+          "dat": "bardziej interesującej",
+          "acc": "bardziej interesującą",
+          "ins": "bardziej interesującą",
+          "loc": "bardziej interesującej"
+        },
+        "n": {
+          "nom": "bardziej interesujące",
+          "gen": "bardziej interesującego",
+          "dat": "bardziej interesującemu",
+          "acc": "bardziej interesujące",
+          "ins": "bardziej interesującym",
+          "loc": "bardziej interesującym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej interesujący",
+          "gen": "bardziej interesujących",
+          "dat": "bardziej interesującym",
+          "acc": "bardziej interesujących",
+          "ins": "bardziej interesującymi",
+          "loc": "bardziej interesujących"
+        },
+        "nonvirile": {
+          "nom": "bardziej interesujące",
+          "gen": "bardziej interesujących",
+          "dat": "bardziej interesującym",
+          "acc": "bardziej interesujące",
+          "ins": "bardziej interesującymi",
+          "loc": "bardziej interesujących"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej interesujący",
+          "gen": "najbardziej interesującego",
+          "dat": "najbardziej interesującemu",
+          "acc": "najbardziej interesującego",
+          "ins": "najbardziej interesującym",
+          "loc": "najbardziej interesującym"
+        },
+        "m3": {
+          "nom": "najbardziej interesujący",
+          "gen": "najbardziej interesującego",
+          "dat": "najbardziej interesującemu",
+          "acc": "najbardziej interesujący",
+          "ins": "najbardziej interesującym",
+          "loc": "najbardziej interesującym"
+        },
+        "f": {
+          "nom": "najbardziej interesująca",
+          "gen": "najbardziej interesującej",
+          "dat": "najbardziej interesującej",
+          "acc": "najbardziej interesującą",
+          "ins": "najbardziej interesującą",
+          "loc": "najbardziej interesującej"
+        },
+        "n": {
+          "nom": "najbardziej interesujące",
+          "gen": "najbardziej interesującego",
+          "dat": "najbardziej interesującemu",
+          "acc": "najbardziej interesujące",
+          "ins": "najbardziej interesującym",
+          "loc": "najbardziej interesującym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej interesujący",
+          "gen": "najbardziej interesujących",
+          "dat": "najbardziej interesującym",
+          "acc": "najbardziej interesujących",
+          "ins": "najbardziej interesującymi",
+          "loc": "najbardziej interesujących"
+        },
+        "nonvirile": {
+          "nom": "najbardziej interesujące",
+          "gen": "najbardziej interesujących",
+          "dat": "najbardziej interesującym",
+          "acc": "najbardziej interesujące",
+          "ins": "najbardziej interesującymi",
+          "loc": "najbardziej interesujących"
+        }
+      }
+    }
+  }
+}

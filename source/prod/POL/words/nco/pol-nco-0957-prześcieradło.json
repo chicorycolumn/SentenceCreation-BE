@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "prześcieradło",
+      "gen": "prześcieradła",
+      "dat": "prześcieradłu",
+      "acc": "prześcieradło",
+      "ins": "prześcieradłem",
+      "loc": "prześcieradle",
+      "voc": "prześcieradło"
+    },
+    "plural": {
+      "nom": "prześcieradła",
+      "gen": "prześcieradeł",
+      "dat": "prześcieradłom",
+      "acc": "prześcieradła",
+      "ins": "prześcieradłami",
+      "loc": "prześcieradłach",
+      "voc": "prześcieradła"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pomylić",
+    "verbalNoun": "pomylenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pomylony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pomyliwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pomyli się"
+          },
+          "plural": {
+            "allPluralGenders": "pomyli się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pomylę"
+          },
+          "plural": {
+            "allPluralGenders": "pomylimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pomylisz"
+          },
+          "plural": {
+            "allPluralGenders": "pomylicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pomyli"
+          },
+          "plural": {
+            "allPluralGenders": "pomylą"
+          }
+        }
+      },
+      "imperative": "pomyl",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pomylono"
+          },
+          "plural": {
+            "allPluralGenders": "pomylono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pomyliłem",
+            "f": "pomyliłam"
+          },
+          "plural": {
+            "virile": "pomyliliśmy",
+            "nonvirile": "pomyliłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pomyliłeś",
+            "f": "pomyliłaś"
+          },
+          "plural": {
+            "virile": "pomyliliście",
+            "nonvirile": "pomyliłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pomylił",
+            "f": "pomyliła",
+            "n": "pomyliło"
+          },
+          "plural": {
+            "virile": "pomylili",
+            "nonvirile": "pomyliły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

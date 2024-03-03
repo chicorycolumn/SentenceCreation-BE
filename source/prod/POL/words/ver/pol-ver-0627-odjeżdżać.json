@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odjeżdżać",
+    "verbalNoun": "odjeżdżanie",
+    "activeAdjectival": "odjeżdżający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "odjeżdżając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odjeżdżaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odjeżdżano"
+          },
+          "plural": {
+            "allPluralGenders": "odjeżdżano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odjeżdżałem",
+            "f": "odjeżdżałam"
+          },
+          "plural": {
+            "virile": "odjeżdżaliśmy",
+            "nonvirile": "odjeżdżałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odjeżdżałeś",
+            "f": "odjeżdżałaś"
+          },
+          "plural": {
+            "virile": "odjeżdżaliście",
+            "nonvirile": "odjeżdżałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odjeżdżał",
+            "f": "odjeżdżała",
+            "n": "odjeżdżało"
+          },
+          "plural": {
+            "virile": "odjeżdżali",
+            "nonvirile": "odjeżdżały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odjeżdża się"
+          },
+          "plural": {
+            "allPluralGenders": "odjeżdża się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odjeżdżam"
+          },
+          "plural": {
+            "allPluralGenders": "odjeżdżamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odjeżdżasz"
+          },
+          "plural": {
+            "allPluralGenders": "odjeżdżacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odjeżdża"
+          },
+          "plural": {
+            "allPluralGenders": "odjeżdżają"
+          }
+        }
+      }
+    }
+  }
+}

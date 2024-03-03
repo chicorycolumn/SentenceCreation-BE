@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "przejrzyście",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przejrzysty",
+          "gen": "przejrzystego",
+          "dat": "przejrzystemu",
+          "acc": "przejrzystego",
+          "ins": "przejrzystym",
+          "loc": "przejrzystym"
+        },
+        "m3": {
+          "nom": "przejrzysty",
+          "gen": "przejrzystego",
+          "dat": "przejrzystemu",
+          "acc": "przejrzysty",
+          "ins": "przejrzystym",
+          "loc": "przejrzystym"
+        },
+        "f": {
+          "nom": "przejrzysta",
+          "gen": "przejrzystej",
+          "dat": "przejrzystej",
+          "acc": "przejrzystą",
+          "ins": "przejrzystą",
+          "loc": "przejrzystej"
+        },
+        "n": {
+          "nom": "przejrzyste",
+          "gen": "przejrzystego",
+          "dat": "przejrzystemu",
+          "acc": "przejrzyste",
+          "ins": "przejrzystym",
+          "loc": "przejrzystym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przejrzyści",
+          "gen": "przejrzystych",
+          "dat": "przejrzystym",
+          "acc": "przejrzystych",
+          "ins": "przejrzystymi",
+          "loc": "przejrzystych"
+        },
+        "nonvirile": {
+          "nom": "przejrzyste",
+          "gen": "przejrzystych",
+          "dat": "przejrzystym",
+          "acc": "przejrzyste",
+          "ins": "przejrzystymi",
+          "loc": "przejrzystych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "przejrzystszy",
+          "gen": "przejrzystszego",
+          "dat": "przejrzystszemu",
+          "acc": "przejrzystszego",
+          "ins": "przejrzystszym",
+          "loc": "przejrzystszym"
+        },
+        "m3": {
+          "nom": "przejrzystszy",
+          "gen": "przejrzystszego",
+          "dat": "przejrzystszemu",
+          "acc": "przejrzystszy",
+          "ins": "przejrzystszym",
+          "loc": "przejrzystszym"
+        },
+        "f": {
+          "nom": "przejrzystsza",
+          "gen": "przejrzystszej",
+          "dat": "przejrzystszej",
+          "acc": "przejrzystszą",
+          "ins": "przejrzystszą",
+          "loc": "przejrzystszej"
+        },
+        "n": {
+          "nom": "przejrzystsze",
+          "gen": "przejrzystszego",
+          "dat": "przejrzystszemu",
+          "acc": "przejrzystsze",
+          "ins": "przejrzystszym",
+          "loc": "przejrzystszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przejrzystsi",
+          "gen": "przejrzystszych",
+          "dat": "przejrzystszym",
+          "acc": "przejrzystszych",
+          "ins": "przejrzystszymi",
+          "loc": "przejrzystszych"
+        },
+        "nonvirile": {
+          "nom": "przejrzystsze",
+          "gen": "przejrzystszych",
+          "dat": "przejrzystszym",
+          "acc": "przejrzystsze",
+          "ins": "przejrzystszymi",
+          "loc": "przejrzystszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najprzejrzystszy",
+          "gen": "najprzejrzystszego",
+          "dat": "najprzejrzystszemu",
+          "acc": "najprzejrzystszego",
+          "ins": "najprzejrzystszym",
+          "loc": "najprzejrzystszym"
+        },
+        "m3": {
+          "nom": "najprzejrzystszy",
+          "gen": "najprzejrzystszego",
+          "dat": "najprzejrzystszemu",
+          "acc": "najprzejrzystszy",
+          "ins": "najprzejrzystszym",
+          "loc": "najprzejrzystszym"
+        },
+        "f": {
+          "nom": "najprzejrzystsza",
+          "gen": "najprzejrzystszej",
+          "dat": "najprzejrzystszej",
+          "acc": "najprzejrzystszą",
+          "ins": "najprzejrzystszą",
+          "loc": "najprzejrzystszej"
+        },
+        "n": {
+          "nom": "najprzejrzystsze",
+          "gen": "najprzejrzystszego",
+          "dat": "najprzejrzystszemu",
+          "acc": "najprzejrzystsze",
+          "ins": "najprzejrzystszym",
+          "loc": "najprzejrzystszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najprzejrzystsi",
+          "gen": "najprzejrzystszych",
+          "dat": "najprzejrzystszym",
+          "acc": "najprzejrzystszych",
+          "ins": "najprzejrzystszymi",
+          "loc": "najprzejrzystszych"
+        },
+        "nonvirile": {
+          "nom": "najprzejrzystsze",
+          "gen": "najprzejrzystszych",
+          "dat": "najprzejrzystszym",
+          "acc": "najprzejrzystsze",
+          "ins": "najprzejrzystszymi",
+          "loc": "najprzejrzystszych"
+        }
+      }
+    }
+  }
+}

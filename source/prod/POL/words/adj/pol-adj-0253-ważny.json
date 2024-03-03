@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "ważnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ważny",
+          "gen": "ważnego",
+          "dat": "ważnemu",
+          "acc": "ważnego",
+          "ins": "ważnym",
+          "loc": "ważnym"
+        },
+        "m3": {
+          "nom": "ważny",
+          "gen": "ważnego",
+          "dat": "ważnemu",
+          "acc": "ważny",
+          "ins": "ważnym",
+          "loc": "ważnym"
+        },
+        "f": {
+          "nom": "ważna",
+          "gen": "ważnej",
+          "dat": "ważnej",
+          "acc": "ważną",
+          "ins": "ważną",
+          "loc": "ważnej"
+        },
+        "n": {
+          "nom": "ważne",
+          "gen": "ważnego",
+          "dat": "ważnemu",
+          "acc": "ważne",
+          "ins": "ważnym",
+          "loc": "ważnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ważni",
+          "gen": "ważnych",
+          "dat": "ważnym",
+          "acc": "ważnych",
+          "ins": "ważnymi",
+          "loc": "ważnych"
+        },
+        "nonvirile": {
+          "nom": "ważne",
+          "gen": "ważnych",
+          "dat": "ważnym",
+          "acc": "ważne",
+          "ins": "ważnymi",
+          "loc": "ważnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "ważniejszy",
+          "gen": "ważniejszego",
+          "dat": "ważniejszemu",
+          "acc": "ważniejszego",
+          "ins": "ważniejszym",
+          "loc": "ważniejszym"
+        },
+        "m3": {
+          "nom": "ważniejszy",
+          "gen": "ważniejszego",
+          "dat": "ważniejszemu",
+          "acc": "ważniejszy",
+          "ins": "ważniejszym",
+          "loc": "ważniejszym"
+        },
+        "f": {
+          "nom": "ważniejsza",
+          "gen": "ważniejszej",
+          "dat": "ważniejszej",
+          "acc": "ważniejszą",
+          "ins": "ważniejszą",
+          "loc": "ważniejszej"
+        },
+        "n": {
+          "nom": "ważniejsze",
+          "gen": "ważniejszego",
+          "dat": "ważniejszemu",
+          "acc": "ważniejsze",
+          "ins": "ważniejszym",
+          "loc": "ważniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ważniejsi",
+          "gen": "ważniejszych",
+          "dat": "ważniejszym",
+          "acc": "ważniejszych",
+          "ins": "ważniejszymi",
+          "loc": "ważniejszych"
+        },
+        "nonvirile": {
+          "nom": "ważniejsze",
+          "gen": "ważniejszych",
+          "dat": "ważniejszym",
+          "acc": "ważniejsze",
+          "ins": "ważniejszymi",
+          "loc": "ważniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najważniejszy",
+          "gen": "najważniejszego",
+          "dat": "najważniejszemu",
+          "acc": "najważniejszego",
+          "ins": "najważniejszym",
+          "loc": "najważniejszym"
+        },
+        "m3": {
+          "nom": "najważniejszy",
+          "gen": "najważniejszego",
+          "dat": "najważniejszemu",
+          "acc": "najważniejszy",
+          "ins": "najważniejszym",
+          "loc": "najważniejszym"
+        },
+        "f": {
+          "nom": "najważniejsza",
+          "gen": "najważniejszej",
+          "dat": "najważniejszej",
+          "acc": "najważniejszą",
+          "ins": "najważniejszą",
+          "loc": "najważniejszej"
+        },
+        "n": {
+          "nom": "najważniejsze",
+          "gen": "najważniejszego",
+          "dat": "najważniejszemu",
+          "acc": "najważniejsze",
+          "ins": "najważniejszym",
+          "loc": "najważniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najważniejsi",
+          "gen": "najważniejszych",
+          "dat": "najważniejszym",
+          "acc": "najważniejszych",
+          "ins": "najważniejszymi",
+          "loc": "najważniejszych"
+        },
+        "nonvirile": {
+          "nom": "najważniejsze",
+          "gen": "najważniejszych",
+          "dat": "najważniejszym",
+          "acc": "najważniejsze",
+          "ins": "najważniejszymi",
+          "loc": "najważniejszych"
+        }
+      }
+    }
+  }
+}

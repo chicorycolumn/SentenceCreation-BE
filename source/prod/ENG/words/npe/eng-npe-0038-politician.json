@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "politician",
+      "gen": "politician's"
+    },
+    "plural": {
+      "nom": "politicians",
+      "gen": "politicians'"
+    }
+  }
+}

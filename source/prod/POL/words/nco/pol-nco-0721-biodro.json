@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "biodro",
+      "gen": "biodra",
+      "dat": "biodru",
+      "acc": "biodro",
+      "ins": "biodrem",
+      "loc": "biodrze",
+      "voc": "biodro"
+    },
+    "plural": {
+      "nom": "biodra",
+      "gen": "bioder",
+      "dat": "biodrom",
+      "acc": "biodra",
+      "ins": "biodrami",
+      "loc": "biodrach",
+      "voc": "biodra"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "reszta",
+      "gen": "reszty",
+      "dat": "reszcie",
+      "acc": "resztę",
+      "ins": "resztą",
+      "loc": "reszcie",
+      "voc": "reszto"
+    },
+    "plural": {
+      "nom": "reszty",
+      "gen": "reszt",
+      "dat": "resztom",
+      "acc": "reszty",
+      "ins": "resztami",
+      "loc": "resztach",
+      "voc": "reszty"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nadzorować",
+    "verbalNoun": "nadzorowanie",
+    "activeAdjectival": "nadzorujący",
+    "passiveAdjectival": "nadzorowany",
+    "contemporaryAdverbial": "nadzorując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "nadzoruj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nadzorowano"
+          },
+          "plural": {
+            "allPluralGenders": "nadzorowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nadzorowałem",
+            "f": "nadzorowałam"
+          },
+          "plural": {
+            "virile": "nadzorowaliśmy",
+            "nonvirile": "nadzorowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nadzorowałeś",
+            "f": "nadzorowałaś"
+          },
+          "plural": {
+            "virile": "nadzorowaliście",
+            "nonvirile": "nadzorowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nadzorował",
+            "f": "nadzorowała",
+            "n": "nadzorowało"
+          },
+          "plural": {
+            "virile": "nadzorowali",
+            "nonvirile": "nadzorowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nadzoruje się"
+          },
+          "plural": {
+            "allPluralGenders": "nadzoruje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nadzoruję"
+          },
+          "plural": {
+            "allPluralGenders": "nadzorujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nadzorujesz"
+          },
+          "plural": {
+            "allPluralGenders": "nadzorujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nadzoruje"
+          },
+          "plural": {
+            "allPluralGenders": "nadzorują"
+          }
+        }
+      }
+    }
+  }
+}

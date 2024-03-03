@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "robić",
+    "verbalNoun": "robienie",
+    "activeAdjectival": "robiący",
+    "passiveAdjectival": "robiony",
+    "contemporaryAdverbial": "robiąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "rób",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "robiono"
+          },
+          "plural": {
+            "allPluralGenders": "robiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "robiłem",
+            "f": "robiłam"
+          },
+          "plural": {
+            "virile": "robiliśmy",
+            "nonvirile": "robiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "robiłeś",
+            "f": "robiłaś"
+          },
+          "plural": {
+            "virile": "robiliście",
+            "nonvirile": "robiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "robił",
+            "f": "robiła",
+            "n": "robiło"
+          },
+          "plural": {
+            "virile": "robili",
+            "nonvirile": "robiły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "robi się"
+          },
+          "plural": {
+            "allPluralGenders": "robi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "robię"
+          },
+          "plural": {
+            "allPluralGenders": "robimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "robisz"
+          },
+          "plural": {
+            "allPluralGenders": "robicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "robi"
+          },
+          "plural": {
+            "allPluralGenders": "robią"
+          }
+        }
+      }
+    }
+  }
+}

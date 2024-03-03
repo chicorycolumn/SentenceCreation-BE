@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "formalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "formalny",
+          "gen": "formalnego",
+          "dat": "formalnemu",
+          "acc": "formalnego",
+          "ins": "formalnym",
+          "loc": "formalnym"
+        },
+        "m3": {
+          "nom": "formalny",
+          "gen": "formalnego",
+          "dat": "formalnemu",
+          "acc": "formalny",
+          "ins": "formalnym",
+          "loc": "formalnym"
+        },
+        "f": {
+          "nom": "formalna",
+          "gen": "formalnej",
+          "dat": "formalnej",
+          "acc": "formalną",
+          "ins": "formalną",
+          "loc": "formalnej"
+        },
+        "n": {
+          "nom": "formalne",
+          "gen": "formalnego",
+          "dat": "formalnemu",
+          "acc": "formalne",
+          "ins": "formalnym",
+          "loc": "formalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "formalni",
+          "gen": "formalnych",
+          "dat": "formalnym",
+          "acc": "formalnych",
+          "ins": "formalnymi",
+          "loc": "formalnych"
+        },
+        "nonvirile": {
+          "nom": "formalne",
+          "gen": "formalnych",
+          "dat": "formalnym",
+          "acc": "formalne",
+          "ins": "formalnymi",
+          "loc": "formalnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej formalny",
+          "gen": "bardziej formalnego",
+          "dat": "bardziej formalnemu",
+          "acc": "bardziej formalnego",
+          "ins": "bardziej formalnym",
+          "loc": "bardziej formalnym"
+        },
+        "m3": {
+          "nom": "bardziej formalny",
+          "gen": "bardziej formalnego",
+          "dat": "bardziej formalnemu",
+          "acc": "bardziej formalny",
+          "ins": "bardziej formalnym",
+          "loc": "bardziej formalnym"
+        },
+        "f": {
+          "nom": "bardziej formalna",
+          "gen": "bardziej formalnej",
+          "dat": "bardziej formalnej",
+          "acc": "bardziej formalną",
+          "ins": "bardziej formalną",
+          "loc": "bardziej formalnej"
+        },
+        "n": {
+          "nom": "bardziej formalne",
+          "gen": "bardziej formalnego",
+          "dat": "bardziej formalnemu",
+          "acc": "bardziej formalne",
+          "ins": "bardziej formalnym",
+          "loc": "bardziej formalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej formalni",
+          "gen": "bardziej formalnych",
+          "dat": "bardziej formalnym",
+          "acc": "bardziej formalnych",
+          "ins": "bardziej formalnymi",
+          "loc": "bardziej formalnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej formalne",
+          "gen": "bardziej formalnych",
+          "dat": "bardziej formalnym",
+          "acc": "bardziej formalne",
+          "ins": "bardziej formalnymi",
+          "loc": "bardziej formalnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej formalny",
+          "gen": "najbardziej formalnego",
+          "dat": "najbardziej formalnemu",
+          "acc": "najbardziej formalnego",
+          "ins": "najbardziej formalnym",
+          "loc": "najbardziej formalnym"
+        },
+        "m3": {
+          "nom": "najbardziej formalny",
+          "gen": "najbardziej formalnego",
+          "dat": "najbardziej formalnemu",
+          "acc": "najbardziej formalny",
+          "ins": "najbardziej formalnym",
+          "loc": "najbardziej formalnym"
+        },
+        "f": {
+          "nom": "najbardziej formalna",
+          "gen": "najbardziej formalnej",
+          "dat": "najbardziej formalnej",
+          "acc": "najbardziej formalną",
+          "ins": "najbardziej formalną",
+          "loc": "najbardziej formalnej"
+        },
+        "n": {
+          "nom": "najbardziej formalne",
+          "gen": "najbardziej formalnego",
+          "dat": "najbardziej formalnemu",
+          "acc": "najbardziej formalne",
+          "ins": "najbardziej formalnym",
+          "loc": "najbardziej formalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej formalni",
+          "gen": "najbardziej formalnych",
+          "dat": "najbardziej formalnym",
+          "acc": "najbardziej formalnych",
+          "ins": "najbardziej formalnymi",
+          "loc": "najbardziej formalnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej formalne",
+          "gen": "najbardziej formalnych",
+          "dat": "najbardziej formalnym",
+          "acc": "najbardziej formalne",
+          "ins": "najbardziej formalnymi",
+          "loc": "najbardziej formalnych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nuklearny",
+          "gen": "nuklearnego",
+          "dat": "nuklearnemu",
+          "acc": "nuklearnego",
+          "ins": "nuklearnym",
+          "loc": "nuklearnym"
+        },
+        "m3": {
+          "nom": "nuklearny",
+          "gen": "nuklearnego",
+          "dat": "nuklearnemu",
+          "acc": "nuklearny",
+          "ins": "nuklearnym",
+          "loc": "nuklearnym"
+        },
+        "f": {
+          "nom": "nuklearna",
+          "gen": "nuklearnej",
+          "dat": "nuklearnej",
+          "acc": "nuklearną",
+          "ins": "nuklearną",
+          "loc": "nuklearnej"
+        },
+        "n": {
+          "nom": "nuklearne",
+          "gen": "nuklearnego",
+          "dat": "nuklearnemu",
+          "acc": "nuklearne",
+          "ins": "nuklearnym",
+          "loc": "nuklearnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nuklearni",
+          "gen": "nuklearnych",
+          "dat": "nuklearnym",
+          "acc": "nuklearnych",
+          "ins": "nuklearnymi",
+          "loc": "nuklearnych"
+        },
+        "nonvirile": {
+          "nom": "nuklearne",
+          "gen": "nuklearnych",
+          "dat": "nuklearnym",
+          "acc": "nuklearne",
+          "ins": "nuklearnymi",
+          "loc": "nuklearnych"
+        }
+      }
+    }
+  }
+}

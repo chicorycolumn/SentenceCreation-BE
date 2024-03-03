@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "kosmicznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "kosmiczny",
+          "gen": "kosmicznego",
+          "dat": "kosmicznemu",
+          "acc": "kosmicznego",
+          "ins": "kosmicznym",
+          "loc": "kosmicznym"
+        },
+        "m3": {
+          "nom": "kosmiczny",
+          "gen": "kosmicznego",
+          "dat": "kosmicznemu",
+          "acc": "kosmiczny",
+          "ins": "kosmicznym",
+          "loc": "kosmicznym"
+        },
+        "f": {
+          "nom": "kosmiczna",
+          "gen": "kosmicznej",
+          "dat": "kosmicznej",
+          "acc": "kosmiczną",
+          "ins": "kosmiczną",
+          "loc": "kosmicznej"
+        },
+        "n": {
+          "nom": "kosmiczne",
+          "gen": "kosmicznego",
+          "dat": "kosmicznemu",
+          "acc": "kosmiczne",
+          "ins": "kosmicznym",
+          "loc": "kosmicznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "kosmiczni",
+          "gen": "kosmicznych",
+          "dat": "kosmicznym",
+          "acc": "kosmicznych",
+          "ins": "kosmicznymi",
+          "loc": "kosmicznych"
+        },
+        "nonvirile": {
+          "nom": "kosmiczne",
+          "gen": "kosmicznych",
+          "dat": "kosmicznym",
+          "acc": "kosmiczne",
+          "ins": "kosmicznymi",
+          "loc": "kosmicznych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "curse word",
+      "gen": "curse word's"
+    },
+    "plural": {
+      "nom": "curse words",
+      "gen": "curse words'"
+    }
+  }
+}

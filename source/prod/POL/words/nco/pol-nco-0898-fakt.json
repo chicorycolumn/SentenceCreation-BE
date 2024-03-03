@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "fakt",
+      "gen": "faktu",
+      "dat": "faktowi",
+      "acc": "fakt",
+      "ins": "faktem",
+      "loc": "fakcie",
+      "voc": "fakcie"
+    },
+    "plural": {
+      "nom": "fakty",
+      "gen": "faktów",
+      "dat": "faktom",
+      "acc": "fakty",
+      "ins": "faktami",
+      "loc": "faktach",
+      "voc": "fakty"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "sprzątać",
+    "verbalNoun": "sprzątanie",
+    "activeAdjectival": "sprzątający",
+    "passiveAdjectival": "sprzątany",
+    "contemporaryAdverbial": "sprzątając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "sprzątaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "sprzątano"
+          },
+          "plural": {
+            "allPluralGenders": "sprzątano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "sprzątałem",
+            "f": "sprzątałam"
+          },
+          "plural": {
+            "virile": "sprzątaliśmy",
+            "nonvirile": "sprzątałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "sprzątałeś",
+            "f": "sprzątałaś"
+          },
+          "plural": {
+            "virile": "sprzątaliście",
+            "nonvirile": "sprzątałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "sprzątał",
+            "f": "sprzątała",
+            "n": "sprzątało"
+          },
+          "plural": {
+            "virile": "sprzątali",
+            "nonvirile": "sprzątały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "sprząta się"
+          },
+          "plural": {
+            "allPluralGenders": "sprząta się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "sprzątam"
+          },
+          "plural": {
+            "allPluralGenders": "sprzątamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "sprzątasz"
+          },
+          "plural": {
+            "allPluralGenders": "sprzątacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "sprząta"
+          },
+          "plural": {
+            "allPluralGenders": "sprzątają"
+          }
+        }
+      }
+    }
+  }
+}

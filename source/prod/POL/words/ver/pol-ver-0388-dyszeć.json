@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dyszeć",
+    "verbalNoun": "dyszenie",
+    "activeAdjectival": "dyszący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "dysząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dysz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dyszano"
+          },
+          "plural": {
+            "allPluralGenders": "dyszano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dyszałem",
+            "f": "dyszałam"
+          },
+          "plural": {
+            "virile": "dyszeliśmy",
+            "nonvirile": "dyszałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dyszałeś",
+            "f": "dyszałaś"
+          },
+          "plural": {
+            "virile": "dyszeliście",
+            "nonvirile": "dyszałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dyszał",
+            "f": "dyszała",
+            "n": "dyszało"
+          },
+          "plural": {
+            "virile": "dyszeli",
+            "nonvirile": "dyszały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dyszy się"
+          },
+          "plural": {
+            "allPluralGenders": "dyszy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dyszę"
+          },
+          "plural": {
+            "allPluralGenders": "dyszymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dyszysz"
+          },
+          "plural": {
+            "allPluralGenders": "dyszycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dyszy"
+          },
+          "plural": {
+            "allPluralGenders": "dyszą"
+          }
+        }
+      }
+    }
+  }
+}

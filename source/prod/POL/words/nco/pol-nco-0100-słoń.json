@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "słoń",
+      "gen": "słonia",
+      "dat": "słoniowi",
+      "acc": "słonia",
+      "ins": "słoniem",
+      "loc": "słoniu",
+      "voc": "słoniu"
+    },
+    "plural": {
+      "nom": "słonie",
+      "gen": "słoni",
+      "dat": "słoniom",
+      "acc": "słonie",
+      "ins": "słoniami",
+      "loc": "słoniach",
+      "voc": "słonie"
+    }
+  }
+}

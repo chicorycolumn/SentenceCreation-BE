@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "poczekać",
+    "verbalNoun": "poczekanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "poczekawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poczeka się"
+          },
+          "plural": {
+            "allPluralGenders": "poczeka się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "poczekam"
+          },
+          "plural": {
+            "allPluralGenders": "poczekamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "poczekasz"
+          },
+          "plural": {
+            "allPluralGenders": "poczekacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "poczeka"
+          },
+          "plural": {
+            "allPluralGenders": "poczekają"
+          }
+        }
+      },
+      "imperative": "poczekaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poczekano"
+          },
+          "plural": {
+            "allPluralGenders": "poczekano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "poczekałem",
+            "f": "poczekałam"
+          },
+          "plural": {
+            "virile": "poczekaliśmy",
+            "nonvirile": "poczekałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "poczekałeś",
+            "f": "poczekałaś"
+          },
+          "plural": {
+            "virile": "poczekaliście",
+            "nonvirile": "poczekałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "poczekał",
+            "f": "poczekała",
+            "n": "poczekało"
+          },
+          "plural": {
+            "virile": "poczekali",
+            "nonvirile": "poczekały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

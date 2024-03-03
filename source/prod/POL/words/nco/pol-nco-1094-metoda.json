@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "metoda",
+      "gen": "metody",
+      "dat": "metodzie",
+      "acc": "metodę",
+      "ins": "metodą",
+      "loc": "metodzie",
+      "voc": "metodo"
+    },
+    "plural": {
+      "nom": "metody",
+      "gen": "metod",
+      "dat": "metodom",
+      "acc": "metody",
+      "ins": "metodami",
+      "loc": "metodach",
+      "voc": "metody"
+    }
+  }
+}

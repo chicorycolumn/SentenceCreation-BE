@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "podstępnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "podstępny",
+          "gen": "podstępnego",
+          "dat": "podstępnemu",
+          "acc": "podstępnego",
+          "ins": "podstępnym",
+          "loc": "podstępnym"
+        },
+        "m3": {
+          "nom": "podstępny",
+          "gen": "podstępnego",
+          "dat": "podstępnemu",
+          "acc": "podstępny",
+          "ins": "podstępnym",
+          "loc": "podstępnym"
+        },
+        "f": {
+          "nom": "podstępna",
+          "gen": "podstępnej",
+          "dat": "podstępnej",
+          "acc": "podstępną",
+          "ins": "podstępną",
+          "loc": "podstępnej"
+        },
+        "n": {
+          "nom": "podstępne",
+          "gen": "podstępnego",
+          "dat": "podstępnemu",
+          "acc": "podstępne",
+          "ins": "podstępnym",
+          "loc": "podstępnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "podstępni",
+          "gen": "podstępnych",
+          "dat": "podstępnym",
+          "acc": "podstępnych",
+          "ins": "podstępnymi",
+          "loc": "podstępnych"
+        },
+        "nonvirile": {
+          "nom": "podstępne",
+          "gen": "podstępnych",
+          "dat": "podstępnym",
+          "acc": "podstępne",
+          "ins": "podstępnymi",
+          "loc": "podstępnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "podstępniejszy",
+          "gen": "podstępniejszego",
+          "dat": "podstępniejszemu",
+          "acc": "podstępniejszego",
+          "ins": "podstępniejszym",
+          "loc": "podstępniejszym"
+        },
+        "m3": {
+          "nom": "podstępniejszy",
+          "gen": "podstępniejszego",
+          "dat": "podstępniejszemu",
+          "acc": "podstępniejszy",
+          "ins": "podstępniejszym",
+          "loc": "podstępniejszym"
+        },
+        "f": {
+          "nom": "podstępniejsza",
+          "gen": "podstępniejszej",
+          "dat": "podstępniejszej",
+          "acc": "podstępniejszą",
+          "ins": "podstępniejszą",
+          "loc": "podstępniejszej"
+        },
+        "n": {
+          "nom": "podstępniejsze",
+          "gen": "podstępniejszego",
+          "dat": "podstępniejszemu",
+          "acc": "podstępniejsze",
+          "ins": "podstępniejszym",
+          "loc": "podstępniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "podstępniejsi",
+          "gen": "podstępniejszych",
+          "dat": "podstępniejszym",
+          "acc": "podstępniejszych",
+          "ins": "podstępniejszymi",
+          "loc": "podstępniejszych"
+        },
+        "nonvirile": {
+          "nom": "podstępniejsze",
+          "gen": "podstępniejszych",
+          "dat": "podstępniejszym",
+          "acc": "podstępniejsze",
+          "ins": "podstępniejszymi",
+          "loc": "podstępniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najpodstępniejszy",
+          "gen": "najpodstępniejszego",
+          "dat": "najpodstępniejszemu",
+          "acc": "najpodstępniejszego",
+          "ins": "najpodstępniejszym",
+          "loc": "najpodstępniejszym"
+        },
+        "m3": {
+          "nom": "najpodstępniejszy",
+          "gen": "najpodstępniejszego",
+          "dat": "najpodstępniejszemu",
+          "acc": "najpodstępniejszy",
+          "ins": "najpodstępniejszym",
+          "loc": "najpodstępniejszym"
+        },
+        "f": {
+          "nom": "najpodstępniejsza",
+          "gen": "najpodstępniejszej",
+          "dat": "najpodstępniejszej",
+          "acc": "najpodstępniejszą",
+          "ins": "najpodstępniejszą",
+          "loc": "najpodstępniejszej"
+        },
+        "n": {
+          "nom": "najpodstępniejsze",
+          "gen": "najpodstępniejszego",
+          "dat": "najpodstępniejszemu",
+          "acc": "najpodstępniejsze",
+          "ins": "najpodstępniejszym",
+          "loc": "najpodstępniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najpodstępniejsi",
+          "gen": "najpodstępniejszych",
+          "dat": "najpodstępniejszym",
+          "acc": "najpodstępniejszych",
+          "ins": "najpodstępniejszymi",
+          "loc": "najpodstępniejszych"
+        },
+        "nonvirile": {
+          "nom": "najpodstępniejsze",
+          "gen": "najpodstępniejszych",
+          "dat": "najpodstępniejszym",
+          "acc": "najpodstępniejsze",
+          "ins": "najpodstępniejszymi",
+          "loc": "najpodstępniejszych"
+        }
+      }
+    }
+  }
+}

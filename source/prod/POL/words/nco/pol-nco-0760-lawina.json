@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lawina",
+      "gen": "lawiny",
+      "dat": "lawinie",
+      "acc": "lawinę",
+      "ins": "lawiną",
+      "loc": "lawinie",
+      "voc": "lawino"
+    },
+    "plural": {
+      "nom": "lawiny",
+      "gen": "lawin",
+      "dat": "lawinom",
+      "acc": "lawiny",
+      "ins": "lawinami",
+      "loc": "lawinach",
+      "voc": "lawiny"
+    }
+  }
+}

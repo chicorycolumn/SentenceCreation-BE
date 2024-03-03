@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ostrzegać",
+    "verbalNoun": "ostrzeganie",
+    "activeAdjectival": "ostrzegający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "ostrzegając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "ostrzegaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ostrzegano"
+          },
+          "plural": {
+            "allPluralGenders": "ostrzegano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ostrzegałem",
+            "f": "ostrzegałam"
+          },
+          "plural": {
+            "virile": "ostrzegaliśmy",
+            "nonvirile": "ostrzegałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ostrzegałeś",
+            "f": "ostrzegałaś"
+          },
+          "plural": {
+            "virile": "ostrzegaliście",
+            "nonvirile": "ostrzegałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ostrzegał",
+            "f": "ostrzegała",
+            "n": "ostrzegało"
+          },
+          "plural": {
+            "virile": "ostrzegali",
+            "nonvirile": "ostrzegały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ostrzega się"
+          },
+          "plural": {
+            "allPluralGenders": "ostrzega się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ostrzegam"
+          },
+          "plural": {
+            "allPluralGenders": "ostrzegamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ostrzegasz"
+          },
+          "plural": {
+            "allPluralGenders": "ostrzegacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ostrzega"
+          },
+          "plural": {
+            "allPluralGenders": "ostrzegają"
+          }
+        }
+      }
+    }
+  }
+}

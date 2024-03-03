@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ryzyko",
+      "gen": "ryzyka",
+      "dat": "ryzyku",
+      "acc": "ryzyko",
+      "ins": "ryzykiem",
+      "loc": "ryzyku",
+      "voc": "ryzyko"
+    },
+    "plural": {
+      "nom": "ryzyka",
+      "gen": "ryzyk",
+      "dat": "ryzykom",
+      "acc": "ryzyka",
+      "ins": "ryzykami",
+      "loc": "ryzykach",
+      "voc": "ryzyka"
+    }
+  }
+}

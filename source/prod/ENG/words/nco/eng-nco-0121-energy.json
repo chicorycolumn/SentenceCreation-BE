@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "energy",
+      "gen": "energy's"
+    },
+    "plural": {
+      "nom": "energies",
+      "gen": "energies'"
+    }
+  }
+}

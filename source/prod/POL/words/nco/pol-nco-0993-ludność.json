@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ludność",
+      "gen": "ludności",
+      "dat": "ludności",
+      "acc": "ludność",
+      "ins": "ludnością",
+      "loc": "ludności",
+      "voc": "ludności"
+    }
+  }
+}

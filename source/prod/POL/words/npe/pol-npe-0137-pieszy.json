@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pieszy",
+      "gen": "pieszego",
+      "dat": "pieszemu",
+      "acc": "pieszego",
+      "ins": "pieszym",
+      "loc": "pieszym",
+      "voc": "pieszy"
+    },
+    "plural": {
+      "nom": "piesi",
+      "gen": "pieszych",
+      "dat": "pieszym",
+      "acc": "pieszych",
+      "ins": "pieszymi",
+      "loc": "pieszych",
+      "voc": "piesi"
+    }
+  }
+}

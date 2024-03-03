@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zamykać",
+    "verbalNoun": "zamykanie",
+    "activeAdjectival": "zamykający",
+    "passiveAdjectival": "zamykany",
+    "contemporaryAdverbial": "zamykając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "zamykaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zamykano"
+          },
+          "plural": {
+            "allPluralGenders": "zamykano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zamykałem",
+            "f": "zamykałam"
+          },
+          "plural": {
+            "virile": "zamykaliśmy",
+            "nonvirile": "zamykałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zamykałeś",
+            "f": "zamykałaś"
+          },
+          "plural": {
+            "virile": "zamykaliście",
+            "nonvirile": "zamykałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zamykał",
+            "f": "zamykała",
+            "n": "zamykało"
+          },
+          "plural": {
+            "virile": "zamykali",
+            "nonvirile": "zamykały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zamyka się"
+          },
+          "plural": {
+            "allPluralGenders": "zamyka się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zamykam"
+          },
+          "plural": {
+            "allPluralGenders": "zamykamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zamykasz"
+          },
+          "plural": {
+            "allPluralGenders": "zamykacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zamyka"
+          },
+          "plural": {
+            "allPluralGenders": "zamykają"
+          }
+        }
+      }
+    }
+  }
+}

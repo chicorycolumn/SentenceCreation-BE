@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dzięcioł",
+      "gen": "dzięcioła",
+      "dat": "dzięciołowi",
+      "acc": "dzięcioła",
+      "ins": "dzięciołem",
+      "loc": "dzięciole",
+      "voc": "dzięciole"
+    },
+    "plural": {
+      "nom": "dzięcioły",
+      "gen": "dzięciołów",
+      "dat": "dzięciołom",
+      "acc": "dzięcioły",
+      "ins": "dzięciołami",
+      "loc": "dzięciołach",
+      "voc": "dzięcioły"
+    }
+  }
+}

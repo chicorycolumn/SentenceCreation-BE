@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "talerz",
+      "gen": "talerza",
+      "dat": "talerzowi",
+      "acc": "talerz",
+      "ins": "talerzem",
+      "loc": "talerzu",
+      "voc": "talerzu"
+    },
+    "plural": {
+      "nom": "talerze",
+      "gen": "talerzy",
+      "dat": "talerzom",
+      "acc": "talerze",
+      "ins": "talerzami",
+      "loc": "talerzach",
+      "voc": "talerze"
+    }
+  }
+}

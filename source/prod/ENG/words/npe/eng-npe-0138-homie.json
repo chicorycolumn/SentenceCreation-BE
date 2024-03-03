@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "homie",
+      "gen": "homie's"
+    },
+    "plural": {
+      "nom": "homies",
+      "gen": "homies'"
+    }
+  }
+}

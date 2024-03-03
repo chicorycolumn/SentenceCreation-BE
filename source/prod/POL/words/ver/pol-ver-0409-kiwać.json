@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "kiwać",
+    "verbalNoun": "kiwanie",
+    "activeAdjectival": "kiwający",
+    "passiveAdjectival": "kiwany",
+    "contemporaryAdverbial": "kiwając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "kiwaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kiwano"
+          },
+          "plural": {
+            "allPluralGenders": "kiwano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "kiwałem",
+            "f": "kiwałam"
+          },
+          "plural": {
+            "virile": "kiwaliśmy",
+            "nonvirile": "kiwałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "kiwałeś",
+            "f": "kiwałaś"
+          },
+          "plural": {
+            "virile": "kiwaliście",
+            "nonvirile": "kiwałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "kiwał",
+            "f": "kiwała",
+            "n": "kiwało"
+          },
+          "plural": {
+            "virile": "kiwali",
+            "nonvirile": "kiwały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kiwa się"
+          },
+          "plural": {
+            "allPluralGenders": "kiwa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "kiwam"
+          },
+          "plural": {
+            "allPluralGenders": "kiwamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "kiwasz"
+          },
+          "plural": {
+            "allPluralGenders": "kiwacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "kiwa"
+          },
+          "plural": {
+            "allPluralGenders": "kiwają"
+          }
+        }
+      }
+    }
+  }
+}

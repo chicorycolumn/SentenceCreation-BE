@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "politycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "polityczny",
+          "gen": "politycznego",
+          "dat": "politycznemu",
+          "acc": "politycznego",
+          "ins": "politycznym",
+          "loc": "politycznym"
+        },
+        "m3": {
+          "nom": "polityczny",
+          "gen": "politycznego",
+          "dat": "politycznemu",
+          "acc": "polityczny",
+          "ins": "politycznym",
+          "loc": "politycznym"
+        },
+        "f": {
+          "nom": "polityczna",
+          "gen": "politycznej",
+          "dat": "politycznej",
+          "acc": "polityczną",
+          "ins": "polityczną",
+          "loc": "politycznej"
+        },
+        "n": {
+          "nom": "polityczne",
+          "gen": "politycznego",
+          "dat": "politycznemu",
+          "acc": "polityczne",
+          "ins": "politycznym",
+          "loc": "politycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "polityczni",
+          "gen": "politycznych",
+          "dat": "politycznym",
+          "acc": "politycznych",
+          "ins": "politycznymi",
+          "loc": "politycznych"
+        },
+        "nonvirile": {
+          "nom": "polityczne",
+          "gen": "politycznych",
+          "dat": "politycznym",
+          "acc": "polityczne",
+          "ins": "politycznymi",
+          "loc": "politycznych"
+        }
+      }
+    }
+  }
+}

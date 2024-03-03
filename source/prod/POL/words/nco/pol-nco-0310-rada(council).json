@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rada",
+      "gen": "rady",
+      "dat": "radzie",
+      "acc": "radę",
+      "ins": "radą",
+      "loc": "radzie",
+      "voc": "rado"
+    },
+    "plural": {
+      "nom": "rady",
+      "gen": "rad",
+      "dat": "radom",
+      "acc": "rady",
+      "ins": "radami",
+      "loc": "radach",
+      "voc": "rady"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "ponuro",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ponury",
+          "gen": "ponurego",
+          "dat": "ponuremu",
+          "acc": "ponurego",
+          "ins": "ponurym",
+          "loc": "ponurym"
+        },
+        "m3": {
+          "nom": "ponury",
+          "gen": "ponurego",
+          "dat": "ponuremu",
+          "acc": "ponury",
+          "ins": "ponurym",
+          "loc": "ponurym"
+        },
+        "f": {
+          "nom": "ponura",
+          "gen": "ponurej",
+          "dat": "ponurej",
+          "acc": "ponurą",
+          "ins": "ponurą",
+          "loc": "ponurej"
+        },
+        "n": {
+          "nom": "ponure",
+          "gen": "ponurego",
+          "dat": "ponuremu",
+          "acc": "ponure",
+          "ins": "ponurym",
+          "loc": "ponurym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ponurzy",
+          "gen": "ponurych",
+          "dat": "ponurym",
+          "acc": "ponurych",
+          "ins": "ponurymi",
+          "loc": "ponurych"
+        },
+        "nonvirile": {
+          "nom": "ponure",
+          "gen": "ponurych",
+          "dat": "ponurym",
+          "acc": "ponure",
+          "ins": "ponurymi",
+          "loc": "ponurych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej ponury",
+          "gen": "bardziej ponurego",
+          "dat": "bardziej ponuremu",
+          "acc": "bardziej ponurego",
+          "ins": "bardziej ponurym",
+          "loc": "bardziej ponurym"
+        },
+        "m3": {
+          "nom": "bardziej ponury",
+          "gen": "bardziej ponurego",
+          "dat": "bardziej ponuremu",
+          "acc": "bardziej ponury",
+          "ins": "bardziej ponurym",
+          "loc": "bardziej ponurym"
+        },
+        "f": {
+          "nom": "bardziej ponura",
+          "gen": "bardziej ponurej",
+          "dat": "bardziej ponurej",
+          "acc": "bardziej ponurą",
+          "ins": "bardziej ponurą",
+          "loc": "bardziej ponurej"
+        },
+        "n": {
+          "nom": "bardziej ponure",
+          "gen": "bardziej ponurego",
+          "dat": "bardziej ponuremu",
+          "acc": "bardziej ponure",
+          "ins": "bardziej ponurym",
+          "loc": "bardziej ponurym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej ponurzy",
+          "gen": "bardziej ponurych",
+          "dat": "bardziej ponurym",
+          "acc": "bardziej ponurych",
+          "ins": "bardziej ponurymi",
+          "loc": "bardziej ponurych"
+        },
+        "nonvirile": {
+          "nom": "bardziej ponure",
+          "gen": "bardziej ponurych",
+          "dat": "bardziej ponurym",
+          "acc": "bardziej ponure",
+          "ins": "bardziej ponurymi",
+          "loc": "bardziej ponurych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej ponury",
+          "gen": "najbardziej ponurego",
+          "dat": "najbardziej ponuremu",
+          "acc": "najbardziej ponurego",
+          "ins": "najbardziej ponurym",
+          "loc": "najbardziej ponurym"
+        },
+        "m3": {
+          "nom": "najbardziej ponury",
+          "gen": "najbardziej ponurego",
+          "dat": "najbardziej ponuremu",
+          "acc": "najbardziej ponury",
+          "ins": "najbardziej ponurym",
+          "loc": "najbardziej ponurym"
+        },
+        "f": {
+          "nom": "najbardziej ponura",
+          "gen": "najbardziej ponurej",
+          "dat": "najbardziej ponurej",
+          "acc": "najbardziej ponurą",
+          "ins": "najbardziej ponurą",
+          "loc": "najbardziej ponurej"
+        },
+        "n": {
+          "nom": "najbardziej ponure",
+          "gen": "najbardziej ponurego",
+          "dat": "najbardziej ponuremu",
+          "acc": "najbardziej ponure",
+          "ins": "najbardziej ponurym",
+          "loc": "najbardziej ponurym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej ponurzy",
+          "gen": "najbardziej ponurych",
+          "dat": "najbardziej ponurym",
+          "acc": "najbardziej ponurych",
+          "ins": "najbardziej ponurymi",
+          "loc": "najbardziej ponurych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej ponure",
+          "gen": "najbardziej ponurych",
+          "dat": "najbardziej ponurym",
+          "acc": "najbardziej ponure",
+          "ins": "najbardziej ponurymi",
+          "loc": "najbardziej ponurych"
+        }
+      }
+    }
+  }
+}

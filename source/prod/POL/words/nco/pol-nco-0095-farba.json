@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "farba",
+      "gen": "farby",
+      "dat": "farbie",
+      "acc": "farbę",
+      "ins": "farbą",
+      "loc": "farbie",
+      "voc": "farbo"
+    },
+    "plural": {
+      "nom": "farby",
+      "gen": "farb",
+      "dat": "farbom",
+      "acc": "farby",
+      "ins": "farbami",
+      "loc": "farbach",
+      "voc": "farby"
+    }
+  }
+}

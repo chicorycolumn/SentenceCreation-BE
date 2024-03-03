@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "życie",
+      "gen": "życia",
+      "dat": "życiu",
+      "acc": "życie",
+      "ins": "życiem",
+      "loc": "życiu",
+      "voc": "życie"
+    },
+    "plural": {
+      "nom": "życia",
+      "gen": "żyć",
+      "dat": "życiom",
+      "acc": "życia",
+      "ins": "życiami",
+      "loc": "życiach",
+      "voc": "życia"
+    }
+  }
+}

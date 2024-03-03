@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przejmować",
+    "verbalNoun": "przejmowanie",
+    "activeAdjectival": "przejmujący",
+    "passiveAdjectival": "przejmowany",
+    "contemporaryAdverbial": "przejmując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przejmuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przejmowano"
+          },
+          "plural": {
+            "allPluralGenders": "przejmowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przejmowałem",
+            "f": "przejmowałam"
+          },
+          "plural": {
+            "virile": "przejmowaliśmy",
+            "nonvirile": "przejmowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przejmowałeś",
+            "f": "przejmowałaś"
+          },
+          "plural": {
+            "virile": "przejmowaliście",
+            "nonvirile": "przejmowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przejmował",
+            "f": "przejmowała",
+            "n": "przejmowało"
+          },
+          "plural": {
+            "virile": "przejmowali",
+            "nonvirile": "przejmowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przejmuje się"
+          },
+          "plural": {
+            "allPluralGenders": "przejmuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przejmuję"
+          },
+          "plural": {
+            "allPluralGenders": "przejmujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przejmujesz"
+          },
+          "plural": {
+            "allPluralGenders": "przejmujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przejmuje"
+          },
+          "plural": {
+            "allPluralGenders": "przejmują"
+          }
+        }
+      }
+    }
+  }
+}

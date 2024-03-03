@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "porozmawiać",
+    "verbalNoun": "porozmawianie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "porozmawiawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "porozmawia się"
+          },
+          "plural": {
+            "allPluralGenders": "porozmawia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "porozmawiam"
+          },
+          "plural": {
+            "allPluralGenders": "porozmawiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "porozmawiasz"
+          },
+          "plural": {
+            "allPluralGenders": "porozmawiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "porozmawia"
+          },
+          "plural": {
+            "allPluralGenders": "porozmawiają"
+          }
+        }
+      },
+      "imperative": "porozmawiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "porozmawiano"
+          },
+          "plural": {
+            "allPluralGenders": "porozmawiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "porozmawiałem",
+            "f": "porozmawiałam"
+          },
+          "plural": {
+            "virile": "porozmawialiśmy",
+            "nonvirile": "porozmawiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "porozmawiałeś",
+            "f": "porozmawiałaś"
+          },
+          "plural": {
+            "virile": "porozmawialiście",
+            "nonvirile": "porozmawiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "porozmawiał",
+            "f": "porozmawiała",
+            "n": "porozmawiało"
+          },
+          "plural": {
+            "virile": "porozmawiali",
+            "nonvirile": "porozmawiały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

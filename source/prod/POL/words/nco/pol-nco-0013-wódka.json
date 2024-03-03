@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wódka",
+      "gen": "wódki",
+      "dat": "wódce",
+      "acc": "wódkę",
+      "ins": "wódką",
+      "loc": "wódce",
+      "voc": "wódko"
+    },
+    "plural": {
+      "nom": "wódki",
+      "gen": "wódek",
+      "dat": "wódkom",
+      "acc": "wódki",
+      "ins": "wódkami",
+      "loc": "wódkach",
+      "voc": "wódki"
+    }
+  }
+}

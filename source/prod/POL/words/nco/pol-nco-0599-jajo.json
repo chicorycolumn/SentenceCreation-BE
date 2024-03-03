@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "jajo",
+      "gen": "jaja",
+      "dat": "jaju",
+      "acc": "jajo",
+      "ins": "jajem",
+      "loc": "jaju",
+      "voc": "jajo"
+    },
+    "plural": {
+      "nom": "jaja",
+      "gen": "jaj",
+      "dat": "jajom",
+      "acc": "jaja",
+      "ins": "jajami",
+      "loc": "jajach",
+      "voc": "jaja"
+    }
+  }
+}

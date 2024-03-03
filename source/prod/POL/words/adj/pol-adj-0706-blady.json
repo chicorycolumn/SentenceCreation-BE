@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "blado",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "blady",
+          "gen": "bladego",
+          "dat": "blademu",
+          "acc": "bladego",
+          "ins": "bladym",
+          "loc": "bladym"
+        },
+        "m3": {
+          "nom": "blady",
+          "gen": "bladego",
+          "dat": "blademu",
+          "acc": "blady",
+          "ins": "bladym",
+          "loc": "bladym"
+        },
+        "f": {
+          "nom": "blada",
+          "gen": "bladej",
+          "dat": "bladej",
+          "acc": "bladą",
+          "ins": "bladą",
+          "loc": "bladej"
+        },
+        "n": {
+          "nom": "blade",
+          "gen": "bladego",
+          "dat": "blademu",
+          "acc": "blade",
+          "ins": "bladym",
+          "loc": "bladym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bladzi",
+          "gen": "bladych",
+          "dat": "bladym",
+          "acc": "bladych",
+          "ins": "bladymi",
+          "loc": "bladych"
+        },
+        "nonvirile": {
+          "nom": "blade",
+          "gen": "bladych",
+          "dat": "bladym",
+          "acc": "blade",
+          "ins": "bladymi",
+          "loc": "bladych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "bladszy",
+              "bledszy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "bladszego",
+              "bledszego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "bladszemu",
+              "bledszemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "bladszego",
+              "bledszego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "bladszym",
+              "bledszym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "bladszym",
+              "bledszym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "bladszy",
+              "bledszy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "bladszego",
+              "bledszego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "bladszemu",
+              "bledszemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "bladszy",
+              "bledszy"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "bladszym",
+              "bledszym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "bladszym",
+              "bledszym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "bladsza",
+              "bledsza"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "bladszej",
+              "bledszej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "bladszej",
+              "bledszej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "bladszą",
+              "bledszą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "bladszą",
+              "bledszą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "bladszej",
+              "bledszej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "bladsze",
+              "bledsze"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "bladszego",
+              "bledszego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "bladszemu",
+              "bledszemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "bladsze",
+              "bledsze"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "bladszym",
+              "bledszym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "bladszym",
+              "bledszym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "bladsi",
+              "bledsi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "bladszych",
+              "bledszych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "bladszym",
+              "bledszym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "bladszych",
+              "bledszych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "bladszymi",
+              "bledszymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "bladszych",
+              "bledszych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "bladsze",
+              "bledsze"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "bladszych",
+              "bledszych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "bladszym",
+              "bledszym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "bladsze",
+              "bledsze"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "bladszymi",
+              "bledszymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "bladszych",
+              "bledszych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszy",
+              "najbledszy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszego",
+              "najbledszego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszemu",
+              "najbledszemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszego",
+              "najbledszego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszym",
+              "najbledszym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszym",
+              "najbledszym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszy",
+              "najbledszy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszego",
+              "najbledszego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszemu",
+              "najbledszemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszy",
+              "najbledszy"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszym",
+              "najbledszym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszym",
+              "najbledszym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najbladsza",
+              "najbledsza"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszej",
+              "najbledszej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszej",
+              "najbledszej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszą",
+              "najbledszą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszą",
+              "najbledszą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszej",
+              "najbledszej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najbladsze",
+              "najbledsze"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszego",
+              "najbledszego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszemu",
+              "najbledszemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najbladsze",
+              "najbledsze"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszym",
+              "najbledszym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszym",
+              "najbledszym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najbladsi",
+              "najbledsi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszych",
+              "najbledszych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszym",
+              "najbledszym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszych",
+              "najbledszych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszymi",
+              "najbledszymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszych",
+              "najbledszych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najbladsze",
+              "najbledsze"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszych",
+              "najbledszych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszym",
+              "najbledszym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najbladsze",
+              "najbledsze"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszymi",
+              "najbledszymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najbladszych",
+              "najbledszych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

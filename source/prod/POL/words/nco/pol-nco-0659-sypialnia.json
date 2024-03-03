@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sypialnia",
+      "gen": "sypialni",
+      "dat": "sypialni",
+      "acc": "sypialnię",
+      "ins": "sypialnią",
+      "loc": "sypialni",
+      "voc": "sypialnio"
+    },
+    "plural": {
+      "nom": "sypialnie",
+      "gen": [
+        "sypialni",
+        "sypialń"
+      ],
+      "dat": "sypialniom",
+      "acc": "sypialnie",
+      "ins": "sypialniami",
+      "loc": "sypialniach",
+      "voc": "sypialnie"
+    }
+  }
+}

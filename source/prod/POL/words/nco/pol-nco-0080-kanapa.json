@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kanapa",
+      "gen": "kanapy",
+      "dat": "kanapie",
+      "acc": "kanapę",
+      "ins": "kanapą",
+      "loc": "kanapie",
+      "voc": "kanapo"
+    },
+    "plural": {
+      "nom": "kanapy",
+      "gen": "kanap",
+      "dat": "kanapom",
+      "acc": "kanapy",
+      "ins": "kanapami",
+      "loc": "kanapach",
+      "voc": "kanapy"
+    }
+  }
+}

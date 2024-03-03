@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "płot",
+      "gen": "płotu",
+      "dat": "płotowi",
+      "acc": "płot",
+      "ins": "płotem",
+      "loc": "płocie",
+      "voc": "płocie"
+    },
+    "plural": {
+      "nom": "płoty",
+      "gen": "płotów",
+      "dat": "płotom",
+      "acc": "płoty",
+      "ins": "płotami",
+      "loc": "płotach",
+      "voc": "płoty"
+    }
+  }
+}

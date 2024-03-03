@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "morski",
+          "gen": "morskiego",
+          "dat": "morskiemu",
+          "acc": "morskiego",
+          "ins": "morskim",
+          "loc": "morskim"
+        },
+        "m3": {
+          "nom": "morski",
+          "gen": "morskiego",
+          "dat": "morskiemu",
+          "acc": "morski",
+          "ins": "morskim",
+          "loc": "morskim"
+        },
+        "f": {
+          "nom": "morska",
+          "gen": "morskiej",
+          "dat": "morskiej",
+          "acc": "morską",
+          "ins": "morską",
+          "loc": "morskiej"
+        },
+        "n": {
+          "nom": "morskie",
+          "gen": "morskiego",
+          "dat": "morskiemu",
+          "acc": "morskie",
+          "ins": "morskim",
+          "loc": "morskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "morscy",
+          "gen": "morskich",
+          "dat": "morskim",
+          "acc": "morskich",
+          "ins": "morskimi",
+          "loc": "morskich"
+        },
+        "nonvirile": {
+          "nom": "morskie",
+          "gen": "morskich",
+          "dat": "morskim",
+          "acc": "morskie",
+          "ins": "morskimi",
+          "loc": "morskich"
+        }
+      }
+    }
+  }
+}

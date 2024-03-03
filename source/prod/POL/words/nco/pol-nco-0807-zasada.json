@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zasada",
+      "gen": "zasady",
+      "dat": "zasadzie",
+      "acc": "zasadę",
+      "ins": "zasadą",
+      "loc": "zasadzie",
+      "voc": "zasado"
+    },
+    "plural": {
+      "nom": "zasady",
+      "gen": "zasad",
+      "dat": "zasadom",
+      "acc": "zasady",
+      "ins": "zasadami",
+      "loc": "zasadach",
+      "voc": "zasady"
+    }
+  }
+}

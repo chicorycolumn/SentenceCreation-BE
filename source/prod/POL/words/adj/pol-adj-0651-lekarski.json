@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "lekarsko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "lekarski",
+          "gen": "lekarskiego",
+          "dat": "lekarskiemu",
+          "acc": "lekarskiego",
+          "ins": "lekarskim",
+          "loc": "lekarskim"
+        },
+        "m3": {
+          "nom": "lekarski",
+          "gen": "lekarskiego",
+          "dat": "lekarskiemu",
+          "acc": "lekarski",
+          "ins": "lekarskim",
+          "loc": "lekarskim"
+        },
+        "f": {
+          "nom": "lekarska",
+          "gen": "lekarskiej",
+          "dat": "lekarskiej",
+          "acc": "lekarską",
+          "ins": "lekarską",
+          "loc": "lekarskiej"
+        },
+        "n": {
+          "nom": "lekarskie",
+          "gen": "lekarskiego",
+          "dat": "lekarskiemu",
+          "acc": "lekarskie",
+          "ins": "lekarskim",
+          "loc": "lekarskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "lekarscy",
+          "gen": "lekarskich",
+          "dat": "lekarskim",
+          "acc": "lekarskich",
+          "ins": "lekarskimi",
+          "loc": "lekarskich"
+        },
+        "nonvirile": {
+          "nom": "lekarskie",
+          "gen": "lekarskich",
+          "dat": "lekarskim",
+          "acc": "lekarskie",
+          "ins": "lekarskimi",
+          "loc": "lekarskich"
+        }
+      }
+    }
+  }
+}

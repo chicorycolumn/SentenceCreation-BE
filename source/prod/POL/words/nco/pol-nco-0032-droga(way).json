@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "droga",
+      "gen": "drogi",
+      "dat": "drodze",
+      "acc": "drogę",
+      "ins": "drogą",
+      "loc": "drodze",
+      "voc": "drogo"
+    },
+    "plural": {
+      "nom": "drogi",
+      "gen": "dróg",
+      "dat": "drogom",
+      "acc": "drogi",
+      "ins": "drogami",
+      "loc": "drogach",
+      "voc": "drogi"
+    }
+  }
+}

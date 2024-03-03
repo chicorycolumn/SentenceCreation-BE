@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odwiedzać",
+    "verbalNoun": "odwiedzanie",
+    "activeAdjectival": "odwiedzający",
+    "passiveAdjectival": "odwiedzany",
+    "contemporaryAdverbial": "odwiedzając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odwiedzaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odwiedzano"
+          },
+          "plural": {
+            "allPluralGenders": "odwiedzano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odwiedzałem",
+            "f": "odwiedzałam"
+          },
+          "plural": {
+            "virile": "odwiedzaliśmy",
+            "nonvirile": "odwiedzałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odwiedzałeś",
+            "f": "odwiedzałaś"
+          },
+          "plural": {
+            "virile": "odwiedzaliście",
+            "nonvirile": "odwiedzałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odwiedzał",
+            "f": "odwiedzała",
+            "n": "odwiedzało"
+          },
+          "plural": {
+            "virile": "odwiedzali",
+            "nonvirile": "odwiedzały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odwiedza się"
+          },
+          "plural": {
+            "allPluralGenders": "odwiedza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odwiedzam"
+          },
+          "plural": {
+            "allPluralGenders": "odwiedzamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odwiedzasz"
+          },
+          "plural": {
+            "allPluralGenders": "odwiedzacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odwiedza"
+          },
+          "plural": {
+            "allPluralGenders": "odwiedzają"
+          }
+        }
+      }
+    }
+  }
+}

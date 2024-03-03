@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nazywać",
+    "verbalNoun": "nazywanie",
+    "activeAdjectival": "nazywający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "nazywając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "nazywaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nazywano"
+          },
+          "plural": {
+            "allPluralGenders": "nazywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nazywałem",
+            "f": "nazywałam"
+          },
+          "plural": {
+            "virile": "nazywaliśmy",
+            "nonvirile": "nazywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nazywałeś",
+            "f": "nazywałaś"
+          },
+          "plural": {
+            "virile": "nazywaliście",
+            "nonvirile": "nazywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nazywał",
+            "f": "nazywała",
+            "n": "nazywało"
+          },
+          "plural": {
+            "virile": "nazywali",
+            "nonvirile": "nazywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nazywa się"
+          },
+          "plural": {
+            "allPluralGenders": "nazywa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nazywam"
+          },
+          "plural": {
+            "allPluralGenders": "nazywamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nazywasz"
+          },
+          "plural": {
+            "allPluralGenders": "nazywacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nazywa"
+          },
+          "plural": {
+            "allPluralGenders": "nazywają"
+          }
+        }
+      }
+    }
+  }
+}

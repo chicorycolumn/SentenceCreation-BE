@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mit",
+      "gen": "mitu",
+      "dat": "mitowi",
+      "acc": "mit",
+      "ins": "mitem",
+      "loc": "micie",
+      "voc": "micie"
+    },
+    "plural": {
+      "nom": "mity",
+      "gen": "mitów",
+      "dat": "mitom",
+      "acc": "mity",
+      "ins": "mitami",
+      "loc": "mitach",
+      "voc": "mity"
+    }
+  }
+}

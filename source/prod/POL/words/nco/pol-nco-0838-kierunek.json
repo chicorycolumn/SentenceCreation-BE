@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kierunek",
+      "gen": "kierunku",
+      "dat": "kierunkowi",
+      "acc": "kierunek",
+      "ins": "kierunkiem",
+      "loc": "kierunku",
+      "voc": "kierunku"
+    },
+    "plural": {
+      "nom": "kierunki",
+      "gen": "kierunków",
+      "dat": "kierunkom",
+      "acc": "kierunki",
+      "ins": "kierunkami",
+      "loc": "kierunkach",
+      "voc": "kierunki"
+    }
+  }
+}

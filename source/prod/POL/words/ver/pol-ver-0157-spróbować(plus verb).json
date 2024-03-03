@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "spróbować",
+    "verbalNoun": "spróbowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "spróbowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "spróbowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "spróbuje się"
+          },
+          "plural": {
+            "allPluralGenders": "spróbuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "spróbuję"
+          },
+          "plural": {
+            "allPluralGenders": "spróbujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "spróbujesz"
+          },
+          "plural": {
+            "allPluralGenders": "spróbujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "spróbuje"
+          },
+          "plural": {
+            "allPluralGenders": "spróbują"
+          }
+        }
+      },
+      "imperative": "spróbuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "spróbowano"
+          },
+          "plural": {
+            "allPluralGenders": "spróbowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "spróbowałem",
+            "f": "spróbowałam"
+          },
+          "plural": {
+            "virile": "spróbowaliśmy",
+            "nonvirile": "spróbowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "spróbowałeś",
+            "f": "spróbowałaś"
+          },
+          "plural": {
+            "virile": "spróbowaliście",
+            "nonvirile": "spróbowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "spróbował",
+            "f": "spróbowała",
+            "n": "spróbowało"
+          },
+          "plural": {
+            "virile": "spróbowali",
+            "nonvirile": "spróbowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

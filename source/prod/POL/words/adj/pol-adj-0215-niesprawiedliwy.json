@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niesprawiedliwie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niesprawiedliwy",
+          "gen": "niesprawiedliwego",
+          "dat": "niesprawiedliwemu",
+          "acc": "niesprawiedliwego",
+          "ins": "niesprawiedliwym",
+          "loc": "niesprawiedliwym"
+        },
+        "m3": {
+          "nom": "niesprawiedliwy",
+          "gen": "niesprawiedliwego",
+          "dat": "niesprawiedliwemu",
+          "acc": "niesprawiedliwy",
+          "ins": "niesprawiedliwym",
+          "loc": "niesprawiedliwym"
+        },
+        "f": {
+          "nom": "niesprawiedliwa",
+          "gen": "niesprawiedliwej",
+          "dat": "niesprawiedliwej",
+          "acc": "niesprawiedliwą",
+          "ins": "niesprawiedliwą",
+          "loc": "niesprawiedliwej"
+        },
+        "n": {
+          "nom": "niesprawiedliwe",
+          "gen": "niesprawiedliwego",
+          "dat": "niesprawiedliwemu",
+          "acc": "niesprawiedliwe",
+          "ins": "niesprawiedliwym",
+          "loc": "niesprawiedliwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niesprawiedliwi",
+          "gen": "niesprawiedliwych",
+          "dat": "niesprawiedliwym",
+          "acc": "niesprawiedliwych",
+          "ins": "niesprawiedliwymi",
+          "loc": "niesprawiedliwych"
+        },
+        "nonvirile": {
+          "nom": "niesprawiedliwe",
+          "gen": "niesprawiedliwych",
+          "dat": "niesprawiedliwym",
+          "acc": "niesprawiedliwe",
+          "ins": "niesprawiedliwymi",
+          "loc": "niesprawiedliwych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "niesprawiedliwszy",
+          "gen": "niesprawiedliwszego",
+          "dat": "niesprawiedliwszemu",
+          "acc": "niesprawiedliwszego",
+          "ins": "niesprawiedliwszym",
+          "loc": "niesprawiedliwszym"
+        },
+        "m3": {
+          "nom": "niesprawiedliwszy",
+          "gen": "niesprawiedliwszego",
+          "dat": "niesprawiedliwszemu",
+          "acc": "niesprawiedliwszy",
+          "ins": "niesprawiedliwszym",
+          "loc": "niesprawiedliwszym"
+        },
+        "f": {
+          "nom": "niesprawiedliwsza",
+          "gen": "niesprawiedliwszej",
+          "dat": "niesprawiedliwszej",
+          "acc": "niesprawiedliwszą",
+          "ins": "niesprawiedliwszą",
+          "loc": "niesprawiedliwszej"
+        },
+        "n": {
+          "nom": "niesprawiedliwsze",
+          "gen": "niesprawiedliwszego",
+          "dat": "niesprawiedliwszemu",
+          "acc": "niesprawiedliwsze",
+          "ins": "niesprawiedliwszym",
+          "loc": "niesprawiedliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niesprawiedliwsi",
+          "gen": "niesprawiedliwszych",
+          "dat": "niesprawiedliwszym",
+          "acc": "niesprawiedliwszych",
+          "ins": "niesprawiedliwszymi",
+          "loc": "niesprawiedliwszych"
+        },
+        "nonvirile": {
+          "nom": "niesprawiedliwsze",
+          "gen": "niesprawiedliwszych",
+          "dat": "niesprawiedliwszym",
+          "acc": "niesprawiedliwsze",
+          "ins": "niesprawiedliwszymi",
+          "loc": "niesprawiedliwszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najniesprawiedliwszy",
+          "gen": "najniesprawiedliwszego",
+          "dat": "najniesprawiedliwszemu",
+          "acc": "najniesprawiedliwszego",
+          "ins": "najniesprawiedliwszym",
+          "loc": "najniesprawiedliwszym"
+        },
+        "m3": {
+          "nom": "najniesprawiedliwszy",
+          "gen": "najniesprawiedliwszego",
+          "dat": "najniesprawiedliwszemu",
+          "acc": "najniesprawiedliwszy",
+          "ins": "najniesprawiedliwszym",
+          "loc": "najniesprawiedliwszym"
+        },
+        "f": {
+          "nom": "najniesprawiedliwsza",
+          "gen": "najniesprawiedliwszej",
+          "dat": "najniesprawiedliwszej",
+          "acc": "najniesprawiedliwszą",
+          "ins": "najniesprawiedliwszą",
+          "loc": "najniesprawiedliwszej"
+        },
+        "n": {
+          "nom": "najniesprawiedliwsze",
+          "gen": "najniesprawiedliwszego",
+          "dat": "najniesprawiedliwszemu",
+          "acc": "najniesprawiedliwsze",
+          "ins": "najniesprawiedliwszym",
+          "loc": "najniesprawiedliwszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najniesprawiedliwsi",
+          "gen": "najniesprawiedliwszych",
+          "dat": "najniesprawiedliwszym",
+          "acc": "najniesprawiedliwszych",
+          "ins": "najniesprawiedliwszymi",
+          "loc": "najniesprawiedliwszych"
+        },
+        "nonvirile": {
+          "nom": "najniesprawiedliwsze",
+          "gen": "najniesprawiedliwszych",
+          "dat": "najniesprawiedliwszym",
+          "acc": "najniesprawiedliwsze",
+          "ins": "najniesprawiedliwszymi",
+          "loc": "najniesprawiedliwszych"
+        }
+      }
+    }
+  }
+}

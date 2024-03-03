@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "teacher",
+      "gen": "teacher's"
+    },
+    "plural": {
+      "nom": "teachers",
+      "gen": "teachers'"
+    }
+  }
+}

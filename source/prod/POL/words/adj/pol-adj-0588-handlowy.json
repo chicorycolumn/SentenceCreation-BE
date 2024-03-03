@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "handlowy",
+          "gen": "handlowego",
+          "dat": "handlowemu",
+          "acc": "handlowego",
+          "ins": "handlowym",
+          "loc": "handlowym"
+        },
+        "m3": {
+          "nom": "handlowy",
+          "gen": "handlowego",
+          "dat": "handlowemu",
+          "acc": "handlowy",
+          "ins": "handlowym",
+          "loc": "handlowym"
+        },
+        "f": {
+          "nom": "handlowa",
+          "gen": "handlowej",
+          "dat": "handlowej",
+          "acc": "handlową",
+          "ins": "handlową",
+          "loc": "handlowej"
+        },
+        "n": {
+          "nom": "handlowe",
+          "gen": "handlowego",
+          "dat": "handlowemu",
+          "acc": "handlowe",
+          "ins": "handlowym",
+          "loc": "handlowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "handlowi",
+          "gen": "handlowych",
+          "dat": "handlowym",
+          "acc": "handlowych",
+          "ins": "handlowymi",
+          "loc": "handlowych"
+        },
+        "nonvirile": {
+          "nom": "handlowe",
+          "gen": "handlowych",
+          "dat": "handlowym",
+          "acc": "handlowe",
+          "ins": "handlowymi",
+          "loc": "handlowych"
+        }
+      }
+    }
+  }
+}

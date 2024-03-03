@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "truskawka",
+      "gen": "truskawki",
+      "dat": "truskawce",
+      "acc": "truskawkę",
+      "ins": "truskawką",
+      "loc": "truskawce",
+      "voc": "truskawko"
+    },
+    "plural": {
+      "nom": "truskawki",
+      "gen": "truskawek",
+      "dat": "truskawkom",
+      "acc": "truskawki",
+      "ins": "truskawkami",
+      "loc": "truskawkach",
+      "voc": "truskawki"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gniew",
+      "gen": "gniewu",
+      "dat": "gniewowi",
+      "acc": "gniew",
+      "ins": "gniewem",
+      "loc": "gniewie",
+      "voc": "gniewie"
+    }
+  }
+}

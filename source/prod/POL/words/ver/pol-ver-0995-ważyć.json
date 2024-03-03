@@ -1,0 +1,106 @@
+{
+  "inflections": {
+    "infinitive": "ważyć",
+    "verbalNoun": "ważenie",
+    "activeAdjectival": "ważący",
+    "passiveAdjectival": "ważony",
+    "contemporaryAdverbial": "ważąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "waż",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ważono"
+          },
+          "plural": {
+            "allPluralGenders": "ważono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": [
+              "ważyłem"
+            ],
+            "f": [
+              "ważyłam"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "ważyliśmy"
+            ],
+            "nonvirile": [
+              "ważyłyśmy"
+            ]
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": [
+              "ważyłeś"
+            ],
+            "f": [
+              "ważyłaś"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "ważyliście"
+            ],
+            "nonvirile": [
+              "ważyłyście"
+            ]
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ważył",
+            "f": "ważyła",
+            "n": "ważyło"
+          },
+          "plural": {
+            "virile": "ważyli",
+            "nonvirile": "ważyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "waży się"
+          },
+          "plural": {
+            "allPluralGenders": "waży się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "ważę"
+          },
+          "plural": {
+            "allPluralGenders": "ważymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "ważysz"
+          },
+          "plural": {
+            "allPluralGenders": "ważycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "waży"
+          },
+          "plural": {
+            "allPluralGenders": "ważą"
+          }
+        }
+      }
+    }
+  }
+}

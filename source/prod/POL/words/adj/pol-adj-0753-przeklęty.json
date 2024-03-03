@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przeklęty",
+          "gen": "przeklętego",
+          "dat": "przeklętemu",
+          "acc": "przeklętego",
+          "ins": "przeklętym",
+          "loc": "przeklętym"
+        },
+        "m3": {
+          "nom": "przeklęty",
+          "gen": "przeklętego",
+          "dat": "przeklętemu",
+          "acc": "przeklęty",
+          "ins": "przeklętym",
+          "loc": "przeklętym"
+        },
+        "f": {
+          "nom": "przeklęta",
+          "gen": "przeklętej",
+          "dat": "przeklętej",
+          "acc": "przeklętą",
+          "ins": "przeklętą",
+          "loc": "przeklętej"
+        },
+        "n": {
+          "nom": "przeklęte",
+          "gen": "przeklętego",
+          "dat": "przeklętemu",
+          "acc": "przeklęte",
+          "ins": "przeklętym",
+          "loc": "przeklętym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przeklęci",
+          "gen": "przeklętych",
+          "dat": "przeklętym",
+          "acc": "przeklętych",
+          "ins": "przeklętymi",
+          "loc": "przeklętych"
+        },
+        "nonvirile": {
+          "nom": "przeklęte",
+          "gen": "przeklętych",
+          "dat": "przeklętym",
+          "acc": "przeklęte",
+          "ins": "przeklętymi",
+          "loc": "przeklętych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej przeklęty",
+          "gen": "bardziej przeklętego",
+          "dat": "bardziej przeklętemu",
+          "acc": "bardziej przeklętego",
+          "ins": "bardziej przeklętym",
+          "loc": "bardziej przeklętym"
+        },
+        "m3": {
+          "nom": "bardziej przeklęty",
+          "gen": "bardziej przeklętego",
+          "dat": "bardziej przeklętemu",
+          "acc": "bardziej przeklęty",
+          "ins": "bardziej przeklętym",
+          "loc": "bardziej przeklętym"
+        },
+        "f": {
+          "nom": "bardziej przeklęta",
+          "gen": "bardziej przeklętej",
+          "dat": "bardziej przeklętej",
+          "acc": "bardziej przeklętą",
+          "ins": "bardziej przeklętą",
+          "loc": "bardziej przeklętej"
+        },
+        "n": {
+          "nom": "bardziej przeklęte",
+          "gen": "bardziej przeklętego",
+          "dat": "bardziej przeklętemu",
+          "acc": "bardziej przeklęte",
+          "ins": "bardziej przeklętym",
+          "loc": "bardziej przeklętym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej przeklęci",
+          "gen": "bardziej przeklętych",
+          "dat": "bardziej przeklętym",
+          "acc": "bardziej przeklętych",
+          "ins": "bardziej przeklętymi",
+          "loc": "bardziej przeklętych"
+        },
+        "nonvirile": {
+          "nom": "bardziej przeklęte",
+          "gen": "bardziej przeklętych",
+          "dat": "bardziej przeklętym",
+          "acc": "bardziej przeklęte",
+          "ins": "bardziej przeklętymi",
+          "loc": "bardziej przeklętych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej przeklęty",
+          "gen": "najbardziej przeklętego",
+          "dat": "najbardziej przeklętemu",
+          "acc": "najbardziej przeklętego",
+          "ins": "najbardziej przeklętym",
+          "loc": "najbardziej przeklętym"
+        },
+        "m3": {
+          "nom": "najbardziej przeklęty",
+          "gen": "najbardziej przeklętego",
+          "dat": "najbardziej przeklętemu",
+          "acc": "najbardziej przeklęty",
+          "ins": "najbardziej przeklętym",
+          "loc": "najbardziej przeklętym"
+        },
+        "f": {
+          "nom": "najbardziej przeklęta",
+          "gen": "najbardziej przeklętej",
+          "dat": "najbardziej przeklętej",
+          "acc": "najbardziej przeklętą",
+          "ins": "najbardziej przeklętą",
+          "loc": "najbardziej przeklętej"
+        },
+        "n": {
+          "nom": "najbardziej przeklęte",
+          "gen": "najbardziej przeklętego",
+          "dat": "najbardziej przeklętemu",
+          "acc": "najbardziej przeklęte",
+          "ins": "najbardziej przeklętym",
+          "loc": "najbardziej przeklętym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej przeklęci",
+          "gen": "najbardziej przeklętych",
+          "dat": "najbardziej przeklętym",
+          "acc": "najbardziej przeklętych",
+          "ins": "najbardziej przeklętymi",
+          "loc": "najbardziej przeklętych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej przeklęte",
+          "gen": "najbardziej przeklętych",
+          "dat": "najbardziej przeklętym",
+          "acc": "najbardziej przeklęte",
+          "ins": "najbardziej przeklętymi",
+          "loc": "najbardziej przeklętych"
+        }
+      }
+    }
+  }
+}

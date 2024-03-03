@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nieznany",
+          "gen": "nieznanego",
+          "dat": "nieznanemu",
+          "acc": "nieznanego",
+          "ins": "nieznanym",
+          "loc": "nieznanym"
+        },
+        "m3": {
+          "nom": "nieznany",
+          "gen": "nieznanego",
+          "dat": "nieznanemu",
+          "acc": "nieznany",
+          "ins": "nieznanym",
+          "loc": "nieznanym"
+        },
+        "f": {
+          "nom": "nieznana",
+          "gen": "nieznanej",
+          "dat": "nieznanej",
+          "acc": "nieznaną",
+          "ins": "nieznaną",
+          "loc": "nieznanej"
+        },
+        "n": {
+          "nom": "nieznane",
+          "gen": "nieznanego",
+          "dat": "nieznanemu",
+          "acc": "nieznane",
+          "ins": "nieznanym",
+          "loc": "nieznanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieznani",
+          "gen": "nieznanych",
+          "dat": "nieznanym",
+          "acc": "nieznanych",
+          "ins": "nieznanymi",
+          "loc": "nieznanych"
+        },
+        "nonvirile": {
+          "nom": "nieznane",
+          "gen": "nieznanych",
+          "dat": "nieznanym",
+          "acc": "nieznane",
+          "ins": "nieznanymi",
+          "loc": "nieznanych"
+        }
+      }
+    }
+  }
+}

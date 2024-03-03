@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niedorzecznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niedorzeczny",
+          "gen": "niedorzecznego",
+          "dat": "niedorzecznemu",
+          "acc": "niedorzecznego",
+          "ins": "niedorzecznym",
+          "loc": "niedorzecznym"
+        },
+        "m3": {
+          "nom": "niedorzeczny",
+          "gen": "niedorzecznego",
+          "dat": "niedorzecznemu",
+          "acc": "niedorzeczny",
+          "ins": "niedorzecznym",
+          "loc": "niedorzecznym"
+        },
+        "f": {
+          "nom": "niedorzeczna",
+          "gen": "niedorzecznej",
+          "dat": "niedorzecznej",
+          "acc": "niedorzeczną",
+          "ins": "niedorzeczną",
+          "loc": "niedorzecznej"
+        },
+        "n": {
+          "nom": "niedorzeczne",
+          "gen": "niedorzecznego",
+          "dat": "niedorzecznemu",
+          "acc": "niedorzeczne",
+          "ins": "niedorzecznym",
+          "loc": "niedorzecznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niedorzeczni",
+          "gen": "niedorzecznych",
+          "dat": "niedorzecznym",
+          "acc": "niedorzecznych",
+          "ins": "niedorzecznymi",
+          "loc": "niedorzecznych"
+        },
+        "nonvirile": {
+          "nom": "niedorzeczne",
+          "gen": "niedorzecznych",
+          "dat": "niedorzecznym",
+          "acc": "niedorzeczne",
+          "ins": "niedorzecznymi",
+          "loc": "niedorzecznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "niedorzeczniejszy",
+          "gen": "niedorzeczniejszego",
+          "dat": "niedorzeczniejszemu",
+          "acc": "niedorzeczniejszego",
+          "ins": "niedorzeczniejszym",
+          "loc": "niedorzeczniejszym"
+        },
+        "m3": {
+          "nom": "niedorzeczniejszy",
+          "gen": "niedorzeczniejszego",
+          "dat": "niedorzeczniejszemu",
+          "acc": "niedorzeczniejszy",
+          "ins": "niedorzeczniejszym",
+          "loc": "niedorzeczniejszym"
+        },
+        "f": {
+          "nom": "niedorzeczniejsza",
+          "gen": "niedorzeczniejszej",
+          "dat": "niedorzeczniejszej",
+          "acc": "niedorzeczniejszą",
+          "ins": "niedorzeczniejszą",
+          "loc": "niedorzeczniejszej"
+        },
+        "n": {
+          "nom": "niedorzeczniejsze",
+          "gen": "niedorzeczniejszego",
+          "dat": "niedorzeczniejszemu",
+          "acc": "niedorzeczniejsze",
+          "ins": "niedorzeczniejszym",
+          "loc": "niedorzeczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niedorzeczniejsi",
+          "gen": "niedorzeczniejszych",
+          "dat": "niedorzeczniejszym",
+          "acc": "niedorzeczniejszych",
+          "ins": "niedorzeczniejszymi",
+          "loc": "niedorzeczniejszych"
+        },
+        "nonvirile": {
+          "nom": "niedorzeczniejsze",
+          "gen": "niedorzeczniejszych",
+          "dat": "niedorzeczniejszym",
+          "acc": "niedorzeczniejsze",
+          "ins": "niedorzeczniejszymi",
+          "loc": "niedorzeczniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najniedorzeczniejszy",
+          "gen": "najniedorzeczniejszego",
+          "dat": "najniedorzeczniejszemu",
+          "acc": "najniedorzeczniejszego",
+          "ins": "najniedorzeczniejszym",
+          "loc": "najniedorzeczniejszym"
+        },
+        "m3": {
+          "nom": "najniedorzeczniejszy",
+          "gen": "najniedorzeczniejszego",
+          "dat": "najniedorzeczniejszemu",
+          "acc": "najniedorzeczniejszy",
+          "ins": "najniedorzeczniejszym",
+          "loc": "najniedorzeczniejszym"
+        },
+        "f": {
+          "nom": "najniedorzeczniejsza",
+          "gen": "najniedorzeczniejszej",
+          "dat": "najniedorzeczniejszej",
+          "acc": "najniedorzeczniejszą",
+          "ins": "najniedorzeczniejszą",
+          "loc": "najniedorzeczniejszej"
+        },
+        "n": {
+          "nom": "najniedorzeczniejsze",
+          "gen": "najniedorzeczniejszego",
+          "dat": "najniedorzeczniejszemu",
+          "acc": "najniedorzeczniejsze",
+          "ins": "najniedorzeczniejszym",
+          "loc": "najniedorzeczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najniedorzeczniejsi",
+          "gen": "najniedorzeczniejszych",
+          "dat": "najniedorzeczniejszym",
+          "acc": "najniedorzeczniejszych",
+          "ins": "najniedorzeczniejszymi",
+          "loc": "najniedorzeczniejszych"
+        },
+        "nonvirile": {
+          "nom": "najniedorzeczniejsze",
+          "gen": "najniedorzeczniejszych",
+          "dat": "najniedorzeczniejszym",
+          "acc": "najniedorzeczniejsze",
+          "ins": "najniedorzeczniejszymi",
+          "loc": "najniedorzeczniejszych"
+        }
+      }
+    }
+  }
+}

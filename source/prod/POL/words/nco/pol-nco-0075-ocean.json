@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ocean",
+      "gen": "oceanu",
+      "dat": "oceanowi",
+      "acc": "ocean",
+      "ins": "oceanem",
+      "loc": "oceanie",
+      "voc": "oceanie"
+    },
+    "plural": {
+      "nom": "oceany",
+      "gen": "oceanów",
+      "dat": "oceanom",
+      "acc": "oceany",
+      "ins": "oceanami",
+      "loc": "oceanach",
+      "voc": "oceany"
+    }
+  }
+}

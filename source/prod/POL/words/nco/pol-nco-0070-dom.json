@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dom",
+      "gen": "domu",
+      "dat": "domowi",
+      "acc": "dom",
+      "ins": "domem",
+      "loc": "domu",
+      "voc": [
+        "domu",
+        "domie"
+      ]
+    },
+    "plural": {
+      "nom": "domy",
+      "gen": "domów",
+      "dat": "domom",
+      "acc": "domy",
+      "ins": "domami",
+      "loc": "domach",
+      "voc": "domy"
+    }
+  }
+}

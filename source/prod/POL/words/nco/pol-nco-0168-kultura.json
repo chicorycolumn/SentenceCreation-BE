@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kultura",
+      "gen": "kultury",
+      "dat": "kulturze",
+      "acc": "kulturę",
+      "ins": "kulturą",
+      "loc": "kulturze",
+      "voc": "kulturo"
+    },
+    "plural": {
+      "nom": "kultury",
+      "gen": "kultur",
+      "dat": "kulturom",
+      "acc": "kultury",
+      "ins": "kulturami",
+      "loc": "kulturach",
+      "voc": "kultury"
+    }
+  }
+}

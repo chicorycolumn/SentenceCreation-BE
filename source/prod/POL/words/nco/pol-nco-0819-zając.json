@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zając",
+      "gen": "zająca",
+      "dat": "zającowi",
+      "acc": "zająca",
+      "ins": "zającem",
+      "loc": "zającu",
+      "voc": "zającu"
+    },
+    "plural": {
+      "nom": "zające",
+      "gen": [
+        "zajęcy",
+        "zająców"
+      ],
+      "dat": "zającom",
+      "acc": "zające",
+      "ins": "zającami",
+      "loc": "zającach",
+      "voc": "zające"
+    }
+  }
+}

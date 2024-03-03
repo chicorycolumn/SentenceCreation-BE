@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "siostrzeniec",
+      "gen": "siostrzeńca",
+      "dat": "siostrzeńcowi",
+      "acc": "siostrzeńca",
+      "ins": "siostrzeńcem",
+      "loc": "siostrzeńcu",
+      "voc": [
+        "siostrzeńcu",
+        "siostrzeńcze"
+      ]
+    },
+    "plural": {
+      "nom": "siostrzeńcy",
+      "gen": "siostrzeńców",
+      "dat": "siostrzeńcom",
+      "acc": "siostrzeńców",
+      "ins": "siostrzeńcami",
+      "loc": "siostrzeńcach",
+      "voc": "siostrzeńcy"
+    }
+  }
+}

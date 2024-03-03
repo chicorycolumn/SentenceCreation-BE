@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "durnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "durny",
+          "gen": "durnego",
+          "dat": "durnemu",
+          "acc": "durnego",
+          "ins": "durnym",
+          "loc": "durnym"
+        },
+        "m3": {
+          "nom": "durny",
+          "gen": "durnego",
+          "dat": "durnemu",
+          "acc": "durny",
+          "ins": "durnym",
+          "loc": "durnym"
+        },
+        "f": {
+          "nom": "durna",
+          "gen": "durnej",
+          "dat": "durnej",
+          "acc": "durną",
+          "ins": "durną",
+          "loc": "durnej"
+        },
+        "n": {
+          "nom": "durne",
+          "gen": "durnego",
+          "dat": "durnemu",
+          "acc": "durne",
+          "ins": "durnym",
+          "loc": "durnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "durni",
+          "gen": "durnych",
+          "dat": "durnym",
+          "acc": "durnych",
+          "ins": "durnymi",
+          "loc": "durnych"
+        },
+        "nonvirile": {
+          "nom": "durne",
+          "gen": "durnych",
+          "dat": "durnym",
+          "acc": "durne",
+          "ins": "durnymi",
+          "loc": "durnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "durniejszy",
+          "gen": "durniejszego",
+          "dat": "durniejszemu",
+          "acc": "durniejszego",
+          "ins": "durniejszym",
+          "loc": "durniejszym"
+        },
+        "m3": {
+          "nom": "durniejszy",
+          "gen": "durniejszego",
+          "dat": "durniejszemu",
+          "acc": "durniejszy",
+          "ins": "durniejszym",
+          "loc": "durniejszym"
+        },
+        "f": {
+          "nom": "durniejsza",
+          "gen": "durniejszej",
+          "dat": "durniejszej",
+          "acc": "durniejszą",
+          "ins": "durniejszą",
+          "loc": "durniejszej"
+        },
+        "n": {
+          "nom": "durniejsze",
+          "gen": "durniejszego",
+          "dat": "durniejszemu",
+          "acc": "durniejsze",
+          "ins": "durniejszym",
+          "loc": "durniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "durniejsi",
+          "gen": "durniejszych",
+          "dat": "durniejszym",
+          "acc": "durniejszych",
+          "ins": "durniejszymi",
+          "loc": "durniejszych"
+        },
+        "nonvirile": {
+          "nom": "durniejsze",
+          "gen": "durniejszych",
+          "dat": "durniejszym",
+          "acc": "durniejsze",
+          "ins": "durniejszymi",
+          "loc": "durniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najdurniejszy",
+          "gen": "najdurniejszego",
+          "dat": "najdurniejszemu",
+          "acc": "najdurniejszego",
+          "ins": "najdurniejszym",
+          "loc": "najdurniejszym"
+        },
+        "m3": {
+          "nom": "najdurniejszy",
+          "gen": "najdurniejszego",
+          "dat": "najdurniejszemu",
+          "acc": "najdurniejszy",
+          "ins": "najdurniejszym",
+          "loc": "najdurniejszym"
+        },
+        "f": {
+          "nom": "najdurniejsza",
+          "gen": "najdurniejszej",
+          "dat": "najdurniejszej",
+          "acc": "najdurniejszą",
+          "ins": "najdurniejszą",
+          "loc": "najdurniejszej"
+        },
+        "n": {
+          "nom": "najdurniejsze",
+          "gen": "najdurniejszego",
+          "dat": "najdurniejszemu",
+          "acc": "najdurniejsze",
+          "ins": "najdurniejszym",
+          "loc": "najdurniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najdurniejsi",
+          "gen": "najdurniejszych",
+          "dat": "najdurniejszym",
+          "acc": "najdurniejszych",
+          "ins": "najdurniejszymi",
+          "loc": "najdurniejszych"
+        },
+        "nonvirile": {
+          "nom": "najdurniejsze",
+          "gen": "najdurniejszych",
+          "dat": "najdurniejszym",
+          "acc": "najdurniejsze",
+          "ins": "najdurniejszymi",
+          "loc": "najdurniejszych"
+        }
+      }
+    }
+  }
+}

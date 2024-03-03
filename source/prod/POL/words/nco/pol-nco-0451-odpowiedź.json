@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "odpowiedź",
+      "gen": "odpowiedzi",
+      "dat": "odpowiedzi",
+      "acc": "odpowiedź",
+      "ins": "odpowiedzią",
+      "loc": "odpowiedzi",
+      "voc": "odpowiedzi"
+    },
+    "plural": {
+      "nom": "odpowiedzi",
+      "gen": "odpowiedzi",
+      "dat": "odpowiedziom",
+      "acc": "odpowiedzi",
+      "ins": "odpowiedziami",
+      "loc": "odpowiedziach",
+      "voc": "odpowiedzi"
+    }
+  }
+}

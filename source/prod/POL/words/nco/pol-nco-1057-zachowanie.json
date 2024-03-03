@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zachowanie",
+      "gen": "zachowania",
+      "dat": "zachowaniu",
+      "acc": "zachowanie",
+      "ins": "zachowaniem",
+      "loc": "zachowaniu",
+      "voc": "zachowanie"
+    },
+    "plural": {
+      "nom": "zachowania",
+      "gen": "zachowań",
+      "dat": "zachowaniom",
+      "acc": "zachowania",
+      "ins": "zachowaniami",
+      "loc": "zachowaniach",
+      "voc": "zachowania"
+    }
+  }
+}

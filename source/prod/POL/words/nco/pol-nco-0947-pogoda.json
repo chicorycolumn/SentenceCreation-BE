@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pogoda",
+      "gen": "pogody",
+      "dat": "pogodzie",
+      "acc": "pogodę",
+      "ins": "pogodą",
+      "loc": "pogodzie",
+      "voc": "pogodo"
+    },
+    "plural": {
+      "nom": "pogody",
+      "gen": "pogód",
+      "dat": "pogodom",
+      "acc": "pogody",
+      "ins": "pogodami",
+      "loc": "pogodach",
+      "voc": "pogody"
+    }
+  }
+}

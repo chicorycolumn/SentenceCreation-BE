@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dawać",
+    "verbalNoun": "dawanie",
+    "activeAdjectival": "dający",
+    "passiveAdjectival": "dawany",
+    "contemporaryAdverbial": "dając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dawaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dawano"
+          },
+          "plural": {
+            "allPluralGenders": "dawano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dawałem",
+            "f": "dawałam"
+          },
+          "plural": {
+            "virile": "dawaliśmy",
+            "nonvirile": "dawałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dawałeś",
+            "f": "dawałaś"
+          },
+          "plural": {
+            "virile": "dawaliście",
+            "nonvirile": "dawałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dawał",
+            "f": "dawała",
+            "n": "dawało"
+          },
+          "plural": {
+            "virile": "dawali",
+            "nonvirile": "dawały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "daje się"
+          },
+          "plural": {
+            "allPluralGenders": "daje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "daję"
+          },
+          "plural": {
+            "allPluralGenders": "dajemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dajesz"
+          },
+          "plural": {
+            "allPluralGenders": "dajecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "daje"
+          },
+          "plural": {
+            "allPluralGenders": "dają"
+          }
+        }
+      }
+    }
+  }
+}

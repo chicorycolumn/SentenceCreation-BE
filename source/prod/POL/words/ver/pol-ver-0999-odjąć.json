@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odjąć",
+    "verbalNoun": "odjęcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "odjęty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odjąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odejmie się"
+          },
+          "plural": {
+            "allPluralGenders": "odejmie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odejmę"
+          },
+          "plural": {
+            "allPluralGenders": "odejmiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odejmiesz"
+          },
+          "plural": {
+            "allPluralGenders": "odejmiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odejmie"
+          },
+          "plural": {
+            "allPluralGenders": "odejmą"
+          }
+        }
+      },
+      "imperative": "odejmij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odjęto"
+          },
+          "plural": {
+            "allPluralGenders": "odjęto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odjąłem",
+            "f": "odjęłam"
+          },
+          "plural": {
+            "virile": "odjęliśmy",
+            "nonvirile": "odjęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odjąłeś",
+            "f": "odjęłaś"
+          },
+          "plural": {
+            "virile": "odjęliście",
+            "nonvirile": "odjęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odjął",
+            "f": "odjęła",
+            "n": "odjęło"
+          },
+          "plural": {
+            "virile": "odjęli",
+            "nonvirile": "odjęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

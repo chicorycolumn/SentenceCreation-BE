@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "holenderski",
+          "gen": "holenderskiego",
+          "dat": "holenderskiemu",
+          "acc": "holenderskiego",
+          "ins": "holenderskim",
+          "loc": "holenderskim"
+        },
+        "m3": {
+          "nom": "holenderski",
+          "gen": "holenderskiego",
+          "dat": "holenderskiemu",
+          "acc": "holenderski",
+          "ins": "holenderskim",
+          "loc": "holenderskim"
+        },
+        "f": {
+          "nom": "holenderska",
+          "gen": "holenderskiej",
+          "dat": "holenderskiej",
+          "acc": "holenderską",
+          "ins": "holenderską",
+          "loc": "holenderskiej"
+        },
+        "n": {
+          "nom": "holenderskie",
+          "gen": "holenderskiego",
+          "dat": "holenderskiemu",
+          "acc": "holenderskie",
+          "ins": "holenderskim",
+          "loc": "holenderskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "holenderscy",
+          "gen": "holenderskich",
+          "dat": "holenderskim",
+          "acc": "holenderskich",
+          "ins": "holenderskimi",
+          "loc": "holenderskich"
+        },
+        "nonvirile": {
+          "nom": "holenderskie",
+          "gen": "holenderskich",
+          "dat": "holenderskim",
+          "acc": "holenderskie",
+          "ins": "holenderskimi",
+          "loc": "holenderskich"
+        }
+      }
+    }
+  }
+}

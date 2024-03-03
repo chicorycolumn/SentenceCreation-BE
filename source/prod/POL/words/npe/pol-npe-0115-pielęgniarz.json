@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pielęgniarz",
+      "gen": "pielęgniarza",
+      "dat": "pielęgniarzowi",
+      "acc": "pielęgniarza",
+      "ins": "pielęgniarzem",
+      "loc": "pielęgniarzu",
+      "voc": "pielęgniarzu"
+    },
+    "plural": {
+      "nom": "pielęgniarze",
+      "gen": "pielęgniarzy",
+      "dat": "pielęgniarzom",
+      "acc": "pielęgniarzy",
+      "ins": "pielęgniarzami",
+      "loc": "pielęgniarzach",
+      "voc": "pielęgniarze"
+    }
+  }
+}

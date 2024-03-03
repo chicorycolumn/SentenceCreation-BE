@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "język",
+      "gen": "języka",
+      "dat": "językowi",
+      "acc": "język",
+      "ins": "językiem",
+      "loc": "języku",
+      "voc": "języku"
+    },
+    "plural": {
+      "nom": "języki",
+      "gen": "języków",
+      "dat": "językom",
+      "acc": "języki",
+      "ins": "językami",
+      "loc": "językach",
+      "voc": "języki"
+    }
+  }
+}

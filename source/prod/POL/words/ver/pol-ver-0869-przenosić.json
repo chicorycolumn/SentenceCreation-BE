@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przenosić",
+    "verbalNoun": "przenoszenie",
+    "activeAdjectival": "przenoszący",
+    "passiveAdjectival": "przenoszony",
+    "contemporaryAdverbial": "przenosząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przenoś",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przenoszono"
+          },
+          "plural": {
+            "allPluralGenders": "przenoszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przenosiłem",
+            "f": "przenosiłam"
+          },
+          "plural": {
+            "virile": "przenosiliśmy",
+            "nonvirile": "przenosiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przenosiłeś",
+            "f": "przenosiłaś"
+          },
+          "plural": {
+            "virile": "przenosiliście",
+            "nonvirile": "przenosiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przenosił",
+            "f": "przenosiła",
+            "n": "przenosiło"
+          },
+          "plural": {
+            "virile": "przenosili",
+            "nonvirile": "przenosiły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przenosi się"
+          },
+          "plural": {
+            "allPluralGenders": "przenosi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przenoszę"
+          },
+          "plural": {
+            "allPluralGenders": "przenosimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przenosisz"
+          },
+          "plural": {
+            "allPluralGenders": "przenosicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przenosi"
+          },
+          "plural": {
+            "allPluralGenders": "przenoszą"
+          }
+        }
+      }
+    }
+  }
+}

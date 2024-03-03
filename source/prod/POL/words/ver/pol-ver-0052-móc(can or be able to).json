@@ -1,0 +1,81 @@
+{
+  "inflections": {
+    "infinitive": "móc",
+    "activeAdjectival": "mogący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "mogąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": false,
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "mogłem",
+            "f": "mogłam"
+          },
+          "plural": {
+            "virile": "mogliśmy",
+            "nonvirile": "mogłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "mogłeś",
+            "f": "mogłaś"
+          },
+          "plural": {
+            "virile": "mogliście",
+            "nonvirile": "mogłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "mógł",
+            "f": "mogła",
+            "n": "mogło"
+          },
+          "plural": {
+            "virile": "mogli",
+            "nonvirile": "mogły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "może się"
+          },
+          "plural": {
+            "allPluralGenders": "może się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "mogę"
+          },
+          "plural": {
+            "allPluralGenders": "możemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "możesz"
+          },
+          "plural": {
+            "allPluralGenders": "możecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "może"
+          },
+          "plural": {
+            "allPluralGenders": "mogą"
+          }
+        }
+      }
+    }
+  }
+}

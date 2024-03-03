@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wróg",
+      "gen": "wroga",
+      "dat": "wrogowi",
+      "acc": "wroga",
+      "ins": "wrogiem",
+      "loc": "wrogu",
+      "voc": "wrogu"
+    },
+    "plural": {
+      "nom": "wrogowie",
+      "gen": "wrogów",
+      "dat": "wrogom",
+      "acc": "wrogów",
+      "ins": "wrogami",
+      "loc": "wrogach",
+      "voc": "wrogowie"
+    }
+  }
+}

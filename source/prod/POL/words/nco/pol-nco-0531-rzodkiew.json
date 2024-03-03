@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rzodkiew",
+      "gen": "rzodkwi",
+      "dat": "rzodkwi",
+      "acc": "rzodkiew",
+      "ins": "rzodkwią",
+      "loc": "rzodkwi",
+      "voc": "rzodkwi"
+    },
+    "plural": {
+      "nom": "rzodkwie",
+      "gen": "rzodkwi",
+      "dat": "rzodkwiom",
+      "acc": "rzodkwie",
+      "ins": "rzodkwiami",
+      "loc": "rzodkwiach",
+      "voc": "rzodkwie"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "temat",
+      "gen": "tematu",
+      "dat": "tematowi",
+      "acc": "temat",
+      "ins": "tematem",
+      "loc": "temacie",
+      "voc": "temacie"
+    },
+    "plural": {
+      "nom": "tematy",
+      "gen": "tematów",
+      "dat": "tematom",
+      "acc": "tematy",
+      "ins": "tematami",
+      "loc": "tematach",
+      "voc": "tematy"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "normalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "normalny",
+          "gen": "normalnego",
+          "dat": "normalnemu",
+          "acc": "normalnego",
+          "ins": "normalnym",
+          "loc": "normalnym"
+        },
+        "m3": {
+          "nom": "normalny",
+          "gen": "normalnego",
+          "dat": "normalnemu",
+          "acc": "normalny",
+          "ins": "normalnym",
+          "loc": "normalnym"
+        },
+        "f": {
+          "nom": "normalna",
+          "gen": "normalnej",
+          "dat": "normalnej",
+          "acc": "normalną",
+          "ins": "normalną",
+          "loc": "normalnej"
+        },
+        "n": {
+          "nom": "normalne",
+          "gen": "normalnego",
+          "dat": "normalnemu",
+          "acc": "normalne",
+          "ins": "normalnym",
+          "loc": "normalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "normalni",
+          "gen": "normalnych",
+          "dat": "normalnym",
+          "acc": "normalnych",
+          "ins": "normalnymi",
+          "loc": "normalnych"
+        },
+        "nonvirile": {
+          "nom": "normalne",
+          "gen": "normalnych",
+          "dat": "normalnym",
+          "acc": "normalne",
+          "ins": "normalnymi",
+          "loc": "normalnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "normalniejszy",
+          "gen": "normalniejszego",
+          "dat": "normalniejszemu",
+          "acc": "normalniejszego",
+          "ins": "normalniejszym",
+          "loc": "normalniejszym"
+        },
+        "m3": {
+          "nom": "normalniejszy",
+          "gen": "normalniejszego",
+          "dat": "normalniejszemu",
+          "acc": "normalniejszy",
+          "ins": "normalniejszym",
+          "loc": "normalniejszym"
+        },
+        "f": {
+          "nom": "normalniejsza",
+          "gen": "normalniejszej",
+          "dat": "normalniejszej",
+          "acc": "normalniejszą",
+          "ins": "normalniejszą",
+          "loc": "normalniejszej"
+        },
+        "n": {
+          "nom": "normalniejsze",
+          "gen": "normalniejszego",
+          "dat": "normalniejszemu",
+          "acc": "normalniejsze",
+          "ins": "normalniejszym",
+          "loc": "normalniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "normalniejsi",
+          "gen": "normalniejszych",
+          "dat": "normalniejszym",
+          "acc": "normalniejszych",
+          "ins": "normalniejszymi",
+          "loc": "normalniejszych"
+        },
+        "nonvirile": {
+          "nom": "normalniejsze",
+          "gen": "normalniejszych",
+          "dat": "normalniejszym",
+          "acc": "normalniejsze",
+          "ins": "normalniejszymi",
+          "loc": "normalniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najnormalniejszy",
+          "gen": "najnormalniejszego",
+          "dat": "najnormalniejszemu",
+          "acc": "najnormalniejszego",
+          "ins": "najnormalniejszym",
+          "loc": "najnormalniejszym"
+        },
+        "m3": {
+          "nom": "najnormalniejszy",
+          "gen": "najnormalniejszego",
+          "dat": "najnormalniejszemu",
+          "acc": "najnormalniejszy",
+          "ins": "najnormalniejszym",
+          "loc": "najnormalniejszym"
+        },
+        "f": {
+          "nom": "najnormalniejsza",
+          "gen": "najnormalniejszej",
+          "dat": "najnormalniejszej",
+          "acc": "najnormalniejszą",
+          "ins": "najnormalniejszą",
+          "loc": "najnormalniejszej"
+        },
+        "n": {
+          "nom": "najnormalniejsze",
+          "gen": "najnormalniejszego",
+          "dat": "najnormalniejszemu",
+          "acc": "najnormalniejsze",
+          "ins": "najnormalniejszym",
+          "loc": "najnormalniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najnormalniejsi",
+          "gen": "najnormalniejszych",
+          "dat": "najnormalniejszym",
+          "acc": "najnormalniejszych",
+          "ins": "najnormalniejszymi",
+          "loc": "najnormalniejszych"
+        },
+        "nonvirile": {
+          "nom": "najnormalniejsze",
+          "gen": "najnormalniejszych",
+          "dat": "najnormalniejszym",
+          "acc": "najnormalniejsze",
+          "ins": "najnormalniejszymi",
+          "loc": "najnormalniejszych"
+        }
+      }
+    }
+  }
+}

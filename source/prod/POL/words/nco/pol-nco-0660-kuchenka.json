@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kuchenka",
+      "gen": "kuchenki",
+      "dat": "kuchence",
+      "acc": "kuchenkę",
+      "ins": "kuchenką",
+      "loc": "kuchence",
+      "voc": "kuchenko"
+    },
+    "plural": {
+      "nom": "kuchenki",
+      "gen": "kuchenek",
+      "dat": "kuchenkom",
+      "acc": "kuchenki",
+      "ins": "kuchenkami",
+      "loc": "kuchenkach",
+      "voc": "kuchenki"
+    }
+  }
+}

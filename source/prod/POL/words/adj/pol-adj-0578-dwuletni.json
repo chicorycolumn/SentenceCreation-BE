@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dwuletni",
+          "gen": "dwuletniego",
+          "dat": "dwuletniemu",
+          "acc": "dwuletniego",
+          "ins": "dwuletnim",
+          "loc": "dwuletnim"
+        },
+        "m3": {
+          "nom": "dwuletni",
+          "gen": "dwuletniego",
+          "dat": "dwuletniemu",
+          "acc": "dwuletni",
+          "ins": "dwuletnim",
+          "loc": "dwuletnim"
+        },
+        "f": {
+          "nom": "dwuletna",
+          "gen": "dwuletniej",
+          "dat": "dwuletniej",
+          "acc": "dwuletną",
+          "ins": "dwuletną",
+          "loc": "dwuletniej"
+        },
+        "n": {
+          "nom": "dwuletnie",
+          "gen": "dwuletniego",
+          "dat": "dwuletniemu",
+          "acc": "dwuletnie",
+          "ins": "dwuletnim",
+          "loc": "dwuletnim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dwuletni",
+          "gen": "dwuletnich",
+          "dat": "dwuletnim",
+          "acc": "dwuletnich",
+          "ins": "dwuletnimi",
+          "loc": "dwuletnich"
+        },
+        "nonvirile": {
+          "nom": "dwuletnie",
+          "gen": "dwuletnich",
+          "dat": "dwuletnim",
+          "acc": "dwuletnie",
+          "ins": "dwuletnimi",
+          "loc": "dwuletnich"
+        }
+      }
+    }
+  }
+}

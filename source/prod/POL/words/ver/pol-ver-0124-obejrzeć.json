@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "obejrzeć",
+    "verbalNoun": "obejrzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "obejrzany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "obejrzawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obejrzy się"
+          },
+          "plural": {
+            "allPluralGenders": "obejrzy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "obejrzę"
+          },
+          "plural": {
+            "allPluralGenders": "obejrzymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "obejrzysz"
+          },
+          "plural": {
+            "allPluralGenders": "obejrzycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "obejrzy"
+          },
+          "plural": {
+            "allPluralGenders": "obejrzą"
+          }
+        }
+      },
+      "imperative": "obejrzyj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obejrzano"
+          },
+          "plural": {
+            "allPluralGenders": "obejrzano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "obejrzałem",
+            "f": "obejrzałam"
+          },
+          "plural": {
+            "virile": "obejrzeliśmy",
+            "nonvirile": "obejrzałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "obejrzałeś",
+            "f": "obejrzałaś"
+          },
+          "plural": {
+            "virile": "obejrzeliście",
+            "nonvirile": "obejrzałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "obejrzał",
+            "f": "obejrzała",
+            "n": "obejrzało"
+          },
+          "plural": {
+            "virile": "obejrzeli",
+            "nonvirile": "obejrzały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

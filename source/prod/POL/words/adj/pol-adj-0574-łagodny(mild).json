@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "łagodnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "łagodny",
+          "gen": "łagodnego",
+          "dat": "łagodnemu",
+          "acc": "łagodnego",
+          "ins": "łagodnym",
+          "loc": "łagodnym"
+        },
+        "m3": {
+          "nom": "łagodny",
+          "gen": "łagodnego",
+          "dat": "łagodnemu",
+          "acc": "łagodny",
+          "ins": "łagodnym",
+          "loc": "łagodnym"
+        },
+        "f": {
+          "nom": "łagodna",
+          "gen": "łagodnej",
+          "dat": "łagodnej",
+          "acc": "łagodną",
+          "ins": "łagodną",
+          "loc": "łagodnej"
+        },
+        "n": {
+          "nom": "łagodne",
+          "gen": "łagodnego",
+          "dat": "łagodnemu",
+          "acc": "łagodne",
+          "ins": "łagodnym",
+          "loc": "łagodnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "łagodni",
+          "gen": "łagodnych",
+          "dat": "łagodnym",
+          "acc": "łagodnych",
+          "ins": "łagodnymi",
+          "loc": "łagodnych"
+        },
+        "nonvirile": {
+          "nom": "łagodne",
+          "gen": "łagodnych",
+          "dat": "łagodnym",
+          "acc": "łagodne",
+          "ins": "łagodnymi",
+          "loc": "łagodnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "łagodniejszy",
+          "gen": "łagodniejszego",
+          "dat": "łagodniejszemu",
+          "acc": "łagodniejszego",
+          "ins": "łagodniejszym",
+          "loc": "łagodniejszym"
+        },
+        "m3": {
+          "nom": "łagodniejszy",
+          "gen": "łagodniejszego",
+          "dat": "łagodniejszemu",
+          "acc": "łagodniejszy",
+          "ins": "łagodniejszym",
+          "loc": "łagodniejszym"
+        },
+        "f": {
+          "nom": "łagodniejsza",
+          "gen": "łagodniejszej",
+          "dat": "łagodniejszej",
+          "acc": "łagodniejszą",
+          "ins": "łagodniejszą",
+          "loc": "łagodniejszej"
+        },
+        "n": {
+          "nom": "łagodniejsze",
+          "gen": "łagodniejszego",
+          "dat": "łagodniejszemu",
+          "acc": "łagodniejsze",
+          "ins": "łagodniejszym",
+          "loc": "łagodniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "łagodniejsi",
+          "gen": "łagodniejszych",
+          "dat": "łagodniejszym",
+          "acc": "łagodniejszych",
+          "ins": "łagodniejszymi",
+          "loc": "łagodniejszych"
+        },
+        "nonvirile": {
+          "nom": "łagodniejsze",
+          "gen": "łagodniejszych",
+          "dat": "łagodniejszym",
+          "acc": "łagodniejsze",
+          "ins": "łagodniejszymi",
+          "loc": "łagodniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najłagodniejszy",
+          "gen": "najłagodniejszego",
+          "dat": "najłagodniejszemu",
+          "acc": "najłagodniejszego",
+          "ins": "najłagodniejszym",
+          "loc": "najłagodniejszym"
+        },
+        "m3": {
+          "nom": "najłagodniejszy",
+          "gen": "najłagodniejszego",
+          "dat": "najłagodniejszemu",
+          "acc": "najłagodniejszy",
+          "ins": "najłagodniejszym",
+          "loc": "najłagodniejszym"
+        },
+        "f": {
+          "nom": "najłagodniejsza",
+          "gen": "najłagodniejszej",
+          "dat": "najłagodniejszej",
+          "acc": "najłagodniejszą",
+          "ins": "najłagodniejszą",
+          "loc": "najłagodniejszej"
+        },
+        "n": {
+          "nom": "najłagodniejsze",
+          "gen": "najłagodniejszego",
+          "dat": "najłagodniejszemu",
+          "acc": "najłagodniejsze",
+          "ins": "najłagodniejszym",
+          "loc": "najłagodniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najłagodniejsi",
+          "gen": "najłagodniejszych",
+          "dat": "najłagodniejszym",
+          "acc": "najłagodniejszych",
+          "ins": "najłagodniejszymi",
+          "loc": "najłagodniejszych"
+        },
+        "nonvirile": {
+          "nom": "najłagodniejsze",
+          "gen": "najłagodniejszych",
+          "dat": "najłagodniejszym",
+          "acc": "najłagodniejsze",
+          "ins": "najłagodniejszymi",
+          "loc": "najłagodniejszych"
+        }
+      }
+    }
+  }
+}

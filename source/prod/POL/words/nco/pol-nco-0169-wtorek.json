@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wtorek",
+      "gen": "wtorku",
+      "dat": "wtorkowi",
+      "acc": "wtorek",
+      "ins": "wtorkiem",
+      "loc": "wtorku",
+      "voc": "wtorku"
+    },
+    "plural": {
+      "nom": "wtorki",
+      "gen": "wtorków",
+      "dat": "wtorkom",
+      "acc": "wtorki",
+      "ins": "wtorkami",
+      "loc": "wtorkach",
+      "voc": "wtorki"
+    }
+  }
+}

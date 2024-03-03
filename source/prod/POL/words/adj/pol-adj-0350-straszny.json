@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "strasznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "straszny",
+          "gen": "strasznego",
+          "dat": "strasznemu",
+          "acc": "strasznego",
+          "ins": "strasznym",
+          "loc": "strasznym"
+        },
+        "m3": {
+          "nom": "straszny",
+          "gen": "strasznego",
+          "dat": "strasznemu",
+          "acc": "straszny",
+          "ins": "strasznym",
+          "loc": "strasznym"
+        },
+        "f": {
+          "nom": "straszna",
+          "gen": "strasznej",
+          "dat": "strasznej",
+          "acc": "straszną",
+          "ins": "straszną",
+          "loc": "strasznej"
+        },
+        "n": {
+          "nom": "straszne",
+          "gen": "strasznego",
+          "dat": "strasznemu",
+          "acc": "straszne",
+          "ins": "strasznym",
+          "loc": "strasznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "straszni",
+          "gen": "strasznych",
+          "dat": "strasznym",
+          "acc": "strasznych",
+          "ins": "strasznymi",
+          "loc": "strasznych"
+        },
+        "nonvirile": {
+          "nom": "straszne",
+          "gen": "strasznych",
+          "dat": "strasznym",
+          "acc": "straszne",
+          "ins": "strasznymi",
+          "loc": "strasznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "straszniejszy",
+          "gen": "straszniejszego",
+          "dat": "straszniejszemu",
+          "acc": "straszniejszego",
+          "ins": "straszniejszym",
+          "loc": "straszniejszym"
+        },
+        "m3": {
+          "nom": "straszniejszy",
+          "gen": "straszniejszego",
+          "dat": "straszniejszemu",
+          "acc": "straszniejszy",
+          "ins": "straszniejszym",
+          "loc": "straszniejszym"
+        },
+        "f": {
+          "nom": "straszniejsza",
+          "gen": "straszniejszej",
+          "dat": "straszniejszej",
+          "acc": "straszniejszą",
+          "ins": "straszniejszą",
+          "loc": "straszniejszej"
+        },
+        "n": {
+          "nom": "straszniejsze",
+          "gen": "straszniejszego",
+          "dat": "straszniejszemu",
+          "acc": "straszniejsze",
+          "ins": "straszniejszym",
+          "loc": "straszniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "straszniejsi",
+          "gen": "straszniejszych",
+          "dat": "straszniejszym",
+          "acc": "straszniejszych",
+          "ins": "straszniejszymi",
+          "loc": "straszniejszych"
+        },
+        "nonvirile": {
+          "nom": "straszniejsze",
+          "gen": "straszniejszych",
+          "dat": "straszniejszym",
+          "acc": "straszniejsze",
+          "ins": "straszniejszymi",
+          "loc": "straszniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najstraszniejszy",
+          "gen": "najstraszniejszego",
+          "dat": "najstraszniejszemu",
+          "acc": "najstraszniejszego",
+          "ins": "najstraszniejszym",
+          "loc": "najstraszniejszym"
+        },
+        "m3": {
+          "nom": "najstraszniejszy",
+          "gen": "najstraszniejszego",
+          "dat": "najstraszniejszemu",
+          "acc": "najstraszniejszy",
+          "ins": "najstraszniejszym",
+          "loc": "najstraszniejszym"
+        },
+        "f": {
+          "nom": "najstraszniejsza",
+          "gen": "najstraszniejszej",
+          "dat": "najstraszniejszej",
+          "acc": "najstraszniejszą",
+          "ins": "najstraszniejszą",
+          "loc": "najstraszniejszej"
+        },
+        "n": {
+          "nom": "najstraszniejsze",
+          "gen": "najstraszniejszego",
+          "dat": "najstraszniejszemu",
+          "acc": "najstraszniejsze",
+          "ins": "najstraszniejszym",
+          "loc": "najstraszniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najstraszniejsi",
+          "gen": "najstraszniejszych",
+          "dat": "najstraszniejszym",
+          "acc": "najstraszniejszych",
+          "ins": "najstraszniejszymi",
+          "loc": "najstraszniejszych"
+        },
+        "nonvirile": {
+          "nom": "najstraszniejsze",
+          "gen": "najstraszniejszych",
+          "dat": "najstraszniejszym",
+          "acc": "najstraszniejsze",
+          "ins": "najstraszniejszymi",
+          "loc": "najstraszniejszych"
+        }
+      }
+    }
+  }
+}

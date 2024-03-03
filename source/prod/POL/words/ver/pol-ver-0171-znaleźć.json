@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "znaleźć",
+    "verbalNoun": "znalezienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "znaleziony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "znalazłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "znajdzie się"
+          },
+          "plural": {
+            "allPluralGenders": "znajdzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "znajdę"
+          },
+          "plural": {
+            "allPluralGenders": "znajdziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "znajdziesz"
+          },
+          "plural": {
+            "allPluralGenders": "znajdziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "znajdzie"
+          },
+          "plural": {
+            "allPluralGenders": "znajdą"
+          }
+        }
+      },
+      "imperative": "znajdź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "znaleziono"
+          },
+          "plural": {
+            "allPluralGenders": "znaleziono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "znalazłem",
+            "f": "znalazłam"
+          },
+          "plural": {
+            "virile": "znaleźliśmy",
+            "nonvirile": "znalazłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "znalazłeś",
+            "f": "znalazłaś"
+          },
+          "plural": {
+            "virile": "znaleźliście",
+            "nonvirile": "znalazłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "znalazł",
+            "f": "znalazła",
+            "n": "znalazło"
+          },
+          "plural": {
+            "virile": "znaleźli",
+            "nonvirile": "znalazły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

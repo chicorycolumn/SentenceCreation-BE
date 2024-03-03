@@ -1,0 +1,8 @@
+{
+  "inflections": {
+    "simple": "bold",
+    "comparative": "bolder",
+    "superlative": "boldest",
+    "adverb": "boldly"
+  }
+}

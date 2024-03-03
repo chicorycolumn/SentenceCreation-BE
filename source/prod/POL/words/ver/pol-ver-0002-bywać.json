@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "bywać",
+    "verbalNoun": "bywanie",
+    "activeAdjectival": "bywający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "bywając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "bywaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "bywano"
+          },
+          "plural": {
+            "allPluralGenders": "bywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "bywałem",
+            "f": "bywałam"
+          },
+          "plural": {
+            "virile": "bywaliśmy",
+            "nonvirile": "bywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "bywałeś",
+            "f": "bywałaś"
+          },
+          "plural": {
+            "virile": "bywaliście",
+            "nonvirile": "bywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "bywał",
+            "f": "bywała",
+            "n": "bywało"
+          },
+          "plural": {
+            "virile": "bywali",
+            "nonvirile": "bywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "bywa się"
+          },
+          "plural": {
+            "allPluralGenders": "bywa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "bywam"
+          },
+          "plural": {
+            "allPluralGenders": "bywamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "bywasz"
+          },
+          "plural": {
+            "allPluralGenders": "bywacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "bywa"
+          },
+          "plural": {
+            "allPluralGenders": "bywają"
+          }
+        }
+      }
+    }
+  }
+}

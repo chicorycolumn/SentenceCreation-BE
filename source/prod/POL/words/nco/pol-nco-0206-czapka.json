@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "czapka",
+      "gen": "czapki",
+      "dat": "czapce",
+      "acc": "czapkę",
+      "ins": "czapką",
+      "loc": "czapce",
+      "voc": "czapko"
+    },
+    "plural": {
+      "nom": "czapki",
+      "gen": "czapek",
+      "dat": "czapkom",
+      "acc": "czapki",
+      "ins": "czapkami",
+      "loc": "czapkach",
+      "voc": "czapki"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sklep",
+      "gen": "sklepu",
+      "dat": "sklepowi",
+      "acc": "sklep",
+      "ins": "sklepem",
+      "loc": "sklepie",
+      "voc": "sklepie"
+    },
+    "plural": {
+      "nom": "sklepy",
+      "gen": "sklepów",
+      "dat": "sklepom",
+      "acc": "sklepy",
+      "ins": "sklepami",
+      "loc": "sklepach",
+      "voc": "sklepy"
+    }
+  }
+}

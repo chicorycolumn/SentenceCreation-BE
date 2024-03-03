@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ogrodnik",
+      "gen": "ogrodnika",
+      "dat": "ogrodnikowi",
+      "acc": "ogrodnika",
+      "ins": "ogrodnikiem",
+      "loc": "ogrodniku",
+      "voc": "ogrodniku"
+    },
+    "plural": {
+      "nom": "ogrodnicy",
+      "gen": "ogrodników",
+      "dat": "ogrodnikom",
+      "acc": "ogrodników",
+      "ins": "ogrodnikami",
+      "loc": "ogrodnikach",
+      "voc": "ogrodnicy"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "grać",
+    "verbalNoun": "granie",
+    "activeAdjectival": "grający",
+    "passiveAdjectival": "grany",
+    "contemporaryAdverbial": "grając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "graj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "grano"
+          },
+          "plural": {
+            "allPluralGenders": "grano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "grałem",
+            "f": "grałam"
+          },
+          "plural": {
+            "virile": "graliśmy",
+            "nonvirile": "grałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "grałeś",
+            "f": "grałaś"
+          },
+          "plural": {
+            "virile": "graliście",
+            "nonvirile": "grałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "grał",
+            "f": "grała",
+            "n": "grało"
+          },
+          "plural": {
+            "virile": "grali",
+            "nonvirile": "grały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "gra się"
+          },
+          "plural": {
+            "allPluralGenders": "gra się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "gram"
+          },
+          "plural": {
+            "allPluralGenders": "gramy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "grasz"
+          },
+          "plural": {
+            "allPluralGenders": "gracie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "gra"
+          },
+          "plural": {
+            "allPluralGenders": "grają"
+          }
+        }
+      }
+    }
+  }
+}

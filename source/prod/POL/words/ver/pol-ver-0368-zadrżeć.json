@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zadrżeć",
+    "verbalNoun": "zadrżenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zadrżawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zadrży się"
+          },
+          "plural": {
+            "allPluralGenders": "zadrży się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zadrżę"
+          },
+          "plural": {
+            "allPluralGenders": "zadrżymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zadrżysz"
+          },
+          "plural": {
+            "allPluralGenders": "zadrżycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zadrży"
+          },
+          "plural": {
+            "allPluralGenders": "zadrżą"
+          }
+        }
+      },
+      "imperative": "zadrżyj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zadrżano"
+          },
+          "plural": {
+            "allPluralGenders": "zadrżano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zadrżałem",
+            "f": "zadrżałam"
+          },
+          "plural": {
+            "virile": "zadrżeliśmy",
+            "nonvirile": "zadrżałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zadrżałeś",
+            "f": "zadrżałaś"
+          },
+          "plural": {
+            "virile": "zadrżeliście",
+            "nonvirile": "zadrżałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zadrżał",
+            "f": "zadrżała",
+            "n": "zadrżało"
+          },
+          "plural": {
+            "virile": "zadrżeli",
+            "nonvirile": "zadrżały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dostawać",
+    "verbalNoun": "dostawanie",
+    "activeAdjectival": "dostający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "dostając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dostawaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dostawano"
+          },
+          "plural": {
+            "allPluralGenders": "dostawano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dostawałem",
+            "f": "dostawałam"
+          },
+          "plural": {
+            "virile": "dostawaliśmy",
+            "nonvirile": "dostawałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dostawałeś",
+            "f": "dostawałaś"
+          },
+          "plural": {
+            "virile": "dostawaliście",
+            "nonvirile": "dostawałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dostawał",
+            "f": "dostawała",
+            "n": "dostawało"
+          },
+          "plural": {
+            "virile": "dostawali",
+            "nonvirile": "dostawały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dostaje się"
+          },
+          "plural": {
+            "allPluralGenders": "dostaje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dostaję"
+          },
+          "plural": {
+            "allPluralGenders": "dostajemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dostajesz"
+          },
+          "plural": {
+            "allPluralGenders": "dostajecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dostaje"
+          },
+          "plural": {
+            "allPluralGenders": "dostają"
+          }
+        }
+      }
+    }
+  }
+}

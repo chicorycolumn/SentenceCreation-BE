@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "poprawnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "poprawny",
+          "gen": "poprawnego",
+          "dat": "poprawnemu",
+          "acc": "poprawnego",
+          "ins": "poprawnym",
+          "loc": "poprawnym"
+        },
+        "m3": {
+          "nom": "poprawny",
+          "gen": "poprawnego",
+          "dat": "poprawnemu",
+          "acc": "poprawny",
+          "ins": "poprawnym",
+          "loc": "poprawnym"
+        },
+        "f": {
+          "nom": "poprawna",
+          "gen": "poprawnej",
+          "dat": "poprawnej",
+          "acc": "poprawną",
+          "ins": "poprawną",
+          "loc": "poprawnej"
+        },
+        "n": {
+          "nom": "poprawne",
+          "gen": "poprawnego",
+          "dat": "poprawnemu",
+          "acc": "poprawne",
+          "ins": "poprawnym",
+          "loc": "poprawnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "poprawni",
+          "gen": "poprawnych",
+          "dat": "poprawnym",
+          "acc": "poprawnych",
+          "ins": "poprawnymi",
+          "loc": "poprawnych"
+        },
+        "nonvirile": {
+          "nom": "poprawne",
+          "gen": "poprawnych",
+          "dat": "poprawnym",
+          "acc": "poprawne",
+          "ins": "poprawnymi",
+          "loc": "poprawnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszy",
+              "bardziej poprawny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszego",
+              "bardziej poprawnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszemu",
+              "bardziej poprawnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszego",
+              "bardziej poprawnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszym",
+              "bardziej poprawnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszym",
+              "bardziej poprawnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszy",
+              "bardziej poprawny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszego",
+              "bardziej poprawnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszemu",
+              "bardziej poprawnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszy",
+              "bardziej poprawny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszym",
+              "bardziej poprawnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszym",
+              "bardziej poprawnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejsza",
+              "bardziej poprawna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszej",
+              "bardziej poprawnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszej",
+              "bardziej poprawnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszą",
+              "bardziej poprawną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszą",
+              "bardziej poprawną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszej",
+              "bardziej poprawnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejsze",
+              "bardziej poprawne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszego",
+              "bardziej poprawnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszemu",
+              "bardziej poprawnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejsze",
+              "bardziej poprawne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszym",
+              "bardziej poprawnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszym",
+              "bardziej poprawnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejsi",
+              "bardziej poprawni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszych",
+              "bardziej poprawnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszym",
+              "bardziej poprawnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszych",
+              "bardziej poprawnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszymi",
+              "bardziej poprawnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszych",
+              "bardziej poprawnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejsze",
+              "bardziej poprawne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszych",
+              "bardziej poprawnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszym",
+              "bardziej poprawnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejsze",
+              "bardziej poprawne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszymi",
+              "bardziej poprawnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "poprawniejszych",
+              "bardziej poprawnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszy",
+              "najbardziej poprawny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszego",
+              "najbardziej poprawnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszemu",
+              "najbardziej poprawnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszego",
+              "najbardziej poprawnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszym",
+              "najbardziej poprawnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszym",
+              "najbardziej poprawnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszy",
+              "najbardziej poprawny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszego",
+              "najbardziej poprawnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszemu",
+              "najbardziej poprawnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszy",
+              "najbardziej poprawny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszym",
+              "najbardziej poprawnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszym",
+              "najbardziej poprawnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejsza",
+              "najbardziej poprawna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszej",
+              "najbardziej poprawnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszej",
+              "najbardziej poprawnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszą",
+              "najbardziej poprawną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszą",
+              "najbardziej poprawną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszej",
+              "najbardziej poprawnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejsze",
+              "najbardziej poprawne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszego",
+              "najbardziej poprawnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszemu",
+              "najbardziej poprawnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejsze",
+              "najbardziej poprawne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszym",
+              "najbardziej poprawnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszym",
+              "najbardziej poprawnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejsi",
+              "najbardziej poprawni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszych",
+              "najbardziej poprawnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszym",
+              "najbardziej poprawnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszych",
+              "najbardziej poprawnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszymi",
+              "najbardziej poprawnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszych",
+              "najbardziej poprawnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejsze",
+              "najbardziej poprawne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszych",
+              "najbardziej poprawnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszym",
+              "najbardziej poprawnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejsze",
+              "najbardziej poprawne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszymi",
+              "najbardziej poprawnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpoprawniejszych",
+              "najbardziej poprawnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

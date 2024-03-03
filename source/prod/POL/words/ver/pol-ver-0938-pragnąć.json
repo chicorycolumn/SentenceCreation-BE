@@ -1,0 +1,81 @@
+{
+  "inflections": {
+    "infinitive": "pragnąć",
+    "activeAdjectival": "pragnący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "pragnąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pragnij",
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "pragnąłem",
+            "f": "pragnęłam"
+          },
+          "plural": {
+            "virile": "pragnęliśmy",
+            "nonvirile": "pragnęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pragnąłeś",
+            "f": "pragnęłaś"
+          },
+          "plural": {
+            "virile": "pragnęliście",
+            "nonvirile": "pragnęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pragnął",
+            "f": "pragnęła",
+            "n": "pragnęło"
+          },
+          "plural": {
+            "virile": "pragnęli",
+            "nonvirile": "pragnęły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pragnie się"
+          },
+          "plural": {
+            "allPluralGenders": "pragnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pragnę"
+          },
+          "plural": {
+            "allPluralGenders": "pragniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pragniesz"
+          },
+          "plural": {
+            "allPluralGenders": "pragniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pragnie"
+          },
+          "plural": {
+            "allPluralGenders": "pragną"
+          }
+        }
+      }
+    }
+  }
+}

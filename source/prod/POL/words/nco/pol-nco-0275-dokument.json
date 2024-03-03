@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dokument",
+      "gen": "dokumentu",
+      "dat": "dokumentowi",
+      "acc": "dokument",
+      "ins": "dokumentem",
+      "loc": "dokumencie",
+      "voc": "dokumencie"
+    },
+    "plural": {
+      "nom": "dokumenty",
+      "gen": "dokumentów",
+      "dat": "dokumentom",
+      "acc": "dokumenty",
+      "ins": "dokumentami",
+      "loc": "dokumentach",
+      "voc": "dokumenty"
+    }
+  }
+}

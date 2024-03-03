@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "narażać na ryzyko",
+    "verbalNoun": "narażanie na ryzyko",
+    "activeAdjectival": "narażający na ryzyko",
+    "passiveAdjectival": "narażany na ryzyko",
+    "contemporaryAdverbial": "narażając na ryzyko",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "narażaj na ryzyko",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "narażano na ryzyko"
+          },
+          "plural": {
+            "allPluralGenders": "narażano na ryzyko"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "narażałem na ryzyko",
+            "f": "narażałam na ryzyko"
+          },
+          "plural": {
+            "virile": "narażaliśmy na ryzyko",
+            "nonvirile": "narażałyśmy na ryzyko"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "narażałeś na ryzyko",
+            "f": "narażałaś na ryzyko"
+          },
+          "plural": {
+            "virile": "narażaliście na ryzyko",
+            "nonvirile": "narażałyście na ryzyko"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "narażał na ryzyko",
+            "f": "narażała na ryzyko",
+            "n": "narażało na ryzyko"
+          },
+          "plural": {
+            "virile": "narażali na ryzyko",
+            "nonvirile": "narażały na ryzyko"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "naraża się na ryzyko"
+          },
+          "plural": {
+            "allPluralGenders": "naraża się na ryzyko"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "narażam na ryzyko"
+          },
+          "plural": {
+            "allPluralGenders": "narażamy na ryzyko"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "narażasz na ryzyko"
+          },
+          "plural": {
+            "allPluralGenders": "narażacie na ryzyko"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "naraża na ryzyko"
+          },
+          "plural": {
+            "allPluralGenders": "narażają na ryzyko"
+          }
+        }
+      }
+    }
+  }
+}

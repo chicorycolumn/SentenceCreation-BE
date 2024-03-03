@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "trasa",
+      "gen": "trasy",
+      "dat": "trasie",
+      "acc": "trasę",
+      "ins": "trasą",
+      "loc": "trasie",
+      "voc": "traso"
+    },
+    "plural": {
+      "nom": "trasy",
+      "gen": "tras",
+      "dat": "trasom",
+      "acc": "trasy",
+      "ins": "trasami",
+      "loc": "trasach",
+      "voc": "trasy"
+    }
+  }
+}

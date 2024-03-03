@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ground floor",
+      "gen": "ground floor's"
+    },
+    "plural": {
+      "nom": "ground floors",
+      "gen": "ground floors'"
+    }
+  }
+}

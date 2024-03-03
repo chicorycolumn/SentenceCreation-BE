@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "jądrowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "jądrowy",
+          "gen": "jądrowego",
+          "dat": "jądrowemu",
+          "acc": "jądrowego",
+          "ins": "jądrowym",
+          "loc": "jądrowym"
+        },
+        "m3": {
+          "nom": "jądrowy",
+          "gen": "jądrowego",
+          "dat": "jądrowemu",
+          "acc": "jądrowy",
+          "ins": "jądrowym",
+          "loc": "jądrowym"
+        },
+        "f": {
+          "nom": "jądrowa",
+          "gen": "jądrowej",
+          "dat": "jądrowej",
+          "acc": "jądrową",
+          "ins": "jądrową",
+          "loc": "jądrowej"
+        },
+        "n": {
+          "nom": "jądrowe",
+          "gen": "jądrowego",
+          "dat": "jądrowemu",
+          "acc": "jądrowe",
+          "ins": "jądrowym",
+          "loc": "jądrowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "jądrowi",
+          "gen": "jądrowych",
+          "dat": "jądrowym",
+          "acc": "jądrowych",
+          "ins": "jądrowymi",
+          "loc": "jądrowych"
+        },
+        "nonvirile": {
+          "nom": "jądrowe",
+          "gen": "jądrowych",
+          "dat": "jądrowym",
+          "acc": "jądrowe",
+          "ins": "jądrowymi",
+          "loc": "jądrowych"
+        }
+      }
+    }
+  }
+}

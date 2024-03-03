@@ -1,0 +1,82 @@
+{
+  "inflections": {
+    "infinitive": "przyjść",
+    "verbalNoun": "przyjście",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przyszedłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przyjdzie się"
+          },
+          "plural": {
+            "allPluralGenders": "przyjdzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przyjdę"
+          },
+          "plural": {
+            "allPluralGenders": "przyjdziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przyjdziesz"
+          },
+          "plural": {
+            "allPluralGenders": "przyjdziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przyjdzie"
+          },
+          "plural": {
+            "allPluralGenders": "przyjdą"
+          }
+        }
+      },
+      "imperative": "przyjdź",
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "przyszedłem",
+            "f": "przyszłam"
+          },
+          "plural": {
+            "virile": "przyszliśmy",
+            "nonvirile": "przyszłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przyszedłeś",
+            "f": "przyszłaś"
+          },
+          "plural": {
+            "virile": "przyszliście",
+            "nonvirile": "przyszłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przyszedł",
+            "f": "przyszła",
+            "n": "przyszło"
+          },
+          "plural": {
+            "virile": "przyszli",
+            "nonvirile": "przyszły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

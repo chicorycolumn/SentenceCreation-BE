@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "automatycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "automatyczny",
+          "gen": "automatycznego",
+          "dat": "automatycznemu",
+          "acc": "automatycznego",
+          "ins": "automatycznym",
+          "loc": "automatycznym"
+        },
+        "m3": {
+          "nom": "automatyczny",
+          "gen": "automatycznego",
+          "dat": "automatycznemu",
+          "acc": "automatyczny",
+          "ins": "automatycznym",
+          "loc": "automatycznym"
+        },
+        "f": {
+          "nom": "automatyczna",
+          "gen": "automatycznej",
+          "dat": "automatycznej",
+          "acc": "automatyczną",
+          "ins": "automatyczną",
+          "loc": "automatycznej"
+        },
+        "n": {
+          "nom": "automatyczne",
+          "gen": "automatycznego",
+          "dat": "automatycznemu",
+          "acc": "automatyczne",
+          "ins": "automatycznym",
+          "loc": "automatycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "automatyczni",
+          "gen": "automatycznych",
+          "dat": "automatycznym",
+          "acc": "automatycznych",
+          "ins": "automatycznymi",
+          "loc": "automatycznych"
+        },
+        "nonvirile": {
+          "nom": "automatyczne",
+          "gen": "automatycznych",
+          "dat": "automatycznym",
+          "acc": "automatyczne",
+          "ins": "automatycznymi",
+          "loc": "automatycznych"
+        }
+      }
+    }
+  }
+}

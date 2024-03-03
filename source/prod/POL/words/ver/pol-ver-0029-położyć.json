@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "położyć",
+    "verbalNoun": "położenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "położony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "położywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "położy się"
+          },
+          "plural": {
+            "allPluralGenders": "położy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "położę"
+          },
+          "plural": {
+            "allPluralGenders": "położymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "położysz"
+          },
+          "plural": {
+            "allPluralGenders": "położycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "położy"
+          },
+          "plural": {
+            "allPluralGenders": "położą"
+          }
+        }
+      },
+      "imperative": "połóż",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "położono"
+          },
+          "plural": {
+            "allPluralGenders": "położono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "położyłem",
+            "f": "położyłam"
+          },
+          "plural": {
+            "virile": "położyliśmy",
+            "nonvirile": "położyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "położyłeś",
+            "f": "położyłaś"
+          },
+          "plural": {
+            "virile": "położyliście",
+            "nonvirile": "położyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "położył",
+            "f": "położyła",
+            "n": "położyło"
+          },
+          "plural": {
+            "virile": "położyli",
+            "nonvirile": "położyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

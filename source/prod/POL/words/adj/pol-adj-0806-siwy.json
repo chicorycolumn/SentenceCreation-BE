@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "siwo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "siwy",
+          "gen": "siwego",
+          "dat": "siwemu",
+          "acc": "siwego",
+          "ins": "siwym",
+          "loc": "siwym"
+        },
+        "m3": {
+          "nom": "siwy",
+          "gen": "siwego",
+          "dat": "siwemu",
+          "acc": "siwy",
+          "ins": "siwym",
+          "loc": "siwym"
+        },
+        "f": {
+          "nom": "siwa",
+          "gen": "siwej",
+          "dat": "siwej",
+          "acc": "siwą",
+          "ins": "siwą",
+          "loc": "siwej"
+        },
+        "n": {
+          "nom": "siwe",
+          "gen": "siwego",
+          "dat": "siwemu",
+          "acc": "siwe",
+          "ins": "siwym",
+          "loc": "siwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "siwi",
+          "gen": "siwych",
+          "dat": "siwym",
+          "acc": "siwych",
+          "ins": "siwymi",
+          "loc": "siwych"
+        },
+        "nonvirile": {
+          "nom": "siwe",
+          "gen": "siwych",
+          "dat": "siwym",
+          "acc": "siwe",
+          "ins": "siwymi",
+          "loc": "siwych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej siwy",
+          "gen": "bardziej siwego",
+          "dat": "bardziej siwemu",
+          "acc": "bardziej siwego",
+          "ins": "bardziej siwym",
+          "loc": "bardziej siwym"
+        },
+        "m3": {
+          "nom": "bardziej siwy",
+          "gen": "bardziej siwego",
+          "dat": "bardziej siwemu",
+          "acc": "bardziej siwy",
+          "ins": "bardziej siwym",
+          "loc": "bardziej siwym"
+        },
+        "f": {
+          "nom": "bardziej siwa",
+          "gen": "bardziej siwej",
+          "dat": "bardziej siwej",
+          "acc": "bardziej siwą",
+          "ins": "bardziej siwą",
+          "loc": "bardziej siwej"
+        },
+        "n": {
+          "nom": "bardziej siwe",
+          "gen": "bardziej siwego",
+          "dat": "bardziej siwemu",
+          "acc": "bardziej siwe",
+          "ins": "bardziej siwym",
+          "loc": "bardziej siwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej siwi",
+          "gen": "bardziej siwych",
+          "dat": "bardziej siwym",
+          "acc": "bardziej siwych",
+          "ins": "bardziej siwymi",
+          "loc": "bardziej siwych"
+        },
+        "nonvirile": {
+          "nom": "bardziej siwe",
+          "gen": "bardziej siwych",
+          "dat": "bardziej siwym",
+          "acc": "bardziej siwe",
+          "ins": "bardziej siwymi",
+          "loc": "bardziej siwych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej siwy",
+          "gen": "najbardziej siwego",
+          "dat": "najbardziej siwemu",
+          "acc": "najbardziej siwego",
+          "ins": "najbardziej siwym",
+          "loc": "najbardziej siwym"
+        },
+        "m3": {
+          "nom": "najbardziej siwy",
+          "gen": "najbardziej siwego",
+          "dat": "najbardziej siwemu",
+          "acc": "najbardziej siwy",
+          "ins": "najbardziej siwym",
+          "loc": "najbardziej siwym"
+        },
+        "f": {
+          "nom": "najbardziej siwa",
+          "gen": "najbardziej siwej",
+          "dat": "najbardziej siwej",
+          "acc": "najbardziej siwą",
+          "ins": "najbardziej siwą",
+          "loc": "najbardziej siwej"
+        },
+        "n": {
+          "nom": "najbardziej siwe",
+          "gen": "najbardziej siwego",
+          "dat": "najbardziej siwemu",
+          "acc": "najbardziej siwe",
+          "ins": "najbardziej siwym",
+          "loc": "najbardziej siwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej siwi",
+          "gen": "najbardziej siwych",
+          "dat": "najbardziej siwym",
+          "acc": "najbardziej siwych",
+          "ins": "najbardziej siwymi",
+          "loc": "najbardziej siwych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej siwe",
+          "gen": "najbardziej siwych",
+          "dat": "najbardziej siwym",
+          "acc": "najbardziej siwe",
+          "ins": "najbardziej siwymi",
+          "loc": "najbardziej siwych"
+        }
+      }
+    }
+  }
+}

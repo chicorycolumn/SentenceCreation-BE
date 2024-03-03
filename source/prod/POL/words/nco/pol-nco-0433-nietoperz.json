@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "nietoperz",
+      "gen": "nietoperza",
+      "dat": "nietoperzowi",
+      "acc": "nietoperza",
+      "ins": "nietoperzem",
+      "loc": "nietoperzu",
+      "voc": "nietoperzu"
+    },
+    "plural": {
+      "nom": "nietoperze",
+      "gen": [
+        "nietoperzy",
+        "nietoperzów"
+      ],
+      "dat": "nietoperzom",
+      "acc": "nietoperze",
+      "ins": "nietoperzami",
+      "loc": "nietoperzach",
+      "voc": "nietoperze"
+    }
+  }
+}

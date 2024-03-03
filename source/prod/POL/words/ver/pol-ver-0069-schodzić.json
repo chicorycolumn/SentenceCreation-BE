@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "schodzić",
+    "verbalNoun": "schodzenie",
+    "activeAdjectival": "schodzący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "schodząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "schodź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "schodzono"
+          },
+          "plural": {
+            "allPluralGenders": "schodzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "schodziłem",
+            "f": "schodziłam"
+          },
+          "plural": {
+            "virile": "schodziliśmy",
+            "nonvirile": "schodziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "schodziłeś",
+            "f": "schodziłaś"
+          },
+          "plural": {
+            "virile": "schodziliście",
+            "nonvirile": "schodziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "schodził",
+            "f": "schodziła",
+            "n": "schodziło"
+          },
+          "plural": {
+            "virile": "schodzili",
+            "nonvirile": "schodziły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "schodzi się"
+          },
+          "plural": {
+            "allPluralGenders": "schodzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "schodzę"
+          },
+          "plural": {
+            "allPluralGenders": "schodzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "schodzisz"
+          },
+          "plural": {
+            "allPluralGenders": "schodzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "schodzi"
+          },
+          "plural": {
+            "allPluralGenders": "schodzą"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "podziemnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "podziemny",
+          "gen": "podziemnego",
+          "dat": "podziemnemu",
+          "acc": "podziemnego",
+          "ins": "podziemnym",
+          "loc": "podziemnym"
+        },
+        "m3": {
+          "nom": "podziemny",
+          "gen": "podziemnego",
+          "dat": "podziemnemu",
+          "acc": "podziemny",
+          "ins": "podziemnym",
+          "loc": "podziemnym"
+        },
+        "f": {
+          "nom": "podziemna",
+          "gen": "podziemnej",
+          "dat": "podziemnej",
+          "acc": "podziemną",
+          "ins": "podziemną",
+          "loc": "podziemnej"
+        },
+        "n": {
+          "nom": "podziemne",
+          "gen": "podziemnego",
+          "dat": "podziemnemu",
+          "acc": "podziemne",
+          "ins": "podziemnym",
+          "loc": "podziemnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "podziemni",
+          "gen": "podziemnych",
+          "dat": "podziemnym",
+          "acc": "podziemnych",
+          "ins": "podziemnymi",
+          "loc": "podziemnych"
+        },
+        "nonvirile": {
+          "nom": "podziemne",
+          "gen": "podziemnych",
+          "dat": "podziemnym",
+          "acc": "podziemne",
+          "ins": "podziemnymi",
+          "loc": "podziemnych"
+        }
+      }
+    }
+  }
+}

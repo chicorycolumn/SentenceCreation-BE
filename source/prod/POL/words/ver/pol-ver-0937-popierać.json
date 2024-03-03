@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "popierać",
+    "verbalNoun": "popieranie",
+    "activeAdjectival": "popierający",
+    "passiveAdjectival": "popierany",
+    "contemporaryAdverbial": "popierając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "popieraj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "popierano"
+          },
+          "plural": {
+            "allPluralGenders": "popierano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "popierałem",
+            "f": "popierałam"
+          },
+          "plural": {
+            "virile": "popieraliśmy",
+            "nonvirile": "popierałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "popierałeś",
+            "f": "popierałaś"
+          },
+          "plural": {
+            "virile": "popieraliście",
+            "nonvirile": "popierałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "popierał",
+            "f": "popierała",
+            "n": "popierało"
+          },
+          "plural": {
+            "virile": "popierali",
+            "nonvirile": "popierały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "popiera się"
+          },
+          "plural": {
+            "allPluralGenders": "popiera się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "popieram"
+          },
+          "plural": {
+            "allPluralGenders": "popieramy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "popierasz"
+          },
+          "plural": {
+            "allPluralGenders": "popieracie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "popiera"
+          },
+          "plural": {
+            "allPluralGenders": "popierają"
+          }
+        }
+      }
+    }
+  }
+}

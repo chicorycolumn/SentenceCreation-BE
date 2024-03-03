@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "grunt",
+      "gen": "gruntu",
+      "dat": "gruntowi",
+      "acc": "grunt",
+      "ins": "gruntem",
+      "loc": "gruncie",
+      "voc": "gruncie"
+    },
+    "plural": {
+      "nom": "grunty",
+      "gen": "gruntów",
+      "dat": "gruntom",
+      "acc": "grunty",
+      "ins": "gruntami",
+      "loc": "gruntach",
+      "voc": "grunty"
+    }
+  }
+}

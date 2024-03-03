@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "żołądek",
+      "gen": "żołądka",
+      "dat": "żołądkowi",
+      "acc": "żołądek",
+      "ins": "żołądkiem",
+      "loc": "żołądku",
+      "voc": "żołądku"
+    },
+    "plural": {
+      "nom": "żołądki",
+      "gen": "żołądków",
+      "dat": "żołądkom",
+      "acc": "żołądki",
+      "ins": "żołądkami",
+      "loc": "żołądkach",
+      "voc": "żołądki"
+    }
+  }
+}

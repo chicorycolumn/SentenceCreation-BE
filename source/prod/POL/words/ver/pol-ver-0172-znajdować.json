@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "znajdować",
+    "verbalNoun": "znajdowanie",
+    "activeAdjectival": "znajdujący",
+    "passiveAdjectival": "znajdowany",
+    "contemporaryAdverbial": "znajdując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "znajduj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "znajdowano"
+          },
+          "plural": {
+            "allPluralGenders": "znajdowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "znajdowałem",
+            "f": "znajdowałam"
+          },
+          "plural": {
+            "virile": "znajdowaliśmy",
+            "nonvirile": "znajdowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "znajdowałeś",
+            "f": "znajdowałaś"
+          },
+          "plural": {
+            "virile": "znajdowaliście",
+            "nonvirile": "znajdowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "znajdował",
+            "f": "znajdowała",
+            "n": "znajdowało"
+          },
+          "plural": {
+            "virile": "znajdowali",
+            "nonvirile": "znajdowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "znajduje się"
+          },
+          "plural": {
+            "allPluralGenders": "znajduje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "znajduję"
+          },
+          "plural": {
+            "allPluralGenders": "znajdujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "znajdujesz"
+          },
+          "plural": {
+            "allPluralGenders": "znajdujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "znajduje"
+          },
+          "plural": {
+            "allPluralGenders": "znajdują"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "ogólnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ogólny",
+          "gen": "ogólnego",
+          "dat": "ogólnemu",
+          "acc": "ogólnego",
+          "ins": "ogólnym",
+          "loc": "ogólnym"
+        },
+        "m3": {
+          "nom": "ogólny",
+          "gen": "ogólnego",
+          "dat": "ogólnemu",
+          "acc": "ogólny",
+          "ins": "ogólnym",
+          "loc": "ogólnym"
+        },
+        "f": {
+          "nom": "ogólna",
+          "gen": "ogólnej",
+          "dat": "ogólnej",
+          "acc": "ogólną",
+          "ins": "ogólną",
+          "loc": "ogólnej"
+        },
+        "n": {
+          "nom": "ogólne",
+          "gen": "ogólnego",
+          "dat": "ogólnemu",
+          "acc": "ogólne",
+          "ins": "ogólnym",
+          "loc": "ogólnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ogólni",
+          "gen": "ogólnych",
+          "dat": "ogólnym",
+          "acc": "ogólnych",
+          "ins": "ogólnymi",
+          "loc": "ogólnych"
+        },
+        "nonvirile": {
+          "nom": "ogólne",
+          "gen": "ogólnych",
+          "dat": "ogólnym",
+          "acc": "ogólne",
+          "ins": "ogólnymi",
+          "loc": "ogólnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "ogólniejszy",
+          "gen": "ogólniejszego",
+          "dat": "ogólniejszemu",
+          "acc": "ogólniejszego",
+          "ins": "ogólniejszym",
+          "loc": "ogólniejszym"
+        },
+        "m3": {
+          "nom": "ogólniejszy",
+          "gen": "ogólniejszego",
+          "dat": "ogólniejszemu",
+          "acc": "ogólniejszy",
+          "ins": "ogólniejszym",
+          "loc": "ogólniejszym"
+        },
+        "f": {
+          "nom": "ogólniejsza",
+          "gen": "ogólniejszej",
+          "dat": "ogólniejszej",
+          "acc": "ogólniejszą",
+          "ins": "ogólniejszą",
+          "loc": "ogólniejszej"
+        },
+        "n": {
+          "nom": "ogólniejsze",
+          "gen": "ogólniejszego",
+          "dat": "ogólniejszemu",
+          "acc": "ogólniejsze",
+          "ins": "ogólniejszym",
+          "loc": "ogólniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ogólniejsi",
+          "gen": "ogólniejszych",
+          "dat": "ogólniejszym",
+          "acc": "ogólniejszych",
+          "ins": "ogólniejszymi",
+          "loc": "ogólniejszych"
+        },
+        "nonvirile": {
+          "nom": "ogólniejsze",
+          "gen": "ogólniejszych",
+          "dat": "ogólniejszym",
+          "acc": "ogólniejsze",
+          "ins": "ogólniejszymi",
+          "loc": "ogólniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najogólniejszy",
+          "gen": "najogólniejszego",
+          "dat": "najogólniejszemu",
+          "acc": "najogólniejszego",
+          "ins": "najogólniejszym",
+          "loc": "najogólniejszym"
+        },
+        "m3": {
+          "nom": "najogólniejszy",
+          "gen": "najogólniejszego",
+          "dat": "najogólniejszemu",
+          "acc": "najogólniejszy",
+          "ins": "najogólniejszym",
+          "loc": "najogólniejszym"
+        },
+        "f": {
+          "nom": "najogólniejsza",
+          "gen": "najogólniejszej",
+          "dat": "najogólniejszej",
+          "acc": "najogólniejszą",
+          "ins": "najogólniejszą",
+          "loc": "najogólniejszej"
+        },
+        "n": {
+          "nom": "najogólniejsze",
+          "gen": "najogólniejszego",
+          "dat": "najogólniejszemu",
+          "acc": "najogólniejsze",
+          "ins": "najogólniejszym",
+          "loc": "najogólniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najogólniejsi",
+          "gen": "najogólniejszych",
+          "dat": "najogólniejszym",
+          "acc": "najogólniejszych",
+          "ins": "najogólniejszymi",
+          "loc": "najogólniejszych"
+        },
+        "nonvirile": {
+          "nom": "najogólniejsze",
+          "gen": "najogólniejszych",
+          "dat": "najogólniejszym",
+          "acc": "najogólniejsze",
+          "ins": "najogólniejszymi",
+          "loc": "najogólniejszych"
+        }
+      }
+    }
+  }
+}

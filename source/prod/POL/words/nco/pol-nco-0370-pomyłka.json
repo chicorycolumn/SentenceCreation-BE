@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pomyłka",
+      "gen": "pomyłki",
+      "dat": "pomyłce",
+      "acc": "pomyłkę",
+      "ins": "pomyłką",
+      "loc": "pomyłce",
+      "voc": "pomyłko"
+    },
+    "plural": {
+      "nom": "pomyłki",
+      "gen": "pomyłek",
+      "dat": "pomyłkom",
+      "acc": "pomyłki",
+      "ins": "pomyłkami",
+      "loc": "pomyłkach",
+      "voc": "pomyłki"
+    }
+  }
+}

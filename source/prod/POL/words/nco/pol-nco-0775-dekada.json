@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dekada",
+      "gen": "dekady",
+      "dat": "dekadzie",
+      "acc": "dekadę",
+      "ins": "dekadą",
+      "loc": "dekadzie",
+      "voc": "dekado"
+    },
+    "plural": {
+      "nom": "dekady",
+      "gen": "dekad",
+      "dat": "dekadom",
+      "acc": "dekady",
+      "ins": "dekadami",
+      "loc": "dekadach",
+      "voc": "dekady"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mrok",
+      "gen": "mroku",
+      "dat": "mrokowi",
+      "acc": "mrok",
+      "ins": "mrokiem",
+      "loc": "mroku",
+      "voc": "mroku"
+    },
+    "plural": {
+      "nom": "mroki",
+      "gen": "mroków",
+      "dat": "mrokom",
+      "acc": "mroki",
+      "ins": "mrokami",
+      "loc": "mrokach",
+      "voc": "mroki"
+    }
+  }
+}

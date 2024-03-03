@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "patrzeć",
+    "verbalNoun": "patrzenie",
+    "activeAdjectival": "patrzący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "patrząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "patrz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "patrzano"
+          },
+          "plural": {
+            "allPluralGenders": "patrzano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "patrzałem",
+            "f": "patrzałam"
+          },
+          "plural": {
+            "virile": "patrzeliśmy",
+            "nonvirile": "patrzałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "patrzałeś",
+            "f": "patrzałaś"
+          },
+          "plural": {
+            "virile": "patrzeliście",
+            "nonvirile": "patrzałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "patrzał",
+            "f": "patrzała",
+            "n": "patrzało"
+          },
+          "plural": {
+            "virile": "patrzeli",
+            "nonvirile": "patrzały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "patrzy się"
+          },
+          "plural": {
+            "allPluralGenders": "patrzy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "patrzę"
+          },
+          "plural": {
+            "allPluralGenders": "patrzymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "patrzysz"
+          },
+          "plural": {
+            "allPluralGenders": "patrzycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "patrzy"
+          },
+          "plural": {
+            "allPluralGenders": "patrzą"
+          }
+        }
+      }
+    }
+  }
+}

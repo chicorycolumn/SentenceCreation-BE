@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "delikatnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "delikatny",
+          "gen": "delikatnego",
+          "dat": "delikatnemu",
+          "acc": "delikatnego",
+          "ins": "delikatnym",
+          "loc": "delikatnym"
+        },
+        "m3": {
+          "nom": "delikatny",
+          "gen": "delikatnego",
+          "dat": "delikatnemu",
+          "acc": "delikatny",
+          "ins": "delikatnym",
+          "loc": "delikatnym"
+        },
+        "f": {
+          "nom": "delikatna",
+          "gen": "delikatnej",
+          "dat": "delikatnej",
+          "acc": "delikatną",
+          "ins": "delikatną",
+          "loc": "delikatnej"
+        },
+        "n": {
+          "nom": "delikatne",
+          "gen": "delikatnego",
+          "dat": "delikatnemu",
+          "acc": "delikatne",
+          "ins": "delikatnym",
+          "loc": "delikatnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "delikatni",
+          "gen": "delikatnych",
+          "dat": "delikatnym",
+          "acc": "delikatnych",
+          "ins": "delikatnymi",
+          "loc": "delikatnych"
+        },
+        "nonvirile": {
+          "nom": "delikatne",
+          "gen": "delikatnych",
+          "dat": "delikatnym",
+          "acc": "delikatne",
+          "ins": "delikatnymi",
+          "loc": "delikatnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "delikatniejszy",
+          "gen": "delikatniejszego",
+          "dat": "delikatniejszemu",
+          "acc": "delikatniejszego",
+          "ins": "delikatniejszym",
+          "loc": "delikatniejszym"
+        },
+        "m3": {
+          "nom": "delikatniejszy",
+          "gen": "delikatniejszego",
+          "dat": "delikatniejszemu",
+          "acc": "delikatniejszy",
+          "ins": "delikatniejszym",
+          "loc": "delikatniejszym"
+        },
+        "f": {
+          "nom": "delikatniejsza",
+          "gen": "delikatniejszej",
+          "dat": "delikatniejszej",
+          "acc": "delikatniejszą",
+          "ins": "delikatniejszą",
+          "loc": "delikatniejszej"
+        },
+        "n": {
+          "nom": "delikatniejsze",
+          "gen": "delikatniejszego",
+          "dat": "delikatniejszemu",
+          "acc": "delikatniejsze",
+          "ins": "delikatniejszym",
+          "loc": "delikatniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "delikatniejsi",
+          "gen": "delikatniejszych",
+          "dat": "delikatniejszym",
+          "acc": "delikatniejszych",
+          "ins": "delikatniejszymi",
+          "loc": "delikatniejszych"
+        },
+        "nonvirile": {
+          "nom": "delikatniejsze",
+          "gen": "delikatniejszych",
+          "dat": "delikatniejszym",
+          "acc": "delikatniejsze",
+          "ins": "delikatniejszymi",
+          "loc": "delikatniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najdelikatniejszy",
+          "gen": "najdelikatniejszego",
+          "dat": "najdelikatniejszemu",
+          "acc": "najdelikatniejszego",
+          "ins": "najdelikatniejszym",
+          "loc": "najdelikatniejszym"
+        },
+        "m3": {
+          "nom": "najdelikatniejszy",
+          "gen": "najdelikatniejszego",
+          "dat": "najdelikatniejszemu",
+          "acc": "najdelikatniejszy",
+          "ins": "najdelikatniejszym",
+          "loc": "najdelikatniejszym"
+        },
+        "f": {
+          "nom": "najdelikatniejsza",
+          "gen": "najdelikatniejszej",
+          "dat": "najdelikatniejszej",
+          "acc": "najdelikatniejszą",
+          "ins": "najdelikatniejszą",
+          "loc": "najdelikatniejszej"
+        },
+        "n": {
+          "nom": "najdelikatniejsze",
+          "gen": "najdelikatniejszego",
+          "dat": "najdelikatniejszemu",
+          "acc": "najdelikatniejsze",
+          "ins": "najdelikatniejszym",
+          "loc": "najdelikatniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najdelikatniejsi",
+          "gen": "najdelikatniejszych",
+          "dat": "najdelikatniejszym",
+          "acc": "najdelikatniejszych",
+          "ins": "najdelikatniejszymi",
+          "loc": "najdelikatniejszych"
+        },
+        "nonvirile": {
+          "nom": "najdelikatniejsze",
+          "gen": "najdelikatniejszych",
+          "dat": "najdelikatniejszym",
+          "acc": "najdelikatniejsze",
+          "ins": "najdelikatniejszymi",
+          "loc": "najdelikatniejszych"
+        }
+      }
+    }
+  }
+}

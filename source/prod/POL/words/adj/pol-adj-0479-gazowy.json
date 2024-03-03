@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "gazowy",
+          "gen": "gazowego",
+          "dat": "gazowemu",
+          "acc": "gazowego",
+          "ins": "gazowym",
+          "loc": "gazowym"
+        },
+        "m3": {
+          "nom": "gazowy",
+          "gen": "gazowego",
+          "dat": "gazowemu",
+          "acc": "gazowy",
+          "ins": "gazowym",
+          "loc": "gazowym"
+        },
+        "f": {
+          "nom": "gazowa",
+          "gen": "gazowej",
+          "dat": "gazowej",
+          "acc": "gazową",
+          "ins": "gazową",
+          "loc": "gazowej"
+        },
+        "n": {
+          "nom": "gazowe",
+          "gen": "gazowego",
+          "dat": "gazowemu",
+          "acc": "gazowe",
+          "ins": "gazowym",
+          "loc": "gazowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "gazowi",
+          "gen": "gazowych",
+          "dat": "gazowym",
+          "acc": "gazowych",
+          "ins": "gazowymi",
+          "loc": "gazowych"
+        },
+        "nonvirile": {
+          "nom": "gazowe",
+          "gen": "gazowych",
+          "dat": "gazowym",
+          "acc": "gazowe",
+          "ins": "gazowymi",
+          "loc": "gazowych"
+        }
+      }
+    }
+  }
+}

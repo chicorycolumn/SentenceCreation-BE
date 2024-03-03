@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "joint",
+      "gen": "joint's"
+    },
+    "plural": {
+      "nom": "joints",
+      "gen": "joints'"
+    }
+  }
+}

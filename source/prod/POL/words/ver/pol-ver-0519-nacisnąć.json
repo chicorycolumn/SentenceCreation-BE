@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nacisnąć",
+    "verbalNoun": "naciśnięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "naciśnięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "nacisnąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "naciśnie się"
+          },
+          "plural": {
+            "allPluralGenders": "naciśnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nacisnę"
+          },
+          "plural": {
+            "allPluralGenders": "naciśniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "naciśniesz"
+          },
+          "plural": {
+            "allPluralGenders": "naciśniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "naciśnie"
+          },
+          "plural": {
+            "allPluralGenders": "nacisną"
+          }
+        }
+      },
+      "imperative": "naciśnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "naciśnięto"
+          },
+          "plural": {
+            "allPluralGenders": "naciśnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nacisnąłem",
+            "f": "nacisnęłam"
+          },
+          "plural": {
+            "virile": "nacisnęliśmy",
+            "nonvirile": "nacisnęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nacisnąłeś",
+            "f": "nacisnęłaś"
+          },
+          "plural": {
+            "virile": "nacisnęliście",
+            "nonvirile": "nacisnęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nacisnął",
+            "f": "nacisnęła",
+            "n": "nacisnęło"
+          },
+          "plural": {
+            "virile": "nacisnęli",
+            "nonvirile": "nacisnęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

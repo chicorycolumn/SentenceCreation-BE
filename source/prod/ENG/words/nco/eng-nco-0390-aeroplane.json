@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "aeroplane",
+      "gen": "aeroplane's"
+    },
+    "plural": {
+      "nom": "aeroplanes",
+      "gen": "aeroplanes'"
+    }
+  }
+}

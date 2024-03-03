@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "oczywiście",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "oczywisty",
+          "gen": "oczywistego",
+          "dat": "oczywistemu",
+          "acc": "oczywistego",
+          "ins": "oczywistym",
+          "loc": "oczywistym"
+        },
+        "m3": {
+          "nom": "oczywisty",
+          "gen": "oczywistego",
+          "dat": "oczywistemu",
+          "acc": "oczywisty",
+          "ins": "oczywistym",
+          "loc": "oczywistym"
+        },
+        "f": {
+          "nom": "oczywista",
+          "gen": "oczywistej",
+          "dat": "oczywistej",
+          "acc": "oczywistą",
+          "ins": "oczywistą",
+          "loc": "oczywistej"
+        },
+        "n": {
+          "nom": "oczywiste",
+          "gen": "oczywistego",
+          "dat": "oczywistemu",
+          "acc": "oczywiste",
+          "ins": "oczywistym",
+          "loc": "oczywistym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "oczywiści",
+          "gen": "oczywistych",
+          "dat": "oczywistym",
+          "acc": "oczywistych",
+          "ins": "oczywistymi",
+          "loc": "oczywistych"
+        },
+        "nonvirile": {
+          "nom": "oczywiste",
+          "gen": "oczywistych",
+          "dat": "oczywistym",
+          "acc": "oczywiste",
+          "ins": "oczywistymi",
+          "loc": "oczywistych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszy",
+              "bardziej oczywisty"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszego",
+              "bardziej oczywistego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszemu",
+              "bardziej oczywistemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszego",
+              "bardziej oczywistego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszym",
+              "bardziej oczywistym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszym",
+              "bardziej oczywistym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszy",
+              "bardziej oczywisty"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszego",
+              "bardziej oczywistego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszemu",
+              "bardziej oczywistemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszy",
+              "bardziej oczywisty"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszym",
+              "bardziej oczywistym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszym",
+              "bardziej oczywistym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistsza",
+              "bardziej oczywista"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszej",
+              "bardziej oczywistej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszej",
+              "bardziej oczywistej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszą",
+              "bardziej oczywistą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszą",
+              "bardziej oczywistą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszej",
+              "bardziej oczywistej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistsze",
+              "bardziej oczywiste"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszego",
+              "bardziej oczywistego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszemu",
+              "bardziej oczywistemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistsze",
+              "bardziej oczywiste"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszym",
+              "bardziej oczywistym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszym",
+              "bardziej oczywistym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistsi",
+              "bardziej oczywiści"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszych",
+              "bardziej oczywistych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszym",
+              "bardziej oczywistym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszych",
+              "bardziej oczywistych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszymi",
+              "bardziej oczywistymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszych",
+              "bardziej oczywistych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistsze",
+              "bardziej oczywiste"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszych",
+              "bardziej oczywistych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszym",
+              "bardziej oczywistym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistsze",
+              "bardziej oczywiste"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszymi",
+              "bardziej oczywistymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "oczywistszych",
+              "bardziej oczywistych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszy",
+              "najbardziej oczywisty"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszego",
+              "najbardziej oczywistego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszemu",
+              "najbardziej oczywistemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszego",
+              "najbardziej oczywistego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszym",
+              "najbardziej oczywistym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszym",
+              "najbardziej oczywistym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszy",
+              "najbardziej oczywisty"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszego",
+              "najbardziej oczywistego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszemu",
+              "najbardziej oczywistemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszy",
+              "najbardziej oczywisty"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszym",
+              "najbardziej oczywistym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszym",
+              "najbardziej oczywistym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistsza",
+              "najbardziej oczywista"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszej",
+              "najbardziej oczywistej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszej",
+              "najbardziej oczywistej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszą",
+              "najbardziej oczywistą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszą",
+              "najbardziej oczywistą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszej",
+              "najbardziej oczywistej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistsze",
+              "najbardziej oczywiste"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszego",
+              "najbardziej oczywistego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszemu",
+              "najbardziej oczywistemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistsze",
+              "najbardziej oczywiste"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszym",
+              "najbardziej oczywistym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszym",
+              "najbardziej oczywistym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistsi",
+              "najbardziej oczywiści"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszych",
+              "najbardziej oczywistych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszym",
+              "najbardziej oczywistym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszych",
+              "najbardziej oczywistych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszymi",
+              "najbardziej oczywistymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszych",
+              "najbardziej oczywistych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistsze",
+              "najbardziej oczywiste"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszych",
+              "najbardziej oczywistych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszym",
+              "najbardziej oczywistym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistsze",
+              "najbardziej oczywiste"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszymi",
+              "najbardziej oczywistymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najoczywistszych",
+              "najbardziej oczywistych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

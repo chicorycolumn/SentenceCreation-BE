@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mięso",
+      "gen": "mięsa",
+      "dat": "mięsu",
+      "acc": "mięso",
+      "ins": "mięsem",
+      "loc": "mięsie",
+      "voc": "mięso"
+    },
+    "plural": {
+      "nom": "mięsa",
+      "gen": "mięs",
+      "dat": "mięsom",
+      "acc": "mięsa",
+      "ins": "mięsami",
+      "loc": "mięsach",
+      "voc": "mięsa"
+    }
+  }
+}

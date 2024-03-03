@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cukrzyca",
+      "gen": "cukrzycy",
+      "dat": "cukrzycy",
+      "acc": "cukrzycę",
+      "ins": "cukrzycą",
+      "loc": "cukrzycy",
+      "voc": "cukrzyco"
+    },
+    "plural": {
+      "nom": "cukrzyce",
+      "gen": "cukrzyc",
+      "dat": "cukrzycom",
+      "acc": "cukrzyce",
+      "ins": "cukrzycami",
+      "loc": "cukrzycach",
+      "voc": "cukrzyce"
+    }
+  }
+}

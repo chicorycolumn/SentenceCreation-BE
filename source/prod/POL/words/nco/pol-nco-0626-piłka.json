@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "piłka",
+      "gen": "piłki",
+      "dat": "piłce",
+      "acc": "piłkę",
+      "ins": "piłką",
+      "loc": "piłce",
+      "voc": "piłko"
+    },
+    "plural": {
+      "nom": "piłki",
+      "gen": "piłek",
+      "dat": "piłkom",
+      "acc": "piłki",
+      "ins": "piłkami",
+      "loc": "piłkach",
+      "voc": "piłki"
+    }
+  }
+}

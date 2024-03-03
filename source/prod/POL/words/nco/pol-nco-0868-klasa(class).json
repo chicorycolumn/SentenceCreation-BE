@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "klasa",
+      "gen": "klasy",
+      "dat": "klasie",
+      "acc": "klasę",
+      "ins": "klasą",
+      "loc": "klasie",
+      "voc": "klaso"
+    },
+    "plural": {
+      "nom": "klasy",
+      "gen": "klas",
+      "dat": "klasom",
+      "acc": "klasy",
+      "ins": "klasami",
+      "loc": "klasach",
+      "voc": "klasy"
+    }
+  }
+}

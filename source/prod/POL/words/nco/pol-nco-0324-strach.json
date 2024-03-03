@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "strach",
+      "gen": "strachu",
+      "dat": "strachowi",
+      "acc": "strach",
+      "ins": "strachem",
+      "loc": "strachu",
+      "voc": "strachu"
+    },
+    "plural": {
+      "nom": "strachy",
+      "gen": "strachów",
+      "dat": "strachom",
+      "acc": "strachy",
+      "ins": "strachami",
+      "loc": "strachach",
+      "voc": "strachy"
+    }
+  }
+}

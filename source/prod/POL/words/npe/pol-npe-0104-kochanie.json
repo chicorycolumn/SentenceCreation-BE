@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kochanie",
+      "gen": "kochania",
+      "dat": "kochaniu",
+      "acc": "kochanie",
+      "ins": "kochaniem",
+      "loc": "kochaniu",
+      "voc": "kochanie"
+    },
+    "plural": {
+      "nom": "kochania",
+      "gen": "kochań",
+      "dat": "kochaniom",
+      "acc": "kochania",
+      "ins": "kochaniami",
+      "loc": "kochaniach",
+      "voc": "kochania"
+    }
+  }
+}

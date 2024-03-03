@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "potwornie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "potworny",
+          "gen": "potwornego",
+          "dat": "potwornemu",
+          "acc": "potwornego",
+          "ins": "potwornym",
+          "loc": "potwornym"
+        },
+        "m3": {
+          "nom": "potworny",
+          "gen": "potwornego",
+          "dat": "potwornemu",
+          "acc": "potworny",
+          "ins": "potwornym",
+          "loc": "potwornym"
+        },
+        "f": {
+          "nom": "potworna",
+          "gen": "potwornej",
+          "dat": "potwornej",
+          "acc": "potworną",
+          "ins": "potworną",
+          "loc": "potwornej"
+        },
+        "n": {
+          "nom": "potworne",
+          "gen": "potwornego",
+          "dat": "potwornemu",
+          "acc": "potworne",
+          "ins": "potwornym",
+          "loc": "potwornym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "potworni",
+          "gen": "potwornych",
+          "dat": "potwornym",
+          "acc": "potwornych",
+          "ins": "potwornymi",
+          "loc": "potwornych"
+        },
+        "nonvirile": {
+          "nom": "potworne",
+          "gen": "potwornych",
+          "dat": "potwornym",
+          "acc": "potworne",
+          "ins": "potwornymi",
+          "loc": "potwornych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "potworniejszy",
+          "gen": "potworniejszego",
+          "dat": "potworniejszemu",
+          "acc": "potworniejszego",
+          "ins": "potworniejszym",
+          "loc": "potworniejszym"
+        },
+        "m3": {
+          "nom": "potworniejszy",
+          "gen": "potworniejszego",
+          "dat": "potworniejszemu",
+          "acc": "potworniejszy",
+          "ins": "potworniejszym",
+          "loc": "potworniejszym"
+        },
+        "f": {
+          "nom": "potworniejsza",
+          "gen": "potworniejszej",
+          "dat": "potworniejszej",
+          "acc": "potworniejszą",
+          "ins": "potworniejszą",
+          "loc": "potworniejszej"
+        },
+        "n": {
+          "nom": "potworniejsze",
+          "gen": "potworniejszego",
+          "dat": "potworniejszemu",
+          "acc": "potworniejsze",
+          "ins": "potworniejszym",
+          "loc": "potworniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "potworniejsi",
+          "gen": "potworniejszych",
+          "dat": "potworniejszym",
+          "acc": "potworniejszych",
+          "ins": "potworniejszymi",
+          "loc": "potworniejszych"
+        },
+        "nonvirile": {
+          "nom": "potworniejsze",
+          "gen": "potworniejszych",
+          "dat": "potworniejszym",
+          "acc": "potworniejsze",
+          "ins": "potworniejszymi",
+          "loc": "potworniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najpotworniejszy",
+          "gen": "najpotworniejszego",
+          "dat": "najpotworniejszemu",
+          "acc": "najpotworniejszego",
+          "ins": "najpotworniejszym",
+          "loc": "najpotworniejszym"
+        },
+        "m3": {
+          "nom": "najpotworniejszy",
+          "gen": "najpotworniejszego",
+          "dat": "najpotworniejszemu",
+          "acc": "najpotworniejszy",
+          "ins": "najpotworniejszym",
+          "loc": "najpotworniejszym"
+        },
+        "f": {
+          "nom": "najpotworniejsza",
+          "gen": "najpotworniejszej",
+          "dat": "najpotworniejszej",
+          "acc": "najpotworniejszą",
+          "ins": "najpotworniejszą",
+          "loc": "najpotworniejszej"
+        },
+        "n": {
+          "nom": "najpotworniejsze",
+          "gen": "najpotworniejszego",
+          "dat": "najpotworniejszemu",
+          "acc": "najpotworniejsze",
+          "ins": "najpotworniejszym",
+          "loc": "najpotworniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najpotworniejsi",
+          "gen": "najpotworniejszych",
+          "dat": "najpotworniejszym",
+          "acc": "najpotworniejszych",
+          "ins": "najpotworniejszymi",
+          "loc": "najpotworniejszych"
+        },
+        "nonvirile": {
+          "nom": "najpotworniejsze",
+          "gen": "najpotworniejszych",
+          "dat": "najpotworniejszym",
+          "acc": "najpotworniejsze",
+          "ins": "najpotworniejszymi",
+          "loc": "najpotworniejszych"
+        }
+      }
+    }
+  }
+}

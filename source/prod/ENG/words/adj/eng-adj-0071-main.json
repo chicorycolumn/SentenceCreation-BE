@@ -1,0 +1,8 @@
+{
+  "inflections": {
+    "simple": "main",
+    "comparative": "more main",
+    "superlative": "the most main",
+    "adverb": "mainly"
+  }
+}

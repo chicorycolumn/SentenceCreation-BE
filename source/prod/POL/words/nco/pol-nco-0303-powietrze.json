@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "powietrze",
+      "gen": "powietrza",
+      "dat": "powietrzu",
+      "acc": "powietrze",
+      "ins": "powietrzem",
+      "loc": "powietrzu",
+      "voc": "powietrze"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "port",
+      "gen": "portu",
+      "dat": "portowi",
+      "acc": "port",
+      "ins": "portem",
+      "loc": "porcie",
+      "voc": "porcie"
+    },
+    "plural": {
+      "nom": "porty",
+      "gen": "portów",
+      "dat": "portom",
+      "acc": "porty",
+      "ins": "portami",
+      "loc": "portach",
+      "voc": "porty"
+    }
+  }
+}

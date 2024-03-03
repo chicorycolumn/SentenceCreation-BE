@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nabywać",
+    "verbalNoun": "nabywanie",
+    "activeAdjectival": "nabywający",
+    "passiveAdjectival": "nabywany",
+    "contemporaryAdverbial": "nabywając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "nabywaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nabywano"
+          },
+          "plural": {
+            "allPluralGenders": "nabywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nabywałem",
+            "f": "nabywałam"
+          },
+          "plural": {
+            "virile": "nabywaliśmy",
+            "nonvirile": "nabywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nabywałeś",
+            "f": "nabywałaś"
+          },
+          "plural": {
+            "virile": "nabywaliście",
+            "nonvirile": "nabywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nabywał",
+            "f": "nabywała",
+            "n": "nabywało"
+          },
+          "plural": {
+            "virile": "nabywali",
+            "nonvirile": "nabywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nabywa się"
+          },
+          "plural": {
+            "allPluralGenders": "nabywa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nabywam"
+          },
+          "plural": {
+            "allPluralGenders": "nabywamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nabywasz"
+          },
+          "plural": {
+            "allPluralGenders": "nabywacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nabywa"
+          },
+          "plural": {
+            "allPluralGenders": "nabywają"
+          }
+        }
+      }
+    }
+  }
+}

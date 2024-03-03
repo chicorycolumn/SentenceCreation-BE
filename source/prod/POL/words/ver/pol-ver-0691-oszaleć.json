@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oszaleć",
+    "verbalNoun": "oszalenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "oszalawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oszaleje się"
+          },
+          "plural": {
+            "allPluralGenders": "oszaleje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oszaleję"
+          },
+          "plural": {
+            "allPluralGenders": "oszalejemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oszalejesz"
+          },
+          "plural": {
+            "allPluralGenders": "oszalejecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "oszaleje"
+          },
+          "plural": {
+            "allPluralGenders": "oszaleją"
+          }
+        }
+      },
+      "imperative": "oszalej",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oszalano"
+          },
+          "plural": {
+            "allPluralGenders": "oszalano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oszalałem",
+            "f": "oszalałam"
+          },
+          "plural": {
+            "virile": "oszaleliśmy",
+            "nonvirile": "oszalałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oszalałeś",
+            "f": "oszalałaś"
+          },
+          "plural": {
+            "virile": "oszaleliście",
+            "nonvirile": "oszalałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oszalał",
+            "f": "oszalała",
+            "n": "oszalało"
+          },
+          "plural": {
+            "virile": "oszaleli",
+            "nonvirile": "oszalały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

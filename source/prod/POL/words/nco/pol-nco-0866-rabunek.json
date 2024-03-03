@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rabunek",
+      "gen": "rabunku",
+      "dat": "rabunkowi",
+      "acc": "rabunek",
+      "ins": "rabunkiem",
+      "loc": "rabunku",
+      "voc": "rabunku"
+    },
+    "plural": {
+      "nom": "rabunki",
+      "gen": "rabunków",
+      "dat": "rabunkom",
+      "acc": "rabunki",
+      "ins": "rabunkami",
+      "loc": "rabunkach",
+      "voc": "rabunki"
+    }
+  }
+}

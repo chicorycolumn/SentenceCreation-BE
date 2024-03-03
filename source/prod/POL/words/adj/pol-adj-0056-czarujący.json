@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "czarująco",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "czarujący",
+          "gen": "czarującego",
+          "dat": "czarującemu",
+          "acc": "czarującego",
+          "ins": "czarującym",
+          "loc": "czarującym"
+        },
+        "m3": {
+          "nom": "czarujący",
+          "gen": "czarującego",
+          "dat": "czarującemu",
+          "acc": "czarujący",
+          "ins": "czarującym",
+          "loc": "czarującym"
+        },
+        "f": {
+          "nom": "czarująca",
+          "gen": "czarującej",
+          "dat": "czarującej",
+          "acc": "czarującą",
+          "ins": "czarującą",
+          "loc": "czarującej"
+        },
+        "n": {
+          "nom": "czarujące",
+          "gen": "czarującego",
+          "dat": "czarującemu",
+          "acc": "czarujące",
+          "ins": "czarującym",
+          "loc": "czarującym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "czarujący",
+          "gen": "czarujących",
+          "dat": "czarującym",
+          "acc": "czarujących",
+          "ins": "czarującymi",
+          "loc": "czarujących"
+        },
+        "nonvirile": {
+          "nom": "czarujące",
+          "gen": "czarujących",
+          "dat": "czarującym",
+          "acc": "czarujące",
+          "ins": "czarującymi",
+          "loc": "czarujących"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej czarujący",
+          "gen": "bardziej czarującego",
+          "dat": "bardziej czarującemu",
+          "acc": "bardziej czarującego",
+          "ins": "bardziej czarującym",
+          "loc": "bardziej czarującym"
+        },
+        "m3": {
+          "nom": "bardziej czarujący",
+          "gen": "bardziej czarującego",
+          "dat": "bardziej czarującemu",
+          "acc": "bardziej czarujący",
+          "ins": "bardziej czarującym",
+          "loc": "bardziej czarującym"
+        },
+        "f": {
+          "nom": "bardziej czarująca",
+          "gen": "bardziej czarującej",
+          "dat": "bardziej czarującej",
+          "acc": "bardziej czarującą",
+          "ins": "bardziej czarującą",
+          "loc": "bardziej czarującej"
+        },
+        "n": {
+          "nom": "bardziej czarujące",
+          "gen": "bardziej czarującego",
+          "dat": "bardziej czarującemu",
+          "acc": "bardziej czarujące",
+          "ins": "bardziej czarującym",
+          "loc": "bardziej czarującym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej czarujący",
+          "gen": "bardziej czarujących",
+          "dat": "bardziej czarującym",
+          "acc": "bardziej czarujących",
+          "ins": "bardziej czarującymi",
+          "loc": "bardziej czarujących"
+        },
+        "nonvirile": {
+          "nom": "bardziej czarujące",
+          "gen": "bardziej czarujących",
+          "dat": "bardziej czarującym",
+          "acc": "bardziej czarujące",
+          "ins": "bardziej czarującymi",
+          "loc": "bardziej czarujących"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej czarujący",
+          "gen": "najbardziej czarującego",
+          "dat": "najbardziej czarującemu",
+          "acc": "najbardziej czarującego",
+          "ins": "najbardziej czarującym",
+          "loc": "najbardziej czarującym"
+        },
+        "m3": {
+          "nom": "najbardziej czarujący",
+          "gen": "najbardziej czarującego",
+          "dat": "najbardziej czarującemu",
+          "acc": "najbardziej czarujący",
+          "ins": "najbardziej czarującym",
+          "loc": "najbardziej czarującym"
+        },
+        "f": {
+          "nom": "najbardziej czarująca",
+          "gen": "najbardziej czarującej",
+          "dat": "najbardziej czarującej",
+          "acc": "najbardziej czarującą",
+          "ins": "najbardziej czarującą",
+          "loc": "najbardziej czarującej"
+        },
+        "n": {
+          "nom": "najbardziej czarujące",
+          "gen": "najbardziej czarującego",
+          "dat": "najbardziej czarującemu",
+          "acc": "najbardziej czarujące",
+          "ins": "najbardziej czarującym",
+          "loc": "najbardziej czarującym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej czarujący",
+          "gen": "najbardziej czarujących",
+          "dat": "najbardziej czarującym",
+          "acc": "najbardziej czarujących",
+          "ins": "najbardziej czarującymi",
+          "loc": "najbardziej czarujących"
+        },
+        "nonvirile": {
+          "nom": "najbardziej czarujące",
+          "gen": "najbardziej czarujących",
+          "dat": "najbardziej czarującym",
+          "acc": "najbardziej czarujące",
+          "ins": "najbardziej czarującymi",
+          "loc": "najbardziej czarujących"
+        }
+      }
+    }
+  }
+}

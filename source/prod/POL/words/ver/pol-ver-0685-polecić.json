@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "polecić",
+    "verbalNoun": "polecenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "polecony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "poleciwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poleci się"
+          },
+          "plural": {
+            "allPluralGenders": "poleci się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "polecę"
+          },
+          "plural": {
+            "allPluralGenders": "polecimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "polecisz"
+          },
+          "plural": {
+            "allPluralGenders": "polecicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "poleci"
+          },
+          "plural": {
+            "allPluralGenders": "polecą"
+          }
+        }
+      },
+      "imperative": "poleć",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "polecono"
+          },
+          "plural": {
+            "allPluralGenders": "polecono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "poleciłem",
+            "f": "poleciłam"
+          },
+          "plural": {
+            "virile": "poleciliśmy",
+            "nonvirile": "poleciłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "poleciłeś",
+            "f": "poleciłaś"
+          },
+          "plural": {
+            "virile": "poleciliście",
+            "nonvirile": "poleciłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "polecił",
+            "f": "poleciła",
+            "n": "poleciło"
+          },
+          "plural": {
+            "virile": "polecili",
+            "nonvirile": "poleciły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

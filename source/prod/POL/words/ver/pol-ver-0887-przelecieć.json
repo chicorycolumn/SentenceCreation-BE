@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przelecieć",
+    "verbalNoun": "przelecenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przeleciany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przeleciwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeleci się"
+          },
+          "plural": {
+            "allPluralGenders": "przeleci się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przelecę"
+          },
+          "plural": {
+            "allPluralGenders": "przelecimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przelecisz"
+          },
+          "plural": {
+            "allPluralGenders": "przelecicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przeleci"
+          },
+          "plural": {
+            "allPluralGenders": "przelecą"
+          }
+        }
+      },
+      "imperative": "przeleć",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeleciano"
+          },
+          "plural": {
+            "allPluralGenders": "przeleciano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przeleciałem",
+            "f": "przeleciałam"
+          },
+          "plural": {
+            "virile": "przelecieliśmy",
+            "nonvirile": "przeleciałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przeleciałeś",
+            "f": "przeleciałaś"
+          },
+          "plural": {
+            "virile": "przelecieliście",
+            "nonvirile": "przeleciałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przeleciał",
+            "f": "przeleciała",
+            "n": "przeleciało"
+          },
+          "plural": {
+            "virile": "przelecieli",
+            "nonvirile": "przeleciały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

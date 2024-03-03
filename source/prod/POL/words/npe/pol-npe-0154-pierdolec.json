@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pierdolec",
+      "gen": "pierdolca",
+      "dat": "pierdolcowi",
+      "acc": "pierdolca",
+      "ins": "pierdolcem",
+      "loc": "pierdolcu",
+      "voc": "pierdolcu"
+    },
+    "plural": {
+      "nom": "pierdolcy",
+      "gen": "pierdolców",
+      "dat": "pierdolcom",
+      "acc": "pierdolców",
+      "ins": "pierdolcami",
+      "loc": "pierdolcach",
+      "voc": "pierdolcy"
+    }
+  }
+}

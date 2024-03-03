@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "groźnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "groźny",
+          "gen": "groźnego",
+          "dat": "groźnemu",
+          "acc": "groźnego",
+          "ins": "groźnym",
+          "loc": "groźnym"
+        },
+        "m3": {
+          "nom": "groźny",
+          "gen": "groźnego",
+          "dat": "groźnemu",
+          "acc": "groźny",
+          "ins": "groźnym",
+          "loc": "groźnym"
+        },
+        "f": {
+          "nom": "groźna",
+          "gen": "groźnej",
+          "dat": "groźnej",
+          "acc": "groźną",
+          "ins": "groźną",
+          "loc": "groźnej"
+        },
+        "n": {
+          "nom": "groźne",
+          "gen": "groźnego",
+          "dat": "groźnemu",
+          "acc": "groźne",
+          "ins": "groźnym",
+          "loc": "groźnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "groźni",
+          "gen": "groźnych",
+          "dat": "groźnym",
+          "acc": "groźnych",
+          "ins": "groźnymi",
+          "loc": "groźnych"
+        },
+        "nonvirile": {
+          "nom": "groźne",
+          "gen": "groźnych",
+          "dat": "groźnym",
+          "acc": "groźne",
+          "ins": "groźnymi",
+          "loc": "groźnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "groźniejszy",
+          "gen": "groźniejszego",
+          "dat": "groźniejszemu",
+          "acc": "groźniejszego",
+          "ins": "groźniejszym",
+          "loc": "groźniejszym"
+        },
+        "m3": {
+          "nom": "groźniejszy",
+          "gen": "groźniejszego",
+          "dat": "groźniejszemu",
+          "acc": "groźniejszy",
+          "ins": "groźniejszym",
+          "loc": "groźniejszym"
+        },
+        "f": {
+          "nom": "groźniejsza",
+          "gen": "groźniejszej",
+          "dat": "groźniejszej",
+          "acc": "groźniejszą",
+          "ins": "groźniejszą",
+          "loc": "groźniejszej"
+        },
+        "n": {
+          "nom": "groźniejsze",
+          "gen": "groźniejszego",
+          "dat": "groźniejszemu",
+          "acc": "groźniejsze",
+          "ins": "groźniejszym",
+          "loc": "groźniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "groźniejsi",
+          "gen": "groźniejszych",
+          "dat": "groźniejszym",
+          "acc": "groźniejszych",
+          "ins": "groźniejszymi",
+          "loc": "groźniejszych"
+        },
+        "nonvirile": {
+          "nom": "groźniejsze",
+          "gen": "groźniejszych",
+          "dat": "groźniejszym",
+          "acc": "groźniejsze",
+          "ins": "groźniejszymi",
+          "loc": "groźniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najgroźniejszy",
+          "gen": "najgroźniejszego",
+          "dat": "najgroźniejszemu",
+          "acc": "najgroźniejszego",
+          "ins": "najgroźniejszym",
+          "loc": "najgroźniejszym"
+        },
+        "m3": {
+          "nom": "najgroźniejszy",
+          "gen": "najgroźniejszego",
+          "dat": "najgroźniejszemu",
+          "acc": "najgroźniejszy",
+          "ins": "najgroźniejszym",
+          "loc": "najgroźniejszym"
+        },
+        "f": {
+          "nom": "najgroźniejsza",
+          "gen": "najgroźniejszej",
+          "dat": "najgroźniejszej",
+          "acc": "najgroźniejszą",
+          "ins": "najgroźniejszą",
+          "loc": "najgroźniejszej"
+        },
+        "n": {
+          "nom": "najgroźniejsze",
+          "gen": "najgroźniejszego",
+          "dat": "najgroźniejszemu",
+          "acc": "najgroźniejsze",
+          "ins": "najgroźniejszym",
+          "loc": "najgroźniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najgroźniejsi",
+          "gen": "najgroźniejszych",
+          "dat": "najgroźniejszym",
+          "acc": "najgroźniejszych",
+          "ins": "najgroźniejszymi",
+          "loc": "najgroźniejszych"
+        },
+        "nonvirile": {
+          "nom": "najgroźniejsze",
+          "gen": "najgroźniejszych",
+          "dat": "najgroźniejszym",
+          "acc": "najgroźniejsze",
+          "ins": "najgroźniejszymi",
+          "loc": "najgroźniejszych"
+        }
+      }
+    }
+  }
+}

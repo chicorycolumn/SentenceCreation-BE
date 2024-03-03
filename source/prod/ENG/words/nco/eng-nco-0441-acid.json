@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "acid",
+      "gen": "acid's"
+    },
+    "plural": {
+      "nom": "acids",
+      "gen": "acids'"
+    }
+  }
+}

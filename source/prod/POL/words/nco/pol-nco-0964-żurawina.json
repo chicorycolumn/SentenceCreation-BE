@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "żurawina",
+      "gen": "żurawiny",
+      "dat": "żurawinie",
+      "acc": "żurawinę",
+      "ins": "żurawiną",
+      "loc": "żurawinie",
+      "voc": "żurawino"
+    },
+    "plural": {
+      "nom": "żurawiny",
+      "gen": "żurawin",
+      "dat": "żurawinom",
+      "acc": "żurawiny",
+      "ins": "żurawinami",
+      "loc": "żurawinach",
+      "voc": "żurawiny"
+    }
+  }
+}

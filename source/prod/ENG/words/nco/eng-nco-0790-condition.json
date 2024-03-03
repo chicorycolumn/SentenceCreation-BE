@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "condition",
+      "gen": "condition's"
+    },
+    "plural": {
+      "nom": "conditions",
+      "gen": "conditions'"
+    }
+  }
+}

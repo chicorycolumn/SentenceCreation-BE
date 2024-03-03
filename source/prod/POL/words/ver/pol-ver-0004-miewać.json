@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "miewać",
+    "verbalNoun": "miewanie",
+    "activeAdjectival": "miewający",
+    "passiveAdjectival": "miewany",
+    "contemporaryAdverbial": "miewając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "miewaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "miewano"
+          },
+          "plural": {
+            "allPluralGenders": "miewano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "miewałem",
+            "f": "miewałam"
+          },
+          "plural": {
+            "virile": "miewaliśmy",
+            "nonvirile": "miewałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "miewałeś",
+            "f": "miewałaś"
+          },
+          "plural": {
+            "virile": "miewaliście",
+            "nonvirile": "miewałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "miewał",
+            "f": "miewała",
+            "n": "miewało"
+          },
+          "plural": {
+            "virile": "miewali",
+            "nonvirile": "miewały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "miewa się"
+          },
+          "plural": {
+            "allPluralGenders": "miewa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "miewam"
+          },
+          "plural": {
+            "allPluralGenders": "miewamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "miewasz"
+          },
+          "plural": {
+            "allPluralGenders": "miewacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "miewa"
+          },
+          "plural": {
+            "allPluralGenders": "miewają"
+          }
+        }
+      }
+    }
+  }
+}

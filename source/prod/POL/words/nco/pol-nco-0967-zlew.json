@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zlew",
+      "gen": "zlewu",
+      "dat": "zlewowi",
+      "acc": "zlew",
+      "ins": "zlewem",
+      "loc": "zlewie",
+      "voc": "zlewie"
+    },
+    "plural": {
+      "nom": "zlewy",
+      "gen": "zlewów",
+      "dat": "zlewom",
+      "acc": "zlewy",
+      "ins": "zlewami",
+      "loc": "zlewach",
+      "voc": "zlewy"
+    }
+  }
+}

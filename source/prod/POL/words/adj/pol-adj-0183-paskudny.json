@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "paskudnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "paskudny",
+          "gen": "paskudnego",
+          "dat": "paskudnemu",
+          "acc": "paskudnego",
+          "ins": "paskudnym",
+          "loc": "paskudnym"
+        },
+        "m3": {
+          "nom": "paskudny",
+          "gen": "paskudnego",
+          "dat": "paskudnemu",
+          "acc": "paskudny",
+          "ins": "paskudnym",
+          "loc": "paskudnym"
+        },
+        "f": {
+          "nom": "paskudna",
+          "gen": "paskudnej",
+          "dat": "paskudnej",
+          "acc": "paskudną",
+          "ins": "paskudną",
+          "loc": "paskudnej"
+        },
+        "n": {
+          "nom": "paskudne",
+          "gen": "paskudnego",
+          "dat": "paskudnemu",
+          "acc": "paskudne",
+          "ins": "paskudnym",
+          "loc": "paskudnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "paskudni",
+          "gen": "paskudnych",
+          "dat": "paskudnym",
+          "acc": "paskudnych",
+          "ins": "paskudnymi",
+          "loc": "paskudnych"
+        },
+        "nonvirile": {
+          "nom": "paskudne",
+          "gen": "paskudnych",
+          "dat": "paskudnym",
+          "acc": "paskudne",
+          "ins": "paskudnymi",
+          "loc": "paskudnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "paskudniejszy",
+          "gen": "paskudniejszego",
+          "dat": "paskudniejszemu",
+          "acc": "paskudniejszego",
+          "ins": "paskudniejszym",
+          "loc": "paskudniejszym"
+        },
+        "m3": {
+          "nom": "paskudniejszy",
+          "gen": "paskudniejszego",
+          "dat": "paskudniejszemu",
+          "acc": "paskudniejszy",
+          "ins": "paskudniejszym",
+          "loc": "paskudniejszym"
+        },
+        "f": {
+          "nom": "paskudniejsza",
+          "gen": "paskudniejszej",
+          "dat": "paskudniejszej",
+          "acc": "paskudniejszą",
+          "ins": "paskudniejszą",
+          "loc": "paskudniejszej"
+        },
+        "n": {
+          "nom": "paskudniejsze",
+          "gen": "paskudniejszego",
+          "dat": "paskudniejszemu",
+          "acc": "paskudniejsze",
+          "ins": "paskudniejszym",
+          "loc": "paskudniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "paskudniejsi",
+          "gen": "paskudniejszych",
+          "dat": "paskudniejszym",
+          "acc": "paskudniejszych",
+          "ins": "paskudniejszymi",
+          "loc": "paskudniejszych"
+        },
+        "nonvirile": {
+          "nom": "paskudniejsze",
+          "gen": "paskudniejszych",
+          "dat": "paskudniejszym",
+          "acc": "paskudniejsze",
+          "ins": "paskudniejszymi",
+          "loc": "paskudniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najpaskudniejszy",
+          "gen": "najpaskudniejszego",
+          "dat": "najpaskudniejszemu",
+          "acc": "najpaskudniejszego",
+          "ins": "najpaskudniejszym",
+          "loc": "najpaskudniejszym"
+        },
+        "m3": {
+          "nom": "najpaskudniejszy",
+          "gen": "najpaskudniejszego",
+          "dat": "najpaskudniejszemu",
+          "acc": "najpaskudniejszy",
+          "ins": "najpaskudniejszym",
+          "loc": "najpaskudniejszym"
+        },
+        "f": {
+          "nom": "najpaskudniejsza",
+          "gen": "najpaskudniejszej",
+          "dat": "najpaskudniejszej",
+          "acc": "najpaskudniejszą",
+          "ins": "najpaskudniejszą",
+          "loc": "najpaskudniejszej"
+        },
+        "n": {
+          "nom": "najpaskudniejsze",
+          "gen": "najpaskudniejszego",
+          "dat": "najpaskudniejszemu",
+          "acc": "najpaskudniejsze",
+          "ins": "najpaskudniejszym",
+          "loc": "najpaskudniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najpaskudniejsi",
+          "gen": "najpaskudniejszych",
+          "dat": "najpaskudniejszym",
+          "acc": "najpaskudniejszych",
+          "ins": "najpaskudniejszymi",
+          "loc": "najpaskudniejszych"
+        },
+        "nonvirile": {
+          "nom": "najpaskudniejsze",
+          "gen": "najpaskudniejszych",
+          "dat": "najpaskudniejszym",
+          "acc": "najpaskudniejsze",
+          "ins": "najpaskudniejszymi",
+          "loc": "najpaskudniejszych"
+        }
+      }
+    }
+  }
+}

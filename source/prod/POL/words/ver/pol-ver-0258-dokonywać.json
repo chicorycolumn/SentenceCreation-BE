@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dokonywać",
+    "verbalNoun": "dokonywanie",
+    "activeAdjectival": "dokonujący",
+    "passiveAdjectival": "dokonywany",
+    "contemporaryAdverbial": "dokonując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dokonuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dokonywano"
+          },
+          "plural": {
+            "allPluralGenders": "dokonywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dokonywałem",
+            "f": "dokonywałam"
+          },
+          "plural": {
+            "virile": "dokonywaliśmy",
+            "nonvirile": "dokonywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dokonywałeś",
+            "f": "dokonywałaś"
+          },
+          "plural": {
+            "virile": "dokonywaliście",
+            "nonvirile": "dokonywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dokonywał",
+            "f": "dokonywała",
+            "n": "dokonywało"
+          },
+          "plural": {
+            "virile": "dokonywali",
+            "nonvirile": "dokonywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dokonuje się"
+          },
+          "plural": {
+            "allPluralGenders": "dokonuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dokonuję"
+          },
+          "plural": {
+            "allPluralGenders": "dokonujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dokonujesz"
+          },
+          "plural": {
+            "allPluralGenders": "dokonujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dokonuje"
+          },
+          "plural": {
+            "allPluralGenders": "dokonują"
+          }
+        }
+      }
+    }
+  }
+}

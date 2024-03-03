@@ -1,0 +1,8 @@
+{
+  "inflections": {
+    "simple": "safe",
+    "comparative": "safer",
+    "superlative": "safest",
+    "adverb": "safely"
+  }
+}

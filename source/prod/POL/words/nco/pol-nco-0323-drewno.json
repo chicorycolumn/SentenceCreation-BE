@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "drewno",
+      "gen": "drewna",
+      "dat": "drewnu",
+      "acc": "drewno",
+      "ins": "drewnem",
+      "loc": "drewnie",
+      "voc": "drewno"
+    },
+    "plural": {
+      "nom": "drewna",
+      "gen": "drewien",
+      "dat": "drewnom",
+      "acc": "drewna",
+      "ins": "drewnami",
+      "loc": "drewnach",
+      "voc": "drewna"
+    }
+  }
+}

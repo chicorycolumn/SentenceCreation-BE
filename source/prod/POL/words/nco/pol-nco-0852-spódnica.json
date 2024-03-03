@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "spódnica",
+      "gen": "spódnicy",
+      "dat": "spódnicy",
+      "acc": "spódnicę",
+      "ins": "spódnicą",
+      "loc": "spódnicy",
+      "voc": "spódnico"
+    },
+    "plural": {
+      "nom": "spódnice",
+      "gen": "spódnic",
+      "dat": "spódnicom",
+      "acc": "spódnice",
+      "ins": "spódnicami",
+      "loc": "spódnicach",
+      "voc": "spódnice"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odpuszczać",
+    "verbalNoun": "odpuszczanie",
+    "activeAdjectival": "odpuszczający",
+    "passiveAdjectival": "odpuszczany",
+    "contemporaryAdverbial": "odpuszczając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odpuszczaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odpuszczano"
+          },
+          "plural": {
+            "allPluralGenders": "odpuszczano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odpuszczałem",
+            "f": "odpuszczałam"
+          },
+          "plural": {
+            "virile": "odpuszczaliśmy",
+            "nonvirile": "odpuszczałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odpuszczałeś",
+            "f": "odpuszczałaś"
+          },
+          "plural": {
+            "virile": "odpuszczaliście",
+            "nonvirile": "odpuszczałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odpuszczał",
+            "f": "odpuszczała",
+            "n": "odpuszczało"
+          },
+          "plural": {
+            "virile": "odpuszczali",
+            "nonvirile": "odpuszczały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odpuszcza się"
+          },
+          "plural": {
+            "allPluralGenders": "odpuszcza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odpuszczam"
+          },
+          "plural": {
+            "allPluralGenders": "odpuszczamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odpuszczasz"
+          },
+          "plural": {
+            "allPluralGenders": "odpuszczacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odpuszcza"
+          },
+          "plural": {
+            "allPluralGenders": "odpuszczają"
+          }
+        }
+      }
+    }
+  }
+}

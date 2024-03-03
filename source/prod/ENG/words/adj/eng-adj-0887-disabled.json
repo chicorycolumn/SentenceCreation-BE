@@ -1,0 +1,8 @@
+{
+  "inflections": {
+    "simple": "disabled",
+    "comparative": "more disabled",
+    "superlative": "the most disabled",
+    "adverb": false
+  }
+}

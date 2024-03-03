@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "tajemniczo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "tajemniczy",
+          "gen": "tajemniczego",
+          "dat": "tajemniczemu",
+          "acc": "tajemniczego",
+          "ins": "tajemniczym",
+          "loc": "tajemniczym"
+        },
+        "m3": {
+          "nom": "tajemniczy",
+          "gen": "tajemniczego",
+          "dat": "tajemniczemu",
+          "acc": "tajemniczy",
+          "ins": "tajemniczym",
+          "loc": "tajemniczym"
+        },
+        "f": {
+          "nom": "tajemnicza",
+          "gen": "tajemniczej",
+          "dat": "tajemniczej",
+          "acc": "tajemniczą",
+          "ins": "tajemniczą",
+          "loc": "tajemniczej"
+        },
+        "n": {
+          "nom": "tajemnicze",
+          "gen": "tajemniczego",
+          "dat": "tajemniczemu",
+          "acc": "tajemnicze",
+          "ins": "tajemniczym",
+          "loc": "tajemniczym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "tajemniczy",
+          "gen": "tajemniczych",
+          "dat": "tajemniczym",
+          "acc": "tajemniczych",
+          "ins": "tajemniczymi",
+          "loc": "tajemniczych"
+        },
+        "nonvirile": {
+          "nom": "tajemnicze",
+          "gen": "tajemniczych",
+          "dat": "tajemniczym",
+          "acc": "tajemnicze",
+          "ins": "tajemniczymi",
+          "loc": "tajemniczych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej tajemniczy",
+          "gen": "bardziej tajemniczego",
+          "dat": "bardziej tajemniczemu",
+          "acc": "bardziej tajemniczego",
+          "ins": "bardziej tajemniczym",
+          "loc": "bardziej tajemniczym"
+        },
+        "m3": {
+          "nom": "bardziej tajemniczy",
+          "gen": "bardziej tajemniczego",
+          "dat": "bardziej tajemniczemu",
+          "acc": "bardziej tajemniczy",
+          "ins": "bardziej tajemniczym",
+          "loc": "bardziej tajemniczym"
+        },
+        "f": {
+          "nom": "bardziej tajemnicza",
+          "gen": "bardziej tajemniczej",
+          "dat": "bardziej tajemniczej",
+          "acc": "bardziej tajemniczą",
+          "ins": "bardziej tajemniczą",
+          "loc": "bardziej tajemniczej"
+        },
+        "n": {
+          "nom": "bardziej tajemnicze",
+          "gen": "bardziej tajemniczego",
+          "dat": "bardziej tajemniczemu",
+          "acc": "bardziej tajemnicze",
+          "ins": "bardziej tajemniczym",
+          "loc": "bardziej tajemniczym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej tajemniczy",
+          "gen": "bardziej tajemniczych",
+          "dat": "bardziej tajemniczym",
+          "acc": "bardziej tajemniczych",
+          "ins": "bardziej tajemniczymi",
+          "loc": "bardziej tajemniczych"
+        },
+        "nonvirile": {
+          "nom": "bardziej tajemnicze",
+          "gen": "bardziej tajemniczych",
+          "dat": "bardziej tajemniczym",
+          "acc": "bardziej tajemnicze",
+          "ins": "bardziej tajemniczymi",
+          "loc": "bardziej tajemniczych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej tajemniczy",
+          "gen": "najbardziej tajemniczego",
+          "dat": "najbardziej tajemniczemu",
+          "acc": "najbardziej tajemniczego",
+          "ins": "najbardziej tajemniczym",
+          "loc": "najbardziej tajemniczym"
+        },
+        "m3": {
+          "nom": "najbardziej tajemniczy",
+          "gen": "najbardziej tajemniczego",
+          "dat": "najbardziej tajemniczemu",
+          "acc": "najbardziej tajemniczy",
+          "ins": "najbardziej tajemniczym",
+          "loc": "najbardziej tajemniczym"
+        },
+        "f": {
+          "nom": "najbardziej tajemnicza",
+          "gen": "najbardziej tajemniczej",
+          "dat": "najbardziej tajemniczej",
+          "acc": "najbardziej tajemniczą",
+          "ins": "najbardziej tajemniczą",
+          "loc": "najbardziej tajemniczej"
+        },
+        "n": {
+          "nom": "najbardziej tajemnicze",
+          "gen": "najbardziej tajemniczego",
+          "dat": "najbardziej tajemniczemu",
+          "acc": "najbardziej tajemnicze",
+          "ins": "najbardziej tajemniczym",
+          "loc": "najbardziej tajemniczym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej tajemniczy",
+          "gen": "najbardziej tajemniczych",
+          "dat": "najbardziej tajemniczym",
+          "acc": "najbardziej tajemniczych",
+          "ins": "najbardziej tajemniczymi",
+          "loc": "najbardziej tajemniczych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej tajemnicze",
+          "gen": "najbardziej tajemniczych",
+          "dat": "najbardziej tajemniczym",
+          "acc": "najbardziej tajemnicze",
+          "ins": "najbardziej tajemniczymi",
+          "loc": "najbardziej tajemniczych"
+        }
+      }
+    }
+  }
+}

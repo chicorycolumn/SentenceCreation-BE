@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "jęknąć",
+    "verbalNoun": "jęknięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "jęknąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "jęknie się"
+          },
+          "plural": {
+            "allPluralGenders": "jęknie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "jęknę"
+          },
+          "plural": {
+            "allPluralGenders": "jękniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "jękniesz"
+          },
+          "plural": {
+            "allPluralGenders": "jękniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "jęknie"
+          },
+          "plural": {
+            "allPluralGenders": "jękną"
+          }
+        }
+      },
+      "imperative": "jęknij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "jęknięto"
+          },
+          "plural": {
+            "allPluralGenders": "jęknięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "jęknąłem",
+            "f": "jęknęłam"
+          },
+          "plural": {
+            "virile": "jęknęliśmy",
+            "nonvirile": "jęknęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "jęknąłeś",
+            "f": "jęknęłaś"
+          },
+          "plural": {
+            "virile": "jęknęliście",
+            "nonvirile": "jęknęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "jęknął",
+            "f": "jęknęła",
+            "n": "jęknęło"
+          },
+          "plural": {
+            "virile": "jęknęli",
+            "nonvirile": "jęknęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "słuchać",
+    "verbalNoun": "słuchanie",
+    "activeAdjectival": "słuchający",
+    "passiveAdjectival": "słuchany",
+    "contemporaryAdverbial": "słuchając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "słuchaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "słuchano"
+          },
+          "plural": {
+            "allPluralGenders": "słuchano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "słuchałem",
+            "f": "słuchałam"
+          },
+          "plural": {
+            "virile": "słuchaliśmy",
+            "nonvirile": "słuchałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "słuchałeś",
+            "f": "słuchałaś"
+          },
+          "plural": {
+            "virile": "słuchaliście",
+            "nonvirile": "słuchałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "słuchał",
+            "f": "słuchała",
+            "n": "słuchało"
+          },
+          "plural": {
+            "virile": "słuchali",
+            "nonvirile": "słuchały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "słucha się"
+          },
+          "plural": {
+            "allPluralGenders": "słucha się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "słucham"
+          },
+          "plural": {
+            "allPluralGenders": "słuchamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "słuchasz"
+          },
+          "plural": {
+            "allPluralGenders": "słuchacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "słucha"
+          },
+          "plural": {
+            "allPluralGenders": "słuchają"
+          }
+        }
+      }
+    }
+  }
+}

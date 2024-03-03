@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "choinka",
+      "gen": "choinki",
+      "dat": "choince",
+      "acc": "choinkę",
+      "ins": "choinką",
+      "loc": "choince",
+      "voc": "choinko"
+    },
+    "plural": {
+      "nom": "choinki",
+      "gen": "choinek",
+      "dat": "choinkom",
+      "acc": "choinki",
+      "ins": "choinkami",
+      "loc": "choinkach",
+      "voc": "choinki"
+    }
+  }
+}

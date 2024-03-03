@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "podejrzanie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "podejrzany",
+          "gen": "podejrzanego",
+          "dat": "podejrzanemu",
+          "acc": "podejrzanego",
+          "ins": "podejrzanym",
+          "loc": "podejrzanym"
+        },
+        "m3": {
+          "nom": "podejrzany",
+          "gen": "podejrzanego",
+          "dat": "podejrzanemu",
+          "acc": "podejrzany",
+          "ins": "podejrzanym",
+          "loc": "podejrzanym"
+        },
+        "f": {
+          "nom": "podejrzana",
+          "gen": "podejrzanej",
+          "dat": "podejrzanej",
+          "acc": "podejrzaną",
+          "ins": "podejrzaną",
+          "loc": "podejrzanej"
+        },
+        "n": {
+          "nom": "podejrzane",
+          "gen": "podejrzanego",
+          "dat": "podejrzanemu",
+          "acc": "podejrzane",
+          "ins": "podejrzanym",
+          "loc": "podejrzanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "podejrzani",
+          "gen": "podejrzanych",
+          "dat": "podejrzanym",
+          "acc": "podejrzanych",
+          "ins": "podejrzanymi",
+          "loc": "podejrzanych"
+        },
+        "nonvirile": {
+          "nom": "podejrzane",
+          "gen": "podejrzanych",
+          "dat": "podejrzanym",
+          "acc": "podejrzane",
+          "ins": "podejrzanymi",
+          "loc": "podejrzanych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej podejrzany",
+          "gen": "bardziej podejrzanego",
+          "dat": "bardziej podejrzanemu",
+          "acc": "bardziej podejrzanego",
+          "ins": "bardziej podejrzanym",
+          "loc": "bardziej podejrzanym"
+        },
+        "m3": {
+          "nom": "bardziej podejrzany",
+          "gen": "bardziej podejrzanego",
+          "dat": "bardziej podejrzanemu",
+          "acc": "bardziej podejrzany",
+          "ins": "bardziej podejrzanym",
+          "loc": "bardziej podejrzanym"
+        },
+        "f": {
+          "nom": "bardziej podejrzana",
+          "gen": "bardziej podejrzanej",
+          "dat": "bardziej podejrzanej",
+          "acc": "bardziej podejrzaną",
+          "ins": "bardziej podejrzaną",
+          "loc": "bardziej podejrzanej"
+        },
+        "n": {
+          "nom": "bardziej podejrzane",
+          "gen": "bardziej podejrzanego",
+          "dat": "bardziej podejrzanemu",
+          "acc": "bardziej podejrzane",
+          "ins": "bardziej podejrzanym",
+          "loc": "bardziej podejrzanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej podejrzani",
+          "gen": "bardziej podejrzanych",
+          "dat": "bardziej podejrzanym",
+          "acc": "bardziej podejrzanych",
+          "ins": "bardziej podejrzanymi",
+          "loc": "bardziej podejrzanych"
+        },
+        "nonvirile": {
+          "nom": "bardziej podejrzane",
+          "gen": "bardziej podejrzanych",
+          "dat": "bardziej podejrzanym",
+          "acc": "bardziej podejrzane",
+          "ins": "bardziej podejrzanymi",
+          "loc": "bardziej podejrzanych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej podejrzany",
+          "gen": "najbardziej podejrzanego",
+          "dat": "najbardziej podejrzanemu",
+          "acc": "najbardziej podejrzanego",
+          "ins": "najbardziej podejrzanym",
+          "loc": "najbardziej podejrzanym"
+        },
+        "m3": {
+          "nom": "najbardziej podejrzany",
+          "gen": "najbardziej podejrzanego",
+          "dat": "najbardziej podejrzanemu",
+          "acc": "najbardziej podejrzany",
+          "ins": "najbardziej podejrzanym",
+          "loc": "najbardziej podejrzanym"
+        },
+        "f": {
+          "nom": "najbardziej podejrzana",
+          "gen": "najbardziej podejrzanej",
+          "dat": "najbardziej podejrzanej",
+          "acc": "najbardziej podejrzaną",
+          "ins": "najbardziej podejrzaną",
+          "loc": "najbardziej podejrzanej"
+        },
+        "n": {
+          "nom": "najbardziej podejrzane",
+          "gen": "najbardziej podejrzanego",
+          "dat": "najbardziej podejrzanemu",
+          "acc": "najbardziej podejrzane",
+          "ins": "najbardziej podejrzanym",
+          "loc": "najbardziej podejrzanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej podejrzani",
+          "gen": "najbardziej podejrzanych",
+          "dat": "najbardziej podejrzanym",
+          "acc": "najbardziej podejrzanych",
+          "ins": "najbardziej podejrzanymi",
+          "loc": "najbardziej podejrzanych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej podejrzane",
+          "gen": "najbardziej podejrzanych",
+          "dat": "najbardziej podejrzanym",
+          "acc": "najbardziej podejrzane",
+          "ins": "najbardziej podejrzanymi",
+          "loc": "najbardziej podejrzanych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "muł",
+      "gen": "mułu",
+      "dat": "mułowi",
+      "acc": "muł",
+      "ins": "mułem",
+      "loc": "mule",
+      "voc": "mule"
+    },
+    "plural": {
+      "nom": "muły",
+      "gen": "mułów",
+      "dat": "mułom",
+      "acc": "muły",
+      "ins": "mułami",
+      "loc": "mułach",
+      "voc": "muły"
+    }
+  }
+}

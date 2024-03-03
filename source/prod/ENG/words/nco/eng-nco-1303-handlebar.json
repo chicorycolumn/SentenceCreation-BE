@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "handlebar",
+      "gen": "handlebar's"
+    },
+    "plural": {
+      "nom": "handlebars",
+      "gen": "handlebars'"
+    }
+  }
+}

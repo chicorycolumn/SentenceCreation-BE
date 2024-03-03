@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odrzekać",
+    "verbalNoun": "odrzekanie",
+    "activeAdjectival": "odrzekający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "odrzekając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odrzekaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odrzekano"
+          },
+          "plural": {
+            "allPluralGenders": "odrzekano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odrzekałem",
+            "f": "odrzekałam"
+          },
+          "plural": {
+            "virile": "odrzekaliśmy",
+            "nonvirile": "odrzekałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odrzekałeś",
+            "f": "odrzekałaś"
+          },
+          "plural": {
+            "virile": "odrzekaliście",
+            "nonvirile": "odrzekałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odrzekał",
+            "f": "odrzekała",
+            "n": "odrzekało"
+          },
+          "plural": {
+            "virile": "odrzekali",
+            "nonvirile": "odrzekały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odrzeka się"
+          },
+          "plural": {
+            "allPluralGenders": "odrzeka się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odrzekam"
+          },
+          "plural": {
+            "allPluralGenders": "odrzekamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odrzekasz"
+          },
+          "plural": {
+            "allPluralGenders": "odrzekacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odrzeka"
+          },
+          "plural": {
+            "allPluralGenders": "odrzekają"
+          }
+        }
+      }
+    }
+  }
+}

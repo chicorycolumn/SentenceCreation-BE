@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "przesądnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przesądny",
+          "gen": "przesądnego",
+          "dat": "przesądnemu",
+          "acc": "przesądnego",
+          "ins": "przesądnym",
+          "loc": "przesądnym"
+        },
+        "m3": {
+          "nom": "przesądny",
+          "gen": "przesądnego",
+          "dat": "przesądnemu",
+          "acc": "przesądny",
+          "ins": "przesądnym",
+          "loc": "przesądnym"
+        },
+        "f": {
+          "nom": "przesądna",
+          "gen": "przesądnej",
+          "dat": "przesądnej",
+          "acc": "przesądną",
+          "ins": "przesądną",
+          "loc": "przesądnej"
+        },
+        "n": {
+          "nom": "przesądne",
+          "gen": "przesądnego",
+          "dat": "przesądnemu",
+          "acc": "przesądne",
+          "ins": "przesądnym",
+          "loc": "przesądnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przesądni",
+          "gen": "przesądnych",
+          "dat": "przesądnym",
+          "acc": "przesądnych",
+          "ins": "przesądnymi",
+          "loc": "przesądnych"
+        },
+        "nonvirile": {
+          "nom": "przesądne",
+          "gen": "przesądnych",
+          "dat": "przesądnym",
+          "acc": "przesądne",
+          "ins": "przesądnymi",
+          "loc": "przesądnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "przesądniejszy",
+          "gen": "przesądniejszego",
+          "dat": "przesądniejszemu",
+          "acc": "przesądniejszego",
+          "ins": "przesądniejszym",
+          "loc": "przesądniejszym"
+        },
+        "m3": {
+          "nom": "przesądniejszy",
+          "gen": "przesądniejszego",
+          "dat": "przesądniejszemu",
+          "acc": "przesądniejszy",
+          "ins": "przesądniejszym",
+          "loc": "przesądniejszym"
+        },
+        "f": {
+          "nom": "przesądniejsza",
+          "gen": "przesądniejszej",
+          "dat": "przesądniejszej",
+          "acc": "przesądniejszą",
+          "ins": "przesądniejszą",
+          "loc": "przesądniejszej"
+        },
+        "n": {
+          "nom": "przesądniejsze",
+          "gen": "przesądniejszego",
+          "dat": "przesądniejszemu",
+          "acc": "przesądniejsze",
+          "ins": "przesądniejszym",
+          "loc": "przesądniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przesądniejsi",
+          "gen": "przesądniejszych",
+          "dat": "przesądniejszym",
+          "acc": "przesądniejszych",
+          "ins": "przesądniejszymi",
+          "loc": "przesądniejszych"
+        },
+        "nonvirile": {
+          "nom": "przesądniejsze",
+          "gen": "przesądniejszych",
+          "dat": "przesądniejszym",
+          "acc": "przesądniejsze",
+          "ins": "przesądniejszymi",
+          "loc": "przesądniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najprzesądniejszy",
+          "gen": "najprzesądniejszego",
+          "dat": "najprzesądniejszemu",
+          "acc": "najprzesądniejszego",
+          "ins": "najprzesądniejszym",
+          "loc": "najprzesądniejszym"
+        },
+        "m3": {
+          "nom": "najprzesądniejszy",
+          "gen": "najprzesądniejszego",
+          "dat": "najprzesądniejszemu",
+          "acc": "najprzesądniejszy",
+          "ins": "najprzesądniejszym",
+          "loc": "najprzesądniejszym"
+        },
+        "f": {
+          "nom": "najprzesądniejsza",
+          "gen": "najprzesądniejszej",
+          "dat": "najprzesądniejszej",
+          "acc": "najprzesądniejszą",
+          "ins": "najprzesądniejszą",
+          "loc": "najprzesądniejszej"
+        },
+        "n": {
+          "nom": "najprzesądniejsze",
+          "gen": "najprzesądniejszego",
+          "dat": "najprzesądniejszemu",
+          "acc": "najprzesądniejsze",
+          "ins": "najprzesądniejszym",
+          "loc": "najprzesądniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najprzesądniejsi",
+          "gen": "najprzesądniejszych",
+          "dat": "najprzesądniejszym",
+          "acc": "najprzesądniejszych",
+          "ins": "najprzesądniejszymi",
+          "loc": "najprzesądniejszych"
+        },
+        "nonvirile": {
+          "nom": "najprzesądniejsze",
+          "gen": "najprzesądniejszych",
+          "dat": "najprzesądniejszym",
+          "acc": "najprzesądniejsze",
+          "ins": "najprzesądniejszymi",
+          "loc": "najprzesądniejszych"
+        }
+      }
+    }
+  }
+}

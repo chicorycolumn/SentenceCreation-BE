@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "indywidualnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "indywidualny",
+          "gen": "indywidualnego",
+          "dat": "indywidualnemu",
+          "acc": "indywidualnego",
+          "ins": "indywidualnym",
+          "loc": "indywidualnym"
+        },
+        "m3": {
+          "nom": "indywidualny",
+          "gen": "indywidualnego",
+          "dat": "indywidualnemu",
+          "acc": "indywidualny",
+          "ins": "indywidualnym",
+          "loc": "indywidualnym"
+        },
+        "f": {
+          "nom": "indywidualna",
+          "gen": "indywidualnej",
+          "dat": "indywidualnej",
+          "acc": "indywidualną",
+          "ins": "indywidualną",
+          "loc": "indywidualnej"
+        },
+        "n": {
+          "nom": "indywidualne",
+          "gen": "indywidualnego",
+          "dat": "indywidualnemu",
+          "acc": "indywidualne",
+          "ins": "indywidualnym",
+          "loc": "indywidualnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "indywidualni",
+          "gen": "indywidualnych",
+          "dat": "indywidualnym",
+          "acc": "indywidualnych",
+          "ins": "indywidualnymi",
+          "loc": "indywidualnych"
+        },
+        "nonvirile": {
+          "nom": "indywidualne",
+          "gen": "indywidualnych",
+          "dat": "indywidualnym",
+          "acc": "indywidualne",
+          "ins": "indywidualnymi",
+          "loc": "indywidualnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej indywidualny",
+          "gen": "bardziej indywidualnego",
+          "dat": "bardziej indywidualnemu",
+          "acc": "bardziej indywidualnego",
+          "ins": "bardziej indywidualnym",
+          "loc": "bardziej indywidualnym"
+        },
+        "m3": {
+          "nom": "bardziej indywidualny",
+          "gen": "bardziej indywidualnego",
+          "dat": "bardziej indywidualnemu",
+          "acc": "bardziej indywidualny",
+          "ins": "bardziej indywidualnym",
+          "loc": "bardziej indywidualnym"
+        },
+        "f": {
+          "nom": "bardziej indywidualna",
+          "gen": "bardziej indywidualnej",
+          "dat": "bardziej indywidualnej",
+          "acc": "bardziej indywidualną",
+          "ins": "bardziej indywidualną",
+          "loc": "bardziej indywidualnej"
+        },
+        "n": {
+          "nom": "bardziej indywidualne",
+          "gen": "bardziej indywidualnego",
+          "dat": "bardziej indywidualnemu",
+          "acc": "bardziej indywidualne",
+          "ins": "bardziej indywidualnym",
+          "loc": "bardziej indywidualnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej indywidualni",
+          "gen": "bardziej indywidualnych",
+          "dat": "bardziej indywidualnym",
+          "acc": "bardziej indywidualnych",
+          "ins": "bardziej indywidualnymi",
+          "loc": "bardziej indywidualnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej indywidualne",
+          "gen": "bardziej indywidualnych",
+          "dat": "bardziej indywidualnym",
+          "acc": "bardziej indywidualne",
+          "ins": "bardziej indywidualnymi",
+          "loc": "bardziej indywidualnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej indywidualny",
+          "gen": "najbardziej indywidualnego",
+          "dat": "najbardziej indywidualnemu",
+          "acc": "najbardziej indywidualnego",
+          "ins": "najbardziej indywidualnym",
+          "loc": "najbardziej indywidualnym"
+        },
+        "m3": {
+          "nom": "najbardziej indywidualny",
+          "gen": "najbardziej indywidualnego",
+          "dat": "najbardziej indywidualnemu",
+          "acc": "najbardziej indywidualny",
+          "ins": "najbardziej indywidualnym",
+          "loc": "najbardziej indywidualnym"
+        },
+        "f": {
+          "nom": "najbardziej indywidualna",
+          "gen": "najbardziej indywidualnej",
+          "dat": "najbardziej indywidualnej",
+          "acc": "najbardziej indywidualną",
+          "ins": "najbardziej indywidualną",
+          "loc": "najbardziej indywidualnej"
+        },
+        "n": {
+          "nom": "najbardziej indywidualne",
+          "gen": "najbardziej indywidualnego",
+          "dat": "najbardziej indywidualnemu",
+          "acc": "najbardziej indywidualne",
+          "ins": "najbardziej indywidualnym",
+          "loc": "najbardziej indywidualnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej indywidualni",
+          "gen": "najbardziej indywidualnych",
+          "dat": "najbardziej indywidualnym",
+          "acc": "najbardziej indywidualnych",
+          "ins": "najbardziej indywidualnymi",
+          "loc": "najbardziej indywidualnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej indywidualne",
+          "gen": "najbardziej indywidualnych",
+          "dat": "najbardziej indywidualnym",
+          "acc": "najbardziej indywidualne",
+          "ins": "najbardziej indywidualnymi",
+          "loc": "najbardziej indywidualnych"
+        }
+      }
+    }
+  }
+}

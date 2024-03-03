@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rura",
+      "gen": "rury",
+      "dat": "rurze",
+      "acc": "rurę",
+      "ins": "rurą",
+      "loc": "rurze",
+      "voc": "ruro"
+    },
+    "plural": {
+      "nom": "rury",
+      "gen": "rur",
+      "dat": "rurom",
+      "acc": "rury",
+      "ins": "rurami",
+      "loc": "rurach",
+      "voc": "rury"
+    }
+  }
+}

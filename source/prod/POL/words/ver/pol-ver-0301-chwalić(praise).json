@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "chwalić",
+    "verbalNoun": "chwalenie",
+    "activeAdjectival": "chwalący",
+    "passiveAdjectival": "chwalony",
+    "contemporaryAdverbial": "chwaląc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "chwal",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "chwalono"
+          },
+          "plural": {
+            "allPluralGenders": "chwalono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "chwaliłem",
+            "f": "chwaliłam"
+          },
+          "plural": {
+            "virile": "chwaliliśmy",
+            "nonvirile": "chwaliłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "chwaliłeś",
+            "f": "chwaliłaś"
+          },
+          "plural": {
+            "virile": "chwaliliście",
+            "nonvirile": "chwaliłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "chwalił",
+            "f": "chwaliła",
+            "n": "chwaliło"
+          },
+          "plural": {
+            "virile": "chwalili",
+            "nonvirile": "chwaliły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "chwali się"
+          },
+          "plural": {
+            "allPluralGenders": "chwali się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "chwalę"
+          },
+          "plural": {
+            "allPluralGenders": "chwalimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "chwalisz"
+          },
+          "plural": {
+            "allPluralGenders": "chwalicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "chwali"
+          },
+          "plural": {
+            "allPluralGenders": "chwalą"
+          }
+        }
+      }
+    }
+  }
+}

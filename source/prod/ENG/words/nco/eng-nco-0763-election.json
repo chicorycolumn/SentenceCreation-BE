@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "election",
+      "gen": "election's"
+    },
+    "plural": {
+      "nom": "elections",
+      "gen": "elections'"
+    }
+  }
+}

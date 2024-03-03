@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przesadzić",
+    "verbalNoun": "przesadzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przesadzony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przesadziwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przesadzi się"
+          },
+          "plural": {
+            "allPluralGenders": "przesadzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przesadzę"
+          },
+          "plural": {
+            "allPluralGenders": "przesadzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przesadzisz"
+          },
+          "plural": {
+            "allPluralGenders": "przesadzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przesadzi"
+          },
+          "plural": {
+            "allPluralGenders": "przesadzą"
+          }
+        }
+      },
+      "imperative": "przesadź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przesadzono"
+          },
+          "plural": {
+            "allPluralGenders": "przesadzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przesadziłem",
+            "f": "przesadziłam"
+          },
+          "plural": {
+            "virile": "przesadziliśmy",
+            "nonvirile": "przesadziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przesadziłeś",
+            "f": "przesadziłaś"
+          },
+          "plural": {
+            "virile": "przesadziliście",
+            "nonvirile": "przesadziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przesadził",
+            "f": "przesadziła",
+            "n": "przesadziło"
+          },
+          "plural": {
+            "virile": "przesadzili",
+            "nonvirile": "przesadziły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

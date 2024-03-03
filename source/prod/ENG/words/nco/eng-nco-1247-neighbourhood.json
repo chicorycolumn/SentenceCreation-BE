@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "neighbourhood",
+      "gen": "neighbourhood's"
+    },
+    "plural": {
+      "nom": "neighbourhoods",
+      "gen": "neighbourhoods'"
+    }
+  }
+}

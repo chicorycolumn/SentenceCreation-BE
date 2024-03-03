@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "method",
+      "gen": "method's"
+    },
+    "plural": {
+      "nom": "methods",
+      "gen": "methods'"
+    }
+  }
+}

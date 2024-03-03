@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pułkownik",
+      "gen": "pułkownika",
+      "dat": "pułkownikowi",
+      "acc": "pułkownika",
+      "ins": "pułkownikiem",
+      "loc": "pułkowniku",
+      "voc": "pułkowniku"
+    },
+    "plural": {
+      "nom": "pułkownicy",
+      "gen": "pułkowników",
+      "dat": "pułkownikom",
+      "acc": "pułkowników",
+      "ins": "pułkownikami",
+      "loc": "pułkownikach",
+      "voc": "pułkownicy"
+    }
+  }
+}

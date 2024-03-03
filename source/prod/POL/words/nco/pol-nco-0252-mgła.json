@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mgła",
+      "gen": "mgły",
+      "dat": "mgle",
+      "acc": "mgłę",
+      "ins": "mgłą",
+      "loc": "mgle",
+      "voc": "mgło"
+    },
+    "plural": {
+      "nom": "mgły",
+      "gen": "mgieł",
+      "dat": "mgłom",
+      "acc": "mgły",
+      "ins": "mgłami",
+      "loc": "mgłach",
+      "voc": "mgły"
+    }
+  }
+}

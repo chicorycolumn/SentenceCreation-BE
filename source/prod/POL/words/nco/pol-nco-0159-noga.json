@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "noga",
+      "gen": "nogi",
+      "dat": "nodze",
+      "acc": "nogę",
+      "ins": "nogą",
+      "loc": "nodze",
+      "voc": "nogo"
+    },
+    "plural": {
+      "nom": "nogi",
+      "gen": "nóg",
+      "dat": "nogom",
+      "acc": "nogi",
+      "ins": "nogami",
+      "loc": "nogach",
+      "voc": "nogi"
+    }
+  }
+}

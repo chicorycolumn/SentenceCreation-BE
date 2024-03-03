@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "skusić",
+    "verbalNoun": "skuszenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "skuszony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "skusiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "skusi się"
+          },
+          "plural": {
+            "allPluralGenders": "skusi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "skuszę"
+          },
+          "plural": {
+            "allPluralGenders": "skusimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "skusisz"
+          },
+          "plural": {
+            "allPluralGenders": "skusicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "skusi"
+          },
+          "plural": {
+            "allPluralGenders": "skuszą"
+          }
+        }
+      },
+      "imperative": "skuś",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "skuszono"
+          },
+          "plural": {
+            "allPluralGenders": "skuszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "skusiłem",
+            "f": "skusiłam"
+          },
+          "plural": {
+            "virile": "skusiliśmy",
+            "nonvirile": "skusiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "skusiłeś",
+            "f": "skusiłaś"
+          },
+          "plural": {
+            "virile": "skusiliście",
+            "nonvirile": "skusiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "skusił",
+            "f": "skusiła",
+            "n": "skusiło"
+          },
+          "plural": {
+            "virile": "skusili",
+            "nonvirile": "skusiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przyjaciel",
+      "gen": "przyjaciela",
+      "dat": "przyjacielowi",
+      "acc": "przyjaciela",
+      "ins": "przyjacielem",
+      "loc": "przyjacielu",
+      "voc": "przyjacielu"
+    },
+    "plural": {
+      "nom": "przyjaciele",
+      "gen": "przyjaciół",
+      "dat": "przyjaciołom",
+      "acc": "przyjaciół",
+      "ins": "przyjaciółmi",
+      "loc": "przyjaciołach",
+      "voc": "przyjaciele"
+    }
+  }
+}

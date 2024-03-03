@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pożyczyć",
+    "verbalNoun": "pożyczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pożyczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pożyczywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pożyczy się"
+          },
+          "plural": {
+            "allPluralGenders": "pożyczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pożyczę"
+          },
+          "plural": {
+            "allPluralGenders": "pożyczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pożyczysz"
+          },
+          "plural": {
+            "allPluralGenders": "pożyczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pożyczy"
+          },
+          "plural": {
+            "allPluralGenders": "pożyczą"
+          }
+        }
+      },
+      "imperative": "pożycz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pożyczono"
+          },
+          "plural": {
+            "allPluralGenders": "pożyczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pożyczyłem",
+            "f": "pożyczyłam"
+          },
+          "plural": {
+            "virile": "pożyczyliśmy",
+            "nonvirile": "pożyczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pożyczyłeś",
+            "f": "pożyczyłaś"
+          },
+          "plural": {
+            "virile": "pożyczyliście",
+            "nonvirile": "pożyczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pożyczył",
+            "f": "pożyczyła",
+            "n": "pożyczyło"
+          },
+          "plural": {
+            "virile": "pożyczyli",
+            "nonvirile": "pożyczyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

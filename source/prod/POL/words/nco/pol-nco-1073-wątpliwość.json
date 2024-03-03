@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wątpliwość",
+      "gen": "wątpliwości",
+      "dat": "wątpliwości",
+      "acc": "wątpliwość",
+      "ins": "wątpliwością",
+      "loc": "wątpliwości",
+      "voc": "wątpliwości"
+    },
+    "plural": {
+      "nom": "wątpliwości",
+      "gen": "wątpliwości",
+      "dat": "wątpliwościom",
+      "acc": "wątpliwości",
+      "ins": "wątpliwościami",
+      "loc": "wątpliwościach",
+      "voc": "wątpliwości"
+    }
+  }
+}

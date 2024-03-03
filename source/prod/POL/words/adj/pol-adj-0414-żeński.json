@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "żeńsko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "żeński",
+          "gen": "żeńskiego",
+          "dat": "żeńskiemu",
+          "acc": "żeńskiego",
+          "ins": "żeńskim",
+          "loc": "żeńskim"
+        },
+        "m3": {
+          "nom": "żeński",
+          "gen": "żeńskiego",
+          "dat": "żeńskiemu",
+          "acc": "żeński",
+          "ins": "żeńskim",
+          "loc": "żeńskim"
+        },
+        "f": {
+          "nom": "żeńska",
+          "gen": "żeńskiej",
+          "dat": "żeńskiej",
+          "acc": "żeńską",
+          "ins": "żeńską",
+          "loc": "żeńskiej"
+        },
+        "n": {
+          "nom": "żeńskie",
+          "gen": "żeńskiego",
+          "dat": "żeńskiemu",
+          "acc": "żeńskie",
+          "ins": "żeńskim",
+          "loc": "żeńskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "żeńscy",
+          "gen": "żeńskich",
+          "dat": "żeńskim",
+          "acc": "żeńskich",
+          "ins": "żeńskimi",
+          "loc": "żeńskich"
+        },
+        "nonvirile": {
+          "nom": "żeńskie",
+          "gen": "żeńskich",
+          "dat": "żeńskim",
+          "acc": "żeńskie",
+          "ins": "żeńskimi",
+          "loc": "żeńskich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej żeński",
+          "gen": "bardziej żeńskiego",
+          "dat": "bardziej żeńskiemu",
+          "acc": "bardziej żeńskiego",
+          "ins": "bardziej żeńskim",
+          "loc": "bardziej żeńskim"
+        },
+        "m3": {
+          "nom": "bardziej żeński",
+          "gen": "bardziej żeńskiego",
+          "dat": "bardziej żeńskiemu",
+          "acc": "bardziej żeński",
+          "ins": "bardziej żeńskim",
+          "loc": "bardziej żeńskim"
+        },
+        "f": {
+          "nom": "bardziej żeńska",
+          "gen": "bardziej żeńskiej",
+          "dat": "bardziej żeńskiej",
+          "acc": "bardziej żeńską",
+          "ins": "bardziej żeńską",
+          "loc": "bardziej żeńskiej"
+        },
+        "n": {
+          "nom": "bardziej żeńskie",
+          "gen": "bardziej żeńskiego",
+          "dat": "bardziej żeńskiemu",
+          "acc": "bardziej żeńskie",
+          "ins": "bardziej żeńskim",
+          "loc": "bardziej żeńskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej żeńscy",
+          "gen": "bardziej żeńskich",
+          "dat": "bardziej żeńskim",
+          "acc": "bardziej żeńskich",
+          "ins": "bardziej żeńskimi",
+          "loc": "bardziej żeńskich"
+        },
+        "nonvirile": {
+          "nom": "bardziej żeńskie",
+          "gen": "bardziej żeńskich",
+          "dat": "bardziej żeńskim",
+          "acc": "bardziej żeńskie",
+          "ins": "bardziej żeńskimi",
+          "loc": "bardziej żeńskich"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej żeński",
+          "gen": "najbardziej żeńskiego",
+          "dat": "najbardziej żeńskiemu",
+          "acc": "najbardziej żeńskiego",
+          "ins": "najbardziej żeńskim",
+          "loc": "najbardziej żeńskim"
+        },
+        "m3": {
+          "nom": "najbardziej żeński",
+          "gen": "najbardziej żeńskiego",
+          "dat": "najbardziej żeńskiemu",
+          "acc": "najbardziej żeński",
+          "ins": "najbardziej żeńskim",
+          "loc": "najbardziej żeńskim"
+        },
+        "f": {
+          "nom": "najbardziej żeńska",
+          "gen": "najbardziej żeńskiej",
+          "dat": "najbardziej żeńskiej",
+          "acc": "najbardziej żeńską",
+          "ins": "najbardziej żeńską",
+          "loc": "najbardziej żeńskiej"
+        },
+        "n": {
+          "nom": "najbardziej żeńskie",
+          "gen": "najbardziej żeńskiego",
+          "dat": "najbardziej żeńskiemu",
+          "acc": "najbardziej żeńskie",
+          "ins": "najbardziej żeńskim",
+          "loc": "najbardziej żeńskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej żeńscy",
+          "gen": "najbardziej żeńskich",
+          "dat": "najbardziej żeńskim",
+          "acc": "najbardziej żeńskich",
+          "ins": "najbardziej żeńskimi",
+          "loc": "najbardziej żeńskich"
+        },
+        "nonvirile": {
+          "nom": "najbardziej żeńskie",
+          "gen": "najbardziej żeńskich",
+          "dat": "najbardziej żeńskim",
+          "acc": "najbardziej żeńskie",
+          "ins": "najbardziej żeńskimi",
+          "loc": "najbardziej żeńskich"
+        }
+      }
+    }
+  }
+}

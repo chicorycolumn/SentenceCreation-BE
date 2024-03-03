@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "silnik",
+      "gen": "silnika",
+      "dat": "silnikowi",
+      "acc": "silnik",
+      "ins": "silnikiem",
+      "loc": "silniku",
+      "voc": "silniku"
+    },
+    "plural": {
+      "nom": "silniki",
+      "gen": "silników",
+      "dat": "silnikom",
+      "acc": "silniki",
+      "ins": "silnikami",
+      "loc": "silnikach",
+      "voc": "silniki"
+    }
+  }
+}

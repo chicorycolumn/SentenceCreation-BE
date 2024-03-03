@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "marnować",
+    "verbalNoun": "marnowanie",
+    "activeAdjectival": "marnujący",
+    "passiveAdjectival": "marnowany",
+    "contemporaryAdverbial": "marnując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "marnuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "marnowano"
+          },
+          "plural": {
+            "allPluralGenders": "marnowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "marnowałem",
+            "f": "marnowałam"
+          },
+          "plural": {
+            "virile": "marnowaliśmy",
+            "nonvirile": "marnowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "marnowałeś",
+            "f": "marnowałaś"
+          },
+          "plural": {
+            "virile": "marnowaliście",
+            "nonvirile": "marnowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "marnował",
+            "f": "marnowała",
+            "n": "marnowało"
+          },
+          "plural": {
+            "virile": "marnowali",
+            "nonvirile": "marnowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "marnuje się"
+          },
+          "plural": {
+            "allPluralGenders": "marnuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "marnuję"
+          },
+          "plural": {
+            "allPluralGenders": "marnujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "marnujesz"
+          },
+          "plural": {
+            "allPluralGenders": "marnujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "marnuje"
+          },
+          "plural": {
+            "allPluralGenders": "marnują"
+          }
+        }
+      }
+    }
+  }
+}

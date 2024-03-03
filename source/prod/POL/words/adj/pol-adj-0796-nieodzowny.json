@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "nieodzownie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nieodzowny",
+          "gen": "nieodzownego",
+          "dat": "nieodzownemu",
+          "acc": "nieodzownego",
+          "ins": "nieodzownym",
+          "loc": "nieodzownym"
+        },
+        "m3": {
+          "nom": "nieodzowny",
+          "gen": "nieodzownego",
+          "dat": "nieodzownemu",
+          "acc": "nieodzowny",
+          "ins": "nieodzownym",
+          "loc": "nieodzownym"
+        },
+        "f": {
+          "nom": "nieodzowna",
+          "gen": "nieodzownej",
+          "dat": "nieodzownej",
+          "acc": "nieodzowną",
+          "ins": "nieodzowną",
+          "loc": "nieodzownej"
+        },
+        "n": {
+          "nom": "nieodzowne",
+          "gen": "nieodzownego",
+          "dat": "nieodzownemu",
+          "acc": "nieodzowne",
+          "ins": "nieodzownym",
+          "loc": "nieodzownym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieodzowni",
+          "gen": "nieodzownych",
+          "dat": "nieodzownym",
+          "acc": "nieodzownych",
+          "ins": "nieodzownymi",
+          "loc": "nieodzownych"
+        },
+        "nonvirile": {
+          "nom": "nieodzowne",
+          "gen": "nieodzownych",
+          "dat": "nieodzownym",
+          "acc": "nieodzowne",
+          "ins": "nieodzownymi",
+          "loc": "nieodzownych"
+        }
+      }
+    }
+  }
+}

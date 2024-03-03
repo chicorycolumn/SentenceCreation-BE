@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pokój",
+      "gen": "pokoju",
+      "dat": "pokojowi",
+      "acc": "pokój",
+      "ins": "pokojem",
+      "loc": "pokoju",
+      "voc": "pokoju"
+    },
+    "plural": {
+      "nom": "pokoje",
+      "gen": [
+        "pokojów",
+        "pokoi"
+      ],
+      "dat": "pokojom",
+      "acc": "pokoje",
+      "ins": "pokojami",
+      "loc": "pokojach",
+      "voc": "pokoje"
+    }
+  }
+}

@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "prawdopodobnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "prawdopodobny",
+          "gen": "prawdopodobnego",
+          "dat": "prawdopodobnemu",
+          "acc": "prawdopodobnego",
+          "ins": "prawdopodobnym",
+          "loc": "prawdopodobnym"
+        },
+        "m3": {
+          "nom": "prawdopodobny",
+          "gen": "prawdopodobnego",
+          "dat": "prawdopodobnemu",
+          "acc": "prawdopodobny",
+          "ins": "prawdopodobnym",
+          "loc": "prawdopodobnym"
+        },
+        "f": {
+          "nom": "prawdopodobna",
+          "gen": "prawdopodobnej",
+          "dat": "prawdopodobnej",
+          "acc": "prawdopodobną",
+          "ins": "prawdopodobną",
+          "loc": "prawdopodobnej"
+        },
+        "n": {
+          "nom": "prawdopodobne",
+          "gen": "prawdopodobnego",
+          "dat": "prawdopodobnemu",
+          "acc": "prawdopodobne",
+          "ins": "prawdopodobnym",
+          "loc": "prawdopodobnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "prawdopodobni",
+          "gen": "prawdopodobnych",
+          "dat": "prawdopodobnym",
+          "acc": "prawdopodobnych",
+          "ins": "prawdopodobnymi",
+          "loc": "prawdopodobnych"
+        },
+        "nonvirile": {
+          "nom": "prawdopodobne",
+          "gen": "prawdopodobnych",
+          "dat": "prawdopodobnym",
+          "acc": "prawdopodobne",
+          "ins": "prawdopodobnymi",
+          "loc": "prawdopodobnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszy",
+              "bardziej prawdopodobny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszego",
+              "bardziej prawdopodobnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszemu",
+              "bardziej prawdopodobnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszego",
+              "bardziej prawdopodobnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszym",
+              "bardziej prawdopodobnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszym",
+              "bardziej prawdopodobnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszy",
+              "bardziej prawdopodobny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszego",
+              "bardziej prawdopodobnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszemu",
+              "bardziej prawdopodobnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszy",
+              "bardziej prawdopodobny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszym",
+              "bardziej prawdopodobnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszym",
+              "bardziej prawdopodobnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejsza",
+              "bardziej prawdopodobna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszej",
+              "bardziej prawdopodobnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszej",
+              "bardziej prawdopodobnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszą",
+              "bardziej prawdopodobną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszą",
+              "bardziej prawdopodobną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszej",
+              "bardziej prawdopodobnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejsze",
+              "bardziej prawdopodobne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszego",
+              "bardziej prawdopodobnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszemu",
+              "bardziej prawdopodobnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejsze",
+              "bardziej prawdopodobne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszym",
+              "bardziej prawdopodobnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszym",
+              "bardziej prawdopodobnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejsi",
+              "bardziej prawdopodobni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszych",
+              "bardziej prawdopodobnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszym",
+              "bardziej prawdopodobnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszych",
+              "bardziej prawdopodobnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszymi",
+              "bardziej prawdopodobnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszych",
+              "bardziej prawdopodobnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejsze",
+              "bardziej prawdopodobne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszych",
+              "bardziej prawdopodobnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszym",
+              "bardziej prawdopodobnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejsze",
+              "bardziej prawdopodobne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszymi",
+              "bardziej prawdopodobnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "prawdopodobniejszych",
+              "bardziej prawdopodobnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszy",
+              "najbardziej prawdopodobny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszego",
+              "najbardziej prawdopodobnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszemu",
+              "najbardziej prawdopodobnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszego",
+              "najbardziej prawdopodobnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszym",
+              "najbardziej prawdopodobnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszym",
+              "najbardziej prawdopodobnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszy",
+              "najbardziej prawdopodobny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszego",
+              "najbardziej prawdopodobnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszemu",
+              "najbardziej prawdopodobnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszy",
+              "najbardziej prawdopodobny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszym",
+              "najbardziej prawdopodobnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszym",
+              "najbardziej prawdopodobnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejsza",
+              "najbardziej prawdopodobna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszej",
+              "najbardziej prawdopodobnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszej",
+              "najbardziej prawdopodobnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszą",
+              "najbardziej prawdopodobną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszą",
+              "najbardziej prawdopodobną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszej",
+              "najbardziej prawdopodobnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejsze",
+              "najbardziej prawdopodobne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszego",
+              "najbardziej prawdopodobnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszemu",
+              "najbardziej prawdopodobnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejsze",
+              "najbardziej prawdopodobne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszym",
+              "najbardziej prawdopodobnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszym",
+              "najbardziej prawdopodobnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejsi",
+              "najbardziej prawdopodobni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszych",
+              "najbardziej prawdopodobnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszym",
+              "najbardziej prawdopodobnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszych",
+              "najbardziej prawdopodobnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszymi",
+              "najbardziej prawdopodobnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszych",
+              "najbardziej prawdopodobnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejsze",
+              "najbardziej prawdopodobne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszych",
+              "najbardziej prawdopodobnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszym",
+              "najbardziej prawdopodobnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejsze",
+              "najbardziej prawdopodobne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszymi",
+              "najbardziej prawdopodobnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najprawdopodobniejszych",
+              "najbardziej prawdopodobnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zmartwić",
+    "verbalNoun": "zmartwienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zmartwiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zmartwiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zmartwi się"
+          },
+          "plural": {
+            "allPluralGenders": "zmartwi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zmartwię"
+          },
+          "plural": {
+            "allPluralGenders": "zmartwimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zmartwisz"
+          },
+          "plural": {
+            "allPluralGenders": "zmartwicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zmartwi"
+          },
+          "plural": {
+            "allPluralGenders": "zmartwią"
+          }
+        }
+      },
+      "imperative": "zmartw",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zmartwiono"
+          },
+          "plural": {
+            "allPluralGenders": "zmartwiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zmartwiłem",
+            "f": "zmartwiłam"
+          },
+          "plural": {
+            "virile": "zmartwiliśmy",
+            "nonvirile": "zmartwiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zmartwiłeś",
+            "f": "zmartwiłaś"
+          },
+          "plural": {
+            "virile": "zmartwiliście",
+            "nonvirile": "zmartwiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zmartwił",
+            "f": "zmartwiła",
+            "n": "zmartwiło"
+          },
+          "plural": {
+            "virile": "zmartwili",
+            "nonvirile": "zmartwiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

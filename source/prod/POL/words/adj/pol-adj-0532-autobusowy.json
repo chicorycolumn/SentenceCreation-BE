@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "autobusowy",
+          "gen": "autobusowego",
+          "dat": "autobusowemu",
+          "acc": "autobusowego",
+          "ins": "autobusowym",
+          "loc": "autobusowym"
+        },
+        "m3": {
+          "nom": "autobusowy",
+          "gen": "autobusowego",
+          "dat": "autobusowemu",
+          "acc": "autobusowy",
+          "ins": "autobusowym",
+          "loc": "autobusowym"
+        },
+        "f": {
+          "nom": "autobusowa",
+          "gen": "autobusowej",
+          "dat": "autobusowej",
+          "acc": "autobusową",
+          "ins": "autobusową",
+          "loc": "autobusowej"
+        },
+        "n": {
+          "nom": "autobusowe",
+          "gen": "autobusowego",
+          "dat": "autobusowemu",
+          "acc": "autobusowe",
+          "ins": "autobusowym",
+          "loc": "autobusowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "autobusowi",
+          "gen": "autobusowych",
+          "dat": "autobusowym",
+          "acc": "autobusowych",
+          "ins": "autobusowymi",
+          "loc": "autobusowych"
+        },
+        "nonvirile": {
+          "nom": "autobusowe",
+          "gen": "autobusowych",
+          "dat": "autobusowym",
+          "acc": "autobusowe",
+          "ins": "autobusowymi",
+          "loc": "autobusowych"
+        }
+      }
+    }
+  }
+}

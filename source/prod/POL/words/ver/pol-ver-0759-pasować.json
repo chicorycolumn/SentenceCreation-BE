@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pasować",
+    "verbalNoun": "pasowanie",
+    "activeAdjectival": "pasujący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "pasując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pasuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pasowano"
+          },
+          "plural": {
+            "allPluralGenders": "pasowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pasowałem",
+            "f": "pasowałam"
+          },
+          "plural": {
+            "virile": "pasowaliśmy",
+            "nonvirile": "pasowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pasowałeś",
+            "f": "pasowałaś"
+          },
+          "plural": {
+            "virile": "pasowaliście",
+            "nonvirile": "pasowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pasował",
+            "f": "pasowała",
+            "n": "pasowało"
+          },
+          "plural": {
+            "virile": "pasowali",
+            "nonvirile": "pasowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pasuje się"
+          },
+          "plural": {
+            "allPluralGenders": "pasuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pasuję"
+          },
+          "plural": {
+            "allPluralGenders": "pasujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pasujesz"
+          },
+          "plural": {
+            "allPluralGenders": "pasujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pasuje"
+          },
+          "plural": {
+            "allPluralGenders": "pasują"
+          }
+        }
+      }
+    }
+  }
+}

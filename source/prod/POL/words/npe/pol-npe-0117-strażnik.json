@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "strażnik",
+      "gen": "strażnika",
+      "dat": "strażnikowi",
+      "acc": "strażnika",
+      "ins": "strażnikiem",
+      "loc": "strażniku",
+      "voc": "strażniku"
+    },
+    "plural": {
+      "nom": "strażnicy",
+      "gen": "strażników",
+      "dat": "strażnikom",
+      "acc": "strażników",
+      "ins": "strażnikami",
+      "loc": "strażnikach",
+      "voc": "strażnicy"
+    }
+  }
+}

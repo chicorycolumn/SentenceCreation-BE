@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "tablica",
+      "gen": "tablicy",
+      "dat": "tablicy",
+      "acc": "tablicę",
+      "ins": "tablicą",
+      "loc": "tablicy",
+      "voc": "tablico"
+    },
+    "plural": {
+      "nom": "tablice",
+      "gen": "tablic",
+      "dat": "tablicom",
+      "acc": "tablice",
+      "ins": "tablicami",
+      "loc": "tablicach",
+      "voc": "tablice"
+    }
+  }
+}

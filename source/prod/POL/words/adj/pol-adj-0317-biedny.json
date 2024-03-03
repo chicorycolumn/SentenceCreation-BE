@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "biednie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "biedny",
+          "gen": "biednego",
+          "dat": "biednemu",
+          "acc": "biednego",
+          "ins": "biednym",
+          "loc": "biednym"
+        },
+        "m3": {
+          "nom": "biedny",
+          "gen": "biednego",
+          "dat": "biednemu",
+          "acc": "biedny",
+          "ins": "biednym",
+          "loc": "biednym"
+        },
+        "f": {
+          "nom": "biedna",
+          "gen": "biednej",
+          "dat": "biednej",
+          "acc": "biedną",
+          "ins": "biedną",
+          "loc": "biednej"
+        },
+        "n": {
+          "nom": "biedne",
+          "gen": "biednego",
+          "dat": "biednemu",
+          "acc": "biedne",
+          "ins": "biednym",
+          "loc": "biednym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "biedni",
+          "gen": "biednych",
+          "dat": "biednym",
+          "acc": "biednych",
+          "ins": "biednymi",
+          "loc": "biednych"
+        },
+        "nonvirile": {
+          "nom": "biedne",
+          "gen": "biednych",
+          "dat": "biednym",
+          "acc": "biedne",
+          "ins": "biednymi",
+          "loc": "biednych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "biedniejszy",
+          "gen": "biedniejszego",
+          "dat": "biedniejszemu",
+          "acc": "biedniejszego",
+          "ins": "biedniejszym",
+          "loc": "biedniejszym"
+        },
+        "m3": {
+          "nom": "biedniejszy",
+          "gen": "biedniejszego",
+          "dat": "biedniejszemu",
+          "acc": "biedniejszy",
+          "ins": "biedniejszym",
+          "loc": "biedniejszym"
+        },
+        "f": {
+          "nom": "biedniejsza",
+          "gen": "biedniejszej",
+          "dat": "biedniejszej",
+          "acc": "biedniejszą",
+          "ins": "biedniejszą",
+          "loc": "biedniejszej"
+        },
+        "n": {
+          "nom": "biedniejsze",
+          "gen": "biedniejszego",
+          "dat": "biedniejszemu",
+          "acc": "biedniejsze",
+          "ins": "biedniejszym",
+          "loc": "biedniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "biedniejsi",
+          "gen": "biedniejszych",
+          "dat": "biedniejszym",
+          "acc": "biedniejszych",
+          "ins": "biedniejszymi",
+          "loc": "biedniejszych"
+        },
+        "nonvirile": {
+          "nom": "biedniejsze",
+          "gen": "biedniejszych",
+          "dat": "biedniejszym",
+          "acc": "biedniejsze",
+          "ins": "biedniejszymi",
+          "loc": "biedniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbiedniejszy",
+          "gen": "najbiedniejszego",
+          "dat": "najbiedniejszemu",
+          "acc": "najbiedniejszego",
+          "ins": "najbiedniejszym",
+          "loc": "najbiedniejszym"
+        },
+        "m3": {
+          "nom": "najbiedniejszy",
+          "gen": "najbiedniejszego",
+          "dat": "najbiedniejszemu",
+          "acc": "najbiedniejszy",
+          "ins": "najbiedniejszym",
+          "loc": "najbiedniejszym"
+        },
+        "f": {
+          "nom": "najbiedniejsza",
+          "gen": "najbiedniejszej",
+          "dat": "najbiedniejszej",
+          "acc": "najbiedniejszą",
+          "ins": "najbiedniejszą",
+          "loc": "najbiedniejszej"
+        },
+        "n": {
+          "nom": "najbiedniejsze",
+          "gen": "najbiedniejszego",
+          "dat": "najbiedniejszemu",
+          "acc": "najbiedniejsze",
+          "ins": "najbiedniejszym",
+          "loc": "najbiedniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbiedniejsi",
+          "gen": "najbiedniejszych",
+          "dat": "najbiedniejszym",
+          "acc": "najbiedniejszych",
+          "ins": "najbiedniejszymi",
+          "loc": "najbiedniejszych"
+        },
+        "nonvirile": {
+          "nom": "najbiedniejsze",
+          "gen": "najbiedniejszych",
+          "dat": "najbiedniejszym",
+          "acc": "najbiedniejsze",
+          "ins": "najbiedniejszymi",
+          "loc": "najbiedniejszych"
+        }
+      }
+    }
+  }
+}

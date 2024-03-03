@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ołówek",
+      "gen": "ołówka",
+      "dat": "ołówkowi",
+      "acc": "ołówek",
+      "ins": "ołówkiem",
+      "loc": "ołówku",
+      "voc": "ołówku"
+    },
+    "plural": {
+      "nom": "ołówki",
+      "gen": "ołówków",
+      "dat": "ołówkom",
+      "acc": "ołówki",
+      "ins": "ołówkami",
+      "loc": "ołówkach",
+      "voc": "ołówki"
+    }
+  }
+}

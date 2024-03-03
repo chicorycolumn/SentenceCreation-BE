@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sześcian",
+      "gen": "sześcianu",
+      "dat": "sześcianowi",
+      "acc": "sześcian",
+      "ins": "sześcianem",
+      "loc": "sześcianie",
+      "voc": "sześcianie"
+    },
+    "plural": {
+      "nom": "sześciany",
+      "gen": "sześcianów",
+      "dat": "sześcianom",
+      "acc": "sześciany",
+      "ins": "sześcianami",
+      "loc": "sześcianach",
+      "voc": "sześciany"
+    }
+  }
+}

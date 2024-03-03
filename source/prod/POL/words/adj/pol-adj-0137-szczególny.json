@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "szczególnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "szczególny",
+          "gen": "szczególnego",
+          "dat": "szczególnemu",
+          "acc": "szczególnego",
+          "ins": "szczególnym",
+          "loc": "szczególnym"
+        },
+        "m3": {
+          "nom": "szczególny",
+          "gen": "szczególnego",
+          "dat": "szczególnemu",
+          "acc": "szczególny",
+          "ins": "szczególnym",
+          "loc": "szczególnym"
+        },
+        "f": {
+          "nom": "szczególna",
+          "gen": "szczególnej",
+          "dat": "szczególnej",
+          "acc": "szczególną",
+          "ins": "szczególną",
+          "loc": "szczególnej"
+        },
+        "n": {
+          "nom": "szczególne",
+          "gen": "szczególnego",
+          "dat": "szczególnemu",
+          "acc": "szczególne",
+          "ins": "szczególnym",
+          "loc": "szczególnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "szczególni",
+          "gen": "szczególnych",
+          "dat": "szczególnym",
+          "acc": "szczególnych",
+          "ins": "szczególnymi",
+          "loc": "szczególnych"
+        },
+        "nonvirile": {
+          "nom": "szczególne",
+          "gen": "szczególnych",
+          "dat": "szczególnym",
+          "acc": "szczególne",
+          "ins": "szczególnymi",
+          "loc": "szczególnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszy",
+              "bardziej szczególny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszego",
+              "bardziej szczególnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszemu",
+              "bardziej szczególnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszego",
+              "bardziej szczególnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszym",
+              "bardziej szczególnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszym",
+              "bardziej szczególnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszy",
+              "bardziej szczególny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszego",
+              "bardziej szczególnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszemu",
+              "bardziej szczególnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszy",
+              "bardziej szczególny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszym",
+              "bardziej szczególnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszym",
+              "bardziej szczególnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejsza",
+              "bardziej szczególna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszej",
+              "bardziej szczególnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszej",
+              "bardziej szczególnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszą",
+              "bardziej szczególną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszą",
+              "bardziej szczególną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszej",
+              "bardziej szczególnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejsze",
+              "bardziej szczególne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszego",
+              "bardziej szczególnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszemu",
+              "bardziej szczególnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejsze",
+              "bardziej szczególne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszym",
+              "bardziej szczególnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszym",
+              "bardziej szczególnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejsi",
+              "bardziej szczególni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszych",
+              "bardziej szczególnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszym",
+              "bardziej szczególnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszych",
+              "bardziej szczególnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszymi",
+              "bardziej szczególnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszych",
+              "bardziej szczególnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejsze",
+              "bardziej szczególne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszych",
+              "bardziej szczególnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszym",
+              "bardziej szczególnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejsze",
+              "bardziej szczególne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszymi",
+              "bardziej szczególnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "szczególniejszych",
+              "bardziej szczególnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszy",
+              "najbardziej szczególny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszego",
+              "najbardziej szczególnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszemu",
+              "najbardziej szczególnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszego",
+              "najbardziej szczególnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszym",
+              "najbardziej szczególnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszym",
+              "najbardziej szczególnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszy",
+              "najbardziej szczególny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszego",
+              "najbardziej szczególnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszemu",
+              "najbardziej szczególnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszy",
+              "najbardziej szczególny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszym",
+              "najbardziej szczególnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszym",
+              "najbardziej szczególnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejsza",
+              "najbardziej szczególna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszej",
+              "najbardziej szczególnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszej",
+              "najbardziej szczególnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszą",
+              "najbardziej szczególną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszą",
+              "najbardziej szczególną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszej",
+              "najbardziej szczególnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejsze",
+              "najbardziej szczególne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszego",
+              "najbardziej szczególnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszemu",
+              "najbardziej szczególnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejsze",
+              "najbardziej szczególne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszym",
+              "najbardziej szczególnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszym",
+              "najbardziej szczególnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejsi",
+              "najbardziej szczególni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszych",
+              "najbardziej szczególnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszym",
+              "najbardziej szczególnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszych",
+              "najbardziej szczególnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszymi",
+              "najbardziej szczególnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszych",
+              "najbardziej szczególnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejsze",
+              "najbardziej szczególne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszych",
+              "najbardziej szczególnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszym",
+              "najbardziej szczególnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejsze",
+              "najbardziej szczególne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszymi",
+              "najbardziej szczególnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczególniejszych",
+              "najbardziej szczególnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

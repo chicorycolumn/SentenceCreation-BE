@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lęk",
+      "gen": "lęku",
+      "dat": "lękowi",
+      "acc": "lęk",
+      "ins": "lękiem",
+      "loc": "lęku",
+      "voc": "lęku"
+    },
+    "plural": {
+      "nom": "lęki",
+      "gen": "lęków",
+      "dat": "lękom",
+      "acc": "lęki",
+      "ins": "lękami",
+      "loc": "lękach",
+      "voc": "lęki"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "popełnić",
+    "verbalNoun": "popełnienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "popełniony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "popełniwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "popełni się"
+          },
+          "plural": {
+            "allPluralGenders": "popełni się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "popełnię"
+          },
+          "plural": {
+            "allPluralGenders": "popełnimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "popełnisz"
+          },
+          "plural": {
+            "allPluralGenders": "popełnicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "popełni"
+          },
+          "plural": {
+            "allPluralGenders": "popełnią"
+          }
+        }
+      },
+      "imperative": "popełnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "popełniono"
+          },
+          "plural": {
+            "allPluralGenders": "popełniono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "popełniłem",
+            "f": "popełniłam"
+          },
+          "plural": {
+            "virile": "popełniliśmy",
+            "nonvirile": "popełniłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "popełniłeś",
+            "f": "popełniłaś"
+          },
+          "plural": {
+            "virile": "popełniliście",
+            "nonvirile": "popełniłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "popełnił",
+            "f": "popełniła",
+            "n": "popełniło"
+          },
+          "plural": {
+            "virile": "popełnili",
+            "nonvirile": "popełniły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

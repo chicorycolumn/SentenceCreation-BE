@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "koń",
+      "gen": "konia",
+      "dat": "koniowi",
+      "acc": "konia",
+      "ins": "koniem",
+      "loc": "koniu",
+      "voc": "koniu"
+    },
+    "plural": {
+      "nom": "konie",
+      "gen": "koni",
+      "dat": "koniom",
+      "acc": "konie",
+      "ins": "końmi",
+      "loc": "koniach",
+      "voc": "konie"
+    }
+  }
+}

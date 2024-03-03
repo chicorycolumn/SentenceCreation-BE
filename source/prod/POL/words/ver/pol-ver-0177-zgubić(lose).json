@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zgubić",
+    "verbalNoun": "zgubienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zgubiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zgubiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zgubi się"
+          },
+          "plural": {
+            "allPluralGenders": "zgubi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zgubię"
+          },
+          "plural": {
+            "allPluralGenders": "zgubimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zgubisz"
+          },
+          "plural": {
+            "allPluralGenders": "zgubicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zgubi"
+          },
+          "plural": {
+            "allPluralGenders": "zgubią"
+          }
+        }
+      },
+      "imperative": "zgub",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zgubiono"
+          },
+          "plural": {
+            "allPluralGenders": "zgubiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zgubiłem",
+            "f": "zgubiłam"
+          },
+          "plural": {
+            "virile": "zgubiliśmy",
+            "nonvirile": "zgubiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zgubiłeś",
+            "f": "zgubiłaś"
+          },
+          "plural": {
+            "virile": "zgubiliście",
+            "nonvirile": "zgubiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zgubił",
+            "f": "zgubiła",
+            "n": "zgubiło"
+          },
+          "plural": {
+            "virile": "zgubili",
+            "nonvirile": "zgubiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

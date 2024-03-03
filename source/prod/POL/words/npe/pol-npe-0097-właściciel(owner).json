@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "właściciel",
+      "gen": "właściciela",
+      "dat": "właścicielowi",
+      "acc": "właściciela",
+      "ins": "właścicielem",
+      "loc": "właścicielu",
+      "voc": "właścicielu"
+    },
+    "plural": {
+      "nom": "właściciele",
+      "gen": "właścicieli",
+      "dat": "właścicielom",
+      "acc": "właścicieli",
+      "ins": "właścicielami",
+      "loc": "właścicielach",
+      "voc": "właściciele"
+    }
+  }
+}

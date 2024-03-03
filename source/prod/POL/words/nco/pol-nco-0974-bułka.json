@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "bułka",
+      "gen": "bułki",
+      "dat": "bułce",
+      "acc": "bułkę",
+      "ins": "bułką",
+      "loc": "bułce",
+      "voc": "bułko"
+    },
+    "plural": {
+      "nom": "bułki",
+      "gen": "bułek",
+      "dat": "bułkom",
+      "acc": "bułki",
+      "ins": "bułkami",
+      "loc": "bułkach",
+      "voc": "bułki"
+    }
+  }
+}

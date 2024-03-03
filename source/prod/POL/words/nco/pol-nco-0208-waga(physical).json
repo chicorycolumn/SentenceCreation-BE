@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "waga",
+      "gen": "wagi",
+      "dat": "wadze",
+      "acc": "wagę",
+      "ins": "wagą",
+      "loc": "wadze",
+      "voc": "wago"
+    },
+    "plural": {
+      "nom": "wagi",
+      "gen": "wag",
+      "dat": "wagom",
+      "acc": "wagi",
+      "ins": "wagami",
+      "loc": "wagach",
+      "voc": "wagi"
+    }
+  }
+}

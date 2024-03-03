@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pojawiać",
+    "verbalNoun": "pojawianie",
+    "activeAdjectival": "pojawiający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "pojawiając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pojawiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pojawiano"
+          },
+          "plural": {
+            "allPluralGenders": "pojawiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pojawiałem",
+            "f": "pojawiałam"
+          },
+          "plural": {
+            "virile": "pojawialiśmy",
+            "nonvirile": "pojawiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pojawiałeś",
+            "f": "pojawiałaś"
+          },
+          "plural": {
+            "virile": "pojawialiście",
+            "nonvirile": "pojawiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pojawiał",
+            "f": "pojawiała",
+            "n": "pojawiało"
+          },
+          "plural": {
+            "virile": "pojawiali",
+            "nonvirile": "pojawiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pojawia się"
+          },
+          "plural": {
+            "allPluralGenders": "pojawia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pojawiam"
+          },
+          "plural": {
+            "allPluralGenders": "pojawiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pojawiasz"
+          },
+          "plural": {
+            "allPluralGenders": "pojawiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pojawia"
+          },
+          "plural": {
+            "allPluralGenders": "pojawiają"
+          }
+        }
+      }
+    }
+  }
+}

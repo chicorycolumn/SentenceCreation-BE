@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "miernie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "mierny",
+          "gen": "miernego",
+          "dat": "miernemu",
+          "acc": "miernego",
+          "ins": "miernym",
+          "loc": "miernym"
+        },
+        "m3": {
+          "nom": "mierny",
+          "gen": "miernego",
+          "dat": "miernemu",
+          "acc": "mierny",
+          "ins": "miernym",
+          "loc": "miernym"
+        },
+        "f": {
+          "nom": "mierna",
+          "gen": "miernej",
+          "dat": "miernej",
+          "acc": "mierną",
+          "ins": "mierną",
+          "loc": "miernej"
+        },
+        "n": {
+          "nom": "mierne",
+          "gen": "miernego",
+          "dat": "miernemu",
+          "acc": "mierne",
+          "ins": "miernym",
+          "loc": "miernym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "mierni",
+          "gen": "miernych",
+          "dat": "miernym",
+          "acc": "miernych",
+          "ins": "miernymi",
+          "loc": "miernych"
+        },
+        "nonvirile": {
+          "nom": "mierne",
+          "gen": "miernych",
+          "dat": "miernym",
+          "acc": "mierne",
+          "ins": "miernymi",
+          "loc": "miernych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "mierniejszy",
+          "gen": "mierniejszego",
+          "dat": "mierniejszemu",
+          "acc": "mierniejszego",
+          "ins": "mierniejszym",
+          "loc": "mierniejszym"
+        },
+        "m3": {
+          "nom": "mierniejszy",
+          "gen": "mierniejszego",
+          "dat": "mierniejszemu",
+          "acc": "mierniejszy",
+          "ins": "mierniejszym",
+          "loc": "mierniejszym"
+        },
+        "f": {
+          "nom": "mierniejsza",
+          "gen": "mierniejszej",
+          "dat": "mierniejszej",
+          "acc": "mierniejszą",
+          "ins": "mierniejszą",
+          "loc": "mierniejszej"
+        },
+        "n": {
+          "nom": "mierniejsze",
+          "gen": "mierniejszego",
+          "dat": "mierniejszemu",
+          "acc": "mierniejsze",
+          "ins": "mierniejszym",
+          "loc": "mierniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "mierniejsi",
+          "gen": "mierniejszych",
+          "dat": "mierniejszym",
+          "acc": "mierniejszych",
+          "ins": "mierniejszymi",
+          "loc": "mierniejszych"
+        },
+        "nonvirile": {
+          "nom": "mierniejsze",
+          "gen": "mierniejszych",
+          "dat": "mierniejszym",
+          "acc": "mierniejsze",
+          "ins": "mierniejszymi",
+          "loc": "mierniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najmierniejszy",
+          "gen": "najmierniejszego",
+          "dat": "najmierniejszemu",
+          "acc": "najmierniejszego",
+          "ins": "najmierniejszym",
+          "loc": "najmierniejszym"
+        },
+        "m3": {
+          "nom": "najmierniejszy",
+          "gen": "najmierniejszego",
+          "dat": "najmierniejszemu",
+          "acc": "najmierniejszy",
+          "ins": "najmierniejszym",
+          "loc": "najmierniejszym"
+        },
+        "f": {
+          "nom": "najmierniejsza",
+          "gen": "najmierniejszej",
+          "dat": "najmierniejszej",
+          "acc": "najmierniejszą",
+          "ins": "najmierniejszą",
+          "loc": "najmierniejszej"
+        },
+        "n": {
+          "nom": "najmierniejsze",
+          "gen": "najmierniejszego",
+          "dat": "najmierniejszemu",
+          "acc": "najmierniejsze",
+          "ins": "najmierniejszym",
+          "loc": "najmierniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najmierniejsi",
+          "gen": "najmierniejszych",
+          "dat": "najmierniejszym",
+          "acc": "najmierniejszych",
+          "ins": "najmierniejszymi",
+          "loc": "najmierniejszych"
+        },
+        "nonvirile": {
+          "nom": "najmierniejsze",
+          "gen": "najmierniejszych",
+          "dat": "najmierniejszym",
+          "acc": "najmierniejsze",
+          "ins": "najmierniejszymi",
+          "loc": "najmierniejszych"
+        }
+      }
+    }
+  }
+}

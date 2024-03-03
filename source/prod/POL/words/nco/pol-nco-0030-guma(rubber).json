@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "guma",
+      "gen": "gumy",
+      "dat": "gumie",
+      "acc": "gumę",
+      "ins": "gumą",
+      "loc": "gumie",
+      "voc": "gumo"
+    },
+    "plural": {
+      "nom": "gumy",
+      "gen": "gum",
+      "dat": "gumom",
+      "acc": "gumy",
+      "ins": "gumami",
+      "loc": "gumach",
+      "voc": "gumy"
+    }
+  }
+}

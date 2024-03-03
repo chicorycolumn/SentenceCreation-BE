@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kształt",
+      "gen": "kształtu",
+      "dat": "kształtowi",
+      "acc": "kształt",
+      "ins": "kształtem",
+      "loc": "kształcie",
+      "voc": "kształcie"
+    },
+    "plural": {
+      "nom": "kształty",
+      "gen": "kształtów",
+      "dat": "kształtom",
+      "acc": "kształty",
+      "ins": "kształtami",
+      "loc": "kształtach",
+      "voc": "kształty"
+    }
+  }
+}

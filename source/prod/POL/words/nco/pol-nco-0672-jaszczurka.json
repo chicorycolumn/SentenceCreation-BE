@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "jaszczurka",
+      "gen": "jaszczurki",
+      "dat": "jaszczurce",
+      "acc": "jaszczurkę",
+      "ins": "jaszczurką",
+      "loc": "jaszczurce",
+      "voc": "jaszczurko"
+    },
+    "plural": {
+      "nom": "jaszczurki",
+      "gen": "jaszczurek",
+      "dat": "jaszczurkom",
+      "acc": "jaszczurki",
+      "ins": "jaszczurkami",
+      "loc": "jaszczurkach",
+      "voc": "jaszczurki"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "głęboko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "głęboki",
+          "gen": "głębokiego",
+          "dat": "głębokiemu",
+          "acc": "głębokiego",
+          "ins": "głębokim",
+          "loc": "głębokim"
+        },
+        "m3": {
+          "nom": "głęboki",
+          "gen": "głębokiego",
+          "dat": "głębokiemu",
+          "acc": "głęboki",
+          "ins": "głębokim",
+          "loc": "głębokim"
+        },
+        "f": {
+          "nom": "głęboka",
+          "gen": "głębokiej",
+          "dat": "głębokiej",
+          "acc": "głęboką",
+          "ins": "głęboką",
+          "loc": "głębokiej"
+        },
+        "n": {
+          "nom": "głębokie",
+          "gen": "głębokiego",
+          "dat": "głębokiemu",
+          "acc": "głębokie",
+          "ins": "głębokim",
+          "loc": "głębokim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "głębocy",
+          "gen": "głębokich",
+          "dat": "głębokim",
+          "acc": "głębokich",
+          "ins": "głębokimi",
+          "loc": "głębokich"
+        },
+        "nonvirile": {
+          "nom": "głębokie",
+          "gen": "głębokich",
+          "dat": "głębokim",
+          "acc": "głębokie",
+          "ins": "głębokimi",
+          "loc": "głębokich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "głębszy",
+          "gen": "głębszego",
+          "dat": "głębszemu",
+          "acc": "głębszego",
+          "ins": "głębszym",
+          "loc": "głębszym"
+        },
+        "m3": {
+          "nom": "głębszy",
+          "gen": "głębszego",
+          "dat": "głębszemu",
+          "acc": "głębszy",
+          "ins": "głębszym",
+          "loc": "głębszym"
+        },
+        "f": {
+          "nom": "głębsza",
+          "gen": "głębszej",
+          "dat": "głębszej",
+          "acc": "głębszą",
+          "ins": "głębszą",
+          "loc": "głębszej"
+        },
+        "n": {
+          "nom": "głębsze",
+          "gen": "głębszego",
+          "dat": "głębszemu",
+          "acc": "głębsze",
+          "ins": "głębszym",
+          "loc": "głębszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "głębsi",
+          "gen": "głębszych",
+          "dat": "głębszym",
+          "acc": "głębszych",
+          "ins": "głębszymi",
+          "loc": "głębszych"
+        },
+        "nonvirile": {
+          "nom": "głębsze",
+          "gen": "głębszych",
+          "dat": "głębszym",
+          "acc": "głębsze",
+          "ins": "głębszymi",
+          "loc": "głębszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najgłębszy",
+          "gen": "najgłębszego",
+          "dat": "najgłębszemu",
+          "acc": "najgłębszego",
+          "ins": "najgłębszym",
+          "loc": "najgłębszym"
+        },
+        "m3": {
+          "nom": "najgłębszy",
+          "gen": "najgłębszego",
+          "dat": "najgłębszemu",
+          "acc": "najgłębszy",
+          "ins": "najgłębszym",
+          "loc": "najgłębszym"
+        },
+        "f": {
+          "nom": "najgłębsza",
+          "gen": "najgłębszej",
+          "dat": "najgłębszej",
+          "acc": "najgłębszą",
+          "ins": "najgłębszą",
+          "loc": "najgłębszej"
+        },
+        "n": {
+          "nom": "najgłębsze",
+          "gen": "najgłębszego",
+          "dat": "najgłębszemu",
+          "acc": "najgłębsze",
+          "ins": "najgłębszym",
+          "loc": "najgłębszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najgłębsi",
+          "gen": "najgłębszych",
+          "dat": "najgłębszym",
+          "acc": "najgłębszych",
+          "ins": "najgłębszymi",
+          "loc": "najgłębszych"
+        },
+        "nonvirile": {
+          "nom": "najgłębsze",
+          "gen": "najgłębszych",
+          "dat": "najgłębszym",
+          "acc": "najgłębsze",
+          "ins": "najgłębszymi",
+          "loc": "najgłębszych"
+        }
+      }
+    }
+  }
+}

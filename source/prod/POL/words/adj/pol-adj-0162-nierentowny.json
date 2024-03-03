@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "nierentownie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nierentowny",
+          "gen": "nierentownego",
+          "dat": "nierentownemu",
+          "acc": "nierentownego",
+          "ins": "nierentownym",
+          "loc": "nierentownym"
+        },
+        "m3": {
+          "nom": "nierentowny",
+          "gen": "nierentownego",
+          "dat": "nierentownemu",
+          "acc": "nierentowny",
+          "ins": "nierentownym",
+          "loc": "nierentownym"
+        },
+        "f": {
+          "nom": "nierentowna",
+          "gen": "nierentownej",
+          "dat": "nierentownej",
+          "acc": "nierentowną",
+          "ins": "nierentowną",
+          "loc": "nierentownej"
+        },
+        "n": {
+          "nom": "nierentowne",
+          "gen": "nierentownego",
+          "dat": "nierentownemu",
+          "acc": "nierentowne",
+          "ins": "nierentownym",
+          "loc": "nierentownym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nierentowni",
+          "gen": "nierentownych",
+          "dat": "nierentownym",
+          "acc": "nierentownych",
+          "ins": "nierentownymi",
+          "loc": "nierentownych"
+        },
+        "nonvirile": {
+          "nom": "nierentowne",
+          "gen": "nierentownych",
+          "dat": "nierentownym",
+          "acc": "nierentowne",
+          "ins": "nierentownymi",
+          "loc": "nierentownych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej nierentowny",
+          "gen": "bardziej nierentownego",
+          "dat": "bardziej nierentownemu",
+          "acc": "bardziej nierentownego",
+          "ins": "bardziej nierentownym",
+          "loc": "bardziej nierentownym"
+        },
+        "m3": {
+          "nom": "bardziej nierentowny",
+          "gen": "bardziej nierentownego",
+          "dat": "bardziej nierentownemu",
+          "acc": "bardziej nierentowny",
+          "ins": "bardziej nierentownym",
+          "loc": "bardziej nierentownym"
+        },
+        "f": {
+          "nom": "bardziej nierentowna",
+          "gen": "bardziej nierentownej",
+          "dat": "bardziej nierentownej",
+          "acc": "bardziej nierentowną",
+          "ins": "bardziej nierentowną",
+          "loc": "bardziej nierentownej"
+        },
+        "n": {
+          "nom": "bardziej nierentowne",
+          "gen": "bardziej nierentownego",
+          "dat": "bardziej nierentownemu",
+          "acc": "bardziej nierentowne",
+          "ins": "bardziej nierentownym",
+          "loc": "bardziej nierentownym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej nierentowni",
+          "gen": "bardziej nierentownych",
+          "dat": "bardziej nierentownym",
+          "acc": "bardziej nierentownych",
+          "ins": "bardziej nierentownymi",
+          "loc": "bardziej nierentownych"
+        },
+        "nonvirile": {
+          "nom": "bardziej nierentowne",
+          "gen": "bardziej nierentownych",
+          "dat": "bardziej nierentownym",
+          "acc": "bardziej nierentowne",
+          "ins": "bardziej nierentownymi",
+          "loc": "bardziej nierentownych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej nierentowny",
+          "gen": "najbardziej nierentownego",
+          "dat": "najbardziej nierentownemu",
+          "acc": "najbardziej nierentownego",
+          "ins": "najbardziej nierentownym",
+          "loc": "najbardziej nierentownym"
+        },
+        "m3": {
+          "nom": "najbardziej nierentowny",
+          "gen": "najbardziej nierentownego",
+          "dat": "najbardziej nierentownemu",
+          "acc": "najbardziej nierentowny",
+          "ins": "najbardziej nierentownym",
+          "loc": "najbardziej nierentownym"
+        },
+        "f": {
+          "nom": "najbardziej nierentowna",
+          "gen": "najbardziej nierentownej",
+          "dat": "najbardziej nierentownej",
+          "acc": "najbardziej nierentowną",
+          "ins": "najbardziej nierentowną",
+          "loc": "najbardziej nierentownej"
+        },
+        "n": {
+          "nom": "najbardziej nierentowne",
+          "gen": "najbardziej nierentownego",
+          "dat": "najbardziej nierentownemu",
+          "acc": "najbardziej nierentowne",
+          "ins": "najbardziej nierentownym",
+          "loc": "najbardziej nierentownym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej nierentowni",
+          "gen": "najbardziej nierentownych",
+          "dat": "najbardziej nierentownym",
+          "acc": "najbardziej nierentownych",
+          "ins": "najbardziej nierentownymi",
+          "loc": "najbardziej nierentownych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej nierentowne",
+          "gen": "najbardziej nierentownych",
+          "dat": "najbardziej nierentownym",
+          "acc": "najbardziej nierentowne",
+          "ins": "najbardziej nierentownymi",
+          "loc": "najbardziej nierentownych"
+        }
+      }
+    }
+  }
+}

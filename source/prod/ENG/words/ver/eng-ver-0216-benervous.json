@@ -1,0 +1,15 @@
+{
+  "inflections": {
+    "infinitive": "be nervous",
+    "v2": {
+      "isTerminus": true,
+      "normal": [
+        "was nervous",
+        "were nervous"
+      ]
+    },
+    "v3": "been nervous",
+    "thirdPS": "is nervous",
+    "gerund": "being nervous"
+  }
+}

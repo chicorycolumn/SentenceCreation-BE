@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "poddać",
+    "verbalNoun": "poddanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "poddany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "poddawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podda się"
+          },
+          "plural": {
+            "allPluralGenders": "podda się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "poddam"
+          },
+          "plural": {
+            "allPluralGenders": "poddamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "poddasz"
+          },
+          "plural": {
+            "allPluralGenders": "poddacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podda"
+          },
+          "plural": {
+            "allPluralGenders": "poddadzą"
+          }
+        }
+      },
+      "imperative": "poddaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poddano"
+          },
+          "plural": {
+            "allPluralGenders": "poddano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "poddałem",
+            "f": "poddałam"
+          },
+          "plural": {
+            "virile": "poddaliśmy",
+            "nonvirile": "poddałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "poddałeś",
+            "f": "poddałaś"
+          },
+          "plural": {
+            "virile": "poddaliście",
+            "nonvirile": "poddałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "poddał",
+            "f": "poddała",
+            "n": "poddało"
+          },
+          "plural": {
+            "virile": "poddali",
+            "nonvirile": "poddały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "inflections": {
+    "simple": "long",
+    "comparative": "longer",
+    "superlative": "longest",
+    "adverb": false
+  }
+}

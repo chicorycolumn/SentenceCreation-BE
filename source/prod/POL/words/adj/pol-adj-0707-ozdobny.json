@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "ozdobnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ozdobny",
+          "gen": "ozdobnego",
+          "dat": "ozdobnemu",
+          "acc": "ozdobnego",
+          "ins": "ozdobnym",
+          "loc": "ozdobnym"
+        },
+        "m3": {
+          "nom": "ozdobny",
+          "gen": "ozdobnego",
+          "dat": "ozdobnemu",
+          "acc": "ozdobny",
+          "ins": "ozdobnym",
+          "loc": "ozdobnym"
+        },
+        "f": {
+          "nom": "ozdobna",
+          "gen": "ozdobnej",
+          "dat": "ozdobnej",
+          "acc": "ozdobną",
+          "ins": "ozdobną",
+          "loc": "ozdobnej"
+        },
+        "n": {
+          "nom": "ozdobne",
+          "gen": "ozdobnego",
+          "dat": "ozdobnemu",
+          "acc": "ozdobne",
+          "ins": "ozdobnym",
+          "loc": "ozdobnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ozdobni",
+          "gen": "ozdobnych",
+          "dat": "ozdobnym",
+          "acc": "ozdobnych",
+          "ins": "ozdobnymi",
+          "loc": "ozdobnych"
+        },
+        "nonvirile": {
+          "nom": "ozdobne",
+          "gen": "ozdobnych",
+          "dat": "ozdobnym",
+          "acc": "ozdobne",
+          "ins": "ozdobnymi",
+          "loc": "ozdobnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "ozdobniejszy",
+          "gen": "ozdobniejszego",
+          "dat": "ozdobniejszemu",
+          "acc": "ozdobniejszego",
+          "ins": "ozdobniejszym",
+          "loc": "ozdobniejszym"
+        },
+        "m3": {
+          "nom": "ozdobniejszy",
+          "gen": "ozdobniejszego",
+          "dat": "ozdobniejszemu",
+          "acc": "ozdobniejszy",
+          "ins": "ozdobniejszym",
+          "loc": "ozdobniejszym"
+        },
+        "f": {
+          "nom": "ozdobniejsza",
+          "gen": "ozdobniejszej",
+          "dat": "ozdobniejszej",
+          "acc": "ozdobniejszą",
+          "ins": "ozdobniejszą",
+          "loc": "ozdobniejszej"
+        },
+        "n": {
+          "nom": "ozdobniejsze",
+          "gen": "ozdobniejszego",
+          "dat": "ozdobniejszemu",
+          "acc": "ozdobniejsze",
+          "ins": "ozdobniejszym",
+          "loc": "ozdobniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ozdobniejsi",
+          "gen": "ozdobniejszych",
+          "dat": "ozdobniejszym",
+          "acc": "ozdobniejszych",
+          "ins": "ozdobniejszymi",
+          "loc": "ozdobniejszych"
+        },
+        "nonvirile": {
+          "nom": "ozdobniejsze",
+          "gen": "ozdobniejszych",
+          "dat": "ozdobniejszym",
+          "acc": "ozdobniejsze",
+          "ins": "ozdobniejszymi",
+          "loc": "ozdobniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najozdobniejszy",
+          "gen": "najozdobniejszego",
+          "dat": "najozdobniejszemu",
+          "acc": "najozdobniejszego",
+          "ins": "najozdobniejszym",
+          "loc": "najozdobniejszym"
+        },
+        "m3": {
+          "nom": "najozdobniejszy",
+          "gen": "najozdobniejszego",
+          "dat": "najozdobniejszemu",
+          "acc": "najozdobniejszy",
+          "ins": "najozdobniejszym",
+          "loc": "najozdobniejszym"
+        },
+        "f": {
+          "nom": "najozdobniejsza",
+          "gen": "najozdobniejszej",
+          "dat": "najozdobniejszej",
+          "acc": "najozdobniejszą",
+          "ins": "najozdobniejszą",
+          "loc": "najozdobniejszej"
+        },
+        "n": {
+          "nom": "najozdobniejsze",
+          "gen": "najozdobniejszego",
+          "dat": "najozdobniejszemu",
+          "acc": "najozdobniejsze",
+          "ins": "najozdobniejszym",
+          "loc": "najozdobniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najozdobniejsi",
+          "gen": "najozdobniejszych",
+          "dat": "najozdobniejszym",
+          "acc": "najozdobniejszych",
+          "ins": "najozdobniejszymi",
+          "loc": "najozdobniejszych"
+        },
+        "nonvirile": {
+          "nom": "najozdobniejsze",
+          "gen": "najozdobniejszych",
+          "dat": "najozdobniejszym",
+          "acc": "najozdobniejsze",
+          "ins": "najozdobniejszymi",
+          "loc": "najozdobniejszych"
+        }
+      }
+    }
+  }
+}

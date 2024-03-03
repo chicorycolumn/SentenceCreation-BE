@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "królewski",
+          "gen": "królewskiego",
+          "dat": "królewskiemu",
+          "acc": "królewskiego",
+          "ins": "królewskim",
+          "loc": "królewskim"
+        },
+        "m3": {
+          "nom": "królewski",
+          "gen": "królewskiego",
+          "dat": "królewskiemu",
+          "acc": "królewski",
+          "ins": "królewskim",
+          "loc": "królewskim"
+        },
+        "f": {
+          "nom": "królewska",
+          "gen": "królewskiej",
+          "dat": "królewskiej",
+          "acc": "królewską",
+          "ins": "królewską",
+          "loc": "królewskiej"
+        },
+        "n": {
+          "nom": "królewskie",
+          "gen": "królewskiego",
+          "dat": "królewskiemu",
+          "acc": "królewskie",
+          "ins": "królewskim",
+          "loc": "królewskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "królewscy",
+          "gen": "królewskich",
+          "dat": "królewskim",
+          "acc": "królewskich",
+          "ins": "królewskimi",
+          "loc": "królewskich"
+        },
+        "nonvirile": {
+          "nom": "królewskie",
+          "gen": "królewskich",
+          "dat": "królewskim",
+          "acc": "królewskie",
+          "ins": "królewskimi",
+          "loc": "królewskich"
+        }
+      }
+    }
+  }
+}

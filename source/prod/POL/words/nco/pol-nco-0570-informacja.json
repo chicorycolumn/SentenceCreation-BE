@@ -1,0 +1,30 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "informacja",
+      "gen": "informacji",
+      "dat": "informacji",
+      "acc": "informację",
+      "ins": "informacją",
+      "loc": "informacji",
+      "voc": "informacjo"
+    },
+    "plural": {
+      "nom": "informacje",
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "informacji"
+        ],
+        "additionalInfrequent": [
+          "informacyj"
+        ]
+      },
+      "dat": "informacjom",
+      "acc": "informacje",
+      "ins": "informacjami",
+      "loc": "informacjach",
+      "voc": "informacje"
+    }
+  }
+}

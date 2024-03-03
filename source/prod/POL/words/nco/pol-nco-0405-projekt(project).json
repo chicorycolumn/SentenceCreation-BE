@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "projekt",
+      "gen": "projektu",
+      "dat": "projektowi",
+      "acc": "projekt",
+      "ins": "projektem",
+      "loc": "projekcie",
+      "voc": "projekcie"
+    },
+    "plural": {
+      "nom": "projekty",
+      "gen": "projektów",
+      "dat": "projektom",
+      "acc": "projekty",
+      "ins": "projektami",
+      "loc": "projektach",
+      "voc": "projekty"
+    }
+  }
+}

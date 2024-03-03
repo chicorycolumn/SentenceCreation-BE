@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pochłaniać",
+    "verbalNoun": "pochłanianie",
+    "activeAdjectival": "pochłaniający",
+    "passiveAdjectival": "pochłaniany",
+    "contemporaryAdverbial": "pochłaniając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pochłaniaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pochłaniano"
+          },
+          "plural": {
+            "allPluralGenders": "pochłaniano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pochłaniałem",
+            "f": "pochłaniałam"
+          },
+          "plural": {
+            "virile": "pochłanialiśmy",
+            "nonvirile": "pochłaniałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pochłaniałeś",
+            "f": "pochłaniałaś"
+          },
+          "plural": {
+            "virile": "pochłanialiście",
+            "nonvirile": "pochłaniałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pochłaniał",
+            "f": "pochłaniała",
+            "n": "pochłaniało"
+          },
+          "plural": {
+            "virile": "pochłaniali",
+            "nonvirile": "pochłaniały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pochłania się"
+          },
+          "plural": {
+            "allPluralGenders": "pochłania się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pochłaniam"
+          },
+          "plural": {
+            "allPluralGenders": "pochłaniamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pochłaniasz"
+          },
+          "plural": {
+            "allPluralGenders": "pochłaniacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pochłania"
+          },
+          "plural": {
+            "allPluralGenders": "pochłaniają"
+          }
+        }
+      }
+    }
+  }
+}

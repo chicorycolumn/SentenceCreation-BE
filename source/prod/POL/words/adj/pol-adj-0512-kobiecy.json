@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "kobieco",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "kobiecy",
+          "gen": "kobiecego",
+          "dat": "kobiecemu",
+          "acc": "kobiecego",
+          "ins": "kobiecym",
+          "loc": "kobiecym"
+        },
+        "m3": {
+          "nom": "kobiecy",
+          "gen": "kobiecego",
+          "dat": "kobiecemu",
+          "acc": "kobiecy",
+          "ins": "kobiecym",
+          "loc": "kobiecym"
+        },
+        "f": {
+          "nom": "kobieca",
+          "gen": "kobiecej",
+          "dat": "kobiecej",
+          "acc": "kobiecą",
+          "ins": "kobiecą",
+          "loc": "kobiecej"
+        },
+        "n": {
+          "nom": "kobiece",
+          "gen": "kobiecego",
+          "dat": "kobiecemu",
+          "acc": "kobiece",
+          "ins": "kobiecym",
+          "loc": "kobiecym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "kobiecy",
+          "gen": "kobiecych",
+          "dat": "kobiecym",
+          "acc": "kobiecych",
+          "ins": "kobiecymi",
+          "loc": "kobiecych"
+        },
+        "nonvirile": {
+          "nom": "kobiece",
+          "gen": "kobiecych",
+          "dat": "kobiecym",
+          "acc": "kobiece",
+          "ins": "kobiecymi",
+          "loc": "kobiecych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej kobiecy",
+          "gen": "bardziej kobiecego",
+          "dat": "bardziej kobiecemu",
+          "acc": "bardziej kobiecego",
+          "ins": "bardziej kobiecym",
+          "loc": "bardziej kobiecym"
+        },
+        "m3": {
+          "nom": "bardziej kobiecy",
+          "gen": "bardziej kobiecego",
+          "dat": "bardziej kobiecemu",
+          "acc": "bardziej kobiecy",
+          "ins": "bardziej kobiecym",
+          "loc": "bardziej kobiecym"
+        },
+        "f": {
+          "nom": "bardziej kobieca",
+          "gen": "bardziej kobiecej",
+          "dat": "bardziej kobiecej",
+          "acc": "bardziej kobiecą",
+          "ins": "bardziej kobiecą",
+          "loc": "bardziej kobiecej"
+        },
+        "n": {
+          "nom": "bardziej kobiece",
+          "gen": "bardziej kobiecego",
+          "dat": "bardziej kobiecemu",
+          "acc": "bardziej kobiece",
+          "ins": "bardziej kobiecym",
+          "loc": "bardziej kobiecym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej kobiecy",
+          "gen": "bardziej kobiecych",
+          "dat": "bardziej kobiecym",
+          "acc": "bardziej kobiecych",
+          "ins": "bardziej kobiecymi",
+          "loc": "bardziej kobiecych"
+        },
+        "nonvirile": {
+          "nom": "bardziej kobiece",
+          "gen": "bardziej kobiecych",
+          "dat": "bardziej kobiecym",
+          "acc": "bardziej kobiece",
+          "ins": "bardziej kobiecymi",
+          "loc": "bardziej kobiecych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej kobiecy",
+          "gen": "najbardziej kobiecego",
+          "dat": "najbardziej kobiecemu",
+          "acc": "najbardziej kobiecego",
+          "ins": "najbardziej kobiecym",
+          "loc": "najbardziej kobiecym"
+        },
+        "m3": {
+          "nom": "najbardziej kobiecy",
+          "gen": "najbardziej kobiecego",
+          "dat": "najbardziej kobiecemu",
+          "acc": "najbardziej kobiecy",
+          "ins": "najbardziej kobiecym",
+          "loc": "najbardziej kobiecym"
+        },
+        "f": {
+          "nom": "najbardziej kobieca",
+          "gen": "najbardziej kobiecej",
+          "dat": "najbardziej kobiecej",
+          "acc": "najbardziej kobiecą",
+          "ins": "najbardziej kobiecą",
+          "loc": "najbardziej kobiecej"
+        },
+        "n": {
+          "nom": "najbardziej kobiece",
+          "gen": "najbardziej kobiecego",
+          "dat": "najbardziej kobiecemu",
+          "acc": "najbardziej kobiece",
+          "ins": "najbardziej kobiecym",
+          "loc": "najbardziej kobiecym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej kobiecy",
+          "gen": "najbardziej kobiecych",
+          "dat": "najbardziej kobiecym",
+          "acc": "najbardziej kobiecych",
+          "ins": "najbardziej kobiecymi",
+          "loc": "najbardziej kobiecych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej kobiece",
+          "gen": "najbardziej kobiecych",
+          "dat": "najbardziej kobiecym",
+          "acc": "najbardziej kobiece",
+          "ins": "najbardziej kobiecymi",
+          "loc": "najbardziej kobiecych"
+        }
+      }
+    }
+  }
+}

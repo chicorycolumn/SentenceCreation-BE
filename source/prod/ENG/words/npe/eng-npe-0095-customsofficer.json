@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "customs officer",
+      "gen": "customs officer's"
+    },
+    "plural": {
+      "nom": "customs officers",
+      "gen": "customs officers'"
+    }
+  }
+}

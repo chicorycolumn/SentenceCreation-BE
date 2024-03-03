@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odgrywać",
+    "verbalNoun": "odgrywanie",
+    "activeAdjectival": "odgrywający",
+    "passiveAdjectival": "odgrywany",
+    "contemporaryAdverbial": "odgrywając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odgrywaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odgrywano"
+          },
+          "plural": {
+            "allPluralGenders": "odgrywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odgrywałem",
+            "f": "odgrywałam"
+          },
+          "plural": {
+            "virile": "odgrywaliśmy",
+            "nonvirile": "odgrywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odgrywałeś",
+            "f": "odgrywałaś"
+          },
+          "plural": {
+            "virile": "odgrywaliście",
+            "nonvirile": "odgrywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odgrywał",
+            "f": "odgrywała",
+            "n": "odgrywało"
+          },
+          "plural": {
+            "virile": "odgrywali",
+            "nonvirile": "odgrywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odgrywa się"
+          },
+          "plural": {
+            "allPluralGenders": "odgrywa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odgrywam"
+          },
+          "plural": {
+            "allPluralGenders": "odgrywamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odgrywasz"
+          },
+          "plural": {
+            "allPluralGenders": "odgrywacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odgrywa"
+          },
+          "plural": {
+            "allPluralGenders": "odgrywają"
+          }
+        }
+      }
+    }
+  }
+}

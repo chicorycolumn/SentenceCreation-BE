@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odwrócić",
+    "verbalNoun": "odwrócenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "odwrócony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odwróciwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odwróci się"
+          },
+          "plural": {
+            "allPluralGenders": "odwróci się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odwrócę"
+          },
+          "plural": {
+            "allPluralGenders": "odwrócimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odwrócisz"
+          },
+          "plural": {
+            "allPluralGenders": "odwrócicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odwróci"
+          },
+          "plural": {
+            "allPluralGenders": "odwrócą"
+          }
+        }
+      },
+      "imperative": "odwróć",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odwrócono"
+          },
+          "plural": {
+            "allPluralGenders": "odwrócono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odwróciłem",
+            "f": "odwróciłam"
+          },
+          "plural": {
+            "virile": "odwróciliśmy",
+            "nonvirile": "odwróciłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odwróciłeś",
+            "f": "odwróciłaś"
+          },
+          "plural": {
+            "virile": "odwróciliście",
+            "nonvirile": "odwróciłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odwrócił",
+            "f": "odwróciła",
+            "n": "odwróciło"
+          },
+          "plural": {
+            "virile": "odwrócili",
+            "nonvirile": "odwróciły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

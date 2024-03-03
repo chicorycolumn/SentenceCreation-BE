@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dogonić",
+    "verbalNoun": "dogonienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "dogoniony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "dogoniwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dogoni się"
+          },
+          "plural": {
+            "allPluralGenders": "dogoni się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dogonię"
+          },
+          "plural": {
+            "allPluralGenders": "dogonimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dogonisz"
+          },
+          "plural": {
+            "allPluralGenders": "dogonicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dogoni"
+          },
+          "plural": {
+            "allPluralGenders": "dogonią"
+          }
+        }
+      },
+      "imperative": "dogoń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dogoniono"
+          },
+          "plural": {
+            "allPluralGenders": "dogoniono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dogoniłem",
+            "f": "dogoniłam"
+          },
+          "plural": {
+            "virile": "dogoniliśmy",
+            "nonvirile": "dogoniłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dogoniłeś",
+            "f": "dogoniłaś"
+          },
+          "plural": {
+            "virile": "dogoniliście",
+            "nonvirile": "dogoniłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dogonił",
+            "f": "dogoniła",
+            "n": "dogoniło"
+          },
+          "plural": {
+            "virile": "dogonili",
+            "nonvirile": "dogoniły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

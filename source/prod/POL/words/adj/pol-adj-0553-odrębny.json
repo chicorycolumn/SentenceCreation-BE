@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "odrębnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "odrębny",
+          "gen": "odrębnego",
+          "dat": "odrębnemu",
+          "acc": "odrębnego",
+          "ins": "odrębnym",
+          "loc": "odrębnym"
+        },
+        "m3": {
+          "nom": "odrębny",
+          "gen": "odrębnego",
+          "dat": "odrębnemu",
+          "acc": "odrębny",
+          "ins": "odrębnym",
+          "loc": "odrębnym"
+        },
+        "f": {
+          "nom": "odrębna",
+          "gen": "odrębnej",
+          "dat": "odrębnej",
+          "acc": "odrębną",
+          "ins": "odrębną",
+          "loc": "odrębnej"
+        },
+        "n": {
+          "nom": "odrębne",
+          "gen": "odrębnego",
+          "dat": "odrębnemu",
+          "acc": "odrębne",
+          "ins": "odrębnym",
+          "loc": "odrębnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "odrębni",
+          "gen": "odrębnych",
+          "dat": "odrębnym",
+          "acc": "odrębnych",
+          "ins": "odrębnymi",
+          "loc": "odrębnych"
+        },
+        "nonvirile": {
+          "nom": "odrębne",
+          "gen": "odrębnych",
+          "dat": "odrębnym",
+          "acc": "odrębne",
+          "ins": "odrębnymi",
+          "loc": "odrębnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej odrębny",
+          "gen": "bardziej odrębnego",
+          "dat": "bardziej odrębnemu",
+          "acc": "bardziej odrębnego",
+          "ins": "bardziej odrębnym",
+          "loc": "bardziej odrębnym"
+        },
+        "m3": {
+          "nom": "bardziej odrębny",
+          "gen": "bardziej odrębnego",
+          "dat": "bardziej odrębnemu",
+          "acc": "bardziej odrębny",
+          "ins": "bardziej odrębnym",
+          "loc": "bardziej odrębnym"
+        },
+        "f": {
+          "nom": "bardziej odrębna",
+          "gen": "bardziej odrębnej",
+          "dat": "bardziej odrębnej",
+          "acc": "bardziej odrębną",
+          "ins": "bardziej odrębną",
+          "loc": "bardziej odrębnej"
+        },
+        "n": {
+          "nom": "bardziej odrębne",
+          "gen": "bardziej odrębnego",
+          "dat": "bardziej odrębnemu",
+          "acc": "bardziej odrębne",
+          "ins": "bardziej odrębnym",
+          "loc": "bardziej odrębnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej odrębni",
+          "gen": "bardziej odrębnych",
+          "dat": "bardziej odrębnym",
+          "acc": "bardziej odrębnych",
+          "ins": "bardziej odrębnymi",
+          "loc": "bardziej odrębnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej odrębne",
+          "gen": "bardziej odrębnych",
+          "dat": "bardziej odrębnym",
+          "acc": "bardziej odrębne",
+          "ins": "bardziej odrębnymi",
+          "loc": "bardziej odrębnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej odrębny",
+          "gen": "najbardziej odrębnego",
+          "dat": "najbardziej odrębnemu",
+          "acc": "najbardziej odrębnego",
+          "ins": "najbardziej odrębnym",
+          "loc": "najbardziej odrębnym"
+        },
+        "m3": {
+          "nom": "najbardziej odrębny",
+          "gen": "najbardziej odrębnego",
+          "dat": "najbardziej odrębnemu",
+          "acc": "najbardziej odrębny",
+          "ins": "najbardziej odrębnym",
+          "loc": "najbardziej odrębnym"
+        },
+        "f": {
+          "nom": "najbardziej odrębna",
+          "gen": "najbardziej odrębnej",
+          "dat": "najbardziej odrębnej",
+          "acc": "najbardziej odrębną",
+          "ins": "najbardziej odrębną",
+          "loc": "najbardziej odrębnej"
+        },
+        "n": {
+          "nom": "najbardziej odrębne",
+          "gen": "najbardziej odrębnego",
+          "dat": "najbardziej odrębnemu",
+          "acc": "najbardziej odrębne",
+          "ins": "najbardziej odrębnym",
+          "loc": "najbardziej odrębnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej odrębni",
+          "gen": "najbardziej odrębnych",
+          "dat": "najbardziej odrębnym",
+          "acc": "najbardziej odrębnych",
+          "ins": "najbardziej odrębnymi",
+          "loc": "najbardziej odrębnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej odrębne",
+          "gen": "najbardziej odrębnych",
+          "dat": "najbardziej odrębnym",
+          "acc": "najbardziej odrębne",
+          "ins": "najbardziej odrębnymi",
+          "loc": "najbardziej odrębnych"
+        }
+      }
+    }
+  }
+}

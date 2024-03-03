@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "klatka",
+      "gen": "klatki",
+      "dat": "klatce",
+      "acc": "klatkę",
+      "ins": "klatką",
+      "loc": "klatce",
+      "voc": "klatko"
+    },
+    "plural": {
+      "nom": "klatki",
+      "gen": "klatek",
+      "dat": "klatkom",
+      "acc": "klatki",
+      "ins": "klatkami",
+      "loc": "klatkach",
+      "voc": "klatki"
+    }
+  }
+}

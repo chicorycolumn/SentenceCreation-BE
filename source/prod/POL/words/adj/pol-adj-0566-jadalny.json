@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "jadalny",
+          "gen": "jadalnego",
+          "dat": "jadalnemu",
+          "acc": "jadalnego",
+          "ins": "jadalnym",
+          "loc": "jadalnym"
+        },
+        "m3": {
+          "nom": "jadalny",
+          "gen": "jadalnego",
+          "dat": "jadalnemu",
+          "acc": "jadalny",
+          "ins": "jadalnym",
+          "loc": "jadalnym"
+        },
+        "f": {
+          "nom": "jadalna",
+          "gen": "jadalnej",
+          "dat": "jadalnej",
+          "acc": "jadalną",
+          "ins": "jadalną",
+          "loc": "jadalnej"
+        },
+        "n": {
+          "nom": "jadalne",
+          "gen": "jadalnego",
+          "dat": "jadalnemu",
+          "acc": "jadalne",
+          "ins": "jadalnym",
+          "loc": "jadalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "jadalni",
+          "gen": "jadalnych",
+          "dat": "jadalnym",
+          "acc": "jadalnych",
+          "ins": "jadalnymi",
+          "loc": "jadalnych"
+        },
+        "nonvirile": {
+          "nom": "jadalne",
+          "gen": "jadalnych",
+          "dat": "jadalnym",
+          "acc": "jadalne",
+          "ins": "jadalnymi",
+          "loc": "jadalnych"
+        }
+      }
+    }
+  }
+}

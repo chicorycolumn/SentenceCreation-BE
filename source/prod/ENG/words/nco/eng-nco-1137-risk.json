@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "risk",
+      "gen": "risk's"
+    },
+    "plural": {
+      "nom": "risks",
+      "gen": "risks'"
+    }
+  }
+}

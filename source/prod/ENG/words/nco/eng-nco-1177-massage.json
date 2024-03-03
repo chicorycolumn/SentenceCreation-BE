@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "massage",
+      "gen": "massage's"
+    },
+    "plural": {
+      "nom": "massages",
+      "gen": "massages'"
+    }
+  }
+}

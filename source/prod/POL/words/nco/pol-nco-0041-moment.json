@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "moment",
+      "gen": "momentu",
+      "dat": "momentowi",
+      "acc": "moment",
+      "ins": "momentem",
+      "loc": "momencie",
+      "voc": "momencie"
+    },
+    "plural": {
+      "nom": "momenty",
+      "gen": "momentów",
+      "dat": "momentom",
+      "acc": "momenty",
+      "ins": "momentami",
+      "loc": "momentach",
+      "voc": "momenty"
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "inflections": {
+    "infinitive": "zaryzykować",
+    "verbalNoun": "zaryzykowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zaryzykowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaryzykuje się"
+          },
+          "plural": {
+            "allPluralGenders": "zaryzykuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "zaryzykuję"
+          },
+          "plural": {
+            "allPluralGenders": "zaryzykujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "zaryzykujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zaryzykujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zaryzykuje"
+          },
+          "plural": {
+            "allPluralGenders": "zaryzykują"
+          }
+        }
+      },
+      "imperative": "zaryzykuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaryzykowano"
+          },
+          "plural": {
+            "allPluralGenders": "zaryzykowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": [
+              "zaryzykowałem"
+            ],
+            "f": [
+              "zaryzykowałam"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "zaryzykowaliśmy"
+            ],
+            "nonvirile": [
+              "zaryzykowałyśmy"
+            ]
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": [
+              "zaryzykowałeś"
+            ],
+            "f": [
+              "zaryzykowałaś"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "zaryzykowaliście"
+            ],
+            "nonvirile": [
+              "zaryzykowałyście"
+            ]
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zaryzykował",
+            "f": "zaryzykowała",
+            "n": "zaryzykowało"
+          },
+          "plural": {
+            "virile": "zaryzykowali",
+            "nonvirile": "zaryzykowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

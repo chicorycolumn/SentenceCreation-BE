@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "łabędź",
+      "gen": "łabędzia",
+      "dat": "łabędziowi",
+      "acc": "łabędzia",
+      "ins": "łabędziem",
+      "loc": "łabędziu",
+      "voc": "łabędziu"
+    },
+    "plural": {
+      "nom": "łabędzie",
+      "gen": "łabędzi",
+      "dat": "łabędziom",
+      "acc": "łabędzie",
+      "ins": "łabędziami",
+      "loc": "łabędziach",
+      "voc": "łabędzie"
+    }
+  }
+}

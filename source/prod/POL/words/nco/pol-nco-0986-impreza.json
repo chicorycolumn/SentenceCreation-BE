@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "impreza",
+      "gen": "imprezy",
+      "dat": "imprezie",
+      "acc": "imprezę",
+      "ins": "imprezą",
+      "loc": "imprezie",
+      "voc": "imprezo"
+    },
+    "plural": {
+      "nom": "imprezy",
+      "gen": "imprez",
+      "dat": "imprezom",
+      "acc": "imprezy",
+      "ins": "imprezami",
+      "loc": "imprezach",
+      "voc": "imprezy"
+    }
+  }
+}

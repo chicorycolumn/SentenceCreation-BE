@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "silnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "silny",
+          "gen": "silnego",
+          "dat": "silnemu",
+          "acc": "silnego",
+          "ins": "silnym",
+          "loc": "silnym"
+        },
+        "m3": {
+          "nom": "silny",
+          "gen": "silnego",
+          "dat": "silnemu",
+          "acc": "silny",
+          "ins": "silnym",
+          "loc": "silnym"
+        },
+        "f": {
+          "nom": "silna",
+          "gen": "silnej",
+          "dat": "silnej",
+          "acc": "silną",
+          "ins": "silną",
+          "loc": "silnej"
+        },
+        "n": {
+          "nom": "silne",
+          "gen": "silnego",
+          "dat": "silnemu",
+          "acc": "silne",
+          "ins": "silnym",
+          "loc": "silnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "silni",
+          "gen": "silnych",
+          "dat": "silnym",
+          "acc": "silnych",
+          "ins": "silnymi",
+          "loc": "silnych"
+        },
+        "nonvirile": {
+          "nom": "silne",
+          "gen": "silnych",
+          "dat": "silnym",
+          "acc": "silne",
+          "ins": "silnymi",
+          "loc": "silnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "silniejszy",
+          "gen": "silniejszego",
+          "dat": "silniejszemu",
+          "acc": "silniejszego",
+          "ins": "silniejszym",
+          "loc": "silniejszym"
+        },
+        "m3": {
+          "nom": "silniejszy",
+          "gen": "silniejszego",
+          "dat": "silniejszemu",
+          "acc": "silniejszy",
+          "ins": "silniejszym",
+          "loc": "silniejszym"
+        },
+        "f": {
+          "nom": "silniejsza",
+          "gen": "silniejszej",
+          "dat": "silniejszej",
+          "acc": "silniejszą",
+          "ins": "silniejszą",
+          "loc": "silniejszej"
+        },
+        "n": {
+          "nom": "silniejsze",
+          "gen": "silniejszego",
+          "dat": "silniejszemu",
+          "acc": "silniejsze",
+          "ins": "silniejszym",
+          "loc": "silniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "silniejsi",
+          "gen": "silniejszych",
+          "dat": "silniejszym",
+          "acc": "silniejszych",
+          "ins": "silniejszymi",
+          "loc": "silniejszych"
+        },
+        "nonvirile": {
+          "nom": "silniejsze",
+          "gen": "silniejszych",
+          "dat": "silniejszym",
+          "acc": "silniejsze",
+          "ins": "silniejszymi",
+          "loc": "silniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najsilniejszy",
+          "gen": "najsilniejszego",
+          "dat": "najsilniejszemu",
+          "acc": "najsilniejszego",
+          "ins": "najsilniejszym",
+          "loc": "najsilniejszym"
+        },
+        "m3": {
+          "nom": "najsilniejszy",
+          "gen": "najsilniejszego",
+          "dat": "najsilniejszemu",
+          "acc": "najsilniejszy",
+          "ins": "najsilniejszym",
+          "loc": "najsilniejszym"
+        },
+        "f": {
+          "nom": "najsilniejsza",
+          "gen": "najsilniejszej",
+          "dat": "najsilniejszej",
+          "acc": "najsilniejszą",
+          "ins": "najsilniejszą",
+          "loc": "najsilniejszej"
+        },
+        "n": {
+          "nom": "najsilniejsze",
+          "gen": "najsilniejszego",
+          "dat": "najsilniejszemu",
+          "acc": "najsilniejsze",
+          "ins": "najsilniejszym",
+          "loc": "najsilniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najsilniejsi",
+          "gen": "najsilniejszych",
+          "dat": "najsilniejszym",
+          "acc": "najsilniejszych",
+          "ins": "najsilniejszymi",
+          "loc": "najsilniejszych"
+        },
+        "nonvirile": {
+          "nom": "najsilniejsze",
+          "gen": "najsilniejszych",
+          "dat": "najsilniejszym",
+          "acc": "najsilniejsze",
+          "ins": "najsilniejszymi",
+          "loc": "najsilniejszych"
+        }
+      }
+    }
+  }
+}

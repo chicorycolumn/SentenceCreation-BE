@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pasażer",
+      "gen": "pasażera",
+      "dat": "pasażerowi",
+      "acc": "pasażera",
+      "ins": "pasażerem",
+      "loc": "pasażerze",
+      "voc": "pasażerze"
+    },
+    "plural": {
+      "nom": "pasażerowie",
+      "gen": "pasażerów",
+      "dat": "pasażerom",
+      "acc": "pasażerów",
+      "ins": "pasażerami",
+      "loc": "pasażerach",
+      "voc": "pasażerowie"
+    }
+  }
+}

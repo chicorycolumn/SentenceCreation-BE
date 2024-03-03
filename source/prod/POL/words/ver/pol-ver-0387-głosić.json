@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "głosić",
+    "verbalNoun": "głoszenie",
+    "activeAdjectival": "głoszący",
+    "passiveAdjectival": "głoszony",
+    "contemporaryAdverbial": "głosząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "głoś",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "głoszono"
+          },
+          "plural": {
+            "allPluralGenders": "głoszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "głosiłem",
+            "f": "głosiłam"
+          },
+          "plural": {
+            "virile": "głosiliśmy",
+            "nonvirile": "głosiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "głosiłeś",
+            "f": "głosiłaś"
+          },
+          "plural": {
+            "virile": "głosiliście",
+            "nonvirile": "głosiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "głosił",
+            "f": "głosiła",
+            "n": "głosiło"
+          },
+          "plural": {
+            "virile": "głosili",
+            "nonvirile": "głosiły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "głosi się"
+          },
+          "plural": {
+            "allPluralGenders": "głosi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "głoszę"
+          },
+          "plural": {
+            "allPluralGenders": "głosimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "głosisz"
+          },
+          "plural": {
+            "allPluralGenders": "głosicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "głosi"
+          },
+          "plural": {
+            "allPluralGenders": "głoszą"
+          }
+        }
+      }
+    }
+  }
+}

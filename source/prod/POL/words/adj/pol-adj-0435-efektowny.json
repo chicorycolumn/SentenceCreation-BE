@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "efektownie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "efektowny",
+          "gen": "efektownego",
+          "dat": "efektownemu",
+          "acc": "efektownego",
+          "ins": "efektownym",
+          "loc": "efektownym"
+        },
+        "m3": {
+          "nom": "efektowny",
+          "gen": "efektownego",
+          "dat": "efektownemu",
+          "acc": "efektowny",
+          "ins": "efektownym",
+          "loc": "efektownym"
+        },
+        "f": {
+          "nom": "efektowna",
+          "gen": "efektownej",
+          "dat": "efektownej",
+          "acc": "efektowną",
+          "ins": "efektowną",
+          "loc": "efektownej"
+        },
+        "n": {
+          "nom": "efektowne",
+          "gen": "efektownego",
+          "dat": "efektownemu",
+          "acc": "efektowne",
+          "ins": "efektownym",
+          "loc": "efektownym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "efektowni",
+          "gen": "efektownych",
+          "dat": "efektownym",
+          "acc": "efektownych",
+          "ins": "efektownymi",
+          "loc": "efektownych"
+        },
+        "nonvirile": {
+          "nom": "efektowne",
+          "gen": "efektownych",
+          "dat": "efektownym",
+          "acc": "efektowne",
+          "ins": "efektownymi",
+          "loc": "efektownych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "efektowniejszy",
+          "gen": "efektowniejszego",
+          "dat": "efektowniejszemu",
+          "acc": "efektowniejszego",
+          "ins": "efektowniejszym",
+          "loc": "efektowniejszym"
+        },
+        "m3": {
+          "nom": "efektowniejszy",
+          "gen": "efektowniejszego",
+          "dat": "efektowniejszemu",
+          "acc": "efektowniejszy",
+          "ins": "efektowniejszym",
+          "loc": "efektowniejszym"
+        },
+        "f": {
+          "nom": "efektowniejsza",
+          "gen": "efektowniejszej",
+          "dat": "efektowniejszej",
+          "acc": "efektowniejszą",
+          "ins": "efektowniejszą",
+          "loc": "efektowniejszej"
+        },
+        "n": {
+          "nom": "efektowniejsze",
+          "gen": "efektowniejszego",
+          "dat": "efektowniejszemu",
+          "acc": "efektowniejsze",
+          "ins": "efektowniejszym",
+          "loc": "efektowniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "efektowniejsi",
+          "gen": "efektowniejszych",
+          "dat": "efektowniejszym",
+          "acc": "efektowniejszych",
+          "ins": "efektowniejszymi",
+          "loc": "efektowniejszych"
+        },
+        "nonvirile": {
+          "nom": "efektowniejsze",
+          "gen": "efektowniejszych",
+          "dat": "efektowniejszym",
+          "acc": "efektowniejsze",
+          "ins": "efektowniejszymi",
+          "loc": "efektowniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najefektowniejszy",
+          "gen": "najefektowniejszego",
+          "dat": "najefektowniejszemu",
+          "acc": "najefektowniejszego",
+          "ins": "najefektowniejszym",
+          "loc": "najefektowniejszym"
+        },
+        "m3": {
+          "nom": "najefektowniejszy",
+          "gen": "najefektowniejszego",
+          "dat": "najefektowniejszemu",
+          "acc": "najefektowniejszy",
+          "ins": "najefektowniejszym",
+          "loc": "najefektowniejszym"
+        },
+        "f": {
+          "nom": "najefektowniejsza",
+          "gen": "najefektowniejszej",
+          "dat": "najefektowniejszej",
+          "acc": "najefektowniejszą",
+          "ins": "najefektowniejszą",
+          "loc": "najefektowniejszej"
+        },
+        "n": {
+          "nom": "najefektowniejsze",
+          "gen": "najefektowniejszego",
+          "dat": "najefektowniejszemu",
+          "acc": "najefektowniejsze",
+          "ins": "najefektowniejszym",
+          "loc": "najefektowniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najefektowniejsi",
+          "gen": "najefektowniejszych",
+          "dat": "najefektowniejszym",
+          "acc": "najefektowniejszych",
+          "ins": "najefektowniejszymi",
+          "loc": "najefektowniejszych"
+        },
+        "nonvirile": {
+          "nom": "najefektowniejsze",
+          "gen": "najefektowniejszych",
+          "dat": "najefektowniejszym",
+          "acc": "najefektowniejsze",
+          "ins": "najefektowniejszymi",
+          "loc": "najefektowniejszych"
+        }
+      }
+    }
+  }
+}

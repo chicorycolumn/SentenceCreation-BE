@@ -1,0 +1,81 @@
+{
+  "inflections": {
+    "infinitive": "wkładać",
+    "activeAdjectival": "wkładający",
+    "passiveAdjectival": "wkładany",
+    "contemporaryAdverbial": "wkładając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "wkładaj",
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "wkładałem",
+            "f": "wkładałam"
+          },
+          "plural": {
+            "virile": "wkładaliśmy",
+            "nonvirile": "wkładałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wkładałeś",
+            "f": "wkładałaś"
+          },
+          "plural": {
+            "virile": "wkładaliście",
+            "nonvirile": "wkładałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wkładał",
+            "f": "wkładała",
+            "n": "wkładało"
+          },
+          "plural": {
+            "virile": "wkładali",
+            "nonvirile": "wkładały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wkłada się"
+          },
+          "plural": {
+            "allPluralGenders": "wkłada się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wkładam"
+          },
+          "plural": {
+            "allPluralGenders": "wkładamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wkładasz"
+          },
+          "plural": {
+            "allPluralGenders": "wkładacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wkłada"
+          },
+          "plural": {
+            "allPluralGenders": "wkładają"
+          }
+        }
+      }
+    }
+  }
+}

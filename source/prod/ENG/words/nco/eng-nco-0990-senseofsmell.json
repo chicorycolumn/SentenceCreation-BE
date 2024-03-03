@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sense of smell",
+      "gen": "sense of smell's"
+    },
+    "plural": {
+      "nom": "senses of smell",
+      "gen": "senses of smell's"
+    }
+  }
+}

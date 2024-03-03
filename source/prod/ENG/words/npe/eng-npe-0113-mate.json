@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mate",
+      "gen": "mate's"
+    },
+    "plural": {
+      "nom": "mates",
+      "gen": "mates'"
+    }
+  }
+}

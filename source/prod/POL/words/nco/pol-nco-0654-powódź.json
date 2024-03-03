@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "powódź",
+      "gen": "powodzi",
+      "dat": "powodzi",
+      "acc": "powódź",
+      "ins": "powodzią",
+      "loc": "powodzi",
+      "voc": "powodzi"
+    },
+    "plural": {
+      "nom": "powodzie",
+      "gen": "powodzi",
+      "dat": "powodziom",
+      "acc": "powodzie",
+      "ins": "powodziami",
+      "loc": "powodziach",
+      "voc": "powodzie"
+    }
+  }
+}

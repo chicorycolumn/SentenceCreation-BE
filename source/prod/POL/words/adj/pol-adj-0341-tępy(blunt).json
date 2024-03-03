@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "tępo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "tępy",
+          "gen": "tępego",
+          "dat": "tępemu",
+          "acc": "tępego",
+          "ins": "tępym",
+          "loc": "tępym"
+        },
+        "m3": {
+          "nom": "tępy",
+          "gen": "tępego",
+          "dat": "tępemu",
+          "acc": "tępy",
+          "ins": "tępym",
+          "loc": "tępym"
+        },
+        "f": {
+          "nom": "tępa",
+          "gen": "tępej",
+          "dat": "tępej",
+          "acc": "tępą",
+          "ins": "tępą",
+          "loc": "tępej"
+        },
+        "n": {
+          "nom": "tępe",
+          "gen": "tępego",
+          "dat": "tępemu",
+          "acc": "tępe",
+          "ins": "tępym",
+          "loc": "tępym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "tępi",
+          "gen": "tępych",
+          "dat": "tępym",
+          "acc": "tępych",
+          "ins": "tępymi",
+          "loc": "tępych"
+        },
+        "nonvirile": {
+          "nom": "tępe",
+          "gen": "tępych",
+          "dat": "tępym",
+          "acc": "tępe",
+          "ins": "tępymi",
+          "loc": "tępych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "tępszy",
+              "bardziej tępy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "tępszego",
+              "bardziej tępego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "tępszemu",
+              "bardziej tępemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "tępszego",
+              "bardziej tępego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "tępszym",
+              "bardziej tępym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "tępszym",
+              "bardziej tępym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "tępszy",
+              "bardziej tępy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "tępszego",
+              "bardziej tępego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "tępszemu",
+              "bardziej tępemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "tępszy",
+              "bardziej tępy"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "tępszym",
+              "bardziej tępym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "tępszym",
+              "bardziej tępym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "tępsza",
+              "bardziej tępa"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "tępszej",
+              "bardziej tępej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "tępszej",
+              "bardziej tępej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "tępszą",
+              "bardziej tępą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "tępszą",
+              "bardziej tępą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "tępszej",
+              "bardziej tępej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "tępsze",
+              "bardziej tępe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "tępszego",
+              "bardziej tępego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "tępszemu",
+              "bardziej tępemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "tępsze",
+              "bardziej tępe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "tępszym",
+              "bardziej tępym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "tępszym",
+              "bardziej tępym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "tępsi",
+              "bardziej tępi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "tępszych",
+              "bardziej tępych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "tępszym",
+              "bardziej tępym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "tępszych",
+              "bardziej tępych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "tępszymi",
+              "bardziej tępymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "tępszych",
+              "bardziej tępych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "tępsze",
+              "bardziej tępe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "tępszych",
+              "bardziej tępych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "tępszym",
+              "bardziej tępym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "tępsze",
+              "bardziej tępe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "tępszymi",
+              "bardziej tępymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "tępszych",
+              "bardziej tępych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszy",
+              "najbardziej tępy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszego",
+              "najbardziej tępego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszemu",
+              "najbardziej tępemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszego",
+              "najbardziej tępego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszym",
+              "najbardziej tępym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszym",
+              "najbardziej tępym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszy",
+              "najbardziej tępy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszego",
+              "najbardziej tępego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszemu",
+              "najbardziej tępemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszy",
+              "najbardziej tępy"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszym",
+              "najbardziej tępym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszym",
+              "najbardziej tępym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najtępsza",
+              "najbardziej tępa"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszej",
+              "najbardziej tępej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszej",
+              "najbardziej tępej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszą",
+              "najbardziej tępą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszą",
+              "najbardziej tępą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszej",
+              "najbardziej tępej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najtępsze",
+              "najbardziej tępe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszego",
+              "najbardziej tępego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszemu",
+              "najbardziej tępemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najtępsze",
+              "najbardziej tępe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszym",
+              "najbardziej tępym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszym",
+              "najbardziej tępym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najtępsi",
+              "najbardziej tępi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszych",
+              "najbardziej tępych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszym",
+              "najbardziej tępym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszych",
+              "najbardziej tępych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszymi",
+              "najbardziej tępymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszych",
+              "najbardziej tępych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najtępsze",
+              "najbardziej tępe"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszych",
+              "najbardziej tępych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszym",
+              "najbardziej tępym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najtępsze",
+              "najbardziej tępe"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszymi",
+              "najbardziej tępymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najtępszych",
+              "najbardziej tępych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

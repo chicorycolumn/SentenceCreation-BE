@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "married couple",
+      "gen": "married couple's"
+    },
+    "plural": {
+      "nom": "married couples",
+      "gen": "married couples'"
+    }
+  }
+}

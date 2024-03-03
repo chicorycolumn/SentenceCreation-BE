@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "obcy",
+      "gen": "obcego",
+      "dat": "obcemu",
+      "acc": "obcego",
+      "ins": "obcym",
+      "loc": "obcym",
+      "voc": "obcy"
+    },
+    "plural": {
+      "nom": "obcy",
+      "gen": "obcych",
+      "dat": "obcym",
+      "acc": "obcych",
+      "ins": "obcymi",
+      "loc": "obcych",
+      "voc": "obcy"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "poradzić",
+    "verbalNoun": "poradzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "poradzony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "poradziwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poradzi się"
+          },
+          "plural": {
+            "allPluralGenders": "poradzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "poradzę"
+          },
+          "plural": {
+            "allPluralGenders": "poradzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "poradzisz"
+          },
+          "plural": {
+            "allPluralGenders": "poradzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "poradzi"
+          },
+          "plural": {
+            "allPluralGenders": "poradzą"
+          }
+        }
+      },
+      "imperative": "poradź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poradzono"
+          },
+          "plural": {
+            "allPluralGenders": "poradzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "poradziłem",
+            "f": "poradziłam"
+          },
+          "plural": {
+            "virile": "poradziliśmy",
+            "nonvirile": "poradziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "poradziłeś",
+            "f": "poradziłaś"
+          },
+          "plural": {
+            "virile": "poradziliście",
+            "nonvirile": "poradziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "poradził",
+            "f": "poradziła",
+            "n": "poradziło"
+          },
+          "plural": {
+            "virile": "poradzili",
+            "nonvirile": "poradziły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

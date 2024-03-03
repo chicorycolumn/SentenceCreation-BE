@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odciąć",
+    "verbalNoun": "odcięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "odcięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odciąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odetnie się"
+          },
+          "plural": {
+            "allPluralGenders": "odetnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odetnę"
+          },
+          "plural": {
+            "allPluralGenders": "odetniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odetniesz"
+          },
+          "plural": {
+            "allPluralGenders": "odetniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odetnie"
+          },
+          "plural": {
+            "allPluralGenders": "odetną"
+          }
+        }
+      },
+      "imperative": "odetnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odcięto"
+          },
+          "plural": {
+            "allPluralGenders": "odcięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odciąłem",
+            "f": "odcięłam"
+          },
+          "plural": {
+            "virile": "odcięliśmy",
+            "nonvirile": "odcięłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odciąłeś",
+            "f": "odcięłaś"
+          },
+          "plural": {
+            "virile": "odcięliście",
+            "nonvirile": "odcięłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odciął",
+            "f": "odcięła",
+            "n": "odcięło"
+          },
+          "plural": {
+            "virile": "odcięli",
+            "nonvirile": "odcięły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

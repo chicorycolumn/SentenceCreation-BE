@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pominąć",
+    "verbalNoun": "pominięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pominięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pominąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pominie się"
+          },
+          "plural": {
+            "allPluralGenders": "pominie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pominę"
+          },
+          "plural": {
+            "allPluralGenders": "pominiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pominiesz"
+          },
+          "plural": {
+            "allPluralGenders": "pominiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pominie"
+          },
+          "plural": {
+            "allPluralGenders": "pominą"
+          }
+        }
+      },
+      "imperative": "pomiń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pominięto"
+          },
+          "plural": {
+            "allPluralGenders": "pominięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pominąłem",
+            "f": "pominęłam"
+          },
+          "plural": {
+            "virile": "pominęliśmy",
+            "nonvirile": "pominęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pominąłeś",
+            "f": "pominęłaś"
+          },
+          "plural": {
+            "virile": "pominęliście",
+            "nonvirile": "pominęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pominął",
+            "f": "pominęła",
+            "n": "pominęło"
+          },
+          "plural": {
+            "virile": "pominęli",
+            "nonvirile": "pominęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

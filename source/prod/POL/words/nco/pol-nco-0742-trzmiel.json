@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "trzmiel",
+      "gen": "trzmiela",
+      "dat": "trzmielowi",
+      "acc": "trzmiela",
+      "ins": "trzmielem",
+      "loc": "trzmielu",
+      "voc": "trzmielu"
+    },
+    "plural": {
+      "nom": "trzmiele",
+      "gen": "trzmieli",
+      "dat": "trzmielom",
+      "acc": "trzmiele",
+      "ins": "trzmielami",
+      "loc": "trzmielach",
+      "voc": "trzmiele"
+    }
+  }
+}

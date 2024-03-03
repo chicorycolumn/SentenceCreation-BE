@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "karaluch",
+      "gen": "karalucha",
+      "dat": "karaluchowi",
+      "acc": "karalucha",
+      "ins": "karaluchem",
+      "loc": "karaluchu",
+      "voc": "karaluchu"
+    },
+    "plural": {
+      "nom": "karaluchy",
+      "gen": "karaluchów",
+      "dat": "karaluchom",
+      "acc": "karaluchy",
+      "ins": "karaluchami",
+      "loc": "karaluchach",
+      "voc": "karaluchy"
+    }
+  }
+}

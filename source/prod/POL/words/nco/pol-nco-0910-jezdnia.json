@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "jezdnia",
+      "gen": "jezdni",
+      "dat": "jezdni",
+      "acc": "jezdnię",
+      "ins": "jezdnią",
+      "loc": "jezdni",
+      "voc": "jezdnio"
+    },
+    "plural": {
+      "nom": "jezdnie",
+      "gen": [
+        "jezdni",
+        "jezdń"
+      ],
+      "dat": "jezdniom",
+      "acc": "jezdnie",
+      "ins": "jezdniami",
+      "loc": "jezdniach",
+      "voc": "jezdnie"
+    }
+  }
+}

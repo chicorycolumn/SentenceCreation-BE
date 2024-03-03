@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "niezbędnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niezbędny",
+          "gen": "niezbędnego",
+          "dat": "niezbędnemu",
+          "acc": "niezbędnego",
+          "ins": "niezbędnym",
+          "loc": "niezbędnym"
+        },
+        "m3": {
+          "nom": "niezbędny",
+          "gen": "niezbędnego",
+          "dat": "niezbędnemu",
+          "acc": "niezbędny",
+          "ins": "niezbędnym",
+          "loc": "niezbędnym"
+        },
+        "f": {
+          "nom": "niezbędna",
+          "gen": "niezbędnej",
+          "dat": "niezbędnej",
+          "acc": "niezbędną",
+          "ins": "niezbędną",
+          "loc": "niezbędnej"
+        },
+        "n": {
+          "nom": "niezbędne",
+          "gen": "niezbędnego",
+          "dat": "niezbędnemu",
+          "acc": "niezbędne",
+          "ins": "niezbędnym",
+          "loc": "niezbędnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niezbędni",
+          "gen": "niezbędnych",
+          "dat": "niezbędnym",
+          "acc": "niezbędnych",
+          "ins": "niezbędnymi",
+          "loc": "niezbędnych"
+        },
+        "nonvirile": {
+          "nom": "niezbędne",
+          "gen": "niezbędnych",
+          "dat": "niezbędnym",
+          "acc": "niezbędne",
+          "ins": "niezbędnymi",
+          "loc": "niezbędnych"
+        }
+      }
+    }
+  }
+}

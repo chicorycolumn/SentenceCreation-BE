@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pożałować",
+    "verbalNoun": "pożałowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pożałowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pożałowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pożałuje się"
+          },
+          "plural": {
+            "allPluralGenders": "pożałuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pożałuję"
+          },
+          "plural": {
+            "allPluralGenders": "pożałujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pożałujesz"
+          },
+          "plural": {
+            "allPluralGenders": "pożałujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pożałuje"
+          },
+          "plural": {
+            "allPluralGenders": "pożałują"
+          }
+        }
+      },
+      "imperative": "pożałuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pożałowano"
+          },
+          "plural": {
+            "allPluralGenders": "pożałowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pożałowałem",
+            "f": "pożałowałam"
+          },
+          "plural": {
+            "virile": "pożałowaliśmy",
+            "nonvirile": "pożałowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pożałowałeś",
+            "f": "pożałowałaś"
+          },
+          "plural": {
+            "virile": "pożałowaliście",
+            "nonvirile": "pożałowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pożałował",
+            "f": "pożałowała",
+            "n": "pożałowało"
+          },
+          "plural": {
+            "virile": "pożałowali",
+            "nonvirile": "pożałowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

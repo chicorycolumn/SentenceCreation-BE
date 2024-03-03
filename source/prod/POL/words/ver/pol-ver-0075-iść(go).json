@@ -1,0 +1,81 @@
+{
+  "inflections": {
+    "infinitive": "iść",
+    "activeAdjectival": "idący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "idąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "idź",
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "szedłem",
+            "f": "szłam"
+          },
+          "plural": {
+            "virile": "szliśmy",
+            "nonvirile": "szłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "szedłeś",
+            "f": "szłaś"
+          },
+          "plural": {
+            "virile": "szliście",
+            "nonvirile": "szłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "szedł",
+            "f": "szła",
+            "n": "szło"
+          },
+          "plural": {
+            "virile": "szli",
+            "nonvirile": "szły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "idzie się"
+          },
+          "plural": {
+            "allPluralGenders": "idzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "idę"
+          },
+          "plural": {
+            "allPluralGenders": "idziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "idziesz"
+          },
+          "plural": {
+            "allPluralGenders": "idziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "idzie"
+          },
+          "plural": {
+            "allPluralGenders": "idą"
+          }
+        }
+      }
+    }
+  }
+}

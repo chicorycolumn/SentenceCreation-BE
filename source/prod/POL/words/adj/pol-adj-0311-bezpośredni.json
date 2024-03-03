@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "bezpośrednio",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bezpośredni",
+          "gen": "bezpośredniego",
+          "dat": "bezpośredniemu",
+          "acc": "bezpośredniego",
+          "ins": "bezpośrednim",
+          "loc": "bezpośrednim"
+        },
+        "m3": {
+          "nom": "bezpośredni",
+          "gen": "bezpośredniego",
+          "dat": "bezpośredniemu",
+          "acc": "bezpośredni",
+          "ins": "bezpośrednim",
+          "loc": "bezpośrednim"
+        },
+        "f": {
+          "nom": "bezpośredna",
+          "gen": "bezpośredniej",
+          "dat": "bezpośredniej",
+          "acc": "bezpośredną",
+          "ins": "bezpośredną",
+          "loc": "bezpośredniej"
+        },
+        "n": {
+          "nom": "bezpośrednie",
+          "gen": "bezpośredniego",
+          "dat": "bezpośredniemu",
+          "acc": "bezpośrednie",
+          "ins": "bezpośrednim",
+          "loc": "bezpośrednim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bezpośredni",
+          "gen": "bezpośrednich",
+          "dat": "bezpośrednim",
+          "acc": "bezpośrednich",
+          "ins": "bezpośrednimi",
+          "loc": "bezpośrednich"
+        },
+        "nonvirile": {
+          "nom": "bezpośrednie",
+          "gen": "bezpośrednich",
+          "dat": "bezpośrednim",
+          "acc": "bezpośrednie",
+          "ins": "bezpośrednimi",
+          "loc": "bezpośrednich"
+        }
+      }
+    }
+  }
+}

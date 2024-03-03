@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "drut",
+      "gen": "drutu",
+      "dat": "drutowi",
+      "acc": "drut",
+      "ins": "drutem",
+      "loc": "drucie",
+      "voc": "drucie"
+    },
+    "plural": {
+      "nom": "druty",
+      "gen": "drutów",
+      "dat": "drutom",
+      "acc": "druty",
+      "ins": "drutami",
+      "loc": "drutach",
+      "voc": "druty"
+    }
+  }
+}

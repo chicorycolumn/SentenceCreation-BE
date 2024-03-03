@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przenieść",
+    "verbalNoun": "przeniesienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przeniesiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "preniósłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeniesie się"
+          },
+          "plural": {
+            "allPluralGenders": "przeniesie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przeniosę"
+          },
+          "plural": {
+            "allPluralGenders": "przeniesiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przeniesiesz"
+          },
+          "plural": {
+            "allPluralGenders": "przeniesiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przeniesie"
+          },
+          "plural": {
+            "allPluralGenders": "przeniosą"
+          }
+        }
+      },
+      "imperative": "przenieś",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeniesiono"
+          },
+          "plural": {
+            "allPluralGenders": "przeniesiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przeniosłem",
+            "f": "przeniosłam"
+          },
+          "plural": {
+            "virile": "przeniosliśmy",
+            "nonvirile": "przeniosłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przeniosłeś",
+            "f": "przeniosłaś"
+          },
+          "plural": {
+            "virile": "przeniosliście",
+            "nonvirile": "przeniosłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przeniósł",
+            "f": "przeniosła",
+            "n": "przeniosło"
+          },
+          "plural": {
+            "virile": "przeniosli",
+            "nonvirile": "przeniosły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

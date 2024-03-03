@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "magnetycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "magnetyczny",
+          "gen": "magnetycznego",
+          "dat": "magnetycznemu",
+          "acc": "magnetycznego",
+          "ins": "magnetycznym",
+          "loc": "magnetycznym"
+        },
+        "m3": {
+          "nom": "magnetyczny",
+          "gen": "magnetycznego",
+          "dat": "magnetycznemu",
+          "acc": "magnetyczny",
+          "ins": "magnetycznym",
+          "loc": "magnetycznym"
+        },
+        "f": {
+          "nom": "magnetyczna",
+          "gen": "magnetycznej",
+          "dat": "magnetycznej",
+          "acc": "magnetyczną",
+          "ins": "magnetyczną",
+          "loc": "magnetycznej"
+        },
+        "n": {
+          "nom": "magnetyczne",
+          "gen": "magnetycznego",
+          "dat": "magnetycznemu",
+          "acc": "magnetyczne",
+          "ins": "magnetycznym",
+          "loc": "magnetycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "magnetyczni",
+          "gen": "magnetycznych",
+          "dat": "magnetycznym",
+          "acc": "magnetycznych",
+          "ins": "magnetycznymi",
+          "loc": "magnetycznych"
+        },
+        "nonvirile": {
+          "nom": "magnetyczne",
+          "gen": "magnetycznych",
+          "dat": "magnetycznym",
+          "acc": "magnetyczne",
+          "ins": "magnetycznymi",
+          "loc": "magnetycznych"
+        }
+      }
+    }
+  }
+}

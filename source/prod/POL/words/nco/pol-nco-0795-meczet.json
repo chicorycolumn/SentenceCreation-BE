@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "meczet",
+      "gen": "meczetu",
+      "dat": "meczetowi",
+      "acc": "meczet",
+      "ins": "meczetem",
+      "loc": "meczecie",
+      "voc": "meczecie"
+    },
+    "plural": {
+      "nom": "meczety",
+      "gen": "meczetów",
+      "dat": "meczetom",
+      "acc": "meczety",
+      "ins": "meczetami",
+      "loc": "meczetach",
+      "voc": "meczety"
+    }
+  }
+}

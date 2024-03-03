@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "zajebiście",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zajebisty",
+          "gen": "zajebistego",
+          "dat": "zajebistemu",
+          "acc": "zajebistego",
+          "ins": "zajebistym",
+          "loc": "zajebistym"
+        },
+        "m3": {
+          "nom": "zajebisty",
+          "gen": "zajebistego",
+          "dat": "zajebistemu",
+          "acc": "zajebisty",
+          "ins": "zajebistym",
+          "loc": "zajebistym"
+        },
+        "f": {
+          "nom": "zajebista",
+          "gen": "zajebistej",
+          "dat": "zajebistej",
+          "acc": "zajebistą",
+          "ins": "zajebistą",
+          "loc": "zajebistej"
+        },
+        "n": {
+          "nom": "zajebiste",
+          "gen": "zajebistego",
+          "dat": "zajebistemu",
+          "acc": "zajebiste",
+          "ins": "zajebistym",
+          "loc": "zajebistym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zajebiści",
+          "gen": "zajebistych",
+          "dat": "zajebistym",
+          "acc": "zajebistych",
+          "ins": "zajebistymi",
+          "loc": "zajebistych"
+        },
+        "nonvirile": {
+          "nom": "zajebiste",
+          "gen": "zajebistych",
+          "dat": "zajebistym",
+          "acc": "zajebiste",
+          "ins": "zajebistymi",
+          "loc": "zajebistych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "zajebistszy",
+          "gen": "zajebistszego",
+          "dat": "zajebistszemu",
+          "acc": "zajebistszego",
+          "ins": "zajebistszym",
+          "loc": "zajebistszym"
+        },
+        "m3": {
+          "nom": "zajebistszy",
+          "gen": "zajebistszego",
+          "dat": "zajebistszemu",
+          "acc": "zajebistszy",
+          "ins": "zajebistszym",
+          "loc": "zajebistszym"
+        },
+        "f": {
+          "nom": "zajebistsza",
+          "gen": "zajebistszej",
+          "dat": "zajebistszej",
+          "acc": "zajebistszą",
+          "ins": "zajebistszą",
+          "loc": "zajebistszej"
+        },
+        "n": {
+          "nom": "zajebistsze",
+          "gen": "zajebistszego",
+          "dat": "zajebistszemu",
+          "acc": "zajebistsze",
+          "ins": "zajebistszym",
+          "loc": "zajebistszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zajebistsi",
+          "gen": "zajebistszych",
+          "dat": "zajebistszym",
+          "acc": "zajebistszych",
+          "ins": "zajebistszymi",
+          "loc": "zajebistszych"
+        },
+        "nonvirile": {
+          "nom": "zajebistsze",
+          "gen": "zajebistszych",
+          "dat": "zajebistszym",
+          "acc": "zajebistsze",
+          "ins": "zajebistszymi",
+          "loc": "zajebistszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najzajebistszy",
+          "gen": "najzajebistszego",
+          "dat": "najzajebistszemu",
+          "acc": "najzajebistszego",
+          "ins": "najzajebistszym",
+          "loc": "najzajebistszym"
+        },
+        "m3": {
+          "nom": "najzajebistszy",
+          "gen": "najzajebistszego",
+          "dat": "najzajebistszemu",
+          "acc": "najzajebistszy",
+          "ins": "najzajebistszym",
+          "loc": "najzajebistszym"
+        },
+        "f": {
+          "nom": "najzajebistsza",
+          "gen": "najzajebistszej",
+          "dat": "najzajebistszej",
+          "acc": "najzajebistszą",
+          "ins": "najzajebistszą",
+          "loc": "najzajebistszej"
+        },
+        "n": {
+          "nom": "najzajebistsze",
+          "gen": "najzajebistszego",
+          "dat": "najzajebistszemu",
+          "acc": "najzajebistsze",
+          "ins": "najzajebistszym",
+          "loc": "najzajebistszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najzajebistsi",
+          "gen": "najzajebistszych",
+          "dat": "najzajebistszym",
+          "acc": "najzajebistszych",
+          "ins": "najzajebistszymi",
+          "loc": "najzajebistszych"
+        },
+        "nonvirile": {
+          "nom": "najzajebistsze",
+          "gen": "najzajebistszych",
+          "dat": "najzajebistszym",
+          "acc": "najzajebistsze",
+          "ins": "najzajebistszymi",
+          "loc": "najzajebistszych"
+        }
+      }
+    }
+  }
+}

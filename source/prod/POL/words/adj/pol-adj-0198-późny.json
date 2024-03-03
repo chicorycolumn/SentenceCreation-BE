@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "późno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "późny",
+          "gen": "późnego",
+          "dat": "późnemu",
+          "acc": "późnego",
+          "ins": "późnym",
+          "loc": "późnym"
+        },
+        "m3": {
+          "nom": "późny",
+          "gen": "późnego",
+          "dat": "późnemu",
+          "acc": "późny",
+          "ins": "późnym",
+          "loc": "późnym"
+        },
+        "f": {
+          "nom": "późna",
+          "gen": "późnej",
+          "dat": "późnej",
+          "acc": "późną",
+          "ins": "późną",
+          "loc": "późnej"
+        },
+        "n": {
+          "nom": "późne",
+          "gen": "późnego",
+          "dat": "późnemu",
+          "acc": "późne",
+          "ins": "późnym",
+          "loc": "późnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "późni",
+          "gen": "późnych",
+          "dat": "późnym",
+          "acc": "późnych",
+          "ins": "późnymi",
+          "loc": "późnych"
+        },
+        "nonvirile": {
+          "nom": "późne",
+          "gen": "późnych",
+          "dat": "późnym",
+          "acc": "późne",
+          "ins": "późnymi",
+          "loc": "późnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "późniejszy",
+          "gen": "późniejszego",
+          "dat": "późniejszemu",
+          "acc": "późniejszego",
+          "ins": "późniejszym",
+          "loc": "późniejszym"
+        },
+        "m3": {
+          "nom": "późniejszy",
+          "gen": "późniejszego",
+          "dat": "późniejszemu",
+          "acc": "późniejszy",
+          "ins": "późniejszym",
+          "loc": "późniejszym"
+        },
+        "f": {
+          "nom": "późniejsza",
+          "gen": "późniejszej",
+          "dat": "późniejszej",
+          "acc": "późniejszą",
+          "ins": "późniejszą",
+          "loc": "późniejszej"
+        },
+        "n": {
+          "nom": "późniejsze",
+          "gen": "późniejszego",
+          "dat": "późniejszemu",
+          "acc": "późniejsze",
+          "ins": "późniejszym",
+          "loc": "późniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "późniejsi",
+          "gen": "późniejszych",
+          "dat": "późniejszym",
+          "acc": "późniejszych",
+          "ins": "późniejszymi",
+          "loc": "późniejszych"
+        },
+        "nonvirile": {
+          "nom": "późniejsze",
+          "gen": "późniejszych",
+          "dat": "późniejszym",
+          "acc": "późniejsze",
+          "ins": "późniejszymi",
+          "loc": "późniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najpóźniejszy",
+          "gen": "najpóźniejszego",
+          "dat": "najpóźniejszemu",
+          "acc": "najpóźniejszego",
+          "ins": "najpóźniejszym",
+          "loc": "najpóźniejszym"
+        },
+        "m3": {
+          "nom": "najpóźniejszy",
+          "gen": "najpóźniejszego",
+          "dat": "najpóźniejszemu",
+          "acc": "najpóźniejszy",
+          "ins": "najpóźniejszym",
+          "loc": "najpóźniejszym"
+        },
+        "f": {
+          "nom": "najpóźniejsza",
+          "gen": "najpóźniejszej",
+          "dat": "najpóźniejszej",
+          "acc": "najpóźniejszą",
+          "ins": "najpóźniejszą",
+          "loc": "najpóźniejszej"
+        },
+        "n": {
+          "nom": "najpóźniejsze",
+          "gen": "najpóźniejszego",
+          "dat": "najpóźniejszemu",
+          "acc": "najpóźniejsze",
+          "ins": "najpóźniejszym",
+          "loc": "najpóźniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najpóźniejsi",
+          "gen": "najpóźniejszych",
+          "dat": "najpóźniejszym",
+          "acc": "najpóźniejszych",
+          "ins": "najpóźniejszymi",
+          "loc": "najpóźniejszych"
+        },
+        "nonvirile": {
+          "nom": "najpóźniejsze",
+          "gen": "najpóźniejszych",
+          "dat": "najpóźniejszym",
+          "acc": "najpóźniejsze",
+          "ins": "najpóźniejszymi",
+          "loc": "najpóźniejszych"
+        }
+      }
+    }
+  }
+}

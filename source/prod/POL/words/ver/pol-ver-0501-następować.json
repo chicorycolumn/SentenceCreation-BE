@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "następować",
+    "verbalNoun": "następowanie",
+    "activeAdjectival": "następujący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "następując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "następuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "następowano"
+          },
+          "plural": {
+            "allPluralGenders": "następowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "następowałem",
+            "f": "następowałam"
+          },
+          "plural": {
+            "virile": "następowaliśmy",
+            "nonvirile": "następowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "następowałeś",
+            "f": "następowałaś"
+          },
+          "plural": {
+            "virile": "następowaliście",
+            "nonvirile": "następowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "następował",
+            "f": "następowała",
+            "n": "następowało"
+          },
+          "plural": {
+            "virile": "następowali",
+            "nonvirile": "następowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "następuje się"
+          },
+          "plural": {
+            "allPluralGenders": "następuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "następuję"
+          },
+          "plural": {
+            "allPluralGenders": "następujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "następujesz"
+          },
+          "plural": {
+            "allPluralGenders": "następujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "następuje"
+          },
+          "plural": {
+            "allPluralGenders": "następują"
+          }
+        }
+      }
+    }
+  }
+}

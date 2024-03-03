@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wrona",
+      "gen": "wrony",
+      "dat": "wronie",
+      "acc": "wronę",
+      "ins": "wroną",
+      "loc": "wronie",
+      "voc": "wrono"
+    },
+    "plural": {
+      "nom": "wrony",
+      "gen": "wron",
+      "dat": "wronom",
+      "acc": "wrony",
+      "ins": "wronami",
+      "loc": "wronach",
+      "voc": "wrony"
+    }
+  }
+}

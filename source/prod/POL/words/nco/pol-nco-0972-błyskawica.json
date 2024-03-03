@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "błyskawica",
+      "gen": "błyskawicy",
+      "dat": "błyskawicy",
+      "acc": "błyskawicę",
+      "ins": "błyskawicą",
+      "loc": "błyskawicy",
+      "voc": "błyskawico"
+    },
+    "plural": {
+      "nom": "błyskawice",
+      "gen": "błyskawic",
+      "dat": "błyskawicom",
+      "acc": "błyskawice",
+      "ins": "błyskawicami",
+      "loc": "błyskawicach",
+      "voc": "błyskawice"
+    }
+  }
+}

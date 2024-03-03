@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "krewny",
+      "gen": "krewnego",
+      "dat": "krewnemu",
+      "acc": "krewnego",
+      "ins": "krewnym",
+      "loc": "krewnym",
+      "voc": "krewny"
+    },
+    "plural": {
+      "nom": "krewni",
+      "gen": "krewnych",
+      "dat": "krewnym",
+      "acc": "krewnych",
+      "ins": "krewnymi",
+      "loc": "krewnych",
+      "voc": "krewni"
+    }
+  }
+}

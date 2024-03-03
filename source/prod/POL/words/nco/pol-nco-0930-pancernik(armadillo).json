@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pancernik",
+      "gen": "pancernika",
+      "dat": "pancernikowi",
+      "acc": "pancernika",
+      "ins": "pancernikiem",
+      "loc": "pancerniku",
+      "voc": "pancerniku"
+    },
+    "plural": {
+      "nom": "pancerniki",
+      "gen": "pancerników",
+      "dat": "pancernikom",
+      "acc": "pancerniki",
+      "ins": "pancernikami",
+      "loc": "pancernikach",
+      "voc": "pancerniki"
+    }
+  }
+}

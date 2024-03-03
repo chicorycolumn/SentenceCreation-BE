@@ -1,0 +1,19 @@
+{
+  "inflections": {
+    "infinitive": "cancel",
+    "verbal": {},
+    "v2": [
+      "canceled",
+      "cancelled"
+    ],
+    "v3": [
+      "canceled",
+      "cancelled"
+    ],
+    "thirdPS": "cancels",
+    "gerund": [
+      "canceling",
+      "cancelling"
+    ]
+  }
+}

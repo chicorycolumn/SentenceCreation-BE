@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "węzeł",
+      "gen": "węzła",
+      "dat": "węzłowi",
+      "acc": "węzeł",
+      "ins": "węzłem",
+      "loc": "węźle",
+      "voc": "węźle"
+    },
+    "plural": {
+      "nom": "węzły",
+      "gen": "węzłów",
+      "dat": "węzłom",
+      "acc": "węzły",
+      "ins": "węzłami",
+      "loc": "węzłach",
+      "voc": "węzły"
+    }
+  }
+}

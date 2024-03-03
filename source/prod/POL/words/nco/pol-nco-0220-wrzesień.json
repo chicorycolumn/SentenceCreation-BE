@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wrzesień",
+      "gen": "września",
+      "dat": "wrześniowi",
+      "acc": "wrzesień",
+      "ins": "wrześniem",
+      "loc": "wrześniu",
+      "voc": "wrześniu"
+    },
+    "plural": {
+      "nom": "wrześnie",
+      "gen": [
+        "wrześni",
+        "wrześniów"
+      ],
+      "dat": "wrześniom",
+      "acc": "wrześnie",
+      "ins": "wrześniami",
+      "loc": "wrześniach",
+      "voc": "wrześnie"
+    }
+  }
+}

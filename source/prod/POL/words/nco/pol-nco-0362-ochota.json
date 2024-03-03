@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ochota",
+      "gen": "ochoty",
+      "dat": "ochocie",
+      "acc": "ochotę",
+      "ins": "ochotą",
+      "loc": "ochocie",
+      "voc": "ochoto"
+    }
+  }
+}

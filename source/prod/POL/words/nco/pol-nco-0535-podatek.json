@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "podatek",
+      "gen": "podatku",
+      "dat": "podatkowi",
+      "acc": "podatek",
+      "ins": "podatkiem",
+      "loc": "podatku",
+      "voc": "podatku"
+    },
+    "plural": {
+      "nom": "podatki",
+      "gen": "podatków",
+      "dat": "podatkom",
+      "acc": "podatki",
+      "ins": "podatkami",
+      "loc": "podatkach",
+      "voc": "podatki"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "chorować",
+    "verbalNoun": "chorowanie",
+    "activeAdjectival": "chorujący",
+    "passiveAdjectival": "chorowany",
+    "contemporaryAdverbial": "chorując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "choruj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "chorowano"
+          },
+          "plural": {
+            "allPluralGenders": "chorowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "chorowałem",
+            "f": "chorowałam"
+          },
+          "plural": {
+            "virile": "chorowaliśmy",
+            "nonvirile": "chorowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "chorowałeś",
+            "f": "chorowałaś"
+          },
+          "plural": {
+            "virile": "chorowaliście",
+            "nonvirile": "chorowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "chorował",
+            "f": "chorowała",
+            "n": "chorowało"
+          },
+          "plural": {
+            "virile": "chorowali",
+            "nonvirile": "chorowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "choruje się"
+          },
+          "plural": {
+            "allPluralGenders": "choruje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "choruję"
+          },
+          "plural": {
+            "allPluralGenders": "chorujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "chorujesz"
+          },
+          "plural": {
+            "allPluralGenders": "chorujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "choruje"
+          },
+          "plural": {
+            "allPluralGenders": "chorują"
+          }
+        }
+      }
+    }
+  }
+}

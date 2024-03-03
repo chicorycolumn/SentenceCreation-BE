@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "budynek",
+      "gen": "budynku",
+      "dat": "budynkowi",
+      "acc": "budynek",
+      "ins": "budynkiem",
+      "loc": "budynku",
+      "voc": "budynku"
+    },
+    "plural": {
+      "nom": "budynki",
+      "gen": "budynków",
+      "dat": "budynkom",
+      "acc": "budynki",
+      "ins": "budynkami",
+      "loc": "budynkach",
+      "voc": "budynki"
+    }
+  }
+}

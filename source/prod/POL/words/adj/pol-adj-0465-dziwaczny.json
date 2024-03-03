@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "dziwacznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dziwaczny",
+          "gen": "dziwacznego",
+          "dat": "dziwacznemu",
+          "acc": "dziwacznego",
+          "ins": "dziwacznym",
+          "loc": "dziwacznym"
+        },
+        "m3": {
+          "nom": "dziwaczny",
+          "gen": "dziwacznego",
+          "dat": "dziwacznemu",
+          "acc": "dziwaczny",
+          "ins": "dziwacznym",
+          "loc": "dziwacznym"
+        },
+        "f": {
+          "nom": "dziwaczna",
+          "gen": "dziwacznej",
+          "dat": "dziwacznej",
+          "acc": "dziwaczną",
+          "ins": "dziwaczną",
+          "loc": "dziwacznej"
+        },
+        "n": {
+          "nom": "dziwaczne",
+          "gen": "dziwacznego",
+          "dat": "dziwacznemu",
+          "acc": "dziwaczne",
+          "ins": "dziwacznym",
+          "loc": "dziwacznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dziwaczni",
+          "gen": "dziwacznych",
+          "dat": "dziwacznym",
+          "acc": "dziwacznych",
+          "ins": "dziwacznymi",
+          "loc": "dziwacznych"
+        },
+        "nonvirile": {
+          "nom": "dziwaczne",
+          "gen": "dziwacznych",
+          "dat": "dziwacznym",
+          "acc": "dziwaczne",
+          "ins": "dziwacznymi",
+          "loc": "dziwacznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "dziwaczniejszy",
+          "gen": "dziwaczniejszego",
+          "dat": "dziwaczniejszemu",
+          "acc": "dziwaczniejszego",
+          "ins": "dziwaczniejszym",
+          "loc": "dziwaczniejszym"
+        },
+        "m3": {
+          "nom": "dziwaczniejszy",
+          "gen": "dziwaczniejszego",
+          "dat": "dziwaczniejszemu",
+          "acc": "dziwaczniejszy",
+          "ins": "dziwaczniejszym",
+          "loc": "dziwaczniejszym"
+        },
+        "f": {
+          "nom": "dziwaczniejsza",
+          "gen": "dziwaczniejszej",
+          "dat": "dziwaczniejszej",
+          "acc": "dziwaczniejszą",
+          "ins": "dziwaczniejszą",
+          "loc": "dziwaczniejszej"
+        },
+        "n": {
+          "nom": "dziwaczniejsze",
+          "gen": "dziwaczniejszego",
+          "dat": "dziwaczniejszemu",
+          "acc": "dziwaczniejsze",
+          "ins": "dziwaczniejszym",
+          "loc": "dziwaczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dziwaczniejsi",
+          "gen": "dziwaczniejszych",
+          "dat": "dziwaczniejszym",
+          "acc": "dziwaczniejszych",
+          "ins": "dziwaczniejszymi",
+          "loc": "dziwaczniejszych"
+        },
+        "nonvirile": {
+          "nom": "dziwaczniejsze",
+          "gen": "dziwaczniejszych",
+          "dat": "dziwaczniejszym",
+          "acc": "dziwaczniejsze",
+          "ins": "dziwaczniejszymi",
+          "loc": "dziwaczniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najdziwaczniejszy",
+          "gen": "najdziwaczniejszego",
+          "dat": "najdziwaczniejszemu",
+          "acc": "najdziwaczniejszego",
+          "ins": "najdziwaczniejszym",
+          "loc": "najdziwaczniejszym"
+        },
+        "m3": {
+          "nom": "najdziwaczniejszy",
+          "gen": "najdziwaczniejszego",
+          "dat": "najdziwaczniejszemu",
+          "acc": "najdziwaczniejszy",
+          "ins": "najdziwaczniejszym",
+          "loc": "najdziwaczniejszym"
+        },
+        "f": {
+          "nom": "najdziwaczniejsza",
+          "gen": "najdziwaczniejszej",
+          "dat": "najdziwaczniejszej",
+          "acc": "najdziwaczniejszą",
+          "ins": "najdziwaczniejszą",
+          "loc": "najdziwaczniejszej"
+        },
+        "n": {
+          "nom": "najdziwaczniejsze",
+          "gen": "najdziwaczniejszego",
+          "dat": "najdziwaczniejszemu",
+          "acc": "najdziwaczniejsze",
+          "ins": "najdziwaczniejszym",
+          "loc": "najdziwaczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najdziwaczniejsi",
+          "gen": "najdziwaczniejszych",
+          "dat": "najdziwaczniejszym",
+          "acc": "najdziwaczniejszych",
+          "ins": "najdziwaczniejszymi",
+          "loc": "najdziwaczniejszych"
+        },
+        "nonvirile": {
+          "nom": "najdziwaczniejsze",
+          "gen": "najdziwaczniejszych",
+          "dat": "najdziwaczniejszym",
+          "acc": "najdziwaczniejsze",
+          "ins": "najdziwaczniejszymi",
+          "loc": "najdziwaczniejszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "milioner",
+      "gen": "milionera",
+      "dat": "milionerowi",
+      "acc": "milionera",
+      "ins": "milionerem",
+      "loc": "milionerze",
+      "voc": "milionerze"
+    },
+    "plural": {
+      "nom": "milionerzy",
+      "gen": "milionerów",
+      "dat": "milionerom",
+      "acc": "milionerów",
+      "ins": "milionerami",
+      "loc": "milionerach",
+      "voc": "milionerzy"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wejście",
+      "gen": "wejścia",
+      "dat": "wejściu",
+      "acc": "wejście",
+      "ins": "wejściem",
+      "loc": "wejściu",
+      "voc": "wejście"
+    },
+    "plural": {
+      "nom": "wejścia",
+      "gen": "wejść",
+      "dat": "wejściom",
+      "acc": "wejścia",
+      "ins": "wejściami",
+      "loc": "wejściach",
+      "voc": "wejścia"
+    }
+  }
+}

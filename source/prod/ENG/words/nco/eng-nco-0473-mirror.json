@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mirror",
+      "gen": "mirror's"
+    },
+    "plural": {
+      "nom": "mirrors",
+      "gen": "mirrors'"
+    }
+  }
+}

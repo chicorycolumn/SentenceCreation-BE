@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "ciemno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ciemny",
+          "gen": "ciemnego",
+          "dat": "ciemnemu",
+          "acc": "ciemnego",
+          "ins": "ciemnym",
+          "loc": "ciemnym"
+        },
+        "m3": {
+          "nom": "ciemny",
+          "gen": "ciemnego",
+          "dat": "ciemnemu",
+          "acc": "ciemny",
+          "ins": "ciemnym",
+          "loc": "ciemnym"
+        },
+        "f": {
+          "nom": "ciemna",
+          "gen": "ciemnej",
+          "dat": "ciemnej",
+          "acc": "ciemną",
+          "ins": "ciemną",
+          "loc": "ciemnej"
+        },
+        "n": {
+          "nom": "ciemne",
+          "gen": "ciemnego",
+          "dat": "ciemnemu",
+          "acc": "ciemne",
+          "ins": "ciemnym",
+          "loc": "ciemnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ciemni",
+          "gen": "ciemnych",
+          "dat": "ciemnym",
+          "acc": "ciemnych",
+          "ins": "ciemnymi",
+          "loc": "ciemnych"
+        },
+        "nonvirile": {
+          "nom": "ciemne",
+          "gen": "ciemnych",
+          "dat": "ciemnym",
+          "acc": "ciemne",
+          "ins": "ciemnymi",
+          "loc": "ciemnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "ciemniejszy",
+          "gen": "ciemniejszego",
+          "dat": "ciemniejszemu",
+          "acc": "ciemniejszego",
+          "ins": "ciemniejszym",
+          "loc": "ciemniejszym"
+        },
+        "m3": {
+          "nom": "ciemniejszy",
+          "gen": "ciemniejszego",
+          "dat": "ciemniejszemu",
+          "acc": "ciemniejszy",
+          "ins": "ciemniejszym",
+          "loc": "ciemniejszym"
+        },
+        "f": {
+          "nom": "ciemniejsza",
+          "gen": "ciemniejszej",
+          "dat": "ciemniejszej",
+          "acc": "ciemniejszą",
+          "ins": "ciemniejszą",
+          "loc": "ciemniejszej"
+        },
+        "n": {
+          "nom": "ciemniejsze",
+          "gen": "ciemniejszego",
+          "dat": "ciemniejszemu",
+          "acc": "ciemniejsze",
+          "ins": "ciemniejszym",
+          "loc": "ciemniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ciemniejsi",
+          "gen": "ciemniejszych",
+          "dat": "ciemniejszym",
+          "acc": "ciemniejszych",
+          "ins": "ciemniejszymi",
+          "loc": "ciemniejszych"
+        },
+        "nonvirile": {
+          "nom": "ciemniejsze",
+          "gen": "ciemniejszych",
+          "dat": "ciemniejszym",
+          "acc": "ciemniejsze",
+          "ins": "ciemniejszymi",
+          "loc": "ciemniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najciemniejszy",
+          "gen": "najciemniejszego",
+          "dat": "najciemniejszemu",
+          "acc": "najciemniejszego",
+          "ins": "najciemniejszym",
+          "loc": "najciemniejszym"
+        },
+        "m3": {
+          "nom": "najciemniejszy",
+          "gen": "najciemniejszego",
+          "dat": "najciemniejszemu",
+          "acc": "najciemniejszy",
+          "ins": "najciemniejszym",
+          "loc": "najciemniejszym"
+        },
+        "f": {
+          "nom": "najciemniejsza",
+          "gen": "najciemniejszej",
+          "dat": "najciemniejszej",
+          "acc": "najciemniejszą",
+          "ins": "najciemniejszą",
+          "loc": "najciemniejszej"
+        },
+        "n": {
+          "nom": "najciemniejsze",
+          "gen": "najciemniejszego",
+          "dat": "najciemniejszemu",
+          "acc": "najciemniejsze",
+          "ins": "najciemniejszym",
+          "loc": "najciemniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najciemniejsi",
+          "gen": "najciemniejszych",
+          "dat": "najciemniejszym",
+          "acc": "najciemniejszych",
+          "ins": "najciemniejszymi",
+          "loc": "najciemniejszych"
+        },
+        "nonvirile": {
+          "nom": "najciemniejsze",
+          "gen": "najciemniejszych",
+          "dat": "najciemniejszym",
+          "acc": "najciemniejsze",
+          "ins": "najciemniejszymi",
+          "loc": "najciemniejszych"
+        }
+      }
+    }
+  }
+}

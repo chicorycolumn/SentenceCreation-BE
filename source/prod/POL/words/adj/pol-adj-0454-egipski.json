@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "egipski",
+          "gen": "egipskiego",
+          "dat": "egipskiemu",
+          "acc": "egipskiego",
+          "ins": "egipskim",
+          "loc": "egipskim"
+        },
+        "m3": {
+          "nom": "egipski",
+          "gen": "egipskiego",
+          "dat": "egipskiemu",
+          "acc": "egipski",
+          "ins": "egipskim",
+          "loc": "egipskim"
+        },
+        "f": {
+          "nom": "egipska",
+          "gen": "egipskiej",
+          "dat": "egipskiej",
+          "acc": "egipską",
+          "ins": "egipską",
+          "loc": "egipskiej"
+        },
+        "n": {
+          "nom": "egipskie",
+          "gen": "egipskiego",
+          "dat": "egipskiemu",
+          "acc": "egipskie",
+          "ins": "egipskim",
+          "loc": "egipskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "egipscy",
+          "gen": "egipskich",
+          "dat": "egipskim",
+          "acc": "egipskich",
+          "ins": "egipskimi",
+          "loc": "egipskich"
+        },
+        "nonvirile": {
+          "nom": "egipskie",
+          "gen": "egipskich",
+          "dat": "egipskim",
+          "acc": "egipskie",
+          "ins": "egipskimi",
+          "loc": "egipskich"
+        }
+      }
+    }
+  }
+}

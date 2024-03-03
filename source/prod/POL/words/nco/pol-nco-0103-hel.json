@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "hel",
+      "gen": "helu",
+      "dat": "helowi",
+      "acc": "hel",
+      "ins": "helem",
+      "loc": "helu",
+      "voc": "helu"
+    }
+  }
+}

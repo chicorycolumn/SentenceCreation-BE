@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "obco",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "obcy",
+          "gen": "obcego",
+          "dat": "obcemu",
+          "acc": "obcego",
+          "ins": "obcym",
+          "loc": "obcym"
+        },
+        "m3": {
+          "nom": "obcy",
+          "gen": "obcego",
+          "dat": "obcemu",
+          "acc": "obcy",
+          "ins": "obcym",
+          "loc": "obcym"
+        },
+        "f": {
+          "nom": "obca",
+          "gen": "obcej",
+          "dat": "obcej",
+          "acc": "obcą",
+          "ins": "obcą",
+          "loc": "obcej"
+        },
+        "n": {
+          "nom": "obce",
+          "gen": "obcego",
+          "dat": "obcemu",
+          "acc": "obce",
+          "ins": "obcym",
+          "loc": "obcym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "obcy",
+          "gen": "obcych",
+          "dat": "obcym",
+          "acc": "obcych",
+          "ins": "obcymi",
+          "loc": "obcych"
+        },
+        "nonvirile": {
+          "nom": "obce",
+          "gen": "obcych",
+          "dat": "obcym",
+          "acc": "obce",
+          "ins": "obcymi",
+          "loc": "obcych"
+        }
+      }
+    }
+  }
+}

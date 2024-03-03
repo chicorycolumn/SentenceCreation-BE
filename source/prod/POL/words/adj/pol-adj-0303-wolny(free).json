@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "wolny",
+          "gen": "wolnego",
+          "dat": "wolnemu",
+          "acc": "wolnego",
+          "ins": "wolnym",
+          "loc": "wolnym"
+        },
+        "m3": {
+          "nom": "wolny",
+          "gen": "wolnego",
+          "dat": "wolnemu",
+          "acc": "wolny",
+          "ins": "wolnym",
+          "loc": "wolnym"
+        },
+        "f": {
+          "nom": "wolna",
+          "gen": "wolnej",
+          "dat": "wolnej",
+          "acc": "wolną",
+          "ins": "wolną",
+          "loc": "wolnej"
+        },
+        "n": {
+          "nom": "wolne",
+          "gen": "wolnego",
+          "dat": "wolnemu",
+          "acc": "wolne",
+          "ins": "wolnym",
+          "loc": "wolnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wolni",
+          "gen": "wolnych",
+          "dat": "wolnym",
+          "acc": "wolnych",
+          "ins": "wolnymi",
+          "loc": "wolnych"
+        },
+        "nonvirile": {
+          "nom": "wolne",
+          "gen": "wolnych",
+          "dat": "wolnym",
+          "acc": "wolne",
+          "ins": "wolnymi",
+          "loc": "wolnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej wolny",
+          "gen": "bardziej wolnego",
+          "dat": "bardziej wolnemu",
+          "acc": "bardziej wolnego",
+          "ins": "bardziej wolnym",
+          "loc": "bardziej wolnym"
+        },
+        "m3": {
+          "nom": "bardziej wolny",
+          "gen": "bardziej wolnego",
+          "dat": "bardziej wolnemu",
+          "acc": "bardziej wolny",
+          "ins": "bardziej wolnym",
+          "loc": "bardziej wolnym"
+        },
+        "f": {
+          "nom": "bardziej wolna",
+          "gen": "bardziej wolnej",
+          "dat": "bardziej wolnej",
+          "acc": "bardziej wolną",
+          "ins": "bardziej wolną",
+          "loc": "bardziej wolnej"
+        },
+        "n": {
+          "nom": "bardziej wolne",
+          "gen": "bardziej wolnego",
+          "dat": "bardziej wolnemu",
+          "acc": "bardziej wolne",
+          "ins": "bardziej wolnym",
+          "loc": "bardziej wolnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej wolni",
+          "gen": "bardziej wolnych",
+          "dat": "bardziej wolnym",
+          "acc": "bardziej wolnych",
+          "ins": "bardziej wolnymi",
+          "loc": "bardziej wolnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej wolne",
+          "gen": "bardziej wolnych",
+          "dat": "bardziej wolnym",
+          "acc": "bardziej wolne",
+          "ins": "bardziej wolnymi",
+          "loc": "bardziej wolnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej wolny",
+          "gen": "najbardziej wolnego",
+          "dat": "najbardziej wolnemu",
+          "acc": "najbardziej wolnego",
+          "ins": "najbardziej wolnym",
+          "loc": "najbardziej wolnym"
+        },
+        "m3": {
+          "nom": "najbardziej wolny",
+          "gen": "najbardziej wolnego",
+          "dat": "najbardziej wolnemu",
+          "acc": "najbardziej wolny",
+          "ins": "najbardziej wolnym",
+          "loc": "najbardziej wolnym"
+        },
+        "f": {
+          "nom": "najbardziej wolna",
+          "gen": "najbardziej wolnej",
+          "dat": "najbardziej wolnej",
+          "acc": "najbardziej wolną",
+          "ins": "najbardziej wolną",
+          "loc": "najbardziej wolnej"
+        },
+        "n": {
+          "nom": "najbardziej wolne",
+          "gen": "najbardziej wolnego",
+          "dat": "najbardziej wolnemu",
+          "acc": "najbardziej wolne",
+          "ins": "najbardziej wolnym",
+          "loc": "najbardziej wolnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej wolni",
+          "gen": "najbardziej wolnych",
+          "dat": "najbardziej wolnym",
+          "acc": "najbardziej wolnych",
+          "ins": "najbardziej wolnymi",
+          "loc": "najbardziej wolnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej wolne",
+          "gen": "najbardziej wolnych",
+          "dat": "najbardziej wolnym",
+          "acc": "najbardziej wolne",
+          "ins": "najbardziej wolnymi",
+          "loc": "najbardziej wolnych"
+        }
+      }
+    }
+  }
+}

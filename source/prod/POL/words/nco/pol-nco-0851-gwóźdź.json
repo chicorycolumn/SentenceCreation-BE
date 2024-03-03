@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gwóźdź",
+      "gen": "gwoździa",
+      "dat": "gwoździowi",
+      "acc": "gwóźdź",
+      "ins": "gwoździem",
+      "loc": "gwoździu",
+      "voc": "gwoździu"
+    },
+    "plural": {
+      "nom": "gwoździe",
+      "gen": "gwoździ",
+      "dat": "gwoździom",
+      "acc": "gwoździe",
+      "ins": [
+        "gwoździami",
+        "gwoźdźmi"
+      ],
+      "loc": "gwoździach",
+      "voc": "gwoździe"
+    }
+  }
+}

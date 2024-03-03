@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "smacznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "smaczny",
+          "gen": "smacznego",
+          "dat": "smacznemu",
+          "acc": "smacznego",
+          "ins": "smacznym",
+          "loc": "smacznym"
+        },
+        "m3": {
+          "nom": "smaczny",
+          "gen": "smacznego",
+          "dat": "smacznemu",
+          "acc": "smaczny",
+          "ins": "smacznym",
+          "loc": "smacznym"
+        },
+        "f": {
+          "nom": "smaczna",
+          "gen": "smacznej",
+          "dat": "smacznej",
+          "acc": "smaczną",
+          "ins": "smaczną",
+          "loc": "smacznej"
+        },
+        "n": {
+          "nom": "smaczne",
+          "gen": "smacznego",
+          "dat": "smacznemu",
+          "acc": "smaczne",
+          "ins": "smacznym",
+          "loc": "smacznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "smaczni",
+          "gen": "smacznych",
+          "dat": "smacznym",
+          "acc": "smacznych",
+          "ins": "smacznymi",
+          "loc": "smacznych"
+        },
+        "nonvirile": {
+          "nom": "smaczne",
+          "gen": "smacznych",
+          "dat": "smacznym",
+          "acc": "smaczne",
+          "ins": "smacznymi",
+          "loc": "smacznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszy",
+              "bardziej smaczny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszego",
+              "bardziej smacznego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszemu",
+              "bardziej smacznemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszego",
+              "bardziej smacznego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszym",
+              "bardziej smacznym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszym",
+              "bardziej smacznym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszy",
+              "bardziej smaczny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszego",
+              "bardziej smacznego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszemu",
+              "bardziej smacznemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszy",
+              "bardziej smaczny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszym",
+              "bardziej smacznym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszym",
+              "bardziej smacznym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejsza",
+              "bardziej smaczna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszej",
+              "bardziej smacznej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszej",
+              "bardziej smacznej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszą",
+              "bardziej smaczną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszą",
+              "bardziej smaczną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszej",
+              "bardziej smacznej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejsze",
+              "bardziej smaczne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszego",
+              "bardziej smacznego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszemu",
+              "bardziej smacznemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejsze",
+              "bardziej smaczne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszym",
+              "bardziej smacznym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszym",
+              "bardziej smacznym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejsi",
+              "bardziej smaczni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszych",
+              "bardziej smacznych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszym",
+              "bardziej smacznym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszych",
+              "bardziej smacznych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszymi",
+              "bardziej smacznymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszych",
+              "bardziej smacznych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejsze",
+              "bardziej smaczne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszych",
+              "bardziej smacznych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszym",
+              "bardziej smacznym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejsze",
+              "bardziej smaczne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszymi",
+              "bardziej smacznymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "smaczniejszych",
+              "bardziej smacznych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszy",
+              "najbardziej smaczny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszego",
+              "najbardziej smacznego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszemu",
+              "najbardziej smacznemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszego",
+              "najbardziej smacznego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszym",
+              "najbardziej smacznym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszym",
+              "najbardziej smacznym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszy",
+              "najbardziej smaczny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszego",
+              "najbardziej smacznego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszemu",
+              "najbardziej smacznemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszy",
+              "najbardziej smaczny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszym",
+              "najbardziej smacznym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszym",
+              "najbardziej smacznym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejsza",
+              "najbardziej smaczna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszej",
+              "najbardziej smacznej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszej",
+              "najbardziej smacznej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszą",
+              "najbardziej smaczną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszą",
+              "najbardziej smaczną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszej",
+              "najbardziej smacznej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejsze",
+              "najbardziej smaczne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszego",
+              "najbardziej smacznego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszemu",
+              "najbardziej smacznemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejsze",
+              "najbardziej smaczne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszym",
+              "najbardziej smacznym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszym",
+              "najbardziej smacznym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejsi",
+              "najbardziej smaczni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszych",
+              "najbardziej smacznych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszym",
+              "najbardziej smacznym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszych",
+              "najbardziej smacznych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszymi",
+              "najbardziej smacznymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszych",
+              "najbardziej smacznych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejsze",
+              "najbardziej smaczne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszych",
+              "najbardziej smacznych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszym",
+              "najbardziej smacznym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejsze",
+              "najbardziej smaczne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszymi",
+              "najbardziej smacznymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najsmaczniejszych",
+              "najbardziej smacznych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

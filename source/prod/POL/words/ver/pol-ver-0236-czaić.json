@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "czaić",
+    "verbalNoun": "czajenie",
+    "activeAdjectival": "czający",
+    "passiveAdjectival": "czajony",
+    "contemporaryAdverbial": "czając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "czaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "czajono"
+          },
+          "plural": {
+            "allPluralGenders": "czajono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "czaiłem",
+            "f": "czaiłam"
+          },
+          "plural": {
+            "virile": "czailiśmy",
+            "nonvirile": "czaiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "czaiłeś",
+            "f": "czaiłaś"
+          },
+          "plural": {
+            "virile": "czailiście",
+            "nonvirile": "czaiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "czaił",
+            "f": "czaiła",
+            "n": "czaiło"
+          },
+          "plural": {
+            "virile": "czaili",
+            "nonvirile": "czaiły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "czai się"
+          },
+          "plural": {
+            "allPluralGenders": "czai się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "czaję"
+          },
+          "plural": {
+            "allPluralGenders": "czaimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "czaisz"
+          },
+          "plural": {
+            "allPluralGenders": "czaicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "czai"
+          },
+          "plural": {
+            "allPluralGenders": "czają"
+          }
+        }
+      }
+    }
+  }
+}

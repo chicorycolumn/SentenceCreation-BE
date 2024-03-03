@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "otrzymywać",
+    "verbalNoun": "otrzymywanie",
+    "activeAdjectival": "otrzymujący",
+    "passiveAdjectival": "otrzymywany",
+    "contemporaryAdverbial": "otrzymując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "otrzymuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "otrzymywano"
+          },
+          "plural": {
+            "allPluralGenders": "otrzymywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "otrzymywałem",
+            "f": "otrzymywałam"
+          },
+          "plural": {
+            "virile": "otrzymywaliśmy",
+            "nonvirile": "otrzymywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "otrzymywałeś",
+            "f": "otrzymywałaś"
+          },
+          "plural": {
+            "virile": "otrzymywaliście",
+            "nonvirile": "otrzymywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "otrzymywał",
+            "f": "otrzymywała",
+            "n": "otrzymywało"
+          },
+          "plural": {
+            "virile": "otrzymywali",
+            "nonvirile": "otrzymywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "otrzymuje się"
+          },
+          "plural": {
+            "allPluralGenders": "otrzymuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "otrzymuję"
+          },
+          "plural": {
+            "allPluralGenders": "otrzymujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "otrzymujesz"
+          },
+          "plural": {
+            "allPluralGenders": "otrzymujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "otrzymuje"
+          },
+          "plural": {
+            "allPluralGenders": "otrzymują"
+          }
+        }
+      }
+    }
+  }
+}

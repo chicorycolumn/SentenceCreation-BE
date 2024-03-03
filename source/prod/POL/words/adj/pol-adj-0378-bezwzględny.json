@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "bezwzględnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "bezwzględny",
+          "gen": "bezwzględnego",
+          "dat": "bezwzględnemu",
+          "acc": "bezwzględnego",
+          "ins": "bezwzględnym",
+          "loc": "bezwzględnym"
+        },
+        "m3": {
+          "nom": "bezwzględny",
+          "gen": "bezwzględnego",
+          "dat": "bezwzględnemu",
+          "acc": "bezwzględny",
+          "ins": "bezwzględnym",
+          "loc": "bezwzględnym"
+        },
+        "f": {
+          "nom": "bezwzględna",
+          "gen": "bezwzględnej",
+          "dat": "bezwzględnej",
+          "acc": "bezwzględną",
+          "ins": "bezwzględną",
+          "loc": "bezwzględnej"
+        },
+        "n": {
+          "nom": "bezwzględne",
+          "gen": "bezwzględnego",
+          "dat": "bezwzględnemu",
+          "acc": "bezwzględne",
+          "ins": "bezwzględnym",
+          "loc": "bezwzględnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bezwzględni",
+          "gen": "bezwzględnych",
+          "dat": "bezwzględnym",
+          "acc": "bezwzględnych",
+          "ins": "bezwzględnymi",
+          "loc": "bezwzględnych"
+        },
+        "nonvirile": {
+          "nom": "bezwzględne",
+          "gen": "bezwzględnych",
+          "dat": "bezwzględnym",
+          "acc": "bezwzględne",
+          "ins": "bezwzględnymi",
+          "loc": "bezwzględnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej bezwzględny",
+          "gen": "bardziej bezwzględnego",
+          "dat": "bardziej bezwzględnemu",
+          "acc": "bardziej bezwzględnego",
+          "ins": "bardziej bezwzględnym",
+          "loc": "bardziej bezwzględnym"
+        },
+        "m3": {
+          "nom": "bardziej bezwzględny",
+          "gen": "bardziej bezwzględnego",
+          "dat": "bardziej bezwzględnemu",
+          "acc": "bardziej bezwzględny",
+          "ins": "bardziej bezwzględnym",
+          "loc": "bardziej bezwzględnym"
+        },
+        "f": {
+          "nom": "bardziej bezwzględna",
+          "gen": "bardziej bezwzględnej",
+          "dat": "bardziej bezwzględnej",
+          "acc": "bardziej bezwzględną",
+          "ins": "bardziej bezwzględną",
+          "loc": "bardziej bezwzględnej"
+        },
+        "n": {
+          "nom": "bardziej bezwzględne",
+          "gen": "bardziej bezwzględnego",
+          "dat": "bardziej bezwzględnemu",
+          "acc": "bardziej bezwzględne",
+          "ins": "bardziej bezwzględnym",
+          "loc": "bardziej bezwzględnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej bezwzględni",
+          "gen": "bardziej bezwzględnych",
+          "dat": "bardziej bezwzględnym",
+          "acc": "bardziej bezwzględnych",
+          "ins": "bardziej bezwzględnymi",
+          "loc": "bardziej bezwzględnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej bezwzględne",
+          "gen": "bardziej bezwzględnych",
+          "dat": "bardziej bezwzględnym",
+          "acc": "bardziej bezwzględne",
+          "ins": "bardziej bezwzględnymi",
+          "loc": "bardziej bezwzględnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej bezwzględny",
+          "gen": "najbardziej bezwzględnego",
+          "dat": "najbardziej bezwzględnemu",
+          "acc": "najbardziej bezwzględnego",
+          "ins": "najbardziej bezwzględnym",
+          "loc": "najbardziej bezwzględnym"
+        },
+        "m3": {
+          "nom": "najbardziej bezwzględny",
+          "gen": "najbardziej bezwzględnego",
+          "dat": "najbardziej bezwzględnemu",
+          "acc": "najbardziej bezwzględny",
+          "ins": "najbardziej bezwzględnym",
+          "loc": "najbardziej bezwzględnym"
+        },
+        "f": {
+          "nom": "najbardziej bezwzględna",
+          "gen": "najbardziej bezwzględnej",
+          "dat": "najbardziej bezwzględnej",
+          "acc": "najbardziej bezwzględną",
+          "ins": "najbardziej bezwzględną",
+          "loc": "najbardziej bezwzględnej"
+        },
+        "n": {
+          "nom": "najbardziej bezwzględne",
+          "gen": "najbardziej bezwzględnego",
+          "dat": "najbardziej bezwzględnemu",
+          "acc": "najbardziej bezwzględne",
+          "ins": "najbardziej bezwzględnym",
+          "loc": "najbardziej bezwzględnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej bezwzględni",
+          "gen": "najbardziej bezwzględnych",
+          "dat": "najbardziej bezwzględnym",
+          "acc": "najbardziej bezwzględnych",
+          "ins": "najbardziej bezwzględnymi",
+          "loc": "najbardziej bezwzględnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej bezwzględne",
+          "gen": "najbardziej bezwzględnych",
+          "dat": "najbardziej bezwzględnym",
+          "acc": "najbardziej bezwzględne",
+          "ins": "najbardziej bezwzględnymi",
+          "loc": "najbardziej bezwzględnych"
+        }
+      }
+    }
+  }
+}

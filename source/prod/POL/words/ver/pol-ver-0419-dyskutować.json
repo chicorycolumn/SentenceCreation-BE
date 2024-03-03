@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dyskutować",
+    "verbalNoun": "dyskutowanie",
+    "activeAdjectival": "dyskutujący",
+    "passiveAdjectival": "dyskutowany",
+    "contemporaryAdverbial": "dyskutując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dyskutuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dyskutowano"
+          },
+          "plural": {
+            "allPluralGenders": "dyskutowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dyskutowałem",
+            "f": "dyskutowałam"
+          },
+          "plural": {
+            "virile": "dyskutowaliśmy",
+            "nonvirile": "dyskutowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dyskutowałeś",
+            "f": "dyskutowałaś"
+          },
+          "plural": {
+            "virile": "dyskutowaliście",
+            "nonvirile": "dyskutowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dyskutował",
+            "f": "dyskutowała",
+            "n": "dyskutowało"
+          },
+          "plural": {
+            "virile": "dyskutowali",
+            "nonvirile": "dyskutowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dyskutuje się"
+          },
+          "plural": {
+            "allPluralGenders": "dyskutuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dyskutuję"
+          },
+          "plural": {
+            "allPluralGenders": "dyskutujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dyskutujesz"
+          },
+          "plural": {
+            "allPluralGenders": "dyskutujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dyskutuje"
+          },
+          "plural": {
+            "allPluralGenders": "dyskutują"
+          }
+        }
+      }
+    }
+  }
+}

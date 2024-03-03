@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "światło",
+      "gen": "światła",
+      "dat": "światłu",
+      "acc": "światło",
+      "ins": "światłem",
+      "loc": "świetle",
+      "voc": "światło"
+    },
+    "plural": {
+      "nom": "światła",
+      "gen": "świateł",
+      "dat": "światłom",
+      "acc": "światła",
+      "ins": "światłami",
+      "loc": "światłach",
+      "voc": "światła"
+    }
+  }
+}

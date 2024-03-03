@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rysunek",
+      "gen": "rysunku",
+      "dat": "rysunkowi",
+      "acc": "rysunek",
+      "ins": "rysunkiem",
+      "loc": "rysunku",
+      "voc": "rysunku"
+    },
+    "plural": {
+      "nom": "rysunki",
+      "gen": "rysunków",
+      "dat": "rysunkom",
+      "acc": "rysunki",
+      "ins": "rysunkami",
+      "loc": "rysunkach",
+      "voc": "rysunki"
+    }
+  }
+}

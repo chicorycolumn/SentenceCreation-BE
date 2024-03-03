@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "zasadniczo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zasadniczy",
+          "gen": "zasadniczego",
+          "dat": "zasadniczemu",
+          "acc": "zasadniczego",
+          "ins": "zasadniczym",
+          "loc": "zasadniczym"
+        },
+        "m3": {
+          "nom": "zasadniczy",
+          "gen": "zasadniczego",
+          "dat": "zasadniczemu",
+          "acc": "zasadniczy",
+          "ins": "zasadniczym",
+          "loc": "zasadniczym"
+        },
+        "f": {
+          "nom": "zasadnicza",
+          "gen": "zasadniczej",
+          "dat": "zasadniczej",
+          "acc": "zasadniczą",
+          "ins": "zasadniczą",
+          "loc": "zasadniczej"
+        },
+        "n": {
+          "nom": "zasadnicze",
+          "gen": "zasadniczego",
+          "dat": "zasadniczemu",
+          "acc": "zasadnicze",
+          "ins": "zasadniczym",
+          "loc": "zasadniczym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zasadniczy",
+          "gen": "zasadniczych",
+          "dat": "zasadniczym",
+          "acc": "zasadniczych",
+          "ins": "zasadniczymi",
+          "loc": "zasadniczych"
+        },
+        "nonvirile": {
+          "nom": "zasadnicze",
+          "gen": "zasadniczych",
+          "dat": "zasadniczym",
+          "acc": "zasadnicze",
+          "ins": "zasadniczymi",
+          "loc": "zasadniczych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej zasadniczy",
+          "gen": "bardziej zasadniczego",
+          "dat": "bardziej zasadniczemu",
+          "acc": "bardziej zasadniczego",
+          "ins": "bardziej zasadniczym",
+          "loc": "bardziej zasadniczym"
+        },
+        "m3": {
+          "nom": "bardziej zasadniczy",
+          "gen": "bardziej zasadniczego",
+          "dat": "bardziej zasadniczemu",
+          "acc": "bardziej zasadniczy",
+          "ins": "bardziej zasadniczym",
+          "loc": "bardziej zasadniczym"
+        },
+        "f": {
+          "nom": "bardziej zasadnicza",
+          "gen": "bardziej zasadniczej",
+          "dat": "bardziej zasadniczej",
+          "acc": "bardziej zasadniczą",
+          "ins": "bardziej zasadniczą",
+          "loc": "bardziej zasadniczej"
+        },
+        "n": {
+          "nom": "bardziej zasadnicze",
+          "gen": "bardziej zasadniczego",
+          "dat": "bardziej zasadniczemu",
+          "acc": "bardziej zasadnicze",
+          "ins": "bardziej zasadniczym",
+          "loc": "bardziej zasadniczym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej zasadniczy",
+          "gen": "bardziej zasadniczych",
+          "dat": "bardziej zasadniczym",
+          "acc": "bardziej zasadniczych",
+          "ins": "bardziej zasadniczymi",
+          "loc": "bardziej zasadniczych"
+        },
+        "nonvirile": {
+          "nom": "bardziej zasadnicze",
+          "gen": "bardziej zasadniczych",
+          "dat": "bardziej zasadniczym",
+          "acc": "bardziej zasadnicze",
+          "ins": "bardziej zasadniczymi",
+          "loc": "bardziej zasadniczych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej zasadniczy",
+          "gen": "najbardziej zasadniczego",
+          "dat": "najbardziej zasadniczemu",
+          "acc": "najbardziej zasadniczego",
+          "ins": "najbardziej zasadniczym",
+          "loc": "najbardziej zasadniczym"
+        },
+        "m3": {
+          "nom": "najbardziej zasadniczy",
+          "gen": "najbardziej zasadniczego",
+          "dat": "najbardziej zasadniczemu",
+          "acc": "najbardziej zasadniczy",
+          "ins": "najbardziej zasadniczym",
+          "loc": "najbardziej zasadniczym"
+        },
+        "f": {
+          "nom": "najbardziej zasadnicza",
+          "gen": "najbardziej zasadniczej",
+          "dat": "najbardziej zasadniczej",
+          "acc": "najbardziej zasadniczą",
+          "ins": "najbardziej zasadniczą",
+          "loc": "najbardziej zasadniczej"
+        },
+        "n": {
+          "nom": "najbardziej zasadnicze",
+          "gen": "najbardziej zasadniczego",
+          "dat": "najbardziej zasadniczemu",
+          "acc": "najbardziej zasadnicze",
+          "ins": "najbardziej zasadniczym",
+          "loc": "najbardziej zasadniczym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej zasadniczy",
+          "gen": "najbardziej zasadniczych",
+          "dat": "najbardziej zasadniczym",
+          "acc": "najbardziej zasadniczych",
+          "ins": "najbardziej zasadniczymi",
+          "loc": "najbardziej zasadniczych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej zasadnicze",
+          "gen": "najbardziej zasadniczych",
+          "dat": "najbardziej zasadniczym",
+          "acc": "najbardziej zasadnicze",
+          "ins": "najbardziej zasadniczymi",
+          "loc": "najbardziej zasadniczych"
+        }
+      }
+    }
+  }
+}

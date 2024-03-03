@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przekształcić",
+    "verbalNoun": "przekształcenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przekształcony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przekształciwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przekształci się"
+          },
+          "plural": {
+            "allPluralGenders": "przekształci się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przekształcę"
+          },
+          "plural": {
+            "allPluralGenders": "przekształcimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przekształcisz"
+          },
+          "plural": {
+            "allPluralGenders": "przekształcicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przekształci"
+          },
+          "plural": {
+            "allPluralGenders": "przekształcą"
+          }
+        }
+      },
+      "imperative": "przekształć",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przekształcono"
+          },
+          "plural": {
+            "allPluralGenders": "przekształcono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przekształciłem",
+            "f": "przekształciłam"
+          },
+          "plural": {
+            "virile": "przekształciliśmy",
+            "nonvirile": "przekształciłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przekształciłeś",
+            "f": "przekształciłaś"
+          },
+          "plural": {
+            "virile": "przekształciliście",
+            "nonvirile": "przekształciłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przekształcił",
+            "f": "przekształciła",
+            "n": "przekształciło"
+          },
+          "plural": {
+            "virile": "przekształcili",
+            "nonvirile": "przekształciły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

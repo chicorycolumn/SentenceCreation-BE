@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "brud",
+      "gen": "brudu",
+      "dat": "brudowi",
+      "acc": "brud",
+      "ins": "brudem",
+      "loc": "brudzie",
+      "voc": "brudzie"
+    },
+    "plural": {
+      "nom": "brudy",
+      "gen": "brudów",
+      "dat": "brudom",
+      "acc": "brudy",
+      "ins": "brudami",
+      "loc": "brudach",
+      "voc": "brudy"
+    }
+  }
+}

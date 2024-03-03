@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zrobić",
+    "verbalNoun": "zrobienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zrobiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zrobiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zrobi się"
+          },
+          "plural": {
+            "allPluralGenders": "zrobi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zrobię"
+          },
+          "plural": {
+            "allPluralGenders": "zrobimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zrobisz"
+          },
+          "plural": {
+            "allPluralGenders": "zrobicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zrobi"
+          },
+          "plural": {
+            "allPluralGenders": "zrobią"
+          }
+        }
+      },
+      "imperative": "zrób",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zrobiono"
+          },
+          "plural": {
+            "allPluralGenders": "zrobiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zrobiłem",
+            "f": "zrobiłam"
+          },
+          "plural": {
+            "virile": "zrobiliśmy",
+            "nonvirile": "zrobiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zrobiłeś",
+            "f": "zrobiłaś"
+          },
+          "plural": {
+            "virile": "zrobiliście",
+            "nonvirile": "zrobiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zrobił",
+            "f": "zrobiła",
+            "n": "zrobiło"
+          },
+          "plural": {
+            "virile": "zrobili",
+            "nonvirile": "zrobiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

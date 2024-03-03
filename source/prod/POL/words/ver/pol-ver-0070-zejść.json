@@ -1,0 +1,82 @@
+{
+  "inflections": {
+    "infinitive": "zejść",
+    "verbalNoun": "zejście",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zszedłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zejdzie się"
+          },
+          "plural": {
+            "allPluralGenders": "zejdzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zejdę"
+          },
+          "plural": {
+            "allPluralGenders": "zejdziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zejdziesz"
+          },
+          "plural": {
+            "allPluralGenders": "zejdziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zejdzie"
+          },
+          "plural": {
+            "allPluralGenders": "zejdą"
+          }
+        }
+      },
+      "imperative": "zejdź",
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "zszedłem",
+            "f": "zeszłam"
+          },
+          "plural": {
+            "virile": "zeszliśmy",
+            "nonvirile": "zeszłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zszedłeś",
+            "f": "zeszłaś"
+          },
+          "plural": {
+            "virile": "zeszliście",
+            "nonvirile": "zeszłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zszedł",
+            "f": "zeszła",
+            "n": "zeszło"
+          },
+          "plural": {
+            "virile": "zeszli",
+            "nonvirile": "zeszły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

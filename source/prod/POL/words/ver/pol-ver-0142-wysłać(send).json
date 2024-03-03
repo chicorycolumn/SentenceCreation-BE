@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wysłać",
+    "verbalNoun": "wysłanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "wysłany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "wysławszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wyśle się"
+          },
+          "plural": {
+            "allPluralGenders": "wyśle się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wyślę"
+          },
+          "plural": {
+            "allPluralGenders": "wyślemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wyślesz"
+          },
+          "plural": {
+            "allPluralGenders": "wyślecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wyśle"
+          },
+          "plural": {
+            "allPluralGenders": "wyślą"
+          }
+        }
+      },
+      "imperative": "wyślij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wysłano"
+          },
+          "plural": {
+            "allPluralGenders": "wysłano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wysłałem",
+            "f": "wysłałam"
+          },
+          "plural": {
+            "virile": "wysłaliśmy",
+            "nonvirile": "wysłałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wysłałeś",
+            "f": "wysłałaś"
+          },
+          "plural": {
+            "virile": "wysłaliście",
+            "nonvirile": "wysłałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wysłał",
+            "f": "wysłała",
+            "n": "wysłało"
+          },
+          "plural": {
+            "virile": "wysłali",
+            "nonvirile": "wysłały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "głośno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "głośny",
+          "gen": "głośnego",
+          "dat": "głośnemu",
+          "acc": "głośnego",
+          "ins": "głośnym",
+          "loc": "głośnym"
+        },
+        "m3": {
+          "nom": "głośny",
+          "gen": "głośnego",
+          "dat": "głośnemu",
+          "acc": "głośny",
+          "ins": "głośnym",
+          "loc": "głośnym"
+        },
+        "f": {
+          "nom": "głośna",
+          "gen": "głośnej",
+          "dat": "głośnej",
+          "acc": "głośną",
+          "ins": "głośną",
+          "loc": "głośnej"
+        },
+        "n": {
+          "nom": "głośne",
+          "gen": "głośnego",
+          "dat": "głośnemu",
+          "acc": "głośne",
+          "ins": "głośnym",
+          "loc": "głośnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "głośni",
+          "gen": "głośnych",
+          "dat": "głośnym",
+          "acc": "głośnych",
+          "ins": "głośnymi",
+          "loc": "głośnych"
+        },
+        "nonvirile": {
+          "nom": "głośne",
+          "gen": "głośnych",
+          "dat": "głośnym",
+          "acc": "głośne",
+          "ins": "głośnymi",
+          "loc": "głośnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "głośniejszy",
+          "gen": "głośniejszego",
+          "dat": "głośniejszemu",
+          "acc": "głośniejszego",
+          "ins": "głośniejszym",
+          "loc": "głośniejszym"
+        },
+        "m3": {
+          "nom": "głośniejszy",
+          "gen": "głośniejszego",
+          "dat": "głośniejszemu",
+          "acc": "głośniejszy",
+          "ins": "głośniejszym",
+          "loc": "głośniejszym"
+        },
+        "f": {
+          "nom": "głośniejsza",
+          "gen": "głośniejszej",
+          "dat": "głośniejszej",
+          "acc": "głośniejszą",
+          "ins": "głośniejszą",
+          "loc": "głośniejszej"
+        },
+        "n": {
+          "nom": "głośniejsze",
+          "gen": "głośniejszego",
+          "dat": "głośniejszemu",
+          "acc": "głośniejsze",
+          "ins": "głośniejszym",
+          "loc": "głośniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "głośniejsi",
+          "gen": "głośniejszych",
+          "dat": "głośniejszym",
+          "acc": "głośniejszych",
+          "ins": "głośniejszymi",
+          "loc": "głośniejszych"
+        },
+        "nonvirile": {
+          "nom": "głośniejsze",
+          "gen": "głośniejszych",
+          "dat": "głośniejszym",
+          "acc": "głośniejsze",
+          "ins": "głośniejszymi",
+          "loc": "głośniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najgłośniejszy",
+          "gen": "najgłośniejszego",
+          "dat": "najgłośniejszemu",
+          "acc": "najgłośniejszego",
+          "ins": "najgłośniejszym",
+          "loc": "najgłośniejszym"
+        },
+        "m3": {
+          "nom": "najgłośniejszy",
+          "gen": "najgłośniejszego",
+          "dat": "najgłośniejszemu",
+          "acc": "najgłośniejszy",
+          "ins": "najgłośniejszym",
+          "loc": "najgłośniejszym"
+        },
+        "f": {
+          "nom": "najgłośniejsza",
+          "gen": "najgłośniejszej",
+          "dat": "najgłośniejszej",
+          "acc": "najgłośniejszą",
+          "ins": "najgłośniejszą",
+          "loc": "najgłośniejszej"
+        },
+        "n": {
+          "nom": "najgłośniejsze",
+          "gen": "najgłośniejszego",
+          "dat": "najgłośniejszemu",
+          "acc": "najgłośniejsze",
+          "ins": "najgłośniejszym",
+          "loc": "najgłośniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najgłośniejsi",
+          "gen": "najgłośniejszych",
+          "dat": "najgłośniejszym",
+          "acc": "najgłośniejszych",
+          "ins": "najgłośniejszymi",
+          "loc": "najgłośniejszych"
+        },
+        "nonvirile": {
+          "nom": "najgłośniejsze",
+          "gen": "najgłośniejszych",
+          "dat": "najgłośniejszym",
+          "acc": "najgłośniejsze",
+          "ins": "najgłośniejszymi",
+          "loc": "najgłośniejszych"
+        }
+      }
+    }
+  }
+}

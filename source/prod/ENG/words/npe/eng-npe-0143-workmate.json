@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "workmate",
+      "gen": "workmate's"
+    },
+    "plural": {
+      "nom": "workmates",
+      "gen": "workmates'"
+    }
+  }
+}

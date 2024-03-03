@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pomóc",
+    "verbalNoun": "pomożenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pomógłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pomoże się"
+          },
+          "plural": {
+            "allPluralGenders": "pomoże się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pomogę"
+          },
+          "plural": {
+            "allPluralGenders": "pomożemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pomożesz"
+          },
+          "plural": {
+            "allPluralGenders": "pomożecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pomoże"
+          },
+          "plural": {
+            "allPluralGenders": "pomogą"
+          }
+        }
+      },
+      "imperative": "pomóż",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pomożono"
+          },
+          "plural": {
+            "allPluralGenders": "pomożono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pomogłem",
+            "f": "pomogłam"
+          },
+          "plural": {
+            "virile": "pomogliśmy",
+            "nonvirile": "pomogłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pomogłeś",
+            "f": "pomogłaś"
+          },
+          "plural": {
+            "virile": "pomogliście",
+            "nonvirile": "pomogłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pomógł",
+            "f": "pomogła",
+            "n": "pomogło"
+          },
+          "plural": {
+            "virile": "pomogli",
+            "nonvirile": "pomogły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

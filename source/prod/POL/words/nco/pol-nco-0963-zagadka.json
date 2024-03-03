@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zagadka",
+      "gen": "zagadki",
+      "dat": "zagadce",
+      "acc": "zagadkę",
+      "ins": "zagadką",
+      "loc": "zagadce",
+      "voc": "zagadko"
+    },
+    "plural": {
+      "nom": "zagadki",
+      "gen": "zagadek",
+      "dat": "zagadkom",
+      "acc": "zagadki",
+      "ins": "zagadkami",
+      "loc": "zagadkach",
+      "voc": "zagadki"
+    }
+  }
+}

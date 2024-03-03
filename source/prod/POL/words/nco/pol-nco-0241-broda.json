@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "broda",
+      "gen": "brody",
+      "dat": "brodzie",
+      "acc": "brodę",
+      "ins": "brodą",
+      "loc": "brodzie",
+      "voc": "brodo"
+    },
+    "plural": {
+      "nom": "brody",
+      "gen": "bród",
+      "dat": "brodom",
+      "acc": "brody",
+      "ins": "brodami",
+      "loc": "brodach",
+      "voc": "brody"
+    }
+  }
+}

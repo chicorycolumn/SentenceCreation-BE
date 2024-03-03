@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lis",
+      "gen": "lisa",
+      "dat": "lisowi",
+      "acc": "lisa",
+      "ins": "lisem",
+      "loc": "lisie",
+      "voc": "lisie"
+    },
+    "plural": {
+      "nom": "lisy",
+      "gen": "lisów",
+      "dat": "lisom",
+      "acc": "lisy",
+      "ins": "lisami",
+      "loc": "lisach",
+      "voc": "lisy"
+    }
+  }
+}

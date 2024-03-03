@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dopuścić",
+    "verbalNoun": "dopuszczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "dopuszczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "dopuściwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dopuści się"
+          },
+          "plural": {
+            "allPluralGenders": "dopuści się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dopuszczę"
+          },
+          "plural": {
+            "allPluralGenders": "dopuścimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dopuścisz"
+          },
+          "plural": {
+            "allPluralGenders": "dopuścicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dopuści"
+          },
+          "plural": {
+            "allPluralGenders": "dopuszczą"
+          }
+        }
+      },
+      "imperative": "dopuść",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dopuszczono"
+          },
+          "plural": {
+            "allPluralGenders": "dopuszczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dopuściłem",
+            "f": "dopuściłam"
+          },
+          "plural": {
+            "virile": "dopuściliśmy",
+            "nonvirile": "dopuściłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dopuściłeś",
+            "f": "dopuściłaś"
+          },
+          "plural": {
+            "virile": "dopuściliście",
+            "nonvirile": "dopuściłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dopuścił",
+            "f": "dopuściła",
+            "n": "dopuściło"
+          },
+          "plural": {
+            "virile": "dopuścili",
+            "nonvirile": "dopuściły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

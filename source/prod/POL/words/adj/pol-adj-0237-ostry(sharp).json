@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "ostro",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ostry",
+          "gen": "ostrego",
+          "dat": "ostremu",
+          "acc": "ostrego",
+          "ins": "ostrym",
+          "loc": "ostrym"
+        },
+        "m3": {
+          "nom": "ostry",
+          "gen": "ostrego",
+          "dat": "ostremu",
+          "acc": "ostry",
+          "ins": "ostrym",
+          "loc": "ostrym"
+        },
+        "f": {
+          "nom": "ostra",
+          "gen": "ostrej",
+          "dat": "ostrej",
+          "acc": "ostrą",
+          "ins": "ostrą",
+          "loc": "ostrej"
+        },
+        "n": {
+          "nom": "ostre",
+          "gen": "ostrego",
+          "dat": "ostremu",
+          "acc": "ostre",
+          "ins": "ostrym",
+          "loc": "ostrym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ostrzy",
+          "gen": "ostrych",
+          "dat": "ostrym",
+          "acc": "ostrych",
+          "ins": "ostrymi",
+          "loc": "ostrych"
+        },
+        "nonvirile": {
+          "nom": "ostre",
+          "gen": "ostrych",
+          "dat": "ostrym",
+          "acc": "ostre",
+          "ins": "ostrymi",
+          "loc": "ostrych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "ostrzejszy",
+          "gen": "ostrzejszego",
+          "dat": "ostrzejszemu",
+          "acc": "ostrzejszego",
+          "ins": "ostrzejszym",
+          "loc": "ostrzejszym"
+        },
+        "m3": {
+          "nom": "ostrzejszy",
+          "gen": "ostrzejszego",
+          "dat": "ostrzejszemu",
+          "acc": "ostrzejszy",
+          "ins": "ostrzejszym",
+          "loc": "ostrzejszym"
+        },
+        "f": {
+          "nom": "ostrzejsza",
+          "gen": "ostrzejszej",
+          "dat": "ostrzejszej",
+          "acc": "ostrzejszą",
+          "ins": "ostrzejszą",
+          "loc": "ostrzejszej"
+        },
+        "n": {
+          "nom": "ostrzejsze",
+          "gen": "ostrzejszego",
+          "dat": "ostrzejszemu",
+          "acc": "ostrzejsze",
+          "ins": "ostrzejszym",
+          "loc": "ostrzejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ostrzejsi",
+          "gen": "ostrzejszych",
+          "dat": "ostrzejszym",
+          "acc": "ostrzejszych",
+          "ins": "ostrzejszymi",
+          "loc": "ostrzejszych"
+        },
+        "nonvirile": {
+          "nom": "ostrzejsze",
+          "gen": "ostrzejszych",
+          "dat": "ostrzejszym",
+          "acc": "ostrzejsze",
+          "ins": "ostrzejszymi",
+          "loc": "ostrzejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najostrzejszy",
+          "gen": "najostrzejszego",
+          "dat": "najostrzejszemu",
+          "acc": "najostrzejszego",
+          "ins": "najostrzejszym",
+          "loc": "najostrzejszym"
+        },
+        "m3": {
+          "nom": "najostrzejszy",
+          "gen": "najostrzejszego",
+          "dat": "najostrzejszemu",
+          "acc": "najostrzejszy",
+          "ins": "najostrzejszym",
+          "loc": "najostrzejszym"
+        },
+        "f": {
+          "nom": "najostrzejsza",
+          "gen": "najostrzejszej",
+          "dat": "najostrzejszej",
+          "acc": "najostrzejszą",
+          "ins": "najostrzejszą",
+          "loc": "najostrzejszej"
+        },
+        "n": {
+          "nom": "najostrzejsze",
+          "gen": "najostrzejszego",
+          "dat": "najostrzejszemu",
+          "acc": "najostrzejsze",
+          "ins": "najostrzejszym",
+          "loc": "najostrzejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najostrzejsi",
+          "gen": "najostrzejszych",
+          "dat": "najostrzejszym",
+          "acc": "najostrzejszych",
+          "ins": "najostrzejszymi",
+          "loc": "najostrzejszych"
+        },
+        "nonvirile": {
+          "nom": "najostrzejsze",
+          "gen": "najostrzejszych",
+          "dat": "najostrzejszym",
+          "acc": "najostrzejsze",
+          "ins": "najostrzejszymi",
+          "loc": "najostrzejszych"
+        }
+      }
+    }
+  }
+}

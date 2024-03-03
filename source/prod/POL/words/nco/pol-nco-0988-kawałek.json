@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kawałek",
+      "gen": "kawałka",
+      "dat": "kawałkowi",
+      "acc": "kawałek",
+      "ins": "kawałkiem",
+      "loc": "kawałku",
+      "voc": "kawałku"
+    },
+    "plural": {
+      "nom": "kawałki",
+      "gen": "kawałków",
+      "dat": "kawałkom",
+      "acc": "kawałki",
+      "ins": "kawałkami",
+      "loc": "kawałkach",
+      "voc": "kawałki"
+    }
+  }
+}

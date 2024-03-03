@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pchła",
+      "gen": "pchły",
+      "dat": "pchle",
+      "acc": "pchłę",
+      "ins": "pchłą",
+      "loc": "pchle",
+      "voc": "pchło"
+    },
+    "plural": {
+      "nom": "pchły",
+      "gen": "pcheł",
+      "dat": "pchłom",
+      "acc": "pchły",
+      "ins": "pchłami",
+      "loc": "pchłach",
+      "voc": "pchły"
+    }
+  }
+}

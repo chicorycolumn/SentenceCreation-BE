@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cebula",
+      "gen": "cebuli",
+      "dat": "cebuli",
+      "acc": "cebulę",
+      "ins": "cebulą",
+      "loc": "cebuli",
+      "voc": "cebulo"
+    },
+    "plural": {
+      "nom": "cebule",
+      "gen": "cebul",
+      "dat": "cebulom",
+      "acc": "cebule",
+      "ins": "cebulami",
+      "loc": "cebulach",
+      "voc": "cebule"
+    }
+  }
+}

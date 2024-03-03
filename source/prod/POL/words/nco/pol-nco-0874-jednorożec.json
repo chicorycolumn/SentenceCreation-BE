@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "jednorożec",
+      "gen": "jednorożca",
+      "dat": "jednorożcowi",
+      "acc": "jednorożca",
+      "ins": "jednorożcem",
+      "loc": "jednorożcu",
+      "voc": "jednorożcu"
+    },
+    "plural": {
+      "nom": "jednorożce",
+      "gen": "jednorożców",
+      "dat": "jednorożcom",
+      "acc": "jednorożce",
+      "ins": "jednorożcami",
+      "loc": "jednorożcach",
+      "voc": "jednorożce"
+    }
+  }
+}

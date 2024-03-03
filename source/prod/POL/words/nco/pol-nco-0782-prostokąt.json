@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "prostokąt",
+      "gen": "prostokątu",
+      "dat": "prostokątowi",
+      "acc": "prostokąt",
+      "ins": "prostokątem",
+      "loc": "prostokącie",
+      "voc": "prostokącie"
+    },
+    "plural": {
+      "nom": "prostokąty",
+      "gen": "prostokątów",
+      "dat": "prostokątom",
+      "acc": "prostokąty",
+      "ins": "prostokątami",
+      "loc": "prostokątach",
+      "voc": "prostokąty"
+    }
+  }
+}

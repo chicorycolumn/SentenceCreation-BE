@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "żona",
+      "gen": "żony",
+      "dat": "żonie",
+      "acc": "żonę",
+      "ins": "żoną",
+      "loc": "żonie",
+      "voc": "żono"
+    },
+    "plural": {
+      "nom": "żony",
+      "gen": "żon",
+      "dat": "żonom",
+      "acc": "żony",
+      "ins": "żonami",
+      "loc": "żonach",
+      "voc": "żony"
+    }
+  }
+}

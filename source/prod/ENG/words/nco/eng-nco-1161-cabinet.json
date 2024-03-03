@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cabinet",
+      "gen": "cabinet's"
+    },
+    "plural": {
+      "nom": "cabinets",
+      "gen": "cabinets'"
+    }
+  }
+}

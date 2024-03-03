@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "spokojnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "spokojny",
+          "gen": "spokojnego",
+          "dat": "spokojnemu",
+          "acc": "spokojnego",
+          "ins": "spokojnym",
+          "loc": "spokojnym"
+        },
+        "m3": {
+          "nom": "spokojny",
+          "gen": "spokojnego",
+          "dat": "spokojnemu",
+          "acc": "spokojny",
+          "ins": "spokojnym",
+          "loc": "spokojnym"
+        },
+        "f": {
+          "nom": "spokojna",
+          "gen": "spokojnej",
+          "dat": "spokojnej",
+          "acc": "spokojną",
+          "ins": "spokojną",
+          "loc": "spokojnej"
+        },
+        "n": {
+          "nom": "spokojne",
+          "gen": "spokojnego",
+          "dat": "spokojnemu",
+          "acc": "spokojne",
+          "ins": "spokojnym",
+          "loc": "spokojnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "spokojni",
+          "gen": "spokojnych",
+          "dat": "spokojnym",
+          "acc": "spokojnych",
+          "ins": "spokojnymi",
+          "loc": "spokojnych"
+        },
+        "nonvirile": {
+          "nom": "spokojne",
+          "gen": "spokojnych",
+          "dat": "spokojnym",
+          "acc": "spokojne",
+          "ins": "spokojnymi",
+          "loc": "spokojnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "spokojniejszy",
+          "gen": "spokojniejszego",
+          "dat": "spokojniejszemu",
+          "acc": "spokojniejszego",
+          "ins": "spokojniejszym",
+          "loc": "spokojniejszym"
+        },
+        "m3": {
+          "nom": "spokojniejszy",
+          "gen": "spokojniejszego",
+          "dat": "spokojniejszemu",
+          "acc": "spokojniejszy",
+          "ins": "spokojniejszym",
+          "loc": "spokojniejszym"
+        },
+        "f": {
+          "nom": "spokojniejsza",
+          "gen": "spokojniejszej",
+          "dat": "spokojniejszej",
+          "acc": "spokojniejszą",
+          "ins": "spokojniejszą",
+          "loc": "spokojniejszej"
+        },
+        "n": {
+          "nom": "spokojniejsze",
+          "gen": "spokojniejszego",
+          "dat": "spokojniejszemu",
+          "acc": "spokojniejsze",
+          "ins": "spokojniejszym",
+          "loc": "spokojniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "spokojniejsi",
+          "gen": "spokojniejszych",
+          "dat": "spokojniejszym",
+          "acc": "spokojniejszych",
+          "ins": "spokojniejszymi",
+          "loc": "spokojniejszych"
+        },
+        "nonvirile": {
+          "nom": "spokojniejsze",
+          "gen": "spokojniejszych",
+          "dat": "spokojniejszym",
+          "acc": "spokojniejsze",
+          "ins": "spokojniejszymi",
+          "loc": "spokojniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najspokojniejszy",
+          "gen": "najspokojniejszego",
+          "dat": "najspokojniejszemu",
+          "acc": "najspokojniejszego",
+          "ins": "najspokojniejszym",
+          "loc": "najspokojniejszym"
+        },
+        "m3": {
+          "nom": "najspokojniejszy",
+          "gen": "najspokojniejszego",
+          "dat": "najspokojniejszemu",
+          "acc": "najspokojniejszy",
+          "ins": "najspokojniejszym",
+          "loc": "najspokojniejszym"
+        },
+        "f": {
+          "nom": "najspokojniejsza",
+          "gen": "najspokojniejszej",
+          "dat": "najspokojniejszej",
+          "acc": "najspokojniejszą",
+          "ins": "najspokojniejszą",
+          "loc": "najspokojniejszej"
+        },
+        "n": {
+          "nom": "najspokojniejsze",
+          "gen": "najspokojniejszego",
+          "dat": "najspokojniejszemu",
+          "acc": "najspokojniejsze",
+          "ins": "najspokojniejszym",
+          "loc": "najspokojniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najspokojniejsi",
+          "gen": "najspokojniejszych",
+          "dat": "najspokojniejszym",
+          "acc": "najspokojniejszych",
+          "ins": "najspokojniejszymi",
+          "loc": "najspokojniejszych"
+        },
+        "nonvirile": {
+          "nom": "najspokojniejsze",
+          "gen": "najspokojniejszych",
+          "dat": "najspokojniejszym",
+          "acc": "najspokojniejsze",
+          "ins": "najspokojniejszymi",
+          "loc": "najspokojniejszych"
+        }
+      }
+    }
+  }
+}

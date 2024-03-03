@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "plural": {
+      "nom": "opady",
+      "gen": "opadów",
+      "dat": "opadom",
+      "acc": "opady",
+      "ins": "opadami",
+      "loc": "opadach",
+      "voc": "opady"
+    }
+  }
+}

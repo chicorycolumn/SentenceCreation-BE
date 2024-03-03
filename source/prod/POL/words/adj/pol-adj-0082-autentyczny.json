@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "autentycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "autentyczny",
+          "gen": "autentycznego",
+          "dat": "autentycznemu",
+          "acc": "autentycznego",
+          "ins": "autentycznym",
+          "loc": "autentycznym"
+        },
+        "m3": {
+          "nom": "autentyczny",
+          "gen": "autentycznego",
+          "dat": "autentycznemu",
+          "acc": "autentyczny",
+          "ins": "autentycznym",
+          "loc": "autentycznym"
+        },
+        "f": {
+          "nom": "autentyczna",
+          "gen": "autentycznej",
+          "dat": "autentycznej",
+          "acc": "autentyczną",
+          "ins": "autentyczną",
+          "loc": "autentycznej"
+        },
+        "n": {
+          "nom": "autentyczne",
+          "gen": "autentycznego",
+          "dat": "autentycznemu",
+          "acc": "autentyczne",
+          "ins": "autentycznym",
+          "loc": "autentycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "autentyczni",
+          "gen": "autentycznych",
+          "dat": "autentycznym",
+          "acc": "autentycznych",
+          "ins": "autentycznymi",
+          "loc": "autentycznych"
+        },
+        "nonvirile": {
+          "nom": "autentyczne",
+          "gen": "autentycznych",
+          "dat": "autentycznym",
+          "acc": "autentyczne",
+          "ins": "autentycznymi",
+          "loc": "autentycznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "autentyczniejszy",
+          "gen": "autentyczniejszego",
+          "dat": "autentyczniejszemu",
+          "acc": "autentyczniejszego",
+          "ins": "autentyczniejszym",
+          "loc": "autentyczniejszym"
+        },
+        "m3": {
+          "nom": "autentyczniejszy",
+          "gen": "autentyczniejszego",
+          "dat": "autentyczniejszemu",
+          "acc": "autentyczniejszy",
+          "ins": "autentyczniejszym",
+          "loc": "autentyczniejszym"
+        },
+        "f": {
+          "nom": "autentyczniejsza",
+          "gen": "autentyczniejszej",
+          "dat": "autentyczniejszej",
+          "acc": "autentyczniejszą",
+          "ins": "autentyczniejszą",
+          "loc": "autentyczniejszej"
+        },
+        "n": {
+          "nom": "autentyczniejsze",
+          "gen": "autentyczniejszego",
+          "dat": "autentyczniejszemu",
+          "acc": "autentyczniejsze",
+          "ins": "autentyczniejszym",
+          "loc": "autentyczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "autentyczniejsi",
+          "gen": "autentyczniejszych",
+          "dat": "autentyczniejszym",
+          "acc": "autentyczniejszych",
+          "ins": "autentyczniejszymi",
+          "loc": "autentyczniejszych"
+        },
+        "nonvirile": {
+          "nom": "autentyczniejsze",
+          "gen": "autentyczniejszych",
+          "dat": "autentyczniejszym",
+          "acc": "autentyczniejsze",
+          "ins": "autentyczniejszymi",
+          "loc": "autentyczniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najautentyczniejszy",
+          "gen": "najautentyczniejszego",
+          "dat": "najautentyczniejszemu",
+          "acc": "najautentyczniejszego",
+          "ins": "najautentyczniejszym",
+          "loc": "najautentyczniejszym"
+        },
+        "m3": {
+          "nom": "najautentyczniejszy",
+          "gen": "najautentyczniejszego",
+          "dat": "najautentyczniejszemu",
+          "acc": "najautentyczniejszy",
+          "ins": "najautentyczniejszym",
+          "loc": "najautentyczniejszym"
+        },
+        "f": {
+          "nom": "najautentyczniejsza",
+          "gen": "najautentyczniejszej",
+          "dat": "najautentyczniejszej",
+          "acc": "najautentyczniejszą",
+          "ins": "najautentyczniejszą",
+          "loc": "najautentyczniejszej"
+        },
+        "n": {
+          "nom": "najautentyczniejsze",
+          "gen": "najautentyczniejszego",
+          "dat": "najautentyczniejszemu",
+          "acc": "najautentyczniejsze",
+          "ins": "najautentyczniejszym",
+          "loc": "najautentyczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najautentyczniejsi",
+          "gen": "najautentyczniejszych",
+          "dat": "najautentyczniejszym",
+          "acc": "najautentyczniejszych",
+          "ins": "najautentyczniejszymi",
+          "loc": "najautentyczniejszych"
+        },
+        "nonvirile": {
+          "nom": "najautentyczniejsze",
+          "gen": "najautentyczniejszych",
+          "dat": "najautentyczniejszym",
+          "acc": "najautentyczniejsze",
+          "ins": "najautentyczniejszymi",
+          "loc": "najautentyczniejszych"
+        }
+      }
+    }
+  }
+}

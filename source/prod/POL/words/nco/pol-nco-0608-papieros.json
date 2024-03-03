@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "papieros",
+      "gen": "papierosa",
+      "dat": "papierosowi",
+      "acc": "papierosa",
+      "ins": "papierosem",
+      "loc": "papierosie",
+      "voc": "papierosie"
+    },
+    "plural": {
+      "nom": "papierosy",
+      "gen": "papierosów",
+      "dat": "papierosom",
+      "acc": "papierosy",
+      "ins": "papierosami",
+      "loc": "papierosach",
+      "voc": "papierosy"
+    }
+  }
+}

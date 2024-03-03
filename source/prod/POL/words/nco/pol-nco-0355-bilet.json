@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "bilet",
+      "gen": "biletu",
+      "dat": "biletowi",
+      "acc": "bilet",
+      "ins": "biletem",
+      "loc": "bilecie",
+      "voc": "bilecie"
+    },
+    "plural": {
+      "nom": "bilety",
+      "gen": "biletów",
+      "dat": "biletom",
+      "acc": "bilety",
+      "ins": "biletami",
+      "loc": "biletach",
+      "voc": "bilety"
+    }
+  }
+}

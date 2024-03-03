@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "particle",
+      "gen": "particle's"
+    },
+    "plural": {
+      "nom": "particles",
+      "gen": "particles'"
+    }
+  }
+}

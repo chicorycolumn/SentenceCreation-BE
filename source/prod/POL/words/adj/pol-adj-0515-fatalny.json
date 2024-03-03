@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "fatalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "fatalny",
+          "gen": "fatalnego",
+          "dat": "fatalnemu",
+          "acc": "fatalnego",
+          "ins": "fatalnym",
+          "loc": "fatalnym"
+        },
+        "m3": {
+          "nom": "fatalny",
+          "gen": "fatalnego",
+          "dat": "fatalnemu",
+          "acc": "fatalny",
+          "ins": "fatalnym",
+          "loc": "fatalnym"
+        },
+        "f": {
+          "nom": "fatalna",
+          "gen": "fatalnej",
+          "dat": "fatalnej",
+          "acc": "fatalną",
+          "ins": "fatalną",
+          "loc": "fatalnej"
+        },
+        "n": {
+          "nom": "fatalne",
+          "gen": "fatalnego",
+          "dat": "fatalnemu",
+          "acc": "fatalne",
+          "ins": "fatalnym",
+          "loc": "fatalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "fatalni",
+          "gen": "fatalnych",
+          "dat": "fatalnym",
+          "acc": "fatalnych",
+          "ins": "fatalnymi",
+          "loc": "fatalnych"
+        },
+        "nonvirile": {
+          "nom": "fatalne",
+          "gen": "fatalnych",
+          "dat": "fatalnym",
+          "acc": "fatalne",
+          "ins": "fatalnymi",
+          "loc": "fatalnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "fatalniejszy",
+          "gen": "fatalniejszego",
+          "dat": "fatalniejszemu",
+          "acc": "fatalniejszego",
+          "ins": "fatalniejszym",
+          "loc": "fatalniejszym"
+        },
+        "m3": {
+          "nom": "fatalniejszy",
+          "gen": "fatalniejszego",
+          "dat": "fatalniejszemu",
+          "acc": "fatalniejszy",
+          "ins": "fatalniejszym",
+          "loc": "fatalniejszym"
+        },
+        "f": {
+          "nom": "fatalniejsza",
+          "gen": "fatalniejszej",
+          "dat": "fatalniejszej",
+          "acc": "fatalniejszą",
+          "ins": "fatalniejszą",
+          "loc": "fatalniejszej"
+        },
+        "n": {
+          "nom": "fatalniejsze",
+          "gen": "fatalniejszego",
+          "dat": "fatalniejszemu",
+          "acc": "fatalniejsze",
+          "ins": "fatalniejszym",
+          "loc": "fatalniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "fatalniejsi",
+          "gen": "fatalniejszych",
+          "dat": "fatalniejszym",
+          "acc": "fatalniejszych",
+          "ins": "fatalniejszymi",
+          "loc": "fatalniejszych"
+        },
+        "nonvirile": {
+          "nom": "fatalniejsze",
+          "gen": "fatalniejszych",
+          "dat": "fatalniejszym",
+          "acc": "fatalniejsze",
+          "ins": "fatalniejszymi",
+          "loc": "fatalniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najfatalniejszy",
+          "gen": "najfatalniejszego",
+          "dat": "najfatalniejszemu",
+          "acc": "najfatalniejszego",
+          "ins": "najfatalniejszym",
+          "loc": "najfatalniejszym"
+        },
+        "m3": {
+          "nom": "najfatalniejszy",
+          "gen": "najfatalniejszego",
+          "dat": "najfatalniejszemu",
+          "acc": "najfatalniejszy",
+          "ins": "najfatalniejszym",
+          "loc": "najfatalniejszym"
+        },
+        "f": {
+          "nom": "najfatalniejsza",
+          "gen": "najfatalniejszej",
+          "dat": "najfatalniejszej",
+          "acc": "najfatalniejszą",
+          "ins": "najfatalniejszą",
+          "loc": "najfatalniejszej"
+        },
+        "n": {
+          "nom": "najfatalniejsze",
+          "gen": "najfatalniejszego",
+          "dat": "najfatalniejszemu",
+          "acc": "najfatalniejsze",
+          "ins": "najfatalniejszym",
+          "loc": "najfatalniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najfatalniejsi",
+          "gen": "najfatalniejszych",
+          "dat": "najfatalniejszym",
+          "acc": "najfatalniejszych",
+          "ins": "najfatalniejszymi",
+          "loc": "najfatalniejszych"
+        },
+        "nonvirile": {
+          "nom": "najfatalniejsze",
+          "gen": "najfatalniejszych",
+          "dat": "najfatalniejszym",
+          "acc": "najfatalniejsze",
+          "ins": "najfatalniejszymi",
+          "loc": "najfatalniejszych"
+        }
+      }
+    }
+  }
+}

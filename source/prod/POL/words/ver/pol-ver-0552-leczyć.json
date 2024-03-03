@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "leczyć",
+    "verbalNoun": "leczenie",
+    "activeAdjectival": "leczący",
+    "passiveAdjectival": "leczony",
+    "contemporaryAdverbial": "lecząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "lecz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "leczono"
+          },
+          "plural": {
+            "allPluralGenders": "leczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "leczyłem",
+            "f": "leczyłam"
+          },
+          "plural": {
+            "virile": "leczyliśmy",
+            "nonvirile": "leczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "leczyłeś",
+            "f": "leczyłaś"
+          },
+          "plural": {
+            "virile": "leczyliście",
+            "nonvirile": "leczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "leczył",
+            "f": "leczyła",
+            "n": "leczyło"
+          },
+          "plural": {
+            "virile": "leczyli",
+            "nonvirile": "leczyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "leczy się"
+          },
+          "plural": {
+            "allPluralGenders": "leczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "leczę"
+          },
+          "plural": {
+            "allPluralGenders": "leczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "leczysz"
+          },
+          "plural": {
+            "allPluralGenders": "leczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "leczy"
+          },
+          "plural": {
+            "allPluralGenders": "leczą"
+          }
+        }
+      }
+    }
+  }
+}

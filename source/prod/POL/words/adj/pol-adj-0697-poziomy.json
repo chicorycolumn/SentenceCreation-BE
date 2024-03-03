@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "poziomo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "poziomy",
+          "gen": "poziomego",
+          "dat": "poziomemu",
+          "acc": "poziomego",
+          "ins": "poziomym",
+          "loc": "poziomym"
+        },
+        "m3": {
+          "nom": "poziomy",
+          "gen": "poziomego",
+          "dat": "poziomemu",
+          "acc": "poziomy",
+          "ins": "poziomym",
+          "loc": "poziomym"
+        },
+        "f": {
+          "nom": "pozioma",
+          "gen": "poziomej",
+          "dat": "poziomej",
+          "acc": "poziomą",
+          "ins": "poziomą",
+          "loc": "poziomej"
+        },
+        "n": {
+          "nom": "poziome",
+          "gen": "poziomego",
+          "dat": "poziomemu",
+          "acc": "poziome",
+          "ins": "poziomym",
+          "loc": "poziomym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "poziomi",
+          "gen": "poziomych",
+          "dat": "poziomym",
+          "acc": "poziomych",
+          "ins": "poziomymi",
+          "loc": "poziomych"
+        },
+        "nonvirile": {
+          "nom": "poziome",
+          "gen": "poziomych",
+          "dat": "poziomym",
+          "acc": "poziome",
+          "ins": "poziomymi",
+          "loc": "poziomych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej poziomy",
+          "gen": "bardziej poziomego",
+          "dat": "bardziej poziomemu",
+          "acc": "bardziej poziomego",
+          "ins": "bardziej poziomym",
+          "loc": "bardziej poziomym"
+        },
+        "m3": {
+          "nom": "bardziej poziomy",
+          "gen": "bardziej poziomego",
+          "dat": "bardziej poziomemu",
+          "acc": "bardziej poziomy",
+          "ins": "bardziej poziomym",
+          "loc": "bardziej poziomym"
+        },
+        "f": {
+          "nom": "bardziej pozioma",
+          "gen": "bardziej poziomej",
+          "dat": "bardziej poziomej",
+          "acc": "bardziej poziomą",
+          "ins": "bardziej poziomą",
+          "loc": "bardziej poziomej"
+        },
+        "n": {
+          "nom": "bardziej poziome",
+          "gen": "bardziej poziomego",
+          "dat": "bardziej poziomemu",
+          "acc": "bardziej poziome",
+          "ins": "bardziej poziomym",
+          "loc": "bardziej poziomym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej poziomi",
+          "gen": "bardziej poziomych",
+          "dat": "bardziej poziomym",
+          "acc": "bardziej poziomych",
+          "ins": "bardziej poziomymi",
+          "loc": "bardziej poziomych"
+        },
+        "nonvirile": {
+          "nom": "bardziej poziome",
+          "gen": "bardziej poziomych",
+          "dat": "bardziej poziomym",
+          "acc": "bardziej poziome",
+          "ins": "bardziej poziomymi",
+          "loc": "bardziej poziomych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej poziomy",
+          "gen": "najbardziej poziomego",
+          "dat": "najbardziej poziomemu",
+          "acc": "najbardziej poziomego",
+          "ins": "najbardziej poziomym",
+          "loc": "najbardziej poziomym"
+        },
+        "m3": {
+          "nom": "najbardziej poziomy",
+          "gen": "najbardziej poziomego",
+          "dat": "najbardziej poziomemu",
+          "acc": "najbardziej poziomy",
+          "ins": "najbardziej poziomym",
+          "loc": "najbardziej poziomym"
+        },
+        "f": {
+          "nom": "najbardziej pozioma",
+          "gen": "najbardziej poziomej",
+          "dat": "najbardziej poziomej",
+          "acc": "najbardziej poziomą",
+          "ins": "najbardziej poziomą",
+          "loc": "najbardziej poziomej"
+        },
+        "n": {
+          "nom": "najbardziej poziome",
+          "gen": "najbardziej poziomego",
+          "dat": "najbardziej poziomemu",
+          "acc": "najbardziej poziome",
+          "ins": "najbardziej poziomym",
+          "loc": "najbardziej poziomym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej poziomi",
+          "gen": "najbardziej poziomych",
+          "dat": "najbardziej poziomym",
+          "acc": "najbardziej poziomych",
+          "ins": "najbardziej poziomymi",
+          "loc": "najbardziej poziomych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej poziome",
+          "gen": "najbardziej poziomych",
+          "dat": "najbardziej poziomym",
+          "acc": "najbardziej poziome",
+          "ins": "najbardziej poziomymi",
+          "loc": "najbardziej poziomych"
+        }
+      }
+    }
+  }
+}

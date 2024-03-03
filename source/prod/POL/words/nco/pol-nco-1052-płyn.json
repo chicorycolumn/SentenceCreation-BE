@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "płyn",
+      "gen": "płynu",
+      "dat": "płynowi",
+      "acc": "płyn",
+      "ins": "płynem",
+      "loc": "płynie",
+      "voc": "płynie"
+    },
+    "plural": {
+      "nom": "płyny",
+      "gen": "płynów",
+      "dat": "płynom",
+      "acc": "płyny",
+      "ins": "płynami",
+      "loc": "płynach",
+      "voc": "płyny"
+    }
+  }
+}

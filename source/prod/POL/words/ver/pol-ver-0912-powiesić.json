@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "powiesić",
+    "verbalNoun": "powieszenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "powieszony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "powiesiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powiesi się"
+          },
+          "plural": {
+            "allPluralGenders": "powiesi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "powieszę"
+          },
+          "plural": {
+            "allPluralGenders": "powiesimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "powiesisz"
+          },
+          "plural": {
+            "allPluralGenders": "powiesicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "powiesi"
+          },
+          "plural": {
+            "allPluralGenders": "powieszą"
+          }
+        }
+      },
+      "imperative": "powieś",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powieszono"
+          },
+          "plural": {
+            "allPluralGenders": "powieszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "powiesiłem",
+            "f": "powiesiłam"
+          },
+          "plural": {
+            "virile": "powiesiliśmy",
+            "nonvirile": "powiesiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "powiesiłeś",
+            "f": "powiesiłaś"
+          },
+          "plural": {
+            "virile": "powiesiliście",
+            "nonvirile": "powiesiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "powiesił",
+            "f": "powiesiła",
+            "n": "powiesiło"
+          },
+          "plural": {
+            "virile": "powiesili",
+            "nonvirile": "powiesiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

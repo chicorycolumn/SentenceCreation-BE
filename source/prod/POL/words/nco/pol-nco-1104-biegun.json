@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "biegun",
+      "gen": "bieguna",
+      "dat": "biegunowi",
+      "acc": "biegun",
+      "ins": "biegunem",
+      "loc": "biegunie",
+      "voc": "biegunie"
+    },
+    "plural": {
+      "nom": "bieguny",
+      "gen": "biegunów",
+      "dat": "biegunom",
+      "acc": "bieguny",
+      "ins": "biegunami",
+      "loc": "biegunach",
+      "voc": "bieguny"
+    }
+  }
+}

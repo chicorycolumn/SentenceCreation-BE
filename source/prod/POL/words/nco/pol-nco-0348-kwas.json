@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kwas",
+      "gen": "kwasu",
+      "dat": "kwasowi",
+      "acc": "kwas",
+      "ins": "kwasem",
+      "loc": "kwasie",
+      "voc": "kwasie"
+    },
+    "plural": {
+      "nom": "kwasy",
+      "gen": "kwasów",
+      "dat": "kwasom",
+      "acc": "kwasy",
+      "ins": "kwasami",
+      "loc": "kwasach",
+      "voc": "kwasy"
+    }
+  }
+}

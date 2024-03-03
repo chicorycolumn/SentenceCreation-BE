@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "prezent",
+      "gen": "prezentu",
+      "dat": "prezentowi",
+      "acc": "prezent",
+      "ins": "prezentem",
+      "loc": "prezencie",
+      "voc": "prezencie"
+    },
+    "plural": {
+      "nom": "prezenty",
+      "gen": "prezentów",
+      "dat": "prezentom",
+      "acc": "prezenty",
+      "ins": "prezentami",
+      "loc": "prezentach",
+      "voc": "prezenty"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "budzik",
+      "gen": "budzika",
+      "dat": "budzikowi",
+      "acc": "budzik",
+      "ins": "budzikiem",
+      "loc": "budziku",
+      "voc": "budziku"
+    },
+    "plural": {
+      "nom": "budziki",
+      "gen": "budzików",
+      "dat": "budzikom",
+      "acc": "budziki",
+      "ins": "budzikami",
+      "loc": "budzikach",
+      "voc": "budziki"
+    }
+  }
+}

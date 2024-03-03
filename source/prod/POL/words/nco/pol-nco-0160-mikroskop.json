@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mikroskop",
+      "gen": "mikroskopu",
+      "dat": "mikroskopowi",
+      "acc": "mikroskop",
+      "ins": "mikroskopem",
+      "loc": "mikroskopie",
+      "voc": "mikroskopie"
+    },
+    "plural": {
+      "nom": "mikroskopy",
+      "gen": "mikroskopów",
+      "dat": "mikroskopom",
+      "acc": "mikroskopy",
+      "ins": "mikroskopami",
+      "loc": "mikroskopach",
+      "voc": "mikroskopy"
+    }
+  }
+}

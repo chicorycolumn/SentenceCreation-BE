@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zgoda",
+      "gen": "zgody",
+      "dat": "zgodzie",
+      "acc": "zgodę",
+      "ins": "zgodą",
+      "loc": "zgodzie",
+      "voc": "zgodo"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "norweski",
+          "gen": "norweskiego",
+          "dat": "norweskiemu",
+          "acc": "norweskiego",
+          "ins": "norweskim",
+          "loc": "norweskim"
+        },
+        "m3": {
+          "nom": "norweski",
+          "gen": "norweskiego",
+          "dat": "norweskiemu",
+          "acc": "norweski",
+          "ins": "norweskim",
+          "loc": "norweskim"
+        },
+        "f": {
+          "nom": "norweska",
+          "gen": "norweskiej",
+          "dat": "norweskiej",
+          "acc": "norweską",
+          "ins": "norweską",
+          "loc": "norweskiej"
+        },
+        "n": {
+          "nom": "norweskie",
+          "gen": "norweskiego",
+          "dat": "norweskiemu",
+          "acc": "norweskie",
+          "ins": "norweskim",
+          "loc": "norweskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "norwescy",
+          "gen": "norweskich",
+          "dat": "norweskim",
+          "acc": "norweskich",
+          "ins": "norweskimi",
+          "loc": "norweskich"
+        },
+        "nonvirile": {
+          "nom": "norweskie",
+          "gen": "norweskich",
+          "dat": "norweskim",
+          "acc": "norweskie",
+          "ins": "norweskimi",
+          "loc": "norweskich"
+        }
+      }
+    }
+  }
+}

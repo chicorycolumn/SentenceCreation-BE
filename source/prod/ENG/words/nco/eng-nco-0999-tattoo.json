@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "tattoo",
+      "gen": "tattoo's"
+    },
+    "plural": {
+      "nom": "tattoos",
+      "gen": "tattoos'"
+    }
+  }
+}

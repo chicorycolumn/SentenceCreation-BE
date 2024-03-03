@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dziękować",
+    "verbalNoun": "dziękowanie",
+    "activeAdjectival": "dziękujący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "dziękując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dziękuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dziękowano"
+          },
+          "plural": {
+            "allPluralGenders": "dziękowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dziękowałem",
+            "f": "dziękowałam"
+          },
+          "plural": {
+            "virile": "dziękowaliśmy",
+            "nonvirile": "dziękowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dziękowałeś",
+            "f": "dziękowałaś"
+          },
+          "plural": {
+            "virile": "dziękowaliście",
+            "nonvirile": "dziękowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dziękował",
+            "f": "dziękowała",
+            "n": "dziękowało"
+          },
+          "plural": {
+            "virile": "dziękowali",
+            "nonvirile": "dziękowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dziękuje się"
+          },
+          "plural": {
+            "allPluralGenders": "dziękuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dziękuję"
+          },
+          "plural": {
+            "allPluralGenders": "dziękujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dziękujesz"
+          },
+          "plural": {
+            "allPluralGenders": "dziękujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dziękuje"
+          },
+          "plural": {
+            "allPluralGenders": "dziękują"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "miotła",
+      "gen": "miotły",
+      "dat": "miotle",
+      "acc": "miotłę",
+      "ins": "miotłą",
+      "loc": "miotle",
+      "voc": "miotło"
+    },
+    "plural": {
+      "nom": "miotły",
+      "gen": "mioteł",
+      "dat": "miotłom",
+      "acc": "miotły",
+      "ins": "miotłami",
+      "loc": "miotłach",
+      "voc": "miotły"
+    }
+  }
+}

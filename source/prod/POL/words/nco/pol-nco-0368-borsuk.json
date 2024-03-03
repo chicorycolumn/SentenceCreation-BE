@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "borsuk",
+      "gen": "borsuka",
+      "dat": "borsukowi",
+      "acc": "borsuka",
+      "ins": "borsukiem",
+      "loc": "borsuku",
+      "voc": "borsuku"
+    },
+    "plural": {
+      "nom": "borsuki",
+      "gen": "borsuków",
+      "dat": "borsukom",
+      "acc": "borsuki",
+      "ins": "borsukami",
+      "loc": "borsukach",
+      "voc": "borsuki"
+    }
+  }
+}

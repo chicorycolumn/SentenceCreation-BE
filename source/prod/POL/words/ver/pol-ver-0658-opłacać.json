@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "opłacać",
+    "verbalNoun": "opłacanie",
+    "activeAdjectival": "opłacający",
+    "passiveAdjectival": "opłacany",
+    "contemporaryAdverbial": "opłacając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "opłacaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opłacano"
+          },
+          "plural": {
+            "allPluralGenders": "opłacano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "opłacałem",
+            "f": "opłacałam"
+          },
+          "plural": {
+            "virile": "opłacaliśmy",
+            "nonvirile": "opłacałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "opłacałeś",
+            "f": "opłacałaś"
+          },
+          "plural": {
+            "virile": "opłacaliście",
+            "nonvirile": "opłacałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "opłacał",
+            "f": "opłacała",
+            "n": "opłacało"
+          },
+          "plural": {
+            "virile": "opłacali",
+            "nonvirile": "opłacały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opłaca się"
+          },
+          "plural": {
+            "allPluralGenders": "opłaca się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "opłacam"
+          },
+          "plural": {
+            "allPluralGenders": "opłacamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "opłacasz"
+          },
+          "plural": {
+            "allPluralGenders": "opłacacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "opłaca"
+          },
+          "plural": {
+            "allPluralGenders": "opłacają"
+          }
+        }
+      }
+    }
+  }
+}

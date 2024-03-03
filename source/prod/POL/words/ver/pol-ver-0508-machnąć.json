@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "machnąć",
+    "verbalNoun": "machnięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "machnięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "machnąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "machnie się"
+          },
+          "plural": {
+            "allPluralGenders": "machnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "machnę"
+          },
+          "plural": {
+            "allPluralGenders": "machniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "machniesz"
+          },
+          "plural": {
+            "allPluralGenders": "machniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "machnie"
+          },
+          "plural": {
+            "allPluralGenders": "machną"
+          }
+        }
+      },
+      "imperative": "machnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "machnięto"
+          },
+          "plural": {
+            "allPluralGenders": "machnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "machnąłem",
+            "f": "machnęłam"
+          },
+          "plural": {
+            "virile": "machnęliśmy",
+            "nonvirile": "machnęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "machnąłeś",
+            "f": "machnęłaś"
+          },
+          "plural": {
+            "virile": "machnęliście",
+            "nonvirile": "machnęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "machnął",
+            "f": "machnęła",
+            "n": "machnęło"
+          },
+          "plural": {
+            "virile": "machnęli",
+            "nonvirile": "machnęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

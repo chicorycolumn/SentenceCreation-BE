@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "stwarzać",
+    "verbalNoun": "stwarzanie",
+    "activeAdjectival": "stwarzający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "stwarzając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "stwarzaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "stwarzano"
+          },
+          "plural": {
+            "allPluralGenders": "stwarzano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "stwarzałem",
+            "f": "stwarzałam"
+          },
+          "plural": {
+            "virile": "stwarzaliśmy",
+            "nonvirile": "stwarzałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "stwarzałeś",
+            "f": "stwarzałaś"
+          },
+          "plural": {
+            "virile": "stwarzaliście",
+            "nonvirile": "stwarzałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "stwarzał",
+            "f": "stwarzała",
+            "n": "stwarzało"
+          },
+          "plural": {
+            "virile": "stwarzali",
+            "nonvirile": "stwarzały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "stwarza się"
+          },
+          "plural": {
+            "allPluralGenders": "stwarza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "stwarzam"
+          },
+          "plural": {
+            "allPluralGenders": "stwarzamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "stwarzasz"
+          },
+          "plural": {
+            "allPluralGenders": "stwarzacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "stwarza"
+          },
+          "plural": {
+            "allPluralGenders": "stwarzają"
+          }
+        }
+      }
+    }
+  }
+}

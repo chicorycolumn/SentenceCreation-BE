@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ramię",
+      "gen": "ramienia",
+      "dat": "ramieniu",
+      "acc": "ramię",
+      "ins": "ramieniem",
+      "loc": "ramieniu",
+      "voc": "ramię"
+    },
+    "plural": {
+      "nom": "ramiona",
+      "gen": "ramion",
+      "dat": "ramionom",
+      "acc": "ramiona",
+      "ins": "ramionami",
+      "loc": "ramionach",
+      "voc": "ramiona"
+    }
+  }
+}

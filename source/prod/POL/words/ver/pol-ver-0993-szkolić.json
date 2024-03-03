@@ -1,0 +1,106 @@
+{
+  "inflections": {
+    "infinitive": "szkolić",
+    "verbalNoun": "szkolenie",
+    "activeAdjectival": "szkolący",
+    "passiveAdjectival": "szkolony",
+    "contemporaryAdverbial": "szkoląc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "szkol",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "szkolono"
+          },
+          "plural": {
+            "allPluralGenders": "szkolono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": [
+              "szkoliłem"
+            ],
+            "f": [
+              "szkoliłam"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "szkoliliśmy"
+            ],
+            "nonvirile": [
+              "szkoliłyśmy"
+            ]
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": [
+              "szkoliłeś"
+            ],
+            "f": [
+              "szkoliłaś"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "szkoliliście"
+            ],
+            "nonvirile": [
+              "szkoliłyście"
+            ]
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "szkolił",
+            "f": "szkoliła",
+            "n": "szkoliło"
+          },
+          "plural": {
+            "virile": "szkolili",
+            "nonvirile": "szkoliły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "szkoli się"
+          },
+          "plural": {
+            "allPluralGenders": "szkoli się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "szkolę"
+          },
+          "plural": {
+            "allPluralGenders": "szkolimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "szkolisz"
+          },
+          "plural": {
+            "allPluralGenders": "szkolicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "szkoli"
+          },
+          "plural": {
+            "allPluralGenders": "szkolą"
+          }
+        }
+      }
+    }
+  }
+}

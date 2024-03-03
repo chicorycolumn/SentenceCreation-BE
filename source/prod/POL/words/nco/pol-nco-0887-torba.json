@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "torba",
+      "gen": "torby",
+      "dat": "torbie",
+      "acc": "torbę",
+      "ins": "torbą",
+      "loc": "torbie",
+      "voc": "torbo"
+    },
+    "plural": {
+      "nom": "torby",
+      "gen": [
+        "toreb",
+        "torb"
+      ],
+      "dat": "torbom",
+      "acc": "torby",
+      "ins": "torbami",
+      "loc": "torbach",
+      "voc": "torby"
+    }
+  }
+}

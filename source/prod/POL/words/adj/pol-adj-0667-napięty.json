@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "napięty",
+          "gen": "napiętego",
+          "dat": "napiętemu",
+          "acc": "napiętego",
+          "ins": "napiętym",
+          "loc": "napiętym"
+        },
+        "m3": {
+          "nom": "napięty",
+          "gen": "napiętego",
+          "dat": "napiętemu",
+          "acc": "napięty",
+          "ins": "napiętym",
+          "loc": "napiętym"
+        },
+        "f": {
+          "nom": "napięta",
+          "gen": "napiętej",
+          "dat": "napiętej",
+          "acc": "napiętą",
+          "ins": "napiętą",
+          "loc": "napiętej"
+        },
+        "n": {
+          "nom": "napięte",
+          "gen": "napiętego",
+          "dat": "napiętemu",
+          "acc": "napięte",
+          "ins": "napiętym",
+          "loc": "napiętym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "napięci",
+          "gen": "napiętych",
+          "dat": "napiętym",
+          "acc": "napiętych",
+          "ins": "napiętymi",
+          "loc": "napiętych"
+        },
+        "nonvirile": {
+          "nom": "napięte",
+          "gen": "napiętych",
+          "dat": "napiętym",
+          "acc": "napięte",
+          "ins": "napiętymi",
+          "loc": "napiętych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej napięty",
+          "gen": "bardziej napiętego",
+          "dat": "bardziej napiętemu",
+          "acc": "bardziej napiętego",
+          "ins": "bardziej napiętym",
+          "loc": "bardziej napiętym"
+        },
+        "m3": {
+          "nom": "bardziej napięty",
+          "gen": "bardziej napiętego",
+          "dat": "bardziej napiętemu",
+          "acc": "bardziej napięty",
+          "ins": "bardziej napiętym",
+          "loc": "bardziej napiętym"
+        },
+        "f": {
+          "nom": "bardziej napięta",
+          "gen": "bardziej napiętej",
+          "dat": "bardziej napiętej",
+          "acc": "bardziej napiętą",
+          "ins": "bardziej napiętą",
+          "loc": "bardziej napiętej"
+        },
+        "n": {
+          "nom": "bardziej napięte",
+          "gen": "bardziej napiętego",
+          "dat": "bardziej napiętemu",
+          "acc": "bardziej napięte",
+          "ins": "bardziej napiętym",
+          "loc": "bardziej napiętym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej napięci",
+          "gen": "bardziej napiętych",
+          "dat": "bardziej napiętym",
+          "acc": "bardziej napiętych",
+          "ins": "bardziej napiętymi",
+          "loc": "bardziej napiętych"
+        },
+        "nonvirile": {
+          "nom": "bardziej napięte",
+          "gen": "bardziej napiętych",
+          "dat": "bardziej napiętym",
+          "acc": "bardziej napięte",
+          "ins": "bardziej napiętymi",
+          "loc": "bardziej napiętych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej napięty",
+          "gen": "najbardziej napiętego",
+          "dat": "najbardziej napiętemu",
+          "acc": "najbardziej napiętego",
+          "ins": "najbardziej napiętym",
+          "loc": "najbardziej napiętym"
+        },
+        "m3": {
+          "nom": "najbardziej napięty",
+          "gen": "najbardziej napiętego",
+          "dat": "najbardziej napiętemu",
+          "acc": "najbardziej napięty",
+          "ins": "najbardziej napiętym",
+          "loc": "najbardziej napiętym"
+        },
+        "f": {
+          "nom": "najbardziej napięta",
+          "gen": "najbardziej napiętej",
+          "dat": "najbardziej napiętej",
+          "acc": "najbardziej napiętą",
+          "ins": "najbardziej napiętą",
+          "loc": "najbardziej napiętej"
+        },
+        "n": {
+          "nom": "najbardziej napięte",
+          "gen": "najbardziej napiętego",
+          "dat": "najbardziej napiętemu",
+          "acc": "najbardziej napięte",
+          "ins": "najbardziej napiętym",
+          "loc": "najbardziej napiętym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej napięci",
+          "gen": "najbardziej napiętych",
+          "dat": "najbardziej napiętym",
+          "acc": "najbardziej napiętych",
+          "ins": "najbardziej napiętymi",
+          "loc": "najbardziej napiętych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej napięte",
+          "gen": "najbardziej napiętych",
+          "dat": "najbardziej napiętym",
+          "acc": "najbardziej napięte",
+          "ins": "najbardziej napiętymi",
+          "loc": "najbardziej napiętych"
+        }
+      }
+    }
+  }
+}

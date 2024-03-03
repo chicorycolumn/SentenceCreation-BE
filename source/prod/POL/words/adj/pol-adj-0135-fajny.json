@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "fajnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "fajny",
+          "gen": "fajnego",
+          "dat": "fajnemu",
+          "acc": "fajnego",
+          "ins": "fajnym",
+          "loc": "fajnym"
+        },
+        "m3": {
+          "nom": "fajny",
+          "gen": "fajnego",
+          "dat": "fajnemu",
+          "acc": "fajny",
+          "ins": "fajnym",
+          "loc": "fajnym"
+        },
+        "f": {
+          "nom": "fajna",
+          "gen": "fajnej",
+          "dat": "fajnej",
+          "acc": "fajną",
+          "ins": "fajną",
+          "loc": "fajnej"
+        },
+        "n": {
+          "nom": "fajne",
+          "gen": "fajnego",
+          "dat": "fajnemu",
+          "acc": "fajne",
+          "ins": "fajnym",
+          "loc": "fajnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "fajni",
+          "gen": "fajnych",
+          "dat": "fajnym",
+          "acc": "fajnych",
+          "ins": "fajnymi",
+          "loc": "fajnych"
+        },
+        "nonvirile": {
+          "nom": "fajne",
+          "gen": "fajnych",
+          "dat": "fajnym",
+          "acc": "fajne",
+          "ins": "fajnymi",
+          "loc": "fajnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "fajniejszy",
+          "gen": "fajniejszego",
+          "dat": "fajniejszemu",
+          "acc": "fajniejszego",
+          "ins": "fajniejszym",
+          "loc": "fajniejszym"
+        },
+        "m3": {
+          "nom": "fajniejszy",
+          "gen": "fajniejszego",
+          "dat": "fajniejszemu",
+          "acc": "fajniejszy",
+          "ins": "fajniejszym",
+          "loc": "fajniejszym"
+        },
+        "f": {
+          "nom": "fajniejsza",
+          "gen": "fajniejszej",
+          "dat": "fajniejszej",
+          "acc": "fajniejszą",
+          "ins": "fajniejszą",
+          "loc": "fajniejszej"
+        },
+        "n": {
+          "nom": "fajniejsze",
+          "gen": "fajniejszego",
+          "dat": "fajniejszemu",
+          "acc": "fajniejsze",
+          "ins": "fajniejszym",
+          "loc": "fajniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "fajniejsi",
+          "gen": "fajniejszych",
+          "dat": "fajniejszym",
+          "acc": "fajniejszych",
+          "ins": "fajniejszymi",
+          "loc": "fajniejszych"
+        },
+        "nonvirile": {
+          "nom": "fajniejsze",
+          "gen": "fajniejszych",
+          "dat": "fajniejszym",
+          "acc": "fajniejsze",
+          "ins": "fajniejszymi",
+          "loc": "fajniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najfajniejszy",
+          "gen": "najfajniejszego",
+          "dat": "najfajniejszemu",
+          "acc": "najfajniejszego",
+          "ins": "najfajniejszym",
+          "loc": "najfajniejszym"
+        },
+        "m3": {
+          "nom": "najfajniejszy",
+          "gen": "najfajniejszego",
+          "dat": "najfajniejszemu",
+          "acc": "najfajniejszy",
+          "ins": "najfajniejszym",
+          "loc": "najfajniejszym"
+        },
+        "f": {
+          "nom": "najfajniejsza",
+          "gen": "najfajniejszej",
+          "dat": "najfajniejszej",
+          "acc": "najfajniejszą",
+          "ins": "najfajniejszą",
+          "loc": "najfajniejszej"
+        },
+        "n": {
+          "nom": "najfajniejsze",
+          "gen": "najfajniejszego",
+          "dat": "najfajniejszemu",
+          "acc": "najfajniejsze",
+          "ins": "najfajniejszym",
+          "loc": "najfajniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najfajniejsi",
+          "gen": "najfajniejszych",
+          "dat": "najfajniejszym",
+          "acc": "najfajniejszych",
+          "ins": "najfajniejszymi",
+          "loc": "najfajniejszych"
+        },
+        "nonvirile": {
+          "nom": "najfajniejsze",
+          "gen": "najfajniejszych",
+          "dat": "najfajniejszym",
+          "acc": "najfajniejsze",
+          "ins": "najfajniejszymi",
+          "loc": "najfajniejszych"
+        }
+      }
+    }
+  }
+}

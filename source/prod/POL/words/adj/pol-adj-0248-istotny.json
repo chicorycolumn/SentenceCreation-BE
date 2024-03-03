@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "istotnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "istotny",
+          "gen": "istotnego",
+          "dat": "istotnemu",
+          "acc": "istotnego",
+          "ins": "istotnym",
+          "loc": "istotnym"
+        },
+        "m3": {
+          "nom": "istotny",
+          "gen": "istotnego",
+          "dat": "istotnemu",
+          "acc": "istotny",
+          "ins": "istotnym",
+          "loc": "istotnym"
+        },
+        "f": {
+          "nom": "istotna",
+          "gen": "istotnej",
+          "dat": "istotnej",
+          "acc": "istotną",
+          "ins": "istotną",
+          "loc": "istotnej"
+        },
+        "n": {
+          "nom": "istotne",
+          "gen": "istotnego",
+          "dat": "istotnemu",
+          "acc": "istotne",
+          "ins": "istotnym",
+          "loc": "istotnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "istotni",
+          "gen": "istotnych",
+          "dat": "istotnym",
+          "acc": "istotnych",
+          "ins": "istotnymi",
+          "loc": "istotnych"
+        },
+        "nonvirile": {
+          "nom": "istotne",
+          "gen": "istotnych",
+          "dat": "istotnym",
+          "acc": "istotne",
+          "ins": "istotnymi",
+          "loc": "istotnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "istotniejszy",
+          "gen": "istotniejszego",
+          "dat": "istotniejszemu",
+          "acc": "istotniejszego",
+          "ins": "istotniejszym",
+          "loc": "istotniejszym"
+        },
+        "m3": {
+          "nom": "istotniejszy",
+          "gen": "istotniejszego",
+          "dat": "istotniejszemu",
+          "acc": "istotniejszy",
+          "ins": "istotniejszym",
+          "loc": "istotniejszym"
+        },
+        "f": {
+          "nom": "istotniejsza",
+          "gen": "istotniejszej",
+          "dat": "istotniejszej",
+          "acc": "istotniejszą",
+          "ins": "istotniejszą",
+          "loc": "istotniejszej"
+        },
+        "n": {
+          "nom": "istotniejsze",
+          "gen": "istotniejszego",
+          "dat": "istotniejszemu",
+          "acc": "istotniejsze",
+          "ins": "istotniejszym",
+          "loc": "istotniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "istotniejsi",
+          "gen": "istotniejszych",
+          "dat": "istotniejszym",
+          "acc": "istotniejszych",
+          "ins": "istotniejszymi",
+          "loc": "istotniejszych"
+        },
+        "nonvirile": {
+          "nom": "istotniejsze",
+          "gen": "istotniejszych",
+          "dat": "istotniejszym",
+          "acc": "istotniejsze",
+          "ins": "istotniejszymi",
+          "loc": "istotniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najistotniejszy",
+          "gen": "najistotniejszego",
+          "dat": "najistotniejszemu",
+          "acc": "najistotniejszego",
+          "ins": "najistotniejszym",
+          "loc": "najistotniejszym"
+        },
+        "m3": {
+          "nom": "najistotniejszy",
+          "gen": "najistotniejszego",
+          "dat": "najistotniejszemu",
+          "acc": "najistotniejszy",
+          "ins": "najistotniejszym",
+          "loc": "najistotniejszym"
+        },
+        "f": {
+          "nom": "najistotniejsza",
+          "gen": "najistotniejszej",
+          "dat": "najistotniejszej",
+          "acc": "najistotniejszą",
+          "ins": "najistotniejszą",
+          "loc": "najistotniejszej"
+        },
+        "n": {
+          "nom": "najistotniejsze",
+          "gen": "najistotniejszego",
+          "dat": "najistotniejszemu",
+          "acc": "najistotniejsze",
+          "ins": "najistotniejszym",
+          "loc": "najistotniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najistotniejsi",
+          "gen": "najistotniejszych",
+          "dat": "najistotniejszym",
+          "acc": "najistotniejszych",
+          "ins": "najistotniejszymi",
+          "loc": "najistotniejszych"
+        },
+        "nonvirile": {
+          "nom": "najistotniejsze",
+          "gen": "najistotniejszych",
+          "dat": "najistotniejszym",
+          "acc": "najistotniejsze",
+          "ins": "najistotniejszymi",
+          "loc": "najistotniejszych"
+        }
+      }
+    }
+  }
+}

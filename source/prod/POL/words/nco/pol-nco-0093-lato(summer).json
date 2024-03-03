@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lato",
+      "gen": "lata",
+      "dat": "latu",
+      "acc": "lato",
+      "ins": "latem",
+      "loc": "lecie",
+      "voc": "lato"
+    },
+    "plural": {
+      "nom": "lata",
+      "gen": "lat",
+      "dat": "latom",
+      "acc": "lata",
+      "ins": "latami",
+      "loc": "latach",
+      "voc": "lata"
+    }
+  }
+}

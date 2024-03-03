@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wygrywać",
+    "verbalNoun": "wygrywanie",
+    "activeAdjectival": "wygrywający",
+    "passiveAdjectival": "wygrywany",
+    "contemporaryAdverbial": "wygrywając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "wygrywaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wygrywano"
+          },
+          "plural": {
+            "allPluralGenders": "wygrywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wygrywałem",
+            "f": "wygrywałam"
+          },
+          "plural": {
+            "virile": "wygrywaliśmy",
+            "nonvirile": "wygrywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wygrywałeś",
+            "f": "wygrywałaś"
+          },
+          "plural": {
+            "virile": "wygrywaliście",
+            "nonvirile": "wygrywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wygrywał",
+            "f": "wygrywała",
+            "n": "wygrywało"
+          },
+          "plural": {
+            "virile": "wygrywali",
+            "nonvirile": "wygrywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wygrywa się"
+          },
+          "plural": {
+            "allPluralGenders": "wygrywa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wygrywam"
+          },
+          "plural": {
+            "allPluralGenders": "wygrywamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wygrywasz"
+          },
+          "plural": {
+            "allPluralGenders": "wygrywacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wygrywa"
+          },
+          "plural": {
+            "allPluralGenders": "wygrywają"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "rzucić",
+    "verbalNoun": "rzucenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "rzuciwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "rzuci się"
+          },
+          "plural": {
+            "allPluralGenders": "rzuci się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "rzucę"
+          },
+          "plural": {
+            "allPluralGenders": "rzucimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "rzucisz"
+          },
+          "plural": {
+            "allPluralGenders": "rzucicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "rzuci"
+          },
+          "plural": {
+            "allPluralGenders": "rzucą"
+          }
+        }
+      },
+      "imperative": "rzuć",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "rzucono"
+          },
+          "plural": {
+            "allPluralGenders": "rzucono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "rzuciłem",
+            "f": "rzuciłam"
+          },
+          "plural": {
+            "virile": "rzuciliśmy",
+            "nonvirile": "rzuciłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "rzuciłeś",
+            "f": "rzuciłaś"
+          },
+          "plural": {
+            "virile": "rzuciliście",
+            "nonvirile": "rzuciłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "rzucił",
+            "f": "rzuciła",
+            "n": "rzuciło"
+          },
+          "plural": {
+            "virile": "rzucili",
+            "nonvirile": "rzuciły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

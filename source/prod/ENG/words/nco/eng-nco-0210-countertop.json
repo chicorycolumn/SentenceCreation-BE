@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "countertop",
+      "gen": "countertop's"
+    },
+    "plural": {
+      "nom": "countertops",
+      "gen": "countertops'"
+    }
+  }
+}

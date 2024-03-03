@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zima",
+      "gen": "zimy",
+      "dat": "zimie",
+      "acc": "zimę",
+      "ins": "zimą",
+      "loc": "zimie",
+      "voc": "zimo"
+    },
+    "plural": {
+      "nom": "zimy",
+      "gen": "zim",
+      "dat": "zimom",
+      "acc": "zimy",
+      "ins": "zimami",
+      "loc": "zimach",
+      "voc": "zimy"
+    }
+  }
+}

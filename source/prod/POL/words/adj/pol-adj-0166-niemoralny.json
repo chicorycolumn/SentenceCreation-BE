@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niemoralnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niemoralny",
+          "gen": "niemoralnego",
+          "dat": "niemoralnemu",
+          "acc": "niemoralnego",
+          "ins": "niemoralnym",
+          "loc": "niemoralnym"
+        },
+        "m3": {
+          "nom": "niemoralny",
+          "gen": "niemoralnego",
+          "dat": "niemoralnemu",
+          "acc": "niemoralny",
+          "ins": "niemoralnym",
+          "loc": "niemoralnym"
+        },
+        "f": {
+          "nom": "niemoralna",
+          "gen": "niemoralnej",
+          "dat": "niemoralnej",
+          "acc": "niemoralną",
+          "ins": "niemoralną",
+          "loc": "niemoralnej"
+        },
+        "n": {
+          "nom": "niemoralne",
+          "gen": "niemoralnego",
+          "dat": "niemoralnemu",
+          "acc": "niemoralne",
+          "ins": "niemoralnym",
+          "loc": "niemoralnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niemoralni",
+          "gen": "niemoralnych",
+          "dat": "niemoralnym",
+          "acc": "niemoralnych",
+          "ins": "niemoralnymi",
+          "loc": "niemoralnych"
+        },
+        "nonvirile": {
+          "nom": "niemoralne",
+          "gen": "niemoralnych",
+          "dat": "niemoralnym",
+          "acc": "niemoralne",
+          "ins": "niemoralnymi",
+          "loc": "niemoralnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "niemoralniejszy",
+          "gen": "niemoralniejszego",
+          "dat": "niemoralniejszemu",
+          "acc": "niemoralniejszego",
+          "ins": "niemoralniejszym",
+          "loc": "niemoralniejszym"
+        },
+        "m3": {
+          "nom": "niemoralniejszy",
+          "gen": "niemoralniejszego",
+          "dat": "niemoralniejszemu",
+          "acc": "niemoralniejszy",
+          "ins": "niemoralniejszym",
+          "loc": "niemoralniejszym"
+        },
+        "f": {
+          "nom": "niemoralniejsza",
+          "gen": "niemoralniejszej",
+          "dat": "niemoralniejszej",
+          "acc": "niemoralniejszą",
+          "ins": "niemoralniejszą",
+          "loc": "niemoralniejszej"
+        },
+        "n": {
+          "nom": "niemoralniejsze",
+          "gen": "niemoralniejszego",
+          "dat": "niemoralniejszemu",
+          "acc": "niemoralniejsze",
+          "ins": "niemoralniejszym",
+          "loc": "niemoralniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niemoralniejsi",
+          "gen": "niemoralniejszych",
+          "dat": "niemoralniejszym",
+          "acc": "niemoralniejszych",
+          "ins": "niemoralniejszymi",
+          "loc": "niemoralniejszych"
+        },
+        "nonvirile": {
+          "nom": "niemoralniejsze",
+          "gen": "niemoralniejszych",
+          "dat": "niemoralniejszym",
+          "acc": "niemoralniejsze",
+          "ins": "niemoralniejszymi",
+          "loc": "niemoralniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najniemoralniejszy",
+          "gen": "najniemoralniejszego",
+          "dat": "najniemoralniejszemu",
+          "acc": "najniemoralniejszego",
+          "ins": "najniemoralniejszym",
+          "loc": "najniemoralniejszym"
+        },
+        "m3": {
+          "nom": "najniemoralniejszy",
+          "gen": "najniemoralniejszego",
+          "dat": "najniemoralniejszemu",
+          "acc": "najniemoralniejszy",
+          "ins": "najniemoralniejszym",
+          "loc": "najniemoralniejszym"
+        },
+        "f": {
+          "nom": "najniemoralniejsza",
+          "gen": "najniemoralniejszej",
+          "dat": "najniemoralniejszej",
+          "acc": "najniemoralniejszą",
+          "ins": "najniemoralniejszą",
+          "loc": "najniemoralniejszej"
+        },
+        "n": {
+          "nom": "najniemoralniejsze",
+          "gen": "najniemoralniejszego",
+          "dat": "najniemoralniejszemu",
+          "acc": "najniemoralniejsze",
+          "ins": "najniemoralniejszym",
+          "loc": "najniemoralniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najniemoralniejsi",
+          "gen": "najniemoralniejszych",
+          "dat": "najniemoralniejszym",
+          "acc": "najniemoralniejszych",
+          "ins": "najniemoralniejszymi",
+          "loc": "najniemoralniejszych"
+        },
+        "nonvirile": {
+          "nom": "najniemoralniejsze",
+          "gen": "najniemoralniejszych",
+          "dat": "najniemoralniejszym",
+          "acc": "najniemoralniejsze",
+          "ins": "najniemoralniejszymi",
+          "loc": "najniemoralniejszych"
+        }
+      }
+    }
+  }
+}

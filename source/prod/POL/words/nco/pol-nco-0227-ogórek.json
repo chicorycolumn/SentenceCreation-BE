@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ogórek",
+      "gen": "ogórka",
+      "dat": "ogórkowi",
+      "acc": "ogórek",
+      "ins": "ogórkiem",
+      "loc": "ogórku",
+      "voc": "ogórku"
+    },
+    "plural": {
+      "nom": "ogórki",
+      "gen": "ogórków",
+      "dat": "ogórkom",
+      "acc": "ogórki",
+      "ins": "ogórkami",
+      "loc": "ogórkach",
+      "voc": "ogórki"
+    }
+  }
+}

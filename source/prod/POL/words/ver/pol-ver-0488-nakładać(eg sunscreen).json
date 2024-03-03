@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nakładać",
+    "verbalNoun": "nakładanie",
+    "activeAdjectival": "nakładający",
+    "passiveAdjectival": "nakładany",
+    "contemporaryAdverbial": "nakładając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "nakładaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nakładano"
+          },
+          "plural": {
+            "allPluralGenders": "nakładano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nakładałem",
+            "f": "nakładałam"
+          },
+          "plural": {
+            "virile": "nakładaliśmy",
+            "nonvirile": "nakładałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nakładałeś",
+            "f": "nakładałaś"
+          },
+          "plural": {
+            "virile": "nakładaliście",
+            "nonvirile": "nakładałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nakładał",
+            "f": "nakładała",
+            "n": "nakładało"
+          },
+          "plural": {
+            "virile": "nakładali",
+            "nonvirile": "nakładały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nakłada się"
+          },
+          "plural": {
+            "allPluralGenders": "nakłada się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nakładam"
+          },
+          "plural": {
+            "allPluralGenders": "nakładamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nakładasz"
+          },
+          "plural": {
+            "allPluralGenders": "nakładacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nakłada"
+          },
+          "plural": {
+            "allPluralGenders": "nakładają"
+          }
+        }
+      }
+    }
+  }
+}

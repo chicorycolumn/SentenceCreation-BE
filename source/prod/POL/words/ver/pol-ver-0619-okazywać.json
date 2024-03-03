@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "okazywać",
+    "verbalNoun": "okazywanie",
+    "activeAdjectival": "okazujący",
+    "passiveAdjectival": "okazywany",
+    "contemporaryAdverbial": "okazując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "okazuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "okazywano"
+          },
+          "plural": {
+            "allPluralGenders": "okazywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "okazywałem",
+            "f": "okazywałam"
+          },
+          "plural": {
+            "virile": "okazywaliśmy",
+            "nonvirile": "okazywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "okazywałeś",
+            "f": "okazywałaś"
+          },
+          "plural": {
+            "virile": "okazywaliście",
+            "nonvirile": "okazywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "okazywał",
+            "f": "okazywała",
+            "n": "okazywało"
+          },
+          "plural": {
+            "virile": "okazywali",
+            "nonvirile": "okazywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "okazuje się"
+          },
+          "plural": {
+            "allPluralGenders": "okazuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "okazuję"
+          },
+          "plural": {
+            "allPluralGenders": "okazujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "okazujesz"
+          },
+          "plural": {
+            "allPluralGenders": "okazujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "okazuje"
+          },
+          "plural": {
+            "allPluralGenders": "okazują"
+          }
+        }
+      }
+    }
+  }
+}

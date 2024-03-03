@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zmieniać",
+    "verbalNoun": "zmienianie",
+    "activeAdjectival": "zmieniający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "zmieniając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "zmieniaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zmieniano"
+          },
+          "plural": {
+            "allPluralGenders": "zmieniano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zmieniałem",
+            "f": "zmieniałam"
+          },
+          "plural": {
+            "virile": "zmienialiśmy",
+            "nonvirile": "zmieniałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zmieniałeś",
+            "f": "zmieniałaś"
+          },
+          "plural": {
+            "virile": "zmienialiście",
+            "nonvirile": "zmieniałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zmieniał",
+            "f": "zmieniała",
+            "n": "zmieniało"
+          },
+          "plural": {
+            "virile": "zmieniali",
+            "nonvirile": "zmieniały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zmienia się"
+          },
+          "plural": {
+            "allPluralGenders": "zmienia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zmieniam"
+          },
+          "plural": {
+            "allPluralGenders": "zmieniamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zmieniasz"
+          },
+          "plural": {
+            "allPluralGenders": "zmieniacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zmienia"
+          },
+          "plural": {
+            "allPluralGenders": "zmieniają"
+          }
+        }
+      }
+    }
+  }
+}

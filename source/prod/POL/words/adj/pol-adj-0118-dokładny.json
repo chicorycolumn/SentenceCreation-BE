@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "dokładnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dokładny",
+          "gen": "dokładnego",
+          "dat": "dokładnemu",
+          "acc": "dokładnego",
+          "ins": "dokładnym",
+          "loc": "dokładnym"
+        },
+        "m3": {
+          "nom": "dokładny",
+          "gen": "dokładnego",
+          "dat": "dokładnemu",
+          "acc": "dokładny",
+          "ins": "dokładnym",
+          "loc": "dokładnym"
+        },
+        "f": {
+          "nom": "dokładna",
+          "gen": "dokładnej",
+          "dat": "dokładnej",
+          "acc": "dokładną",
+          "ins": "dokładną",
+          "loc": "dokładnej"
+        },
+        "n": {
+          "nom": "dokładne",
+          "gen": "dokładnego",
+          "dat": "dokładnemu",
+          "acc": "dokładne",
+          "ins": "dokładnym",
+          "loc": "dokładnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dokładni",
+          "gen": "dokładnych",
+          "dat": "dokładnym",
+          "acc": "dokładnych",
+          "ins": "dokładnymi",
+          "loc": "dokładnych"
+        },
+        "nonvirile": {
+          "nom": "dokładne",
+          "gen": "dokładnych",
+          "dat": "dokładnym",
+          "acc": "dokładne",
+          "ins": "dokładnymi",
+          "loc": "dokładnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "dokładniejszy",
+          "gen": "dokładniejszego",
+          "dat": "dokładniejszemu",
+          "acc": "dokładniejszego",
+          "ins": "dokładniejszym",
+          "loc": "dokładniejszym"
+        },
+        "m3": {
+          "nom": "dokładniejszy",
+          "gen": "dokładniejszego",
+          "dat": "dokładniejszemu",
+          "acc": "dokładniejszy",
+          "ins": "dokładniejszym",
+          "loc": "dokładniejszym"
+        },
+        "f": {
+          "nom": "dokładniejsza",
+          "gen": "dokładniejszej",
+          "dat": "dokładniejszej",
+          "acc": "dokładniejszą",
+          "ins": "dokładniejszą",
+          "loc": "dokładniejszej"
+        },
+        "n": {
+          "nom": "dokładniejsze",
+          "gen": "dokładniejszego",
+          "dat": "dokładniejszemu",
+          "acc": "dokładniejsze",
+          "ins": "dokładniejszym",
+          "loc": "dokładniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dokładniejsi",
+          "gen": "dokładniejszych",
+          "dat": "dokładniejszym",
+          "acc": "dokładniejszych",
+          "ins": "dokładniejszymi",
+          "loc": "dokładniejszych"
+        },
+        "nonvirile": {
+          "nom": "dokładniejsze",
+          "gen": "dokładniejszych",
+          "dat": "dokładniejszym",
+          "acc": "dokładniejsze",
+          "ins": "dokładniejszymi",
+          "loc": "dokładniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najdokładniejszy",
+          "gen": "najdokładniejszego",
+          "dat": "najdokładniejszemu",
+          "acc": "najdokładniejszego",
+          "ins": "najdokładniejszym",
+          "loc": "najdokładniejszym"
+        },
+        "m3": {
+          "nom": "najdokładniejszy",
+          "gen": "najdokładniejszego",
+          "dat": "najdokładniejszemu",
+          "acc": "najdokładniejszy",
+          "ins": "najdokładniejszym",
+          "loc": "najdokładniejszym"
+        },
+        "f": {
+          "nom": "najdokładniejsza",
+          "gen": "najdokładniejszej",
+          "dat": "najdokładniejszej",
+          "acc": "najdokładniejszą",
+          "ins": "najdokładniejszą",
+          "loc": "najdokładniejszej"
+        },
+        "n": {
+          "nom": "najdokładniejsze",
+          "gen": "najdokładniejszego",
+          "dat": "najdokładniejszemu",
+          "acc": "najdokładniejsze",
+          "ins": "najdokładniejszym",
+          "loc": "najdokładniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najdokładniejsi",
+          "gen": "najdokładniejszych",
+          "dat": "najdokładniejszym",
+          "acc": "najdokładniejszych",
+          "ins": "najdokładniejszymi",
+          "loc": "najdokładniejszych"
+        },
+        "nonvirile": {
+          "nom": "najdokładniejsze",
+          "gen": "najdokładniejszych",
+          "dat": "najdokładniejszym",
+          "acc": "najdokładniejsze",
+          "ins": "najdokładniejszymi",
+          "loc": "najdokładniejszych"
+        }
+      }
+    }
+  }
+}

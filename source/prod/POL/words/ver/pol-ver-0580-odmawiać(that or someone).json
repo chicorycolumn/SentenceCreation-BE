@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odmawiać",
+    "verbalNoun": "odmawianie",
+    "activeAdjectival": "odmawiający",
+    "passiveAdjectival": "odmawiany",
+    "contemporaryAdverbial": "odmawiając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odmawiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odmawiano"
+          },
+          "plural": {
+            "allPluralGenders": "odmawiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odmawiałem",
+            "f": "odmawiałam"
+          },
+          "plural": {
+            "virile": "odmawialiśmy",
+            "nonvirile": "odmawiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odmawiałeś",
+            "f": "odmawiałaś"
+          },
+          "plural": {
+            "virile": "odmawialiście",
+            "nonvirile": "odmawiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odmawiał",
+            "f": "odmawiała",
+            "n": "odmawiało"
+          },
+          "plural": {
+            "virile": "odmawiali",
+            "nonvirile": "odmawiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odmawia się"
+          },
+          "plural": {
+            "allPluralGenders": "odmawia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odmawiam"
+          },
+          "plural": {
+            "allPluralGenders": "odmawiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odmawiasz"
+          },
+          "plural": {
+            "allPluralGenders": "odmawiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odmawia"
+          },
+          "plural": {
+            "allPluralGenders": "odmawiają"
+          }
+        }
+      }
+    }
+  }
+}

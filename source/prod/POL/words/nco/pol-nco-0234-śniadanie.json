@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "śniadanie",
+      "gen": "śniadania",
+      "dat": "śniadaniu",
+      "acc": "śniadanie",
+      "ins": "śniadaniem",
+      "loc": "śniadaniu",
+      "voc": "śniadanie"
+    },
+    "plural": {
+      "nom": "śniadania",
+      "gen": "śniadań",
+      "dat": "śniadaniom",
+      "acc": "śniadania",
+      "ins": "śniadaniami",
+      "loc": "śniadaniach",
+      "voc": "śniadania"
+    }
+  }
+}

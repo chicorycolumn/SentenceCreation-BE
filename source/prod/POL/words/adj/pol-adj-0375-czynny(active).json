@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "czynnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "czynny",
+          "gen": "czynnego",
+          "dat": "czynnemu",
+          "acc": "czynnego",
+          "ins": "czynnym",
+          "loc": "czynnym"
+        },
+        "m3": {
+          "nom": "czynny",
+          "gen": "czynnego",
+          "dat": "czynnemu",
+          "acc": "czynny",
+          "ins": "czynnym",
+          "loc": "czynnym"
+        },
+        "f": {
+          "nom": "czynna",
+          "gen": "czynnej",
+          "dat": "czynnej",
+          "acc": "czynną",
+          "ins": "czynną",
+          "loc": "czynnej"
+        },
+        "n": {
+          "nom": "czynne",
+          "gen": "czynnego",
+          "dat": "czynnemu",
+          "acc": "czynne",
+          "ins": "czynnym",
+          "loc": "czynnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "czynni",
+          "gen": "czynnych",
+          "dat": "czynnym",
+          "acc": "czynnych",
+          "ins": "czynnymi",
+          "loc": "czynnych"
+        },
+        "nonvirile": {
+          "nom": "czynne",
+          "gen": "czynnych",
+          "dat": "czynnym",
+          "acc": "czynne",
+          "ins": "czynnymi",
+          "loc": "czynnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "czynniejszy",
+          "gen": "czynniejszego",
+          "dat": "czynniejszemu",
+          "acc": "czynniejszego",
+          "ins": "czynniejszym",
+          "loc": "czynniejszym"
+        },
+        "m3": {
+          "nom": "czynniejszy",
+          "gen": "czynniejszego",
+          "dat": "czynniejszemu",
+          "acc": "czynniejszy",
+          "ins": "czynniejszym",
+          "loc": "czynniejszym"
+        },
+        "f": {
+          "nom": "czynniejsza",
+          "gen": "czynniejszej",
+          "dat": "czynniejszej",
+          "acc": "czynniejszą",
+          "ins": "czynniejszą",
+          "loc": "czynniejszej"
+        },
+        "n": {
+          "nom": "czynniejsze",
+          "gen": "czynniejszego",
+          "dat": "czynniejszemu",
+          "acc": "czynniejsze",
+          "ins": "czynniejszym",
+          "loc": "czynniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "czynniejsi",
+          "gen": "czynniejszych",
+          "dat": "czynniejszym",
+          "acc": "czynniejszych",
+          "ins": "czynniejszymi",
+          "loc": "czynniejszych"
+        },
+        "nonvirile": {
+          "nom": "czynniejsze",
+          "gen": "czynniejszych",
+          "dat": "czynniejszym",
+          "acc": "czynniejsze",
+          "ins": "czynniejszymi",
+          "loc": "czynniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najczynniejszy",
+          "gen": "najczynniejszego",
+          "dat": "najczynniejszemu",
+          "acc": "najczynniejszego",
+          "ins": "najczynniejszym",
+          "loc": "najczynniejszym"
+        },
+        "m3": {
+          "nom": "najczynniejszy",
+          "gen": "najczynniejszego",
+          "dat": "najczynniejszemu",
+          "acc": "najczynniejszy",
+          "ins": "najczynniejszym",
+          "loc": "najczynniejszym"
+        },
+        "f": {
+          "nom": "najczynniejsza",
+          "gen": "najczynniejszej",
+          "dat": "najczynniejszej",
+          "acc": "najczynniejszą",
+          "ins": "najczynniejszą",
+          "loc": "najczynniejszej"
+        },
+        "n": {
+          "nom": "najczynniejsze",
+          "gen": "najczynniejszego",
+          "dat": "najczynniejszemu",
+          "acc": "najczynniejsze",
+          "ins": "najczynniejszym",
+          "loc": "najczynniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najczynniejsi",
+          "gen": "najczynniejszych",
+          "dat": "najczynniejszym",
+          "acc": "najczynniejszych",
+          "ins": "najczynniejszymi",
+          "loc": "najczynniejszych"
+        },
+        "nonvirile": {
+          "nom": "najczynniejsze",
+          "gen": "najczynniejszych",
+          "dat": "najczynniejszym",
+          "acc": "najczynniejsze",
+          "ins": "najczynniejszymi",
+          "loc": "najczynniejszych"
+        }
+      }
+    }
+  }
+}

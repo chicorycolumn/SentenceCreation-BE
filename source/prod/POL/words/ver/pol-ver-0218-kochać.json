@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "kochać",
+    "verbalNoun": "kochanie",
+    "activeAdjectival": "kochający",
+    "passiveAdjectival": "kochany",
+    "contemporaryAdverbial": "kochając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "kochaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kochano"
+          },
+          "plural": {
+            "allPluralGenders": "kochano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "kochałem",
+            "f": "kochałam"
+          },
+          "plural": {
+            "virile": "kochaliśmy",
+            "nonvirile": "kochałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "kochałeś",
+            "f": "kochałaś"
+          },
+          "plural": {
+            "virile": "kochaliście",
+            "nonvirile": "kochałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "kochał",
+            "f": "kochała",
+            "n": "kochało"
+          },
+          "plural": {
+            "virile": "kochali",
+            "nonvirile": "kochały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kocha się"
+          },
+          "plural": {
+            "allPluralGenders": "kocha się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "kocham"
+          },
+          "plural": {
+            "allPluralGenders": "kochamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "kochasz"
+          },
+          "plural": {
+            "allPluralGenders": "kochacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "kocha"
+          },
+          "plural": {
+            "allPluralGenders": "kochają"
+          }
+        }
+      }
+    }
+  }
+}

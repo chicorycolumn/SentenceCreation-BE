@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "fabryka",
+      "gen": "fabryki",
+      "dat": "fabryce",
+      "acc": "fabrykę",
+      "ins": "fabryką",
+      "loc": "fabryce",
+      "voc": "fabryko"
+    },
+    "plural": {
+      "nom": "fabryki",
+      "gen": "fabryk",
+      "dat": "fabrykom",
+      "acc": "fabryki",
+      "ins": "fabrykami",
+      "loc": "fabrykach",
+      "voc": "fabryki"
+    }
+  }
+}

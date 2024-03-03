@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pozbawić",
+    "verbalNoun": "pozbawienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pozbawiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pozbawiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pozbawi się"
+          },
+          "plural": {
+            "allPluralGenders": "pozbawi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pozbawię"
+          },
+          "plural": {
+            "allPluralGenders": "pozbawimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pozbawisz"
+          },
+          "plural": {
+            "allPluralGenders": "pozbawicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pozbawi"
+          },
+          "plural": {
+            "allPluralGenders": "pozbawią"
+          }
+        }
+      },
+      "imperative": "pozbaw",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pozbawiono"
+          },
+          "plural": {
+            "allPluralGenders": "pozbawiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pozbawiłem",
+            "f": "pozbawiłam"
+          },
+          "plural": {
+            "virile": "pozbawiliśmy",
+            "nonvirile": "pozbawiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pozbawiłeś",
+            "f": "pozbawiłaś"
+          },
+          "plural": {
+            "virile": "pozbawiliście",
+            "nonvirile": "pozbawiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pozbawił",
+            "f": "pozbawiła",
+            "n": "pozbawiło"
+          },
+          "plural": {
+            "virile": "pozbawili",
+            "nonvirile": "pozbawiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

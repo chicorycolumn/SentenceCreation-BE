@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "czarno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "czarny",
+          "gen": "czarnego",
+          "dat": "czarnemu",
+          "acc": "czarnego",
+          "ins": "czarnym",
+          "loc": "czarnym"
+        },
+        "m3": {
+          "nom": "czarny",
+          "gen": "czarnego",
+          "dat": "czarnemu",
+          "acc": "czarny",
+          "ins": "czarnym",
+          "loc": "czarnym"
+        },
+        "f": {
+          "nom": "czarna",
+          "gen": "czarnej",
+          "dat": "czarnej",
+          "acc": "czarną",
+          "ins": "czarną",
+          "loc": "czarnej"
+        },
+        "n": {
+          "nom": "czarne",
+          "gen": "czarnego",
+          "dat": "czarnemu",
+          "acc": "czarne",
+          "ins": "czarnym",
+          "loc": "czarnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "czarni",
+          "gen": "czarnych",
+          "dat": "czarnym",
+          "acc": "czarnych",
+          "ins": "czarnymi",
+          "loc": "czarnych"
+        },
+        "nonvirile": {
+          "nom": "czarne",
+          "gen": "czarnych",
+          "dat": "czarnym",
+          "acc": "czarne",
+          "ins": "czarnymi",
+          "loc": "czarnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszy",
+              "bardziej czarny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszego",
+              "bardziej czarnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszemu",
+              "bardziej czarnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszego",
+              "bardziej czarnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszym",
+              "bardziej czarnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszym",
+              "bardziej czarnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszy",
+              "bardziej czarny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszego",
+              "bardziej czarnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszemu",
+              "bardziej czarnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszy",
+              "bardziej czarny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszym",
+              "bardziej czarnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszym",
+              "bardziej czarnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejsza",
+              "bardziej czarna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszej",
+              "bardziej czarnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszej",
+              "bardziej czarnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszą",
+              "bardziej czarną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszą",
+              "bardziej czarną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszej",
+              "bardziej czarnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejsze",
+              "bardziej czarne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszego",
+              "bardziej czarnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszemu",
+              "bardziej czarnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejsze",
+              "bardziej czarne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszym",
+              "bardziej czarnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszym",
+              "bardziej czarnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejsi",
+              "bardziej czarni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszych",
+              "bardziej czarnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszym",
+              "bardziej czarnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszych",
+              "bardziej czarnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszymi",
+              "bardziej czarnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszych",
+              "bardziej czarnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejsze",
+              "bardziej czarne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszych",
+              "bardziej czarnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszym",
+              "bardziej czarnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejsze",
+              "bardziej czarne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszymi",
+              "bardziej czarnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "czarniejszych",
+              "bardziej czarnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszy",
+              "najbardziej czarny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszego",
+              "najbardziej czarnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszemu",
+              "najbardziej czarnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszego",
+              "najbardziej czarnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszym",
+              "najbardziej czarnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszym",
+              "najbardziej czarnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszy",
+              "najbardziej czarny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszego",
+              "najbardziej czarnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszemu",
+              "najbardziej czarnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszy",
+              "najbardziej czarny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszym",
+              "najbardziej czarnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszym",
+              "najbardziej czarnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejsza",
+              "najbardziej czarna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszej",
+              "najbardziej czarnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszej",
+              "najbardziej czarnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszą",
+              "najbardziej czarną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszą",
+              "najbardziej czarną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszej",
+              "najbardziej czarnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejsze",
+              "najbardziej czarne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszego",
+              "najbardziej czarnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszemu",
+              "najbardziej czarnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejsze",
+              "najbardziej czarne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszym",
+              "najbardziej czarnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszym",
+              "najbardziej czarnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejsi",
+              "najbardziej czarni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszych",
+              "najbardziej czarnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszym",
+              "najbardziej czarnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszych",
+              "najbardziej czarnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszymi",
+              "najbardziej czarnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszych",
+              "najbardziej czarnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejsze",
+              "najbardziej czarne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszych",
+              "najbardziej czarnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszym",
+              "najbardziej czarnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejsze",
+              "najbardziej czarne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszymi",
+              "najbardziej czarnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najczarniejszych",
+              "najbardziej czarnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

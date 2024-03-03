@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "polecieć",
+    "verbalNoun": "polecenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "poleciawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poleci się"
+          },
+          "plural": {
+            "allPluralGenders": "poleci się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "polecę"
+          },
+          "plural": {
+            "allPluralGenders": "polecimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "polecisz"
+          },
+          "plural": {
+            "allPluralGenders": "polecicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "poleci"
+          },
+          "plural": {
+            "allPluralGenders": "polecą"
+          }
+        }
+      },
+      "imperative": "poleć",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poleciano"
+          },
+          "plural": {
+            "allPluralGenders": "poleciano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "poleciałem",
+            "f": "poleciałam"
+          },
+          "plural": {
+            "virile": "polecieliśmy",
+            "nonvirile": "poleciałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "poleciałeś",
+            "f": "poleciałaś"
+          },
+          "plural": {
+            "virile": "polecieliście",
+            "nonvirile": "poleciałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "poleciał",
+            "f": "poleciała",
+            "n": "poleciało"
+          },
+          "plural": {
+            "virile": "polecieli",
+            "nonvirile": "poleciały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

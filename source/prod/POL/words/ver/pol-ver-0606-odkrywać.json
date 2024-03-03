@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odkrywać",
+    "verbalNoun": "odkrywanie",
+    "activeAdjectival": "odkrywający",
+    "passiveAdjectival": "odkrywany",
+    "contemporaryAdverbial": "odkrywając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odkrywaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odkrywano"
+          },
+          "plural": {
+            "allPluralGenders": "odkrywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odkrywałem",
+            "f": "odkrywałam"
+          },
+          "plural": {
+            "virile": "odkrywaliśmy",
+            "nonvirile": "odkrywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odkrywałeś",
+            "f": "odkrywałaś"
+          },
+          "plural": {
+            "virile": "odkrywaliście",
+            "nonvirile": "odkrywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odkrywał",
+            "f": "odkrywała",
+            "n": "odkrywało"
+          },
+          "plural": {
+            "virile": "odkrywali",
+            "nonvirile": "odkrywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odkrywa się"
+          },
+          "plural": {
+            "allPluralGenders": "odkrywa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odkrywam"
+          },
+          "plural": {
+            "allPluralGenders": "odkrywamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odkrywasz"
+          },
+          "plural": {
+            "allPluralGenders": "odkrywacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odkrywa"
+          },
+          "plural": {
+            "allPluralGenders": "odkrywają"
+          }
+        }
+      }
+    }
+  }
+}

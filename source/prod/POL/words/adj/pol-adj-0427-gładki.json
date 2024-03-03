@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "gładko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "gładki",
+          "gen": "gładkiego",
+          "dat": "gładkiemu",
+          "acc": "gładkiego",
+          "ins": "gładkim",
+          "loc": "gładkim"
+        },
+        "m3": {
+          "nom": "gładki",
+          "gen": "gładkiego",
+          "dat": "gładkiemu",
+          "acc": "gładki",
+          "ins": "gładkim",
+          "loc": "gładkim"
+        },
+        "f": {
+          "nom": "gładka",
+          "gen": "gładkiej",
+          "dat": "gładkiej",
+          "acc": "gładką",
+          "ins": "gładką",
+          "loc": "gładkiej"
+        },
+        "n": {
+          "nom": "gładkie",
+          "gen": "gładkiego",
+          "dat": "gładkiemu",
+          "acc": "gładkie",
+          "ins": "gładkim",
+          "loc": "gładkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "gładcy",
+          "gen": "gładkich",
+          "dat": "gładkim",
+          "acc": "gładkich",
+          "ins": "gładkimi",
+          "loc": "gładkich"
+        },
+        "nonvirile": {
+          "nom": "gładkie",
+          "gen": "gładkich",
+          "dat": "gładkim",
+          "acc": "gładkie",
+          "ins": "gładkimi",
+          "loc": "gładkich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "gładszy",
+              "bardziej gładki"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "gładszego",
+              "bardziej gładkiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "gładszemu",
+              "bardziej gładkiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "gładszego",
+              "bardziej gładkiego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "gładszym",
+              "bardziej gładkim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "gładszym",
+              "bardziej gładkim"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "gładszy",
+              "bardziej gładki"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "gładszego",
+              "bardziej gładkiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "gładszemu",
+              "bardziej gładkiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "gładszy",
+              "bardziej gładki"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "gładszym",
+              "bardziej gładkim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "gładszym",
+              "bardziej gładkim"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "gładsza",
+              "bardziej gładka"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "gładszej",
+              "bardziej gładkiej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "gładszej",
+              "bardziej gładkiej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "gładszą",
+              "bardziej gładką"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "gładszą",
+              "bardziej gładką"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "gładszej",
+              "bardziej gładkiej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "gładsze",
+              "bardziej gładkie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "gładszego",
+              "bardziej gładkiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "gładszemu",
+              "bardziej gładkiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "gładsze",
+              "bardziej gładkie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "gładszym",
+              "bardziej gładkim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "gładszym",
+              "bardziej gładkim"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "gładsi",
+              "bardziej gładcy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "gładszych",
+              "bardziej gładkich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "gładszym",
+              "bardziej gładkim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "gładszych",
+              "bardziej gładkich"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "gładszymi",
+              "bardziej gładkimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "gładszych",
+              "bardziej gładkich"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "gładsze",
+              "bardziej gładkie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "gładszych",
+              "bardziej gładkich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "gładszym",
+              "bardziej gładkim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "gładsze",
+              "bardziej gładkie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "gładszymi",
+              "bardziej gładkimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "gładszych",
+              "bardziej gładkich"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszy",
+              "najbardziej gładki"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszego",
+              "najbardziej gładkiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszemu",
+              "najbardziej gładkiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszego",
+              "najbardziej gładkiego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszym",
+              "najbardziej gładkim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszym",
+              "najbardziej gładkim"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszy",
+              "najbardziej gładki"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszego",
+              "najbardziej gładkiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszemu",
+              "najbardziej gładkiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszy",
+              "najbardziej gładki"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszym",
+              "najbardziej gładkim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszym",
+              "najbardziej gładkim"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najgładsza",
+              "najbardziej gładka"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszej",
+              "najbardziej gładkiej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszej",
+              "najbardziej gładkiej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszą",
+              "najbardziej gładką"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszą",
+              "najbardziej gładką"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszej",
+              "najbardziej gładkiej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najgładsze",
+              "najbardziej gładkie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszego",
+              "najbardziej gładkiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszemu",
+              "najbardziej gładkiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najgładsze",
+              "najbardziej gładkie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszym",
+              "najbardziej gładkim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszym",
+              "najbardziej gładkim"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najgładsi",
+              "najbardziej gładcy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszych",
+              "najbardziej gładkich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszym",
+              "najbardziej gładkim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszych",
+              "najbardziej gładkich"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszymi",
+              "najbardziej gładkimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszych",
+              "najbardziej gładkich"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najgładsze",
+              "najbardziej gładkie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszych",
+              "najbardziej gładkich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszym",
+              "najbardziej gładkim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najgładsze",
+              "najbardziej gładkie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszymi",
+              "najbardziej gładkimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najgładszych",
+              "najbardziej gładkich"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

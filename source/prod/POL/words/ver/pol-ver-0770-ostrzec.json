@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ostrzec",
+    "verbalNoun": "ostrzeżenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "ostrzeżony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "ostrzegłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ostrzeże się"
+          },
+          "plural": {
+            "allPluralGenders": "ostrzeże się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ostrzegę"
+          },
+          "plural": {
+            "allPluralGenders": "ostrzeżemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ostrzeżesz"
+          },
+          "plural": {
+            "allPluralGenders": "ostrzeżecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ostrzeże"
+          },
+          "plural": {
+            "allPluralGenders": "ostrzegą"
+          }
+        }
+      },
+      "imperative": "ostrzeż",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ostrzeżono"
+          },
+          "plural": {
+            "allPluralGenders": "ostrzeżono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ostrzegłem",
+            "f": "ostrzegłam"
+          },
+          "plural": {
+            "virile": "ostrzegliśmy",
+            "nonvirile": "ostrzegłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ostrzegłeś",
+            "f": "ostrzegłaś"
+          },
+          "plural": {
+            "virile": "ostrzegliście",
+            "nonvirile": "ostrzegłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ostrzegł",
+            "f": "ostrzegła",
+            "n": "ostrzegło"
+          },
+          "plural": {
+            "virile": "ostrzegli",
+            "nonvirile": "ostrzegły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

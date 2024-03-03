@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kukurydza",
+      "gen": "kukurydzy",
+      "dat": "kukurydzy",
+      "acc": "kukurydzę",
+      "ins": "kukurydzą",
+      "loc": "kukurydzy",
+      "voc": "kukurydzo"
+    },
+    "plural": {
+      "nom": "kukurydze",
+      "gen": "kukurydzy",
+      "dat": "kukurydzom",
+      "acc": "kukurydze",
+      "ins": "kukurydzami",
+      "loc": "kukurydzach",
+      "voc": "kukurydze"
+    }
+  }
+}

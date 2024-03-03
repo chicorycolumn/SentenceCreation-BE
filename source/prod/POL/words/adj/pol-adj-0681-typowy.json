@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "typowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "typowy",
+          "gen": "typowego",
+          "dat": "typowemu",
+          "acc": "typowego",
+          "ins": "typowym",
+          "loc": "typowym"
+        },
+        "m3": {
+          "nom": "typowy",
+          "gen": "typowego",
+          "dat": "typowemu",
+          "acc": "typowy",
+          "ins": "typowym",
+          "loc": "typowym"
+        },
+        "f": {
+          "nom": "typowa",
+          "gen": "typowej",
+          "dat": "typowej",
+          "acc": "typową",
+          "ins": "typową",
+          "loc": "typowej"
+        },
+        "n": {
+          "nom": "typowe",
+          "gen": "typowego",
+          "dat": "typowemu",
+          "acc": "typowe",
+          "ins": "typowym",
+          "loc": "typowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "typowi",
+          "gen": "typowych",
+          "dat": "typowym",
+          "acc": "typowych",
+          "ins": "typowymi",
+          "loc": "typowych"
+        },
+        "nonvirile": {
+          "nom": "typowe",
+          "gen": "typowych",
+          "dat": "typowym",
+          "acc": "typowe",
+          "ins": "typowymi",
+          "loc": "typowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej typowy",
+          "gen": "bardziej typowego",
+          "dat": "bardziej typowemu",
+          "acc": "bardziej typowego",
+          "ins": "bardziej typowym",
+          "loc": "bardziej typowym"
+        },
+        "m3": {
+          "nom": "bardziej typowy",
+          "gen": "bardziej typowego",
+          "dat": "bardziej typowemu",
+          "acc": "bardziej typowy",
+          "ins": "bardziej typowym",
+          "loc": "bardziej typowym"
+        },
+        "f": {
+          "nom": "bardziej typowa",
+          "gen": "bardziej typowej",
+          "dat": "bardziej typowej",
+          "acc": "bardziej typową",
+          "ins": "bardziej typową",
+          "loc": "bardziej typowej"
+        },
+        "n": {
+          "nom": "bardziej typowe",
+          "gen": "bardziej typowego",
+          "dat": "bardziej typowemu",
+          "acc": "bardziej typowe",
+          "ins": "bardziej typowym",
+          "loc": "bardziej typowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej typowi",
+          "gen": "bardziej typowych",
+          "dat": "bardziej typowym",
+          "acc": "bardziej typowych",
+          "ins": "bardziej typowymi",
+          "loc": "bardziej typowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej typowe",
+          "gen": "bardziej typowych",
+          "dat": "bardziej typowym",
+          "acc": "bardziej typowe",
+          "ins": "bardziej typowymi",
+          "loc": "bardziej typowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej typowy",
+          "gen": "najbardziej typowego",
+          "dat": "najbardziej typowemu",
+          "acc": "najbardziej typowego",
+          "ins": "najbardziej typowym",
+          "loc": "najbardziej typowym"
+        },
+        "m3": {
+          "nom": "najbardziej typowy",
+          "gen": "najbardziej typowego",
+          "dat": "najbardziej typowemu",
+          "acc": "najbardziej typowy",
+          "ins": "najbardziej typowym",
+          "loc": "najbardziej typowym"
+        },
+        "f": {
+          "nom": "najbardziej typowa",
+          "gen": "najbardziej typowej",
+          "dat": "najbardziej typowej",
+          "acc": "najbardziej typową",
+          "ins": "najbardziej typową",
+          "loc": "najbardziej typowej"
+        },
+        "n": {
+          "nom": "najbardziej typowe",
+          "gen": "najbardziej typowego",
+          "dat": "najbardziej typowemu",
+          "acc": "najbardziej typowe",
+          "ins": "najbardziej typowym",
+          "loc": "najbardziej typowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej typowi",
+          "gen": "najbardziej typowych",
+          "dat": "najbardziej typowym",
+          "acc": "najbardziej typowych",
+          "ins": "najbardziej typowymi",
+          "loc": "najbardziej typowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej typowe",
+          "gen": "najbardziej typowych",
+          "dat": "najbardziej typowym",
+          "acc": "najbardziej typowe",
+          "ins": "najbardziej typowymi",
+          "loc": "najbardziej typowych"
+        }
+      }
+    }
+  }
+}

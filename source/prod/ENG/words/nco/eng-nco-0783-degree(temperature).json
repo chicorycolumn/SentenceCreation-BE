@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "degree",
+      "gen": "degree's"
+    },
+    "plural": {
+      "nom": "degrees",
+      "gen": "degrees'"
+    }
+  }
+}

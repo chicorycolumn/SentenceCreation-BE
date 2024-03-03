@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "krzyczeć",
+    "verbalNoun": "krzyczenie",
+    "activeAdjectival": "krzyczący",
+    "passiveAdjectival": "krzyczany",
+    "contemporaryAdverbial": "krzycząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "krzycz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "krzyczano"
+          },
+          "plural": {
+            "allPluralGenders": "krzyczano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "krzyczałem",
+            "f": "krzyczałam"
+          },
+          "plural": {
+            "virile": "krzyczeliśmy",
+            "nonvirile": "krzyczałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "krzyczałeś",
+            "f": "krzyczałaś"
+          },
+          "plural": {
+            "virile": "krzyczeliście",
+            "nonvirile": "krzyczałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "krzyczał",
+            "f": "krzyczała",
+            "n": "krzyczało"
+          },
+          "plural": {
+            "virile": "krzyczeli",
+            "nonvirile": "krzyczały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "krzyczy się"
+          },
+          "plural": {
+            "allPluralGenders": "krzyczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "krzyczę"
+          },
+          "plural": {
+            "allPluralGenders": "krzyczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "krzyczysz"
+          },
+          "plural": {
+            "allPluralGenders": "krzyczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "krzyczy"
+          },
+          "plural": {
+            "allPluralGenders": "krzyczą"
+          }
+        }
+      }
+    }
+  }
+}

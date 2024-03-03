@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "seler",
+      "gen": "selera",
+      "dat": "selerowi",
+      "acc": "seler",
+      "ins": "selerem",
+      "loc": "selerze",
+      "voc": "selerze"
+    },
+    "plural": {
+      "nom": "selery",
+      "gen": "selerów",
+      "dat": "selerom",
+      "acc": "selery",
+      "ins": "selerami",
+      "loc": "selerach",
+      "voc": "selery"
+    }
+  }
+}

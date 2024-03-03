@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "autostrada",
+      "gen": "autostrady",
+      "dat": "autostradzie",
+      "acc": "autostradę",
+      "ins": "autostradą",
+      "loc": "autostradzie",
+      "voc": "autostrado"
+    },
+    "plural": {
+      "nom": "autostrady",
+      "gen": "autostrad",
+      "dat": "autostradom",
+      "acc": "autostrady",
+      "ins": "autostradami",
+      "loc": "autostradach",
+      "voc": "autostrady"
+    }
+  }
+}

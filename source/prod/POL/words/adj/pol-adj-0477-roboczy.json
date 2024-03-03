@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "roboczo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "roboczy",
+          "gen": "roboczego",
+          "dat": "roboczemu",
+          "acc": "roboczego",
+          "ins": "roboczym",
+          "loc": "roboczym"
+        },
+        "m3": {
+          "nom": "roboczy",
+          "gen": "roboczego",
+          "dat": "roboczemu",
+          "acc": "roboczy",
+          "ins": "roboczym",
+          "loc": "roboczym"
+        },
+        "f": {
+          "nom": "robocza",
+          "gen": "roboczej",
+          "dat": "roboczej",
+          "acc": "roboczą",
+          "ins": "roboczą",
+          "loc": "roboczej"
+        },
+        "n": {
+          "nom": "robocze",
+          "gen": "roboczego",
+          "dat": "roboczemu",
+          "acc": "robocze",
+          "ins": "roboczym",
+          "loc": "roboczym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "roboczy",
+          "gen": "roboczych",
+          "dat": "roboczym",
+          "acc": "roboczych",
+          "ins": "roboczymi",
+          "loc": "roboczych"
+        },
+        "nonvirile": {
+          "nom": "robocze",
+          "gen": "roboczych",
+          "dat": "roboczym",
+          "acc": "robocze",
+          "ins": "roboczymi",
+          "loc": "roboczych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej roboczy",
+          "gen": "bardziej roboczego",
+          "dat": "bardziej roboczemu",
+          "acc": "bardziej roboczego",
+          "ins": "bardziej roboczym",
+          "loc": "bardziej roboczym"
+        },
+        "m3": {
+          "nom": "bardziej roboczy",
+          "gen": "bardziej roboczego",
+          "dat": "bardziej roboczemu",
+          "acc": "bardziej roboczy",
+          "ins": "bardziej roboczym",
+          "loc": "bardziej roboczym"
+        },
+        "f": {
+          "nom": "bardziej robocza",
+          "gen": "bardziej roboczej",
+          "dat": "bardziej roboczej",
+          "acc": "bardziej roboczą",
+          "ins": "bardziej roboczą",
+          "loc": "bardziej roboczej"
+        },
+        "n": {
+          "nom": "bardziej robocze",
+          "gen": "bardziej roboczego",
+          "dat": "bardziej roboczemu",
+          "acc": "bardziej robocze",
+          "ins": "bardziej roboczym",
+          "loc": "bardziej roboczym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej roboczy",
+          "gen": "bardziej roboczych",
+          "dat": "bardziej roboczym",
+          "acc": "bardziej roboczych",
+          "ins": "bardziej roboczymi",
+          "loc": "bardziej roboczych"
+        },
+        "nonvirile": {
+          "nom": "bardziej robocze",
+          "gen": "bardziej roboczych",
+          "dat": "bardziej roboczym",
+          "acc": "bardziej robocze",
+          "ins": "bardziej roboczymi",
+          "loc": "bardziej roboczych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej roboczy",
+          "gen": "najbardziej roboczego",
+          "dat": "najbardziej roboczemu",
+          "acc": "najbardziej roboczego",
+          "ins": "najbardziej roboczym",
+          "loc": "najbardziej roboczym"
+        },
+        "m3": {
+          "nom": "najbardziej roboczy",
+          "gen": "najbardziej roboczego",
+          "dat": "najbardziej roboczemu",
+          "acc": "najbardziej roboczy",
+          "ins": "najbardziej roboczym",
+          "loc": "najbardziej roboczym"
+        },
+        "f": {
+          "nom": "najbardziej robocza",
+          "gen": "najbardziej roboczej",
+          "dat": "najbardziej roboczej",
+          "acc": "najbardziej roboczą",
+          "ins": "najbardziej roboczą",
+          "loc": "najbardziej roboczej"
+        },
+        "n": {
+          "nom": "najbardziej robocze",
+          "gen": "najbardziej roboczego",
+          "dat": "najbardziej roboczemu",
+          "acc": "najbardziej robocze",
+          "ins": "najbardziej roboczym",
+          "loc": "najbardziej roboczym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej roboczy",
+          "gen": "najbardziej roboczych",
+          "dat": "najbardziej roboczym",
+          "acc": "najbardziej roboczych",
+          "ins": "najbardziej roboczymi",
+          "loc": "najbardziej roboczych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej robocze",
+          "gen": "najbardziej roboczych",
+          "dat": "najbardziej roboczym",
+          "acc": "najbardziej robocze",
+          "ins": "najbardziej roboczymi",
+          "loc": "najbardziej roboczych"
+        }
+      }
+    }
+  }
+}

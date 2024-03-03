@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "edukacyjnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "edukacyjny",
+          "gen": "edukacyjnego",
+          "dat": "edukacyjnemu",
+          "acc": "edukacyjnego",
+          "ins": "edukacyjnym",
+          "loc": "edukacyjnym"
+        },
+        "m3": {
+          "nom": "edukacyjny",
+          "gen": "edukacyjnego",
+          "dat": "edukacyjnemu",
+          "acc": "edukacyjny",
+          "ins": "edukacyjnym",
+          "loc": "edukacyjnym"
+        },
+        "f": {
+          "nom": "edukacyjna",
+          "gen": "edukacyjnej",
+          "dat": "edukacyjnej",
+          "acc": "edukacyjną",
+          "ins": "edukacyjną",
+          "loc": "edukacyjnej"
+        },
+        "n": {
+          "nom": "edukacyjne",
+          "gen": "edukacyjnego",
+          "dat": "edukacyjnemu",
+          "acc": "edukacyjne",
+          "ins": "edukacyjnym",
+          "loc": "edukacyjnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "edukacyjni",
+          "gen": "edukacyjnych",
+          "dat": "edukacyjnym",
+          "acc": "edukacyjnych",
+          "ins": "edukacyjnymi",
+          "loc": "edukacyjnych"
+        },
+        "nonvirile": {
+          "nom": "edukacyjne",
+          "gen": "edukacyjnych",
+          "dat": "edukacyjnym",
+          "acc": "edukacyjne",
+          "ins": "edukacyjnymi",
+          "loc": "edukacyjnych"
+        }
+      }
+    }
+  }
+}

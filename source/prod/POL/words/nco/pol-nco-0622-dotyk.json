@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dotyk",
+      "gen": "dotyku",
+      "dat": "dotykowi",
+      "acc": "dotyk",
+      "ins": "dotykiem",
+      "loc": "dotyku",
+      "voc": "dotyku"
+    },
+    "plural": {
+      "nom": "dotyki",
+      "gen": "dotyków",
+      "dat": "dotykom",
+      "acc": "dotyki",
+      "ins": "dotykami",
+      "loc": "dotykach",
+      "voc": "dotyki"
+    }
+  }
+}

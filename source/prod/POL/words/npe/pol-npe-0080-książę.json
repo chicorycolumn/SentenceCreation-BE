@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "książę",
+      "gen": "księcia",
+      "dat": "księciu",
+      "acc": "księcia",
+      "ins": "księciem",
+      "loc": "księciu",
+      "voc": "książę"
+    },
+    "plural": {
+      "nom": "książęta",
+      "gen": "książąt",
+      "dat": "książętom",
+      "acc": "książąt",
+      "ins": "książętami",
+      "loc": "książętach",
+      "voc": "książęta"
+    }
+  }
+}

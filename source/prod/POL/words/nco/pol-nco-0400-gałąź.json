@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gałąź",
+      "gen": "gałęzi",
+      "dat": "gałęzi",
+      "acc": "gałąź",
+      "ins": "gałęzią",
+      "loc": "gałęzi",
+      "voc": "gałęzi"
+    },
+    "plural": {
+      "nom": "gałęzie",
+      "gen": "gałęzi",
+      "dat": "gałęziom",
+      "acc": "gałęzie",
+      "ins": [
+        "gałęziami",
+        "gałęźmi"
+      ],
+      "loc": "gałęziach",
+      "voc": "gałęzie"
+    }
+  }
+}

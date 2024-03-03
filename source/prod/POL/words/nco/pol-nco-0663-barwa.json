@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "barwa",
+      "gen": "barwy",
+      "dat": "barwie",
+      "acc": "barwę",
+      "ins": "barwą",
+      "loc": "barwie",
+      "voc": "barwo"
+    },
+    "plural": {
+      "nom": "barwy",
+      "gen": "barw",
+      "dat": "barwom",
+      "acc": "barwy",
+      "ins": "barwami",
+      "loc": "barwach",
+      "voc": "barwy"
+    }
+  }
+}

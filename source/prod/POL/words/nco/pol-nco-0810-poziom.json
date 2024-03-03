@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "poziom",
+      "gen": "poziomu",
+      "dat": "poziomowi",
+      "acc": "poziom",
+      "ins": "poziomem",
+      "loc": "poziomie",
+      "voc": "poziomie"
+    },
+    "plural": {
+      "nom": "poziomy",
+      "gen": "poziomów",
+      "dat": "poziomom",
+      "acc": "poziomy",
+      "ins": "poziomami",
+      "loc": "poziomach",
+      "voc": "poziomy"
+    }
+  }
+}

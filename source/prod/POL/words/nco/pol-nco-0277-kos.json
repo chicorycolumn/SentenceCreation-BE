@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kos",
+      "gen": "kosa",
+      "dat": "kosowi",
+      "acc": "kosa",
+      "ins": "kosem",
+      "loc": "kosie",
+      "voc": "kosie"
+    },
+    "plural": {
+      "nom": "kosy",
+      "gen": "kosów",
+      "dat": "kosom",
+      "acc": "kosy",
+      "ins": "kosami",
+      "loc": "kosach",
+      "voc": "kosy"
+    }
+  }
+}

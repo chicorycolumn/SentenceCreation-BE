@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "stan",
+      "gen": "stanu",
+      "dat": "stanowi",
+      "acc": "stan",
+      "ins": "stanem",
+      "loc": "stanie",
+      "voc": "stanie"
+    },
+    "plural": {
+      "nom": "stany",
+      "gen": "stanów",
+      "dat": "stanom",
+      "acc": "stany",
+      "ins": "stanami",
+      "loc": "stanach",
+      "voc": "stany"
+    }
+  }
+}

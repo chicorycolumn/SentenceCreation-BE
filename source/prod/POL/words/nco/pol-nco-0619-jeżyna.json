@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "jeżyna",
+      "gen": "jeżyny",
+      "dat": "jeżynie",
+      "acc": "jeżynę",
+      "ins": "jeżyną",
+      "loc": "jeżynie",
+      "voc": "jeżyno"
+    },
+    "plural": {
+      "nom": "jeżyny",
+      "gen": "jeżyn",
+      "dat": "jeżynom",
+      "acc": "jeżyny",
+      "ins": "jeżynami",
+      "loc": "jeżynach",
+      "voc": "jeżyny"
+    }
+  }
+}

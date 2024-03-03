@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "powolnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "powolny",
+          "gen": "powolnego",
+          "dat": "powolnemu",
+          "acc": "powolnego",
+          "ins": "powolnym",
+          "loc": "powolnym"
+        },
+        "m3": {
+          "nom": "powolny",
+          "gen": "powolnego",
+          "dat": "powolnemu",
+          "acc": "powolny",
+          "ins": "powolnym",
+          "loc": "powolnym"
+        },
+        "f": {
+          "nom": "powolna",
+          "gen": "powolnej",
+          "dat": "powolnej",
+          "acc": "powolną",
+          "ins": "powolną",
+          "loc": "powolnej"
+        },
+        "n": {
+          "nom": "powolne",
+          "gen": "powolnego",
+          "dat": "powolnemu",
+          "acc": "powolne",
+          "ins": "powolnym",
+          "loc": "powolnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "powolni",
+          "gen": "powolnych",
+          "dat": "powolnym",
+          "acc": "powolnych",
+          "ins": "powolnymi",
+          "loc": "powolnych"
+        },
+        "nonvirile": {
+          "nom": "powolne",
+          "gen": "powolnych",
+          "dat": "powolnym",
+          "acc": "powolne",
+          "ins": "powolnymi",
+          "loc": "powolnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "powolniejszy",
+          "gen": "powolniejszego",
+          "dat": "powolniejszemu",
+          "acc": "powolniejszego",
+          "ins": "powolniejszym",
+          "loc": "powolniejszym"
+        },
+        "m3": {
+          "nom": "powolniejszy",
+          "gen": "powolniejszego",
+          "dat": "powolniejszemu",
+          "acc": "powolniejszy",
+          "ins": "powolniejszym",
+          "loc": "powolniejszym"
+        },
+        "f": {
+          "nom": "powolniejsza",
+          "gen": "powolniejszej",
+          "dat": "powolniejszej",
+          "acc": "powolniejszą",
+          "ins": "powolniejszą",
+          "loc": "powolniejszej"
+        },
+        "n": {
+          "nom": "powolniejsze",
+          "gen": "powolniejszego",
+          "dat": "powolniejszemu",
+          "acc": "powolniejsze",
+          "ins": "powolniejszym",
+          "loc": "powolniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "powolniejsi",
+          "gen": "powolniejszych",
+          "dat": "powolniejszym",
+          "acc": "powolniejszych",
+          "ins": "powolniejszymi",
+          "loc": "powolniejszych"
+        },
+        "nonvirile": {
+          "nom": "powolniejsze",
+          "gen": "powolniejszych",
+          "dat": "powolniejszym",
+          "acc": "powolniejsze",
+          "ins": "powolniejszymi",
+          "loc": "powolniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najpowolniejszy",
+          "gen": "najpowolniejszego",
+          "dat": "najpowolniejszemu",
+          "acc": "najpowolniejszego",
+          "ins": "najpowolniejszym",
+          "loc": "najpowolniejszym"
+        },
+        "m3": {
+          "nom": "najpowolniejszy",
+          "gen": "najpowolniejszego",
+          "dat": "najpowolniejszemu",
+          "acc": "najpowolniejszy",
+          "ins": "najpowolniejszym",
+          "loc": "najpowolniejszym"
+        },
+        "f": {
+          "nom": "najpowolniejsza",
+          "gen": "najpowolniejszej",
+          "dat": "najpowolniejszej",
+          "acc": "najpowolniejszą",
+          "ins": "najpowolniejszą",
+          "loc": "najpowolniejszej"
+        },
+        "n": {
+          "nom": "najpowolniejsze",
+          "gen": "najpowolniejszego",
+          "dat": "najpowolniejszemu",
+          "acc": "najpowolniejsze",
+          "ins": "najpowolniejszym",
+          "loc": "najpowolniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najpowolniejsi",
+          "gen": "najpowolniejszych",
+          "dat": "najpowolniejszym",
+          "acc": "najpowolniejszych",
+          "ins": "najpowolniejszymi",
+          "loc": "najpowolniejszych"
+        },
+        "nonvirile": {
+          "nom": "najpowolniejsze",
+          "gen": "najpowolniejszych",
+          "dat": "najpowolniejszym",
+          "acc": "najpowolniejsze",
+          "ins": "najpowolniejszymi",
+          "loc": "najpowolniejszych"
+        }
+      }
+    }
+  }
+}

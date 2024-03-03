@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kapłan",
+      "gen": "kapłana",
+      "dat": "kapłanowi",
+      "acc": "kapłana",
+      "ins": "kapłanem",
+      "loc": "kapłanie",
+      "voc": "kapłanie"
+    },
+    "plural": {
+      "nom": "kapłani",
+      "gen": "kapłanów",
+      "dat": "kapłanom",
+      "acc": "kapłanów",
+      "ins": "kapłanami",
+      "loc": "kapłanach",
+      "voc": "kapłani"
+    }
+  }
+}

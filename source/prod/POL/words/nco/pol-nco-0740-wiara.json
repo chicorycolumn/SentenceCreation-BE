@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wiara",
+      "gen": "wiary",
+      "dat": "wierze",
+      "acc": "wiarę",
+      "ins": "wiarą",
+      "loc": "wierze",
+      "voc": "wiaro"
+    },
+    "plural": {
+      "nom": "wiary",
+      "gen": "wiar",
+      "dat": "wiarom",
+      "acc": "wiary",
+      "ins": "wiarami",
+      "loc": "wiarach",
+      "voc": "wiary"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "marijuana",
+      "gen": "marijuana's"
+    },
+    "plural": {
+      "nom": "marijuanas",
+      "gen": "marijuanas'"
+    }
+  }
+}

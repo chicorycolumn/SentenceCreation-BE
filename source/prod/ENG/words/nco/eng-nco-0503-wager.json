@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wager",
+      "gen": "wager's"
+    },
+    "plural": {
+      "nom": "wagers",
+      "gen": "wagers'"
+    }
+  }
+}

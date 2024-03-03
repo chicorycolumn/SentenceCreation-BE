@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "kompletnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "kompletny",
+          "gen": "kompletnego",
+          "dat": "kompletnemu",
+          "acc": "kompletnego",
+          "ins": "kompletnym",
+          "loc": "kompletnym"
+        },
+        "m3": {
+          "nom": "kompletny",
+          "gen": "kompletnego",
+          "dat": "kompletnemu",
+          "acc": "kompletny",
+          "ins": "kompletnym",
+          "loc": "kompletnym"
+        },
+        "f": {
+          "nom": "kompletna",
+          "gen": "kompletnej",
+          "dat": "kompletnej",
+          "acc": "kompletną",
+          "ins": "kompletną",
+          "loc": "kompletnej"
+        },
+        "n": {
+          "nom": "kompletne",
+          "gen": "kompletnego",
+          "dat": "kompletnemu",
+          "acc": "kompletne",
+          "ins": "kompletnym",
+          "loc": "kompletnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "kompletni",
+          "gen": "kompletnych",
+          "dat": "kompletnym",
+          "acc": "kompletnych",
+          "ins": "kompletnymi",
+          "loc": "kompletnych"
+        },
+        "nonvirile": {
+          "nom": "kompletne",
+          "gen": "kompletnych",
+          "dat": "kompletnym",
+          "acc": "kompletne",
+          "ins": "kompletnymi",
+          "loc": "kompletnych"
+        }
+      }
+    }
+  }
+}

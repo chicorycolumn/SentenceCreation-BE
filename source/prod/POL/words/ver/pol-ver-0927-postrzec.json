@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "postrzec",
+    "verbalNoun": "postrzeżenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "postrzeżony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "postrzegłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "postrzeże się"
+          },
+          "plural": {
+            "allPluralGenders": "postrzeże się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "postrzegę"
+          },
+          "plural": {
+            "allPluralGenders": "postrzeżemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "postrzeżesz"
+          },
+          "plural": {
+            "allPluralGenders": "postrzeżecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "postrzeże"
+          },
+          "plural": {
+            "allPluralGenders": "postrzegą"
+          }
+        }
+      },
+      "imperative": "postrzeż",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "postrzeżono"
+          },
+          "plural": {
+            "allPluralGenders": "postrzeżono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "postrzegłem",
+            "f": "postrzegłam"
+          },
+          "plural": {
+            "virile": "postrzegliśmy",
+            "nonvirile": "postrzegłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "postrzegłeś",
+            "f": "postrzegłaś"
+          },
+          "plural": {
+            "virile": "postrzegliście",
+            "nonvirile": "postrzegłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "postrzegł",
+            "f": "postrzegła",
+            "n": "postrzegło"
+          },
+          "plural": {
+            "virile": "postrzegli",
+            "nonvirile": "postrzegły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

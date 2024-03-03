@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oświadczyć",
+    "verbalNoun": "oświadczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "oświadczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "oświadczywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oświadczy się"
+          },
+          "plural": {
+            "allPluralGenders": "oświadczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oświadczę"
+          },
+          "plural": {
+            "allPluralGenders": "oświadczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oświadczysz"
+          },
+          "plural": {
+            "allPluralGenders": "oświadczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "oświadczy"
+          },
+          "plural": {
+            "allPluralGenders": "oświadczą"
+          }
+        }
+      },
+      "imperative": "oświadcz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oświadczono"
+          },
+          "plural": {
+            "allPluralGenders": "oświadczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oświadczyłem",
+            "f": "oświadczyłam"
+          },
+          "plural": {
+            "virile": "oświadczyliśmy",
+            "nonvirile": "oświadczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oświadczyłeś",
+            "f": "oświadczyłaś"
+          },
+          "plural": {
+            "virile": "oświadczyliście",
+            "nonvirile": "oświadczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oświadczył",
+            "f": "oświadczyła",
+            "n": "oświadczyło"
+          },
+          "plural": {
+            "virile": "oświadczyli",
+            "nonvirile": "oświadczyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

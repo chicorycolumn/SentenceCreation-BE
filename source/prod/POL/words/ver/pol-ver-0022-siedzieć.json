@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "siedzieć",
+    "verbalNoun": "siedzenie",
+    "activeAdjectival": "siedzący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "siedząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "siedź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "siedziano"
+          },
+          "plural": {
+            "allPluralGenders": "siedziano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "siedziałem",
+            "f": "siedziałam"
+          },
+          "plural": {
+            "virile": "siedzieliśmy",
+            "nonvirile": "siedziałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "siedziałeś",
+            "f": "siedziałaś"
+          },
+          "plural": {
+            "virile": "siedzieliście",
+            "nonvirile": "siedziałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "siedział",
+            "f": "siedziała",
+            "n": "siedziało"
+          },
+          "plural": {
+            "virile": "siedzieli",
+            "nonvirile": "siedziały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "siedzi się"
+          },
+          "plural": {
+            "allPluralGenders": "siedzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "siedzę"
+          },
+          "plural": {
+            "allPluralGenders": "siedzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "siedzisz"
+          },
+          "plural": {
+            "allPluralGenders": "siedzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "siedzi"
+          },
+          "plural": {
+            "allPluralGenders": "siedzą"
+          }
+        }
+      }
+    }
+  }
+}

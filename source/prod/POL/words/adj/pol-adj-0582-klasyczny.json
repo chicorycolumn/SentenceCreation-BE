@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "klasycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "klasyczny",
+          "gen": "klasycznego",
+          "dat": "klasycznemu",
+          "acc": "klasycznego",
+          "ins": "klasycznym",
+          "loc": "klasycznym"
+        },
+        "m3": {
+          "nom": "klasyczny",
+          "gen": "klasycznego",
+          "dat": "klasycznemu",
+          "acc": "klasyczny",
+          "ins": "klasycznym",
+          "loc": "klasycznym"
+        },
+        "f": {
+          "nom": "klasyczna",
+          "gen": "klasycznej",
+          "dat": "klasycznej",
+          "acc": "klasyczną",
+          "ins": "klasyczną",
+          "loc": "klasycznej"
+        },
+        "n": {
+          "nom": "klasyczne",
+          "gen": "klasycznego",
+          "dat": "klasycznemu",
+          "acc": "klasyczne",
+          "ins": "klasycznym",
+          "loc": "klasycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "klasyczni",
+          "gen": "klasycznych",
+          "dat": "klasycznym",
+          "acc": "klasycznych",
+          "ins": "klasycznymi",
+          "loc": "klasycznych"
+        },
+        "nonvirile": {
+          "nom": "klasyczne",
+          "gen": "klasycznych",
+          "dat": "klasycznym",
+          "acc": "klasyczne",
+          "ins": "klasycznymi",
+          "loc": "klasycznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "klasyczniejszy",
+          "gen": "klasyczniejszego",
+          "dat": "klasyczniejszemu",
+          "acc": "klasyczniejszego",
+          "ins": "klasyczniejszym",
+          "loc": "klasyczniejszym"
+        },
+        "m3": {
+          "nom": "klasyczniejszy",
+          "gen": "klasyczniejszego",
+          "dat": "klasyczniejszemu",
+          "acc": "klasyczniejszy",
+          "ins": "klasyczniejszym",
+          "loc": "klasyczniejszym"
+        },
+        "f": {
+          "nom": "klasyczniejsza",
+          "gen": "klasyczniejszej",
+          "dat": "klasyczniejszej",
+          "acc": "klasyczniejszą",
+          "ins": "klasyczniejszą",
+          "loc": "klasyczniejszej"
+        },
+        "n": {
+          "nom": "klasyczniejsze",
+          "gen": "klasyczniejszego",
+          "dat": "klasyczniejszemu",
+          "acc": "klasyczniejsze",
+          "ins": "klasyczniejszym",
+          "loc": "klasyczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "klasyczniejsi",
+          "gen": "klasyczniejszych",
+          "dat": "klasyczniejszym",
+          "acc": "klasyczniejszych",
+          "ins": "klasyczniejszymi",
+          "loc": "klasyczniejszych"
+        },
+        "nonvirile": {
+          "nom": "klasyczniejsze",
+          "gen": "klasyczniejszych",
+          "dat": "klasyczniejszym",
+          "acc": "klasyczniejsze",
+          "ins": "klasyczniejszymi",
+          "loc": "klasyczniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najklasyczniejszy",
+          "gen": "najklasyczniejszego",
+          "dat": "najklasyczniejszemu",
+          "acc": "najklasyczniejszego",
+          "ins": "najklasyczniejszym",
+          "loc": "najklasyczniejszym"
+        },
+        "m3": {
+          "nom": "najklasyczniejszy",
+          "gen": "najklasyczniejszego",
+          "dat": "najklasyczniejszemu",
+          "acc": "najklasyczniejszy",
+          "ins": "najklasyczniejszym",
+          "loc": "najklasyczniejszym"
+        },
+        "f": {
+          "nom": "najklasyczniejsza",
+          "gen": "najklasyczniejszej",
+          "dat": "najklasyczniejszej",
+          "acc": "najklasyczniejszą",
+          "ins": "najklasyczniejszą",
+          "loc": "najklasyczniejszej"
+        },
+        "n": {
+          "nom": "najklasyczniejsze",
+          "gen": "najklasyczniejszego",
+          "dat": "najklasyczniejszemu",
+          "acc": "najklasyczniejsze",
+          "ins": "najklasyczniejszym",
+          "loc": "najklasyczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najklasyczniejsi",
+          "gen": "najklasyczniejszych",
+          "dat": "najklasyczniejszym",
+          "acc": "najklasyczniejszych",
+          "ins": "najklasyczniejszymi",
+          "loc": "najklasyczniejszych"
+        },
+        "nonvirile": {
+          "nom": "najklasyczniejsze",
+          "gen": "najklasyczniejszych",
+          "dat": "najklasyczniejszym",
+          "acc": "najklasyczniejsze",
+          "ins": "najklasyczniejszymi",
+          "loc": "najklasyczniejszych"
+        }
+      }
+    }
+  }
+}

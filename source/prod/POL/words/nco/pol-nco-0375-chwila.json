@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "chwila",
+      "gen": "chwili",
+      "dat": "chwili",
+      "acc": "chwilę",
+      "ins": "chwilą",
+      "loc": "chwili",
+      "voc": "chwilo"
+    },
+    "plural": {
+      "nom": "chwile",
+      "gen": "chwil",
+      "dat": "chwilom",
+      "acc": "chwile",
+      "ins": "chwilami",
+      "loc": "chwilach",
+      "voc": "chwile"
+    }
+  }
+}

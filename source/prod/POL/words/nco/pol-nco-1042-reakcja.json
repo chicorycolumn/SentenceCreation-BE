@@ -1,0 +1,30 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "reakcja",
+      "gen": "reakcji",
+      "dat": "reakcji",
+      "acc": "reakcję",
+      "ins": "reakcją",
+      "loc": "reakcji",
+      "voc": "reakcjo"
+    },
+    "plural": {
+      "nom": "reakcje",
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "reakcji"
+        ],
+        "additionalInfrequent": [
+          "reakcyj"
+        ]
+      },
+      "dat": "reakcjom",
+      "acc": "reakcje",
+      "ins": "reakcjami",
+      "loc": "reakcjach",
+      "voc": "reakcje"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zabawa",
+      "gen": "zabawy",
+      "dat": "zabawie",
+      "acc": "zabawę",
+      "ins": "zabawą",
+      "loc": "zabawie",
+      "voc": "zabawo"
+    },
+    "plural": {
+      "nom": "zabawy",
+      "gen": "zabaw",
+      "dat": "zabawom",
+      "acc": "zabawy",
+      "ins": "zabawami",
+      "loc": "zabawach",
+      "voc": "zabawy"
+    }
+  }
+}

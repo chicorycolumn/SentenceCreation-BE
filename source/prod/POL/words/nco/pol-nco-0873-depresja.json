@@ -1,0 +1,30 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "depresja",
+      "gen": "depresji",
+      "dat": "depresji",
+      "acc": "depresję",
+      "ins": "depresją",
+      "loc": "depresji",
+      "voc": "depresjo"
+    },
+    "plural": {
+      "nom": "depresje",
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "depresji"
+        ],
+        "additionalInfrequent": [
+          "depresyj"
+        ]
+      },
+      "dat": "depresjom",
+      "acc": "depresje",
+      "ins": "depresjami",
+      "loc": "depresjach",
+      "voc": "depresje"
+    }
+  }
+}

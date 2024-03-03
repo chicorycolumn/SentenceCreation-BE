@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "polecać",
+    "verbalNoun": "polecanie",
+    "activeAdjectival": "polecający",
+    "passiveAdjectival": "polecany",
+    "contemporaryAdverbial": "polecając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "polecaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "polecano"
+          },
+          "plural": {
+            "allPluralGenders": "polecano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "polecałem",
+            "f": "polecałam"
+          },
+          "plural": {
+            "virile": "polecaliśmy",
+            "nonvirile": "polecałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "polecałeś",
+            "f": "polecałaś"
+          },
+          "plural": {
+            "virile": "polecaliście",
+            "nonvirile": "polecałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "polecał",
+            "f": "polecała",
+            "n": "polecało"
+          },
+          "plural": {
+            "virile": "polecali",
+            "nonvirile": "polecały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poleca się"
+          },
+          "plural": {
+            "allPluralGenders": "poleca się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "polecam"
+          },
+          "plural": {
+            "allPluralGenders": "polecamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "polecasz"
+          },
+          "plural": {
+            "allPluralGenders": "polecacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "poleca"
+          },
+          "plural": {
+            "allPluralGenders": "polecają"
+          }
+        }
+      }
+    }
+  }
+}

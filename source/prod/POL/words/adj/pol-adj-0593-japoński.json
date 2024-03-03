@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "japoński",
+          "gen": "japońskiego",
+          "dat": "japońskiemu",
+          "acc": "japońskiego",
+          "ins": "japońskim",
+          "loc": "japońskim"
+        },
+        "m3": {
+          "nom": "japoński",
+          "gen": "japońskiego",
+          "dat": "japońskiemu",
+          "acc": "japoński",
+          "ins": "japońskim",
+          "loc": "japońskim"
+        },
+        "f": {
+          "nom": "japońska",
+          "gen": "japońskiej",
+          "dat": "japońskiej",
+          "acc": "japońską",
+          "ins": "japońską",
+          "loc": "japońskiej"
+        },
+        "n": {
+          "nom": "japońskie",
+          "gen": "japońskiego",
+          "dat": "japońskiemu",
+          "acc": "japońskie",
+          "ins": "japońskim",
+          "loc": "japońskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "japońscy",
+          "gen": "japońskich",
+          "dat": "japońskim",
+          "acc": "japońskich",
+          "ins": "japońskimi",
+          "loc": "japońskich"
+        },
+        "nonvirile": {
+          "nom": "japońskie",
+          "gen": "japońskich",
+          "dat": "japońskim",
+          "acc": "japońskie",
+          "ins": "japońskimi",
+          "loc": "japońskich"
+        }
+      }
+    }
+  }
+}

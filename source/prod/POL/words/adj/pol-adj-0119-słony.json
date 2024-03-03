@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "słono",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "słony",
+          "gen": "słonego",
+          "dat": "słonemu",
+          "acc": "słonego",
+          "ins": "słonym",
+          "loc": "słonym"
+        },
+        "m3": {
+          "nom": "słony",
+          "gen": "słonego",
+          "dat": "słonemu",
+          "acc": "słony",
+          "ins": "słonym",
+          "loc": "słonym"
+        },
+        "f": {
+          "nom": "słona",
+          "gen": "słonej",
+          "dat": "słonej",
+          "acc": "słoną",
+          "ins": "słoną",
+          "loc": "słonej"
+        },
+        "n": {
+          "nom": "słone",
+          "gen": "słonego",
+          "dat": "słonemu",
+          "acc": "słone",
+          "ins": "słonym",
+          "loc": "słonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "słoni",
+          "gen": "słonych",
+          "dat": "słonym",
+          "acc": "słonych",
+          "ins": "słonymi",
+          "loc": "słonych"
+        },
+        "nonvirile": {
+          "nom": "słone",
+          "gen": "słonych",
+          "dat": "słonym",
+          "acc": "słone",
+          "ins": "słonymi",
+          "loc": "słonych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej słony",
+          "gen": "bardziej słonego",
+          "dat": "bardziej słonemu",
+          "acc": "bardziej słonego",
+          "ins": "bardziej słonym",
+          "loc": "bardziej słonym"
+        },
+        "m3": {
+          "nom": "bardziej słony",
+          "gen": "bardziej słonego",
+          "dat": "bardziej słonemu",
+          "acc": "bardziej słony",
+          "ins": "bardziej słonym",
+          "loc": "bardziej słonym"
+        },
+        "f": {
+          "nom": "bardziej słona",
+          "gen": "bardziej słonej",
+          "dat": "bardziej słonej",
+          "acc": "bardziej słoną",
+          "ins": "bardziej słoną",
+          "loc": "bardziej słonej"
+        },
+        "n": {
+          "nom": "bardziej słone",
+          "gen": "bardziej słonego",
+          "dat": "bardziej słonemu",
+          "acc": "bardziej słone",
+          "ins": "bardziej słonym",
+          "loc": "bardziej słonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej słoni",
+          "gen": "bardziej słonych",
+          "dat": "bardziej słonym",
+          "acc": "bardziej słonych",
+          "ins": "bardziej słonymi",
+          "loc": "bardziej słonych"
+        },
+        "nonvirile": {
+          "nom": "bardziej słone",
+          "gen": "bardziej słonych",
+          "dat": "bardziej słonym",
+          "acc": "bardziej słone",
+          "ins": "bardziej słonymi",
+          "loc": "bardziej słonych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej słony",
+          "gen": "najbardziej słonego",
+          "dat": "najbardziej słonemu",
+          "acc": "najbardziej słonego",
+          "ins": "najbardziej słonym",
+          "loc": "najbardziej słonym"
+        },
+        "m3": {
+          "nom": "najbardziej słony",
+          "gen": "najbardziej słonego",
+          "dat": "najbardziej słonemu",
+          "acc": "najbardziej słony",
+          "ins": "najbardziej słonym",
+          "loc": "najbardziej słonym"
+        },
+        "f": {
+          "nom": "najbardziej słona",
+          "gen": "najbardziej słonej",
+          "dat": "najbardziej słonej",
+          "acc": "najbardziej słoną",
+          "ins": "najbardziej słoną",
+          "loc": "najbardziej słonej"
+        },
+        "n": {
+          "nom": "najbardziej słone",
+          "gen": "najbardziej słonego",
+          "dat": "najbardziej słonemu",
+          "acc": "najbardziej słone",
+          "ins": "najbardziej słonym",
+          "loc": "najbardziej słonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej słoni",
+          "gen": "najbardziej słonych",
+          "dat": "najbardziej słonym",
+          "acc": "najbardziej słonych",
+          "ins": "najbardziej słonymi",
+          "loc": "najbardziej słonych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej słone",
+          "gen": "najbardziej słonych",
+          "dat": "najbardziej słonym",
+          "acc": "najbardziej słone",
+          "ins": "najbardziej słonymi",
+          "loc": "najbardziej słonych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przypuszczać",
+    "verbalNoun": "przypuszczanie",
+    "activeAdjectival": "przypuszczający",
+    "passiveAdjectival": "przypuszczany",
+    "contemporaryAdverbial": "przypuszczając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przypuszczaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przypuszczano"
+          },
+          "plural": {
+            "allPluralGenders": "przypuszczano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przypuszczałem",
+            "f": "przypuszczałam"
+          },
+          "plural": {
+            "virile": "przypuszczaliśmy",
+            "nonvirile": "przypuszczałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przypuszczałeś",
+            "f": "przypuszczałaś"
+          },
+          "plural": {
+            "virile": "przypuszczaliście",
+            "nonvirile": "przypuszczałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przypuszczał",
+            "f": "przypuszczała",
+            "n": "przypuszczało"
+          },
+          "plural": {
+            "virile": "przypuszczali",
+            "nonvirile": "przypuszczały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przypuszcza się"
+          },
+          "plural": {
+            "allPluralGenders": "przypuszcza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przypuszczam"
+          },
+          "plural": {
+            "allPluralGenders": "przypuszczamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przypuszczasz"
+          },
+          "plural": {
+            "allPluralGenders": "przypuszczacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przypuszcza"
+          },
+          "plural": {
+            "allPluralGenders": "przypuszczają"
+          }
+        }
+      }
+    }
+  }
+}

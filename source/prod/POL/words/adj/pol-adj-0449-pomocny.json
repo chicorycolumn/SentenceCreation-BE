@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "pomocnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pomocny",
+          "gen": "pomocnego",
+          "dat": "pomocnemu",
+          "acc": "pomocnego",
+          "ins": "pomocnym",
+          "loc": "pomocnym"
+        },
+        "m3": {
+          "nom": "pomocny",
+          "gen": "pomocnego",
+          "dat": "pomocnemu",
+          "acc": "pomocny",
+          "ins": "pomocnym",
+          "loc": "pomocnym"
+        },
+        "f": {
+          "nom": "pomocna",
+          "gen": "pomocnej",
+          "dat": "pomocnej",
+          "acc": "pomocną",
+          "ins": "pomocną",
+          "loc": "pomocnej"
+        },
+        "n": {
+          "nom": "pomocne",
+          "gen": "pomocnego",
+          "dat": "pomocnemu",
+          "acc": "pomocne",
+          "ins": "pomocnym",
+          "loc": "pomocnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pomocni",
+          "gen": "pomocnych",
+          "dat": "pomocnym",
+          "acc": "pomocnych",
+          "ins": "pomocnymi",
+          "loc": "pomocnych"
+        },
+        "nonvirile": {
+          "nom": "pomocne",
+          "gen": "pomocnych",
+          "dat": "pomocnym",
+          "acc": "pomocne",
+          "ins": "pomocnymi",
+          "loc": "pomocnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej pomocny",
+          "gen": "bardziej pomocnego",
+          "dat": "bardziej pomocnemu",
+          "acc": "bardziej pomocnego",
+          "ins": "bardziej pomocnym",
+          "loc": "bardziej pomocnym"
+        },
+        "m3": {
+          "nom": "bardziej pomocny",
+          "gen": "bardziej pomocnego",
+          "dat": "bardziej pomocnemu",
+          "acc": "bardziej pomocny",
+          "ins": "bardziej pomocnym",
+          "loc": "bardziej pomocnym"
+        },
+        "f": {
+          "nom": "bardziej pomocna",
+          "gen": "bardziej pomocnej",
+          "dat": "bardziej pomocnej",
+          "acc": "bardziej pomocną",
+          "ins": "bardziej pomocną",
+          "loc": "bardziej pomocnej"
+        },
+        "n": {
+          "nom": "bardziej pomocne",
+          "gen": "bardziej pomocnego",
+          "dat": "bardziej pomocnemu",
+          "acc": "bardziej pomocne",
+          "ins": "bardziej pomocnym",
+          "loc": "bardziej pomocnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej pomocni",
+          "gen": "bardziej pomocnych",
+          "dat": "bardziej pomocnym",
+          "acc": "bardziej pomocnych",
+          "ins": "bardziej pomocnymi",
+          "loc": "bardziej pomocnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej pomocne",
+          "gen": "bardziej pomocnych",
+          "dat": "bardziej pomocnym",
+          "acc": "bardziej pomocne",
+          "ins": "bardziej pomocnymi",
+          "loc": "bardziej pomocnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej pomocny",
+          "gen": "najbardziej pomocnego",
+          "dat": "najbardziej pomocnemu",
+          "acc": "najbardziej pomocnego",
+          "ins": "najbardziej pomocnym",
+          "loc": "najbardziej pomocnym"
+        },
+        "m3": {
+          "nom": "najbardziej pomocny",
+          "gen": "najbardziej pomocnego",
+          "dat": "najbardziej pomocnemu",
+          "acc": "najbardziej pomocny",
+          "ins": "najbardziej pomocnym",
+          "loc": "najbardziej pomocnym"
+        },
+        "f": {
+          "nom": "najbardziej pomocna",
+          "gen": "najbardziej pomocnej",
+          "dat": "najbardziej pomocnej",
+          "acc": "najbardziej pomocną",
+          "ins": "najbardziej pomocną",
+          "loc": "najbardziej pomocnej"
+        },
+        "n": {
+          "nom": "najbardziej pomocne",
+          "gen": "najbardziej pomocnego",
+          "dat": "najbardziej pomocnemu",
+          "acc": "najbardziej pomocne",
+          "ins": "najbardziej pomocnym",
+          "loc": "najbardziej pomocnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej pomocni",
+          "gen": "najbardziej pomocnych",
+          "dat": "najbardziej pomocnym",
+          "acc": "najbardziej pomocnych",
+          "ins": "najbardziej pomocnymi",
+          "loc": "najbardziej pomocnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej pomocne",
+          "gen": "najbardziej pomocnych",
+          "dat": "najbardziej pomocnym",
+          "acc": "najbardziej pomocne",
+          "ins": "najbardziej pomocnymi",
+          "loc": "najbardziej pomocnych"
+        }
+      }
+    }
+  }
+}

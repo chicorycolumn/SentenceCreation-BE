@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "gumowy",
+          "gen": "gumowego",
+          "dat": "gumowemu",
+          "acc": "gumowego",
+          "ins": "gumowym",
+          "loc": "gumowym"
+        },
+        "m3": {
+          "nom": "gumowy",
+          "gen": "gumowego",
+          "dat": "gumowemu",
+          "acc": "gumowy",
+          "ins": "gumowym",
+          "loc": "gumowym"
+        },
+        "f": {
+          "nom": "gumowa",
+          "gen": "gumowej",
+          "dat": "gumowej",
+          "acc": "gumową",
+          "ins": "gumową",
+          "loc": "gumowej"
+        },
+        "n": {
+          "nom": "gumowe",
+          "gen": "gumowego",
+          "dat": "gumowemu",
+          "acc": "gumowe",
+          "ins": "gumowym",
+          "loc": "gumowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "gumowi",
+          "gen": "gumowych",
+          "dat": "gumowym",
+          "acc": "gumowych",
+          "ins": "gumowymi",
+          "loc": "gumowych"
+        },
+        "nonvirile": {
+          "nom": "gumowe",
+          "gen": "gumowych",
+          "dat": "gumowym",
+          "acc": "gumowe",
+          "ins": "gumowymi",
+          "loc": "gumowych"
+        }
+      }
+    }
+  }
+}

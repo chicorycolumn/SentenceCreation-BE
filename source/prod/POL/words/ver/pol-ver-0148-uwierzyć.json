@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "uwierzyć",
+    "verbalNoun": "uwierzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "uwierzywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "uwierzy się"
+          },
+          "plural": {
+            "allPluralGenders": "uwierzy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "uwierzę"
+          },
+          "plural": {
+            "allPluralGenders": "uwierzymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "uwierzysz"
+          },
+          "plural": {
+            "allPluralGenders": "uwierzycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "uwierzy"
+          },
+          "plural": {
+            "allPluralGenders": "uwierzą"
+          }
+        }
+      },
+      "imperative": "uwierz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "uwierzono"
+          },
+          "plural": {
+            "allPluralGenders": "uwierzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "uwierzyłem",
+            "f": "uwierzyłam"
+          },
+          "plural": {
+            "virile": "uwierzyliśmy",
+            "nonvirile": "uwierzyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "uwierzyłeś",
+            "f": "uwierzyłaś"
+          },
+          "plural": {
+            "virile": "uwierzyliście",
+            "nonvirile": "uwierzyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "uwierzył",
+            "f": "uwierzyła",
+            "n": "uwierzyło"
+          },
+          "plural": {
+            "virile": "uwierzyli",
+            "nonvirile": "uwierzyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

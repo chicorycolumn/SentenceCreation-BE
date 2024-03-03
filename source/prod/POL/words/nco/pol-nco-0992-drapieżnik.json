@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "drapieżnik",
+      "gen": "drapieżnika",
+      "dat": "drapieżnikowi",
+      "acc": "drapieżnika",
+      "ins": "drapieżnikiem",
+      "loc": "drapieżniku",
+      "voc": "drapieżniku"
+    },
+    "plural": {
+      "nom": "drapieżniki",
+      "gen": "drapieżników",
+      "dat": "drapieżnikom",
+      "acc": "drapieżniki",
+      "ins": "drapieżnikami",
+      "loc": "drapieżnikach",
+      "voc": "drapieżniki"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ukraść",
+    "verbalNoun": "ukradnięcie ukradzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "ukradziony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "ukradłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ukradnie się"
+          },
+          "plural": {
+            "allPluralGenders": "ukradnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ukradnę"
+          },
+          "plural": {
+            "allPluralGenders": "ukradniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ukradniesz"
+          },
+          "plural": {
+            "allPluralGenders": "ukradniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ukradnie"
+          },
+          "plural": {
+            "allPluralGenders": "ukradną"
+          }
+        }
+      },
+      "imperative": "ukradnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ukradziono"
+          },
+          "plural": {
+            "allPluralGenders": "ukradziono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ukradłem",
+            "f": "ukradłam"
+          },
+          "plural": {
+            "virile": "ukradliśmy",
+            "nonvirile": "ukradłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ukradłeś",
+            "f": "ukradłaś"
+          },
+          "plural": {
+            "virile": "ukradliście",
+            "nonvirile": "ukradłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ukradł",
+            "f": "ukradła",
+            "n": "ukradło"
+          },
+          "plural": {
+            "virile": "ukradli",
+            "nonvirile": "ukradły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

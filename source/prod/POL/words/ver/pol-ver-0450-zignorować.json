@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zignorować",
+    "verbalNoun": "zignorowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zignorowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zignorowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zignoruje się"
+          },
+          "plural": {
+            "allPluralGenders": "zignoruje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zignoruję"
+          },
+          "plural": {
+            "allPluralGenders": "zignorujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zignorujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zignorujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zignoruje"
+          },
+          "plural": {
+            "allPluralGenders": "zignorują"
+          }
+        }
+      },
+      "imperative": "zignoruj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zignorowano"
+          },
+          "plural": {
+            "allPluralGenders": "zignorowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zignorowałem",
+            "f": "zignorowałam"
+          },
+          "plural": {
+            "virile": "zignorowaliśmy",
+            "nonvirile": "zignorowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zignorowałeś",
+            "f": "zignorowałaś"
+          },
+          "plural": {
+            "virile": "zignorowaliście",
+            "nonvirile": "zignorowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zignorował",
+            "f": "zignorowała",
+            "n": "zignorowało"
+          },
+          "plural": {
+            "virile": "zignorowali",
+            "nonvirile": "zignorowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

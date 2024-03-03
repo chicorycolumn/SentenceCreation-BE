@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odpoczywać",
+    "verbalNoun": "odpoczywanie",
+    "activeAdjectival": "odpoczywający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "odpoczywając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odpoczywaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odpoczywano"
+          },
+          "plural": {
+            "allPluralGenders": "odpoczywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odpoczywałem",
+            "f": "odpoczywałam"
+          },
+          "plural": {
+            "virile": "odpoczywaliśmy",
+            "nonvirile": "odpoczywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odpoczywałeś",
+            "f": "odpoczywałaś"
+          },
+          "plural": {
+            "virile": "odpoczywaliście",
+            "nonvirile": "odpoczywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odpoczywał",
+            "f": "odpoczywała",
+            "n": "odpoczywało"
+          },
+          "plural": {
+            "virile": "odpoczywali",
+            "nonvirile": "odpoczywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odpoczywa się"
+          },
+          "plural": {
+            "allPluralGenders": "odpoczywa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odpoczywam"
+          },
+          "plural": {
+            "allPluralGenders": "odpoczywamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odpoczywasz"
+          },
+          "plural": {
+            "allPluralGenders": "odpoczywacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odpoczywa"
+          },
+          "plural": {
+            "allPluralGenders": "odpoczywają"
+          }
+        }
+      }
+    }
+  }
+}

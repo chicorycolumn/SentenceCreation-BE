@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "omijać",
+    "verbalNoun": "omijanie",
+    "activeAdjectival": "omijający",
+    "passiveAdjectival": "omijany",
+    "contemporaryAdverbial": "omijając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "omijaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "omijano"
+          },
+          "plural": {
+            "allPluralGenders": "omijano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "omijałem",
+            "f": "omijałam"
+          },
+          "plural": {
+            "virile": "omijaliśmy",
+            "nonvirile": "omijałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "omijałeś",
+            "f": "omijałaś"
+          },
+          "plural": {
+            "virile": "omijaliście",
+            "nonvirile": "omijałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "omijał",
+            "f": "omijała",
+            "n": "omijało"
+          },
+          "plural": {
+            "virile": "omijali",
+            "nonvirile": "omijały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "omija się"
+          },
+          "plural": {
+            "allPluralGenders": "omija się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "omijam"
+          },
+          "plural": {
+            "allPluralGenders": "omijamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "omijasz"
+          },
+          "plural": {
+            "allPluralGenders": "omijacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "omija"
+          },
+          "plural": {
+            "allPluralGenders": "omijają"
+          }
+        }
+      }
+    }
+  }
+}

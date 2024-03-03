@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "winogrono",
+      "gen": "winogrona",
+      "dat": "winogronu",
+      "acc": "winogrono",
+      "ins": "winogronem",
+      "loc": "winogronie",
+      "voc": "winogrono"
+    },
+    "plural": {
+      "nom": "winogrona",
+      "gen": "winogron",
+      "dat": "winogronom",
+      "acc": "winogrona",
+      "ins": "winogronami",
+      "loc": "winogronach",
+      "voc": "winogrona"
+    }
+  }
+}

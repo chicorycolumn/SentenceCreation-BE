@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "comforter",
+      "gen": "comforter's"
+    },
+    "plural": {
+      "nom": "comforters",
+      "gen": "comforters'"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "różnorodnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "różnorodny",
+          "gen": "różnorodnego",
+          "dat": "różnorodnemu",
+          "acc": "różnorodnego",
+          "ins": "różnorodnym",
+          "loc": "różnorodnym"
+        },
+        "m3": {
+          "nom": "różnorodny",
+          "gen": "różnorodnego",
+          "dat": "różnorodnemu",
+          "acc": "różnorodny",
+          "ins": "różnorodnym",
+          "loc": "różnorodnym"
+        },
+        "f": {
+          "nom": "różnorodna",
+          "gen": "różnorodnej",
+          "dat": "różnorodnej",
+          "acc": "różnorodną",
+          "ins": "różnorodną",
+          "loc": "różnorodnej"
+        },
+        "n": {
+          "nom": "różnorodne",
+          "gen": "różnorodnego",
+          "dat": "różnorodnemu",
+          "acc": "różnorodne",
+          "ins": "różnorodnym",
+          "loc": "różnorodnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "różnorodni",
+          "gen": "różnorodnych",
+          "dat": "różnorodnym",
+          "acc": "różnorodnych",
+          "ins": "różnorodnymi",
+          "loc": "różnorodnych"
+        },
+        "nonvirile": {
+          "nom": "różnorodne",
+          "gen": "różnorodnych",
+          "dat": "różnorodnym",
+          "acc": "różnorodne",
+          "ins": "różnorodnymi",
+          "loc": "różnorodnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "różnorodniejszy",
+          "gen": "różnorodniejszego",
+          "dat": "różnorodniejszemu",
+          "acc": "różnorodniejszego",
+          "ins": "różnorodniejszym",
+          "loc": "różnorodniejszym"
+        },
+        "m3": {
+          "nom": "różnorodniejszy",
+          "gen": "różnorodniejszego",
+          "dat": "różnorodniejszemu",
+          "acc": "różnorodniejszy",
+          "ins": "różnorodniejszym",
+          "loc": "różnorodniejszym"
+        },
+        "f": {
+          "nom": "różnorodniejsza",
+          "gen": "różnorodniejszej",
+          "dat": "różnorodniejszej",
+          "acc": "różnorodniejszą",
+          "ins": "różnorodniejszą",
+          "loc": "różnorodniejszej"
+        },
+        "n": {
+          "nom": "różnorodniejsze",
+          "gen": "różnorodniejszego",
+          "dat": "różnorodniejszemu",
+          "acc": "różnorodniejsze",
+          "ins": "różnorodniejszym",
+          "loc": "różnorodniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "różnorodniejsi",
+          "gen": "różnorodniejszych",
+          "dat": "różnorodniejszym",
+          "acc": "różnorodniejszych",
+          "ins": "różnorodniejszymi",
+          "loc": "różnorodniejszych"
+        },
+        "nonvirile": {
+          "nom": "różnorodniejsze",
+          "gen": "różnorodniejszych",
+          "dat": "różnorodniejszym",
+          "acc": "różnorodniejsze",
+          "ins": "różnorodniejszymi",
+          "loc": "różnorodniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najróżnorodniejszy",
+          "gen": "najróżnorodniejszego",
+          "dat": "najróżnorodniejszemu",
+          "acc": "najróżnorodniejszego",
+          "ins": "najróżnorodniejszym",
+          "loc": "najróżnorodniejszym"
+        },
+        "m3": {
+          "nom": "najróżnorodniejszy",
+          "gen": "najróżnorodniejszego",
+          "dat": "najróżnorodniejszemu",
+          "acc": "najróżnorodniejszy",
+          "ins": "najróżnorodniejszym",
+          "loc": "najróżnorodniejszym"
+        },
+        "f": {
+          "nom": "najróżnorodniejsza",
+          "gen": "najróżnorodniejszej",
+          "dat": "najróżnorodniejszej",
+          "acc": "najróżnorodniejszą",
+          "ins": "najróżnorodniejszą",
+          "loc": "najróżnorodniejszej"
+        },
+        "n": {
+          "nom": "najróżnorodniejsze",
+          "gen": "najróżnorodniejszego",
+          "dat": "najróżnorodniejszemu",
+          "acc": "najróżnorodniejsze",
+          "ins": "najróżnorodniejszym",
+          "loc": "najróżnorodniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najróżnorodniejsi",
+          "gen": "najróżnorodniejszych",
+          "dat": "najróżnorodniejszym",
+          "acc": "najróżnorodniejszych",
+          "ins": "najróżnorodniejszymi",
+          "loc": "najróżnorodniejszych"
+        },
+        "nonvirile": {
+          "nom": "najróżnorodniejsze",
+          "gen": "najróżnorodniejszych",
+          "dat": "najróżnorodniejszym",
+          "acc": "najróżnorodniejsze",
+          "ins": "najróżnorodniejszymi",
+          "loc": "najróżnorodniejszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "szyja",
+      "gen": "szyi",
+      "dat": "szyi",
+      "acc": "szyję",
+      "ins": "szyją",
+      "loc": "szyi",
+      "voc": "szyjo"
+    },
+    "plural": {
+      "nom": "szyje",
+      "gen": "szyj",
+      "dat": "szyjom",
+      "acc": "szyje",
+      "ins": "szyjami",
+      "loc": "szyjach",
+      "voc": "szyje"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "sumiennie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "sumienny",
+          "gen": "sumiennego",
+          "dat": "sumiennemu",
+          "acc": "sumiennego",
+          "ins": "sumiennym",
+          "loc": "sumiennym"
+        },
+        "m3": {
+          "nom": "sumienny",
+          "gen": "sumiennego",
+          "dat": "sumiennemu",
+          "acc": "sumienny",
+          "ins": "sumiennym",
+          "loc": "sumiennym"
+        },
+        "f": {
+          "nom": "sumienna",
+          "gen": "sumiennej",
+          "dat": "sumiennej",
+          "acc": "sumienną",
+          "ins": "sumienną",
+          "loc": "sumiennej"
+        },
+        "n": {
+          "nom": "sumienne",
+          "gen": "sumiennego",
+          "dat": "sumiennemu",
+          "acc": "sumienne",
+          "ins": "sumiennym",
+          "loc": "sumiennym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "sumienni",
+          "gen": "sumiennych",
+          "dat": "sumiennym",
+          "acc": "sumiennych",
+          "ins": "sumiennymi",
+          "loc": "sumiennych"
+        },
+        "nonvirile": {
+          "nom": "sumienne",
+          "gen": "sumiennych",
+          "dat": "sumiennym",
+          "acc": "sumienne",
+          "ins": "sumiennymi",
+          "loc": "sumiennych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej sumienny",
+          "gen": "bardziej sumiennego",
+          "dat": "bardziej sumiennemu",
+          "acc": "bardziej sumiennego",
+          "ins": "bardziej sumiennym",
+          "loc": "bardziej sumiennym"
+        },
+        "m3": {
+          "nom": "bardziej sumienny",
+          "gen": "bardziej sumiennego",
+          "dat": "bardziej sumiennemu",
+          "acc": "bardziej sumienny",
+          "ins": "bardziej sumiennym",
+          "loc": "bardziej sumiennym"
+        },
+        "f": {
+          "nom": "bardziej sumienna",
+          "gen": "bardziej sumiennej",
+          "dat": "bardziej sumiennej",
+          "acc": "bardziej sumienną",
+          "ins": "bardziej sumienną",
+          "loc": "bardziej sumiennej"
+        },
+        "n": {
+          "nom": "bardziej sumienne",
+          "gen": "bardziej sumiennego",
+          "dat": "bardziej sumiennemu",
+          "acc": "bardziej sumienne",
+          "ins": "bardziej sumiennym",
+          "loc": "bardziej sumiennym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej sumienni",
+          "gen": "bardziej sumiennych",
+          "dat": "bardziej sumiennym",
+          "acc": "bardziej sumiennych",
+          "ins": "bardziej sumiennymi",
+          "loc": "bardziej sumiennych"
+        },
+        "nonvirile": {
+          "nom": "bardziej sumienne",
+          "gen": "bardziej sumiennych",
+          "dat": "bardziej sumiennym",
+          "acc": "bardziej sumienne",
+          "ins": "bardziej sumiennymi",
+          "loc": "bardziej sumiennych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej sumienny",
+          "gen": "najbardziej sumiennego",
+          "dat": "najbardziej sumiennemu",
+          "acc": "najbardziej sumiennego",
+          "ins": "najbardziej sumiennym",
+          "loc": "najbardziej sumiennym"
+        },
+        "m3": {
+          "nom": "najbardziej sumienny",
+          "gen": "najbardziej sumiennego",
+          "dat": "najbardziej sumiennemu",
+          "acc": "najbardziej sumienny",
+          "ins": "najbardziej sumiennym",
+          "loc": "najbardziej sumiennym"
+        },
+        "f": {
+          "nom": "najbardziej sumienna",
+          "gen": "najbardziej sumiennej",
+          "dat": "najbardziej sumiennej",
+          "acc": "najbardziej sumienną",
+          "ins": "najbardziej sumienną",
+          "loc": "najbardziej sumiennej"
+        },
+        "n": {
+          "nom": "najbardziej sumienne",
+          "gen": "najbardziej sumiennego",
+          "dat": "najbardziej sumiennemu",
+          "acc": "najbardziej sumienne",
+          "ins": "najbardziej sumiennym",
+          "loc": "najbardziej sumiennym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej sumienni",
+          "gen": "najbardziej sumiennych",
+          "dat": "najbardziej sumiennym",
+          "acc": "najbardziej sumiennych",
+          "ins": "najbardziej sumiennymi",
+          "loc": "najbardziej sumiennych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej sumienne",
+          "gen": "najbardziej sumiennych",
+          "dat": "najbardziej sumiennym",
+          "acc": "najbardziej sumienne",
+          "ins": "najbardziej sumiennymi",
+          "loc": "najbardziej sumiennych"
+        }
+      }
+    }
+  }
+}

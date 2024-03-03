@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przeglądać",
+    "verbalNoun": "przeglądanie",
+    "activeAdjectival": "przeglądający",
+    "passiveAdjectival": "przeglądany",
+    "contemporaryAdverbial": "przeglądając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przeglądaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeglądano"
+          },
+          "plural": {
+            "allPluralGenders": "przeglądano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przeglądałem",
+            "f": "przeglądałam"
+          },
+          "plural": {
+            "virile": "przeglądaliśmy",
+            "nonvirile": "przeglądałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przeglądałeś",
+            "f": "przeglądałaś"
+          },
+          "plural": {
+            "virile": "przeglądaliście",
+            "nonvirile": "przeglądałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przeglądał",
+            "f": "przeglądała",
+            "n": "przeglądało"
+          },
+          "plural": {
+            "virile": "przeglądali",
+            "nonvirile": "przeglądały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przegląda się"
+          },
+          "plural": {
+            "allPluralGenders": "przegląda się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przeglądam"
+          },
+          "plural": {
+            "allPluralGenders": "przeglądamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przeglądasz"
+          },
+          "plural": {
+            "allPluralGenders": "przeglądacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przegląda"
+          },
+          "plural": {
+            "allPluralGenders": "przeglądają"
+          }
+        }
+      }
+    }
+  }
+}

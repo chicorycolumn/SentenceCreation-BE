@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przychodzić",
+    "verbalNoun": "przychodzenie",
+    "activeAdjectival": "przychodzący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "przychodząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przychodź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przychodzono"
+          },
+          "plural": {
+            "allPluralGenders": "przychodzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przychodziłem",
+            "f": "przychodziłam"
+          },
+          "plural": {
+            "virile": "przychodziliśmy",
+            "nonvirile": "przychodziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przychodziłeś",
+            "f": "przychodziłaś"
+          },
+          "plural": {
+            "virile": "przychodziliście",
+            "nonvirile": "przychodziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przychodził",
+            "f": "przychodziła",
+            "n": "przychodziło"
+          },
+          "plural": {
+            "virile": "przychodzili",
+            "nonvirile": "przychodziły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przychodzi się"
+          },
+          "plural": {
+            "allPluralGenders": "przychodzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przychodzę"
+          },
+          "plural": {
+            "allPluralGenders": "przychodzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przychodzisz"
+          },
+          "plural": {
+            "allPluralGenders": "przychodzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przychodzi"
+          },
+          "plural": {
+            "allPluralGenders": "przychodzą"
+          }
+        }
+      }
+    }
+  }
+}

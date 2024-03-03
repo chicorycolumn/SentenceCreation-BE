@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pomachać",
+    "verbalNoun": "pomachanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pomachawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pomacha się"
+          },
+          "plural": {
+            "allPluralGenders": "pomacha się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pomacham"
+          },
+          "plural": {
+            "allPluralGenders": "pomachamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pomachasz"
+          },
+          "plural": {
+            "allPluralGenders": "pomachacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pomacha"
+          },
+          "plural": {
+            "allPluralGenders": "pomachają"
+          }
+        }
+      },
+      "imperative": "pomachaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pomachano"
+          },
+          "plural": {
+            "allPluralGenders": "pomachano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pomachałem",
+            "f": "pomachałam"
+          },
+          "plural": {
+            "virile": "pomachaliśmy",
+            "nonvirile": "pomachałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pomachałeś",
+            "f": "pomachałaś"
+          },
+          "plural": {
+            "virile": "pomachaliście",
+            "nonvirile": "pomachałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pomachał",
+            "f": "pomachała",
+            "n": "pomachało"
+          },
+          "plural": {
+            "virile": "pomachali",
+            "nonvirile": "pomachały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "żywiołowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "żywiołowy",
+          "gen": "żywiołowego",
+          "dat": "żywiołowemu",
+          "acc": "żywiołowego",
+          "ins": "żywiołowym",
+          "loc": "żywiołowym"
+        },
+        "m3": {
+          "nom": "żywiołowy",
+          "gen": "żywiołowego",
+          "dat": "żywiołowemu",
+          "acc": "żywiołowy",
+          "ins": "żywiołowym",
+          "loc": "żywiołowym"
+        },
+        "f": {
+          "nom": "żywiołowa",
+          "gen": "żywiołowej",
+          "dat": "żywiołowej",
+          "acc": "żywiołową",
+          "ins": "żywiołową",
+          "loc": "żywiołowej"
+        },
+        "n": {
+          "nom": "żywiołowe",
+          "gen": "żywiołowego",
+          "dat": "żywiołowemu",
+          "acc": "żywiołowe",
+          "ins": "żywiołowym",
+          "loc": "żywiołowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "żywiołowi",
+          "gen": "żywiołowych",
+          "dat": "żywiołowym",
+          "acc": "żywiołowych",
+          "ins": "żywiołowymi",
+          "loc": "żywiołowych"
+        },
+        "nonvirile": {
+          "nom": "żywiołowe",
+          "gen": "żywiołowych",
+          "dat": "żywiołowym",
+          "acc": "żywiołowe",
+          "ins": "żywiołowymi",
+          "loc": "żywiołowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej żywiołowy",
+          "gen": "bardziej żywiołowego",
+          "dat": "bardziej żywiołowemu",
+          "acc": "bardziej żywiołowego",
+          "ins": "bardziej żywiołowym",
+          "loc": "bardziej żywiołowym"
+        },
+        "m3": {
+          "nom": "bardziej żywiołowy",
+          "gen": "bardziej żywiołowego",
+          "dat": "bardziej żywiołowemu",
+          "acc": "bardziej żywiołowy",
+          "ins": "bardziej żywiołowym",
+          "loc": "bardziej żywiołowym"
+        },
+        "f": {
+          "nom": "bardziej żywiołowa",
+          "gen": "bardziej żywiołowej",
+          "dat": "bardziej żywiołowej",
+          "acc": "bardziej żywiołową",
+          "ins": "bardziej żywiołową",
+          "loc": "bardziej żywiołowej"
+        },
+        "n": {
+          "nom": "bardziej żywiołowe",
+          "gen": "bardziej żywiołowego",
+          "dat": "bardziej żywiołowemu",
+          "acc": "bardziej żywiołowe",
+          "ins": "bardziej żywiołowym",
+          "loc": "bardziej żywiołowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej żywiołowi",
+          "gen": "bardziej żywiołowych",
+          "dat": "bardziej żywiołowym",
+          "acc": "bardziej żywiołowych",
+          "ins": "bardziej żywiołowymi",
+          "loc": "bardziej żywiołowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej żywiołowe",
+          "gen": "bardziej żywiołowych",
+          "dat": "bardziej żywiołowym",
+          "acc": "bardziej żywiołowe",
+          "ins": "bardziej żywiołowymi",
+          "loc": "bardziej żywiołowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej żywiołowy",
+          "gen": "najbardziej żywiołowego",
+          "dat": "najbardziej żywiołowemu",
+          "acc": "najbardziej żywiołowego",
+          "ins": "najbardziej żywiołowym",
+          "loc": "najbardziej żywiołowym"
+        },
+        "m3": {
+          "nom": "najbardziej żywiołowy",
+          "gen": "najbardziej żywiołowego",
+          "dat": "najbardziej żywiołowemu",
+          "acc": "najbardziej żywiołowy",
+          "ins": "najbardziej żywiołowym",
+          "loc": "najbardziej żywiołowym"
+        },
+        "f": {
+          "nom": "najbardziej żywiołowa",
+          "gen": "najbardziej żywiołowej",
+          "dat": "najbardziej żywiołowej",
+          "acc": "najbardziej żywiołową",
+          "ins": "najbardziej żywiołową",
+          "loc": "najbardziej żywiołowej"
+        },
+        "n": {
+          "nom": "najbardziej żywiołowe",
+          "gen": "najbardziej żywiołowego",
+          "dat": "najbardziej żywiołowemu",
+          "acc": "najbardziej żywiołowe",
+          "ins": "najbardziej żywiołowym",
+          "loc": "najbardziej żywiołowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej żywiołowi",
+          "gen": "najbardziej żywiołowych",
+          "dat": "najbardziej żywiołowym",
+          "acc": "najbardziej żywiołowych",
+          "ins": "najbardziej żywiołowymi",
+          "loc": "najbardziej żywiołowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej żywiołowe",
+          "gen": "najbardziej żywiołowych",
+          "dat": "najbardziej żywiołowym",
+          "acc": "najbardziej żywiołowe",
+          "ins": "najbardziej żywiołowymi",
+          "loc": "najbardziej żywiołowych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "papuga",
+      "gen": "papugi",
+      "dat": "papudze",
+      "acc": "papugę",
+      "ins": "papugą",
+      "loc": "papudze",
+      "voc": "papugo"
+    },
+    "plural": {
+      "nom": "papugi",
+      "gen": "papug",
+      "dat": "papugom",
+      "acc": "papugi",
+      "ins": "papugami",
+      "loc": "papugach",
+      "voc": "papugi"
+    }
+  }
+}

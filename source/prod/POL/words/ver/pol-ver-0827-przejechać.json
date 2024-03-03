@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przejechać",
+    "verbalNoun": "przejechanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przejechany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przejechawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przejedzie się"
+          },
+          "plural": {
+            "allPluralGenders": "przejedzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przejadę"
+          },
+          "plural": {
+            "allPluralGenders": "przejedziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przejedziesz"
+          },
+          "plural": {
+            "allPluralGenders": "przejedziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przejedzie"
+          },
+          "plural": {
+            "allPluralGenders": "przejadą"
+          }
+        }
+      },
+      "imperative": "przejedź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przejechano"
+          },
+          "plural": {
+            "allPluralGenders": "przejechano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przejechałem",
+            "f": "przejechałam"
+          },
+          "plural": {
+            "virile": "przejechaliśmy",
+            "nonvirile": "przejechałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przejechałeś",
+            "f": "przejechałaś"
+          },
+          "plural": {
+            "virile": "przejechaliście",
+            "nonvirile": "przejechałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przejechał",
+            "f": "przejechała",
+            "n": "przejechało"
+          },
+          "plural": {
+            "virile": "przejechali",
+            "nonvirile": "przejechały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

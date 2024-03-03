@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dostrzec",
+    "verbalNoun": "dostrzeżenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "dostrzeżony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "dostrzegłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dostrzeże się"
+          },
+          "plural": {
+            "allPluralGenders": "dostrzeże się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dostrzegę"
+          },
+          "plural": {
+            "allPluralGenders": "dostrzeżemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dostrzeżesz"
+          },
+          "plural": {
+            "allPluralGenders": "dostrzeżecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dostrzeże"
+          },
+          "plural": {
+            "allPluralGenders": "dostrzegą"
+          }
+        }
+      },
+      "imperative": "dostrzeż",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dostrzeżono"
+          },
+          "plural": {
+            "allPluralGenders": "dostrzeżono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dostrzegłem",
+            "f": "dostrzegłam"
+          },
+          "plural": {
+            "virile": "dostrzegliśmy",
+            "nonvirile": "dostrzegłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dostrzegłeś",
+            "f": "dostrzegłaś"
+          },
+          "plural": {
+            "virile": "dostrzegliście",
+            "nonvirile": "dostrzegłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dostrzegł",
+            "f": "dostrzegła",
+            "n": "dostrzegło"
+          },
+          "plural": {
+            "virile": "dostrzegli",
+            "nonvirile": "dostrzegły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

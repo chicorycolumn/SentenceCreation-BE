@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "nierówno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nierówny",
+          "gen": "nierównego",
+          "dat": "nierównemu",
+          "acc": "nierównego",
+          "ins": "nierównym",
+          "loc": "nierównym"
+        },
+        "m3": {
+          "nom": "nierówny",
+          "gen": "nierównego",
+          "dat": "nierównemu",
+          "acc": "nierówny",
+          "ins": "nierównym",
+          "loc": "nierównym"
+        },
+        "f": {
+          "nom": "nierówna",
+          "gen": "nierównej",
+          "dat": "nierównej",
+          "acc": "nierówną",
+          "ins": "nierówną",
+          "loc": "nierównej"
+        },
+        "n": {
+          "nom": "nierówne",
+          "gen": "nierównego",
+          "dat": "nierównemu",
+          "acc": "nierówne",
+          "ins": "nierównym",
+          "loc": "nierównym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nierówni",
+          "gen": "nierównych",
+          "dat": "nierównym",
+          "acc": "nierównych",
+          "ins": "nierównymi",
+          "loc": "nierównych"
+        },
+        "nonvirile": {
+          "nom": "nierówne",
+          "gen": "nierównych",
+          "dat": "nierównym",
+          "acc": "nierówne",
+          "ins": "nierównymi",
+          "loc": "nierównych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej nierówny",
+          "gen": "bardziej nierównego",
+          "dat": "bardziej nierównemu",
+          "acc": "bardziej nierównego",
+          "ins": "bardziej nierównym",
+          "loc": "bardziej nierównym"
+        },
+        "m3": {
+          "nom": "bardziej nierówny",
+          "gen": "bardziej nierównego",
+          "dat": "bardziej nierównemu",
+          "acc": "bardziej nierówny",
+          "ins": "bardziej nierównym",
+          "loc": "bardziej nierównym"
+        },
+        "f": {
+          "nom": "bardziej nierówna",
+          "gen": "bardziej nierównej",
+          "dat": "bardziej nierównej",
+          "acc": "bardziej nierówną",
+          "ins": "bardziej nierówną",
+          "loc": "bardziej nierównej"
+        },
+        "n": {
+          "nom": "bardziej nierówne",
+          "gen": "bardziej nierównego",
+          "dat": "bardziej nierównemu",
+          "acc": "bardziej nierówne",
+          "ins": "bardziej nierównym",
+          "loc": "bardziej nierównym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej nierówni",
+          "gen": "bardziej nierównych",
+          "dat": "bardziej nierównym",
+          "acc": "bardziej nierównych",
+          "ins": "bardziej nierównymi",
+          "loc": "bardziej nierównych"
+        },
+        "nonvirile": {
+          "nom": "bardziej nierówne",
+          "gen": "bardziej nierównych",
+          "dat": "bardziej nierównym",
+          "acc": "bardziej nierówne",
+          "ins": "bardziej nierównymi",
+          "loc": "bardziej nierównych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej nierówny",
+          "gen": "najbardziej nierównego",
+          "dat": "najbardziej nierównemu",
+          "acc": "najbardziej nierównego",
+          "ins": "najbardziej nierównym",
+          "loc": "najbardziej nierównym"
+        },
+        "m3": {
+          "nom": "najbardziej nierówny",
+          "gen": "najbardziej nierównego",
+          "dat": "najbardziej nierównemu",
+          "acc": "najbardziej nierówny",
+          "ins": "najbardziej nierównym",
+          "loc": "najbardziej nierównym"
+        },
+        "f": {
+          "nom": "najbardziej nierówna",
+          "gen": "najbardziej nierównej",
+          "dat": "najbardziej nierównej",
+          "acc": "najbardziej nierówną",
+          "ins": "najbardziej nierówną",
+          "loc": "najbardziej nierównej"
+        },
+        "n": {
+          "nom": "najbardziej nierówne",
+          "gen": "najbardziej nierównego",
+          "dat": "najbardziej nierównemu",
+          "acc": "najbardziej nierówne",
+          "ins": "najbardziej nierównym",
+          "loc": "najbardziej nierównym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej nierówni",
+          "gen": "najbardziej nierównych",
+          "dat": "najbardziej nierównym",
+          "acc": "najbardziej nierównych",
+          "ins": "najbardziej nierównymi",
+          "loc": "najbardziej nierównych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej nierówne",
+          "gen": "najbardziej nierównych",
+          "dat": "najbardziej nierównym",
+          "acc": "najbardziej nierówne",
+          "ins": "najbardziej nierównymi",
+          "loc": "najbardziej nierównych"
+        }
+      }
+    }
+  }
+}

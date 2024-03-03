@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "koło",
+      "gen": "koła",
+      "dat": "kołu",
+      "acc": "koło",
+      "ins": "kołem",
+      "loc": "kole",
+      "voc": "koło"
+    },
+    "plural": {
+      "nom": "koła",
+      "gen": "kół",
+      "dat": "kołom",
+      "acc": "koła",
+      "ins": "kołami",
+      "loc": "kołach",
+      "voc": "koła"
+    }
+  }
+}

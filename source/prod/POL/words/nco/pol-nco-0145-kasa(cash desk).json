@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kasa",
+      "gen": "kasy",
+      "dat": "kasie",
+      "acc": "kasę",
+      "ins": "kasą",
+      "loc": "kasie",
+      "voc": "kaso"
+    },
+    "plural": {
+      "nom": "kasy",
+      "gen": "kas",
+      "dat": "kasom",
+      "acc": "kasy",
+      "ins": "kasami",
+      "loc": "kasach",
+      "voc": "kasy"
+    }
+  }
+}

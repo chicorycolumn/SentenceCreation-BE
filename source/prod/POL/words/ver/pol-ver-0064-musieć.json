@@ -1,0 +1,81 @@
+{
+  "inflections": {
+    "infinitive": "musieć",
+    "activeAdjectival": "muszący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "musząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": false,
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "musiałem",
+            "f": "musiałam"
+          },
+          "plural": {
+            "virile": "musieliśmy",
+            "nonvirile": "musiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "musiałeś",
+            "f": "musiałaś"
+          },
+          "plural": {
+            "virile": "musieliście",
+            "nonvirile": "musiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "musiał",
+            "f": "musiała",
+            "n": "musiało"
+          },
+          "plural": {
+            "virile": "musieli",
+            "nonvirile": "musiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "musi się"
+          },
+          "plural": {
+            "allPluralGenders": "musi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "muszę"
+          },
+          "plural": {
+            "allPluralGenders": "musimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "musisz"
+          },
+          "plural": {
+            "allPluralGenders": "musicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "musi"
+          },
+          "plural": {
+            "allPluralGenders": "muszą"
+          }
+        }
+      }
+    }
+  }
+}

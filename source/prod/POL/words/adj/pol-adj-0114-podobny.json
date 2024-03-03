@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "podobnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "podobny",
+          "gen": "podobnego",
+          "dat": "podobnemu",
+          "acc": "podobnego",
+          "ins": "podobnym",
+          "loc": "podobnym"
+        },
+        "m3": {
+          "nom": "podobny",
+          "gen": "podobnego",
+          "dat": "podobnemu",
+          "acc": "podobny",
+          "ins": "podobnym",
+          "loc": "podobnym"
+        },
+        "f": {
+          "nom": "podobna",
+          "gen": "podobnej",
+          "dat": "podobnej",
+          "acc": "podobną",
+          "ins": "podobną",
+          "loc": "podobnej"
+        },
+        "n": {
+          "nom": "podobne",
+          "gen": "podobnego",
+          "dat": "podobnemu",
+          "acc": "podobne",
+          "ins": "podobnym",
+          "loc": "podobnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "podobni",
+          "gen": "podobnych",
+          "dat": "podobnym",
+          "acc": "podobnych",
+          "ins": "podobnymi",
+          "loc": "podobnych"
+        },
+        "nonvirile": {
+          "nom": "podobne",
+          "gen": "podobnych",
+          "dat": "podobnym",
+          "acc": "podobne",
+          "ins": "podobnymi",
+          "loc": "podobnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszy",
+              "bardziej podobny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszego",
+              "bardziej podobnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszemu",
+              "bardziej podobnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszego",
+              "bardziej podobnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszym",
+              "bardziej podobnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszym",
+              "bardziej podobnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszy",
+              "bardziej podobny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszego",
+              "bardziej podobnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszemu",
+              "bardziej podobnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszy",
+              "bardziej podobny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszym",
+              "bardziej podobnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszym",
+              "bardziej podobnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejsza",
+              "bardziej podobna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszej",
+              "bardziej podobnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszej",
+              "bardziej podobnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszą",
+              "bardziej podobną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszą",
+              "bardziej podobną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszej",
+              "bardziej podobnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejsze",
+              "bardziej podobne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszego",
+              "bardziej podobnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszemu",
+              "bardziej podobnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejsze",
+              "bardziej podobne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszym",
+              "bardziej podobnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszym",
+              "bardziej podobnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejsi",
+              "bardziej podobni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszych",
+              "bardziej podobnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszym",
+              "bardziej podobnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszych",
+              "bardziej podobnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszymi",
+              "bardziej podobnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszych",
+              "bardziej podobnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejsze",
+              "bardziej podobne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszych",
+              "bardziej podobnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszym",
+              "bardziej podobnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejsze",
+              "bardziej podobne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszymi",
+              "bardziej podobnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "podobniejszych",
+              "bardziej podobnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszy",
+              "najbardziej podobny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszego",
+              "najbardziej podobnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszemu",
+              "najbardziej podobnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszego",
+              "najbardziej podobnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszym",
+              "najbardziej podobnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszym",
+              "najbardziej podobnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszy",
+              "najbardziej podobny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszego",
+              "najbardziej podobnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszemu",
+              "najbardziej podobnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszy",
+              "najbardziej podobny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszym",
+              "najbardziej podobnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszym",
+              "najbardziej podobnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejsza",
+              "najbardziej podobna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszej",
+              "najbardziej podobnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszej",
+              "najbardziej podobnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszą",
+              "najbardziej podobną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszą",
+              "najbardziej podobną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszej",
+              "najbardziej podobnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejsze",
+              "najbardziej podobne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszego",
+              "najbardziej podobnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszemu",
+              "najbardziej podobnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejsze",
+              "najbardziej podobne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszym",
+              "najbardziej podobnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszym",
+              "najbardziej podobnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejsi",
+              "najbardziej podobni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszych",
+              "najbardziej podobnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszym",
+              "najbardziej podobnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszych",
+              "najbardziej podobnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszymi",
+              "najbardziej podobnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszych",
+              "najbardziej podobnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejsze",
+              "najbardziej podobne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszych",
+              "najbardziej podobnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszym",
+              "najbardziej podobnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejsze",
+              "najbardziej podobne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszymi",
+              "najbardziej podobnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najpodobniejszych",
+              "najbardziej podobnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

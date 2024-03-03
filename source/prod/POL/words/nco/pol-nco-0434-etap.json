@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "etap",
+      "gen": "etapu",
+      "dat": "etapowi",
+      "acc": "etap",
+      "ins": "etapem",
+      "loc": "etapie",
+      "voc": "etapie"
+    },
+    "plural": {
+      "nom": "etapy",
+      "gen": "etapów",
+      "dat": "etapom",
+      "acc": "etapy",
+      "ins": "etapami",
+      "loc": "etapach",
+      "voc": "etapy"
+    }
+  }
+}

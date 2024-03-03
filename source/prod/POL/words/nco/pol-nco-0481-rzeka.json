@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rzeka",
+      "gen": "rzeki",
+      "dat": "rzece",
+      "acc": "rzekę",
+      "ins": "rzeką",
+      "loc": "rzece",
+      "voc": "rzeko"
+    },
+    "plural": {
+      "nom": "rzeki",
+      "gen": "rzek",
+      "dat": "rzekom",
+      "acc": "rzeki",
+      "ins": "rzekami",
+      "loc": "rzekach",
+      "voc": "rzeki"
+    }
+  }
+}

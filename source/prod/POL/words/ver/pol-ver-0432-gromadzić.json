@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "gromadzić",
+    "verbalNoun": "gromadzenie",
+    "activeAdjectival": "gromadzący",
+    "passiveAdjectival": "gromadzony",
+    "contemporaryAdverbial": "gromadząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "gromadź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "gromadzono"
+          },
+          "plural": {
+            "allPluralGenders": "gromadzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "gromadziłem",
+            "f": "gromadziłam"
+          },
+          "plural": {
+            "virile": "gromadziliśmy",
+            "nonvirile": "gromadziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "gromadziłeś",
+            "f": "gromadziłaś"
+          },
+          "plural": {
+            "virile": "gromadziliście",
+            "nonvirile": "gromadziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "gromadził",
+            "f": "gromadziła",
+            "n": "gromadziło"
+          },
+          "plural": {
+            "virile": "gromadzili",
+            "nonvirile": "gromadziły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "gromadzi się"
+          },
+          "plural": {
+            "allPluralGenders": "gromadzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "gromadzę"
+          },
+          "plural": {
+            "allPluralGenders": "gromadzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "gromadzisz"
+          },
+          "plural": {
+            "allPluralGenders": "gromadzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "gromadzi"
+          },
+          "plural": {
+            "allPluralGenders": "gromadzą"
+          }
+        }
+      }
+    }
+  }
+}

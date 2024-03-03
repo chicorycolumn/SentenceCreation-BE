@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "jeść",
+    "verbalNoun": "jedzenie",
+    "activeAdjectival": "jedzący",
+    "passiveAdjectival": "jedzony",
+    "contemporaryAdverbial": "jedząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "jedz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "jedzono"
+          },
+          "plural": {
+            "allPluralGenders": "jedzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "jadłem",
+            "f": "jadłam"
+          },
+          "plural": {
+            "virile": "jedliśmy",
+            "nonvirile": "jadłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "jadłeś",
+            "f": "jadłaś"
+          },
+          "plural": {
+            "virile": "jedliście",
+            "nonvirile": "jadłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "jadł",
+            "f": "jadła",
+            "n": "jadło"
+          },
+          "plural": {
+            "virile": "jedli",
+            "nonvirile": "jadły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "je się"
+          },
+          "plural": {
+            "allPluralGenders": "je się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "jem"
+          },
+          "plural": {
+            "allPluralGenders": "jemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "jesz"
+          },
+          "plural": {
+            "allPluralGenders": "jecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "je"
+          },
+          "plural": {
+            "allPluralGenders": "jedzą"
+          }
+        }
+      }
+    }
+  }
+}

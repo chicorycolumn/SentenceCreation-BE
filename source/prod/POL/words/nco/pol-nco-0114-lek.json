@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lek",
+      "gen": "leku",
+      "dat": "lekowi",
+      "acc": "lek",
+      "ins": "lekiem",
+      "loc": "leku",
+      "voc": "leku"
+    },
+    "plural": {
+      "nom": "leki",
+      "gen": "leków",
+      "dat": "lekom",
+      "acc": "leki",
+      "ins": "lekami",
+      "loc": "lekach",
+      "voc": "leki"
+    }
+  }
+}

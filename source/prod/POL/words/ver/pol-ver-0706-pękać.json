@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pękać",
+    "verbalNoun": "pękanie",
+    "activeAdjectival": "pękający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "pękając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pękaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pękano"
+          },
+          "plural": {
+            "allPluralGenders": "pękano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pękałem",
+            "f": "pękałam"
+          },
+          "plural": {
+            "virile": "pękaliśmy",
+            "nonvirile": "pękałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pękałeś",
+            "f": "pękałaś"
+          },
+          "plural": {
+            "virile": "pękaliście",
+            "nonvirile": "pękałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pękał",
+            "f": "pękała",
+            "n": "pękało"
+          },
+          "plural": {
+            "virile": "pękali",
+            "nonvirile": "pękały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pęka się"
+          },
+          "plural": {
+            "allPluralGenders": "pęka się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pękam"
+          },
+          "plural": {
+            "allPluralGenders": "pękamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pękasz"
+          },
+          "plural": {
+            "allPluralGenders": "pękacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pęka"
+          },
+          "plural": {
+            "allPluralGenders": "pękają"
+          }
+        }
+      }
+    }
+  }
+}

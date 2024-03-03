@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kość",
+      "gen": "kości",
+      "dat": "kości",
+      "acc": "kość",
+      "ins": "kością",
+      "loc": "kości",
+      "voc": "kości"
+    },
+    "plural": {
+      "nom": "kości",
+      "gen": "kości",
+      "dat": "kościom",
+      "acc": "kości",
+      "ins": [
+        "kośćmi",
+        "kościami"
+      ],
+      "loc": "kościach",
+      "voc": "kości"
+    }
+  }
+}

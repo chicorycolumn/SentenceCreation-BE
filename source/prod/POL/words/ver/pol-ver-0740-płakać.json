@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "płakać",
+    "verbalNoun": "płakanie",
+    "activeAdjectival": "płaczący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "płacząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "płacz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "płakano"
+          },
+          "plural": {
+            "allPluralGenders": "płakano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "płakałem",
+            "f": "płakałam"
+          },
+          "plural": {
+            "virile": "płakaliśmy",
+            "nonvirile": "płakałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "płakałeś",
+            "f": "płakałaś"
+          },
+          "plural": {
+            "virile": "płakaliście",
+            "nonvirile": "płakałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "płakał",
+            "f": "płakała",
+            "n": "płakało"
+          },
+          "plural": {
+            "virile": "płakali",
+            "nonvirile": "płakały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "płacze się"
+          },
+          "plural": {
+            "allPluralGenders": "płacze się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "płaczę"
+          },
+          "plural": {
+            "allPluralGenders": "płaczemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "płaczesz"
+          },
+          "plural": {
+            "allPluralGenders": "płaczecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "płacze"
+          },
+          "plural": {
+            "allPluralGenders": "płaczą"
+          }
+        }
+      }
+    }
+  }
+}

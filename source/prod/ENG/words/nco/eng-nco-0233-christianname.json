@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "christian name",
+      "gen": "christian name's"
+    },
+    "plural": {
+      "nom": "christian names",
+      "gen": "christian names'"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wpływ",
+      "gen": "wpływu",
+      "dat": "wpływowi",
+      "acc": "wpływ",
+      "ins": "wpływem",
+      "loc": "wpływie",
+      "voc": "wpływie"
+    },
+    "plural": {
+      "nom": "wpływy",
+      "gen": "wpływów",
+      "dat": "wpływom",
+      "acc": "wpływy",
+      "ins": "wpływami",
+      "loc": "wpływach",
+      "voc": "wpływy"
+    }
+  }
+}

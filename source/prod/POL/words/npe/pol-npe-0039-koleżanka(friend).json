@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "koleżanka",
+      "gen": "koleżanki",
+      "dat": "koleżance",
+      "acc": "koleżankę",
+      "ins": "koleżanką",
+      "loc": "koleżance",
+      "voc": "koleżanko"
+    },
+    "plural": {
+      "nom": "koleżanki",
+      "gen": "koleżanek",
+      "dat": "koleżankom",
+      "acc": "koleżanki",
+      "ins": "koleżankami",
+      "loc": "koleżankach",
+      "voc": "koleżanki"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pierścionek",
+      "gen": "pierścionka",
+      "dat": "pierścionkowi",
+      "acc": "pierścionek",
+      "ins": "pierścionkiem",
+      "loc": "pierścionku",
+      "voc": "pierścionku"
+    },
+    "plural": {
+      "nom": "pierścionki",
+      "gen": "pierścionków",
+      "dat": "pierścionkom",
+      "acc": "pierścionki",
+      "ins": "pierścionkami",
+      "loc": "pierścionkach",
+      "voc": "pierścionki"
+    }
+  }
+}

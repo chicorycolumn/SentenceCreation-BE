@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "niewinnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niewinny",
+          "gen": "niewinnego",
+          "dat": "niewinnemu",
+          "acc": "niewinnego",
+          "ins": "niewinnym",
+          "loc": "niewinnym"
+        },
+        "m3": {
+          "nom": "niewinny",
+          "gen": "niewinnego",
+          "dat": "niewinnemu",
+          "acc": "niewinny",
+          "ins": "niewinnym",
+          "loc": "niewinnym"
+        },
+        "f": {
+          "nom": "niewinna",
+          "gen": "niewinnej",
+          "dat": "niewinnej",
+          "acc": "niewinną",
+          "ins": "niewinną",
+          "loc": "niewinnej"
+        },
+        "n": {
+          "nom": "niewinne",
+          "gen": "niewinnego",
+          "dat": "niewinnemu",
+          "acc": "niewinne",
+          "ins": "niewinnym",
+          "loc": "niewinnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niewinni",
+          "gen": "niewinnych",
+          "dat": "niewinnym",
+          "acc": "niewinnych",
+          "ins": "niewinnymi",
+          "loc": "niewinnych"
+        },
+        "nonvirile": {
+          "nom": "niewinne",
+          "gen": "niewinnych",
+          "dat": "niewinnym",
+          "acc": "niewinne",
+          "ins": "niewinnymi",
+          "loc": "niewinnych"
+        }
+      }
+    }
+  }
+}

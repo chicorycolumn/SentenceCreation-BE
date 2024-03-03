@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dupek",
+      "gen": "dupka",
+      "dat": "dupkowi",
+      "acc": "dupka",
+      "ins": "dupkiem",
+      "loc": "dupku",
+      "voc": "dupku"
+    },
+    "plural": {
+      "nom": "dupki",
+      "gen": "dupków",
+      "dat": "dupkom",
+      "acc": "dupków",
+      "ins": "dupkami",
+      "loc": "dupkach",
+      "voc": "dupki"
+    }
+  }
+}

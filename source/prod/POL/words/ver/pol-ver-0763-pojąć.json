@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pojąć",
+    "verbalNoun": "pojęcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pojęty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pojąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pojmie się"
+          },
+          "plural": {
+            "allPluralGenders": "pojmie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pojmę"
+          },
+          "plural": {
+            "allPluralGenders": "pojmiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pojmiesz"
+          },
+          "plural": {
+            "allPluralGenders": "pojmiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pojmie"
+          },
+          "plural": {
+            "allPluralGenders": "pojmą"
+          }
+        }
+      },
+      "imperative": "pojmij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pojęto"
+          },
+          "plural": {
+            "allPluralGenders": "pojęto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pojąłem",
+            "f": "pojęłam"
+          },
+          "plural": {
+            "virile": "pojęliśmy",
+            "nonvirile": "pojęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pojąłeś",
+            "f": "pojęłaś"
+          },
+          "plural": {
+            "virile": "pojęliście",
+            "nonvirile": "pojęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pojął",
+            "f": "pojęła",
+            "n": "pojęło"
+          },
+          "plural": {
+            "virile": "pojęli",
+            "nonvirile": "pojęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

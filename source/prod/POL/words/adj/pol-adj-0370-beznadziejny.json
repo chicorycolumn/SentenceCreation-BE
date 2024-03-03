@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "beznadziejnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "beznadziejny",
+          "gen": "beznadziejnego",
+          "dat": "beznadziejnemu",
+          "acc": "beznadziejnego",
+          "ins": "beznadziejnym",
+          "loc": "beznadziejnym"
+        },
+        "m3": {
+          "nom": "beznadziejny",
+          "gen": "beznadziejnego",
+          "dat": "beznadziejnemu",
+          "acc": "beznadziejny",
+          "ins": "beznadziejnym",
+          "loc": "beznadziejnym"
+        },
+        "f": {
+          "nom": "beznadziejna",
+          "gen": "beznadziejnej",
+          "dat": "beznadziejnej",
+          "acc": "beznadziejną",
+          "ins": "beznadziejną",
+          "loc": "beznadziejnej"
+        },
+        "n": {
+          "nom": "beznadziejne",
+          "gen": "beznadziejnego",
+          "dat": "beznadziejnemu",
+          "acc": "beznadziejne",
+          "ins": "beznadziejnym",
+          "loc": "beznadziejnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "beznadziejni",
+          "gen": "beznadziejnych",
+          "dat": "beznadziejnym",
+          "acc": "beznadziejnych",
+          "ins": "beznadziejnymi",
+          "loc": "beznadziejnych"
+        },
+        "nonvirile": {
+          "nom": "beznadziejne",
+          "gen": "beznadziejnych",
+          "dat": "beznadziejnym",
+          "acc": "beznadziejne",
+          "ins": "beznadziejnymi",
+          "loc": "beznadziejnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej beznadziejny",
+          "gen": "bardziej beznadziejnego",
+          "dat": "bardziej beznadziejnemu",
+          "acc": "bardziej beznadziejnego",
+          "ins": "bardziej beznadziejnym",
+          "loc": "bardziej beznadziejnym"
+        },
+        "m3": {
+          "nom": "bardziej beznadziejny",
+          "gen": "bardziej beznadziejnego",
+          "dat": "bardziej beznadziejnemu",
+          "acc": "bardziej beznadziejny",
+          "ins": "bardziej beznadziejnym",
+          "loc": "bardziej beznadziejnym"
+        },
+        "f": {
+          "nom": "bardziej beznadziejna",
+          "gen": "bardziej beznadziejnej",
+          "dat": "bardziej beznadziejnej",
+          "acc": "bardziej beznadziejną",
+          "ins": "bardziej beznadziejną",
+          "loc": "bardziej beznadziejnej"
+        },
+        "n": {
+          "nom": "bardziej beznadziejne",
+          "gen": "bardziej beznadziejnego",
+          "dat": "bardziej beznadziejnemu",
+          "acc": "bardziej beznadziejne",
+          "ins": "bardziej beznadziejnym",
+          "loc": "bardziej beznadziejnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej beznadziejni",
+          "gen": "bardziej beznadziejnych",
+          "dat": "bardziej beznadziejnym",
+          "acc": "bardziej beznadziejnych",
+          "ins": "bardziej beznadziejnymi",
+          "loc": "bardziej beznadziejnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej beznadziejne",
+          "gen": "bardziej beznadziejnych",
+          "dat": "bardziej beznadziejnym",
+          "acc": "bardziej beznadziejne",
+          "ins": "bardziej beznadziejnymi",
+          "loc": "bardziej beznadziejnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej beznadziejny",
+          "gen": "najbardziej beznadziejnego",
+          "dat": "najbardziej beznadziejnemu",
+          "acc": "najbardziej beznadziejnego",
+          "ins": "najbardziej beznadziejnym",
+          "loc": "najbardziej beznadziejnym"
+        },
+        "m3": {
+          "nom": "najbardziej beznadziejny",
+          "gen": "najbardziej beznadziejnego",
+          "dat": "najbardziej beznadziejnemu",
+          "acc": "najbardziej beznadziejny",
+          "ins": "najbardziej beznadziejnym",
+          "loc": "najbardziej beznadziejnym"
+        },
+        "f": {
+          "nom": "najbardziej beznadziejna",
+          "gen": "najbardziej beznadziejnej",
+          "dat": "najbardziej beznadziejnej",
+          "acc": "najbardziej beznadziejną",
+          "ins": "najbardziej beznadziejną",
+          "loc": "najbardziej beznadziejnej"
+        },
+        "n": {
+          "nom": "najbardziej beznadziejne",
+          "gen": "najbardziej beznadziejnego",
+          "dat": "najbardziej beznadziejnemu",
+          "acc": "najbardziej beznadziejne",
+          "ins": "najbardziej beznadziejnym",
+          "loc": "najbardziej beznadziejnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej beznadziejni",
+          "gen": "najbardziej beznadziejnych",
+          "dat": "najbardziej beznadziejnym",
+          "acc": "najbardziej beznadziejnych",
+          "ins": "najbardziej beznadziejnymi",
+          "loc": "najbardziej beznadziejnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej beznadziejne",
+          "gen": "najbardziej beznadziejnych",
+          "dat": "najbardziej beznadziejnym",
+          "acc": "najbardziej beznadziejne",
+          "ins": "najbardziej beznadziejnymi",
+          "loc": "najbardziej beznadziejnych"
+        }
+      }
+    }
+  }
+}

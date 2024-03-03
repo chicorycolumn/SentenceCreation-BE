@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wypadek",
+      "gen": "wypadku",
+      "dat": "wypadkowi",
+      "acc": "wypadek",
+      "ins": "wypadkiem",
+      "loc": "wypadku",
+      "voc": "wypadku"
+    },
+    "plural": {
+      "nom": "wypadki",
+      "gen": "wypadków",
+      "dat": "wypadkom",
+      "acc": "wypadki",
+      "ins": "wypadkami",
+      "loc": "wypadkach",
+      "voc": "wypadki"
+    }
+  }
+}

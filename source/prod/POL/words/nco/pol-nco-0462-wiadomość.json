@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wiadomość",
+      "gen": "wiadomości",
+      "dat": "wiadomości",
+      "acc": "wiadomość",
+      "ins": "wiadomością",
+      "loc": "wiadomości",
+      "voc": "wiadomości"
+    },
+    "plural": {
+      "nom": "wiadomości",
+      "gen": "wiadomości",
+      "dat": "wiadomościom",
+      "acc": "wiadomości",
+      "ins": "wiadomościami",
+      "loc": "wiadomościach",
+      "voc": "wiadomości"
+    }
+  }
+}

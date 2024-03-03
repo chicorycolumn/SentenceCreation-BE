@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "objąć",
+    "verbalNoun": "objęcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "objęty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "objąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "obejmie się"
+          },
+          "plural": {
+            "allPluralGenders": "obejmie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "obejmę"
+          },
+          "plural": {
+            "allPluralGenders": "obejmiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "obejmiesz"
+          },
+          "plural": {
+            "allPluralGenders": "obejmiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "obejmie"
+          },
+          "plural": {
+            "allPluralGenders": "obejmą"
+          }
+        }
+      },
+      "imperative": "obejmij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "objęto"
+          },
+          "plural": {
+            "allPluralGenders": "objęto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "objąłem",
+            "f": "objęłam"
+          },
+          "plural": {
+            "virile": "objęliśmy",
+            "nonvirile": "objęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "objąłeś",
+            "f": "objęłaś"
+          },
+          "plural": {
+            "virile": "objęliście",
+            "nonvirile": "objęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "objął",
+            "f": "objęła",
+            "n": "objęło"
+          },
+          "plural": {
+            "virile": "objęli",
+            "nonvirile": "objęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

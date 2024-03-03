@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "kontynuować",
+    "verbalNoun": "kontynuowanie",
+    "activeAdjectival": "kontynuujący",
+    "passiveAdjectival": "kontynuowany",
+    "contemporaryAdverbial": "kontynuując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "kontynuuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kontynuowano"
+          },
+          "plural": {
+            "allPluralGenders": "kontynuowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "kontynuowałem",
+            "f": "kontynuowałam"
+          },
+          "plural": {
+            "virile": "kontynuowaliśmy",
+            "nonvirile": "kontynuowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "kontynuowałeś",
+            "f": "kontynuowałaś"
+          },
+          "plural": {
+            "virile": "kontynuowaliście",
+            "nonvirile": "kontynuowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "kontynuował",
+            "f": "kontynuowała",
+            "n": "kontynuowało"
+          },
+          "plural": {
+            "virile": "kontynuowali",
+            "nonvirile": "kontynuowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kontynuuje się"
+          },
+          "plural": {
+            "allPluralGenders": "kontynuuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "kontynuuję"
+          },
+          "plural": {
+            "allPluralGenders": "kontynuujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "kontynuujesz"
+          },
+          "plural": {
+            "allPluralGenders": "kontynuujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "kontynuuje"
+          },
+          "plural": {
+            "allPluralGenders": "kontynuują"
+          }
+        }
+      }
+    }
+  }
+}

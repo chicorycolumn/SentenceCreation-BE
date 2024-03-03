@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "narzekać",
+    "verbalNoun": "narzekanie",
+    "activeAdjectival": "narzekający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "narzekając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "narzekaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "narzekano"
+          },
+          "plural": {
+            "allPluralGenders": "narzekano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "narzekałem",
+            "f": "narzekałam"
+          },
+          "plural": {
+            "virile": "narzekaliśmy",
+            "nonvirile": "narzekałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "narzekałeś",
+            "f": "narzekałaś"
+          },
+          "plural": {
+            "virile": "narzekaliście",
+            "nonvirile": "narzekałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "narzekał",
+            "f": "narzekała",
+            "n": "narzekało"
+          },
+          "plural": {
+            "virile": "narzekali",
+            "nonvirile": "narzekały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "narzeka się"
+          },
+          "plural": {
+            "allPluralGenders": "narzeka się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "narzekam"
+          },
+          "plural": {
+            "allPluralGenders": "narzekamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "narzekasz"
+          },
+          "plural": {
+            "allPluralGenders": "narzekacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "narzeka"
+          },
+          "plural": {
+            "allPluralGenders": "narzekają"
+          }
+        }
+      }
+    }
+  }
+}

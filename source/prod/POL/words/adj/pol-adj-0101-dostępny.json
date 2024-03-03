@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "dostępnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dostępny",
+          "gen": "dostępnego",
+          "dat": "dostępnemu",
+          "acc": "dostępnego",
+          "ins": "dostępnym",
+          "loc": "dostępnym"
+        },
+        "m3": {
+          "nom": "dostępny",
+          "gen": "dostępnego",
+          "dat": "dostępnemu",
+          "acc": "dostępny",
+          "ins": "dostępnym",
+          "loc": "dostępnym"
+        },
+        "f": {
+          "nom": "dostępna",
+          "gen": "dostępnej",
+          "dat": "dostępnej",
+          "acc": "dostępną",
+          "ins": "dostępną",
+          "loc": "dostępnej"
+        },
+        "n": {
+          "nom": "dostępne",
+          "gen": "dostępnego",
+          "dat": "dostępnemu",
+          "acc": "dostępne",
+          "ins": "dostępnym",
+          "loc": "dostępnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dostępni",
+          "gen": "dostępnych",
+          "dat": "dostępnym",
+          "acc": "dostępnych",
+          "ins": "dostępnymi",
+          "loc": "dostępnych"
+        },
+        "nonvirile": {
+          "nom": "dostępne",
+          "gen": "dostępnych",
+          "dat": "dostępnym",
+          "acc": "dostępne",
+          "ins": "dostępnymi",
+          "loc": "dostępnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszy",
+              "bardziej dostępny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszego",
+              "bardziej dostępnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszemu",
+              "bardziej dostępnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszego",
+              "bardziej dostępnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszym",
+              "bardziej dostępnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszym",
+              "bardziej dostępnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszy",
+              "bardziej dostępny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszego",
+              "bardziej dostępnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszemu",
+              "bardziej dostępnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszy",
+              "bardziej dostępny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszym",
+              "bardziej dostępnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszym",
+              "bardziej dostępnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejsza",
+              "bardziej dostępna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszej",
+              "bardziej dostępnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszej",
+              "bardziej dostępnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszą",
+              "bardziej dostępną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszą",
+              "bardziej dostępną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszej",
+              "bardziej dostępnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejsze",
+              "bardziej dostępne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszego",
+              "bardziej dostępnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszemu",
+              "bardziej dostępnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejsze",
+              "bardziej dostępne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszym",
+              "bardziej dostępnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszym",
+              "bardziej dostępnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejsi",
+              "bardziej dostępni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszych",
+              "bardziej dostępnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszym",
+              "bardziej dostępnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszych",
+              "bardziej dostępnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszymi",
+              "bardziej dostępnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszych",
+              "bardziej dostępnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejsze",
+              "bardziej dostępne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszych",
+              "bardziej dostępnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszym",
+              "bardziej dostępnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejsze",
+              "bardziej dostępne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszymi",
+              "bardziej dostępnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "dostępniejszych",
+              "bardziej dostępnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszy",
+              "najbardziej dostępny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszego",
+              "najbardziej dostępnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszemu",
+              "najbardziej dostępnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszego",
+              "najbardziej dostępnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszym",
+              "najbardziej dostępnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszym",
+              "najbardziej dostępnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszy",
+              "najbardziej dostępny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszego",
+              "najbardziej dostępnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszemu",
+              "najbardziej dostępnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszy",
+              "najbardziej dostępny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszym",
+              "najbardziej dostępnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszym",
+              "najbardziej dostępnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejsza",
+              "najbardziej dostępna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszej",
+              "najbardziej dostępnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszej",
+              "najbardziej dostępnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszą",
+              "najbardziej dostępną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszą",
+              "najbardziej dostępną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszej",
+              "najbardziej dostępnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejsze",
+              "najbardziej dostępne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszego",
+              "najbardziej dostępnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszemu",
+              "najbardziej dostępnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejsze",
+              "najbardziej dostępne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszym",
+              "najbardziej dostępnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszym",
+              "najbardziej dostępnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejsi",
+              "najbardziej dostępni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszych",
+              "najbardziej dostępnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszym",
+              "najbardziej dostępnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszych",
+              "najbardziej dostępnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszymi",
+              "najbardziej dostępnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszych",
+              "najbardziej dostępnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejsze",
+              "najbardziej dostępne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszych",
+              "najbardziej dostępnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszym",
+              "najbardziej dostępnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejsze",
+              "najbardziej dostępne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszymi",
+              "najbardziej dostępnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najdostępniejszych",
+              "najbardziej dostępnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

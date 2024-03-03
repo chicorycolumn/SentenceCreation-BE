@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "zjadliwie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zjadliwy",
+          "gen": "zjadliwego",
+          "dat": "zjadliwemu",
+          "acc": "zjadliwego",
+          "ins": "zjadliwym",
+          "loc": "zjadliwym"
+        },
+        "m3": {
+          "nom": "zjadliwy",
+          "gen": "zjadliwego",
+          "dat": "zjadliwemu",
+          "acc": "zjadliwy",
+          "ins": "zjadliwym",
+          "loc": "zjadliwym"
+        },
+        "f": {
+          "nom": "zjadliwa",
+          "gen": "zjadliwej",
+          "dat": "zjadliwej",
+          "acc": "zjadliwą",
+          "ins": "zjadliwą",
+          "loc": "zjadliwej"
+        },
+        "n": {
+          "nom": "zjadliwe",
+          "gen": "zjadliwego",
+          "dat": "zjadliwemu",
+          "acc": "zjadliwe",
+          "ins": "zjadliwym",
+          "loc": "zjadliwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zjadliwi",
+          "gen": "zjadliwych",
+          "dat": "zjadliwym",
+          "acc": "zjadliwych",
+          "ins": "zjadliwymi",
+          "loc": "zjadliwych"
+        },
+        "nonvirile": {
+          "nom": "zjadliwe",
+          "gen": "zjadliwych",
+          "dat": "zjadliwym",
+          "acc": "zjadliwe",
+          "ins": "zjadliwymi",
+          "loc": "zjadliwych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej zjadliwy",
+          "gen": "bardziej zjadliwego",
+          "dat": "bardziej zjadliwemu",
+          "acc": "bardziej zjadliwego",
+          "ins": "bardziej zjadliwym",
+          "loc": "bardziej zjadliwym"
+        },
+        "m3": {
+          "nom": "bardziej zjadliwy",
+          "gen": "bardziej zjadliwego",
+          "dat": "bardziej zjadliwemu",
+          "acc": "bardziej zjadliwy",
+          "ins": "bardziej zjadliwym",
+          "loc": "bardziej zjadliwym"
+        },
+        "f": {
+          "nom": "bardziej zjadliwa",
+          "gen": "bardziej zjadliwej",
+          "dat": "bardziej zjadliwej",
+          "acc": "bardziej zjadliwą",
+          "ins": "bardziej zjadliwą",
+          "loc": "bardziej zjadliwej"
+        },
+        "n": {
+          "nom": "bardziej zjadliwe",
+          "gen": "bardziej zjadliwego",
+          "dat": "bardziej zjadliwemu",
+          "acc": "bardziej zjadliwe",
+          "ins": "bardziej zjadliwym",
+          "loc": "bardziej zjadliwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej zjadliwi",
+          "gen": "bardziej zjadliwych",
+          "dat": "bardziej zjadliwym",
+          "acc": "bardziej zjadliwych",
+          "ins": "bardziej zjadliwymi",
+          "loc": "bardziej zjadliwych"
+        },
+        "nonvirile": {
+          "nom": "bardziej zjadliwe",
+          "gen": "bardziej zjadliwych",
+          "dat": "bardziej zjadliwym",
+          "acc": "bardziej zjadliwe",
+          "ins": "bardziej zjadliwymi",
+          "loc": "bardziej zjadliwych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej zjadliwy",
+          "gen": "najbardziej zjadliwego",
+          "dat": "najbardziej zjadliwemu",
+          "acc": "najbardziej zjadliwego",
+          "ins": "najbardziej zjadliwym",
+          "loc": "najbardziej zjadliwym"
+        },
+        "m3": {
+          "nom": "najbardziej zjadliwy",
+          "gen": "najbardziej zjadliwego",
+          "dat": "najbardziej zjadliwemu",
+          "acc": "najbardziej zjadliwy",
+          "ins": "najbardziej zjadliwym",
+          "loc": "najbardziej zjadliwym"
+        },
+        "f": {
+          "nom": "najbardziej zjadliwa",
+          "gen": "najbardziej zjadliwej",
+          "dat": "najbardziej zjadliwej",
+          "acc": "najbardziej zjadliwą",
+          "ins": "najbardziej zjadliwą",
+          "loc": "najbardziej zjadliwej"
+        },
+        "n": {
+          "nom": "najbardziej zjadliwe",
+          "gen": "najbardziej zjadliwego",
+          "dat": "najbardziej zjadliwemu",
+          "acc": "najbardziej zjadliwe",
+          "ins": "najbardziej zjadliwym",
+          "loc": "najbardziej zjadliwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej zjadliwi",
+          "gen": "najbardziej zjadliwych",
+          "dat": "najbardziej zjadliwym",
+          "acc": "najbardziej zjadliwych",
+          "ins": "najbardziej zjadliwymi",
+          "loc": "najbardziej zjadliwych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej zjadliwe",
+          "gen": "najbardziej zjadliwych",
+          "dat": "najbardziej zjadliwym",
+          "acc": "najbardziej zjadliwe",
+          "ins": "najbardziej zjadliwymi",
+          "loc": "najbardziej zjadliwych"
+        }
+      }
+    }
+  }
+}

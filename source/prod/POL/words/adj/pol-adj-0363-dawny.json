@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "dawno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dawny",
+          "gen": "dawnego",
+          "dat": "dawnemu",
+          "acc": "dawnego",
+          "ins": "dawnym",
+          "loc": "dawnym"
+        },
+        "m3": {
+          "nom": "dawny",
+          "gen": "dawnego",
+          "dat": "dawnemu",
+          "acc": "dawny",
+          "ins": "dawnym",
+          "loc": "dawnym"
+        },
+        "f": {
+          "nom": "dawna",
+          "gen": "dawnej",
+          "dat": "dawnej",
+          "acc": "dawną",
+          "ins": "dawną",
+          "loc": "dawnej"
+        },
+        "n": {
+          "nom": "dawne",
+          "gen": "dawnego",
+          "dat": "dawnemu",
+          "acc": "dawne",
+          "ins": "dawnym",
+          "loc": "dawnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dawni",
+          "gen": "dawnych",
+          "dat": "dawnym",
+          "acc": "dawnych",
+          "ins": "dawnymi",
+          "loc": "dawnych"
+        },
+        "nonvirile": {
+          "nom": "dawne",
+          "gen": "dawnych",
+          "dat": "dawnym",
+          "acc": "dawne",
+          "ins": "dawnymi",
+          "loc": "dawnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "dawniejszy",
+          "gen": "dawniejszego",
+          "dat": "dawniejszemu",
+          "acc": "dawniejszego",
+          "ins": "dawniejszym",
+          "loc": "dawniejszym"
+        },
+        "m3": {
+          "nom": "dawniejszy",
+          "gen": "dawniejszego",
+          "dat": "dawniejszemu",
+          "acc": "dawniejszy",
+          "ins": "dawniejszym",
+          "loc": "dawniejszym"
+        },
+        "f": {
+          "nom": "dawniejsza",
+          "gen": "dawniejszej",
+          "dat": "dawniejszej",
+          "acc": "dawniejszą",
+          "ins": "dawniejszą",
+          "loc": "dawniejszej"
+        },
+        "n": {
+          "nom": "dawniejsze",
+          "gen": "dawniejszego",
+          "dat": "dawniejszemu",
+          "acc": "dawniejsze",
+          "ins": "dawniejszym",
+          "loc": "dawniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dawniejsi",
+          "gen": "dawniejszych",
+          "dat": "dawniejszym",
+          "acc": "dawniejszych",
+          "ins": "dawniejszymi",
+          "loc": "dawniejszych"
+        },
+        "nonvirile": {
+          "nom": "dawniejsze",
+          "gen": "dawniejszych",
+          "dat": "dawniejszym",
+          "acc": "dawniejsze",
+          "ins": "dawniejszymi",
+          "loc": "dawniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najdawniejszy",
+          "gen": "najdawniejszego",
+          "dat": "najdawniejszemu",
+          "acc": "najdawniejszego",
+          "ins": "najdawniejszym",
+          "loc": "najdawniejszym"
+        },
+        "m3": {
+          "nom": "najdawniejszy",
+          "gen": "najdawniejszego",
+          "dat": "najdawniejszemu",
+          "acc": "najdawniejszy",
+          "ins": "najdawniejszym",
+          "loc": "najdawniejszym"
+        },
+        "f": {
+          "nom": "najdawniejsza",
+          "gen": "najdawniejszej",
+          "dat": "najdawniejszej",
+          "acc": "najdawniejszą",
+          "ins": "najdawniejszą",
+          "loc": "najdawniejszej"
+        },
+        "n": {
+          "nom": "najdawniejsze",
+          "gen": "najdawniejszego",
+          "dat": "najdawniejszemu",
+          "acc": "najdawniejsze",
+          "ins": "najdawniejszym",
+          "loc": "najdawniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najdawniejsi",
+          "gen": "najdawniejszych",
+          "dat": "najdawniejszym",
+          "acc": "najdawniejszych",
+          "ins": "najdawniejszymi",
+          "loc": "najdawniejszych"
+        },
+        "nonvirile": {
+          "nom": "najdawniejsze",
+          "gen": "najdawniejszych",
+          "dat": "najdawniejszym",
+          "acc": "najdawniejsze",
+          "ins": "najdawniejszymi",
+          "loc": "najdawniejszych"
+        }
+      }
+    }
+  }
+}

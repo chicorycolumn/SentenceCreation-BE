@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "finałowy",
+          "gen": "finałowego",
+          "dat": "finałowemu",
+          "acc": "finałowego",
+          "ins": "finałowym",
+          "loc": "finałowym"
+        },
+        "m3": {
+          "nom": "finałowy",
+          "gen": "finałowego",
+          "dat": "finałowemu",
+          "acc": "finałowy",
+          "ins": "finałowym",
+          "loc": "finałowym"
+        },
+        "f": {
+          "nom": "finałowa",
+          "gen": "finałowej",
+          "dat": "finałowej",
+          "acc": "finałową",
+          "ins": "finałową",
+          "loc": "finałowej"
+        },
+        "n": {
+          "nom": "finałowe",
+          "gen": "finałowego",
+          "dat": "finałowemu",
+          "acc": "finałowe",
+          "ins": "finałowym",
+          "loc": "finałowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "finałowi",
+          "gen": "finałowych",
+          "dat": "finałowym",
+          "acc": "finałowych",
+          "ins": "finałowymi",
+          "loc": "finałowych"
+        },
+        "nonvirile": {
+          "nom": "finałowe",
+          "gen": "finałowych",
+          "dat": "finałowym",
+          "acc": "finałowe",
+          "ins": "finałowymi",
+          "loc": "finałowych"
+        }
+      }
+    }
+  }
+}

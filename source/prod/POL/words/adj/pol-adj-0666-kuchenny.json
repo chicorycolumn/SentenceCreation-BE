@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "kuchenny",
+          "gen": "kuchennego",
+          "dat": "kuchennemu",
+          "acc": "kuchennego",
+          "ins": "kuchennym",
+          "loc": "kuchennym"
+        },
+        "m3": {
+          "nom": "kuchenny",
+          "gen": "kuchennego",
+          "dat": "kuchennemu",
+          "acc": "kuchenny",
+          "ins": "kuchennym",
+          "loc": "kuchennym"
+        },
+        "f": {
+          "nom": "kuchenna",
+          "gen": "kuchennej",
+          "dat": "kuchennej",
+          "acc": "kuchenną",
+          "ins": "kuchenną",
+          "loc": "kuchennej"
+        },
+        "n": {
+          "nom": "kuchenne",
+          "gen": "kuchennego",
+          "dat": "kuchennemu",
+          "acc": "kuchenne",
+          "ins": "kuchennym",
+          "loc": "kuchennym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "kuchenni",
+          "gen": "kuchennych",
+          "dat": "kuchennym",
+          "acc": "kuchennych",
+          "ins": "kuchennymi",
+          "loc": "kuchennych"
+        },
+        "nonvirile": {
+          "nom": "kuchenne",
+          "gen": "kuchennych",
+          "dat": "kuchennym",
+          "acc": "kuchenne",
+          "ins": "kuchennymi",
+          "loc": "kuchennych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "denerwować",
+    "verbalNoun": "denerwowanie",
+    "activeAdjectival": "denerwujący",
+    "passiveAdjectival": "denerwowany",
+    "contemporaryAdverbial": "denerwując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "denerwuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "denerwowano"
+          },
+          "plural": {
+            "allPluralGenders": "denerwowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "denerwowałem",
+            "f": "denerwowałam"
+          },
+          "plural": {
+            "virile": "denerwowaliśmy",
+            "nonvirile": "denerwowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "denerwowałeś",
+            "f": "denerwowałaś"
+          },
+          "plural": {
+            "virile": "denerwowaliście",
+            "nonvirile": "denerwowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "denerwował",
+            "f": "denerwowała",
+            "n": "denerwowało"
+          },
+          "plural": {
+            "virile": "denerwowali",
+            "nonvirile": "denerwowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "denerwuje się"
+          },
+          "plural": {
+            "allPluralGenders": "denerwuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "denerwuję"
+          },
+          "plural": {
+            "allPluralGenders": "denerwujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "denerwujesz"
+          },
+          "plural": {
+            "allPluralGenders": "denerwujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "denerwuje"
+          },
+          "plural": {
+            "allPluralGenders": "denerwują"
+          }
+        }
+      }
+    }
+  }
+}

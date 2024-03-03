@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "space",
+      "gen": "space's"
+    },
+    "plural": {
+      "nom": "spaces",
+      "gen": "spaces'"
+    }
+  }
+}

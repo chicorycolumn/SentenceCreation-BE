@@ -1,0 +1,607 @@
+{
+  "inflections": {
+    "adverb": {
+      "isTerminus": true,
+      "normal": [
+        "srogo"
+      ],
+      "additionalInfrequent": [
+        "srodze"
+      ]
+    },
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "srogi",
+          "gen": "srogiego",
+          "dat": "srogiemu",
+          "acc": "srogiego",
+          "ins": "srogim",
+          "loc": "srogim"
+        },
+        "m3": {
+          "nom": "srogi",
+          "gen": "srogiego",
+          "dat": "srogiemu",
+          "acc": "srogi",
+          "ins": "srogim",
+          "loc": "srogim"
+        },
+        "f": {
+          "nom": "sroga",
+          "gen": "srogiej",
+          "dat": "srogiej",
+          "acc": "srogą",
+          "ins": "srogą",
+          "loc": "srogiej"
+        },
+        "n": {
+          "nom": "srogie",
+          "gen": "srogiego",
+          "dat": "srogiemu",
+          "acc": "srogie",
+          "ins": "srogim",
+          "loc": "srogim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "srodzy",
+          "gen": "srogich",
+          "dat": "srogim",
+          "acc": "srogich",
+          "ins": "srogimi",
+          "loc": "srogich"
+        },
+        "nonvirile": {
+          "nom": "srogie",
+          "gen": "srogich",
+          "dat": "srogim",
+          "acc": "srogie",
+          "ins": "srogimi",
+          "loc": "srogich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "sroższy",
+              "bardziej srogi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "sroższego",
+              "bardziej srogiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "sroższemu",
+              "bardziej srogiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "sroższego",
+              "bardziej srogiego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "sroższym",
+              "bardziej srogim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "sroższym",
+              "bardziej srogim"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "sroższy",
+              "bardziej srogi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "sroższego",
+              "bardziej srogiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "sroższemu",
+              "bardziej srogiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "sroższy",
+              "bardziej srogi"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "sroższym",
+              "bardziej srogim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "sroższym",
+              "bardziej srogim"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "sroższa",
+              "bardziej sroga"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "sroższej",
+              "bardziej srogiej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "sroższej",
+              "bardziej srogiej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "sroższą",
+              "bardziej srogą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "sroższą",
+              "bardziej srogą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "sroższej",
+              "bardziej srogiej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "sroższe",
+              "bardziej srogie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "sroższego",
+              "bardziej srogiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "sroższemu",
+              "bardziej srogiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "sroższe",
+              "bardziej srogie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "sroższym",
+              "bardziej srogim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "sroższym",
+              "bardziej srogim"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "srożsi",
+              "bardziej srodzy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "sroższych",
+              "bardziej srogich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "sroższym",
+              "bardziej srogim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "sroższych",
+              "bardziej srogich"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "sroższymi",
+              "bardziej srogimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "sroższych",
+              "bardziej srogich"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "sroższe",
+              "bardziej srogie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "sroższych",
+              "bardziej srogich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "sroższym",
+              "bardziej srogim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "sroższe",
+              "bardziej srogie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "sroższymi",
+              "bardziej srogimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "sroższych",
+              "bardziej srogich"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższy",
+              "najbardziej srogi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższego",
+              "najbardziej srogiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższemu",
+              "najbardziej srogiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższego",
+              "najbardziej srogiego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższym",
+              "najbardziej srogim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższym",
+              "najbardziej srogim"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższy",
+              "najbardziej srogi"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższego",
+              "najbardziej srogiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższemu",
+              "najbardziej srogiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższy",
+              "najbardziej srogi"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższym",
+              "najbardziej srogim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższym",
+              "najbardziej srogim"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższa",
+              "najbardziej sroga"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższej",
+              "najbardziej srogiej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższej",
+              "najbardziej srogiej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższą",
+              "najbardziej srogą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższą",
+              "najbardziej srogą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższej",
+              "najbardziej srogiej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższe",
+              "najbardziej srogie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższego",
+              "najbardziej srogiego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższemu",
+              "najbardziej srogiemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższe",
+              "najbardziej srogie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższym",
+              "najbardziej srogim"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższym",
+              "najbardziej srogim"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najsrożsi",
+              "najbardziej srodzy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższych",
+              "najbardziej srogich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższym",
+              "najbardziej srogim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższych",
+              "najbardziej srogich"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższymi",
+              "najbardziej srogimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższych",
+              "najbardziej srogich"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższe",
+              "najbardziej srogie"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższych",
+              "najbardziej srogich"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższym",
+              "najbardziej srogim"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższe",
+              "najbardziej srogie"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższymi",
+              "najbardziej srogimi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najsroższych",
+              "najbardziej srogich"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

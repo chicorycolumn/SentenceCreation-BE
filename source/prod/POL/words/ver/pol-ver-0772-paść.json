@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "paść",
+    "verbalNoun": "padnięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "padłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "padnie się"
+          },
+          "plural": {
+            "allPluralGenders": "padnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "padnę"
+          },
+          "plural": {
+            "allPluralGenders": "padniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "padniesz"
+          },
+          "plural": {
+            "allPluralGenders": "padniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "padnie"
+          },
+          "plural": {
+            "allPluralGenders": "padną"
+          }
+        }
+      },
+      "imperative": "padnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "padnięto"
+          },
+          "plural": {
+            "allPluralGenders": "padnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "padłem",
+            "f": "padłam"
+          },
+          "plural": {
+            "virile": "padliśmy",
+            "nonvirile": "padłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "padłeś",
+            "f": "padłaś"
+          },
+          "plural": {
+            "virile": "padliście",
+            "nonvirile": "padłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "padł",
+            "f": "padła",
+            "n": "padło"
+          },
+          "plural": {
+            "virile": "padli",
+            "nonvirile": "padły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

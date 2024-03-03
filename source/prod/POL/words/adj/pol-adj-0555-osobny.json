@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "osobno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "osobny",
+          "gen": "osobnego",
+          "dat": "osobnemu",
+          "acc": "osobnego",
+          "ins": "osobnym",
+          "loc": "osobnym"
+        },
+        "m3": {
+          "nom": "osobny",
+          "gen": "osobnego",
+          "dat": "osobnemu",
+          "acc": "osobny",
+          "ins": "osobnym",
+          "loc": "osobnym"
+        },
+        "f": {
+          "nom": "osobna",
+          "gen": "osobnej",
+          "dat": "osobnej",
+          "acc": "osobną",
+          "ins": "osobną",
+          "loc": "osobnej"
+        },
+        "n": {
+          "nom": "osobne",
+          "gen": "osobnego",
+          "dat": "osobnemu",
+          "acc": "osobne",
+          "ins": "osobnym",
+          "loc": "osobnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "osobni",
+          "gen": "osobnych",
+          "dat": "osobnym",
+          "acc": "osobnych",
+          "ins": "osobnymi",
+          "loc": "osobnych"
+        },
+        "nonvirile": {
+          "nom": "osobne",
+          "gen": "osobnych",
+          "dat": "osobnym",
+          "acc": "osobne",
+          "ins": "osobnymi",
+          "loc": "osobnych"
+        }
+      }
+    }
+  }
+}

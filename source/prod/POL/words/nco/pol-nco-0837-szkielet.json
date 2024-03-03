@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "szkielet",
+      "gen": "szkieletu",
+      "dat": "szkieletowi",
+      "acc": "szkielet",
+      "ins": "szkieletem",
+      "loc": "szkielecie",
+      "voc": "szkielecie"
+    },
+    "plural": {
+      "nom": "szkielety",
+      "gen": "szkieletów",
+      "dat": "szkieletom",
+      "acc": "szkielety",
+      "ins": "szkieletami",
+      "loc": "szkieletach",
+      "voc": "szkielety"
+    }
+  }
+}

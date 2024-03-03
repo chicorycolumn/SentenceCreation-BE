@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "zazdrośnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zazdrosny",
+          "gen": "zazdrosnego",
+          "dat": "zazdrosnemu",
+          "acc": "zazdrosnego",
+          "ins": "zazdrosnym",
+          "loc": "zazdrosnym"
+        },
+        "m3": {
+          "nom": "zazdrosny",
+          "gen": "zazdrosnego",
+          "dat": "zazdrosnemu",
+          "acc": "zazdrosny",
+          "ins": "zazdrosnym",
+          "loc": "zazdrosnym"
+        },
+        "f": {
+          "nom": "zazdrosna",
+          "gen": "zazdrosnej",
+          "dat": "zazdrosnej",
+          "acc": "zazdrosną",
+          "ins": "zazdrosną",
+          "loc": "zazdrosnej"
+        },
+        "n": {
+          "nom": "zazdrosne",
+          "gen": "zazdrosnego",
+          "dat": "zazdrosnemu",
+          "acc": "zazdrosne",
+          "ins": "zazdrosnym",
+          "loc": "zazdrosnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zazdrośni",
+          "gen": "zazdrosnych",
+          "dat": "zazdrosnym",
+          "acc": "zazdrosnych",
+          "ins": "zazdrosnymi",
+          "loc": "zazdrosnych"
+        },
+        "nonvirile": {
+          "nom": "zazdrosne",
+          "gen": "zazdrosnych",
+          "dat": "zazdrosnym",
+          "acc": "zazdrosne",
+          "ins": "zazdrosnymi",
+          "loc": "zazdrosnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej zazdrosny",
+          "gen": "bardziej zazdrosnego",
+          "dat": "bardziej zazdrosnemu",
+          "acc": "bardziej zazdrosnego",
+          "ins": "bardziej zazdrosnym",
+          "loc": "bardziej zazdrosnym"
+        },
+        "m3": {
+          "nom": "bardziej zazdrosny",
+          "gen": "bardziej zazdrosnego",
+          "dat": "bardziej zazdrosnemu",
+          "acc": "bardziej zazdrosny",
+          "ins": "bardziej zazdrosnym",
+          "loc": "bardziej zazdrosnym"
+        },
+        "f": {
+          "nom": "bardziej zazdrosna",
+          "gen": "bardziej zazdrosnej",
+          "dat": "bardziej zazdrosnej",
+          "acc": "bardziej zazdrosną",
+          "ins": "bardziej zazdrosną",
+          "loc": "bardziej zazdrosnej"
+        },
+        "n": {
+          "nom": "bardziej zazdrosne",
+          "gen": "bardziej zazdrosnego",
+          "dat": "bardziej zazdrosnemu",
+          "acc": "bardziej zazdrosne",
+          "ins": "bardziej zazdrosnym",
+          "loc": "bardziej zazdrosnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej zazdrośni",
+          "gen": "bardziej zazdrosnych",
+          "dat": "bardziej zazdrosnym",
+          "acc": "bardziej zazdrosnych",
+          "ins": "bardziej zazdrosnymi",
+          "loc": "bardziej zazdrosnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej zazdrosne",
+          "gen": "bardziej zazdrosnych",
+          "dat": "bardziej zazdrosnym",
+          "acc": "bardziej zazdrosne",
+          "ins": "bardziej zazdrosnymi",
+          "loc": "bardziej zazdrosnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej zazdrosny",
+          "gen": "najbardziej zazdrosnego",
+          "dat": "najbardziej zazdrosnemu",
+          "acc": "najbardziej zazdrosnego",
+          "ins": "najbardziej zazdrosnym",
+          "loc": "najbardziej zazdrosnym"
+        },
+        "m3": {
+          "nom": "najbardziej zazdrosny",
+          "gen": "najbardziej zazdrosnego",
+          "dat": "najbardziej zazdrosnemu",
+          "acc": "najbardziej zazdrosny",
+          "ins": "najbardziej zazdrosnym",
+          "loc": "najbardziej zazdrosnym"
+        },
+        "f": {
+          "nom": "najbardziej zazdrosna",
+          "gen": "najbardziej zazdrosnej",
+          "dat": "najbardziej zazdrosnej",
+          "acc": "najbardziej zazdrosną",
+          "ins": "najbardziej zazdrosną",
+          "loc": "najbardziej zazdrosnej"
+        },
+        "n": {
+          "nom": "najbardziej zazdrosne",
+          "gen": "najbardziej zazdrosnego",
+          "dat": "najbardziej zazdrosnemu",
+          "acc": "najbardziej zazdrosne",
+          "ins": "najbardziej zazdrosnym",
+          "loc": "najbardziej zazdrosnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej zazdrośni",
+          "gen": "najbardziej zazdrosnych",
+          "dat": "najbardziej zazdrosnym",
+          "acc": "najbardziej zazdrosnych",
+          "ins": "najbardziej zazdrosnymi",
+          "loc": "najbardziej zazdrosnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej zazdrosne",
+          "gen": "najbardziej zazdrosnych",
+          "dat": "najbardziej zazdrosnym",
+          "acc": "najbardziej zazdrosne",
+          "ins": "najbardziej zazdrosnymi",
+          "loc": "najbardziej zazdrosnych"
+        }
+      }
+    }
+  }
+}

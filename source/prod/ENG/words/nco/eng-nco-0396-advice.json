@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "advice",
+      "gen": "advice's"
+    },
+    "plural": {
+      "nom": "piece of advice",
+      "gen": "pieces of advice's"
+    }
+  }
+}

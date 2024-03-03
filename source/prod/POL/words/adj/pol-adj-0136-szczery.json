@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "szczerze",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "szczery",
+          "gen": "szczerego",
+          "dat": "szczeremu",
+          "acc": "szczerego",
+          "ins": "szczerym",
+          "loc": "szczerym"
+        },
+        "m3": {
+          "nom": "szczery",
+          "gen": "szczerego",
+          "dat": "szczeremu",
+          "acc": "szczery",
+          "ins": "szczerym",
+          "loc": "szczerym"
+        },
+        "f": {
+          "nom": "szczera",
+          "gen": "szczerej",
+          "dat": "szczerej",
+          "acc": "szczerą",
+          "ins": "szczerą",
+          "loc": "szczerej"
+        },
+        "n": {
+          "nom": "szczere",
+          "gen": "szczerego",
+          "dat": "szczeremu",
+          "acc": "szczere",
+          "ins": "szczerym",
+          "loc": "szczerym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "szczerzy",
+          "gen": "szczerych",
+          "dat": "szczerym",
+          "acc": "szczerych",
+          "ins": "szczerymi",
+          "loc": "szczerych"
+        },
+        "nonvirile": {
+          "nom": "szczere",
+          "gen": "szczerych",
+          "dat": "szczerym",
+          "acc": "szczere",
+          "ins": "szczerymi",
+          "loc": "szczerych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszy",
+              "bardziej szczery"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszego",
+              "bardziej szczerego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszemu",
+              "bardziej szczeremu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszego",
+              "bardziej szczerego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszym",
+              "bardziej szczerym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszym",
+              "bardziej szczerym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszy",
+              "bardziej szczery"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszego",
+              "bardziej szczerego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszemu",
+              "bardziej szczeremu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszy",
+              "bardziej szczery"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszym",
+              "bardziej szczerym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszym",
+              "bardziej szczerym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "szczersza",
+              "bardziej szczera"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszej",
+              "bardziej szczerej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszej",
+              "bardziej szczerej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszą",
+              "bardziej szczerą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszą",
+              "bardziej szczerą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszej",
+              "bardziej szczerej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "szczersze",
+              "bardziej szczere"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszego",
+              "bardziej szczerego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszemu",
+              "bardziej szczeremu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "szczersze",
+              "bardziej szczere"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszym",
+              "bardziej szczerym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszym",
+              "bardziej szczerym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "szczersi",
+              "bardziej szczerzy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszych",
+              "bardziej szczerych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszym",
+              "bardziej szczerym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszych",
+              "bardziej szczerych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszymi",
+              "bardziej szczerymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszych",
+              "bardziej szczerych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "szczersze",
+              "bardziej szczere"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszych",
+              "bardziej szczerych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszym",
+              "bardziej szczerym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "szczersze",
+              "bardziej szczere"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszymi",
+              "bardziej szczerymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "szczerszych",
+              "bardziej szczerych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszy",
+              "najbardziej szczery"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszego",
+              "najbardziej szczerego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszemu",
+              "najbardziej szczeremu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszego",
+              "najbardziej szczerego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszym",
+              "najbardziej szczerym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszym",
+              "najbardziej szczerym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszy",
+              "najbardziej szczery"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszego",
+              "najbardziej szczerego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszemu",
+              "najbardziej szczeremu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszy",
+              "najbardziej szczery"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszym",
+              "najbardziej szczerym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszym",
+              "najbardziej szczerym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najszczersza",
+              "najbardziej szczera"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszej",
+              "najbardziej szczerej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszej",
+              "najbardziej szczerej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszą",
+              "najbardziej szczerą"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszą",
+              "najbardziej szczerą"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszej",
+              "najbardziej szczerej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najszczersze",
+              "najbardziej szczere"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszego",
+              "najbardziej szczerego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszemu",
+              "najbardziej szczeremu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczersze",
+              "najbardziej szczere"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszym",
+              "najbardziej szczerym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszym",
+              "najbardziej szczerym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najszczersi",
+              "najbardziej szczerzy"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszych",
+              "najbardziej szczerych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszym",
+              "najbardziej szczerym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszych",
+              "najbardziej szczerych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszymi",
+              "najbardziej szczerymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszych",
+              "najbardziej szczerych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najszczersze",
+              "najbardziej szczere"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszych",
+              "najbardziej szczerych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszym",
+              "najbardziej szczerym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczersze",
+              "najbardziej szczere"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszymi",
+              "najbardziej szczerymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najszczerszych",
+              "najbardziej szczerych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

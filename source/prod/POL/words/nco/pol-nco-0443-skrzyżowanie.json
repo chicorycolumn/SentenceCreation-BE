@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "skrzyżowanie",
+      "gen": "skrzyżowania",
+      "dat": "skrzyżowaniu",
+      "acc": "skrzyżowanie",
+      "ins": "skrzyżowaniem",
+      "loc": "skrzyżowaniu",
+      "voc": "skrzyżowanie"
+    },
+    "plural": {
+      "nom": "skrzyżowania",
+      "gen": "skrzyżowań",
+      "dat": "skrzyżowaniom",
+      "acc": "skrzyżowania",
+      "ins": "skrzyżowaniami",
+      "loc": "skrzyżowaniach",
+      "voc": "skrzyżowania"
+    }
+  }
+}

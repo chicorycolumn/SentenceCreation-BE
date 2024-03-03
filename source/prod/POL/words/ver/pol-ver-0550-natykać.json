@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "natykać",
+    "verbalNoun": "natykanie",
+    "activeAdjectival": "natykający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "natykając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "natykaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "natykano"
+          },
+          "plural": {
+            "allPluralGenders": "natykano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "natykałem",
+            "f": "natykałam"
+          },
+          "plural": {
+            "virile": "natykaliśmy",
+            "nonvirile": "natykałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "natykałeś",
+            "f": "natykałaś"
+          },
+          "plural": {
+            "virile": "natykaliście",
+            "nonvirile": "natykałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "natykał",
+            "f": "natykała",
+            "n": "natykało"
+          },
+          "plural": {
+            "virile": "natykali",
+            "nonvirile": "natykały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "natyka się"
+          },
+          "plural": {
+            "allPluralGenders": "natyka się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "natykam"
+          },
+          "plural": {
+            "allPluralGenders": "natykamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "natykasz"
+          },
+          "plural": {
+            "allPluralGenders": "natykacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "natyka"
+          },
+          "plural": {
+            "allPluralGenders": "natykają"
+          }
+        }
+      }
+    }
+  }
+}

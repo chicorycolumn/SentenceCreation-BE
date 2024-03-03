@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "koc",
+      "gen": "koca",
+      "dat": "kocowi",
+      "acc": "koc",
+      "ins": "kocem",
+      "loc": "kocu",
+      "voc": "kocu"
+    },
+    "plural": {
+      "nom": "koce",
+      "gen": "koców",
+      "dat": "kocom",
+      "acc": "koce",
+      "ins": "kocami",
+      "loc": "kocach",
+      "voc": "koce"
+    }
+  }
+}

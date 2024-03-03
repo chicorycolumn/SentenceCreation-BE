@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "elektronicznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "elektroniczny",
+          "gen": "elektronicznego",
+          "dat": "elektronicznemu",
+          "acc": "elektronicznego",
+          "ins": "elektronicznym",
+          "loc": "elektronicznym"
+        },
+        "m3": {
+          "nom": "elektroniczny",
+          "gen": "elektronicznego",
+          "dat": "elektronicznemu",
+          "acc": "elektroniczny",
+          "ins": "elektronicznym",
+          "loc": "elektronicznym"
+        },
+        "f": {
+          "nom": "elektroniczna",
+          "gen": "elektronicznej",
+          "dat": "elektronicznej",
+          "acc": "elektroniczną",
+          "ins": "elektroniczną",
+          "loc": "elektronicznej"
+        },
+        "n": {
+          "nom": "elektroniczne",
+          "gen": "elektronicznego",
+          "dat": "elektronicznemu",
+          "acc": "elektroniczne",
+          "ins": "elektronicznym",
+          "loc": "elektronicznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "elektroniczni",
+          "gen": "elektronicznych",
+          "dat": "elektronicznym",
+          "acc": "elektronicznych",
+          "ins": "elektronicznymi",
+          "loc": "elektronicznych"
+        },
+        "nonvirile": {
+          "nom": "elektroniczne",
+          "gen": "elektronicznych",
+          "dat": "elektronicznym",
+          "acc": "elektroniczne",
+          "ins": "elektronicznymi",
+          "loc": "elektronicznych"
+        }
+      }
+    }
+  }
+}

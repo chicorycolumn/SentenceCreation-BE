@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "potraktować",
+    "verbalNoun": "potraktowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "potraktowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "potraktowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "potraktuje się"
+          },
+          "plural": {
+            "allPluralGenders": "potraktuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "potraktuję"
+          },
+          "plural": {
+            "allPluralGenders": "potraktujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "potraktujesz"
+          },
+          "plural": {
+            "allPluralGenders": "potraktujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "potraktuje"
+          },
+          "plural": {
+            "allPluralGenders": "potraktują"
+          }
+        }
+      },
+      "imperative": "potraktuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "potraktowano"
+          },
+          "plural": {
+            "allPluralGenders": "potraktowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "potraktowałem",
+            "f": "potraktowałam"
+          },
+          "plural": {
+            "virile": "potraktowaliśmy",
+            "nonvirile": "potraktowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "potraktowałeś",
+            "f": "potraktowałaś"
+          },
+          "plural": {
+            "virile": "potraktowaliście",
+            "nonvirile": "potraktowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "potraktował",
+            "f": "potraktowała",
+            "n": "potraktowało"
+          },
+          "plural": {
+            "virile": "potraktowali",
+            "nonvirile": "potraktowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

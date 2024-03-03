@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odpowiedzieć",
+    "verbalNoun": "odpowiedzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odpowiedziawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odpowie się"
+          },
+          "plural": {
+            "allPluralGenders": "odpowie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odpowiem"
+          },
+          "plural": {
+            "allPluralGenders": "odpowiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odpowiesz"
+          },
+          "plural": {
+            "allPluralGenders": "odpowiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odpowie"
+          },
+          "plural": {
+            "allPluralGenders": "odpowiedzą"
+          }
+        }
+      },
+      "imperative": "odpowiedz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odpowiedziano"
+          },
+          "plural": {
+            "allPluralGenders": "odpowiedziano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odpowiedziałem",
+            "f": "odpowiedziałam"
+          },
+          "plural": {
+            "virile": "odpowiedzieliśmy",
+            "nonvirile": "odpowiedziałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odpowiedziałeś",
+            "f": "odpowiedziałaś"
+          },
+          "plural": {
+            "virile": "odpowiedzieliście",
+            "nonvirile": "odpowiedziałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odpowiedział",
+            "f": "odpowiedziała",
+            "n": "odpowiedziało"
+          },
+          "plural": {
+            "virile": "odpowiedzieli",
+            "nonvirile": "odpowiedziały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

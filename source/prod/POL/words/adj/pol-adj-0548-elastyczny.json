@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "elastycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "elastyczny",
+          "gen": "elastycznego",
+          "dat": "elastycznemu",
+          "acc": "elastycznego",
+          "ins": "elastycznym",
+          "loc": "elastycznym"
+        },
+        "m3": {
+          "nom": "elastyczny",
+          "gen": "elastycznego",
+          "dat": "elastycznemu",
+          "acc": "elastyczny",
+          "ins": "elastycznym",
+          "loc": "elastycznym"
+        },
+        "f": {
+          "nom": "elastyczna",
+          "gen": "elastycznej",
+          "dat": "elastycznej",
+          "acc": "elastyczną",
+          "ins": "elastyczną",
+          "loc": "elastycznej"
+        },
+        "n": {
+          "nom": "elastyczne",
+          "gen": "elastycznego",
+          "dat": "elastycznemu",
+          "acc": "elastyczne",
+          "ins": "elastycznym",
+          "loc": "elastycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "elastyczni",
+          "gen": "elastycznych",
+          "dat": "elastycznym",
+          "acc": "elastycznych",
+          "ins": "elastycznymi",
+          "loc": "elastycznych"
+        },
+        "nonvirile": {
+          "nom": "elastyczne",
+          "gen": "elastycznych",
+          "dat": "elastycznym",
+          "acc": "elastyczne",
+          "ins": "elastycznymi",
+          "loc": "elastycznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej elastyczny",
+          "gen": "bardziej elastycznego",
+          "dat": "bardziej elastycznemu",
+          "acc": "bardziej elastycznego",
+          "ins": "bardziej elastycznym",
+          "loc": "bardziej elastycznym"
+        },
+        "m3": {
+          "nom": "bardziej elastyczny",
+          "gen": "bardziej elastycznego",
+          "dat": "bardziej elastycznemu",
+          "acc": "bardziej elastyczny",
+          "ins": "bardziej elastycznym",
+          "loc": "bardziej elastycznym"
+        },
+        "f": {
+          "nom": "bardziej elastyczna",
+          "gen": "bardziej elastycznej",
+          "dat": "bardziej elastycznej",
+          "acc": "bardziej elastyczną",
+          "ins": "bardziej elastyczną",
+          "loc": "bardziej elastycznej"
+        },
+        "n": {
+          "nom": "bardziej elastyczne",
+          "gen": "bardziej elastycznego",
+          "dat": "bardziej elastycznemu",
+          "acc": "bardziej elastyczne",
+          "ins": "bardziej elastycznym",
+          "loc": "bardziej elastycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej elastyczni",
+          "gen": "bardziej elastycznych",
+          "dat": "bardziej elastycznym",
+          "acc": "bardziej elastycznych",
+          "ins": "bardziej elastycznymi",
+          "loc": "bardziej elastycznych"
+        },
+        "nonvirile": {
+          "nom": "bardziej elastyczne",
+          "gen": "bardziej elastycznych",
+          "dat": "bardziej elastycznym",
+          "acc": "bardziej elastyczne",
+          "ins": "bardziej elastycznymi",
+          "loc": "bardziej elastycznych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej elastyczny",
+          "gen": "najbardziej elastycznego",
+          "dat": "najbardziej elastycznemu",
+          "acc": "najbardziej elastycznego",
+          "ins": "najbardziej elastycznym",
+          "loc": "najbardziej elastycznym"
+        },
+        "m3": {
+          "nom": "najbardziej elastyczny",
+          "gen": "najbardziej elastycznego",
+          "dat": "najbardziej elastycznemu",
+          "acc": "najbardziej elastyczny",
+          "ins": "najbardziej elastycznym",
+          "loc": "najbardziej elastycznym"
+        },
+        "f": {
+          "nom": "najbardziej elastyczna",
+          "gen": "najbardziej elastycznej",
+          "dat": "najbardziej elastycznej",
+          "acc": "najbardziej elastyczną",
+          "ins": "najbardziej elastyczną",
+          "loc": "najbardziej elastycznej"
+        },
+        "n": {
+          "nom": "najbardziej elastyczne",
+          "gen": "najbardziej elastycznego",
+          "dat": "najbardziej elastycznemu",
+          "acc": "najbardziej elastyczne",
+          "ins": "najbardziej elastycznym",
+          "loc": "najbardziej elastycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej elastyczni",
+          "gen": "najbardziej elastycznych",
+          "dat": "najbardziej elastycznym",
+          "acc": "najbardziej elastycznych",
+          "ins": "najbardziej elastycznymi",
+          "loc": "najbardziej elastycznych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej elastyczne",
+          "gen": "najbardziej elastycznych",
+          "dat": "najbardziej elastycznym",
+          "acc": "najbardziej elastyczne",
+          "ins": "najbardziej elastycznymi",
+          "loc": "najbardziej elastycznych"
+        }
+      }
+    }
+  }
+}

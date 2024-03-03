@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "umysłowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "umysłowy",
+          "gen": "umysłowego",
+          "dat": "umysłowemu",
+          "acc": "umysłowego",
+          "ins": "umysłowym",
+          "loc": "umysłowym"
+        },
+        "m3": {
+          "nom": "umysłowy",
+          "gen": "umysłowego",
+          "dat": "umysłowemu",
+          "acc": "umysłowy",
+          "ins": "umysłowym",
+          "loc": "umysłowym"
+        },
+        "f": {
+          "nom": "umysłowa",
+          "gen": "umysłowej",
+          "dat": "umysłowej",
+          "acc": "umysłową",
+          "ins": "umysłową",
+          "loc": "umysłowej"
+        },
+        "n": {
+          "nom": "umysłowe",
+          "gen": "umysłowego",
+          "dat": "umysłowemu",
+          "acc": "umysłowe",
+          "ins": "umysłowym",
+          "loc": "umysłowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "umysłowi",
+          "gen": "umysłowych",
+          "dat": "umysłowym",
+          "acc": "umysłowych",
+          "ins": "umysłowymi",
+          "loc": "umysłowych"
+        },
+        "nonvirile": {
+          "nom": "umysłowe",
+          "gen": "umysłowych",
+          "dat": "umysłowym",
+          "acc": "umysłowe",
+          "ins": "umysłowymi",
+          "loc": "umysłowych"
+        }
+      }
+    }
+  }
+}

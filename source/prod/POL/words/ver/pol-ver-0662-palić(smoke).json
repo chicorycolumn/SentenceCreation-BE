@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "palić",
+    "verbalNoun": "palenie",
+    "activeAdjectival": "palący",
+    "passiveAdjectival": "palony",
+    "contemporaryAdverbial": "paląc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pal",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "palono"
+          },
+          "plural": {
+            "allPluralGenders": "palono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "paliłem",
+            "f": "paliłam"
+          },
+          "plural": {
+            "virile": "paliliśmy",
+            "nonvirile": "paliłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "paliłeś",
+            "f": "paliłaś"
+          },
+          "plural": {
+            "virile": "paliliście",
+            "nonvirile": "paliłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "palił",
+            "f": "paliła",
+            "n": "paliło"
+          },
+          "plural": {
+            "virile": "palili",
+            "nonvirile": "paliły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pali się"
+          },
+          "plural": {
+            "allPluralGenders": "pali się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "palę"
+          },
+          "plural": {
+            "allPluralGenders": "palimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "palisz"
+          },
+          "plural": {
+            "allPluralGenders": "palicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pali"
+          },
+          "plural": {
+            "allPluralGenders": "palą"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "czas",
+      "gen": "czasu",
+      "dat": "czasowi",
+      "acc": "czas",
+      "ins": "czasem",
+      "loc": "czasie",
+      "voc": "czasie"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "niebo",
+      "gen": "nieba",
+      "dat": "niebu",
+      "acc": "niebo",
+      "ins": "niebem",
+      "loc": "niebie",
+      "voc": "niebo"
+    },
+    "plural": {
+      "nom": "nieba",
+      "gen": "nieb",
+      "dat": "niebom",
+      "acc": "nieba",
+      "ins": "niebami",
+      "loc": "niebach",
+      "voc": "nieba"
+    }
+  }
+}

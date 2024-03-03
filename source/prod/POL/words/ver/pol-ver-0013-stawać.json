@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "stawać",
+    "verbalNoun": "stawanie",
+    "activeAdjectival": "stający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "stając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "stawaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "stawano"
+          },
+          "plural": {
+            "allPluralGenders": "stawano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "stawałem",
+            "f": "stawałam"
+          },
+          "plural": {
+            "virile": "stawaliśmy",
+            "nonvirile": "stawałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "stawałeś",
+            "f": "stawałaś"
+          },
+          "plural": {
+            "virile": "stawaliście",
+            "nonvirile": "stawałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "stawał",
+            "f": "stawała",
+            "n": "stawało"
+          },
+          "plural": {
+            "virile": "stawali",
+            "nonvirile": "stawały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "staje się"
+          },
+          "plural": {
+            "allPluralGenders": "staje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "staję"
+          },
+          "plural": {
+            "allPluralGenders": "stajemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "stajesz"
+          },
+          "plural": {
+            "allPluralGenders": "stajecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "staje"
+          },
+          "plural": {
+            "allPluralGenders": "stają"
+          }
+        }
+      }
+    }
+  }
+}

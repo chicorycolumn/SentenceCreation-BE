@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "szklanka",
+      "gen": "szklanki",
+      "dat": "szklance",
+      "acc": "szklankę",
+      "ins": "szklanką",
+      "loc": "szklance",
+      "voc": "szklanko"
+    },
+    "plural": {
+      "nom": "szklanki",
+      "gen": "szklanek",
+      "dat": "szklankom",
+      "acc": "szklanki",
+      "ins": "szklankami",
+      "loc": "szklankach",
+      "voc": "szklanki"
+    }
+  }
+}

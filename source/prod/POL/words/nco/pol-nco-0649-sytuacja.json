@@ -1,0 +1,30 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sytuacja",
+      "gen": "sytuacji",
+      "dat": "sytuacji",
+      "acc": "sytuację",
+      "ins": "sytuacją",
+      "loc": "sytuacji",
+      "voc": "sytuacjo"
+    },
+    "plural": {
+      "nom": "sytuacje",
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "sytuacji"
+        ],
+        "additionalInfrequent": [
+          "sytuacyj"
+        ]
+      },
+      "dat": "sytuacjom",
+      "acc": "sytuacje",
+      "ins": "sytuacjami",
+      "loc": "sytuacjach",
+      "voc": "sytuacje"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odchodzić",
+    "verbalNoun": "odchodzenie",
+    "activeAdjectival": "odchodzący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "odchodząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odchodź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odchodzono"
+          },
+          "plural": {
+            "allPluralGenders": "odchodzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odchodziłem",
+            "f": "odchodziłam"
+          },
+          "plural": {
+            "virile": "odchodziliśmy",
+            "nonvirile": "odchodziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odchodziłeś",
+            "f": "odchodziłaś"
+          },
+          "plural": {
+            "virile": "odchodziliście",
+            "nonvirile": "odchodziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odchodził",
+            "f": "odchodziła",
+            "n": "odchodziło"
+          },
+          "plural": {
+            "virile": "odchodzili",
+            "nonvirile": "odchodziły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odchodzi się"
+          },
+          "plural": {
+            "allPluralGenders": "odchodzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odchodzę"
+          },
+          "plural": {
+            "allPluralGenders": "odchodzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odchodzisz"
+          },
+          "plural": {
+            "allPluralGenders": "odchodzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odchodzi"
+          },
+          "plural": {
+            "allPluralGenders": "odchodzą"
+          }
+        }
+      }
+    }
+  }
+}

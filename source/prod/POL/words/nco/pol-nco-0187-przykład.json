@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przykład",
+      "gen": "przykładu",
+      "dat": "przykładowi",
+      "acc": "przykład",
+      "ins": "przykładem",
+      "loc": "przykładzie",
+      "voc": "przykładzie"
+    },
+    "plural": {
+      "nom": "przykłady",
+      "gen": "przykładów",
+      "dat": "przykładom",
+      "acc": "przykłady",
+      "ins": "przykładami",
+      "loc": "przykładach",
+      "voc": "przykłady"
+    }
+  }
+}

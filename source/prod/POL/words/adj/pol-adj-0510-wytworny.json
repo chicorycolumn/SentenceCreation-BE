@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "wytwornie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "wytworny",
+          "gen": "wytwornego",
+          "dat": "wytwornemu",
+          "acc": "wytwornego",
+          "ins": "wytwornym",
+          "loc": "wytwornym"
+        },
+        "m3": {
+          "nom": "wytworny",
+          "gen": "wytwornego",
+          "dat": "wytwornemu",
+          "acc": "wytworny",
+          "ins": "wytwornym",
+          "loc": "wytwornym"
+        },
+        "f": {
+          "nom": "wytworna",
+          "gen": "wytwornej",
+          "dat": "wytwornej",
+          "acc": "wytworną",
+          "ins": "wytworną",
+          "loc": "wytwornej"
+        },
+        "n": {
+          "nom": "wytworne",
+          "gen": "wytwornego",
+          "dat": "wytwornemu",
+          "acc": "wytworne",
+          "ins": "wytwornym",
+          "loc": "wytwornym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wytworni",
+          "gen": "wytwornych",
+          "dat": "wytwornym",
+          "acc": "wytwornych",
+          "ins": "wytwornymi",
+          "loc": "wytwornych"
+        },
+        "nonvirile": {
+          "nom": "wytworne",
+          "gen": "wytwornych",
+          "dat": "wytwornym",
+          "acc": "wytworne",
+          "ins": "wytwornymi",
+          "loc": "wytwornych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "wytworniejszy",
+          "gen": "wytworniejszego",
+          "dat": "wytworniejszemu",
+          "acc": "wytworniejszego",
+          "ins": "wytworniejszym",
+          "loc": "wytworniejszym"
+        },
+        "m3": {
+          "nom": "wytworniejszy",
+          "gen": "wytworniejszego",
+          "dat": "wytworniejszemu",
+          "acc": "wytworniejszy",
+          "ins": "wytworniejszym",
+          "loc": "wytworniejszym"
+        },
+        "f": {
+          "nom": "wytworniejsza",
+          "gen": "wytworniejszej",
+          "dat": "wytworniejszej",
+          "acc": "wytworniejszą",
+          "ins": "wytworniejszą",
+          "loc": "wytworniejszej"
+        },
+        "n": {
+          "nom": "wytworniejsze",
+          "gen": "wytworniejszego",
+          "dat": "wytworniejszemu",
+          "acc": "wytworniejsze",
+          "ins": "wytworniejszym",
+          "loc": "wytworniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wytworniejsi",
+          "gen": "wytworniejszych",
+          "dat": "wytworniejszym",
+          "acc": "wytworniejszych",
+          "ins": "wytworniejszymi",
+          "loc": "wytworniejszych"
+        },
+        "nonvirile": {
+          "nom": "wytworniejsze",
+          "gen": "wytworniejszych",
+          "dat": "wytworniejszym",
+          "acc": "wytworniejsze",
+          "ins": "wytworniejszymi",
+          "loc": "wytworniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najwytworniejszy",
+          "gen": "najwytworniejszego",
+          "dat": "najwytworniejszemu",
+          "acc": "najwytworniejszego",
+          "ins": "najwytworniejszym",
+          "loc": "najwytworniejszym"
+        },
+        "m3": {
+          "nom": "najwytworniejszy",
+          "gen": "najwytworniejszego",
+          "dat": "najwytworniejszemu",
+          "acc": "najwytworniejszy",
+          "ins": "najwytworniejszym",
+          "loc": "najwytworniejszym"
+        },
+        "f": {
+          "nom": "najwytworniejsza",
+          "gen": "najwytworniejszej",
+          "dat": "najwytworniejszej",
+          "acc": "najwytworniejszą",
+          "ins": "najwytworniejszą",
+          "loc": "najwytworniejszej"
+        },
+        "n": {
+          "nom": "najwytworniejsze",
+          "gen": "najwytworniejszego",
+          "dat": "najwytworniejszemu",
+          "acc": "najwytworniejsze",
+          "ins": "najwytworniejszym",
+          "loc": "najwytworniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najwytworniejsi",
+          "gen": "najwytworniejszych",
+          "dat": "najwytworniejszym",
+          "acc": "najwytworniejszych",
+          "ins": "najwytworniejszymi",
+          "loc": "najwytworniejszych"
+        },
+        "nonvirile": {
+          "nom": "najwytworniejsze",
+          "gen": "najwytworniejszych",
+          "dat": "najwytworniejszym",
+          "acc": "najwytworniejsze",
+          "ins": "najwytworniejszymi",
+          "loc": "najwytworniejszych"
+        }
+      }
+    }
+  }
+}

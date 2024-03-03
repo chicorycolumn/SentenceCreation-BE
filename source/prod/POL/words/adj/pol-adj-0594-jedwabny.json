@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "jedwabny",
+          "gen": "jedwabnego",
+          "dat": "jedwabnemu",
+          "acc": "jedwabnego",
+          "ins": "jedwabnym",
+          "loc": "jedwabnym"
+        },
+        "m3": {
+          "nom": "jedwabny",
+          "gen": "jedwabnego",
+          "dat": "jedwabnemu",
+          "acc": "jedwabny",
+          "ins": "jedwabnym",
+          "loc": "jedwabnym"
+        },
+        "f": {
+          "nom": "jedwabna",
+          "gen": "jedwabnej",
+          "dat": "jedwabnej",
+          "acc": "jedwabną",
+          "ins": "jedwabną",
+          "loc": "jedwabnej"
+        },
+        "n": {
+          "nom": "jedwabne",
+          "gen": "jedwabnego",
+          "dat": "jedwabnemu",
+          "acc": "jedwabne",
+          "ins": "jedwabnym",
+          "loc": "jedwabnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "jedwabni",
+          "gen": "jedwabnych",
+          "dat": "jedwabnym",
+          "acc": "jedwabnych",
+          "ins": "jedwabnymi",
+          "loc": "jedwabnych"
+        },
+        "nonvirile": {
+          "nom": "jedwabne",
+          "gen": "jedwabnych",
+          "dat": "jedwabnym",
+          "acc": "jedwabne",
+          "ins": "jedwabnymi",
+          "loc": "jedwabnych"
+        }
+      }
+    }
+  }
+}

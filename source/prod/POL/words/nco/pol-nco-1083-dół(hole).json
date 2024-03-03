@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dół",
+      "gen": "dołu",
+      "dat": "dołowi",
+      "acc": "dół",
+      "ins": "dołem",
+      "loc": "dole",
+      "voc": "dole"
+    },
+    "plural": {
+      "nom": "doły",
+      "gen": "dołów",
+      "dat": "dołom",
+      "acc": "doły",
+      "ins": "dołami",
+      "loc": "dołach",
+      "voc": "doły"
+    }
+  }
+}

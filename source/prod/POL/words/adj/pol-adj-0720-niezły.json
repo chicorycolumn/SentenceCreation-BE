@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "nieźle",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niezły",
+          "gen": "niezłego",
+          "dat": "niezłemu",
+          "acc": "niezłego",
+          "ins": "niezłym",
+          "loc": "niezłym"
+        },
+        "m3": {
+          "nom": "niezły",
+          "gen": "niezłego",
+          "dat": "niezłemu",
+          "acc": "niezły",
+          "ins": "niezłym",
+          "loc": "niezłym"
+        },
+        "f": {
+          "nom": "niezła",
+          "gen": "niezłej",
+          "dat": "niezłej",
+          "acc": "niezłą",
+          "ins": "niezłą",
+          "loc": "niezłej"
+        },
+        "n": {
+          "nom": "niezłe",
+          "gen": "niezłego",
+          "dat": "niezłemu",
+          "acc": "niezłe",
+          "ins": "niezłym",
+          "loc": "niezłym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nieźli",
+          "gen": "niezłych",
+          "dat": "niezłym",
+          "acc": "niezłych",
+          "ins": "niezłymi",
+          "loc": "niezłych"
+        },
+        "nonvirile": {
+          "nom": "niezłe",
+          "gen": "niezłych",
+          "dat": "niezłym",
+          "acc": "niezłe",
+          "ins": "niezłymi",
+          "loc": "niezłych"
+        }
+      }
+    }
+  }
+}

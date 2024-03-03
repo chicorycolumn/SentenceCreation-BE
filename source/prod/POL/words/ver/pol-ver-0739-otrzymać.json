@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "otrzymać",
+    "verbalNoun": "otrzymanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "otrzymany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "otrzymawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "otrzyma się"
+          },
+          "plural": {
+            "allPluralGenders": "otrzyma się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "otrzymam"
+          },
+          "plural": {
+            "allPluralGenders": "otrzymamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "otrzymasz"
+          },
+          "plural": {
+            "allPluralGenders": "otrzymacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "otrzyma"
+          },
+          "plural": {
+            "allPluralGenders": "otrzymają"
+          }
+        }
+      },
+      "imperative": "otrzymaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "otrzymano"
+          },
+          "plural": {
+            "allPluralGenders": "otrzymano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "otrzymałem",
+            "f": "otrzymałam"
+          },
+          "plural": {
+            "virile": "otrzymaliśmy",
+            "nonvirile": "otrzymałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "otrzymałeś",
+            "f": "otrzymałaś"
+          },
+          "plural": {
+            "virile": "otrzymaliście",
+            "nonvirile": "otrzymałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "otrzymał",
+            "f": "otrzymała",
+            "n": "otrzymało"
+          },
+          "plural": {
+            "virile": "otrzymali",
+            "nonvirile": "otrzymały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

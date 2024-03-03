@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pomijać",
+    "verbalNoun": "pomijanie",
+    "activeAdjectival": "pomijający",
+    "passiveAdjectival": "pomijany",
+    "contemporaryAdverbial": "pomijając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pomijaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pomijano"
+          },
+          "plural": {
+            "allPluralGenders": "pomijano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pomijałem",
+            "f": "pomijałam"
+          },
+          "plural": {
+            "virile": "pomijaliśmy",
+            "nonvirile": "pomijałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pomijałeś",
+            "f": "pomijałaś"
+          },
+          "plural": {
+            "virile": "pomijaliście",
+            "nonvirile": "pomijałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pomijał",
+            "f": "pomijała",
+            "n": "pomijało"
+          },
+          "plural": {
+            "virile": "pomijali",
+            "nonvirile": "pomijały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pomija się"
+          },
+          "plural": {
+            "allPluralGenders": "pomija się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pomijam"
+          },
+          "plural": {
+            "allPluralGenders": "pomijamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pomijasz"
+          },
+          "plural": {
+            "allPluralGenders": "pomijacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pomija"
+          },
+          "plural": {
+            "allPluralGenders": "pomijają"
+          }
+        }
+      }
+    }
+  }
+}

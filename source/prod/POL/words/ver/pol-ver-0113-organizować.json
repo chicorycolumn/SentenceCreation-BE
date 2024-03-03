@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "organizować",
+    "verbalNoun": "organizowanie",
+    "activeAdjectival": "organizujący",
+    "passiveAdjectival": "organizowany",
+    "contemporaryAdverbial": "organizując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "organizuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "organizowano"
+          },
+          "plural": {
+            "allPluralGenders": "organizowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "organizowałem",
+            "f": "organizowałam"
+          },
+          "plural": {
+            "virile": "organizowaliśmy",
+            "nonvirile": "organizowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "organizowałeś",
+            "f": "organizowałaś"
+          },
+          "plural": {
+            "virile": "organizowaliście",
+            "nonvirile": "organizowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "organizował",
+            "f": "organizowała",
+            "n": "organizowało"
+          },
+          "plural": {
+            "virile": "organizowali",
+            "nonvirile": "organizowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "organizuje się"
+          },
+          "plural": {
+            "allPluralGenders": "organizuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "organizuję"
+          },
+          "plural": {
+            "allPluralGenders": "organizujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "organizujesz"
+          },
+          "plural": {
+            "allPluralGenders": "organizujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "organizuje"
+          },
+          "plural": {
+            "allPluralGenders": "organizują"
+          }
+        }
+      }
+    }
+  }
+}

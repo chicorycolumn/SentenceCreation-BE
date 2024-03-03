@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odpływać",
+    "verbalNoun": "odpływanie",
+    "activeAdjectival": "odpływający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "odpływając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odpływaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odpływano"
+          },
+          "plural": {
+            "allPluralGenders": "odpływano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odpływałem",
+            "f": "odpływałam"
+          },
+          "plural": {
+            "virile": "odpływaliśmy",
+            "nonvirile": "odpływałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odpływałeś",
+            "f": "odpływałaś"
+          },
+          "plural": {
+            "virile": "odpływaliście",
+            "nonvirile": "odpływałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odpływał",
+            "f": "odpływała",
+            "n": "odpływało"
+          },
+          "plural": {
+            "virile": "odpływali",
+            "nonvirile": "odpływały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odpływa się"
+          },
+          "plural": {
+            "allPluralGenders": "odpływa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odpływam"
+          },
+          "plural": {
+            "allPluralGenders": "odpływamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odpływasz"
+          },
+          "plural": {
+            "allPluralGenders": "odpływacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odpływa"
+          },
+          "plural": {
+            "allPluralGenders": "odpływają"
+          }
+        }
+      }
+    }
+  }
+}

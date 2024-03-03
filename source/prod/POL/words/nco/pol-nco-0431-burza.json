@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "burza",
+      "gen": "burzy",
+      "dat": "burzy",
+      "acc": "burzę",
+      "ins": "burzą",
+      "loc": "burzy",
+      "voc": "burzo"
+    },
+    "plural": {
+      "nom": "burze",
+      "gen": "burz",
+      "dat": "burzom",
+      "acc": "burze",
+      "ins": "burzami",
+      "loc": "burzach",
+      "voc": "burze"
+    }
+  }
+}

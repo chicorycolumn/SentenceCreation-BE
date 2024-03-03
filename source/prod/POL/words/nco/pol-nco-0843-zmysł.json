@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zmysł",
+      "gen": "zmysłu",
+      "dat": "zmysłowi",
+      "acc": "zmysł",
+      "ins": "zmysłem",
+      "loc": "zmyśle",
+      "voc": "zmyśle"
+    },
+    "plural": {
+      "nom": "zmysły",
+      "gen": "zmysłów",
+      "dat": "zmysłom",
+      "acc": "zmysły",
+      "ins": "zmysłami",
+      "loc": "zmysłach",
+      "voc": "zmysły"
+    }
+  }
+}

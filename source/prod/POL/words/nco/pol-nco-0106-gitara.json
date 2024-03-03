@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gitara",
+      "gen": "gitary",
+      "dat": "gitarze",
+      "acc": "gitarę",
+      "ins": "gitarą",
+      "loc": "gitarze",
+      "voc": "gitaro"
+    },
+    "plural": {
+      "nom": "gitary",
+      "gen": "gitar",
+      "dat": "gitarom",
+      "acc": "gitary",
+      "ins": "gitarami",
+      "loc": "gitarach",
+      "voc": "gitary"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "potrzebować",
+    "verbalNoun": "potrzebowanie",
+    "activeAdjectival": "potrzebujący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "potrzebując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "potrzebuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "potrzebowano"
+          },
+          "plural": {
+            "allPluralGenders": "potrzebowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "potrzebowałem",
+            "f": "potrzebowałam"
+          },
+          "plural": {
+            "virile": "potrzebowaliśmy",
+            "nonvirile": "potrzebowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "potrzebowałeś",
+            "f": "potrzebowałaś"
+          },
+          "plural": {
+            "virile": "potrzebowaliście",
+            "nonvirile": "potrzebowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "potrzebował",
+            "f": "potrzebowała",
+            "n": "potrzebowało"
+          },
+          "plural": {
+            "virile": "potrzebowali",
+            "nonvirile": "potrzebowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "potrzebuje się"
+          },
+          "plural": {
+            "allPluralGenders": "potrzebuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "potrzebuję"
+          },
+          "plural": {
+            "allPluralGenders": "potrzebujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "potrzebujesz"
+          },
+          "plural": {
+            "allPluralGenders": "potrzebujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "potrzebuje"
+          },
+          "plural": {
+            "allPluralGenders": "potrzebują"
+          }
+        }
+      }
+    }
+  }
+}

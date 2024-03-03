@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przestępca",
+      "gen": "przestępcy",
+      "dat": "przestępcy",
+      "acc": "przestępcę",
+      "ins": "przestępcą",
+      "loc": "przestępcy",
+      "voc": "przestępco"
+    },
+    "plural": {
+      "nom": "przestępcy",
+      "gen": "przestępców",
+      "dat": "przestępcom",
+      "acc": "przestępców",
+      "ins": "przestępcami",
+      "loc": "przestępcach",
+      "voc": "przestępcy"
+    }
+  }
+}

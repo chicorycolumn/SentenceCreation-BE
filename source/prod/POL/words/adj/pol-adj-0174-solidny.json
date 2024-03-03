@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "solidnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "solidny",
+          "gen": "solidnego",
+          "dat": "solidnemu",
+          "acc": "solidnego",
+          "ins": "solidnym",
+          "loc": "solidnym"
+        },
+        "m3": {
+          "nom": "solidny",
+          "gen": "solidnego",
+          "dat": "solidnemu",
+          "acc": "solidny",
+          "ins": "solidnym",
+          "loc": "solidnym"
+        },
+        "f": {
+          "nom": "solidna",
+          "gen": "solidnej",
+          "dat": "solidnej",
+          "acc": "solidną",
+          "ins": "solidną",
+          "loc": "solidnej"
+        },
+        "n": {
+          "nom": "solidne",
+          "gen": "solidnego",
+          "dat": "solidnemu",
+          "acc": "solidne",
+          "ins": "solidnym",
+          "loc": "solidnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "solidni",
+          "gen": "solidnych",
+          "dat": "solidnym",
+          "acc": "solidnych",
+          "ins": "solidnymi",
+          "loc": "solidnych"
+        },
+        "nonvirile": {
+          "nom": "solidne",
+          "gen": "solidnych",
+          "dat": "solidnym",
+          "acc": "solidne",
+          "ins": "solidnymi",
+          "loc": "solidnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "solidniejszy",
+          "gen": "solidniejszego",
+          "dat": "solidniejszemu",
+          "acc": "solidniejszego",
+          "ins": "solidniejszym",
+          "loc": "solidniejszym"
+        },
+        "m3": {
+          "nom": "solidniejszy",
+          "gen": "solidniejszego",
+          "dat": "solidniejszemu",
+          "acc": "solidniejszy",
+          "ins": "solidniejszym",
+          "loc": "solidniejszym"
+        },
+        "f": {
+          "nom": "solidniejsza",
+          "gen": "solidniejszej",
+          "dat": "solidniejszej",
+          "acc": "solidniejszą",
+          "ins": "solidniejszą",
+          "loc": "solidniejszej"
+        },
+        "n": {
+          "nom": "solidniejsze",
+          "gen": "solidniejszego",
+          "dat": "solidniejszemu",
+          "acc": "solidniejsze",
+          "ins": "solidniejszym",
+          "loc": "solidniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "solidniejsi",
+          "gen": "solidniejszych",
+          "dat": "solidniejszym",
+          "acc": "solidniejszych",
+          "ins": "solidniejszymi",
+          "loc": "solidniejszych"
+        },
+        "nonvirile": {
+          "nom": "solidniejsze",
+          "gen": "solidniejszych",
+          "dat": "solidniejszym",
+          "acc": "solidniejsze",
+          "ins": "solidniejszymi",
+          "loc": "solidniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najsolidniejszy",
+          "gen": "najsolidniejszego",
+          "dat": "najsolidniejszemu",
+          "acc": "najsolidniejszego",
+          "ins": "najsolidniejszym",
+          "loc": "najsolidniejszym"
+        },
+        "m3": {
+          "nom": "najsolidniejszy",
+          "gen": "najsolidniejszego",
+          "dat": "najsolidniejszemu",
+          "acc": "najsolidniejszy",
+          "ins": "najsolidniejszym",
+          "loc": "najsolidniejszym"
+        },
+        "f": {
+          "nom": "najsolidniejsza",
+          "gen": "najsolidniejszej",
+          "dat": "najsolidniejszej",
+          "acc": "najsolidniejszą",
+          "ins": "najsolidniejszą",
+          "loc": "najsolidniejszej"
+        },
+        "n": {
+          "nom": "najsolidniejsze",
+          "gen": "najsolidniejszego",
+          "dat": "najsolidniejszemu",
+          "acc": "najsolidniejsze",
+          "ins": "najsolidniejszym",
+          "loc": "najsolidniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najsolidniejsi",
+          "gen": "najsolidniejszych",
+          "dat": "najsolidniejszym",
+          "acc": "najsolidniejszych",
+          "ins": "najsolidniejszymi",
+          "loc": "najsolidniejszych"
+        },
+        "nonvirile": {
+          "nom": "najsolidniejsze",
+          "gen": "najsolidniejszych",
+          "dat": "najsolidniejszym",
+          "acc": "najsolidniejsze",
+          "ins": "najsolidniejszymi",
+          "loc": "najsolidniejszych"
+        }
+      }
+    }
+  }
+}

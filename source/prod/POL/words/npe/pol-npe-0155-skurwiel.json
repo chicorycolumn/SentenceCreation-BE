@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "skurwiel",
+      "gen": "skurwiela",
+      "dat": "skurwielowi",
+      "acc": "skurwiela",
+      "ins": "skurwielem",
+      "loc": "skurwielu",
+      "voc": "skurwielu"
+    },
+    "plural": {
+      "nom": "skurwiele",
+      "gen": [
+        "skurwieli",
+        "skurwielów"
+      ],
+      "dat": "skurwielom",
+      "acc": [
+        "skurwieli",
+        "skurwielów"
+      ],
+      "ins": "skurwielami",
+      "loc": "skurwielach",
+      "voc": "skurwiele"
+    }
+  }
+}

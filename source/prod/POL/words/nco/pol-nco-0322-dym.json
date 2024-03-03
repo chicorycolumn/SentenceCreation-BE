@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dym",
+      "gen": "dymu",
+      "dat": "dymowi",
+      "acc": "dym",
+      "ins": "dymem",
+      "loc": "dymie",
+      "voc": "dymie"
+    },
+    "plural": {
+      "nom": "dymy",
+      "gen": "dymów",
+      "dat": "dymom",
+      "acc": "dymy",
+      "ins": "dymami",
+      "loc": "dymach",
+      "voc": "dymy"
+    }
+  }
+}

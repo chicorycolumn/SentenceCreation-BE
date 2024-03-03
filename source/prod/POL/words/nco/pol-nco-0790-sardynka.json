@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sardynka",
+      "gen": "sardynki",
+      "dat": "sardynce",
+      "acc": "sardynkę",
+      "ins": "sardynką",
+      "loc": "sardynce",
+      "voc": "sardynko"
+    },
+    "plural": {
+      "nom": "sardynki",
+      "gen": "sardynek",
+      "dat": "sardynkom",
+      "acc": "sardynki",
+      "ins": "sardynkami",
+      "loc": "sardynkach",
+      "voc": "sardynki"
+    }
+  }
+}

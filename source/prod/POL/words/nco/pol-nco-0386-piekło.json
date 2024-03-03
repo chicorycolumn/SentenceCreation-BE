@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "piekło",
+      "gen": "piekła",
+      "dat": "piekłu",
+      "acc": "piekło",
+      "ins": "piekłem",
+      "loc": "piekle",
+      "voc": "piekło"
+    },
+    "plural": {
+      "nom": "piekła",
+      "gen": "piekieł",
+      "dat": "piekłom",
+      "acc": "piekła",
+      "ins": "piekłami",
+      "loc": "piekłach",
+      "voc": "piekła"
+    }
+  }
+}

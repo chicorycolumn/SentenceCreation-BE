@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "chory",
+          "gen": "chorego",
+          "dat": "choremu",
+          "acc": "chorego",
+          "ins": "chorym",
+          "loc": "chorym"
+        },
+        "m3": {
+          "nom": "chory",
+          "gen": "chorego",
+          "dat": "choremu",
+          "acc": "chory",
+          "ins": "chorym",
+          "loc": "chorym"
+        },
+        "f": {
+          "nom": "chora",
+          "gen": "chorej",
+          "dat": "chorej",
+          "acc": "chorą",
+          "ins": "chorą",
+          "loc": "chorej"
+        },
+        "n": {
+          "nom": "chore",
+          "gen": "chorego",
+          "dat": "choremu",
+          "acc": "chore",
+          "ins": "chorym",
+          "loc": "chorym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "chorzy",
+          "gen": "chorych",
+          "dat": "chorym",
+          "acc": "chorych",
+          "ins": "chorymi",
+          "loc": "chorych"
+        },
+        "nonvirile": {
+          "nom": "chore",
+          "gen": "chorych",
+          "dat": "chorym",
+          "acc": "chore",
+          "ins": "chorymi",
+          "loc": "chorych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej chory",
+          "gen": "bardziej chorego",
+          "dat": "bardziej choremu",
+          "acc": "bardziej chorego",
+          "ins": "bardziej chorym",
+          "loc": "bardziej chorym"
+        },
+        "m3": {
+          "nom": "bardziej chory",
+          "gen": "bardziej chorego",
+          "dat": "bardziej choremu",
+          "acc": "bardziej chory",
+          "ins": "bardziej chorym",
+          "loc": "bardziej chorym"
+        },
+        "f": {
+          "nom": "bardziej chora",
+          "gen": "bardziej chorej",
+          "dat": "bardziej chorej",
+          "acc": "bardziej chorą",
+          "ins": "bardziej chorą",
+          "loc": "bardziej chorej"
+        },
+        "n": {
+          "nom": "bardziej chore",
+          "gen": "bardziej chorego",
+          "dat": "bardziej choremu",
+          "acc": "bardziej chore",
+          "ins": "bardziej chorym",
+          "loc": "bardziej chorym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej chorzy",
+          "gen": "bardziej chorych",
+          "dat": "bardziej chorym",
+          "acc": "bardziej chorych",
+          "ins": "bardziej chorymi",
+          "loc": "bardziej chorych"
+        },
+        "nonvirile": {
+          "nom": "bardziej chore",
+          "gen": "bardziej chorych",
+          "dat": "bardziej chorym",
+          "acc": "bardziej chore",
+          "ins": "bardziej chorymi",
+          "loc": "bardziej chorych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej chory",
+          "gen": "najbardziej chorego",
+          "dat": "najbardziej choremu",
+          "acc": "najbardziej chorego",
+          "ins": "najbardziej chorym",
+          "loc": "najbardziej chorym"
+        },
+        "m3": {
+          "nom": "najbardziej chory",
+          "gen": "najbardziej chorego",
+          "dat": "najbardziej choremu",
+          "acc": "najbardziej chory",
+          "ins": "najbardziej chorym",
+          "loc": "najbardziej chorym"
+        },
+        "f": {
+          "nom": "najbardziej chora",
+          "gen": "najbardziej chorej",
+          "dat": "najbardziej chorej",
+          "acc": "najbardziej chorą",
+          "ins": "najbardziej chorą",
+          "loc": "najbardziej chorej"
+        },
+        "n": {
+          "nom": "najbardziej chore",
+          "gen": "najbardziej chorego",
+          "dat": "najbardziej choremu",
+          "acc": "najbardziej chore",
+          "ins": "najbardziej chorym",
+          "loc": "najbardziej chorym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej chorzy",
+          "gen": "najbardziej chorych",
+          "dat": "najbardziej chorym",
+          "acc": "najbardziej chorych",
+          "ins": "najbardziej chorymi",
+          "loc": "najbardziej chorych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej chore",
+          "gen": "najbardziej chorych",
+          "dat": "najbardziej chorym",
+          "acc": "najbardziej chore",
+          "ins": "najbardziej chorymi",
+          "loc": "najbardziej chorych"
+        }
+      }
+    }
+  }
+}

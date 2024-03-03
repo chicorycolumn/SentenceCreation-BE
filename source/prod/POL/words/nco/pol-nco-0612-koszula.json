@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "koszula",
+      "gen": "koszuli",
+      "dat": "koszuli",
+      "acc": "koszulę",
+      "ins": "koszulą",
+      "loc": "koszuli",
+      "voc": "koszulo"
+    },
+    "plural": {
+      "nom": "koszule",
+      "gen": "koszul",
+      "dat": "koszulom",
+      "acc": "koszule",
+      "ins": "koszulami",
+      "loc": "koszulach",
+      "voc": "koszule"
+    }
+  }
+}

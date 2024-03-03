@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "fascynująco",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "fascynujący",
+          "gen": "fascynującego",
+          "dat": "fascynującemu",
+          "acc": "fascynującego",
+          "ins": "fascynującym",
+          "loc": "fascynującym"
+        },
+        "m3": {
+          "nom": "fascynujący",
+          "gen": "fascynującego",
+          "dat": "fascynującemu",
+          "acc": "fascynujący",
+          "ins": "fascynującym",
+          "loc": "fascynującym"
+        },
+        "f": {
+          "nom": "fascynująca",
+          "gen": "fascynującej",
+          "dat": "fascynującej",
+          "acc": "fascynującą",
+          "ins": "fascynującą",
+          "loc": "fascynującej"
+        },
+        "n": {
+          "nom": "fascynujące",
+          "gen": "fascynującego",
+          "dat": "fascynującemu",
+          "acc": "fascynujące",
+          "ins": "fascynującym",
+          "loc": "fascynującym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "fascynujący",
+          "gen": "fascynujących",
+          "dat": "fascynującym",
+          "acc": "fascynujących",
+          "ins": "fascynującymi",
+          "loc": "fascynujących"
+        },
+        "nonvirile": {
+          "nom": "fascynujące",
+          "gen": "fascynujących",
+          "dat": "fascynującym",
+          "acc": "fascynujące",
+          "ins": "fascynującymi",
+          "loc": "fascynujących"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej fascynujący",
+          "gen": "bardziej fascynującego",
+          "dat": "bardziej fascynującemu",
+          "acc": "bardziej fascynującego",
+          "ins": "bardziej fascynującym",
+          "loc": "bardziej fascynującym"
+        },
+        "m3": {
+          "nom": "bardziej fascynujący",
+          "gen": "bardziej fascynującego",
+          "dat": "bardziej fascynującemu",
+          "acc": "bardziej fascynujący",
+          "ins": "bardziej fascynującym",
+          "loc": "bardziej fascynującym"
+        },
+        "f": {
+          "nom": "bardziej fascynująca",
+          "gen": "bardziej fascynującej",
+          "dat": "bardziej fascynującej",
+          "acc": "bardziej fascynującą",
+          "ins": "bardziej fascynującą",
+          "loc": "bardziej fascynującej"
+        },
+        "n": {
+          "nom": "bardziej fascynujące",
+          "gen": "bardziej fascynującego",
+          "dat": "bardziej fascynującemu",
+          "acc": "bardziej fascynujące",
+          "ins": "bardziej fascynującym",
+          "loc": "bardziej fascynującym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej fascynujący",
+          "gen": "bardziej fascynujących",
+          "dat": "bardziej fascynującym",
+          "acc": "bardziej fascynujących",
+          "ins": "bardziej fascynującymi",
+          "loc": "bardziej fascynujących"
+        },
+        "nonvirile": {
+          "nom": "bardziej fascynujące",
+          "gen": "bardziej fascynujących",
+          "dat": "bardziej fascynującym",
+          "acc": "bardziej fascynujące",
+          "ins": "bardziej fascynującymi",
+          "loc": "bardziej fascynujących"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej fascynujący",
+          "gen": "najbardziej fascynującego",
+          "dat": "najbardziej fascynującemu",
+          "acc": "najbardziej fascynującego",
+          "ins": "najbardziej fascynującym",
+          "loc": "najbardziej fascynującym"
+        },
+        "m3": {
+          "nom": "najbardziej fascynujący",
+          "gen": "najbardziej fascynującego",
+          "dat": "najbardziej fascynującemu",
+          "acc": "najbardziej fascynujący",
+          "ins": "najbardziej fascynującym",
+          "loc": "najbardziej fascynującym"
+        },
+        "f": {
+          "nom": "najbardziej fascynująca",
+          "gen": "najbardziej fascynującej",
+          "dat": "najbardziej fascynującej",
+          "acc": "najbardziej fascynującą",
+          "ins": "najbardziej fascynującą",
+          "loc": "najbardziej fascynującej"
+        },
+        "n": {
+          "nom": "najbardziej fascynujące",
+          "gen": "najbardziej fascynującego",
+          "dat": "najbardziej fascynującemu",
+          "acc": "najbardziej fascynujące",
+          "ins": "najbardziej fascynującym",
+          "loc": "najbardziej fascynującym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej fascynujący",
+          "gen": "najbardziej fascynujących",
+          "dat": "najbardziej fascynującym",
+          "acc": "najbardziej fascynujących",
+          "ins": "najbardziej fascynującymi",
+          "loc": "najbardziej fascynujących"
+        },
+        "nonvirile": {
+          "nom": "najbardziej fascynujące",
+          "gen": "najbardziej fascynujących",
+          "dat": "najbardziej fascynującym",
+          "acc": "najbardziej fascynujące",
+          "ins": "najbardziej fascynującymi",
+          "loc": "najbardziej fascynujących"
+        }
+      }
+    }
+  }
+}

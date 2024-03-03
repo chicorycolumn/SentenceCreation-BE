@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "machać",
+    "verbalNoun": "machanie",
+    "activeAdjectival": "machający",
+    "passiveAdjectival": "machany",
+    "contemporaryAdverbial": "machając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "machaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "machano"
+          },
+          "plural": {
+            "allPluralGenders": "machano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "machałem",
+            "f": "machałam"
+          },
+          "plural": {
+            "virile": "machaliśmy",
+            "nonvirile": "machałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "machałeś",
+            "f": "machałaś"
+          },
+          "plural": {
+            "virile": "machaliście",
+            "nonvirile": "machałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "machał",
+            "f": "machała",
+            "n": "machało"
+          },
+          "plural": {
+            "virile": "machali",
+            "nonvirile": "machały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "macha się"
+          },
+          "plural": {
+            "allPluralGenders": "macha się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "macham"
+          },
+          "plural": {
+            "allPluralGenders": "machamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "machasz"
+          },
+          "plural": {
+            "allPluralGenders": "machacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "macha"
+          },
+          "plural": {
+            "allPluralGenders": "machają"
+          }
+        }
+      }
+    }
+  }
+}

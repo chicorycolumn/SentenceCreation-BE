@@ -1,0 +1,106 @@
+{
+  "inflections": {
+    "infinitive": "występować",
+    "verbalNoun": "występowanie",
+    "activeAdjectival": "występujący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "występując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "występuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "występowano"
+          },
+          "plural": {
+            "allPluralGenders": "występowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": [
+              "występowałem"
+            ],
+            "f": [
+              "występowałam"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "występowaliśmy"
+            ],
+            "nonvirile": [
+              "występowałyśmy"
+            ]
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": [
+              "występowałeś"
+            ],
+            "f": [
+              "występowałaś"
+            ]
+          },
+          "plural": {
+            "virile": [
+              "występowaliście"
+            ],
+            "nonvirile": [
+              "występowałyście"
+            ]
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "występował",
+            "f": "występowała",
+            "n": "występowało"
+          },
+          "plural": {
+            "virile": "występowali",
+            "nonvirile": "występowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "występuje się"
+          },
+          "plural": {
+            "allPluralGenders": "występuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "występuję"
+          },
+          "plural": {
+            "allPluralGenders": "występujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGendersExcludingNeuter": "występujesz"
+          },
+          "plural": {
+            "allPluralGenders": "występujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "występuje"
+          },
+          "plural": {
+            "allPluralGenders": "występują"
+          }
+        }
+      }
+    }
+  }
+}

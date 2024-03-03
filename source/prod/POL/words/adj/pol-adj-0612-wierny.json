@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "wiernie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "wierny",
+          "gen": "wiernego",
+          "dat": "wiernemu",
+          "acc": "wiernego",
+          "ins": "wiernym",
+          "loc": "wiernym"
+        },
+        "m3": {
+          "nom": "wierny",
+          "gen": "wiernego",
+          "dat": "wiernemu",
+          "acc": "wierny",
+          "ins": "wiernym",
+          "loc": "wiernym"
+        },
+        "f": {
+          "nom": "wierna",
+          "gen": "wiernej",
+          "dat": "wiernej",
+          "acc": "wierną",
+          "ins": "wierną",
+          "loc": "wiernej"
+        },
+        "n": {
+          "nom": "wierne",
+          "gen": "wiernego",
+          "dat": "wiernemu",
+          "acc": "wierne",
+          "ins": "wiernym",
+          "loc": "wiernym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wierni",
+          "gen": "wiernych",
+          "dat": "wiernym",
+          "acc": "wiernych",
+          "ins": "wiernymi",
+          "loc": "wiernych"
+        },
+        "nonvirile": {
+          "nom": "wierne",
+          "gen": "wiernych",
+          "dat": "wiernym",
+          "acc": "wierne",
+          "ins": "wiernymi",
+          "loc": "wiernych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszy",
+              "bardziej wierny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszego",
+              "bardziej wiernego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszemu",
+              "bardziej wiernemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszego",
+              "bardziej wiernego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszym",
+              "bardziej wiernym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszym",
+              "bardziej wiernym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszy",
+              "bardziej wierny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszego",
+              "bardziej wiernego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszemu",
+              "bardziej wiernemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszy",
+              "bardziej wierny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszym",
+              "bardziej wiernym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszym",
+              "bardziej wiernym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejsza",
+              "bardziej wierna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszej",
+              "bardziej wiernej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszej",
+              "bardziej wiernej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszą",
+              "bardziej wierną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszą",
+              "bardziej wierną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszej",
+              "bardziej wiernej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejsze",
+              "bardziej wierne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszego",
+              "bardziej wiernego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszemu",
+              "bardziej wiernemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejsze",
+              "bardziej wierne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszym",
+              "bardziej wiernym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszym",
+              "bardziej wiernym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejsi",
+              "bardziej wierni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszych",
+              "bardziej wiernych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszym",
+              "bardziej wiernym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszych",
+              "bardziej wiernych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszymi",
+              "bardziej wiernymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszych",
+              "bardziej wiernych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejsze",
+              "bardziej wierne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszych",
+              "bardziej wiernych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszym",
+              "bardziej wiernym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejsze",
+              "bardziej wierne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszymi",
+              "bardziej wiernymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "wierniejszych",
+              "bardziej wiernych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszy",
+              "najbardziej wierny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszego",
+              "najbardziej wiernego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszemu",
+              "najbardziej wiernemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszego",
+              "najbardziej wiernego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszym",
+              "najbardziej wiernym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszym",
+              "najbardziej wiernym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszy",
+              "najbardziej wierny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszego",
+              "najbardziej wiernego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszemu",
+              "najbardziej wiernemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszy",
+              "najbardziej wierny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszym",
+              "najbardziej wiernym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszym",
+              "najbardziej wiernym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejsza",
+              "najbardziej wierna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszej",
+              "najbardziej wiernej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszej",
+              "najbardziej wiernej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszą",
+              "najbardziej wierną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszą",
+              "najbardziej wierną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszej",
+              "najbardziej wiernej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejsze",
+              "najbardziej wierne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszego",
+              "najbardziej wiernego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszemu",
+              "najbardziej wiernemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejsze",
+              "najbardziej wierne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszym",
+              "najbardziej wiernym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszym",
+              "najbardziej wiernym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejsi",
+              "najbardziej wierni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszych",
+              "najbardziej wiernych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszym",
+              "najbardziej wiernym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszych",
+              "najbardziej wiernych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszymi",
+              "najbardziej wiernymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszych",
+              "najbardziej wiernych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejsze",
+              "najbardziej wierne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszych",
+              "najbardziej wiernych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszym",
+              "najbardziej wiernym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejsze",
+              "najbardziej wierne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszymi",
+              "najbardziej wiernymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najwierniejszych",
+              "najbardziej wiernych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

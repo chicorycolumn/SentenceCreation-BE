@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "materac",
+      "gen": "materaca",
+      "dat": "materacowi",
+      "acc": "materac",
+      "ins": "materacem",
+      "loc": "materacu",
+      "voc": "materacu"
+    },
+    "plural": {
+      "nom": "materace",
+      "gen": [
+        "materaców",
+        "materacy"
+      ],
+      "dat": "materacom",
+      "acc": "materace",
+      "ins": "materacami",
+      "loc": "materacach",
+      "voc": "materace"
+    }
+  }
+}

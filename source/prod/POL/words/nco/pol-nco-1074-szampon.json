@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "szampon",
+      "gen": "szamponu",
+      "dat": "szamponowi",
+      "acc": "szampon",
+      "ins": "szamponem",
+      "loc": "szamponie",
+      "voc": "szamponie"
+    },
+    "plural": {
+      "nom": "szampony",
+      "gen": "szamponów",
+      "dat": "szamponom",
+      "acc": "szampony",
+      "ins": "szamponami",
+      "loc": "szamponach",
+      "voc": "szampony"
+    }
+  }
+}

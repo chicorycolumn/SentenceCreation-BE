@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "proponować",
+    "verbalNoun": "proponowanie",
+    "activeAdjectival": "proponujący",
+    "passiveAdjectival": "proponowany",
+    "contemporaryAdverbial": "proponując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "proponuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "proponowano"
+          },
+          "plural": {
+            "allPluralGenders": "proponowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "proponowałem",
+            "f": "proponowałam"
+          },
+          "plural": {
+            "virile": "proponowaliśmy",
+            "nonvirile": "proponowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "proponowałeś",
+            "f": "proponowałaś"
+          },
+          "plural": {
+            "virile": "proponowaliście",
+            "nonvirile": "proponowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "proponował",
+            "f": "proponowała",
+            "n": "proponowało"
+          },
+          "plural": {
+            "virile": "proponowali",
+            "nonvirile": "proponowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "proponuje się"
+          },
+          "plural": {
+            "allPluralGenders": "proponuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "proponuję"
+          },
+          "plural": {
+            "allPluralGenders": "proponujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "proponujesz"
+          },
+          "plural": {
+            "allPluralGenders": "proponujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "proponuje"
+          },
+          "plural": {
+            "allPluralGenders": "proponują"
+          }
+        }
+      }
+    }
+  }
+}

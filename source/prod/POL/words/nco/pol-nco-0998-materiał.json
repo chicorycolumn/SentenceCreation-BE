@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "materiał",
+      "gen": "materiału",
+      "dat": "materiałowi",
+      "acc": "materiał",
+      "ins": "materiałem",
+      "loc": "materiale",
+      "voc": "materiale"
+    },
+    "plural": {
+      "nom": "materiały",
+      "gen": "materiałów",
+      "dat": "materiałom",
+      "acc": "materiały",
+      "ins": "materiałami",
+      "loc": "materiałach",
+      "voc": "materiały"
+    }
+  }
+}

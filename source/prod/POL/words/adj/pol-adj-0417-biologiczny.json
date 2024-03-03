@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "biologicznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "biologiczny",
+          "gen": "biologicznego",
+          "dat": "biologicznemu",
+          "acc": "biologicznego",
+          "ins": "biologicznym",
+          "loc": "biologicznym"
+        },
+        "m3": {
+          "nom": "biologiczny",
+          "gen": "biologicznego",
+          "dat": "biologicznemu",
+          "acc": "biologiczny",
+          "ins": "biologicznym",
+          "loc": "biologicznym"
+        },
+        "f": {
+          "nom": "biologiczna",
+          "gen": "biologicznej",
+          "dat": "biologicznej",
+          "acc": "biologiczną",
+          "ins": "biologiczną",
+          "loc": "biologicznej"
+        },
+        "n": {
+          "nom": "biologiczne",
+          "gen": "biologicznego",
+          "dat": "biologicznemu",
+          "acc": "biologiczne",
+          "ins": "biologicznym",
+          "loc": "biologicznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "biologiczni",
+          "gen": "biologicznych",
+          "dat": "biologicznym",
+          "acc": "biologicznych",
+          "ins": "biologicznymi",
+          "loc": "biologicznych"
+        },
+        "nonvirile": {
+          "nom": "biologiczne",
+          "gen": "biologicznych",
+          "dat": "biologicznym",
+          "acc": "biologiczne",
+          "ins": "biologicznymi",
+          "loc": "biologicznych"
+        }
+      }
+    }
+  }
+}

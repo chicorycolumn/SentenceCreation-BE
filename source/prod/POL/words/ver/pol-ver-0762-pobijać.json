@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "podbijać",
+    "verbalNoun": "podbijanie",
+    "activeAdjectival": "podbijający",
+    "passiveAdjectival": "podbijany",
+    "contemporaryAdverbial": "podbijając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "podbijaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podbijano"
+          },
+          "plural": {
+            "allPluralGenders": "podbijano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "podbijałem",
+            "f": "podbijałam"
+          },
+          "plural": {
+            "virile": "podbijaliśmy",
+            "nonvirile": "podbijałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podbijałeś",
+            "f": "podbijałaś"
+          },
+          "plural": {
+            "virile": "podbijaliście",
+            "nonvirile": "podbijałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podbijał",
+            "f": "podbijała",
+            "n": "podbijało"
+          },
+          "plural": {
+            "virile": "podbijali",
+            "nonvirile": "podbijały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podbija się"
+          },
+          "plural": {
+            "allPluralGenders": "podbija się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podbijam"
+          },
+          "plural": {
+            "allPluralGenders": "podbijamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podbijasz"
+          },
+          "plural": {
+            "allPluralGenders": "podbijacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podbija"
+          },
+          "plural": {
+            "allPluralGenders": "podbijają"
+          }
+        }
+      }
+    }
+  }
+}

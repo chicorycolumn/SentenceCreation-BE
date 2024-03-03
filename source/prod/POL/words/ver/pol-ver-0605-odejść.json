@@ -1,0 +1,82 @@
+{
+  "inflections": {
+    "infinitive": "odejść",
+    "verbalNoun": "odejście",
+    "activeAdjectival": false,
+    "passiveAdjectival": "odeszły",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odszedłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odejdzie się"
+          },
+          "plural": {
+            "allPluralGenders": "odejdzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odejdę"
+          },
+          "plural": {
+            "allPluralGenders": "odejdziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odejdziesz"
+          },
+          "plural": {
+            "allPluralGenders": "odejdziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odejdzie"
+          },
+          "plural": {
+            "allPluralGenders": "odejdą"
+          }
+        }
+      },
+      "imperative": "odejdź",
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "odszedłem",
+            "f": "odeszłam"
+          },
+          "plural": {
+            "virile": "odeszliśmy",
+            "nonvirile": "odeszłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odszedłeś",
+            "f": "odeszłaś"
+          },
+          "plural": {
+            "virile": "odeszliście",
+            "nonvirile": "odeszłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odszedł",
+            "f": "odeszła",
+            "n": "odeszło"
+          },
+          "plural": {
+            "virile": "odeszli",
+            "nonvirile": "odeszły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

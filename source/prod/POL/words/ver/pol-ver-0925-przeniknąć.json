@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przeniknąć",
+    "verbalNoun": "przeniknięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przeniknięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przeniknąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeniknie się"
+          },
+          "plural": {
+            "allPluralGenders": "przeniknie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przeniknę"
+          },
+          "plural": {
+            "allPluralGenders": "przenikniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przenikniesz"
+          },
+          "plural": {
+            "allPluralGenders": "przenikniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przeniknie"
+          },
+          "plural": {
+            "allPluralGenders": "przenikną"
+          }
+        }
+      },
+      "imperative": "przeniknij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeniknięto"
+          },
+          "plural": {
+            "allPluralGenders": "przeniknięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przeniknąłem",
+            "f": "przeniknęłam"
+          },
+          "plural": {
+            "virile": "przeniknęliśmy",
+            "nonvirile": "przeniknęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przeniknąłeś",
+            "f": "przeniknęłaś"
+          },
+          "plural": {
+            "virile": "przeniknęliście",
+            "nonvirile": "przeniknęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przeniknął",
+            "f": "przeniknęła",
+            "n": "przeniknęło"
+          },
+          "plural": {
+            "virile": "przeniknęli",
+            "nonvirile": "przeniknęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ciało",
+      "gen": "ciała",
+      "dat": "ciału",
+      "acc": "ciało",
+      "ins": "ciałem",
+      "loc": "ciele",
+      "voc": "ciało"
+    },
+    "plural": {
+      "nom": "ciała",
+      "gen": "ciał",
+      "dat": "ciałom",
+      "acc": "ciała",
+      "ins": "ciałami",
+      "loc": "ciałach",
+      "voc": "ciała"
+    }
+  }
+}

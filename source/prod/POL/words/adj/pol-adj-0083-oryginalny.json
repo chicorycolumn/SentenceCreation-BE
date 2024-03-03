@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "oryginalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "oryginalny",
+          "gen": "oryginalnego",
+          "dat": "oryginalnemu",
+          "acc": "oryginalnego",
+          "ins": "oryginalnym",
+          "loc": "oryginalnym"
+        },
+        "m3": {
+          "nom": "oryginalny",
+          "gen": "oryginalnego",
+          "dat": "oryginalnemu",
+          "acc": "oryginalny",
+          "ins": "oryginalnym",
+          "loc": "oryginalnym"
+        },
+        "f": {
+          "nom": "oryginalna",
+          "gen": "oryginalnej",
+          "dat": "oryginalnej",
+          "acc": "oryginalną",
+          "ins": "oryginalną",
+          "loc": "oryginalnej"
+        },
+        "n": {
+          "nom": "oryginalne",
+          "gen": "oryginalnego",
+          "dat": "oryginalnemu",
+          "acc": "oryginalne",
+          "ins": "oryginalnym",
+          "loc": "oryginalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "oryginalni",
+          "gen": "oryginalnych",
+          "dat": "oryginalnym",
+          "acc": "oryginalnych",
+          "ins": "oryginalnymi",
+          "loc": "oryginalnych"
+        },
+        "nonvirile": {
+          "nom": "oryginalne",
+          "gen": "oryginalnych",
+          "dat": "oryginalnym",
+          "acc": "oryginalne",
+          "ins": "oryginalnymi",
+          "loc": "oryginalnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "oryginalniejszy",
+          "gen": "oryginalniejszego",
+          "dat": "oryginalniejszemu",
+          "acc": "oryginalniejszego",
+          "ins": "oryginalniejszym",
+          "loc": "oryginalniejszym"
+        },
+        "m3": {
+          "nom": "oryginalniejszy",
+          "gen": "oryginalniejszego",
+          "dat": "oryginalniejszemu",
+          "acc": "oryginalniejszy",
+          "ins": "oryginalniejszym",
+          "loc": "oryginalniejszym"
+        },
+        "f": {
+          "nom": "oryginalniejsza",
+          "gen": "oryginalniejszej",
+          "dat": "oryginalniejszej",
+          "acc": "oryginalniejszą",
+          "ins": "oryginalniejszą",
+          "loc": "oryginalniejszej"
+        },
+        "n": {
+          "nom": "oryginalniejsze",
+          "gen": "oryginalniejszego",
+          "dat": "oryginalniejszemu",
+          "acc": "oryginalniejsze",
+          "ins": "oryginalniejszym",
+          "loc": "oryginalniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "oryginalniejsi",
+          "gen": "oryginalniejszych",
+          "dat": "oryginalniejszym",
+          "acc": "oryginalniejszych",
+          "ins": "oryginalniejszymi",
+          "loc": "oryginalniejszych"
+        },
+        "nonvirile": {
+          "nom": "oryginalniejsze",
+          "gen": "oryginalniejszych",
+          "dat": "oryginalniejszym",
+          "acc": "oryginalniejsze",
+          "ins": "oryginalniejszymi",
+          "loc": "oryginalniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najoryginalniejszy",
+          "gen": "najoryginalniejszego",
+          "dat": "najoryginalniejszemu",
+          "acc": "najoryginalniejszego",
+          "ins": "najoryginalniejszym",
+          "loc": "najoryginalniejszym"
+        },
+        "m3": {
+          "nom": "najoryginalniejszy",
+          "gen": "najoryginalniejszego",
+          "dat": "najoryginalniejszemu",
+          "acc": "najoryginalniejszy",
+          "ins": "najoryginalniejszym",
+          "loc": "najoryginalniejszym"
+        },
+        "f": {
+          "nom": "najoryginalniejsza",
+          "gen": "najoryginalniejszej",
+          "dat": "najoryginalniejszej",
+          "acc": "najoryginalniejszą",
+          "ins": "najoryginalniejszą",
+          "loc": "najoryginalniejszej"
+        },
+        "n": {
+          "nom": "najoryginalniejsze",
+          "gen": "najoryginalniejszego",
+          "dat": "najoryginalniejszemu",
+          "acc": "najoryginalniejsze",
+          "ins": "najoryginalniejszym",
+          "loc": "najoryginalniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najoryginalniejsi",
+          "gen": "najoryginalniejszych",
+          "dat": "najoryginalniejszym",
+          "acc": "najoryginalniejszych",
+          "ins": "najoryginalniejszymi",
+          "loc": "najoryginalniejszych"
+        },
+        "nonvirile": {
+          "nom": "najoryginalniejsze",
+          "gen": "najoryginalniejszych",
+          "dat": "najoryginalniejszym",
+          "acc": "najoryginalniejsze",
+          "ins": "najoryginalniejszymi",
+          "loc": "najoryginalniejszych"
+        }
+      }
+    }
+  }
+}

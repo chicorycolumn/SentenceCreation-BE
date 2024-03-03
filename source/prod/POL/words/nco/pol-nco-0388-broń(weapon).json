@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "broń",
+      "gen": "broni",
+      "dat": "broni",
+      "acc": "broń",
+      "ins": "bronią",
+      "loc": "broni",
+      "voc": "broni"
+    },
+    "plural": {
+      "nom": "bronie",
+      "gen": "broni",
+      "dat": "broniom",
+      "acc": "bronie",
+      "ins": "broniami",
+      "loc": "broniach",
+      "voc": "bronie"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "jeż",
+      "gen": "jeża",
+      "dat": "jeżowi",
+      "acc": "jeża",
+      "ins": "jeżem",
+      "loc": "jeżu",
+      "voc": "jeżu"
+    },
+    "plural": {
+      "nom": "jeże",
+      "gen": [
+        "jeży",
+        "jeżów"
+      ],
+      "dat": "jeżom",
+      "acc": "jeże",
+      "ins": "jeżami",
+      "loc": "jeżach",
+      "voc": "jeże"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "filozoficznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "filozoficzny",
+          "gen": "filozoficznego",
+          "dat": "filozoficznemu",
+          "acc": "filozoficznego",
+          "ins": "filozoficznym",
+          "loc": "filozoficznym"
+        },
+        "m3": {
+          "nom": "filozoficzny",
+          "gen": "filozoficznego",
+          "dat": "filozoficznemu",
+          "acc": "filozoficzny",
+          "ins": "filozoficznym",
+          "loc": "filozoficznym"
+        },
+        "f": {
+          "nom": "filozoficzna",
+          "gen": "filozoficznej",
+          "dat": "filozoficznej",
+          "acc": "filozoficzną",
+          "ins": "filozoficzną",
+          "loc": "filozoficznej"
+        },
+        "n": {
+          "nom": "filozoficzne",
+          "gen": "filozoficznego",
+          "dat": "filozoficznemu",
+          "acc": "filozoficzne",
+          "ins": "filozoficznym",
+          "loc": "filozoficznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "filozoficzni",
+          "gen": "filozoficznych",
+          "dat": "filozoficznym",
+          "acc": "filozoficznych",
+          "ins": "filozoficznymi",
+          "loc": "filozoficznych"
+        },
+        "nonvirile": {
+          "nom": "filozoficzne",
+          "gen": "filozoficznych",
+          "dat": "filozoficznym",
+          "acc": "filozoficzne",
+          "ins": "filozoficznymi",
+          "loc": "filozoficznych"
+        }
+      }
+    }
+  }
+}

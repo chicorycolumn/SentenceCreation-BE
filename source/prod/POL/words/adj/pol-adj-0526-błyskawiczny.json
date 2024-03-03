@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "błyskawicznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "błyskawiczny",
+          "gen": "błyskawicznego",
+          "dat": "błyskawicznemu",
+          "acc": "błyskawicznego",
+          "ins": "błyskawicznym",
+          "loc": "błyskawicznym"
+        },
+        "m3": {
+          "nom": "błyskawiczny",
+          "gen": "błyskawicznego",
+          "dat": "błyskawicznemu",
+          "acc": "błyskawiczny",
+          "ins": "błyskawicznym",
+          "loc": "błyskawicznym"
+        },
+        "f": {
+          "nom": "błyskawiczna",
+          "gen": "błyskawicznej",
+          "dat": "błyskawicznej",
+          "acc": "błyskawiczną",
+          "ins": "błyskawiczną",
+          "loc": "błyskawicznej"
+        },
+        "n": {
+          "nom": "błyskawiczne",
+          "gen": "błyskawicznego",
+          "dat": "błyskawicznemu",
+          "acc": "błyskawiczne",
+          "ins": "błyskawicznym",
+          "loc": "błyskawicznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "błyskawiczni",
+          "gen": "błyskawicznych",
+          "dat": "błyskawicznym",
+          "acc": "błyskawicznych",
+          "ins": "błyskawicznymi",
+          "loc": "błyskawicznych"
+        },
+        "nonvirile": {
+          "nom": "błyskawiczne",
+          "gen": "błyskawicznych",
+          "dat": "błyskawicznym",
+          "acc": "błyskawiczne",
+          "ins": "błyskawicznymi",
+          "loc": "błyskawicznych"
+        }
+      }
+    }
+  }
+}

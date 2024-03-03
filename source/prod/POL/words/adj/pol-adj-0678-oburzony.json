@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "oburzony",
+          "gen": "oburzonego",
+          "dat": "oburzonemu",
+          "acc": "oburzonego",
+          "ins": "oburzonym",
+          "loc": "oburzonym"
+        },
+        "m3": {
+          "nom": "oburzony",
+          "gen": "oburzonego",
+          "dat": "oburzonemu",
+          "acc": "oburzony",
+          "ins": "oburzonym",
+          "loc": "oburzonym"
+        },
+        "f": {
+          "nom": "oburzona",
+          "gen": "oburzonej",
+          "dat": "oburzonej",
+          "acc": "oburzoną",
+          "ins": "oburzoną",
+          "loc": "oburzonej"
+        },
+        "n": {
+          "nom": "oburzone",
+          "gen": "oburzonego",
+          "dat": "oburzonemu",
+          "acc": "oburzone",
+          "ins": "oburzonym",
+          "loc": "oburzonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "oburzeni",
+          "gen": "oburzonych",
+          "dat": "oburzonym",
+          "acc": "oburzonych",
+          "ins": "oburzonymi",
+          "loc": "oburzonych"
+        },
+        "nonvirile": {
+          "nom": "oburzone",
+          "gen": "oburzonych",
+          "dat": "oburzonym",
+          "acc": "oburzone",
+          "ins": "oburzonymi",
+          "loc": "oburzonych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej oburzony",
+          "gen": "bardziej oburzonego",
+          "dat": "bardziej oburzonemu",
+          "acc": "bardziej oburzonego",
+          "ins": "bardziej oburzonym",
+          "loc": "bardziej oburzonym"
+        },
+        "m3": {
+          "nom": "bardziej oburzony",
+          "gen": "bardziej oburzonego",
+          "dat": "bardziej oburzonemu",
+          "acc": "bardziej oburzony",
+          "ins": "bardziej oburzonym",
+          "loc": "bardziej oburzonym"
+        },
+        "f": {
+          "nom": "bardziej oburzona",
+          "gen": "bardziej oburzonej",
+          "dat": "bardziej oburzonej",
+          "acc": "bardziej oburzoną",
+          "ins": "bardziej oburzoną",
+          "loc": "bardziej oburzonej"
+        },
+        "n": {
+          "nom": "bardziej oburzone",
+          "gen": "bardziej oburzonego",
+          "dat": "bardziej oburzonemu",
+          "acc": "bardziej oburzone",
+          "ins": "bardziej oburzonym",
+          "loc": "bardziej oburzonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej oburzeni",
+          "gen": "bardziej oburzonych",
+          "dat": "bardziej oburzonym",
+          "acc": "bardziej oburzonych",
+          "ins": "bardziej oburzonymi",
+          "loc": "bardziej oburzonych"
+        },
+        "nonvirile": {
+          "nom": "bardziej oburzone",
+          "gen": "bardziej oburzonych",
+          "dat": "bardziej oburzonym",
+          "acc": "bardziej oburzone",
+          "ins": "bardziej oburzonymi",
+          "loc": "bardziej oburzonych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej oburzony",
+          "gen": "najbardziej oburzonego",
+          "dat": "najbardziej oburzonemu",
+          "acc": "najbardziej oburzonego",
+          "ins": "najbardziej oburzonym",
+          "loc": "najbardziej oburzonym"
+        },
+        "m3": {
+          "nom": "najbardziej oburzony",
+          "gen": "najbardziej oburzonego",
+          "dat": "najbardziej oburzonemu",
+          "acc": "najbardziej oburzony",
+          "ins": "najbardziej oburzonym",
+          "loc": "najbardziej oburzonym"
+        },
+        "f": {
+          "nom": "najbardziej oburzona",
+          "gen": "najbardziej oburzonej",
+          "dat": "najbardziej oburzonej",
+          "acc": "najbardziej oburzoną",
+          "ins": "najbardziej oburzoną",
+          "loc": "najbardziej oburzonej"
+        },
+        "n": {
+          "nom": "najbardziej oburzone",
+          "gen": "najbardziej oburzonego",
+          "dat": "najbardziej oburzonemu",
+          "acc": "najbardziej oburzone",
+          "ins": "najbardziej oburzonym",
+          "loc": "najbardziej oburzonym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej oburzeni",
+          "gen": "najbardziej oburzonych",
+          "dat": "najbardziej oburzonym",
+          "acc": "najbardziej oburzonych",
+          "ins": "najbardziej oburzonymi",
+          "loc": "najbardziej oburzonych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej oburzone",
+          "gen": "najbardziej oburzonych",
+          "dat": "najbardziej oburzonym",
+          "acc": "najbardziej oburzone",
+          "ins": "najbardziej oburzonymi",
+          "loc": "najbardziej oburzonych"
+        }
+      }
+    }
+  }
+}

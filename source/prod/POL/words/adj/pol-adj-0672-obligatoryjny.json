@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "obligatoryjnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "obligatoryjny",
+          "gen": "obligatoryjnego",
+          "dat": "obligatoryjnemu",
+          "acc": "obligatoryjnego",
+          "ins": "obligatoryjnym",
+          "loc": "obligatoryjnym"
+        },
+        "m3": {
+          "nom": "obligatoryjny",
+          "gen": "obligatoryjnego",
+          "dat": "obligatoryjnemu",
+          "acc": "obligatoryjny",
+          "ins": "obligatoryjnym",
+          "loc": "obligatoryjnym"
+        },
+        "f": {
+          "nom": "obligatoryjna",
+          "gen": "obligatoryjnej",
+          "dat": "obligatoryjnej",
+          "acc": "obligatoryjną",
+          "ins": "obligatoryjną",
+          "loc": "obligatoryjnej"
+        },
+        "n": {
+          "nom": "obligatoryjne",
+          "gen": "obligatoryjnego",
+          "dat": "obligatoryjnemu",
+          "acc": "obligatoryjne",
+          "ins": "obligatoryjnym",
+          "loc": "obligatoryjnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "obligatoryjni",
+          "gen": "obligatoryjnych",
+          "dat": "obligatoryjnym",
+          "acc": "obligatoryjnych",
+          "ins": "obligatoryjnymi",
+          "loc": "obligatoryjnych"
+        },
+        "nonvirile": {
+          "nom": "obligatoryjne",
+          "gen": "obligatoryjnych",
+          "dat": "obligatoryjnym",
+          "acc": "obligatoryjne",
+          "ins": "obligatoryjnymi",
+          "loc": "obligatoryjnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej obligatoryjny",
+          "gen": "bardziej obligatoryjnego",
+          "dat": "bardziej obligatoryjnemu",
+          "acc": "bardziej obligatoryjnego",
+          "ins": "bardziej obligatoryjnym",
+          "loc": "bardziej obligatoryjnym"
+        },
+        "m3": {
+          "nom": "bardziej obligatoryjny",
+          "gen": "bardziej obligatoryjnego",
+          "dat": "bardziej obligatoryjnemu",
+          "acc": "bardziej obligatoryjny",
+          "ins": "bardziej obligatoryjnym",
+          "loc": "bardziej obligatoryjnym"
+        },
+        "f": {
+          "nom": "bardziej obligatoryjna",
+          "gen": "bardziej obligatoryjnej",
+          "dat": "bardziej obligatoryjnej",
+          "acc": "bardziej obligatoryjną",
+          "ins": "bardziej obligatoryjną",
+          "loc": "bardziej obligatoryjnej"
+        },
+        "n": {
+          "nom": "bardziej obligatoryjne",
+          "gen": "bardziej obligatoryjnego",
+          "dat": "bardziej obligatoryjnemu",
+          "acc": "bardziej obligatoryjne",
+          "ins": "bardziej obligatoryjnym",
+          "loc": "bardziej obligatoryjnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej obligatoryjni",
+          "gen": "bardziej obligatoryjnych",
+          "dat": "bardziej obligatoryjnym",
+          "acc": "bardziej obligatoryjnych",
+          "ins": "bardziej obligatoryjnymi",
+          "loc": "bardziej obligatoryjnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej obligatoryjne",
+          "gen": "bardziej obligatoryjnych",
+          "dat": "bardziej obligatoryjnym",
+          "acc": "bardziej obligatoryjne",
+          "ins": "bardziej obligatoryjnymi",
+          "loc": "bardziej obligatoryjnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej obligatoryjny",
+          "gen": "najbardziej obligatoryjnego",
+          "dat": "najbardziej obligatoryjnemu",
+          "acc": "najbardziej obligatoryjnego",
+          "ins": "najbardziej obligatoryjnym",
+          "loc": "najbardziej obligatoryjnym"
+        },
+        "m3": {
+          "nom": "najbardziej obligatoryjny",
+          "gen": "najbardziej obligatoryjnego",
+          "dat": "najbardziej obligatoryjnemu",
+          "acc": "najbardziej obligatoryjny",
+          "ins": "najbardziej obligatoryjnym",
+          "loc": "najbardziej obligatoryjnym"
+        },
+        "f": {
+          "nom": "najbardziej obligatoryjna",
+          "gen": "najbardziej obligatoryjnej",
+          "dat": "najbardziej obligatoryjnej",
+          "acc": "najbardziej obligatoryjną",
+          "ins": "najbardziej obligatoryjną",
+          "loc": "najbardziej obligatoryjnej"
+        },
+        "n": {
+          "nom": "najbardziej obligatoryjne",
+          "gen": "najbardziej obligatoryjnego",
+          "dat": "najbardziej obligatoryjnemu",
+          "acc": "najbardziej obligatoryjne",
+          "ins": "najbardziej obligatoryjnym",
+          "loc": "najbardziej obligatoryjnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej obligatoryjni",
+          "gen": "najbardziej obligatoryjnych",
+          "dat": "najbardziej obligatoryjnym",
+          "acc": "najbardziej obligatoryjnych",
+          "ins": "najbardziej obligatoryjnymi",
+          "loc": "najbardziej obligatoryjnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej obligatoryjne",
+          "gen": "najbardziej obligatoryjnych",
+          "dat": "najbardziej obligatoryjnym",
+          "acc": "najbardziej obligatoryjne",
+          "ins": "najbardziej obligatoryjnymi",
+          "loc": "najbardziej obligatoryjnych"
+        }
+      }
+    }
+  }
+}

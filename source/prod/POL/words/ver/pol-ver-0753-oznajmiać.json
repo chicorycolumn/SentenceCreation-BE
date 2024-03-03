@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oznajmiać",
+    "verbalNoun": "oznajmianie",
+    "activeAdjectival": "oznajmiający",
+    "passiveAdjectival": "oznajmiany",
+    "contemporaryAdverbial": "oznajmiając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "oznajmiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oznajmiano"
+          },
+          "plural": {
+            "allPluralGenders": "oznajmiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oznajmiałem",
+            "f": "oznajmiałam"
+          },
+          "plural": {
+            "virile": "oznajmialiśmy",
+            "nonvirile": "oznajmiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oznajmiałeś",
+            "f": "oznajmiałaś"
+          },
+          "plural": {
+            "virile": "oznajmialiście",
+            "nonvirile": "oznajmiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oznajmiał",
+            "f": "oznajmiała",
+            "n": "oznajmiało"
+          },
+          "plural": {
+            "virile": "oznajmiali",
+            "nonvirile": "oznajmiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oznajmia się"
+          },
+          "plural": {
+            "allPluralGenders": "oznajmia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oznajmiam"
+          },
+          "plural": {
+            "allPluralGenders": "oznajmiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oznajmiasz"
+          },
+          "plural": {
+            "allPluralGenders": "oznajmiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "oznajmia"
+          },
+          "plural": {
+            "allPluralGenders": "oznajmiają"
+          }
+        }
+      }
+    }
+  }
+}

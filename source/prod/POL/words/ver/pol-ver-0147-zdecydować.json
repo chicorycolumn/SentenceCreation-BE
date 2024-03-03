@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zdecydować",
+    "verbalNoun": "zdecydowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zdecydowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zdecydowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zdecyduje się"
+          },
+          "plural": {
+            "allPluralGenders": "zdecyduje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zdecyduję"
+          },
+          "plural": {
+            "allPluralGenders": "zdecydujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zdecydujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zdecydujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zdecyduje"
+          },
+          "plural": {
+            "allPluralGenders": "zdecydują"
+          }
+        }
+      },
+      "imperative": "zdecyduj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zdecydowano"
+          },
+          "plural": {
+            "allPluralGenders": "zdecydowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zdecydowałem",
+            "f": "zdecydowałam"
+          },
+          "plural": {
+            "virile": "zdecydowaliśmy",
+            "nonvirile": "zdecydowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zdecydowałeś",
+            "f": "zdecydowałaś"
+          },
+          "plural": {
+            "virile": "zdecydowaliście",
+            "nonvirile": "zdecydowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zdecydował",
+            "f": "zdecydowała",
+            "n": "zdecydowało"
+          },
+          "plural": {
+            "virile": "zdecydowali",
+            "nonvirile": "zdecydowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

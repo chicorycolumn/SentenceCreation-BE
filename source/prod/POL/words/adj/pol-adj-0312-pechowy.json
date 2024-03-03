@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "pechowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pechowy",
+          "gen": "pechowego",
+          "dat": "pechowemu",
+          "acc": "pechowego",
+          "ins": "pechowym",
+          "loc": "pechowym"
+        },
+        "m3": {
+          "nom": "pechowy",
+          "gen": "pechowego",
+          "dat": "pechowemu",
+          "acc": "pechowy",
+          "ins": "pechowym",
+          "loc": "pechowym"
+        },
+        "f": {
+          "nom": "pechowa",
+          "gen": "pechowej",
+          "dat": "pechowej",
+          "acc": "pechową",
+          "ins": "pechową",
+          "loc": "pechowej"
+        },
+        "n": {
+          "nom": "pechowe",
+          "gen": "pechowego",
+          "dat": "pechowemu",
+          "acc": "pechowe",
+          "ins": "pechowym",
+          "loc": "pechowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pechowi",
+          "gen": "pechowych",
+          "dat": "pechowym",
+          "acc": "pechowych",
+          "ins": "pechowymi",
+          "loc": "pechowych"
+        },
+        "nonvirile": {
+          "nom": "pechowe",
+          "gen": "pechowych",
+          "dat": "pechowym",
+          "acc": "pechowe",
+          "ins": "pechowymi",
+          "loc": "pechowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej pechowy",
+          "gen": "bardziej pechowego",
+          "dat": "bardziej pechowemu",
+          "acc": "bardziej pechowego",
+          "ins": "bardziej pechowym",
+          "loc": "bardziej pechowym"
+        },
+        "m3": {
+          "nom": "bardziej pechowy",
+          "gen": "bardziej pechowego",
+          "dat": "bardziej pechowemu",
+          "acc": "bardziej pechowy",
+          "ins": "bardziej pechowym",
+          "loc": "bardziej pechowym"
+        },
+        "f": {
+          "nom": "bardziej pechowa",
+          "gen": "bardziej pechowej",
+          "dat": "bardziej pechowej",
+          "acc": "bardziej pechową",
+          "ins": "bardziej pechową",
+          "loc": "bardziej pechowej"
+        },
+        "n": {
+          "nom": "bardziej pechowe",
+          "gen": "bardziej pechowego",
+          "dat": "bardziej pechowemu",
+          "acc": "bardziej pechowe",
+          "ins": "bardziej pechowym",
+          "loc": "bardziej pechowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej pechowi",
+          "gen": "bardziej pechowych",
+          "dat": "bardziej pechowym",
+          "acc": "bardziej pechowych",
+          "ins": "bardziej pechowymi",
+          "loc": "bardziej pechowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej pechowe",
+          "gen": "bardziej pechowych",
+          "dat": "bardziej pechowym",
+          "acc": "bardziej pechowe",
+          "ins": "bardziej pechowymi",
+          "loc": "bardziej pechowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej pechowy",
+          "gen": "najbardziej pechowego",
+          "dat": "najbardziej pechowemu",
+          "acc": "najbardziej pechowego",
+          "ins": "najbardziej pechowym",
+          "loc": "najbardziej pechowym"
+        },
+        "m3": {
+          "nom": "najbardziej pechowy",
+          "gen": "najbardziej pechowego",
+          "dat": "najbardziej pechowemu",
+          "acc": "najbardziej pechowy",
+          "ins": "najbardziej pechowym",
+          "loc": "najbardziej pechowym"
+        },
+        "f": {
+          "nom": "najbardziej pechowa",
+          "gen": "najbardziej pechowej",
+          "dat": "najbardziej pechowej",
+          "acc": "najbardziej pechową",
+          "ins": "najbardziej pechową",
+          "loc": "najbardziej pechowej"
+        },
+        "n": {
+          "nom": "najbardziej pechowe",
+          "gen": "najbardziej pechowego",
+          "dat": "najbardziej pechowemu",
+          "acc": "najbardziej pechowe",
+          "ins": "najbardziej pechowym",
+          "loc": "najbardziej pechowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej pechowi",
+          "gen": "najbardziej pechowych",
+          "dat": "najbardziej pechowym",
+          "acc": "najbardziej pechowych",
+          "ins": "najbardziej pechowymi",
+          "loc": "najbardziej pechowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej pechowe",
+          "gen": "najbardziej pechowych",
+          "dat": "najbardziej pechowym",
+          "acc": "najbardziej pechowe",
+          "ins": "najbardziej pechowymi",
+          "loc": "najbardziej pechowych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dressing gown",
+      "gen": "dressing gown's"
+    },
+    "plural": {
+      "nom": "dressing gowns",
+      "gen": "dressing gowns'"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "obraz",
+      "gen": "obrazu",
+      "dat": "obrazowi",
+      "acc": "obraz",
+      "ins": "obrazem",
+      "loc": "obrazie",
+      "voc": "obrazie"
+    },
+    "plural": {
+      "nom": "obrazy",
+      "gen": "obrazów",
+      "dat": "obrazom",
+      "acc": "obrazy",
+      "ins": "obrazami",
+      "loc": "obrazach",
+      "voc": "obrazy"
+    }
+  }
+}

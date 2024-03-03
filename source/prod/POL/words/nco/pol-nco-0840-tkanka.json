@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "tkanka",
+      "gen": "tkanki",
+      "dat": "tkance",
+      "acc": "tkankę",
+      "ins": "tkanką",
+      "loc": "tkance",
+      "voc": "tkanko"
+    },
+    "plural": {
+      "nom": "tkanki",
+      "gen": "tkanek",
+      "dat": "tkankom",
+      "acc": "tkanki",
+      "ins": "tkankami",
+      "loc": "tkankach",
+      "voc": "tkanki"
+    }
+  }
+}

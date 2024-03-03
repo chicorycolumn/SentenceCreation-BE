@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zniszczyć",
+    "verbalNoun": "zniszczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zniszczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zniszczywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zniszczy się"
+          },
+          "plural": {
+            "allPluralGenders": "zniszczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zniszczę"
+          },
+          "plural": {
+            "allPluralGenders": "zniszczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zniszczysz"
+          },
+          "plural": {
+            "allPluralGenders": "zniszczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zniszczy"
+          },
+          "plural": {
+            "allPluralGenders": "zniszczą"
+          }
+        }
+      },
+      "imperative": "zniszcz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zniszczono"
+          },
+          "plural": {
+            "allPluralGenders": "zniszczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zniszczyłem",
+            "f": "zniszczyłam"
+          },
+          "plural": {
+            "virile": "zniszczyliśmy",
+            "nonvirile": "zniszczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zniszczyłeś",
+            "f": "zniszczyłaś"
+          },
+          "plural": {
+            "virile": "zniszczyliście",
+            "nonvirile": "zniszczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zniszczył",
+            "f": "zniszczyła",
+            "n": "zniszczyło"
+          },
+          "plural": {
+            "virile": "zniszczyli",
+            "nonvirile": "zniszczyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

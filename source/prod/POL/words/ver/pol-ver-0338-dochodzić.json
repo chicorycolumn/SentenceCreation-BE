@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dochodzić",
+    "verbalNoun": "dochodzenie",
+    "activeAdjectival": "dochodzący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "dochodząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dochodź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dochodzono"
+          },
+          "plural": {
+            "allPluralGenders": "dochodzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dochodziłem",
+            "f": "dochodziłam"
+          },
+          "plural": {
+            "virile": "dochodziliśmy",
+            "nonvirile": "dochodziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dochodziłeś",
+            "f": "dochodziłaś"
+          },
+          "plural": {
+            "virile": "dochodziliście",
+            "nonvirile": "dochodziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dochodził",
+            "f": "dochodziła",
+            "n": "dochodziło"
+          },
+          "plural": {
+            "virile": "dochodzili",
+            "nonvirile": "dochodziły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dochodzi się"
+          },
+          "plural": {
+            "allPluralGenders": "dochodzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dochodzę"
+          },
+          "plural": {
+            "allPluralGenders": "dochodzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dochodzisz"
+          },
+          "plural": {
+            "allPluralGenders": "dochodzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dochodzi"
+          },
+          "plural": {
+            "allPluralGenders": "dochodzą"
+          }
+        }
+      }
+    }
+  }
+}

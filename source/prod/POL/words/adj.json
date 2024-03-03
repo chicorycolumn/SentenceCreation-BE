@@ -1,0 +1,8605 @@
+[
+  {
+    "lemma": "pomarańczowy",
+    "id": "pol-adj-0001-pomarańczowy",
+    "frequency": 1,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "sok pomarańczowy ― orange juice"
+      ]
+    }
+  },
+  {
+    "lemma": "kiepski",
+    "id": "pol-adj-0002-kiepski",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "zły"
+      ]
+    }
+  },
+  {
+    "lemma": "zły",
+    "id": "pol-adj-0003-zły(bad)",
+    "frequency": 1,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "quality",
+      "emoji": "👎"
+    }
+  },
+  {
+    "lemma": "zły",
+    "id": "pol-adj-0004-zły(evil)",
+    "_inflectionsRoot": "pol-adj-0003-zły(bad)",
+    "frequency": 1,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "villainous",
+      "emoji": "😈"
+    },
+    "extra": {
+      "usage": [
+        "Wiedźma jest zła i musi zostać ukarana. ― The witch is evil and must be punished."
+      ]
+    }
+  },
+  {
+    "lemma": "zły",
+    "id": "pol-adj-0005-zły(angry)",
+    "frequency": 1,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "emotion",
+      "emoji": "🤪"
+    }
+  },
+  {
+    "lemma": "jasny",
+    "id": "pol-adj-0006-jasny(bright)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "not dark",
+      "emoji": "💡"
+    },
+    "extra": {
+      "antonyms": [
+        "ciemny",
+        "niejasny"
+      ]
+    }
+  },
+  {
+    "lemma": "jasny",
+    "id": "pol-adj-0007-jasny(evident)",
+    "_inflectionsRoot": "pol-adj-0006-jasny(bright)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "knowledge",
+      "emoji": "👀"
+    },
+    "extra": {
+      "antonyms": [
+        "ciemny",
+        "niejasny"
+      ]
+    }
+  },
+  {
+    "lemma": "niejasny",
+    "id": "pol-adj-0008-niejasny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "ciemny",
+    "id": "pol-adj-0009-ciemny",
+    "frequency": 1,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "mroczny",
+        "czarny"
+      ],
+      "antonyms": [
+        "jasny"
+      ]
+    }
+  },
+  {
+    "lemma": "szczupły",
+    "id": "pol-adj-0010-szczupły",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "smukły",
+        "wysmukły"
+      ]
+    }
+  },
+  {
+    "lemma": "smukły",
+    "id": "pol-adj-0011-smukły",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "słaby",
+    "id": "pol-adj-0012-słaby",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "mierny",
+        "zły"
+      ],
+      "antonyms": [
+        "mocny",
+        "silny",
+        "dobry"
+      ]
+    }
+  },
+  {
+    "lemma": "dobry",
+    "id": "pol-adj-0013-dobry",
+    "frequency": 1,
+    "register": 0
+  },
+  {
+    "lemma": "silny",
+    "id": "pol-adj-0014-silny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "mierny",
+    "id": "pol-adj-0015-mierny",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "mierny",
+        "zły"
+      ]
+    }
+  },
+  {
+    "lemma": "mocny",
+    "id": "pol-adj-0016-mocny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "wspaniały",
+    "id": "pol-adj-0017-wspaniały",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "dobry"
+      ]
+    }
+  },
+  {
+    "lemma": "ciężki",
+    "id": "pol-adj-0018-ciężki(heavy)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "physical",
+      "emoji": "🪨"
+    },
+    "extra": {
+      "synonyms": [
+        "trudny"
+      ],
+      "antonyms": [
+        "lekki"
+      ]
+    }
+  },
+  {
+    "lemma": "ciężki",
+    "id": "pol-adj-0019-ciężki(difficult)",
+    "_inflectionsRoot": "pol-adj-0018-ciężki(heavy)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "not easy",
+      "emoji": "📚"
+    },
+    "extra": {
+      "synonyms": [
+        "trudny"
+      ],
+      "antonyms": [
+        "lekki"
+      ]
+    }
+  },
+  {
+    "lemma": "lekki",
+    "id": "pol-adj-0020-lekki",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "ciężki"
+      ]
+    }
+  },
+  {
+    "lemma": "trudny",
+    "id": "pol-adj-0021-trudny",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "wrażliwy",
+    "id": "pol-adj-0022-wrażliwy(impressionable)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "personality",
+      "emoji": "🧒"
+    },
+    "extra": {
+      "antonyms": [
+        "niewrażliwy"
+      ]
+    }
+  },
+  {
+    "lemma": "wrażliwy",
+    "id": "pol-adj-0023-wrażliwy(susceptible)",
+    "_inflectionsRoot": "pol-adj-0022-wrażliwy(impressionable)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "medical",
+      "emoji": "😷"
+    },
+    "extra": {
+      "antonyms": [
+        "niewrażliwy"
+      ]
+    }
+  },
+  {
+    "lemma": "powszechny",
+    "id": "pol-adj-0024-powszechny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "częsty"
+      ]
+    }
+  },
+  {
+    "lemma": "częsty",
+    "id": "pol-adj-0025-częsty",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "nieczęsty",
+        "rzadki"
+      ]
+    }
+  },
+  {
+    "lemma": "martwy",
+    "id": "pol-adj-0026-martwy(dead)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "was alive",
+      "emoji": "⚰️"
+    }
+  },
+  {
+    "lemma": "martwy",
+    "id": "pol-adj-0027-martwy(inanimate)",
+    "_inflectionsRoot": "pol-adj-0026-martwy(dead)",
+    "frequency": 5,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "not animate",
+      "emoji": "📦"
+    }
+  },
+  {
+    "lemma": "nieożywiony",
+    "id": "pol-adj-0028-nieożywiony",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "żywy",
+    "id": "pol-adj-0029-żywy(live)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "not dead",
+      "emoji": "🐣"
+    },
+    "extra": {
+      "synonyms": [
+        "żyjący",
+        "żwawy",
+        "skoczny"
+      ],
+      "antonyms": [
+        "martwy",
+        "nieżywy"
+      ]
+    }
+  },
+  {
+    "lemma": "żywy",
+    "id": "pol-adj-0030-żywy(lively)",
+    "_inflectionsRoot": "pol-adj-0029-żywy(live)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "personality",
+      "emoji": "😃"
+    },
+    "extra": {
+      "synonyms": [
+        "żyjący",
+        "żwawy",
+        "skoczny"
+      ],
+      "antonyms": [
+        "martwy",
+        "nieżywy"
+      ]
+    }
+  },
+  {
+    "lemma": "bezpłatny",
+    "id": "pol-adj-0031-bezpłatny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "płatny"
+      ]
+    }
+  },
+  {
+    "lemma": "młody",
+    "id": "pol-adj-0032-młody",
+    "frequency": 1,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "stary"
+      ]
+    }
+  },
+  {
+    "lemma": "stary",
+    "id": "pol-adj-0033-stary",
+    "frequency": 1,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "młody",
+        "nowy"
+      ]
+    }
+  },
+  {
+    "lemma": "czarny",
+    "id": "pol-adj-0034-czarny",
+    "frequency": 1,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "kary",
+        "wrony"
+      ],
+      "antonyms": [
+        "biały"
+      ]
+    }
+  },
+  {
+    "lemma": "biały",
+    "id": "pol-adj-0035-biały",
+    "frequency": 1,
+    "register": 0
+  },
+  {
+    "lemma": "konieczny",
+    "id": "pol-adj-0036-konieczny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "zasadniczy",
+        "nieuchronny",
+        "bezwarunkowy",
+        "potrzebny",
+        "podstawowy",
+        "niezbędny"
+      ],
+      "antonyms": [
+        "niekonieczny"
+      ]
+    }
+  },
+  {
+    "lemma": "zasadniczy",
+    "id": "pol-adj-0037-zasadniczy",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "podstawowy",
+        "pryncypialny"
+      ]
+    }
+  },
+  {
+    "lemma": "potrzebny",
+    "id": "pol-adj-0038-potrzebny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "konieczny"
+      ]
+    }
+  },
+  {
+    "lemma": "bezwarunkowy",
+    "id": "pol-adj-0039-bezwarunkowy",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "niezbędny",
+    "id": "pol-adj-0040-niezbędny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "zbędny"
+      ]
+    }
+  },
+  {
+    "lemma": "podstawowy",
+    "id": "pol-adj-0041-podstawowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "głęboki",
+    "id": "pol-adj-0042-głęboki(concrete)",
+    "frequency": 2,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "physical",
+      "emoji": "🌊"
+    },
+    "extra": {
+      "antonyms": [
+        "miałki",
+        "niegłęboki",
+        "płytki"
+      ]
+    }
+  },
+  {
+    "lemma": "głęboki",
+    "id": "pol-adj-0043-głęboki(abstract)",
+    "_inflectionsRoot": "pol-adj-0042-głęboki(concrete)",
+    "frequency": 5,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "💭"
+    },
+    "extra": {
+      "antonyms": [
+        "miałki",
+        "niegłęboki",
+        "płytki"
+      ]
+    }
+  },
+  {
+    "lemma": "płytki",
+    "id": "pol-adj-0044-płytki",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "niegłęboki",
+        "dialectal",
+        "miałki"
+      ],
+      "antonyms": [
+        "głęboki"
+      ]
+    }
+  },
+  {
+    "lemma": "następny",
+    "id": "pol-adj-0045-następny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "poprzedni"
+      ]
+    }
+  },
+  {
+    "lemma": "poprzedni",
+    "id": "pol-adj-0046-poprzedni",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "następny"
+      ]
+    }
+  },
+  {
+    "lemma": "wielki",
+    "id": "pol-adj-0047-wielki",
+    "frequency": 1,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "duży"
+      ]
+    }
+  },
+  {
+    "lemma": "duży",
+    "id": "pol-adj-0048-duży",
+    "frequency": 1,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "duży"
+      ],
+      "antonyms": [
+        "mały"
+      ]
+    }
+  },
+  {
+    "lemma": "męczący",
+    "id": "pol-adj-0049-męczący",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "znojny"
+      ]
+    }
+  },
+  {
+    "lemma": "ostateczny",
+    "id": "pol-adj-0050-ostateczny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "Sąd Ostateczny – Last Judgment"
+      ]
+    }
+  },
+  {
+    "lemma": "gorzki",
+    "id": "pol-adj-0051-gorzki",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "słodki",
+    "id": "pol-adj-0052-słodki(food)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "food",
+      "emoji": "🍬"
+    }
+  },
+  {
+    "lemma": "słodki",
+    "id": "pol-adj-0053-słodki(cute)",
+    "_inflectionsRoot": "pol-adj-0052-słodki(food)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "appearance",
+      "emoji": "🐕"
+    }
+  },
+  {
+    "lemma": "ciasny",
+    "id": "pol-adj-0054-ciasny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "zgniły",
+    "id": "pol-adj-0055-zgniły",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "czarujący",
+    "id": "pol-adj-0056-czarujący",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "potężny",
+    "id": "pol-adj-0057-potężny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "głodny",
+    "id": "pol-adj-0058-głodny",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "prawdziwy",
+    "id": "pol-adj-0059-prawdziwy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "ciepły",
+    "id": "pol-adj-0060-ciepły",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "niezwykły",
+    "id": "pol-adj-0061-niezwykły",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "niebezpieczny",
+    "id": "pol-adj-0062-niebezpieczny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "tradycyjny",
+    "id": "pol-adj-0063-tradycyjny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "kwadratowy",
+    "id": "pol-adj-0064-kwadratowy",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "główny",
+    "id": "pol-adj-0065-główny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "uważny",
+    "id": "pol-adj-0066-uważny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "gotowy",
+    "id": "pol-adj-0067-gotowy(person)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    }
+  },
+  {
+    "lemma": "gotowy",
+    "id": "pol-adj-0068-gotowy(readymade)",
+    "_inflectionsRoot": "pol-adj-0067-gotowy(person)",
+    "frequency": 5,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "eg food",
+      "emoji": "🍲"
+    }
+  },
+  {
+    "lemma": "błędny",
+    "id": "pol-adj-0069-błędny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "pewny",
+    "id": "pol-adj-0070-pewny(certain)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "probability",
+      "emoji": "🎲"
+    }
+  },
+  {
+    "lemma": "pewny",
+    "id": "pol-adj-0071-pewny(confident)",
+    "_inflectionsRoot": "pol-adj-0070-pewny(certain)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "personal attitude towards probability",
+      "emoji": "💭"
+    }
+  },
+  {
+    "lemma": "odważny",
+    "id": "pol-adj-0072-odważny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "cały",
+    "id": "pol-adj-0073-cały",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "niski",
+    "id": "pol-adj-0074-niski(physical)",
+    "frequency": 2,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🧒"
+    }
+  },
+  {
+    "lemma": "niski",
+    "id": "pol-adj-0075-niski(abstract)",
+    "_inflectionsRoot": "pol-adj-0074-niski(physical)",
+    "frequency": 2,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "📉"
+    }
+  },
+  {
+    "lemma": "zmęczony",
+    "id": "pol-adj-0076-zmęczony",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "powolny",
+    "id": "pol-adj-0077-powolny",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "ładny",
+    "id": "pol-adj-0078-ładny",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "zwykły",
+    "id": "pol-adj-0079-zwykły",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "kruchy",
+    "id": "pol-adj-0080-kruchy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "fałszywy",
+    "id": "pol-adj-0081-fałszywy",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "nieprawdziwy",
+        "zły"
+      ],
+      "antonyms": [
+        "autentyczny",
+        "autentyk",
+        "oryginalny"
+      ]
+    }
+  },
+  {
+    "lemma": "autentyczny",
+    "id": "pol-adj-0082-autentyczny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "autentyk",
+        "oryginalny",
+        "prawdziwy",
+        "szczery"
+      ],
+      "antonyms": [
+        "fałszywy",
+        "nieprawdziwy",
+        "Hypernym:",
+        "prawdziwy",
+        "sztuczny"
+      ]
+    }
+  },
+  {
+    "lemma": "oryginalny",
+    "id": "pol-adj-0083-oryginalny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "autentyczny",
+        "autentyk"
+      ]
+    }
+  },
+  {
+    "lemma": "twardy",
+    "id": "pol-adj-0084-twardy",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "miękki"
+      ],
+      "usage": [
+        "Diamenty są bardzo twarde . ― Diamonds are very hard. Moje łóżko jest bardzo twarde . ― My bed is very hard. Boli mnie ząb, więc nie mogę jeść twardego jedzenia. ― I have a toothache so I can't eat tough food. Ten stek jest twardy . ― This steak is tough. twardy znak ― hard sign",
+        "Nie bądź dla niej taki twardy . ― Don't be so tough with her. Nie uważasz, że jesteś dla niego zbyt twardy ? ― Don't you think you are too hard on him?",
+        "Wolę spać na twardym materacu. ― I prefer sleeping on a firm mattress.",
+        "Muszę kupić twardy pędzel. ― I have to buy a stiff brush."
+      ]
+    }
+  },
+  {
+    "lemma": "miękki",
+    "id": "pol-adj-0085-miękki",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "twardy"
+      ],
+      "usage": [
+        "miękki znak ― soft sign"
+      ]
+    }
+  },
+  {
+    "lemma": "rozczarowany",
+    "id": "pol-adj-0086-rozczarowany",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "zawiedziony"
+      ]
+    }
+  },
+  {
+    "lemma": "zawiedziony",
+    "id": "pol-adj-0087-zawiedziony",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "rozczarowany"
+      ]
+    }
+  },
+  {
+    "lemma": "bogaty",
+    "id": "pol-adj-0088-bogaty",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "Jego ojciec było bardzo bogatym człowiekiem. ― His father was a very rich man."
+      ]
+    }
+  },
+  {
+    "lemma": "obfity",
+    "id": "pol-adj-0089-obfity",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "bogaty",
+        "sowity",
+        "hojny",
+        "przebogaty",
+        "rzęsisty",
+        "suty"
+      ]
+    }
+  },
+  {
+    "lemma": "bolesny",
+    "id": "pol-adj-0090-bolesny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "bezbolesny",
+        "niebolesny"
+      ]
+    }
+  },
+  {
+    "lemma": "bezbolesny",
+    "id": "pol-adj-0091-bezbolesny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "niebolesny"
+      ],
+      "antonyms": [
+        "bolesny"
+      ]
+    }
+  },
+  {
+    "lemma": "świetny",
+    "id": "pol-adj-0092-świetny",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "dobry"
+      ]
+    }
+  },
+  {
+    "lemma": "nieśmiały",
+    "id": "pol-adj-0093-nieśmiały",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "śmiały"
+      ]
+    }
+  },
+  {
+    "lemma": "śmiały",
+    "id": "pol-adj-0094-śmiały",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "nieśmiały"
+      ]
+    }
+  },
+  {
+    "lemma": "chudy",
+    "id": "pol-adj-0095-chudy",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "szczupły"
+      ],
+      "antonyms": [
+        "gruby"
+      ]
+    }
+  },
+  {
+    "lemma": "gruby",
+    "id": "pol-adj-0096-gruby(fat)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🧑"
+    },
+    "extra": {
+      "synonyms": [
+        "otyły",
+        "puszysty",
+        "grubiański",
+        "fajny",
+        "konkretny",
+        "zajebisty"
+      ],
+      "antonyms": [
+        "cienki",
+        "chudy",
+        "szczupły",
+        "cienki"
+      ]
+    }
+  },
+  {
+    "lemma": "gruby",
+    "id": "pol-adj-0097-gruby(thick)",
+    "_inflectionsRoot": "pol-adj-0096-gruby(fat)",
+    "frequency": 2,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "object",
+      "emoji": "📦"
+    },
+    "extra": {
+      "synonyms": [
+        "otyły",
+        "puszysty",
+        "grubiański",
+        "fajny",
+        "konkretny",
+        "zajebisty"
+      ],
+      "antonyms": [
+        "cienki",
+        "chudy",
+        "szczupły",
+        "cienki"
+      ]
+    }
+  },
+  {
+    "lemma": "cichy",
+    "id": "pol-adj-0098-cichy(volume)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "sound",
+      "emoji": "🔊"
+    },
+    "extra": {
+      "antonyms": [
+        "głośny"
+      ]
+    }
+  },
+  {
+    "lemma": "cichy",
+    "id": "pol-adj-0099-cichy(calm)",
+    "_inflectionsRoot": "pol-adj-0098-cichy(volume)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "psychological",
+      "emoji": "🧠"
+    },
+    "extra": {
+      "antonyms": [
+        "głośny"
+      ]
+    }
+  },
+  {
+    "lemma": "głośny",
+    "id": "pol-adj-0100-głośny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "hałaśliwy",
+        "sławny",
+        "znany",
+        "słynny"
+      ],
+      "antonyms": [
+        "cichy"
+      ],
+      "usage": [
+        "To jest głośna sprawa . ― This is a high-profile case ."
+      ]
+    }
+  },
+  {
+    "lemma": "dostępny",
+    "id": "pol-adj-0101-dostępny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "niedostępny"
+      ]
+    }
+  },
+  {
+    "lemma": "niedostępny",
+    "id": "pol-adj-0102-niedostępny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "dostępny"
+      ]
+    }
+  },
+  {
+    "lemma": "idealny",
+    "id": "pol-adj-0103-idealny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "Pani Magdalena jest idealną szefową. ― Ms. Magdalena is an ideal boss."
+      ]
+    }
+  },
+  {
+    "lemma": "bezpieczny",
+    "id": "pol-adj-0104-bezpieczny",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "niebezpieczny"
+      ]
+    }
+  },
+  {
+    "lemma": "ogromny",
+    "id": "pol-adj-0105-ogromny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "duży"
+      ]
+    }
+  },
+  {
+    "lemma": "tani",
+    "id": "pol-adj-0106-tani",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "drogi"
+      ]
+    }
+  },
+  {
+    "lemma": "drogi",
+    "id": "pol-adj-0107-drogi",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "kochany",
+        "luby"
+      ],
+      "antonyms": [
+        "tani"
+      ]
+    }
+  },
+  {
+    "lemma": "interesujący",
+    "id": "pol-adj-0108-interesujący",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "ciekawy"
+      ],
+      "antonyms": [
+        "nudny"
+      ]
+    }
+  },
+  {
+    "lemma": "ciekawy",
+    "id": "pol-adj-0109-ciekawy(interesting)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "positive",
+      "emoji": "👀"
+    },
+    "extra": {
+      "synonyms": [
+        "interesujący"
+      ],
+      "antonyms": [
+        "nieciekawy",
+        "nudny"
+      ]
+    }
+  },
+  {
+    "lemma": "ciekawy",
+    "id": "pol-adj-0110-ciekawy(curious)",
+    "_inflectionsRoot": "pol-adj-0109-ciekawy(interesting)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "odd",
+      "emoji": "🤔"
+    },
+    "extra": {
+      "synonyms": [
+        "interesujący"
+      ],
+      "antonyms": [
+        "nieciekawy",
+        "nudny"
+      ]
+    }
+  },
+  {
+    "lemma": "nudny",
+    "id": "pol-adj-0111-nudny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "doskonały",
+    "id": "pol-adj-0112-doskonały",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "dobry"
+      ],
+      "antonyms": [
+        "niedoskonały"
+      ]
+    }
+  },
+  {
+    "lemma": "różny",
+    "id": "pol-adj-0113-różny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "rozmaity",
+        "inny"
+      ],
+      "antonyms": [
+        "podobny"
+      ]
+    }
+  },
+  {
+    "lemma": "podobny",
+    "id": "pol-adj-0114-podobny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "niepodobny",
+        "różny"
+      ]
+    }
+  },
+  {
+    "lemma": "rozmaity",
+    "id": "pol-adj-0115-rozmaity",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "różnoraki",
+        "różnorodny"
+      ]
+    }
+  },
+  {
+    "lemma": "luźny",
+    "id": "pol-adj-0116-luźny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "Ten but jest bardzo luźny . ― This shoe is very loose ."
+      ]
+    }
+  },
+  {
+    "lemma": "poważny",
+    "id": "pol-adj-0117-poważny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "niepoważny"
+      ]
+    }
+  },
+  {
+    "lemma": "dokładny",
+    "id": "pol-adj-0118-dokładny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "niedokładny"
+      ]
+    }
+  },
+  {
+    "lemma": "słony",
+    "id": "pol-adj-0119-słony",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "wygórowany"
+      ]
+    }
+  },
+  {
+    "lemma": "odpowiedni",
+    "id": "pol-adj-0120-odpowiedni(appropriate)",
+    "frequency": 2,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "correct",
+      "emoji": "✅"
+    },
+    "extra": {
+      "synonyms": [
+        "dobry"
+      ]
+    }
+  },
+  {
+    "lemma": "odpowiedni",
+    "id": "pol-adj-0121-odpowiedni(relevant)",
+    "_inflectionsRoot": "pol-adj-0120-odpowiedni(appropriate)",
+    "frequency": 5,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "connected",
+      "emoji": "🔗"
+    },
+    "extra": {
+      "synonyms": [
+        "dobry"
+      ]
+    }
+  },
+  {
+    "lemma": "atrakcyjny",
+    "id": "pol-adj-0122-atrakcyjny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "nieatrakcyjny"
+      ]
+    }
+  },
+  {
+    "lemma": "nieatrakcyjny",
+    "id": "pol-adj-0123-nieatrakcyjny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "atrakcyjny"
+      ]
+    }
+  },
+  {
+    "lemma": "poprawny",
+    "id": "pol-adj-0124-poprawny",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "dobry"
+      ],
+      "antonyms": [
+        "niepoprawny",
+        "błędny"
+      ]
+    }
+  },
+  {
+    "lemma": "niepoprawny",
+    "id": "pol-adj-0125-niepoprawny",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "zły"
+      ]
+    }
+  },
+  {
+    "lemma": "brzydki",
+    "id": "pol-adj-0126-brzydki",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "ładny",
+        "niebrzydki"
+      ]
+    }
+  },
+  {
+    "lemma": "podekscytowany",
+    "id": "pol-adj-0127-podekscytowany",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "Jestem podekscytowany , gdy zauważam, że taki rodzaj myślenia się upowszechnia. ― I'm excited when I notice that this kind of thinking is spreading."
+      ]
+    }
+  },
+  {
+    "lemma": "przesądny",
+    "id": "pol-adj-0128-przesądny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "zabobonny"
+      ]
+    }
+  },
+  {
+    "lemma": "zabobonny",
+    "id": "pol-adj-0129-zabobonny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "przesądny"
+      ]
+    }
+  },
+  {
+    "lemma": "otyły",
+    "id": "pol-adj-0130-otyły",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "puszysty",
+    "id": "pol-adj-0131-puszysty",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "cienki",
+    "id": "pol-adj-0132-cienki",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "marny",
+    "id": "pol-adj-0133-marny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "zajebisty",
+    "id": "pol-adj-0134-zajebisty",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "fajny",
+    "id": "pol-adj-0135-fajny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "dobry"
+      ]
+    }
+  },
+  {
+    "lemma": "szczery",
+    "id": "pol-adj-0136-szczery",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "autentyczny"
+      ],
+      "antonyms": [
+        "nieszczery"
+      ]
+    }
+  },
+  {
+    "lemma": "szczególny",
+    "id": "pol-adj-0137-szczególny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "osobliwy",
+        "specjalny"
+      ],
+      "antonyms": [
+        "nieszczególny"
+      ]
+    }
+  },
+  {
+    "lemma": "specjalny",
+    "id": "pol-adj-0138-specjalny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "niespecjalny"
+      ]
+    }
+  },
+  {
+    "lemma": "osobliwy",
+    "id": "pol-adj-0139-osobliwy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "niewłaściwy",
+    "id": "pol-adj-0140-niewłaściwy(inappropriate)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "not proper",
+      "emoji": "🙁"
+    },
+    "extra": {
+      "synonyms": [
+        "zły"
+      ]
+    }
+  },
+  {
+    "lemma": "niewłaściwy",
+    "id": "pol-adj-0141-niewłaściwy(wrong)",
+    "_inflectionsRoot": "pol-adj-0140-niewłaściwy(inappropriate)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "not correct",
+      "emoji": "❌"
+    },
+    "extra": {
+      "synonyms": [
+        "zły"
+      ]
+    }
+  },
+  {
+    "lemma": "nowy",
+    "id": "pol-adj-0142-nowy",
+    "frequency": 1,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "stary"
+      ]
+    }
+  },
+  {
+    "lemma": "nienormalny",
+    "id": "pol-adj-0143-nienormalny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "nieprawidłowy",
+        "niespotykany",
+        "chory",
+        "psychicznie"
+      ]
+    }
+  },
+  {
+    "lemma": "chory",
+    "id": "pol-adj-0144-chory",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "Mam dość tej chorej atmosfery w pracy. ― I've had enough of this poisonous atmosphere at work.",
+        "Trzy stówy za obiad? To jest chore . ― Three hundred for a lunch? That's crazy ."
+      ]
+    }
+  },
+  {
+    "lemma": "nieprawidłowy",
+    "id": "pol-adj-0145-nieprawidłowy(irregular)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "not regular",
+      "emoji": "👽"
+    }
+  },
+  {
+    "lemma": "nieprawidłowy",
+    "id": "pol-adj-0146-nieprawidłowy(incorrect)",
+    "_inflectionsRoot": "pol-adj-0145-nieprawidłowy(irregular)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "not correct",
+      "emoji": "❌"
+    }
+  },
+  {
+    "lemma": "niespotykany",
+    "id": "pol-adj-0147-niespotykany",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "zimny",
+    "id": "pol-adj-0148-zimny",
+    "frequency": 1,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "chłodny"
+      ]
+    }
+  },
+  {
+    "lemma": "chłodny",
+    "id": "pol-adj-0149-chłodny",
+    "frequency": 1,
+    "register": 0
+  },
+  {
+    "lemma": "niebieski",
+    "id": "pol-adj-0150-niebieski",
+    "frequency": 1,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "niebiański"
+      ]
+    }
+  },
+  {
+    "lemma": "niebiański",
+    "id": "pol-adj-0151-niebiański",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "oczywisty",
+    "id": "pol-adj-0152-oczywisty",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "nieoczywisty"
+      ]
+    }
+  },
+  {
+    "lemma": "narodowy",
+    "id": "pol-adj-0153-narodowy",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "antynarodowy"
+      ]
+    }
+  },
+  {
+    "lemma": "niedochodowy",
+    "id": "pol-adj-0154-niedochodowy",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "nieintratny",
+        "nieopłacalny",
+        "nierentowny",
+        "niezyskowny"
+      ],
+      "antonyms": [
+        "dochodowy"
+      ]
+    }
+  },
+  {
+    "lemma": "nieodpowiedni",
+    "id": "pol-adj-0155-nieodpowiedni",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "nieposłuszny",
+    "id": "pol-adj-0156-nieposłuszny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "niedobry"
+      ],
+      "antonyms": [
+        "posłuszny"
+      ]
+    }
+  },
+  {
+    "lemma": "optymistyczny",
+    "id": "pol-adj-0157-optymistyczny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "pesymistyczny"
+      ]
+    }
+  },
+  {
+    "lemma": "nieopłacalny",
+    "id": "pol-adj-0158-nieopłacalny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "niedochodowy",
+        "nieintratny",
+        "nierentowny",
+        "niezyskowny"
+      ],
+      "antonyms": [
+        "opłacalny"
+      ]
+    }
+  },
+  {
+    "lemma": "niesmaczny",
+    "id": "pol-adj-0159-niesmaczny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "niedobry"
+      ],
+      "antonyms": [
+        "smaczny",
+        "dobry"
+      ]
+    }
+  },
+  {
+    "lemma": "rentowny",
+    "id": "pol-adj-0160-rentowny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "dochodowy",
+        "intratny",
+        "lukratywny",
+        "opłacalny",
+        "zyskowny"
+      ],
+      "antonyms": [
+        "nierentowny"
+      ]
+    }
+  },
+  {
+    "lemma": "życzliwy",
+    "id": "pol-adj-0161-życzliwy",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "nierentowny",
+    "id": "pol-adj-0162-nierentowny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "niedochodowy",
+        "nieintratny",
+        "nieopłacalny",
+        "niezyskowny"
+      ],
+      "antonyms": [
+        "rentowny"
+      ]
+    }
+  },
+  {
+    "lemma": "nieżyczliwy",
+    "id": "pol-adj-0163-nieżyczliwy",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "niedobry"
+      ],
+      "antonyms": [
+        "życzliwy",
+        "dobry"
+      ]
+    }
+  },
+  {
+    "lemma": "pesymistyczny",
+    "id": "pol-adj-0164-pesymistyczny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "optymistyczny"
+      ]
+    }
+  },
+  {
+    "lemma": "staranny",
+    "id": "pol-adj-0165-staranny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "dokładny"
+      ],
+      "antonyms": [
+        "niestaranny"
+      ]
+    }
+  },
+  {
+    "lemma": "niemoralny",
+    "id": "pol-adj-0166-niemoralny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "amoralny"
+      ],
+      "antonyms": [
+        "moralny"
+      ]
+    }
+  },
+  {
+    "lemma": "moralny",
+    "id": "pol-adj-0167-moralny",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "smaczny",
+    "id": "pol-adj-0168-smaczny",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "opłacalny",
+    "id": "pol-adj-0169-opłacalny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "dochodowy",
+        "intratny",
+        "lukratywny",
+        "rentowny",
+        "zyskowny"
+      ],
+      "antonyms": [
+        "nieopłacalny"
+      ]
+    }
+  },
+  {
+    "lemma": "dochodowy",
+    "id": "pol-adj-0170-dochodowy",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "intratny",
+        "lukratywny",
+        "opłacalny",
+        "rentowny",
+        "zyskowny"
+      ],
+      "antonyms": [
+        "niedochodowy"
+      ]
+    }
+  },
+  {
+    "lemma": "posłuszny",
+    "id": "pol-adj-0171-posłuszny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "wściekły",
+    "id": "pol-adj-0172-wściekły(angry)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "psychological",
+      "emoji": "🧠"
+    },
+    "extra": {
+      "synonyms": [
+        "zły"
+      ]
+    }
+  },
+  {
+    "lemma": "wściekły",
+    "id": "pol-adj-0173-wściekły(rabid)",
+    "_inflectionsRoot": "pol-adj-0172-wściekły(angry)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "medical",
+      "emoji": "🩺"
+    }
+  },
+  {
+    "lemma": "solidny",
+    "id": "pol-adj-0174-solidny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "Największą zaletą tego laptopa jest solidne wykonanie. The biggest advantage of this laptop is its sturdy build.",
+        "Paweł jest solidnym pracownikiem. Paul is a trustworthy employee."
+      ]
+    }
+  },
+  {
+    "lemma": "szary",
+    "id": "pol-adj-0175-szary",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "szary kolor :"
+      ]
+    }
+  },
+  {
+    "lemma": "towarzyski",
+    "id": "pol-adj-0176-towarzyski",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "nietowarzyski"
+      ]
+    }
+  },
+  {
+    "lemma": "malutki",
+    "id": "pol-adj-0177-malutki",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "mały"
+      ]
+    }
+  },
+  {
+    "lemma": "mały",
+    "id": "pol-adj-0178-mały(concrete)",
+    "frequency": 1,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "physical",
+      "emoji": "🪨"
+    },
+    "extra": {
+      "synonyms": [
+        "mały"
+      ],
+      "antonyms": [
+        "duży"
+      ]
+    }
+  },
+  {
+    "lemma": "mały",
+    "id": "pol-adj-0179-mały(abstract)",
+    "_inflectionsRoot": "pol-adj-0178-mały(concrete)",
+    "frequency": 1,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "💭"
+    },
+    "extra": {
+      "synonyms": [
+        "mały"
+      ],
+      "antonyms": [
+        "duży"
+      ]
+    }
+  },
+  {
+    "lemma": "suchy",
+    "id": "pol-adj-0180-suchy",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "mokry"
+      ]
+    }
+  },
+  {
+    "lemma": "mokry",
+    "id": "pol-adj-0181-mokry",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "suchy"
+      ]
+    }
+  },
+  {
+    "lemma": "śliczny",
+    "id": "pol-adj-0182-śliczny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "ładny",
+        "piękny",
+        "uroczy"
+      ],
+      "antonyms": [
+        "brzydki",
+        "paskudny",
+        "szkaradny",
+        "szpetny"
+      ]
+    }
+  },
+  {
+    "lemma": "paskudny",
+    "id": "pol-adj-0183-paskudny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "uroczy",
+    "id": "pol-adj-0184-uroczy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "piękny",
+    "id": "pol-adj-0185-piękny",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "Jaki piękny dzień! ― What a beautiful day! Była piękną kobietą. ― She was a beautiful woman."
+      ]
+    }
+  },
+  {
+    "lemma": "darmowy",
+    "id": "pol-adj-0186-darmowy",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "bezpłatny"
+      ]
+    }
+  },
+  {
+    "lemma": "nielegalny",
+    "id": "pol-adj-0187-nielegalny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "legalny"
+      ]
+    }
+  },
+  {
+    "lemma": "legalny",
+    "id": "pol-adj-0188-legalny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "nielegalny"
+      ]
+    }
+  },
+  {
+    "lemma": "właściwy",
+    "id": "pol-adj-0189-właściwy",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "dobry"
+      ]
+    }
+  },
+  {
+    "lemma": "identyczny",
+    "id": "pol-adj-0190-identyczny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "tożsamy",
+        "jednakowy"
+      ]
+    }
+  },
+  {
+    "lemma": "tożsamy",
+    "id": "pol-adj-0191-tożsamy",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "identyczny"
+      ]
+    }
+  },
+  {
+    "lemma": "jednakowy",
+    "id": "pol-adj-0192-jednakowy",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "identyczny",
+        "jednaki"
+      ]
+    }
+  },
+  {
+    "lemma": "wyczerpujący",
+    "id": "pol-adj-0193-wyczerpujący(exhausting)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "tiring",
+      "emoji": "🥱"
+    },
+    "extra": {
+      "synonyms": [
+        "męczący",
+        "kompletny",
+        "wszechstronny"
+      ]
+    }
+  },
+  {
+    "lemma": "wyczerpujący",
+    "id": "pol-adj-0194-wyczerpujący(exhaustive)",
+    "_inflectionsRoot": "pol-adj-0193-wyczerpujący(exhausting)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "data",
+      "emoji": "📚"
+    },
+    "extra": {
+      "synonyms": [
+        "męczący",
+        "kompletny",
+        "wszechstronny"
+      ]
+    }
+  },
+  {
+    "lemma": "wszechstronny",
+    "id": "pol-adj-0195-wszechstronny(versatile)",
+    "frequency": 5,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "many uses",
+      "emoji": "📀"
+    }
+  },
+  {
+    "lemma": "wszechstronny",
+    "id": "pol-adj-0196-wszechstronny(comprehensive)",
+    "_inflectionsRoot": "pol-adj-0195-wszechstronny(versatile)",
+    "frequency": 5,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "data",
+      "emoji": "📚"
+    }
+  },
+  {
+    "lemma": "kompletny",
+    "id": "pol-adj-0197-kompletny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "późny",
+    "id": "pol-adj-0198-późny",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "wczesny"
+      ]
+    }
+  },
+  {
+    "lemma": "wczesny",
+    "id": "pol-adj-0199-wczesny",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "późny"
+      ]
+    }
+  },
+  {
+    "lemma": "pierwszy",
+    "id": "pol-adj-0200-pierwszy",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "niepierwszy",
+        "ostatni"
+      ]
+    }
+  },
+  {
+    "lemma": "ostatni",
+    "id": "pol-adj-0201-ostatni",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "wysoki",
+    "id": "pol-adj-0202-wysoki(abstract)",
+    "frequency": 1,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "💭"
+    },
+    "extra": {
+      "synonyms": [
+        "przymknięty"
+      ]
+    }
+  },
+  {
+    "lemma": "wysoki",
+    "id": "pol-adj-0203-wysoki(physical)",
+    "_inflectionsRoot": "pol-adj-0202-wysoki(abstract)",
+    "frequency": 1,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "physical",
+      "emoji": "🪨"
+    },
+    "extra": {
+      "synonyms": [
+        "przymknięty"
+      ]
+    }
+  },
+  {
+    "lemma": "normalny",
+    "id": "pol-adj-0204-normalny",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "nienormalny"
+      ]
+    }
+  },
+  {
+    "lemma": "olbrzymi",
+    "id": "pol-adj-0205-olbrzymi",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "duży"
+      ]
+    }
+  },
+  {
+    "lemma": "skąpy",
+    "id": "pol-adj-0206-skąpy(miserly)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    }
+  },
+  {
+    "lemma": "skąpy",
+    "id": "pol-adj-0207-skąpy(scant)",
+    "_inflectionsRoot": "pol-adj-0206-skąpy(miserly)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "quantity",
+      "emoji": "🧮"
+    }
+  },
+  {
+    "lemma": "hojny",
+    "id": "pol-adj-0208-hojny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "szczodry",
+        "obfity"
+      ],
+      "antonyms": [
+        "skąpy"
+      ]
+    }
+  },
+  {
+    "lemma": "szczodry",
+    "id": "pol-adj-0209-szczodry",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "hojny",
+        "wielkoduszny",
+        "obfity"
+      ]
+    }
+  },
+  {
+    "lemma": "szeroki",
+    "id": "pol-adj-0210-szeroki",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "obszerny",
+        "rozległy"
+      ],
+      "antonyms": [
+        "nieszeroki",
+        "wąski"
+      ]
+    }
+  },
+  {
+    "lemma": "wąski",
+    "id": "pol-adj-0211-wąski",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "szeroki"
+      ]
+    }
+  },
+  {
+    "lemma": "rozległy",
+    "id": "pol-adj-0212-rozległy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "obszerny",
+    "id": "pol-adj-0213-obszerny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "duży"
+      ]
+    }
+  },
+  {
+    "lemma": "sprawiedliwy",
+    "id": "pol-adj-0214-sprawiedliwy",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "niesprawiedliwy"
+      ]
+    }
+  },
+  {
+    "lemma": "niesprawiedliwy",
+    "id": "pol-adj-0215-niesprawiedliwy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "rzadki",
+    "id": "pol-adj-0216-rzadki(rare)",
+    "frequency": 2,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "frequency",
+      "emoji": "📅"
+    },
+    "extra": {
+      "usage": [
+        "W tym rezerwacie można spotkać rzadkie gatunki ptaków. In this nature reserve one can encounter rare species of birds.",
+        "Miso jest rzadką zupą pochodzącą z Japonii. Miso is a thin soup originating from Japan.",
+        "Lis spłoszył się i przebiegł przez drogę, uciekając w kierunku rzadkiego lasu. The fox startled and ran across the road, heading towards a sparse forest."
+      ]
+    }
+  },
+  {
+    "lemma": "rzadki",
+    "id": "pol-adj-0217-rzadki(runny)",
+    "_inflectionsRoot": "pol-adj-0216-rzadki(rare)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "liquid",
+      "emoji": "🍯"
+    },
+    "extra": {
+      "usage": [
+        "W tym rezerwacie można spotkać rzadkie gatunki ptaków. In this nature reserve one can encounter rare species of birds.",
+        "Miso jest rzadką zupą pochodzącą z Japonii. Miso is a thin soup originating from Japan.",
+        "Lis spłoszył się i przebiegł przez drogę, uciekając w kierunku rzadkiego lasu. The fox startled and ran across the road, heading towards a sparse forest."
+      ]
+    }
+  },
+  {
+    "lemma": "inteligentny",
+    "id": "pol-adj-0218-inteligentny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "nieinteligentny",
+        "głupi"
+      ]
+    }
+  },
+  {
+    "lemma": "głupi",
+    "id": "pol-adj-0219-głupi",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "durny",
+        "niemądry"
+      ],
+      "antonyms": [
+        "mądry",
+        "niegłupi"
+      ]
+    }
+  },
+  {
+    "lemma": "możliwy",
+    "id": "pol-adj-0220-możliwy",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "pełny",
+    "id": "pol-adj-0221-pełny",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "pusty"
+      ]
+    }
+  },
+  {
+    "lemma": "pusty",
+    "id": "pol-adj-0222-pusty",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "międzynarodowy",
+    "id": "pol-adj-0223-międzynarodowy",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "internacjonalny"
+      ]
+    }
+  },
+  {
+    "lemma": "wygodny",
+    "id": "pol-adj-0224-wygodny",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "niewygodny"
+      ]
+    }
+  },
+  {
+    "lemma": "sławny",
+    "id": "pol-adj-0225-sławny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "hałaśliwy",
+    "id": "pol-adj-0226-hałaśliwy",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "głośny"
+      ]
+    }
+  },
+  {
+    "lemma": "znany",
+    "id": "pol-adj-0227-znany",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "słynny",
+    "id": "pol-adj-0228-słynny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "sławny"
+      ]
+    }
+  },
+  {
+    "lemma": "zabawny",
+    "id": "pol-adj-0229-zabawny(fun)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "quality",
+      "emoji": "✅"
+    },
+    "extra": {
+      "synonyms": [
+        "dowcipny",
+        "śmieszny",
+        "komiczny",
+        "żartobliwy"
+      ]
+    }
+  },
+  {
+    "lemma": "zabawny",
+    "id": "pol-adj-0230-zabawny(humorous thing)",
+    "_inflectionsRoot": "pol-adj-0229-zabawny(fun)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "object",
+      "emoji": "📦"
+    },
+    "extra": {
+      "synonyms": [
+        "dowcipny",
+        "śmieszny",
+        "komiczny",
+        "żartobliwy"
+      ]
+    }
+  },
+  {
+    "lemma": "zabawny",
+    "id": "pol-adj-0231-zabawny(humorous person)",
+    "_inflectionsRoot": "pol-adj-0229-zabawny(fun)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    },
+    "extra": {
+      "synonyms": [
+        "dowcipny",
+        "śmieszny",
+        "komiczny",
+        "żartobliwy"
+      ]
+    }
+  },
+  {
+    "lemma": "śmieszny",
+    "id": "pol-adj-0232-śmieszny(humorous thing)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "object",
+      "emoji": "📦"
+    },
+    "extra": {
+      "usage": [
+        "Nie ma w tym nic śmiesznego . ― There is nothing funny about it."
+      ]
+    }
+  },
+  {
+    "lemma": "śmieszny",
+    "id": "pol-adj-0233-śmieszny(humorous person)",
+    "_inflectionsRoot": "pol-adj-0232-śmieszny(humorous thing)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    },
+    "extra": {
+      "usage": [
+        "Nie ma w tym nic śmiesznego . ― There is nothing funny about it."
+      ]
+    }
+  },
+  {
+    "lemma": "żartobliwy",
+    "id": "pol-adj-0234-żartobliwy",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "zabawny",
+        "śmieszny",
+        "dowcipny"
+      ]
+    }
+  },
+  {
+    "lemma": "dowcipny",
+    "id": "pol-adj-0235-dowcipny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "śmieszny",
+        "zabawny",
+        "żartobliwy"
+      ]
+    }
+  },
+  {
+    "lemma": "pikantny",
+    "id": "pol-adj-0236-pikantny",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "ostry"
+      ]
+    }
+  },
+  {
+    "lemma": "ostry",
+    "id": "pol-adj-0237-ostry(sharp)",
+    "frequency": 2,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "physical",
+      "emoji": "🪨"
+    },
+    "extra": {
+      "synonyms": [
+        "wysoki",
+        "stromy"
+      ],
+      "antonyms": [
+        "tępy",
+        "gruby",
+        "niski"
+      ]
+    }
+  },
+  {
+    "lemma": "ostry",
+    "id": "pol-adj-0238-ostry(spicy)",
+    "_inflectionsRoot": "pol-adj-0237-ostry(sharp)",
+    "frequency": 2,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "food",
+      "emoji": "🍲"
+    },
+    "extra": {
+      "synonyms": [
+        "wysoki",
+        "stromy"
+      ],
+      "antonyms": [
+        "tępy",
+        "gruby",
+        "niski"
+      ]
+    }
+  },
+  {
+    "lemma": "ostry",
+    "id": "pol-adj-0239-ostry(acute)",
+    "_inflectionsRoot": "pol-adj-0237-ostry(sharp)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "medical",
+      "emoji": "🩺"
+    },
+    "extra": {
+      "synonyms": [
+        "wysoki",
+        "stromy"
+      ],
+      "antonyms": [
+        "tępy",
+        "gruby",
+        "niski"
+      ]
+    }
+  },
+  {
+    "lemma": "nieciekawy",
+    "id": "pol-adj-0240-nieciekawy",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "nudny"
+      ],
+      "antonyms": [
+        "ciekawy",
+        "interesujący"
+      ]
+    }
+  },
+  {
+    "lemma": "brudny",
+    "id": "pol-adj-0241-brudny",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "czysty"
+      ]
+    }
+  },
+  {
+    "lemma": "lokalny",
+    "id": "pol-adj-0242-lokalny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "przyjazny",
+    "id": "pol-adj-0243-przyjazny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "purpurowy",
+    "id": "pol-adj-0244-purpurowy",
+    "frequency": 1,
+    "register": 0
+  },
+  {
+    "lemma": "otwarty",
+    "id": "pol-adj-0245-otwarty",
+    "frequency": 1,
+    "register": 0
+  },
+  {
+    "lemma": "wiarygodny",
+    "id": "pol-adj-0246-wiarygodny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "niewiarygodny",
+    "id": "pol-adj-0247-niewiarygodny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "istotny",
+    "id": "pol-adj-0248-istotny",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "natychmiastowy",
+    "id": "pol-adj-0249-natychmiastowy",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "zazdrosny",
+    "id": "pol-adj-0250-zazdrosny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "elektryczny",
+    "id": "pol-adj-0251-elektryczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "spóźniony",
+    "id": "pol-adj-0252-spóźniony",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "ważny",
+    "id": "pol-adj-0253-ważny",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "bliski",
+    "id": "pol-adj-0254-bliski",
+    "frequency": 1,
+    "register": 0
+  },
+  {
+    "lemma": "zaskoczony",
+    "id": "pol-adj-0255-zaskoczony",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "prawdopodobny",
+    "id": "pol-adj-0256-prawdopodobny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "smutny",
+    "id": "pol-adj-0257-smutny",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "tajemniczy",
+    "id": "pol-adj-0258-tajemniczy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "krótki",
+    "id": "pol-adj-0259-krótki",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "uparty",
+    "id": "pol-adj-0260-uparty",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "zdolny",
+    "id": "pol-adj-0261-zdolny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "okrągły",
+    "id": "pol-adj-0262-okrągły",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "długi",
+    "id": "pol-adj-0263-długi",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "wyjątkowy",
+    "id": "pol-adj-0264-wyjątkowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "średniowieczny",
+    "id": "pol-adj-0265-średniowieczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "żółty",
+    "id": "pol-adj-0266-żółty",
+    "frequency": 1,
+    "register": 0
+  },
+  {
+    "lemma": "kwaśny",
+    "id": "pol-adj-0267-kwaśny",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "pyszny",
+    "id": "pol-adj-0268-pyszny",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "śródziemnomorski",
+    "id": "pol-adj-0269-śródziemnomorski",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "zagraniczny",
+    "id": "pol-adj-0270-zagraniczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "okropny",
+    "id": "pol-adj-0271-okropny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "zwariowany",
+    "id": "pol-adj-0272-zwariowany",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "niemiły",
+    "id": "pol-adj-0273-niemiły",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "wyczerpany",
+    "id": "pol-adj-0274-wyczerpany",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "niezdrowy",
+    "id": "pol-adj-0275-niezdrowy",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "przyjemny",
+    "id": "pol-adj-0276-przyjemny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "gorący",
+    "id": "pol-adj-0277-gorący",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "czerwony",
+    "id": "pol-adj-0278-czerwony",
+    "frequency": 1,
+    "register": 0
+  },
+  {
+    "lemma": "przeciętny",
+    "id": "pol-adj-0279-przeciętny(average)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "mathematical",
+      "emoji": "🧮"
+    }
+  },
+  {
+    "lemma": "przeciętny",
+    "id": "pol-adj-0280-przeciętny(mediocre)",
+    "_inflectionsRoot": "pol-adj-0279-przeciętny(average)",
+    "frequency": 5,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "quality",
+      "emoji": "✅"
+    }
+  },
+  {
+    "lemma": "radosny",
+    "id": "pol-adj-0281-radosny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "kolorowy",
+    "id": "pol-adj-0282-kolorowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "brązowy",
+    "id": "pol-adj-0283-brązowy",
+    "frequency": 1,
+    "register": 0
+  },
+  {
+    "lemma": "lepki",
+    "id": "pol-adj-0284-lepki",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "zakazany",
+    "id": "pol-adj-0285-zakazany",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "niezawodny",
+    "id": "pol-adj-0286-niezawodny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "zadowolony",
+    "id": "pol-adj-0287-zadowolony",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "trójkątny",
+    "id": "pol-adj-0288-trójkątny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "znakomity",
+    "id": "pol-adj-0289-znakomity",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "obcisły",
+    "id": "pol-adj-0290-obcisły",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "leniwy",
+    "id": "pol-adj-0291-leniwy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "dziwny",
+    "id": "pol-adj-0292-dziwny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "zdrowy",
+    "id": "pol-adj-0293-zdrowy",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "niezależny",
+    "id": "pol-adj-0294-niezależny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "obrzydliwy",
+    "id": "pol-adj-0295-obrzydliwy",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "wspólny",
+    "id": "pol-adj-0296-wspólny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "modny",
+    "id": "pol-adj-0297-modny",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "nijaki",
+    "id": "pol-adj-0298-nijaki(neuter)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "grammatical",
+      "emoji": "📚"
+    },
+    "extra": {
+      "synonyms": [
+        "żaden",
+        "bezbarwny"
+      ]
+    }
+  },
+  {
+    "lemma": "nijaki",
+    "id": "pol-adj-0299-nijaki(bland)",
+    "_inflectionsRoot": "pol-adj-0298-nijaki(neuter)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "quality",
+      "emoji": "✅"
+    },
+    "extra": {
+      "synonyms": [
+        "żaden",
+        "bezbarwny"
+      ]
+    }
+  },
+  {
+    "lemma": "bezbarwny",
+    "id": "pol-adj-0300-bezbarwny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "przezroczysty",
+        "bezbarwny",
+        "błyszczyk",
+        "―",
+        "clear",
+        "lip-gloss"
+      ],
+      "antonyms": [
+        "barwisty",
+        "barwny",
+        "kolorowy",
+        "barwisty",
+        "barwny"
+      ]
+    }
+  },
+  {
+    "lemma": "szybki",
+    "id": "pol-adj-0301-szybki",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "wolny"
+      ]
+    }
+  },
+  {
+    "lemma": "wolny",
+    "id": "pol-adj-0302-wolny(slow)",
+    "frequency": 2,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "speed",
+      "emoji": "🏎️"
+    },
+    "extra": {
+      "synonyms": [
+        "powolny",
+        "niezależny",
+        "nieskrępowany",
+        "swobodny",
+        "niezajęty",
+        "nieżonaty",
+        "dostępny"
+      ],
+      "antonyms": [
+        "szybki"
+      ]
+    }
+  },
+  {
+    "lemma": "wolny",
+    "id": "pol-adj-0303-wolny(free)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "philosophical",
+      "emoji": "🗽"
+    },
+    "extra": {
+      "synonyms": [
+        "powolny",
+        "niezależny",
+        "nieskrępowany",
+        "swobodny",
+        "niezajęty",
+        "nieżonaty",
+        "dostępny"
+      ],
+      "antonyms": [
+        "szybki"
+      ]
+    }
+  },
+  {
+    "lemma": "różnorodny",
+    "id": "pol-adj-0304-różnorodny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "rozmaity",
+        "różnoraki"
+      ]
+    }
+  },
+  {
+    "lemma": "prosty",
+    "id": "pol-adj-0305-prosty(straight)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "geometric",
+      "emoji": "📐"
+    },
+    "extra": {
+      "synonyms": [
+        "łatwy",
+        "bezpośredni",
+        "naturalny",
+        "otwarty",
+        "szczery"
+      ],
+      "antonyms": [
+        "krzywy",
+        "nieprosty",
+        "trudny",
+        "skomplikowany"
+      ]
+    }
+  },
+  {
+    "lemma": "prosty",
+    "id": "pol-adj-0306-prosty(simple)",
+    "_inflectionsRoot": "pol-adj-0305-prosty(straight)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "ease",
+      "emoji": "🤔"
+    },
+    "extra": {
+      "synonyms": [
+        "łatwy",
+        "bezpośredni",
+        "naturalny",
+        "otwarty",
+        "szczery"
+      ],
+      "antonyms": [
+        "krzywy",
+        "nieprosty",
+        "trudny",
+        "skomplikowany"
+      ]
+    }
+  },
+  {
+    "lemma": "łatwy",
+    "id": "pol-adj-0307-łatwy",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "prosty"
+      ],
+      "antonyms": [
+        "trudny"
+      ]
+    }
+  },
+  {
+    "lemma": "krzywy",
+    "id": "pol-adj-0308-krzywy",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "naturalny",
+    "id": "pol-adj-0309-naturalny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "przyrodzony",
+        "wrodzony",
+        "bezpośredni",
+        "otwarty",
+        "prosty",
+        "szczery"
+      ]
+    }
+  },
+  {
+    "lemma": "skomplikowany",
+    "id": "pol-adj-0310-skomplikowany",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "złożony",
+        "meandryczny",
+        "nieprosty",
+        "pogmatwany",
+        "pokrętny",
+        "poplątany",
+        "powikłany",
+        "zagmatwany",
+        "zawikłany",
+        "zawiły",
+        "złożony"
+      ]
+    }
+  },
+  {
+    "lemma": "bezpośredni",
+    "id": "pol-adj-0311-bezpośredni",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "przyległy"
+      ],
+      "antonyms": [
+        "pośredni"
+      ]
+    }
+  },
+  {
+    "lemma": "pechowy",
+    "id": "pol-adj-0312-pechowy",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "feralny",
+        "niefortunny",
+        "niepomyślny",
+        "nieszczęśliwy"
+      ],
+      "antonyms": [
+        "fortunny",
+        "pomyślny",
+        "szczęśliwy"
+      ]
+    }
+  },
+  {
+    "lemma": "szczęśliwy",
+    "id": "pol-adj-0313-szczęśliwy(happy)",
+    "frequency": 2,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "emotion",
+      "emoji": "🤪"
+    }
+  },
+  {
+    "lemma": "szczęśliwy",
+    "id": "pol-adj-0314-szczęśliwy(lucky)",
+    "_inflectionsRoot": "pol-adj-0313-szczęśliwy(happy)",
+    "frequency": 5,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "fortune",
+      "emoji": "🍀"
+    }
+  },
+  {
+    "lemma": "powierzchowny",
+    "id": "pol-adj-0315-powierzchowny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "naskórkowy",
+        "wierzchni",
+        "pobieżny",
+        "płytki",
+        "niegłęboki",
+        "pozorny"
+      ]
+    }
+  },
+  {
+    "lemma": "prawidłowy",
+    "id": "pol-adj-0316-prawidłowy",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "dobry",
+        "foremny",
+        "poprawny",
+        "poprawny",
+        "właściwy"
+      ]
+    }
+  },
+  {
+    "lemma": "biedny",
+    "id": "pol-adj-0317-biedny",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "goły",
+        "niebogaty",
+        "skromny",
+        "ubogi"
+      ],
+      "antonyms": [
+        "bogaty",
+        "zamożny",
+        "biedny"
+      ],
+      "usage": [
+        "biedny kotek ― a poor cat biedny psiak ― a poor doggy biedna sierota ― a poor orphan biedna oferma ― a poor loser biedna ofiara ― a poor victim biedna kaleka ― a poor cripple biedne dziecko ― poor kid biedne stworzenie ― poor creature biedne szczenię ― a poor puppy"
+      ]
+    }
+  },
+  {
+    "lemma": "skromny",
+    "id": "pol-adj-0318-skromny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "mały"
+      ]
+    }
+  },
+  {
+    "lemma": "zamożny",
+    "id": "pol-adj-0319-zamożny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "bogaty",
+        "dostatni",
+        "majętny",
+        "zasobny",
+        "dziany",
+        "nadziany"
+      ]
+    }
+  },
+  {
+    "lemma": "ubogi",
+    "id": "pol-adj-0320-ubogi",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "daleki",
+    "id": "pol-adj-0321-daleki",
+    "frequency": 1,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "odległy",
+        "oddalony"
+      ],
+      "antonyms": [
+        "niedaleki",
+        "bliski"
+      ]
+    }
+  },
+  {
+    "lemma": "niedaleki",
+    "id": "pol-adj-0322-niedaleki",
+    "frequency": 1,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "pobliski"
+      ]
+    }
+  },
+  {
+    "lemma": "odległy",
+    "id": "pol-adj-0323-odległy",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "sztuczny",
+    "id": "pol-adj-0324-sztuczny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "archaic",
+        "autentyczny",
+        "naturalny",
+        "prawdziwy"
+      ]
+    }
+  },
+  {
+    "lemma": "spokojny",
+    "id": "pol-adj-0325-spokojny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "niespokojny"
+      ]
+    }
+  },
+  {
+    "lemma": "niespokojny",
+    "id": "pol-adj-0326-niespokojny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "swobodny",
+    "id": "pol-adj-0327-swobodny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "realny",
+    "id": "pol-adj-0328-realny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "prawdziwy",
+        "rzeczywisty",
+        "możliwy",
+        "zdroworozsądkowy"
+      ]
+    }
+  },
+  {
+    "lemma": "rzeczywisty",
+    "id": "pol-adj-0329-rzeczywisty",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "faktyczny",
+    "id": "pol-adj-0330-faktyczny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "zbędny",
+    "id": "pol-adj-0331-zbędny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "niepotrzebny",
+        "zbyteczny"
+      ],
+      "antonyms": [
+        "niezbędny"
+      ]
+    }
+  },
+  {
+    "lemma": "niepotrzebny",
+    "id": "pol-adj-0332-niepotrzebny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "potrzebny"
+      ]
+    }
+  },
+  {
+    "lemma": "odpowiedzialny",
+    "id": "pol-adj-0333-odpowiedzialny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "nieodpowiedzialny"
+      ]
+    }
+  },
+  {
+    "lemma": "nieodpowiedzialny",
+    "id": "pol-adj-0334-nieodpowiedzialny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "odpowiedzialny"
+      ]
+    }
+  },
+  {
+    "lemma": "zamknięty",
+    "id": "pol-adj-0335-zamknięty",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "hermetyczny",
+        "skryty",
+        "zamknięty",
+        "sobie",
+        "zeskorupiały"
+      ],
+      "antonyms": [
+        "otwarty"
+      ]
+    }
+  },
+  {
+    "lemma": "mądry",
+    "id": "pol-adj-0336-mądry",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "głupi",
+        "niemądry"
+      ]
+    }
+  },
+  {
+    "lemma": "ścisły",
+    "id": "pol-adj-0337-ścisły",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "nauki ścisłe ― hard sciences"
+      ]
+    }
+  },
+  {
+    "lemma": "znudzony",
+    "id": "pol-adj-0338-znudzony",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "znużony",
+        "wynudzony"
+      ]
+    }
+  },
+  {
+    "lemma": "obecny",
+    "id": "pol-adj-0339-obecny(in attendance)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "event",
+      "emoji": "📅️"
+    },
+    "extra": {
+      "synonyms": [
+        "bieżący"
+      ]
+    }
+  },
+  {
+    "lemma": "obecny",
+    "id": "pol-adj-0340-obecny(time)",
+    "_inflectionsRoot": "pol-adj-0339-obecny(in attendance)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "time",
+      "emoji": "🕒"
+    },
+    "extra": {
+      "synonyms": [
+        "bieżący"
+      ]
+    }
+  },
+  {
+    "lemma": "tępy",
+    "id": "pol-adj-0341-tępy(blunt)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "physical",
+      "emoji": "🪨"
+    },
+    "extra": {
+      "synonyms": [
+        "nieostry",
+        "głupi",
+        "głupawy",
+        "tępawy"
+      ],
+      "antonyms": [
+        "ostry",
+        "bystry",
+        "mądry",
+        "niegłupi"
+      ],
+      "usage": [
+        "Już też i słońce wschodzi, krwawo się czerwieni, Brzegiem tępym , jak gdyby odartym od promieni, Na wpół widne, na poły w czerni chmur się chowa, Jak rozżarzona w węglach kowalskich podkowa. Now the sun is also rising; it is red like blood, with an indistinct edge, as though bereft of its rays; half bright, it is half hidden in the blackness of the clouds, like a horseshoe glowing among a blacksmith's coals."
+      ]
+    }
+  },
+  {
+    "lemma": "tępy",
+    "id": "pol-adj-0342-tępy(dumb)",
+    "_inflectionsRoot": "pol-adj-0341-tępy(blunt)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    },
+    "extra": {
+      "synonyms": [
+        "nieostry",
+        "głupi",
+        "głupawy",
+        "tępawy"
+      ],
+      "antonyms": [
+        "ostry",
+        "bystry",
+        "mądry",
+        "niegłupi"
+      ],
+      "usage": [
+        "Już też i słońce wschodzi, krwawo się czerwieni, Brzegiem tępym , jak gdyby odartym od promieni, Na wpół widne, na poły w czerni chmur się chowa, Jak rozżarzona w węglach kowalskich podkowa. Now the sun is also rising; it is red like blood, with an indistinct edge, as though bereft of its rays; half bright, it is half hidden in the blackness of the clouds, like a horseshoe glowing among a blacksmith's coals."
+      ]
+    }
+  },
+  {
+    "lemma": "bystry",
+    "id": "pol-adj-0343-bystry",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "mroczny",
+    "id": "pol-adj-0344-mroczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "popularny",
+    "id": "pol-adj-0345-popularny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "nerwowy",
+    "id": "pol-adj-0346-nerwowy",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "miły",
+    "id": "pol-adj-0347-miły(thing)",
+    "frequency": 1,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "physical",
+      "emoji": "🪨"
+    }
+  },
+  {
+    "lemma": "miły",
+    "id": "pol-adj-0348-miły(polite)",
+    "_inflectionsRoot": "pol-adj-0347-miły(thing)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    }
+  },
+  {
+    "lemma": "niedbały",
+    "id": "pol-adj-0349-niedbały",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "straszny",
+    "id": "pol-adj-0350-straszny",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "niewinny",
+    "id": "pol-adj-0351-niewinny",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "obcy",
+    "id": "pol-adj-0352-obcy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "niechlujny",
+    "id": "pol-adj-0353-niechlujny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "durny",
+    "id": "pol-adj-0354-durny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "odporny",
+    "id": "pol-adj-0355-odporny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "sypki",
+    "id": "pol-adj-0356-sypki",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "cyfrowy",
+    "id": "pol-adj-0357-cyfrowy",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "analogowy"
+      ]
+    }
+  },
+  {
+    "lemma": "analogowy",
+    "id": "pol-adj-0358-analogowy",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "cyfrowy"
+      ]
+    }
+  },
+  {
+    "lemma": "absurdalny",
+    "id": "pol-adj-0359-absurdalny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "bez sensu",
+        "bezsensowny",
+        "niedorzeczny",
+        "nonsensowny"
+      ],
+      "antonyms": [
+        "sensowny"
+      ]
+    }
+  },
+  {
+    "lemma": "niedorzeczny",
+    "id": "pol-adj-0360-niedorzeczny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "absurdalny",
+        "bez",
+        "sensu",
+        "bezsensowny",
+        "nonsensowny"
+      ],
+      "antonyms": [
+        "sensowny"
+      ]
+    }
+  },
+  {
+    "lemma": "bezsensowny",
+    "id": "pol-adj-0361-bezsensowny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "absurdalny",
+        "bez",
+        "sensu",
+        "niedorzeczny",
+        "nonsensowny"
+      ],
+      "antonyms": [
+        "sensowny"
+      ]
+    }
+  },
+  {
+    "lemma": "naukowy",
+    "id": "pol-adj-0362-naukowy",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "badawczy"
+      ]
+    }
+  },
+  {
+    "lemma": "dawny",
+    "id": "pol-adj-0363-dawny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "niedawny"
+      ]
+    }
+  },
+  {
+    "lemma": "bezradny",
+    "id": "pol-adj-0364-bezradny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "bezbronny",
+        "bezsilny",
+        "bezradny"
+      ]
+    }
+  },
+  {
+    "lemma": "bezbronny",
+    "id": "pol-adj-0365-bezbronny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "bezsilny",
+        "bezradny"
+      ]
+    }
+  },
+  {
+    "lemma": "bezsilny",
+    "id": "pol-adj-0366-bezsilny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "bezbronny",
+        "bezradny"
+      ],
+      "usage": [
+        "bezsilny w obliczu czegoś ― powerless in the face of bezsilny wobec czegoś ― powerless against/over"
+      ]
+    }
+  },
+  {
+    "lemma": "boski",
+    "id": "pol-adj-0367-boski",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "cudowny",
+        "piękny",
+        "wspaniały"
+      ]
+    }
+  },
+  {
+    "lemma": "cudowny",
+    "id": "pol-adj-0368-cudowny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "ciągły",
+    "id": "pol-adj-0369-ciągły",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "Mimo ciągłych skarg mieszkańców okolicy klub nadal działa. Despite repeated complaints from the area's residents, the club is still operating.",
+        "Podwójna ciągła linia na środku jezdni oznacza, że wyprzedzanie jest niedozwolone. A double unbroken line in the middle of the road indicates that overtaking is not allowed."
+      ]
+    }
+  },
+  {
+    "lemma": "beznadziejny",
+    "id": "pol-adj-0370-beznadziejny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "zły"
+      ]
+    }
+  },
+  {
+    "lemma": "boczny",
+    "id": "pol-adj-0371-boczny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "boczny ołtarz ― a side altar boczna droga ― a side road boczna ulica/uliczka ― a side street boczna ściana ― a side wall boczna szyba ― a side window (of a car) boczna kieszeń ― a side pocket boczne wejście ― a side entrance boczne drzwi ― a side door boczne schody ― side stairs boczne lusterka ― a side window"
+      ]
+    }
+  },
+  {
+    "lemma": "betonowy",
+    "id": "pol-adj-0372-betonowy",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "betonowa mieszanka ― a concrete mix betonowy mur ― a concrete wall",
+        "betonowy kandydat ― a stick in the mud candidate"
+      ]
+    }
+  },
+  {
+    "lemma": "długotrwały",
+    "id": "pol-adj-0373-długotrwały",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "krótkotrwały"
+      ]
+    }
+  },
+  {
+    "lemma": "krótkotrwały",
+    "id": "pol-adj-0374-krótkotrwały",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "długotrwały",
+        "krótkotrwałe",
+        "nawracające",
+        "zaburzenia",
+        "depresyjne",
+        "―",
+        "recurrent",
+        "brief",
+        "depression"
+      ]
+    }
+  },
+  {
+    "lemma": "czynny",
+    "id": "pol-adj-0375-czynny(active)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    },
+    "extra": {
+      "synonyms": [
+        "aktywny",
+        "otwarty",
+        "funkcjonujący",
+        "sprawny"
+      ],
+      "antonyms": [
+        "bezczynny",
+        "bierny",
+        "pasywny",
+        "zamknięty",
+        "nieczynny",
+        "nieczynny",
+        "niesprawny",
+        "bierny"
+      ]
+    }
+  },
+  {
+    "lemma": "czynny",
+    "id": "pol-adj-0376-czynny(open)",
+    "_inflectionsRoot": "pol-adj-0375-czynny(active)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "shop",
+      "emoji": "🏬"
+    },
+    "extra": {
+      "synonyms": [
+        "aktywny",
+        "otwarty",
+        "funkcjonujący",
+        "sprawny"
+      ],
+      "antonyms": [
+        "bezczynny",
+        "bierny",
+        "pasywny",
+        "zamknięty",
+        "nieczynny",
+        "nieczynny",
+        "niesprawny",
+        "bierny"
+      ]
+    }
+  },
+  {
+    "lemma": "urzędowy",
+    "id": "pol-adj-0377-urzędowy",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "bezwzględny",
+    "id": "pol-adj-0378-bezwzględny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "ostry",
+        "twardy",
+        "srogi",
+        "niepobłażliwy",
+        "niewyrozumiały",
+        "surowy",
+        "absolutny",
+        "bezwarunkowy"
+      ],
+      "antonyms": [
+        "pobłażliwy"
+      ],
+      "usage": [
+        "kwota bezwzględna ― an absolute sum/amount liczba bezwzględna ― an absolute number wielkości bezwzględne ― an absolute size wysokość bezwzględna ― an absolute height"
+      ]
+    }
+  },
+  {
+    "lemma": "pobłażliwy",
+    "id": "pol-adj-0379-pobłażliwy",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "wyrozumiały"
+      ]
+    }
+  },
+  {
+    "lemma": "surowy",
+    "id": "pol-adj-0380-surowy(raw)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "food",
+      "emoji": "🍲"
+    }
+  },
+  {
+    "lemma": "surowy",
+    "id": "pol-adj-0381-surowy(strict)",
+    "_inflectionsRoot": "pol-adj-0380-surowy(raw)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    }
+  },
+  {
+    "lemma": "absolutny",
+    "id": "pol-adj-0382-absolutny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "srogi",
+    "id": "pol-adj-0383-srogi",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "drewniany",
+    "id": "pol-adj-0384-drewniany",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "niedrewniany"
+      ]
+    }
+  },
+  {
+    "lemma": "cholerny",
+    "id": "pol-adj-0385-cholerny",
+    "frequency": 4,
+    "register": 8,
+    "extra": {
+      "synonyms": [
+        "pieprzony"
+      ]
+    }
+  },
+  {
+    "lemma": "pieprzony",
+    "id": "pol-adj-0386-pieprzony",
+    "frequency": 4,
+    "register": 8,
+    "extra": {
+      "synonyms": [
+        "cholerny"
+      ]
+    }
+  },
+  {
+    "lemma": "agresywny",
+    "id": "pol-adj-0387-agresywny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "napastliwy",
+        "wrogi",
+        "gniewny",
+        "zdenerwowany",
+        "gwałtowny",
+        "nerwowy",
+        "jaskrawy",
+        "papuzi",
+        "ostry",
+        "soczysty",
+        "krzykliwy",
+        "intensywny",
+        "wściekły",
+        "zjadliwy",
+        "aktywny"
+      ],
+      "usage": [
+        "agresywny sprzedawca ― an aggressive salesperson"
+      ]
+    }
+  },
+  {
+    "lemma": "zjadliwy",
+    "id": "pol-adj-0388-zjadliwy",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "soczysty",
+    "id": "pol-adj-0389-soczysty",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "mięsisty"
+      ]
+    }
+  },
+  {
+    "lemma": "wrogi",
+    "id": "pol-adj-0390-wrogi",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "zdenerwowany",
+    "id": "pol-adj-0391-zdenerwowany(annoyed)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "annoyed",
+      "emoji": "😠"
+    }
+  },
+  {
+    "lemma": "zdenerwowany",
+    "id": "pol-adj-0392-zdenerwowany(nervous)",
+    "_inflectionsRoot": "pol-adj-0391-zdenerwowany(annoyed)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "nervous",
+      "emoji": "😨"
+    }
+  },
+  {
+    "lemma": "gwałtowny",
+    "id": "pol-adj-0393-gwałtowny(person)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    }
+  },
+  {
+    "lemma": "gwałtowny",
+    "id": "pol-adj-0394-gwałtowny(trendline)",
+    "_inflectionsRoot": "pol-adj-0393-gwałtowny(person)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "mathematical",
+      "emoji": "🧮"
+    }
+  },
+  {
+    "lemma": "błyszczący",
+    "id": "pol-adj-0395-błyszczący",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "lśniący",
+        "połyskliwy",
+        "błyszczący"
+      ]
+    }
+  },
+  {
+    "lemma": "lśniący",
+    "id": "pol-adj-0396-lśniący",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "niesamowity",
+    "id": "pol-adj-0397-niesamowity",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "nieopisany",
+        "niezwykły",
+        "przedziwny",
+        "niezwykły",
+        "wielki"
+      ]
+    }
+  },
+  {
+    "lemma": "bezimienny",
+    "id": "pol-adj-0398-bezimienny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "anonimowy"
+      ]
+    }
+  },
+  {
+    "lemma": "tandetny",
+    "id": "pol-adj-0399-tandetny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "etyczny",
+    "id": "pol-adj-0400-etyczny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "nieetyczny"
+      ]
+    }
+  },
+  {
+    "lemma": "biznesowy",
+    "id": "pol-adj-0401-biznesowy",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "biznesowy charakter ― a business character/nature biznesowy język ― business language analityk biznesowy ― a business analist klient biznesowy ― a business client/customer lunch biznesowy ― a business lunch model biznesowy ― a business model partner biznesowy ― a business partner podręcznik biznesowy ― a business manual/guide/handbook/textbook/guidebook/coursebook/workbook potencjał biznesowy ― business potential proces biznesowy ― a business process strój biznesowy ― a business outfit układ biznesowy ― a business arrangement wspólnik biznesowy ― a business associate aktywność biznesowa ― business activity efektywność biznesowa ― business effectiveness kolacja biznesowa ― a business dinner operacja biznesowa ― a business operation propozycja biznesowa ― a business proposition relacja biznesowa ― a business relation(ship) rozmowa biznesowa ― a business conversation strategia biznesowa ― a business strategy tematyka biznesowa ― a business topic współpraca biznesowa ― business cooperation zdolność biznesowa ― business (cap)abilities centrum biznesowe ― a center of business doradztwo biznesowe ― business consultancy/consulting/advice partnerstwo biznesowe ― a business partnership przyjęcie biznesowe ― a business party podejście biznesowe ― a business approach/approach to business przedsięwzięcie biznesowe ― a business venture/enterprise rozwiązanie biznesowe ― a business solution ryzyko biznesowe ― a business risk spotkanie biznesowe ― a business meeting ubezpieczenie biznesowe ― business insurance życie biznesowe ― business life/a life of business decyzje biznesowe ― business decisions działania biznesowe ― business activity innowacje biznesowe ― business innovations kompetencje biznesowe ― business competencies narzędzia biznesowe ― business tools negocjacje biznesowe ― business negoations osiągnięcia biznesowe ― business achievements reguły biznesowe ― business rules szanse biznesowe ― business opportunities szkolenia biznesowe ― business training/coaching/schooling courses tłumaczenia biznesowe ― business translations wyzwania biznesowe ― business challenges założenia biznesowe ― business assumptions/objectives zastosowania biznesowe ― business applications"
+      ]
+    }
+  },
+  {
+    "lemma": "bujny",
+    "id": "pol-adj-0402-bujny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "rozrosły",
+        "wybujały"
+      ]
+    }
+  },
+  {
+    "lemma": "wybujały",
+    "id": "pol-adj-0403-wybujały",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "chrześcijański",
+    "id": "pol-adj-0404-chrześcijański",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "niechrześcijański"
+      ]
+    }
+  },
+  {
+    "lemma": "francuski",
+    "id": "pol-adj-0405-francuski",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "Mówisz po francusku ? ― Do you speak French ? (informal) Mówi pan po francusku ? ― Do you speak French ? (formal, to male) Mówi pani po francusku ? ― Do you speak French ? (formal, to female)"
+      ]
+    }
+  },
+  {
+    "lemma": "celowy",
+    "id": "pol-adj-0406-celowy",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "umyślny",
+        "zamierzony",
+        "intencjonalny"
+      ],
+      "antonyms": [
+        "niecelowy"
+      ]
+    }
+  },
+  {
+    "lemma": "zamierzony",
+    "id": "pol-adj-0407-zamierzony",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "umyślny",
+        "celowy",
+        "intencjonalny"
+      ]
+    }
+  },
+  {
+    "lemma": "goły",
+    "id": "pol-adj-0408-goły",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "nagi"
+      ],
+      "usage": [
+        "Dostałem gołe mieszkanie w spadku. ― I inherited an unfurnished apartment."
+      ]
+    }
+  },
+  {
+    "lemma": "nagi",
+    "id": "pol-adj-0409-nagi",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "goły"
+      ]
+    }
+  },
+  {
+    "lemma": "dzienny",
+    "id": "pol-adj-0410-dzienny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "nocny"
+      ]
+    }
+  },
+  {
+    "lemma": "nocny",
+    "id": "pol-adj-0411-nocny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "dzienny"
+      ]
+    }
+  },
+  {
+    "lemma": "dzielny",
+    "id": "pol-adj-0412-dzielny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "odważny",
+        "zręczny"
+      ]
+    }
+  },
+  {
+    "lemma": "zręczny",
+    "id": "pol-adj-0413-zręczny",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "żeński",
+    "id": "pol-adj-0414-żeński",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "babi",
+        "babski",
+        "damski",
+        "kobiecy",
+        "niewieści"
+      ]
+    }
+  },
+  {
+    "lemma": "górny",
+    "id": "pol-adj-0415-górny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "dolny"
+      ]
+    }
+  },
+  {
+    "lemma": "dolny",
+    "id": "pol-adj-0416-dolny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "górny"
+      ]
+    }
+  },
+  {
+    "lemma": "biologiczny",
+    "id": "pol-adj-0417-biologiczny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "naturalny",
+        "rodzony"
+      ],
+      "usage": [
+        "eksperyment biologiczny ― biological experiment gabinet biologiczny ― biological office materiał biologiczny ― biological material gatunek biologiczny ― biological species ostęp biologiczny ― biological backwood układ biologiczny ― biological system aktywność biologiczna ― biological activity błona biologiczna ― biological membrane metoda biologiczna ― biological method olimpiada biologiczna ― biological Olympiad pracownia biologiczna ― biological laboratory wiedza biologiczna ― biological knowledge badanie biologiczne ― biological research kółko biologiczne ― biological wheel testy biologiczne ― biological tests cechy biologiczne ― biological traits nauki biologiczne ― biological science/ life science właściwości biologiczne ― biological properties instynkt biologiczny ― biological instinct mechanizm biologiczny ― biological mechanism popęd biologiczny ― biological drive/urge/impulse potencjał biologiczny ― biological potential proces biologiczny ― biological process rozkład biologiczny ― biological decay rytm biologiczny ― biological rhythm zegar biologiczny ― biological clock ściek biologiczny ― biological effluvium masaż biologiczny ― biological massage adaptacja biologiczna ― biological adaptation degradacja biologiczna ― biological degradation dojrzałość biologiczna ― biological maturity ewolucja biologiczna ― biological evolution funkcja biologiczna ― biological function natura biologiczna ― biological nature płeć biologiczna ― biological gender/sex potrzeba biologiczna ― biological need różnorodność biologiczna ― biological diversity uprawa biologiczna ― biological cultivation równowaga biologiczna ― biological balance broń biologiczna ― biological weapon zastawka biologiczna ― biological valve oczyszczalnia biologiczna ― biological odnowa biologiczna ― biological treatment plant sauna biologiczna ― biological sauna spa biologiczna ― biological spa oczyszczanie biologiczne ― biological treatment promieniowanie biologiczne ― biological radiation przetrwanie biologiczne ― biological survival przystosowanie biologiczne ― biological adaptation skażenie biologiczne ― bio hazard wyniszczenie biologiczne ― biological destruction minimum biologiczne ― biological minimum podłoże biologiczne ― biological substrate/base ślady biologiczne ― biologicals/biological traces zasoby biologiczne ― biological resources uwarunkowanie biologiczne ― biological conditioning gabinet odnowy biologicznej ― office of biological regeneration ochrona różnorodnośc i biologicznej ― protection of biological diversity"
+      ]
+    }
+  },
+  {
+    "lemma": "dziecinny",
+    "id": "pol-adj-0418-dziecinny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "infantylny",
+        "naiwny",
+        "dziecięcy",
+        "dziecięcy"
+      ]
+    }
+  },
+  {
+    "lemma": "dziecięcy",
+    "id": "pol-adj-0419-dziecięcy",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "dziecinny"
+      ]
+    }
+  },
+  {
+    "lemma": "naiwny",
+    "id": "pol-adj-0420-naiwny",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "błękitny",
+    "id": "pol-adj-0421-błękitny",
+    "frequency": 1,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "Hypernym: niebieski błękitne oczy ― sky blue eyes błękitny jak niebo ― sky blue like the sky"
+      ]
+    }
+  },
+  {
+    "lemma": "głuchy",
+    "id": "pol-adj-0422-głuchy",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "niesłyszący",
+        "ogłuchły"
+      ]
+    }
+  },
+  {
+    "lemma": "barwny",
+    "id": "pol-adj-0423-barwny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "barwisty",
+        "kolorowy",
+        "barwisty"
+      ],
+      "antonyms": [
+        "bezbarwny"
+      ]
+    }
+  },
+  {
+    "lemma": "bieżący",
+    "id": "pol-adj-0424-bieżący",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "obecny",
+        "bieżący"
+      ]
+    }
+  },
+  {
+    "lemma": "drobny",
+    "id": "pol-adj-0425-drobny(texture)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "physical",
+      "emoji": "🪨"
+    },
+    "extra": {
+      "synonyms": [
+        "mały"
+      ]
+    }
+  },
+  {
+    "lemma": "drobny",
+    "id": "pol-adj-0426-drobny(abstract)",
+    "_inflectionsRoot": "pol-adj-0425-drobny(texture)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "physical",
+      "emoji": "🪨"
+    },
+    "extra": {
+      "synonyms": [
+        "mały"
+      ]
+    }
+  },
+  {
+    "lemma": "gładki",
+    "id": "pol-adj-0427-gładki",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "szorstki"
+      ]
+    }
+  },
+  {
+    "lemma": "szorstki",
+    "id": "pol-adj-0428-szorstki",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "chropawy",
+        "chropowaty",
+        "obcesowy",
+        "ordynarny",
+        "toporny",
+        "zgrubny",
+        "chrapliwy",
+        "ochrypły",
+        "zachrypły"
+      ],
+      "antonyms": [
+        "gładki"
+      ]
+    }
+  },
+  {
+    "lemma": "polityczny",
+    "id": "pol-adj-0429-polityczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "podejrzany",
+    "id": "pol-adj-0430-podejrzany",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "urzekający",
+    "id": "pol-adj-0431-urzekający",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "ujmujący",
+    "id": "pol-adj-0432-ujmujący",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "czarujący",
+        "fascynujący",
+        "porywający",
+        "urzekający"
+      ]
+    }
+  },
+  {
+    "lemma": "burzliwy",
+    "id": "pol-adj-0433-burzliwy",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "wzburzony"
+      ]
+    }
+  },
+  {
+    "lemma": "chemiczny",
+    "id": "pol-adj-0434-chemiczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "efektowny",
+    "id": "pol-adj-0435-efektowny",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "dorosły",
+    "id": "pol-adj-0436-dorosły",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "europejski",
+    "id": "pol-adj-0437-europejski",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "granatowy",
+    "id": "pol-adj-0438-granatowy",
+    "frequency": 1,
+    "register": 0
+  },
+  {
+    "lemma": "duński",
+    "id": "pol-adj-0439-duński",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "angielski",
+    "id": "pol-adj-0440-angielski",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "genetyczny",
+    "id": "pol-adj-0441-genetyczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "finansowy",
+    "id": "pol-adj-0442-finansowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "giełdowy",
+    "id": "pol-adj-0443-giełdowy",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "popołudniowy",
+    "id": "pol-adj-0444-popołudniowy",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "cudzy",
+    "id": "pol-adj-0445-cudzy",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "były",
+    "id": "pol-adj-0446-były",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "całkowity",
+    "id": "pol-adj-0447-całkowity",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "brytyjski",
+    "id": "pol-adj-0448-brytyjski",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "pomocny",
+    "id": "pol-adj-0449-pomocny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "dany",
+    "id": "pol-adj-0450-dany",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "dowolny",
+    "id": "pol-adj-0451-dowolny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "grecki",
+    "id": "pol-adj-0452-grecki",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "fizyczny",
+    "id": "pol-adj-0453-fizyczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "egipski",
+    "id": "pol-adj-0454-egipski",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "czujny",
+    "id": "pol-adj-0455-czujny",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "policyjny",
+    "id": "pol-adj-0456-policyjny",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "rodzinny",
+    "id": "pol-adj-0457-rodzinny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "dodatkowy",
+    "id": "pol-adj-0458-dodatkowy",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "amerykański",
+    "id": "pol-adj-0459-amerykański",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "czeski",
+    "id": "pol-adj-0460-czeski",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "ponury",
+    "id": "pol-adj-0461-ponury",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "duchowy",
+    "id": "pol-adj-0462-duchowy",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "filozoficzny",
+    "id": "pol-adj-0463-filozoficzny",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "chwilowy",
+    "id": "pol-adj-0464-chwilowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "dziwaczny",
+    "id": "pol-adj-0465-dziwaczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "codzienny",
+    "id": "pol-adj-0466-codzienny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "podwodny",
+    "id": "pol-adj-0467-podwodny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "drugi",
+    "id": "pol-adj-0468-drugi",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "demokratyczny",
+    "id": "pol-adj-0469-demokratyczny",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "deszczowy",
+    "id": "pol-adj-0470-deszczowy",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "chętny",
+    "id": "pol-adj-0471-chętny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "cenny",
+    "id": "pol-adj-0472-cenny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "brutalny",
+    "id": "pol-adj-0473-brutalny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "dziki",
+    "id": "pol-adj-0474-dziki",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "austriacki",
+    "id": "pol-adj-0475-austriacki",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "białoruski",
+    "id": "pol-adj-0476-białoruski",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "roboczy",
+    "id": "pol-adj-0477-roboczy",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "emocjonalny",
+    "id": "pol-adj-0478-emocjonalny",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "gazowy",
+    "id": "pol-adj-0479-gazowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "dojrzały",
+    "id": "pol-adj-0480-dojrzały(person)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    }
+  },
+  {
+    "lemma": "dojrzały",
+    "id": "pol-adj-0481-dojrzały(ripe)",
+    "_inflectionsRoot": "pol-adj-0480-dojrzały(person)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "food",
+      "emoji": "🍲"
+    }
+  },
+  {
+    "lemma": "dumny",
+    "id": "pol-adj-0482-dumny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "delikatny",
+    "id": "pol-adj-0483-delikatny(delicate)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "delicate",
+      "emoji": "💔"
+    }
+  },
+  {
+    "lemma": "delikatny",
+    "id": "pol-adj-0484-delikatny(gentle)",
+    "_inflectionsRoot": "pol-adj-0483-delikatny(delicate)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "gentle",
+      "emoji": "🪶"
+    }
+  },
+  {
+    "lemma": "chiński",
+    "id": "pol-adj-0485-chiński",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "biblijny",
+    "id": "pol-adj-0486-biblijny",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "fioletowy",
+    "id": "pol-adj-0487-fioletowy",
+    "frequency": 1,
+    "register": 0
+  },
+  {
+    "lemma": "charytatywny",
+    "id": "pol-adj-0488-charytatywny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "finałowy",
+    "id": "pol-adj-0489-finałowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "przypadkowy",
+    "id": "pol-adj-0490-przypadkowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "afrykański",
+    "id": "pol-adj-0491-afrykański",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "częściowy",
+    "id": "pol-adj-0492-częściowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "generalny",
+    "id": "pol-adj-0493-generalny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "arabski",
+    "id": "pol-adj-0494-arabski",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "fikcyjny",
+    "id": "pol-adj-0495-fikcyjny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "elektroniczny",
+    "id": "pol-adj-0496-elektroniczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "rodzimy",
+    "id": "pol-adj-0497-rodzimy",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "domowy",
+    "id": "pol-adj-0498-domowy(politics)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "politics",
+      "emoji": "🗳️"
+    }
+  },
+  {
+    "lemma": "domowy",
+    "id": "pol-adj-0499-domowy(house)",
+    "_inflectionsRoot": "pol-adj-0498-domowy(politics)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "household",
+      "emoji": "🏠"
+    }
+  },
+  {
+    "lemma": "specyficzny",
+    "id": "pol-adj-0500-specyficzny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "charakterystyczny",
+        "swoisty"
+      ]
+    }
+  },
+  {
+    "lemma": "swoisty",
+    "id": "pol-adj-0501-swoisty",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "godny",
+    "id": "pol-adj-0502-godny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "godzien"
+      ],
+      "antonyms": [
+        "niegodny"
+      ]
+    }
+  },
+  {
+    "lemma": "doświadczony",
+    "id": "pol-adj-0503-doświadczony",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "bywały",
+        "obyty",
+        "obeznany",
+        "wyrobiony",
+        "wytrawny"
+      ],
+      "antonyms": [
+        "niedoświadczony"
+      ]
+    }
+  },
+  {
+    "lemma": "automatyczny",
+    "id": "pol-adj-0504-automatyczny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "samoczynny"
+      ],
+      "antonyms": [
+        "ręczny"
+      ]
+    }
+  },
+  {
+    "lemma": "ręczny",
+    "id": "pol-adj-0505-ręczny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "automatyczny",
+        "samoczynny"
+      ],
+      "usage": [
+        "narzędzie ręczne ― hand tool ręczne sadzenie ― hand planting"
+      ]
+    }
+  },
+  {
+    "lemma": "samoczynny",
+    "id": "pol-adj-0506-samoczynny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "automatyczny"
+      ],
+      "antonyms": [
+        "ręczny"
+      ]
+    }
+  },
+  {
+    "lemma": "gniewny",
+    "id": "pol-adj-0507-gniewny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "zły"
+      ]
+    }
+  },
+  {
+    "lemma": "żywiołowy",
+    "id": "pol-adj-0508-żywiołowy",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "elegancki",
+    "id": "pol-adj-0509-elegancki",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "wytworny"
+      ]
+    }
+  },
+  {
+    "lemma": "wytworny",
+    "id": "pol-adj-0510-wytworny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "elegancki"
+      ]
+    }
+  },
+  {
+    "lemma": "damski",
+    "id": "pol-adj-0511-damski",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "babi",
+        "babski",
+        "kobiecy",
+        "niewieści",
+        "żeński"
+      ]
+    }
+  },
+  {
+    "lemma": "kobiecy",
+    "id": "pol-adj-0512-kobiecy",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "babi",
+        "babski",
+        "damski",
+        "niewieści",
+        "żeński"
+      ]
+    }
+  },
+  {
+    "lemma": "babski",
+    "id": "pol-adj-0513-babski",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "babi",
+        "damski",
+        "kobiecy",
+        "niewieści",
+        "żeński"
+      ]
+    }
+  },
+  {
+    "lemma": "akademicki",
+    "id": "pol-adj-0514-akademicki",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "archaic",
+        "akademiczny"
+      ]
+    }
+  },
+  {
+    "lemma": "fatalny",
+    "id": "pol-adj-0515-fatalny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "pechowy",
+        "nieunikniony",
+        "straszny"
+      ]
+    }
+  },
+  {
+    "lemma": "nieunikniony",
+    "id": "pol-adj-0516-nieunikniony",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "ambitny",
+    "id": "pol-adj-0517-ambitny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "tandetny"
+      ]
+    }
+  },
+  {
+    "lemma": "formalny",
+    "id": "pol-adj-0518-formalny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "urzędowy",
+        "obowiązujący"
+      ]
+    }
+  },
+  {
+    "lemma": "miejscowy",
+    "id": "pol-adj-0519-miejscowy",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "lokalny",
+        "tutejszy"
+      ]
+    }
+  },
+  {
+    "lemma": "tutejszy",
+    "id": "pol-adj-0520-tutejszy",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "lokalny",
+        "miejscowy"
+      ],
+      "antonyms": [
+        "nietutejszy"
+      ]
+    }
+  },
+  {
+    "lemma": "utalentowany",
+    "id": "pol-adj-0521-utalentowany",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "zdolny",
+        "uzdolniony"
+      ]
+    }
+  },
+  {
+    "lemma": "aktywny",
+    "id": "pol-adj-0522-aktywny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "czynny"
+      ],
+      "antonyms": [
+        "bezczynny",
+        "bierny",
+        "pasywny",
+        "bierny"
+      ]
+    }
+  },
+  {
+    "lemma": "pasywny",
+    "id": "pol-adj-0523-pasywny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "bezczynny",
+        "bierny"
+      ],
+      "antonyms": [
+        "aktywny",
+        "czynny",
+        "czynny",
+        "aktywny"
+      ]
+    }
+  },
+  {
+    "lemma": "bezczynny",
+    "id": "pol-adj-0524-bezczynny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "bierny",
+        "pasywny"
+      ],
+      "antonyms": [
+        "aktywny",
+        "czynny"
+      ]
+    }
+  },
+  {
+    "lemma": "bierny",
+    "id": "pol-adj-0525-bierny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "bezczynny",
+        "pasywny",
+        "obojętny",
+        "pasywny"
+      ],
+      "antonyms": [
+        "aktywny",
+        "czynny"
+      ],
+      "usage": [
+        "bierny chemicznie ― chemically inactive"
+      ]
+    }
+  },
+  {
+    "lemma": "błyskawiczny",
+    "id": "pol-adj-0526-błyskawiczny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "błyskawicowy",
+        "błyskawiczny"
+      ],
+      "usage": [
+        "zupa błyskawiczna ― instant ramen/soup budyń błyskawiczny ― instant pudding płatki błyskawiczne ― instant cereal"
+      ]
+    }
+  },
+  {
+    "lemma": "anonimowy",
+    "id": "pol-adj-0527-anonimowy",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "bezimienny"
+      ]
+    }
+  },
+  {
+    "lemma": "fascynujący",
+    "id": "pol-adj-0528-fascynujący",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "czarujący",
+        "porywający",
+        "ujmujący",
+        "urzekający"
+      ]
+    }
+  },
+  {
+    "lemma": "bankowy",
+    "id": "pol-adj-0529-bankowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "alternatywny",
+    "id": "pol-adj-0530-alternatywny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "fantastyczny",
+    "id": "pol-adj-0531-fantastyczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "autobusowy",
+    "id": "pol-adj-0532-autobusowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "globalny",
+    "id": "pol-adj-0533-globalny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "górski",
+    "id": "pol-adj-0534-górski",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "centralny",
+    "id": "pol-adj-0535-centralny(spatially)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "direction",
+      "emoji": "📍"
+    }
+  },
+  {
+    "lemma": "centralny",
+    "id": "pol-adj-0536-centralny(important)",
+    "_inflectionsRoot": "pol-adj-0535-centralny(spatially)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "important",
+      "emoji": "❗"
+    }
+  },
+  {
+    "lemma": "edukacyjny",
+    "id": "pol-adj-0537-edukacyjny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "końcowy",
+    "id": "pol-adj-0538-końcowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "drogowy",
+    "id": "pol-adj-0539-drogowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "graniczny",
+    "id": "pol-adj-0540-graniczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "czołowy",
+    "id": "pol-adj-0541-czołowy",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "dzisiejszy",
+    "id": "pol-adj-0542-dzisiejszy(literally today)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "event",
+      "emoji": "📅️"
+    }
+  },
+  {
+    "lemma": "dzisiejszy",
+    "id": "pol-adj-0543-dzisiejszy(contemporary)",
+    "_inflectionsRoot": "pol-adj-0542-dzisiejszy(literally today)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "general",
+      "emoji": "🔲"
+    }
+  },
+  {
+    "lemma": "dzisiejszy",
+    "id": "pol-adj-0544-dzisiejszy(present)",
+    "_inflectionsRoot": "pol-adj-0542-dzisiejszy(literally today)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "time",
+      "emoji": "🕒"
+    }
+  },
+  {
+    "lemma": "gościnny",
+    "id": "pol-adj-0545-gościnny",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "etniczny",
+    "id": "pol-adj-0546-etniczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "dramatyczny",
+    "id": "pol-adj-0547-dramatyczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "elastyczny",
+    "id": "pol-adj-0548-elastyczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "ekologiczny",
+    "id": "pol-adj-0549-ekologiczny",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "estetyczny",
+    "id": "pol-adj-0550-estetyczny",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "filmowy",
+    "id": "pol-adj-0551-filmowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "indywidualny",
+    "id": "pol-adj-0552-indywidualny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "osobisty",
+        "charakterystyczny",
+        "jednostkowy",
+        "niecodzienny",
+        "nienormalny",
+        "odrębny",
+        "osobniczy",
+        "rozpoznawalny",
+        "specjalny",
+        "specyficzny",
+        "swoisty",
+        "szczególny",
+        "wyjątkowy",
+        "osobny",
+        "niezespołowy",
+        "pojedynczy",
+        "oddzielny"
+      ]
+    }
+  },
+  {
+    "lemma": "odrębny",
+    "id": "pol-adj-0553-odrębny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "rozpoznawalny",
+    "id": "pol-adj-0554-rozpoznawalny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "nierozpoznawalny"
+      ]
+    }
+  },
+  {
+    "lemma": "osobny",
+    "id": "pol-adj-0555-osobny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "oddzielny",
+        "odrębny",
+        "rozdzielny",
+        "unikalny"
+      ]
+    }
+  },
+  {
+    "lemma": "osobisty",
+    "id": "pol-adj-0556-osobisty",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "dowód osobisty ― personal ID"
+      ]
+    }
+  },
+  {
+    "lemma": "oddzielny",
+    "id": "pol-adj-0557-oddzielny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "osobny",
+        "odrębny"
+      ]
+    }
+  },
+  {
+    "lemma": "jawny",
+    "id": "pol-adj-0558-jawny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "widoczny"
+      ],
+      "antonyms": [
+        "tajny",
+        "niejawny",
+        "zastrzeżony",
+        "tekst",
+        "jawny",
+        "―",
+        "clear",
+        "text/",
+        "plain",
+        "text"
+      ]
+    }
+  },
+  {
+    "lemma": "widoczny",
+    "id": "pol-adj-0559-widoczny(visible)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "perception",
+      "emoji": "👀"
+    },
+    "extra": {
+      "antonyms": [
+        "niewidoczny"
+      ]
+    }
+  },
+  {
+    "lemma": "widoczny",
+    "id": "pol-adj-0560-widoczny(apparent)",
+    "_inflectionsRoot": "pol-adj-0559-widoczny(visible)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "mental",
+      "emoji": "🧠"
+    },
+    "extra": {
+      "antonyms": [
+        "niewidoczny"
+      ]
+    }
+  },
+  {
+    "lemma": "tajny",
+    "id": "pol-adj-0561-tajny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "poufny",
+        "niejawny"
+      ],
+      "antonyms": [
+        "jawny"
+      ]
+    }
+  },
+  {
+    "lemma": "zastrzeżony",
+    "id": "pol-adj-0562-zastrzeżony",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "kameralny",
+    "id": "pol-adj-0563-kameralny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "muzyka kameralna ― chamber music orkiestra kameralna ― chamber orchestra"
+      ]
+    }
+  },
+  {
+    "lemma": "jednoznaczny",
+    "id": "pol-adj-0564-jednoznaczny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "wieloznaczny"
+      ]
+    }
+  },
+  {
+    "lemma": "internetowy",
+    "id": "pol-adj-0565-internetowy",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "komunikator internetowy ― instant messenger portal internetowy ― web portal sklep internetowy ― online shop"
+      ]
+    }
+  },
+  {
+    "lemma": "jadalny",
+    "id": "pol-adj-0566-jadalny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "niejadalny"
+      ]
+    }
+  },
+  {
+    "lemma": "indyjski",
+    "id": "pol-adj-0567-indyjski",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "hinduski"
+      ]
+    }
+  },
+  {
+    "lemma": "hinduski",
+    "id": "pol-adj-0568-hinduski",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "indyjski",
+        "hinduistyczny"
+      ]
+    }
+  },
+  {
+    "lemma": "kluczowy",
+    "id": "pol-adj-0569-kluczowy",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "podstawowy",
+        "główny"
+      ]
+    }
+  },
+  {
+    "lemma": "katolicki",
+    "id": "pol-adj-0570-katolicki",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "akatolicki",
+        "niekatolicki"
+      ]
+    }
+  },
+  {
+    "lemma": "holenderski",
+    "id": "pol-adj-0571-holenderski",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "niderlandzki"
+      ]
+    }
+  },
+  {
+    "lemma": "historyczny",
+    "id": "pol-adj-0572-historyczny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "ahistoryczny"
+      ]
+    }
+  },
+  {
+    "lemma": "intensywny",
+    "id": "pol-adj-0573-intensywny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "łagodny",
+        "nieznaczny",
+        "słaby",
+        "subtelny",
+        "delikatny",
+        "stonowany"
+      ]
+    }
+  },
+  {
+    "lemma": "łagodny",
+    "id": "pol-adj-0574-łagodny(mild)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "eg flavour, weather",
+      "emoji": "☁️"
+    }
+  },
+  {
+    "lemma": "łagodny",
+    "id": "pol-adj-0575-łagodny(benign)",
+    "_inflectionsRoot": "pol-adj-0574-łagodny(mild)",
+    "frequency": 5,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "medical",
+      "emoji": "🩺"
+    }
+  },
+  {
+    "lemma": "subtelny",
+    "id": "pol-adj-0576-subtelny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "taktowny",
+        "oględny",
+        "wymyślny",
+        "delikatny",
+        "filigranowy",
+        "łagodny",
+        "nieznaczny",
+        "dyskretny"
+      ]
+    }
+  },
+  {
+    "lemma": "istny",
+    "id": "pol-adj-0577-istny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "istny raj ― true paradise"
+      ]
+    }
+  },
+  {
+    "lemma": "dwuletni",
+    "id": "pol-adj-0578-dwuletni",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "dwuroczny"
+      ]
+    }
+  },
+  {
+    "lemma": "umysłowy",
+    "id": "pol-adj-0579-umysłowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "korzystny",
+    "id": "pol-adj-0580-korzystny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "dobry"
+      ]
+    }
+  },
+  {
+    "lemma": "groźny",
+    "id": "pol-adj-0581-groźny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "klasyczny",
+    "id": "pol-adj-0582-klasyczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "konkurencyjny",
+    "id": "pol-adj-0583-konkurencyjny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "kosmiczny",
+    "id": "pol-adj-0584-kosmiczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "budowlany",
+    "id": "pol-adj-0585-budowlany",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "bojowy",
+    "id": "pol-adj-0586-bojowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "erotyczny",
+    "id": "pol-adj-0587-erotyczny",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "handlowy",
+    "id": "pol-adj-0588-handlowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "królewski",
+    "id": "pol-adj-0589-królewski",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "kamienny",
+    "id": "pol-adj-0590-kamienny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "jądrowy",
+    "id": "pol-adj-0591-jądrowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "atomowy",
+    "id": "pol-adj-0592-atomowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "japoński",
+    "id": "pol-adj-0593-japoński",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "jedwabny",
+    "id": "pol-adj-0594-jedwabny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "imponujący",
+    "id": "pol-adj-0595-imponujący",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "hiszpański",
+    "id": "pol-adj-0596-hiszpański",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "kolejny",
+    "id": "pol-adj-0597-kolejny",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "konserwatywny",
+    "id": "pol-adj-0598-konserwatywny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "krajowy",
+    "id": "pol-adj-0599-krajowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "jesienny",
+    "id": "pol-adj-0600-jesienny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "jaskrawy",
+    "id": "pol-adj-0601-jaskrawy",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "gumowy",
+    "id": "pol-adj-0602-gumowy",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "irlandzki",
+    "id": "pol-adj-0603-irlandzki",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "izraelski",
+    "id": "pol-adj-0604-izraelski",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "logiczny",
+    "id": "pol-adj-0605-logiczny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "nielogiczny"
+      ]
+    }
+  },
+  {
+    "lemma": "metalowy",
+    "id": "pol-adj-0606-metalowy",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "heavymetalowy"
+      ]
+    }
+  },
+  {
+    "lemma": "kryminalny",
+    "id": "pol-adj-0607-kryminalny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "przestępczy"
+      ]
+    }
+  },
+  {
+    "lemma": "przestępczy",
+    "id": "pol-adj-0608-przestępczy",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "kryminalny"
+      ]
+    }
+  },
+  {
+    "lemma": "miesięczny",
+    "id": "pol-adj-0609-miesięczny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "księżycowy"
+      ]
+    }
+  },
+  {
+    "lemma": "niejaki",
+    "id": "pol-adj-0610-niejaki",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "Dokumenty wskazują, że właścicielem budynku jest niejaki Waldemar Kowalski. The documents indicate that the owner of the building is one Waldemar Kowalski."
+      ]
+    }
+  },
+  {
+    "lemma": "lojalny",
+    "id": "pol-adj-0611-lojalny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "wierny",
+        "prawomyślny",
+        "praworządny"
+      ]
+    }
+  },
+  {
+    "lemma": "wierny",
+    "id": "pol-adj-0612-wierny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "ludzki",
+    "id": "pol-adj-0613-ludzki",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "człowieczy"
+      ],
+      "antonyms": [
+        "nieludzki"
+      ]
+    }
+  },
+  {
+    "lemma": "miejski",
+    "id": "pol-adj-0614-miejski",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "Coordinate term: wiejski"
+      ]
+    }
+  },
+  {
+    "lemma": "nieczynny",
+    "id": "pol-adj-0615-nieczynny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "zamknięty",
+        "czynny",
+        "niesprawny"
+      ]
+    }
+  },
+  {
+    "lemma": "masywny",
+    "id": "pol-adj-0616-masywny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "zwalisty",
+        "wypełniony"
+      ]
+    }
+  },
+  {
+    "lemma": "niemy",
+    "id": "pol-adj-0617-niemy",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "atoniczny",
+        "bezdźwięczny",
+        "bezgłośny"
+      ]
+    }
+  },
+  {
+    "lemma": "nieoczekiwany",
+    "id": "pol-adj-0618-nieoczekiwany",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "niespodziany",
+        "niespodziewany"
+      ]
+    }
+  },
+  {
+    "lemma": "niespodziewany",
+    "id": "pol-adj-0619-niespodziewany",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "niespodziany",
+        "nieoczekiwany"
+      ]
+    }
+  },
+  {
+    "lemma": "negatywny",
+    "id": "pol-adj-0620-negatywny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "pozytywny"
+      ]
+    }
+  },
+  {
+    "lemma": "pozytywny",
+    "id": "pol-adj-0621-pozytywny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "negatywny"
+      ]
+    }
+  },
+  {
+    "lemma": "następujący",
+    "id": "pol-adj-0622-następujący",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "taki",
+        "niżej",
+        "wymieniony"
+      ]
+    }
+  },
+  {
+    "lemma": "nierówny",
+    "id": "pol-adj-0623-nierówny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "nieregularny"
+      ]
+    }
+  },
+  {
+    "lemma": "niecały",
+    "id": "pol-adj-0624-niecały",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "niekompletny",
+        "niepełny",
+        "niezupełny"
+      ]
+    }
+  },
+  {
+    "lemma": "nieobecny",
+    "id": "pol-adj-0625-nieobecny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "obecny"
+      ]
+    }
+  },
+  {
+    "lemma": "letni",
+    "id": "pol-adj-0626-letni(summer)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "time",
+      "emoji": "🕒"
+    },
+    "extra": {
+      "synonyms": [
+        "letny",
+        "ciepławy",
+        "obojętny"
+      ]
+    }
+  },
+  {
+    "lemma": "letni",
+    "id": "pol-adj-0627-letni(lukewarm)",
+    "_inflectionsRoot": "pol-adj-0626-letni(summer)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "temperature",
+      "emoji": "🌡️"
+    },
+    "extra": {
+      "synonyms": [
+        "letny",
+        "ciepławy",
+        "obojętny"
+      ]
+    }
+  },
+  {
+    "lemma": "obojętny",
+    "id": "pol-adj-0628-obojętny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "apatyczny",
+        "beznamiętny",
+        "tępy",
+        "błahy",
+        "nieistotny",
+        "nieważny",
+        "bierny"
+      ],
+      "antonyms": [
+        "namiętny"
+      ]
+    }
+  },
+  {
+    "lemma": "męski",
+    "id": "pol-adj-0629-męski(linguistics)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "grammatical",
+      "emoji": "📚"
+    },
+    "extra": {
+      "antonyms": [
+        "babski",
+        "niemęski",
+        "damski",
+        "kobiecy",
+        "żeński",
+        "żeński"
+      ]
+    }
+  },
+  {
+    "lemma": "męski",
+    "id": "pol-adj-0630-męski(manly)",
+    "_inflectionsRoot": "pol-adj-0629-męski(linguistics)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    },
+    "extra": {
+      "antonyms": [
+        "babski",
+        "niemęski",
+        "damski",
+        "kobiecy",
+        "żeński",
+        "żeński"
+      ]
+    }
+  },
+  {
+    "lemma": "męski",
+    "id": "pol-adj-0631-męski(men's)",
+    "_inflectionsRoot": "pol-adj-0629-męski(linguistics)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    }
+  },
+  {
+    "lemma": "magnetyczny",
+    "id": "pol-adj-0632-magnetyczny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "amagnetyczny",
+        "niemagnetyczny"
+      ]
+    }
+  },
+  {
+    "lemma": "małżeński",
+    "id": "pol-adj-0633-małżeński",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "matrymonialny"
+      ]
+    }
+  },
+  {
+    "lemma": "ludowy",
+    "id": "pol-adj-0634-ludowy",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "obiegowy",
+        "potoczny",
+        "wernakularny",
+        "miejscowy",
+        "zwyczajowy",
+        "wernakularny"
+      ]
+    }
+  },
+  {
+    "lemma": "potoczny",
+    "id": "pol-adj-0635-potoczny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "kolokwialny",
+        "obiegowy"
+      ]
+    }
+  },
+  {
+    "lemma": "zwyczajowy",
+    "id": "pol-adj-0636-zwyczajowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "niedawny",
+    "id": "pol-adj-0637-niedawny",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "bliski",
+        "świeży"
+      ]
+    }
+  },
+  {
+    "lemma": "świeży",
+    "id": "pol-adj-0638-świeży",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "rześki",
+        "rzeźwy",
+        "ożywczy",
+        "nowy",
+        "aktualny",
+        "wyspany",
+        "wypoczęty",
+        "odświeżony",
+        "jasny",
+        "soczysty",
+        "intensywny"
+      ],
+      "antonyms": [
+        "nieświeży"
+      ]
+    }
+  },
+  {
+    "lemma": "lodowaty",
+    "id": "pol-adj-0639-lodowaty",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "oficjalny",
+    "id": "pol-adj-0640-oficjalny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "nieoficjalny"
+      ]
+    }
+  },
+  {
+    "lemma": "niemiecki",
+    "id": "pol-adj-0641-niemiecki",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "Mówisz po niemiecku? ― Do you speak German? (informal) Mówi pan po niemiecku? ― Do you speak German? (formal, to male) Mówi pani po niemiecku? ― Do you speak German? (formal, to female)"
+      ]
+    }
+  },
+  {
+    "lemma": "krwawy",
+    "id": "pol-adj-0642-krwawy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "niekorzystny",
+    "id": "pol-adj-0643-niekorzystny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "lewy",
+    "id": "pol-adj-0644-lewy",
+    "frequency": 1,
+    "register": 0
+  },
+  {
+    "lemma": "magiczny",
+    "id": "pol-adj-0645-magiczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "luksusowy",
+    "id": "pol-adj-0646-luksusowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "liczny",
+    "id": "pol-adj-0647-liczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "miniony",
+    "id": "pol-adj-0648-miniony",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "morski",
+    "id": "pol-adj-0649-morski(sea)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "area",
+      "emoji": "📍"
+    }
+  },
+  {
+    "lemma": "morski",
+    "id": "pol-adj-0650-morski(teal)",
+    "_inflectionsRoot": "pol-adj-0649-morski(sea)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "colour",
+      "emoji": "🌈"
+    }
+  },
+  {
+    "lemma": "lekarski",
+    "id": "pol-adj-0651-lekarski",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "niepełnosprawny",
+    "id": "pol-adj-0652-niepełnosprawny",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "litewski",
+    "id": "pol-adj-0653-litewski",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "nadmierny",
+    "id": "pol-adj-0654-nadmierny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "muzułmański",
+    "id": "pol-adj-0655-muzułmański",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "niektóry",
+    "id": "pol-adj-0656-niektóry",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "niepokojący",
+    "id": "pol-adj-0657-niepokojący",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "leśny",
+    "id": "pol-adj-0658-leśny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "nieprzyjemny",
+    "id": "pol-adj-0659-nieprzyjemny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "medyczny",
+    "id": "pol-adj-0660-medyczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "niepewny",
+    "id": "pol-adj-0661-niepewny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "nagły",
+    "id": "pol-adj-0662-nagły",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "lewicowy",
+    "id": "pol-adj-0663-lewicowy",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "lądowy",
+    "id": "pol-adj-0664-lądowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "narciarski",
+    "id": "pol-adj-0665-narciarski",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "kuchenny",
+    "id": "pol-adj-0666-kuchenny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "napięty",
+    "id": "pol-adj-0667-napięty",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "pilny",
+    "id": "pol-adj-0668-pilny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "ówczesny",
+    "id": "pol-adj-0669-ówczesny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "ówczesny szef ― the boss of that time"
+      ]
+    }
+  },
+  {
+    "lemma": "obowiązkowy",
+    "id": "pol-adj-0670-obowiązkowy",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "obligatoryjny",
+        "przymusowy",
+        "sumienny",
+        "rzetelny"
+      ]
+    }
+  },
+  {
+    "lemma": "przymusowy",
+    "id": "pol-adj-0671-przymusowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "obligatoryjny",
+    "id": "pol-adj-0672-obligatoryjny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "obowiązkowy",
+        "konieczny",
+        "obowiązujący",
+        "powinny",
+        "należny"
+      ],
+      "antonyms": [
+        "fakultatywny",
+        "dobrowolny",
+        "nieobowiązkowy",
+        "nadobowiązkowy",
+        "ponadobowiązkowy"
+      ],
+      "usage": [
+        "Dla pasożytów fakultatywnych wykorzystanie gospodarza do rozwoju jest tylko jedną z możliwości osiągnięcia sukcesu rozrodczego, w przeciwieństwie do pasożytów obligatoryjnych , które w toku ewolucji utraciły zdolność do budowy własnych gniazd, czy chociażby do opieki nad własnym potomstwem. For the facultative parasites, the exploitation of a host for reproduction is only one of their options for achieving reproductive success, in contrast with the obligate parasites, which, in the course of evolution, have lost the ability to build their own nests or just to take care of their own offspring."
+      ]
+    }
+  },
+  {
+    "lemma": "rzetelny",
+    "id": "pol-adj-0673-rzetelny",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "sumienny",
+    "id": "pol-adj-0674-sumienny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "nieznany",
+    "id": "pol-adj-0675-nieznany",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "znany"
+      ]
+    }
+  },
+  {
+    "lemma": "niewidoczny",
+    "id": "pol-adj-0676-niewidoczny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "niewidzialny"
+      ],
+      "antonyms": [
+        "widoczny",
+        "widzialny"
+      ]
+    }
+  },
+  {
+    "lemma": "niewidzialny",
+    "id": "pol-adj-0677-niewidzialny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "niewidoczny"
+      ],
+      "antonyms": [
+        "widoczny",
+        "widzialny"
+      ]
+    }
+  },
+  {
+    "lemma": "oburzony",
+    "id": "pol-adj-0678-oburzony",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "zły"
+      ]
+    }
+  },
+  {
+    "lemma": "ogólny",
+    "id": "pol-adj-0679-ogólny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "całościowy",
+        "generalny",
+        "uniwersalny",
+        "wszechstronny",
+        "ramowy",
+        "powszechny"
+      ],
+      "antonyms": [
+        "szczególny",
+        "szczegółowy",
+        "sporadyczny"
+      ]
+    }
+  },
+  {
+    "lemma": "nietypowy",
+    "id": "pol-adj-0680-nietypowy",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "typowy"
+      ]
+    }
+  },
+  {
+    "lemma": "typowy",
+    "id": "pol-adj-0681-typowy",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "nietypowy"
+      ]
+    }
+  },
+  {
+    "lemma": "odwrotny",
+    "id": "pol-adj-0682-odwrotny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "sprzeczny",
+        "anty",
+        "przeciwny",
+        "przeciwstawny",
+        "przeciwny"
+      ]
+    }
+  },
+  {
+    "lemma": "sprzeczny",
+    "id": "pol-adj-0683-sprzeczny",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "przeciwny",
+    "id": "pol-adj-0684-przeciwny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "anty",
+        "odwrotny",
+        "przeciwstawny"
+      ],
+      "usage": [
+        "Cokolwiek ci powie, zrób coś przeciwnego . ― Whatever he tells you, do the opposite.",
+        "Dlaczego Kościół jest przeciwny antykoncepcji? ― Why is the Church against contraception?"
+      ]
+    }
+  },
+  {
+    "lemma": "pierwotny",
+    "id": "pol-adj-0685-pierwotny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "las pierwotny ― primeval forest",
+        "pierwotna nadczynność przytarczyc ― primary hyperparathyroidism uzwojenie pierwotne ― primary winding"
+      ]
+    }
+  },
+  {
+    "lemma": "nowoczesny",
+    "id": "pol-adj-0686-nowoczesny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "anachroniczny",
+        "archaiczny",
+        "archaistyczny",
+        "niedzisiejszy",
+        "przestarzały",
+        "przeżytkowy"
+      ]
+    }
+  },
+  {
+    "lemma": "współczesny",
+    "id": "pol-adj-0687-współczesny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "anachroniczny",
+        "archaiczny",
+        "archaistyczny",
+        "niedzisiejszy",
+        "przestarzały",
+        "przeżytkowy"
+      ]
+    }
+  },
+  {
+    "lemma": "przestarzały",
+    "id": "pol-adj-0688-przestarzały",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "antyczny",
+        "archaistyczny",
+        "nienowoczesny",
+        "przedpotopowy",
+        "staromodny",
+        "staroświecki"
+      ]
+    }
+  },
+  {
+    "lemma": "kłótliwy",
+    "id": "pol-adj-0689-kłótliwy",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "swarliwy"
+      ]
+    }
+  },
+  {
+    "lemma": "niewielki",
+    "id": "pol-adj-0690-niewielki(concrete)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "physical",
+      "emoji": "🪨"
+    },
+    "extra": {
+      "synonyms": [
+        "mały",
+        "nieistotny"
+      ],
+      "antonyms": [
+        "wielki"
+      ]
+    }
+  },
+  {
+    "lemma": "niewielki",
+    "id": "pol-adj-0691-niewielki(abstract)",
+    "_inflectionsRoot": "pol-adj-0690-niewielki(concrete)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "abstract",
+      "emoji": "💭"
+    },
+    "extra": {
+      "synonyms": [
+        "mały",
+        "nieistotny"
+      ],
+      "antonyms": [
+        "wielki"
+      ]
+    }
+  },
+  {
+    "lemma": "odmienny",
+    "id": "pol-adj-0692-odmienny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "nieodmienny"
+      ]
+    }
+  },
+  {
+    "lemma": "nuklearny",
+    "id": "pol-adj-0693-nuklearny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "jądrowy"
+      ]
+    }
+  },
+  {
+    "lemma": "pewien",
+    "id": "pol-adj-0694-pewien",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "pewny"
+      ],
+      "usage": [
+        "Nie jestem pewien . ― I am not sure ."
+      ]
+    }
+  },
+  {
+    "lemma": "pijany",
+    "id": "pol-adj-0695-pijany",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "pijany"
+      ]
+    }
+  },
+  {
+    "lemma": "pionowy",
+    "id": "pol-adj-0696-pionowy",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "poziomy"
+      ]
+    }
+  },
+  {
+    "lemma": "poziomy",
+    "id": "pol-adj-0697-poziomy",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "podniosły",
+        "wzniosły"
+      ],
+      "usage": [
+        "Linia B także zmienia przebieg na bardziej poziomy wskutek niewielkiego wzrostu stężenia Cho. Line B also changes its course to a more horizontal one as a consequence of a small increase in Cho strengthening."
+      ]
+    }
+  },
+  {
+    "lemma": "papierowy",
+    "id": "pol-adj-0698-papierowy",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "pergaminowy",
+        "nienaturalny",
+        "nieprawdziwy",
+        "nijaki"
+      ]
+    }
+  },
+  {
+    "lemma": "okrutny",
+    "id": "pol-adj-0699-okrutny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "archaic",
+        "bestialny",
+        "bestialski"
+      ]
+    }
+  },
+  {
+    "lemma": "niezrozumiały",
+    "id": "pol-adj-0700-niezrozumiały",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "zrozumiały"
+      ]
+    }
+  },
+  {
+    "lemma": "zrozumiały",
+    "id": "pol-adj-0701-zrozumiały",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "niezrozumiały"
+      ]
+    }
+  },
+  {
+    "lemma": "ograniczony",
+    "id": "pol-adj-0702-ograniczony",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "nieustanny",
+    "id": "pol-adj-0703-nieustanny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "plastikowy",
+    "id": "pol-adj-0704-plastikowy",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "olimpijski",
+    "id": "pol-adj-0705-olimpijski",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "blady",
+    "id": "pol-adj-0706-blady",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "ozdobny",
+    "id": "pol-adj-0707-ozdobny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "norweski",
+    "id": "pol-adj-0708-norweski",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "oddany",
+    "id": "pol-adj-0709-oddany",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "nieznośny",
+    "id": "pol-adj-0710-nieznośny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "państwowy",
+    "id": "pol-adj-0711-państwowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "ochronny",
+    "id": "pol-adj-0712-ochronny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "obronny",
+    "id": "pol-adj-0713-obronny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "ostrożny",
+    "id": "pol-adj-0714-ostrożny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "osobowy",
+    "id": "pol-adj-0715-osobowy",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "nikły",
+    "id": "pol-adj-0716-nikły",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "niewyraźny",
+    "id": "pol-adj-0717-niewyraźny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "ohydny",
+    "id": "pol-adj-0718-ohydny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "płaski",
+    "id": "pol-adj-0719-płaski",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "niezły",
+    "id": "pol-adj-0720-niezły",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "przemysłowy",
+    "id": "pol-adj-0721-przemysłowy",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "industrialny",
+        "uprzemysłowiony"
+      ]
+    }
+  },
+  {
+    "lemma": "psi",
+    "id": "pol-adj-0722-psi",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "pieski",
+        "archaic",
+        "sobaczy"
+      ]
+    }
+  },
+  {
+    "lemma": "rolniczy",
+    "id": "pol-adj-0723-rolniczy",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "agrary",
+        "rolny"
+      ]
+    }
+  },
+  {
+    "lemma": "wojenny",
+    "id": "pol-adj-0724-wojenny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "stan wojenny ― martial law film wojenny ― war film"
+      ]
+    }
+  },
+  {
+    "lemma": "prawny",
+    "id": "pol-adj-0725-prawny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "legalny"
+      ],
+      "antonyms": [
+        "bezprawny",
+        "nielegalny",
+        "nieprawny"
+      ]
+    }
+  },
+  {
+    "lemma": "przebiegły",
+    "id": "pol-adj-0726-przebiegły",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "chytry",
+        "cwany",
+        "podstępny",
+        "sprytny",
+        "przemyślny"
+      ]
+    }
+  },
+  {
+    "lemma": "sprytny",
+    "id": "pol-adj-0727-sprytny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "podstępny",
+    "id": "pol-adj-0728-podstępny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "chytry",
+        "sprytny",
+        "przebiegły"
+      ]
+    }
+  },
+  {
+    "lemma": "przerażający",
+    "id": "pol-adj-0729-przerażający(scary)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "scary",
+      "emoji": "👻"
+    },
+    "extra": {
+      "synonyms": [
+        "straszny",
+        "zatrważający"
+      ]
+    }
+  },
+  {
+    "lemma": "przerażający",
+    "id": "pol-adj-0730-przerażający(appalling)",
+    "_inflectionsRoot": "pol-adj-0729-przerażający(scary)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "appalling",
+      "emoji": "😠"
+    },
+    "extra": {
+      "synonyms": [
+        "straszny",
+        "zatrważający"
+      ]
+    }
+  },
+  {
+    "lemma": "pożyteczny",
+    "id": "pol-adj-0731-pożyteczny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "przydatny",
+        "użyteczny"
+      ]
+    }
+  },
+  {
+    "lemma": "przydatny",
+    "id": "pol-adj-0732-przydatny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "użyteczny"
+      ]
+    }
+  },
+  {
+    "lemma": "użyteczny",
+    "id": "pol-adj-0733-użyteczny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "przydatny",
+        "pożyteczny"
+      ],
+      "antonyms": [
+        "bezużyteczny"
+      ]
+    }
+  },
+  {
+    "lemma": "pośredni",
+    "id": "pol-adj-0734-pośredni",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "przejściowy"
+      ],
+      "antonyms": [
+        "bezpośredni"
+      ]
+    }
+  },
+  {
+    "lemma": "tymczasowy",
+    "id": "pol-adj-0735-tymczasowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "religijny",
+    "id": "pol-adj-0736-religijny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "areligijny",
+        "niereligijny"
+      ]
+    }
+  },
+  {
+    "lemma": "polski",
+    "id": "pol-adj-0737-polski",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "Hypernym: słowiański"
+      ]
+    }
+  },
+  {
+    "lemma": "północny",
+    "id": "pol-adj-0738-północny(northern)",
+    "frequency": 2,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "direction",
+      "emoji": "📍"
+    },
+    "extra": {
+      "usage": [
+        "Coordinate term: południowy"
+      ]
+    }
+  },
+  {
+    "lemma": "północny",
+    "id": "pol-adj-0739-północny(midnight)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "time",
+      "emoji": "🕒"
+    },
+    "extra": {
+      "usage": [
+        "Coordinate term: południowy"
+      ]
+    }
+  },
+  {
+    "lemma": "przygotowany",
+    "id": "pol-adj-0740-przygotowany",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "nieprzygotowany"
+      ]
+    }
+  },
+  {
+    "lemma": "pobliski",
+    "id": "pol-adj-0741-pobliski",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "niedaleki"
+      ]
+    }
+  },
+  {
+    "lemma": "początkowy",
+    "id": "pol-adj-0742-początkowy",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "wyjściowy",
+        "podstawowy",
+        "elementarny"
+      ]
+    }
+  },
+  {
+    "lemma": "rolny",
+    "id": "pol-adj-0743-rolny",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "agrarny",
+        "rolniczy"
+      ]
+    }
+  },
+  {
+    "lemma": "powietrzny",
+    "id": "pol-adj-0744-powietrzny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "poduszka powietrzna ― air bag"
+      ]
+    }
+  },
+  {
+    "lemma": "regularny",
+    "id": "pol-adj-0745-regularny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "nieregularny"
+      ]
+    }
+  },
+  {
+    "lemma": "radziecki",
+    "id": "pol-adj-0746-radziecki",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "sowiecki"
+      ]
+    }
+  },
+  {
+    "lemma": "profesjonalny",
+    "id": "pol-adj-0747-profesjonalny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "zawodowy"
+      ],
+      "antonyms": [
+        "amatorski",
+        "nieprofesjonalny"
+      ]
+    }
+  },
+  {
+    "lemma": "zawodowy",
+    "id": "pol-adj-0748-zawodowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "amatorski",
+    "id": "pol-adj-0749-amatorski",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "dyletancki",
+        "niefachowy",
+        "nieudolny"
+      ],
+      "antonyms": [
+        "zawodowy",
+        "profesjonalny"
+      ]
+    }
+  },
+  {
+    "lemma": "przezroczysty",
+    "id": "pol-adj-0750-przezroczysty",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "ażurowy"
+      ]
+    }
+  },
+  {
+    "lemma": "przystojny",
+    "id": "pol-adj-0751-przystojny",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "przyzwoity"
+      ]
+    }
+  },
+  {
+    "lemma": "przyzwoity",
+    "id": "pol-adj-0752-przyzwoity",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "nieprzyzwoity"
+      ]
+    }
+  },
+  {
+    "lemma": "przeklęty",
+    "id": "pol-adj-0753-przeklęty",
+    "frequency": 4,
+    "register": 8,
+    "extra": {
+      "synonyms": [
+        "cholerny",
+        "okropny",
+        "straszny"
+      ]
+    }
+  },
+  {
+    "lemma": "pospolity",
+    "id": "pol-adj-0754-pospolity",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "powszechny",
+        "zwykły"
+      ]
+    }
+  },
+  {
+    "lemma": "prawy",
+    "id": "pol-adj-0755-prawy",
+    "frequency": 1,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "legalny"
+      ],
+      "antonyms": [
+        "lewy",
+        "niegodziwy"
+      ]
+    }
+  },
+  {
+    "lemma": "niegodziwy",
+    "id": "pol-adj-0756-niegodziwy",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "podły",
+    "id": "pol-adj-0757-podły",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "Mój ojciec był naprawdę podłym człowiekiem. ― My father was truly a wicked man.",
+        "Potraktowano nas w podły sposób. ― We were treated in a disgraceful way.",
+        "To piwo jest wyjątkowo podłe . ― This beer is exceptionally awful ."
+      ]
+    }
+  },
+  {
+    "lemma": "ranny",
+    "id": "pol-adj-0758-ranny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "poraniony",
+        "zraniony"
+      ]
+    }
+  },
+  {
+    "lemma": "przedni",
+    "id": "pol-adj-0759-przedni",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "tylny",
+        "zadni"
+      ]
+    }
+  },
+  {
+    "lemma": "tylny",
+    "id": "pol-adj-0760-tylny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "zadni"
+      ],
+      "antonyms": [
+        "przedni"
+      ]
+    }
+  },
+  {
+    "lemma": "południowy",
+    "id": "pol-adj-0761-południowy(southern)",
+    "frequency": 2,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "direction",
+      "emoji": "📍"
+    },
+    "extra": {
+      "usage": [
+        "Coordinate term: północny"
+      ]
+    }
+  },
+  {
+    "lemma": "południowy",
+    "id": "pol-adj-0762-południowy(noon)",
+    "frequency": 3,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "time",
+      "emoji": "🕒"
+    },
+    "extra": {
+      "usage": [
+        "Coordinate term: północny"
+      ]
+    }
+  },
+  {
+    "lemma": "stromy",
+    "id": "pol-adj-0763-stromy",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "płynny",
+    "id": "pol-adj-0764-płynny",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "biegły"
+      ]
+    }
+  },
+  {
+    "lemma": "prawicowy",
+    "id": "pol-adj-0765-prawicowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "pozostały",
+    "id": "pol-adj-0766-pozostały",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "poranny",
+    "id": "pol-adj-0767-poranny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "posępny",
+    "id": "pol-adj-0768-posępny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "podwójny",
+    "id": "pol-adj-0769-podwójny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "precyzyjny",
+    "id": "pol-adj-0770-precyzyjny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "roczny",
+    "id": "pol-adj-0771-roczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "prywatny",
+    "id": "pol-adj-0772-prywatny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "podziemny",
+    "id": "pol-adj-0773-podziemny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "przyszły",
+    "id": "pol-adj-0774-przyszły",
+    "frequency": 2,
+    "register": 0
+  },
+  {
+    "lemma": "przyrodniczy",
+    "id": "pol-adj-0775-przyrodniczy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "potworny",
+    "id": "pol-adj-0776-potworny(monstrous)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "monstrous",
+      "emoji": "👹"
+    }
+  },
+  {
+    "lemma": "potworny",
+    "id": "pol-adj-0777-potworny(appalling)",
+    "_inflectionsRoot": "pol-adj-0776-potworny(monstrous)",
+    "frequency": 4,
+    "register": 0,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "appalling",
+      "emoji": "😠"
+    }
+  },
+  {
+    "lemma": "przestrzenny",
+    "id": "pol-adj-0778-przestrzenny",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "psychologiczny",
+    "id": "pol-adj-0779-psychologiczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "przejrzysty",
+    "id": "pol-adj-0780-przejrzysty",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "psychiczny",
+    "id": "pol-adj-0781-psychiczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "publiczny",
+    "id": "pol-adj-0782-publiczny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "porządny",
+    "id": "pol-adj-0783-porządny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "inny",
+    "id": "pol-adj-0784-inny",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "różny"
+      ],
+      "antonyms": [
+        "ten sam",
+        "taki sam",
+        "identyczny"
+      ]
+    }
+  },
+  {
+    "lemma": "zdeterminowany",
+    "id": "pol-adj-0785-zdeterminowany",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "zdecydowany"
+      ]
+    }
+  },
+  {
+    "lemma": "gigantyczny",
+    "id": "pol-adj-0786-gigantyczny",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "duży"
+      ]
+    }
+  },
+  {
+    "lemma": "kanadyjski",
+    "id": "pol-adj-0787-kanadyjski",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "ratunkowy",
+    "id": "pol-adj-0788-ratunkowy",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "złamany",
+    "id": "pol-adj-0789-złamany",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "zepsuty"
+      ]
+    }
+  },
+  {
+    "lemma": "gęsty",
+    "id": "pol-adj-0790-gęsty",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "rzadki"
+      ]
+    }
+  },
+  {
+    "lemma": "zielony",
+    "id": "pol-adj-0791-zielony",
+    "frequency": 1,
+    "register": 0,
+    "extra": {
+      "usage": [
+        "On jest totalnie zielony w tym obszarze. ― He's totally green in this field"
+      ]
+    }
+  },
+  {
+    "lemma": "czysty",
+    "id": "pol-adj-0792-czysty",
+    "frequency": 2,
+    "register": 0,
+    "extra": {
+      "antonyms": [
+        "brudny",
+        "rozpuszczonyy",
+        "zanieczyszczony",
+        "podstępny",
+        "nieczysty"
+      ]
+    }
+  },
+  {
+    "lemma": "schludny",
+    "id": "pol-adj-0793-schludny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "różowy",
+    "id": "pol-adj-0794-różowy",
+    "frequency": 1,
+    "register": 0
+  },
+  {
+    "lemma": "perfekcyjny",
+    "id": "pol-adj-0795-perfekcyjny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "nieodzowny",
+    "id": "pol-adj-0796-nieodzowny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "pierwszorzędowy",
+    "id": "pol-adj-0797-pierwszorzędowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "lukratywny",
+    "id": "pol-adj-0798-lukratywny",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "małostkowy",
+    "id": "pol-adj-0799-małostkowy",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "aktualny",
+    "id": "pol-adj-0800-aktualny",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "krzykliwy",
+    "id": "pol-adj-0801-krzykliwy",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "środkowy",
+    "id": "pol-adj-0802-środkowy",
+    "frequency": 3,
+    "register": 0
+  },
+  {
+    "lemma": "stały",
+    "id": "pol-adj-0803-stały",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "nieruchomy",
+        "nieodłączny",
+        "nieprzerwany",
+        "trwały",
+        "niezmienny"
+      ],
+      "antonyms": [
+        "ruchomy",
+        "czasowy",
+        "tymczasowy",
+        "okresowy",
+        "tymczasowy",
+        "dorywczy",
+        "zmienny"
+      ]
+    }
+  },
+  {
+    "lemma": "trwały",
+    "id": "pol-adj-0804-trwały",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "permanentny"
+      ],
+      "antonyms": [
+        "nietrwały"
+      ]
+    }
+  },
+  {
+    "lemma": "srebrny",
+    "id": "pol-adj-0805-srebrny",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "srebrzysty"
+      ]
+    }
+  },
+  {
+    "lemma": "siwy",
+    "id": "pol-adj-0806-siwy",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "popielaty",
+        "szary",
+        "szpakowaty",
+        "sędziwy"
+      ]
+    }
+  },
+  {
+    "lemma": "bordowy",
+    "id": "pol-adj-0807-bordowy",
+    "frequency": 5,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "bordo"
+      ]
+    }
+  },
+  {
+    "lemma": "złoty",
+    "id": "pol-adj-0808-złoty",
+    "frequency": 3,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "złocisty",
+        "złotolity",
+        "szczerozłoty",
+        "złocisty",
+        "złociutki",
+        "pozłocisty",
+        "złotolity",
+        "dobry"
+      ]
+    }
+  },
+  {
+    "lemma": "liliowy",
+    "id": "pol-adj-0809-liliowy",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "jasnofioletowy",
+        "lila",
+        "liliowy:"
+      ]
+    }
+  },
+  {
+    "lemma": "beżowy",
+    "id": "pol-adj-0810-beżowy",
+    "frequency": 4,
+    "register": 0,
+    "extra": {
+      "synonyms": [
+        "beż"
+      ]
+    }
+  },
+  {
+    "lemma": "karmazynowy",
+    "id": "pol-adj-0811-karmazynowy",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "lazurowy",
+    "id": "pol-adj-0812-lazurowy",
+    "frequency": 5,
+    "register": 0
+  },
+  {
+    "lemma": "szkarłatny",
+    "id": "pol-adj-0813-szkarłatny",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "turkusowy",
+    "id": "pol-adj-0814-turkusowy",
+    "frequency": 4,
+    "register": 0
+  },
+  {
+    "lemma": "cyrankowy",
+    "id": "pol-adj-0815-cyrankowy",
+    "frequency": 5,
+    "register": 0
+  }
+]

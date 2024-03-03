@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "bosko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "boski",
+          "gen": "boskiego",
+          "dat": "boskiemu",
+          "acc": "boskiego",
+          "ins": "boskim",
+          "loc": "boskim"
+        },
+        "m3": {
+          "nom": "boski",
+          "gen": "boskiego",
+          "dat": "boskiemu",
+          "acc": "boski",
+          "ins": "boskim",
+          "loc": "boskim"
+        },
+        "f": {
+          "nom": "boska",
+          "gen": "boskiej",
+          "dat": "boskiej",
+          "acc": "boską",
+          "ins": "boską",
+          "loc": "boskiej"
+        },
+        "n": {
+          "nom": "boskie",
+          "gen": "boskiego",
+          "dat": "boskiemu",
+          "acc": "boskie",
+          "ins": "boskim",
+          "loc": "boskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "boscy",
+          "gen": "boskich",
+          "dat": "boskim",
+          "acc": "boskich",
+          "ins": "boskimi",
+          "loc": "boskich"
+        },
+        "nonvirile": {
+          "nom": "boskie",
+          "gen": "boskich",
+          "dat": "boskim",
+          "acc": "boskie",
+          "ins": "boskimi",
+          "loc": "boskich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej boski",
+          "gen": "bardziej boskiego",
+          "dat": "bardziej boskiemu",
+          "acc": "bardziej boskiego",
+          "ins": "bardziej boskim",
+          "loc": "bardziej boskim"
+        },
+        "m3": {
+          "nom": "bardziej boski",
+          "gen": "bardziej boskiego",
+          "dat": "bardziej boskiemu",
+          "acc": "bardziej boski",
+          "ins": "bardziej boskim",
+          "loc": "bardziej boskim"
+        },
+        "f": {
+          "nom": "bardziej boska",
+          "gen": "bardziej boskiej",
+          "dat": "bardziej boskiej",
+          "acc": "bardziej boską",
+          "ins": "bardziej boską",
+          "loc": "bardziej boskiej"
+        },
+        "n": {
+          "nom": "bardziej boskie",
+          "gen": "bardziej boskiego",
+          "dat": "bardziej boskiemu",
+          "acc": "bardziej boskie",
+          "ins": "bardziej boskim",
+          "loc": "bardziej boskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej boscy",
+          "gen": "bardziej boskich",
+          "dat": "bardziej boskim",
+          "acc": "bardziej boskich",
+          "ins": "bardziej boskimi",
+          "loc": "bardziej boskich"
+        },
+        "nonvirile": {
+          "nom": "bardziej boskie",
+          "gen": "bardziej boskich",
+          "dat": "bardziej boskim",
+          "acc": "bardziej boskie",
+          "ins": "bardziej boskimi",
+          "loc": "bardziej boskich"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej boski",
+          "gen": "najbardziej boskiego",
+          "dat": "najbardziej boskiemu",
+          "acc": "najbardziej boskiego",
+          "ins": "najbardziej boskim",
+          "loc": "najbardziej boskim"
+        },
+        "m3": {
+          "nom": "najbardziej boski",
+          "gen": "najbardziej boskiego",
+          "dat": "najbardziej boskiemu",
+          "acc": "najbardziej boski",
+          "ins": "najbardziej boskim",
+          "loc": "najbardziej boskim"
+        },
+        "f": {
+          "nom": "najbardziej boska",
+          "gen": "najbardziej boskiej",
+          "dat": "najbardziej boskiej",
+          "acc": "najbardziej boską",
+          "ins": "najbardziej boską",
+          "loc": "najbardziej boskiej"
+        },
+        "n": {
+          "nom": "najbardziej boskie",
+          "gen": "najbardziej boskiego",
+          "dat": "najbardziej boskiemu",
+          "acc": "najbardziej boskie",
+          "ins": "najbardziej boskim",
+          "loc": "najbardziej boskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej boscy",
+          "gen": "najbardziej boskich",
+          "dat": "najbardziej boskim",
+          "acc": "najbardziej boskich",
+          "ins": "najbardziej boskimi",
+          "loc": "najbardziej boskich"
+        },
+        "nonvirile": {
+          "nom": "najbardziej boskie",
+          "gen": "najbardziej boskich",
+          "dat": "najbardziej boskim",
+          "acc": "najbardziej boskie",
+          "ins": "najbardziej boskimi",
+          "loc": "najbardziej boskich"
+        }
+      }
+    }
+  }
+}

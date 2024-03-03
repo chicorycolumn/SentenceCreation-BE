@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "poznać",
+    "verbalNoun": "poznanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "poznany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "poznawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pozna się"
+          },
+          "plural": {
+            "allPluralGenders": "pozna się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "poznam"
+          },
+          "plural": {
+            "allPluralGenders": "poznamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "poznasz"
+          },
+          "plural": {
+            "allPluralGenders": "poznacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pozna"
+          },
+          "plural": {
+            "allPluralGenders": "poznają"
+          }
+        }
+      },
+      "imperative": "poznaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poznano"
+          },
+          "plural": {
+            "allPluralGenders": "poznano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "poznałem",
+            "f": "poznałam"
+          },
+          "plural": {
+            "virile": "poznaliśmy",
+            "nonvirile": "poznałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "poznałeś",
+            "f": "poznałaś"
+          },
+          "plural": {
+            "virile": "poznaliście",
+            "nonvirile": "poznałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "poznał",
+            "f": "poznała",
+            "n": "poznało"
+          },
+          "plural": {
+            "virile": "poznali",
+            "nonvirile": "poznały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

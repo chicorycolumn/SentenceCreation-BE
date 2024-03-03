@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nazwać",
+    "verbalNoun": "nazwanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "nazwany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "nazwawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nazwie się"
+          },
+          "plural": {
+            "allPluralGenders": "nazwie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nazwę"
+          },
+          "plural": {
+            "allPluralGenders": "nazwiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nazwiesz"
+          },
+          "plural": {
+            "allPluralGenders": "nazwiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nazwie"
+          },
+          "plural": {
+            "allPluralGenders": "nazwą"
+          }
+        }
+      },
+      "imperative": "nazwij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nazwano"
+          },
+          "plural": {
+            "allPluralGenders": "nazwano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nazwałem",
+            "f": "nazwałam"
+          },
+          "plural": {
+            "virile": "nazwaliśmy",
+            "nonvirile": "nazwałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nazwałeś",
+            "f": "nazwałaś"
+          },
+          "plural": {
+            "virile": "nazwaliście",
+            "nonvirile": "nazwałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nazwał",
+            "f": "nazwała",
+            "n": "nazwało"
+          },
+          "plural": {
+            "virile": "nazwali",
+            "nonvirile": "nazwały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

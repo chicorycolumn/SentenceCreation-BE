@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zagrać",
+    "verbalNoun": "zagranie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zagrany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zagrawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zagra się"
+          },
+          "plural": {
+            "allPluralGenders": "zagra się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zagram"
+          },
+          "plural": {
+            "allPluralGenders": "zagramy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zagrasz"
+          },
+          "plural": {
+            "allPluralGenders": "zagracie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zagra"
+          },
+          "plural": {
+            "allPluralGenders": "zagrają"
+          }
+        }
+      },
+      "imperative": "zagraj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zagrano"
+          },
+          "plural": {
+            "allPluralGenders": "zagrano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zagrałem",
+            "f": "zagrałam"
+          },
+          "plural": {
+            "virile": "zagraliśmy",
+            "nonvirile": "zagrałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zagrałeś",
+            "f": "zagrałaś"
+          },
+          "plural": {
+            "virile": "zagraliście",
+            "nonvirile": "zagrałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zagrał",
+            "f": "zagrała",
+            "n": "zagrało"
+          },
+          "plural": {
+            "virile": "zagrali",
+            "nonvirile": "zagrały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

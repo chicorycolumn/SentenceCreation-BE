@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "gniewać",
+    "verbalNoun": "gniewanie",
+    "activeAdjectival": "gniewający",
+    "passiveAdjectival": "gniewany",
+    "contemporaryAdverbial": "gniewając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "gniewaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "gniewano"
+          },
+          "plural": {
+            "allPluralGenders": "gniewano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "gniewałem",
+            "f": "gniewałam"
+          },
+          "plural": {
+            "virile": "gniewaliśmy",
+            "nonvirile": "gniewałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "gniewałeś",
+            "f": "gniewałaś"
+          },
+          "plural": {
+            "virile": "gniewaliście",
+            "nonvirile": "gniewałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "gniewał",
+            "f": "gniewała",
+            "n": "gniewało"
+          },
+          "plural": {
+            "virile": "gniewali",
+            "nonvirile": "gniewały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "gniewa się"
+          },
+          "plural": {
+            "allPluralGenders": "gniewa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "gniewam"
+          },
+          "plural": {
+            "allPluralGenders": "gniewamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "gniewasz"
+          },
+          "plural": {
+            "allPluralGenders": "gniewacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "gniewa"
+          },
+          "plural": {
+            "allPluralGenders": "gniewają"
+          }
+        }
+      }
+    }
+  }
+}

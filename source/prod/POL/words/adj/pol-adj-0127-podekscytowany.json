@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "podekscytowanie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "podekscytowany",
+          "gen": "podekscytowanego",
+          "dat": "podekscytowanemu",
+          "acc": "podekscytowanego",
+          "ins": "podekscytowanym",
+          "loc": "podekscytowanym"
+        },
+        "m3": {
+          "nom": "podekscytowany",
+          "gen": "podekscytowanego",
+          "dat": "podekscytowanemu",
+          "acc": "podekscytowany",
+          "ins": "podekscytowanym",
+          "loc": "podekscytowanym"
+        },
+        "f": {
+          "nom": "podekscytowana",
+          "gen": "podekscytowanej",
+          "dat": "podekscytowanej",
+          "acc": "podekscytowaną",
+          "ins": "podekscytowaną",
+          "loc": "podekscytowanej"
+        },
+        "n": {
+          "nom": "podekscytowane",
+          "gen": "podekscytowanego",
+          "dat": "podekscytowanemu",
+          "acc": "podekscytowane",
+          "ins": "podekscytowanym",
+          "loc": "podekscytowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "podekscytowani",
+          "gen": "podekscytowanych",
+          "dat": "podekscytowanym",
+          "acc": "podekscytowanych",
+          "ins": "podekscytowanymi",
+          "loc": "podekscytowanych"
+        },
+        "nonvirile": {
+          "nom": "podekscytowane",
+          "gen": "podekscytowanych",
+          "dat": "podekscytowanym",
+          "acc": "podekscytowane",
+          "ins": "podekscytowanymi",
+          "loc": "podekscytowanych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "podekscytowaniejszy",
+          "gen": "podekscytowaniejszego",
+          "dat": "podekscytowaniejszemu",
+          "acc": "podekscytowaniejszego",
+          "ins": "podekscytowaniejszym",
+          "loc": "podekscytowaniejszym"
+        },
+        "m3": {
+          "nom": "podekscytowaniejszy",
+          "gen": "podekscytowaniejszego",
+          "dat": "podekscytowaniejszemu",
+          "acc": "podekscytowaniejszy",
+          "ins": "podekscytowaniejszym",
+          "loc": "podekscytowaniejszym"
+        },
+        "f": {
+          "nom": "podekscytowaniejsza",
+          "gen": "podekscytowaniejszej",
+          "dat": "podekscytowaniejszej",
+          "acc": "podekscytowaniejszą",
+          "ins": "podekscytowaniejszą",
+          "loc": "podekscytowaniejszej"
+        },
+        "n": {
+          "nom": "podekscytowaniejsze",
+          "gen": "podekscytowaniejszego",
+          "dat": "podekscytowaniejszemu",
+          "acc": "podekscytowaniejsze",
+          "ins": "podekscytowaniejszym",
+          "loc": "podekscytowaniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "podekscytowaniejsi",
+          "gen": "podekscytowaniejszych",
+          "dat": "podekscytowaniejszym",
+          "acc": "podekscytowaniejszych",
+          "ins": "podekscytowaniejszymi",
+          "loc": "podekscytowaniejszych"
+        },
+        "nonvirile": {
+          "nom": "podekscytowaniejsze",
+          "gen": "podekscytowaniejszych",
+          "dat": "podekscytowaniejszym",
+          "acc": "podekscytowaniejsze",
+          "ins": "podekscytowaniejszymi",
+          "loc": "podekscytowaniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najpodekscytowaniejszy",
+          "gen": "najpodekscytowaniejszego",
+          "dat": "najpodekscytowaniejszemu",
+          "acc": "najpodekscytowaniejszego",
+          "ins": "najpodekscytowaniejszym",
+          "loc": "najpodekscytowaniejszym"
+        },
+        "m3": {
+          "nom": "najpodekscytowaniejszy",
+          "gen": "najpodekscytowaniejszego",
+          "dat": "najpodekscytowaniejszemu",
+          "acc": "najpodekscytowaniejszy",
+          "ins": "najpodekscytowaniejszym",
+          "loc": "najpodekscytowaniejszym"
+        },
+        "f": {
+          "nom": "najpodekscytowaniejsza",
+          "gen": "najpodekscytowaniejszej",
+          "dat": "najpodekscytowaniejszej",
+          "acc": "najpodekscytowaniejszą",
+          "ins": "najpodekscytowaniejszą",
+          "loc": "najpodekscytowaniejszej"
+        },
+        "n": {
+          "nom": "najpodekscytowaniejsze",
+          "gen": "najpodekscytowaniejszego",
+          "dat": "najpodekscytowaniejszemu",
+          "acc": "najpodekscytowaniejsze",
+          "ins": "najpodekscytowaniejszym",
+          "loc": "najpodekscytowaniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najpodekscytowaniejsi",
+          "gen": "najpodekscytowaniejszych",
+          "dat": "najpodekscytowaniejszym",
+          "acc": "najpodekscytowaniejszych",
+          "ins": "najpodekscytowaniejszymi",
+          "loc": "najpodekscytowaniejszych"
+        },
+        "nonvirile": {
+          "nom": "najpodekscytowaniejsze",
+          "gen": "najpodekscytowaniejszych",
+          "dat": "najpodekscytowaniejszym",
+          "acc": "najpodekscytowaniejsze",
+          "ins": "najpodekscytowaniejszymi",
+          "loc": "najpodekscytowaniejszych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nauczać",
+    "verbalNoun": "nauczanie",
+    "activeAdjectival": "nauczający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "nauczając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "nauczaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nauczano"
+          },
+          "plural": {
+            "allPluralGenders": "nauczano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nauczałem",
+            "f": "nauczałam"
+          },
+          "plural": {
+            "virile": "nauczaliśmy",
+            "nonvirile": "nauczałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nauczałeś",
+            "f": "nauczałaś"
+          },
+          "plural": {
+            "virile": "nauczaliście",
+            "nonvirile": "nauczałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nauczał",
+            "f": "nauczała",
+            "n": "nauczało"
+          },
+          "plural": {
+            "virile": "nauczali",
+            "nonvirile": "nauczały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "naucza się"
+          },
+          "plural": {
+            "allPluralGenders": "naucza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nauczam"
+          },
+          "plural": {
+            "allPluralGenders": "nauczamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nauczasz"
+          },
+          "plural": {
+            "allPluralGenders": "nauczacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "naucza"
+          },
+          "plural": {
+            "allPluralGenders": "nauczają"
+          }
+        }
+      }
+    }
+  }
+}

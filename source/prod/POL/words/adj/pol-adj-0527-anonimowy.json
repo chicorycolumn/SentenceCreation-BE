@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "anonimowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "anonimowy",
+          "gen": "anonimowego",
+          "dat": "anonimowemu",
+          "acc": "anonimowego",
+          "ins": "anonimowym",
+          "loc": "anonimowym"
+        },
+        "m3": {
+          "nom": "anonimowy",
+          "gen": "anonimowego",
+          "dat": "anonimowemu",
+          "acc": "anonimowy",
+          "ins": "anonimowym",
+          "loc": "anonimowym"
+        },
+        "f": {
+          "nom": "anonimowa",
+          "gen": "anonimowej",
+          "dat": "anonimowej",
+          "acc": "anonimową",
+          "ins": "anonimową",
+          "loc": "anonimowej"
+        },
+        "n": {
+          "nom": "anonimowe",
+          "gen": "anonimowego",
+          "dat": "anonimowemu",
+          "acc": "anonimowe",
+          "ins": "anonimowym",
+          "loc": "anonimowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "anonimowi",
+          "gen": "anonimowych",
+          "dat": "anonimowym",
+          "acc": "anonimowych",
+          "ins": "anonimowymi",
+          "loc": "anonimowych"
+        },
+        "nonvirile": {
+          "nom": "anonimowe",
+          "gen": "anonimowych",
+          "dat": "anonimowym",
+          "acc": "anonimowe",
+          "ins": "anonimowymi",
+          "loc": "anonimowych"
+        }
+      }
+    }
+  }
+}

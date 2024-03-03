@@ -1,0 +1,30 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "radio",
+      "gen": "radia",
+      "dat": "radiu",
+      "acc": "radio",
+      "ins": "radiem",
+      "loc": {
+        "isTerminus": true,
+        "normal": [
+          "radiu"
+        ],
+        "additionalInfrequent": [
+          "radio"
+        ]
+      },
+      "voc": "radio"
+    },
+    "plural": {
+      "nom": "radia",
+      "gen": "radiów",
+      "dat": "radiom",
+      "acc": "radia",
+      "ins": "radiami",
+      "loc": "radiach",
+      "voc": "radia"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "odwrotnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "odwrotny",
+          "gen": "odwrotnego",
+          "dat": "odwrotnemu",
+          "acc": "odwrotnego",
+          "ins": "odwrotnym",
+          "loc": "odwrotnym"
+        },
+        "m3": {
+          "nom": "odwrotny",
+          "gen": "odwrotnego",
+          "dat": "odwrotnemu",
+          "acc": "odwrotny",
+          "ins": "odwrotnym",
+          "loc": "odwrotnym"
+        },
+        "f": {
+          "nom": "odwrotna",
+          "gen": "odwrotnej",
+          "dat": "odwrotnej",
+          "acc": "odwrotną",
+          "ins": "odwrotną",
+          "loc": "odwrotnej"
+        },
+        "n": {
+          "nom": "odwrotne",
+          "gen": "odwrotnego",
+          "dat": "odwrotnemu",
+          "acc": "odwrotne",
+          "ins": "odwrotnym",
+          "loc": "odwrotnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "odwrotni",
+          "gen": "odwrotnych",
+          "dat": "odwrotnym",
+          "acc": "odwrotnych",
+          "ins": "odwrotnymi",
+          "loc": "odwrotnych"
+        },
+        "nonvirile": {
+          "nom": "odwrotne",
+          "gen": "odwrotnych",
+          "dat": "odwrotnym",
+          "acc": "odwrotne",
+          "ins": "odwrotnymi",
+          "loc": "odwrotnych"
+        }
+      }
+    }
+  }
+}

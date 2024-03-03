@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "pesymistycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pesymistyczny",
+          "gen": "pesymistycznego",
+          "dat": "pesymistycznemu",
+          "acc": "pesymistycznego",
+          "ins": "pesymistycznym",
+          "loc": "pesymistycznym"
+        },
+        "m3": {
+          "nom": "pesymistyczny",
+          "gen": "pesymistycznego",
+          "dat": "pesymistycznemu",
+          "acc": "pesymistyczny",
+          "ins": "pesymistycznym",
+          "loc": "pesymistycznym"
+        },
+        "f": {
+          "nom": "pesymistyczna",
+          "gen": "pesymistycznej",
+          "dat": "pesymistycznej",
+          "acc": "pesymistyczną",
+          "ins": "pesymistyczną",
+          "loc": "pesymistycznej"
+        },
+        "n": {
+          "nom": "pesymistyczne",
+          "gen": "pesymistycznego",
+          "dat": "pesymistycznemu",
+          "acc": "pesymistyczne",
+          "ins": "pesymistycznym",
+          "loc": "pesymistycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pesymistyczni",
+          "gen": "pesymistycznych",
+          "dat": "pesymistycznym",
+          "acc": "pesymistycznych",
+          "ins": "pesymistycznymi",
+          "loc": "pesymistycznych"
+        },
+        "nonvirile": {
+          "nom": "pesymistyczne",
+          "gen": "pesymistycznych",
+          "dat": "pesymistycznym",
+          "acc": "pesymistyczne",
+          "ins": "pesymistycznymi",
+          "loc": "pesymistycznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej pesymistyczny",
+          "gen": "bardziej pesymistycznego",
+          "dat": "bardziej pesymistycznemu",
+          "acc": "bardziej pesymistycznego",
+          "ins": "bardziej pesymistycznym",
+          "loc": "bardziej pesymistycznym"
+        },
+        "m3": {
+          "nom": "bardziej pesymistyczny",
+          "gen": "bardziej pesymistycznego",
+          "dat": "bardziej pesymistycznemu",
+          "acc": "bardziej pesymistyczny",
+          "ins": "bardziej pesymistycznym",
+          "loc": "bardziej pesymistycznym"
+        },
+        "f": {
+          "nom": "bardziej pesymistyczna",
+          "gen": "bardziej pesymistycznej",
+          "dat": "bardziej pesymistycznej",
+          "acc": "bardziej pesymistyczną",
+          "ins": "bardziej pesymistyczną",
+          "loc": "bardziej pesymistycznej"
+        },
+        "n": {
+          "nom": "bardziej pesymistyczne",
+          "gen": "bardziej pesymistycznego",
+          "dat": "bardziej pesymistycznemu",
+          "acc": "bardziej pesymistyczne",
+          "ins": "bardziej pesymistycznym",
+          "loc": "bardziej pesymistycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej pesymistyczni",
+          "gen": "bardziej pesymistycznych",
+          "dat": "bardziej pesymistycznym",
+          "acc": "bardziej pesymistycznych",
+          "ins": "bardziej pesymistycznymi",
+          "loc": "bardziej pesymistycznych"
+        },
+        "nonvirile": {
+          "nom": "bardziej pesymistyczne",
+          "gen": "bardziej pesymistycznych",
+          "dat": "bardziej pesymistycznym",
+          "acc": "bardziej pesymistyczne",
+          "ins": "bardziej pesymistycznymi",
+          "loc": "bardziej pesymistycznych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej pesymistyczny",
+          "gen": "najbardziej pesymistycznego",
+          "dat": "najbardziej pesymistycznemu",
+          "acc": "najbardziej pesymistycznego",
+          "ins": "najbardziej pesymistycznym",
+          "loc": "najbardziej pesymistycznym"
+        },
+        "m3": {
+          "nom": "najbardziej pesymistyczny",
+          "gen": "najbardziej pesymistycznego",
+          "dat": "najbardziej pesymistycznemu",
+          "acc": "najbardziej pesymistyczny",
+          "ins": "najbardziej pesymistycznym",
+          "loc": "najbardziej pesymistycznym"
+        },
+        "f": {
+          "nom": "najbardziej pesymistyczna",
+          "gen": "najbardziej pesymistycznej",
+          "dat": "najbardziej pesymistycznej",
+          "acc": "najbardziej pesymistyczną",
+          "ins": "najbardziej pesymistyczną",
+          "loc": "najbardziej pesymistycznej"
+        },
+        "n": {
+          "nom": "najbardziej pesymistyczne",
+          "gen": "najbardziej pesymistycznego",
+          "dat": "najbardziej pesymistycznemu",
+          "acc": "najbardziej pesymistyczne",
+          "ins": "najbardziej pesymistycznym",
+          "loc": "najbardziej pesymistycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej pesymistyczni",
+          "gen": "najbardziej pesymistycznych",
+          "dat": "najbardziej pesymistycznym",
+          "acc": "najbardziej pesymistycznych",
+          "ins": "najbardziej pesymistycznymi",
+          "loc": "najbardziej pesymistycznych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej pesymistyczne",
+          "gen": "najbardziej pesymistycznych",
+          "dat": "najbardziej pesymistycznym",
+          "acc": "najbardziej pesymistyczne",
+          "ins": "najbardziej pesymistycznymi",
+          "loc": "najbardziej pesymistycznych"
+        }
+      }
+    }
+  }
+}

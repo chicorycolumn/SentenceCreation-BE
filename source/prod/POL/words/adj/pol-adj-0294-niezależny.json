@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niezależnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niezależny",
+          "gen": "niezależnego",
+          "dat": "niezależnemu",
+          "acc": "niezależnego",
+          "ins": "niezależnym",
+          "loc": "niezależnym"
+        },
+        "m3": {
+          "nom": "niezależny",
+          "gen": "niezależnego",
+          "dat": "niezależnemu",
+          "acc": "niezależny",
+          "ins": "niezależnym",
+          "loc": "niezależnym"
+        },
+        "f": {
+          "nom": "niezależna",
+          "gen": "niezależnej",
+          "dat": "niezależnej",
+          "acc": "niezależną",
+          "ins": "niezależną",
+          "loc": "niezależnej"
+        },
+        "n": {
+          "nom": "niezależne",
+          "gen": "niezależnego",
+          "dat": "niezależnemu",
+          "acc": "niezależne",
+          "ins": "niezależnym",
+          "loc": "niezależnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niezależni",
+          "gen": "niezależnych",
+          "dat": "niezależnym",
+          "acc": "niezależnych",
+          "ins": "niezależnymi",
+          "loc": "niezależnych"
+        },
+        "nonvirile": {
+          "nom": "niezależne",
+          "gen": "niezależnych",
+          "dat": "niezależnym",
+          "acc": "niezależne",
+          "ins": "niezależnymi",
+          "loc": "niezależnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej niezależny",
+          "gen": "bardziej niezależnego",
+          "dat": "bardziej niezależnemu",
+          "acc": "bardziej niezależnego",
+          "ins": "bardziej niezależnym",
+          "loc": "bardziej niezależnym"
+        },
+        "m3": {
+          "nom": "bardziej niezależny",
+          "gen": "bardziej niezależnego",
+          "dat": "bardziej niezależnemu",
+          "acc": "bardziej niezależny",
+          "ins": "bardziej niezależnym",
+          "loc": "bardziej niezależnym"
+        },
+        "f": {
+          "nom": "bardziej niezależna",
+          "gen": "bardziej niezależnej",
+          "dat": "bardziej niezależnej",
+          "acc": "bardziej niezależną",
+          "ins": "bardziej niezależną",
+          "loc": "bardziej niezależnej"
+        },
+        "n": {
+          "nom": "bardziej niezależne",
+          "gen": "bardziej niezależnego",
+          "dat": "bardziej niezależnemu",
+          "acc": "bardziej niezależne",
+          "ins": "bardziej niezależnym",
+          "loc": "bardziej niezależnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej niezależni",
+          "gen": "bardziej niezależnych",
+          "dat": "bardziej niezależnym",
+          "acc": "bardziej niezależnych",
+          "ins": "bardziej niezależnymi",
+          "loc": "bardziej niezależnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej niezależne",
+          "gen": "bardziej niezależnych",
+          "dat": "bardziej niezależnym",
+          "acc": "bardziej niezależne",
+          "ins": "bardziej niezależnymi",
+          "loc": "bardziej niezależnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej niezależny",
+          "gen": "najbardziej niezależnego",
+          "dat": "najbardziej niezależnemu",
+          "acc": "najbardziej niezależnego",
+          "ins": "najbardziej niezależnym",
+          "loc": "najbardziej niezależnym"
+        },
+        "m3": {
+          "nom": "najbardziej niezależny",
+          "gen": "najbardziej niezależnego",
+          "dat": "najbardziej niezależnemu",
+          "acc": "najbardziej niezależny",
+          "ins": "najbardziej niezależnym",
+          "loc": "najbardziej niezależnym"
+        },
+        "f": {
+          "nom": "najbardziej niezależna",
+          "gen": "najbardziej niezależnej",
+          "dat": "najbardziej niezależnej",
+          "acc": "najbardziej niezależną",
+          "ins": "najbardziej niezależną",
+          "loc": "najbardziej niezależnej"
+        },
+        "n": {
+          "nom": "najbardziej niezależne",
+          "gen": "najbardziej niezależnego",
+          "dat": "najbardziej niezależnemu",
+          "acc": "najbardziej niezależne",
+          "ins": "najbardziej niezależnym",
+          "loc": "najbardziej niezależnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej niezależni",
+          "gen": "najbardziej niezależnych",
+          "dat": "najbardziej niezależnym",
+          "acc": "najbardziej niezależnych",
+          "ins": "najbardziej niezależnymi",
+          "loc": "najbardziej niezależnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej niezależne",
+          "gen": "najbardziej niezależnych",
+          "dat": "najbardziej niezależnym",
+          "acc": "najbardziej niezależne",
+          "ins": "najbardziej niezależnymi",
+          "loc": "najbardziej niezależnych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "winda",
+      "gen": "windy",
+      "dat": "windzie",
+      "acc": "windę",
+      "ins": "windą",
+      "loc": "windzie",
+      "voc": "windo"
+    },
+    "plural": {
+      "nom": "windy",
+      "gen": "wind",
+      "dat": "windom",
+      "acc": "windy",
+      "ins": "windami",
+      "loc": "windach",
+      "voc": "windy"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "próbować",
+    "verbalNoun": "próbowanie",
+    "activeAdjectival": "próbujący",
+    "passiveAdjectival": "próbowany",
+    "contemporaryAdverbial": "próbując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "próbuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "próbowano"
+          },
+          "plural": {
+            "allPluralGenders": "próbowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "próbowałem",
+            "f": "próbowałam"
+          },
+          "plural": {
+            "virile": "próbowaliśmy",
+            "nonvirile": "próbowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "próbowałeś",
+            "f": "próbowałaś"
+          },
+          "plural": {
+            "virile": "próbowaliście",
+            "nonvirile": "próbowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "próbował",
+            "f": "próbowała",
+            "n": "próbowało"
+          },
+          "plural": {
+            "virile": "próbowali",
+            "nonvirile": "próbowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "próbuje się"
+          },
+          "plural": {
+            "allPluralGenders": "próbuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "próbuję"
+          },
+          "plural": {
+            "allPluralGenders": "próbujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "próbujesz"
+          },
+          "plural": {
+            "allPluralGenders": "próbujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "próbuje"
+          },
+          "plural": {
+            "allPluralGenders": "próbują"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "początek",
+      "gen": "początku",
+      "dat": "początkowi",
+      "acc": "początek",
+      "ins": "początkiem",
+      "loc": "początku",
+      "voc": "początku"
+    },
+    "plural": {
+      "nom": "początki",
+      "gen": "początków",
+      "dat": "początkom",
+      "acc": "początki",
+      "ins": "początkami",
+      "loc": "początkach",
+      "voc": "początki"
+    }
+  }
+}

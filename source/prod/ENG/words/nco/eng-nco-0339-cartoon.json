@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cartoon",
+      "gen": "cartoon's"
+    },
+    "plural": {
+      "nom": "cartoons",
+      "gen": "cartoons'"
+    }
+  }
+}

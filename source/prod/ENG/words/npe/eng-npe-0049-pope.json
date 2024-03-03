@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pope",
+      "gen": "pope's"
+    },
+    "plural": {
+      "nom": "popes",
+      "gen": "popes'"
+    }
+  }
+}

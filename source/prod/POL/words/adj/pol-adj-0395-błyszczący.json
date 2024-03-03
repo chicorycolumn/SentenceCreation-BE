@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "błyszcząco",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "błyszczący",
+          "gen": "błyszczącego",
+          "dat": "błyszczącemu",
+          "acc": "błyszczącego",
+          "ins": "błyszczącym",
+          "loc": "błyszczącym"
+        },
+        "m3": {
+          "nom": "błyszczący",
+          "gen": "błyszczącego",
+          "dat": "błyszczącemu",
+          "acc": "błyszczący",
+          "ins": "błyszczącym",
+          "loc": "błyszczącym"
+        },
+        "f": {
+          "nom": "błyszcząca",
+          "gen": "błyszczącej",
+          "dat": "błyszczącej",
+          "acc": "błyszczącą",
+          "ins": "błyszczącą",
+          "loc": "błyszczącej"
+        },
+        "n": {
+          "nom": "błyszczące",
+          "gen": "błyszczącego",
+          "dat": "błyszczącemu",
+          "acc": "błyszczące",
+          "ins": "błyszczącym",
+          "loc": "błyszczącym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "błyszczący",
+          "gen": "błyszczących",
+          "dat": "błyszczącym",
+          "acc": "błyszczących",
+          "ins": "błyszczącymi",
+          "loc": "błyszczących"
+        },
+        "nonvirile": {
+          "nom": "błyszczące",
+          "gen": "błyszczących",
+          "dat": "błyszczącym",
+          "acc": "błyszczące",
+          "ins": "błyszczącymi",
+          "loc": "błyszczących"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej błyszczący",
+          "gen": "bardziej błyszczącego",
+          "dat": "bardziej błyszczącemu",
+          "acc": "bardziej błyszczącego",
+          "ins": "bardziej błyszczącym",
+          "loc": "bardziej błyszczącym"
+        },
+        "m3": {
+          "nom": "bardziej błyszczący",
+          "gen": "bardziej błyszczącego",
+          "dat": "bardziej błyszczącemu",
+          "acc": "bardziej błyszczący",
+          "ins": "bardziej błyszczącym",
+          "loc": "bardziej błyszczącym"
+        },
+        "f": {
+          "nom": "bardziej błyszcząca",
+          "gen": "bardziej błyszczącej",
+          "dat": "bardziej błyszczącej",
+          "acc": "bardziej błyszczącą",
+          "ins": "bardziej błyszczącą",
+          "loc": "bardziej błyszczącej"
+        },
+        "n": {
+          "nom": "bardziej błyszczące",
+          "gen": "bardziej błyszczącego",
+          "dat": "bardziej błyszczącemu",
+          "acc": "bardziej błyszczące",
+          "ins": "bardziej błyszczącym",
+          "loc": "bardziej błyszczącym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej błyszczący",
+          "gen": "bardziej błyszczących",
+          "dat": "bardziej błyszczącym",
+          "acc": "bardziej błyszczących",
+          "ins": "bardziej błyszczącymi",
+          "loc": "bardziej błyszczących"
+        },
+        "nonvirile": {
+          "nom": "bardziej błyszczące",
+          "gen": "bardziej błyszczących",
+          "dat": "bardziej błyszczącym",
+          "acc": "bardziej błyszczące",
+          "ins": "bardziej błyszczącymi",
+          "loc": "bardziej błyszczących"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej błyszczący",
+          "gen": "najbardziej błyszczącego",
+          "dat": "najbardziej błyszczącemu",
+          "acc": "najbardziej błyszczącego",
+          "ins": "najbardziej błyszczącym",
+          "loc": "najbardziej błyszczącym"
+        },
+        "m3": {
+          "nom": "najbardziej błyszczący",
+          "gen": "najbardziej błyszczącego",
+          "dat": "najbardziej błyszczącemu",
+          "acc": "najbardziej błyszczący",
+          "ins": "najbardziej błyszczącym",
+          "loc": "najbardziej błyszczącym"
+        },
+        "f": {
+          "nom": "najbardziej błyszcząca",
+          "gen": "najbardziej błyszczącej",
+          "dat": "najbardziej błyszczącej",
+          "acc": "najbardziej błyszczącą",
+          "ins": "najbardziej błyszczącą",
+          "loc": "najbardziej błyszczącej"
+        },
+        "n": {
+          "nom": "najbardziej błyszczące",
+          "gen": "najbardziej błyszczącego",
+          "dat": "najbardziej błyszczącemu",
+          "acc": "najbardziej błyszczące",
+          "ins": "najbardziej błyszczącym",
+          "loc": "najbardziej błyszczącym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej błyszczący",
+          "gen": "najbardziej błyszczących",
+          "dat": "najbardziej błyszczącym",
+          "acc": "najbardziej błyszczących",
+          "ins": "najbardziej błyszczącymi",
+          "loc": "najbardziej błyszczących"
+        },
+        "nonvirile": {
+          "nom": "najbardziej błyszczące",
+          "gen": "najbardziej błyszczących",
+          "dat": "najbardziej błyszczącym",
+          "acc": "najbardziej błyszczące",
+          "ins": "najbardziej błyszczącymi",
+          "loc": "najbardziej błyszczących"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "żyrafa",
+      "gen": "żyrafy",
+      "dat": "żyrafie",
+      "acc": "żyrafę",
+      "ins": "żyrafą",
+      "loc": "żyrafie",
+      "voc": "żyrafo"
+    },
+    "plural": {
+      "nom": "żyrafy",
+      "gen": "żyraf",
+      "dat": "żyrafom",
+      "acc": "żyrafy",
+      "ins": "żyrafami",
+      "loc": "żyrafach",
+      "voc": "żyrafy"
+    }
+  }
+}

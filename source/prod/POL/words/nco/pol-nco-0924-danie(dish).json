@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "danie",
+      "gen": "dania",
+      "dat": "daniu",
+      "acc": "danie",
+      "ins": "daniem",
+      "loc": "daniu",
+      "voc": "danie"
+    },
+    "plural": {
+      "nom": "dania",
+      "gen": "dań",
+      "dat": "daniom",
+      "acc": "dania",
+      "ins": "daniami",
+      "loc": "daniach",
+      "voc": "dania"
+    }
+  }
+}

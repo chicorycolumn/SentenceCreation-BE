@@ -1,0 +1,8 @@
+{
+  "inflections": {
+    "simple": "complex",
+    "comparative": "more complex",
+    "superlative": "the most complex",
+    "adverb": "complexly"
+  }
+}

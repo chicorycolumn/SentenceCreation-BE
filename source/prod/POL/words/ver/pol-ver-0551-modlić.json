@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "modlić",
+    "verbalNoun": "modlenie",
+    "activeAdjectival": "modlący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "modląc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "módl",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "modlono"
+          },
+          "plural": {
+            "allPluralGenders": "modlono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "modliłem",
+            "f": "modliłam"
+          },
+          "plural": {
+            "virile": "modliliśmy",
+            "nonvirile": "modliłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "modliłeś",
+            "f": "modliłaś"
+          },
+          "plural": {
+            "virile": "modliliście",
+            "nonvirile": "modliłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "modlił",
+            "f": "modliła",
+            "n": "modliło"
+          },
+          "plural": {
+            "virile": "modlili",
+            "nonvirile": "modliły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "modli się"
+          },
+          "plural": {
+            "allPluralGenders": "modli się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "modlę"
+          },
+          "plural": {
+            "allPluralGenders": "modlimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "modlisz"
+          },
+          "plural": {
+            "allPluralGenders": "modlicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "modli"
+          },
+          "plural": {
+            "allPluralGenders": "modlą"
+          }
+        }
+      }
+    }
+  }
+}

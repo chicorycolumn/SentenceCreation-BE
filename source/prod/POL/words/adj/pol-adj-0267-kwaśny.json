@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "kwaśno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "kwaśny",
+          "gen": "kwaśnego",
+          "dat": "kwaśnemu",
+          "acc": "kwaśnego",
+          "ins": "kwaśnym",
+          "loc": "kwaśnym"
+        },
+        "m3": {
+          "nom": "kwaśny",
+          "gen": "kwaśnego",
+          "dat": "kwaśnemu",
+          "acc": "kwaśny",
+          "ins": "kwaśnym",
+          "loc": "kwaśnym"
+        },
+        "f": {
+          "nom": "kwaśna",
+          "gen": "kwaśnej",
+          "dat": "kwaśnej",
+          "acc": "kwaśną",
+          "ins": "kwaśną",
+          "loc": "kwaśnej"
+        },
+        "n": {
+          "nom": "kwaśne",
+          "gen": "kwaśnego",
+          "dat": "kwaśnemu",
+          "acc": "kwaśne",
+          "ins": "kwaśnym",
+          "loc": "kwaśnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "kwaśni",
+          "gen": "kwaśnych",
+          "dat": "kwaśnym",
+          "acc": "kwaśnych",
+          "ins": "kwaśnymi",
+          "loc": "kwaśnych"
+        },
+        "nonvirile": {
+          "nom": "kwaśne",
+          "gen": "kwaśnych",
+          "dat": "kwaśnym",
+          "acc": "kwaśne",
+          "ins": "kwaśnymi",
+          "loc": "kwaśnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "kwaśniejszy",
+          "gen": "kwaśniejszego",
+          "dat": "kwaśniejszemu",
+          "acc": "kwaśniejszego",
+          "ins": "kwaśniejszym",
+          "loc": "kwaśniejszym"
+        },
+        "m3": {
+          "nom": "kwaśniejszy",
+          "gen": "kwaśniejszego",
+          "dat": "kwaśniejszemu",
+          "acc": "kwaśniejszy",
+          "ins": "kwaśniejszym",
+          "loc": "kwaśniejszym"
+        },
+        "f": {
+          "nom": "kwaśniejsza",
+          "gen": "kwaśniejszej",
+          "dat": "kwaśniejszej",
+          "acc": "kwaśniejszą",
+          "ins": "kwaśniejszą",
+          "loc": "kwaśniejszej"
+        },
+        "n": {
+          "nom": "kwaśniejsze",
+          "gen": "kwaśniejszego",
+          "dat": "kwaśniejszemu",
+          "acc": "kwaśniejsze",
+          "ins": "kwaśniejszym",
+          "loc": "kwaśniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "kwaśniejsi",
+          "gen": "kwaśniejszych",
+          "dat": "kwaśniejszym",
+          "acc": "kwaśniejszych",
+          "ins": "kwaśniejszymi",
+          "loc": "kwaśniejszych"
+        },
+        "nonvirile": {
+          "nom": "kwaśniejsze",
+          "gen": "kwaśniejszych",
+          "dat": "kwaśniejszym",
+          "acc": "kwaśniejsze",
+          "ins": "kwaśniejszymi",
+          "loc": "kwaśniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najkwaśniejszy",
+          "gen": "najkwaśniejszego",
+          "dat": "najkwaśniejszemu",
+          "acc": "najkwaśniejszego",
+          "ins": "najkwaśniejszym",
+          "loc": "najkwaśniejszym"
+        },
+        "m3": {
+          "nom": "najkwaśniejszy",
+          "gen": "najkwaśniejszego",
+          "dat": "najkwaśniejszemu",
+          "acc": "najkwaśniejszy",
+          "ins": "najkwaśniejszym",
+          "loc": "najkwaśniejszym"
+        },
+        "f": {
+          "nom": "najkwaśniejsza",
+          "gen": "najkwaśniejszej",
+          "dat": "najkwaśniejszej",
+          "acc": "najkwaśniejszą",
+          "ins": "najkwaśniejszą",
+          "loc": "najkwaśniejszej"
+        },
+        "n": {
+          "nom": "najkwaśniejsze",
+          "gen": "najkwaśniejszego",
+          "dat": "najkwaśniejszemu",
+          "acc": "najkwaśniejsze",
+          "ins": "najkwaśniejszym",
+          "loc": "najkwaśniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najkwaśniejsi",
+          "gen": "najkwaśniejszych",
+          "dat": "najkwaśniejszym",
+          "acc": "najkwaśniejszych",
+          "ins": "najkwaśniejszymi",
+          "loc": "najkwaśniejszych"
+        },
+        "nonvirile": {
+          "nom": "najkwaśniejsze",
+          "gen": "najkwaśniejszych",
+          "dat": "najkwaśniejszym",
+          "acc": "najkwaśniejsze",
+          "ins": "najkwaśniejszymi",
+          "loc": "najkwaśniejszych"
+        }
+      }
+    }
+  }
+}

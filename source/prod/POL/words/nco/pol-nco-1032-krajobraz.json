@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "krajobraz",
+      "gen": "krajobrazu",
+      "dat": "krajobrazowi",
+      "acc": "krajobraz",
+      "ins": "krajobrazem",
+      "loc": "krajobrazie",
+      "voc": "krajobrazie"
+    },
+    "plural": {
+      "nom": "krajobrazy",
+      "gen": "krajobrazów",
+      "dat": "krajobrazom",
+      "acc": "krajobrazy",
+      "ins": "krajobrazami",
+      "loc": "krajobrazach",
+      "voc": "krajobrazy"
+    }
+  }
+}

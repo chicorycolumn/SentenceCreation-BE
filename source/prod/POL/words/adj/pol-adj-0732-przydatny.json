@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "przydatnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "przydatny",
+          "gen": "przydatnego",
+          "dat": "przydatnemu",
+          "acc": "przydatnego",
+          "ins": "przydatnym",
+          "loc": "przydatnym"
+        },
+        "m3": {
+          "nom": "przydatny",
+          "gen": "przydatnego",
+          "dat": "przydatnemu",
+          "acc": "przydatny",
+          "ins": "przydatnym",
+          "loc": "przydatnym"
+        },
+        "f": {
+          "nom": "przydatna",
+          "gen": "przydatnej",
+          "dat": "przydatnej",
+          "acc": "przydatną",
+          "ins": "przydatną",
+          "loc": "przydatnej"
+        },
+        "n": {
+          "nom": "przydatne",
+          "gen": "przydatnego",
+          "dat": "przydatnemu",
+          "acc": "przydatne",
+          "ins": "przydatnym",
+          "loc": "przydatnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "przydatni",
+          "gen": "przydatnych",
+          "dat": "przydatnym",
+          "acc": "przydatnych",
+          "ins": "przydatnymi",
+          "loc": "przydatnych"
+        },
+        "nonvirile": {
+          "nom": "przydatne",
+          "gen": "przydatnych",
+          "dat": "przydatnym",
+          "acc": "przydatne",
+          "ins": "przydatnymi",
+          "loc": "przydatnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej przydatny",
+          "gen": "bardziej przydatnego",
+          "dat": "bardziej przydatnemu",
+          "acc": "bardziej przydatnego",
+          "ins": "bardziej przydatnym",
+          "loc": "bardziej przydatnym"
+        },
+        "m3": {
+          "nom": "bardziej przydatny",
+          "gen": "bardziej przydatnego",
+          "dat": "bardziej przydatnemu",
+          "acc": "bardziej przydatny",
+          "ins": "bardziej przydatnym",
+          "loc": "bardziej przydatnym"
+        },
+        "f": {
+          "nom": "bardziej przydatna",
+          "gen": "bardziej przydatnej",
+          "dat": "bardziej przydatnej",
+          "acc": "bardziej przydatną",
+          "ins": "bardziej przydatną",
+          "loc": "bardziej przydatnej"
+        },
+        "n": {
+          "nom": "bardziej przydatne",
+          "gen": "bardziej przydatnego",
+          "dat": "bardziej przydatnemu",
+          "acc": "bardziej przydatne",
+          "ins": "bardziej przydatnym",
+          "loc": "bardziej przydatnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej przydatni",
+          "gen": "bardziej przydatnych",
+          "dat": "bardziej przydatnym",
+          "acc": "bardziej przydatnych",
+          "ins": "bardziej przydatnymi",
+          "loc": "bardziej przydatnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej przydatne",
+          "gen": "bardziej przydatnych",
+          "dat": "bardziej przydatnym",
+          "acc": "bardziej przydatne",
+          "ins": "bardziej przydatnymi",
+          "loc": "bardziej przydatnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej przydatny",
+          "gen": "najbardziej przydatnego",
+          "dat": "najbardziej przydatnemu",
+          "acc": "najbardziej przydatnego",
+          "ins": "najbardziej przydatnym",
+          "loc": "najbardziej przydatnym"
+        },
+        "m3": {
+          "nom": "najbardziej przydatny",
+          "gen": "najbardziej przydatnego",
+          "dat": "najbardziej przydatnemu",
+          "acc": "najbardziej przydatny",
+          "ins": "najbardziej przydatnym",
+          "loc": "najbardziej przydatnym"
+        },
+        "f": {
+          "nom": "najbardziej przydatna",
+          "gen": "najbardziej przydatnej",
+          "dat": "najbardziej przydatnej",
+          "acc": "najbardziej przydatną",
+          "ins": "najbardziej przydatną",
+          "loc": "najbardziej przydatnej"
+        },
+        "n": {
+          "nom": "najbardziej przydatne",
+          "gen": "najbardziej przydatnego",
+          "dat": "najbardziej przydatnemu",
+          "acc": "najbardziej przydatne",
+          "ins": "najbardziej przydatnym",
+          "loc": "najbardziej przydatnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej przydatni",
+          "gen": "najbardziej przydatnych",
+          "dat": "najbardziej przydatnym",
+          "acc": "najbardziej przydatnych",
+          "ins": "najbardziej przydatnymi",
+          "loc": "najbardziej przydatnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej przydatne",
+          "gen": "najbardziej przydatnych",
+          "dat": "najbardziej przydatnym",
+          "acc": "najbardziej przydatne",
+          "ins": "najbardziej przydatnymi",
+          "loc": "najbardziej przydatnych"
+        }
+      }
+    }
+  }
+}

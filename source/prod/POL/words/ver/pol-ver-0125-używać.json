@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "używać",
+    "verbalNoun": "używanie",
+    "activeAdjectival": "używający",
+    "passiveAdjectival": "używany",
+    "contemporaryAdverbial": "używając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "używaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "używano"
+          },
+          "plural": {
+            "allPluralGenders": "używano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "używałem",
+            "f": "używałam"
+          },
+          "plural": {
+            "virile": "używaliśmy",
+            "nonvirile": "używałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "używałeś",
+            "f": "używałaś"
+          },
+          "plural": {
+            "virile": "używaliście",
+            "nonvirile": "używałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "używał",
+            "f": "używała",
+            "n": "używało"
+          },
+          "plural": {
+            "virile": "używali",
+            "nonvirile": "używały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "używa się"
+          },
+          "plural": {
+            "allPluralGenders": "używa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "używam"
+          },
+          "plural": {
+            "allPluralGenders": "używamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "używasz"
+          },
+          "plural": {
+            "allPluralGenders": "używacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "używa"
+          },
+          "plural": {
+            "allPluralGenders": "używają"
+          }
+        }
+      }
+    }
+  }
+}

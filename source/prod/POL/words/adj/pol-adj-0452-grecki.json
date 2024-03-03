@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "grecki",
+          "gen": "greckiego",
+          "dat": "greckiemu",
+          "acc": "greckiego",
+          "ins": "greckim",
+          "loc": "greckim"
+        },
+        "m3": {
+          "nom": "grecki",
+          "gen": "greckiego",
+          "dat": "greckiemu",
+          "acc": "grecki",
+          "ins": "greckim",
+          "loc": "greckim"
+        },
+        "f": {
+          "nom": "grecka",
+          "gen": "greckiej",
+          "dat": "greckiej",
+          "acc": "grecką",
+          "ins": "grecką",
+          "loc": "greckiej"
+        },
+        "n": {
+          "nom": "greckie",
+          "gen": "greckiego",
+          "dat": "greckiemu",
+          "acc": "greckie",
+          "ins": "greckim",
+          "loc": "greckim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "greccy",
+          "gen": "greckich",
+          "dat": "greckim",
+          "acc": "greckich",
+          "ins": "greckimi",
+          "loc": "greckich"
+        },
+        "nonvirile": {
+          "nom": "greckie",
+          "gen": "greckich",
+          "dat": "greckim",
+          "acc": "greckie",
+          "ins": "greckimi",
+          "loc": "greckich"
+        }
+      }
+    }
+  }
+}

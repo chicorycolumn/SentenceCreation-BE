@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kura",
+      "gen": "kury",
+      "dat": "kurze",
+      "acc": "kurę",
+      "ins": "kurą",
+      "loc": "kurze",
+      "voc": "kuro"
+    },
+    "plural": {
+      "nom": "kury",
+      "gen": "kur",
+      "dat": "kurom",
+      "acc": "kury",
+      "ins": "kurami",
+      "loc": "kurach",
+      "voc": "kury"
+    }
+  }
+}

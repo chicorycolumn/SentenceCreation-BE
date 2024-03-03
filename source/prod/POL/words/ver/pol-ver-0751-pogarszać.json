@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pogarszać",
+    "verbalNoun": "pogarszanie",
+    "activeAdjectival": "pogarszający",
+    "passiveAdjectival": "pogarszany",
+    "contemporaryAdverbial": "pogarszając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pogarszaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pogarszano"
+          },
+          "plural": {
+            "allPluralGenders": "pogarszano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pogarszałem",
+            "f": "pogarszałam"
+          },
+          "plural": {
+            "virile": "pogarszaliśmy",
+            "nonvirile": "pogarszałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pogarszałeś",
+            "f": "pogarszałaś"
+          },
+          "plural": {
+            "virile": "pogarszaliście",
+            "nonvirile": "pogarszałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pogarszał",
+            "f": "pogarszała",
+            "n": "pogarszało"
+          },
+          "plural": {
+            "virile": "pogarszali",
+            "nonvirile": "pogarszały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pogarsza się"
+          },
+          "plural": {
+            "allPluralGenders": "pogarsza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pogarszam"
+          },
+          "plural": {
+            "allPluralGenders": "pogarszamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pogarszasz"
+          },
+          "plural": {
+            "allPluralGenders": "pogarszacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pogarsza"
+          },
+          "plural": {
+            "allPluralGenders": "pogarszają"
+          }
+        }
+      }
+    }
+  }
+}

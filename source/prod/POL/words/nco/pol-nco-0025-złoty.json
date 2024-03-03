@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "złoty",
+      "gen": "złotego",
+      "dat": "złotemu",
+      "acc": "złotego",
+      "ins": "złotym",
+      "loc": "złotym",
+      "voc": "złoty"
+    },
+    "plural": {
+      "nom": "złote",
+      "gen": "złotych",
+      "dat": "złotym",
+      "acc": "złote",
+      "ins": "złotymi",
+      "loc": "złotych",
+      "voc": "złote"
+    }
+  }
+}

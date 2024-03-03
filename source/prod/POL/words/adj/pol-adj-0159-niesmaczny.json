@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niesmacznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niesmaczny",
+          "gen": "niesmacznego",
+          "dat": "niesmacznemu",
+          "acc": "niesmacznego",
+          "ins": "niesmacznym",
+          "loc": "niesmacznym"
+        },
+        "m3": {
+          "nom": "niesmaczny",
+          "gen": "niesmacznego",
+          "dat": "niesmacznemu",
+          "acc": "niesmaczny",
+          "ins": "niesmacznym",
+          "loc": "niesmacznym"
+        },
+        "f": {
+          "nom": "niesmaczna",
+          "gen": "niesmacznej",
+          "dat": "niesmacznej",
+          "acc": "niesmaczną",
+          "ins": "niesmaczną",
+          "loc": "niesmacznej"
+        },
+        "n": {
+          "nom": "niesmaczne",
+          "gen": "niesmacznego",
+          "dat": "niesmacznemu",
+          "acc": "niesmaczne",
+          "ins": "niesmacznym",
+          "loc": "niesmacznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niesmaczni",
+          "gen": "niesmacznych",
+          "dat": "niesmacznym",
+          "acc": "niesmacznych",
+          "ins": "niesmacznymi",
+          "loc": "niesmacznych"
+        },
+        "nonvirile": {
+          "nom": "niesmaczne",
+          "gen": "niesmacznych",
+          "dat": "niesmacznym",
+          "acc": "niesmaczne",
+          "ins": "niesmacznymi",
+          "loc": "niesmacznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "niesmaczniejszy",
+          "gen": "niesmaczniejszego",
+          "dat": "niesmaczniejszemu",
+          "acc": "niesmaczniejszego",
+          "ins": "niesmaczniejszym",
+          "loc": "niesmaczniejszym"
+        },
+        "m3": {
+          "nom": "niesmaczniejszy",
+          "gen": "niesmaczniejszego",
+          "dat": "niesmaczniejszemu",
+          "acc": "niesmaczniejszy",
+          "ins": "niesmaczniejszym",
+          "loc": "niesmaczniejszym"
+        },
+        "f": {
+          "nom": "niesmaczniejsza",
+          "gen": "niesmaczniejszej",
+          "dat": "niesmaczniejszej",
+          "acc": "niesmaczniejszą",
+          "ins": "niesmaczniejszą",
+          "loc": "niesmaczniejszej"
+        },
+        "n": {
+          "nom": "niesmaczniejsze",
+          "gen": "niesmaczniejszego",
+          "dat": "niesmaczniejszemu",
+          "acc": "niesmaczniejsze",
+          "ins": "niesmaczniejszym",
+          "loc": "niesmaczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niesmaczniejsi",
+          "gen": "niesmaczniejszych",
+          "dat": "niesmaczniejszym",
+          "acc": "niesmaczniejszych",
+          "ins": "niesmaczniejszymi",
+          "loc": "niesmaczniejszych"
+        },
+        "nonvirile": {
+          "nom": "niesmaczniejsze",
+          "gen": "niesmaczniejszych",
+          "dat": "niesmaczniejszym",
+          "acc": "niesmaczniejsze",
+          "ins": "niesmaczniejszymi",
+          "loc": "niesmaczniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najniesmaczniejszy",
+          "gen": "najniesmaczniejszego",
+          "dat": "najniesmaczniejszemu",
+          "acc": "najniesmaczniejszego",
+          "ins": "najniesmaczniejszym",
+          "loc": "najniesmaczniejszym"
+        },
+        "m3": {
+          "nom": "najniesmaczniejszy",
+          "gen": "najniesmaczniejszego",
+          "dat": "najniesmaczniejszemu",
+          "acc": "najniesmaczniejszy",
+          "ins": "najniesmaczniejszym",
+          "loc": "najniesmaczniejszym"
+        },
+        "f": {
+          "nom": "najniesmaczniejsza",
+          "gen": "najniesmaczniejszej",
+          "dat": "najniesmaczniejszej",
+          "acc": "najniesmaczniejszą",
+          "ins": "najniesmaczniejszą",
+          "loc": "najniesmaczniejszej"
+        },
+        "n": {
+          "nom": "najniesmaczniejsze",
+          "gen": "najniesmaczniejszego",
+          "dat": "najniesmaczniejszemu",
+          "acc": "najniesmaczniejsze",
+          "ins": "najniesmaczniejszym",
+          "loc": "najniesmaczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najniesmaczniejsi",
+          "gen": "najniesmaczniejszych",
+          "dat": "najniesmaczniejszym",
+          "acc": "najniesmaczniejszych",
+          "ins": "najniesmaczniejszymi",
+          "loc": "najniesmaczniejszych"
+        },
+        "nonvirile": {
+          "nom": "najniesmaczniejsze",
+          "gen": "najniesmaczniejszych",
+          "dat": "najniesmaczniejszym",
+          "acc": "najniesmaczniejsze",
+          "ins": "najniesmaczniejszymi",
+          "loc": "najniesmaczniejszych"
+        }
+      }
+    }
+  }
+}

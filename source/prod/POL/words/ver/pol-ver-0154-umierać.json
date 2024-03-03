@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "umierać",
+    "verbalNoun": "umieranie",
+    "activeAdjectival": "umierający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "umierając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "umieraj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "umierano"
+          },
+          "plural": {
+            "allPluralGenders": "umierano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "umierałem",
+            "f": "umierałam"
+          },
+          "plural": {
+            "virile": "umieraliśmy",
+            "nonvirile": "umierałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "umierałeś",
+            "f": "umierałaś"
+          },
+          "plural": {
+            "virile": "umieraliście",
+            "nonvirile": "umierałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "umierał",
+            "f": "umierała",
+            "n": "umierało"
+          },
+          "plural": {
+            "virile": "umierali",
+            "nonvirile": "umierały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "umiera się"
+          },
+          "plural": {
+            "allPluralGenders": "umiera się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "umieram"
+          },
+          "plural": {
+            "allPluralGenders": "umieramy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "umierasz"
+          },
+          "plural": {
+            "allPluralGenders": "umieracie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "umiera"
+          },
+          "plural": {
+            "allPluralGenders": "umierają"
+          }
+        }
+      }
+    }
+  }
+}

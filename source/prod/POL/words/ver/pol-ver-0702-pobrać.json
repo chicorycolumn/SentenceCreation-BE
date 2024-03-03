@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pobrać",
+    "verbalNoun": "pobranie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pobrany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pobrawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pobierze się"
+          },
+          "plural": {
+            "allPluralGenders": "pobierze się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pobiorę"
+          },
+          "plural": {
+            "allPluralGenders": "pobierzemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pobierzesz"
+          },
+          "plural": {
+            "allPluralGenders": "pobierzecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pobierze"
+          },
+          "plural": {
+            "allPluralGenders": "pobiorą"
+          }
+        }
+      },
+      "imperative": "pobierz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pobrano"
+          },
+          "plural": {
+            "allPluralGenders": "pobrano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pobrałem",
+            "f": "pobrałam"
+          },
+          "plural": {
+            "virile": "pobraliśmy",
+            "nonvirile": "pobrałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pobrałeś",
+            "f": "pobrałaś"
+          },
+          "plural": {
+            "virile": "pobraliście",
+            "nonvirile": "pobrałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pobrał",
+            "f": "pobrała",
+            "n": "pobrało"
+          },
+          "plural": {
+            "virile": "pobrali",
+            "nonvirile": "pobrały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

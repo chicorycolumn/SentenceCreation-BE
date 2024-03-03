@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pencil",
+      "gen": "pencil's"
+    },
+    "plural": {
+      "nom": "pencils",
+      "gen": "pencils'"
+    }
+  }
+}

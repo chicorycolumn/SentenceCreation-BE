@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "billionaire",
+      "gen": "billionaire's"
+    },
+    "plural": {
+      "nom": "billionaires",
+      "gen": "billionaires'"
+    }
+  }
+}

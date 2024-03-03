@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "country",
+      "gen": "country's"
+    },
+    "plural": {
+      "nom": "countries",
+      "gen": "countries'"
+    }
+  }
+}

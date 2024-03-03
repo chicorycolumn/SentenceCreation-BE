@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "job",
+      "gen": "job's"
+    },
+    "plural": {
+      "nom": "jobs",
+      "gen": "jobs'"
+    }
+  }
+}

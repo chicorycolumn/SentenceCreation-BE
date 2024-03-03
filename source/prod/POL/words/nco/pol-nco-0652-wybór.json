@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wybór",
+      "gen": "wyboru",
+      "dat": "wyborowi",
+      "acc": "wybór",
+      "ins": "wyborem",
+      "loc": "wyborze",
+      "voc": "wyborze"
+    },
+    "plural": {
+      "nom": "wybory",
+      "gen": "wyborów",
+      "dat": "wyborom",
+      "acc": "wybory",
+      "ins": "wyborami",
+      "loc": "wyborach",
+      "voc": "wybory"
+    }
+  }
+}

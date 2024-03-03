@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pomysł",
+      "gen": "pomysłu",
+      "dat": "pomysłowi",
+      "acc": "pomysł",
+      "ins": "pomysłem",
+      "loc": "pomyśle",
+      "voc": "pomyśle"
+    },
+    "plural": {
+      "nom": "pomysły",
+      "gen": "pomysłów",
+      "dat": "pomysłom",
+      "acc": "pomysły",
+      "ins": "pomysłami",
+      "loc": "pomysłach",
+      "voc": "pomysły"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "kameralnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "kameralny",
+          "gen": "kameralnego",
+          "dat": "kameralnemu",
+          "acc": "kameralnego",
+          "ins": "kameralnym",
+          "loc": "kameralnym"
+        },
+        "m3": {
+          "nom": "kameralny",
+          "gen": "kameralnego",
+          "dat": "kameralnemu",
+          "acc": "kameralny",
+          "ins": "kameralnym",
+          "loc": "kameralnym"
+        },
+        "f": {
+          "nom": "kameralna",
+          "gen": "kameralnej",
+          "dat": "kameralnej",
+          "acc": "kameralną",
+          "ins": "kameralną",
+          "loc": "kameralnej"
+        },
+        "n": {
+          "nom": "kameralne",
+          "gen": "kameralnego",
+          "dat": "kameralnemu",
+          "acc": "kameralne",
+          "ins": "kameralnym",
+          "loc": "kameralnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "kameralni",
+          "gen": "kameralnych",
+          "dat": "kameralnym",
+          "acc": "kameralnych",
+          "ins": "kameralnymi",
+          "loc": "kameralnych"
+        },
+        "nonvirile": {
+          "nom": "kameralne",
+          "gen": "kameralnych",
+          "dat": "kameralnym",
+          "acc": "kameralne",
+          "ins": "kameralnymi",
+          "loc": "kameralnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "kameralniejszy",
+          "gen": "kameralniejszego",
+          "dat": "kameralniejszemu",
+          "acc": "kameralniejszego",
+          "ins": "kameralniejszym",
+          "loc": "kameralniejszym"
+        },
+        "m3": {
+          "nom": "kameralniejszy",
+          "gen": "kameralniejszego",
+          "dat": "kameralniejszemu",
+          "acc": "kameralniejszy",
+          "ins": "kameralniejszym",
+          "loc": "kameralniejszym"
+        },
+        "f": {
+          "nom": "kameralniejsza",
+          "gen": "kameralniejszej",
+          "dat": "kameralniejszej",
+          "acc": "kameralniejszą",
+          "ins": "kameralniejszą",
+          "loc": "kameralniejszej"
+        },
+        "n": {
+          "nom": "kameralniejsze",
+          "gen": "kameralniejszego",
+          "dat": "kameralniejszemu",
+          "acc": "kameralniejsze",
+          "ins": "kameralniejszym",
+          "loc": "kameralniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "kameralniejsi",
+          "gen": "kameralniejszych",
+          "dat": "kameralniejszym",
+          "acc": "kameralniejszych",
+          "ins": "kameralniejszymi",
+          "loc": "kameralniejszych"
+        },
+        "nonvirile": {
+          "nom": "kameralniejsze",
+          "gen": "kameralniejszych",
+          "dat": "kameralniejszym",
+          "acc": "kameralniejsze",
+          "ins": "kameralniejszymi",
+          "loc": "kameralniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najkameralniejszy",
+          "gen": "najkameralniejszego",
+          "dat": "najkameralniejszemu",
+          "acc": "najkameralniejszego",
+          "ins": "najkameralniejszym",
+          "loc": "najkameralniejszym"
+        },
+        "m3": {
+          "nom": "najkameralniejszy",
+          "gen": "najkameralniejszego",
+          "dat": "najkameralniejszemu",
+          "acc": "najkameralniejszy",
+          "ins": "najkameralniejszym",
+          "loc": "najkameralniejszym"
+        },
+        "f": {
+          "nom": "najkameralniejsza",
+          "gen": "najkameralniejszej",
+          "dat": "najkameralniejszej",
+          "acc": "najkameralniejszą",
+          "ins": "najkameralniejszą",
+          "loc": "najkameralniejszej"
+        },
+        "n": {
+          "nom": "najkameralniejsze",
+          "gen": "najkameralniejszego",
+          "dat": "najkameralniejszemu",
+          "acc": "najkameralniejsze",
+          "ins": "najkameralniejszym",
+          "loc": "najkameralniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najkameralniejsi",
+          "gen": "najkameralniejszych",
+          "dat": "najkameralniejszym",
+          "acc": "najkameralniejszych",
+          "ins": "najkameralniejszymi",
+          "loc": "najkameralniejszych"
+        },
+        "nonvirile": {
+          "nom": "najkameralniejsze",
+          "gen": "najkameralniejszych",
+          "dat": "najkameralniejszym",
+          "acc": "najkameralniejsze",
+          "ins": "najkameralniejszymi",
+          "loc": "najkameralniejszych"
+        }
+      }
+    }
+  }
+}

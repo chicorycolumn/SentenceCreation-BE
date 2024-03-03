@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odziedziczyć",
+    "verbalNoun": "odziedziczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "odziedziczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odziedziczywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odziedziczy się"
+          },
+          "plural": {
+            "allPluralGenders": "odziedziczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odziedziczę"
+          },
+          "plural": {
+            "allPluralGenders": "odziedziczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odziedziczysz"
+          },
+          "plural": {
+            "allPluralGenders": "odziedziczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odziedziczy"
+          },
+          "plural": {
+            "allPluralGenders": "odziedziczą"
+          }
+        }
+      },
+      "imperative": "odziedzicz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odziedziczono"
+          },
+          "plural": {
+            "allPluralGenders": "odziedziczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odziedziczyłem",
+            "f": "odziedziczyłam"
+          },
+          "plural": {
+            "virile": "odziedziczyliśmy",
+            "nonvirile": "odziedziczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odziedziczyłeś",
+            "f": "odziedziczyłaś"
+          },
+          "plural": {
+            "virile": "odziedziczyliście",
+            "nonvirile": "odziedziczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odziedziczył",
+            "f": "odziedziczyła",
+            "n": "odziedziczyło"
+          },
+          "plural": {
+            "virile": "odziedziczyli",
+            "nonvirile": "odziedziczyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

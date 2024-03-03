@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "opiekować",
+    "verbalNoun": "opiekowanie",
+    "activeAdjectival": "opiekujący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "opiekując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "opiekuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opiekowano"
+          },
+          "plural": {
+            "allPluralGenders": "opiekowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "opiekowałem",
+            "f": "opiekowałam"
+          },
+          "plural": {
+            "virile": "opiekowaliśmy",
+            "nonvirile": "opiekowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "opiekowałeś",
+            "f": "opiekowałaś"
+          },
+          "plural": {
+            "virile": "opiekowaliście",
+            "nonvirile": "opiekowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "opiekował",
+            "f": "opiekowała",
+            "n": "opiekowało"
+          },
+          "plural": {
+            "virile": "opiekowali",
+            "nonvirile": "opiekowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opiekuje się"
+          },
+          "plural": {
+            "allPluralGenders": "opiekuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "opiekuję"
+          },
+          "plural": {
+            "allPluralGenders": "opiekujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "opiekujesz"
+          },
+          "plural": {
+            "allPluralGenders": "opiekujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "opiekuje"
+          },
+          "plural": {
+            "allPluralGenders": "opiekują"
+          }
+        }
+      }
+    }
+  }
+}

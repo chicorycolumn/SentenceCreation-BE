@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "lojalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "lojalny",
+          "gen": "lojalnego",
+          "dat": "lojalnemu",
+          "acc": "lojalnego",
+          "ins": "lojalnym",
+          "loc": "lojalnym"
+        },
+        "m3": {
+          "nom": "lojalny",
+          "gen": "lojalnego",
+          "dat": "lojalnemu",
+          "acc": "lojalny",
+          "ins": "lojalnym",
+          "loc": "lojalnym"
+        },
+        "f": {
+          "nom": "lojalna",
+          "gen": "lojalnej",
+          "dat": "lojalnej",
+          "acc": "lojalną",
+          "ins": "lojalną",
+          "loc": "lojalnej"
+        },
+        "n": {
+          "nom": "lojalne",
+          "gen": "lojalnego",
+          "dat": "lojalnemu",
+          "acc": "lojalne",
+          "ins": "lojalnym",
+          "loc": "lojalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "lojalni",
+          "gen": "lojalnych",
+          "dat": "lojalnym",
+          "acc": "lojalnych",
+          "ins": "lojalnymi",
+          "loc": "lojalnych"
+        },
+        "nonvirile": {
+          "nom": "lojalne",
+          "gen": "lojalnych",
+          "dat": "lojalnym",
+          "acc": "lojalne",
+          "ins": "lojalnymi",
+          "loc": "lojalnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszy",
+              "bardziej lojalny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszego",
+              "bardziej lojalnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszemu",
+              "bardziej lojalnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszego",
+              "bardziej lojalnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszym",
+              "bardziej lojalnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszym",
+              "bardziej lojalnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszy",
+              "bardziej lojalny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszego",
+              "bardziej lojalnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszemu",
+              "bardziej lojalnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszy",
+              "bardziej lojalny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszym",
+              "bardziej lojalnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszym",
+              "bardziej lojalnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejsza",
+              "bardziej lojalna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszej",
+              "bardziej lojalnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszej",
+              "bardziej lojalnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszą",
+              "bardziej lojalną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszą",
+              "bardziej lojalną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszej",
+              "bardziej lojalnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejsze",
+              "bardziej lojalne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszego",
+              "bardziej lojalnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszemu",
+              "bardziej lojalnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejsze",
+              "bardziej lojalne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszym",
+              "bardziej lojalnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszym",
+              "bardziej lojalnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejsi",
+              "bardziej lojalni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszych",
+              "bardziej lojalnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszym",
+              "bardziej lojalnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszych",
+              "bardziej lojalnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszymi",
+              "bardziej lojalnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszych",
+              "bardziej lojalnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejsze",
+              "bardziej lojalne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszych",
+              "bardziej lojalnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszym",
+              "bardziej lojalnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejsze",
+              "bardziej lojalne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszymi",
+              "bardziej lojalnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "lojalniejszych",
+              "bardziej lojalnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszy",
+              "najbardziej lojalny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszego",
+              "najbardziej lojalnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszemu",
+              "najbardziej lojalnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszego",
+              "najbardziej lojalnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszym",
+              "najbardziej lojalnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszym",
+              "najbardziej lojalnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszy",
+              "najbardziej lojalny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszego",
+              "najbardziej lojalnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszemu",
+              "najbardziej lojalnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszy",
+              "najbardziej lojalny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszym",
+              "najbardziej lojalnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszym",
+              "najbardziej lojalnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejsza",
+              "najbardziej lojalna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszej",
+              "najbardziej lojalnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszej",
+              "najbardziej lojalnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszą",
+              "najbardziej lojalną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszą",
+              "najbardziej lojalną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszej",
+              "najbardziej lojalnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejsze",
+              "najbardziej lojalne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszego",
+              "najbardziej lojalnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszemu",
+              "najbardziej lojalnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejsze",
+              "najbardziej lojalne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszym",
+              "najbardziej lojalnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszym",
+              "najbardziej lojalnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejsi",
+              "najbardziej lojalni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszych",
+              "najbardziej lojalnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszym",
+              "najbardziej lojalnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszych",
+              "najbardziej lojalnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszymi",
+              "najbardziej lojalnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszych",
+              "najbardziej lojalnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejsze",
+              "najbardziej lojalne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszych",
+              "najbardziej lojalnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszym",
+              "najbardziej lojalnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejsze",
+              "najbardziej lojalne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszymi",
+              "najbardziej lojalnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najlojalniejszych",
+              "najbardziej lojalnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

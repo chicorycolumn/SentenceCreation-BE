@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "surowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "surowy",
+          "gen": "surowego",
+          "dat": "surowemu",
+          "acc": "surowego",
+          "ins": "surowym",
+          "loc": "surowym"
+        },
+        "m3": {
+          "nom": "surowy",
+          "gen": "surowego",
+          "dat": "surowemu",
+          "acc": "surowy",
+          "ins": "surowym",
+          "loc": "surowym"
+        },
+        "f": {
+          "nom": "surowa",
+          "gen": "surowej",
+          "dat": "surowej",
+          "acc": "surową",
+          "ins": "surową",
+          "loc": "surowej"
+        },
+        "n": {
+          "nom": "surowe",
+          "gen": "surowego",
+          "dat": "surowemu",
+          "acc": "surowe",
+          "ins": "surowym",
+          "loc": "surowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "surowi",
+          "gen": "surowych",
+          "dat": "surowym",
+          "acc": "surowych",
+          "ins": "surowymi",
+          "loc": "surowych"
+        },
+        "nonvirile": {
+          "nom": "surowe",
+          "gen": "surowych",
+          "dat": "surowym",
+          "acc": "surowe",
+          "ins": "surowymi",
+          "loc": "surowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "surowszy",
+          "gen": "surowszego",
+          "dat": "surowszemu",
+          "acc": "surowszego",
+          "ins": "surowszym",
+          "loc": "surowszym"
+        },
+        "m3": {
+          "nom": "surowszy",
+          "gen": "surowszego",
+          "dat": "surowszemu",
+          "acc": "surowszy",
+          "ins": "surowszym",
+          "loc": "surowszym"
+        },
+        "f": {
+          "nom": "surowsza",
+          "gen": "surowszej",
+          "dat": "surowszej",
+          "acc": "surowszą",
+          "ins": "surowszą",
+          "loc": "surowszej"
+        },
+        "n": {
+          "nom": "surowsze",
+          "gen": "surowszego",
+          "dat": "surowszemu",
+          "acc": "surowsze",
+          "ins": "surowszym",
+          "loc": "surowszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "surowsi",
+          "gen": "surowszych",
+          "dat": "surowszym",
+          "acc": "surowszych",
+          "ins": "surowszymi",
+          "loc": "surowszych"
+        },
+        "nonvirile": {
+          "nom": "surowsze",
+          "gen": "surowszych",
+          "dat": "surowszym",
+          "acc": "surowsze",
+          "ins": "surowszymi",
+          "loc": "surowszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najsurowszy",
+          "gen": "najsurowszego",
+          "dat": "najsurowszemu",
+          "acc": "najsurowszego",
+          "ins": "najsurowszym",
+          "loc": "najsurowszym"
+        },
+        "m3": {
+          "nom": "najsurowszy",
+          "gen": "najsurowszego",
+          "dat": "najsurowszemu",
+          "acc": "najsurowszy",
+          "ins": "najsurowszym",
+          "loc": "najsurowszym"
+        },
+        "f": {
+          "nom": "najsurowsza",
+          "gen": "najsurowszej",
+          "dat": "najsurowszej",
+          "acc": "najsurowszą",
+          "ins": "najsurowszą",
+          "loc": "najsurowszej"
+        },
+        "n": {
+          "nom": "najsurowsze",
+          "gen": "najsurowszego",
+          "dat": "najsurowszemu",
+          "acc": "najsurowsze",
+          "ins": "najsurowszym",
+          "loc": "najsurowszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najsurowsi",
+          "gen": "najsurowszych",
+          "dat": "najsurowszym",
+          "acc": "najsurowszych",
+          "ins": "najsurowszymi",
+          "loc": "najsurowszych"
+        },
+        "nonvirile": {
+          "nom": "najsurowsze",
+          "gen": "najsurowszych",
+          "dat": "najsurowszym",
+          "acc": "najsurowsze",
+          "ins": "najsurowszymi",
+          "loc": "najsurowszych"
+        }
+      }
+    }
+  }
+}

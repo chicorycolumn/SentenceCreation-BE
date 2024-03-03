@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "roślina",
+      "gen": "rośliny",
+      "dat": "roślinie",
+      "acc": "roślinę",
+      "ins": "rośliną",
+      "loc": "roślinie",
+      "voc": "roślino"
+    },
+    "plural": {
+      "nom": "rośliny",
+      "gen": "roślin",
+      "dat": "roślinom",
+      "acc": "rośliny",
+      "ins": "roślinami",
+      "loc": "roślinach",
+      "voc": "rośliny"
+    }
+  }
+}

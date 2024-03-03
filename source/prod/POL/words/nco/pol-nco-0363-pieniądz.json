@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pieniądz",
+      "gen": "pieniądza",
+      "dat": "pieniądzowi",
+      "acc": "pieniądz",
+      "ins": "pieniądzem",
+      "loc": "pieniądzu",
+      "voc": "pieniądzu"
+    },
+    "plural": {
+      "nom": "pieniądze",
+      "gen": "pieniędzy",
+      "dat": "pieniądzom",
+      "acc": "pieniądze",
+      "ins": "pieniędzmi",
+      "loc": "pieniądzach",
+      "voc": "pieniądze"
+    }
+  }
+}

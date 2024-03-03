@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sędzia",
+      "gen": "sędziego",
+      "dat": "sędziemu",
+      "acc": "sędziego",
+      "ins": "sędzią",
+      "loc": "sędzi",
+      "voc": "sędzio"
+    },
+    "plural": {
+      "nom": "sędziowie",
+      "gen": "sędziów",
+      "dat": "sędziom",
+      "acc": "sędziów",
+      "ins": "sędziami",
+      "loc": "sędziach",
+      "voc": "sędziowie"
+    }
+  }
+}

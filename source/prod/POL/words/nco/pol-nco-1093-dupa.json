@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dupa",
+      "gen": "dupy",
+      "dat": "dupie",
+      "acc": "dupę",
+      "ins": "dupą",
+      "loc": "dupie",
+      "voc": "dupo"
+    },
+    "plural": {
+      "nom": "dupy",
+      "gen": "dup",
+      "dat": "dupom",
+      "acc": "dupy",
+      "ins": "dupami",
+      "loc": "dupach",
+      "voc": "dupy"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sąd",
+      "gen": "sądu",
+      "dat": "sądowi",
+      "acc": "sąd",
+      "ins": "sądem",
+      "loc": "sądzie",
+      "voc": "sądzie"
+    },
+    "plural": {
+      "nom": "sądy",
+      "gen": "sądów",
+      "dat": "sądom",
+      "acc": "sądy",
+      "ins": "sądami",
+      "loc": "sądach",
+      "voc": "sądy"
+    }
+  }
+}

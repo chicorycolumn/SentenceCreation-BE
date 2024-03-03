@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zagrozić",
+    "verbalNoun": "zagrożenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zagrożony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zagroziwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zagrozi się"
+          },
+          "plural": {
+            "allPluralGenders": "zagrozi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zagrożę"
+          },
+          "plural": {
+            "allPluralGenders": "zagrozimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zagrozisz"
+          },
+          "plural": {
+            "allPluralGenders": "zagrozicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zagrozi"
+          },
+          "plural": {
+            "allPluralGenders": "zagrożą"
+          }
+        }
+      },
+      "imperative": "zagroź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zagrożono"
+          },
+          "plural": {
+            "allPluralGenders": "zagrożono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zagroziłem",
+            "f": "zagroziłam"
+          },
+          "plural": {
+            "virile": "zagroziliśmy",
+            "nonvirile": "zagroziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zagroziłeś",
+            "f": "zagroziłaś"
+          },
+          "plural": {
+            "virile": "zagroziliście",
+            "nonvirile": "zagroziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zagroził",
+            "f": "zagroziła",
+            "n": "zagroziło"
+          },
+          "plural": {
+            "virile": "zagrozili",
+            "nonvirile": "zagroziły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

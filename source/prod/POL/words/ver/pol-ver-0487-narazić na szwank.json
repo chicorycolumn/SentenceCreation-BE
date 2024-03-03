@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "narazić na szwank",
+    "verbalNoun": "narażenie na szwank",
+    "activeAdjectival": false,
+    "passiveAdjectival": "narażony na szwank",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "naraziwszy na szwank",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "narazi się na szwank"
+          },
+          "plural": {
+            "allPluralGenders": "narazi się na szwank"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "narażę na szwank"
+          },
+          "plural": {
+            "allPluralGenders": "narazimy na szwank"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "narazisz na szwank"
+          },
+          "plural": {
+            "allPluralGenders": "narazicie na szwank"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "narazi na szwank"
+          },
+          "plural": {
+            "allPluralGenders": "narażą na szwank"
+          }
+        }
+      },
+      "imperative": "naraź na szwank",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "narażono na szwank"
+          },
+          "plural": {
+            "allPluralGenders": "narażono na szwank"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "naraziłem na szwank",
+            "f": "naraziłam na szwank"
+          },
+          "plural": {
+            "virile": "naraziliśmy na szwank",
+            "nonvirile": "naraziłyśmy na szwank"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "naraziłeś na szwank",
+            "f": "naraziłaś na szwank"
+          },
+          "plural": {
+            "virile": "naraziliście na szwank",
+            "nonvirile": "naraziłyście na szwank"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "naraził na szwank",
+            "f": "naraziła na szwank",
+            "n": "naraziło na szwank"
+          },
+          "plural": {
+            "virile": "narazili na szwank",
+            "nonvirile": "naraziły na szwank"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

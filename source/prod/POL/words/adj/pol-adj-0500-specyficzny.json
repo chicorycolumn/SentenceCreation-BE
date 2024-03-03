@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "specyficznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "specyficzny",
+          "gen": "specyficznego",
+          "dat": "specyficznemu",
+          "acc": "specyficznego",
+          "ins": "specyficznym",
+          "loc": "specyficznym"
+        },
+        "m3": {
+          "nom": "specyficzny",
+          "gen": "specyficznego",
+          "dat": "specyficznemu",
+          "acc": "specyficzny",
+          "ins": "specyficznym",
+          "loc": "specyficznym"
+        },
+        "f": {
+          "nom": "specyficzna",
+          "gen": "specyficznej",
+          "dat": "specyficznej",
+          "acc": "specyficzną",
+          "ins": "specyficzną",
+          "loc": "specyficznej"
+        },
+        "n": {
+          "nom": "specyficzne",
+          "gen": "specyficznego",
+          "dat": "specyficznemu",
+          "acc": "specyficzne",
+          "ins": "specyficznym",
+          "loc": "specyficznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "specyficzni",
+          "gen": "specyficznych",
+          "dat": "specyficznym",
+          "acc": "specyficznych",
+          "ins": "specyficznymi",
+          "loc": "specyficznych"
+        },
+        "nonvirile": {
+          "nom": "specyficzne",
+          "gen": "specyficznych",
+          "dat": "specyficznym",
+          "acc": "specyficzne",
+          "ins": "specyficznymi",
+          "loc": "specyficznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej specyficzny",
+          "gen": "bardziej specyficznego",
+          "dat": "bardziej specyficznemu",
+          "acc": "bardziej specyficznego",
+          "ins": "bardziej specyficznym",
+          "loc": "bardziej specyficznym"
+        },
+        "m3": {
+          "nom": "bardziej specyficzny",
+          "gen": "bardziej specyficznego",
+          "dat": "bardziej specyficznemu",
+          "acc": "bardziej specyficzny",
+          "ins": "bardziej specyficznym",
+          "loc": "bardziej specyficznym"
+        },
+        "f": {
+          "nom": "bardziej specyficzna",
+          "gen": "bardziej specyficznej",
+          "dat": "bardziej specyficznej",
+          "acc": "bardziej specyficzną",
+          "ins": "bardziej specyficzną",
+          "loc": "bardziej specyficznej"
+        },
+        "n": {
+          "nom": "bardziej specyficzne",
+          "gen": "bardziej specyficznego",
+          "dat": "bardziej specyficznemu",
+          "acc": "bardziej specyficzne",
+          "ins": "bardziej specyficznym",
+          "loc": "bardziej specyficznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej specyficzni",
+          "gen": "bardziej specyficznych",
+          "dat": "bardziej specyficznym",
+          "acc": "bardziej specyficznych",
+          "ins": "bardziej specyficznymi",
+          "loc": "bardziej specyficznych"
+        },
+        "nonvirile": {
+          "nom": "bardziej specyficzne",
+          "gen": "bardziej specyficznych",
+          "dat": "bardziej specyficznym",
+          "acc": "bardziej specyficzne",
+          "ins": "bardziej specyficznymi",
+          "loc": "bardziej specyficznych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej specyficzny",
+          "gen": "najbardziej specyficznego",
+          "dat": "najbardziej specyficznemu",
+          "acc": "najbardziej specyficznego",
+          "ins": "najbardziej specyficznym",
+          "loc": "najbardziej specyficznym"
+        },
+        "m3": {
+          "nom": "najbardziej specyficzny",
+          "gen": "najbardziej specyficznego",
+          "dat": "najbardziej specyficznemu",
+          "acc": "najbardziej specyficzny",
+          "ins": "najbardziej specyficznym",
+          "loc": "najbardziej specyficznym"
+        },
+        "f": {
+          "nom": "najbardziej specyficzna",
+          "gen": "najbardziej specyficznej",
+          "dat": "najbardziej specyficznej",
+          "acc": "najbardziej specyficzną",
+          "ins": "najbardziej specyficzną",
+          "loc": "najbardziej specyficznej"
+        },
+        "n": {
+          "nom": "najbardziej specyficzne",
+          "gen": "najbardziej specyficznego",
+          "dat": "najbardziej specyficznemu",
+          "acc": "najbardziej specyficzne",
+          "ins": "najbardziej specyficznym",
+          "loc": "najbardziej specyficznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej specyficzni",
+          "gen": "najbardziej specyficznych",
+          "dat": "najbardziej specyficznym",
+          "acc": "najbardziej specyficznych",
+          "ins": "najbardziej specyficznymi",
+          "loc": "najbardziej specyficznych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej specyficzne",
+          "gen": "najbardziej specyficznych",
+          "dat": "najbardziej specyficznym",
+          "acc": "najbardziej specyficzne",
+          "ins": "najbardziej specyficznymi",
+          "loc": "najbardziej specyficznych"
+        }
+      }
+    }
+  }
+}

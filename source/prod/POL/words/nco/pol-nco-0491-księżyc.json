@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "księżyc",
+      "gen": "księżyca",
+      "dat": "księżycowi",
+      "acc": "księżyc",
+      "ins": "księżycem",
+      "loc": "księżycu",
+      "voc": "księżycu"
+    },
+    "plural": {
+      "nom": "księżyce",
+      "gen": "księżyców",
+      "dat": "księżycom",
+      "acc": "księżyce",
+      "ins": "księżycami",
+      "loc": "księżycach",
+      "voc": "księżyce"
+    }
+  }
+}

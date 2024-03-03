@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "skarpeta",
+      "gen": "skarpety",
+      "dat": "skarpecie",
+      "acc": "skarpetę",
+      "ins": "skarpetą",
+      "loc": "skarpecie",
+      "voc": "skarpeto"
+    },
+    "plural": {
+      "nom": "skarpety",
+      "gen": "skarpet",
+      "dat": "skarpetom",
+      "acc": "skarpety",
+      "ins": "skarpetami",
+      "loc": "skarpetach",
+      "voc": "skarpety"
+    }
+  }
+}

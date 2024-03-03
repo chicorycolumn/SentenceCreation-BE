@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dojeżdżać",
+    "verbalNoun": "dojeżdżanie",
+    "activeAdjectival": "dojeżdżający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "dojeżdżając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dojeżdżaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dojeżdżano"
+          },
+          "plural": {
+            "allPluralGenders": "dojeżdżano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dojeżdżałem",
+            "f": "dojeżdżałam"
+          },
+          "plural": {
+            "virile": "dojeżdżaliśmy",
+            "nonvirile": "dojeżdżałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dojeżdżałeś",
+            "f": "dojeżdżałaś"
+          },
+          "plural": {
+            "virile": "dojeżdżaliście",
+            "nonvirile": "dojeżdżałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dojeżdżał",
+            "f": "dojeżdżała",
+            "n": "dojeżdżało"
+          },
+          "plural": {
+            "virile": "dojeżdżali",
+            "nonvirile": "dojeżdżały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dojeżdża się"
+          },
+          "plural": {
+            "allPluralGenders": "dojeżdża się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dojeżdżam"
+          },
+          "plural": {
+            "allPluralGenders": "dojeżdżamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dojeżdżasz"
+          },
+          "plural": {
+            "allPluralGenders": "dojeżdżacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dojeżdża"
+          },
+          "plural": {
+            "allPluralGenders": "dojeżdżają"
+          }
+        }
+      }
+    }
+  }
+}

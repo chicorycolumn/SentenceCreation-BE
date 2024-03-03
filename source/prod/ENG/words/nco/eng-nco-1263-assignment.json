@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "assignment",
+      "gen": "assignment's"
+    },
+    "plural": {
+      "nom": "assignments",
+      "gen": "assignments'"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "tymczasowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "tymczasowy",
+          "gen": "tymczasowego",
+          "dat": "tymczasowemu",
+          "acc": "tymczasowego",
+          "ins": "tymczasowym",
+          "loc": "tymczasowym"
+        },
+        "m3": {
+          "nom": "tymczasowy",
+          "gen": "tymczasowego",
+          "dat": "tymczasowemu",
+          "acc": "tymczasowy",
+          "ins": "tymczasowym",
+          "loc": "tymczasowym"
+        },
+        "f": {
+          "nom": "tymczasowa",
+          "gen": "tymczasowej",
+          "dat": "tymczasowej",
+          "acc": "tymczasową",
+          "ins": "tymczasową",
+          "loc": "tymczasowej"
+        },
+        "n": {
+          "nom": "tymczasowe",
+          "gen": "tymczasowego",
+          "dat": "tymczasowemu",
+          "acc": "tymczasowe",
+          "ins": "tymczasowym",
+          "loc": "tymczasowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "tymczasowi",
+          "gen": "tymczasowych",
+          "dat": "tymczasowym",
+          "acc": "tymczasowych",
+          "ins": "tymczasowymi",
+          "loc": "tymczasowych"
+        },
+        "nonvirile": {
+          "nom": "tymczasowe",
+          "gen": "tymczasowych",
+          "dat": "tymczasowym",
+          "acc": "tymczasowe",
+          "ins": "tymczasowymi",
+          "loc": "tymczasowych"
+        }
+      }
+    }
+  }
+}

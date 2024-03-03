@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mrówka",
+      "gen": "mrówki",
+      "dat": "mrówce",
+      "acc": "mrówkę",
+      "ins": "mrówką",
+      "loc": "mrówce",
+      "voc": "mrówko"
+    },
+    "plural": {
+      "nom": "mrówki",
+      "gen": "mrówek",
+      "dat": "mrówkom",
+      "acc": "mrówki",
+      "ins": "mrówkami",
+      "loc": "mrówkach",
+      "voc": "mrówki"
+    }
+  }
+}

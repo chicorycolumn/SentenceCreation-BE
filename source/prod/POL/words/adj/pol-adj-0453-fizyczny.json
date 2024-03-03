@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "fizycznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "fizyczny",
+          "gen": "fizycznego",
+          "dat": "fizycznemu",
+          "acc": "fizycznego",
+          "ins": "fizycznym",
+          "loc": "fizycznym"
+        },
+        "m3": {
+          "nom": "fizyczny",
+          "gen": "fizycznego",
+          "dat": "fizycznemu",
+          "acc": "fizyczny",
+          "ins": "fizycznym",
+          "loc": "fizycznym"
+        },
+        "f": {
+          "nom": "fizyczna",
+          "gen": "fizycznej",
+          "dat": "fizycznej",
+          "acc": "fizyczną",
+          "ins": "fizyczną",
+          "loc": "fizycznej"
+        },
+        "n": {
+          "nom": "fizyczne",
+          "gen": "fizycznego",
+          "dat": "fizycznemu",
+          "acc": "fizyczne",
+          "ins": "fizycznym",
+          "loc": "fizycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "fizyczni",
+          "gen": "fizycznych",
+          "dat": "fizycznym",
+          "acc": "fizycznych",
+          "ins": "fizycznymi",
+          "loc": "fizycznych"
+        },
+        "nonvirile": {
+          "nom": "fizyczne",
+          "gen": "fizycznych",
+          "dat": "fizycznym",
+          "acc": "fizyczne",
+          "ins": "fizycznymi",
+          "loc": "fizycznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej fizyczny",
+          "gen": "bardziej fizycznego",
+          "dat": "bardziej fizycznemu",
+          "acc": "bardziej fizycznego",
+          "ins": "bardziej fizycznym",
+          "loc": "bardziej fizycznym"
+        },
+        "m3": {
+          "nom": "bardziej fizyczny",
+          "gen": "bardziej fizycznego",
+          "dat": "bardziej fizycznemu",
+          "acc": "bardziej fizyczny",
+          "ins": "bardziej fizycznym",
+          "loc": "bardziej fizycznym"
+        },
+        "f": {
+          "nom": "bardziej fizyczna",
+          "gen": "bardziej fizycznej",
+          "dat": "bardziej fizycznej",
+          "acc": "bardziej fizyczną",
+          "ins": "bardziej fizyczną",
+          "loc": "bardziej fizycznej"
+        },
+        "n": {
+          "nom": "bardziej fizyczne",
+          "gen": "bardziej fizycznego",
+          "dat": "bardziej fizycznemu",
+          "acc": "bardziej fizyczne",
+          "ins": "bardziej fizycznym",
+          "loc": "bardziej fizycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej fizyczni",
+          "gen": "bardziej fizycznych",
+          "dat": "bardziej fizycznym",
+          "acc": "bardziej fizycznych",
+          "ins": "bardziej fizycznymi",
+          "loc": "bardziej fizycznych"
+        },
+        "nonvirile": {
+          "nom": "bardziej fizyczne",
+          "gen": "bardziej fizycznych",
+          "dat": "bardziej fizycznym",
+          "acc": "bardziej fizyczne",
+          "ins": "bardziej fizycznymi",
+          "loc": "bardziej fizycznych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej fizyczny",
+          "gen": "najbardziej fizycznego",
+          "dat": "najbardziej fizycznemu",
+          "acc": "najbardziej fizycznego",
+          "ins": "najbardziej fizycznym",
+          "loc": "najbardziej fizycznym"
+        },
+        "m3": {
+          "nom": "najbardziej fizyczny",
+          "gen": "najbardziej fizycznego",
+          "dat": "najbardziej fizycznemu",
+          "acc": "najbardziej fizyczny",
+          "ins": "najbardziej fizycznym",
+          "loc": "najbardziej fizycznym"
+        },
+        "f": {
+          "nom": "najbardziej fizyczna",
+          "gen": "najbardziej fizycznej",
+          "dat": "najbardziej fizycznej",
+          "acc": "najbardziej fizyczną",
+          "ins": "najbardziej fizyczną",
+          "loc": "najbardziej fizycznej"
+        },
+        "n": {
+          "nom": "najbardziej fizyczne",
+          "gen": "najbardziej fizycznego",
+          "dat": "najbardziej fizycznemu",
+          "acc": "najbardziej fizyczne",
+          "ins": "najbardziej fizycznym",
+          "loc": "najbardziej fizycznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej fizyczni",
+          "gen": "najbardziej fizycznych",
+          "dat": "najbardziej fizycznym",
+          "acc": "najbardziej fizycznych",
+          "ins": "najbardziej fizycznymi",
+          "loc": "najbardziej fizycznych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej fizyczne",
+          "gen": "najbardziej fizycznych",
+          "dat": "najbardziej fizycznym",
+          "acc": "najbardziej fizyczne",
+          "ins": "najbardziej fizycznymi",
+          "loc": "najbardziej fizycznych"
+        }
+      }
+    }
+  }
+}

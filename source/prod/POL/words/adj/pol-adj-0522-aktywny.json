@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "aktywnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "aktywny",
+          "gen": "aktywnego",
+          "dat": "aktywnemu",
+          "acc": "aktywnego",
+          "ins": "aktywnym",
+          "loc": "aktywnym"
+        },
+        "m3": {
+          "nom": "aktywny",
+          "gen": "aktywnego",
+          "dat": "aktywnemu",
+          "acc": "aktywny",
+          "ins": "aktywnym",
+          "loc": "aktywnym"
+        },
+        "f": {
+          "nom": "aktywna",
+          "gen": "aktywnej",
+          "dat": "aktywnej",
+          "acc": "aktywną",
+          "ins": "aktywną",
+          "loc": "aktywnej"
+        },
+        "n": {
+          "nom": "aktywne",
+          "gen": "aktywnego",
+          "dat": "aktywnemu",
+          "acc": "aktywne",
+          "ins": "aktywnym",
+          "loc": "aktywnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "aktywni",
+          "gen": "aktywnych",
+          "dat": "aktywnym",
+          "acc": "aktywnych",
+          "ins": "aktywnymi",
+          "loc": "aktywnych"
+        },
+        "nonvirile": {
+          "nom": "aktywne",
+          "gen": "aktywnych",
+          "dat": "aktywnym",
+          "acc": "aktywne",
+          "ins": "aktywnymi",
+          "loc": "aktywnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszy",
+              "bardziej aktywny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszego",
+              "bardziej aktywnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszemu",
+              "bardziej aktywnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszego",
+              "bardziej aktywnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszym",
+              "bardziej aktywnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszym",
+              "bardziej aktywnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszy",
+              "bardziej aktywny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszego",
+              "bardziej aktywnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszemu",
+              "bardziej aktywnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszy",
+              "bardziej aktywny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszym",
+              "bardziej aktywnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszym",
+              "bardziej aktywnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejsza",
+              "bardziej aktywna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszej",
+              "bardziej aktywnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszej",
+              "bardziej aktywnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszą",
+              "bardziej aktywną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszą",
+              "bardziej aktywną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszej",
+              "bardziej aktywnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejsze",
+              "bardziej aktywne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszego",
+              "bardziej aktywnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszemu",
+              "bardziej aktywnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejsze",
+              "bardziej aktywne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszym",
+              "bardziej aktywnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszym",
+              "bardziej aktywnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejsi",
+              "bardziej aktywni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszych",
+              "bardziej aktywnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszym",
+              "bardziej aktywnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszych",
+              "bardziej aktywnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszymi",
+              "bardziej aktywnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszych",
+              "bardziej aktywnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejsze",
+              "bardziej aktywne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszych",
+              "bardziej aktywnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszym",
+              "bardziej aktywnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejsze",
+              "bardziej aktywne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszymi",
+              "bardziej aktywnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "aktywniejszych",
+              "bardziej aktywnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszy",
+              "najbardziej aktywny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszego",
+              "najbardziej aktywnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszemu",
+              "najbardziej aktywnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszego",
+              "najbardziej aktywnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszym",
+              "najbardziej aktywnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszym",
+              "najbardziej aktywnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszy",
+              "najbardziej aktywny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszego",
+              "najbardziej aktywnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszemu",
+              "najbardziej aktywnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszy",
+              "najbardziej aktywny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszym",
+              "najbardziej aktywnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszym",
+              "najbardziej aktywnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejsza",
+              "najbardziej aktywna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszej",
+              "najbardziej aktywnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszej",
+              "najbardziej aktywnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszą",
+              "najbardziej aktywną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszą",
+              "najbardziej aktywną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszej",
+              "najbardziej aktywnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejsze",
+              "najbardziej aktywne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszego",
+              "najbardziej aktywnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszemu",
+              "najbardziej aktywnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejsze",
+              "najbardziej aktywne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszym",
+              "najbardziej aktywnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszym",
+              "najbardziej aktywnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejsi",
+              "najbardziej aktywni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszych",
+              "najbardziej aktywnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszym",
+              "najbardziej aktywnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszych",
+              "najbardziej aktywnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszymi",
+              "najbardziej aktywnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszych",
+              "najbardziej aktywnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejsze",
+              "najbardziej aktywne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszych",
+              "najbardziej aktywnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszym",
+              "najbardziej aktywnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejsze",
+              "najbardziej aktywne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszymi",
+              "najbardziej aktywnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najaktywniejszych",
+              "najbardziej aktywnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

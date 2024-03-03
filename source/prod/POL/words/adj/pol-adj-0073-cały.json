@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "cało",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "cały",
+          "gen": "całego",
+          "dat": "całemu",
+          "acc": "całego",
+          "ins": "całym",
+          "loc": "całym"
+        },
+        "m3": {
+          "nom": "cały",
+          "gen": "całego",
+          "dat": "całemu",
+          "acc": "cały",
+          "ins": "całym",
+          "loc": "całym"
+        },
+        "f": {
+          "nom": "cała",
+          "gen": "całej",
+          "dat": "całej",
+          "acc": "całą",
+          "ins": "całą",
+          "loc": "całej"
+        },
+        "n": {
+          "nom": "całe",
+          "gen": "całego",
+          "dat": "całemu",
+          "acc": "całe",
+          "ins": "całym",
+          "loc": "całym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "cali",
+          "gen": "całych",
+          "dat": "całym",
+          "acc": "całych",
+          "ins": "całymi",
+          "loc": "całych"
+        },
+        "nonvirile": {
+          "nom": "całe",
+          "gen": "całych",
+          "dat": "całym",
+          "acc": "całe",
+          "ins": "całymi",
+          "loc": "całych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kula",
+      "gen": "kuli",
+      "dat": "kuli",
+      "acc": "kulę",
+      "ins": "kulą",
+      "loc": "kuli",
+      "voc": "kulo"
+    },
+    "plural": {
+      "nom": "kule",
+      "gen": [
+        "kul",
+        "kuli"
+      ],
+      "dat": "kulom",
+      "acc": "kule",
+      "ins": "kulami",
+      "loc": "kulach",
+      "voc": "kule"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "zbędnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zbędny",
+          "gen": "zbędnego",
+          "dat": "zbędnemu",
+          "acc": "zbędnego",
+          "ins": "zbędnym",
+          "loc": "zbędnym"
+        },
+        "m3": {
+          "nom": "zbędny",
+          "gen": "zbędnego",
+          "dat": "zbędnemu",
+          "acc": "zbędny",
+          "ins": "zbędnym",
+          "loc": "zbędnym"
+        },
+        "f": {
+          "nom": "zbędna",
+          "gen": "zbędnej",
+          "dat": "zbędnej",
+          "acc": "zbędną",
+          "ins": "zbędną",
+          "loc": "zbędnej"
+        },
+        "n": {
+          "nom": "zbędne",
+          "gen": "zbędnego",
+          "dat": "zbędnemu",
+          "acc": "zbędne",
+          "ins": "zbędnym",
+          "loc": "zbędnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zbędni",
+          "gen": "zbędnych",
+          "dat": "zbędnym",
+          "acc": "zbędnych",
+          "ins": "zbędnymi",
+          "loc": "zbędnych"
+        },
+        "nonvirile": {
+          "nom": "zbędne",
+          "gen": "zbędnych",
+          "dat": "zbędnym",
+          "acc": "zbędne",
+          "ins": "zbędnymi",
+          "loc": "zbędnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej zbędny",
+          "gen": "bardziej zbędnego",
+          "dat": "bardziej zbędnemu",
+          "acc": "bardziej zbędnego",
+          "ins": "bardziej zbędnym",
+          "loc": "bardziej zbędnym"
+        },
+        "m3": {
+          "nom": "bardziej zbędny",
+          "gen": "bardziej zbędnego",
+          "dat": "bardziej zbędnemu",
+          "acc": "bardziej zbędny",
+          "ins": "bardziej zbędnym",
+          "loc": "bardziej zbędnym"
+        },
+        "f": {
+          "nom": "bardziej zbędna",
+          "gen": "bardziej zbędnej",
+          "dat": "bardziej zbędnej",
+          "acc": "bardziej zbędną",
+          "ins": "bardziej zbędną",
+          "loc": "bardziej zbędnej"
+        },
+        "n": {
+          "nom": "bardziej zbędne",
+          "gen": "bardziej zbędnego",
+          "dat": "bardziej zbędnemu",
+          "acc": "bardziej zbędne",
+          "ins": "bardziej zbędnym",
+          "loc": "bardziej zbędnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej zbędni",
+          "gen": "bardziej zbędnych",
+          "dat": "bardziej zbędnym",
+          "acc": "bardziej zbędnych",
+          "ins": "bardziej zbędnymi",
+          "loc": "bardziej zbędnych"
+        },
+        "nonvirile": {
+          "nom": "bardziej zbędne",
+          "gen": "bardziej zbędnych",
+          "dat": "bardziej zbędnym",
+          "acc": "bardziej zbędne",
+          "ins": "bardziej zbędnymi",
+          "loc": "bardziej zbędnych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej zbędny",
+          "gen": "najbardziej zbędnego",
+          "dat": "najbardziej zbędnemu",
+          "acc": "najbardziej zbędnego",
+          "ins": "najbardziej zbędnym",
+          "loc": "najbardziej zbędnym"
+        },
+        "m3": {
+          "nom": "najbardziej zbędny",
+          "gen": "najbardziej zbędnego",
+          "dat": "najbardziej zbędnemu",
+          "acc": "najbardziej zbędny",
+          "ins": "najbardziej zbędnym",
+          "loc": "najbardziej zbędnym"
+        },
+        "f": {
+          "nom": "najbardziej zbędna",
+          "gen": "najbardziej zbędnej",
+          "dat": "najbardziej zbędnej",
+          "acc": "najbardziej zbędną",
+          "ins": "najbardziej zbędną",
+          "loc": "najbardziej zbędnej"
+        },
+        "n": {
+          "nom": "najbardziej zbędne",
+          "gen": "najbardziej zbędnego",
+          "dat": "najbardziej zbędnemu",
+          "acc": "najbardziej zbędne",
+          "ins": "najbardziej zbędnym",
+          "loc": "najbardziej zbędnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej zbędni",
+          "gen": "najbardziej zbędnych",
+          "dat": "najbardziej zbędnym",
+          "acc": "najbardziej zbędnych",
+          "ins": "najbardziej zbędnymi",
+          "loc": "najbardziej zbędnych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej zbędne",
+          "gen": "najbardziej zbędnych",
+          "dat": "najbardziej zbędnym",
+          "acc": "najbardziej zbędne",
+          "ins": "najbardziej zbędnymi",
+          "loc": "najbardziej zbędnych"
+        }
+      }
+    }
+  }
+}

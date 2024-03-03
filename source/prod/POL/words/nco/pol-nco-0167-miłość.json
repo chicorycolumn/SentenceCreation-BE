@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "miłość",
+      "gen": "miłości",
+      "dat": "miłości",
+      "acc": "miłość",
+      "ins": "miłością",
+      "loc": "miłości",
+      "voc": "miłości"
+    },
+    "plural": {
+      "nom": "miłości",
+      "gen": "miłości",
+      "dat": "miłościom",
+      "acc": "miłości",
+      "ins": "miłościami",
+      "loc": "miłościach",
+      "voc": "miłości"
+    }
+  }
+}

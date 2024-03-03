@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "raj",
+      "gen": "raju",
+      "dat": "rajowi",
+      "acc": "raj",
+      "ins": "rajem",
+      "loc": "raju",
+      "voc": "raju"
+    },
+    "plural": {
+      "nom": "raje",
+      "gen": "rajów",
+      "dat": "rajom",
+      "acc": "raje",
+      "ins": "rajami",
+      "loc": "rajach",
+      "voc": "raje"
+    }
+  }
+}

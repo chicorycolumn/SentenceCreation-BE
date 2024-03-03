@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pobliski",
+          "gen": "pobliskiego",
+          "dat": "pobliskiemu",
+          "acc": "pobliskiego",
+          "ins": "pobliskim",
+          "loc": "pobliskim"
+        },
+        "m3": {
+          "nom": "pobliski",
+          "gen": "pobliskiego",
+          "dat": "pobliskiemu",
+          "acc": "pobliski",
+          "ins": "pobliskim",
+          "loc": "pobliskim"
+        },
+        "f": {
+          "nom": "pobliska",
+          "gen": "pobliskiej",
+          "dat": "pobliskiej",
+          "acc": "pobliską",
+          "ins": "pobliską",
+          "loc": "pobliskiej"
+        },
+        "n": {
+          "nom": "pobliskie",
+          "gen": "pobliskiego",
+          "dat": "pobliskiemu",
+          "acc": "pobliskie",
+          "ins": "pobliskim",
+          "loc": "pobliskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pobliscy",
+          "gen": "pobliskich",
+          "dat": "pobliskim",
+          "acc": "pobliskich",
+          "ins": "pobliskimi",
+          "loc": "pobliskich"
+        },
+        "nonvirile": {
+          "nom": "pobliskie",
+          "gen": "pobliskich",
+          "dat": "pobliskim",
+          "acc": "pobliskie",
+          "ins": "pobliskimi",
+          "loc": "pobliskich"
+        }
+      }
+    }
+  }
+}

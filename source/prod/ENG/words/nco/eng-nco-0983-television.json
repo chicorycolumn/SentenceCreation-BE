@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "television",
+      "gen": "television's"
+    },
+    "plural": {
+      "nom": "televisions",
+      "gen": "televisions'"
+    }
+  }
+}

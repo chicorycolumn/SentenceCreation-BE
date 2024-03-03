@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "mówić",
+    "verbalNoun": "mówienie",
+    "activeAdjectival": "mówiący",
+    "passiveAdjectival": "mówiony",
+    "contemporaryAdverbial": "mówiąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "mów",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mówiono"
+          },
+          "plural": {
+            "allPluralGenders": "mówiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "mówiłem",
+            "f": "mówiłam"
+          },
+          "plural": {
+            "virile": "mówiliśmy",
+            "nonvirile": "mówiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "mówiłeś",
+            "f": "mówiłaś"
+          },
+          "plural": {
+            "virile": "mówiliście",
+            "nonvirile": "mówiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "mówił",
+            "f": "mówiła",
+            "n": "mówiło"
+          },
+          "plural": {
+            "virile": "mówili",
+            "nonvirile": "mówiły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mówi się"
+          },
+          "plural": {
+            "allPluralGenders": "mówi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "mówię"
+          },
+          "plural": {
+            "allPluralGenders": "mówimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "mówisz"
+          },
+          "plural": {
+            "allPluralGenders": "mówicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "mówi"
+          },
+          "plural": {
+            "allPluralGenders": "mówią"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "martwić",
+    "verbalNoun": "martwienie",
+    "activeAdjectival": "martwiący",
+    "passiveAdjectival": "martwiony",
+    "contemporaryAdverbial": "martwiąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "martw",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "martwiono"
+          },
+          "plural": {
+            "allPluralGenders": "martwiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "martwiłem",
+            "f": "martwiłam"
+          },
+          "plural": {
+            "virile": "martwiliśmy",
+            "nonvirile": "martwiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "martwiłeś",
+            "f": "martwiłaś"
+          },
+          "plural": {
+            "virile": "martwiliście",
+            "nonvirile": "martwiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "martwił",
+            "f": "martwiła",
+            "n": "martwiło"
+          },
+          "plural": {
+            "virile": "martwili",
+            "nonvirile": "martwiły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "martwi się"
+          },
+          "plural": {
+            "allPluralGenders": "martwi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "martwię"
+          },
+          "plural": {
+            "allPluralGenders": "martwimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "martwisz"
+          },
+          "plural": {
+            "allPluralGenders": "martwicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "martwi"
+          },
+          "plural": {
+            "allPluralGenders": "martwią"
+          }
+        }
+      }
+    }
+  }
+}

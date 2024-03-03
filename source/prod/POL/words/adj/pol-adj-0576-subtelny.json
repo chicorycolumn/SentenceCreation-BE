@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "subtelnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "subtelny",
+          "gen": "subtelnego",
+          "dat": "subtelnemu",
+          "acc": "subtelnego",
+          "ins": "subtelnym",
+          "loc": "subtelnym"
+        },
+        "m3": {
+          "nom": "subtelny",
+          "gen": "subtelnego",
+          "dat": "subtelnemu",
+          "acc": "subtelny",
+          "ins": "subtelnym",
+          "loc": "subtelnym"
+        },
+        "f": {
+          "nom": "subtelna",
+          "gen": "subtelnej",
+          "dat": "subtelnej",
+          "acc": "subtelną",
+          "ins": "subtelną",
+          "loc": "subtelnej"
+        },
+        "n": {
+          "nom": "subtelne",
+          "gen": "subtelnego",
+          "dat": "subtelnemu",
+          "acc": "subtelne",
+          "ins": "subtelnym",
+          "loc": "subtelnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "subtelni",
+          "gen": "subtelnych",
+          "dat": "subtelnym",
+          "acc": "subtelnych",
+          "ins": "subtelnymi",
+          "loc": "subtelnych"
+        },
+        "nonvirile": {
+          "nom": "subtelne",
+          "gen": "subtelnych",
+          "dat": "subtelnym",
+          "acc": "subtelne",
+          "ins": "subtelnymi",
+          "loc": "subtelnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "subtelniejszy",
+          "gen": "subtelniejszego",
+          "dat": "subtelniejszemu",
+          "acc": "subtelniejszego",
+          "ins": "subtelniejszym",
+          "loc": "subtelniejszym"
+        },
+        "m3": {
+          "nom": "subtelniejszy",
+          "gen": "subtelniejszego",
+          "dat": "subtelniejszemu",
+          "acc": "subtelniejszy",
+          "ins": "subtelniejszym",
+          "loc": "subtelniejszym"
+        },
+        "f": {
+          "nom": "subtelniejsza",
+          "gen": "subtelniejszej",
+          "dat": "subtelniejszej",
+          "acc": "subtelniejszą",
+          "ins": "subtelniejszą",
+          "loc": "subtelniejszej"
+        },
+        "n": {
+          "nom": "subtelniejsze",
+          "gen": "subtelniejszego",
+          "dat": "subtelniejszemu",
+          "acc": "subtelniejsze",
+          "ins": "subtelniejszym",
+          "loc": "subtelniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "subtelniejsi",
+          "gen": "subtelniejszych",
+          "dat": "subtelniejszym",
+          "acc": "subtelniejszych",
+          "ins": "subtelniejszymi",
+          "loc": "subtelniejszych"
+        },
+        "nonvirile": {
+          "nom": "subtelniejsze",
+          "gen": "subtelniejszych",
+          "dat": "subtelniejszym",
+          "acc": "subtelniejsze",
+          "ins": "subtelniejszymi",
+          "loc": "subtelniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najsubtelniejszy",
+          "gen": "najsubtelniejszego",
+          "dat": "najsubtelniejszemu",
+          "acc": "najsubtelniejszego",
+          "ins": "najsubtelniejszym",
+          "loc": "najsubtelniejszym"
+        },
+        "m3": {
+          "nom": "najsubtelniejszy",
+          "gen": "najsubtelniejszego",
+          "dat": "najsubtelniejszemu",
+          "acc": "najsubtelniejszy",
+          "ins": "najsubtelniejszym",
+          "loc": "najsubtelniejszym"
+        },
+        "f": {
+          "nom": "najsubtelniejsza",
+          "gen": "najsubtelniejszej",
+          "dat": "najsubtelniejszej",
+          "acc": "najsubtelniejszą",
+          "ins": "najsubtelniejszą",
+          "loc": "najsubtelniejszej"
+        },
+        "n": {
+          "nom": "najsubtelniejsze",
+          "gen": "najsubtelniejszego",
+          "dat": "najsubtelniejszemu",
+          "acc": "najsubtelniejsze",
+          "ins": "najsubtelniejszym",
+          "loc": "najsubtelniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najsubtelniejsi",
+          "gen": "najsubtelniejszych",
+          "dat": "najsubtelniejszym",
+          "acc": "najsubtelniejszych",
+          "ins": "najsubtelniejszymi",
+          "loc": "najsubtelniejszych"
+        },
+        "nonvirile": {
+          "nom": "najsubtelniejsze",
+          "gen": "najsubtelniejszych",
+          "dat": "najsubtelniejszym",
+          "acc": "najsubtelniejsze",
+          "ins": "najsubtelniejszymi",
+          "loc": "najsubtelniejszych"
+        }
+      }
+    }
+  }
+}

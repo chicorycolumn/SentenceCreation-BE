@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "adwokat",
+      "gen": "adwokata",
+      "dat": "adwokatowi",
+      "acc": "adwokata",
+      "ins": "adwokatem",
+      "loc": "adwokacie",
+      "voc": "adwokacie"
+    },
+    "plural": {
+      "nom": "adwokaci",
+      "gen": "adwokatów",
+      "dat": "adwokatom",
+      "acc": "adwokatów",
+      "ins": "adwokatami",
+      "loc": "adwokatach",
+      "voc": "adwokaci"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "martwo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "martwy",
+          "gen": "martwego",
+          "dat": "martwemu",
+          "acc": "martwego",
+          "ins": "martwym",
+          "loc": "martwym"
+        },
+        "m3": {
+          "nom": "martwy",
+          "gen": "martwego",
+          "dat": "martwemu",
+          "acc": "martwy",
+          "ins": "martwym",
+          "loc": "martwym"
+        },
+        "f": {
+          "nom": "martwa",
+          "gen": "martwej",
+          "dat": "martwej",
+          "acc": "martwą",
+          "ins": "martwą",
+          "loc": "martwej"
+        },
+        "n": {
+          "nom": "martwe",
+          "gen": "martwego",
+          "dat": "martwemu",
+          "acc": "martwe",
+          "ins": "martwym",
+          "loc": "martwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "martwi",
+          "gen": "martwych",
+          "dat": "martwym",
+          "acc": "martwych",
+          "ins": "martwymi",
+          "loc": "martwych"
+        },
+        "nonvirile": {
+          "nom": "martwe",
+          "gen": "martwych",
+          "dat": "martwym",
+          "acc": "martwe",
+          "ins": "martwymi",
+          "loc": "martwych"
+        }
+      }
+    }
+  }
+}

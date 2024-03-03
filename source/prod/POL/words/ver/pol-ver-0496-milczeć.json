@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "milczeć",
+    "verbalNoun": "milczenie",
+    "activeAdjectival": "milczący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "milcząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "milcz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "milczano"
+          },
+          "plural": {
+            "allPluralGenders": "milczano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "milczałem",
+            "f": "milczałam"
+          },
+          "plural": {
+            "virile": "milczeliśmy",
+            "nonvirile": "milczałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "milczałeś",
+            "f": "milczałaś"
+          },
+          "plural": {
+            "virile": "milczeliście",
+            "nonvirile": "milczałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "milczał",
+            "f": "milczała",
+            "n": "milczało"
+          },
+          "plural": {
+            "virile": "milczeli",
+            "nonvirile": "milczały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "milczy się"
+          },
+          "plural": {
+            "allPluralGenders": "milczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "milczę"
+          },
+          "plural": {
+            "allPluralGenders": "milczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "milczysz"
+          },
+          "plural": {
+            "allPluralGenders": "milczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "milczy"
+          },
+          "plural": {
+            "allPluralGenders": "milczą"
+          }
+        }
+      }
+    }
+  }
+}

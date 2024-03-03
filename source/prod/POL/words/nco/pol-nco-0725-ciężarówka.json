@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ciężarówka",
+      "gen": "ciężarówki",
+      "dat": "ciężarówce",
+      "acc": "ciężarówkę",
+      "ins": "ciężarówką",
+      "loc": "ciężarówce",
+      "voc": "ciężarówko"
+    },
+    "plural": {
+      "nom": "ciężarówki",
+      "gen": "ciężarówek",
+      "dat": "ciężarówkom",
+      "acc": "ciężarówki",
+      "ins": "ciężarówkami",
+      "loc": "ciężarówkach",
+      "voc": "ciężarówki"
+    }
+  }
+}

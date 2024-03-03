@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "biało",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "biały",
+          "gen": "białego",
+          "dat": "białemu",
+          "acc": "białego",
+          "ins": "białym",
+          "loc": "białym"
+        },
+        "m3": {
+          "nom": "biały",
+          "gen": "białego",
+          "dat": "białemu",
+          "acc": "biały",
+          "ins": "białym",
+          "loc": "białym"
+        },
+        "f": {
+          "nom": "biała",
+          "gen": "białej",
+          "dat": "białej",
+          "acc": "białą",
+          "ins": "białą",
+          "loc": "białej"
+        },
+        "n": {
+          "nom": "białe",
+          "gen": "białego",
+          "dat": "białemu",
+          "acc": "białe",
+          "ins": "białym",
+          "loc": "białym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "biali",
+          "gen": "białych",
+          "dat": "białym",
+          "acc": "białych",
+          "ins": "białymi",
+          "loc": "białych"
+        },
+        "nonvirile": {
+          "nom": "białe",
+          "gen": "białych",
+          "dat": "białym",
+          "acc": "białe",
+          "ins": "białymi",
+          "loc": "białych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bielszy",
+          "gen": "bielszego",
+          "dat": "bielszemu",
+          "acc": "bielszego",
+          "ins": "bielszym",
+          "loc": "bielszym"
+        },
+        "m3": {
+          "nom": "bielszy",
+          "gen": "bielszego",
+          "dat": "bielszemu",
+          "acc": "bielszy",
+          "ins": "bielszym",
+          "loc": "bielszym"
+        },
+        "f": {
+          "nom": "bielsza",
+          "gen": "bielszej",
+          "dat": "bielszej",
+          "acc": "bielszą",
+          "ins": "bielszą",
+          "loc": "bielszej"
+        },
+        "n": {
+          "nom": "bielsze",
+          "gen": "bielszego",
+          "dat": "bielszemu",
+          "acc": "bielsze",
+          "ins": "bielszym",
+          "loc": "bielszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bielsi",
+          "gen": "bielszych",
+          "dat": "bielszym",
+          "acc": "bielszych",
+          "ins": "bielszymi",
+          "loc": "bielszych"
+        },
+        "nonvirile": {
+          "nom": "bielsze",
+          "gen": "bielszych",
+          "dat": "bielszym",
+          "acc": "bielsze",
+          "ins": "bielszymi",
+          "loc": "bielszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbielszy",
+          "gen": "najbielszego",
+          "dat": "najbielszemu",
+          "acc": "najbielszego",
+          "ins": "najbielszym",
+          "loc": "najbielszym"
+        },
+        "m3": {
+          "nom": "najbielszy",
+          "gen": "najbielszego",
+          "dat": "najbielszemu",
+          "acc": "najbielszy",
+          "ins": "najbielszym",
+          "loc": "najbielszym"
+        },
+        "f": {
+          "nom": "najbielsza",
+          "gen": "najbielszej",
+          "dat": "najbielszej",
+          "acc": "najbielszą",
+          "ins": "najbielszą",
+          "loc": "najbielszej"
+        },
+        "n": {
+          "nom": "najbielsze",
+          "gen": "najbielszego",
+          "dat": "najbielszemu",
+          "acc": "najbielsze",
+          "ins": "najbielszym",
+          "loc": "najbielszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbielsi",
+          "gen": "najbielszych",
+          "dat": "najbielszym",
+          "acc": "najbielszych",
+          "ins": "najbielszymi",
+          "loc": "najbielszych"
+        },
+        "nonvirile": {
+          "nom": "najbielsze",
+          "gen": "najbielszych",
+          "dat": "najbielszym",
+          "acc": "najbielsze",
+          "ins": "najbielszymi",
+          "loc": "najbielszych"
+        }
+      }
+    }
+  }
+}

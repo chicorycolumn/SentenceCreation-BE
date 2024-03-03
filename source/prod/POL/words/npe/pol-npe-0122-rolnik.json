@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rolnik",
+      "gen": "rolnika",
+      "dat": "rolnikowi",
+      "acc": "rolnika",
+      "ins": "rolnikiem",
+      "loc": "rolniku",
+      "voc": "rolniku"
+    },
+    "plural": {
+      "nom": "rolnicy",
+      "gen": "rolników",
+      "dat": "rolnikom",
+      "acc": "rolników",
+      "ins": "rolnikami",
+      "loc": "rolnikach",
+      "voc": "rolnicy"
+    }
+  }
+}

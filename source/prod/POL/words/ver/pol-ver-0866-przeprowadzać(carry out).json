@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przeprowadzać",
+    "verbalNoun": "przeprowadzanie",
+    "activeAdjectival": "przeprowadzający",
+    "passiveAdjectival": "przeprowadzany",
+    "contemporaryAdverbial": "przeprowadzając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przeprowadzaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeprowadzano"
+          },
+          "plural": {
+            "allPluralGenders": "przeprowadzano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przeprowadzałem",
+            "f": "przeprowadzałam"
+          },
+          "plural": {
+            "virile": "przeprowadzaliśmy",
+            "nonvirile": "przeprowadzałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przeprowadzałeś",
+            "f": "przeprowadzałaś"
+          },
+          "plural": {
+            "virile": "przeprowadzaliście",
+            "nonvirile": "przeprowadzałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przeprowadzał",
+            "f": "przeprowadzała",
+            "n": "przeprowadzało"
+          },
+          "plural": {
+            "virile": "przeprowadzali",
+            "nonvirile": "przeprowadzały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przeprowadza się"
+          },
+          "plural": {
+            "allPluralGenders": "przeprowadza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przeprowadzam"
+          },
+          "plural": {
+            "allPluralGenders": "przeprowadzamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przeprowadzasz"
+          },
+          "plural": {
+            "allPluralGenders": "przeprowadzacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przeprowadza"
+          },
+          "plural": {
+            "allPluralGenders": "przeprowadzają"
+          }
+        }
+      }
+    }
+  }
+}

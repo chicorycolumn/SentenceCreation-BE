@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kucharz",
+      "gen": "kucharza",
+      "dat": "kucharzowi",
+      "acc": "kucharza",
+      "ins": "kucharzem",
+      "loc": "kucharzu",
+      "voc": "kucharzu"
+    },
+    "plural": {
+      "nom": "kucharze",
+      "gen": "kucharzy",
+      "dat": "kucharzom",
+      "acc": "kucharzy",
+      "ins": "kucharzami",
+      "loc": "kucharzach",
+      "voc": "kucharze"
+    }
+  }
+}

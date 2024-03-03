@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "future",
+      "gen": "future's"
+    },
+    "plural": {
+      "nom": "futures",
+      "gen": "futures'"
+    }
+  }
+}

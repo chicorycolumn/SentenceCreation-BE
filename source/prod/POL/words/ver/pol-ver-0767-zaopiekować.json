@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zaopiekować",
+    "verbalNoun": "zaopiekowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zaopiekowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaopiekuje się"
+          },
+          "plural": {
+            "allPluralGenders": "zaopiekuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zaopiekuję"
+          },
+          "plural": {
+            "allPluralGenders": "zaopiekujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zaopiekujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zaopiekujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zaopiekuje"
+          },
+          "plural": {
+            "allPluralGenders": "zaopiekują"
+          }
+        }
+      },
+      "imperative": "zaopiekuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zaopiekowano"
+          },
+          "plural": {
+            "allPluralGenders": "zaopiekowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zaopiekowałem",
+            "f": "zaopiekowałam"
+          },
+          "plural": {
+            "virile": "zaopiekowaliśmy",
+            "nonvirile": "zaopiekowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zaopiekowałeś",
+            "f": "zaopiekowałaś"
+          },
+          "plural": {
+            "virile": "zaopiekowaliście",
+            "nonvirile": "zaopiekowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zaopiekował",
+            "f": "zaopiekowała",
+            "n": "zaopiekowało"
+          },
+          "plural": {
+            "virile": "zaopiekowali",
+            "nonvirile": "zaopiekowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

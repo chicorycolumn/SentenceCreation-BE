@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przerywać",
+    "verbalNoun": "przerywanie",
+    "activeAdjectival": "przerywający",
+    "passiveAdjectival": "przerywany",
+    "contemporaryAdverbial": "przerywając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przerywaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przerywano"
+          },
+          "plural": {
+            "allPluralGenders": "przerywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przerywałem",
+            "f": "przerywałam"
+          },
+          "plural": {
+            "virile": "przerywaliśmy",
+            "nonvirile": "przerywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przerywałeś",
+            "f": "przerywałaś"
+          },
+          "plural": {
+            "virile": "przerywaliście",
+            "nonvirile": "przerywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przerywał",
+            "f": "przerywała",
+            "n": "przerywało"
+          },
+          "plural": {
+            "virile": "przerywali",
+            "nonvirile": "przerywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przerywa się"
+          },
+          "plural": {
+            "allPluralGenders": "przerywa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przerywam"
+          },
+          "plural": {
+            "allPluralGenders": "przerywamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przerywasz"
+          },
+          "plural": {
+            "allPluralGenders": "przerywacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przerywa"
+          },
+          "plural": {
+            "allPluralGenders": "przerywają"
+          }
+        }
+      }
+    }
+  }
+}

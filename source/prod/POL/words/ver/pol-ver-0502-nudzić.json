@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nudzić",
+    "verbalNoun": "nudzenie",
+    "activeAdjectival": "nudzący",
+    "passiveAdjectival": "nudzony",
+    "contemporaryAdverbial": "nudząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "nudź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nudzono"
+          },
+          "plural": {
+            "allPluralGenders": "nudzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nudziłem",
+            "f": "nudziłam"
+          },
+          "plural": {
+            "virile": "nudziliśmy",
+            "nonvirile": "nudziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nudziłeś",
+            "f": "nudziłaś"
+          },
+          "plural": {
+            "virile": "nudziliście",
+            "nonvirile": "nudziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nudził",
+            "f": "nudziła",
+            "n": "nudziło"
+          },
+          "plural": {
+            "virile": "nudzili",
+            "nonvirile": "nudziły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "nudzi się"
+          },
+          "plural": {
+            "allPluralGenders": "nudzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "nudzę"
+          },
+          "plural": {
+            "allPluralGenders": "nudzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "nudzisz"
+          },
+          "plural": {
+            "allPluralGenders": "nudzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "nudzi"
+          },
+          "plural": {
+            "allPluralGenders": "nudzą"
+          }
+        }
+      }
+    }
+  }
+}

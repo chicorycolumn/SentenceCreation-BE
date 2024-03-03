@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "alkohol",
+      "gen": "alkoholu",
+      "dat": "alkoholowi",
+      "acc": "alkohol",
+      "ins": "alkoholem",
+      "loc": "alkoholu",
+      "voc": "alkoholu"
+    },
+    "plural": {
+      "nom": "alkohole",
+      "gen": [
+        "alkoholi",
+        "alkoholów"
+      ],
+      "dat": "alkoholom",
+      "acc": "alkohole",
+      "ins": "alkoholami",
+      "loc": "alkoholach",
+      "voc": "alkohole"
+    }
+  }
+}

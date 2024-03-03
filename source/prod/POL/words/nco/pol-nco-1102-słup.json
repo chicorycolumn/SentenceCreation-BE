@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "słup",
+      "gen": "słupa",
+      "dat": "słupowi",
+      "acc": "słup",
+      "ins": "słupem",
+      "loc": "słupie",
+      "voc": "słupie"
+    },
+    "plural": {
+      "nom": "słupy",
+      "gen": "słupów",
+      "dat": "słupom",
+      "acc": "słupy",
+      "ins": "słupami",
+      "loc": "słupach",
+      "voc": "słupy"
+    }
+  }
+}

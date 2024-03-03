@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "atomowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "atomowy",
+          "gen": "atomowego",
+          "dat": "atomowemu",
+          "acc": "atomowego",
+          "ins": "atomowym",
+          "loc": "atomowym"
+        },
+        "m3": {
+          "nom": "atomowy",
+          "gen": "atomowego",
+          "dat": "atomowemu",
+          "acc": "atomowy",
+          "ins": "atomowym",
+          "loc": "atomowym"
+        },
+        "f": {
+          "nom": "atomowa",
+          "gen": "atomowej",
+          "dat": "atomowej",
+          "acc": "atomową",
+          "ins": "atomową",
+          "loc": "atomowej"
+        },
+        "n": {
+          "nom": "atomowe",
+          "gen": "atomowego",
+          "dat": "atomowemu",
+          "acc": "atomowe",
+          "ins": "atomowym",
+          "loc": "atomowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "atomowi",
+          "gen": "atomowych",
+          "dat": "atomowym",
+          "acc": "atomowych",
+          "ins": "atomowymi",
+          "loc": "atomowych"
+        },
+        "nonvirile": {
+          "nom": "atomowe",
+          "gen": "atomowych",
+          "dat": "atomowym",
+          "acc": "atomowe",
+          "ins": "atomowymi",
+          "loc": "atomowych"
+        }
+      }
+    }
+  }
+}

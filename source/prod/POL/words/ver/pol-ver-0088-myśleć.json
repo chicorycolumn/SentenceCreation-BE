@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "myśleć",
+    "verbalNoun": "myślenie",
+    "activeAdjectival": "myślący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "myśląc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "myśl",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "myślano"
+          },
+          "plural": {
+            "allPluralGenders": "myślano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "myślałem",
+            "f": "myślałam"
+          },
+          "plural": {
+            "virile": "myśleliśmy",
+            "nonvirile": "myślałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "myślałeś",
+            "f": "myślałaś"
+          },
+          "plural": {
+            "virile": "myśleliście",
+            "nonvirile": "myślałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "myślał",
+            "f": "myślała",
+            "n": "myślało"
+          },
+          "plural": {
+            "virile": "myśleli",
+            "nonvirile": "myślały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "myśli się"
+          },
+          "plural": {
+            "allPluralGenders": "myśli się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "myślę"
+          },
+          "plural": {
+            "allPluralGenders": "myślimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "myślisz"
+          },
+          "plural": {
+            "allPluralGenders": "myślicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "myśli"
+          },
+          "plural": {
+            "allPluralGenders": "myślą"
+          }
+        }
+      }
+    }
+  }
+}

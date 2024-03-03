@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "owinąć",
+    "verbalNoun": "owinięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "owinięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "owinąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "owinie się"
+          },
+          "plural": {
+            "allPluralGenders": "owinie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "owinę"
+          },
+          "plural": {
+            "allPluralGenders": "owiniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "owiniesz"
+          },
+          "plural": {
+            "allPluralGenders": "owiniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "owinie"
+          },
+          "plural": {
+            "allPluralGenders": "owiną"
+          }
+        }
+      },
+      "imperative": "owiń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "owinięto"
+          },
+          "plural": {
+            "allPluralGenders": "owinięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "owinąłem",
+            "f": "owinęłam"
+          },
+          "plural": {
+            "virile": "owinęliśmy",
+            "nonvirile": "owinęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "owinąłeś",
+            "f": "owinęłaś"
+          },
+          "plural": {
+            "virile": "owinęliście",
+            "nonvirile": "owinęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "owinął",
+            "f": "owinęła",
+            "n": "owinęło"
+          },
+          "plural": {
+            "virile": "owinęli",
+            "nonvirile": "owinęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

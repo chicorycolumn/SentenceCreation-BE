@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "lądować",
+    "verbalNoun": "lądowanie",
+    "activeAdjectival": "lądujący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "lądując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "ląduj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "lądowano"
+          },
+          "plural": {
+            "allPluralGenders": "lądowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "lądowałem",
+            "f": "lądowałam"
+          },
+          "plural": {
+            "virile": "lądowaliśmy",
+            "nonvirile": "lądowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "lądowałeś",
+            "f": "lądowałaś"
+          },
+          "plural": {
+            "virile": "lądowaliście",
+            "nonvirile": "lądowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "lądował",
+            "f": "lądowała",
+            "n": "lądowało"
+          },
+          "plural": {
+            "virile": "lądowali",
+            "nonvirile": "lądowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ląduje się"
+          },
+          "plural": {
+            "allPluralGenders": "ląduje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ląduję"
+          },
+          "plural": {
+            "allPluralGenders": "lądujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "lądujesz"
+          },
+          "plural": {
+            "allPluralGenders": "lądujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ląduje"
+          },
+          "plural": {
+            "allPluralGenders": "lądują"
+          }
+        }
+      }
+    }
+  }
+}

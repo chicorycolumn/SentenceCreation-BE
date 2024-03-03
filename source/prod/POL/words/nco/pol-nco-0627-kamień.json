@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kamień",
+      "gen": "kamienia",
+      "dat": "kamieniowi",
+      "acc": "kamień",
+      "ins": "kamieniem",
+      "loc": "kamieniu",
+      "voc": "kamieniu"
+    },
+    "plural": {
+      "nom": "kamienie",
+      "gen": "kamieni",
+      "dat": "kamieniom",
+      "acc": "kamienie",
+      "ins": "kamieniami",
+      "loc": "kamieniach",
+      "voc": "kamienie"
+    }
+  }
+}

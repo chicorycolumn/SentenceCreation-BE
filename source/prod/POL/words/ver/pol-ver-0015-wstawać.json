@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wstawać",
+    "verbalNoun": "wstawanie",
+    "activeAdjectival": "wstający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "wstając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "wstawaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wstawano"
+          },
+          "plural": {
+            "allPluralGenders": "wstawano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wstawałem",
+            "f": "wstawałam"
+          },
+          "plural": {
+            "virile": "wstawaliśmy",
+            "nonvirile": "wstawałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wstawałeś",
+            "f": "wstawałaś"
+          },
+          "plural": {
+            "virile": "wstawaliście",
+            "nonvirile": "wstawałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wstawał",
+            "f": "wstawała",
+            "n": "wstawało"
+          },
+          "plural": {
+            "virile": "wstawali",
+            "nonvirile": "wstawały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wstaje się"
+          },
+          "plural": {
+            "allPluralGenders": "wstaje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wstaję"
+          },
+          "plural": {
+            "allPluralGenders": "wstajemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wstajesz"
+          },
+          "plural": {
+            "allPluralGenders": "wstajecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wstaje"
+          },
+          "plural": {
+            "allPluralGenders": "wstają"
+          }
+        }
+      }
+    }
+  }
+}

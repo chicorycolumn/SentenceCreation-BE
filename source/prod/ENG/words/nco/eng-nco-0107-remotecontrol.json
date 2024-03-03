@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "remote control",
+      "gen": "remote control's"
+    },
+    "plural": {
+      "nom": "remote controls",
+      "gen": "remote controls'"
+    }
+  }
+}

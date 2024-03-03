@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "cennie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "cenny",
+          "gen": "cennego",
+          "dat": "cennemu",
+          "acc": "cennego",
+          "ins": "cennym",
+          "loc": "cennym"
+        },
+        "m3": {
+          "nom": "cenny",
+          "gen": "cennego",
+          "dat": "cennemu",
+          "acc": "cenny",
+          "ins": "cennym",
+          "loc": "cennym"
+        },
+        "f": {
+          "nom": "cenna",
+          "gen": "cennej",
+          "dat": "cennej",
+          "acc": "cenną",
+          "ins": "cenną",
+          "loc": "cennej"
+        },
+        "n": {
+          "nom": "cenne",
+          "gen": "cennego",
+          "dat": "cennemu",
+          "acc": "cenne",
+          "ins": "cennym",
+          "loc": "cennym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "cenni",
+          "gen": "cennych",
+          "dat": "cennym",
+          "acc": "cennych",
+          "ins": "cennymi",
+          "loc": "cennych"
+        },
+        "nonvirile": {
+          "nom": "cenne",
+          "gen": "cennych",
+          "dat": "cennym",
+          "acc": "cenne",
+          "ins": "cennymi",
+          "loc": "cennych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "cenniejszy",
+          "gen": "cenniejszego",
+          "dat": "cenniejszemu",
+          "acc": "cenniejszego",
+          "ins": "cenniejszym",
+          "loc": "cenniejszym"
+        },
+        "m3": {
+          "nom": "cenniejszy",
+          "gen": "cenniejszego",
+          "dat": "cenniejszemu",
+          "acc": "cenniejszy",
+          "ins": "cenniejszym",
+          "loc": "cenniejszym"
+        },
+        "f": {
+          "nom": "cenniejsza",
+          "gen": "cenniejszej",
+          "dat": "cenniejszej",
+          "acc": "cenniejszą",
+          "ins": "cenniejszą",
+          "loc": "cenniejszej"
+        },
+        "n": {
+          "nom": "cenniejsze",
+          "gen": "cenniejszego",
+          "dat": "cenniejszemu",
+          "acc": "cenniejsze",
+          "ins": "cenniejszym",
+          "loc": "cenniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "cenniejsi",
+          "gen": "cenniejszych",
+          "dat": "cenniejszym",
+          "acc": "cenniejszych",
+          "ins": "cenniejszymi",
+          "loc": "cenniejszych"
+        },
+        "nonvirile": {
+          "nom": "cenniejsze",
+          "gen": "cenniejszych",
+          "dat": "cenniejszym",
+          "acc": "cenniejsze",
+          "ins": "cenniejszymi",
+          "loc": "cenniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najcenniejszy",
+          "gen": "najcenniejszego",
+          "dat": "najcenniejszemu",
+          "acc": "najcenniejszego",
+          "ins": "najcenniejszym",
+          "loc": "najcenniejszym"
+        },
+        "m3": {
+          "nom": "najcenniejszy",
+          "gen": "najcenniejszego",
+          "dat": "najcenniejszemu",
+          "acc": "najcenniejszy",
+          "ins": "najcenniejszym",
+          "loc": "najcenniejszym"
+        },
+        "f": {
+          "nom": "najcenniejsza",
+          "gen": "najcenniejszej",
+          "dat": "najcenniejszej",
+          "acc": "najcenniejszą",
+          "ins": "najcenniejszą",
+          "loc": "najcenniejszej"
+        },
+        "n": {
+          "nom": "najcenniejsze",
+          "gen": "najcenniejszego",
+          "dat": "najcenniejszemu",
+          "acc": "najcenniejsze",
+          "ins": "najcenniejszym",
+          "loc": "najcenniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najcenniejsi",
+          "gen": "najcenniejszych",
+          "dat": "najcenniejszym",
+          "acc": "najcenniejszych",
+          "ins": "najcenniejszymi",
+          "loc": "najcenniejszych"
+        },
+        "nonvirile": {
+          "nom": "najcenniejsze",
+          "gen": "najcenniejszych",
+          "dat": "najcenniejszym",
+          "acc": "najcenniejsze",
+          "ins": "najcenniejszymi",
+          "loc": "najcenniejszych"
+        }
+      }
+    }
+  }
+}

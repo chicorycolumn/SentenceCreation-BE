@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "samobójstwo",
+      "gen": "samobójstwa",
+      "dat": "samobójstwu",
+      "acc": "samobójstwo",
+      "ins": "samobójstwem",
+      "loc": "samobójstwie",
+      "voc": "samobójstwo"
+    },
+    "plural": {
+      "nom": "samobójstwa",
+      "gen": "samobójstw",
+      "dat": "samobójstwom",
+      "acc": "samobójstwa",
+      "ins": "samobójstwami",
+      "loc": "samobójstwach",
+      "voc": "samobójstwa"
+    }
+  }
+}

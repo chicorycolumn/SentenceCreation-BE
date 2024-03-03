@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pociągać",
+    "verbalNoun": "pociąganie",
+    "activeAdjectival": "pociągający",
+    "passiveAdjectival": "pociągany",
+    "contemporaryAdverbial": "pociągając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pociągaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pociągano"
+          },
+          "plural": {
+            "allPluralGenders": "pociągano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pociągałem",
+            "f": "pociągałam"
+          },
+          "plural": {
+            "virile": "pociągaliśmy",
+            "nonvirile": "pociągałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pociągałeś",
+            "f": "pociągałaś"
+          },
+          "plural": {
+            "virile": "pociągaliście",
+            "nonvirile": "pociągałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pociągał",
+            "f": "pociągała",
+            "n": "pociągało"
+          },
+          "plural": {
+            "virile": "pociągali",
+            "nonvirile": "pociągały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pociąga się"
+          },
+          "plural": {
+            "allPluralGenders": "pociąga się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pociągam"
+          },
+          "plural": {
+            "allPluralGenders": "pociągamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pociągasz"
+          },
+          "plural": {
+            "allPluralGenders": "pociągacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pociąga"
+          },
+          "plural": {
+            "allPluralGenders": "pociągają"
+          }
+        }
+      }
+    }
+  }
+}

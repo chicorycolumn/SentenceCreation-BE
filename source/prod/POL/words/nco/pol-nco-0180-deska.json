@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "deska",
+      "gen": "deski",
+      "dat": "desce",
+      "acc": "deskę",
+      "ins": "deską",
+      "loc": "desce",
+      "voc": "desko"
+    },
+    "plural": {
+      "nom": "deski",
+      "gen": "desek",
+      "dat": "deskom",
+      "acc": "deski",
+      "ins": "deskami",
+      "loc": "deskach",
+      "voc": "deski"
+    }
+  }
+}

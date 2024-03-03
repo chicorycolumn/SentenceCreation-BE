@@ -1,0 +1,8 @@
+{
+  "inflections": {
+    "simple": "mandatory",
+    "comparative": "more mandatory",
+    "superlative": "the most mandatory",
+    "adverb": "mandatorily"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przesyłka",
+      "gen": "przesyłki",
+      "dat": "przesyłce",
+      "acc": "przesyłkę",
+      "ins": "przesyłką",
+      "loc": "przesyłce",
+      "voc": "przesyłko"
+    },
+    "plural": {
+      "nom": "przesyłki",
+      "gen": "przesyłek",
+      "dat": "przesyłkom",
+      "acc": "przesyłki",
+      "ins": "przesyłkami",
+      "loc": "przesyłkach",
+      "voc": "przesyłki"
+    }
+  }
+}

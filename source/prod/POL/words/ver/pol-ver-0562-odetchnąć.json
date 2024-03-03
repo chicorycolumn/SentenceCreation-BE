@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odetchnąć",
+    "verbalNoun": "odetchnięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odetchnąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odetchnie się"
+          },
+          "plural": {
+            "allPluralGenders": "odetchnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odetchnę"
+          },
+          "plural": {
+            "allPluralGenders": "odetchniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odetchniesz"
+          },
+          "plural": {
+            "allPluralGenders": "odetchniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odetchnie"
+          },
+          "plural": {
+            "allPluralGenders": "odetchną"
+          }
+        }
+      },
+      "imperative": "odetchnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odetchnięto"
+          },
+          "plural": {
+            "allPluralGenders": "odetchnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odetchnąłem",
+            "f": "odetchnęłam"
+          },
+          "plural": {
+            "virile": "odetchnęliśmy",
+            "nonvirile": "odetchnęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odetchnąłeś",
+            "f": "odetchnęłaś"
+          },
+          "plural": {
+            "virile": "odetchnęliście",
+            "nonvirile": "odetchnęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odetchnął",
+            "f": "odetchnęła",
+            "n": "odetchnęło"
+          },
+          "plural": {
+            "virile": "odetchnęli",
+            "nonvirile": "odetchnęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

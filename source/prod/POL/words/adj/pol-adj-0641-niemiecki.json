@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niemiecki",
+          "gen": "niemieckiego",
+          "dat": "niemieckiemu",
+          "acc": "niemieckiego",
+          "ins": "niemieckim",
+          "loc": "niemieckim"
+        },
+        "m3": {
+          "nom": "niemiecki",
+          "gen": "niemieckiego",
+          "dat": "niemieckiemu",
+          "acc": "niemiecki",
+          "ins": "niemieckim",
+          "loc": "niemieckim"
+        },
+        "f": {
+          "nom": "niemiecka",
+          "gen": "niemieckiej",
+          "dat": "niemieckiej",
+          "acc": "niemiecką",
+          "ins": "niemiecką",
+          "loc": "niemieckiej"
+        },
+        "n": {
+          "nom": "niemieckie",
+          "gen": "niemieckiego",
+          "dat": "niemieckiemu",
+          "acc": "niemieckie",
+          "ins": "niemieckim",
+          "loc": "niemieckim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niemieccy",
+          "gen": "niemieckich",
+          "dat": "niemieckim",
+          "acc": "niemieckich",
+          "ins": "niemieckimi",
+          "loc": "niemieckich"
+        },
+        "nonvirile": {
+          "nom": "niemieckie",
+          "gen": "niemieckich",
+          "dat": "niemieckim",
+          "acc": "niemieckie",
+          "ins": "niemieckimi",
+          "loc": "niemieckich"
+        }
+      }
+    }
+  }
+}

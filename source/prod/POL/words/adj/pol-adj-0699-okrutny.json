@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "okrutnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "okrutny",
+          "gen": "okrutnego",
+          "dat": "okrutnemu",
+          "acc": "okrutnego",
+          "ins": "okrutnym",
+          "loc": "okrutnym"
+        },
+        "m3": {
+          "nom": "okrutny",
+          "gen": "okrutnego",
+          "dat": "okrutnemu",
+          "acc": "okrutny",
+          "ins": "okrutnym",
+          "loc": "okrutnym"
+        },
+        "f": {
+          "nom": "okrutna",
+          "gen": "okrutnej",
+          "dat": "okrutnej",
+          "acc": "okrutną",
+          "ins": "okrutną",
+          "loc": "okrutnej"
+        },
+        "n": {
+          "nom": "okrutne",
+          "gen": "okrutnego",
+          "dat": "okrutnemu",
+          "acc": "okrutne",
+          "ins": "okrutnym",
+          "loc": "okrutnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "okrutni",
+          "gen": "okrutnych",
+          "dat": "okrutnym",
+          "acc": "okrutnych",
+          "ins": "okrutnymi",
+          "loc": "okrutnych"
+        },
+        "nonvirile": {
+          "nom": "okrutne",
+          "gen": "okrutnych",
+          "dat": "okrutnym",
+          "acc": "okrutne",
+          "ins": "okrutnymi",
+          "loc": "okrutnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszy",
+              "bardziej okrutny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszego",
+              "bardziej okrutnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszemu",
+              "bardziej okrutnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszego",
+              "bardziej okrutnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszym",
+              "bardziej okrutnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszym",
+              "bardziej okrutnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszy",
+              "bardziej okrutny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszego",
+              "bardziej okrutnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszemu",
+              "bardziej okrutnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszy",
+              "bardziej okrutny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszym",
+              "bardziej okrutnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszym",
+              "bardziej okrutnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejsza",
+              "bardziej okrutna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszej",
+              "bardziej okrutnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszej",
+              "bardziej okrutnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszą",
+              "bardziej okrutną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszą",
+              "bardziej okrutną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszej",
+              "bardziej okrutnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejsze",
+              "bardziej okrutne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszego",
+              "bardziej okrutnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszemu",
+              "bardziej okrutnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejsze",
+              "bardziej okrutne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszym",
+              "bardziej okrutnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszym",
+              "bardziej okrutnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejsi",
+              "bardziej okrutni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszych",
+              "bardziej okrutnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszym",
+              "bardziej okrutnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszych",
+              "bardziej okrutnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszymi",
+              "bardziej okrutnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszych",
+              "bardziej okrutnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejsze",
+              "bardziej okrutne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszych",
+              "bardziej okrutnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszym",
+              "bardziej okrutnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejsze",
+              "bardziej okrutne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszymi",
+              "bardziej okrutnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "okrutniejszych",
+              "bardziej okrutnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszy",
+              "najbardziej okrutny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszego",
+              "najbardziej okrutnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszemu",
+              "najbardziej okrutnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszego",
+              "najbardziej okrutnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszym",
+              "najbardziej okrutnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszym",
+              "najbardziej okrutnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszy",
+              "najbardziej okrutny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszego",
+              "najbardziej okrutnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszemu",
+              "najbardziej okrutnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszy",
+              "najbardziej okrutny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszym",
+              "najbardziej okrutnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszym",
+              "najbardziej okrutnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejsza",
+              "najbardziej okrutna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszej",
+              "najbardziej okrutnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszej",
+              "najbardziej okrutnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszą",
+              "najbardziej okrutną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszą",
+              "najbardziej okrutną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszej",
+              "najbardziej okrutnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejsze",
+              "najbardziej okrutne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszego",
+              "najbardziej okrutnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszemu",
+              "najbardziej okrutnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejsze",
+              "najbardziej okrutne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszym",
+              "najbardziej okrutnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszym",
+              "najbardziej okrutnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejsi",
+              "najbardziej okrutni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszych",
+              "najbardziej okrutnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszym",
+              "najbardziej okrutnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszych",
+              "najbardziej okrutnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszymi",
+              "najbardziej okrutnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszych",
+              "najbardziej okrutnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejsze",
+              "najbardziej okrutne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszych",
+              "najbardziej okrutnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszym",
+              "najbardziej okrutnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejsze",
+              "najbardziej okrutne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszymi",
+              "najbardziej okrutnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najokrutniejszych",
+              "najbardziej okrutnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "francuski",
+          "gen": "francuskiego",
+          "dat": "francuskiemu",
+          "acc": "francuskiego",
+          "ins": "francuskim",
+          "loc": "francuskim"
+        },
+        "m3": {
+          "nom": "francuski",
+          "gen": "francuskiego",
+          "dat": "francuskiemu",
+          "acc": "francuski",
+          "ins": "francuskim",
+          "loc": "francuskim"
+        },
+        "f": {
+          "nom": "francuska",
+          "gen": "francuskiej",
+          "dat": "francuskiej",
+          "acc": "francuską",
+          "ins": "francuską",
+          "loc": "francuskiej"
+        },
+        "n": {
+          "nom": "francuskie",
+          "gen": "francuskiego",
+          "dat": "francuskiemu",
+          "acc": "francuskie",
+          "ins": "francuskim",
+          "loc": "francuskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "francuscy",
+          "gen": "francuskich",
+          "dat": "francuskim",
+          "acc": "francuskich",
+          "ins": "francuskimi",
+          "loc": "francuskich"
+        },
+        "nonvirile": {
+          "nom": "francuskie",
+          "gen": "francuskich",
+          "dat": "francuskim",
+          "acc": "francuskie",
+          "ins": "francuskimi",
+          "loc": "francuskich"
+        }
+      }
+    }
+  }
+}

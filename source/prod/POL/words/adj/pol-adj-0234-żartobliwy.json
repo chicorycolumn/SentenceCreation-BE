@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "żartobliwie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "żartobliwy",
+          "gen": "żartobliwego",
+          "dat": "żartobliwemu",
+          "acc": "żartobliwego",
+          "ins": "żartobliwym",
+          "loc": "żartobliwym"
+        },
+        "m3": {
+          "nom": "żartobliwy",
+          "gen": "żartobliwego",
+          "dat": "żartobliwemu",
+          "acc": "żartobliwy",
+          "ins": "żartobliwym",
+          "loc": "żartobliwym"
+        },
+        "f": {
+          "nom": "żartobliwa",
+          "gen": "żartobliwej",
+          "dat": "żartobliwej",
+          "acc": "żartobliwą",
+          "ins": "żartobliwą",
+          "loc": "żartobliwej"
+        },
+        "n": {
+          "nom": "żartobliwe",
+          "gen": "żartobliwego",
+          "dat": "żartobliwemu",
+          "acc": "żartobliwe",
+          "ins": "żartobliwym",
+          "loc": "żartobliwym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "żartobliwi",
+          "gen": "żartobliwych",
+          "dat": "żartobliwym",
+          "acc": "żartobliwych",
+          "ins": "żartobliwymi",
+          "loc": "żartobliwych"
+        },
+        "nonvirile": {
+          "nom": "żartobliwe",
+          "gen": "żartobliwych",
+          "dat": "żartobliwym",
+          "acc": "żartobliwe",
+          "ins": "żartobliwymi",
+          "loc": "żartobliwych"
+        }
+      }
+    }
+  }
+}

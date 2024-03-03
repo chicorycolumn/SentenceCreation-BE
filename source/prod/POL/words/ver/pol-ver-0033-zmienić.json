@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zmienić",
+    "verbalNoun": "zmienienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zmieniony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zmieniwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zmieni się"
+          },
+          "plural": {
+            "allPluralGenders": "zmieni się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zmienię"
+          },
+          "plural": {
+            "allPluralGenders": "zmienimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zmienisz"
+          },
+          "plural": {
+            "allPluralGenders": "zmienicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zmieni"
+          },
+          "plural": {
+            "allPluralGenders": "zmienią"
+          }
+        }
+      },
+      "imperative": "zmień",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zmieniono"
+          },
+          "plural": {
+            "allPluralGenders": "zmieniono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zmieniłem",
+            "f": "zmieniłam"
+          },
+          "plural": {
+            "virile": "zmieniliśmy",
+            "nonvirile": "zmieniłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zmieniłeś",
+            "f": "zmieniłaś"
+          },
+          "plural": {
+            "virile": "zmieniliście",
+            "nonvirile": "zmieniłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zmienił",
+            "f": "zmieniła",
+            "n": "zmieniło"
+          },
+          "plural": {
+            "virile": "zmienili",
+            "nonvirile": "zmieniły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

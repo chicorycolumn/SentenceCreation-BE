@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przechowywać",
+    "verbalNoun": "przechowywanie",
+    "activeAdjectival": "przechowujący",
+    "passiveAdjectival": "przechowywany",
+    "contemporaryAdverbial": "przechowując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przechowuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przechowywano"
+          },
+          "plural": {
+            "allPluralGenders": "przechowywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przechowywałem",
+            "f": "przechowywałam"
+          },
+          "plural": {
+            "virile": "przechowywaliśmy",
+            "nonvirile": "przechowywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przechowywałeś",
+            "f": "przechowywałaś"
+          },
+          "plural": {
+            "virile": "przechowywaliście",
+            "nonvirile": "przechowywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przechowywał",
+            "f": "przechowywała",
+            "n": "przechowywało"
+          },
+          "plural": {
+            "virile": "przechowywali",
+            "nonvirile": "przechowywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przechowuje się"
+          },
+          "plural": {
+            "allPluralGenders": "przechowuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przechowuję"
+          },
+          "plural": {
+            "allPluralGenders": "przechowujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przechowujesz"
+          },
+          "plural": {
+            "allPluralGenders": "przechowujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przechowuje"
+          },
+          "plural": {
+            "allPluralGenders": "przechowują"
+          }
+        }
+      }
+    }
+  }
+}

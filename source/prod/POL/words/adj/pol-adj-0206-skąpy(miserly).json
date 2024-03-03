@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "skąpo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "skąpy",
+          "gen": "skąpego",
+          "dat": "skąpemu",
+          "acc": "skąpego",
+          "ins": "skąpym",
+          "loc": "skąpym"
+        },
+        "m3": {
+          "nom": "skąpy",
+          "gen": "skąpego",
+          "dat": "skąpemu",
+          "acc": "skąpy",
+          "ins": "skąpym",
+          "loc": "skąpym"
+        },
+        "f": {
+          "nom": "skąpa",
+          "gen": "skąpej",
+          "dat": "skąpej",
+          "acc": "skąpą",
+          "ins": "skąpą",
+          "loc": "skąpej"
+        },
+        "n": {
+          "nom": "skąpe",
+          "gen": "skąpego",
+          "dat": "skąpemu",
+          "acc": "skąpe",
+          "ins": "skąpym",
+          "loc": "skąpym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "skąpi",
+          "gen": "skąpych",
+          "dat": "skąpym",
+          "acc": "skąpych",
+          "ins": "skąpymi",
+          "loc": "skąpych"
+        },
+        "nonvirile": {
+          "nom": "skąpe",
+          "gen": "skąpych",
+          "dat": "skąpym",
+          "acc": "skąpe",
+          "ins": "skąpymi",
+          "loc": "skąpych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej skąpy",
+          "gen": "bardziej skąpego",
+          "dat": "bardziej skąpemu",
+          "acc": "bardziej skąpego",
+          "ins": "bardziej skąpym",
+          "loc": "bardziej skąpym"
+        },
+        "m3": {
+          "nom": "bardziej skąpy",
+          "gen": "bardziej skąpego",
+          "dat": "bardziej skąpemu",
+          "acc": "bardziej skąpy",
+          "ins": "bardziej skąpym",
+          "loc": "bardziej skąpym"
+        },
+        "f": {
+          "nom": "bardziej skąpa",
+          "gen": "bardziej skąpej",
+          "dat": "bardziej skąpej",
+          "acc": "bardziej skąpą",
+          "ins": "bardziej skąpą",
+          "loc": "bardziej skąpej"
+        },
+        "n": {
+          "nom": "bardziej skąpe",
+          "gen": "bardziej skąpego",
+          "dat": "bardziej skąpemu",
+          "acc": "bardziej skąpe",
+          "ins": "bardziej skąpym",
+          "loc": "bardziej skąpym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej skąpi",
+          "gen": "bardziej skąpych",
+          "dat": "bardziej skąpym",
+          "acc": "bardziej skąpych",
+          "ins": "bardziej skąpymi",
+          "loc": "bardziej skąpych"
+        },
+        "nonvirile": {
+          "nom": "bardziej skąpe",
+          "gen": "bardziej skąpych",
+          "dat": "bardziej skąpym",
+          "acc": "bardziej skąpe",
+          "ins": "bardziej skąpymi",
+          "loc": "bardziej skąpych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej skąpy",
+          "gen": "najbardziej skąpego",
+          "dat": "najbardziej skąpemu",
+          "acc": "najbardziej skąpego",
+          "ins": "najbardziej skąpym",
+          "loc": "najbardziej skąpym"
+        },
+        "m3": {
+          "nom": "najbardziej skąpy",
+          "gen": "najbardziej skąpego",
+          "dat": "najbardziej skąpemu",
+          "acc": "najbardziej skąpy",
+          "ins": "najbardziej skąpym",
+          "loc": "najbardziej skąpym"
+        },
+        "f": {
+          "nom": "najbardziej skąpa",
+          "gen": "najbardziej skąpej",
+          "dat": "najbardziej skąpej",
+          "acc": "najbardziej skąpą",
+          "ins": "najbardziej skąpą",
+          "loc": "najbardziej skąpej"
+        },
+        "n": {
+          "nom": "najbardziej skąpe",
+          "gen": "najbardziej skąpego",
+          "dat": "najbardziej skąpemu",
+          "acc": "najbardziej skąpe",
+          "ins": "najbardziej skąpym",
+          "loc": "najbardziej skąpym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej skąpi",
+          "gen": "najbardziej skąpych",
+          "dat": "najbardziej skąpym",
+          "acc": "najbardziej skąpych",
+          "ins": "najbardziej skąpymi",
+          "loc": "najbardziej skąpych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej skąpe",
+          "gen": "najbardziej skąpych",
+          "dat": "najbardziej skąpym",
+          "acc": "najbardziej skąpe",
+          "ins": "najbardziej skąpymi",
+          "loc": "najbardziej skąpych"
+        }
+      }
+    }
+  }
+}

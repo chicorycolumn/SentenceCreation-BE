@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "rozgniewać",
+    "verbalNoun": "rozgniewanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "rozgniewany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "rozgniewawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "rozgniewa się"
+          },
+          "plural": {
+            "allPluralGenders": "rozgniewa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "rozgniewam"
+          },
+          "plural": {
+            "allPluralGenders": "rozgniewamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "rozgniewasz"
+          },
+          "plural": {
+            "allPluralGenders": "rozgniewacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "rozgniewa"
+          },
+          "plural": {
+            "allPluralGenders": "rozgniewają"
+          }
+        }
+      },
+      "imperative": "rozgniewaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "rozgniewano"
+          },
+          "plural": {
+            "allPluralGenders": "rozgniewano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "rozgniewałem",
+            "f": "rozgniewałam"
+          },
+          "plural": {
+            "virile": "rozgniewaliśmy",
+            "nonvirile": "rozgniewałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "rozgniewałeś",
+            "f": "rozgniewałaś"
+          },
+          "plural": {
+            "virile": "rozgniewaliście",
+            "nonvirile": "rozgniewałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "rozgniewał",
+            "f": "rozgniewała",
+            "n": "rozgniewało"
+          },
+          "plural": {
+            "virile": "rozgniewali",
+            "nonvirile": "rozgniewały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

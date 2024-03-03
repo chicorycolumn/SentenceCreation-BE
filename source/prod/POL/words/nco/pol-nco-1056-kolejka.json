@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kolejka",
+      "gen": "kolejki",
+      "dat": "kolejce",
+      "acc": "kolejkę",
+      "ins": "kolejką",
+      "loc": "kolejce",
+      "voc": "kolejko"
+    },
+    "plural": {
+      "nom": "kolejki",
+      "gen": "kolejek",
+      "dat": "kolejkom",
+      "acc": "kolejki",
+      "ins": "kolejkami",
+      "loc": "kolejkach",
+      "voc": "kolejki"
+    }
+  }
+}

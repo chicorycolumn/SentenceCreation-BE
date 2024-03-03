@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ballpoint pen",
+      "gen": "ballpoint pen's"
+    },
+    "plural": {
+      "nom": "ballpoint pens",
+      "gen": "ballpoint pens'"
+    }
+  }
+}

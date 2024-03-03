@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "odlegle",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "odległy",
+          "gen": "odległego",
+          "dat": "odległemu",
+          "acc": "odległego",
+          "ins": "odległym",
+          "loc": "odległym"
+        },
+        "m3": {
+          "nom": "odległy",
+          "gen": "odległego",
+          "dat": "odległemu",
+          "acc": "odległy",
+          "ins": "odległym",
+          "loc": "odległym"
+        },
+        "f": {
+          "nom": "odległa",
+          "gen": "odległej",
+          "dat": "odległej",
+          "acc": "odległą",
+          "ins": "odległą",
+          "loc": "odległej"
+        },
+        "n": {
+          "nom": "odległe",
+          "gen": "odległego",
+          "dat": "odległemu",
+          "acc": "odległe",
+          "ins": "odległym",
+          "loc": "odległym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "odlegli",
+          "gen": "odległych",
+          "dat": "odległym",
+          "acc": "odległych",
+          "ins": "odległymi",
+          "loc": "odległych"
+        },
+        "nonvirile": {
+          "nom": "odległe",
+          "gen": "odległych",
+          "dat": "odległym",
+          "acc": "odległe",
+          "ins": "odległymi",
+          "loc": "odległych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "odleglejszy",
+          "gen": "odleglejszego",
+          "dat": "odleglejszemu",
+          "acc": "odleglejszego",
+          "ins": "odleglejszym",
+          "loc": "odleglejszym"
+        },
+        "m3": {
+          "nom": "odleglejszy",
+          "gen": "odleglejszego",
+          "dat": "odleglejszemu",
+          "acc": "odleglejszy",
+          "ins": "odleglejszym",
+          "loc": "odleglejszym"
+        },
+        "f": {
+          "nom": "odleglejsza",
+          "gen": "odleglejszej",
+          "dat": "odleglejszej",
+          "acc": "odleglejszą",
+          "ins": "odleglejszą",
+          "loc": "odleglejszej"
+        },
+        "n": {
+          "nom": "odleglejsze",
+          "gen": "odleglejszego",
+          "dat": "odleglejszemu",
+          "acc": "odleglejsze",
+          "ins": "odleglejszym",
+          "loc": "odleglejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "odleglejsi",
+          "gen": "odleglejszych",
+          "dat": "odleglejszym",
+          "acc": "odleglejszych",
+          "ins": "odleglejszymi",
+          "loc": "odleglejszych"
+        },
+        "nonvirile": {
+          "nom": "odleglejsze",
+          "gen": "odleglejszych",
+          "dat": "odleglejszym",
+          "acc": "odleglejsze",
+          "ins": "odleglejszymi",
+          "loc": "odleglejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najodleglejszy",
+          "gen": "najodleglejszego",
+          "dat": "najodleglejszemu",
+          "acc": "najodleglejszego",
+          "ins": "najodleglejszym",
+          "loc": "najodleglejszym"
+        },
+        "m3": {
+          "nom": "najodleglejszy",
+          "gen": "najodleglejszego",
+          "dat": "najodleglejszemu",
+          "acc": "najodleglejszy",
+          "ins": "najodleglejszym",
+          "loc": "najodleglejszym"
+        },
+        "f": {
+          "nom": "najodleglejsza",
+          "gen": "najodleglejszej",
+          "dat": "najodleglejszej",
+          "acc": "najodleglejszą",
+          "ins": "najodleglejszą",
+          "loc": "najodleglejszej"
+        },
+        "n": {
+          "nom": "najodleglejsze",
+          "gen": "najodleglejszego",
+          "dat": "najodleglejszemu",
+          "acc": "najodleglejsze",
+          "ins": "najodleglejszym",
+          "loc": "najodleglejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najodleglejsi",
+          "gen": "najodleglejszych",
+          "dat": "najodleglejszym",
+          "acc": "najodleglejszych",
+          "ins": "najodleglejszymi",
+          "loc": "najodleglejszych"
+        },
+        "nonvirile": {
+          "nom": "najodleglejsze",
+          "gen": "najodleglejszych",
+          "dat": "najodleglejszym",
+          "acc": "najodleglejsze",
+          "ins": "najodleglejszymi",
+          "loc": "najodleglejszych"
+        }
+      }
+    }
+  }
+}

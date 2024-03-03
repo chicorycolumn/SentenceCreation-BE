@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ser",
+      "gen": "sera",
+      "dat": "serowi",
+      "acc": "ser",
+      "ins": "serem",
+      "loc": "serze",
+      "voc": "serze"
+    },
+    "plural": {
+      "nom": "sery",
+      "gen": "serów",
+      "dat": "serom",
+      "acc": "sery",
+      "ins": "serami",
+      "loc": "serach",
+      "voc": "sery"
+    }
+  }
+}

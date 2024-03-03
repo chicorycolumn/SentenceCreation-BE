@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dziennikarz",
+      "gen": "dziennikarza",
+      "dat": "dziennikarzowi",
+      "acc": "dziennikarza",
+      "ins": "dziennikarzem",
+      "loc": "dziennikarzu",
+      "voc": "dziennikarzu"
+    },
+    "plural": {
+      "nom": "dziennikarze",
+      "gen": "dziennikarzy",
+      "dat": "dziennikarzom",
+      "acc": "dziennikarzy",
+      "ins": "dziennikarzami",
+      "loc": "dziennikarzach",
+      "voc": "dziennikarze"
+    }
+  }
+}

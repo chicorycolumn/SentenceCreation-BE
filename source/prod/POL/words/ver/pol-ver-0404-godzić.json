@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "godzić",
+    "verbalNoun": "godzenie",
+    "activeAdjectival": "godzący",
+    "passiveAdjectival": "godzony",
+    "contemporaryAdverbial": "godząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "gódź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "godzono"
+          },
+          "plural": {
+            "allPluralGenders": "godzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "godziłem",
+            "f": "godziłam"
+          },
+          "plural": {
+            "virile": "godziliśmy",
+            "nonvirile": "godziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "godziłeś",
+            "f": "godziłaś"
+          },
+          "plural": {
+            "virile": "godziliście",
+            "nonvirile": "godziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "godził",
+            "f": "godziła",
+            "n": "godziło"
+          },
+          "plural": {
+            "virile": "godzili",
+            "nonvirile": "godziły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "godzi się"
+          },
+          "plural": {
+            "allPluralGenders": "godzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "godzę"
+          },
+          "plural": {
+            "allPluralGenders": "godzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "godzisz"
+          },
+          "plural": {
+            "allPluralGenders": "godzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "godzi"
+          },
+          "plural": {
+            "allPluralGenders": "godzą"
+          }
+        }
+      }
+    }
+  }
+}

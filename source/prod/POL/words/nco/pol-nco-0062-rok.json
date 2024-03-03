@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rok",
+      "gen": "roku",
+      "dat": "rokowi",
+      "acc": "rok",
+      "ins": "rokiem",
+      "loc": "roku",
+      "voc": "roku"
+    },
+    "plural": {
+      "nom": "lata",
+      "gen": "lat",
+      "dat": "latom",
+      "acc": "lata",
+      "ins": "latami",
+      "loc": "latach",
+      "voc": "lata"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niewiarygodnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niewiarygodny",
+          "gen": "niewiarygodnego",
+          "dat": "niewiarygodnemu",
+          "acc": "niewiarygodnego",
+          "ins": "niewiarygodnym",
+          "loc": "niewiarygodnym"
+        },
+        "m3": {
+          "nom": "niewiarygodny",
+          "gen": "niewiarygodnego",
+          "dat": "niewiarygodnemu",
+          "acc": "niewiarygodny",
+          "ins": "niewiarygodnym",
+          "loc": "niewiarygodnym"
+        },
+        "f": {
+          "nom": "niewiarygodna",
+          "gen": "niewiarygodnej",
+          "dat": "niewiarygodnej",
+          "acc": "niewiarygodną",
+          "ins": "niewiarygodną",
+          "loc": "niewiarygodnej"
+        },
+        "n": {
+          "nom": "niewiarygodne",
+          "gen": "niewiarygodnego",
+          "dat": "niewiarygodnemu",
+          "acc": "niewiarygodne",
+          "ins": "niewiarygodnym",
+          "loc": "niewiarygodnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niewiarygodni",
+          "gen": "niewiarygodnych",
+          "dat": "niewiarygodnym",
+          "acc": "niewiarygodnych",
+          "ins": "niewiarygodnymi",
+          "loc": "niewiarygodnych"
+        },
+        "nonvirile": {
+          "nom": "niewiarygodne",
+          "gen": "niewiarygodnych",
+          "dat": "niewiarygodnym",
+          "acc": "niewiarygodne",
+          "ins": "niewiarygodnymi",
+          "loc": "niewiarygodnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "niewiarygodniejszy",
+          "gen": "niewiarygodniejszego",
+          "dat": "niewiarygodniejszemu",
+          "acc": "niewiarygodniejszego",
+          "ins": "niewiarygodniejszym",
+          "loc": "niewiarygodniejszym"
+        },
+        "m3": {
+          "nom": "niewiarygodniejszy",
+          "gen": "niewiarygodniejszego",
+          "dat": "niewiarygodniejszemu",
+          "acc": "niewiarygodniejszy",
+          "ins": "niewiarygodniejszym",
+          "loc": "niewiarygodniejszym"
+        },
+        "f": {
+          "nom": "niewiarygodniejsza",
+          "gen": "niewiarygodniejszej",
+          "dat": "niewiarygodniejszej",
+          "acc": "niewiarygodniejszą",
+          "ins": "niewiarygodniejszą",
+          "loc": "niewiarygodniejszej"
+        },
+        "n": {
+          "nom": "niewiarygodniejsze",
+          "gen": "niewiarygodniejszego",
+          "dat": "niewiarygodniejszemu",
+          "acc": "niewiarygodniejsze",
+          "ins": "niewiarygodniejszym",
+          "loc": "niewiarygodniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niewiarygodniejsi",
+          "gen": "niewiarygodniejszych",
+          "dat": "niewiarygodniejszym",
+          "acc": "niewiarygodniejszych",
+          "ins": "niewiarygodniejszymi",
+          "loc": "niewiarygodniejszych"
+        },
+        "nonvirile": {
+          "nom": "niewiarygodniejsze",
+          "gen": "niewiarygodniejszych",
+          "dat": "niewiarygodniejszym",
+          "acc": "niewiarygodniejsze",
+          "ins": "niewiarygodniejszymi",
+          "loc": "niewiarygodniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najniewiarygodniejszy",
+          "gen": "najniewiarygodniejszego",
+          "dat": "najniewiarygodniejszemu",
+          "acc": "najniewiarygodniejszego",
+          "ins": "najniewiarygodniejszym",
+          "loc": "najniewiarygodniejszym"
+        },
+        "m3": {
+          "nom": "najniewiarygodniejszy",
+          "gen": "najniewiarygodniejszego",
+          "dat": "najniewiarygodniejszemu",
+          "acc": "najniewiarygodniejszy",
+          "ins": "najniewiarygodniejszym",
+          "loc": "najniewiarygodniejszym"
+        },
+        "f": {
+          "nom": "najniewiarygodniejsza",
+          "gen": "najniewiarygodniejszej",
+          "dat": "najniewiarygodniejszej",
+          "acc": "najniewiarygodniejszą",
+          "ins": "najniewiarygodniejszą",
+          "loc": "najniewiarygodniejszej"
+        },
+        "n": {
+          "nom": "najniewiarygodniejsze",
+          "gen": "najniewiarygodniejszego",
+          "dat": "najniewiarygodniejszemu",
+          "acc": "najniewiarygodniejsze",
+          "ins": "najniewiarygodniejszym",
+          "loc": "najniewiarygodniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najniewiarygodniejsi",
+          "gen": "najniewiarygodniejszych",
+          "dat": "najniewiarygodniejszym",
+          "acc": "najniewiarygodniejszych",
+          "ins": "najniewiarygodniejszymi",
+          "loc": "najniewiarygodniejszych"
+        },
+        "nonvirile": {
+          "nom": "najniewiarygodniejsze",
+          "gen": "najniewiarygodniejszych",
+          "dat": "najniewiarygodniejszym",
+          "acc": "najniewiarygodniejsze",
+          "ins": "najniewiarygodniejszymi",
+          "loc": "najniewiarygodniejszych"
+        }
+      }
+    }
+  }
+}

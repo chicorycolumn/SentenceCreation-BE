@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przechować",
+    "verbalNoun": "przechowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przechowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przechowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przechowa się"
+          },
+          "plural": {
+            "allPluralGenders": "przechowa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przechowam"
+          },
+          "plural": {
+            "allPluralGenders": "przechowamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przechowasz"
+          },
+          "plural": {
+            "allPluralGenders": "przechowacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przechowa"
+          },
+          "plural": {
+            "allPluralGenders": "przechowają"
+          }
+        }
+      },
+      "imperative": "przechowaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przechowano"
+          },
+          "plural": {
+            "allPluralGenders": "przechowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przechowałem",
+            "f": "przechowałam"
+          },
+          "plural": {
+            "virile": "przechowaliśmy",
+            "nonvirile": "przechowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przechowałeś",
+            "f": "przechowałaś"
+          },
+          "plural": {
+            "virile": "przechowaliście",
+            "nonvirile": "przechowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przechował",
+            "f": "przechowała",
+            "n": "przechowało"
+          },
+          "plural": {
+            "virile": "przechowali",
+            "nonvirile": "przechowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

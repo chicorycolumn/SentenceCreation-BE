@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "łazienka",
+      "gen": "łazienki",
+      "dat": "łazience",
+      "acc": "łazienkę",
+      "ins": "łazienką",
+      "loc": "łazience",
+      "voc": "łazienko"
+    },
+    "plural": {
+      "nom": "łazienki",
+      "gen": "łazienek",
+      "dat": "łazienkom",
+      "acc": "łazienki",
+      "ins": "łazienkami",
+      "loc": "łazienkach",
+      "voc": "łazienki"
+    }
+  }
+}

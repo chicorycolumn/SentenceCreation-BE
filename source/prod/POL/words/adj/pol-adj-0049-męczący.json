@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "męcząco",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "męczący",
+          "gen": "męczącego",
+          "dat": "męczącemu",
+          "acc": "męczącego",
+          "ins": "męczącym",
+          "loc": "męczącym"
+        },
+        "m3": {
+          "nom": "męczący",
+          "gen": "męczącego",
+          "dat": "męczącemu",
+          "acc": "męczący",
+          "ins": "męczącym",
+          "loc": "męczącym"
+        },
+        "f": {
+          "nom": "męcząca",
+          "gen": "męczącej",
+          "dat": "męczącej",
+          "acc": "męczącą",
+          "ins": "męczącą",
+          "loc": "męczącej"
+        },
+        "n": {
+          "nom": "męczące",
+          "gen": "męczącego",
+          "dat": "męczącemu",
+          "acc": "męczące",
+          "ins": "męczącym",
+          "loc": "męczącym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "męczący",
+          "gen": "męczących",
+          "dat": "męczącym",
+          "acc": "męczących",
+          "ins": "męczącymi",
+          "loc": "męczących"
+        },
+        "nonvirile": {
+          "nom": "męczące",
+          "gen": "męczących",
+          "dat": "męczącym",
+          "acc": "męczące",
+          "ins": "męczącymi",
+          "loc": "męczących"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej męczący",
+          "gen": "bardziej męczącego",
+          "dat": "bardziej męczącemu",
+          "acc": "bardziej męczącego",
+          "ins": "bardziej męczącym",
+          "loc": "bardziej męczącym"
+        },
+        "m3": {
+          "nom": "bardziej męczący",
+          "gen": "bardziej męczącego",
+          "dat": "bardziej męczącemu",
+          "acc": "bardziej męczący",
+          "ins": "bardziej męczącym",
+          "loc": "bardziej męczącym"
+        },
+        "f": {
+          "nom": "bardziej męcząca",
+          "gen": "bardziej męczącej",
+          "dat": "bardziej męczącej",
+          "acc": "bardziej męczącą",
+          "ins": "bardziej męczącą",
+          "loc": "bardziej męczącej"
+        },
+        "n": {
+          "nom": "bardziej męczące",
+          "gen": "bardziej męczącego",
+          "dat": "bardziej męczącemu",
+          "acc": "bardziej męczące",
+          "ins": "bardziej męczącym",
+          "loc": "bardziej męczącym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej męczący",
+          "gen": "bardziej męczących",
+          "dat": "bardziej męczącym",
+          "acc": "bardziej męczących",
+          "ins": "bardziej męczącymi",
+          "loc": "bardziej męczących"
+        },
+        "nonvirile": {
+          "nom": "bardziej męczące",
+          "gen": "bardziej męczących",
+          "dat": "bardziej męczącym",
+          "acc": "bardziej męczące",
+          "ins": "bardziej męczącymi",
+          "loc": "bardziej męczących"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej męczący",
+          "gen": "najbardziej męczącego",
+          "dat": "najbardziej męczącemu",
+          "acc": "najbardziej męczącego",
+          "ins": "najbardziej męczącym",
+          "loc": "najbardziej męczącym"
+        },
+        "m3": {
+          "nom": "najbardziej męczący",
+          "gen": "najbardziej męczącego",
+          "dat": "najbardziej męczącemu",
+          "acc": "najbardziej męczący",
+          "ins": "najbardziej męczącym",
+          "loc": "najbardziej męczącym"
+        },
+        "f": {
+          "nom": "najbardziej męcząca",
+          "gen": "najbardziej męczącej",
+          "dat": "najbardziej męczącej",
+          "acc": "najbardziej męczącą",
+          "ins": "najbardziej męczącą",
+          "loc": "najbardziej męczącej"
+        },
+        "n": {
+          "nom": "najbardziej męczące",
+          "gen": "najbardziej męczącego",
+          "dat": "najbardziej męczącemu",
+          "acc": "najbardziej męczące",
+          "ins": "najbardziej męczącym",
+          "loc": "najbardziej męczącym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej męczący",
+          "gen": "najbardziej męczących",
+          "dat": "najbardziej męczącym",
+          "acc": "najbardziej męczących",
+          "ins": "najbardziej męczącymi",
+          "loc": "najbardziej męczących"
+        },
+        "nonvirile": {
+          "nom": "najbardziej męczące",
+          "gen": "najbardziej męczących",
+          "dat": "najbardziej męczącym",
+          "acc": "najbardziej męczące",
+          "ins": "najbardziej męczącymi",
+          "loc": "najbardziej męczących"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "dochodowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dochodowy",
+          "gen": "dochodowego",
+          "dat": "dochodowemu",
+          "acc": "dochodowego",
+          "ins": "dochodowym",
+          "loc": "dochodowym"
+        },
+        "m3": {
+          "nom": "dochodowy",
+          "gen": "dochodowego",
+          "dat": "dochodowemu",
+          "acc": "dochodowy",
+          "ins": "dochodowym",
+          "loc": "dochodowym"
+        },
+        "f": {
+          "nom": "dochodowa",
+          "gen": "dochodowej",
+          "dat": "dochodowej",
+          "acc": "dochodową",
+          "ins": "dochodową",
+          "loc": "dochodowej"
+        },
+        "n": {
+          "nom": "dochodowe",
+          "gen": "dochodowego",
+          "dat": "dochodowemu",
+          "acc": "dochodowe",
+          "ins": "dochodowym",
+          "loc": "dochodowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dochodowi",
+          "gen": "dochodowych",
+          "dat": "dochodowym",
+          "acc": "dochodowych",
+          "ins": "dochodowymi",
+          "loc": "dochodowych"
+        },
+        "nonvirile": {
+          "nom": "dochodowe",
+          "gen": "dochodowych",
+          "dat": "dochodowym",
+          "acc": "dochodowe",
+          "ins": "dochodowymi",
+          "loc": "dochodowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej dochodowy",
+          "gen": "bardziej dochodowego",
+          "dat": "bardziej dochodowemu",
+          "acc": "bardziej dochodowego",
+          "ins": "bardziej dochodowym",
+          "loc": "bardziej dochodowym"
+        },
+        "m3": {
+          "nom": "bardziej dochodowy",
+          "gen": "bardziej dochodowego",
+          "dat": "bardziej dochodowemu",
+          "acc": "bardziej dochodowy",
+          "ins": "bardziej dochodowym",
+          "loc": "bardziej dochodowym"
+        },
+        "f": {
+          "nom": "bardziej dochodowa",
+          "gen": "bardziej dochodowej",
+          "dat": "bardziej dochodowej",
+          "acc": "bardziej dochodową",
+          "ins": "bardziej dochodową",
+          "loc": "bardziej dochodowej"
+        },
+        "n": {
+          "nom": "bardziej dochodowe",
+          "gen": "bardziej dochodowego",
+          "dat": "bardziej dochodowemu",
+          "acc": "bardziej dochodowe",
+          "ins": "bardziej dochodowym",
+          "loc": "bardziej dochodowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej dochodowi",
+          "gen": "bardziej dochodowych",
+          "dat": "bardziej dochodowym",
+          "acc": "bardziej dochodowych",
+          "ins": "bardziej dochodowymi",
+          "loc": "bardziej dochodowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej dochodowe",
+          "gen": "bardziej dochodowych",
+          "dat": "bardziej dochodowym",
+          "acc": "bardziej dochodowe",
+          "ins": "bardziej dochodowymi",
+          "loc": "bardziej dochodowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej dochodowy",
+          "gen": "najbardziej dochodowego",
+          "dat": "najbardziej dochodowemu",
+          "acc": "najbardziej dochodowego",
+          "ins": "najbardziej dochodowym",
+          "loc": "najbardziej dochodowym"
+        },
+        "m3": {
+          "nom": "najbardziej dochodowy",
+          "gen": "najbardziej dochodowego",
+          "dat": "najbardziej dochodowemu",
+          "acc": "najbardziej dochodowy",
+          "ins": "najbardziej dochodowym",
+          "loc": "najbardziej dochodowym"
+        },
+        "f": {
+          "nom": "najbardziej dochodowa",
+          "gen": "najbardziej dochodowej",
+          "dat": "najbardziej dochodowej",
+          "acc": "najbardziej dochodową",
+          "ins": "najbardziej dochodową",
+          "loc": "najbardziej dochodowej"
+        },
+        "n": {
+          "nom": "najbardziej dochodowe",
+          "gen": "najbardziej dochodowego",
+          "dat": "najbardziej dochodowemu",
+          "acc": "najbardziej dochodowe",
+          "ins": "najbardziej dochodowym",
+          "loc": "najbardziej dochodowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej dochodowi",
+          "gen": "najbardziej dochodowych",
+          "dat": "najbardziej dochodowym",
+          "acc": "najbardziej dochodowych",
+          "ins": "najbardziej dochodowymi",
+          "loc": "najbardziej dochodowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej dochodowe",
+          "gen": "najbardziej dochodowych",
+          "dat": "najbardziej dochodowym",
+          "acc": "najbardziej dochodowe",
+          "ins": "najbardziej dochodowymi",
+          "loc": "najbardziej dochodowych"
+        }
+      }
+    }
+  }
+}

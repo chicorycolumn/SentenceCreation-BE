@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "movement",
+      "gen": "movement's"
+    },
+    "plural": {
+      "nom": "movements",
+      "gen": "movements'"
+    }
+  }
+}

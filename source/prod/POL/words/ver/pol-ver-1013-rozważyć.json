@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "rozważyć",
+    "verbalNoun": "rozważenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "rozważony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "rozważywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "rozważy się"
+          },
+          "plural": {
+            "allPluralGenders": "rozważy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "rozważę"
+          },
+          "plural": {
+            "allPluralGenders": "rozważymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "rozważysz"
+          },
+          "plural": {
+            "allPluralGenders": "rozważycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "rozważy"
+          },
+          "plural": {
+            "allPluralGenders": "rozważą"
+          }
+        }
+      },
+      "imperative": "rozważ",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "rozważono"
+          },
+          "plural": {
+            "allPluralGenders": "rozważono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "rozważyłem",
+            "f": "rozważyłam"
+          },
+          "plural": {
+            "virile": "rozważyliśmy",
+            "nonvirile": "rozważyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "rozważyłeś",
+            "f": "rozważyłaś"
+          },
+          "plural": {
+            "virile": "rozważyliście",
+            "nonvirile": "rozważyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "rozważył",
+            "f": "rozważyła",
+            "n": "rozważyło"
+          },
+          "plural": {
+            "virile": "rozważyli",
+            "nonvirile": "rozważyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

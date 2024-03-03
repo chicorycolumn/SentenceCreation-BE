@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "benzyna",
+      "gen": "benzyny",
+      "dat": "benzynie",
+      "acc": "benzynę",
+      "ins": "benzyną",
+      "loc": "benzynie",
+      "voc": "benzyno"
+    }
+  }
+}

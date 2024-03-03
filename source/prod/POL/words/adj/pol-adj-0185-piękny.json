@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "pięknie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "piękny",
+          "gen": "pięknego",
+          "dat": "pięknemu",
+          "acc": "pięknego",
+          "ins": "pięknym",
+          "loc": "pięknym"
+        },
+        "m3": {
+          "nom": "piękny",
+          "gen": "pięknego",
+          "dat": "pięknemu",
+          "acc": "piękny",
+          "ins": "pięknym",
+          "loc": "pięknym"
+        },
+        "f": {
+          "nom": "piękna",
+          "gen": "pięknej",
+          "dat": "pięknej",
+          "acc": "piękną",
+          "ins": "piękną",
+          "loc": "pięknej"
+        },
+        "n": {
+          "nom": "piękne",
+          "gen": "pięknego",
+          "dat": "pięknemu",
+          "acc": "piękne",
+          "ins": "pięknym",
+          "loc": "pięknym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "piękni",
+          "gen": "pięknych",
+          "dat": "pięknym",
+          "acc": "pięknych",
+          "ins": "pięknymi",
+          "loc": "pięknych"
+        },
+        "nonvirile": {
+          "nom": "piękne",
+          "gen": "pięknych",
+          "dat": "pięknym",
+          "acc": "piękne",
+          "ins": "pięknymi",
+          "loc": "pięknych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "piękniejszy",
+          "gen": "piękniejszego",
+          "dat": "piękniejszemu",
+          "acc": "piękniejszego",
+          "ins": "piękniejszym",
+          "loc": "piękniejszym"
+        },
+        "m3": {
+          "nom": "piękniejszy",
+          "gen": "piękniejszego",
+          "dat": "piękniejszemu",
+          "acc": "piękniejszy",
+          "ins": "piękniejszym",
+          "loc": "piękniejszym"
+        },
+        "f": {
+          "nom": "piękniejsza",
+          "gen": "piękniejszej",
+          "dat": "piękniejszej",
+          "acc": "piękniejszą",
+          "ins": "piękniejszą",
+          "loc": "piękniejszej"
+        },
+        "n": {
+          "nom": "piękniejsze",
+          "gen": "piękniejszego",
+          "dat": "piękniejszemu",
+          "acc": "piękniejsze",
+          "ins": "piękniejszym",
+          "loc": "piękniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "piękniejsi",
+          "gen": "piękniejszych",
+          "dat": "piękniejszym",
+          "acc": "piękniejszych",
+          "ins": "piękniejszymi",
+          "loc": "piękniejszych"
+        },
+        "nonvirile": {
+          "nom": "piękniejsze",
+          "gen": "piękniejszych",
+          "dat": "piękniejszym",
+          "acc": "piękniejsze",
+          "ins": "piękniejszymi",
+          "loc": "piękniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najpiękniejszy",
+          "gen": "najpiękniejszego",
+          "dat": "najpiękniejszemu",
+          "acc": "najpiękniejszego",
+          "ins": "najpiękniejszym",
+          "loc": "najpiękniejszym"
+        },
+        "m3": {
+          "nom": "najpiękniejszy",
+          "gen": "najpiękniejszego",
+          "dat": "najpiękniejszemu",
+          "acc": "najpiękniejszy",
+          "ins": "najpiękniejszym",
+          "loc": "najpiękniejszym"
+        },
+        "f": {
+          "nom": "najpiękniejsza",
+          "gen": "najpiękniejszej",
+          "dat": "najpiękniejszej",
+          "acc": "najpiękniejszą",
+          "ins": "najpiękniejszą",
+          "loc": "najpiękniejszej"
+        },
+        "n": {
+          "nom": "najpiękniejsze",
+          "gen": "najpiękniejszego",
+          "dat": "najpiękniejszemu",
+          "acc": "najpiękniejsze",
+          "ins": "najpiękniejszym",
+          "loc": "najpiękniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najpiękniejsi",
+          "gen": "najpiękniejszych",
+          "dat": "najpiękniejszym",
+          "acc": "najpiękniejszych",
+          "ins": "najpiękniejszymi",
+          "loc": "najpiękniejszych"
+        },
+        "nonvirile": {
+          "nom": "najpiękniejsze",
+          "gen": "najpiękniejszych",
+          "dat": "najpiękniejszym",
+          "acc": "najpiękniejsze",
+          "ins": "najpiękniejszymi",
+          "loc": "najpiękniejszych"
+        }
+      }
+    }
+  }
+}

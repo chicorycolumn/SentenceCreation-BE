@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "kwadratowy",
+          "gen": "kwadratowego",
+          "dat": "kwadratowemu",
+          "acc": "kwadratowego",
+          "ins": "kwadratowym",
+          "loc": "kwadratowym"
+        },
+        "m3": {
+          "nom": "kwadratowy",
+          "gen": "kwadratowego",
+          "dat": "kwadratowemu",
+          "acc": "kwadratowy",
+          "ins": "kwadratowym",
+          "loc": "kwadratowym"
+        },
+        "f": {
+          "nom": "kwadratowa",
+          "gen": "kwadratowej",
+          "dat": "kwadratowej",
+          "acc": "kwadratową",
+          "ins": "kwadratową",
+          "loc": "kwadratowej"
+        },
+        "n": {
+          "nom": "kwadratowe",
+          "gen": "kwadratowego",
+          "dat": "kwadratowemu",
+          "acc": "kwadratowe",
+          "ins": "kwadratowym",
+          "loc": "kwadratowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "kwadratowi",
+          "gen": "kwadratowych",
+          "dat": "kwadratowym",
+          "acc": "kwadratowych",
+          "ins": "kwadratowymi",
+          "loc": "kwadratowych"
+        },
+        "nonvirile": {
+          "nom": "kwadratowe",
+          "gen": "kwadratowych",
+          "dat": "kwadratowym",
+          "acc": "kwadratowe",
+          "ins": "kwadratowymi",
+          "loc": "kwadratowych"
+        }
+      }
+    }
+  }
+}

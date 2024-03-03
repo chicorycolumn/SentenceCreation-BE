@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niezrozumiale",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niezrozumiały",
+          "gen": "niezrozumiałego",
+          "dat": "niezrozumiałemu",
+          "acc": "niezrozumiałego",
+          "ins": "niezrozumiałym",
+          "loc": "niezrozumiałym"
+        },
+        "m3": {
+          "nom": "niezrozumiały",
+          "gen": "niezrozumiałego",
+          "dat": "niezrozumiałemu",
+          "acc": "niezrozumiały",
+          "ins": "niezrozumiałym",
+          "loc": "niezrozumiałym"
+        },
+        "f": {
+          "nom": "niezrozumiała",
+          "gen": "niezrozumiałej",
+          "dat": "niezrozumiałej",
+          "acc": "niezrozumiałą",
+          "ins": "niezrozumiałą",
+          "loc": "niezrozumiałej"
+        },
+        "n": {
+          "nom": "niezrozumiałe",
+          "gen": "niezrozumiałego",
+          "dat": "niezrozumiałemu",
+          "acc": "niezrozumiałe",
+          "ins": "niezrozumiałym",
+          "loc": "niezrozumiałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niezrozumiali",
+          "gen": "niezrozumiałych",
+          "dat": "niezrozumiałym",
+          "acc": "niezrozumiałych",
+          "ins": "niezrozumiałymi",
+          "loc": "niezrozumiałych"
+        },
+        "nonvirile": {
+          "nom": "niezrozumiałe",
+          "gen": "niezrozumiałych",
+          "dat": "niezrozumiałym",
+          "acc": "niezrozumiałe",
+          "ins": "niezrozumiałymi",
+          "loc": "niezrozumiałych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej niezrozumiały",
+          "gen": "bardziej niezrozumiałego",
+          "dat": "bardziej niezrozumiałemu",
+          "acc": "bardziej niezrozumiałego",
+          "ins": "bardziej niezrozumiałym",
+          "loc": "bardziej niezrozumiałym"
+        },
+        "m3": {
+          "nom": "bardziej niezrozumiały",
+          "gen": "bardziej niezrozumiałego",
+          "dat": "bardziej niezrozumiałemu",
+          "acc": "bardziej niezrozumiały",
+          "ins": "bardziej niezrozumiałym",
+          "loc": "bardziej niezrozumiałym"
+        },
+        "f": {
+          "nom": "bardziej niezrozumiała",
+          "gen": "bardziej niezrozumiałej",
+          "dat": "bardziej niezrozumiałej",
+          "acc": "bardziej niezrozumiałą",
+          "ins": "bardziej niezrozumiałą",
+          "loc": "bardziej niezrozumiałej"
+        },
+        "n": {
+          "nom": "bardziej niezrozumiałe",
+          "gen": "bardziej niezrozumiałego",
+          "dat": "bardziej niezrozumiałemu",
+          "acc": "bardziej niezrozumiałe",
+          "ins": "bardziej niezrozumiałym",
+          "loc": "bardziej niezrozumiałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej niezrozumiali",
+          "gen": "bardziej niezrozumiałych",
+          "dat": "bardziej niezrozumiałym",
+          "acc": "bardziej niezrozumiałych",
+          "ins": "bardziej niezrozumiałymi",
+          "loc": "bardziej niezrozumiałych"
+        },
+        "nonvirile": {
+          "nom": "bardziej niezrozumiałe",
+          "gen": "bardziej niezrozumiałych",
+          "dat": "bardziej niezrozumiałym",
+          "acc": "bardziej niezrozumiałe",
+          "ins": "bardziej niezrozumiałymi",
+          "loc": "bardziej niezrozumiałych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej niezrozumiały",
+          "gen": "najbardziej niezrozumiałego",
+          "dat": "najbardziej niezrozumiałemu",
+          "acc": "najbardziej niezrozumiałego",
+          "ins": "najbardziej niezrozumiałym",
+          "loc": "najbardziej niezrozumiałym"
+        },
+        "m3": {
+          "nom": "najbardziej niezrozumiały",
+          "gen": "najbardziej niezrozumiałego",
+          "dat": "najbardziej niezrozumiałemu",
+          "acc": "najbardziej niezrozumiały",
+          "ins": "najbardziej niezrozumiałym",
+          "loc": "najbardziej niezrozumiałym"
+        },
+        "f": {
+          "nom": "najbardziej niezrozumiała",
+          "gen": "najbardziej niezrozumiałej",
+          "dat": "najbardziej niezrozumiałej",
+          "acc": "najbardziej niezrozumiałą",
+          "ins": "najbardziej niezrozumiałą",
+          "loc": "najbardziej niezrozumiałej"
+        },
+        "n": {
+          "nom": "najbardziej niezrozumiałe",
+          "gen": "najbardziej niezrozumiałego",
+          "dat": "najbardziej niezrozumiałemu",
+          "acc": "najbardziej niezrozumiałe",
+          "ins": "najbardziej niezrozumiałym",
+          "loc": "najbardziej niezrozumiałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej niezrozumiali",
+          "gen": "najbardziej niezrozumiałych",
+          "dat": "najbardziej niezrozumiałym",
+          "acc": "najbardziej niezrozumiałych",
+          "ins": "najbardziej niezrozumiałymi",
+          "loc": "najbardziej niezrozumiałych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej niezrozumiałe",
+          "gen": "najbardziej niezrozumiałych",
+          "dat": "najbardziej niezrozumiałym",
+          "acc": "najbardziej niezrozumiałe",
+          "ins": "najbardziej niezrozumiałymi",
+          "loc": "najbardziej niezrozumiałych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "objective",
+      "gen": "objective's"
+    },
+    "plural": {
+      "nom": "objectives",
+      "gen": "objectives'"
+    }
+  }
+}

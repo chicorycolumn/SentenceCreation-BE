@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przedmiot",
+      "gen": "przedmiotu",
+      "dat": "przedmiotowi",
+      "acc": "przedmiot",
+      "ins": "przedmiotem",
+      "loc": "przedmiocie",
+      "voc": "przedmiocie"
+    },
+    "plural": {
+      "nom": "przedmioty",
+      "gen": "przedmiotów",
+      "dat": "przedmiotom",
+      "acc": "przedmioty",
+      "ins": "przedmiotami",
+      "loc": "przedmiotach",
+      "voc": "przedmioty"
+    }
+  }
+}

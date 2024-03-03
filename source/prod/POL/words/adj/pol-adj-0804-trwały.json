@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "trwale",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "trwały",
+          "gen": "trwałego",
+          "dat": "trwałemu",
+          "acc": "trwałego",
+          "ins": "trwałym",
+          "loc": "trwałym"
+        },
+        "m3": {
+          "nom": "trwały",
+          "gen": "trwałego",
+          "dat": "trwałemu",
+          "acc": "trwały",
+          "ins": "trwałym",
+          "loc": "trwałym"
+        },
+        "f": {
+          "nom": "trwała",
+          "gen": "trwałej",
+          "dat": "trwałej",
+          "acc": "trwałą",
+          "ins": "trwałą",
+          "loc": "trwałej"
+        },
+        "n": {
+          "nom": "trwałe",
+          "gen": "trwałego",
+          "dat": "trwałemu",
+          "acc": "trwałe",
+          "ins": "trwałym",
+          "loc": "trwałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "trwali",
+          "gen": "trwałych",
+          "dat": "trwałym",
+          "acc": "trwałych",
+          "ins": "trwałymi",
+          "loc": "trwałych"
+        },
+        "nonvirile": {
+          "nom": "trwałe",
+          "gen": "trwałych",
+          "dat": "trwałym",
+          "acc": "trwałe",
+          "ins": "trwałymi",
+          "loc": "trwałych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "trwalszy",
+          "gen": "trwalszego",
+          "dat": "trwalszemu",
+          "acc": "trwalszego",
+          "ins": "trwalszym",
+          "loc": "trwalszym"
+        },
+        "m3": {
+          "nom": "trwalszy",
+          "gen": "trwalszego",
+          "dat": "trwalszemu",
+          "acc": "trwalszy",
+          "ins": "trwalszym",
+          "loc": "trwalszym"
+        },
+        "f": {
+          "nom": "trwalsza",
+          "gen": "trwalszej",
+          "dat": "trwalszej",
+          "acc": "trwalszą",
+          "ins": "trwalszą",
+          "loc": "trwalszej"
+        },
+        "n": {
+          "nom": "trwalsze",
+          "gen": "trwalszego",
+          "dat": "trwalszemu",
+          "acc": "trwalsze",
+          "ins": "trwalszym",
+          "loc": "trwalszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "trwalsi",
+          "gen": "trwalszych",
+          "dat": "trwalszym",
+          "acc": "trwalszych",
+          "ins": "trwalszymi",
+          "loc": "trwalszych"
+        },
+        "nonvirile": {
+          "nom": "trwalsze",
+          "gen": "trwalszych",
+          "dat": "trwalszym",
+          "acc": "trwalsze",
+          "ins": "trwalszymi",
+          "loc": "trwalszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najtrwalszy",
+          "gen": "najtrwalszego",
+          "dat": "najtrwalszemu",
+          "acc": "najtrwalszego",
+          "ins": "najtrwalszym",
+          "loc": "najtrwalszym"
+        },
+        "m3": {
+          "nom": "najtrwalszy",
+          "gen": "najtrwalszego",
+          "dat": "najtrwalszemu",
+          "acc": "najtrwalszy",
+          "ins": "najtrwalszym",
+          "loc": "najtrwalszym"
+        },
+        "f": {
+          "nom": "najtrwalsza",
+          "gen": "najtrwalszej",
+          "dat": "najtrwalszej",
+          "acc": "najtrwalszą",
+          "ins": "najtrwalszą",
+          "loc": "najtrwalszej"
+        },
+        "n": {
+          "nom": "najtrwalsze",
+          "gen": "najtrwalszego",
+          "dat": "najtrwalszemu",
+          "acc": "najtrwalsze",
+          "ins": "najtrwalszym",
+          "loc": "najtrwalszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najtrwalsi",
+          "gen": "najtrwalszych",
+          "dat": "najtrwalszym",
+          "acc": "najtrwalszych",
+          "ins": "najtrwalszymi",
+          "loc": "najtrwalszych"
+        },
+        "nonvirile": {
+          "nom": "najtrwalsze",
+          "gen": "najtrwalszych",
+          "dat": "najtrwalszym",
+          "acc": "najtrwalsze",
+          "ins": "najtrwalszymi",
+          "loc": "najtrwalszych"
+        }
+      }
+    }
+  }
+}

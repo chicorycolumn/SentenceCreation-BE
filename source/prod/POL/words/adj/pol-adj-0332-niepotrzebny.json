@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "niepotrzebnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niepotrzebny",
+          "gen": "niepotrzebnego",
+          "dat": "niepotrzebnemu",
+          "acc": "niepotrzebnego",
+          "ins": "niepotrzebnym",
+          "loc": "niepotrzebnym"
+        },
+        "m3": {
+          "nom": "niepotrzebny",
+          "gen": "niepotrzebnego",
+          "dat": "niepotrzebnemu",
+          "acc": "niepotrzebny",
+          "ins": "niepotrzebnym",
+          "loc": "niepotrzebnym"
+        },
+        "f": {
+          "nom": "niepotrzebna",
+          "gen": "niepotrzebnej",
+          "dat": "niepotrzebnej",
+          "acc": "niepotrzebną",
+          "ins": "niepotrzebną",
+          "loc": "niepotrzebnej"
+        },
+        "n": {
+          "nom": "niepotrzebne",
+          "gen": "niepotrzebnego",
+          "dat": "niepotrzebnemu",
+          "acc": "niepotrzebne",
+          "ins": "niepotrzebnym",
+          "loc": "niepotrzebnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niepotrzebni",
+          "gen": "niepotrzebnych",
+          "dat": "niepotrzebnym",
+          "acc": "niepotrzebnych",
+          "ins": "niepotrzebnymi",
+          "loc": "niepotrzebnych"
+        },
+        "nonvirile": {
+          "nom": "niepotrzebne",
+          "gen": "niepotrzebnych",
+          "dat": "niepotrzebnym",
+          "acc": "niepotrzebne",
+          "ins": "niepotrzebnymi",
+          "loc": "niepotrzebnych"
+        }
+      }
+    }
+  }
+}

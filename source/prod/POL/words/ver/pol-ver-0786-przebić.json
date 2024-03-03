@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przebić",
+    "verbalNoun": "przebicie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "przebity",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "przebiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przebije się"
+          },
+          "plural": {
+            "allPluralGenders": "przebije się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przebiję"
+          },
+          "plural": {
+            "allPluralGenders": "przebijemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przebijesz"
+          },
+          "plural": {
+            "allPluralGenders": "przebijecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przebije"
+          },
+          "plural": {
+            "allPluralGenders": "przebiją"
+          }
+        }
+      },
+      "imperative": "przebij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przebito"
+          },
+          "plural": {
+            "allPluralGenders": "przebito"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przebiłem",
+            "f": "przebiłam"
+          },
+          "plural": {
+            "virile": "przebiliśmy",
+            "nonvirile": "przebiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przebiłeś",
+            "f": "przebiłaś"
+          },
+          "plural": {
+            "virile": "przebiliście",
+            "nonvirile": "przebiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przebił",
+            "f": "przebiła",
+            "n": "przebiło"
+          },
+          "plural": {
+            "virile": "przebili",
+            "nonvirile": "przebiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

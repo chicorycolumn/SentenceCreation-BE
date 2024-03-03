@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "proof",
+      "gen": "proof's"
+    },
+    "plural": {
+      "nom": "proofs",
+      "gen": "proofs'"
+    }
+  }
+}

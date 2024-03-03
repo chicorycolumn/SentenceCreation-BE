@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "man",
+      "gen": "man's"
+    },
+    "plural": {
+      "nom": "men",
+      "gen": "men's"
+    }
+  }
+}

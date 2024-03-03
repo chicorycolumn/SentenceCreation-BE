@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "siła",
+      "gen": "siły",
+      "dat": "sile",
+      "acc": "siłę",
+      "ins": "siłą",
+      "loc": "sile",
+      "voc": "siło"
+    },
+    "plural": {
+      "nom": "siły",
+      "gen": "sił",
+      "dat": "siłom",
+      "acc": "siły",
+      "ins": "siłami",
+      "loc": "siłach",
+      "voc": "siły"
+    }
+  }
+}

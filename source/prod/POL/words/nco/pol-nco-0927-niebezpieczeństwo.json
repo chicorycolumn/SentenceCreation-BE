@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "niebezpieczeństwo",
+      "gen": "niebezpieczeństwa",
+      "dat": "niebezpieczeństwu",
+      "acc": "niebezpieczeństwo",
+      "ins": "niebezpieczeństwem",
+      "loc": "niebezpieczeństwie",
+      "voc": "niebezpieczeństwo"
+    },
+    "plural": {
+      "nom": "niebezpieczeństwa",
+      "gen": "niebezpieczeństw",
+      "dat": "niebezpieczeństwom",
+      "acc": "niebezpieczeństwa",
+      "ins": "niebezpieczeństwami",
+      "loc": "niebezpieczeństwach",
+      "voc": "niebezpieczeństwa"
+    }
+  }
+}

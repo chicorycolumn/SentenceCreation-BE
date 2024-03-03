@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "prawda",
+      "gen": "prawdy",
+      "dat": "prawdzie",
+      "acc": "prawdę",
+      "ins": "prawdą",
+      "loc": "prawdzie",
+      "voc": "prawdo"
+    },
+    "plural": {
+      "nom": "prawdy",
+      "gen": "prawd",
+      "dat": "prawdom",
+      "acc": "prawdy",
+      "ins": "prawdami",
+      "loc": "prawdach",
+      "voc": "prawdy"
+    }
+  }
+}

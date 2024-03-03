@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dokonać",
+    "verbalNoun": "dokonanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "dokonany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "dokonawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dokona się"
+          },
+          "plural": {
+            "allPluralGenders": "dokona się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dokonam"
+          },
+          "plural": {
+            "allPluralGenders": "dokonamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dokonasz"
+          },
+          "plural": {
+            "allPluralGenders": "dokonacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dokona"
+          },
+          "plural": {
+            "allPluralGenders": "dokonają"
+          }
+        }
+      },
+      "imperative": "dokonaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dokonano"
+          },
+          "plural": {
+            "allPluralGenders": "dokonano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dokonałem",
+            "f": "dokonałam"
+          },
+          "plural": {
+            "virile": "dokonaliśmy",
+            "nonvirile": "dokonałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dokonałeś",
+            "f": "dokonałaś"
+          },
+          "plural": {
+            "virile": "dokonaliście",
+            "nonvirile": "dokonałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dokonał",
+            "f": "dokonała",
+            "n": "dokonało"
+          },
+          "plural": {
+            "virile": "dokonali",
+            "nonvirile": "dokonały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

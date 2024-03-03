@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dokończyć",
+    "verbalNoun": "dokończenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "dokończony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "dokończywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dokończy się"
+          },
+          "plural": {
+            "allPluralGenders": "dokończy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dokończę"
+          },
+          "plural": {
+            "allPluralGenders": "dokończymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dokończysz"
+          },
+          "plural": {
+            "allPluralGenders": "dokończycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dokończy"
+          },
+          "plural": {
+            "allPluralGenders": "dokończą"
+          }
+        }
+      },
+      "imperative": "dokończ",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dokończono"
+          },
+          "plural": {
+            "allPluralGenders": "dokończono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dokończyłem",
+            "f": "dokończyłam"
+          },
+          "plural": {
+            "virile": "dokończyliśmy",
+            "nonvirile": "dokończyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dokończyłeś",
+            "f": "dokończyłaś"
+          },
+          "plural": {
+            "virile": "dokończyliście",
+            "nonvirile": "dokończyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dokończył",
+            "f": "dokończyła",
+            "n": "dokończyło"
+          },
+          "plural": {
+            "virile": "dokończyli",
+            "nonvirile": "dokończyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

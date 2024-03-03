@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kark",
+      "gen": "karku",
+      "dat": "karkowi",
+      "acc": "kark",
+      "ins": "karkiem",
+      "loc": "karku",
+      "voc": "karku"
+    },
+    "plural": {
+      "nom": "karki",
+      "gen": "karków",
+      "dat": "karkom",
+      "acc": "karki",
+      "ins": "karkami",
+      "loc": "karkach",
+      "voc": "karki"
+    }
+  }
+}

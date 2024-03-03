@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mewa",
+      "gen": "mewy",
+      "dat": "mewie",
+      "acc": "mewę",
+      "ins": "mewą",
+      "loc": "mewie",
+      "voc": "mewo"
+    },
+    "plural": {
+      "nom": "mewy",
+      "gen": "mew",
+      "dat": "mewom",
+      "acc": "mewy",
+      "ins": "mewami",
+      "loc": "mewach",
+      "voc": "mewy"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "stwierdzić",
+    "verbalNoun": "stwierdzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "stwierdzony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "stwierdziwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "stwierdzi się"
+          },
+          "plural": {
+            "allPluralGenders": "stwierdzi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "stwierdzę"
+          },
+          "plural": {
+            "allPluralGenders": "stwierdzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "stwierdzisz"
+          },
+          "plural": {
+            "allPluralGenders": "stwierdzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "stwierdzi"
+          },
+          "plural": {
+            "allPluralGenders": "stwierdzą"
+          }
+        }
+      },
+      "imperative": "stwierdź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "stwierdzono"
+          },
+          "plural": {
+            "allPluralGenders": "stwierdzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "stwierdziłem",
+            "f": "stwierdziłam"
+          },
+          "plural": {
+            "virile": "stwierdziliśmy",
+            "nonvirile": "stwierdziłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "stwierdziłeś",
+            "f": "stwierdziłaś"
+          },
+          "plural": {
+            "virile": "stwierdziliście",
+            "nonvirile": "stwierdziłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "stwierdził",
+            "f": "stwierdziła",
+            "n": "stwierdziło"
+          },
+          "plural": {
+            "virile": "stwierdzili",
+            "nonvirile": "stwierdziły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

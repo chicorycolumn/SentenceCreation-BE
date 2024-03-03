@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "mordować",
+    "verbalNoun": "mordowanie",
+    "activeAdjectival": "mordujący",
+    "passiveAdjectival": "mordowany",
+    "contemporaryAdverbial": "mordując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "morduj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mordowano"
+          },
+          "plural": {
+            "allPluralGenders": "mordowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "mordowałem",
+            "f": "mordowałam"
+          },
+          "plural": {
+            "virile": "mordowaliśmy",
+            "nonvirile": "mordowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "mordowałeś",
+            "f": "mordowałaś"
+          },
+          "plural": {
+            "virile": "mordowaliście",
+            "nonvirile": "mordowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "mordował",
+            "f": "mordowała",
+            "n": "mordowało"
+          },
+          "plural": {
+            "virile": "mordowali",
+            "nonvirile": "mordowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "morduje się"
+          },
+          "plural": {
+            "allPluralGenders": "morduje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "morduję"
+          },
+          "plural": {
+            "allPluralGenders": "mordujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "mordujesz"
+          },
+          "plural": {
+            "allPluralGenders": "mordujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "morduje"
+          },
+          "plural": {
+            "allPluralGenders": "mordują"
+          }
+        }
+      }
+    }
+  }
+}

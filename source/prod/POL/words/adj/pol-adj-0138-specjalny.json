@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "specjalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "specjalny",
+          "gen": "specjalnego",
+          "dat": "specjalnemu",
+          "acc": "specjalnego",
+          "ins": "specjalnym",
+          "loc": "specjalnym"
+        },
+        "m3": {
+          "nom": "specjalny",
+          "gen": "specjalnego",
+          "dat": "specjalnemu",
+          "acc": "specjalny",
+          "ins": "specjalnym",
+          "loc": "specjalnym"
+        },
+        "f": {
+          "nom": "specjalna",
+          "gen": "specjalnej",
+          "dat": "specjalnej",
+          "acc": "specjalną",
+          "ins": "specjalną",
+          "loc": "specjalnej"
+        },
+        "n": {
+          "nom": "specjalne",
+          "gen": "specjalnego",
+          "dat": "specjalnemu",
+          "acc": "specjalne",
+          "ins": "specjalnym",
+          "loc": "specjalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "specjalni",
+          "gen": "specjalnych",
+          "dat": "specjalnym",
+          "acc": "specjalnych",
+          "ins": "specjalnymi",
+          "loc": "specjalnych"
+        },
+        "nonvirile": {
+          "nom": "specjalne",
+          "gen": "specjalnych",
+          "dat": "specjalnym",
+          "acc": "specjalne",
+          "ins": "specjalnymi",
+          "loc": "specjalnych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "mruknąć",
+    "verbalNoun": "mruknięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "mruknąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mruknie się"
+          },
+          "plural": {
+            "allPluralGenders": "mruknie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "mruknę"
+          },
+          "plural": {
+            "allPluralGenders": "mrukniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "mrukniesz"
+          },
+          "plural": {
+            "allPluralGenders": "mrukniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "mruknie"
+          },
+          "plural": {
+            "allPluralGenders": "mrukną"
+          }
+        }
+      },
+      "imperative": "mruknij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "mruknięto"
+          },
+          "plural": {
+            "allPluralGenders": "mruknięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "mruknąłem",
+            "f": "mruknęłam"
+          },
+          "plural": {
+            "virile": "mruknęliśmy",
+            "nonvirile": "mruknęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "mruknąłeś",
+            "f": "mruknęłaś"
+          },
+          "plural": {
+            "virile": "mruknęliście",
+            "nonvirile": "mruknęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "mruknął",
+            "f": "mruknęła",
+            "n": "mruknęło"
+          },
+          "plural": {
+            "virile": "mruknęli",
+            "nonvirile": "mruknęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

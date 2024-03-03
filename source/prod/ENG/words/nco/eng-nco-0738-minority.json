@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "minority",
+      "gen": "minority's"
+    },
+    "plural": {
+      "nom": "minorities",
+      "gen": "minorities'"
+    }
+  }
+}

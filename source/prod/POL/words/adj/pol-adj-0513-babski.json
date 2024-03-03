@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "po babsku",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "babski",
+          "gen": "babskiego",
+          "dat": "babskiemu",
+          "acc": "babskiego",
+          "ins": "babskim",
+          "loc": "babskim"
+        },
+        "m3": {
+          "nom": "babski",
+          "gen": "babskiego",
+          "dat": "babskiemu",
+          "acc": "babski",
+          "ins": "babskim",
+          "loc": "babskim"
+        },
+        "f": {
+          "nom": "babska",
+          "gen": "babskiej",
+          "dat": "babskiej",
+          "acc": "babską",
+          "ins": "babską",
+          "loc": "babskiej"
+        },
+        "n": {
+          "nom": "babskie",
+          "gen": "babskiego",
+          "dat": "babskiemu",
+          "acc": "babskie",
+          "ins": "babskim",
+          "loc": "babskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "babscy",
+          "gen": "babskich",
+          "dat": "babskim",
+          "acc": "babskich",
+          "ins": "babskimi",
+          "loc": "babskich"
+        },
+        "nonvirile": {
+          "nom": "babskie",
+          "gen": "babskich",
+          "dat": "babskim",
+          "acc": "babskie",
+          "ins": "babskimi",
+          "loc": "babskich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej babski",
+          "gen": "bardziej babskiego",
+          "dat": "bardziej babskiemu",
+          "acc": "bardziej babskiego",
+          "ins": "bardziej babskim",
+          "loc": "bardziej babskim"
+        },
+        "m3": {
+          "nom": "bardziej babski",
+          "gen": "bardziej babskiego",
+          "dat": "bardziej babskiemu",
+          "acc": "bardziej babski",
+          "ins": "bardziej babskim",
+          "loc": "bardziej babskim"
+        },
+        "f": {
+          "nom": "bardziej babska",
+          "gen": "bardziej babskiej",
+          "dat": "bardziej babskiej",
+          "acc": "bardziej babską",
+          "ins": "bardziej babską",
+          "loc": "bardziej babskiej"
+        },
+        "n": {
+          "nom": "bardziej babskie",
+          "gen": "bardziej babskiego",
+          "dat": "bardziej babskiemu",
+          "acc": "bardziej babskie",
+          "ins": "bardziej babskim",
+          "loc": "bardziej babskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej babscy",
+          "gen": "bardziej babskich",
+          "dat": "bardziej babskim",
+          "acc": "bardziej babskich",
+          "ins": "bardziej babskimi",
+          "loc": "bardziej babskich"
+        },
+        "nonvirile": {
+          "nom": "bardziej babskie",
+          "gen": "bardziej babskich",
+          "dat": "bardziej babskim",
+          "acc": "bardziej babskie",
+          "ins": "bardziej babskimi",
+          "loc": "bardziej babskich"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej babski",
+          "gen": "najbardziej babskiego",
+          "dat": "najbardziej babskiemu",
+          "acc": "najbardziej babskiego",
+          "ins": "najbardziej babskim",
+          "loc": "najbardziej babskim"
+        },
+        "m3": {
+          "nom": "najbardziej babski",
+          "gen": "najbardziej babskiego",
+          "dat": "najbardziej babskiemu",
+          "acc": "najbardziej babski",
+          "ins": "najbardziej babskim",
+          "loc": "najbardziej babskim"
+        },
+        "f": {
+          "nom": "najbardziej babska",
+          "gen": "najbardziej babskiej",
+          "dat": "najbardziej babskiej",
+          "acc": "najbardziej babską",
+          "ins": "najbardziej babską",
+          "loc": "najbardziej babskiej"
+        },
+        "n": {
+          "nom": "najbardziej babskie",
+          "gen": "najbardziej babskiego",
+          "dat": "najbardziej babskiemu",
+          "acc": "najbardziej babskie",
+          "ins": "najbardziej babskim",
+          "loc": "najbardziej babskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej babscy",
+          "gen": "najbardziej babskich",
+          "dat": "najbardziej babskim",
+          "acc": "najbardziej babskich",
+          "ins": "najbardziej babskimi",
+          "loc": "najbardziej babskich"
+        },
+        "nonvirile": {
+          "nom": "najbardziej babskie",
+          "gen": "najbardziej babskich",
+          "dat": "najbardziej babskim",
+          "acc": "najbardziej babskie",
+          "ins": "najbardziej babskimi",
+          "loc": "najbardziej babskich"
+        }
+      }
+    }
+  }
+}

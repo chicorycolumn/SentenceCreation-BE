@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "serce",
+      "gen": "serca",
+      "dat": "sercu",
+      "acc": "serce",
+      "ins": "sercem",
+      "loc": "sercu",
+      "voc": "serce"
+    },
+    "plural": {
+      "nom": "serca",
+      "gen": "serc",
+      "dat": "sercom",
+      "acc": "serca",
+      "ins": "sercami",
+      "loc": "sercach",
+      "voc": "serca"
+    }
+  }
+}

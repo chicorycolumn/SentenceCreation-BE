@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pochłonąć",
+    "verbalNoun": "pochłonięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "pochłonięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pochłonąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pochłonie się"
+          },
+          "plural": {
+            "allPluralGenders": "pochłonie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pochłonę"
+          },
+          "plural": {
+            "allPluralGenders": "pochłoniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pochłoniesz"
+          },
+          "plural": {
+            "allPluralGenders": "pochłoniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pochłonie"
+          },
+          "plural": {
+            "allPluralGenders": "pochłoną"
+          }
+        }
+      },
+      "imperative": "pochłonij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pochłonięto"
+          },
+          "plural": {
+            "allPluralGenders": "pochłonięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pochłonąłem",
+            "f": "pochłonęłam"
+          },
+          "plural": {
+            "virile": "pochłonęliśmy",
+            "nonvirile": "pochłonęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pochłonąłeś",
+            "f": "pochłonęłaś"
+          },
+          "plural": {
+            "virile": "pochłonęliście",
+            "nonvirile": "pochłonęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pochłonął",
+            "f": "pochłonęła",
+            "n": "pochłonęło"
+          },
+          "plural": {
+            "virile": "pochłonęli",
+            "nonvirile": "pochłonęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "olbrzymio",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "olbrzymi",
+          "gen": "olbrzymiego",
+          "dat": "olbrzymiemu",
+          "acc": "olbrzymiego",
+          "ins": "olbrzymim",
+          "loc": "olbrzymim"
+        },
+        "m3": {
+          "nom": "olbrzymi",
+          "gen": "olbrzymiego",
+          "dat": "olbrzymiemu",
+          "acc": "olbrzymi",
+          "ins": "olbrzymim",
+          "loc": "olbrzymim"
+        },
+        "f": {
+          "nom": "olbrzyma",
+          "gen": "olbrzymiej",
+          "dat": "olbrzymiej",
+          "acc": "olbrzymą",
+          "ins": "olbrzymą",
+          "loc": "olbrzymiej"
+        },
+        "n": {
+          "nom": "olbrzymie",
+          "gen": "olbrzymiego",
+          "dat": "olbrzymiemu",
+          "acc": "olbrzymie",
+          "ins": "olbrzymim",
+          "loc": "olbrzymim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "olbrzymi",
+          "gen": "olbrzymich",
+          "dat": "olbrzymim",
+          "acc": "olbrzymich",
+          "ins": "olbrzymimi",
+          "loc": "olbrzymich"
+        },
+        "nonvirile": {
+          "nom": "olbrzymie",
+          "gen": "olbrzymich",
+          "dat": "olbrzymim",
+          "acc": "olbrzymie",
+          "ins": "olbrzymimi",
+          "loc": "olbrzymich"
+        }
+      }
+    }
+  }
+}

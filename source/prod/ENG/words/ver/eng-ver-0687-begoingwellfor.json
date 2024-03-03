@@ -1,0 +1,15 @@
+{
+  "inflections": {
+    "infinitive": "be going well for",
+    "v2": {
+      "isTerminus": true,
+      "normal": [
+        "was going well for",
+        "were going well for"
+      ]
+    },
+    "v3": "been going well for",
+    "thirdPS": "is going well for",
+    "gerund": "being going well for"
+  }
+}

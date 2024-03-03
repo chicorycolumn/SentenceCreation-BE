@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rice",
+      "gen": "rice's"
+    },
+    "plural": {
+      "nom": "rice",
+      "gen": "rice's"
+    }
+  }
+}

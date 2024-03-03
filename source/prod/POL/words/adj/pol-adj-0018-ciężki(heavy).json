@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "ciężko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ciężki",
+          "gen": "ciężkiego",
+          "dat": "ciężkiemu",
+          "acc": "ciężkiego",
+          "ins": "ciężkim",
+          "loc": "ciężkim"
+        },
+        "m3": {
+          "nom": "ciężki",
+          "gen": "ciężkiego",
+          "dat": "ciężkiemu",
+          "acc": "ciężki",
+          "ins": "ciężkim",
+          "loc": "ciężkim"
+        },
+        "f": {
+          "nom": "ciężka",
+          "gen": "ciężkiej",
+          "dat": "ciężkiej",
+          "acc": "ciężką",
+          "ins": "ciężką",
+          "loc": "ciężkiej"
+        },
+        "n": {
+          "nom": "ciężkie",
+          "gen": "ciężkiego",
+          "dat": "ciężkiemu",
+          "acc": "ciężkie",
+          "ins": "ciężkim",
+          "loc": "ciężkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ciężcy",
+          "gen": "ciężkich",
+          "dat": "ciężkim",
+          "acc": "ciężkich",
+          "ins": "ciężkimi",
+          "loc": "ciężkich"
+        },
+        "nonvirile": {
+          "nom": "ciężkie",
+          "gen": "ciężkich",
+          "dat": "ciężkim",
+          "acc": "ciężkie",
+          "ins": "ciężkimi",
+          "loc": "ciężkich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "cięższy",
+          "gen": "cięższego",
+          "dat": "cięższemu",
+          "acc": "cięższego",
+          "ins": "cięższym",
+          "loc": "cięższym"
+        },
+        "m3": {
+          "nom": "cięższy",
+          "gen": "cięższego",
+          "dat": "cięższemu",
+          "acc": "cięższy",
+          "ins": "cięższym",
+          "loc": "cięższym"
+        },
+        "f": {
+          "nom": "cięższa",
+          "gen": "cięższej",
+          "dat": "cięższej",
+          "acc": "cięższą",
+          "ins": "cięższą",
+          "loc": "cięższej"
+        },
+        "n": {
+          "nom": "cięższe",
+          "gen": "cięższego",
+          "dat": "cięższemu",
+          "acc": "cięższe",
+          "ins": "cięższym",
+          "loc": "cięższym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ciężsi",
+          "gen": "cięższych",
+          "dat": "cięższym",
+          "acc": "cięższych",
+          "ins": "cięższymi",
+          "loc": "cięższych"
+        },
+        "nonvirile": {
+          "nom": "cięższe",
+          "gen": "cięższych",
+          "dat": "cięższym",
+          "acc": "cięższe",
+          "ins": "cięższymi",
+          "loc": "cięższych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najcięższy",
+          "gen": "najcięższego",
+          "dat": "najcięższemu",
+          "acc": "najcięższego",
+          "ins": "najcięższym",
+          "loc": "najcięższym"
+        },
+        "m3": {
+          "nom": "najcięższy",
+          "gen": "najcięższego",
+          "dat": "najcięższemu",
+          "acc": "najcięższy",
+          "ins": "najcięższym",
+          "loc": "najcięższym"
+        },
+        "f": {
+          "nom": "najcięższa",
+          "gen": "najcięższej",
+          "dat": "najcięższej",
+          "acc": "najcięższą",
+          "ins": "najcięższą",
+          "loc": "najcięższej"
+        },
+        "n": {
+          "nom": "najcięższe",
+          "gen": "najcięższego",
+          "dat": "najcięższemu",
+          "acc": "najcięższe",
+          "ins": "najcięższym",
+          "loc": "najcięższym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najciężsi",
+          "gen": "najcięższych",
+          "dat": "najcięższym",
+          "acc": "najcięższych",
+          "ins": "najcięższymi",
+          "loc": "najcięższych"
+        },
+        "nonvirile": {
+          "nom": "najcięższe",
+          "gen": "najcięższych",
+          "dat": "najcięższym",
+          "acc": "najcięższe",
+          "ins": "najcięższymi",
+          "loc": "najcięższych"
+        }
+      }
+    }
+  }
+}

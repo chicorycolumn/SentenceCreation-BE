@@ -1,0 +1,29 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "oko",
+      "gen": "oka",
+      "dat": "oku",
+      "acc": "oko",
+      "ins": "okiem",
+      "loc": "oku",
+      "voc": "oko"
+    },
+    "plural": {
+      "nom": "oczy",
+      "gen": [
+        "oczu",
+        "ócz",
+        "oczów"
+      ],
+      "dat": "oczom",
+      "acc": "oczy",
+      "ins": [
+        "oczami",
+        "oczyma"
+      ],
+      "loc": "oczach",
+      "voc": "oczy"
+    }
+  }
+}

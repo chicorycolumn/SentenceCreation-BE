@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kurz",
+      "gen": "kurzu",
+      "dat": "kurzowi",
+      "acc": "kurz",
+      "ins": "kurzem",
+      "loc": "kurzu",
+      "voc": "kurzu"
+    },
+    "plural": {
+      "nom": "kurze",
+      "gen": "kurzów",
+      "dat": "kurzom",
+      "acc": "kurze",
+      "ins": "kurzami",
+      "loc": "kurzach",
+      "voc": "kurze"
+    }
+  }
+}

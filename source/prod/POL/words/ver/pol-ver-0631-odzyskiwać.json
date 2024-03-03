@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odzyskiwać",
+    "verbalNoun": "odzyskiwanie",
+    "activeAdjectival": "odzyskujący",
+    "passiveAdjectival": "odzyskiwany",
+    "contemporaryAdverbial": "odzyskując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "odzyskuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odzyskiwano"
+          },
+          "plural": {
+            "allPluralGenders": "odzyskiwano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odzyskiwałem",
+            "f": "odzyskiwałam"
+          },
+          "plural": {
+            "virile": "odzyskiwaliśmy",
+            "nonvirile": "odzyskiwałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odzyskiwałeś",
+            "f": "odzyskiwałaś"
+          },
+          "plural": {
+            "virile": "odzyskiwaliście",
+            "nonvirile": "odzyskiwałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odzyskiwał",
+            "f": "odzyskiwała",
+            "n": "odzyskiwało"
+          },
+          "plural": {
+            "virile": "odzyskiwali",
+            "nonvirile": "odzyskiwały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odzyskuje się"
+          },
+          "plural": {
+            "allPluralGenders": "odzyskuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odzyskuję"
+          },
+          "plural": {
+            "allPluralGenders": "odzyskujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odzyskujesz"
+          },
+          "plural": {
+            "allPluralGenders": "odzyskujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odzyskuje"
+          },
+          "plural": {
+            "allPluralGenders": "odzyskują"
+          }
+        }
+      }
+    }
+  }
+}

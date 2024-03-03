@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "commercial",
+      "gen": "commercial's"
+    },
+    "plural": {
+      "nom": "commercials",
+      "gen": "commercials'"
+    }
+  }
+}

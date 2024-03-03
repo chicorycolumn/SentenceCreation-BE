@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "darmowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "darmowy",
+          "gen": "darmowego",
+          "dat": "darmowemu",
+          "acc": "darmowego",
+          "ins": "darmowym",
+          "loc": "darmowym"
+        },
+        "m3": {
+          "nom": "darmowy",
+          "gen": "darmowego",
+          "dat": "darmowemu",
+          "acc": "darmowy",
+          "ins": "darmowym",
+          "loc": "darmowym"
+        },
+        "f": {
+          "nom": "darmowa",
+          "gen": "darmowej",
+          "dat": "darmowej",
+          "acc": "darmową",
+          "ins": "darmową",
+          "loc": "darmowej"
+        },
+        "n": {
+          "nom": "darmowe",
+          "gen": "darmowego",
+          "dat": "darmowemu",
+          "acc": "darmowe",
+          "ins": "darmowym",
+          "loc": "darmowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "darmowi",
+          "gen": "darmowych",
+          "dat": "darmowym",
+          "acc": "darmowych",
+          "ins": "darmowymi",
+          "loc": "darmowych"
+        },
+        "nonvirile": {
+          "nom": "darmowe",
+          "gen": "darmowych",
+          "dat": "darmowym",
+          "acc": "darmowe",
+          "ins": "darmowymi",
+          "loc": "darmowych"
+        }
+      }
+    }
+  }
+}

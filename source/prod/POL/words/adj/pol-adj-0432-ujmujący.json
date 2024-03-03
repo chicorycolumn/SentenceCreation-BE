@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "ujmująco",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "ujmujący",
+          "gen": "ujmującego",
+          "dat": "ujmującemu",
+          "acc": "ujmującego",
+          "ins": "ujmującym",
+          "loc": "ujmującym"
+        },
+        "m3": {
+          "nom": "ujmujący",
+          "gen": "ujmującego",
+          "dat": "ujmującemu",
+          "acc": "ujmujący",
+          "ins": "ujmującym",
+          "loc": "ujmującym"
+        },
+        "f": {
+          "nom": "ujmująca",
+          "gen": "ujmującej",
+          "dat": "ujmującej",
+          "acc": "ujmującą",
+          "ins": "ujmującą",
+          "loc": "ujmującej"
+        },
+        "n": {
+          "nom": "ujmujące",
+          "gen": "ujmującego",
+          "dat": "ujmującemu",
+          "acc": "ujmujące",
+          "ins": "ujmującym",
+          "loc": "ujmującym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "ujmujący",
+          "gen": "ujmujących",
+          "dat": "ujmującym",
+          "acc": "ujmujących",
+          "ins": "ujmującymi",
+          "loc": "ujmujących"
+        },
+        "nonvirile": {
+          "nom": "ujmujące",
+          "gen": "ujmujących",
+          "dat": "ujmującym",
+          "acc": "ujmujące",
+          "ins": "ujmującymi",
+          "loc": "ujmujących"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej ujmujący",
+          "gen": "bardziej ujmującego",
+          "dat": "bardziej ujmującemu",
+          "acc": "bardziej ujmującego",
+          "ins": "bardziej ujmującym",
+          "loc": "bardziej ujmującym"
+        },
+        "m3": {
+          "nom": "bardziej ujmujący",
+          "gen": "bardziej ujmującego",
+          "dat": "bardziej ujmującemu",
+          "acc": "bardziej ujmujący",
+          "ins": "bardziej ujmującym",
+          "loc": "bardziej ujmującym"
+        },
+        "f": {
+          "nom": "bardziej ujmująca",
+          "gen": "bardziej ujmującej",
+          "dat": "bardziej ujmującej",
+          "acc": "bardziej ujmującą",
+          "ins": "bardziej ujmującą",
+          "loc": "bardziej ujmującej"
+        },
+        "n": {
+          "nom": "bardziej ujmujące",
+          "gen": "bardziej ujmującego",
+          "dat": "bardziej ujmującemu",
+          "acc": "bardziej ujmujące",
+          "ins": "bardziej ujmującym",
+          "loc": "bardziej ujmującym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej ujmujący",
+          "gen": "bardziej ujmujących",
+          "dat": "bardziej ujmującym",
+          "acc": "bardziej ujmujących",
+          "ins": "bardziej ujmującymi",
+          "loc": "bardziej ujmujących"
+        },
+        "nonvirile": {
+          "nom": "bardziej ujmujące",
+          "gen": "bardziej ujmujących",
+          "dat": "bardziej ujmującym",
+          "acc": "bardziej ujmujące",
+          "ins": "bardziej ujmującymi",
+          "loc": "bardziej ujmujących"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej ujmujący",
+          "gen": "najbardziej ujmującego",
+          "dat": "najbardziej ujmującemu",
+          "acc": "najbardziej ujmującego",
+          "ins": "najbardziej ujmującym",
+          "loc": "najbardziej ujmującym"
+        },
+        "m3": {
+          "nom": "najbardziej ujmujący",
+          "gen": "najbardziej ujmującego",
+          "dat": "najbardziej ujmującemu",
+          "acc": "najbardziej ujmujący",
+          "ins": "najbardziej ujmującym",
+          "loc": "najbardziej ujmującym"
+        },
+        "f": {
+          "nom": "najbardziej ujmująca",
+          "gen": "najbardziej ujmującej",
+          "dat": "najbardziej ujmującej",
+          "acc": "najbardziej ujmującą",
+          "ins": "najbardziej ujmującą",
+          "loc": "najbardziej ujmującej"
+        },
+        "n": {
+          "nom": "najbardziej ujmujące",
+          "gen": "najbardziej ujmującego",
+          "dat": "najbardziej ujmującemu",
+          "acc": "najbardziej ujmujące",
+          "ins": "najbardziej ujmującym",
+          "loc": "najbardziej ujmującym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej ujmujący",
+          "gen": "najbardziej ujmujących",
+          "dat": "najbardziej ujmującym",
+          "acc": "najbardziej ujmujących",
+          "ins": "najbardziej ujmującymi",
+          "loc": "najbardziej ujmujących"
+        },
+        "nonvirile": {
+          "nom": "najbardziej ujmujące",
+          "gen": "najbardziej ujmujących",
+          "dat": "najbardziej ujmującym",
+          "acc": "najbardziej ujmujące",
+          "ins": "najbardziej ujmującymi",
+          "loc": "najbardziej ujmujących"
+        }
+      }
+    }
+  }
+}

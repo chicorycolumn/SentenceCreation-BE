@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pani",
+      "gen": "pani",
+      "dat": "pani",
+      "acc": "panią",
+      "ins": "panią",
+      "loc": "pani",
+      "voc": "pani"
+    },
+    "plural": {
+      "nom": "panie",
+      "gen": "pań",
+      "dat": "paniom",
+      "acc": "panie",
+      "ins": "paniami",
+      "loc": "paniach",
+      "voc": "panie"
+    }
+  }
+}

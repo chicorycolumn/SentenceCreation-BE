@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "powtórzyć",
+    "verbalNoun": "powtórzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "powtórzony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "powtórzywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powtórzy się"
+          },
+          "plural": {
+            "allPluralGenders": "powtórzy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "powtórzę"
+          },
+          "plural": {
+            "allPluralGenders": "powtórzymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "powtórzysz"
+          },
+          "plural": {
+            "allPluralGenders": "powtórzycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "powtórzy"
+          },
+          "plural": {
+            "allPluralGenders": "powtórzą"
+          }
+        }
+      },
+      "imperative": "powtórz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powtórzono"
+          },
+          "plural": {
+            "allPluralGenders": "powtórzono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "powtórzyłem",
+            "f": "powtórzyłam"
+          },
+          "plural": {
+            "virile": "powtórzyliśmy",
+            "nonvirile": "powtórzyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "powtórzyłeś",
+            "f": "powtórzyłaś"
+          },
+          "plural": {
+            "virile": "powtórzyliście",
+            "nonvirile": "powtórzyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "powtórzył",
+            "f": "powtórzyła",
+            "n": "powtórzyło"
+          },
+          "plural": {
+            "virile": "powtórzyli",
+            "nonvirile": "powtórzyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ślub",
+      "gen": "ślubu",
+      "dat": "ślubowi",
+      "acc": "ślub",
+      "ins": "ślubem",
+      "loc": "ślubie",
+      "voc": "ślubie"
+    },
+    "plural": {
+      "nom": "śluby",
+      "gen": "ślubów",
+      "dat": "ślubom",
+      "acc": "śluby",
+      "ins": "ślubami",
+      "loc": "ślubach",
+      "voc": "śluby"
+    }
+  }
+}

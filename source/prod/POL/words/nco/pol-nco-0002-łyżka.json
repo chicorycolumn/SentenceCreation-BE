@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "łyżka",
+      "gen": "łyżki",
+      "dat": "łyżce",
+      "acc": "łyżkę",
+      "ins": "łyżką",
+      "loc": "łyżce",
+      "voc": "łyżko"
+    },
+    "plural": {
+      "nom": "łyżki",
+      "gen": "łyżek",
+      "dat": "łyżkom",
+      "acc": "łyżki",
+      "ins": "łyżkami",
+      "loc": "łyżkach",
+      "voc": "łyżki"
+    }
+  }
+}

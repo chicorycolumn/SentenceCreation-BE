@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "uroczo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "uroczy",
+          "gen": "uroczego",
+          "dat": "uroczemu",
+          "acc": "uroczego",
+          "ins": "uroczym",
+          "loc": "uroczym"
+        },
+        "m3": {
+          "nom": "uroczy",
+          "gen": "uroczego",
+          "dat": "uroczemu",
+          "acc": "uroczy",
+          "ins": "uroczym",
+          "loc": "uroczym"
+        },
+        "f": {
+          "nom": "urocza",
+          "gen": "uroczej",
+          "dat": "uroczej",
+          "acc": "uroczą",
+          "ins": "uroczą",
+          "loc": "uroczej"
+        },
+        "n": {
+          "nom": "urocze",
+          "gen": "uroczego",
+          "dat": "uroczemu",
+          "acc": "urocze",
+          "ins": "uroczym",
+          "loc": "uroczym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "uroczy",
+          "gen": "uroczych",
+          "dat": "uroczym",
+          "acc": "uroczych",
+          "ins": "uroczymi",
+          "loc": "uroczych"
+        },
+        "nonvirile": {
+          "nom": "urocze",
+          "gen": "uroczych",
+          "dat": "uroczym",
+          "acc": "urocze",
+          "ins": "uroczymi",
+          "loc": "uroczych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej uroczy",
+          "gen": "bardziej uroczego",
+          "dat": "bardziej uroczemu",
+          "acc": "bardziej uroczego",
+          "ins": "bardziej uroczym",
+          "loc": "bardziej uroczym"
+        },
+        "m3": {
+          "nom": "bardziej uroczy",
+          "gen": "bardziej uroczego",
+          "dat": "bardziej uroczemu",
+          "acc": "bardziej uroczy",
+          "ins": "bardziej uroczym",
+          "loc": "bardziej uroczym"
+        },
+        "f": {
+          "nom": "bardziej urocza",
+          "gen": "bardziej uroczej",
+          "dat": "bardziej uroczej",
+          "acc": "bardziej uroczą",
+          "ins": "bardziej uroczą",
+          "loc": "bardziej uroczej"
+        },
+        "n": {
+          "nom": "bardziej urocze",
+          "gen": "bardziej uroczego",
+          "dat": "bardziej uroczemu",
+          "acc": "bardziej urocze",
+          "ins": "bardziej uroczym",
+          "loc": "bardziej uroczym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej uroczy",
+          "gen": "bardziej uroczych",
+          "dat": "bardziej uroczym",
+          "acc": "bardziej uroczych",
+          "ins": "bardziej uroczymi",
+          "loc": "bardziej uroczych"
+        },
+        "nonvirile": {
+          "nom": "bardziej urocze",
+          "gen": "bardziej uroczych",
+          "dat": "bardziej uroczym",
+          "acc": "bardziej urocze",
+          "ins": "bardziej uroczymi",
+          "loc": "bardziej uroczych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej uroczy",
+          "gen": "najbardziej uroczego",
+          "dat": "najbardziej uroczemu",
+          "acc": "najbardziej uroczego",
+          "ins": "najbardziej uroczym",
+          "loc": "najbardziej uroczym"
+        },
+        "m3": {
+          "nom": "najbardziej uroczy",
+          "gen": "najbardziej uroczego",
+          "dat": "najbardziej uroczemu",
+          "acc": "najbardziej uroczy",
+          "ins": "najbardziej uroczym",
+          "loc": "najbardziej uroczym"
+        },
+        "f": {
+          "nom": "najbardziej urocza",
+          "gen": "najbardziej uroczej",
+          "dat": "najbardziej uroczej",
+          "acc": "najbardziej uroczą",
+          "ins": "najbardziej uroczą",
+          "loc": "najbardziej uroczej"
+        },
+        "n": {
+          "nom": "najbardziej urocze",
+          "gen": "najbardziej uroczego",
+          "dat": "najbardziej uroczemu",
+          "acc": "najbardziej urocze",
+          "ins": "najbardziej uroczym",
+          "loc": "najbardziej uroczym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej uroczy",
+          "gen": "najbardziej uroczych",
+          "dat": "najbardziej uroczym",
+          "acc": "najbardziej uroczych",
+          "ins": "najbardziej uroczymi",
+          "loc": "najbardziej uroczych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej urocze",
+          "gen": "najbardziej uroczych",
+          "dat": "najbardziej uroczym",
+          "acc": "najbardziej urocze",
+          "ins": "najbardziej uroczymi",
+          "loc": "najbardziej uroczych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odłożyć",
+    "verbalNoun": "odłożenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "odłożony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odłożywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odłoży się"
+          },
+          "plural": {
+            "allPluralGenders": "odłoży się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odłożę"
+          },
+          "plural": {
+            "allPluralGenders": "odłożymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odłożysz"
+          },
+          "plural": {
+            "allPluralGenders": "odłożycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odłoży"
+          },
+          "plural": {
+            "allPluralGenders": "odłożą"
+          }
+        }
+      },
+      "imperative": "odłóż",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odłożono"
+          },
+          "plural": {
+            "allPluralGenders": "odłożono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odłożyłem",
+            "f": "odłożyłam"
+          },
+          "plural": {
+            "virile": "odłożyliśmy",
+            "nonvirile": "odłożyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odłożyłeś",
+            "f": "odłożyłaś"
+          },
+          "plural": {
+            "virile": "odłożyliście",
+            "nonvirile": "odłożyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odłożył",
+            "f": "odłożyła",
+            "n": "odłożyło"
+          },
+          "plural": {
+            "virile": "odłożyli",
+            "nonvirile": "odłożyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

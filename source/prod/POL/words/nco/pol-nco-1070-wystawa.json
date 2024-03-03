@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wystawa",
+      "gen": "wystawy",
+      "dat": "wystawie",
+      "acc": "wystawę",
+      "ins": "wystawą",
+      "loc": "wystawie",
+      "voc": "wystawo"
+    },
+    "plural": {
+      "nom": "wystawy",
+      "gen": "wystaw",
+      "dat": "wystawom",
+      "acc": "wystawy",
+      "ins": "wystawami",
+      "loc": "wystawach",
+      "voc": "wystawy"
+    }
+  }
+}

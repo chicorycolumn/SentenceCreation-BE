@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "krzyknąć",
+    "verbalNoun": "krzyknięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "krzyknąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "krzyknie się"
+          },
+          "plural": {
+            "allPluralGenders": "krzyknie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "krzyknę"
+          },
+          "plural": {
+            "allPluralGenders": "krzykniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "krzykniesz"
+          },
+          "plural": {
+            "allPluralGenders": "krzykniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "krzyknie"
+          },
+          "plural": {
+            "allPluralGenders": "krzykną"
+          }
+        }
+      },
+      "imperative": "krzyknij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "krzyknięto"
+          },
+          "plural": {
+            "allPluralGenders": "krzyknięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "krzyknąłem",
+            "f": "krzyknęłam"
+          },
+          "plural": {
+            "virile": "krzyknęliśmy",
+            "nonvirile": "krzyknęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "krzyknąłeś",
+            "f": "krzyknęłaś"
+          },
+          "plural": {
+            "virile": "krzyknęliście",
+            "nonvirile": "krzyknęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "krzyknął",
+            "f": "krzyknęła",
+            "n": "krzyknęło"
+          },
+          "plural": {
+            "virile": "krzyknęli",
+            "nonvirile": "krzyknęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

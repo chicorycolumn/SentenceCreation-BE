@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zmrok",
+      "gen": "zmroku",
+      "dat": "zmrokowi",
+      "acc": "zmrok",
+      "ins": "zmrokiem",
+      "loc": "zmroku",
+      "voc": "zmroku"
+    }
+  }
+}

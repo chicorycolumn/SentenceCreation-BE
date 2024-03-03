@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "szacować",
+    "verbalNoun": "szacowanie",
+    "activeAdjectival": "szacujący",
+    "passiveAdjectival": "szacowany",
+    "contemporaryAdverbial": "szacując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "szacuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "szacowano"
+          },
+          "plural": {
+            "allPluralGenders": "szacowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "szacowałem",
+            "f": "szacowałam"
+          },
+          "plural": {
+            "virile": "szacowaliśmy",
+            "nonvirile": "szacowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "szacowałeś",
+            "f": "szacowałaś"
+          },
+          "plural": {
+            "virile": "szacowaliście",
+            "nonvirile": "szacowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "szacował",
+            "f": "szacowała",
+            "n": "szacowało"
+          },
+          "plural": {
+            "virile": "szacowali",
+            "nonvirile": "szacowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "szacuje się"
+          },
+          "plural": {
+            "allPluralGenders": "szacuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "szacuję"
+          },
+          "plural": {
+            "allPluralGenders": "szacujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "szacujesz"
+          },
+          "plural": {
+            "allPluralGenders": "szacujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "szacuje"
+          },
+          "plural": {
+            "allPluralGenders": "szacują"
+          }
+        }
+      }
+    }
+  }
+}

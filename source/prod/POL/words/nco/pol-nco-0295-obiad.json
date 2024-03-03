@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "obiad",
+      "gen": "obiadu",
+      "dat": "obiadowi",
+      "acc": "obiad",
+      "ins": "obiadem",
+      "loc": "obiedzie",
+      "voc": "obiedzie"
+    },
+    "plural": {
+      "nom": "obiady",
+      "gen": "obiadów",
+      "dat": "obiadom",
+      "acc": "obiady",
+      "ins": "obiadami",
+      "loc": "obiadach",
+      "voc": "obiady"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kokos",
+      "gen": "kokosu",
+      "dat": "kokosowi",
+      "acc": "kokos",
+      "ins": "kokosem",
+      "loc": "kokosie",
+      "voc": "kokosie"
+    },
+    "plural": {
+      "nom": "kokosy",
+      "gen": "kokosów",
+      "dat": "kokosom",
+      "acc": "kokosy",
+      "ins": "kokosami",
+      "loc": "kokosach",
+      "voc": "kokosy"
+    }
+  }
+}

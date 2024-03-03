@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "herbata",
+      "gen": "herbaty",
+      "dat": "herbacie",
+      "acc": "herbatę",
+      "ins": "herbatą",
+      "loc": "herbacie",
+      "voc": "herbato"
+    },
+    "plural": {
+      "nom": "herbaty",
+      "gen": "herbat",
+      "dat": "herbatom",
+      "acc": "herbaty",
+      "ins": "herbatami",
+      "loc": "herbatach",
+      "voc": "herbaty"
+    }
+  }
+}

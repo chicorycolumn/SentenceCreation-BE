@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zdenerwować",
+    "verbalNoun": "zdenerwowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zdenerwowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zdenerwowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zdenerwuje się"
+          },
+          "plural": {
+            "allPluralGenders": "zdenerwuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zdenerwuję"
+          },
+          "plural": {
+            "allPluralGenders": "zdenerwujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zdenerwujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zdenerwujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zdenerwuje"
+          },
+          "plural": {
+            "allPluralGenders": "zdenerwują"
+          }
+        }
+      },
+      "imperative": "zdenerwuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zdenerwowano"
+          },
+          "plural": {
+            "allPluralGenders": "zdenerwowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zdenerwowałem",
+            "f": "zdenerwowałam"
+          },
+          "plural": {
+            "virile": "zdenerwowaliśmy",
+            "nonvirile": "zdenerwowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zdenerwowałeś",
+            "f": "zdenerwowałaś"
+          },
+          "plural": {
+            "virile": "zdenerwowaliście",
+            "nonvirile": "zdenerwowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zdenerwował",
+            "f": "zdenerwowała",
+            "n": "zdenerwowało"
+          },
+          "plural": {
+            "virile": "zdenerwowali",
+            "nonvirile": "zdenerwowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

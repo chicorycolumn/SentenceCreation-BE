@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "lekceważyć",
+    "verbalNoun": "lekceważenie",
+    "activeAdjectival": "lekceważący",
+    "passiveAdjectival": "lekceważony",
+    "contemporaryAdverbial": "lekceważąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "lekceważ",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "lekceważono"
+          },
+          "plural": {
+            "allPluralGenders": "lekceważono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "lekceważyłem",
+            "f": "lekceważyłam"
+          },
+          "plural": {
+            "virile": "lekceważyliśmy",
+            "nonvirile": "lekceważyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "lekceważyłeś",
+            "f": "lekceważyłaś"
+          },
+          "plural": {
+            "virile": "lekceważyliście",
+            "nonvirile": "lekceważyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "lekceważył",
+            "f": "lekceważyła",
+            "n": "lekceważyło"
+          },
+          "plural": {
+            "virile": "lekceważyli",
+            "nonvirile": "lekceważyły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "lekceważy się"
+          },
+          "plural": {
+            "allPluralGenders": "lekceważy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "lekceważę"
+          },
+          "plural": {
+            "allPluralGenders": "lekceważymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "lekceważysz"
+          },
+          "plural": {
+            "allPluralGenders": "lekceważycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "lekceważy"
+          },
+          "plural": {
+            "allPluralGenders": "lekceważą"
+          }
+        }
+      }
+    }
+  }
+}

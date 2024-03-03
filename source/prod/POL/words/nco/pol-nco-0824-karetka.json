@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "karetka",
+      "gen": "karetki",
+      "dat": "karetce",
+      "acc": "karetkę",
+      "ins": "karetką",
+      "loc": "karetce",
+      "voc": "karetko"
+    },
+    "plural": {
+      "nom": "karetki",
+      "gen": "karetek",
+      "dat": "karetkom",
+      "acc": "karetki",
+      "ins": "karetkami",
+      "loc": "karetkach",
+      "voc": "karetki"
+    }
+  }
+}

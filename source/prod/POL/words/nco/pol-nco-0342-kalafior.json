@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kalafior",
+      "gen": "kalafiora",
+      "dat": "kalafiorowi",
+      "acc": [
+        "kalafior",
+        "kalafiora"
+      ],
+      "ins": "kalafiorem",
+      "loc": "kalafiorze",
+      "voc": "kalafiorze"
+    },
+    "plural": {
+      "nom": "kalafiory",
+      "gen": "kalafiorów",
+      "dat": "kalafiorom",
+      "acc": "kalafiory",
+      "ins": "kalafiorami",
+      "loc": "kalafiorach",
+      "voc": "kalafiory"
+    }
+  }
+}

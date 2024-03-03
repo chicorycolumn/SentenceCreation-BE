@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "szczotka",
+      "gen": "szczotki",
+      "dat": "szczotce",
+      "acc": "szczotkę",
+      "ins": "szczotką",
+      "loc": "szczotce",
+      "voc": "szczotko"
+    },
+    "plural": {
+      "nom": "szczotki",
+      "gen": "szczotek",
+      "dat": "szczotkom",
+      "acc": "szczotki",
+      "ins": "szczotkami",
+      "loc": "szczotkach",
+      "voc": "szczotki"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zioło",
+      "gen": "zioła",
+      "dat": "ziołu",
+      "acc": "zioło",
+      "ins": "ziołem",
+      "loc": "ziole",
+      "voc": "zioło"
+    },
+    "plural": {
+      "nom": "zioła",
+      "gen": "ziół",
+      "dat": "ziołom",
+      "acc": "zioła",
+      "ins": "ziołami",
+      "loc": "ziołach",
+      "voc": "zioła"
+    }
+  }
+}

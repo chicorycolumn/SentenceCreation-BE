@@ -1,0 +1,82 @@
+{
+  "inflections": {
+    "infinitive": "dojść",
+    "verbalNoun": "dojście",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "doszedłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dojdzie się"
+          },
+          "plural": {
+            "allPluralGenders": "dojdzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dojdę"
+          },
+          "plural": {
+            "allPluralGenders": "dojdziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dojdziesz"
+          },
+          "plural": {
+            "allPluralGenders": "dojdziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dojdzie"
+          },
+          "plural": {
+            "allPluralGenders": "dojdą"
+          }
+        }
+      },
+      "imperative": "dojdź",
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "doszedłem",
+            "f": "doszłam"
+          },
+          "plural": {
+            "virile": "doszliśmy",
+            "nonvirile": "doszłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "doszedłeś",
+            "f": "doszłaś"
+          },
+          "plural": {
+            "virile": "doszliście",
+            "nonvirile": "doszłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "doszedł",
+            "f": "doszła",
+            "n": "doszło"
+          },
+          "plural": {
+            "virile": "doszli",
+            "nonvirile": "doszły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

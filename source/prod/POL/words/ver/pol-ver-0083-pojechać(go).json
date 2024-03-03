@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pojechać",
+    "verbalNoun": "pojechanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pojechawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pojedzie się"
+          },
+          "plural": {
+            "allPluralGenders": "pojedzie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pojadę"
+          },
+          "plural": {
+            "allPluralGenders": "pojedziemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pojedziesz"
+          },
+          "plural": {
+            "allPluralGenders": "pojedziecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pojedzie"
+          },
+          "plural": {
+            "allPluralGenders": "pojadą"
+          }
+        }
+      },
+      "imperative": "pojedź",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pojechano"
+          },
+          "plural": {
+            "allPluralGenders": "pojechano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pojechałem",
+            "f": "pojechałam"
+          },
+          "plural": {
+            "virile": "pojechaliśmy",
+            "nonvirile": "pojechałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pojechałeś",
+            "f": "pojechałaś"
+          },
+          "plural": {
+            "virile": "pojechaliście",
+            "nonvirile": "pojechałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pojechał",
+            "f": "pojechała",
+            "n": "pojechało"
+          },
+          "plural": {
+            "virile": "pojechali",
+            "nonvirile": "pojechały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

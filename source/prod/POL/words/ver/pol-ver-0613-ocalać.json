@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ocalać",
+    "verbalNoun": "ocalanie",
+    "activeAdjectival": "ocalający",
+    "passiveAdjectival": "ocalany",
+    "contemporaryAdverbial": "ocalając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "ocalaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ocalano"
+          },
+          "plural": {
+            "allPluralGenders": "ocalano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ocalałem",
+            "f": "ocalałam"
+          },
+          "plural": {
+            "virile": "ocalaliśmy",
+            "nonvirile": "ocalałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ocalałeś",
+            "f": "ocalałaś"
+          },
+          "plural": {
+            "virile": "ocalaliście",
+            "nonvirile": "ocalałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ocalał",
+            "f": "ocalała",
+            "n": "ocalało"
+          },
+          "plural": {
+            "virile": "ocalali",
+            "nonvirile": "ocalały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ocala się"
+          },
+          "plural": {
+            "allPluralGenders": "ocala się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ocalam"
+          },
+          "plural": {
+            "allPluralGenders": "ocalamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ocalasz"
+          },
+          "plural": {
+            "allPluralGenders": "ocalacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ocala"
+          },
+          "plural": {
+            "allPluralGenders": "ocalają"
+          }
+        }
+      }
+    }
+  }
+}

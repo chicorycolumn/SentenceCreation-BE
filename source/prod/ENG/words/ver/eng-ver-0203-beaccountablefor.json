@@ -1,0 +1,15 @@
+{
+  "inflections": {
+    "infinitive": "be accountable for",
+    "v2": {
+      "isTerminus": true,
+      "normal": [
+        "was accountable for",
+        "were accountable for"
+      ]
+    },
+    "v3": "been accountable for",
+    "thirdPS": "is accountable for",
+    "gerund": "being accountable for"
+  }
+}

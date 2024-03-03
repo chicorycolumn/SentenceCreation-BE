@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "osiągnąć",
+    "verbalNoun": "osiągnięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "osiągnięty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "osiągnąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "osiągnie się"
+          },
+          "plural": {
+            "allPluralGenders": "osiągnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "osiągnę"
+          },
+          "plural": {
+            "allPluralGenders": "osiągniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "osiągniesz"
+          },
+          "plural": {
+            "allPluralGenders": "osiągniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "osiągnie"
+          },
+          "plural": {
+            "allPluralGenders": "osiągną"
+          }
+        }
+      },
+      "imperative": "osiągnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "osiągnięto"
+          },
+          "plural": {
+            "allPluralGenders": "osiągnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "osiągnąłem",
+            "f": "osiągnęłam"
+          },
+          "plural": {
+            "virile": "osiągnęliśmy",
+            "nonvirile": "osiągnęłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "osiągnąłeś",
+            "f": "osiągnęłaś"
+          },
+          "plural": {
+            "virile": "osiągnęliście",
+            "nonvirile": "osiągnęłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "osiągnął",
+            "f": "osiągnęła",
+            "n": "osiągnęło"
+          },
+          "plural": {
+            "virile": "osiągnęli",
+            "nonvirile": "osiągnęły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

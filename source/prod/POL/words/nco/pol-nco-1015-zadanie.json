@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zadanie",
+      "gen": "zadania",
+      "dat": "zadaniu",
+      "acc": "zadanie",
+      "ins": "zadaniem",
+      "loc": "zadaniu",
+      "voc": "zadanie"
+    },
+    "plural": {
+      "nom": "zadania",
+      "gen": "zadań",
+      "dat": "zadaniom",
+      "acc": "zadania",
+      "ins": "zadaniami",
+      "loc": "zadaniach",
+      "voc": "zadania"
+    }
+  }
+}

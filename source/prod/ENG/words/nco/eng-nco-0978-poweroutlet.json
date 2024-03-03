@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "power outlet",
+      "gen": "power outlet's"
+    },
+    "plural": {
+      "nom": "power outlets",
+      "gen": "power outlets'"
+    }
+  }
+}

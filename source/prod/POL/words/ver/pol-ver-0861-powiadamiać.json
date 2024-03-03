@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "powiadamiać",
+    "verbalNoun": "powiadamianie",
+    "activeAdjectival": "powiadamiający",
+    "passiveAdjectival": "powiadamiany",
+    "contemporaryAdverbial": "powiadamiając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "powiadamiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powiadamiano"
+          },
+          "plural": {
+            "allPluralGenders": "powiadamiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "powiadamiałem",
+            "f": "powiadamiałam"
+          },
+          "plural": {
+            "virile": "powiadamialiśmy",
+            "nonvirile": "powiadamiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "powiadamiałeś",
+            "f": "powiadamiałaś"
+          },
+          "plural": {
+            "virile": "powiadamialiście",
+            "nonvirile": "powiadamiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "powiadamiał",
+            "f": "powiadamiała",
+            "n": "powiadamiało"
+          },
+          "plural": {
+            "virile": "powiadamiali",
+            "nonvirile": "powiadamiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powiadamia się"
+          },
+          "plural": {
+            "allPluralGenders": "powiadamia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "powiadamiam"
+          },
+          "plural": {
+            "allPluralGenders": "powiadamiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "powiadamiasz"
+          },
+          "plural": {
+            "allPluralGenders": "powiadamiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "powiadamia"
+          },
+          "plural": {
+            "allPluralGenders": "powiadamiają"
+          }
+        }
+      }
+    }
+  }
+}

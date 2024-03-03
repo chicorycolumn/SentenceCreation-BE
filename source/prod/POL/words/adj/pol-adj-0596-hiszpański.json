@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "hiszpański",
+          "gen": "hiszpańskiego",
+          "dat": "hiszpańskiemu",
+          "acc": "hiszpańskiego",
+          "ins": "hiszpańskim",
+          "loc": "hiszpańskim"
+        },
+        "m3": {
+          "nom": "hiszpański",
+          "gen": "hiszpańskiego",
+          "dat": "hiszpańskiemu",
+          "acc": "hiszpański",
+          "ins": "hiszpańskim",
+          "loc": "hiszpańskim"
+        },
+        "f": {
+          "nom": "hiszpańska",
+          "gen": "hiszpańskiej",
+          "dat": "hiszpańskiej",
+          "acc": "hiszpańską",
+          "ins": "hiszpańską",
+          "loc": "hiszpańskiej"
+        },
+        "n": {
+          "nom": "hiszpańskie",
+          "gen": "hiszpańskiego",
+          "dat": "hiszpańskiemu",
+          "acc": "hiszpańskie",
+          "ins": "hiszpańskim",
+          "loc": "hiszpańskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "hiszpańscy",
+          "gen": "hiszpańskich",
+          "dat": "hiszpańskim",
+          "acc": "hiszpańskich",
+          "ins": "hiszpańskimi",
+          "loc": "hiszpańskich"
+        },
+        "nonvirile": {
+          "nom": "hiszpańskie",
+          "gen": "hiszpańskich",
+          "dat": "hiszpańskim",
+          "acc": "hiszpańskie",
+          "ins": "hiszpańskimi",
+          "loc": "hiszpańskich"
+        }
+      }
+    }
+  }
+}

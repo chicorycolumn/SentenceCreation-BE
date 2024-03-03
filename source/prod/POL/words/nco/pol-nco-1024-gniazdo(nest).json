@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gniazdo",
+      "gen": "gniazda",
+      "dat": "gniazdu",
+      "acc": "gniazdo",
+      "ins": "gniazdem",
+      "loc": "gnieździe",
+      "voc": "gniazdo"
+    },
+    "plural": {
+      "nom": "gniazda",
+      "gen": "gniazd",
+      "dat": "gniazdom",
+      "acc": "gniazda",
+      "ins": "gniazdami",
+      "loc": "gniazdach",
+      "voc": "gniazda"
+    }
+  }
+}

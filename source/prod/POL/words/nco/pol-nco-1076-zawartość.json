@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zawartość",
+      "gen": "zawartości",
+      "dat": "zawartości",
+      "acc": "zawartość",
+      "ins": "zawartością",
+      "loc": "zawartości",
+      "voc": "zawartości"
+    },
+    "plural": {
+      "nom": "zawartości",
+      "gen": "zawartości",
+      "dat": "zawartościom",
+      "acc": "zawartości",
+      "ins": "zawartościami",
+      "loc": "zawartościach",
+      "voc": "zawartości"
+    }
+  }
+}

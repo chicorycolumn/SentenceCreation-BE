@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "podkreślać",
+    "verbalNoun": "podkreślanie",
+    "activeAdjectival": "podkreślający",
+    "passiveAdjectival": "podkreślany",
+    "contemporaryAdverbial": "podkreślając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "podkreślaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podkreślano"
+          },
+          "plural": {
+            "allPluralGenders": "podkreślano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "podkreślałem",
+            "f": "podkreślałam"
+          },
+          "plural": {
+            "virile": "podkreślaliśmy",
+            "nonvirile": "podkreślałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podkreślałeś",
+            "f": "podkreślałaś"
+          },
+          "plural": {
+            "virile": "podkreślaliście",
+            "nonvirile": "podkreślałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podkreślał",
+            "f": "podkreślała",
+            "n": "podkreślało"
+          },
+          "plural": {
+            "virile": "podkreślali",
+            "nonvirile": "podkreślały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podkreśla się"
+          },
+          "plural": {
+            "allPluralGenders": "podkreśla się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podkreślam"
+          },
+          "plural": {
+            "allPluralGenders": "podkreślamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podkreślasz"
+          },
+          "plural": {
+            "allPluralGenders": "podkreślacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podkreśla"
+          },
+          "plural": {
+            "allPluralGenders": "podkreślają"
+          }
+        }
+      }
+    }
+  }
+}

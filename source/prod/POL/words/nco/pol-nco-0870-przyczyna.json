@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przyczyna",
+      "gen": "przyczyny",
+      "dat": "przyczynie",
+      "acc": "przyczynę",
+      "ins": "przyczyną",
+      "loc": "przyczynie",
+      "voc": "przyczyno"
+    },
+    "plural": {
+      "nom": "przyczyny",
+      "gen": "przyczyn",
+      "dat": "przyczynom",
+      "acc": "przyczyny",
+      "ins": "przyczynami",
+      "loc": "przyczynach",
+      "voc": "przyczyny"
+    }
+  }
+}

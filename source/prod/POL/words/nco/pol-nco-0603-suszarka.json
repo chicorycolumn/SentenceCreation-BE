@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "suszarka",
+      "gen": "suszarki",
+      "dat": "suszarce",
+      "acc": "suszarkę",
+      "ins": "suszarką",
+      "loc": "suszarce",
+      "voc": "suszarko"
+    },
+    "plural": {
+      "nom": "suszarki",
+      "gen": "suszarek",
+      "dat": "suszarkom",
+      "acc": "suszarki",
+      "ins": "suszarkami",
+      "loc": "suszarkach",
+      "voc": "suszarki"
+    }
+  }
+}

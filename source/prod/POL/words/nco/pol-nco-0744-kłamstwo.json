@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kłamstwo",
+      "gen": "kłamstwa",
+      "dat": "kłamstwu",
+      "acc": "kłamstwo",
+      "ins": "kłamstwem",
+      "loc": "kłamstwie",
+      "voc": "kłamstwo"
+    },
+    "plural": {
+      "nom": "kłamstwa",
+      "gen": "kłamstw",
+      "dat": "kłamstwom",
+      "acc": "kłamstwa",
+      "ins": "kłamstwami",
+      "loc": "kłamstwach",
+      "voc": "kłamstwa"
+    }
+  }
+}

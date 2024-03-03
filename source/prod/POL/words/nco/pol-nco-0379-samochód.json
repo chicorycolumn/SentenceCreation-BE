@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "samochód",
+      "gen": "samochodu",
+      "dat": "samochodowi",
+      "acc": "samochód",
+      "ins": "samochodem",
+      "loc": "samochodzie",
+      "voc": "samochodzie"
+    },
+    "plural": {
+      "nom": "samochody",
+      "gen": "samochodów",
+      "dat": "samochodom",
+      "acc": "samochody",
+      "ins": "samochodami",
+      "loc": "samochodach",
+      "voc": "samochody"
+    }
+  }
+}

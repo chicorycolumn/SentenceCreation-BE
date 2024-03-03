@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sos",
+      "gen": "sosu",
+      "dat": "sosowi",
+      "acc": "sos",
+      "ins": "sosem",
+      "loc": "sosie",
+      "voc": "sosie"
+    },
+    "plural": {
+      "nom": "sosy",
+      "gen": "sosów",
+      "dat": "sosom",
+      "acc": "sosy",
+      "ins": "sosami",
+      "loc": "sosach",
+      "voc": "sosy"
+    }
+  }
+}

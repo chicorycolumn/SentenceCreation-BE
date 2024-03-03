@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "situation",
+      "gen": "situation's"
+    },
+    "plural": {
+      "nom": "situations",
+      "gen": "situations'"
+    }
+  }
+}

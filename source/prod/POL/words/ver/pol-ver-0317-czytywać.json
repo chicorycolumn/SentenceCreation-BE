@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "czytywać",
+    "verbalNoun": "czytywanie",
+    "activeAdjectival": "czytujący",
+    "passiveAdjectival": "czytywany",
+    "contemporaryAdverbial": "czytując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "czytuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "czytywano"
+          },
+          "plural": {
+            "allPluralGenders": "czytywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "czytywałem",
+            "f": "czytywałam"
+          },
+          "plural": {
+            "virile": "czytywaliśmy",
+            "nonvirile": "czytywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "czytywałeś",
+            "f": "czytywałaś"
+          },
+          "plural": {
+            "virile": "czytywaliście",
+            "nonvirile": "czytywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "czytywał",
+            "f": "czytywała",
+            "n": "czytywało"
+          },
+          "plural": {
+            "virile": "czytywali",
+            "nonvirile": "czytywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "czytuje się"
+          },
+          "plural": {
+            "allPluralGenders": "czytuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "czytuję"
+          },
+          "plural": {
+            "allPluralGenders": "czytujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "czytujesz"
+          },
+          "plural": {
+            "allPluralGenders": "czytujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "czytuje"
+          },
+          "plural": {
+            "allPluralGenders": "czytują"
+          }
+        }
+      }
+    }
+  }
+}

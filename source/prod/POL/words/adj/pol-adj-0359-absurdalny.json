@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "absurdalnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "absurdalny",
+          "gen": "absurdalnego",
+          "dat": "absurdalnemu",
+          "acc": "absurdalnego",
+          "ins": "absurdalnym",
+          "loc": "absurdalnym"
+        },
+        "m3": {
+          "nom": "absurdalny",
+          "gen": "absurdalnego",
+          "dat": "absurdalnemu",
+          "acc": "absurdalny",
+          "ins": "absurdalnym",
+          "loc": "absurdalnym"
+        },
+        "f": {
+          "nom": "absurdalna",
+          "gen": "absurdalnej",
+          "dat": "absurdalnej",
+          "acc": "absurdalną",
+          "ins": "absurdalną",
+          "loc": "absurdalnej"
+        },
+        "n": {
+          "nom": "absurdalne",
+          "gen": "absurdalnego",
+          "dat": "absurdalnemu",
+          "acc": "absurdalne",
+          "ins": "absurdalnym",
+          "loc": "absurdalnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "absurdalni",
+          "gen": "absurdalnych",
+          "dat": "absurdalnym",
+          "acc": "absurdalnych",
+          "ins": "absurdalnymi",
+          "loc": "absurdalnych"
+        },
+        "nonvirile": {
+          "nom": "absurdalne",
+          "gen": "absurdalnych",
+          "dat": "absurdalnym",
+          "acc": "absurdalne",
+          "ins": "absurdalnymi",
+          "loc": "absurdalnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszy",
+              "bardziej absurdalny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszego",
+              "bardziej absurdalnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszemu",
+              "bardziej absurdalnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszego",
+              "bardziej absurdalnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszym",
+              "bardziej absurdalnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszym",
+              "bardziej absurdalnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszy",
+              "bardziej absurdalny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszego",
+              "bardziej absurdalnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszemu",
+              "bardziej absurdalnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszy",
+              "bardziej absurdalny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszym",
+              "bardziej absurdalnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszym",
+              "bardziej absurdalnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejsza",
+              "bardziej absurdalna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszej",
+              "bardziej absurdalnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszej",
+              "bardziej absurdalnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszą",
+              "bardziej absurdalną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszą",
+              "bardziej absurdalną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszej",
+              "bardziej absurdalnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejsze",
+              "bardziej absurdalne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszego",
+              "bardziej absurdalnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszemu",
+              "bardziej absurdalnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejsze",
+              "bardziej absurdalne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszym",
+              "bardziej absurdalnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszym",
+              "bardziej absurdalnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejsi",
+              "bardziej absurdalni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszych",
+              "bardziej absurdalnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszym",
+              "bardziej absurdalnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszych",
+              "bardziej absurdalnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszymi",
+              "bardziej absurdalnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszych",
+              "bardziej absurdalnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejsze",
+              "bardziej absurdalne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszych",
+              "bardziej absurdalnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszym",
+              "bardziej absurdalnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejsze",
+              "bardziej absurdalne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszymi",
+              "bardziej absurdalnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "absurdalniejszych",
+              "bardziej absurdalnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszy",
+              "najbardziej absurdalny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszego",
+              "najbardziej absurdalnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszemu",
+              "najbardziej absurdalnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszego",
+              "najbardziej absurdalnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszym",
+              "najbardziej absurdalnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszym",
+              "najbardziej absurdalnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszy",
+              "najbardziej absurdalny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszego",
+              "najbardziej absurdalnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszemu",
+              "najbardziej absurdalnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszy",
+              "najbardziej absurdalny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszym",
+              "najbardziej absurdalnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszym",
+              "najbardziej absurdalnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejsza",
+              "najbardziej absurdalna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszej",
+              "najbardziej absurdalnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszej",
+              "najbardziej absurdalnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszą",
+              "najbardziej absurdalną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszą",
+              "najbardziej absurdalną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszej",
+              "najbardziej absurdalnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejsze",
+              "najbardziej absurdalne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszego",
+              "najbardziej absurdalnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszemu",
+              "najbardziej absurdalnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejsze",
+              "najbardziej absurdalne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszym",
+              "najbardziej absurdalnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszym",
+              "najbardziej absurdalnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejsi",
+              "najbardziej absurdalni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszych",
+              "najbardziej absurdalnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszym",
+              "najbardziej absurdalnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszych",
+              "najbardziej absurdalnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszymi",
+              "najbardziej absurdalnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszych",
+              "najbardziej absurdalnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejsze",
+              "najbardziej absurdalne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszych",
+              "najbardziej absurdalnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszym",
+              "najbardziej absurdalnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejsze",
+              "najbardziej absurdalne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszymi",
+              "najbardziej absurdalnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najabsurdalniejszych",
+              "najbardziej absurdalnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "spytać",
+    "verbalNoun": "spytanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "spytany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "spytawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "spyta się"
+          },
+          "plural": {
+            "allPluralGenders": "spyta się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "spytam"
+          },
+          "plural": {
+            "allPluralGenders": "spytamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "spytasz"
+          },
+          "plural": {
+            "allPluralGenders": "spytacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "spyta"
+          },
+          "plural": {
+            "allPluralGenders": "spytają"
+          }
+        }
+      },
+      "imperative": "spytaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "spytano"
+          },
+          "plural": {
+            "allPluralGenders": "spytano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "spytałem",
+            "f": "spytałam"
+          },
+          "plural": {
+            "virile": "spytaliśmy",
+            "nonvirile": "spytałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "spytałeś",
+            "f": "spytałaś"
+          },
+          "plural": {
+            "virile": "spytaliście",
+            "nonvirile": "spytałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "spytał",
+            "f": "spytała",
+            "n": "spytało"
+          },
+          "plural": {
+            "virile": "spytali",
+            "nonvirile": "spytały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

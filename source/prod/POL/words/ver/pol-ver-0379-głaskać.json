@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "głaskać",
+    "verbalNoun": "głaskanie",
+    "activeAdjectival": "głaszczący",
+    "passiveAdjectival": "głaskany",
+    "contemporaryAdverbial": "głaszcząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "głaszcz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "głaskano"
+          },
+          "plural": {
+            "allPluralGenders": "głaskano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "głaskałem",
+            "f": "głaskałam"
+          },
+          "plural": {
+            "virile": "głaskaliśmy",
+            "nonvirile": "głaskałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "głaskałeś",
+            "f": "głaskałaś"
+          },
+          "plural": {
+            "virile": "głaskaliście",
+            "nonvirile": "głaskałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "głaskał",
+            "f": "głaskała",
+            "n": "głaskało"
+          },
+          "plural": {
+            "virile": "głaskali",
+            "nonvirile": "głaskały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "głaszcze się"
+          },
+          "plural": {
+            "allPluralGenders": "głaszcze się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "głaszczę"
+          },
+          "plural": {
+            "allPluralGenders": "głaszczemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "głaszczesz"
+          },
+          "plural": {
+            "allPluralGenders": "głaszczecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "głaszcze"
+          },
+          "plural": {
+            "allPluralGenders": "głaszczą"
+          }
+        }
+      }
+    }
+  }
+}

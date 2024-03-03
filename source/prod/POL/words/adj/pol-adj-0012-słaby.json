@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "słabo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "słaby",
+          "gen": "słabego",
+          "dat": "słabemu",
+          "acc": "słabego",
+          "ins": "słabym",
+          "loc": "słabym"
+        },
+        "m3": {
+          "nom": "słaby",
+          "gen": "słabego",
+          "dat": "słabemu",
+          "acc": "słaby",
+          "ins": "słabym",
+          "loc": "słabym"
+        },
+        "f": {
+          "nom": "słaba",
+          "gen": "słabej",
+          "dat": "słabej",
+          "acc": "słabą",
+          "ins": "słabą",
+          "loc": "słabej"
+        },
+        "n": {
+          "nom": "słabe",
+          "gen": "słabego",
+          "dat": "słabemu",
+          "acc": "słabe",
+          "ins": "słabym",
+          "loc": "słabym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "słabi",
+          "gen": "słabych",
+          "dat": "słabym",
+          "acc": "słabych",
+          "ins": "słabymi",
+          "loc": "słabych"
+        },
+        "nonvirile": {
+          "nom": "słabe",
+          "gen": "słabych",
+          "dat": "słabym",
+          "acc": "słabe",
+          "ins": "słabymi",
+          "loc": "słabych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "słabszy",
+          "gen": "słabszego",
+          "dat": "słabszemu",
+          "acc": "słabszego",
+          "ins": "słabszym",
+          "loc": "słabszym"
+        },
+        "m3": {
+          "nom": "słabszy",
+          "gen": "słabszego",
+          "dat": "słabszemu",
+          "acc": "słabszy",
+          "ins": "słabszym",
+          "loc": "słabszym"
+        },
+        "f": {
+          "nom": "słabsza",
+          "gen": "słabszej",
+          "dat": "słabszej",
+          "acc": "słabszą",
+          "ins": "słabszą",
+          "loc": "słabszej"
+        },
+        "n": {
+          "nom": "słabsze",
+          "gen": "słabszego",
+          "dat": "słabszemu",
+          "acc": "słabsze",
+          "ins": "słabszym",
+          "loc": "słabszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "słabsi",
+          "gen": "słabszych",
+          "dat": "słabszym",
+          "acc": "słabszych",
+          "ins": "słabszymi",
+          "loc": "słabszych"
+        },
+        "nonvirile": {
+          "nom": "słabsze",
+          "gen": "słabszych",
+          "dat": "słabszym",
+          "acc": "słabsze",
+          "ins": "słabszymi",
+          "loc": "słabszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najsłabszy",
+          "gen": "najsłabszego",
+          "dat": "najsłabszemu",
+          "acc": "najsłabszego",
+          "ins": "najsłabszym",
+          "loc": "najsłabszym"
+        },
+        "m3": {
+          "nom": "najsłabszy",
+          "gen": "najsłabszego",
+          "dat": "najsłabszemu",
+          "acc": "najsłabszy",
+          "ins": "najsłabszym",
+          "loc": "najsłabszym"
+        },
+        "f": {
+          "nom": "najsłabsza",
+          "gen": "najsłabszej",
+          "dat": "najsłabszej",
+          "acc": "najsłabszą",
+          "ins": "najsłabszą",
+          "loc": "najsłabszej"
+        },
+        "n": {
+          "nom": "najsłabsze",
+          "gen": "najsłabszego",
+          "dat": "najsłabszemu",
+          "acc": "najsłabsze",
+          "ins": "najsłabszym",
+          "loc": "najsłabszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najsłabsi",
+          "gen": "najsłabszych",
+          "dat": "najsłabszym",
+          "acc": "najsłabszych",
+          "ins": "najsłabszymi",
+          "loc": "najsłabszych"
+        },
+        "nonvirile": {
+          "nom": "najsłabsze",
+          "gen": "najsłabszych",
+          "dat": "najsłabszym",
+          "acc": "najsłabsze",
+          "ins": "najsłabszymi",
+          "loc": "najsłabszych"
+        }
+      }
+    }
+  }
+}

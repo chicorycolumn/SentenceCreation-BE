@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rzepa",
+      "gen": "rzepy",
+      "dat": "rzepie",
+      "acc": "rzepę",
+      "ins": "rzepą",
+      "loc": "rzepie",
+      "voc": "rzepo"
+    },
+    "plural": {
+      "nom": "rzepy",
+      "gen": "rzep",
+      "dat": "rzepom",
+      "acc": "rzepy",
+      "ins": "rzepami",
+      "loc": "rzepach",
+      "voc": "rzepy"
+    }
+  }
+}

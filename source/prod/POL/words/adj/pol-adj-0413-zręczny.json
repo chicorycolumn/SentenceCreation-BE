@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "zręcznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "zręczny",
+          "gen": "zręcznego",
+          "dat": "zręcznemu",
+          "acc": "zręcznego",
+          "ins": "zręcznym",
+          "loc": "zręcznym"
+        },
+        "m3": {
+          "nom": "zręczny",
+          "gen": "zręcznego",
+          "dat": "zręcznemu",
+          "acc": "zręczny",
+          "ins": "zręcznym",
+          "loc": "zręcznym"
+        },
+        "f": {
+          "nom": "zręczna",
+          "gen": "zręcznej",
+          "dat": "zręcznej",
+          "acc": "zręczną",
+          "ins": "zręczną",
+          "loc": "zręcznej"
+        },
+        "n": {
+          "nom": "zręczne",
+          "gen": "zręcznego",
+          "dat": "zręcznemu",
+          "acc": "zręczne",
+          "ins": "zręcznym",
+          "loc": "zręcznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zręczni",
+          "gen": "zręcznych",
+          "dat": "zręcznym",
+          "acc": "zręcznych",
+          "ins": "zręcznymi",
+          "loc": "zręcznych"
+        },
+        "nonvirile": {
+          "nom": "zręczne",
+          "gen": "zręcznych",
+          "dat": "zręcznym",
+          "acc": "zręczne",
+          "ins": "zręcznymi",
+          "loc": "zręcznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "zręczniejszy",
+          "gen": "zręczniejszego",
+          "dat": "zręczniejszemu",
+          "acc": "zręczniejszego",
+          "ins": "zręczniejszym",
+          "loc": "zręczniejszym"
+        },
+        "m3": {
+          "nom": "zręczniejszy",
+          "gen": "zręczniejszego",
+          "dat": "zręczniejszemu",
+          "acc": "zręczniejszy",
+          "ins": "zręczniejszym",
+          "loc": "zręczniejszym"
+        },
+        "f": {
+          "nom": "zręczniejsza",
+          "gen": "zręczniejszej",
+          "dat": "zręczniejszej",
+          "acc": "zręczniejszą",
+          "ins": "zręczniejszą",
+          "loc": "zręczniejszej"
+        },
+        "n": {
+          "nom": "zręczniejsze",
+          "gen": "zręczniejszego",
+          "dat": "zręczniejszemu",
+          "acc": "zręczniejsze",
+          "ins": "zręczniejszym",
+          "loc": "zręczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "zręczniejsi",
+          "gen": "zręczniejszych",
+          "dat": "zręczniejszym",
+          "acc": "zręczniejszych",
+          "ins": "zręczniejszymi",
+          "loc": "zręczniejszych"
+        },
+        "nonvirile": {
+          "nom": "zręczniejsze",
+          "gen": "zręczniejszych",
+          "dat": "zręczniejszym",
+          "acc": "zręczniejsze",
+          "ins": "zręczniejszymi",
+          "loc": "zręczniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najzręczniejszy",
+          "gen": "najzręczniejszego",
+          "dat": "najzręczniejszemu",
+          "acc": "najzręczniejszego",
+          "ins": "najzręczniejszym",
+          "loc": "najzręczniejszym"
+        },
+        "m3": {
+          "nom": "najzręczniejszy",
+          "gen": "najzręczniejszego",
+          "dat": "najzręczniejszemu",
+          "acc": "najzręczniejszy",
+          "ins": "najzręczniejszym",
+          "loc": "najzręczniejszym"
+        },
+        "f": {
+          "nom": "najzręczniejsza",
+          "gen": "najzręczniejszej",
+          "dat": "najzręczniejszej",
+          "acc": "najzręczniejszą",
+          "ins": "najzręczniejszą",
+          "loc": "najzręczniejszej"
+        },
+        "n": {
+          "nom": "najzręczniejsze",
+          "gen": "najzręczniejszego",
+          "dat": "najzręczniejszemu",
+          "acc": "najzręczniejsze",
+          "ins": "najzręczniejszym",
+          "loc": "najzręczniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najzręczniejsi",
+          "gen": "najzręczniejszych",
+          "dat": "najzręczniejszym",
+          "acc": "najzręczniejszych",
+          "ins": "najzręczniejszymi",
+          "loc": "najzręczniejszych"
+        },
+        "nonvirile": {
+          "nom": "najzręczniejsze",
+          "gen": "najzręczniejszych",
+          "dat": "najzręczniejszym",
+          "acc": "najzręczniejsze",
+          "ins": "najzręczniejszymi",
+          "loc": "najzręczniejszych"
+        }
+      }
+    }
+  }
+}

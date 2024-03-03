@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dzwonić",
+    "verbalNoun": "dzwonienie",
+    "activeAdjectival": "dzwoniący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "dzwoniąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "dzwoń",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dzwoniono"
+          },
+          "plural": {
+            "allPluralGenders": "dzwoniono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dzwoniłem",
+            "f": "dzwoniłam"
+          },
+          "plural": {
+            "virile": "dzwoniliśmy",
+            "nonvirile": "dzwoniłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dzwoniłeś",
+            "f": "dzwoniłaś"
+          },
+          "plural": {
+            "virile": "dzwoniliście",
+            "nonvirile": "dzwoniłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dzwonił",
+            "f": "dzwoniła",
+            "n": "dzwoniło"
+          },
+          "plural": {
+            "virile": "dzwonili",
+            "nonvirile": "dzwoniły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dzwoni się"
+          },
+          "plural": {
+            "allPluralGenders": "dzwoni się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dzwonię"
+          },
+          "plural": {
+            "allPluralGenders": "dzwonimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dzwonisz"
+          },
+          "plural": {
+            "allPluralGenders": "dzwonicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dzwoni"
+          },
+          "plural": {
+            "allPluralGenders": "dzwonią"
+          }
+        }
+      }
+    }
+  }
+}

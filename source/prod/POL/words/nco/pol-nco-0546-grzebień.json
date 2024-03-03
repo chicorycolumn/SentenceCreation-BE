@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "grzebień",
+      "gen": "grzebienia",
+      "dat": "grzebieniowi",
+      "acc": "grzebień",
+      "ins": "grzebieniem",
+      "loc": "grzebieniu",
+      "voc": "grzebieniu"
+    },
+    "plural": {
+      "nom": "grzebienie",
+      "gen": "grzebieni",
+      "dat": "grzebieniom",
+      "acc": "grzebienie",
+      "ins": "grzebieniami",
+      "loc": "grzebieniach",
+      "voc": "grzebienie"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zamordować",
+    "verbalNoun": "zamordowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zamordowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zamordowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zamorduje się"
+          },
+          "plural": {
+            "allPluralGenders": "zamorduje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zamorduję"
+          },
+          "plural": {
+            "allPluralGenders": "zamordujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zamordujesz"
+          },
+          "plural": {
+            "allPluralGenders": "zamordujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zamorduje"
+          },
+          "plural": {
+            "allPluralGenders": "zamordują"
+          }
+        }
+      },
+      "imperative": "zamorduj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zamordowano"
+          },
+          "plural": {
+            "allPluralGenders": "zamordowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zamordowałem",
+            "f": "zamordowałam"
+          },
+          "plural": {
+            "virile": "zamordowaliśmy",
+            "nonvirile": "zamordowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zamordowałeś",
+            "f": "zamordowałaś"
+          },
+          "plural": {
+            "virile": "zamordowaliście",
+            "nonvirile": "zamordowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zamordował",
+            "f": "zamordowała",
+            "n": "zamordowało"
+          },
+          "plural": {
+            "virile": "zamordowali",
+            "nonvirile": "zamordowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

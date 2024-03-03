@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "podziwiać",
+    "verbalNoun": "podziwianie",
+    "activeAdjectival": "podziwiający",
+    "passiveAdjectival": "podziwiany",
+    "contemporaryAdverbial": "podziwiając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "podziwiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podziwiano"
+          },
+          "plural": {
+            "allPluralGenders": "podziwiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "podziwiałem",
+            "f": "podziwiałam"
+          },
+          "plural": {
+            "virile": "podziwialiśmy",
+            "nonvirile": "podziwiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podziwiałeś",
+            "f": "podziwiałaś"
+          },
+          "plural": {
+            "virile": "podziwialiście",
+            "nonvirile": "podziwiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podziwiał",
+            "f": "podziwiała",
+            "n": "podziwiało"
+          },
+          "plural": {
+            "virile": "podziwiali",
+            "nonvirile": "podziwiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podziwia się"
+          },
+          "plural": {
+            "allPluralGenders": "podziwia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podziwiam"
+          },
+          "plural": {
+            "allPluralGenders": "podziwiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podziwiasz"
+          },
+          "plural": {
+            "allPluralGenders": "podziwiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podziwia"
+          },
+          "plural": {
+            "allPluralGenders": "podziwiają"
+          }
+        }
+      }
+    }
+  }
+}

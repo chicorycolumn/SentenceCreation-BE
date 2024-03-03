@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "postrzegać",
+    "verbalNoun": "postrzeganie",
+    "activeAdjectival": "postrzegający",
+    "passiveAdjectival": "postrzegany",
+    "contemporaryAdverbial": "postrzegając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "postrzegaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "postrzegano"
+          },
+          "plural": {
+            "allPluralGenders": "postrzegano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "postrzegałem",
+            "f": "postrzegałam"
+          },
+          "plural": {
+            "virile": "postrzegaliśmy",
+            "nonvirile": "postrzegałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "postrzegałeś",
+            "f": "postrzegałaś"
+          },
+          "plural": {
+            "virile": "postrzegaliście",
+            "nonvirile": "postrzegałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "postrzegał",
+            "f": "postrzegała",
+            "n": "postrzegało"
+          },
+          "plural": {
+            "virile": "postrzegali",
+            "nonvirile": "postrzegały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "postrzega się"
+          },
+          "plural": {
+            "allPluralGenders": "postrzega się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "postrzegam"
+          },
+          "plural": {
+            "allPluralGenders": "postrzegamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "postrzegasz"
+          },
+          "plural": {
+            "allPluralGenders": "postrzegacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "postrzega"
+          },
+          "plural": {
+            "allPluralGenders": "postrzegają"
+          }
+        }
+      }
+    }
+  }
+}

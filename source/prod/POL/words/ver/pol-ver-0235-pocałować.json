@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pocałować",
+    "verbalNoun": "pocałowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pocałowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pocałuje się"
+          },
+          "plural": {
+            "allPluralGenders": "pocałuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pocałuję"
+          },
+          "plural": {
+            "allPluralGenders": "pocałujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pocałujesz"
+          },
+          "plural": {
+            "allPluralGenders": "pocałujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pocałuje"
+          },
+          "plural": {
+            "allPluralGenders": "pocałują"
+          }
+        }
+      },
+      "imperative": "pocałuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pocałowano"
+          },
+          "plural": {
+            "allPluralGenders": "pocałowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pocałowałem",
+            "f": "pocałowałam"
+          },
+          "plural": {
+            "virile": "pocałowaliśmy",
+            "nonvirile": "pocałowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pocałowałeś",
+            "f": "pocałowałaś"
+          },
+          "plural": {
+            "virile": "pocałowaliście",
+            "nonvirile": "pocałowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pocałował",
+            "f": "pocałowała",
+            "n": "pocałowało"
+          },
+          "plural": {
+            "virile": "pocałowali",
+            "nonvirile": "pocałowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

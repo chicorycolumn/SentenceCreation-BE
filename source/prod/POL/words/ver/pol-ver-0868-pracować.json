@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pracować",
+    "verbalNoun": "pracowanie",
+    "activeAdjectival": "pracujący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "pracując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pracuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pracowano"
+          },
+          "plural": {
+            "allPluralGenders": "pracowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pracowałem",
+            "f": "pracowałam"
+          },
+          "plural": {
+            "virile": "pracowaliśmy",
+            "nonvirile": "pracowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pracowałeś",
+            "f": "pracowałaś"
+          },
+          "plural": {
+            "virile": "pracowaliście",
+            "nonvirile": "pracowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pracował",
+            "f": "pracowała",
+            "n": "pracowało"
+          },
+          "plural": {
+            "virile": "pracowali",
+            "nonvirile": "pracowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pracuje się"
+          },
+          "plural": {
+            "allPluralGenders": "pracuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pracuję"
+          },
+          "plural": {
+            "allPluralGenders": "pracujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pracujesz"
+          },
+          "plural": {
+            "allPluralGenders": "pracujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pracuje"
+          },
+          "plural": {
+            "allPluralGenders": "pracują"
+          }
+        }
+      }
+    }
+  }
+}

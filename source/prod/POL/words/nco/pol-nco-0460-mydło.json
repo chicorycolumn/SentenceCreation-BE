@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mydło",
+      "gen": "mydła",
+      "dat": "mydłu",
+      "acc": "mydło",
+      "ins": "mydłem",
+      "loc": "mydle",
+      "voc": "mydło"
+    },
+    "plural": {
+      "nom": "mydła",
+      "gen": "mydeł",
+      "dat": "mydłom",
+      "acc": "mydła",
+      "ins": "mydłami",
+      "loc": "mydłach",
+      "voc": "mydła"
+    }
+  }
+}

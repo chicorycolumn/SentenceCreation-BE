@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "iskra",
+      "gen": "iskry",
+      "dat": "iskrze",
+      "acc": "iskrę",
+      "ins": "iskrą",
+      "loc": "iskrze",
+      "voc": "iskro"
+    },
+    "plural": {
+      "nom": "iskry",
+      "gen": "iskier",
+      "dat": "iskrom",
+      "acc": "iskry",
+      "ins": "iskrami",
+      "loc": "iskrach",
+      "voc": "iskry"
+    }
+  }
+}

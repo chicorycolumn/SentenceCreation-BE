@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "poprzednio",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "poprzedni",
+          "gen": "poprzedniego",
+          "dat": "poprzedniemu",
+          "acc": "poprzedniego",
+          "ins": "poprzednim",
+          "loc": "poprzednim"
+        },
+        "m3": {
+          "nom": "poprzedni",
+          "gen": "poprzedniego",
+          "dat": "poprzedniemu",
+          "acc": "poprzedni",
+          "ins": "poprzednim",
+          "loc": "poprzednim"
+        },
+        "f": {
+          "nom": "poprzedna",
+          "gen": "poprzedniej",
+          "dat": "poprzedniej",
+          "acc": "poprzedną",
+          "ins": "poprzedną",
+          "loc": "poprzedniej"
+        },
+        "n": {
+          "nom": "poprzednie",
+          "gen": "poprzedniego",
+          "dat": "poprzedniemu",
+          "acc": "poprzednie",
+          "ins": "poprzednim",
+          "loc": "poprzednim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "poprzedni",
+          "gen": "poprzednich",
+          "dat": "poprzednim",
+          "acc": "poprzednich",
+          "ins": "poprzednimi",
+          "loc": "poprzednich"
+        },
+        "nonvirile": {
+          "nom": "poprzednie",
+          "gen": "poprzednich",
+          "dat": "poprzednim",
+          "acc": "poprzednie",
+          "ins": "poprzednimi",
+          "loc": "poprzednich"
+        }
+      }
+    }
+  }
+}

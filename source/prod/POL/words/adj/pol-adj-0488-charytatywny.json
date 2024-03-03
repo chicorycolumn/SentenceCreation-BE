@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "charytatywnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "charytatywny",
+          "gen": "charytatywnego",
+          "dat": "charytatywnemu",
+          "acc": "charytatywnego",
+          "ins": "charytatywnym",
+          "loc": "charytatywnym"
+        },
+        "m3": {
+          "nom": "charytatywny",
+          "gen": "charytatywnego",
+          "dat": "charytatywnemu",
+          "acc": "charytatywny",
+          "ins": "charytatywnym",
+          "loc": "charytatywnym"
+        },
+        "f": {
+          "nom": "charytatywna",
+          "gen": "charytatywnej",
+          "dat": "charytatywnej",
+          "acc": "charytatywną",
+          "ins": "charytatywną",
+          "loc": "charytatywnej"
+        },
+        "n": {
+          "nom": "charytatywne",
+          "gen": "charytatywnego",
+          "dat": "charytatywnemu",
+          "acc": "charytatywne",
+          "ins": "charytatywnym",
+          "loc": "charytatywnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "charytatywni",
+          "gen": "charytatywnych",
+          "dat": "charytatywnym",
+          "acc": "charytatywnych",
+          "ins": "charytatywnymi",
+          "loc": "charytatywnych"
+        },
+        "nonvirile": {
+          "nom": "charytatywne",
+          "gen": "charytatywnych",
+          "dat": "charytatywnym",
+          "acc": "charytatywne",
+          "ins": "charytatywnymi",
+          "loc": "charytatywnych"
+        }
+      }
+    }
+  }
+}

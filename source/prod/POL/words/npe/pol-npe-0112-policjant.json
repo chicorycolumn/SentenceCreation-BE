@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "policjant",
+      "gen": "policjanta",
+      "dat": "policjantowi",
+      "acc": "policjanta",
+      "ins": "policjantem",
+      "loc": "policjancie",
+      "voc": "policjancie"
+    },
+    "plural": {
+      "nom": "policjanci",
+      "gen": "policjantów",
+      "dat": "policjantom",
+      "acc": "policjantów",
+      "ins": "policjantami",
+      "loc": "policjantach",
+      "voc": "policjanci"
+    }
+  }
+}

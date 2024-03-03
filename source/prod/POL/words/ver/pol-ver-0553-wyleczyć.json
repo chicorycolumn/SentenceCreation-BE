@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wyleczyć",
+    "verbalNoun": "wyleczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "wyleczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "wyleczywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wyleczy się"
+          },
+          "plural": {
+            "allPluralGenders": "wyleczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wyleczę"
+          },
+          "plural": {
+            "allPluralGenders": "wyleczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wyleczysz"
+          },
+          "plural": {
+            "allPluralGenders": "wyleczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wyleczy"
+          },
+          "plural": {
+            "allPluralGenders": "wyleczą"
+          }
+        }
+      },
+      "imperative": "wylecz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wyleczono"
+          },
+          "plural": {
+            "allPluralGenders": "wyleczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wyleczyłem",
+            "f": "wyleczyłam"
+          },
+          "plural": {
+            "virile": "wyleczyliśmy",
+            "nonvirile": "wyleczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wyleczyłeś",
+            "f": "wyleczyłaś"
+          },
+          "plural": {
+            "virile": "wyleczyliście",
+            "nonvirile": "wyleczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wyleczył",
+            "f": "wyleczyła",
+            "n": "wyleczyło"
+          },
+          "plural": {
+            "virile": "wyleczyli",
+            "nonvirile": "wyleczyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

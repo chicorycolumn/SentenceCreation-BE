@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "nerwowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "nerwowy",
+          "gen": "nerwowego",
+          "dat": "nerwowemu",
+          "acc": "nerwowego",
+          "ins": "nerwowym",
+          "loc": "nerwowym"
+        },
+        "m3": {
+          "nom": "nerwowy",
+          "gen": "nerwowego",
+          "dat": "nerwowemu",
+          "acc": "nerwowy",
+          "ins": "nerwowym",
+          "loc": "nerwowym"
+        },
+        "f": {
+          "nom": "nerwowa",
+          "gen": "nerwowej",
+          "dat": "nerwowej",
+          "acc": "nerwową",
+          "ins": "nerwową",
+          "loc": "nerwowej"
+        },
+        "n": {
+          "nom": "nerwowe",
+          "gen": "nerwowego",
+          "dat": "nerwowemu",
+          "acc": "nerwowe",
+          "ins": "nerwowym",
+          "loc": "nerwowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "nerwowi",
+          "gen": "nerwowych",
+          "dat": "nerwowym",
+          "acc": "nerwowych",
+          "ins": "nerwowymi",
+          "loc": "nerwowych"
+        },
+        "nonvirile": {
+          "nom": "nerwowe",
+          "gen": "nerwowych",
+          "dat": "nerwowym",
+          "acc": "nerwowe",
+          "ins": "nerwowymi",
+          "loc": "nerwowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej nerwowy",
+          "gen": "bardziej nerwowego",
+          "dat": "bardziej nerwowemu",
+          "acc": "bardziej nerwowego",
+          "ins": "bardziej nerwowym",
+          "loc": "bardziej nerwowym"
+        },
+        "m3": {
+          "nom": "bardziej nerwowy",
+          "gen": "bardziej nerwowego",
+          "dat": "bardziej nerwowemu",
+          "acc": "bardziej nerwowy",
+          "ins": "bardziej nerwowym",
+          "loc": "bardziej nerwowym"
+        },
+        "f": {
+          "nom": "bardziej nerwowa",
+          "gen": "bardziej nerwowej",
+          "dat": "bardziej nerwowej",
+          "acc": "bardziej nerwową",
+          "ins": "bardziej nerwową",
+          "loc": "bardziej nerwowej"
+        },
+        "n": {
+          "nom": "bardziej nerwowe",
+          "gen": "bardziej nerwowego",
+          "dat": "bardziej nerwowemu",
+          "acc": "bardziej nerwowe",
+          "ins": "bardziej nerwowym",
+          "loc": "bardziej nerwowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej nerwowi",
+          "gen": "bardziej nerwowych",
+          "dat": "bardziej nerwowym",
+          "acc": "bardziej nerwowych",
+          "ins": "bardziej nerwowymi",
+          "loc": "bardziej nerwowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej nerwowe",
+          "gen": "bardziej nerwowych",
+          "dat": "bardziej nerwowym",
+          "acc": "bardziej nerwowe",
+          "ins": "bardziej nerwowymi",
+          "loc": "bardziej nerwowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej nerwowy",
+          "gen": "najbardziej nerwowego",
+          "dat": "najbardziej nerwowemu",
+          "acc": "najbardziej nerwowego",
+          "ins": "najbardziej nerwowym",
+          "loc": "najbardziej nerwowym"
+        },
+        "m3": {
+          "nom": "najbardziej nerwowy",
+          "gen": "najbardziej nerwowego",
+          "dat": "najbardziej nerwowemu",
+          "acc": "najbardziej nerwowy",
+          "ins": "najbardziej nerwowym",
+          "loc": "najbardziej nerwowym"
+        },
+        "f": {
+          "nom": "najbardziej nerwowa",
+          "gen": "najbardziej nerwowej",
+          "dat": "najbardziej nerwowej",
+          "acc": "najbardziej nerwową",
+          "ins": "najbardziej nerwową",
+          "loc": "najbardziej nerwowej"
+        },
+        "n": {
+          "nom": "najbardziej nerwowe",
+          "gen": "najbardziej nerwowego",
+          "dat": "najbardziej nerwowemu",
+          "acc": "najbardziej nerwowe",
+          "ins": "najbardziej nerwowym",
+          "loc": "najbardziej nerwowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej nerwowi",
+          "gen": "najbardziej nerwowych",
+          "dat": "najbardziej nerwowym",
+          "acc": "najbardziej nerwowych",
+          "ins": "najbardziej nerwowymi",
+          "loc": "najbardziej nerwowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej nerwowe",
+          "gen": "najbardziej nerwowych",
+          "dat": "najbardziej nerwowym",
+          "acc": "najbardziej nerwowe",
+          "ins": "najbardziej nerwowymi",
+          "loc": "najbardziej nerwowych"
+        }
+      }
+    }
+  }
+}

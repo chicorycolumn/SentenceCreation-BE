@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "łosoś",
+      "gen": "łososia",
+      "dat": "łososiowi",
+      "acc": "łososia",
+      "ins": "łososiem",
+      "loc": "łososiu",
+      "voc": "łososiu"
+    },
+    "plural": {
+      "nom": "łososie",
+      "gen": "łososi",
+      "dat": "łososiom",
+      "acc": "łososie",
+      "ins": "łososiami",
+      "loc": "łososiach",
+      "voc": "łososie"
+    }
+  }
+}

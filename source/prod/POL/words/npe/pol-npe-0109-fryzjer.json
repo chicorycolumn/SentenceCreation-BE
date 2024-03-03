@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "fryzjer",
+      "gen": "fryzjera",
+      "dat": "fryzjerowi",
+      "acc": "fryzjera",
+      "ins": "fryzjerem",
+      "loc": "fryzjerze",
+      "voc": "fryzjerze"
+    },
+    "plural": {
+      "nom": "fryzjerzy",
+      "gen": "fryzjerów",
+      "dat": "fryzjerom",
+      "acc": "fryzjerów",
+      "ins": "fryzjerami",
+      "loc": "fryzjerach",
+      "voc": "fryzjerzy"
+    }
+  }
+}

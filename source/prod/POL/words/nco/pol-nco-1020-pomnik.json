@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pomnik",
+      "gen": "pomnika",
+      "dat": "pomnikowi",
+      "acc": "pomnik",
+      "ins": "pomnikiem",
+      "loc": "pomniku",
+      "voc": "pomniku"
+    },
+    "plural": {
+      "nom": "pomniki",
+      "gen": "pomników",
+      "dat": "pomnikom",
+      "acc": "pomniki",
+      "ins": "pomnikami",
+      "loc": "pomnikach",
+      "voc": "pomniki"
+    }
+  }
+}

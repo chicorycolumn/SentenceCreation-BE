@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zobaczyć",
+    "verbalNoun": "zobaczenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zobaczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zobaczywszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zobaczy się"
+          },
+          "plural": {
+            "allPluralGenders": "zobaczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zobaczę"
+          },
+          "plural": {
+            "allPluralGenders": "zobaczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zobaczysz"
+          },
+          "plural": {
+            "allPluralGenders": "zobaczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zobaczy"
+          },
+          "plural": {
+            "allPluralGenders": "zobaczą"
+          }
+        }
+      },
+      "imperative": "zobacz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zobaczono"
+          },
+          "plural": {
+            "allPluralGenders": "zobaczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zobaczyłem",
+            "f": "zobaczyłam"
+          },
+          "plural": {
+            "virile": "zobaczyliśmy",
+            "nonvirile": "zobaczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zobaczyłeś",
+            "f": "zobaczyłaś"
+          },
+          "plural": {
+            "virile": "zobaczyliście",
+            "nonvirile": "zobaczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zobaczył",
+            "f": "zobaczyła",
+            "n": "zobaczyło"
+          },
+          "plural": {
+            "virile": "zobaczyli",
+            "nonvirile": "zobaczyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

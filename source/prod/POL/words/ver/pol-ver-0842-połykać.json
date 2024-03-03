@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "połykać",
+    "verbalNoun": "połykanie",
+    "activeAdjectival": "połykający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "połykając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "połykaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "połykano"
+          },
+          "plural": {
+            "allPluralGenders": "połykano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "połykałem",
+            "f": "połykałam"
+          },
+          "plural": {
+            "virile": "połykaliśmy",
+            "nonvirile": "połykałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "połykałeś",
+            "f": "połykałaś"
+          },
+          "plural": {
+            "virile": "połykaliście",
+            "nonvirile": "połykałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "połykał",
+            "f": "połykała",
+            "n": "połykało"
+          },
+          "plural": {
+            "virile": "połykali",
+            "nonvirile": "połykały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "połyka się"
+          },
+          "plural": {
+            "allPluralGenders": "połyka się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "połykam"
+          },
+          "plural": {
+            "allPluralGenders": "połykamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "połykasz"
+          },
+          "plural": {
+            "allPluralGenders": "połykacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "połyka"
+          },
+          "plural": {
+            "allPluralGenders": "połykają"
+          }
+        }
+      }
+    }
+  }
+}

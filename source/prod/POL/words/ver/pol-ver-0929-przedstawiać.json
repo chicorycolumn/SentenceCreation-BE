@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "przedstawiać",
+    "verbalNoun": "przedstawianie",
+    "activeAdjectival": "przedstawiający",
+    "passiveAdjectival": "przedstawiany",
+    "contemporaryAdverbial": "przedstawiając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "przedstawiaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przedstawiano"
+          },
+          "plural": {
+            "allPluralGenders": "przedstawiano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "przedstawiałem",
+            "f": "przedstawiałam"
+          },
+          "plural": {
+            "virile": "przedstawialiśmy",
+            "nonvirile": "przedstawiałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "przedstawiałeś",
+            "f": "przedstawiałaś"
+          },
+          "plural": {
+            "virile": "przedstawialiście",
+            "nonvirile": "przedstawiałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "przedstawiał",
+            "f": "przedstawiała",
+            "n": "przedstawiało"
+          },
+          "plural": {
+            "virile": "przedstawiali",
+            "nonvirile": "przedstawiały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "przedstawia się"
+          },
+          "plural": {
+            "allPluralGenders": "przedstawia się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "przedstawiam"
+          },
+          "plural": {
+            "allPluralGenders": "przedstawiamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "przedstawiasz"
+          },
+          "plural": {
+            "allPluralGenders": "przedstawiacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "przedstawia"
+          },
+          "plural": {
+            "allPluralGenders": "przedstawiają"
+          }
+        }
+      }
+    }
+  }
+}

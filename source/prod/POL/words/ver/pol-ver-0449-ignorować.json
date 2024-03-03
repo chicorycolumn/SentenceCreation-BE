@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "ignorować",
+    "verbalNoun": "ignorowanie",
+    "activeAdjectival": "ignorujący",
+    "passiveAdjectival": "ignorowany",
+    "contemporaryAdverbial": "ignorując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "ignoruj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ignorowano"
+          },
+          "plural": {
+            "allPluralGenders": "ignorowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "ignorowałem",
+            "f": "ignorowałam"
+          },
+          "plural": {
+            "virile": "ignorowaliśmy",
+            "nonvirile": "ignorowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "ignorowałeś",
+            "f": "ignorowałaś"
+          },
+          "plural": {
+            "virile": "ignorowaliście",
+            "nonvirile": "ignorowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "ignorował",
+            "f": "ignorowała",
+            "n": "ignorowało"
+          },
+          "plural": {
+            "virile": "ignorowali",
+            "nonvirile": "ignorowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "ignoruje się"
+          },
+          "plural": {
+            "allPluralGenders": "ignoruje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "ignoruję"
+          },
+          "plural": {
+            "allPluralGenders": "ignorujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "ignorujesz"
+          },
+          "plural": {
+            "allPluralGenders": "ignorujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "ignoruje"
+          },
+          "plural": {
+            "allPluralGenders": "ignorują"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "negatywnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "negatywny",
+          "gen": "negatywnego",
+          "dat": "negatywnemu",
+          "acc": "negatywnego",
+          "ins": "negatywnym",
+          "loc": "negatywnym"
+        },
+        "m3": {
+          "nom": "negatywny",
+          "gen": "negatywnego",
+          "dat": "negatywnemu",
+          "acc": "negatywny",
+          "ins": "negatywnym",
+          "loc": "negatywnym"
+        },
+        "f": {
+          "nom": "negatywna",
+          "gen": "negatywnej",
+          "dat": "negatywnej",
+          "acc": "negatywną",
+          "ins": "negatywną",
+          "loc": "negatywnej"
+        },
+        "n": {
+          "nom": "negatywne",
+          "gen": "negatywnego",
+          "dat": "negatywnemu",
+          "acc": "negatywne",
+          "ins": "negatywnym",
+          "loc": "negatywnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "negatywni",
+          "gen": "negatywnych",
+          "dat": "negatywnym",
+          "acc": "negatywnych",
+          "ins": "negatywnymi",
+          "loc": "negatywnych"
+        },
+        "nonvirile": {
+          "nom": "negatywne",
+          "gen": "negatywnych",
+          "dat": "negatywnym",
+          "acc": "negatywne",
+          "ins": "negatywnymi",
+          "loc": "negatywnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "negatywniejszy",
+          "gen": "negatywniejszego",
+          "dat": "negatywniejszemu",
+          "acc": "negatywniejszego",
+          "ins": "negatywniejszym",
+          "loc": "negatywniejszym"
+        },
+        "m3": {
+          "nom": "negatywniejszy",
+          "gen": "negatywniejszego",
+          "dat": "negatywniejszemu",
+          "acc": "negatywniejszy",
+          "ins": "negatywniejszym",
+          "loc": "negatywniejszym"
+        },
+        "f": {
+          "nom": "negatywniejsza",
+          "gen": "negatywniejszej",
+          "dat": "negatywniejszej",
+          "acc": "negatywniejszą",
+          "ins": "negatywniejszą",
+          "loc": "negatywniejszej"
+        },
+        "n": {
+          "nom": "negatywniejsze",
+          "gen": "negatywniejszego",
+          "dat": "negatywniejszemu",
+          "acc": "negatywniejsze",
+          "ins": "negatywniejszym",
+          "loc": "negatywniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "negatywniejsi",
+          "gen": "negatywniejszych",
+          "dat": "negatywniejszym",
+          "acc": "negatywniejszych",
+          "ins": "negatywniejszymi",
+          "loc": "negatywniejszych"
+        },
+        "nonvirile": {
+          "nom": "negatywniejsze",
+          "gen": "negatywniejszych",
+          "dat": "negatywniejszym",
+          "acc": "negatywniejsze",
+          "ins": "negatywniejszymi",
+          "loc": "negatywniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najnegatywniejszy",
+          "gen": "najnegatywniejszego",
+          "dat": "najnegatywniejszemu",
+          "acc": "najnegatywniejszego",
+          "ins": "najnegatywniejszym",
+          "loc": "najnegatywniejszym"
+        },
+        "m3": {
+          "nom": "najnegatywniejszy",
+          "gen": "najnegatywniejszego",
+          "dat": "najnegatywniejszemu",
+          "acc": "najnegatywniejszy",
+          "ins": "najnegatywniejszym",
+          "loc": "najnegatywniejszym"
+        },
+        "f": {
+          "nom": "najnegatywniejsza",
+          "gen": "najnegatywniejszej",
+          "dat": "najnegatywniejszej",
+          "acc": "najnegatywniejszą",
+          "ins": "najnegatywniejszą",
+          "loc": "najnegatywniejszej"
+        },
+        "n": {
+          "nom": "najnegatywniejsze",
+          "gen": "najnegatywniejszego",
+          "dat": "najnegatywniejszemu",
+          "acc": "najnegatywniejsze",
+          "ins": "najnegatywniejszym",
+          "loc": "najnegatywniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najnegatywniejsi",
+          "gen": "najnegatywniejszych",
+          "dat": "najnegatywniejszym",
+          "acc": "najnegatywniejszych",
+          "ins": "najnegatywniejszymi",
+          "loc": "najnegatywniejszych"
+        },
+        "nonvirile": {
+          "nom": "najnegatywniejsze",
+          "gen": "najnegatywniejszych",
+          "dat": "najnegatywniejszym",
+          "acc": "najnegatywniejsze",
+          "ins": "najnegatywniejszymi",
+          "loc": "najnegatywniejszych"
+        }
+      }
+    }
+  }
+}

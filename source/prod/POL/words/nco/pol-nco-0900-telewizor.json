@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "telewizor",
+      "gen": "telewizora",
+      "dat": "telewizorowi",
+      "acc": "telewizor",
+      "ins": "telewizorem",
+      "loc": "telewizorze",
+      "voc": "telewizorze"
+    },
+    "plural": {
+      "nom": "telewizory",
+      "gen": "telewizorów",
+      "dat": "telewizorom",
+      "acc": "telewizory",
+      "ins": "telewizorami",
+      "loc": "telewizorach",
+      "voc": "telewizory"
+    }
+  }
+}

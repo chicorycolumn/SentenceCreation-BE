@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pobiec",
+    "verbalNoun": "pobiegnięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "pobiegłszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pobiegnie się"
+          },
+          "plural": {
+            "allPluralGenders": "pobiegnie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pobiegnę"
+          },
+          "plural": {
+            "allPluralGenders": "pobiegniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pobiegniesz"
+          },
+          "plural": {
+            "allPluralGenders": "pobiegniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pobiegnie"
+          },
+          "plural": {
+            "allPluralGenders": "pobiegną"
+          }
+        }
+      },
+      "imperative": "pobiegnij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pobiegnięto"
+          },
+          "plural": {
+            "allPluralGenders": "pobiegnięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pobiegłem",
+            "f": "pobiegłam"
+          },
+          "plural": {
+            "virile": "pobiegliśmy",
+            "nonvirile": "pobiegłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pobiegłeś",
+            "f": "pobiegłaś"
+          },
+          "plural": {
+            "virile": "pobiegliście",
+            "nonvirile": "pobiegłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pobiegł",
+            "f": "pobiegła",
+            "n": "pobiegło"
+          },
+          "plural": {
+            "virile": "pobiegli",
+            "nonvirile": "pobiegły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

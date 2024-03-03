@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "dziennie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dzienny",
+          "gen": "dziennego",
+          "dat": "dziennemu",
+          "acc": "dziennego",
+          "ins": "dziennym",
+          "loc": "dziennym"
+        },
+        "m3": {
+          "nom": "dzienny",
+          "gen": "dziennego",
+          "dat": "dziennemu",
+          "acc": "dzienny",
+          "ins": "dziennym",
+          "loc": "dziennym"
+        },
+        "f": {
+          "nom": "dzienna",
+          "gen": "dziennej",
+          "dat": "dziennej",
+          "acc": "dzienną",
+          "ins": "dzienną",
+          "loc": "dziennej"
+        },
+        "n": {
+          "nom": "dzienne",
+          "gen": "dziennego",
+          "dat": "dziennemu",
+          "acc": "dzienne",
+          "ins": "dziennym",
+          "loc": "dziennym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dzienni",
+          "gen": "dziennych",
+          "dat": "dziennym",
+          "acc": "dziennych",
+          "ins": "dziennymi",
+          "loc": "dziennych"
+        },
+        "nonvirile": {
+          "nom": "dzienne",
+          "gen": "dziennych",
+          "dat": "dziennym",
+          "acc": "dzienne",
+          "ins": "dziennymi",
+          "loc": "dziennych"
+        }
+      }
+    }
+  }
+}

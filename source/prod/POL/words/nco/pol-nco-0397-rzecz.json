@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rzecz",
+      "gen": "rzeczy",
+      "dat": "rzeczy",
+      "acc": "rzecz",
+      "ins": "rzeczą",
+      "loc": "rzeczy",
+      "voc": "rzeczy"
+    },
+    "plural": {
+      "nom": "rzeczy",
+      "gen": "rzeczy",
+      "dat": "rzeczom",
+      "acc": "rzeczy",
+      "ins": "rzeczami",
+      "loc": "rzeczach",
+      "voc": "rzeczy"
+    }
+  }
+}

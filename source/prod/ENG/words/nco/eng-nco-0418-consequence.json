@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "consequence",
+      "gen": "consequence's"
+    },
+    "plural": {
+      "nom": "consequences",
+      "gen": "consequences'"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "piasek",
+      "gen": "piasku",
+      "dat": "piaskowi",
+      "acc": "piasek",
+      "ins": "piaskiem",
+      "loc": "piasku",
+      "voc": "piasku"
+    }
+  }
+}

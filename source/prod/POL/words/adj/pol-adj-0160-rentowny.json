@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "rentownie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "rentowny",
+          "gen": "rentownego",
+          "dat": "rentownemu",
+          "acc": "rentownego",
+          "ins": "rentownym",
+          "loc": "rentownym"
+        },
+        "m3": {
+          "nom": "rentowny",
+          "gen": "rentownego",
+          "dat": "rentownemu",
+          "acc": "rentowny",
+          "ins": "rentownym",
+          "loc": "rentownym"
+        },
+        "f": {
+          "nom": "rentowna",
+          "gen": "rentownej",
+          "dat": "rentownej",
+          "acc": "rentowną",
+          "ins": "rentowną",
+          "loc": "rentownej"
+        },
+        "n": {
+          "nom": "rentowne",
+          "gen": "rentownego",
+          "dat": "rentownemu",
+          "acc": "rentowne",
+          "ins": "rentownym",
+          "loc": "rentownym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "rentowni",
+          "gen": "rentownych",
+          "dat": "rentownym",
+          "acc": "rentownych",
+          "ins": "rentownymi",
+          "loc": "rentownych"
+        },
+        "nonvirile": {
+          "nom": "rentowne",
+          "gen": "rentownych",
+          "dat": "rentownym",
+          "acc": "rentowne",
+          "ins": "rentownymi",
+          "loc": "rentownych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej rentowny",
+          "gen": "bardziej rentownego",
+          "dat": "bardziej rentownemu",
+          "acc": "bardziej rentownego",
+          "ins": "bardziej rentownym",
+          "loc": "bardziej rentownym"
+        },
+        "m3": {
+          "nom": "bardziej rentowny",
+          "gen": "bardziej rentownego",
+          "dat": "bardziej rentownemu",
+          "acc": "bardziej rentowny",
+          "ins": "bardziej rentownym",
+          "loc": "bardziej rentownym"
+        },
+        "f": {
+          "nom": "bardziej rentowna",
+          "gen": "bardziej rentownej",
+          "dat": "bardziej rentownej",
+          "acc": "bardziej rentowną",
+          "ins": "bardziej rentowną",
+          "loc": "bardziej rentownej"
+        },
+        "n": {
+          "nom": "bardziej rentowne",
+          "gen": "bardziej rentownego",
+          "dat": "bardziej rentownemu",
+          "acc": "bardziej rentowne",
+          "ins": "bardziej rentownym",
+          "loc": "bardziej rentownym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej rentowni",
+          "gen": "bardziej rentownych",
+          "dat": "bardziej rentownym",
+          "acc": "bardziej rentownych",
+          "ins": "bardziej rentownymi",
+          "loc": "bardziej rentownych"
+        },
+        "nonvirile": {
+          "nom": "bardziej rentowne",
+          "gen": "bardziej rentownych",
+          "dat": "bardziej rentownym",
+          "acc": "bardziej rentowne",
+          "ins": "bardziej rentownymi",
+          "loc": "bardziej rentownych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej rentowny",
+          "gen": "najbardziej rentownego",
+          "dat": "najbardziej rentownemu",
+          "acc": "najbardziej rentownego",
+          "ins": "najbardziej rentownym",
+          "loc": "najbardziej rentownym"
+        },
+        "m3": {
+          "nom": "najbardziej rentowny",
+          "gen": "najbardziej rentownego",
+          "dat": "najbardziej rentownemu",
+          "acc": "najbardziej rentowny",
+          "ins": "najbardziej rentownym",
+          "loc": "najbardziej rentownym"
+        },
+        "f": {
+          "nom": "najbardziej rentowna",
+          "gen": "najbardziej rentownej",
+          "dat": "najbardziej rentownej",
+          "acc": "najbardziej rentowną",
+          "ins": "najbardziej rentowną",
+          "loc": "najbardziej rentownej"
+        },
+        "n": {
+          "nom": "najbardziej rentowne",
+          "gen": "najbardziej rentownego",
+          "dat": "najbardziej rentownemu",
+          "acc": "najbardziej rentowne",
+          "ins": "najbardziej rentownym",
+          "loc": "najbardziej rentownym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej rentowni",
+          "gen": "najbardziej rentownych",
+          "dat": "najbardziej rentownym",
+          "acc": "najbardziej rentownych",
+          "ins": "najbardziej rentownymi",
+          "loc": "najbardziej rentownych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej rentowne",
+          "gen": "najbardziej rentownych",
+          "dat": "najbardziej rentownym",
+          "acc": "najbardziej rentowne",
+          "ins": "najbardziej rentownymi",
+          "loc": "najbardziej rentownych"
+        }
+      }
+    }
+  }
+}

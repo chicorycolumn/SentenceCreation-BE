@@ -1,0 +1,31 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dystans",
+      "gen": "dystansu",
+      "dat": "dystansowi",
+      "acc": "dystans",
+      "ins": "dystansem",
+      "loc": "dystansie",
+      "voc": "dystansie"
+    },
+    "plural": {
+      "nom": [
+        "dystanse",
+        "dystansy"
+      ],
+      "gen": "dystansów",
+      "dat": "dystansom",
+      "acc": [
+        "dystanse",
+        "dystansy"
+      ],
+      "ins": "dystansami",
+      "loc": "dystansach",
+      "voc": [
+        "dystanse",
+        "dystansy"
+      ]
+    }
+  }
+}

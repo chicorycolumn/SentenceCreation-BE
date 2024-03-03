@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "futbol",
+      "gen": "futbolu",
+      "dat": "futbolowi",
+      "acc": "futbol",
+      "ins": "futbolem",
+      "loc": "futbolu",
+      "voc": "futbolu"
+    }
+  }
+}

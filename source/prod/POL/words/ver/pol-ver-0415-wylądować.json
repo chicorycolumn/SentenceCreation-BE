@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wylądować",
+    "verbalNoun": "wylądowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "wylądowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wyląduje się"
+          },
+          "plural": {
+            "allPluralGenders": "wyląduje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wyląduję"
+          },
+          "plural": {
+            "allPluralGenders": "wylądujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wylądujesz"
+          },
+          "plural": {
+            "allPluralGenders": "wylądujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wyląduje"
+          },
+          "plural": {
+            "allPluralGenders": "wylądują"
+          }
+        }
+      },
+      "imperative": "wyląduj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wylądowano"
+          },
+          "plural": {
+            "allPluralGenders": "wylądowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wylądowałem",
+            "f": "wylądowałam"
+          },
+          "plural": {
+            "virile": "wylądowaliśmy",
+            "nonvirile": "wylądowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wylądowałeś",
+            "f": "wylądowałaś"
+          },
+          "plural": {
+            "virile": "wylądowaliście",
+            "nonvirile": "wylądowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wylądował",
+            "f": "wylądowała",
+            "n": "wylądowało"
+          },
+          "plural": {
+            "virile": "wylądowali",
+            "nonvirile": "wylądowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

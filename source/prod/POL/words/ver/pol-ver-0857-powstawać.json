@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "powstawać",
+    "verbalNoun": "powstawanie",
+    "activeAdjectival": "powstający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "powstając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "powstawaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powstawano"
+          },
+          "plural": {
+            "allPluralGenders": "powstawano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "powstawałem",
+            "f": "powstawałam"
+          },
+          "plural": {
+            "virile": "powstawaliśmy",
+            "nonvirile": "powstawałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "powstawałeś",
+            "f": "powstawałaś"
+          },
+          "plural": {
+            "virile": "powstawaliście",
+            "nonvirile": "powstawałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "powstawał",
+            "f": "powstawała",
+            "n": "powstawało"
+          },
+          "plural": {
+            "virile": "powstawali",
+            "nonvirile": "powstawały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powstaje się"
+          },
+          "plural": {
+            "allPluralGenders": "powstaje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "powstaję"
+          },
+          "plural": {
+            "allPluralGenders": "powstajemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "powstajesz"
+          },
+          "plural": {
+            "allPluralGenders": "powstajecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "powstaje"
+          },
+          "plural": {
+            "allPluralGenders": "powstają"
+          }
+        }
+      }
+    }
+  }
+}

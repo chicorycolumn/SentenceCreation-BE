@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "dzielnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "dzielny",
+          "gen": "dzielnego",
+          "dat": "dzielnemu",
+          "acc": "dzielnego",
+          "ins": "dzielnym",
+          "loc": "dzielnym"
+        },
+        "m3": {
+          "nom": "dzielny",
+          "gen": "dzielnego",
+          "dat": "dzielnemu",
+          "acc": "dzielny",
+          "ins": "dzielnym",
+          "loc": "dzielnym"
+        },
+        "f": {
+          "nom": "dzielna",
+          "gen": "dzielnej",
+          "dat": "dzielnej",
+          "acc": "dzielną",
+          "ins": "dzielną",
+          "loc": "dzielnej"
+        },
+        "n": {
+          "nom": "dzielne",
+          "gen": "dzielnego",
+          "dat": "dzielnemu",
+          "acc": "dzielne",
+          "ins": "dzielnym",
+          "loc": "dzielnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dzielni",
+          "gen": "dzielnych",
+          "dat": "dzielnym",
+          "acc": "dzielnych",
+          "ins": "dzielnymi",
+          "loc": "dzielnych"
+        },
+        "nonvirile": {
+          "nom": "dzielne",
+          "gen": "dzielnych",
+          "dat": "dzielnym",
+          "acc": "dzielne",
+          "ins": "dzielnymi",
+          "loc": "dzielnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "dzielniejszy",
+          "gen": "dzielniejszego",
+          "dat": "dzielniejszemu",
+          "acc": "dzielniejszego",
+          "ins": "dzielniejszym",
+          "loc": "dzielniejszym"
+        },
+        "m3": {
+          "nom": "dzielniejszy",
+          "gen": "dzielniejszego",
+          "dat": "dzielniejszemu",
+          "acc": "dzielniejszy",
+          "ins": "dzielniejszym",
+          "loc": "dzielniejszym"
+        },
+        "f": {
+          "nom": "dzielniejsza",
+          "gen": "dzielniejszej",
+          "dat": "dzielniejszej",
+          "acc": "dzielniejszą",
+          "ins": "dzielniejszą",
+          "loc": "dzielniejszej"
+        },
+        "n": {
+          "nom": "dzielniejsze",
+          "gen": "dzielniejszego",
+          "dat": "dzielniejszemu",
+          "acc": "dzielniejsze",
+          "ins": "dzielniejszym",
+          "loc": "dzielniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "dzielniejsi",
+          "gen": "dzielniejszych",
+          "dat": "dzielniejszym",
+          "acc": "dzielniejszych",
+          "ins": "dzielniejszymi",
+          "loc": "dzielniejszych"
+        },
+        "nonvirile": {
+          "nom": "dzielniejsze",
+          "gen": "dzielniejszych",
+          "dat": "dzielniejszym",
+          "acc": "dzielniejsze",
+          "ins": "dzielniejszymi",
+          "loc": "dzielniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najdzielniejszy",
+          "gen": "najdzielniejszego",
+          "dat": "najdzielniejszemu",
+          "acc": "najdzielniejszego",
+          "ins": "najdzielniejszym",
+          "loc": "najdzielniejszym"
+        },
+        "m3": {
+          "nom": "najdzielniejszy",
+          "gen": "najdzielniejszego",
+          "dat": "najdzielniejszemu",
+          "acc": "najdzielniejszy",
+          "ins": "najdzielniejszym",
+          "loc": "najdzielniejszym"
+        },
+        "f": {
+          "nom": "najdzielniejsza",
+          "gen": "najdzielniejszej",
+          "dat": "najdzielniejszej",
+          "acc": "najdzielniejszą",
+          "ins": "najdzielniejszą",
+          "loc": "najdzielniejszej"
+        },
+        "n": {
+          "nom": "najdzielniejsze",
+          "gen": "najdzielniejszego",
+          "dat": "najdzielniejszemu",
+          "acc": "najdzielniejsze",
+          "ins": "najdzielniejszym",
+          "loc": "najdzielniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najdzielniejsi",
+          "gen": "najdzielniejszych",
+          "dat": "najdzielniejszym",
+          "acc": "najdzielniejszych",
+          "ins": "najdzielniejszymi",
+          "loc": "najdzielniejszych"
+        },
+        "nonvirile": {
+          "nom": "najdzielniejsze",
+          "gen": "najdzielniejszych",
+          "dat": "najdzielniejszym",
+          "acc": "najdzielniejsze",
+          "ins": "najdzielniejszymi",
+          "loc": "najdzielniejszych"
+        }
+      }
+    }
+  }
+}

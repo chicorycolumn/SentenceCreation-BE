@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dzik",
+      "gen": "dzika",
+      "dat": "dzikowi",
+      "acc": "dzika",
+      "ins": "dzikiem",
+      "loc": "dziku",
+      "voc": "dziku"
+    },
+    "plural": {
+      "nom": "dziki",
+      "gen": "dzików",
+      "dat": "dzikom",
+      "acc": "dziki",
+      "ins": "dzikami",
+      "loc": "dzikach",
+      "voc": "dziki"
+    }
+  }
+}

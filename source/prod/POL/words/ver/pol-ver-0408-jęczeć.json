@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "jęczeć",
+    "verbalNoun": "jęczenie",
+    "activeAdjectival": "jęczący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "jęcząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "jęcz",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "jęczano"
+          },
+          "plural": {
+            "allPluralGenders": "jęczano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "jęczałem",
+            "f": "jęczałam"
+          },
+          "plural": {
+            "virile": "jęczeliśmy",
+            "nonvirile": "jęczałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "jęczałeś",
+            "f": "jęczałaś"
+          },
+          "plural": {
+            "virile": "jęczeliście",
+            "nonvirile": "jęczałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "jęczał",
+            "f": "jęczała",
+            "n": "jęczało"
+          },
+          "plural": {
+            "virile": "jęczeli",
+            "nonvirile": "jęczały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "jęczy się"
+          },
+          "plural": {
+            "allPluralGenders": "jęczy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "jęczę"
+          },
+          "plural": {
+            "allPluralGenders": "jęczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "jęczysz"
+          },
+          "plural": {
+            "allPluralGenders": "jęczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "jęczy"
+          },
+          "plural": {
+            "allPluralGenders": "jęczą"
+          }
+        }
+      }
+    }
+  }
+}

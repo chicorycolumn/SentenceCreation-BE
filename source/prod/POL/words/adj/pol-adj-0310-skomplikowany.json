@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "skomplikowanie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "skomplikowany",
+          "gen": "skomplikowanego",
+          "dat": "skomplikowanemu",
+          "acc": "skomplikowanego",
+          "ins": "skomplikowanym",
+          "loc": "skomplikowanym"
+        },
+        "m3": {
+          "nom": "skomplikowany",
+          "gen": "skomplikowanego",
+          "dat": "skomplikowanemu",
+          "acc": "skomplikowany",
+          "ins": "skomplikowanym",
+          "loc": "skomplikowanym"
+        },
+        "f": {
+          "nom": "skomplikowana",
+          "gen": "skomplikowanej",
+          "dat": "skomplikowanej",
+          "acc": "skomplikowaną",
+          "ins": "skomplikowaną",
+          "loc": "skomplikowanej"
+        },
+        "n": {
+          "nom": "skomplikowane",
+          "gen": "skomplikowanego",
+          "dat": "skomplikowanemu",
+          "acc": "skomplikowane",
+          "ins": "skomplikowanym",
+          "loc": "skomplikowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "skomplikowani",
+          "gen": "skomplikowanych",
+          "dat": "skomplikowanym",
+          "acc": "skomplikowanych",
+          "ins": "skomplikowanymi",
+          "loc": "skomplikowanych"
+        },
+        "nonvirile": {
+          "nom": "skomplikowane",
+          "gen": "skomplikowanych",
+          "dat": "skomplikowanym",
+          "acc": "skomplikowane",
+          "ins": "skomplikowanymi",
+          "loc": "skomplikowanych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej skomplikowany",
+          "gen": "bardziej skomplikowanego",
+          "dat": "bardziej skomplikowanemu",
+          "acc": "bardziej skomplikowanego",
+          "ins": "bardziej skomplikowanym",
+          "loc": "bardziej skomplikowanym"
+        },
+        "m3": {
+          "nom": "bardziej skomplikowany",
+          "gen": "bardziej skomplikowanego",
+          "dat": "bardziej skomplikowanemu",
+          "acc": "bardziej skomplikowany",
+          "ins": "bardziej skomplikowanym",
+          "loc": "bardziej skomplikowanym"
+        },
+        "f": {
+          "nom": "bardziej skomplikowana",
+          "gen": "bardziej skomplikowanej",
+          "dat": "bardziej skomplikowanej",
+          "acc": "bardziej skomplikowaną",
+          "ins": "bardziej skomplikowaną",
+          "loc": "bardziej skomplikowanej"
+        },
+        "n": {
+          "nom": "bardziej skomplikowane",
+          "gen": "bardziej skomplikowanego",
+          "dat": "bardziej skomplikowanemu",
+          "acc": "bardziej skomplikowane",
+          "ins": "bardziej skomplikowanym",
+          "loc": "bardziej skomplikowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej skomplikowani",
+          "gen": "bardziej skomplikowanych",
+          "dat": "bardziej skomplikowanym",
+          "acc": "bardziej skomplikowanych",
+          "ins": "bardziej skomplikowanymi",
+          "loc": "bardziej skomplikowanych"
+        },
+        "nonvirile": {
+          "nom": "bardziej skomplikowane",
+          "gen": "bardziej skomplikowanych",
+          "dat": "bardziej skomplikowanym",
+          "acc": "bardziej skomplikowane",
+          "ins": "bardziej skomplikowanymi",
+          "loc": "bardziej skomplikowanych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej skomplikowany",
+          "gen": "najbardziej skomplikowanego",
+          "dat": "najbardziej skomplikowanemu",
+          "acc": "najbardziej skomplikowanego",
+          "ins": "najbardziej skomplikowanym",
+          "loc": "najbardziej skomplikowanym"
+        },
+        "m3": {
+          "nom": "najbardziej skomplikowany",
+          "gen": "najbardziej skomplikowanego",
+          "dat": "najbardziej skomplikowanemu",
+          "acc": "najbardziej skomplikowany",
+          "ins": "najbardziej skomplikowanym",
+          "loc": "najbardziej skomplikowanym"
+        },
+        "f": {
+          "nom": "najbardziej skomplikowana",
+          "gen": "najbardziej skomplikowanej",
+          "dat": "najbardziej skomplikowanej",
+          "acc": "najbardziej skomplikowaną",
+          "ins": "najbardziej skomplikowaną",
+          "loc": "najbardziej skomplikowanej"
+        },
+        "n": {
+          "nom": "najbardziej skomplikowane",
+          "gen": "najbardziej skomplikowanego",
+          "dat": "najbardziej skomplikowanemu",
+          "acc": "najbardziej skomplikowane",
+          "ins": "najbardziej skomplikowanym",
+          "loc": "najbardziej skomplikowanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej skomplikowani",
+          "gen": "najbardziej skomplikowanych",
+          "dat": "najbardziej skomplikowanym",
+          "acc": "najbardziej skomplikowanych",
+          "ins": "najbardziej skomplikowanymi",
+          "loc": "najbardziej skomplikowanych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej skomplikowane",
+          "gen": "najbardziej skomplikowanych",
+          "dat": "najbardziej skomplikowanym",
+          "acc": "najbardziej skomplikowane",
+          "ins": "najbardziej skomplikowanymi",
+          "loc": "najbardziej skomplikowanych"
+        }
+      }
+    }
+  }
+}

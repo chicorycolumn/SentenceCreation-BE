@@ -1,0 +1,15 @@
+{
+  "inflections": {
+    "infinitive": "be on fire",
+    "v2": {
+      "isTerminus": true,
+      "normal": [
+        "was on fire",
+        "were on fire"
+      ]
+    },
+    "v3": "been on fire",
+    "thirdPS": "is on fire",
+    "gerund": "being on fire"
+  }
+}

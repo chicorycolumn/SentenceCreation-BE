@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "plural": {
+      "nom": "slipy",
+      "gen": "slipów",
+      "dat": "slipom",
+      "acc": "slipy",
+      "ins": "slipami",
+      "loc": "slipach",
+      "voc": "slipy"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "distance",
+      "gen": "distance's"
+    },
+    "plural": {
+      "nom": "distances",
+      "gen": "distances'"
+    }
+  }
+}

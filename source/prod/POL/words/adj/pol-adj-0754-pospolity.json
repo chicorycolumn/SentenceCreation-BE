@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pospolity",
+          "gen": "pospolitego",
+          "dat": "pospolitemu",
+          "acc": "pospolitego",
+          "ins": "pospolitym",
+          "loc": "pospolitym"
+        },
+        "m3": {
+          "nom": "pospolity",
+          "gen": "pospolitego",
+          "dat": "pospolitemu",
+          "acc": "pospolity",
+          "ins": "pospolitym",
+          "loc": "pospolitym"
+        },
+        "f": {
+          "nom": "pospolita",
+          "gen": "pospolitej",
+          "dat": "pospolitej",
+          "acc": "pospolitą",
+          "ins": "pospolitą",
+          "loc": "pospolitej"
+        },
+        "n": {
+          "nom": "pospolite",
+          "gen": "pospolitego",
+          "dat": "pospolitemu",
+          "acc": "pospolite",
+          "ins": "pospolitym",
+          "loc": "pospolitym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pospolici",
+          "gen": "pospolitych",
+          "dat": "pospolitym",
+          "acc": "pospolitych",
+          "ins": "pospolitymi",
+          "loc": "pospolitych"
+        },
+        "nonvirile": {
+          "nom": "pospolite",
+          "gen": "pospolitych",
+          "dat": "pospolitym",
+          "acc": "pospolite",
+          "ins": "pospolitymi",
+          "loc": "pospolitych"
+        }
+      }
+    }
+  }
+}

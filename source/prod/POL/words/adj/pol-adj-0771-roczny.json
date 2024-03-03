@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "rocznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "roczny",
+          "gen": "rocznego",
+          "dat": "rocznemu",
+          "acc": "rocznego",
+          "ins": "rocznym",
+          "loc": "rocznym"
+        },
+        "m3": {
+          "nom": "roczny",
+          "gen": "rocznego",
+          "dat": "rocznemu",
+          "acc": "roczny",
+          "ins": "rocznym",
+          "loc": "rocznym"
+        },
+        "f": {
+          "nom": "roczna",
+          "gen": "rocznej",
+          "dat": "rocznej",
+          "acc": "roczną",
+          "ins": "roczną",
+          "loc": "rocznej"
+        },
+        "n": {
+          "nom": "roczne",
+          "gen": "rocznego",
+          "dat": "rocznemu",
+          "acc": "roczne",
+          "ins": "rocznym",
+          "loc": "rocznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "roczni",
+          "gen": "rocznych",
+          "dat": "rocznym",
+          "acc": "rocznych",
+          "ins": "rocznymi",
+          "loc": "rocznych"
+        },
+        "nonvirile": {
+          "nom": "roczne",
+          "gen": "rocznych",
+          "dat": "rocznym",
+          "acc": "roczne",
+          "ins": "rocznymi",
+          "loc": "rocznych"
+        }
+      }
+    }
+  }
+}

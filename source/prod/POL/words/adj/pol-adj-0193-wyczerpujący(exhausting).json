@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "wyczerpująco",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "wyczerpujący",
+          "gen": "wyczerpującego",
+          "dat": "wyczerpującemu",
+          "acc": "wyczerpującego",
+          "ins": "wyczerpującym",
+          "loc": "wyczerpującym"
+        },
+        "m3": {
+          "nom": "wyczerpujący",
+          "gen": "wyczerpującego",
+          "dat": "wyczerpującemu",
+          "acc": "wyczerpujący",
+          "ins": "wyczerpującym",
+          "loc": "wyczerpującym"
+        },
+        "f": {
+          "nom": "wyczerpująca",
+          "gen": "wyczerpującej",
+          "dat": "wyczerpującej",
+          "acc": "wyczerpującą",
+          "ins": "wyczerpującą",
+          "loc": "wyczerpującej"
+        },
+        "n": {
+          "nom": "wyczerpujące",
+          "gen": "wyczerpującego",
+          "dat": "wyczerpującemu",
+          "acc": "wyczerpujące",
+          "ins": "wyczerpującym",
+          "loc": "wyczerpującym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wyczerpujący",
+          "gen": "wyczerpujących",
+          "dat": "wyczerpującym",
+          "acc": "wyczerpujących",
+          "ins": "wyczerpującymi",
+          "loc": "wyczerpujących"
+        },
+        "nonvirile": {
+          "nom": "wyczerpujące",
+          "gen": "wyczerpujących",
+          "dat": "wyczerpującym",
+          "acc": "wyczerpujące",
+          "ins": "wyczerpującymi",
+          "loc": "wyczerpujących"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej wyczerpujący",
+          "gen": "bardziej wyczerpującego",
+          "dat": "bardziej wyczerpującemu",
+          "acc": "bardziej wyczerpującego",
+          "ins": "bardziej wyczerpującym",
+          "loc": "bardziej wyczerpującym"
+        },
+        "m3": {
+          "nom": "bardziej wyczerpujący",
+          "gen": "bardziej wyczerpującego",
+          "dat": "bardziej wyczerpującemu",
+          "acc": "bardziej wyczerpujący",
+          "ins": "bardziej wyczerpującym",
+          "loc": "bardziej wyczerpującym"
+        },
+        "f": {
+          "nom": "bardziej wyczerpująca",
+          "gen": "bardziej wyczerpującej",
+          "dat": "bardziej wyczerpującej",
+          "acc": "bardziej wyczerpującą",
+          "ins": "bardziej wyczerpującą",
+          "loc": "bardziej wyczerpującej"
+        },
+        "n": {
+          "nom": "bardziej wyczerpujące",
+          "gen": "bardziej wyczerpującego",
+          "dat": "bardziej wyczerpującemu",
+          "acc": "bardziej wyczerpujące",
+          "ins": "bardziej wyczerpującym",
+          "loc": "bardziej wyczerpującym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej wyczerpujący",
+          "gen": "bardziej wyczerpujących",
+          "dat": "bardziej wyczerpującym",
+          "acc": "bardziej wyczerpujących",
+          "ins": "bardziej wyczerpującymi",
+          "loc": "bardziej wyczerpujących"
+        },
+        "nonvirile": {
+          "nom": "bardziej wyczerpujące",
+          "gen": "bardziej wyczerpujących",
+          "dat": "bardziej wyczerpującym",
+          "acc": "bardziej wyczerpujące",
+          "ins": "bardziej wyczerpującymi",
+          "loc": "bardziej wyczerpujących"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej wyczerpujący",
+          "gen": "najbardziej wyczerpującego",
+          "dat": "najbardziej wyczerpującemu",
+          "acc": "najbardziej wyczerpującego",
+          "ins": "najbardziej wyczerpującym",
+          "loc": "najbardziej wyczerpującym"
+        },
+        "m3": {
+          "nom": "najbardziej wyczerpujący",
+          "gen": "najbardziej wyczerpującego",
+          "dat": "najbardziej wyczerpującemu",
+          "acc": "najbardziej wyczerpujący",
+          "ins": "najbardziej wyczerpującym",
+          "loc": "najbardziej wyczerpującym"
+        },
+        "f": {
+          "nom": "najbardziej wyczerpująca",
+          "gen": "najbardziej wyczerpującej",
+          "dat": "najbardziej wyczerpującej",
+          "acc": "najbardziej wyczerpującą",
+          "ins": "najbardziej wyczerpującą",
+          "loc": "najbardziej wyczerpującej"
+        },
+        "n": {
+          "nom": "najbardziej wyczerpujące",
+          "gen": "najbardziej wyczerpującego",
+          "dat": "najbardziej wyczerpującemu",
+          "acc": "najbardziej wyczerpujące",
+          "ins": "najbardziej wyczerpującym",
+          "loc": "najbardziej wyczerpującym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej wyczerpujący",
+          "gen": "najbardziej wyczerpujących",
+          "dat": "najbardziej wyczerpującym",
+          "acc": "najbardziej wyczerpujących",
+          "ins": "najbardziej wyczerpującymi",
+          "loc": "najbardziej wyczerpujących"
+        },
+        "nonvirile": {
+          "nom": "najbardziej wyczerpujące",
+          "gen": "najbardziej wyczerpujących",
+          "dat": "najbardziej wyczerpującym",
+          "acc": "najbardziej wyczerpujące",
+          "ins": "najbardziej wyczerpującymi",
+          "loc": "najbardziej wyczerpujących"
+        }
+      }
+    }
+  }
+}

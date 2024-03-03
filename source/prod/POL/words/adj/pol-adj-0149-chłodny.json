@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "chłodno",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "chłodny",
+          "gen": "chłodnego",
+          "dat": "chłodnemu",
+          "acc": "chłodnego",
+          "ins": "chłodnym",
+          "loc": "chłodnym"
+        },
+        "m3": {
+          "nom": "chłodny",
+          "gen": "chłodnego",
+          "dat": "chłodnemu",
+          "acc": "chłodny",
+          "ins": "chłodnym",
+          "loc": "chłodnym"
+        },
+        "f": {
+          "nom": "chłodna",
+          "gen": "chłodnej",
+          "dat": "chłodnej",
+          "acc": "chłodną",
+          "ins": "chłodną",
+          "loc": "chłodnej"
+        },
+        "n": {
+          "nom": "chłodne",
+          "gen": "chłodnego",
+          "dat": "chłodnemu",
+          "acc": "chłodne",
+          "ins": "chłodnym",
+          "loc": "chłodnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "chłodni",
+          "gen": "chłodnych",
+          "dat": "chłodnym",
+          "acc": "chłodnych",
+          "ins": "chłodnymi",
+          "loc": "chłodnych"
+        },
+        "nonvirile": {
+          "nom": "chłodne",
+          "gen": "chłodnych",
+          "dat": "chłodnym",
+          "acc": "chłodne",
+          "ins": "chłodnymi",
+          "loc": "chłodnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "chłodniejszy",
+          "gen": "chłodniejszego",
+          "dat": "chłodniejszemu",
+          "acc": "chłodniejszego",
+          "ins": "chłodniejszym",
+          "loc": "chłodniejszym"
+        },
+        "m3": {
+          "nom": "chłodniejszy",
+          "gen": "chłodniejszego",
+          "dat": "chłodniejszemu",
+          "acc": "chłodniejszy",
+          "ins": "chłodniejszym",
+          "loc": "chłodniejszym"
+        },
+        "f": {
+          "nom": "chłodniejsza",
+          "gen": "chłodniejszej",
+          "dat": "chłodniejszej",
+          "acc": "chłodniejszą",
+          "ins": "chłodniejszą",
+          "loc": "chłodniejszej"
+        },
+        "n": {
+          "nom": "chłodniejsze",
+          "gen": "chłodniejszego",
+          "dat": "chłodniejszemu",
+          "acc": "chłodniejsze",
+          "ins": "chłodniejszym",
+          "loc": "chłodniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "chłodniejsi",
+          "gen": "chłodniejszych",
+          "dat": "chłodniejszym",
+          "acc": "chłodniejszych",
+          "ins": "chłodniejszymi",
+          "loc": "chłodniejszych"
+        },
+        "nonvirile": {
+          "nom": "chłodniejsze",
+          "gen": "chłodniejszych",
+          "dat": "chłodniejszym",
+          "acc": "chłodniejsze",
+          "ins": "chłodniejszymi",
+          "loc": "chłodniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najchłodniejszy",
+          "gen": "najchłodniejszego",
+          "dat": "najchłodniejszemu",
+          "acc": "najchłodniejszego",
+          "ins": "najchłodniejszym",
+          "loc": "najchłodniejszym"
+        },
+        "m3": {
+          "nom": "najchłodniejszy",
+          "gen": "najchłodniejszego",
+          "dat": "najchłodniejszemu",
+          "acc": "najchłodniejszy",
+          "ins": "najchłodniejszym",
+          "loc": "najchłodniejszym"
+        },
+        "f": {
+          "nom": "najchłodniejsza",
+          "gen": "najchłodniejszej",
+          "dat": "najchłodniejszej",
+          "acc": "najchłodniejszą",
+          "ins": "najchłodniejszą",
+          "loc": "najchłodniejszej"
+        },
+        "n": {
+          "nom": "najchłodniejsze",
+          "gen": "najchłodniejszego",
+          "dat": "najchłodniejszemu",
+          "acc": "najchłodniejsze",
+          "ins": "najchłodniejszym",
+          "loc": "najchłodniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najchłodniejsi",
+          "gen": "najchłodniejszych",
+          "dat": "najchłodniejszym",
+          "acc": "najchłodniejszych",
+          "ins": "najchłodniejszymi",
+          "loc": "najchłodniejszych"
+        },
+        "nonvirile": {
+          "nom": "najchłodniejsze",
+          "gen": "najchłodniejszych",
+          "dat": "najchłodniejszym",
+          "acc": "najchłodniejsze",
+          "ins": "najchłodniejszymi",
+          "loc": "najchłodniejszych"
+        }
+      }
+    }
+  }
+}

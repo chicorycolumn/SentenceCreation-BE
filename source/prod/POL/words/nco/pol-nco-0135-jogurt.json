@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "jogurt",
+      "gen": "jogurtu",
+      "dat": "jogurtowi",
+      "acc": "jogurt",
+      "ins": "jogurtem",
+      "loc": "jogurcie",
+      "voc": "jogurcie"
+    },
+    "plural": {
+      "nom": "jogurty",
+      "gen": "jogurtów",
+      "dat": "jogurtom",
+      "acc": "jogurty",
+      "ins": "jogurtami",
+      "loc": "jogurtach",
+      "voc": "jogurty"
+    }
+  }
+}

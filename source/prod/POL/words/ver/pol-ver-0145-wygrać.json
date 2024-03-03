@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wygrać",
+    "verbalNoun": "wygranie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "wygrany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "wygrawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wygra się"
+          },
+          "plural": {
+            "allPluralGenders": "wygra się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wygram"
+          },
+          "plural": {
+            "allPluralGenders": "wygramy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wygrasz"
+          },
+          "plural": {
+            "allPluralGenders": "wygracie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wygra"
+          },
+          "plural": {
+            "allPluralGenders": "wygrają"
+          }
+        }
+      },
+      "imperative": "wygraj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wygrano"
+          },
+          "plural": {
+            "allPluralGenders": "wygrano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wygrałem",
+            "f": "wygrałam"
+          },
+          "plural": {
+            "virile": "wygraliśmy",
+            "nonvirile": "wygrałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wygrałeś",
+            "f": "wygrałaś"
+          },
+          "plural": {
+            "virile": "wygraliście",
+            "nonvirile": "wygrałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wygrał",
+            "f": "wygrała",
+            "n": "wygrało"
+          },
+          "plural": {
+            "virile": "wygrali",
+            "nonvirile": "wygrały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

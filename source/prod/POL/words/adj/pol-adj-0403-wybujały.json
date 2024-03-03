@@ -1,0 +1,166 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "wybujały",
+          "gen": "wybujałego",
+          "dat": "wybujałemu",
+          "acc": "wybujałego",
+          "ins": "wybujałym",
+          "loc": "wybujałym"
+        },
+        "m3": {
+          "nom": "wybujały",
+          "gen": "wybujałego",
+          "dat": "wybujałemu",
+          "acc": "wybujały",
+          "ins": "wybujałym",
+          "loc": "wybujałym"
+        },
+        "f": {
+          "nom": "wybujała",
+          "gen": "wybujałej",
+          "dat": "wybujałej",
+          "acc": "wybujałą",
+          "ins": "wybujałą",
+          "loc": "wybujałej"
+        },
+        "n": {
+          "nom": "wybujałe",
+          "gen": "wybujałego",
+          "dat": "wybujałemu",
+          "acc": "wybujałe",
+          "ins": "wybujałym",
+          "loc": "wybujałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "wybujali",
+          "gen": "wybujałych",
+          "dat": "wybujałym",
+          "acc": "wybujałych",
+          "ins": "wybujałymi",
+          "loc": "wybujałych"
+        },
+        "nonvirile": {
+          "nom": "wybujałe",
+          "gen": "wybujałych",
+          "dat": "wybujałym",
+          "acc": "wybujałe",
+          "ins": "wybujałymi",
+          "loc": "wybujałych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej wybujały",
+          "gen": "bardziej wybujałego",
+          "dat": "bardziej wybujałemu",
+          "acc": "bardziej wybujałego",
+          "ins": "bardziej wybujałym",
+          "loc": "bardziej wybujałym"
+        },
+        "m3": {
+          "nom": "bardziej wybujały",
+          "gen": "bardziej wybujałego",
+          "dat": "bardziej wybujałemu",
+          "acc": "bardziej wybujały",
+          "ins": "bardziej wybujałym",
+          "loc": "bardziej wybujałym"
+        },
+        "f": {
+          "nom": "bardziej wybujała",
+          "gen": "bardziej wybujałej",
+          "dat": "bardziej wybujałej",
+          "acc": "bardziej wybujałą",
+          "ins": "bardziej wybujałą",
+          "loc": "bardziej wybujałej"
+        },
+        "n": {
+          "nom": "bardziej wybujałe",
+          "gen": "bardziej wybujałego",
+          "dat": "bardziej wybujałemu",
+          "acc": "bardziej wybujałe",
+          "ins": "bardziej wybujałym",
+          "loc": "bardziej wybujałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej wybujali",
+          "gen": "bardziej wybujałych",
+          "dat": "bardziej wybujałym",
+          "acc": "bardziej wybujałych",
+          "ins": "bardziej wybujałymi",
+          "loc": "bardziej wybujałych"
+        },
+        "nonvirile": {
+          "nom": "bardziej wybujałe",
+          "gen": "bardziej wybujałych",
+          "dat": "bardziej wybujałym",
+          "acc": "bardziej wybujałe",
+          "ins": "bardziej wybujałymi",
+          "loc": "bardziej wybujałych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej wybujały",
+          "gen": "najbardziej wybujałego",
+          "dat": "najbardziej wybujałemu",
+          "acc": "najbardziej wybujałego",
+          "ins": "najbardziej wybujałym",
+          "loc": "najbardziej wybujałym"
+        },
+        "m3": {
+          "nom": "najbardziej wybujały",
+          "gen": "najbardziej wybujałego",
+          "dat": "najbardziej wybujałemu",
+          "acc": "najbardziej wybujały",
+          "ins": "najbardziej wybujałym",
+          "loc": "najbardziej wybujałym"
+        },
+        "f": {
+          "nom": "najbardziej wybujała",
+          "gen": "najbardziej wybujałej",
+          "dat": "najbardziej wybujałej",
+          "acc": "najbardziej wybujałą",
+          "ins": "najbardziej wybujałą",
+          "loc": "najbardziej wybujałej"
+        },
+        "n": {
+          "nom": "najbardziej wybujałe",
+          "gen": "najbardziej wybujałego",
+          "dat": "najbardziej wybujałemu",
+          "acc": "najbardziej wybujałe",
+          "ins": "najbardziej wybujałym",
+          "loc": "najbardziej wybujałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej wybujali",
+          "gen": "najbardziej wybujałych",
+          "dat": "najbardziej wybujałym",
+          "acc": "najbardziej wybujałych",
+          "ins": "najbardziej wybujałymi",
+          "loc": "najbardziej wybujałych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej wybujałe",
+          "gen": "najbardziej wybujałych",
+          "dat": "najbardziej wybujałym",
+          "acc": "najbardziej wybujałe",
+          "ins": "najbardziej wybujałymi",
+          "loc": "najbardziej wybujałych"
+        }
+      }
+    }
+  }
+}

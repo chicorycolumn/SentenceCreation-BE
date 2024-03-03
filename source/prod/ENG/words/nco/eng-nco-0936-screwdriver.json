@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "screwdriver",
+      "gen": "screwdriver's"
+    },
+    "plural": {
+      "nom": "screwdrivers",
+      "gen": "screwdrivers'"
+    }
+  }
+}

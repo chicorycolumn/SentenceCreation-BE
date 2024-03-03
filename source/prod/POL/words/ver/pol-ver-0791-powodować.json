@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "powodować",
+    "verbalNoun": "powodowanie",
+    "activeAdjectival": "powodujący",
+    "passiveAdjectival": "powodowany",
+    "contemporaryAdverbial": "powodując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "powoduj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powodowano"
+          },
+          "plural": {
+            "allPluralGenders": "powodowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "powodowałem",
+            "f": "powodowałam"
+          },
+          "plural": {
+            "virile": "powodowaliśmy",
+            "nonvirile": "powodowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "powodowałeś",
+            "f": "powodowałaś"
+          },
+          "plural": {
+            "virile": "powodowaliście",
+            "nonvirile": "powodowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "powodował",
+            "f": "powodowała",
+            "n": "powodowało"
+          },
+          "plural": {
+            "virile": "powodowali",
+            "nonvirile": "powodowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powoduje się"
+          },
+          "plural": {
+            "allPluralGenders": "powoduje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "powoduję"
+          },
+          "plural": {
+            "allPluralGenders": "powodujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "powodujesz"
+          },
+          "plural": {
+            "allPluralGenders": "powodujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "powoduje"
+          },
+          "plural": {
+            "allPluralGenders": "powodują"
+          }
+        }
+      }
+    }
+  }
+}

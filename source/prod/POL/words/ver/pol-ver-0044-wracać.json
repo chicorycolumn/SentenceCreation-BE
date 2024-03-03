@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wracać",
+    "verbalNoun": "wracanie",
+    "activeAdjectival": "wracający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "wracając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "wracaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wracano"
+          },
+          "plural": {
+            "allPluralGenders": "wracano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wracałem",
+            "f": "wracałam"
+          },
+          "plural": {
+            "virile": "wracaliśmy",
+            "nonvirile": "wracałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wracałeś",
+            "f": "wracałaś"
+          },
+          "plural": {
+            "virile": "wracaliście",
+            "nonvirile": "wracałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wracał",
+            "f": "wracała",
+            "n": "wracało"
+          },
+          "plural": {
+            "virile": "wracali",
+            "nonvirile": "wracały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wraca się"
+          },
+          "plural": {
+            "allPluralGenders": "wraca się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wracam"
+          },
+          "plural": {
+            "allPluralGenders": "wracamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wracasz"
+          },
+          "plural": {
+            "allPluralGenders": "wracacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wraca"
+          },
+          "plural": {
+            "allPluralGenders": "wracają"
+          }
+        }
+      }
+    }
+  }
+}

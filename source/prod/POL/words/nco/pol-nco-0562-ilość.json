@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ilość",
+      "gen": "ilości",
+      "dat": "ilości",
+      "acc": "ilość",
+      "ins": "ilością",
+      "loc": "ilości",
+      "voc": "ilości"
+    },
+    "plural": {
+      "nom": "ilości",
+      "gen": "ilości",
+      "dat": "ilościom",
+      "acc": "ilości",
+      "ins": "ilościami",
+      "loc": "ilościach",
+      "voc": "ilości"
+    }
+  }
+}

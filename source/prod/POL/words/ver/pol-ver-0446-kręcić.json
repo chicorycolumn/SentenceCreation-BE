@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "kręcić",
+    "verbalNoun": "kręcenie",
+    "activeAdjectival": "kręcący",
+    "passiveAdjectival": "kręcony",
+    "contemporaryAdverbial": "kręcąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "kręć",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kręcono"
+          },
+          "plural": {
+            "allPluralGenders": "kręcono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "kręciłem",
+            "f": "kręciłam"
+          },
+          "plural": {
+            "virile": "kręciliśmy",
+            "nonvirile": "kręciłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "kręciłeś",
+            "f": "kręciłaś"
+          },
+          "plural": {
+            "virile": "kręciliście",
+            "nonvirile": "kręciłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "kręcił",
+            "f": "kręciła",
+            "n": "kręciło"
+          },
+          "plural": {
+            "virile": "kręcili",
+            "nonvirile": "kręciły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kręci się"
+          },
+          "plural": {
+            "allPluralGenders": "kręci się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "kręcę"
+          },
+          "plural": {
+            "allPluralGenders": "kręcimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "kręcisz"
+          },
+          "plural": {
+            "allPluralGenders": "kręcicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "kręci"
+          },
+          "plural": {
+            "allPluralGenders": "kręcą"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "czoło",
+      "gen": "czoła",
+      "dat": "czołu",
+      "acc": "czoło",
+      "ins": "czołem",
+      "loc": "czole",
+      "voc": "czoło"
+    },
+    "plural": {
+      "nom": "czoła",
+      "gen": "czół",
+      "dat": "czołom",
+      "acc": "czoła",
+      "ins": "czołami",
+      "loc": "czołach",
+      "voc": "czoła"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zakochać",
+    "verbalNoun": "zakochanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zakochany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zakochawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zakocha się"
+          },
+          "plural": {
+            "allPluralGenders": "zakocha się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zakocham"
+          },
+          "plural": {
+            "allPluralGenders": "zakochamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zakochasz"
+          },
+          "plural": {
+            "allPluralGenders": "zakochacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zakocha"
+          },
+          "plural": {
+            "allPluralGenders": "zakochają"
+          }
+        }
+      },
+      "imperative": "zakochaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zakochano"
+          },
+          "plural": {
+            "allPluralGenders": "zakochano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zakochałem",
+            "f": "zakochałam"
+          },
+          "plural": {
+            "virile": "zakochaliśmy",
+            "nonvirile": "zakochałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zakochałeś",
+            "f": "zakochałaś"
+          },
+          "plural": {
+            "virile": "zakochaliście",
+            "nonvirile": "zakochałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zakochał",
+            "f": "zakochała",
+            "n": "zakochało"
+          },
+          "plural": {
+            "virile": "zakochali",
+            "nonvirile": "zakochały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

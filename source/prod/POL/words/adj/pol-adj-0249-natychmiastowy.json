@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "natychmiastowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "natychmiastowy",
+          "gen": "natychmiastowego",
+          "dat": "natychmiastowemu",
+          "acc": "natychmiastowego",
+          "ins": "natychmiastowym",
+          "loc": "natychmiastowym"
+        },
+        "m3": {
+          "nom": "natychmiastowy",
+          "gen": "natychmiastowego",
+          "dat": "natychmiastowemu",
+          "acc": "natychmiastowy",
+          "ins": "natychmiastowym",
+          "loc": "natychmiastowym"
+        },
+        "f": {
+          "nom": "natychmiastowa",
+          "gen": "natychmiastowej",
+          "dat": "natychmiastowej",
+          "acc": "natychmiastową",
+          "ins": "natychmiastową",
+          "loc": "natychmiastowej"
+        },
+        "n": {
+          "nom": "natychmiastowe",
+          "gen": "natychmiastowego",
+          "dat": "natychmiastowemu",
+          "acc": "natychmiastowe",
+          "ins": "natychmiastowym",
+          "loc": "natychmiastowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "natychmiastowi",
+          "gen": "natychmiastowych",
+          "dat": "natychmiastowym",
+          "acc": "natychmiastowych",
+          "ins": "natychmiastowymi",
+          "loc": "natychmiastowych"
+        },
+        "nonvirile": {
+          "nom": "natychmiastowe",
+          "gen": "natychmiastowych",
+          "dat": "natychmiastowym",
+          "acc": "natychmiastowe",
+          "ins": "natychmiastowymi",
+          "loc": "natychmiastowych"
+        }
+      }
+    }
+  }
+}

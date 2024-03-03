@@ -1,0 +1,599 @@
+{
+  "inflections": {
+    "adverb": "swobodnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "swobodny",
+          "gen": "swobodnego",
+          "dat": "swobodnemu",
+          "acc": "swobodnego",
+          "ins": "swobodnym",
+          "loc": "swobodnym"
+        },
+        "m3": {
+          "nom": "swobodny",
+          "gen": "swobodnego",
+          "dat": "swobodnemu",
+          "acc": "swobodny",
+          "ins": "swobodnym",
+          "loc": "swobodnym"
+        },
+        "f": {
+          "nom": "swobodna",
+          "gen": "swobodnej",
+          "dat": "swobodnej",
+          "acc": "swobodną",
+          "ins": "swobodną",
+          "loc": "swobodnej"
+        },
+        "n": {
+          "nom": "swobodne",
+          "gen": "swobodnego",
+          "dat": "swobodnemu",
+          "acc": "swobodne",
+          "ins": "swobodnym",
+          "loc": "swobodnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "swobodni",
+          "gen": "swobodnych",
+          "dat": "swobodnym",
+          "acc": "swobodnych",
+          "ins": "swobodnymi",
+          "loc": "swobodnych"
+        },
+        "nonvirile": {
+          "nom": "swobodne",
+          "gen": "swobodnych",
+          "dat": "swobodnym",
+          "acc": "swobodne",
+          "ins": "swobodnymi",
+          "loc": "swobodnych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszy",
+              "bardziej swobodny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszego",
+              "bardziej swobodnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszemu",
+              "bardziej swobodnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszego",
+              "bardziej swobodnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszym",
+              "bardziej swobodnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszym",
+              "bardziej swobodnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszy",
+              "bardziej swobodny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszego",
+              "bardziej swobodnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszemu",
+              "bardziej swobodnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszy",
+              "bardziej swobodny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszym",
+              "bardziej swobodnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszym",
+              "bardziej swobodnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejsza",
+              "bardziej swobodna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszej",
+              "bardziej swobodnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszej",
+              "bardziej swobodnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszą",
+              "bardziej swobodną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszą",
+              "bardziej swobodną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszej",
+              "bardziej swobodnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejsze",
+              "bardziej swobodne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszego",
+              "bardziej swobodnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszemu",
+              "bardziej swobodnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejsze",
+              "bardziej swobodne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszym",
+              "bardziej swobodnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszym",
+              "bardziej swobodnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejsi",
+              "bardziej swobodni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszych",
+              "bardziej swobodnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszym",
+              "bardziej swobodnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszych",
+              "bardziej swobodnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszymi",
+              "bardziej swobodnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszych",
+              "bardziej swobodnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejsze",
+              "bardziej swobodne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszych",
+              "bardziej swobodnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszym",
+              "bardziej swobodnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejsze",
+              "bardziej swobodne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszymi",
+              "bardziej swobodnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "swobodniejszych",
+              "bardziej swobodnych"
+            ]
+          }
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszy",
+              "najbardziej swobodny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszego",
+              "najbardziej swobodnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszemu",
+              "najbardziej swobodnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszego",
+              "najbardziej swobodnego"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszym",
+              "najbardziej swobodnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszym",
+              "najbardziej swobodnym"
+            ]
+          }
+        },
+        "m3": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszy",
+              "najbardziej swobodny"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszego",
+              "najbardziej swobodnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszemu",
+              "najbardziej swobodnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszy",
+              "najbardziej swobodny"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszym",
+              "najbardziej swobodnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszym",
+              "najbardziej swobodnym"
+            ]
+          }
+        },
+        "f": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejsza",
+              "najbardziej swobodna"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszej",
+              "najbardziej swobodnej"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszej",
+              "najbardziej swobodnej"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszą",
+              "najbardziej swobodną"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszą",
+              "najbardziej swobodną"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszej",
+              "najbardziej swobodnej"
+            ]
+          }
+        },
+        "n": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejsze",
+              "najbardziej swobodne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszego",
+              "najbardziej swobodnego"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszemu",
+              "najbardziej swobodnemu"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejsze",
+              "najbardziej swobodne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszym",
+              "najbardziej swobodnym"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszym",
+              "najbardziej swobodnym"
+            ]
+          }
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejsi",
+              "najbardziej swobodni"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszych",
+              "najbardziej swobodnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszym",
+              "najbardziej swobodnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszych",
+              "najbardziej swobodnych"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszymi",
+              "najbardziej swobodnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszych",
+              "najbardziej swobodnych"
+            ]
+          }
+        },
+        "nonvirile": {
+          "nom": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejsze",
+              "najbardziej swobodne"
+            ]
+          },
+          "gen": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszych",
+              "najbardziej swobodnych"
+            ]
+          },
+          "dat": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszym",
+              "najbardziej swobodnym"
+            ]
+          },
+          "acc": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejsze",
+              "najbardziej swobodne"
+            ]
+          },
+          "ins": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszymi",
+              "najbardziej swobodnymi"
+            ]
+          },
+          "loc": {
+            "isTerminus": true,
+            "normal": [
+              "najswobodniejszych",
+              "najbardziej swobodnych"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

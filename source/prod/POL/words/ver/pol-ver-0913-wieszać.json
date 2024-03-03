@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wieszać",
+    "verbalNoun": "wieszanie",
+    "activeAdjectival": "wieszający",
+    "passiveAdjectival": "wieszany",
+    "contemporaryAdverbial": "wieszając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "wieszaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wieszano"
+          },
+          "plural": {
+            "allPluralGenders": "wieszano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wieszałem",
+            "f": "wieszałam"
+          },
+          "plural": {
+            "virile": "wieszaliśmy",
+            "nonvirile": "wieszałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wieszałeś",
+            "f": "wieszałaś"
+          },
+          "plural": {
+            "virile": "wieszaliście",
+            "nonvirile": "wieszałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wieszał",
+            "f": "wieszała",
+            "n": "wieszało"
+          },
+          "plural": {
+            "virile": "wieszali",
+            "nonvirile": "wieszały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wiesza się"
+          },
+          "plural": {
+            "allPluralGenders": "wiesza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wieszam"
+          },
+          "plural": {
+            "allPluralGenders": "wieszamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wieszasz"
+          },
+          "plural": {
+            "allPluralGenders": "wieszacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wiesza"
+          },
+          "plural": {
+            "allPluralGenders": "wieszają"
+          }
+        }
+      }
+    }
+  }
+}

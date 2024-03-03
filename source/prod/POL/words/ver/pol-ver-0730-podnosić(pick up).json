@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "podnosić",
+    "verbalNoun": "podnoszenie",
+    "activeAdjectival": "podnoszący",
+    "passiveAdjectival": "podnoszony",
+    "contemporaryAdverbial": "podnosząc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "podnoś",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podnoszono"
+          },
+          "plural": {
+            "allPluralGenders": "podnoszono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "podnosiłem",
+            "f": "podnosiłam"
+          },
+          "plural": {
+            "virile": "podnosiliśmy",
+            "nonvirile": "podnosiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podnosiłeś",
+            "f": "podnosiłaś"
+          },
+          "plural": {
+            "virile": "podnosiliście",
+            "nonvirile": "podnosiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podnosił",
+            "f": "podnosiła",
+            "n": "podnosiło"
+          },
+          "plural": {
+            "virile": "podnosili",
+            "nonvirile": "podnosiły"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podnosi się"
+          },
+          "plural": {
+            "allPluralGenders": "podnosi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podnoszę"
+          },
+          "plural": {
+            "allPluralGenders": "podnosimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podnosisz"
+          },
+          "plural": {
+            "allPluralGenders": "podnosicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podnosi"
+          },
+          "plural": {
+            "allPluralGenders": "podnoszą"
+          }
+        }
+      }
+    }
+  }
+}

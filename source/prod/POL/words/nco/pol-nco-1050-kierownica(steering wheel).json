@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kierownica",
+      "gen": "kierownicy",
+      "dat": "kierownicy",
+      "acc": "kierownicę",
+      "ins": "kierownicą",
+      "loc": "kierownicy",
+      "voc": "kierownico"
+    },
+    "plural": {
+      "nom": "kierownice",
+      "gen": "kierownic",
+      "dat": "kierownicom",
+      "acc": "kierownice",
+      "ins": "kierownicami",
+      "loc": "kierownicach",
+      "voc": "kierownice"
+    }
+  }
+}

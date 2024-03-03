@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "makrela",
+      "gen": "makreli",
+      "dat": "makreli",
+      "acc": "makrelę",
+      "ins": "makrelą",
+      "loc": "makreli",
+      "voc": "makrelo"
+    },
+    "plural": {
+      "nom": "makrele",
+      "gen": "makrel",
+      "dat": "makrelom",
+      "acc": "makrele",
+      "ins": "makrelami",
+      "loc": "makrelach",
+      "voc": "makrele"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "powtarzać",
+    "verbalNoun": "powtarzanie",
+    "activeAdjectival": "powtarzający",
+    "passiveAdjectival": "powtarzany",
+    "contemporaryAdverbial": "powtarzając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "powtarzaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powtarzano"
+          },
+          "plural": {
+            "allPluralGenders": "powtarzano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "powtarzałem",
+            "f": "powtarzałam"
+          },
+          "plural": {
+            "virile": "powtarzaliśmy",
+            "nonvirile": "powtarzałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "powtarzałeś",
+            "f": "powtarzałaś"
+          },
+          "plural": {
+            "virile": "powtarzaliście",
+            "nonvirile": "powtarzałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "powtarzał",
+            "f": "powtarzała",
+            "n": "powtarzało"
+          },
+          "plural": {
+            "virile": "powtarzali",
+            "nonvirile": "powtarzały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "powtarza się"
+          },
+          "plural": {
+            "allPluralGenders": "powtarza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "powtarzam"
+          },
+          "plural": {
+            "allPluralGenders": "powtarzamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "powtarzasz"
+          },
+          "plural": {
+            "allPluralGenders": "powtarzacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "powtarza"
+          },
+          "plural": {
+            "allPluralGenders": "powtarzają"
+          }
+        }
+      }
+    }
+  }
+}

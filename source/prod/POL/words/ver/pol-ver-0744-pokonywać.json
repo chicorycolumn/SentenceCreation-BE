@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "pokonywać",
+    "verbalNoun": "pokonywanie",
+    "activeAdjectival": "pokonujący",
+    "passiveAdjectival": "pokonywany",
+    "contemporaryAdverbial": "pokonując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "pokonuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pokonywano"
+          },
+          "plural": {
+            "allPluralGenders": "pokonywano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pokonywałem",
+            "f": "pokonywałam"
+          },
+          "plural": {
+            "virile": "pokonywaliśmy",
+            "nonvirile": "pokonywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pokonywałeś",
+            "f": "pokonywałaś"
+          },
+          "plural": {
+            "virile": "pokonywaliście",
+            "nonvirile": "pokonywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pokonywał",
+            "f": "pokonywała",
+            "n": "pokonywało"
+          },
+          "plural": {
+            "virile": "pokonywali",
+            "nonvirile": "pokonywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "pokonuje się"
+          },
+          "plural": {
+            "allPluralGenders": "pokonuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "pokonuję"
+          },
+          "plural": {
+            "allPluralGenders": "pokonujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "pokonujesz"
+          },
+          "plural": {
+            "allPluralGenders": "pokonujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "pokonuje"
+          },
+          "plural": {
+            "allPluralGenders": "pokonują"
+          }
+        }
+      }
+    }
+  }
+}

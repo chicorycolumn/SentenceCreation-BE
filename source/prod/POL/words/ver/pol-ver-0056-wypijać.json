@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "wypijać",
+    "verbalNoun": "wypijanie",
+    "activeAdjectival": "wypijający",
+    "passiveAdjectival": "wypijany",
+    "contemporaryAdverbial": "wypijając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "wypijaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wypijano"
+          },
+          "plural": {
+            "allPluralGenders": "wypijano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "wypijałem",
+            "f": "wypijałam"
+          },
+          "plural": {
+            "virile": "wypijaliśmy",
+            "nonvirile": "wypijałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "wypijałeś",
+            "f": "wypijałaś"
+          },
+          "plural": {
+            "virile": "wypijaliście",
+            "nonvirile": "wypijałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "wypijał",
+            "f": "wypijała",
+            "n": "wypijało"
+          },
+          "plural": {
+            "virile": "wypijali",
+            "nonvirile": "wypijały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "wypija się"
+          },
+          "plural": {
+            "allPluralGenders": "wypija się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "wypijam"
+          },
+          "plural": {
+            "allPluralGenders": "wypijamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "wypijasz"
+          },
+          "plural": {
+            "allPluralGenders": "wypijacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "wypija"
+          },
+          "plural": {
+            "allPluralGenders": "wypijają"
+          }
+        }
+      }
+    }
+  }
+}

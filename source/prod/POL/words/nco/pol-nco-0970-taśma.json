@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "taśma",
+      "gen": "taśmy",
+      "dat": "taśmie",
+      "acc": "taśmę",
+      "ins": "taśmą",
+      "loc": "taśmie",
+      "voc": "taśmo"
+    },
+    "plural": {
+      "nom": "taśmy",
+      "gen": "taśm",
+      "dat": "taśmom",
+      "acc": "taśmy",
+      "ins": "taśmami",
+      "loc": "taśmach",
+      "voc": "taśmy"
+    }
+  }
+}

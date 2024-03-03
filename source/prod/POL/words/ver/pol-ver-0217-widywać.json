@@ -1,0 +1,82 @@
+{
+  "inflections": {
+    "infinitive": "widywać",
+    "verbalNoun": "widywanie",
+    "activeAdjectival": "widujący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "widując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "widuj",
+      "past": {
+        "1per": {
+          "singular": {
+            "m": "widywałem",
+            "f": "widywałam"
+          },
+          "plural": {
+            "virile": "widywaliśmy",
+            "nonvirile": "widywałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "widywałeś",
+            "f": "widywałaś"
+          },
+          "plural": {
+            "virile": "widywaliście",
+            "nonvirile": "widywałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "widywał",
+            "f": "widywała",
+            "n": "widywało"
+          },
+          "plural": {
+            "virile": "widywali",
+            "nonvirile": "widywały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "widuje się"
+          },
+          "plural": {
+            "allPluralGenders": "widuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "widuję"
+          },
+          "plural": {
+            "allPluralGenders": "widujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "widujesz"
+          },
+          "plural": {
+            "allPluralGenders": "widujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "widuje"
+          },
+          "plural": {
+            "allPluralGenders": "widują"
+          }
+        }
+      }
+    }
+  }
+}

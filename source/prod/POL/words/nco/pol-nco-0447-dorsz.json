@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dorsz",
+      "gen": "dorsza",
+      "dat": "dorszowi",
+      "acc": "dorsza",
+      "ins": "dorszem",
+      "loc": "dorszu",
+      "voc": "dorszu"
+    },
+    "plural": {
+      "nom": "dorsze",
+      "gen": [
+        "dorszów",
+        "dorszy"
+      ],
+      "dat": "dorszom",
+      "acc": "dorsze",
+      "ins": "dorszami",
+      "loc": "dorszach",
+      "voc": "dorsze"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "potknąć",
+    "verbalNoun": "potknięcie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "potknąwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "potknie się"
+          },
+          "plural": {
+            "allPluralGenders": "potknie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "potknę"
+          },
+          "plural": {
+            "allPluralGenders": "potkniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "potkniesz"
+          },
+          "plural": {
+            "allPluralGenders": "potkniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "potknie"
+          },
+          "plural": {
+            "allPluralGenders": "potkną"
+          }
+        }
+      },
+      "imperative": "potknij",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "potknięto"
+          },
+          "plural": {
+            "allPluralGenders": "potknięto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "potknąłem",
+            "f": "potknąłam"
+          },
+          "plural": {
+            "virile": "potknęliśmy",
+            "nonvirile": "potknąłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "potknąłeś",
+            "f": "potknąłaś"
+          },
+          "plural": {
+            "virile": "potknęliście",
+            "nonvirile": "potknąłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "potknął",
+            "f": "potknąła",
+            "n": "potknąło"
+          },
+          "plural": {
+            "virile": "potknęli",
+            "nonvirile": "potknąły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

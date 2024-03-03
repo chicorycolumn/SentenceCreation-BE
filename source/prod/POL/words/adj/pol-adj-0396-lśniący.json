@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "lśniąco",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "lśniący",
+          "gen": "lśniącego",
+          "dat": "lśniącemu",
+          "acc": "lśniącego",
+          "ins": "lśniącym",
+          "loc": "lśniącym"
+        },
+        "m3": {
+          "nom": "lśniący",
+          "gen": "lśniącego",
+          "dat": "lśniącemu",
+          "acc": "lśniący",
+          "ins": "lśniącym",
+          "loc": "lśniącym"
+        },
+        "f": {
+          "nom": "lśniąca",
+          "gen": "lśniącej",
+          "dat": "lśniącej",
+          "acc": "lśniącą",
+          "ins": "lśniącą",
+          "loc": "lśniącej"
+        },
+        "n": {
+          "nom": "lśniące",
+          "gen": "lśniącego",
+          "dat": "lśniącemu",
+          "acc": "lśniące",
+          "ins": "lśniącym",
+          "loc": "lśniącym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "lśniący",
+          "gen": "lśniących",
+          "dat": "lśniącym",
+          "acc": "lśniących",
+          "ins": "lśniącymi",
+          "loc": "lśniących"
+        },
+        "nonvirile": {
+          "nom": "lśniące",
+          "gen": "lśniących",
+          "dat": "lśniącym",
+          "acc": "lśniące",
+          "ins": "lśniącymi",
+          "loc": "lśniących"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej lśniący",
+          "gen": "bardziej lśniącego",
+          "dat": "bardziej lśniącemu",
+          "acc": "bardziej lśniącego",
+          "ins": "bardziej lśniącym",
+          "loc": "bardziej lśniącym"
+        },
+        "m3": {
+          "nom": "bardziej lśniący",
+          "gen": "bardziej lśniącego",
+          "dat": "bardziej lśniącemu",
+          "acc": "bardziej lśniący",
+          "ins": "bardziej lśniącym",
+          "loc": "bardziej lśniącym"
+        },
+        "f": {
+          "nom": "bardziej lśniąca",
+          "gen": "bardziej lśniącej",
+          "dat": "bardziej lśniącej",
+          "acc": "bardziej lśniącą",
+          "ins": "bardziej lśniącą",
+          "loc": "bardziej lśniącej"
+        },
+        "n": {
+          "nom": "bardziej lśniące",
+          "gen": "bardziej lśniącego",
+          "dat": "bardziej lśniącemu",
+          "acc": "bardziej lśniące",
+          "ins": "bardziej lśniącym",
+          "loc": "bardziej lśniącym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej lśniący",
+          "gen": "bardziej lśniących",
+          "dat": "bardziej lśniącym",
+          "acc": "bardziej lśniących",
+          "ins": "bardziej lśniącymi",
+          "loc": "bardziej lśniących"
+        },
+        "nonvirile": {
+          "nom": "bardziej lśniące",
+          "gen": "bardziej lśniących",
+          "dat": "bardziej lśniącym",
+          "acc": "bardziej lśniące",
+          "ins": "bardziej lśniącymi",
+          "loc": "bardziej lśniących"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej lśniący",
+          "gen": "najbardziej lśniącego",
+          "dat": "najbardziej lśniącemu",
+          "acc": "najbardziej lśniącego",
+          "ins": "najbardziej lśniącym",
+          "loc": "najbardziej lśniącym"
+        },
+        "m3": {
+          "nom": "najbardziej lśniący",
+          "gen": "najbardziej lśniącego",
+          "dat": "najbardziej lśniącemu",
+          "acc": "najbardziej lśniący",
+          "ins": "najbardziej lśniącym",
+          "loc": "najbardziej lśniącym"
+        },
+        "f": {
+          "nom": "najbardziej lśniąca",
+          "gen": "najbardziej lśniącej",
+          "dat": "najbardziej lśniącej",
+          "acc": "najbardziej lśniącą",
+          "ins": "najbardziej lśniącą",
+          "loc": "najbardziej lśniącej"
+        },
+        "n": {
+          "nom": "najbardziej lśniące",
+          "gen": "najbardziej lśniącego",
+          "dat": "najbardziej lśniącemu",
+          "acc": "najbardziej lśniące",
+          "ins": "najbardziej lśniącym",
+          "loc": "najbardziej lśniącym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej lśniący",
+          "gen": "najbardziej lśniących",
+          "dat": "najbardziej lśniącym",
+          "acc": "najbardziej lśniących",
+          "ins": "najbardziej lśniącymi",
+          "loc": "najbardziej lśniących"
+        },
+        "nonvirile": {
+          "nom": "najbardziej lśniące",
+          "gen": "najbardziej lśniących",
+          "dat": "najbardziej lśniącym",
+          "acc": "najbardziej lśniące",
+          "ins": "najbardziej lśniącymi",
+          "loc": "najbardziej lśniących"
+        }
+      }
+    }
+  }
+}

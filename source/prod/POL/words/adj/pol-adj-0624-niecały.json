@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niecały",
+          "gen": "niecałego",
+          "dat": "niecałemu",
+          "acc": "niecałego",
+          "ins": "niecałym",
+          "loc": "niecałym"
+        },
+        "m3": {
+          "nom": "niecały",
+          "gen": "niecałego",
+          "dat": "niecałemu",
+          "acc": "niecały",
+          "ins": "niecałym",
+          "loc": "niecałym"
+        },
+        "f": {
+          "nom": "niecała",
+          "gen": "niecałej",
+          "dat": "niecałej",
+          "acc": "niecałą",
+          "ins": "niecałą",
+          "loc": "niecałej"
+        },
+        "n": {
+          "nom": "niecałe",
+          "gen": "niecałego",
+          "dat": "niecałemu",
+          "acc": "niecałe",
+          "ins": "niecałym",
+          "loc": "niecałym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niecali",
+          "gen": "niecałych",
+          "dat": "niecałym",
+          "acc": "niecałych",
+          "ins": "niecałymi",
+          "loc": "niecałych"
+        },
+        "nonvirile": {
+          "nom": "niecałe",
+          "gen": "niecałych",
+          "dat": "niecałym",
+          "acc": "niecałe",
+          "ins": "niecałymi",
+          "loc": "niecałych"
+        }
+      }
+    }
+  }
+}

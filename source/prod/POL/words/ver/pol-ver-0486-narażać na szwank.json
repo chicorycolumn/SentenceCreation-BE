@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "narażać na szwank",
+    "verbalNoun": "narażanie na szwank",
+    "activeAdjectival": "narażający na szwank",
+    "passiveAdjectival": "narażany na szwank",
+    "contemporaryAdverbial": "narażając na szwank",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "narażaj na szwank",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "narażano na szwank"
+          },
+          "plural": {
+            "allPluralGenders": "narażano na szwank"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "narażałem na szwank",
+            "f": "narażałam na szwank"
+          },
+          "plural": {
+            "virile": "narażaliśmy na szwank",
+            "nonvirile": "narażałyśmy na szwank"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "narażałeś na szwank",
+            "f": "narażałaś na szwank"
+          },
+          "plural": {
+            "virile": "narażaliście na szwank",
+            "nonvirile": "narażałyście na szwank"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "narażał na szwank",
+            "f": "narażała na szwank",
+            "n": "narażało na szwank"
+          },
+          "plural": {
+            "virile": "narażali na szwank",
+            "nonvirile": "narażały na szwank"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "naraża się na szwank"
+          },
+          "plural": {
+            "allPluralGenders": "naraża się na szwank"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "narażam na szwank"
+          },
+          "plural": {
+            "allPluralGenders": "narażamy na szwank"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "narażasz na szwank"
+          },
+          "plural": {
+            "allPluralGenders": "narażacie na szwank"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "naraża na szwank"
+          },
+          "plural": {
+            "allPluralGenders": "narażają na szwank"
+          }
+        }
+      }
+    }
+  }
+}

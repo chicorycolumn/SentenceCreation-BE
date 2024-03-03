@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oszczędzać",
+    "verbalNoun": "oszczędzanie",
+    "activeAdjectival": "oszczędzający",
+    "passiveAdjectival": "oszczędzany",
+    "contemporaryAdverbial": "oszczędzając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "oszczędzaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oszczędzano"
+          },
+          "plural": {
+            "allPluralGenders": "oszczędzano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oszczędzałem",
+            "f": "oszczędzałam"
+          },
+          "plural": {
+            "virile": "oszczędzaliśmy",
+            "nonvirile": "oszczędzałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oszczędzałeś",
+            "f": "oszczędzałaś"
+          },
+          "plural": {
+            "virile": "oszczędzaliście",
+            "nonvirile": "oszczędzałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oszczędzał",
+            "f": "oszczędzała",
+            "n": "oszczędzało"
+          },
+          "plural": {
+            "virile": "oszczędzali",
+            "nonvirile": "oszczędzały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oszczędza się"
+          },
+          "plural": {
+            "allPluralGenders": "oszczędza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oszczędzam"
+          },
+          "plural": {
+            "allPluralGenders": "oszczędzamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oszczędzasz"
+          },
+          "plural": {
+            "allPluralGenders": "oszczędzacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "oszczędza"
+          },
+          "plural": {
+            "allPluralGenders": "oszczędzają"
+          }
+        }
+      }
+    }
+  }
+}

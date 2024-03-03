@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "toaleta",
+      "gen": "toalety",
+      "dat": "toalecie",
+      "acc": "toaletę",
+      "ins": "toaletą",
+      "loc": "toalecie",
+      "voc": "toaleto"
+    },
+    "plural": {
+      "nom": "toalety",
+      "gen": "toalet",
+      "dat": "toaletom",
+      "acc": "toalety",
+      "ins": "toaletami",
+      "loc": "toaletach",
+      "voc": "toalety"
+    }
+  }
+}

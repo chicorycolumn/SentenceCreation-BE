@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "biblijnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "biblijny",
+          "gen": "biblijnego",
+          "dat": "biblijnemu",
+          "acc": "biblijnego",
+          "ins": "biblijnym",
+          "loc": "biblijnym"
+        },
+        "m3": {
+          "nom": "biblijny",
+          "gen": "biblijnego",
+          "dat": "biblijnemu",
+          "acc": "biblijny",
+          "ins": "biblijnym",
+          "loc": "biblijnym"
+        },
+        "f": {
+          "nom": "biblijna",
+          "gen": "biblijnej",
+          "dat": "biblijnej",
+          "acc": "biblijną",
+          "ins": "biblijną",
+          "loc": "biblijnej"
+        },
+        "n": {
+          "nom": "biblijne",
+          "gen": "biblijnego",
+          "dat": "biblijnemu",
+          "acc": "biblijne",
+          "ins": "biblijnym",
+          "loc": "biblijnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "biblijni",
+          "gen": "biblijnych",
+          "dat": "biblijnym",
+          "acc": "biblijnych",
+          "ins": "biblijnymi",
+          "loc": "biblijnych"
+        },
+        "nonvirile": {
+          "nom": "biblijne",
+          "gen": "biblijnych",
+          "dat": "biblijnym",
+          "acc": "biblijne",
+          "ins": "biblijnymi",
+          "loc": "biblijnych"
+        }
+      }
+    }
+  }
+}

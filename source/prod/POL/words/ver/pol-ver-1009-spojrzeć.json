@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "spojrzeć",
+    "verbalNoun": "spojrzenie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "spojrzany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "spojrzawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "spojrzy się"
+          },
+          "plural": {
+            "allPluralGenders": "spojrzy się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "spojrzę"
+          },
+          "plural": {
+            "allPluralGenders": "spojrzymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "spojrzysz"
+          },
+          "plural": {
+            "allPluralGenders": "spojrzycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "spojrzy"
+          },
+          "plural": {
+            "allPluralGenders": "spojrzą"
+          }
+        }
+      },
+      "imperative": "spojrzyj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "spojrzano"
+          },
+          "plural": {
+            "allPluralGenders": "spojrzano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "spojrzałem",
+            "f": "spojrzałam"
+          },
+          "plural": {
+            "virile": "spojrzeliśmy",
+            "nonvirile": "spojrzałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "spojrzałeś",
+            "f": "spojrzałaś"
+          },
+          "plural": {
+            "virile": "spojrzeliście",
+            "nonvirile": "spojrzałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "spojrzał",
+            "f": "spojrzała",
+            "n": "spojrzało"
+          },
+          "plural": {
+            "virile": "spojrzeli",
+            "nonvirile": "spojrzały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "oznaczać",
+    "verbalNoun": "oznaczanie",
+    "activeAdjectival": "oznaczający",
+    "passiveAdjectival": "oznaczany",
+    "contemporaryAdverbial": "oznaczając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "oznaczaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oznaczano"
+          },
+          "plural": {
+            "allPluralGenders": "oznaczano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "oznaczałem",
+            "f": "oznaczałam"
+          },
+          "plural": {
+            "virile": "oznaczaliśmy",
+            "nonvirile": "oznaczałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "oznaczałeś",
+            "f": "oznaczałaś"
+          },
+          "plural": {
+            "virile": "oznaczaliście",
+            "nonvirile": "oznaczałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "oznaczał",
+            "f": "oznaczała",
+            "n": "oznaczało"
+          },
+          "plural": {
+            "virile": "oznaczali",
+            "nonvirile": "oznaczały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "oznacza się"
+          },
+          "plural": {
+            "allPluralGenders": "oznacza się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "oznaczam"
+          },
+          "plural": {
+            "allPluralGenders": "oznaczamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "oznaczasz"
+          },
+          "plural": {
+            "allPluralGenders": "oznaczacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "oznacza"
+          },
+          "plural": {
+            "allPluralGenders": "oznaczają"
+          }
+        }
+      }
+    }
+  }
+}

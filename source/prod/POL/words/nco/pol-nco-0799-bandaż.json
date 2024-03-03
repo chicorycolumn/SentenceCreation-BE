@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "bandaż",
+      "gen": [
+        "bandaża",
+        "bandażu"
+      ],
+      "dat": "bandażowi",
+      "acc": "bandaż",
+      "ins": "bandażem",
+      "loc": "bandażu",
+      "voc": "bandażu"
+    },
+    "plural": {
+      "nom": "bandaże",
+      "gen": [
+        "bandaży",
+        "bandażów"
+      ],
+      "dat": "bandażom",
+      "acc": "bandaże",
+      "ins": "bandażami",
+      "loc": "bandażach",
+      "voc": "bandaże"
+    }
+  }
+}

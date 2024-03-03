@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "niezdrowo",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niezdrowy",
+          "gen": "niezdrowego",
+          "dat": "niezdrowemu",
+          "acc": "niezdrowego",
+          "ins": "niezdrowym",
+          "loc": "niezdrowym"
+        },
+        "m3": {
+          "nom": "niezdrowy",
+          "gen": "niezdrowego",
+          "dat": "niezdrowemu",
+          "acc": "niezdrowy",
+          "ins": "niezdrowym",
+          "loc": "niezdrowym"
+        },
+        "f": {
+          "nom": "niezdrowa",
+          "gen": "niezdrowej",
+          "dat": "niezdrowej",
+          "acc": "niezdrową",
+          "ins": "niezdrową",
+          "loc": "niezdrowej"
+        },
+        "n": {
+          "nom": "niezdrowe",
+          "gen": "niezdrowego",
+          "dat": "niezdrowemu",
+          "acc": "niezdrowe",
+          "ins": "niezdrowym",
+          "loc": "niezdrowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niezdrowi",
+          "gen": "niezdrowych",
+          "dat": "niezdrowym",
+          "acc": "niezdrowych",
+          "ins": "niezdrowymi",
+          "loc": "niezdrowych"
+        },
+        "nonvirile": {
+          "nom": "niezdrowe",
+          "gen": "niezdrowych",
+          "dat": "niezdrowym",
+          "acc": "niezdrowe",
+          "ins": "niezdrowymi",
+          "loc": "niezdrowych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "bardziej niezdrowy",
+          "gen": "bardziej niezdrowego",
+          "dat": "bardziej niezdrowemu",
+          "acc": "bardziej niezdrowego",
+          "ins": "bardziej niezdrowym",
+          "loc": "bardziej niezdrowym"
+        },
+        "m3": {
+          "nom": "bardziej niezdrowy",
+          "gen": "bardziej niezdrowego",
+          "dat": "bardziej niezdrowemu",
+          "acc": "bardziej niezdrowy",
+          "ins": "bardziej niezdrowym",
+          "loc": "bardziej niezdrowym"
+        },
+        "f": {
+          "nom": "bardziej niezdrowa",
+          "gen": "bardziej niezdrowej",
+          "dat": "bardziej niezdrowej",
+          "acc": "bardziej niezdrową",
+          "ins": "bardziej niezdrową",
+          "loc": "bardziej niezdrowej"
+        },
+        "n": {
+          "nom": "bardziej niezdrowe",
+          "gen": "bardziej niezdrowego",
+          "dat": "bardziej niezdrowemu",
+          "acc": "bardziej niezdrowe",
+          "ins": "bardziej niezdrowym",
+          "loc": "bardziej niezdrowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "bardziej niezdrowi",
+          "gen": "bardziej niezdrowych",
+          "dat": "bardziej niezdrowym",
+          "acc": "bardziej niezdrowych",
+          "ins": "bardziej niezdrowymi",
+          "loc": "bardziej niezdrowych"
+        },
+        "nonvirile": {
+          "nom": "bardziej niezdrowe",
+          "gen": "bardziej niezdrowych",
+          "dat": "bardziej niezdrowym",
+          "acc": "bardziej niezdrowe",
+          "ins": "bardziej niezdrowymi",
+          "loc": "bardziej niezdrowych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najbardziej niezdrowy",
+          "gen": "najbardziej niezdrowego",
+          "dat": "najbardziej niezdrowemu",
+          "acc": "najbardziej niezdrowego",
+          "ins": "najbardziej niezdrowym",
+          "loc": "najbardziej niezdrowym"
+        },
+        "m3": {
+          "nom": "najbardziej niezdrowy",
+          "gen": "najbardziej niezdrowego",
+          "dat": "najbardziej niezdrowemu",
+          "acc": "najbardziej niezdrowy",
+          "ins": "najbardziej niezdrowym",
+          "loc": "najbardziej niezdrowym"
+        },
+        "f": {
+          "nom": "najbardziej niezdrowa",
+          "gen": "najbardziej niezdrowej",
+          "dat": "najbardziej niezdrowej",
+          "acc": "najbardziej niezdrową",
+          "ins": "najbardziej niezdrową",
+          "loc": "najbardziej niezdrowej"
+        },
+        "n": {
+          "nom": "najbardziej niezdrowe",
+          "gen": "najbardziej niezdrowego",
+          "dat": "najbardziej niezdrowemu",
+          "acc": "najbardziej niezdrowe",
+          "ins": "najbardziej niezdrowym",
+          "loc": "najbardziej niezdrowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najbardziej niezdrowi",
+          "gen": "najbardziej niezdrowych",
+          "dat": "najbardziej niezdrowym",
+          "acc": "najbardziej niezdrowych",
+          "ins": "najbardziej niezdrowymi",
+          "loc": "najbardziej niezdrowych"
+        },
+        "nonvirile": {
+          "nom": "najbardziej niezdrowe",
+          "gen": "najbardziej niezdrowych",
+          "dat": "najbardziej niezdrowym",
+          "acc": "najbardziej niezdrowe",
+          "ins": "najbardziej niezdrowymi",
+          "loc": "najbardziej niezdrowych"
+        }
+      }
+    }
+  }
+}

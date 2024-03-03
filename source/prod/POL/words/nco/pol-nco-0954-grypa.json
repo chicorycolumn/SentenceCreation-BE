@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "grypa",
+      "gen": "grypy",
+      "dat": "grypie",
+      "acc": "grypę",
+      "ins": "grypą",
+      "loc": "grypie",
+      "voc": "grypo"
+    },
+    "plural": {
+      "nom": "grypy",
+      "gen": "gryp",
+      "dat": "grypom",
+      "acc": "grypy",
+      "ins": "grypami",
+      "loc": "grypach",
+      "voc": "grypy"
+    }
+  }
+}

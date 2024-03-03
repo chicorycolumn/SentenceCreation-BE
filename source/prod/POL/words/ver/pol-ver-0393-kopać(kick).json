@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "kopać",
+    "verbalNoun": "kopanie",
+    "activeAdjectival": "kopiący",
+    "passiveAdjectival": "kopany",
+    "contemporaryAdverbial": "kopiąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "kop",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kopano"
+          },
+          "plural": {
+            "allPluralGenders": "kopano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "kopałem",
+            "f": "kopałam"
+          },
+          "plural": {
+            "virile": "kopaliśmy",
+            "nonvirile": "kopałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "kopałeś",
+            "f": "kopałaś"
+          },
+          "plural": {
+            "virile": "kopaliście",
+            "nonvirile": "kopałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "kopał",
+            "f": "kopała",
+            "n": "kopało"
+          },
+          "plural": {
+            "virile": "kopali",
+            "nonvirile": "kopały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kopie się"
+          },
+          "plural": {
+            "allPluralGenders": "kopie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "kopię"
+          },
+          "plural": {
+            "allPluralGenders": "kopiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "kopiesz"
+          },
+          "plural": {
+            "allPluralGenders": "kopiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "kopie"
+          },
+          "plural": {
+            "allPluralGenders": "kopią"
+          }
+        }
+      }
+    }
+  }
+}

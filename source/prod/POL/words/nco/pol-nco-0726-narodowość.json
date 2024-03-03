@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "narodowość",
+      "gen": "narodowości",
+      "dat": "narodowości",
+      "acc": "narodowość",
+      "ins": "narodowością",
+      "loc": "narodowości",
+      "voc": "narodowości"
+    },
+    "plural": {
+      "nom": "narodowości",
+      "gen": "narodowości",
+      "dat": "narodowościom",
+      "acc": "narodowości",
+      "ins": "narodowościami",
+      "loc": "narodowościach",
+      "voc": "narodowości"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pudełko",
+      "gen": "pudełka",
+      "dat": "pudełku",
+      "acc": "pudełko",
+      "ins": "pudełkiem",
+      "loc": "pudełku",
+      "voc": "pudełko"
+    },
+    "plural": {
+      "nom": "pudełka",
+      "gen": "pudełek",
+      "dat": "pudełkom",
+      "acc": "pudełka",
+      "ins": "pudełkami",
+      "loc": "pudełkach",
+      "voc": "pudełka"
+    }
+  }
+}

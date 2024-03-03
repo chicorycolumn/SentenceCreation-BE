@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "miękko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "miękki",
+          "gen": "miękkiego",
+          "dat": "miękkiemu",
+          "acc": "miękkiego",
+          "ins": "miękkim",
+          "loc": "miękkim"
+        },
+        "m3": {
+          "nom": "miękki",
+          "gen": "miękkiego",
+          "dat": "miękkiemu",
+          "acc": "miękki",
+          "ins": "miękkim",
+          "loc": "miękkim"
+        },
+        "f": {
+          "nom": "miękka",
+          "gen": "miękkiej",
+          "dat": "miękkiej",
+          "acc": "miękką",
+          "ins": "miękką",
+          "loc": "miękkiej"
+        },
+        "n": {
+          "nom": "miękkie",
+          "gen": "miękkiego",
+          "dat": "miękkiemu",
+          "acc": "miękkie",
+          "ins": "miękkim",
+          "loc": "miękkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "miękcy",
+          "gen": "miękkich",
+          "dat": "miękkim",
+          "acc": "miękkich",
+          "ins": "miękkimi",
+          "loc": "miękkich"
+        },
+        "nonvirile": {
+          "nom": "miękkie",
+          "gen": "miękkich",
+          "dat": "miękkim",
+          "acc": "miękkie",
+          "ins": "miękkimi",
+          "loc": "miękkich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "miększy",
+          "gen": "miększego",
+          "dat": "miększemu",
+          "acc": "miększego",
+          "ins": "miększym",
+          "loc": "miększym"
+        },
+        "m3": {
+          "nom": "miększy",
+          "gen": "miększego",
+          "dat": "miększemu",
+          "acc": "miększy",
+          "ins": "miększym",
+          "loc": "miększym"
+        },
+        "f": {
+          "nom": "miększa",
+          "gen": "miększej",
+          "dat": "miększej",
+          "acc": "miększą",
+          "ins": "miększą",
+          "loc": "miększej"
+        },
+        "n": {
+          "nom": "miększe",
+          "gen": "miększego",
+          "dat": "miększemu",
+          "acc": "miększe",
+          "ins": "miększym",
+          "loc": "miększym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "mięksi",
+          "gen": "miększych",
+          "dat": "miększym",
+          "acc": "miększych",
+          "ins": "miększymi",
+          "loc": "miększych"
+        },
+        "nonvirile": {
+          "nom": "miększe",
+          "gen": "miększych",
+          "dat": "miększym",
+          "acc": "miększe",
+          "ins": "miększymi",
+          "loc": "miększych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najmiększy",
+          "gen": "najmiększego",
+          "dat": "najmiększemu",
+          "acc": "najmiększego",
+          "ins": "najmiększym",
+          "loc": "najmiększym"
+        },
+        "m3": {
+          "nom": "najmiększy",
+          "gen": "najmiększego",
+          "dat": "najmiększemu",
+          "acc": "najmiększy",
+          "ins": "najmiększym",
+          "loc": "najmiększym"
+        },
+        "f": {
+          "nom": "najmiększa",
+          "gen": "najmiększej",
+          "dat": "najmiększej",
+          "acc": "najmiększą",
+          "ins": "najmiększą",
+          "loc": "najmiększej"
+        },
+        "n": {
+          "nom": "najmiększe",
+          "gen": "najmiększego",
+          "dat": "najmiększemu",
+          "acc": "najmiększe",
+          "ins": "najmiększym",
+          "loc": "najmiększym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najmięksi",
+          "gen": "najmiększych",
+          "dat": "najmiększym",
+          "acc": "najmiększych",
+          "ins": "najmiększymi",
+          "loc": "najmiększych"
+        },
+        "nonvirile": {
+          "nom": "najmiększe",
+          "gen": "najmiększych",
+          "dat": "najmiększym",
+          "acc": "najmiększe",
+          "ins": "najmiększymi",
+          "loc": "najmiększych"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cud",
+      "gen": "cudu",
+      "dat": "cudowi",
+      "acc": "cud",
+      "ins": "cudem",
+      "loc": "cudzie",
+      "voc": "cudzie"
+    },
+    "plural": {
+      "nom": [
+        "cuda",
+        "cudy"
+      ],
+      "gen": "cudów",
+      "dat": "cudom",
+      "acc": [
+        "cuda",
+        "cudy"
+      ],
+      "ins": "cudami",
+      "loc": "cudach",
+      "voc": [
+        "cuda",
+        "cudy"
+      ]
+    }
+  }
+}

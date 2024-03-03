@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "zostawić",
+    "verbalNoun": "zostawienie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "zostawiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zostawiwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zostawi się"
+          },
+          "plural": {
+            "allPluralGenders": "zostawi się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "zostawię"
+          },
+          "plural": {
+            "allPluralGenders": "zostawimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "zostawisz"
+          },
+          "plural": {
+            "allPluralGenders": "zostawicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "zostawi"
+          },
+          "plural": {
+            "allPluralGenders": "zostawią"
+          }
+        }
+      },
+      "imperative": "zostaw",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "zostawiono"
+          },
+          "plural": {
+            "allPluralGenders": "zostawiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zostawiłem",
+            "f": "zostawiłam"
+          },
+          "plural": {
+            "virile": "zostawiliśmy",
+            "nonvirile": "zostawiłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zostawiłeś",
+            "f": "zostawiłaś"
+          },
+          "plural": {
+            "virile": "zostawiliście",
+            "nonvirile": "zostawiłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zostawił",
+            "f": "zostawiła",
+            "n": "zostawiło"
+          },
+          "plural": {
+            "virile": "zostawili",
+            "nonvirile": "zostawiły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

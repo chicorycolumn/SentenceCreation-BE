@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "drżeć",
+    "verbalNoun": "drżenie",
+    "activeAdjectival": "drżący",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "drżąc",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "drżyj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "drżano"
+          },
+          "plural": {
+            "allPluralGenders": "drżano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "drżałem",
+            "f": "drżałam"
+          },
+          "plural": {
+            "virile": "drżeliśmy",
+            "nonvirile": "drżałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "drżałeś",
+            "f": "drżałaś"
+          },
+          "plural": {
+            "virile": "drżeliście",
+            "nonvirile": "drżałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "drżał",
+            "f": "drżała",
+            "n": "drżało"
+          },
+          "plural": {
+            "virile": "drżeli",
+            "nonvirile": "drżały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "drży się"
+          },
+          "plural": {
+            "allPluralGenders": "drży się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "drżę"
+          },
+          "plural": {
+            "allPluralGenders": "drżymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "drżysz"
+          },
+          "plural": {
+            "allPluralGenders": "drżycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "drży"
+          },
+          "plural": {
+            "allPluralGenders": "drżą"
+          }
+        }
+      }
+    }
+  }
+}

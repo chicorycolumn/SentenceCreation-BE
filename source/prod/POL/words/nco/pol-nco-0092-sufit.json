@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sufit",
+      "gen": "sufitu",
+      "dat": "sufitowi",
+      "acc": "sufit",
+      "ins": "sufitem",
+      "loc": "suficie",
+      "voc": "suficie"
+    },
+    "plural": {
+      "nom": "sufity",
+      "gen": "sufitów",
+      "dat": "sufitom",
+      "acc": "sufity",
+      "ins": "sufitami",
+      "loc": "sufitach",
+      "voc": "sufity"
+    }
+  }
+}

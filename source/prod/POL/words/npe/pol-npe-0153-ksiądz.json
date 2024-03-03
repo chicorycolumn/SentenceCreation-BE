@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ksiądz",
+      "gen": "księdza",
+      "dat": "księdzu",
+      "acc": "księdza",
+      "ins": "księdzem",
+      "loc": "księdzu",
+      "voc": "księże"
+    },
+    "plural": {
+      "nom": "księża",
+      "gen": "księży",
+      "dat": "księżom",
+      "acc": "księży",
+      "ins": "księżmi",
+      "loc": "księżach",
+      "voc": "księża"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "pysznie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "pyszny",
+          "gen": "pysznego",
+          "dat": "pysznemu",
+          "acc": "pysznego",
+          "ins": "pysznym",
+          "loc": "pysznym"
+        },
+        "m3": {
+          "nom": "pyszny",
+          "gen": "pysznego",
+          "dat": "pysznemu",
+          "acc": "pyszny",
+          "ins": "pysznym",
+          "loc": "pysznym"
+        },
+        "f": {
+          "nom": "pyszna",
+          "gen": "pysznej",
+          "dat": "pysznej",
+          "acc": "pyszną",
+          "ins": "pyszną",
+          "loc": "pysznej"
+        },
+        "n": {
+          "nom": "pyszne",
+          "gen": "pysznego",
+          "dat": "pysznemu",
+          "acc": "pyszne",
+          "ins": "pysznym",
+          "loc": "pysznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pyszni",
+          "gen": "pysznych",
+          "dat": "pysznym",
+          "acc": "pysznych",
+          "ins": "pysznymi",
+          "loc": "pysznych"
+        },
+        "nonvirile": {
+          "nom": "pyszne",
+          "gen": "pysznych",
+          "dat": "pysznym",
+          "acc": "pyszne",
+          "ins": "pysznymi",
+          "loc": "pysznych"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "pyszniejszy",
+          "gen": "pyszniejszego",
+          "dat": "pyszniejszemu",
+          "acc": "pyszniejszego",
+          "ins": "pyszniejszym",
+          "loc": "pyszniejszym"
+        },
+        "m3": {
+          "nom": "pyszniejszy",
+          "gen": "pyszniejszego",
+          "dat": "pyszniejszemu",
+          "acc": "pyszniejszy",
+          "ins": "pyszniejszym",
+          "loc": "pyszniejszym"
+        },
+        "f": {
+          "nom": "pyszniejsza",
+          "gen": "pyszniejszej",
+          "dat": "pyszniejszej",
+          "acc": "pyszniejszą",
+          "ins": "pyszniejszą",
+          "loc": "pyszniejszej"
+        },
+        "n": {
+          "nom": "pyszniejsze",
+          "gen": "pyszniejszego",
+          "dat": "pyszniejszemu",
+          "acc": "pyszniejsze",
+          "ins": "pyszniejszym",
+          "loc": "pyszniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "pyszniejsi",
+          "gen": "pyszniejszych",
+          "dat": "pyszniejszym",
+          "acc": "pyszniejszych",
+          "ins": "pyszniejszymi",
+          "loc": "pyszniejszych"
+        },
+        "nonvirile": {
+          "nom": "pyszniejsze",
+          "gen": "pyszniejszych",
+          "dat": "pyszniejszym",
+          "acc": "pyszniejsze",
+          "ins": "pyszniejszymi",
+          "loc": "pyszniejszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najpyszniejszy",
+          "gen": "najpyszniejszego",
+          "dat": "najpyszniejszemu",
+          "acc": "najpyszniejszego",
+          "ins": "najpyszniejszym",
+          "loc": "najpyszniejszym"
+        },
+        "m3": {
+          "nom": "najpyszniejszy",
+          "gen": "najpyszniejszego",
+          "dat": "najpyszniejszemu",
+          "acc": "najpyszniejszy",
+          "ins": "najpyszniejszym",
+          "loc": "najpyszniejszym"
+        },
+        "f": {
+          "nom": "najpyszniejsza",
+          "gen": "najpyszniejszej",
+          "dat": "najpyszniejszej",
+          "acc": "najpyszniejszą",
+          "ins": "najpyszniejszą",
+          "loc": "najpyszniejszej"
+        },
+        "n": {
+          "nom": "najpyszniejsze",
+          "gen": "najpyszniejszego",
+          "dat": "najpyszniejszemu",
+          "acc": "najpyszniejsze",
+          "ins": "najpyszniejszym",
+          "loc": "najpyszniejszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najpyszniejsi",
+          "gen": "najpyszniejszych",
+          "dat": "najpyszniejszym",
+          "acc": "najpyszniejszych",
+          "ins": "najpyszniejszymi",
+          "loc": "najpyszniejszych"
+        },
+        "nonvirile": {
+          "nom": "najpyszniejsze",
+          "gen": "najpyszniejszych",
+          "dat": "najpyszniejszym",
+          "acc": "najpyszniejsze",
+          "ins": "najpyszniejszymi",
+          "loc": "najpyszniejszych"
+        }
+      }
+    }
+  }
+}

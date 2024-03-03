@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "krowa",
+      "gen": "krowy",
+      "dat": "krowie",
+      "acc": "krowę",
+      "ins": "krową",
+      "loc": "krowie",
+      "voc": "krowo"
+    },
+    "plural": {
+      "nom": "krowy",
+      "gen": "krów",
+      "dat": "krowom",
+      "acc": "krowy",
+      "ins": "krowami",
+      "loc": "krowach",
+      "voc": "krowy"
+    }
+  }
+}

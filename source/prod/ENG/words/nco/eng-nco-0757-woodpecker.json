@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "woodpecker",
+      "gen": "woodpecker's"
+    },
+    "plural": {
+      "nom": "woodpeckers",
+      "gen": "woodpeckers'"
+    }
+  }
+}

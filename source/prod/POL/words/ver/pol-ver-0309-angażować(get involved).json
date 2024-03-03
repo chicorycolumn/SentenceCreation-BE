@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "angażować",
+    "verbalNoun": "angażowanie",
+    "activeAdjectival": "angażujący",
+    "passiveAdjectival": "angażowany",
+    "contemporaryAdverbial": "angażując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "angażuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "angażowano"
+          },
+          "plural": {
+            "allPluralGenders": "angażowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "angażowałem",
+            "f": "angażowałam"
+          },
+          "plural": {
+            "virile": "angażowaliśmy",
+            "nonvirile": "angażowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "angażowałeś",
+            "f": "angażowałaś"
+          },
+          "plural": {
+            "virile": "angażowaliście",
+            "nonvirile": "angażowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "angażował",
+            "f": "angażowała",
+            "n": "angażowało"
+          },
+          "plural": {
+            "virile": "angażowali",
+            "nonvirile": "angażowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "angażuje się"
+          },
+          "plural": {
+            "allPluralGenders": "angażuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "angażuję"
+          },
+          "plural": {
+            "allPluralGenders": "angażujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "angażujesz"
+          },
+          "plural": {
+            "allPluralGenders": "angażujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "angażuje"
+          },
+          "plural": {
+            "allPluralGenders": "angażują"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "użyć",
+    "verbalNoun": "użycie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "użyty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "używszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "użyje się"
+          },
+          "plural": {
+            "allPluralGenders": "użyje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "użyję"
+          },
+          "plural": {
+            "allPluralGenders": "użyjemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "użyjesz"
+          },
+          "plural": {
+            "allPluralGenders": "użyjecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "użyje"
+          },
+          "plural": {
+            "allPluralGenders": "użyją"
+          }
+        }
+      },
+      "imperative": "użyj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "użyto"
+          },
+          "plural": {
+            "allPluralGenders": "użyto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "użyłem",
+            "f": "użyłam"
+          },
+          "plural": {
+            "virile": "użyliśmy",
+            "nonvirile": "użyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "użyłeś",
+            "f": "użyłaś"
+          },
+          "plural": {
+            "virile": "użyliście",
+            "nonvirile": "użyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "użył",
+            "f": "użyła",
+            "n": "użyło"
+          },
+          "plural": {
+            "virile": "użyli",
+            "nonvirile": "użyły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

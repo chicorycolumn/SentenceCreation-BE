@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "poczuć",
+    "verbalNoun": "poczucie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "poczuty",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "poczuwszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poczuje się"
+          },
+          "plural": {
+            "allPluralGenders": "poczuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "poczuję"
+          },
+          "plural": {
+            "allPluralGenders": "poczujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "poczujesz"
+          },
+          "plural": {
+            "allPluralGenders": "poczujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "poczuje"
+          },
+          "plural": {
+            "allPluralGenders": "poczują"
+          }
+        }
+      },
+      "imperative": "poczuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "poczuto"
+          },
+          "plural": {
+            "allPluralGenders": "poczuto"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "poczułem",
+            "f": "poczułam"
+          },
+          "plural": {
+            "virile": "poczuliśmy",
+            "nonvirile": "poczułyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "poczułeś",
+            "f": "poczułaś"
+          },
+          "plural": {
+            "virile": "poczuliście",
+            "nonvirile": "poczułyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "poczuł",
+            "f": "poczuła",
+            "n": "poczuło"
+          },
+          "plural": {
+            "virile": "poczuli",
+            "nonvirile": "poczuły"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

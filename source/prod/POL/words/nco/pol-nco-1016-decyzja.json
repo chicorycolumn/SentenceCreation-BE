@@ -1,0 +1,30 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "decyzja",
+      "gen": "decyzji",
+      "dat": "decyzji",
+      "acc": "decyzję",
+      "ins": "decyzją",
+      "loc": "decyzji",
+      "voc": "decyzjo"
+    },
+    "plural": {
+      "nom": "decyzje",
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "decyzji"
+        ],
+        "additionalInfrequent": [
+          "decyzyj"
+        ]
+      },
+      "dat": "decyzjom",
+      "acc": "decyzje",
+      "ins": "decyzjami",
+      "loc": "decyzjach",
+      "voc": "decyzje"
+    }
+  }
+}

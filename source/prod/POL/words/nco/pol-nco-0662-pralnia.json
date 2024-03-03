@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pralnia",
+      "gen": "pralni",
+      "dat": "pralni",
+      "acc": "pralnię",
+      "ins": "pralnią",
+      "loc": "pralni",
+      "voc": "pralnio"
+    },
+    "plural": {
+      "nom": "pralnie",
+      "gen": "pralni",
+      "dat": "pralniom",
+      "acc": "pralnie",
+      "ins": "pralniami",
+      "loc": "pralniach",
+      "voc": "pralnie"
+    }
+  }
+}

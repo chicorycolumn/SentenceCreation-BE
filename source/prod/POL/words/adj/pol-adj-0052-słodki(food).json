@@ -1,0 +1,167 @@
+{
+  "inflections": {
+    "adverb": "słodko",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "słodki",
+          "gen": "słodkiego",
+          "dat": "słodkiemu",
+          "acc": "słodkiego",
+          "ins": "słodkim",
+          "loc": "słodkim"
+        },
+        "m3": {
+          "nom": "słodki",
+          "gen": "słodkiego",
+          "dat": "słodkiemu",
+          "acc": "słodki",
+          "ins": "słodkim",
+          "loc": "słodkim"
+        },
+        "f": {
+          "nom": "słodka",
+          "gen": "słodkiej",
+          "dat": "słodkiej",
+          "acc": "słodką",
+          "ins": "słodką",
+          "loc": "słodkiej"
+        },
+        "n": {
+          "nom": "słodkie",
+          "gen": "słodkiego",
+          "dat": "słodkiemu",
+          "acc": "słodkie",
+          "ins": "słodkim",
+          "loc": "słodkim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "słodcy",
+          "gen": "słodkich",
+          "dat": "słodkim",
+          "acc": "słodkich",
+          "ins": "słodkimi",
+          "loc": "słodkich"
+        },
+        "nonvirile": {
+          "nom": "słodkie",
+          "gen": "słodkich",
+          "dat": "słodkim",
+          "acc": "słodkie",
+          "ins": "słodkimi",
+          "loc": "słodkich"
+        }
+      }
+    },
+    "comparative": {
+      "singular": {
+        "m1": {
+          "nom": "słodszy",
+          "gen": "słodszego",
+          "dat": "słodszemu",
+          "acc": "słodszego",
+          "ins": "słodszym",
+          "loc": "słodszym"
+        },
+        "m3": {
+          "nom": "słodszy",
+          "gen": "słodszego",
+          "dat": "słodszemu",
+          "acc": "słodszy",
+          "ins": "słodszym",
+          "loc": "słodszym"
+        },
+        "f": {
+          "nom": "słodsza",
+          "gen": "słodszej",
+          "dat": "słodszej",
+          "acc": "słodszą",
+          "ins": "słodszą",
+          "loc": "słodszej"
+        },
+        "n": {
+          "nom": "słodsze",
+          "gen": "słodszego",
+          "dat": "słodszemu",
+          "acc": "słodsze",
+          "ins": "słodszym",
+          "loc": "słodszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "słodsi",
+          "gen": "słodszych",
+          "dat": "słodszym",
+          "acc": "słodszych",
+          "ins": "słodszymi",
+          "loc": "słodszych"
+        },
+        "nonvirile": {
+          "nom": "słodsze",
+          "gen": "słodszych",
+          "dat": "słodszym",
+          "acc": "słodsze",
+          "ins": "słodszymi",
+          "loc": "słodszych"
+        }
+      }
+    },
+    "superlative": {
+      "singular": {
+        "m1": {
+          "nom": "najsłodszy",
+          "gen": "najsłodszego",
+          "dat": "najsłodszemu",
+          "acc": "najsłodszego",
+          "ins": "najsłodszym",
+          "loc": "najsłodszym"
+        },
+        "m3": {
+          "nom": "najsłodszy",
+          "gen": "najsłodszego",
+          "dat": "najsłodszemu",
+          "acc": "najsłodszy",
+          "ins": "najsłodszym",
+          "loc": "najsłodszym"
+        },
+        "f": {
+          "nom": "najsłodsza",
+          "gen": "najsłodszej",
+          "dat": "najsłodszej",
+          "acc": "najsłodszą",
+          "ins": "najsłodszą",
+          "loc": "najsłodszej"
+        },
+        "n": {
+          "nom": "najsłodsze",
+          "gen": "najsłodszego",
+          "dat": "najsłodszemu",
+          "acc": "najsłodsze",
+          "ins": "najsłodszym",
+          "loc": "najsłodszym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "najsłodsi",
+          "gen": "najsłodszych",
+          "dat": "najsłodszym",
+          "acc": "najsłodszych",
+          "ins": "najsłodszymi",
+          "loc": "najsłodszych"
+        },
+        "nonvirile": {
+          "nom": "najsłodsze",
+          "gen": "najsłodszych",
+          "dat": "najsłodszym",
+          "acc": "najsłodsze",
+          "ins": "najsłodszymi",
+          "loc": "najsłodszych"
+        }
+      }
+    }
+  }
+}

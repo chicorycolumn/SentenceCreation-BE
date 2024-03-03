@@ -1,0 +1,59 @@
+{
+  "inflections": {
+    "adverb": "podwodnie",
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "podwodny",
+          "gen": "podwodnego",
+          "dat": "podwodnemu",
+          "acc": "podwodnego",
+          "ins": "podwodnym",
+          "loc": "podwodnym"
+        },
+        "m3": {
+          "nom": "podwodny",
+          "gen": "podwodnego",
+          "dat": "podwodnemu",
+          "acc": "podwodny",
+          "ins": "podwodnym",
+          "loc": "podwodnym"
+        },
+        "f": {
+          "nom": "podwodna",
+          "gen": "podwodnej",
+          "dat": "podwodnej",
+          "acc": "podwodną",
+          "ins": "podwodną",
+          "loc": "podwodnej"
+        },
+        "n": {
+          "nom": "podwodne",
+          "gen": "podwodnego",
+          "dat": "podwodnemu",
+          "acc": "podwodne",
+          "ins": "podwodnym",
+          "loc": "podwodnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "podwodni",
+          "gen": "podwodnych",
+          "dat": "podwodnym",
+          "acc": "podwodnych",
+          "ins": "podwodnymi",
+          "loc": "podwodnych"
+        },
+        "nonvirile": {
+          "nom": "podwodne",
+          "gen": "podwodnych",
+          "dat": "podwodnym",
+          "acc": "podwodne",
+          "ins": "podwodnymi",
+          "loc": "podwodnych"
+        }
+      }
+    }
+  }
+}

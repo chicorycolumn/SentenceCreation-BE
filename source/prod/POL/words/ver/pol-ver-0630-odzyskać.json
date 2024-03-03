@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "odzyskać",
+    "verbalNoun": "odzyskanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "odzyskany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "odzyskawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odzyska się"
+          },
+          "plural": {
+            "allPluralGenders": "odzyska się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "odzyskam"
+          },
+          "plural": {
+            "allPluralGenders": "odzyskamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "odzyskasz"
+          },
+          "plural": {
+            "allPluralGenders": "odzyskacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "odzyska"
+          },
+          "plural": {
+            "allPluralGenders": "odzyskają"
+          }
+        }
+      },
+      "imperative": "odzyskaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "odzyskano"
+          },
+          "plural": {
+            "allPluralGenders": "odzyskano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "odzyskałem",
+            "f": "odzyskałam"
+          },
+          "plural": {
+            "virile": "odzyskaliśmy",
+            "nonvirile": "odzyskałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "odzyskałeś",
+            "f": "odzyskałaś"
+          },
+          "plural": {
+            "virile": "odzyskaliście",
+            "nonvirile": "odzyskałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "odzyskał",
+            "f": "odzyskała",
+            "n": "odzyskało"
+          },
+          "plural": {
+            "virile": "odzyskali",
+            "nonvirile": "odzyskały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

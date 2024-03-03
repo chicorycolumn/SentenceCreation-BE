@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "football",
+      "gen": "football's"
+    },
+    "plural": {
+      "nom": "footballs",
+      "gen": "footballs'"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "piekarnia",
+      "gen": "piekarni",
+      "dat": "piekarni",
+      "acc": "piekarnię",
+      "ins": "piekarnią",
+      "loc": "piekarni",
+      "voc": "piekarnio"
+    },
+    "plural": {
+      "nom": "piekarnie",
+      "gen": [
+        "piekarni",
+        "piekarń"
+      ],
+      "dat": "piekarniom",
+      "acc": "piekarnie",
+      "ins": "piekarniami",
+      "loc": "piekarniach",
+      "voc": "piekarnie"
+    }
+  }
+}

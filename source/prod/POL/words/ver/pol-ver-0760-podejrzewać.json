@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "podejrzewać",
+    "verbalNoun": "podejrzewanie",
+    "activeAdjectival": "podejrzewający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "podejrzewając",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "podejrzewaj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podejrzewano"
+          },
+          "plural": {
+            "allPluralGenders": "podejrzewano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "podejrzewałem",
+            "f": "podejrzewałam"
+          },
+          "plural": {
+            "virile": "podejrzewaliśmy",
+            "nonvirile": "podejrzewałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "podejrzewałeś",
+            "f": "podejrzewałaś"
+          },
+          "plural": {
+            "virile": "podejrzewaliście",
+            "nonvirile": "podejrzewałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "podejrzewał",
+            "f": "podejrzewała",
+            "n": "podejrzewało"
+          },
+          "plural": {
+            "virile": "podejrzewali",
+            "nonvirile": "podejrzewały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "podejrzewa się"
+          },
+          "plural": {
+            "allPluralGenders": "podejrzewa się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "podejrzewam"
+          },
+          "plural": {
+            "allPluralGenders": "podejrzewamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "podejrzewasz"
+          },
+          "plural": {
+            "allPluralGenders": "podejrzewacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "podejrzewa"
+          },
+          "plural": {
+            "allPluralGenders": "podejrzewają"
+          }
+        }
+      }
+    }
+  }
+}

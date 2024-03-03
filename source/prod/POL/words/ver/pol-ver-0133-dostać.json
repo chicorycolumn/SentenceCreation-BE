@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "dostać",
+    "verbalNoun": "dostanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "dostawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dostanie się"
+          },
+          "plural": {
+            "allPluralGenders": "dostanie się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "dostanę"
+          },
+          "plural": {
+            "allPluralGenders": "dostaniemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "dostaniesz"
+          },
+          "plural": {
+            "allPluralGenders": "dostaniecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "dostanie"
+          },
+          "plural": {
+            "allPluralGenders": "dostaną"
+          }
+        }
+      },
+      "imperative": "dostań",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "dostano"
+          },
+          "plural": {
+            "allPluralGenders": "dostano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dostałem",
+            "f": "dostałam"
+          },
+          "plural": {
+            "virile": "dostaliśmy",
+            "nonvirile": "dostałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dostałeś",
+            "f": "dostałaś"
+          },
+          "plural": {
+            "virile": "dostaliście",
+            "nonvirile": "dostałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dostał",
+            "f": "dostała",
+            "n": "dostało"
+          },
+          "plural": {
+            "virile": "dostali",
+            "nonvirile": "dostały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

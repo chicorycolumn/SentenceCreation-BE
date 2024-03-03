@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "leśny",
+          "gen": "leśnego",
+          "dat": "leśnemu",
+          "acc": "leśnego",
+          "ins": "leśnym",
+          "loc": "leśnym"
+        },
+        "m3": {
+          "nom": "leśny",
+          "gen": "leśnego",
+          "dat": "leśnemu",
+          "acc": "leśny",
+          "ins": "leśnym",
+          "loc": "leśnym"
+        },
+        "f": {
+          "nom": "leśna",
+          "gen": "leśnej",
+          "dat": "leśnej",
+          "acc": "leśną",
+          "ins": "leśną",
+          "loc": "leśnej"
+        },
+        "n": {
+          "nom": "leśne",
+          "gen": "leśnego",
+          "dat": "leśnemu",
+          "acc": "leśne",
+          "ins": "leśnym",
+          "loc": "leśnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "leśni",
+          "gen": "leśnych",
+          "dat": "leśnym",
+          "acc": "leśnych",
+          "ins": "leśnymi",
+          "loc": "leśnych"
+        },
+        "nonvirile": {
+          "nom": "leśne",
+          "gen": "leśnych",
+          "dat": "leśnym",
+          "acc": "leśne",
+          "ins": "leśnymi",
+          "loc": "leśnych"
+        }
+      }
+    }
+  }
+}

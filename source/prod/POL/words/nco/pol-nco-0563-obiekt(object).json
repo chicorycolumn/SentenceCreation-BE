@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "obiekt",
+      "gen": "obiektu",
+      "dat": "obiektowi",
+      "acc": "obiekt",
+      "ins": "obiektem",
+      "loc": "obiekcie",
+      "voc": "obiekcie"
+    },
+    "plural": {
+      "nom": "obiekty",
+      "gen": "obiektów",
+      "dat": "obiektom",
+      "acc": "obiekty",
+      "ins": "obiektami",
+      "loc": "obiektach",
+      "voc": "obiekty"
+    }
+  }
+}

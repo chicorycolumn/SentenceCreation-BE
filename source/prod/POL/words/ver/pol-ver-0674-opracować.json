@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "opracować",
+    "verbalNoun": "opracowanie",
+    "activeAdjectival": false,
+    "passiveAdjectival": "opracowany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "opracowawszy",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opracuje się"
+          },
+          "plural": {
+            "allPluralGenders": "opracuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "opracuję"
+          },
+          "plural": {
+            "allPluralGenders": "opracujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "opracujesz"
+          },
+          "plural": {
+            "allPluralGenders": "opracujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "opracuje"
+          },
+          "plural": {
+            "allPluralGenders": "opracują"
+          }
+        }
+      },
+      "imperative": "opracuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "opracowano"
+          },
+          "plural": {
+            "allPluralGenders": "opracowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "opracowałem",
+            "f": "opracowałam"
+          },
+          "plural": {
+            "virile": "opracowaliśmy",
+            "nonvirile": "opracowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "opracowałeś",
+            "f": "opracowałaś"
+          },
+          "plural": {
+            "virile": "opracowaliście",
+            "nonvirile": "opracowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "opracował",
+            "f": "opracowała",
+            "n": "opracowało"
+          },
+          "plural": {
+            "virile": "opracowali",
+            "nonvirile": "opracowały"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

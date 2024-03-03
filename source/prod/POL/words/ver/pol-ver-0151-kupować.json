@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "kupować",
+    "verbalNoun": "kupowanie",
+    "activeAdjectival": "kupujący",
+    "passiveAdjectival": "kupowany",
+    "contemporaryAdverbial": "kupując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "kupuj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kupowano"
+          },
+          "plural": {
+            "allPluralGenders": "kupowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "kupowałem",
+            "f": "kupowałam"
+          },
+          "plural": {
+            "virile": "kupowaliśmy",
+            "nonvirile": "kupowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "kupowałeś",
+            "f": "kupowałaś"
+          },
+          "plural": {
+            "virile": "kupowaliście",
+            "nonvirile": "kupowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "kupował",
+            "f": "kupowała",
+            "n": "kupowało"
+          },
+          "plural": {
+            "virile": "kupowali",
+            "nonvirile": "kupowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "allSingularGenders": "kupuje się"
+          },
+          "plural": {
+            "allPluralGenders": "kupuje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "allSingularGenders": "kupuję"
+          },
+          "plural": {
+            "allPluralGenders": "kupujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "allSingularGenders": "kupujesz"
+          },
+          "plural": {
+            "allPluralGenders": "kupujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "allSingularGenders": "kupuje"
+          },
+          "plural": {
+            "allPluralGenders": "kupują"
+          }
+        }
+      }
+    }
+  }
+}
