@@ -31,15 +31,15 @@ xdescribe("Sandbox.", () => {
 describe("Project Ophiucus: Bravo Wing: Task One.", () => {
   it.only("Take large json dicts of lobjs from Scraper and separate into individual files for BE", () => {
     let e = "prod";
-    let l = "POL";
-    let wordtypes = ["adj"];
+    let l = "ENG";
+    // let wordtypes = [];
 
     const suffixRef = {
       ENG: "TGT",
       POL: "SRC",
     };
     let suffix = `_batch_01_${suffixRef[l]}`;
-    splitLemmaObjectsFromBigJsonToIndividualJsons(e, l, suffix, wordtypes);
+    splitLemmaObjectsFromBigJsonToIndividualJsons(e, l, suffix);
   });
   it("Take formulas from Old Way of storing them", () => {
     // add guideSentence.

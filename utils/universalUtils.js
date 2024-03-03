@@ -459,12 +459,12 @@ exports.purifyString = (s) => {
   return exports.removePunctuationExceptApostrophe(s.trim().toLowerCase());
 };
 
-exports.writeJSON = (path, content) => {
+exports.writeJSON = (path, content, doNotConsoleLog = false) => {
   content = JSON.stringify(content, null, 2);
   fs.writeFile(path, content, (err) => {
     if (err) {
       console.error(err);
-    } else {
+    } else if (!doNotConsoleLog) {
       console.log(
         `Wrote ${content.length} chars of data to "${path}" successfully.`
       );

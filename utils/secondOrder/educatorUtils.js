@@ -376,11 +376,10 @@ exports.splitLemmaObjectsFromBigJsonToIndividualJsons = (
         }
 
         if (Object.keys(word).includes("_inflectionsRoot")) {
-          console.log("");
           console.log(`SKIPPED because uses inflectionsRoot: ${word.id}`);
           if (word.otherShapes) {
             console.log(
-              "Dropping this data. Hopefully it is present in inflections parent:"
+              "DROPPED this data. Hopefully it is present in inflections parent:"
             );
             console.log(word.otherShapes);
           }
@@ -399,7 +398,8 @@ exports.splitLemmaObjectsFromBigJsonToIndividualJsons = (
       meats.forEach((meatArr) => {
         uUtils.writeJSON(
           `source/${e}/${l}/words/${wordtype}/${meatArr[0]}.json`,
-          meatArr[1]
+          meatArr[1],
+          true
         );
       });
     }
