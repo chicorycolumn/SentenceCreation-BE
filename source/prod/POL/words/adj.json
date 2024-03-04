@@ -5,9 +5,7 @@
     "frequency": 1,
     "register": 0,
     "extra": {
-      "usage": [
-        "sok pomarańczowy ― orange juice"
-      ]
+      "usage": ["sok pomarańczowy ― orange juice"]
     }
   },
   {
@@ -16,9 +14,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "zły"
-      ]
+      "synonyms": ["zły"]
     }
   },
   {
@@ -71,10 +67,7 @@
       "emoji": "💡"
     },
     "extra": {
-      "antonyms": [
-        "ciemny",
-        "niejasny"
-      ]
+      "antonyms": ["ciemny", "niejasny"]
     }
   },
   {
@@ -89,10 +82,7 @@
       "emoji": "👀"
     },
     "extra": {
-      "antonyms": [
-        "ciemny",
-        "niejasny"
-      ]
+      "antonyms": ["ciemny", "niejasny"]
     }
   },
   {
@@ -107,13 +97,8 @@
     "frequency": 1,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "mroczny",
-        "czarny"
-      ],
-      "antonyms": [
-        "jasny"
-      ]
+      "synonyms": ["mroczny", "czarny"],
+      "antonyms": ["jasny"]
     }
   },
   {
@@ -122,10 +107,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "smukły",
-        "wysmukły"
-      ]
+      "synonyms": ["smukły", "wysmukły"]
     }
   },
   {
@@ -140,15 +122,8 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "mierny",
-        "zły"
-      ],
-      "antonyms": [
-        "mocny",
-        "silny",
-        "dobry"
-      ]
+      "synonyms": ["mierny", "zły"],
+      "antonyms": ["mocny", "silny", "dobry"]
     }
   },
   {
@@ -169,10 +144,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "mierny",
-        "zły"
-      ]
+      "synonyms": ["mierny", "zły"]
     }
   },
   {
@@ -187,9 +159,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "dobry"
-      ]
+      "synonyms": ["dobry"]
     }
   },
   {
@@ -203,12 +173,8 @@
       "emoji": "🪨"
     },
     "extra": {
-      "synonyms": [
-        "trudny"
-      ],
-      "antonyms": [
-        "lekki"
-      ]
+      "synonyms": ["trudny"],
+      "antonyms": ["lekki"]
     }
   },
   {
@@ -223,12 +189,8 @@
       "emoji": "📚"
     },
     "extra": {
-      "synonyms": [
-        "trudny"
-      ],
-      "antonyms": [
-        "lekki"
-      ]
+      "synonyms": ["trudny"],
+      "antonyms": ["lekki"]
     }
   },
   {
@@ -237,9 +199,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "ciężki"
-      ]
+      "antonyms": ["ciężki"]
     }
   },
   {
@@ -259,9 +219,7 @@
       "emoji": "🧒"
     },
     "extra": {
-      "antonyms": [
-        "niewrażliwy"
-      ]
+      "antonyms": ["niewrażliwy"]
     }
   },
   {
@@ -276,9 +234,7 @@
       "emoji": "😷"
     },
     "extra": {
-      "antonyms": [
-        "niewrażliwy"
-      ]
+      "antonyms": ["niewrażliwy"]
     }
   },
   {
@@ -287,9 +243,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "częsty"
-      ]
+      "synonyms": ["częsty"]
     }
   },
   {
@@ -298,10 +252,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "nieczęsty",
-        "rzadki"
-      ]
+      "antonyms": ["nieczęsty", "rzadki"]
     }
   },
   {
@@ -344,15 +295,8 @@
       "emoji": "🐣"
     },
     "extra": {
-      "synonyms": [
-        "żyjący",
-        "żwawy",
-        "skoczny"
-      ],
-      "antonyms": [
-        "martwy",
-        "nieżywy"
-      ]
+      "synonyms": ["żyjący", "żwawy", "skoczny"],
+      "antonyms": ["martwy", "nieżywy"]
     }
   },
   {
@@ -367,15 +311,8 @@
       "emoji": "😃"
     },
     "extra": {
-      "synonyms": [
-        "żyjący",
-        "żwawy",
-        "skoczny"
-      ],
-      "antonyms": [
-        "martwy",
-        "nieżywy"
-      ]
+      "synonyms": ["żyjący", "żwawy", "skoczny"],
+      "antonyms": ["martwy", "nieżywy"]
     }
   },
   {
@@ -384,9 +321,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "płatny"
-      ]
+      "antonyms": ["płatny"]
     }
   },
   {
@@ -395,9 +330,7 @@
     "frequency": 1,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "stary"
-      ]
+      "antonyms": ["stary"]
     }
   },
   {
@@ -406,10 +339,7 @@
     "frequency": 1,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "młody",
-        "nowy"
-      ]
+      "antonyms": ["młody", "nowy"]
     }
   },
   {
@@ -418,13 +348,8 @@
     "frequency": 1,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "kary",
-        "wrony"
-      ],
-      "antonyms": [
-        "biały"
-      ]
+      "synonyms": ["kary", "wrony"],
+      "antonyms": ["biały"]
     }
   },
   {
@@ -447,9 +372,7 @@
         "podstawowy",
         "niezbędny"
       ],
-      "antonyms": [
-        "niekonieczny"
-      ]
+      "antonyms": ["niekonieczny"]
     }
   },
   {
@@ -458,10 +381,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "podstawowy",
-        "pryncypialny"
-      ]
+      "synonyms": ["podstawowy", "pryncypialny"]
     }
   },
   {
@@ -470,9 +390,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "konieczny"
-      ]
+      "synonyms": ["konieczny"]
     }
   },
   {
@@ -487,9 +405,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "zbędny"
-      ]
+      "antonyms": ["zbędny"]
     }
   },
   {
@@ -509,11 +425,7 @@
       "emoji": "🌊"
     },
     "extra": {
-      "antonyms": [
-        "miałki",
-        "niegłęboki",
-        "płytki"
-      ]
+      "antonyms": ["miałki", "niegłęboki", "płytki"]
     }
   },
   {
@@ -528,11 +440,7 @@
       "emoji": "💭"
     },
     "extra": {
-      "antonyms": [
-        "miałki",
-        "niegłęboki",
-        "płytki"
-      ]
+      "antonyms": ["miałki", "niegłęboki", "płytki"]
     }
   },
   {
@@ -541,14 +449,8 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "niegłęboki",
-        "dialectal",
-        "miałki"
-      ],
-      "antonyms": [
-        "głęboki"
-      ]
+      "synonyms": ["niegłęboki", "dialectal", "miałki"],
+      "antonyms": ["głęboki"]
     }
   },
   {
@@ -557,9 +459,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "poprzedni"
-      ]
+      "antonyms": ["poprzedni"]
     }
   },
   {
@@ -568,9 +468,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "następny"
-      ]
+      "antonyms": ["następny"]
     }
   },
   {
@@ -579,9 +477,7 @@
     "frequency": 1,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "duży"
-      ]
+      "synonyms": ["duży"]
     }
   },
   {
@@ -590,12 +486,8 @@
     "frequency": 1,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "duży"
-      ],
-      "antonyms": [
-        "mały"
-      ]
+      "synonyms": ["duży"],
+      "antonyms": ["mały"]
     }
   },
   {
@@ -604,9 +496,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "znojny"
-      ]
+      "synonyms": ["znojny"]
     }
   },
   {
@@ -615,9 +505,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "usage": [
-        "Sąd Ostateczny – Last Judgment"
-      ]
+      "usage": ["Sąd Ostateczny – Last Judgment"]
     }
   },
   {
@@ -850,15 +738,8 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "nieprawdziwy",
-        "zły"
-      ],
-      "antonyms": [
-        "autentyczny",
-        "autentyk",
-        "oryginalny"
-      ]
+      "synonyms": ["nieprawdziwy", "zły"],
+      "antonyms": ["autentyczny", "autentyk", "oryginalny"]
     }
   },
   {
@@ -867,12 +748,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "autentyk",
-        "oryginalny",
-        "prawdziwy",
-        "szczery"
-      ],
+      "synonyms": ["autentyk", "oryginalny", "prawdziwy", "szczery"],
       "antonyms": [
         "fałszywy",
         "nieprawdziwy",
@@ -888,10 +764,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "autentyczny",
-        "autentyk"
-      ]
+      "synonyms": ["autentyczny", "autentyk"]
     }
   },
   {
@@ -900,9 +773,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "miękki"
-      ],
+      "antonyms": ["miękki"],
       "usage": [
         "Diamenty są bardzo twarde . ― Diamonds are very hard. Moje łóżko jest bardzo twarde . ― My bed is very hard. Boli mnie ząb, więc nie mogę jeść twardego jedzenia. ― I have a toothache so I can't eat tough food. Ten stek jest twardy . ― This steak is tough. twardy znak ― hard sign",
         "Nie bądź dla niej taki twardy . ― Don't be so tough with her. Nie uważasz, że jesteś dla niego zbyt twardy ? ― Don't you think you are too hard on him?",
@@ -917,12 +788,8 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "twardy"
-      ],
-      "usage": [
-        "miękki znak ― soft sign"
-      ]
+      "antonyms": ["twardy"],
+      "usage": ["miękki znak ― soft sign"]
     }
   },
   {
@@ -931,9 +798,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "zawiedziony"
-      ]
+      "synonyms": ["zawiedziony"]
     }
   },
   {
@@ -942,9 +807,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "rozczarowany"
-      ]
+      "synonyms": ["rozczarowany"]
     }
   },
   {
@@ -980,10 +843,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "bezbolesny",
-        "niebolesny"
-      ]
+      "antonyms": ["bezbolesny", "niebolesny"]
     }
   },
   {
@@ -992,12 +852,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "niebolesny"
-      ],
-      "antonyms": [
-        "bolesny"
-      ]
+      "synonyms": ["niebolesny"],
+      "antonyms": ["bolesny"]
     }
   },
   {
@@ -1006,9 +862,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "dobry"
-      ]
+      "synonyms": ["dobry"]
     }
   },
   {
@@ -1017,9 +871,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "śmiały"
-      ]
+      "antonyms": ["śmiały"]
     }
   },
   {
@@ -1028,9 +880,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "nieśmiały"
-      ]
+      "antonyms": ["nieśmiały"]
     }
   },
   {
@@ -1039,12 +889,8 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "szczupły"
-      ],
-      "antonyms": [
-        "gruby"
-      ]
+      "synonyms": ["szczupły"],
+      "antonyms": ["gruby"]
     }
   },
   {
@@ -1066,12 +912,7 @@
         "konkretny",
         "zajebisty"
       ],
-      "antonyms": [
-        "cienki",
-        "chudy",
-        "szczupły",
-        "cienki"
-      ]
+      "antonyms": ["cienki", "chudy", "szczupły", "cienki"]
     }
   },
   {
@@ -1094,12 +935,7 @@
         "konkretny",
         "zajebisty"
       ],
-      "antonyms": [
-        "cienki",
-        "chudy",
-        "szczupły",
-        "cienki"
-      ]
+      "antonyms": ["cienki", "chudy", "szczupły", "cienki"]
     }
   },
   {
@@ -1113,9 +949,7 @@
       "emoji": "🔊"
     },
     "extra": {
-      "antonyms": [
-        "głośny"
-      ]
+      "antonyms": ["głośny"]
     }
   },
   {
@@ -1130,9 +964,7 @@
       "emoji": "🧠"
     },
     "extra": {
-      "antonyms": [
-        "głośny"
-      ]
+      "antonyms": ["głośny"]
     }
   },
   {
@@ -1141,18 +973,9 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "hałaśliwy",
-        "sławny",
-        "znany",
-        "słynny"
-      ],
-      "antonyms": [
-        "cichy"
-      ],
-      "usage": [
-        "To jest głośna sprawa . ― This is a high-profile case ."
-      ]
+      "synonyms": ["hałaśliwy", "sławny", "znany", "słynny"],
+      "antonyms": ["cichy"],
+      "usage": ["To jest głośna sprawa . ― This is a high-profile case ."]
     }
   },
   {
@@ -1161,9 +984,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "niedostępny"
-      ]
+      "antonyms": ["niedostępny"]
     }
   },
   {
@@ -1172,9 +993,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "dostępny"
-      ]
+      "antonyms": ["dostępny"]
     }
   },
   {
@@ -1194,9 +1013,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "niebezpieczny"
-      ]
+      "antonyms": ["niebezpieczny"]
     }
   },
   {
@@ -1205,9 +1022,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "duży"
-      ]
+      "synonyms": ["duży"]
     }
   },
   {
@@ -1216,9 +1031,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "drogi"
-      ]
+      "antonyms": ["drogi"]
     }
   },
   {
@@ -1227,13 +1040,8 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "kochany",
-        "luby"
-      ],
-      "antonyms": [
-        "tani"
-      ]
+      "synonyms": ["kochany", "luby"],
+      "antonyms": ["tani"]
     }
   },
   {
@@ -1242,12 +1050,8 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "ciekawy"
-      ],
-      "antonyms": [
-        "nudny"
-      ]
+      "synonyms": ["ciekawy"],
+      "antonyms": ["nudny"]
     }
   },
   {
@@ -1261,13 +1065,8 @@
       "emoji": "👀"
     },
     "extra": {
-      "synonyms": [
-        "interesujący"
-      ],
-      "antonyms": [
-        "nieciekawy",
-        "nudny"
-      ]
+      "synonyms": ["interesujący"],
+      "antonyms": ["nieciekawy", "nudny"]
     }
   },
   {
@@ -1282,13 +1081,8 @@
       "emoji": "🤔"
     },
     "extra": {
-      "synonyms": [
-        "interesujący"
-      ],
-      "antonyms": [
-        "nieciekawy",
-        "nudny"
-      ]
+      "synonyms": ["interesujący"],
+      "antonyms": ["nieciekawy", "nudny"]
     }
   },
   {
@@ -1303,12 +1097,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "dobry"
-      ],
-      "antonyms": [
-        "niedoskonały"
-      ]
+      "synonyms": ["dobry"],
+      "antonyms": ["niedoskonały"]
     }
   },
   {
@@ -1317,13 +1107,8 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "rozmaity",
-        "inny"
-      ],
-      "antonyms": [
-        "podobny"
-      ]
+      "synonyms": ["rozmaity", "inny"],
+      "antonyms": ["podobny"]
     }
   },
   {
@@ -1332,10 +1117,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "niepodobny",
-        "różny"
-      ]
+      "antonyms": ["niepodobny", "różny"]
     }
   },
   {
@@ -1344,10 +1126,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "różnoraki",
-        "różnorodny"
-      ]
+      "synonyms": ["różnoraki", "różnorodny"]
     }
   },
   {
@@ -1356,9 +1135,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "usage": [
-        "Ten but jest bardzo luźny . ― This shoe is very loose ."
-      ]
+      "usage": ["Ten but jest bardzo luźny . ― This shoe is very loose ."]
     }
   },
   {
@@ -1367,9 +1144,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "niepoważny"
-      ]
+      "antonyms": ["niepoważny"]
     }
   },
   {
@@ -1378,9 +1153,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "niedokładny"
-      ]
+      "antonyms": ["niedokładny"]
     }
   },
   {
@@ -1389,9 +1162,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "wygórowany"
-      ]
+      "synonyms": ["wygórowany"]
     }
   },
   {
@@ -1405,9 +1176,7 @@
       "emoji": "✅"
     },
     "extra": {
-      "synonyms": [
-        "dobry"
-      ]
+      "synonyms": ["dobry"]
     }
   },
   {
@@ -1422,9 +1191,7 @@
       "emoji": "🔗"
     },
     "extra": {
-      "synonyms": [
-        "dobry"
-      ]
+      "synonyms": ["dobry"]
     }
   },
   {
@@ -1433,9 +1200,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "nieatrakcyjny"
-      ]
+      "antonyms": ["nieatrakcyjny"]
     }
   },
   {
@@ -1444,9 +1209,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "atrakcyjny"
-      ]
+      "antonyms": ["atrakcyjny"]
     }
   },
   {
@@ -1455,13 +1218,8 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "dobry"
-      ],
-      "antonyms": [
-        "niepoprawny",
-        "błędny"
-      ]
+      "synonyms": ["dobry"],
+      "antonyms": ["niepoprawny", "błędny"]
     }
   },
   {
@@ -1470,9 +1228,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "zły"
-      ]
+      "synonyms": ["zły"]
     }
   },
   {
@@ -1481,10 +1237,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "ładny",
-        "niebrzydki"
-      ]
+      "antonyms": ["ładny", "niebrzydki"]
     }
   },
   {
@@ -1504,9 +1257,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "zabobonny"
-      ]
+      "synonyms": ["zabobonny"]
     }
   },
   {
@@ -1515,9 +1266,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "przesądny"
-      ]
+      "synonyms": ["przesądny"]
     }
   },
   {
@@ -1556,9 +1305,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "dobry"
-      ]
+      "synonyms": ["dobry"]
     }
   },
   {
@@ -1567,12 +1314,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "autentyczny"
-      ],
-      "antonyms": [
-        "nieszczery"
-      ]
+      "synonyms": ["autentyczny"],
+      "antonyms": ["nieszczery"]
     }
   },
   {
@@ -1581,13 +1324,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "osobliwy",
-        "specjalny"
-      ],
-      "antonyms": [
-        "nieszczególny"
-      ]
+      "synonyms": ["osobliwy", "specjalny"],
+      "antonyms": ["nieszczególny"]
     }
   },
   {
@@ -1596,9 +1334,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "niespecjalny"
-      ]
+      "antonyms": ["niespecjalny"]
     }
   },
   {
@@ -1618,9 +1354,7 @@
       "emoji": "🙁"
     },
     "extra": {
-      "synonyms": [
-        "zły"
-      ]
+      "synonyms": ["zły"]
     }
   },
   {
@@ -1635,9 +1369,7 @@
       "emoji": "❌"
     },
     "extra": {
-      "synonyms": [
-        "zły"
-      ]
+      "synonyms": ["zły"]
     }
   },
   {
@@ -1646,9 +1378,7 @@
     "frequency": 1,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "stary"
-      ]
+      "antonyms": ["stary"]
     }
   },
   {
@@ -1657,12 +1387,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "nieprawidłowy",
-        "niespotykany",
-        "chory",
-        "psychicznie"
-      ]
+      "synonyms": ["nieprawidłowy", "niespotykany", "chory", "psychicznie"]
     }
   },
   {
@@ -1712,9 +1437,7 @@
     "frequency": 1,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "chłodny"
-      ]
+      "synonyms": ["chłodny"]
     }
   },
   {
@@ -1729,9 +1452,7 @@
     "frequency": 1,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "niebiański"
-      ]
+      "synonyms": ["niebiański"]
     }
   },
   {
@@ -1746,9 +1467,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "nieoczywisty"
-      ]
+      "antonyms": ["nieoczywisty"]
     }
   },
   {
@@ -1757,9 +1476,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "antynarodowy"
-      ]
+      "antonyms": ["antynarodowy"]
     }
   },
   {
@@ -1768,15 +1485,8 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "nieintratny",
-        "nieopłacalny",
-        "nierentowny",
-        "niezyskowny"
-      ],
-      "antonyms": [
-        "dochodowy"
-      ]
+      "synonyms": ["nieintratny", "nieopłacalny", "nierentowny", "niezyskowny"],
+      "antonyms": ["dochodowy"]
     }
   },
   {
@@ -1791,12 +1501,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "niedobry"
-      ],
-      "antonyms": [
-        "posłuszny"
-      ]
+      "synonyms": ["niedobry"],
+      "antonyms": ["posłuszny"]
     }
   },
   {
@@ -1805,9 +1511,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "pesymistyczny"
-      ]
+      "antonyms": ["pesymistyczny"]
     }
   },
   {
@@ -1816,15 +1520,8 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "niedochodowy",
-        "nieintratny",
-        "nierentowny",
-        "niezyskowny"
-      ],
-      "antonyms": [
-        "opłacalny"
-      ]
+      "synonyms": ["niedochodowy", "nieintratny", "nierentowny", "niezyskowny"],
+      "antonyms": ["opłacalny"]
     }
   },
   {
@@ -1833,13 +1530,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "niedobry"
-      ],
-      "antonyms": [
-        "smaczny",
-        "dobry"
-      ]
+      "synonyms": ["niedobry"],
+      "antonyms": ["smaczny", "dobry"]
     }
   },
   {
@@ -1855,9 +1547,7 @@
         "opłacalny",
         "zyskowny"
       ],
-      "antonyms": [
-        "nierentowny"
-      ]
+      "antonyms": ["nierentowny"]
     }
   },
   {
@@ -1878,9 +1568,7 @@
         "nieopłacalny",
         "niezyskowny"
       ],
-      "antonyms": [
-        "rentowny"
-      ]
+      "antonyms": ["rentowny"]
     }
   },
   {
@@ -1889,13 +1577,8 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "niedobry"
-      ],
-      "antonyms": [
-        "życzliwy",
-        "dobry"
-      ]
+      "synonyms": ["niedobry"],
+      "antonyms": ["życzliwy", "dobry"]
     }
   },
   {
@@ -1904,9 +1587,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "optymistyczny"
-      ]
+      "antonyms": ["optymistyczny"]
     }
   },
   {
@@ -1915,12 +1596,8 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "dokładny"
-      ],
-      "antonyms": [
-        "niestaranny"
-      ]
+      "synonyms": ["dokładny"],
+      "antonyms": ["niestaranny"]
     }
   },
   {
@@ -1929,12 +1606,8 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "amoralny"
-      ],
-      "antonyms": [
-        "moralny"
-      ]
+      "synonyms": ["amoralny"],
+      "antonyms": ["moralny"]
     }
   },
   {
@@ -1962,9 +1635,7 @@
         "rentowny",
         "zyskowny"
       ],
-      "antonyms": [
-        "nieopłacalny"
-      ]
+      "antonyms": ["nieopłacalny"]
     }
   },
   {
@@ -1980,9 +1651,7 @@
         "rentowny",
         "zyskowny"
       ],
-      "antonyms": [
-        "niedochodowy"
-      ]
+      "antonyms": ["niedochodowy"]
     }
   },
   {
@@ -2002,9 +1671,7 @@
       "emoji": "🧠"
     },
     "extra": {
-      "synonyms": [
-        "zły"
-      ]
+      "synonyms": ["zły"]
     }
   },
   {
@@ -2037,9 +1704,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "usage": [
-        "szary kolor :"
-      ]
+      "usage": ["szary kolor :"]
     }
   },
   {
@@ -2048,9 +1713,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "nietowarzyski"
-      ]
+      "antonyms": ["nietowarzyski"]
     }
   },
   {
@@ -2059,9 +1722,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "mały"
-      ]
+      "synonyms": ["mały"]
     }
   },
   {
@@ -2075,12 +1736,8 @@
       "emoji": "🪨"
     },
     "extra": {
-      "synonyms": [
-        "mały"
-      ],
-      "antonyms": [
-        "duży"
-      ]
+      "synonyms": ["mały"],
+      "antonyms": ["duży"]
     }
   },
   {
@@ -2095,12 +1752,8 @@
       "emoji": "💭"
     },
     "extra": {
-      "synonyms": [
-        "mały"
-      ],
-      "antonyms": [
-        "duży"
-      ]
+      "synonyms": ["mały"],
+      "antonyms": ["duży"]
     }
   },
   {
@@ -2109,9 +1762,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "mokry"
-      ]
+      "antonyms": ["mokry"]
     }
   },
   {
@@ -2120,9 +1771,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "suchy"
-      ]
+      "antonyms": ["suchy"]
     }
   },
   {
@@ -2131,17 +1780,8 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "ładny",
-        "piękny",
-        "uroczy"
-      ],
-      "antonyms": [
-        "brzydki",
-        "paskudny",
-        "szkaradny",
-        "szpetny"
-      ]
+      "synonyms": ["ładny", "piękny", "uroczy"],
+      "antonyms": ["brzydki", "paskudny", "szkaradny", "szpetny"]
     }
   },
   {
@@ -2173,9 +1813,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "bezpłatny"
-      ]
+      "synonyms": ["bezpłatny"]
     }
   },
   {
@@ -2184,9 +1822,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "legalny"
-      ]
+      "antonyms": ["legalny"]
     }
   },
   {
@@ -2195,9 +1831,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "nielegalny"
-      ]
+      "antonyms": ["nielegalny"]
     }
   },
   {
@@ -2206,9 +1840,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "dobry"
-      ]
+      "synonyms": ["dobry"]
     }
   },
   {
@@ -2217,10 +1849,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "tożsamy",
-        "jednakowy"
-      ]
+      "synonyms": ["tożsamy", "jednakowy"]
     }
   },
   {
@@ -2229,9 +1858,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "identyczny"
-      ]
+      "synonyms": ["identyczny"]
     }
   },
   {
@@ -2240,10 +1867,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "identyczny",
-        "jednaki"
-      ]
+      "synonyms": ["identyczny", "jednaki"]
     }
   },
   {
@@ -2257,11 +1881,7 @@
       "emoji": "🥱"
     },
     "extra": {
-      "synonyms": [
-        "męczący",
-        "kompletny",
-        "wszechstronny"
-      ]
+      "synonyms": ["męczący", "kompletny", "wszechstronny"]
     }
   },
   {
@@ -2276,11 +1896,7 @@
       "emoji": "📚"
     },
     "extra": {
-      "synonyms": [
-        "męczący",
-        "kompletny",
-        "wszechstronny"
-      ]
+      "synonyms": ["męczący", "kompletny", "wszechstronny"]
     }
   },
   {
@@ -2318,9 +1934,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "wczesny"
-      ]
+      "antonyms": ["wczesny"]
     }
   },
   {
@@ -2329,9 +1943,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "późny"
-      ]
+      "antonyms": ["późny"]
     }
   },
   {
@@ -2340,10 +1952,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "niepierwszy",
-        "ostatni"
-      ]
+      "antonyms": ["niepierwszy", "ostatni"]
     }
   },
   {
@@ -2363,9 +1972,7 @@
       "emoji": "💭"
     },
     "extra": {
-      "synonyms": [
-        "przymknięty"
-      ]
+      "synonyms": ["przymknięty"]
     }
   },
   {
@@ -2380,9 +1987,7 @@
       "emoji": "🪨"
     },
     "extra": {
-      "synonyms": [
-        "przymknięty"
-      ]
+      "synonyms": ["przymknięty"]
     }
   },
   {
@@ -2391,9 +1996,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "nienormalny"
-      ]
+      "antonyms": ["nienormalny"]
     }
   },
   {
@@ -2402,9 +2005,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "duży"
-      ]
+      "synonyms": ["duży"]
     }
   },
   {
@@ -2436,13 +2037,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "szczodry",
-        "obfity"
-      ],
-      "antonyms": [
-        "skąpy"
-      ]
+      "synonyms": ["szczodry", "obfity"],
+      "antonyms": ["skąpy"]
     }
   },
   {
@@ -2451,11 +2047,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "hojny",
-        "wielkoduszny",
-        "obfity"
-      ]
+      "synonyms": ["hojny", "wielkoduszny", "obfity"]
     }
   },
   {
@@ -2464,14 +2056,8 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "obszerny",
-        "rozległy"
-      ],
-      "antonyms": [
-        "nieszeroki",
-        "wąski"
-      ]
+      "synonyms": ["obszerny", "rozległy"],
+      "antonyms": ["nieszeroki", "wąski"]
     }
   },
   {
@@ -2480,9 +2066,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "szeroki"
-      ]
+      "antonyms": ["szeroki"]
     }
   },
   {
@@ -2497,9 +2081,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "duży"
-      ]
+      "synonyms": ["duży"]
     }
   },
   {
@@ -2508,9 +2090,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "niesprawiedliwy"
-      ]
+      "antonyms": ["niesprawiedliwy"]
     }
   },
   {
@@ -2562,10 +2142,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "nieinteligentny",
-        "głupi"
-      ]
+      "antonyms": ["nieinteligentny", "głupi"]
     }
   },
   {
@@ -2574,14 +2151,8 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "durny",
-        "niemądry"
-      ],
-      "antonyms": [
-        "mądry",
-        "niegłupi"
-      ]
+      "synonyms": ["durny", "niemądry"],
+      "antonyms": ["mądry", "niegłupi"]
     }
   },
   {
@@ -2596,9 +2167,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "pusty"
-      ]
+      "antonyms": ["pusty"]
     }
   },
   {
@@ -2613,9 +2182,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "internacjonalny"
-      ]
+      "synonyms": ["internacjonalny"]
     }
   },
   {
@@ -2624,9 +2191,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "niewygodny"
-      ]
+      "antonyms": ["niewygodny"]
     }
   },
   {
@@ -2641,9 +2206,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "głośny"
-      ]
+      "synonyms": ["głośny"]
     }
   },
   {
@@ -2658,9 +2221,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "sławny"
-      ]
+      "synonyms": ["sławny"]
     }
   },
   {
@@ -2674,12 +2235,7 @@
       "emoji": "✅"
     },
     "extra": {
-      "synonyms": [
-        "dowcipny",
-        "śmieszny",
-        "komiczny",
-        "żartobliwy"
-      ]
+      "synonyms": ["dowcipny", "śmieszny", "komiczny", "żartobliwy"]
     }
   },
   {
@@ -2694,12 +2250,7 @@
       "emoji": "📦"
     },
     "extra": {
-      "synonyms": [
-        "dowcipny",
-        "śmieszny",
-        "komiczny",
-        "żartobliwy"
-      ]
+      "synonyms": ["dowcipny", "śmieszny", "komiczny", "żartobliwy"]
     }
   },
   {
@@ -2714,12 +2265,7 @@
       "emoji": "🏃"
     },
     "extra": {
-      "synonyms": [
-        "dowcipny",
-        "śmieszny",
-        "komiczny",
-        "żartobliwy"
-      ]
+      "synonyms": ["dowcipny", "śmieszny", "komiczny", "żartobliwy"]
     }
   },
   {
@@ -2761,11 +2307,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "zabawny",
-        "śmieszny",
-        "dowcipny"
-      ]
+      "synonyms": ["zabawny", "śmieszny", "dowcipny"]
     }
   },
   {
@@ -2774,11 +2316,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "śmieszny",
-        "zabawny",
-        "żartobliwy"
-      ]
+      "synonyms": ["śmieszny", "zabawny", "żartobliwy"]
     }
   },
   {
@@ -2787,9 +2325,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "ostry"
-      ]
+      "synonyms": ["ostry"]
     }
   },
   {
@@ -2803,15 +2339,8 @@
       "emoji": "🪨"
     },
     "extra": {
-      "synonyms": [
-        "wysoki",
-        "stromy"
-      ],
-      "antonyms": [
-        "tępy",
-        "gruby",
-        "niski"
-      ]
+      "synonyms": ["wysoki", "stromy"],
+      "antonyms": ["tępy", "gruby", "niski"]
     }
   },
   {
@@ -2826,15 +2355,8 @@
       "emoji": "🍲"
     },
     "extra": {
-      "synonyms": [
-        "wysoki",
-        "stromy"
-      ],
-      "antonyms": [
-        "tępy",
-        "gruby",
-        "niski"
-      ]
+      "synonyms": ["wysoki", "stromy"],
+      "antonyms": ["tępy", "gruby", "niski"]
     }
   },
   {
@@ -2849,15 +2371,8 @@
       "emoji": "🩺"
     },
     "extra": {
-      "synonyms": [
-        "wysoki",
-        "stromy"
-      ],
-      "antonyms": [
-        "tępy",
-        "gruby",
-        "niski"
-      ]
+      "synonyms": ["wysoki", "stromy"],
+      "antonyms": ["tępy", "gruby", "niski"]
     }
   },
   {
@@ -2866,13 +2381,8 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "nudny"
-      ],
-      "antonyms": [
-        "ciekawy",
-        "interesujący"
-      ]
+      "synonyms": ["nudny"],
+      "antonyms": ["ciekawy", "interesujący"]
     }
   },
   {
@@ -2881,9 +2391,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "czysty"
-      ]
+      "antonyms": ["czysty"]
     }
   },
   {
@@ -3244,10 +2752,7 @@
       "emoji": "📚"
     },
     "extra": {
-      "synonyms": [
-        "żaden",
-        "bezbarwny"
-      ]
+      "synonyms": ["żaden", "bezbarwny"]
     }
   },
   {
@@ -3262,10 +2767,7 @@
       "emoji": "✅"
     },
     "extra": {
-      "synonyms": [
-        "żaden",
-        "bezbarwny"
-      ]
+      "synonyms": ["żaden", "bezbarwny"]
     }
   },
   {
@@ -3282,13 +2784,7 @@
         "clear",
         "lip-gloss"
       ],
-      "antonyms": [
-        "barwisty",
-        "barwny",
-        "kolorowy",
-        "barwisty",
-        "barwny"
-      ]
+      "antonyms": ["barwisty", "barwny", "kolorowy", "barwisty", "barwny"]
     }
   },
   {
@@ -3297,9 +2793,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "wolny"
-      ]
+      "antonyms": ["wolny"]
     }
   },
   {
@@ -3322,9 +2816,7 @@
         "nieżonaty",
         "dostępny"
       ],
-      "antonyms": [
-        "szybki"
-      ]
+      "antonyms": ["szybki"]
     }
   },
   {
@@ -3347,9 +2839,7 @@
         "nieżonaty",
         "dostępny"
       ],
-      "antonyms": [
-        "szybki"
-      ]
+      "antonyms": ["szybki"]
     }
   },
   {
@@ -3358,10 +2848,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "rozmaity",
-        "różnoraki"
-      ]
+      "synonyms": ["rozmaity", "różnoraki"]
     }
   },
   {
@@ -3375,19 +2862,8 @@
       "emoji": "📐"
     },
     "extra": {
-      "synonyms": [
-        "łatwy",
-        "bezpośredni",
-        "naturalny",
-        "otwarty",
-        "szczery"
-      ],
-      "antonyms": [
-        "krzywy",
-        "nieprosty",
-        "trudny",
-        "skomplikowany"
-      ]
+      "synonyms": ["łatwy", "bezpośredni", "naturalny", "otwarty", "szczery"],
+      "antonyms": ["krzywy", "nieprosty", "trudny", "skomplikowany"]
     }
   },
   {
@@ -3402,19 +2878,8 @@
       "emoji": "🤔"
     },
     "extra": {
-      "synonyms": [
-        "łatwy",
-        "bezpośredni",
-        "naturalny",
-        "otwarty",
-        "szczery"
-      ],
-      "antonyms": [
-        "krzywy",
-        "nieprosty",
-        "trudny",
-        "skomplikowany"
-      ]
+      "synonyms": ["łatwy", "bezpośredni", "naturalny", "otwarty", "szczery"],
+      "antonyms": ["krzywy", "nieprosty", "trudny", "skomplikowany"]
     }
   },
   {
@@ -3423,12 +2888,8 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "prosty"
-      ],
-      "antonyms": [
-        "trudny"
-      ]
+      "synonyms": ["prosty"],
+      "antonyms": ["trudny"]
     }
   },
   {
@@ -3480,12 +2941,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "przyległy"
-      ],
-      "antonyms": [
-        "pośredni"
-      ]
+      "synonyms": ["przyległy"],
+      "antonyms": ["pośredni"]
     }
   },
   {
@@ -3494,17 +2951,8 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "feralny",
-        "niefortunny",
-        "niepomyślny",
-        "nieszczęśliwy"
-      ],
-      "antonyms": [
-        "fortunny",
-        "pomyślny",
-        "szczęśliwy"
-      ]
+      "synonyms": ["feralny", "niefortunny", "niepomyślny", "nieszczęśliwy"],
+      "antonyms": ["fortunny", "pomyślny", "szczęśliwy"]
     }
   },
   {
@@ -3552,13 +3000,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "dobry",
-        "foremny",
-        "poprawny",
-        "poprawny",
-        "właściwy"
-      ]
+      "synonyms": ["dobry", "foremny", "poprawny", "poprawny", "właściwy"]
     }
   },
   {
@@ -3567,17 +3009,8 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "goły",
-        "niebogaty",
-        "skromny",
-        "ubogi"
-      ],
-      "antonyms": [
-        "bogaty",
-        "zamożny",
-        "biedny"
-      ],
+      "synonyms": ["goły", "niebogaty", "skromny", "ubogi"],
+      "antonyms": ["bogaty", "zamożny", "biedny"],
       "usage": [
         "biedny kotek ― a poor cat biedny psiak ― a poor doggy biedna sierota ― a poor orphan biedna oferma ― a poor loser biedna ofiara ― a poor victim biedna kaleka ― a poor cripple biedne dziecko ― poor kid biedne stworzenie ― poor creature biedne szczenię ― a poor puppy"
       ]
@@ -3589,9 +3022,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "mały"
-      ]
+      "synonyms": ["mały"]
     }
   },
   {
@@ -3622,14 +3053,8 @@
     "frequency": 1,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "odległy",
-        "oddalony"
-      ],
-      "antonyms": [
-        "niedaleki",
-        "bliski"
-      ]
+      "synonyms": ["odległy", "oddalony"],
+      "antonyms": ["niedaleki", "bliski"]
     }
   },
   {
@@ -3638,9 +3063,7 @@
     "frequency": 1,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "pobliski"
-      ]
+      "synonyms": ["pobliski"]
     }
   },
   {
@@ -3655,12 +3078,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "archaic",
-        "autentyczny",
-        "naturalny",
-        "prawdziwy"
-      ]
+      "antonyms": ["archaic", "autentyczny", "naturalny", "prawdziwy"]
     }
   },
   {
@@ -3669,9 +3087,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "niespokojny"
-      ]
+      "antonyms": ["niespokojny"]
     }
   },
   {
@@ -3692,12 +3108,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "prawdziwy",
-        "rzeczywisty",
-        "możliwy",
-        "zdroworozsądkowy"
-      ]
+      "synonyms": ["prawdziwy", "rzeczywisty", "możliwy", "zdroworozsądkowy"]
     }
   },
   {
@@ -3718,13 +3129,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "niepotrzebny",
-        "zbyteczny"
-      ],
-      "antonyms": [
-        "niezbędny"
-      ]
+      "synonyms": ["niepotrzebny", "zbyteczny"],
+      "antonyms": ["niezbędny"]
     }
   },
   {
@@ -3733,9 +3139,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "potrzebny"
-      ]
+      "antonyms": ["potrzebny"]
     }
   },
   {
@@ -3744,9 +3148,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "nieodpowiedzialny"
-      ]
+      "antonyms": ["nieodpowiedzialny"]
     }
   },
   {
@@ -3755,9 +3157,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "odpowiedzialny"
-      ]
+      "antonyms": ["odpowiedzialny"]
     }
   },
   {
@@ -3773,9 +3173,7 @@
         "sobie",
         "zeskorupiały"
       ],
-      "antonyms": [
-        "otwarty"
-      ]
+      "antonyms": ["otwarty"]
     }
   },
   {
@@ -3784,10 +3182,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "głupi",
-        "niemądry"
-      ]
+      "antonyms": ["głupi", "niemądry"]
     }
   },
   {
@@ -3796,9 +3191,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "usage": [
-        "nauki ścisłe ― hard sciences"
-      ]
+      "usage": ["nauki ścisłe ― hard sciences"]
     }
   },
   {
@@ -3807,10 +3200,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "znużony",
-        "wynudzony"
-      ]
+      "synonyms": ["znużony", "wynudzony"]
     }
   },
   {
@@ -3824,9 +3214,7 @@
       "emoji": "📅️"
     },
     "extra": {
-      "synonyms": [
-        "bieżący"
-      ]
+      "synonyms": ["bieżący"]
     }
   },
   {
@@ -3841,9 +3229,7 @@
       "emoji": "🕒"
     },
     "extra": {
-      "synonyms": [
-        "bieżący"
-      ]
+      "synonyms": ["bieżący"]
     }
   },
   {
@@ -3857,18 +3243,8 @@
       "emoji": "🪨"
     },
     "extra": {
-      "synonyms": [
-        "nieostry",
-        "głupi",
-        "głupawy",
-        "tępawy"
-      ],
-      "antonyms": [
-        "ostry",
-        "bystry",
-        "mądry",
-        "niegłupi"
-      ],
+      "synonyms": ["nieostry", "głupi", "głupawy", "tępawy"],
+      "antonyms": ["ostry", "bystry", "mądry", "niegłupi"],
       "usage": [
         "Już też i słońce wschodzi, krwawo się czerwieni, Brzegiem tępym , jak gdyby odartym od promieni, Na wpół widne, na poły w czerni chmur się chowa, Jak rozżarzona w węglach kowalskich podkowa. Now the sun is also rising; it is red like blood, with an indistinct edge, as though bereft of its rays; half bright, it is half hidden in the blackness of the clouds, like a horseshoe glowing among a blacksmith's coals."
       ]
@@ -3886,18 +3262,8 @@
       "emoji": "🏃"
     },
     "extra": {
-      "synonyms": [
-        "nieostry",
-        "głupi",
-        "głupawy",
-        "tępawy"
-      ],
-      "antonyms": [
-        "ostry",
-        "bystry",
-        "mądry",
-        "niegłupi"
-      ],
+      "synonyms": ["nieostry", "głupi", "głupawy", "tępawy"],
+      "antonyms": ["ostry", "bystry", "mądry", "niegłupi"],
       "usage": [
         "Już też i słońce wschodzi, krwawo się czerwieni, Brzegiem tępym , jak gdyby odartym od promieni, Na wpół widne, na poły w czerni chmur się chowa, Jak rozżarzona w węglach kowalskich podkowa. Now the sun is also rising; it is red like blood, with an indistinct edge, as though bereft of its rays; half bright, it is half hidden in the blackness of the clouds, like a horseshoe glowing among a blacksmith's coals."
       ]
@@ -4004,9 +3370,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "analogowy"
-      ]
+      "antonyms": ["analogowy"]
     }
   },
   {
@@ -4015,9 +3379,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "cyfrowy"
-      ]
+      "antonyms": ["cyfrowy"]
     }
   },
   {
@@ -4026,15 +3388,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "bez sensu",
-        "bezsensowny",
-        "niedorzeczny",
-        "nonsensowny"
-      ],
-      "antonyms": [
-        "sensowny"
-      ]
+      "synonyms": ["bez sensu", "bezsensowny", "niedorzeczny", "nonsensowny"],
+      "antonyms": ["sensowny"]
     }
   },
   {
@@ -4043,16 +3398,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "absurdalny",
-        "bez",
-        "sensu",
-        "bezsensowny",
-        "nonsensowny"
-      ],
-      "antonyms": [
-        "sensowny"
-      ]
+      "synonyms": ["absurdalny", "bez", "sensu", "bezsensowny", "nonsensowny"],
+      "antonyms": ["sensowny"]
     }
   },
   {
@@ -4061,16 +3408,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "absurdalny",
-        "bez",
-        "sensu",
-        "niedorzeczny",
-        "nonsensowny"
-      ],
-      "antonyms": [
-        "sensowny"
-      ]
+      "synonyms": ["absurdalny", "bez", "sensu", "niedorzeczny", "nonsensowny"],
+      "antonyms": ["sensowny"]
     }
   },
   {
@@ -4079,9 +3418,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "badawczy"
-      ]
+      "synonyms": ["badawczy"]
     }
   },
   {
@@ -4090,9 +3427,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "niedawny"
-      ]
+      "antonyms": ["niedawny"]
     }
   },
   {
@@ -4101,11 +3436,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "bezbronny",
-        "bezsilny",
-        "bezradny"
-      ]
+      "synonyms": ["bezbronny", "bezsilny", "bezradny"]
     }
   },
   {
@@ -4114,10 +3445,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "bezsilny",
-        "bezradny"
-      ]
+      "synonyms": ["bezsilny", "bezradny"]
     }
   },
   {
@@ -4126,10 +3454,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "bezbronny",
-        "bezradny"
-      ],
+      "synonyms": ["bezbronny", "bezradny"],
       "usage": [
         "bezsilny w obliczu czegoś ― powerless in the face of bezsilny wobec czegoś ― powerless against/over"
       ]
@@ -4141,11 +3466,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "cudowny",
-        "piękny",
-        "wspaniały"
-      ]
+      "synonyms": ["cudowny", "piękny", "wspaniały"]
     }
   },
   {
@@ -4172,9 +3493,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "zły"
-      ]
+      "synonyms": ["zły"]
     }
   },
   {
@@ -4206,9 +3525,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "krótkotrwały"
-      ]
+      "antonyms": ["krótkotrwały"]
     }
   },
   {
@@ -4241,12 +3558,7 @@
       "emoji": "🏃"
     },
     "extra": {
-      "synonyms": [
-        "aktywny",
-        "otwarty",
-        "funkcjonujący",
-        "sprawny"
-      ],
+      "synonyms": ["aktywny", "otwarty", "funkcjonujący", "sprawny"],
       "antonyms": [
         "bezczynny",
         "bierny",
@@ -4271,12 +3583,7 @@
       "emoji": "🏬"
     },
     "extra": {
-      "synonyms": [
-        "aktywny",
-        "otwarty",
-        "funkcjonujący",
-        "sprawny"
-      ],
+      "synonyms": ["aktywny", "otwarty", "funkcjonujący", "sprawny"],
       "antonyms": [
         "bezczynny",
         "bierny",
@@ -4311,9 +3618,7 @@
         "absolutny",
         "bezwarunkowy"
       ],
-      "antonyms": [
-        "pobłażliwy"
-      ],
+      "antonyms": ["pobłażliwy"],
       "usage": [
         "kwota bezwzględna ― an absolute sum/amount liczba bezwzględna ― an absolute number wielkości bezwzględne ― an absolute size wysokość bezwzględna ― an absolute height"
       ]
@@ -4325,9 +3630,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "wyrozumiały"
-      ]
+      "synonyms": ["wyrozumiały"]
     }
   },
   {
@@ -4371,9 +3674,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "niedrewniany"
-      ]
+      "antonyms": ["niedrewniany"]
     }
   },
   {
@@ -4382,9 +3683,7 @@
     "frequency": 4,
     "register": 8,
     "extra": {
-      "synonyms": [
-        "pieprzony"
-      ]
+      "synonyms": ["pieprzony"]
     }
   },
   {
@@ -4393,9 +3692,7 @@
     "frequency": 4,
     "register": 8,
     "extra": {
-      "synonyms": [
-        "cholerny"
-      ]
+      "synonyms": ["cholerny"]
     }
   },
   {
@@ -4421,9 +3718,7 @@
         "zjadliwy",
         "aktywny"
       ],
-      "usage": [
-        "agresywny sprzedawca ― an aggressive salesperson"
-      ]
+      "usage": ["agresywny sprzedawca ― an aggressive salesperson"]
     }
   },
   {
@@ -4438,9 +3733,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "mięsisty"
-      ]
+      "synonyms": ["mięsisty"]
     }
   },
   {
@@ -4501,11 +3794,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "lśniący",
-        "połyskliwy",
-        "błyszczący"
-      ]
+      "synonyms": ["lśniący", "połyskliwy", "błyszczący"]
     }
   },
   {
@@ -4535,9 +3824,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "anonimowy"
-      ]
+      "synonyms": ["anonimowy"]
     }
   },
   {
@@ -4552,9 +3839,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "nieetyczny"
-      ]
+      "antonyms": ["nieetyczny"]
     }
   },
   {
@@ -4574,10 +3859,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "rozrosły",
-        "wybujały"
-      ]
+      "synonyms": ["rozrosły", "wybujały"]
     }
   },
   {
@@ -4592,9 +3874,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "niechrześcijański"
-      ]
+      "antonyms": ["niechrześcijański"]
     }
   },
   {
@@ -4614,14 +3894,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "umyślny",
-        "zamierzony",
-        "intencjonalny"
-      ],
-      "antonyms": [
-        "niecelowy"
-      ]
+      "synonyms": ["umyślny", "zamierzony", "intencjonalny"],
+      "antonyms": ["niecelowy"]
     }
   },
   {
@@ -4630,11 +3904,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "umyślny",
-        "celowy",
-        "intencjonalny"
-      ]
+      "synonyms": ["umyślny", "celowy", "intencjonalny"]
     }
   },
   {
@@ -4643,9 +3913,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "nagi"
-      ],
+      "synonyms": ["nagi"],
       "usage": [
         "Dostałem gołe mieszkanie w spadku. ― I inherited an unfurnished apartment."
       ]
@@ -4657,9 +3925,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "goły"
-      ]
+      "synonyms": ["goły"]
     }
   },
   {
@@ -4668,9 +3934,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "nocny"
-      ]
+      "antonyms": ["nocny"]
     }
   },
   {
@@ -4679,9 +3943,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "dzienny"
-      ]
+      "antonyms": ["dzienny"]
     }
   },
   {
@@ -4690,10 +3952,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "odważny",
-        "zręczny"
-      ]
+      "synonyms": ["odważny", "zręczny"]
     }
   },
   {
@@ -4708,13 +3967,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "babi",
-        "babski",
-        "damski",
-        "kobiecy",
-        "niewieści"
-      ]
+      "synonyms": ["babi", "babski", "damski", "kobiecy", "niewieści"]
     }
   },
   {
@@ -4723,9 +3976,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "dolny"
-      ]
+      "antonyms": ["dolny"]
     }
   },
   {
@@ -4734,9 +3985,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "górny"
-      ]
+      "antonyms": ["górny"]
     }
   },
   {
@@ -4745,10 +3994,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "naturalny",
-        "rodzony"
-      ],
+      "synonyms": ["naturalny", "rodzony"],
       "usage": [
         "eksperyment biologiczny ― biological experiment gabinet biologiczny ― biological office materiał biologiczny ― biological material gatunek biologiczny ― biological species ostęp biologiczny ― biological backwood układ biologiczny ― biological system aktywność biologiczna ― biological activity błona biologiczna ― biological membrane metoda biologiczna ― biological method olimpiada biologiczna ― biological Olympiad pracownia biologiczna ― biological laboratory wiedza biologiczna ― biological knowledge badanie biologiczne ― biological research kółko biologiczne ― biological wheel testy biologiczne ― biological tests cechy biologiczne ― biological traits nauki biologiczne ― biological science/ life science właściwości biologiczne ― biological properties instynkt biologiczny ― biological instinct mechanizm biologiczny ― biological mechanism popęd biologiczny ― biological drive/urge/impulse potencjał biologiczny ― biological potential proces biologiczny ― biological process rozkład biologiczny ― biological decay rytm biologiczny ― biological rhythm zegar biologiczny ― biological clock ściek biologiczny ― biological effluvium masaż biologiczny ― biological massage adaptacja biologiczna ― biological adaptation degradacja biologiczna ― biological degradation dojrzałość biologiczna ― biological maturity ewolucja biologiczna ― biological evolution funkcja biologiczna ― biological function natura biologiczna ― biological nature płeć biologiczna ― biological gender/sex potrzeba biologiczna ― biological need różnorodność biologiczna ― biological diversity uprawa biologiczna ― biological cultivation równowaga biologiczna ― biological balance broń biologiczna ― biological weapon zastawka biologiczna ― biological valve oczyszczalnia biologiczna ― biological odnowa biologiczna ― biological treatment plant sauna biologiczna ― biological sauna spa biologiczna ― biological spa oczyszczanie biologiczne ― biological treatment promieniowanie biologiczne ― biological radiation przetrwanie biologiczne ― biological survival przystosowanie biologiczne ― biological adaptation skażenie biologiczne ― bio hazard wyniszczenie biologiczne ― biological destruction minimum biologiczne ― biological minimum podłoże biologiczne ― biological substrate/base ślady biologiczne ― biologicals/biological traces zasoby biologiczne ― biological resources uwarunkowanie biologiczne ― biological conditioning gabinet odnowy biologicznej ― office of biological regeneration ochrona różnorodnośc i biologicznej ― protection of biological diversity"
       ]
@@ -4760,12 +4006,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "infantylny",
-        "naiwny",
-        "dziecięcy",
-        "dziecięcy"
-      ]
+      "synonyms": ["infantylny", "naiwny", "dziecięcy", "dziecięcy"]
     }
   },
   {
@@ -4774,9 +4015,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "dziecinny"
-      ]
+      "synonyms": ["dziecinny"]
     }
   },
   {
@@ -4802,10 +4041,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "niesłyszący",
-        "ogłuchły"
-      ]
+      "synonyms": ["niesłyszący", "ogłuchły"]
     }
   },
   {
@@ -4814,14 +4050,8 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "barwisty",
-        "kolorowy",
-        "barwisty"
-      ],
-      "antonyms": [
-        "bezbarwny"
-      ]
+      "synonyms": ["barwisty", "kolorowy", "barwisty"],
+      "antonyms": ["bezbarwny"]
     }
   },
   {
@@ -4830,10 +4060,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "obecny",
-        "bieżący"
-      ]
+      "synonyms": ["obecny", "bieżący"]
     }
   },
   {
@@ -4847,9 +4074,7 @@
       "emoji": "🪨"
     },
     "extra": {
-      "synonyms": [
-        "mały"
-      ]
+      "synonyms": ["mały"]
     }
   },
   {
@@ -4864,9 +4089,7 @@
       "emoji": "🪨"
     },
     "extra": {
-      "synonyms": [
-        "mały"
-      ]
+      "synonyms": ["mały"]
     }
   },
   {
@@ -4875,9 +4098,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "szorstki"
-      ]
+      "antonyms": ["szorstki"]
     }
   },
   {
@@ -4897,9 +4118,7 @@
         "ochrypły",
         "zachrypły"
       ],
-      "antonyms": [
-        "gładki"
-      ]
+      "antonyms": ["gładki"]
     }
   },
   {
@@ -4926,12 +4145,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "czarujący",
-        "fascynujący",
-        "porywający",
-        "urzekający"
-      ]
+      "synonyms": ["czarujący", "fascynujący", "porywający", "urzekający"]
     }
   },
   {
@@ -4940,9 +4154,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "wzburzony"
-      ]
+      "synonyms": ["wzburzony"]
     }
   },
   {
@@ -5380,10 +4592,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "charakterystyczny",
-        "swoisty"
-      ]
+      "synonyms": ["charakterystyczny", "swoisty"]
     }
   },
   {
@@ -5398,12 +4607,8 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "godzien"
-      ],
-      "antonyms": [
-        "niegodny"
-      ]
+      "synonyms": ["godzien"],
+      "antonyms": ["niegodny"]
     }
   },
   {
@@ -5412,16 +4617,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "bywały",
-        "obyty",
-        "obeznany",
-        "wyrobiony",
-        "wytrawny"
-      ],
-      "antonyms": [
-        "niedoświadczony"
-      ]
+      "synonyms": ["bywały", "obyty", "obeznany", "wyrobiony", "wytrawny"],
+      "antonyms": ["niedoświadczony"]
     }
   },
   {
@@ -5430,12 +4627,8 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "samoczynny"
-      ],
-      "antonyms": [
-        "ręczny"
-      ]
+      "synonyms": ["samoczynny"],
+      "antonyms": ["ręczny"]
     }
   },
   {
@@ -5444,13 +4637,8 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "automatyczny",
-        "samoczynny"
-      ],
-      "usage": [
-        "narzędzie ręczne ― hand tool ręczne sadzenie ― hand planting"
-      ]
+      "antonyms": ["automatyczny", "samoczynny"],
+      "usage": ["narzędzie ręczne ― hand tool ręczne sadzenie ― hand planting"]
     }
   },
   {
@@ -5459,12 +4647,8 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "automatyczny"
-      ],
-      "antonyms": [
-        "ręczny"
-      ]
+      "synonyms": ["automatyczny"],
+      "antonyms": ["ręczny"]
     }
   },
   {
@@ -5473,9 +4657,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "zły"
-      ]
+      "synonyms": ["zły"]
     }
   },
   {
@@ -5490,9 +4672,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "wytworny"
-      ]
+      "synonyms": ["wytworny"]
     }
   },
   {
@@ -5501,9 +4681,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "elegancki"
-      ]
+      "synonyms": ["elegancki"]
     }
   },
   {
@@ -5512,13 +4690,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "babi",
-        "babski",
-        "kobiecy",
-        "niewieści",
-        "żeński"
-      ]
+      "synonyms": ["babi", "babski", "kobiecy", "niewieści", "żeński"]
     }
   },
   {
@@ -5527,13 +4699,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "babi",
-        "babski",
-        "damski",
-        "niewieści",
-        "żeński"
-      ]
+      "synonyms": ["babi", "babski", "damski", "niewieści", "żeński"]
     }
   },
   {
@@ -5542,13 +4708,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "babi",
-        "damski",
-        "kobiecy",
-        "niewieści",
-        "żeński"
-      ]
+      "synonyms": ["babi", "damski", "kobiecy", "niewieści", "żeński"]
     }
   },
   {
@@ -5557,10 +4717,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "archaic",
-        "akademiczny"
-      ]
+      "synonyms": ["archaic", "akademiczny"]
     }
   },
   {
@@ -5569,11 +4726,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "pechowy",
-        "nieunikniony",
-        "straszny"
-      ]
+      "synonyms": ["pechowy", "nieunikniony", "straszny"]
     }
   },
   {
@@ -5588,9 +4741,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "tandetny"
-      ]
+      "antonyms": ["tandetny"]
     }
   },
   {
@@ -5599,10 +4750,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "urzędowy",
-        "obowiązujący"
-      ]
+      "synonyms": ["urzędowy", "obowiązujący"]
     }
   },
   {
@@ -5611,10 +4759,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "lokalny",
-        "tutejszy"
-      ]
+      "synonyms": ["lokalny", "tutejszy"]
     }
   },
   {
@@ -5623,13 +4768,8 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "lokalny",
-        "miejscowy"
-      ],
-      "antonyms": [
-        "nietutejszy"
-      ]
+      "synonyms": ["lokalny", "miejscowy"],
+      "antonyms": ["nietutejszy"]
     }
   },
   {
@@ -5638,10 +4778,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "zdolny",
-        "uzdolniony"
-      ]
+      "synonyms": ["zdolny", "uzdolniony"]
     }
   },
   {
@@ -5650,15 +4787,8 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "czynny"
-      ],
-      "antonyms": [
-        "bezczynny",
-        "bierny",
-        "pasywny",
-        "bierny"
-      ]
+      "synonyms": ["czynny"],
+      "antonyms": ["bezczynny", "bierny", "pasywny", "bierny"]
     }
   },
   {
@@ -5667,16 +4797,8 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "bezczynny",
-        "bierny"
-      ],
-      "antonyms": [
-        "aktywny",
-        "czynny",
-        "czynny",
-        "aktywny"
-      ]
+      "synonyms": ["bezczynny", "bierny"],
+      "antonyms": ["aktywny", "czynny", "czynny", "aktywny"]
     }
   },
   {
@@ -5685,14 +4807,8 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "bierny",
-        "pasywny"
-      ],
-      "antonyms": [
-        "aktywny",
-        "czynny"
-      ]
+      "synonyms": ["bierny", "pasywny"],
+      "antonyms": ["aktywny", "czynny"]
     }
   },
   {
@@ -5701,19 +4817,9 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "bezczynny",
-        "pasywny",
-        "obojętny",
-        "pasywny"
-      ],
-      "antonyms": [
-        "aktywny",
-        "czynny"
-      ],
-      "usage": [
-        "bierny chemicznie ― chemically inactive"
-      ]
+      "synonyms": ["bezczynny", "pasywny", "obojętny", "pasywny"],
+      "antonyms": ["aktywny", "czynny"],
+      "usage": ["bierny chemicznie ― chemically inactive"]
     }
   },
   {
@@ -5722,10 +4828,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "błyskawicowy",
-        "błyskawiczny"
-      ],
+      "synonyms": ["błyskawicowy", "błyskawiczny"],
       "usage": [
         "zupa błyskawiczna ― instant ramen/soup budyń błyskawiczny ― instant pudding płatki błyskawiczne ― instant cereal"
       ]
@@ -5737,9 +4840,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "bezimienny"
-      ]
+      "synonyms": ["bezimienny"]
     }
   },
   {
@@ -5748,12 +4849,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "czarujący",
-        "porywający",
-        "ujmujący",
-        "urzekający"
-      ]
+      "synonyms": ["czarujący", "porywający", "ujmujący", "urzekający"]
     }
   },
   {
@@ -5961,9 +5057,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "nierozpoznawalny"
-      ]
+      "antonyms": ["nierozpoznawalny"]
     }
   },
   {
@@ -5972,12 +5066,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "oddzielny",
-        "odrębny",
-        "rozdzielny",
-        "unikalny"
-      ]
+      "synonyms": ["oddzielny", "odrębny", "rozdzielny", "unikalny"]
     }
   },
   {
@@ -5986,9 +5075,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "usage": [
-        "dowód osobisty ― personal ID"
-      ]
+      "usage": ["dowód osobisty ― personal ID"]
     }
   },
   {
@@ -5997,10 +5084,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "osobny",
-        "odrębny"
-      ]
+      "synonyms": ["osobny", "odrębny"]
     }
   },
   {
@@ -6009,9 +5093,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "widoczny"
-      ],
+      "synonyms": ["widoczny"],
       "antonyms": [
         "tajny",
         "niejawny",
@@ -6037,9 +5119,7 @@
       "emoji": "👀"
     },
     "extra": {
-      "antonyms": [
-        "niewidoczny"
-      ]
+      "antonyms": ["niewidoczny"]
     }
   },
   {
@@ -6054,9 +5134,7 @@
       "emoji": "🧠"
     },
     "extra": {
-      "antonyms": [
-        "niewidoczny"
-      ]
+      "antonyms": ["niewidoczny"]
     }
   },
   {
@@ -6065,13 +5143,8 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "poufny",
-        "niejawny"
-      ],
-      "antonyms": [
-        "jawny"
-      ]
+      "synonyms": ["poufny", "niejawny"],
+      "antonyms": ["jawny"]
     }
   },
   {
@@ -6097,9 +5170,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "wieloznaczny"
-      ]
+      "antonyms": ["wieloznaczny"]
     }
   },
   {
@@ -6119,9 +5190,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "niejadalny"
-      ]
+      "antonyms": ["niejadalny"]
     }
   },
   {
@@ -6130,9 +5199,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "hinduski"
-      ]
+      "synonyms": ["hinduski"]
     }
   },
   {
@@ -6141,10 +5208,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "indyjski",
-        "hinduistyczny"
-      ]
+      "synonyms": ["indyjski", "hinduistyczny"]
     }
   },
   {
@@ -6153,10 +5217,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "podstawowy",
-        "główny"
-      ]
+      "synonyms": ["podstawowy", "główny"]
     }
   },
   {
@@ -6165,10 +5226,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "akatolicki",
-        "niekatolicki"
-      ]
+      "antonyms": ["akatolicki", "niekatolicki"]
     }
   },
   {
@@ -6177,9 +5235,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "niderlandzki"
-      ]
+      "synonyms": ["niderlandzki"]
     }
   },
   {
@@ -6188,9 +5244,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "ahistoryczny"
-      ]
+      "antonyms": ["ahistoryczny"]
     }
   },
   {
@@ -6256,9 +5310,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "usage": [
-        "istny raj ― true paradise"
-      ]
+      "usage": ["istny raj ― true paradise"]
     }
   },
   {
@@ -6267,9 +5319,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "dwuroczny"
-      ]
+      "synonyms": ["dwuroczny"]
     }
   },
   {
@@ -6284,9 +5334,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "dobry"
-      ]
+      "synonyms": ["dobry"]
     }
   },
   {
@@ -6439,9 +5487,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "nielogiczny"
-      ]
+      "antonyms": ["nielogiczny"]
     }
   },
   {
@@ -6450,9 +5496,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "heavymetalowy"
-      ]
+      "synonyms": ["heavymetalowy"]
     }
   },
   {
@@ -6461,9 +5505,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "przestępczy"
-      ]
+      "synonyms": ["przestępczy"]
     }
   },
   {
@@ -6472,9 +5514,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "kryminalny"
-      ]
+      "synonyms": ["kryminalny"]
     }
   },
   {
@@ -6483,9 +5523,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "księżycowy"
-      ]
+      "synonyms": ["księżycowy"]
     }
   },
   {
@@ -6505,11 +5543,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "wierny",
-        "prawomyślny",
-        "praworządny"
-      ]
+      "synonyms": ["wierny", "prawomyślny", "praworządny"]
     }
   },
   {
@@ -6524,12 +5558,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "człowieczy"
-      ],
-      "antonyms": [
-        "nieludzki"
-      ]
+      "synonyms": ["człowieczy"],
+      "antonyms": ["nieludzki"]
     }
   },
   {
@@ -6538,9 +5568,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "usage": [
-        "Coordinate term: wiejski"
-      ]
+      "usage": ["Coordinate term: wiejski"]
     }
   },
   {
@@ -6549,11 +5577,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "zamknięty",
-        "czynny",
-        "niesprawny"
-      ]
+      "synonyms": ["zamknięty", "czynny", "niesprawny"]
     }
   },
   {
@@ -6562,10 +5586,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "zwalisty",
-        "wypełniony"
-      ]
+      "synonyms": ["zwalisty", "wypełniony"]
     }
   },
   {
@@ -6574,11 +5595,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "atoniczny",
-        "bezdźwięczny",
-        "bezgłośny"
-      ]
+      "synonyms": ["atoniczny", "bezdźwięczny", "bezgłośny"]
     }
   },
   {
@@ -6587,10 +5604,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "niespodziany",
-        "niespodziewany"
-      ]
+      "synonyms": ["niespodziany", "niespodziewany"]
     }
   },
   {
@@ -6599,10 +5613,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "niespodziany",
-        "nieoczekiwany"
-      ]
+      "synonyms": ["niespodziany", "nieoczekiwany"]
     }
   },
   {
@@ -6611,9 +5622,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "pozytywny"
-      ]
+      "antonyms": ["pozytywny"]
     }
   },
   {
@@ -6622,9 +5631,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "negatywny"
-      ]
+      "antonyms": ["negatywny"]
     }
   },
   {
@@ -6633,11 +5640,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "taki",
-        "niżej",
-        "wymieniony"
-      ]
+      "synonyms": ["taki", "niżej", "wymieniony"]
     }
   },
   {
@@ -6646,9 +5649,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "nieregularny"
-      ]
+      "synonyms": ["nieregularny"]
     }
   },
   {
@@ -6657,11 +5658,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "niekompletny",
-        "niepełny",
-        "niezupełny"
-      ]
+      "synonyms": ["niekompletny", "niepełny", "niezupełny"]
     }
   },
   {
@@ -6670,9 +5667,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "obecny"
-      ]
+      "antonyms": ["obecny"]
     }
   },
   {
@@ -6686,11 +5681,7 @@
       "emoji": "🕒"
     },
     "extra": {
-      "synonyms": [
-        "letny",
-        "ciepławy",
-        "obojętny"
-      ]
+      "synonyms": ["letny", "ciepławy", "obojętny"]
     }
   },
   {
@@ -6705,11 +5696,7 @@
       "emoji": "🌡️"
     },
     "extra": {
-      "synonyms": [
-        "letny",
-        "ciepławy",
-        "obojętny"
-      ]
+      "synonyms": ["letny", "ciepławy", "obojętny"]
     }
   },
   {
@@ -6727,9 +5714,7 @@
         "nieważny",
         "bierny"
       ],
-      "antonyms": [
-        "namiętny"
-      ]
+      "antonyms": ["namiętny"]
     }
   },
   {
@@ -6793,10 +5778,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "amagnetyczny",
-        "niemagnetyczny"
-      ]
+      "antonyms": ["amagnetyczny", "niemagnetyczny"]
     }
   },
   {
@@ -6805,9 +5787,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "matrymonialny"
-      ]
+      "synonyms": ["matrymonialny"]
     }
   },
   {
@@ -6832,10 +5812,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "kolokwialny",
-        "obiegowy"
-      ]
+      "synonyms": ["kolokwialny", "obiegowy"]
     }
   },
   {
@@ -6850,10 +5827,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "bliski",
-        "świeży"
-      ]
+      "synonyms": ["bliski", "świeży"]
     }
   },
   {
@@ -6875,9 +5849,7 @@
         "soczysty",
         "intensywny"
       ],
-      "antonyms": [
-        "nieświeży"
-      ]
+      "antonyms": ["nieświeży"]
     }
   },
   {
@@ -6892,9 +5864,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "nieoficjalny"
-      ]
+      "antonyms": ["nieoficjalny"]
     }
   },
   {
@@ -7087,9 +6057,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "usage": [
-        "ówczesny szef ― the boss of that time"
-      ]
+      "usage": ["ówczesny szef ― the boss of that time"]
     }
   },
   {
@@ -7098,12 +6066,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "obligatoryjny",
-        "przymusowy",
-        "sumienny",
-        "rzetelny"
-      ]
+      "synonyms": ["obligatoryjny", "przymusowy", "sumienny", "rzetelny"]
     }
   },
   {
@@ -7155,9 +6118,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "znany"
-      ]
+      "antonyms": ["znany"]
     }
   },
   {
@@ -7166,13 +6127,8 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "niewidzialny"
-      ],
-      "antonyms": [
-        "widoczny",
-        "widzialny"
-      ]
+      "synonyms": ["niewidzialny"],
+      "antonyms": ["widoczny", "widzialny"]
     }
   },
   {
@@ -7181,13 +6137,8 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "niewidoczny"
-      ],
-      "antonyms": [
-        "widoczny",
-        "widzialny"
-      ]
+      "synonyms": ["niewidoczny"],
+      "antonyms": ["widoczny", "widzialny"]
     }
   },
   {
@@ -7196,9 +6147,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "zły"
-      ]
+      "synonyms": ["zły"]
     }
   },
   {
@@ -7215,11 +6164,7 @@
         "ramowy",
         "powszechny"
       ],
-      "antonyms": [
-        "szczególny",
-        "szczegółowy",
-        "sporadyczny"
-      ]
+      "antonyms": ["szczególny", "szczegółowy", "sporadyczny"]
     }
   },
   {
@@ -7228,9 +6173,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "typowy"
-      ]
+      "antonyms": ["typowy"]
     }
   },
   {
@@ -7239,9 +6182,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "nietypowy"
-      ]
+      "antonyms": ["nietypowy"]
     }
   },
   {
@@ -7271,11 +6212,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "anty",
-        "odwrotny",
-        "przeciwstawny"
-      ],
+      "synonyms": ["anty", "odwrotny", "przeciwstawny"],
       "usage": [
         "Cokolwiek ci powie, zrób coś przeciwnego . ― Whatever he tells you, do the opposite.",
         "Dlaczego Kościół jest przeciwny antykoncepcji? ― Why is the Church against contraception?"
@@ -7348,9 +6285,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "swarliwy"
-      ]
+      "synonyms": ["swarliwy"]
     }
   },
   {
@@ -7364,13 +6299,8 @@
       "emoji": "🪨"
     },
     "extra": {
-      "synonyms": [
-        "mały",
-        "nieistotny"
-      ],
-      "antonyms": [
-        "wielki"
-      ]
+      "synonyms": ["mały", "nieistotny"],
+      "antonyms": ["wielki"]
     }
   },
   {
@@ -7385,13 +6315,8 @@
       "emoji": "💭"
     },
     "extra": {
-      "synonyms": [
-        "mały",
-        "nieistotny"
-      ],
-      "antonyms": [
-        "wielki"
-      ]
+      "synonyms": ["mały", "nieistotny"],
+      "antonyms": ["wielki"]
     }
   },
   {
@@ -7400,9 +6325,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "nieodmienny"
-      ]
+      "antonyms": ["nieodmienny"]
     }
   },
   {
@@ -7411,9 +6334,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "jądrowy"
-      ]
+      "synonyms": ["jądrowy"]
     }
   },
   {
@@ -7422,12 +6343,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "pewny"
-      ],
-      "usage": [
-        "Nie jestem pewien . ― I am not sure ."
-      ]
+      "synonyms": ["pewny"],
+      "usage": ["Nie jestem pewien . ― I am not sure ."]
     }
   },
   {
@@ -7436,9 +6353,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "pijany"
-      ]
+      "synonyms": ["pijany"]
     }
   },
   {
@@ -7447,9 +6362,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "poziomy"
-      ]
+      "antonyms": ["poziomy"]
     }
   },
   {
@@ -7458,10 +6371,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "podniosły",
-        "wzniosły"
-      ],
+      "antonyms": ["podniosły", "wzniosły"],
       "usage": [
         "Linia B także zmienia przebieg na bardziej poziomy wskutek niewielkiego wzrostu stężenia Cho. Line B also changes its course to a more horizontal one as a consequence of a small increase in Cho strengthening."
       ]
@@ -7473,12 +6383,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "pergaminowy",
-        "nienaturalny",
-        "nieprawdziwy",
-        "nijaki"
-      ]
+      "synonyms": ["pergaminowy", "nienaturalny", "nieprawdziwy", "nijaki"]
     }
   },
   {
@@ -7487,11 +6392,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "archaic",
-        "bestialny",
-        "bestialski"
-      ]
+      "synonyms": ["archaic", "bestialny", "bestialski"]
     }
   },
   {
@@ -7500,9 +6401,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "zrozumiały"
-      ]
+      "antonyms": ["zrozumiały"]
     }
   },
   {
@@ -7511,9 +6410,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "niezrozumiały"
-      ]
+      "antonyms": ["niezrozumiały"]
     }
   },
   {
@@ -7636,10 +6533,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "industrialny",
-        "uprzemysłowiony"
-      ]
+      "synonyms": ["industrialny", "uprzemysłowiony"]
     }
   },
   {
@@ -7648,11 +6542,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "pieski",
-        "archaic",
-        "sobaczy"
-      ]
+      "synonyms": ["pieski", "archaic", "sobaczy"]
     }
   },
   {
@@ -7661,10 +6551,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "agrary",
-        "rolny"
-      ]
+      "synonyms": ["agrary", "rolny"]
     }
   },
   {
@@ -7673,9 +6560,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "usage": [
-        "stan wojenny ― martial law film wojenny ― war film"
-      ]
+      "usage": ["stan wojenny ― martial law film wojenny ― war film"]
     }
   },
   {
@@ -7684,14 +6569,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "legalny"
-      ],
-      "antonyms": [
-        "bezprawny",
-        "nielegalny",
-        "nieprawny"
-      ]
+      "synonyms": ["legalny"],
+      "antonyms": ["bezprawny", "nielegalny", "nieprawny"]
     }
   },
   {
@@ -7700,13 +6579,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "chytry",
-        "cwany",
-        "podstępny",
-        "sprytny",
-        "przemyślny"
-      ]
+      "synonyms": ["chytry", "cwany", "podstępny", "sprytny", "przemyślny"]
     }
   },
   {
@@ -7721,11 +6594,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "chytry",
-        "sprytny",
-        "przebiegły"
-      ]
+      "synonyms": ["chytry", "sprytny", "przebiegły"]
     }
   },
   {
@@ -7739,10 +6608,7 @@
       "emoji": "👻"
     },
     "extra": {
-      "synonyms": [
-        "straszny",
-        "zatrważający"
-      ]
+      "synonyms": ["straszny", "zatrważający"]
     }
   },
   {
@@ -7757,10 +6623,7 @@
       "emoji": "😠"
     },
     "extra": {
-      "synonyms": [
-        "straszny",
-        "zatrważający"
-      ]
+      "synonyms": ["straszny", "zatrważający"]
     }
   },
   {
@@ -7769,10 +6632,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "przydatny",
-        "użyteczny"
-      ]
+      "synonyms": ["przydatny", "użyteczny"]
     }
   },
   {
@@ -7781,9 +6641,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "użyteczny"
-      ]
+      "synonyms": ["użyteczny"]
     }
   },
   {
@@ -7792,13 +6650,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "przydatny",
-        "pożyteczny"
-      ],
-      "antonyms": [
-        "bezużyteczny"
-      ]
+      "synonyms": ["przydatny", "pożyteczny"],
+      "antonyms": ["bezużyteczny"]
     }
   },
   {
@@ -7807,12 +6660,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "przejściowy"
-      ],
-      "antonyms": [
-        "bezpośredni"
-      ]
+      "synonyms": ["przejściowy"],
+      "antonyms": ["bezpośredni"]
     }
   },
   {
@@ -7827,10 +6676,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "areligijny",
-        "niereligijny"
-      ]
+      "antonyms": ["areligijny", "niereligijny"]
     }
   },
   {
@@ -7839,9 +6685,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "usage": [
-        "Hypernym: słowiański"
-      ]
+      "usage": ["Hypernym: słowiański"]
     }
   },
   {
@@ -7855,9 +6699,7 @@
       "emoji": "📍"
     },
     "extra": {
-      "usage": [
-        "Coordinate term: południowy"
-      ]
+      "usage": ["Coordinate term: południowy"]
     }
   },
   {
@@ -7871,9 +6713,7 @@
       "emoji": "🕒"
     },
     "extra": {
-      "usage": [
-        "Coordinate term: południowy"
-      ]
+      "usage": ["Coordinate term: południowy"]
     }
   },
   {
@@ -7882,9 +6722,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "nieprzygotowany"
-      ]
+      "antonyms": ["nieprzygotowany"]
     }
   },
   {
@@ -7893,9 +6731,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "niedaleki"
-      ]
+      "synonyms": ["niedaleki"]
     }
   },
   {
@@ -7904,11 +6740,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "wyjściowy",
-        "podstawowy",
-        "elementarny"
-      ]
+      "synonyms": ["wyjściowy", "podstawowy", "elementarny"]
     }
   },
   {
@@ -7917,10 +6749,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "agrarny",
-        "rolniczy"
-      ]
+      "synonyms": ["agrarny", "rolniczy"]
     }
   },
   {
@@ -7929,9 +6758,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "usage": [
-        "poduszka powietrzna ― air bag"
-      ]
+      "usage": ["poduszka powietrzna ― air bag"]
     }
   },
   {
@@ -7940,9 +6767,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "nieregularny"
-      ]
+      "antonyms": ["nieregularny"]
     }
   },
   {
@@ -7951,9 +6776,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "sowiecki"
-      ]
+      "synonyms": ["sowiecki"]
     }
   },
   {
@@ -7962,13 +6785,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "zawodowy"
-      ],
-      "antonyms": [
-        "amatorski",
-        "nieprofesjonalny"
-      ]
+      "synonyms": ["zawodowy"],
+      "antonyms": ["amatorski", "nieprofesjonalny"]
     }
   },
   {
@@ -7983,15 +6801,8 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "dyletancki",
-        "niefachowy",
-        "nieudolny"
-      ],
-      "antonyms": [
-        "zawodowy",
-        "profesjonalny"
-      ]
+      "synonyms": ["dyletancki", "niefachowy", "nieudolny"],
+      "antonyms": ["zawodowy", "profesjonalny"]
     }
   },
   {
@@ -8000,9 +6811,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "ażurowy"
-      ]
+      "synonyms": ["ażurowy"]
     }
   },
   {
@@ -8011,9 +6820,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "przyzwoity"
-      ]
+      "synonyms": ["przyzwoity"]
     }
   },
   {
@@ -8022,9 +6829,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "nieprzyzwoity"
-      ]
+      "antonyms": ["nieprzyzwoity"]
     }
   },
   {
@@ -8033,11 +6838,7 @@
     "frequency": 4,
     "register": 8,
     "extra": {
-      "synonyms": [
-        "cholerny",
-        "okropny",
-        "straszny"
-      ]
+      "synonyms": ["cholerny", "okropny", "straszny"]
     }
   },
   {
@@ -8046,10 +6847,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "powszechny",
-        "zwykły"
-      ]
+      "synonyms": ["powszechny", "zwykły"]
     }
   },
   {
@@ -8058,13 +6856,8 @@
     "frequency": 1,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "legalny"
-      ],
-      "antonyms": [
-        "lewy",
-        "niegodziwy"
-      ]
+      "synonyms": ["legalny"],
+      "antonyms": ["lewy", "niegodziwy"]
     }
   },
   {
@@ -8092,10 +6885,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "poraniony",
-        "zraniony"
-      ]
+      "synonyms": ["poraniony", "zraniony"]
     }
   },
   {
@@ -8104,10 +6894,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "tylny",
-        "zadni"
-      ]
+      "antonyms": ["tylny", "zadni"]
     }
   },
   {
@@ -8116,12 +6903,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "zadni"
-      ],
-      "antonyms": [
-        "przedni"
-      ]
+      "synonyms": ["zadni"],
+      "antonyms": ["przedni"]
     }
   },
   {
@@ -8135,9 +6918,7 @@
       "emoji": "📍"
     },
     "extra": {
-      "usage": [
-        "Coordinate term: północny"
-      ]
+      "usage": ["Coordinate term: północny"]
     }
   },
   {
@@ -8151,9 +6932,7 @@
       "emoji": "🕒"
     },
     "extra": {
-      "usage": [
-        "Coordinate term: północny"
-      ]
+      "usage": ["Coordinate term: północny"]
     }
   },
   {
@@ -8168,9 +6947,7 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "biegły"
-      ]
+      "synonyms": ["biegły"]
     }
   },
   {
@@ -8304,14 +7081,8 @@
     "frequency": 2,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "różny"
-      ],
-      "antonyms": [
-        "ten sam",
-        "taki sam",
-        "identyczny"
-      ]
+      "synonyms": ["różny"],
+      "antonyms": ["ten sam", "taki sam", "identyczny"]
     }
   },
   {
@@ -8320,9 +7091,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "zdecydowany"
-      ]
+      "synonyms": ["zdecydowany"]
     }
   },
   {
@@ -8331,9 +7100,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "duży"
-      ]
+      "synonyms": ["duży"]
     }
   },
   {
@@ -8354,9 +7121,7 @@
     "frequency": 3,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "zepsuty"
-      ]
+      "synonyms": ["zepsuty"]
     }
   },
   {
@@ -8365,9 +7130,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "antonyms": [
-        "rzadki"
-      ]
+      "antonyms": ["rzadki"]
     }
   },
   {
@@ -8486,12 +7249,8 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "permanentny"
-      ],
-      "antonyms": [
-        "nietrwały"
-      ]
+      "synonyms": ["permanentny"],
+      "antonyms": ["nietrwały"]
     }
   },
   {
@@ -8500,9 +7259,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "srebrzysty"
-      ]
+      "synonyms": ["srebrzysty"]
     }
   },
   {
@@ -8511,12 +7268,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "popielaty",
-        "szary",
-        "szpakowaty",
-        "sędziwy"
-      ]
+      "synonyms": ["popielaty", "szary", "szpakowaty", "sędziwy"]
     }
   },
   {
@@ -8525,9 +7277,7 @@
     "frequency": 5,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "bordo"
-      ]
+      "synonyms": ["bordo"]
     }
   },
   {
@@ -8554,11 +7304,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "jasnofioletowy",
-        "lila",
-        "liliowy:"
-      ]
+      "synonyms": ["jasnofioletowy", "lila", "liliowy:"]
     }
   },
   {
@@ -8567,9 +7313,7 @@
     "frequency": 4,
     "register": 0,
     "extra": {
-      "synonyms": [
-        "beż"
-      ]
+      "synonyms": ["beż"]
     }
   },
   {

@@ -25,13 +25,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "abbreviation": [
-          "o."
-        ]
+        "abbreviation": ["o."]
       },
-      "synonyms": [
-        "ksiądz"
-      ],
+      "synonyms": ["ksiądz"],
       "derivedTerms": [
         "ojcobójczy",
         "ojcowski",
@@ -58,9 +54,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "braciszek"
-        ]
+        "diminutive": ["braciszek"]
       },
       "derivedTerms": [
         "bracki",
@@ -105,16 +99,9 @@
     "gender": "f",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "siostrzyczka"
-        ]
+        "diminutive": ["siostrzyczka"]
       },
-      "derivedTerms": [
-        "siostrzany",
-        "siostrunia",
-        "siostrzyca",
-        "siostrzyczka"
-      ]
+      "derivedTerms": ["siostrzany", "siostrunia", "siostrzyca", "siostrzyczka"]
     }
   },
   {
@@ -125,17 +112,10 @@
     "gender": "f",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "kobietka"
-        ]
+        "diminutive": ["kobietka"]
       },
-      "antonyms": [
-        "mężczyzna"
-      ],
-      "derivedTerms": [
-        "kobiecy",
-        "(adjective)"
-      ]
+      "antonyms": ["mężczyzna"],
+      "derivedTerms": ["kobiecy", "(adjective)"]
     }
   },
   {
@@ -145,9 +125,7 @@
     "register": 0,
     "gender": "m1",
     "extra": {
-      "antonyms": [
-        "kobieta"
-      ]
+      "antonyms": ["kobieta"]
     }
   },
   {
@@ -158,12 +136,8 @@
     "gender": "f",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "córeczka"
-        ],
-        "augmentative": [
-          "córa"
-        ]
+        "diminutive": ["córeczka"],
+        "augmentative": ["córa"]
       }
     }
   },
@@ -175,9 +149,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "synek"
-        ]
+        "diminutive": ["synek"]
       },
       "derivedTerms": [
         "syneczek",
@@ -198,12 +170,8 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "dziadziuś"
-        ],
-        "augmentative": [
-          "dziad"
-        ]
+        "diminutive": ["dziadziuś"],
+        "augmentative": ["dziad"]
       },
       "derivedTerms": [
         "gdyby babcia miała wąsy, toby była dziadkiem",
@@ -219,10 +187,7 @@
     "gender": "f",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "babunia",
-          "babusia"
-        ]
+        "diminutive": ["babunia", "babusia"]
       },
       "synonyms": [
         "baba",
@@ -293,9 +258,7 @@
     "register": 0,
     "gender": "m1",
     "extra": {
-      "synonyms": [
-        "wujek"
-      ],
+      "synonyms": ["wujek"],
       "derivedTerms": [
         "wujaszkowy",
         "wujeczny",
@@ -308,9 +271,7 @@
         "wujostwo",
         "wujaszkować"
       ],
-      "usage": [
-        "Coordinate term: stryj"
-      ]
+      "usage": ["Coordinate term: stryj"]
     }
   },
   {
@@ -321,14 +282,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "wujcio",
-          "wujaszek"
-        ]
+        "diminutive": ["wujcio", "wujaszek"]
       },
-      "synonyms": [
-        "wuj"
-      ]
+      "synonyms": ["wuj"]
     }
   },
   {
@@ -338,9 +294,7 @@
     "register": 0,
     "gender": "f",
     "extra": {
-      "synonyms": [
-        "ciotka"
-      ]
+      "synonyms": ["ciotka"]
     }
   },
   {
@@ -351,9 +305,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "kuzynka"
-        ]
+        "feminine": ["kuzynka"]
       }
     }
   },
@@ -385,10 +337,7 @@
     "register": 0,
     "gender": "m1",
     "extra": {
-      "synonyms": [
-        "brataniec",
-        "synowiec"
-      ]
+      "synonyms": ["brataniec", "synowiec"]
     }
   },
   {
@@ -399,15 +348,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "partnerka"
-        ]
+        "feminine": ["partnerka"]
       },
-      "derivedTerms": [
-        "partnerski",
-        "partnerstwo",
-        "partnerować"
-      ]
+      "derivedTerms": ["partnerski", "partnerstwo", "partnerować"]
     }
   },
   {
@@ -418,9 +361,7 @@
     "gender": "f",
     "extra": {
       "otherShapes": {
-        "masculine": [
-          "partner"
-        ]
+        "masculine": ["partner"]
       }
     }
   },
@@ -437,9 +378,7 @@
     },
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "chłopiec"
-        ]
+        "diminutive": ["chłopiec"]
       }
     }
   },
@@ -457,9 +396,7 @@
     },
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "chłopiec"
-        ]
+        "diminutive": ["chłopiec"]
       }
     }
   },
@@ -471,9 +408,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "chłopczyk"
-        ]
+        "diminutive": ["chłopczyk"]
       },
       "synonyms": [
         "chłopak",
@@ -516,17 +451,10 @@
     },
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "dziewczynka"
-        ]
+        "diminutive": ["dziewczynka"]
       },
-      "synonyms": [
-        "dziewczę",
-        "dziewka"
-      ],
-      "antonyms": [
-        "chłopak"
-      ]
+      "synonyms": ["dziewczę", "dziewka"],
+      "antonyms": ["chłopak"]
     }
   },
   {
@@ -543,17 +471,10 @@
     },
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "dziewczynka"
-        ]
+        "diminutive": ["dziewczynka"]
       },
-      "synonyms": [
-        "dziewczę",
-        "dziewka"
-      ],
-      "antonyms": [
-        "chłopak"
-      ]
+      "synonyms": ["dziewczę", "dziewka"],
+      "antonyms": ["chłopak"]
     }
   },
   {
@@ -564,9 +485,7 @@
     "gender": "f",
     "extra": {
       "otherShapes": {
-        "masculine": [
-          "nauczyciel"
-        ]
+        "masculine": ["nauczyciel"]
       }
     }
   },
@@ -578,14 +497,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "nauczycielka"
-        ]
+        "feminine": ["nauczycielka"]
       },
-      "derivedTerms": [
-        "nauczycielski",
-        "nauczycielstwo"
-      ]
+      "derivedTerms": ["nauczycielski", "nauczycielstwo"]
     }
   },
   {
@@ -608,12 +522,8 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "facecik"
-        ],
-        "feminine": [
-          "facetka"
-        ]
+        "diminutive": ["facecik"],
+        "feminine": ["facetka"]
       }
     }
   },
@@ -624,12 +534,7 @@
     "register": 6,
     "gender": "m1",
     "extra": {
-      "synonyms": [
-        "facet",
-        "kolo",
-        "typ",
-        "hiter"
-      ]
+      "synonyms": ["facet", "kolo", "typ", "hiter"]
     }
   },
   {
@@ -640,15 +545,9 @@
     "gender": "f",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "aktoreczka"
-        ],
-        "augmentative": [
-          "aktorzyca"
-        ],
-        "masculine": [
-          "aktor"
-        ]
+        "diminutive": ["aktoreczka"],
+        "augmentative": ["aktorzyca"],
+        "masculine": ["aktor"]
       }
     }
   },
@@ -660,16 +559,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "aktorzyk"
-        ],
-        "augmentative": [
-          "aktorzyna",
-          "aktorzysko"
-        ],
-        "feminine": [
-          "aktorka"
-        ]
+        "diminutive": ["aktorzyk"],
+        "augmentative": ["aktorzyna", "aktorzysko"],
+        "feminine": ["aktorka"]
       },
       "derivedTerms": [
         "aktor charakterystyczny",
@@ -692,9 +584,7 @@
     "gender": "f",
     "extra": {
       "otherShapes": {
-        "masculine": [
-          "przyjaciel"
-        ]
+        "masculine": ["przyjaciel"]
       }
     }
   },
@@ -706,13 +596,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "przyjaciółka"
-        ]
+        "feminine": ["przyjaciółka"]
       },
-      "derivedTerms": [
-        "prawdziwych przyjaciół poznaje się w biedzie"
-      ],
+      "derivedTerms": ["prawdziwych przyjaciół poznaje się w biedzie"],
       "usage": [
         "Usage notes [ edit ] Not used for casual relationships; znajomy or kolega is preferable for that."
       ]
@@ -731,12 +617,8 @@
     },
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "koleżka"
-        ],
-        "feminine": [
-          "koleżanka"
-        ]
+        "diminutive": ["koleżka"],
+        "feminine": ["koleżanka"]
       }
     }
   },
@@ -754,12 +636,8 @@
     },
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "koleżka"
-        ],
-        "feminine": [
-          "koleżanka"
-        ]
+        "diminutive": ["koleżka"],
+        "feminine": ["koleżanka"]
       }
     }
   },
@@ -776,12 +654,8 @@
     },
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "koleżaneczka"
-        ],
-        "masculine": [
-          "kolega"
-        ]
+        "diminutive": ["koleżaneczka"],
+        "masculine": ["kolega"]
       }
     }
   },
@@ -799,12 +673,8 @@
     },
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "koleżaneczka"
-        ],
-        "masculine": [
-          "kolega"
-        ]
+        "diminutive": ["koleżaneczka"],
+        "masculine": ["kolega"]
       }
     }
   },
@@ -815,9 +685,7 @@
     "register": 6,
     "gender": "m1",
     "extra": {
-      "synonyms": [
-        "znajomy"
-      ]
+      "synonyms": ["znajomy"]
     }
   },
   {
@@ -827,9 +695,7 @@
     "register": 6,
     "gender": "f",
     "extra": {
-      "synonyms": [
-        "znajoma"
-      ]
+      "synonyms": ["znajoma"]
     }
   },
   {
@@ -840,12 +706,8 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "człowieczek"
-        ],
-        "augmentative": [
-          "człowieczysko"
-        ]
+        "diminutive": ["człowieczek"],
+        "augmentative": ["człowieczysko"]
       },
       "derivedTerms": [
         "człowieczy",
@@ -883,14 +745,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "turystka"
-        ]
+        "feminine": ["turystka"]
       },
-      "derivedTerms": [
-        "agroturysta",
-        "agroturystka"
-      ]
+      "derivedTerms": ["agroturysta", "agroturystka"]
     }
   },
   {
@@ -906,9 +763,7 @@
     },
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "bohaterka"
-        ]
+        "feminine": ["bohaterka"]
       },
       "derivedTerms": [
         "antybohaterski",
@@ -936,13 +791,9 @@
     },
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "bohaterka"
-        ]
+        "feminine": ["bohaterka"]
       },
-      "synonyms": [
-        "heros"
-      ],
+      "synonyms": ["heros"],
       "derivedTerms": [
         "antybohaterski",
         "bohaterski",
@@ -997,10 +848,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "polityk",
-          "polityczka"
-        ]
+        "feminine": ["polityk", "polityczka"]
       }
     }
   },
@@ -1011,9 +859,7 @@
     "register": 0,
     "gender": "m1",
     "extra": {
-      "synonyms": [
-        "operator"
-      ]
+      "synonyms": ["operator"]
     }
   },
   {
@@ -1023,11 +869,7 @@
     "register": 0,
     "gender": "m1",
     "extra": {
-      "derivedTerms": [
-        "sąsiadka",
-        "sąsiedni",
-        "sąsiedztwo"
-      ]
+      "derivedTerms": ["sąsiadka", "sąsiedni", "sąsiedztwo"]
     }
   },
   {
@@ -1045,16 +887,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "tłumaczka"
-        ]
+        "feminine": ["tłumaczka"]
       },
-      "derivedTerms": [
-        "tłumaczenie",
-        "tłumaczka",
-        "tłumaczyć",
-        "тлума́ч"
-      ]
+      "derivedTerms": ["tłumaczenie", "tłumaczka", "tłumaczyć", "тлума́ч"]
     }
   },
   {
@@ -1065,14 +900,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "kierowniczka"
-        ]
+        "feminine": ["kierowniczka"]
       },
-      "synonyms": [
-        "zarządca",
-        "dyrektor"
-      ]
+      "synonyms": ["zarządca", "dyrektor"]
     }
   },
   {
@@ -1083,9 +913,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "rycerzyk"
-        ]
+        "diminutive": ["rycerzyk"]
       },
       "derivedTerms": [
         "rycerski",
@@ -1111,20 +939,11 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "złodziejaszek"
-        ],
-        "feminine": [
-          "złodziejka"
-        ]
+        "diminutive": ["złodziejaszek"],
+        "feminine": ["złodziejka"]
       },
-      "synonyms": [
-        "złodziej"
-      ],
-      "derivedTerms": [
-        "złodziejski",
-        "złodziejstwo"
-      ]
+      "synonyms": ["złodziej"],
+      "derivedTerms": ["złodziejski", "złodziejstwo"]
     }
   },
   {
@@ -1135,9 +954,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "kelnerka"
-        ]
+        "feminine": ["kelnerka"]
       }
     }
   },
@@ -1156,14 +973,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "abbreviation": [
-          "inż."
-        ]
+        "abbreviation": ["inż."]
       },
-      "derivedTerms": [
-        "inżynierski",
-        "inżynierstwo"
-      ]
+      "derivedTerms": ["inżynierski", "inżynierstwo"]
     }
   },
   {
@@ -1174,9 +986,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "papieżyca"
-        ]
+        "feminine": ["papieżyca"]
       },
       "derivedTerms": [
         "papieski",
@@ -1218,14 +1028,8 @@
       "emoji": "🐕"
     },
     "extra": {
-      "synonyms": [
-        "kosmita",
-        "ufoludek",
-        "zielony"
-      ],
-      "derivedTerms": [
-        "obczyzna"
-      ]
+      "synonyms": ["kosmita", "ufoludek", "zielony"],
+      "derivedTerms": ["obczyzna"]
     }
   },
   {
@@ -1241,12 +1045,8 @@
       "emoji": "🏃"
     },
     "extra": {
-      "synonyms": [
-        "nieznajomy"
-      ],
-      "derivedTerms": [
-        "obczyzna"
-      ]
+      "synonyms": ["nieznajomy"],
+      "derivedTerms": ["obczyzna"]
     }
   },
   {
@@ -1256,12 +1056,7 @@
     "register": 0,
     "gender": "m1",
     "extra": {
-      "synonyms": [
-        "(",
-        "archaic",
-        ")",
-        "automobilista"
-      ]
+      "synonyms": ["(", "archaic", ")", "automobilista"]
     }
   },
   {
@@ -1279,9 +1074,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "przestępczyni"
-        ]
+        "feminine": ["przestępczyni"]
       }
     }
   },
@@ -1293,14 +1086,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "teściowa"
-        ]
+        "feminine": ["teściowa"]
       },
-      "derivedTerms": [
-        "teściowy",
-        "teściostwo"
-      ]
+      "derivedTerms": ["teściowy", "teściostwo"]
     }
   },
   {
@@ -1311,16 +1099,10 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "bożek"
-        ],
-        "feminine": [
-          "bogini"
-        ]
+        "diminutive": ["bożek"],
+        "feminine": ["bogini"]
       },
-      "synonyms": [
-        "bóstwo"
-      ],
+      "synonyms": ["bóstwo"],
       "derivedTerms": [
         "bezbożniczy",
         "bezbożny",
@@ -1437,9 +1219,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "strażaczek"
-        ]
+        "diminutive": ["strażaczek"]
       }
     }
   },
@@ -1451,17 +1231,10 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "adwokacik"
-        ],
-        "feminine": [
-          "adwokatka"
-        ]
+        "diminutive": ["adwokacik"],
+        "feminine": ["adwokatka"]
       },
-      "synonyms": [
-        "prawnik",
-        "rzecznik"
-      ],
+      "synonyms": ["prawnik", "rzecznik"],
       "derivedTerms": [
         "adwokacki",
         "adwokacina",
@@ -1481,10 +1254,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "pracownica",
-          "pracowniczka"
-        ]
+        "feminine": ["pracownica", "pracowniczka"]
       }
     }
   },
@@ -1496,9 +1266,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "narzeczona"
-        ]
+        "feminine": ["narzeczona"]
       },
       "usage": [
         "Usage notes [ edit ] The plural of this masculine form is also used to refer to couples."
@@ -1513,9 +1281,7 @@
     "gender": "f",
     "extra": {
       "otherShapes": {
-        "masculine": [
-          "narzeczony"
-        ]
+        "masculine": ["narzeczony"]
       },
       "usage": [
         "Usage notes [ edit ] The plural of this word refers to multiple female fiancées. The plural of the masculine form is used to refer to couples."
@@ -1530,15 +1296,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "ogrodniczka"
-        ]
+        "feminine": ["ogrodniczka"]
       },
-      "derivedTerms": [
-        "ogrodnictwo",
-        "ogrodniczki",
-        "ogrodniczy"
-      ]
+      "derivedTerms": ["ogrodnictwo", "ogrodniczki", "ogrodniczy"]
     }
   },
   {
@@ -1549,15 +1309,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "nastolatka"
-        ]
+        "feminine": ["nastolatka"]
       },
-      "derivedTerms": [
-        "nastolatkowy",
-        "nastoletni",
-        "nastoletniość"
-      ]
+      "derivedTerms": ["nastolatkowy", "nastoletni", "nastoletniość"]
     }
   },
   {
@@ -1568,9 +1322,7 @@
     "gender": "f",
     "extra": {
       "otherShapes": {
-        "masculine": [
-          "nastolatek"
-        ]
+        "masculine": ["nastolatek"]
       }
     }
   },
@@ -1582,16 +1334,10 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "studentka"
-        ]
+        "feminine": ["studentka"]
       },
-      "derivedTerms": [
-        "studencki"
-      ],
-      "usage": [
-        "Hypernyms: uczeń uczennica"
-      ]
+      "derivedTerms": ["studencki"],
+      "usage": ["Hypernyms: uczeń uczennica"]
     }
   },
   {
@@ -1602,13 +1348,9 @@
     "gender": "f",
     "extra": {
       "otherShapes": {
-        "masculine": [
-          "student"
-        ]
+        "masculine": ["student"]
       },
-      "usage": [
-        "Hypernym: uczennica"
-      ]
+      "usage": ["Hypernym: uczennica"]
     }
   },
   {
@@ -1618,9 +1360,7 @@
     "register": 0,
     "gender": "m1",
     "extra": {
-      "derivedTerms": [
-        "optyka"
-      ]
+      "derivedTerms": ["optyka"]
     }
   },
   {
@@ -1631,9 +1371,7 @@
     "gender": "f",
     "extra": {
       "otherShapes": {
-        "masculine": [
-          "model"
-        ]
+        "masculine": ["model"]
       }
     }
   },
@@ -1645,9 +1383,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "księżna"
-        ]
+        "feminine": ["księżna"]
       }
     }
   },
@@ -1711,10 +1447,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "wnuczek",
-          "wnuś"
-        ]
+        "diminutive": ["wnuczek", "wnuś"]
       }
     }
   },
@@ -1726,12 +1459,8 @@
     "gender": "f",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "wnusia"
-        ],
-        "masculine": [
-          "wnuk"
-        ]
+        "diminutive": ["wnusia"],
+        "masculine": ["wnuk"]
       }
     }
   },
@@ -1743,9 +1472,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "kucharka"
-        ]
+        "feminine": ["kucharka"]
       }
     }
   },
@@ -1762,9 +1489,7 @@
     },
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "przewodniczka"
-        ]
+        "feminine": ["przewodniczka"]
       }
     }
   },
@@ -1776,13 +1501,9 @@
     "gender": "f",
     "extra": {
       "otherShapes": {
-        "masculine": [
-          "akuszer"
-        ]
+        "masculine": ["akuszer"]
       },
-      "synonyms": [
-        "położna"
-      ],
+      "synonyms": ["położna"],
       "usage": [
         "wiejska akuszerka ― a rural/village accoucheuse",
         "stara akuszerka ― an old accoucheuse",
@@ -1798,9 +1519,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "kapłanka"
-        ]
+        "feminine": ["kapłanka"]
       },
       "derivedTerms": [
         "arcykapłański",
@@ -1822,14 +1541,8 @@
     "register": 0,
     "gender": "m1",
     "extra": {
-      "synonyms": [
-        "nieprzyjaciel",
-        "przeciwnik"
-      ],
-      "derivedTerms": [
-        "wrogi",
-        "wrogość"
-      ]
+      "synonyms": ["nieprzyjaciel", "przeciwnik"],
+      "derivedTerms": ["wrogi", "wrogość"]
     }
   },
   {
@@ -1840,13 +1553,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "pasażerka"
-        ]
+        "feminine": ["pasażerka"]
       },
-      "derivedTerms": [
-        "pasażerski"
-      ]
+      "derivedTerms": ["pasażerski"]
     }
   },
   {
@@ -1857,23 +1566,12 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "żołnierzyk"
-        ],
-        "feminine": [
-          "żołnierka"
-        ]
+        "diminutive": ["żołnierzyk"],
+        "feminine": ["żołnierka"]
       },
-      "synonyms": [
-        "wojak",
-        "wojskowy"
-      ],
-      "derivedTerms": [
-        "żołnierski"
-      ],
-      "usage": [
-        "Hyponyms: najemnik najmita"
-      ]
+      "synonyms": ["wojak", "wojskowy"],
+      "derivedTerms": ["żołnierski"],
+      "usage": ["Hyponyms: najemnik najmita"]
     }
   },
   {
@@ -1883,9 +1581,7 @@
     "register": 0,
     "gender": "m1",
     "extra": {
-      "synonyms": [
-        "stomatolog"
-      ]
+      "synonyms": ["stomatolog"]
     }
   },
   {
@@ -1910,13 +1606,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "uczennica"
-        ]
+        "feminine": ["uczennica"]
       },
-      "usage": [
-        "Hyponyms: student studentka"
-      ]
+      "usage": ["Hyponyms: student studentka"]
     }
   },
   {
@@ -1932,9 +1624,7 @@
     },
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "właścicielka"
-        ]
+        "feminine": ["właścicielka"]
       }
     }
   },
@@ -1952,9 +1642,7 @@
     },
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "właścicielka"
-        ]
+        "feminine": ["właścicielka"]
       }
     }
   },
@@ -1966,9 +1654,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "pisarka"
-        ]
+        "feminine": ["pisarka"]
       }
     }
   },
@@ -1980,19 +1666,10 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "lekarka"
-        ]
+        "feminine": ["lekarka"]
       },
-      "synonyms": [
-        "doktor",
-        "eskulap",
-        "medyk"
-      ],
-      "derivedTerms": [
-        "lekarski",
-        "lekarstwo"
-      ]
+      "synonyms": ["doktor", "eskulap", "medyk"],
+      "derivedTerms": ["lekarski", "lekarstwo"]
     }
   },
   {
@@ -2003,14 +1680,9 @@
     "gender": "f",
     "extra": {
       "otherShapes": {
-        "masculine": [
-          "lekarz"
-        ]
+        "masculine": ["lekarz"]
       },
-      "synonyms": [
-        "doktorka",
-        "medyczka"
-      ]
+      "synonyms": ["doktorka", "medyczka"]
     }
   },
   {
@@ -2026,17 +1698,10 @@
     },
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "sędzia",
-          "sędzina"
-        ]
+        "feminine": ["sędzia", "sędzina"]
       },
-      "synonyms": [
-        "arbiter"
-      ],
-      "derivedTerms": [
-        "sędziowski"
-      ]
+      "synonyms": ["arbiter"],
+      "derivedTerms": ["sędziowski"]
     }
   },
   {
@@ -2053,9 +1718,7 @@
     },
     "extra": {
       "otherShapes": {
-        "masculine": [
-          "sędzia"
-        ]
+        "masculine": ["sędzia"]
       }
     }
   },
@@ -2080,9 +1743,7 @@
     "gender": "f",
     "extra": {
       "otherShapes": {
-        "masculine": [
-          "turysta"
-        ]
+        "masculine": ["turysta"]
       }
     }
   },
@@ -2094,20 +1755,11 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "augmentative": [
-          "dziennikarzyna"
-        ],
-        "feminine": [
-          "dziennikarka"
-        ]
+        "augmentative": ["dziennikarzyna"],
+        "feminine": ["dziennikarka"]
       },
-      "synonyms": [
-        "żurnalista"
-      ],
-      "derivedTerms": [
-        "dziennikarski",
-        "dziennikarstwo"
-      ]
+      "synonyms": ["żurnalista"],
+      "derivedTerms": ["dziennikarski", "dziennikarstwo"]
     }
   },
   {
@@ -2118,9 +1770,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "celniczka"
-        ]
+        "feminine": ["celniczka"]
       }
     }
   },
@@ -2132,15 +1782,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "klientka"
-        ]
+        "feminine": ["klientka"]
       },
-      "synonyms": [
-        "delikwent",
-        "interesant",
-        "petent"
-      ]
+      "synonyms": ["delikwent", "interesant", "petent"]
     }
   },
   {
@@ -2151,16 +1795,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "fryzjerka"
-        ]
+        "feminine": ["fryzjerka"]
       },
-      "derivedTerms": [
-        "fryzjerski",
-        "fryzjerczyk",
-        "fryzjernia",
-        "fryzjerstwo"
-      ]
+      "derivedTerms": ["fryzjerski", "fryzjerczyk", "fryzjernia", "fryzjerstwo"]
     }
   },
   {
@@ -2171,13 +1808,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "śpiewaczka"
-        ]
+        "feminine": ["śpiewaczka"]
       },
-      "synonyms": [
-        "piosenkarz"
-      ]
+      "synonyms": ["piosenkarz"]
     }
   },
   {
@@ -2188,14 +1821,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "morderczyni"
-        ]
+        "feminine": ["morderczyni"]
       },
-      "synonyms": [
-        "zabójca",
-        "rezun"
-      ]
+      "synonyms": ["zabójca", "rezun"]
     }
   },
   {
@@ -2206,9 +1834,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "policjantka"
-        ]
+        "feminine": ["policjantka"]
       }
     }
   },
@@ -2220,9 +1846,7 @@
     "gender": "f",
     "extra": {
       "otherShapes": {
-        "masculine": [
-          "policjant"
-        ]
+        "masculine": ["policjant"]
       }
     }
   },
@@ -2241,9 +1865,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "pielęgniarka"
-        ]
+        "feminine": ["pielęgniarka"]
       }
     }
   },
@@ -2255,13 +1877,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "obywatelka"
-        ]
+        "feminine": ["obywatelka"]
       },
-      "derivedTerms": [
-        "współobywatel"
-      ]
+      "derivedTerms": ["współobywatel"]
     }
   },
   {
@@ -2272,9 +1890,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "strażniczka"
-        ]
+        "feminine": ["strażniczka"]
       }
     }
   },
@@ -2300,9 +1916,7 @@
     "gender": "f",
     "extra": {
       "otherShapes": {
-        "masculine": [
-          "krewny"
-        ]
+        "masculine": ["krewny"]
       }
     }
   },
@@ -2314,9 +1928,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "krewna"
-        ]
+        "feminine": ["krewna"]
       }
     }
   },
@@ -2328,17 +1940,10 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "rolniczka"
-        ]
+        "feminine": ["rolniczka"]
       },
-      "synonyms": [
-        "farmer"
-      ],
-      "derivedTerms": [
-        "rolniczy",
-        "rolnictwo"
-      ]
+      "synonyms": ["farmer"],
+      "derivedTerms": ["rolniczy", "rolnictwo"]
     }
   },
   {
@@ -2353,13 +1958,8 @@
       "emoji": "🏃"
     },
     "extra": {
-      "synonyms": [
-        "niezdara"
-      ],
-      "derivedTerms": [
-        "ofiarny",
-        "ofiarować"
-      ]
+      "synonyms": ["niezdara"],
+      "derivedTerms": ["ofiarny", "ofiarować"]
     }
   },
   {
@@ -2369,12 +1969,8 @@
     "register": 0,
     "gender": "m1",
     "extra": {
-      "synonyms": [
-        "śledczy"
-      ],
-      "derivedTerms": [
-        "detektywistyczny"
-      ]
+      "synonyms": ["śledczy"],
+      "derivedTerms": ["detektywistyczny"]
     }
   },
   {
@@ -2385,9 +1981,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "mistrzyni"
-        ]
+        "feminine": ["mistrzyni"]
       },
       "derivedTerms": [
         "arcymistrzowski",
@@ -2410,13 +2004,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "wegetarianka"
-        ]
+        "feminine": ["wegetarianka"]
       },
-      "synonyms": [
-        "jarosz"
-      ]
+      "synonyms": ["jarosz"]
     }
   },
   {
@@ -2427,9 +2017,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "sekretarka"
-        ]
+        "feminine": ["sekretarka"]
       }
     }
   },
@@ -2441,9 +2029,7 @@
     "gender": "f",
     "extra": {
       "otherShapes": {
-        "masculine": [
-          "znajomy"
-        ]
+        "masculine": ["znajomy"]
       }
     }
   },
@@ -2455,9 +2041,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "znajoma"
-        ]
+        "feminine": ["znajoma"]
       }
     }
   },
@@ -2469,22 +2053,11 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "abbreviation": [
-          "art."
-        ],
-        "feminine": [
-          "artystka"
-        ]
+        "abbreviation": ["art."],
+        "feminine": ["artystka"]
       },
-      "synonyms": [
-        "fachman",
-        "fachowiec",
-        "fachura",
-        "profesjonalista"
-      ],
-      "antonyms": [
-        "partacz"
-      ],
+      "synonyms": ["fachman", "fachowiec", "fachura", "profesjonalista"],
+      "antonyms": ["partacz"],
       "derivedTerms": [
         "antyartystyczny",
         "artystowski",
@@ -2504,14 +2077,9 @@
     "gender": "f",
     "extra": {
       "otherShapes": {
-        "masculine": [
-          "artysta"
-        ]
+        "masculine": ["artysta"]
       },
-      "synonyms": [
-        "profesjonalistka",
-        "specjalistka"
-      ]
+      "synonyms": ["profesjonalistka", "specjalistka"]
     }
   },
   {
@@ -2521,9 +2089,7 @@
     "register": 0,
     "gender": "m1",
     "extra": {
-      "synonyms": [
-        "przestępca"
-      ]
+      "synonyms": ["przestępca"]
     }
   },
   {
@@ -2534,9 +2100,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "prezydentka"
-        ]
+        "feminine": ["prezydentka"]
       }
     }
   },
@@ -2548,9 +2112,7 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "więźniarka"
-        ]
+        "feminine": ["więźniarka"]
       }
     }
   },
@@ -2666,19 +2228,10 @@
     "gender": "f",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "panienka"
-        ],
-        "augmentative": [
-          "pannica",
-          "pannisko"
-        ]
+        "diminutive": ["panienka"],
+        "augmentative": ["pannica", "pannisko"]
       },
-      "derivedTerms": [
-        "panieński",
-        "panieństwo",
-        "Panna"
-      ]
+      "derivedTerms": ["panieński", "panieństwo", "Panna"]
     }
   },
   {
@@ -2701,13 +2254,9 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "feminine": [
-          "liderka"
-        ]
+        "feminine": ["liderka"]
       },
-      "synonyms": [
-        "przywódca"
-      ]
+      "synonyms": ["przywódca"]
     }
   },
   {
@@ -2718,12 +2267,8 @@
     "gender": "m1",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "królewiątko"
-        ],
-        "feminine": [
-          "królowa"
-        ]
+        "diminutive": ["królewiątko"],
+        "feminine": ["królowa"]
       },
       "derivedTerms": [
         "bezkrólewie",
@@ -2753,11 +2298,7 @@
     "register": 0,
     "gender": "f",
     "extra": {
-      "synonyms": [
-        "dama",
-        "hetman",
-        "królówka"
-      ]
+      "synonyms": ["dama", "hetman", "królówka"]
     }
   },
   {
@@ -2767,9 +2308,7 @@
     "register": 0,
     "gender": "n",
     "extra": {
-      "synonyms": [
-        "dziecko"
-      ],
+      "synonyms": ["dziecko"],
       "derivedTerms": [
         "bezdzietny",
         "bezdzietnie",
@@ -2794,12 +2333,8 @@
     "gender": "m2",
     "extra": {
       "otherShapes": {
-        "diminutive": [
-          "aniołek"
-        ],
-        "feminine": [
-          "anielica"
-        ]
+        "diminutive": ["aniołek"],
+        "feminine": ["anielica"]
       },
       "derivedTerms": [
         "anieli",
@@ -2835,16 +2370,10 @@
     "gender": "m3",
     "extra": {
       "otherShapes": {
-        "abbreviation": [
-          "ks."
-        ]
+        "abbreviation": ["ks."]
       },
-      "synonyms": [
-        "ksiądz"
-      ],
-      "derivedTerms": [
-        "kto ma księdza w rodzie, tego bieda nie ubodzie"
-      ],
+      "synonyms": ["ksiądz"],
+      "derivedTerms": ["kto ma księdza w rodzie, tego bieda nie ubodzie"],
       "usage": [
         "Nasza szefowa, pani Magdalena, na zarzut księdza , że jej nieskromny dekolt wzbudza grzeszne myśli odpowiedziała, że on nie skusiłby jej, nawet gdyby stanął przed nią nago. Our boss, Ms. Magdalena, to the priest's objection that her immodest décolletage evokes sinful thoughts replied that he would not tempt her even if he stood naked in front of her."
       ]

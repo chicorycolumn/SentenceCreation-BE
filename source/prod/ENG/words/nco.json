@@ -450,10 +450,7 @@
     "id": "eng-nco-0064-mathematics",
     "register": 0,
     "frequency": 3,
-    "additionalSpellings": [
-      "math",
-      "maths"
-    ],
+    "additionalSpellings": ["math", "maths"],
     "_lacking": true,
     "tantumSingulare": true
   },
@@ -631,9 +628,7 @@
     "id": "eng-nco-0089-kilogram",
     "register": 0,
     "frequency": 3,
-    "additionalSpellings": [
-      "kilo"
-    ]
+    "additionalSpellings": ["kilo"]
   },
   {
     "lemma": "port",
@@ -1202,9 +1197,7 @@
   {
     "lemma": "yoghurt",
     "id": "eng-nco-0168-yoghurt",
-    "additionalSpellings": [
-      "yogurt"
-    ],
+    "additionalSpellings": ["yogurt"],
     "register": 0,
     "frequency": 3,
     "_uncountableType": 2
@@ -1777,9 +1770,7 @@
     "id": "eng-nco-0249-colour",
     "register": 0,
     "frequency": 1,
-    "additionalSpellings": [
-      "color"
-    ],
+    "additionalSpellings": ["color"],
     "_uncountableType": 2
   },
   {
@@ -2704,9 +2695,7 @@
     "id": "eng-nco-0380-metre",
     "register": 0,
     "frequency": 3,
-    "additionalSpellings": [
-      "meter"
-    ]
+    "additionalSpellings": ["meter"]
   },
   {
     "lemma": "lettuce",
@@ -2772,16 +2761,12 @@
     "id": "eng-nco-0389-axe",
     "register": 0,
     "frequency": 4,
-    "additionalSpellings": [
-      "ax"
-    ]
+    "additionalSpellings": ["ax"]
   },
   {
     "lemma": "aeroplane",
     "id": "eng-nco-0390-aeroplane",
-    "additionalSpellings": [
-      "airplane"
-    ],
+    "additionalSpellings": ["airplane"],
     "register": 0,
     "frequency": 2
   },
@@ -3460,9 +3445,7 @@
     "id": "eng-nco-0485-kilometre",
     "register": 0,
     "frequency": 3,
-    "additionalSpellings": [
-      "kilometer"
-    ]
+    "additionalSpellings": ["kilometer"]
   },
   {
     "lemma": "weapon",
@@ -3678,9 +3661,7 @@
     "id": "eng-nco-0517-photograph",
     "register": 0,
     "frequency": 3,
-    "additionalSpellings": [
-      "photo"
-    ]
+    "additionalSpellings": ["photo"]
   },
   {
     "lemma": "mosquito",
@@ -3864,9 +3845,7 @@
     "id": "eng-nco-0544-litre",
     "register": 0,
     "frequency": 3,
-    "additionalSpellings": [
-      "liter"
-    ]
+    "additionalSpellings": ["liter"]
   },
   {
     "lemma": "hope",
@@ -3893,9 +3872,7 @@
     "id": "eng-nco-0548-crossroad",
     "register": 0,
     "frequency": 4,
-    "additionalSpellings": [
-      "crossroads"
-    ]
+    "additionalSpellings": ["crossroads"]
   },
   {
     "lemma": "rice",
@@ -3915,9 +3892,7 @@
     "id": "eng-nco-0551-bicycle",
     "register": 0,
     "frequency": 2,
-    "additionalSpellings": [
-      "bike"
-    ]
+    "additionalSpellings": ["bike"]
   },
   {
     "lemma": "cod",
@@ -4190,9 +4165,7 @@
     "id": "eng-nco-0589-storey",
     "register": 0,
     "frequency": 4,
-    "additionalSpellings": [
-      "story"
-    ]
+    "additionalSpellings": ["story"]
   },
   {
     "lemma": "basis",
@@ -5072,18 +5045,14 @@
     "id": "eng-nco-0714-centre",
     "register": 0,
     "frequency": 3,
-    "additionalSpellings": [
-      "center"
-    ]
+    "additionalSpellings": ["center"]
   },
   {
     "lemma": "city centre",
     "id": "eng-nco-0715-citycentre",
     "register": 0,
     "frequency": 3,
-    "additionalSpellings": [
-      "city center"
-    ]
+    "additionalSpellings": ["city center"]
   },
   {
     "lemma": "means",
@@ -5179,10 +5148,7 @@
     "id": "eng-nco-0728-advertisement",
     "register": 0,
     "frequency": 4,
-    "additionalSpellings": [
-      "advert",
-      "ad"
-    ],
+    "additionalSpellings": ["advert", "ad"],
     "_uncountableType": 2
   },
   {
@@ -5334,9 +5300,7 @@
   {
     "lemma": "ladybird",
     "id": "eng-nco-0750-ladybird",
-    "additionalSpellings": [
-      "ladybug"
-    ],
+    "additionalSpellings": ["ladybug"],
     "register": 0,
     "frequency": 3
   },
@@ -5566,9 +5530,7 @@
     "id": "eng-nco-0781-fridge",
     "register": 0,
     "frequency": 2,
-    "additionalSpellings": [
-      "refrigerator"
-    ]
+    "additionalSpellings": ["refrigerator"]
   },
   {
     "lemma": "arrow",
@@ -5917,9 +5879,7 @@
     "id": "eng-nco-0831-launderette",
     "register": 0,
     "frequency": 3,
-    "additionalSpellings": [
-      "laundrette"
-    ]
+    "additionalSpellings": ["laundrette"]
   },
   {
     "lemma": "laundromat",
@@ -5946,9 +5906,7 @@
     "id": "eng-nco-0835-odour",
     "register": 0,
     "frequency": 4,
-    "additionalSpellings": [
-      "odor"
-    ],
+    "additionalSpellings": ["odor"],
     "_uncountableType": 2
   },
   {
@@ -6146,9 +6104,7 @@
     "id": "eng-nco-0864-sulphur",
     "register": 0,
     "frequency": 4,
-    "additionalSpellings": [
-      "sulfur"
-    ],
+    "additionalSpellings": ["sulfur"],
     "_lacking": true,
     "tantumSingulare": true
   },
@@ -7516,9 +7472,7 @@
     "id": "eng-nco-1070-theatre",
     "register": 0,
     "frequency": 2,
-    "additionalSpellings": [
-      "theater"
-    ]
+    "additionalSpellings": ["theater"]
   },
   {
     "lemma": "route",
@@ -7850,9 +7804,7 @@
     "id": "eng-nco-1120-mould",
     "register": 0,
     "frequency": 3,
-    "additionalSpellings": [
-      "mold"
-    ],
+    "additionalSpellings": ["mold"],
     "_uncountableType": 1
   },
   {
@@ -8202,9 +8154,7 @@
     "id": "eng-nco-1171-doughnut",
     "register": 0,
     "frequency": 3,
-    "additionalSpellings": [
-      "donut"
-    ]
+    "additionalSpellings": ["donut"]
   },
   {
     "lemma": "ring",
@@ -8703,9 +8653,7 @@
     "id": "eng-nco-1247-neighbourhood",
     "register": 0,
     "frequency": 3,
-    "additionalSpellings": [
-      "neighborhood"
-    ]
+    "additionalSpellings": ["neighborhood"]
   },
   {
     "lemma": "pipe",
@@ -9118,9 +9066,7 @@
     "id": "eng-nco-1308-behaviour",
     "register": 0,
     "frequency": 3,
-    "additionalSpellings": [
-      "behavior"
-    ],
+    "additionalSpellings": ["behavior"],
     "_uncountableType": 2
   },
   {
@@ -9154,9 +9100,7 @@
     "id": "eng-nco-1313-laboratory",
     "register": 0,
     "frequency": 4,
-    "additionalSpellings": [
-      "lab"
-    ]
+    "additionalSpellings": ["lab"]
   },
   {
     "lemma": "economy",

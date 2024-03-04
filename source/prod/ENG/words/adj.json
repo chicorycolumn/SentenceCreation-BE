@@ -1979,9 +1979,7 @@
   {
     "lemma": "unsavoury",
     "id": "eng-adj-0273-unsavoury",
-    "additionalSpellings": [
-      "unsavory"
-    ],
+    "additionalSpellings": ["unsavory"],
     "register": 0,
     "frequency": 4
   },
@@ -2120,9 +2118,7 @@
   {
     "lemma": "grey",
     "id": "eng-adj-0296-grey",
-    "additionalSpellings": [
-      "gray"
-    ],
+    "additionalSpellings": ["gray"],
     "register": 0,
     "frequency": 1
   },
@@ -2966,9 +2962,7 @@
   {
     "lemma": "colourful",
     "id": "eng-adj-0424-colourful",
-    "additionalSpellings": [
-      "colorful"
-    ],
+    "additionalSpellings": ["colorful"],
     "register": 0,
     "frequency": 3
   },
@@ -3125,9 +3119,7 @@
   {
     "lemma": "colourless",
     "id": "eng-adj-0450-colourless",
-    "additionalSpellings": [
-      "colorless"
-    ],
+    "additionalSpellings": ["colorless"],
     "register": 0,
     "frequency": 4
   },
@@ -3668,9 +3660,7 @@
   {
     "lemma": "marvellous",
     "id": "eng-adj-0535-marvellous",
-    "additionalSpellings": [
-      "marvelous"
-    ],
+    "additionalSpellings": ["marvelous"],
     "register": 0,
     "frequency": 3
   },
@@ -4567,9 +4557,7 @@
   {
     "lemma": "sombre",
     "id": "eng-adj-0671-sombre",
-    "additionalSpellings": [
-      "somber"
-    ],
+    "additionalSpellings": ["somber"],
     "register": 0,
     "frequency": 4
   },
@@ -5271,9 +5259,7 @@
   {
     "lemma": "recognisable",
     "id": "eng-adj-0777-recognisable",
-    "additionalSpellings": [
-      "recognizable"
-    ],
+    "additionalSpellings": ["recognizable"],
     "register": 0,
     "frequency": 5
   },

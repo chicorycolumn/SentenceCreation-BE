@@ -238,9 +238,7 @@
     "id": "eng-npe-0040-neighbour",
     "register": 0,
     "frequency": 3,
-    "additionalSpellings": [
-      "neighbor"
-    ]
+    "additionalSpellings": ["neighbor"]
   },
   {
     "lemma": "translator",
