@@ -1,4 +1,3 @@
-const { env } = require("node:process");
 const gpUtils = require(".././generalPurposeUtils.js");
 const uUtils = require(".././universalUtils.js");
 const consol = require(".././zerothOrder/consoleLoggingUtils.js");
@@ -275,7 +274,7 @@ exports.checkSentenceFormulaIds = (currentLanguage) => {
 };
 
 exports.getSentenceFormulasBank = (currentLanguage) => {
-  const envir = env.envir;
+  const envir = apiUtils.getEniv("getSentenceFormulasBank");
 
   const {
     sentenceFormulasBank,

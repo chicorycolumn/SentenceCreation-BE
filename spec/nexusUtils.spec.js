@@ -1,4 +1,3 @@
-const { env } = require("node:process");
 const apiUtils = require("../utils/secondOrder/apiUtils");
 const app = require("../app");
 const request = require("supertest");
@@ -11,7 +10,7 @@ const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 
 describe("/nexusUtils", function () {
-  apiUtils.setEniv({ body: { envir: "ref" } }, env);
+  apiUtils.setEniv({ body: { envir: "ref" } });
 
   describe("checkAllLObjsArePresentInNexus", () => {
     it("checkAllLObjsArePresentInNexus ENG", () => {

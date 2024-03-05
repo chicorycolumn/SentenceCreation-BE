@@ -1,4 +1,4 @@
-const { env } = require("node:process");
+const apiUtils = require("../utils/secondOrder/apiUtils.js");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const idUtils = require("../utils/identityUtils.js");
 const uUtils = require("../utils/universalUtils.js");
@@ -39,7 +39,8 @@ exports.fetchPalette = (req) => {
     formattingOptions = {},
   } = req.body;
 
-  consol.logVeryGreyString(`hnrx env.envir is "${env.envir}"`);
+  const envir = apiUtils.getEniv("fetchPalette");
+  consol.logVeryGreyString(`hnrx env.envir is "${envir}"`);
 
   let multipleMode = !!forceMultipleAndQuestionOnly;
   let isQuestion = true;

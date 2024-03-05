@@ -1,4 +1,3 @@
-const { env } = require("node:process");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const uUtils = require("../utils/universalUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
@@ -23,7 +22,7 @@ exports.fetchFormulaTopics = (req) => {
 exports.fetchTags = (req) => {
   let { lang } = req.query;
 
-  apiUtils.setEniv(req, env);
+  apiUtils.setEniv(req);
 
   let { allTags, allTopics } = apiUtils.getTagsAndTopics(lang);
 
@@ -37,7 +36,7 @@ exports.fetchTags = (req) => {
 exports.fetchWordsByCriteria = (req) => {
   let { lang } = req.query;
 
-  apiUtils.setEniv(req, env);
+  apiUtils.setEniv(req);
 
   delete req.query["lang"];
 

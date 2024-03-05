@@ -1,4 +1,3 @@
-const { env } = require("node:process");
 const apiUtils = require("../utils/secondOrder/apiUtils");
 const app = require("../app");
 const request = require("supertest");
@@ -10,7 +9,7 @@ const { runPaletteTest1 } = testingUtils;
 
 describe("/api", function () {
   this.timeout(7000);
-  apiUtils.setEniv({ body: { envir: "ref" } }, env);
+  apiUtils.setEniv({ body: { envir: "ref" } });
 
   describe("/palette - Stage 22: Pronombres, Interrogatives.", () => {
     it("#pal22-01a GET 200 YES: Poleng. ITG_G. Who is she?", () => {

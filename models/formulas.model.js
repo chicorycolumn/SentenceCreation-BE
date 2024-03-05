@@ -1,4 +1,3 @@
-const { env } = require("node:process");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const idUtils = require("../utils/identityUtils.js");
 const uUtils = require("../utils/universalUtils.js");
@@ -17,7 +16,7 @@ const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 exports.fetchFormulas = (req) => {
   let { id } = req.query;
 
-  apiUtils.setEniv(req, env);
+  apiUtils.setEniv(req);
 
   let answerLang = req.query.lang;
   let questionLang = idUtils.getLanguageFromFormulaId(id);
@@ -49,7 +48,7 @@ exports.fetchFormulas = (req) => {
 exports.fetchFormulaIds = (req) => {
   let { lang1, lang2 } = req.query;
 
-  apiUtils.setEniv(req, env);
+  apiUtils.setEniv(req);
 
   ivUtils.validateLang(lang1, 19);
   ivUtils.validateLang(lang2, 20);

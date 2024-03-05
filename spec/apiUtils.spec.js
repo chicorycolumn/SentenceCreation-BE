@@ -1,4 +1,3 @@
-const { env } = require("node:process");
 const apiUtils = require("../utils/secondOrder/apiUtils");
 const app = require("../app");
 const request = require("supertest");
@@ -26,7 +25,7 @@ const runApiTest1 = (req, expected) => {
 };
 
 describe("/educator/formulas.", () => {
-  apiUtils.setEniv({ body: { envir: "ref" } }, env);
+  apiUtils.setEniv({ body: { envir: "ref" } });
 
   it("#san04a GET 200 YES: Check that numeric chunkIds are converted to guidewords.", () => {
     let res = fetchFormulas({

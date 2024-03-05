@@ -1,4 +1,4 @@
-const { env } = require("node:process");
+const apiUtils = require("./secondOrder/apiUtils.js");
 const uUtils = require("./universalUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
@@ -10,7 +10,7 @@ exports.grabLObjById = (lObjId) => {
   let split = lObjId.split("-");
   let lang = split[0].toUpperCase();
   let wordtype = split[1].toUpperCase();
-  const envir = env.envir;
+  const envir = apiUtils.getEniv("grabLObjById");
 
   const lObjs = require(`../source/${envir}/${lang}/words/${wordtype}.json`);
   let lObj = lObjs.find((l) => l.id === lObjId);
@@ -24,7 +24,7 @@ exports.grabLObjById = (lObjId) => {
 
 exports.grabLObjsByWordtype = (lang, wordtype, useDummy) => {
   lang = lang.toUpperCase();
-  const envir = env.envir;
+  const envir = apiUtils.getEniv("grabLObjsByWordtype");
 
   const wordsBank = require(`../source/${envir}/${lang}/words/${wordtype}.json`);
 
@@ -47,7 +47,7 @@ exports.grabLObjsByWordtype = (lang, wordtype, useDummy) => {
 
 exports.readAllLObjs = (lang, useDummy, res, lObjCallback, wordsetCallback) => {
   ivUtils.validateLang(lang, 13);
-  const envir = env.envir;
+  const envir = apiUtils.getEniv("readAllLObjs");
 
   const fs = require("fs");
   let filenames = fs.readdirSync(`source/${envir}/${lang}/words`);
@@ -70,7 +70,7 @@ exports.readAllLObjs = (lang, useDummy, res, lObjCallback, wordsetCallback) => {
 };
 
 exports.grabFormulaById = (formulaId, useDummy, lang) => {
-  const envir = env.envir;
+  const envir = apiUtils.getEniv("grabFormulaById");
 
   if (useDummy) {
     const {
@@ -121,7 +121,7 @@ exports.grabFormula = (
 };
 
 exports.grabSkeletonFormulas = (lang) => {
-  const envir = env.envir;
+  const envir = apiUtils.getEniv("grabSkeletonFormulas");
   lang = lang.toUpperCase();
 
   const fs = require("fs");
@@ -166,7 +166,7 @@ exports.addExtraToLObj = (lObj) => {
 };
 
 exports._grabLObjInfo = (lObjId) => {
-  const envir = env.envir;
+  const envir = apiUtils.getEniv("_grabLObjInfo");
 
   let split = lObjId.split("-");
   let lang = split[0].toUpperCase();

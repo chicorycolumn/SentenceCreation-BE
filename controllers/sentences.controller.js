@@ -1,4 +1,3 @@
-const { env } = require("node:process");
 const apiUtils = require("../utils/secondOrder/apiUtils");
 const { fetchPalette } = require("../models/palette.model");
 const uUtils = require("../utils/universalUtils");
@@ -70,7 +69,7 @@ exports.getSentencesForEducator = (req, res, next) => {
     requestingSingleWordOnly,
   } = req.body;
 
-  apiUtils.setEniv(req, env);
+  apiUtils.setEniv(req);
 
   if (answerFormula) {
     let data = apiUtils.prepareGetDualSentences(

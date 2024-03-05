@@ -1,4 +1,4 @@
-const { env } = require("node:process");
+const apiUtils = require("../../utils/secondOrder/apiUtils.js");
 const { expect } = require("chai");
 const allLangUtils = require("../allLangUtils.js");
 const consol = require("../../utils/zerothOrder/consoleLoggingUtils.js");
@@ -9,7 +9,7 @@ const gdUtils = require("../grabDataUtils.js");
 const refObj = require("../../utils/reference/referenceObjects.js");
 
 exports.getLanguagesOfEquivalents = (sentenceFormulaId) => {
-  const envir = env.envir;
+  const envir = apiUtils.getEniv("getLanguagesOfEquivalents");
 
   let lang = sentenceFormulaId.split("-")[0];
   const nexusSentenceFormulasBank =
@@ -30,7 +30,7 @@ exports.getLanguagesOfEquivalents = (sentenceFormulaId) => {
 };
 
 exports.getEquivalents = (sentenceFormulaId, answerLanguage) => {
-  const envir = env.envir;
+  const envir = apiUtils.getEniv("getEquivalents");
 
   let lang = sentenceFormulaId.split("-")[0];
   const nexusSentenceFormulasBank =
@@ -47,7 +47,7 @@ exports.getEquivalents = (sentenceFormulaId, answerLanguage) => {
 };
 
 exports.getNexusLemmaObjects = (lObj) => {
-  const envir = env.envir;
+  const envir = apiUtils.getEniv("getNexusLemmaObjects");
 
   let lang = idUtils.getLanguageFromLemmaObject(lObj);
 
@@ -255,7 +255,7 @@ exports.checkAllLObjsArePresentInNexus = (lang) => {
 };
 
 exports.getNexusWithAllWordtypes = () => {
-  const envir = env.envir;
+  const envir = apiUtils.getEniv("getNexusWithAllWordtypes");
 
   let wordtypes = refObj.wordtypes;
 

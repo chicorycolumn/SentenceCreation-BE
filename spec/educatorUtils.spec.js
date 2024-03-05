@@ -1,4 +1,3 @@
-const { env } = require("node:process");
 const apiUtils = require("../utils/secondOrder/apiUtils");
 const {
   findHomographs,
@@ -557,7 +556,7 @@ xdescribe("checkWords", () => {
 });
 
 xdescribe("Educator Battery", () => {
-  apiUtils.setEniv({ body: { envir: "ref" } }, env);
+  apiUtils.setEniv({ body: { envir: "ref" } });
 
   it("#eduBat-01 Gives ENG synhomograph lemma objects. (Used programmatically for Type 1 Synhomos)", () => {
     const currentLanguage = "ENG";
