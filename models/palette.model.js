@@ -1,3 +1,4 @@
+const { env } = require("node:process");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const idUtils = require("../utils/identityUtils.js");
 const uUtils = require("../utils/universalUtils.js");
@@ -35,9 +36,10 @@ exports.fetchPalette = (req) => {
     returnDirectly,
     startTime,
     timeLimit,
-    env = "ref",
     formattingOptions = {},
   } = req.body;
+
+  consol.logVeryGreyString(`hnrx env.envir is "${env.envir}"`);
 
   let multipleMode = !!forceMultipleAndQuestionOnly;
   let isQuestion = true;
@@ -103,7 +105,6 @@ exports.fetchPalette = (req) => {
   }
 
   let sentenceFormula = gdUtils.grabFormula(
-    env,
     questionLanguage,
     sentenceFormulaId,
     useDummy,
@@ -150,7 +151,6 @@ exports.fetchPalette = (req) => {
   );
 
   let questionSentenceData = scUtils.processSentenceFormula(
-    env,
     useDummy,
     useDummyWords,
     { currentLanguage: questionLanguage },
@@ -289,8 +289,7 @@ exports.fetchPalette = (req) => {
     } else {
       equivalents = nexusUtils.getEquivalents(
         questionSentenceData.sentenceFormula.id,
-        answerLanguage,
-        env
+        answerLanguage
       );
     }
 
@@ -415,7 +414,6 @@ exports.fetchPalette = (req) => {
         sentenceFormula = formulaIdOrFormula;
       } else {
         sentenceFormula = gdUtils.grabFormula(
-          env,
           answerLanguage,
           formulaIdOrFormula,
           useDummy
@@ -466,7 +464,6 @@ exports.fetchPalette = (req) => {
 
       ///////////////////////////////////////////////kp Conform
       scUtils.conformAnswerStructureToQuestionStructure(
-        env,
         useDummy,
         answerSentenceFormula,
         questionSentenceData.questionOutputArr,
@@ -487,7 +484,6 @@ exports.fetchPalette = (req) => {
       }
 
       answerSentenceData = scUtils.processSentenceFormula(
-        env,
         useDummy,
         useDummyWords,
         {

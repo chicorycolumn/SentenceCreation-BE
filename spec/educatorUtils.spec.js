@@ -1,3 +1,5 @@
+const { env } = require("node:process");
+const apiUtils = require("../utils/secondOrder/apiUtils");
 const {
   findHomographs,
   checkLemmaObjectIds,
@@ -555,6 +557,8 @@ xdescribe("checkWords", () => {
 });
 
 xdescribe("Educator Battery", () => {
+  apiUtils.setEniv({ body: { envir: "ref" } }, env);
+
   it("#eduBat-01 Gives ENG synhomograph lemma objects. (Used programmatically for Type 1 Synhomos)", () => {
     const currentLanguage = "ENG";
     const homographType = "syn";
@@ -563,7 +567,7 @@ xdescribe("Educator Battery", () => {
       ignoreClarifiedAllohoms: true, //Should have no effect as we are asking for synhoms.
     };
 
-    let actual = findHomographs("ref", currentLanguage, homographType, ignore);
+    let actual = findHomographs(currentLanguage, homographType, ignore);
     consol.log(
       "Educator does not need to take action on this: spec result >>>>",
       actual
@@ -577,7 +581,7 @@ xdescribe("Educator Battery", () => {
       ignoreClarifiedAllohoms: true, //Should have no effect as we are asking for synhoms.
     };
 
-    let actual = findHomographs("ref", currentLanguage, homographType, ignore);
+    let actual = findHomographs(currentLanguage, homographType, ignore);
     consol.log(
       "Educator does not need to take action on this: result >>>>",
       actual
@@ -591,7 +595,7 @@ xdescribe("Educator Battery", () => {
       ignoreClarifiedAllohoms: true,
     };
 
-    let actual = findHomographs("ref", currentLanguage, homographType, ignore);
+    let actual = findHomographs(currentLanguage, homographType, ignore);
     consol.log("spec result >>>>", actual);
 
     if (Object.keys(actual).length) {
@@ -611,7 +615,7 @@ xdescribe("Educator Battery", () => {
       ignoreClarifiedAllohoms: true,
     };
 
-    let actual = findHomographs("ref", currentLanguage, homographType, ignore);
+    let actual = findHomographs(currentLanguage, homographType, ignore);
     consol.log("spec result >>>>", actual);
     let keysActual = Object.keys(actual).filter((key) => key !== "true");
 
@@ -627,7 +631,7 @@ xdescribe("Educator Battery", () => {
   it("#eduBat-05 Gives a schematic and duplicateIds. ENG", () => {
     const currentLanguage = "ENG";
 
-    let actual = checkLemmaObjectIds("ref", currentLanguage);
+    let actual = checkLemmaObjectIds(currentLanguage);
 
     if (actual.duplicateIds.length) {
       consol.log(currentLanguage + " Lemma Objects >>>>", actual);
@@ -641,7 +645,7 @@ xdescribe("Educator Battery", () => {
   it("#eduBat-06 Gives a schematic and duplicateIds. POL", () => {
     const currentLanguage = "POL";
 
-    let actual = checkLemmaObjectIds("ref", currentLanguage);
+    let actual = checkLemmaObjectIds(currentLanguage);
 
     if (actual.duplicateIds.length) {
       consol.log(currentLanguage + " Lemma Objects >>>>", actual);
@@ -655,7 +659,7 @@ xdescribe("Educator Battery", () => {
   it("#eduBat-07 Gives a schematic and duplicateIds. ENG", () => {
     const currentLanguage = "ENG";
 
-    let actual = checkSentenceFormulaIds("ref", currentLanguage);
+    let actual = checkSentenceFormulaIds(currentLanguage);
 
     let { duplicateIds, duplicateSymbols } = actual;
 
@@ -680,7 +684,7 @@ xdescribe("Educator Battery", () => {
   it("#eduBat-08 Gives a schematic and duplicateIds. POL", () => {
     const currentLanguage = "POL";
 
-    let actual = checkSentenceFormulaIds("ref", currentLanguage);
+    let actual = checkSentenceFormulaIds(currentLanguage);
 
     let { duplicateIds, duplicateSymbols } = actual;
 
@@ -705,7 +709,7 @@ xdescribe("Educator Battery", () => {
   it("#eduBat-09 Checks words for specific traitKeys that might not have been specified. ENG", () => {
     const currentLanguage = "ENG";
 
-    let actual = checkWords("ref", currentLanguage);
+    let actual = checkWords(currentLanguage);
 
     consol.log(actual);
 
@@ -722,7 +726,7 @@ xdescribe("Educator Battery", () => {
   it("#eduBat-10 Checks words for specific traitKeys that might not have been specified. POL", () => {
     const currentLanguage = "POL";
 
-    let actual = checkWords("ref", currentLanguage);
+    let actual = checkWords(currentLanguage);
 
     consol.log(actual);
 

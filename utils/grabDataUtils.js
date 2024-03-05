@@ -1,3 +1,4 @@
+const { env } = require("node:process");
 const uUtils = require("./universalUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
@@ -5,10 +6,11 @@ const gdUtils = require("./grabDataUtils.js");
 const ivUtils = require("./secondOrder/inputValidationUtils.js");
 const nexusUtils = require("./secondOrder/nexusUtils.js");
 
-exports.grabLObjById = (lObjId, envir = "ref") => {
+exports.grabLObjById = (lObjId) => {
   let split = lObjId.split("-");
   let lang = split[0].toUpperCase();
   let wordtype = split[1].toUpperCase();
+  const envir = env.envir;
 
   const lObjs = require(`../source/${envir}/${lang}/words/${wordtype}.json`);
   let lObj = lObjs.find((l) => l.id === lObjId);
@@ -20,8 +22,9 @@ exports.grabLObjById = (lObjId, envir = "ref") => {
   return lObj;
 };
 
-exports.grabLObjsByWordtype = (lang, wordtype, envir = "ref", useDummy) => {
+exports.grabLObjsByWordtype = (lang, wordtype, useDummy) => {
   lang = lang.toUpperCase();
+  const envir = env.envir;
 
   const wordsBank = require(`../source/${envir}/${lang}/words/${wordtype}.json`);
 
@@ -42,28 +45,17 @@ exports.grabLObjsByWordtype = (lang, wordtype, envir = "ref", useDummy) => {
   return wordsBank;
 };
 
-exports.readAllLObjs = (
-  lang,
-  env = "ref",
-  useDummy,
-  res,
-  lObjCallback,
-  wordsetCallback
-) => {
+exports.readAllLObjs = (lang, useDummy, res, lObjCallback, wordsetCallback) => {
   ivUtils.validateLang(lang, 13);
+  const envir = env.envir;
 
   const fs = require("fs");
-  let filenames = fs.readdirSync(`source/${env}/${lang}/words`);
+  let filenames = fs.readdirSync(`source/${envir}/${lang}/words`);
   filenames
     .filter((filename) => filename.split(".")[1] === "json")
     .forEach((filename) => {
       let wordtype = filename.split(".")[0];
-      let wordsBank = gdUtils.grabLObjsByWordtype(
-        lang,
-        wordtype,
-        env,
-        useDummy
-      );
+      let wordsBank = gdUtils.grabLObjsByWordtype(lang, wordtype, useDummy);
 
       if (wordsetCallback) {
         wordsetCallback(wordsBank, res, wordtype);
@@ -77,7 +69,9 @@ exports.readAllLObjs = (
   return res;
 };
 
-exports.grabFormulaById = (formulaId, useDummy, lang, envir = "ref") => {
+exports.grabFormulaById = (formulaId, useDummy, lang) => {
+  const envir = env.envir;
+
   if (useDummy) {
     const {
       dummySentenceFormulasBank,
@@ -98,7 +92,6 @@ exports.grabFormulaById = (formulaId, useDummy, lang, envir = "ref") => {
 };
 
 exports.grabFormula = (
-  env = "ref",
   currentLanguage,
   sentenceFormulaId,
   useDummy,
@@ -115,8 +108,7 @@ exports.grabFormula = (
   let sentenceFormula = gdUtils.grabFormulaById(
     sentenceFormulaId,
     useDummy,
-    currentLanguage,
-    env
+    currentLanguage
   );
 
   if (!sentenceFormula) {
@@ -128,7 +120,8 @@ exports.grabFormula = (
   return uUtils.copyWithoutReference(sentenceFormula);
 };
 
-exports.grabSkeletonFormulas = (lang, envir = "ref") => {
+exports.grabSkeletonFormulas = (lang) => {
+  const envir = env.envir;
   lang = lang.toUpperCase();
 
   const fs = require("fs");
@@ -137,42 +130,44 @@ exports.grabSkeletonFormulas = (lang, envir = "ref") => {
   let res = filenames.map((filename) => {
     filename = filename.split(".")[0];
 
-    let formulaObject = gdUtils.grabFormulaById(filename, false, lang, envir);
+    let formulaObject = gdUtils.grabFormulaById(filename, false, lang);
 
     return [
       formulaObject.id,
       formulaObject.guide,
-      nexusUtils.getLanguagesOfEquivalents(formulaObject.id, envir),
+      nexusUtils.getLanguagesOfEquivalents(formulaObject.id),
     ];
   });
 
   return res;
 };
 
-exports.grabInflections = (lObjId, envir = "ref") => {
-  let data = gdUtils._grabLObjInfo(lObjId, envir);
+exports.grabInflections = (lObjId) => {
+  let data = gdUtils._grabLObjInfo(lObjId);
   return data.inflections;
 };
 
-exports.addInflections = (lObj, envir = "ref") => {
+exports.addInflections = (lObj) => {
   if (lObj.dummy) {
     return;
   }
 
-  let data = gdUtils._grabLObjInfo(lObj.id, envir);
+  let data = gdUtils._grabLObjInfo(lObj.id);
   lObj.inflections = data.inflections;
 };
 
-exports.addExtraToLObj = (lObj, envir = "ref") => {
+exports.addExtraToLObj = (lObj) => {
   if (lObj.dummy) {
     return;
   }
 
-  let data = gdUtils._grabLObjInfo(lObj.id, envir);
+  let data = gdUtils._grabLObjInfo(lObj.id);
   lObj.extra = data.extra;
 };
 
-exports._grabLObjInfo = (lObjId, envir = "ref") => {
+exports._grabLObjInfo = (lObjId) => {
+  const envir = env.envir;
+
   let split = lObjId.split("-");
   let lang = split[0].toUpperCase();
   let wordtype = split[1];

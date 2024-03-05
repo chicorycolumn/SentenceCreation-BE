@@ -11,7 +11,6 @@ const allLangUtils = require("./allLangUtils.js");
 
 exports.findMatchingLemmaObjectThenWord = (
   dependenceType,
-  env,
   useDummy,
   useDummyWords,
   structureChunk,
@@ -50,7 +49,6 @@ exports.findMatchingLemmaObjectThenWord = (
   let source = gdUtils.grabLObjsByWordtype(
     currentLanguage,
     idUtils.getWordtypeStCh(structureChunk),
-    env,
     useDummy
   );
 
@@ -148,7 +146,7 @@ exports.findMatchingLemmaObjectThenWord = (
   }
 
   matches.forEach((lObj) => {
-    gdUtils.addInflections(lObj, env);
+    gdUtils.addInflections(lObj);
   });
 
   langUtils.expandLemmaObjects(

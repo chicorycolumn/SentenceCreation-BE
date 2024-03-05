@@ -1,3 +1,5 @@
+const { env } = require("node:process");
+const apiUtils = require("../utils/secondOrder/apiUtils");
 const app = require("../app");
 const request = require("supertest");
 const { expect } = require("chai");
@@ -9,15 +11,17 @@ const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 
 describe("/nexusUtils", function () {
+  apiUtils.setEniv({ body: { envir: "ref" } }, env);
+
   describe("checkAllLObjsArePresentInNexus", () => {
     it("checkAllLObjsArePresentInNexus ENG", () => {
-      return nexusUtils.checkAllLObjsArePresentInNexus("ref", "ENG");
+      return nexusUtils.checkAllLObjsArePresentInNexus("ENG");
     });
     it("checkAllLObjsArePresentInNexus POL", () => {
-      return nexusUtils.checkAllLObjsArePresentInNexus("ref", "POL");
+      return nexusUtils.checkAllLObjsArePresentInNexus("POL");
     });
     it("checkAllLObjsArePresentInNexus SPA", () => {
-      return nexusUtils.checkAllLObjsArePresentInNexus("ref", "SPA");
+      return nexusUtils.checkAllLObjsArePresentInNexus("SPA");
     });
   });
 });

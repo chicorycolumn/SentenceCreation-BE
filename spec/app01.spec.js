@@ -1,3 +1,5 @@
+const { env } = require("node:process");
+const apiUtils = require("../utils/secondOrder/apiUtils");
 const app = require("../app");
 const request = require("supertest");
 const { expect } = require("chai");
@@ -17,6 +19,7 @@ const { runPaletteTest1, runPaletteTest1Multiple, checkProportions } =
 
 describe("/api", function () {
   this.timeout(5000);
+  apiUtils.setEniv({ body: { envir: "ref" } }, env);
 
   gpUtils.fillOutWashburneRefObj(
     generalTranslatedSentencesRef,

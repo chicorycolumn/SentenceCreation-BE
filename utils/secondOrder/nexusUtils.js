@@ -1,3 +1,4 @@
+const { env } = require("node:process");
 const { expect } = require("chai");
 const allLangUtils = require("../allLangUtils.js");
 const consol = require("../../utils/zerothOrder/consoleLoggingUtils.js");
@@ -7,10 +8,12 @@ const uUtils = require("../universalUtils.js");
 const gdUtils = require("../grabDataUtils.js");
 const refObj = require("../../utils/reference/referenceObjects.js");
 
-exports.getLanguagesOfEquivalents = (sentenceFormulaId, env = "ref") => {
+exports.getLanguagesOfEquivalents = (sentenceFormulaId) => {
+  const envir = env.envir;
+
   let lang = sentenceFormulaId.split("-")[0];
   const nexusSentenceFormulasBank =
-    require(`../../source/${env}/NEXUS/sentenceFormulas.js`).sentenceFormulas;
+    require(`../../source/${envir}/NEXUS/sentenceFormulas.js`).sentenceFormulas;
   let nexusObjs = nexusSentenceFormulasBank.filter((nexusObj) =>
     nexusObj.equivalents[lang].includes(sentenceFormulaId)
   );
@@ -26,10 +29,12 @@ exports.getLanguagesOfEquivalents = (sentenceFormulaId, env = "ref") => {
   return res;
 };
 
-exports.getEquivalents = (sentenceFormulaId, answerLanguage, env = "ref") => {
+exports.getEquivalents = (sentenceFormulaId, answerLanguage) => {
+  const envir = env.envir;
+
   let lang = sentenceFormulaId.split("-")[0];
   const nexusSentenceFormulasBank =
-    require(`../../source/${env}/NEXUS/sentenceFormulas.js`).sentenceFormulas;
+    require(`../../source/${envir}/NEXUS/sentenceFormulas.js`).sentenceFormulas;
   let nexusObjs = nexusSentenceFormulasBank.filter((nexusObj) =>
     nexusObj.equivalents[lang].includes(sentenceFormulaId)
   );
@@ -41,12 +46,14 @@ exports.getEquivalents = (sentenceFormulaId, answerLanguage, env = "ref") => {
   return res;
 };
 
-exports.getNexusLemmaObjects = (lObj, env = "ref") => {
+exports.getNexusLemmaObjects = (lObj) => {
+  const envir = env.envir;
+
   let lang = idUtils.getLanguageFromLemmaObject(lObj);
 
   const wordtype = idUtils.getWordtypeLObj(lObj);
 
-  const nexusWordsBank = require(`../../source/${env}/NEXUS/words/${wordtype}.json`);
+  const nexusWordsBank = require(`../../source/${envir}/NEXUS/words/${wordtype}.json`);
 
   let resArr = nexusWordsBank.filter((lemmaObject) =>
     lemmaObject.traductions[lang].some((el) =>
@@ -70,8 +77,8 @@ exports.getNexusLemmaObjects = (lObj, env = "ref") => {
   return resArr;
 };
 
-exports.accumulateThisKeyFromLObjs = (lObj, env, key) => {
-  let fetchedLObjs = exports.getNexusLemmaObjects(lObj, env);
+exports.accumulateThisKeyFromLObjs = (lObj, key) => {
+  let fetchedLObjs = exports.getNexusLemmaObjects(lObj);
 
   let typeOfValue = uUtils.typeof(fetchedLObjs[0][key]);
 
@@ -114,21 +121,15 @@ exports.accumulateThisKeyFromLObjs = (lObj, env, key) => {
   }
 };
 
-exports.getPapers = (lObj, env = "ref") => {
+exports.getPapers = (lObj) => {
   let papers =
     lObj.devHardcoded_tags ||
-    exports.accumulateThisKeyFromLObjs(lObj, env, "papers");
+    exports.accumulateThisKeyFromLObjs(lObj, "papers");
 
   return papers;
 };
 
-exports.getTraductions = (
-  lObj,
-  targetlang,
-  getAllIds,
-  mapIdsToLObjs,
-  env = "ref"
-) => {
+exports.getTraductions = (lObj, targetlang, getAllIds, mapIdsToLObjs) => {
   if (mapIdsToLObjs && !getAllIds) {
     consol.throw("bcct Not possible.");
   }
@@ -138,13 +139,12 @@ exports.getTraductions = (
 
   let traductions =
     lObj.devHardcoded_translations ||
-    exports.accumulateThisKeyFromLObjs(lObj, env, "traductions");
+    exports.accumulateThisKeyFromLObjs(lObj, "traductions");
 
   if (getAllIds) {
     let bank = gdUtils.grabLObjsByWordtype(
       targetlang,
       idUtils.getWordtypeLObj(lObj),
-      env,
       false
     );
 
@@ -166,14 +166,13 @@ exports.getTraductions = (
   return traductions[targetlang];
 };
 
-exports.checkAllLObjsArePresentInNexus = (env, lang) => {
-  const nexusWordsBank = exports.getNexusWithAllWordtypes(env);
+exports.checkAllLObjsArePresentInNexus = (lang) => {
+  const nexusWordsBank = exports.getNexusWithAllWordtypes();
 
-  console.log("\n", "[1;35m " + `${env} ${lang}` + "[0m");
+  console.log("\n", "[1;35m " + `${lang}` + "[0m");
 
   gdUtils.readAllLObjs(
     lang,
-    env,
     false,
     null,
     null,
@@ -193,7 +192,6 @@ exports.checkAllLObjsArePresentInNexus = (env, lang) => {
         let boolHolder = [];
         gdUtils.readAllLObjs(
           lang,
-          env,
           false,
           boolHolder,
           (lObj, boolHolder, wordtype) => {
@@ -234,7 +232,7 @@ exports.checkAllLObjsArePresentInNexus = (env, lang) => {
     x.howManyTimesIsEachLObjIdPresentInNexusWordsBank[id] = res.length;
   };
 
-  gdUtils.readAllLObjs(lang, env, false, x, lObjCallback);
+  gdUtils.readAllLObjs(lang, false, x, lObjCallback);
 
   let interestingTally = {};
   Object.keys(x.howManyTimesIsEachLObjIdPresentInNexusWordsBank).forEach(
@@ -256,7 +254,9 @@ exports.checkAllLObjsArePresentInNexus = (env, lang) => {
   return expect(x.problems).to.eql([]);
 };
 
-exports.getNexusWithAllWordtypes = (envir = "ref") => {
+exports.getNexusWithAllWordtypes = () => {
+  const envir = env.envir;
+
   let wordtypes = refObj.wordtypes;
 
   const wordsBank = {};

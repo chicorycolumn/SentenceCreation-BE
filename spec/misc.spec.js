@@ -28,8 +28,8 @@ xdescribe("Sandbox.", () => {
   });
 });
 
-describe("Project Ophiucus: Bravo Wing: Task One.", () => {
-  it.only("Take large json dicts of lobjs from Scraper and separate into individual files for BE", () => {
+xdescribe("Project Ophiucus: Bravo Wing: Task One.", () => {
+  it("Take large json dicts of lobjs from Scraper and separate into individual files for BE", () => {
     let e = "prod";
     let l = "ENG";
     // let wordtypes = [];
@@ -43,10 +43,10 @@ describe("Project Ophiucus: Bravo Wing: Task One.", () => {
   });
   it("Take formulas from Old Way of storing them", () => {
     // add guideSentence.
-    let envs = ["ref", "dev"];
+    let manuallySetEnvs = ["ref", "dev"];
     let langs = ["POL", "ENG", "SPA"];
 
-    envs.forEach((e) => {
+    manuallySetEnvs.forEach((e) => {
       langs.forEach((l) => {
         if (e === "dev" && l === "SPA") {
           return;
@@ -60,9 +60,9 @@ describe("Project Ophiucus: Bravo Wing: Task One.", () => {
 xdescribe("Check FE does not mutate BE sentenceFormulas.", () => {
   it("ENG ref", () => {
     let lang = "ENG";
-    let env = "ref";
+    let manuallySetEnv = "ref";
     let BEs =
-      require(`../source/${env}/${lang}/sentenceFormulas.js`).sentenceFormulasBank;
+      require(`../source/${manuallySetEnv}/${lang}/sentenceFormulas.js`).sentenceFormulasBank;
 
     let beenThroughFEs = []; // Copypaste these yourself from Save Formula button in FE printing to console.
 
@@ -83,9 +83,9 @@ xdescribe("Check FE does not mutate BE sentenceFormulas.", () => {
   });
   it("POL ref", () => {
     let lang = "POL";
-    let env = "ref";
+    let manuallySetEnv = "ref";
     let BEs =
-      require(`../source/${env}/${lang}/sentenceFormulas.js`).sentenceFormulasBank;
+      require(`../source/${manuallySetEnv}/${lang}/sentenceFormulas.js`).sentenceFormulasBank;
 
     let beenThroughFEs = []; // Copypaste these yourself from Save Formula button in FE printing to console.
 

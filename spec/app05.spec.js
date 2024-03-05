@@ -1,3 +1,5 @@
+const { env } = require("node:process");
+const apiUtils = require("../utils/secondOrder/apiUtils");
 const app = require("../app");
 const request = require("supertest");
 const chai = require("chai");
@@ -16,6 +18,7 @@ const {
 
 describe("/api", function () {
   this.timeout(7000);
+  apiUtils.setEniv({ body: { envir: "ref" } }, env);
 
   xdescribe("/palette - Stage 30: Modal verbs, and contractions.", () => {
     describe("#pal30-01 Will not.", () => {

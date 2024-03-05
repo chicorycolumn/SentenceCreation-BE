@@ -632,7 +632,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       let newReqBody = {
         startTime,
-        env: reqBody.env,
 
         allCounterfactualResults,
         counterfactualQuestionSentenceFormula,

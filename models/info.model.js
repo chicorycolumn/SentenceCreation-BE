@@ -1,3 +1,4 @@
+const { env } = require("node:process");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const uUtils = require("../utils/universalUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
@@ -13,14 +14,11 @@ const allLangUtils = require("../utils/allLangUtils.js");
 const refFxn = require("../utils/reference/referenceFunctions.js");
 
 exports.fetchAvailableNexusId = (req) => {
-  let { env } = req.query;
+  apiUtils.setEniv(req, env);
 
   let responseObject = {};
 
-  if (!env) {
-    env = "ref";
-  }
-  responseObject.info = apiUtils.getAnAvailableNexusId(env);
+  responseObject.info = apiUtils.getAnAvailableNexusId();
 
   return Promise.all([responseObject]).then((array) => {
     return array[0];

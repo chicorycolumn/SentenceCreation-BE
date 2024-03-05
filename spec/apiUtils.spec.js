@@ -1,9 +1,10 @@
+const { env } = require("node:process");
+const apiUtils = require("../utils/secondOrder/apiUtils");
 const app = require("../app");
 const request = require("supertest");
 const { expect } = require("chai");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const uUtils = require("../utils/universalUtils.js");
-const apiUtils = require("../utils/secondOrder/apiUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
@@ -25,8 +26,13 @@ const runApiTest1 = (req, expected) => {
 };
 
 describe("/educator/formulas.", () => {
+  apiUtils.setEniv({ body: { envir: "ref" } }, env);
+
   it("#san04a GET 200 YES: Check that numeric chunkIds are converted to guidewords.", () => {
-    let res = fetchFormulas({ query: { id: "POL-101b", lang: "ENG" } });
+    let res = fetchFormulas({
+      query: { id: "POL-101b", lang: "ENG" },
+      body: { envir: "ref" },
+    });
     return res.then((res) => {
       res.questionSentenceFormula =
         res.questionSentenceFormula.sentenceStructure.map(
@@ -45,7 +51,10 @@ describe("/educator/formulas.", () => {
     });
   });
   it("#san04b GET 200 YES: Check that numeric chunkIds are converted to guidewords.", () => {
-    let res = fetchFormulas({ query: { id: "POL-112", lang: "ENG" } });
+    let res = fetchFormulas({
+      query: { id: "POL-112", lang: "ENG" },
+      body: { envir: "ref" },
+    });
     return res.then((res) => {
       res.questionSentenceFormula =
         res.questionSentenceFormula.sentenceStructure.map(

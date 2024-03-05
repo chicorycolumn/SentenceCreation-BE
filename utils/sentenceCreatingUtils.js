@@ -16,7 +16,6 @@ const eaUtils = require("./extraAttributeUtils.js");
 const { HY } = refObj;
 
 exports.selectDependentChunkWordsAndAddToOutputArray = (
-  env,
   dependenceTypeToUpdate,
   explodedOutputArraysWithHeads,
   grandOutputArray,
@@ -81,7 +80,6 @@ exports.selectDependentChunkWordsAndAddToOutputArray = (
             let allPossOutputUnits_dependent =
               otUtils.findMatchingLemmaObjectThenWord(
                 "dependent",
-                env,
                 useDummy,
                 useDummyWords,
                 dependentChunk,
@@ -178,7 +176,6 @@ exports.selectDependentChunkWordsAndAddToOutputArray = (
 };
 
 exports.processSentenceFormula = (
-  env = "ref",
   useDummy,
   useDummyWords,
   languagesObj,
@@ -240,7 +237,6 @@ exports.processSentenceFormula = (
 
     let allPossOutputUnits_head = otUtils.findMatchingLemmaObjectThenWord(
       "head",
-      env,
       useDummy,
       useDummyWords,
       headChunk,
@@ -312,7 +308,6 @@ exports.processSentenceFormula = (
     _dependentChunks
   ) => {
     return scUtils.selectDependentChunkWordsAndAddToOutputArray(
-      env,
       _dependenceTypeToUpdate,
       _explodedOutputArraysWithHeads,
       _grandOutputArray,
@@ -416,7 +411,6 @@ exports.processSentenceFormula = (
 
       let allPossOutputUnits_PHD = otUtils.findMatchingLemmaObjectThenWord(
         "PHD",
-        env,
         useDummy,
         useDummyWords,
         postHocDependentChunk,
@@ -551,7 +545,6 @@ exports.processSentenceFormula = (
     consol.log(`weoi otherChunk "${otherChunk.chunkId}"`);
     let allPossOutputUnits_other = otUtils.findMatchingLemmaObjectThenWord(
       "other",
-      env,
       useDummy,
       useDummyWords,
       otherChunk,
@@ -1490,7 +1483,6 @@ exports.selectWordVersions = (orderedOutputArr, currentLanguage, maqModes) => {
 };
 
 exports.conformAnswerStructureToQuestionStructure = (
-  env,
   useDummy,
   sentenceFormula,
   questionOutputArr,
@@ -1574,7 +1566,6 @@ exports.conformAnswerStructureToQuestionStructure = (
     let source = gdUtils.grabLObjsByWordtype(
       answerLanguage,
       idUtils.getWordtypeStCh(answerStructureChunk),
-      env,
       useDummy
     );
 
