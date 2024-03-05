@@ -10,16 +10,17 @@ const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 
 describe("/nexusUtils", function () {
-  apiUtils.setEnvir({ body: { envir: "ref" } });
+  const testEnv = "ref";
+  apiUtils.setEnvir({ body: { envir: testEnv } });
 
   describe("checkAllLObjsArePresentInNexus", () => {
-    it("checkAllLObjsArePresentInNexus ENG", () => {
+    it(`${testEnv}#checkAllLObjsArePresentInNexus ENG`, () => {
       return nexusUtils.checkAllLObjsArePresentInNexus("ENG");
     });
-    it("checkAllLObjsArePresentInNexus POL", () => {
+    it(`${testEnv}#checkAllLObjsArePresentInNexus POL`, () => {
       return nexusUtils.checkAllLObjsArePresentInNexus("POL");
     });
-    it("checkAllLObjsArePresentInNexus SPA", () => {
+    it(`${testEnv}#checkAllLObjsArePresentInNexus SPA`, () => {
       return nexusUtils.checkAllLObjsArePresentInNexus("SPA");
     });
   });

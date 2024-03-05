@@ -17,11 +17,13 @@ const {
 
 describe("/api", function () {
   this.timeout(7000);
-  apiUtils.setEnvir({ body: { envir: "ref" } });
+
+  const testEnv = "ref";
+  apiUtils.setEnvir({ body: { envir: testEnv } });
 
   xdescribe("/palette - Stage 30: Modal verbs, and contractions.", () => {
     describe("#pal30-01 Will not.", () => {
-      it(`#pal30-01a GET 200 YES: Engpol.`, () => {
+      it(`${testEnv}#pal30-01a GET 200 YES: Engpol.`, () => {
         return runPaletteTest2("ENG", "POL", "125a", [
           {
             ENG: ["I will not read.", "I won't read."], // "I'll not" is correct but uncommon, so I want to accept it for A but never give as Q.
@@ -35,7 +37,7 @@ describe("/api", function () {
           },
         ]);
       });
-      it(`#pal30-01b GET 200 YES: Poleng.`, () => {
+      it(`${testEnv}#pal30-01b GET 200 YES: Poleng.`, () => {
         return runPaletteTest2("POL", "ENG", "125a", [
           {
             POL: ["Nie przeczytam."],
@@ -53,7 +55,7 @@ describe("/api", function () {
 
   describe("/palette - Stage 29: Programmatic negatives, and contractions.", () => {
     describe("#pal29-01 Negative Be (simple).", () => {
-      it(`#pal29-01a GET 200 YES: Engpol.`, () => {
+      it(`${testEnv}#pal29-01a GET 200 YES: Engpol.`, () => {
         return runPaletteTest2("ENG", "POL", "123aa", [
           {
             ENG: ["He is not red.", "He's not red.", "He isn't red."],
@@ -61,7 +63,7 @@ describe("/api", function () {
           },
         ]);
       });
-      it(`#pal29-01b GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.`, () => {
+      it(`${testEnv}#pal29-01b GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.`, () => {
         return runPaletteTest2("POL", "ENG", "123aa", [
           {
             POL: ["Nie jest czerwony.", "On nie jest czerwony."],
@@ -69,7 +71,7 @@ describe("/api", function () {
           },
         ]);
       });
-      it(`#pal29-01a(i) GET 200 YES: Engpol.`, () => {
+      it(`${testEnv}#pal29-01a(i) GET 200 YES: Engpol.`, () => {
         return runPaletteTest2("ENG", "POL", "123aaa", [
           {
             ENG: ["He is not here.", "He's not here.", "He isn't here."],
@@ -77,7 +79,7 @@ describe("/api", function () {
           },
         ]);
       });
-      it(`#pal29-01b(ii) GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.`, () => {
+      it(`${testEnv}#pal29-01b(ii) GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.`, () => {
         return runPaletteTest2("POL", "ENG", "123aaa", [
           {
             POL: ["Nie jest (male) tutaj.", "On nie jest tutaj."],
@@ -85,7 +87,7 @@ describe("/api", function () {
           },
         ]);
       });
-      it(`#pal29-01c GET 200 YES: Engpol.`, () => {
+      it(`${testEnv}#pal29-01c GET 200 YES: Engpol.`, () => {
         return runPaletteTest2("ENG", "POL", "123ab", [
           {
             ENG: ["He was not red.", "He wasn't red."],
@@ -93,7 +95,7 @@ describe("/api", function () {
           },
         ]);
       });
-      it(`#pal29-01d GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.`, () => {
+      it(`${testEnv}#pal29-01d GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.`, () => {
         return runPaletteTest2("POL", "ENG", "123ab", [
           {
             POL: ["Nie był czerwony.", "On nie był czerwony."],
@@ -107,7 +109,7 @@ describe("/api", function () {
       });
     });
     describe("#pal29-02 Negative Have (simple).", () => {
-      it(`#pal29-02a GET 200 YES: Engpol.`, () => {
+      it(`${testEnv}#pal29-02a GET 200 YES: Engpol.`, () => {
         return runPaletteTest2("ENG", "POL", "123ba", [
           {
             ENG: ["He does not have apples.", "He doesn't have apples."],
@@ -115,7 +117,7 @@ describe("/api", function () {
           },
         ]);
       });
-      it(`#pal29-02b GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.`, () => {
+      it(`${testEnv}#pal29-02b GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.`, () => {
         return runPaletteTest2("POL", "ENG", "123ba", [
           {
             POL: ["Nie ma (male) jabłek.", "On nie ma jabłek."],
@@ -123,7 +125,7 @@ describe("/api", function () {
           },
         ]);
       });
-      it(`#pal29-02b(ii) GET 200 YES: Poleng. stativeOverrideFalse.`, () => {
+      it(`${testEnv}#pal29-02b(ii) GET 200 YES: Poleng. stativeOverrideFalse.`, () => {
         return runPaletteTest2("POL", "ENG", "123baa", [
           {
             POL: ["Nie ma (male) jabłek.", "On nie ma jabłek."],
@@ -131,7 +133,7 @@ describe("/api", function () {
           },
         ]);
       });
-      it(`#pal29-02c GET 200 YES: Engpol.`, () => {
+      it(`${testEnv}#pal29-02c GET 200 YES: Engpol.`, () => {
         return runPaletteTest2("ENG", "POL", "123bb", [
           {
             ENG: ["He did not have apples.", "He didn't have apples."],
@@ -139,7 +141,7 @@ describe("/api", function () {
           },
         ]);
       });
-      it(`#pal29-02d GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.`, () => {
+      it(`${testEnv}#pal29-02d GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.`, () => {
         return runPaletteTest2("POL", "ENG", "123bb", [
           {
             POL: ["Nie miał jabłek.", "On nie miał jabłek."],
@@ -153,7 +155,7 @@ describe("/api", function () {
       });
     });
     describe("#pal29-03 Negative Write (simple).", () => {
-      it(`#pal29-03a GET 200 YES: Engpol.`, () => {
+      it(`${testEnv}#pal29-03a GET 200 YES: Engpol.`, () => {
         return runPaletteTest2("ENG", "POL", "123ca", [
           {
             ENG: ["He does not write.", "He doesn't write."],
@@ -161,7 +163,7 @@ describe("/api", function () {
           },
         ]);
       });
-      it(`#pal29-03b GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.`, () => {
+      it(`${testEnv}#pal29-03b GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.`, () => {
         return runPaletteTest2("POL", "ENG", "123ca", [
           {
             POL: ["Nie pisze (male).", "On nie pisze."],
@@ -169,7 +171,7 @@ describe("/api", function () {
           },
         ]);
       });
-      it(`#pal29-03b(ii) GET 200 YES: Poleng. stativeOverrideTrue.`, () => {
+      it(`${testEnv}#pal29-03b(ii) GET 200 YES: Poleng. stativeOverrideTrue.`, () => {
         return runPaletteTest2("POL", "ENG", "123caa", [
           {
             POL: ["Nie pisze (male).", "On nie pisze."],
@@ -177,7 +179,7 @@ describe("/api", function () {
           },
         ]);
       });
-      it(`#pal29-03c GET 200 YES: Engpol.`, () => {
+      it(`${testEnv}#pal29-03c GET 200 YES: Engpol.`, () => {
         return runPaletteTest2("ENG", "POL", "123cb", [
           {
             ENG: ["He did not write.", "He didn't write."],
@@ -185,7 +187,7 @@ describe("/api", function () {
           },
         ]);
       });
-      it(`#pal29-03d GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.`, () => {
+      it(`${testEnv}#pal29-03d GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.`, () => {
         return runPaletteTest2("POL", "ENG", "123cb", [
           {
             POL: ["Nie napisał.", "On nie napisał."],
@@ -199,7 +201,7 @@ describe("/api", function () {
       });
     });
     describe("#pal29-04 Negative Be (perfect).", () => {
-      it(`#pal29-04a GET 200 YES: Engpol.`, () => {
+      it(`${testEnv}#pal29-04a GET 200 YES: Engpol.`, () => {
         return runPaletteTest2("ENG", "POL", "123da", [
           {
             ENG: [
@@ -211,7 +213,7 @@ describe("/api", function () {
           },
         ]);
       });
-      it(`#pal29-04c GET 200 YES: Engpol.`, () => {
+      it(`${testEnv}#pal29-04c GET 200 YES: Engpol.`, () => {
         return runPaletteTest2("ENG", "POL", "123db", [
           {
             ENG: [
@@ -225,7 +227,7 @@ describe("/api", function () {
       });
     });
     describe("#pal29-05 Negative Have (perfect).", () => {
-      it(`#pal29-05a GET 200 YES: Engpol.`, () => {
+      it(`${testEnv}#pal29-05a GET 200 YES: Engpol.`, () => {
         return runPaletteTest2("ENG", "POL", "123ea", [
           {
             ENG: [
@@ -237,7 +239,7 @@ describe("/api", function () {
           },
         ]);
       });
-      it(`#pal29-05c GET 200 YES: Engpol.`, () => {
+      it(`${testEnv}#pal29-05c GET 200 YES: Engpol.`, () => {
         return runPaletteTest2("ENG", "POL", "123eb", [
           {
             ENG: [
@@ -251,7 +253,7 @@ describe("/api", function () {
       });
     });
     describe("#pal29-06 Negative Write (perfect).", () => {
-      it(`#pal29-06a GET 200 YES: Engpol.`, () => {
+      it(`${testEnv}#pal29-06a GET 200 YES: Engpol.`, () => {
         return runPaletteTest2("ENG", "POL", "123fa", [
           {
             ENG: [
@@ -268,7 +270,7 @@ describe("/api", function () {
           },
         ]);
       });
-      it(`#pal29-06c GET 200 YES: Engpol.`, () => {
+      it(`${testEnv}#pal29-06c GET 200 YES: Engpol.`, () => {
         return runPaletteTest2("ENG", "POL", "123fb", [
           {
             ENG: [
@@ -282,7 +284,7 @@ describe("/api", function () {
       });
     });
     describe("#pal29-07 Negative Be (future).", () => {
-      it(`#pal29-07a GET 200 YES: Engpol.`, () => {
+      it(`${testEnv}#pal29-07a GET 200 YES: Engpol.`, () => {
         return runPaletteTest2("ENG", "POL", "123g", [
           {
             ENG: ["My onion will not be red.", "My onion won't be red."],
@@ -290,7 +292,7 @@ describe("/api", function () {
           },
         ]);
       });
-      it(`#pal29-07b GET 200 YES: Poleng.`, () => {
+      it(`${testEnv}#pal29-07b GET 200 YES: Poleng.`, () => {
         return runPaletteTest2("POL", "ENG", "123g", [
           {
             POL: ["Moja cebula nie będzie czerwoną."],
@@ -303,7 +305,7 @@ describe("/api", function () {
           },
         ]);
       });
-      it(`#pal29-07c GET 200 YES: Engpol.`, () => {
+      it(`${testEnv}#pal29-07c GET 200 YES: Engpol.`, () => {
         return runPaletteTest2("ENG", "POL", "123h", [
           {
             ENG: [
@@ -319,7 +321,7 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 28: Correct Polish grammar re gender.", () => {
-    it(`#pal28-01a GET 200 YES: Engpol. Polish m2 nouns are not virile.`, () => {
+    it(`${testEnv}#pal28-01a GET 200 YES: Engpol. Polish m2 nouns are not virile.`, () => {
       return runPaletteTest1("ENG", "POL", "dummy75", [
         {
           ENG: ["Rats were red."],
@@ -331,7 +333,7 @@ describe("/api", function () {
         },
       ]);
     });
-    it(`#pal28-01b GET 200 YES: Poleng. Polish m2 nouns are not virile.`, () => {
+    it(`${testEnv}#pal28-01b GET 200 YES: Poleng. Polish m2 nouns are not virile.`, () => {
       return runPaletteTest1("POL", "ENG", "dummy75", [
         {
           ENG: ["Rats were red.", "Rats have been red.", "Rats had been red."],
@@ -356,10 +358,10 @@ describe("/api", function () {
         ENG: ["Red children.", "Red babies."],
       },
     ];
-    it(`#pal27-01a GET 200 YES: Poleng. Dziecko should translate as Child and also Baby.`, () => {
+    it(`${testEnv}#pal27-01a GET 200 YES: Poleng. Dziecko should translate as Child and also Baby.`, () => {
       return runPaletteTest1("POL", "ENG", "dummy73a", dummy73a);
     });
-    it(`#pal27-01b GET 200 YES: Engpol. Dziecko should translate as Child and also Baby.`, () => {
+    it(`${testEnv}#pal27-01b GET 200 YES: Engpol. Dziecko should translate as Child and also Baby.`, () => {
       return runPaletteTest1("ENG", "POL", "dummy73a", dummy73a);
     });
     const dummy73b = [
@@ -380,13 +382,13 @@ describe("/api", function () {
         ENG: ["Red girls."],
       },
     ];
-    it(`#pal27-01c GET 200 YES: Poleng. Dziecko selectable by gender f.`, () => {
+    it(`${testEnv}#pal27-01c GET 200 YES: Poleng. Dziecko selectable by gender f.`, () => {
       return runPaletteTest1("POL", "ENG", "dummy73b", dummy73b);
     });
-    it(`#pal27-01d GET 200 YES: Engpol. Dziecko selectable by gender f.`, () => {
+    it(`${testEnv}#pal27-01d GET 200 YES: Engpol. Dziecko selectable by gender f.`, () => {
       return runPaletteTest1("ENG", "POL", "dummy73b", dummy73b);
     });
-    it(`#pal27-02a GET 200 YES: Poleng. I was a good person - masculine I should still be dobrą osobą.`, () => {
+    it(`${testEnv}#pal27-02a GET 200 YES: Poleng. I was a good person - masculine I should still be dobrą osobą.`, () => {
       return runPaletteTest1("POL", "ENG", "124b", [
         {
           ENG: ["I was/i a good person."],
@@ -406,7 +408,7 @@ describe("/api", function () {
         },
       ]);
     });
-    it(`#pal27-02b GET 200 YES: Engpol. I was a good person - masculine I should still be dobrą osobą.`, () => {
+    it(`${testEnv}#pal27-02b GET 200 YES: Engpol. I was a good person - masculine I should still be dobrą osobą.`, () => {
       return runPaletteTest1("ENG", "POL", "124b", [
         {
           ENG: ["I (female) was a good person."],
@@ -427,7 +429,7 @@ describe("/api", function () {
         },
       ]);
     });
-    it(`#pal27-02c GET 200 YES: Poleng. I was a good person - singular/plural equal proportion.`, () => {
+    it(`${testEnv}#pal27-02c GET 200 YES: Poleng. I was a good person - singular/plural equal proportion.`, () => {
       return runPaletteTest1Multiple(
         50,
         "POL",
@@ -457,7 +459,7 @@ describe("/api", function () {
         ]);
       });
     });
-    it(`#pal27-02d GET 200 YES: Engpol. 'person' singular does not translate to 'ludzie'.`, () => {
+    it(`${testEnv}#pal27-02d GET 200 YES: Engpol. 'person' singular does not translate to 'ludzie'.`, () => {
       return runPaletteTest1("ENG", "POL", "dummy74", [
         {
           ENG: ["One red person."],
@@ -465,7 +467,7 @@ describe("/api", function () {
         },
       ]);
     });
-    it(`#pal27-02dd GET 200 YES: Engpol. Counterpart of #pal27-02d but not really necessary.`, () => {
+    it(`${testEnv}#pal27-02dd GET 200 YES: Engpol. Counterpart of #pal27-02d but not really necessary.`, () => {
       return runPaletteTest1("POL", "ENG", "dummy74", [
         {
           ENG: ["One red person."],
@@ -473,7 +475,7 @@ describe("/api", function () {
         },
       ]);
     });
-    it(`#pal27-02e GET 200 YES: Poleng. I was a good person - masculine I should still be dobrą osobą.`, () => {
+    it(`${testEnv}#pal27-02e GET 200 YES: Poleng. I was a good person - masculine I should still be dobrą osobą.`, () => {
       return runPaletteTest1("POL", "ENG", "124c", [
         {
           ENG: ["I was/i a good person."],
@@ -509,7 +511,7 @@ describe("/api", function () {
         },
       ]);
     });
-    it(`#pal27-02f GET 200 YES: Engpol. I was a good person - masculine I should still be dobrą osobą.`, () => {
+    it(`${testEnv}#pal27-02f GET 200 YES: Engpol. I was a good person - masculine I should still be dobrą osobą.`, () => {
       return runPaletteTest1("ENG", "POL", "124c", [
         {
           ENG: ["I (female) was a good person."],
@@ -571,22 +573,22 @@ describe("/api", function () {
         POL: ["Czerwone cebule."],
       },
     ];
-    it(`#pal26-01a GET 200 YES: Polspa. Red onion (NORMAL).`, () => {
+    it(`${testEnv}#pal26-01a GET 200 YES: Polspa. Red onion (NORMAL).`, () => {
       return runPaletteTest1("POL", "SPA", "dummy72a", dummy72a);
     });
-    it(`#pal26-01b GET 200 YES: Spapol. Red onion (NORMAL).`, () => {
+    it(`${testEnv}#pal26-01b GET 200 YES: Spapol. Red onion (NORMAL).`, () => {
       return runPaletteTest1("SPA", "POL", "dummy72a", dummy72a);
     });
-    it(`#pal26-01c GET 200 YES: Engspa. Red onion (NORMAL).`, () => {
+    it(`${testEnv}#pal26-01c GET 200 YES: Engspa. Red onion (NORMAL).`, () => {
       return runPaletteTest1("ENG", "SPA", "dummy72a", dummy72a);
     });
-    it(`#pal26-01d GET 200 YES: Spaeng. Red onion (NORMAL).`, () => {
+    it(`${testEnv}#pal26-01d GET 200 YES: Spaeng. Red onion (NORMAL).`, () => {
       return runPaletteTest1("SPA", "ENG", "dummy72a", dummy72a);
     });
   });
 
   describe("/palette - Stage 26-ii: Spanish basic. Hypernyms and Vypernyms", () => {
-    it(`#pal26-02a GET 200 YES: Polspa. Red doctor (MGN).`, () => {
+    it(`${testEnv}#pal26-02a GET 200 YES: Polspa. Red doctor (MGN).`, () => {
       return runPaletteTest1("POL", "SPA", "dummy72b", [
         {
           POL: ["Czerwony lekarz."],
@@ -614,7 +616,7 @@ describe("/api", function () {
         },
       ]);
     });
-    it(`#pal26-02b GET 200 YES: Spapol. Red doctor (MGN).`, () => {
+    it(`${testEnv}#pal26-02b GET 200 YES: Spapol. Red doctor (MGN).`, () => {
       return runPaletteTest1("SPA", "POL", "dummy72b", [
         {
           POL: ["Czerwony lekarz."],
@@ -638,7 +640,7 @@ describe("/api", function () {
         },
       ]);
     });
-    it(`#pal26-02c GET 200 YES: Engspa. Red doctor (MGN).`, () => {
+    it(`${testEnv}#pal26-02c GET 200 YES: Engspa. Red doctor (MGN).`, () => {
       return runPaletteTest1("ENG", "SPA", "dummy72b", [
         {
           ENG: ["Red doctor (male)."],
@@ -662,7 +664,7 @@ describe("/api", function () {
         },
       ]);
     });
-    it(`#pal26-02d GET 200 YES: Spaeng. Red doctor (MGN).`, () => {
+    it(`${testEnv}#pal26-02d GET 200 YES: Spaeng. Red doctor (MGN).`, () => {
       return runPaletteTest1("SPA", "ENG", "dummy72b", [
         {
           SPA: ["Rojo medico."],
@@ -685,7 +687,7 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 26-iii: Spanish basic. Hypernyms and Vypernyms", () => {
-    it(`#pal26-03a GET 200 YES: Polspa. Red mother (Vypernym).`, () => {
+    it(`${testEnv}#pal26-03a GET 200 YES: Polspa. Red mother (Vypernym).`, () => {
       return runPaletteTest1("POL", "SPA", "dummy72c", [
         { POL: ["Czerwona matka."], SPA: ["Roja madre."] },
         { POL: ["Czerwone matki."], SPA: ["Rojas madres."] },
@@ -698,7 +700,7 @@ describe("/api", function () {
         { POL: ["Czerwony rodzic (female)."], SPA: ["Roja madre."] },
       ]);
     });
-    it(`#pal26-03b GET 200 YES: Spapol. Red mother (Vypernym).`, () => {
+    it(`${testEnv}#pal26-03b GET 200 YES: Spapol. Red mother (Vypernym).`, () => {
       return runPaletteTest1("SPA", "POL", "dummy72c", [
         { POL: ["Czerwona matka."], SPA: ["Roja madre."] },
         { POL: ["Czerwone matki."], SPA: ["Rojas madres."] },
@@ -712,7 +714,7 @@ describe("/api", function () {
         { POL: ["Czerwoni rodzice."], SPA: ["Rojos padres (mixed)."] },
       ]);
     });
-    it(`#pal26-03c GET 200 YES: Engspa. Red mother (Vypernym).`, () => {
+    it(`${testEnv}#pal26-03c GET 200 YES: Engspa. Red mother (Vypernym).`, () => {
       return runPaletteTest1("ENG", "SPA", "dummy72c", [
         { ENG: ["Red mother."], SPA: ["Roja madre."] },
         { ENG: ["Red mothers."], SPA: ["Rojas madres."] },
@@ -725,7 +727,7 @@ describe("/api", function () {
         { ENG: ["Red parent (female)."], SPA: ["Roja madre."] },
       ]);
     });
-    it(`#pal26-03d GET 200 YES: Spaeng. Red mother (Vypernym).`, () => {
+    it(`${testEnv}#pal26-03d GET 200 YES: Spaeng. Red mother (Vypernym).`, () => {
       return runPaletteTest1("SPA", "ENG", "dummy72c", [
         { ENG: ["Red mother."], SPA: ["Roja madre."] },
         { ENG: ["Red mothers."], SPA: ["Rojas madres."] },
@@ -736,7 +738,7 @@ describe("/api", function () {
         { ENG: ["Red parents."], SPA: ["Rojos padres (mixed)."] },
       ]);
     });
-    it(`#pal26-03e GET 200 YES: Enpol. Red mother (Vypernym).`, () => {
+    it(`${testEnv}#pal26-03e GET 200 YES: Enpol. Red mother (Vypernym).`, () => {
       return runPaletteTest1("ENG", "POL", "dummy72c", [
         { ENG: ["Red mother."], POL: ["Czerwona matka."] },
         { ENG: ["Red mothers."], POL: ["Czerwone matki."] },
@@ -746,7 +748,7 @@ describe("/api", function () {
         { ENG: ["Red parent."], POL: ["Czerwony rodzic."] },
       ]);
     });
-    it(`#pal26-03f GET 200 YES: Poleng. Red mother (Vypernym).`, () => {
+    it(`${testEnv}#pal26-03f GET 200 YES: Poleng. Red mother (Vypernym).`, () => {
       return runPaletteTest1("POL", "ENG", "dummy72c", [
         { ENG: ["Red mother."], POL: ["Czerwona matka."] },
         { ENG: ["Red mothers."], POL: ["Czerwone matki."] },
@@ -759,7 +761,7 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 26-iv: Spanish basic. HypernymyProportion adjustment but just for mother/father/parent.", () => {
-    it(`#pal26-04a GET 200 YES: Polspa. Red mother (Vypernym).`, () => {
+    it(`${testEnv}#pal26-04a GET 200 YES: Polspa. Red mother (Vypernym).`, () => {
       return runPaletteTest1Multiple(
         250,
         "POL",
@@ -781,7 +783,7 @@ describe("/api", function () {
         ]);
       });
     });
-    it(`#pal26-04b GET 200 YES: Poleng. Red mother (Vypernym).`, () => {
+    it(`${testEnv}#pal26-04b GET 200 YES: Poleng. Red mother (Vypernym).`, () => {
       return runPaletteTest1Multiple(
         250,
         "POL",
@@ -803,7 +805,7 @@ describe("/api", function () {
         ]);
       });
     });
-    it(`#pal26-04c GET 200 YES: Spapol. Red mother (Vypernym).`, () => {
+    it(`${testEnv}#pal26-04c GET 200 YES: Spapol. Red mother (Vypernym).`, () => {
       return runPaletteTest1Multiple(
         250,
         "SPA",
@@ -823,7 +825,7 @@ describe("/api", function () {
         ]);
       });
     });
-    it(`#pal26-04d GET 200 YES: Spaeng. Red mother (Vypernym).`, () => {
+    it(`${testEnv}#pal26-04d GET 200 YES: Spaeng. Red mother (Vypernym).`, () => {
       runPaletteTest1Multiple(
         250,
         "SPA",
@@ -843,7 +845,7 @@ describe("/api", function () {
         ]);
       });
     });
-    it(`#pal26-04e GET 200 YES: Engpol. Red mother (Vypernym).`, () => {
+    it(`${testEnv}#pal26-04e GET 200 YES: Engpol. Red mother (Vypernym).`, () => {
       return runPaletteTest1Multiple(
         250,
         "ENG",
@@ -865,7 +867,7 @@ describe("/api", function () {
         ]);
       });
     });
-    it(`#pal26-04f GET 200 YES: Engspa. Red mother (Vypernym).`, () => {
+    it(`${testEnv}#pal26-04f GET 200 YES: Engspa. Red mother (Vypernym).`, () => {
       return runPaletteTest1Multiple(
         250,
         "ENG",

@@ -25,12 +25,12 @@ const runApiTest1 = (req, expected) => {
 };
 
 describe("/educator/formulas.", () => {
-  apiUtils.setEnvir({ body: { envir: "ref" } });
+  const testEnv = "ref";
+  apiUtils.setEnvir({ body: { envir: testEnv } });
 
-  it(`#san04a GET 200 YES: Check that numeric chunkIds are converted to guidewords.`, () => {
+  it(`${testEnv}#san04a GET 200 YES: Check that numeric chunkIds are converted to guidewords.`, () => {
     let res = fetchFormulas({
       query: { id: "POL-101b", lang: "ENG" },
-      body: { envir: "ref" },
     });
     return res.then((res) => {
       res.questionSentenceFormula =
@@ -49,10 +49,9 @@ describe("/educator/formulas.", () => {
       expect(res).to.eql(desiredRes);
     });
   });
-  it(`#san04b GET 200 YES: Check that numeric chunkIds are converted to guidewords.`, () => {
+  it(`${testEnv}#san04b GET 200 YES: Check that numeric chunkIds are converted to guidewords.`, () => {
     let res = fetchFormulas({
       query: { id: "POL-112", lang: "ENG" },
-      body: { envir: "ref" },
     });
     return res.then((res) => {
       res.questionSentenceFormula =
@@ -74,7 +73,10 @@ describe("/educator/formulas.", () => {
 });
 
 describe("/educator/sentences - Testing API.", () => {
-  it(`#san03 GET 200 YES: Deduplicating specially treated imOnly verbs like 'być'.`, () => {
+  const testEnv = "ref";
+  apiUtils.setEnvir({ body: { envir: testEnv } });
+
+  it(`${testEnv}#san03 GET 200 YES: Deduplicating specially treated imOnly verbs like 'być'.`, () => {
     const questionLanguage = "POL";
 
     let numberString = Date.now();
@@ -118,7 +120,7 @@ describe("/educator/sentences - Testing API.", () => {
       }
     );
   });
-  it(`#san02 GET 200 YES: Educator queries a sentence, Q only but still wants multiple mode.`, () => {
+  it(`${testEnv}#san02 GET 200 YES: Educator queries a sentence, Q only but still wants multiple mode.`, () => {
     const questionLanguage = "POL";
 
     let numberString = Date.now();
@@ -167,7 +169,7 @@ describe("/educator/sentences - Testing API.", () => {
       }
     );
   });
-  it(`#san01 GET 200 YES: Educator queries a single word, Q only but still wants multiple mode.`, () => {
+  it(`${testEnv}#san01 GET 200 YES: Educator queries a single word, Q only but still wants multiple mode.`, () => {
     const questionLanguage = "ENG";
 
     let numberString = Date.now();
@@ -215,7 +217,10 @@ describe("/educator/sentences - Testing API.", () => {
 });
 
 xdescribe("getEnChsForLemma", () => {
-  it("1", () => {
+  const testEnv = "ref";
+  apiUtils.setEnvir({ body: { envir: testEnv } });
+
+  it(`${testEnv}1`, () => {
     const actual = getEnChsForLemma("POL", "kobieta");
     console.log(actual);
     // expect(actual).to.eql(expected);

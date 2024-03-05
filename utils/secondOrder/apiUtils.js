@@ -636,7 +636,7 @@ exports.setEnvir = (req, label) => {
 
   env.envir = envir;
 
-  consol.logVeryGreyString(`${label} set envir to ${envir}`);
+  consol.logVeryGreyString(`"${envir}" set as envir by ${label}`);
 };
 
 exports.getEnvir = (label) => {
@@ -646,7 +646,7 @@ exports.getEnvir = (label) => {
     envir = "ref";
   }
 
-  consol.logVeryGreyString(`${label} get envir is ${envir}`);
+  consol.logVeryGreyString(`"${envir}" got as envir for ${label}`);
 
   return envir;
 };

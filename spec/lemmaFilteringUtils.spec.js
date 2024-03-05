@@ -1,3 +1,4 @@
+const apiUtils = require("../utils/secondOrder/apiUtils");
 const { expect } = require("chai");
 const {
   traverseAndRecordInflections,
@@ -6,6 +7,9 @@ const {
 const shouldConsoleLog = false;
 
 xdescribe("traverseAndRecordInflections", () => {
+  const testEnv = "ref";
+  apiUtils.setEnvir({ body: { envir: testEnv } });
+
   let source = {
     infinitive: "czytać",
     verbal: {
@@ -307,7 +311,7 @@ xdescribe("traverseAndRecordInflections", () => {
     ],
   };
 
-  it(`#lfu1.1a YES: Returns drills successfully (RDS) from set of single requirements.`, () => {
+  it(`${testEnv}#lfu1.1a YES: Returns drills successfully (RDS) from set of single requirements.`, () => {
     let outputUnitsWithDrillPaths = [];
     let reqArrNo = "08";
     traverseAndRecordInflections(
@@ -331,7 +335,7 @@ xdescribe("traverseAndRecordInflections", () => {
       ["gender", "f"],
     ]);
   });
-  it(`#lfu1.1b YES: RDS when gender has two requirement traitValues.`, () => {
+  it(`${testEnv}#lfu1.1b YES: RDS when gender has two requirement traitValues.`, () => {
     let outputUnitsWithDrillPaths = [];
     let reqArrNo = "07";
     traverseAndRecordInflections(
@@ -368,7 +372,7 @@ xdescribe("traverseAndRecordInflections", () => {
       },
     ]);
   });
-  it(`#lfu1.1c YES: RDS when gender has two requirement traitValues which are masculine subgenders.`, () => {
+  it(`${testEnv}#lfu1.1c YES: RDS when gender has two requirement traitValues which are masculine subgenders.`, () => {
     let outputUnitsWithDrillPaths = [];
     let reqArrNo = "06";
     traverseAndRecordInflections(
@@ -405,7 +409,7 @@ xdescribe("traverseAndRecordInflections", () => {
       },
     ]);
   });
-  it(`#lfu1.2a YES: RDS when gender has two identical requirement traitValues (feminine).`, () => {
+  it(`${testEnv}#lfu1.2a YES: RDS when gender has two identical requirement traitValues (feminine).`, () => {
     let outputUnitsWithDrillPaths = [];
     let reqArrNo = "05";
     traverseAndRecordInflections(
@@ -442,7 +446,7 @@ xdescribe("traverseAndRecordInflections", () => {
       },
     ]);
   });
-  it(`#lfu1.2b YES: RDS when gender has five identical requirement traitValues (feminine).`, () => {
+  it(`${testEnv}#lfu1.2b YES: RDS when gender has five identical requirement traitValues (feminine).`, () => {
     let outputUnitsWithDrillPaths = [];
     let reqArrNo = "04";
     traverseAndRecordInflections(
@@ -509,7 +513,7 @@ xdescribe("traverseAndRecordInflections", () => {
       },
     ]);
   });
-  it(`#lfu1.2c YES: RDS when gender has requirement traitValues that are five identical (feminine) and one different (neuter).`, () => {
+  it(`${testEnv}#lfu1.2c YES: RDS when gender has requirement traitValues that are five identical (feminine) and one different (neuter).`, () => {
     let outputUnitsWithDrillPaths = [];
     let reqArrNo = "03";
     traverseAndRecordInflections(
@@ -586,7 +590,7 @@ xdescribe("traverseAndRecordInflections", () => {
       },
     ]);
   });
-  it(`#lfu1.2d YES: RDS when gender has big mix of duplicates in gender requirements.`, () => {
+  it(`${testEnv}#lfu1.2d YES: RDS when gender has big mix of duplicates in gender requirements.`, () => {
     let outputUnitsWithDrillPaths = [];
     let reqArrNo = "02";
     traverseAndRecordInflections(
@@ -693,7 +697,7 @@ xdescribe("traverseAndRecordInflections", () => {
       },
     ]);
   });
-  it(`#lfu1.3a YES: RDS >>> Nonv, Plur <<<.`, () => {
+  it(`${testEnv}#lfu1.3a YES: RDS >>> Nonv, Plur <<<.`, () => {
     let outputUnitsWithDrillPaths = [];
     let reqArrNo = "19";
     traverseAndRecordInflections(
@@ -721,7 +725,7 @@ xdescribe("traverseAndRecordInflections", () => {
       },
     ]);
   });
-  it(`#lfu1.3b YES: RDS >>> Fem, Plur <<< and two person choices.`, () => {
+  it(`${testEnv}#lfu1.3b YES: RDS >>> Fem, Plur <<< and two person choices.`, () => {
     let outputUnitsWithDrillPaths = [];
     let reqArrNo = "18";
     traverseAndRecordInflections(
@@ -759,7 +763,7 @@ xdescribe("traverseAndRecordInflections", () => {
       },
     ]);
   });
-  it(`#lfu1.3c YES: RDS >>> Fem, Plur <<< and two person choices, and two tense choices.`, () => {
+  it(`${testEnv}#lfu1.3c YES: RDS >>> Fem, Plur <<< and two person choices, and two tense choices.`, () => {
     let outputUnitsWithDrillPaths = [];
     let reqArrNo = "17";
     traverseAndRecordInflections(
@@ -817,7 +821,7 @@ xdescribe("traverseAndRecordInflections", () => {
       },
     ]);
   });
-  it(`#lfu1.4a YES: RDS >>> Fem+Nonv, singular <<<.`, () => {
+  it(`${testEnv}#lfu1.4a YES: RDS >>> Fem+Nonv, singular <<<.`, () => {
     let outputUnitsWithDrillPaths = [];
     let reqArrNo = "20";
     traverseAndRecordInflections(
@@ -845,7 +849,7 @@ xdescribe("traverseAndRecordInflections", () => {
       },
     ]);
   });
-  it(`#lfu1.4b YES: RDS >>> Fem, Sing+Plur <<<`, () => {
+  it(`${testEnv}#lfu1.4b YES: RDS >>> Fem, Sing+Plur <<<`, () => {
     let outputUnitsWithDrillPaths = [];
     let reqArrNo = "21";
     traverseAndRecordInflections(
@@ -873,7 +877,7 @@ xdescribe("traverseAndRecordInflections", () => {
       },
     ]);
   });
-  it(`#lfu1.4c YES: 22 (used to fail Drill Virile issue) RDS >>> Nonv, Sing+Plur <<<.`, () => {
+  it(`${testEnv}#lfu1.4c YES: 22 (used to fail Drill Virile issue) RDS >>> Nonv, Sing+Plur <<<.`, () => {
     let outputUnitsWithDrillPaths = [];
     let reqArrNo = "22";
     traverseAndRecordInflections(
@@ -901,7 +905,7 @@ xdescribe("traverseAndRecordInflections", () => {
       },
     ]);
   });
-  it(`#lfu1.4d YES: 23 (used to fail Drill Virile issue) RDS >>> Fem+Nonv, Plur <<<.`, () => {
+  it(`${testEnv}#lfu1.4d YES: 23 (used to fail Drill Virile issue) RDS >>> Fem+Nonv, Plur <<<.`, () => {
     let outputUnitsWithDrillPaths = [];
     let reqArrNo = "23";
     traverseAndRecordInflections(
@@ -929,7 +933,7 @@ xdescribe("traverseAndRecordInflections", () => {
       },
     ]);
   });
-  it(`#lfu1.4e YES: 24 (used to fail Drill Virile issue) RDS >>> Fem+Nonv, Sing+Plur <<<.`, () => {
+  it(`${testEnv}#lfu1.4e YES: 24 (used to fail Drill Virile issue) RDS >>> Fem+Nonv, Sing+Plur <<<.`, () => {
     let outputUnitsWithDrillPaths = [];
     let reqArrNo = "24";
     traverseAndRecordInflections(

@@ -147,7 +147,10 @@ xdescribe("Create contractionsReverse ref.", () => {
 });
 
 xdescribe("findHomographs", () => {
-  it(`#edu1.1 Gives all synhomograph lemma objects in one language.`, () => {
+  const testEnv = "ref";
+  apiUtils.setEnvir({ body: { envir: testEnv } });
+
+  it(`${testEnv}#edu1.1 Gives all synhomograph lemma objects in one language.`, () => {
     const currentLanguage = "ENG";
     const homographType = "syn";
     const ignore = {
@@ -184,7 +187,7 @@ xdescribe("findHomographs", () => {
     consol.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
-  it(`#edu1.2 Gives all synhomograph lemma objects in one language.`, () => {
+  it(`${testEnv}#edu1.2 Gives all synhomograph lemma objects in one language.`, () => {
     const currentLanguage = "ENG";
     const homographType = "syn";
     const ignore = {
@@ -212,7 +215,7 @@ xdescribe("findHomographs", () => {
     consol.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
-  it(`#edu1.3 Gives all synhomograph lemma objects in one language.`, () => {
+  it(`${testEnv}#edu1.3 Gives all synhomograph lemma objects in one language.`, () => {
     const currentLanguage = "ENG";
     const homographType = "syn";
     const ignore = {
@@ -248,7 +251,7 @@ xdescribe("findHomographs", () => {
     consol.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
-  it(`#edu1.4 Gives all synhomograph lemma objects in one language.`, () => {
+  it(`${testEnv}#edu1.4 Gives all synhomograph lemma objects in one language.`, () => {
     const currentLanguage = "ENG";
     const homographType = "syn";
     const ignore = {
@@ -276,7 +279,7 @@ xdescribe("findHomographs", () => {
     consol.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
-  it(`#edu1.11 Gives all allohomograph lemma objects in one language.`, () => {
+  it(`${testEnv}#edu1.11 Gives all allohomograph lemma objects in one language.`, () => {
     const currentLanguage = "ENG";
     const homographType = "allo";
     const ignore = {
@@ -329,7 +332,7 @@ xdescribe("findHomographs", () => {
     consol.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
-  it(`#edu1.12 Gives all allohomograph lemma objects in one language.`, () => {
+  it(`${testEnv}#edu1.12 Gives all allohomograph lemma objects in one language.`, () => {
     const currentLanguage = "ENG";
     const homographType = "allo";
     const ignore = {
@@ -382,7 +385,7 @@ xdescribe("findHomographs", () => {
     consol.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
-  it(`#edu1.13 Gives all allohomograph lemma objects in one language.`, () => {
+  it(`${testEnv}#edu1.13 Gives all allohomograph lemma objects in one language.`, () => {
     const currentLanguage = "ENG";
     const homographType = "allo";
     const ignore = {
@@ -411,7 +414,7 @@ xdescribe("findHomographs", () => {
     consol.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
-  it(`#edu1.14 Gives all allohomograph lemma objects in one language.`, () => {
+  it(`${testEnv}#edu1.14 Gives all allohomograph lemma objects in one language.`, () => {
     const currentLanguage = "ENG";
     const homographType = "allo";
     const ignore = {
@@ -440,7 +443,7 @@ xdescribe("findHomographs", () => {
     consol.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
-  it(`#edu1.15 Includes tObjs. Gives all allohomograph lemma objects in one language.`, () => {
+  it(`${testEnv}#edu1.15 Includes tObjs. Gives all allohomograph lemma objects in one language.`, () => {
     const currentLanguage = "ENG";
     const homographType = "allo";
     const ignore = {
@@ -472,7 +475,10 @@ xdescribe("findHomographs", () => {
 });
 
 xdescribe("checkLemmaObjectIds", () => {
-  it(`#edu2.1 Gives a schematic and duplicateIds. ENG`, () => {
+  const testEnv = "ref";
+  apiUtils.setEnvir({ body: { envir: testEnv } });
+
+  it(`${testEnv}#edu2.1 Gives a schematic and duplicateIds. ENG`, () => {
     const currentLanguage = "ENG";
 
     let actual = checkLemmaObjectIds("dev", currentLanguage);
@@ -519,7 +525,10 @@ xdescribe("checkLemmaObjectIds", () => {
 });
 
 xdescribe("checkSentenceFormulaIds", () => {
-  it(`#edu3.1 Gives a schematic and duplicateIds. ENG`, () => {
+  const testEnv = "ref";
+  apiUtils.setEnvir({ body: { envir: testEnv } });
+
+  it(`${testEnv}#edu3.1 Gives a schematic and duplicateIds. ENG`, () => {
     const currentLanguage = "ENG";
 
     let actual = checkSentenceFormulaIds("dev", currentLanguage);
@@ -542,7 +551,10 @@ xdescribe("checkSentenceFormulaIds", () => {
 });
 
 xdescribe("checkWords", () => {
-  it(`#edu4.1 Checks words for specific traitKeys that might not have been specified. POL`, () => {
+  const testEnv = "ref";
+  apiUtils.setEnvir({ body: { envir: testEnv } });
+
+  it(`${testEnv}#edu4.1 Checks words for specific traitKeys that might not have been specified. POL`, () => {
     const currentLanguage = "POL";
 
     let actual = checkWords("dev", currentLanguage);
@@ -556,9 +568,10 @@ xdescribe("checkWords", () => {
 });
 
 xdescribe("Educator Battery", () => {
-  apiUtils.setEnvir({ body: { envir: "ref" } });
+  const testEnv = "ref";
+  apiUtils.setEnvir({ body: { envir: testEnv } });
 
-  it(`#eduBat-01 Gives ENG synhomograph lemma objects. (Used programmatically for Type 1 Synhomos)`, () => {
+  it(`${testEnv}#eduBat-01 Gives ENG synhomograph lemma objects. (Used programmatically for Type 1 Synhomos)`, () => {
     const currentLanguage = "ENG";
     const homographType = "syn";
     const ignore = {
@@ -572,7 +585,7 @@ xdescribe("Educator Battery", () => {
       actual
     );
   });
-  it(`#eduBat-02 Gives POL synhomograph lemma objects. (Used programmatically for Type 1 Synhoms)`, () => {
+  it(`${testEnv}#eduBat-02 Gives POL synhomograph lemma objects. (Used programmatically for Type 1 Synhoms)`, () => {
     const currentLanguage = "POL";
     const homographType = "syn";
     const ignore = {
@@ -586,7 +599,7 @@ xdescribe("Educator Battery", () => {
       actual
     );
   });
-  it(`#eduBat-03 Gives ENG allohomograph lemma objects.`, () => {
+  it(`${testEnv}#eduBat-03 Gives ENG allohomograph lemma objects.`, () => {
     const currentLanguage = "ENG";
     const homographType = "allo";
     const ignore = {
@@ -606,7 +619,7 @@ xdescribe("Educator Battery", () => {
     }
     expect(Object.keys(actual).length).to.equal(0);
   });
-  it(`#eduBat-04 Gives POL allohomograph lemma objects.`, () => {
+  it(`${testEnv}#eduBat-04 Gives POL allohomograph lemma objects.`, () => {
     const currentLanguage = "POL";
     const homographType = "allo";
     const ignore = {
@@ -627,7 +640,7 @@ xdescribe("Educator Battery", () => {
     }
     expect(keysActual.length).to.equal(0);
   });
-  it(`#eduBat-05 Gives a schematic and duplicateIds. ENG`, () => {
+  it(`${testEnv}#eduBat-05 Gives a schematic and duplicateIds. ENG`, () => {
     const currentLanguage = "ENG";
 
     let actual = checkLemmaObjectIds(currentLanguage);
@@ -641,7 +654,7 @@ xdescribe("Educator Battery", () => {
     }
     expect(actual.duplicateIds.length).to.equal(0);
   });
-  it(`#eduBat-06 Gives a schematic and duplicateIds. POL`, () => {
+  it(`${testEnv}#eduBat-06 Gives a schematic and duplicateIds. POL`, () => {
     const currentLanguage = "POL";
 
     let actual = checkLemmaObjectIds(currentLanguage);
@@ -655,7 +668,7 @@ xdescribe("Educator Battery", () => {
     }
     expect(actual.duplicateIds.length).to.equal(0);
   });
-  it(`#eduBat-07 Gives a schematic and duplicateIds. ENG`, () => {
+  it(`${testEnv}#eduBat-07 Gives a schematic and duplicateIds. ENG`, () => {
     const currentLanguage = "ENG";
 
     let actual = checkSentenceFormulaIds(currentLanguage);
@@ -680,7 +693,7 @@ xdescribe("Educator Battery", () => {
     }
     expect(duplicateSymbols.length).to.equal(0);
   });
-  it(`#eduBat-08 Gives a schematic and duplicateIds. POL`, () => {
+  it(`${testEnv}#eduBat-08 Gives a schematic and duplicateIds. POL`, () => {
     const currentLanguage = "POL";
 
     let actual = checkSentenceFormulaIds(currentLanguage);
@@ -705,7 +718,7 @@ xdescribe("Educator Battery", () => {
     }
     expect(duplicateSymbols.length).to.equal(0);
   });
-  it(`#eduBat-09 Checks words for specific traitKeys that might not have been specified. ENG`, () => {
+  it(`${testEnv}#eduBat-09 Checks words for specific traitKeys that might not have been specified. ENG`, () => {
     const currentLanguage = "ENG";
 
     let actual = checkWords(currentLanguage);
@@ -722,7 +735,7 @@ xdescribe("Educator Battery", () => {
     }
     expect(nounsWithoutGender.length).to.equal(0);
   });
-  it(`#eduBat-10 Checks words for specific traitKeys that might not have been specified. POL`, () => {
+  it(`${testEnv}#eduBat-10 Checks words for specific traitKeys that might not have been specified. POL`, () => {
     const currentLanguage = "POL";
 
     let actual = checkWords(currentLanguage);
