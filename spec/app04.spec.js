@@ -12,7 +12,7 @@ describe("/api", function () {
   apiUtils.setEnvir({ body: { envir: "ref" } });
 
   describe("/palette - Stage 22: Pronombres, Interrogatives.", () => {
-    it("#pal22-01a GET 200 YES: Poleng. ITG_G. Who is she?", () => {
+    it(`#pal22-01a GET 200 YES: Poleng. ITG_G. Who is she?`, () => {
       let ref = [
         {
           ENG: ["Who is she?"],
@@ -48,7 +48,7 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 23: Synonyms.", () => {
-    it("#pal23-01a GET 200 YES: Engpol. Word synonyms, two in ENG and two in POL.", () => {
+    it(`#pal23-01a GET 200 YES: Engpol. Word synonyms, two in ENG and two in POL.`, () => {
       let ref = [
         {
           ENG: ["Small hole."],
@@ -59,7 +59,7 @@ describe("/api", function () {
         useDummyWords: true,
       });
     });
-    it("#pal23-01b GET 200 YES: Poleng. Word synonyms, two in ENG and two in POL.", () => {
+    it(`#pal23-01b GET 200 YES: Poleng. Word synonyms, two in ENG and two in POL.`, () => {
       let ref = [
         {
           ENG: ["Small hole.", "Small pit."],
@@ -70,7 +70,7 @@ describe("/api", function () {
         useDummyWords: true,
       });
     });
-    it("#pal23-01c GET 200 YES: Engpol. Word synonyms, two in ENG and two in POL.", () => {
+    it(`#pal23-01c GET 200 YES: Engpol. Word synonyms, two in ENG and two in POL.`, () => {
       let ref = [
         {
           ENG: ["In a small hole."],
@@ -81,7 +81,7 @@ describe("/api", function () {
         useDummyWords: true,
       });
     });
-    it("#pal23-01d GET 200 YES: Poleng. Word synonyms, two in ENG and two in POL.", () => {
+    it(`#pal23-01d GET 200 YES: Poleng. Word synonyms, two in ENG and two in POL.`, () => {
       let ref = [
         {
           ENG: ["In a small hole.", "In a small pit."],
@@ -92,7 +92,7 @@ describe("/api", function () {
         useDummyWords: true,
       });
     });
-    it("#pal23-01e GET 200 YES: Engpol. Sentences synonyms.", () => {
+    it(`#pal23-01e GET 200 YES: Engpol. Sentences synonyms.`, () => {
       let ref = [
         {
           ENG: ["In a small hole."],
@@ -108,7 +108,7 @@ describe("/api", function () {
         useDummyWords: true,
       });
     });
-    it("#pal23-01f GET 200 YES: Poleng. Sentences synonyms.", () => {
+    it(`#pal23-01f GET 200 YES: Poleng. Sentences synonyms.`, () => {
       let ref = [
         {
           ENG: [
@@ -127,7 +127,7 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 24: Gender of animals is neuter in ENG (see FYIP102).", () => {
-    it("#pal24-01a GET 200 YES: Poleng. I saw a rat, it was small.", () => {
+    it(`#pal24-01a GET 200 YES: Poleng. I saw a rat, it was small.`, () => {
       let ref = [
         {
           ENG: [
@@ -140,7 +140,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "dummy67b", ref);
     });
-    it("#pal24-01b GET 200 YES: Engpol. I saw a rat, it was small.", () => {
+    it(`#pal24-01b GET 200 YES: Engpol. I saw a rat, it was small.`, () => {
       let ref = [
         {
           ENG: ["I see a rat, it was small."],
@@ -152,7 +152,7 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 25: Two levels of dependent chunks.", () => {
-    it("#pal25-01a GET 200 YES: Poleng. I was a good doctor.", () => {
+    it(`#pal25-01a GET 200 YES: Poleng. I was a good doctor.`, () => {
       return runPaletteTest1("POL", "ENG", "124a", [
         {
           ENG: [
@@ -175,7 +175,7 @@ describe("/api", function () {
         },
       ]);
     });
-    it("#pal25-01b GET 200 YES: Engpol. I was a good doctor.", () => {
+    it(`#pal25-01b GET 200 YES: Engpol. I was a good doctor.`, () => {
       return runPaletteTest1("ENG", "POL", "124a", [
         {
           ENG: ["I was a red doctor (male)."],

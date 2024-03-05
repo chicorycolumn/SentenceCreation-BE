@@ -27,7 +27,7 @@ const runApiTest1 = (req, expected) => {
 describe("/educator/formulas.", () => {
   apiUtils.setEnvir({ body: { envir: "ref" } });
 
-  it("#san04a GET 200 YES: Check that numeric chunkIds are converted to guidewords.", () => {
+  it(`#san04a GET 200 YES: Check that numeric chunkIds are converted to guidewords.`, () => {
     let res = fetchFormulas({
       query: { id: "POL-101b", lang: "ENG" },
       body: { envir: "ref" },
@@ -49,7 +49,7 @@ describe("/educator/formulas.", () => {
       expect(res).to.eql(desiredRes);
     });
   });
-  it("#san04b GET 200 YES: Check that numeric chunkIds are converted to guidewords.", () => {
+  it(`#san04b GET 200 YES: Check that numeric chunkIds are converted to guidewords.`, () => {
     let res = fetchFormulas({
       query: { id: "POL-112", lang: "ENG" },
       body: { envir: "ref" },
@@ -74,7 +74,7 @@ describe("/educator/formulas.", () => {
 });
 
 describe("/educator/sentences - Testing API.", () => {
-  it("#san03 GET 200 YES: Deduplicating specially treated imOnly verbs like 'być'.", () => {
+  it(`#san03 GET 200 YES: Deduplicating specially treated imOnly verbs like 'być'.`, () => {
     const questionLanguage = "POL";
 
     let numberString = Date.now();
@@ -118,7 +118,7 @@ describe("/educator/sentences - Testing API.", () => {
       }
     );
   });
-  it("#san02 GET 200 YES: Educator queries a sentence, Q only but still wants multiple mode.", () => {
+  it(`#san02 GET 200 YES: Educator queries a sentence, Q only but still wants multiple mode.`, () => {
     const questionLanguage = "POL";
 
     let numberString = Date.now();
@@ -167,7 +167,7 @@ describe("/educator/sentences - Testing API.", () => {
       }
     );
   });
-  it("#san01 GET 200 YES: Educator queries a single word, Q only but still wants multiple mode.", () => {
+  it(`#san01 GET 200 YES: Educator queries a single word, Q only but still wants multiple mode.`, () => {
     const questionLanguage = "ENG";
 
     let numberString = Date.now();

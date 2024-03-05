@@ -16,7 +16,7 @@ describe("/api", function () {
   apiUtils.setEnvir({ body: { envir: "ref" } });
 
   describe("/palette - Stage 21: Step-T: Tantum Nouns.", () => {
-    it("#pal21-01a GET 200 YES: Poleng. Plurale Tantum in POL is allowed to be sing or plur in ENG.", () => {
+    it(`#pal21-01a GET 200 YES: Poleng. Plurale Tantum in POL is allowed to be sing or plur in ENG.`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -38,7 +38,7 @@ describe("/api", function () {
           ]);
         });
     });
-    it("#pal21-01b GET 200 YES: Engpol. RSWAT for ENG sing to POL Plurale Tantum.", () => {
+    it(`#pal21-01b GET 200 YES: Engpol. RSWAT for ENG sing to POL Plurale Tantum.`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -57,7 +57,7 @@ describe("/api", function () {
           expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
         });
     });
-    it("#pal21-01c GET 200 YES: Engpol. RSWAT for Engpol Plurale Tantum.", () => {
+    it(`#pal21-01c GET 200 YES: Engpol. RSWAT for Engpol Plurale Tantum.`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -77,7 +77,7 @@ describe("/api", function () {
           expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
         });
     });
-    it("#pal21-02a GET 200 YES: Engpol. A POL Plurale Tantum is actually Singular.", () => {
+    it(`#pal21-02a GET 200 YES: Engpol. A POL Plurale Tantum is actually Singular.`, () => {
       let ref = [
         {
           ENG: "One door.",
@@ -86,7 +86,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy68a", ref);
     });
-    it("#pal21-02b GET 200 YES: Poleng. A POL Plurale Tantum is actually Singular.", () => {
+    it(`#pal21-02b GET 200 YES: Poleng. A POL Plurale Tantum is actually Singular.`, () => {
       let ref = [
         {
           ENG: ["One door."],
@@ -95,7 +95,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "dummy68a", ref);
     });
-    it("#pal21-02c GET 200 YES: Engpol. A POL Plurale Tantum is actually Plural.", () => {
+    it(`#pal21-02c GET 200 YES: Engpol. A POL Plurale Tantum is actually Plural.`, () => {
       let ref = [
         {
           ENG: "Two doors.",
@@ -104,7 +104,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy68b", ref);
     });
-    it("#pal21-02d GET 200 YES: Poleng. A POL Plurale Tantum is actually Plural.", () => {
+    it(`#pal21-02d GET 200 YES: Poleng. A POL Plurale Tantum is actually Plural.`, () => {
       let ref = [
         {
           ENG: ["Two doors."],
@@ -113,7 +113,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "dummy68b", ref);
     });
-    it("#pal21-03a GET 200 YES: Engpol. An ENG Plurale Tantum is actually Singular.", () => {
+    it(`#pal21-03a GET 200 YES: Engpol. An ENG Plurale Tantum is actually Singular.`, () => {
       let ref = [
         {
           ENG: "Tweezers are.",
@@ -122,7 +122,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy68c", ref);
     });
-    it("#pal21-03b GET 200 YES: Poleng. An ENG Plurale Tantum is actually Singular.", () => {
+    it(`#pal21-03b GET 200 YES: Poleng. An ENG Plurale Tantum is actually Singular.`, () => {
       let ref = [
         {
           ENG: ["Tweezers are."],
@@ -131,7 +131,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "dummy68c", ref);
     });
-    it("#pal21-03c GET 200 YES: Engpol. An ENG Plurale Tantum is actually Plural.", () => {
+    it(`#pal21-03c GET 200 YES: Engpol. An ENG Plurale Tantum is actually Plural.`, () => {
       let ref = [
         {
           ENG: "Tweezers are.",
@@ -140,7 +140,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy68d", ref);
     });
-    it("#pal21-03d GET 200 YES: Poleng. An ENG Plurale Tantum is actually Plural.", () => {
+    it(`#pal21-03d GET 200 YES: Poleng. An ENG Plurale Tantum is actually Plural.`, () => {
       let ref = [
         {
           ENG: ["Tweezers are."],
@@ -149,7 +149,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "dummy68d", ref);
     });
-    it("#pal21-04a GET 200 YES: Engpol. An ENG Singulare Tantum is actually Singular.", () => {
+    it(`#pal21-04a GET 200 YES: Engpol. An ENG Singulare Tantum is actually Singular.`, () => {
       let ref = [
         {
           ENG: "Dust is.",
@@ -158,7 +158,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy68e", ref);
     });
-    it("#pal21-04b GET 200 YES: Poleng. An ENG Singulare Tantum is actually Singular.", () => {
+    it(`#pal21-04b GET 200 YES: Poleng. An ENG Singulare Tantum is actually Singular.`, () => {
       let ref = [
         {
           ENG: ["Dust is."],
@@ -167,7 +167,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "dummy68e", ref);
     });
-    it("#pal21-04c GET 200 YES: Engpol. An ENG Singulare Tantum is actually Plural.", () => {
+    it(`#pal21-04c GET 200 YES: Engpol. An ENG Singulare Tantum is actually Plural.`, () => {
       let ref = [
         {
           ENG: "Dust is.",
@@ -176,7 +176,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy68f", ref);
     });
-    it("#pal21-04d GET 200 YES: Poleng. An ENG Singulare Tantum is actually Plural.", () => {
+    it(`#pal21-04d GET 200 YES: Poleng. An ENG Singulare Tantum is actually Plural.`, () => {
       let ref = [
         {
           ENG: ["Dust is."],
@@ -188,7 +188,7 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 20: Step-O: Omit particular traitValues from being a valid translation.", () => {
-    it("#pal20-01a GET 200 YES: Engpol. 'I see a rat.'", () => {
+    it(`#pal20-01a GET 200 YES: Engpol. 'I see a rat.'`, () => {
       let ref = [
         {
           ENG: ["I can see a rat.", "I see a rat."],
@@ -197,7 +197,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy67a", ref);
     });
-    it("#pal20-01c GET 200 YES: Poleng. 'I see a rat.'", () => {
+    it(`#pal20-01c GET 200 YES: Poleng. 'I see a rat.'`, () => {
       let ref = [
         {
           ENG: ["I see a rat.", "I can see a rat."],
@@ -210,7 +210,7 @@ describe("/api", function () {
 
   describe("/palette - Stage 19: Step-L: Pronombre translation of gendered objects eg Pomidor/Cebula.", () => {
     //#pal19-00 alias #pal18-09, yes indeed   "It is red." <-> "Ono jest czerwone."
-    it("#pal19-01a GET 200 YES: Engpol. 'There's a woman and I see her.'", () => {
+    it(`#pal19-01a GET 200 YES: Engpol. 'There's a woman and I see her.'`, () => {
       let ref = [
         {
           ENG: "There's a mother and I see her.",
@@ -232,7 +232,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy64a", ref);
     });
-    it("#pal19-01c GET 200 YES: Poleng. 'There's a woman and I see her.'", () => {
+    it(`#pal19-01c GET 200 YES: Poleng. 'There's a woman and I see her.'`, () => {
       let ref = [
         {
           ENG: ["There's a mother and I see her."],
@@ -253,7 +253,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "dummy64a", ref);
     });
-    it("#pal19-02a GET 200 YES: Engpol. 'There's an apple and I see it.'", () => {
+    it(`#pal19-02a GET 200 YES: Engpol. 'There's an apple and I see it.'`, () => {
       let ref = [
         {
           ENG: "There's an apple and I see it.",
@@ -270,7 +270,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy64b", ref);
     });
-    it("#pal19-02c GET 200 YES: Poleng. 'There's an apple and I see it.'", () => {
+    it(`#pal19-02c GET 200 YES: Poleng. 'There's an apple and I see it.'`, () => {
       let ref = [
         {
           ENG: ["There's an apple and I see it."],
@@ -287,7 +287,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "dummy64b", ref);
     });
-    it("#pal19-03a GET 200 YES: Engpol. 'There's a rat and I see him/her/it.'", () => {
+    it(`#pal19-03a GET 200 YES: Engpol. 'There's a rat and I see him/her/it.'`, () => {
       let ref = [
         {
           ENG: "There's a rat and I see it.",
@@ -296,7 +296,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy65a", ref);
     });
-    it("#pal19-03c GET 200 YES: Poleng. 'There's a rat and I see him/her/it.'", () => {
+    it(`#pal19-03c GET 200 YES: Poleng. 'There's a rat and I see him/her/it.'`, () => {
       let ref = [
         {
           ENG: [
@@ -312,7 +312,7 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 18B: Annotations: MGNs and metagenders", () => {
-    it("#pal18-10a GET 200 YES: Engpol. 'The doctor writes.'", () => {
+    it(`#pal18-10a GET 200 YES: Engpol. 'The doctor writes.'`, () => {
       let ref = [
         {
           ENG: "The doctor (male) writes.",
@@ -349,7 +349,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "122", ref);
     });
-    it("#pal18-10b GET 200 YES: Engpol. 'The doctor writes.' PDS", () => {
+    it(`#pal18-10b GET 200 YES: Engpol. 'The doctor writes.' PDS`, () => {
       let ref = [
         {
           ENG: "The doctor writes.",
@@ -372,7 +372,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal18-10c GET 200 YES: Poleng. 'The doctor writes.'", () => {
+    it(`#pal18-10c GET 200 YES: Poleng. 'The doctor writes.'`, () => {
       let ref = [
         {
           ENG: ["The doctor writes.", "The doctor is writing."],
@@ -425,7 +425,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "122", ref);
     });
-    it("#pal18-10d GET 200 YES: Poleng. 'The doctor writes.' PDS", () => {
+    it(`#pal18-10d GET 200 YES: Poleng. 'The doctor writes.' PDS`, () => {
       let ref = [
         {
           ENG: ["The doctor writes.", "The doctor is writing."],
@@ -480,7 +480,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal18-11a GET 200 YES: Engpol. 'The doctor writes.' stCh specified male", () => {
+    it(`#pal18-11a GET 200 YES: Engpol. 'The doctor writes.' stCh specified male`, () => {
       let ref = [
         {
           ENG: "The doctor (male) writes.",
@@ -501,7 +501,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy63a", ref);
     });
-    it("#pal18-11c GET 200 YES: Poleng. 'The doctor writes.' stCh specified male", () => {
+    it(`#pal18-11c GET 200 YES: Poleng. 'The doctor writes.' stCh specified male`, () => {
       let ref = [
         {
           ENG: ["The doctor writes.", "The doctor is writing."],
@@ -530,7 +530,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "dummy63a", ref);
     });
-    it("#pal18-12a GET 200 YES: Engpol. 'The doctor writes.' stCh specified nonvirile", () => {
+    it(`#pal18-12a GET 200 YES: Engpol. 'The doctor writes.' stCh specified nonvirile`, () => {
       let ref = [
         {
           ENG: "The doctors (females) write.",
@@ -543,7 +543,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy63b", ref);
     });
-    it("#pal18-12c GET 200 YES: Poleng. 'The doctor writes.' stCh specified nonvirile", () => {
+    it(`#pal18-12c GET 200 YES: Poleng. 'The doctor writes.' stCh specified nonvirile`, () => {
       let ref = [
         {
           ENG: ["The doctors write.", "The doctors are writing."],
@@ -560,7 +560,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "dummy63b", ref);
     });
-    it("#pal18-13a GET 200 YES: Engpol. 'The doctor writes.' stCh specified female", () => {
+    it(`#pal18-13a GET 200 YES: Engpol. 'The doctor writes.' stCh specified female`, () => {
       let ref = [
         {
           ENG: "The doctor (female) writes.",
@@ -589,7 +589,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy63c", ref);
     });
-    it("#pal18-13c GET 200 YES: Poleng. 'The doctor writes.' stCh specified female", () => {
+    it(`#pal18-13c GET 200 YES: Poleng. 'The doctor writes.' stCh specified female`, () => {
       let ref = [
         {
           ENG: ["The doctor writes.", "The doctor is writing."],
@@ -626,7 +626,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "dummy63c", ref);
     });
-    it("#pal18-14a GET 200 YES: Engpol. 'The doctor writes.' stCh specified virile", () => {
+    it(`#pal18-14a GET 200 YES: Engpol. 'The doctor writes.' stCh specified virile`, () => {
       let ref = [
         {
           ENG: ["The doctors (males) write.", "The doctors (mixed) write."],
@@ -639,7 +639,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy63d", ref);
     });
-    it("#pal18-14c GET 200 YES: Poleng. 'The doctor writes.' stCh specified virile", () => {
+    it(`#pal18-14c GET 200 YES: Poleng. 'The doctor writes.' stCh specified virile`, () => {
       let ref = [
         {
           ENG: ["The doctors write.", "The doctors are writing."],
@@ -659,7 +659,7 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 18A: Annotations: Miscellaneous", () => {
-    it("#pal18-01a GET 200 YES: Engpol. 'she reads' tenseDesc anno should be removed by conditionsOnWhichToBlockAnnotations.", () => {
+    it(`#pal18-01a GET 200 YES: Engpol. 'she reads' tenseDesc anno should be removed by conditionsOnWhichToBlockAnnotations.`, () => {
       //Originally failed as removeAnnotationsByCounterfax lets tenseDesc annos through, would be too many alternate values to check.
       //So this situation, where the anno should be kept, is hardcoded in refObj conditionsOnWhichToBlockAnnotations.
       let ref = [
@@ -678,7 +678,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy61", ref);
     });
-    it("#pal18-01b GET 200 YES: Poleng annotations. 'she reads' tenseDesc anno should be kept via skeleton. Relates to ACX2?", () => {
+    it(`#pal18-01b GET 200 YES: Poleng annotations. 'she reads' tenseDesc anno should be kept via skeleton. Relates to ACX2?`, () => {
       let ref = [
         {
           ENG: ["She reads.", "She is reading."],
@@ -695,7 +695,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "dummy61", ref);
     });
-    it("#pal18-01c GET 200 YES: Poleng PDS. 'she reads'", () => {
+    it(`#pal18-01c GET 200 YES: Poleng PDS. 'she reads'`, () => {
       let ref = [
         {
           ENG: [
@@ -713,7 +713,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal18-02a GET 200 YES: Engpol. 'she writes'", () => {
+    it(`#pal18-02a GET 200 YES: Engpol. 'she writes'`, () => {
       let ref = [
         {
           ENG: "She writes.",
@@ -730,7 +730,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy61a", ref);
     });
-    it("#pal18-02b GET 200 YES: Poleng annotations. 'she writes'", () => {
+    it(`#pal18-02b GET 200 YES: Poleng annotations. 'she writes'`, () => {
       let ref = [
         {
           ENG: ["She writes.", "She is writing."],
@@ -747,7 +747,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "dummy61a", ref);
     });
-    it("#pal18-02c GET 200 YES: Poleng PDS. 'she writes'", () => {
+    it(`#pal18-02c GET 200 YES: Poleng PDS. 'she writes'`, () => {
       let ref = [
         {
           ENG: [
@@ -765,7 +765,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal18-03a GET 200 YES: Engpol. Sentence with 'sheep' should not be disrupted by PDS.", () => {
+    it(`#pal18-03a GET 200 YES: Engpol. Sentence with 'sheep' should not be disrupted by PDS.`, () => {
       let ref = [
         {
           ENG: "With the sheep.",
@@ -780,7 +780,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal18-04a GET 200 YES: Engpol. 'A woman saw me.'", () => {
+    it(`#pal18-04a GET 200 YES: Engpol. 'A woman saw me.'`, () => {
       let ref = [
         {
           ENG: ["The woman saw me.", "A woman saw me."],
@@ -793,7 +793,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "119", ref, {});
     });
-    it("#pal18-04b GET 200 YES: Poleng. 'A woman saw me.'", () => {
+    it(`#pal18-04b GET 200 YES: Poleng. 'A woman saw me.'`, () => {
       let ref = [
         {
           ENG: [
@@ -832,7 +832,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "119", ref, {});
     });
-    it("#pal18-05a GET 200 YES: Engpol. 'We see them.'", () => {
+    it(`#pal18-05a GET 200 YES: Engpol. 'We see them.'`, () => {
       let ref = [
         {
           ENG: ["We see them (males).", "We see them (mixed)."],
@@ -855,7 +855,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy62", ref, {});
     });
-    it("#pal18-05b GET 200 YES: Engpol. 'We see them.' PDS", () => {
+    it(`#pal18-05b GET 200 YES: Engpol. 'We see them.' PDS`, () => {
       let ref = [
         {
           ENG: "We see them.",
@@ -875,7 +875,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal18-05c GET 200 YES: Poleng. 'We see them.'", () => {
+    it(`#pal18-05c GET 200 YES: Poleng. 'We see them.'`, () => {
       let ref = [
         {
           ENG: ["We see them."],
@@ -884,7 +884,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "dummy62", ref, {});
     });
-    it("#pal18-05d GET 200 YES: Poleng. 'We see them.' PDS should have no effect.", () => {
+    it(`#pal18-05d GET 200 YES: Poleng. 'We see them.' PDS should have no effect.`, () => {
       let ref = [
         {
           ENG: ["We see them."],
@@ -895,7 +895,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal18-06a GET 200 YES: Engpol. 'We saw them.'", () => {
+    it(`#pal18-06a GET 200 YES: Engpol. 'We saw them.'`, () => {
       let ref = [
         {
           ENG: [
@@ -948,7 +948,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy62a", ref, {});
     });
-    it("#pal18-06b GET 200 YES: Engpol. 'We saw them.' PDS. *Step-Iota re PDS Diamond*", () => {
+    it(`#pal18-06b GET 200 YES: Engpol. 'We saw them.' PDS. *Step-Iota re PDS Diamond*`, () => {
       let ref = [
         {
           ENG: "We saw them.",
@@ -980,7 +980,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal18-06c GET 200 YES: Poleng. 'We saw them.'", () => {
+    it(`#pal18-06c GET 200 YES: Poleng. 'We saw them.'`, () => {
       let ref = [
         {
           ENG: ["We saw them.", "We had seen them.", "We have seen them."],
@@ -994,7 +994,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "dummy62a", ref, {});
     });
-    it("#pal18-06d GET 200 YES: Poleng. 'We see them.' PDS should have no effect.", () => {
+    it(`#pal18-06d GET 200 YES: Poleng. 'We see them.' PDS should have no effect.`, () => {
       let ref = [
         {
           ENG: ["We saw them.", "We had seen them.", "We have seen them."],
@@ -1010,7 +1010,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal18-07a GET 200 YES: Engpol. 'A doctor saw me.'", () => {
+    it(`#pal18-07a GET 200 YES: Engpol. 'A doctor saw me.'`, () => {
       let ref = [
         {
           ENG: ["The doctor (female) saw me.", "A doctor (female) saw me."],
@@ -1023,7 +1023,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "120", ref);
     });
-    it("#pal18-07b GET 200 YES: Engpol. 'A doctor saw me. PDS'", () => {
+    it(`#pal18-07b GET 200 YES: Engpol. 'A doctor saw me. PDS'`, () => {
       let ref = [
         {
           ENG: ["The doctor saw me.", "A doctor saw me."],
@@ -1034,7 +1034,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal18-07c GET 200 YES: Poleng. 'A doctor saw me.'", () => {
+    it(`#pal18-07c GET 200 YES: Poleng. 'A doctor saw me.'`, () => {
       let ref = [
         {
           ENG: [
@@ -1050,7 +1050,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "120", ref, {});
     });
-    it("#pal18-07d GET 200 YES: Poleng. 'A doctor saw me.' PDS", () => {
+    it(`#pal18-07d GET 200 YES: Poleng. 'A doctor saw me.' PDS`, () => {
       let ref = [
         {
           ENG: [
@@ -1068,7 +1068,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal18-08a GET 200 YES: Engpol. 'I read* a book.'", () => {
+    it(`#pal18-08a GET 200 YES: Engpol. 'I read* a book.'`, () => {
       let ref = [
         {
           ENG: ["I read (present) a book.", "I am reading a book."],
@@ -1108,7 +1108,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "121", ref, {});
     });
-    it("#pal18-08b GET 200 YES: Engpol. 'I read* a book.' PDS", () => {
+    it(`#pal18-08b GET 200 YES: Engpol. 'I read* a book.' PDS`, () => {
       let ref = [
         {
           ENG: ["I am reading a book.", "I read (present) a book."],
@@ -1140,7 +1140,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal18-08c GET 200 YES: Poleng. 'I read* a book.'", () => {
+    it(`#pal18-08c GET 200 YES: Poleng. 'I read* a book.'`, () => {
       let ref = [
         {
           ENG: ["I read a book.", "I am reading a book."],
@@ -1195,7 +1195,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "121", ref, {});
     });
-    it("#pal18-08d GET 200 YES: Poleng. 'I read* a book.' PDS", () => {
+    it(`#pal18-08d GET 200 YES: Poleng. 'I read* a book.' PDS`, () => {
       let ref = [
         {
           ENG: ["I read a book.", "I am reading a book."],
@@ -1252,7 +1252,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal18-09a GET 200 YES: Engpol. 'They are red.'", () => {
+    it(`#pal18-09a GET 200 YES: Engpol. 'They are red.'`, () => {
       let ref = [
         {
           ENG: "He is red.",
@@ -1287,7 +1287,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "123", ref, {});
     });
-    it("#pal18-09b GET 200 YES: Engpol. 'They are red.' PDS", () => {
+    it(`#pal18-09b GET 200 YES: Engpol. 'They are red.' PDS`, () => {
       let ref = [
         {
           ENG: "He is red.",
@@ -1315,7 +1315,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal18-09c GET 200 YES: Poleng. 'They are red.'", () => {
+    it(`#pal18-09c GET 200 YES: Poleng. 'They are red.'`, () => {
       let ref = [
         {
           ENG: ["He is red."],
@@ -1340,7 +1340,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "123", ref, {});
     });
-    it("#pal18-09d GET 200 YES: Poleng. 'They are red.' PDS", () => {
+    it(`#pal18-09d GET 200 YES: Poleng. 'They are red.' PDS`, () => {
       let ref = [
         {
           ENG: ["He is red."],
@@ -1367,7 +1367,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal18-09w GET 200 YES: Engpol. 'Rats are red.' Pluralised m2 should be nonvirile", () => {
+    it(`#pal18-09w GET 200 YES: Engpol. 'Rats are red.' Pluralised m2 should be nonvirile`, () => {
       let ref = [
         {
           ENG: "Rats are red.",
@@ -1384,7 +1384,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy66", ref, {});
     });
-    it("#pal18-09y GET 200 YES: Poleng. 'Rats are red.' Pluralised m2 should be nonvirile", () => {
+    it(`#pal18-09y GET 200 YES: Poleng. 'Rats are red.' Pluralised m2 should be nonvirile`, () => {
       let ref = [
         {
           ENG: ["Rats are red."],
@@ -1404,7 +1404,7 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 17D: Possessive pronombres and MGNs. MGN to agree with pronombre.", () => {
-    it("#pal17-10a GET 200 YES: Engpol. I was here. Testing annotations.", () => {
+    it(`#pal17-10a GET 200 YES: Engpol. I was here. Testing annotations.`, () => {
       let ref = [
         {
           ENG: "I (male) was here.",
@@ -1417,7 +1417,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "117b", ref, {});
     });
-    it("#pal17-10b GET 200 YES: Engpol. I was here. Testing annotations. pleaseDontSpecify", () => {
+    it(`#pal17-10b GET 200 YES: Engpol. I was here. Testing annotations. pleaseDontSpecify`, () => {
       let ref = [
         {
           ENG: "I was here.",
@@ -1428,7 +1428,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-10c GET 200 YES: Poleng. I was here. Testing annotations.", () => {
+    it(`#pal17-10c GET 200 YES: Poleng. I was here. Testing annotations.`, () => {
       let ref = [
         {
           ENG: ["I was here.", "I had been here.", "I have been here."],
@@ -1437,7 +1437,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "117b", ref, {});
     });
-    it("#pal17-10d GET 200 YES: Poleng. I was here. Testing annotations. pleaseDontSpecify but with no effect expected.", () => {
+    it(`#pal17-10d GET 200 YES: Poleng. I was here. Testing annotations. pleaseDontSpecify but with no effect expected.`, () => {
       let ref = [
         {
           ENG: ["I was here.", "I had been here.", "I have been here."],
@@ -1448,7 +1448,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-10e GET 200 YES: Engpol. I am here. Testing annotations.", () => {
+    it(`#pal17-10e GET 200 YES: Engpol. I am here. Testing annotations.`, () => {
       let ref = [
         {
           ENG: "I am here.",
@@ -1457,7 +1457,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "117c", ref, {});
     });
-    it("#pal17-10f GET 200 YES: Engpol. I am here. Testing annotations. pleaseDontSpecify", () => {
+    it(`#pal17-10f GET 200 YES: Engpol. I am here. Testing annotations. pleaseDontSpecify`, () => {
       let ref = [
         {
           ENG: "I am here.",
@@ -1468,7 +1468,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-10g GET 200 YES: Poleng. I am here. Testing annotations.", () => {
+    it(`#pal17-10g GET 200 YES: Poleng. I am here. Testing annotations.`, () => {
       let ref = [
         {
           ENG: ["I am here."],
@@ -1477,7 +1477,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "117c", ref, {});
     });
-    it("#pal17-10h GET 200 YES: Poleng. I am here. Testing annotations. pleaseDontSpecify but with no effect expected.", () => {
+    it(`#pal17-10h GET 200 YES: Poleng. I am here. Testing annotations. pleaseDontSpecify but with no effect expected.`, () => {
       let ref = [
         {
           ENG: ["I am here."],
@@ -1488,7 +1488,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-11a GET 200 YES: Engpol. I was a doctor. MGN to agree with pronombre.", () => {
+    it(`#pal17-11a GET 200 YES: Engpol. I was a doctor. MGN to agree with pronombre.`, () => {
       let ref = [
         {
           ENG: "I (male) was a doctor.",
@@ -1501,7 +1501,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "117", ref, {});
     });
-    it("#pal17-11b GET 200 YES: Engpol. I was a doctor. MGN to agree with pronombre. pleaseDontSpecify", () => {
+    it(`#pal17-11b GET 200 YES: Engpol. I was a doctor. MGN to agree with pronombre. pleaseDontSpecify`, () => {
       let ref = [
         {
           ENG: "I was a doctor.",
@@ -1512,7 +1512,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-11c GET 200 YES: Poleng. I was a doctor. MGN to agree with pronombre.", () => {
+    it(`#pal17-11c GET 200 YES: Poleng. I was a doctor. MGN to agree with pronombre.`, () => {
       let ref = [
         {
           ENG: [
@@ -1525,7 +1525,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "117", ref, {});
     });
-    it("#pal17-11d GET 200 YES: Poleng. I was a doctor. MGN to agree with pronombre. pleaseDontSpecify but with no effect expected.", () => {
+    it(`#pal17-11d GET 200 YES: Poleng. I was a doctor. MGN to agree with pronombre. pleaseDontSpecify but with no effect expected.`, () => {
       let ref = [
         {
           ENG: [
@@ -1540,7 +1540,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-11e GET 200 YES: Engpol. I* was a doctor. MGN to agree with pronombre.", () => {
+    it(`#pal17-11e GET 200 YES: Engpol. I* was a doctor. MGN to agree with pronombre.`, () => {
       let ref = [
         {
           ENG: "I (male) was a doctor.",
@@ -1561,7 +1561,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "117a", ref, {});
     });
-    it("#pal17-11f GET 200 YES: Engpol. I* was a doctor. MGN to agree with pronombre. pleaseDontSpecify", () => {
+    it(`#pal17-11f GET 200 YES: Engpol. I* was a doctor. MGN to agree with pronombre. pleaseDontSpecify`, () => {
       let ref = [
         {
           ENG: "I was a doctor.",
@@ -1576,7 +1576,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-11g GET 200 YES: Poleng. I* was a doctor. MGN to agree with pronombre.", () => {
+    it(`#pal17-11g GET 200 YES: Poleng. I* was a doctor. MGN to agree with pronombre.`, () => {
       let ref = [
         {
           ENG: [
@@ -1605,7 +1605,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "117a", ref, {});
     });
-    it("#pal17-11h GET 200 YES: Poleng. I* was a doctor. MGN to agree with pronombre. pleaseDontSpecify but with no effect expected.", () => {
+    it(`#pal17-11h GET 200 YES: Poleng. I* was a doctor. MGN to agree with pronombre. pleaseDontSpecify but with no effect expected.`, () => {
       let ref = [
         {
           ENG: [
@@ -1636,7 +1636,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-11i GET 200 YES: Engpol. I** was a doctor. MGN to agree with pronombre.", () => {
+    it(`#pal17-11i GET 200 YES: Engpol. I** was a doctor. MGN to agree with pronombre.`, () => {
       let ref = [
         {
           ENG: "I (male) was a doctor.",
@@ -1657,7 +1657,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "117aa", ref, {});
     });
-    it("#pal17-11j GET 200 YES: Engpol. I** was a doctor. MGN to agree with pronombre. pleaseDontSpecify", () => {
+    it(`#pal17-11j GET 200 YES: Engpol. I** was a doctor. MGN to agree with pronombre. pleaseDontSpecify`, () => {
       let ref = [
         {
           ENG: "I was a doctor.",
@@ -1672,7 +1672,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-11k GET 200 YES: Poleng. I** was a doctor. MGN to agree with pronombre.", () => {
+    it(`#pal17-11k GET 200 YES: Poleng. I** was a doctor. MGN to agree with pronombre.`, () => {
       let ref = [
         {
           ENG: [
@@ -1701,7 +1701,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "117aa", ref, {});
     });
-    it("#pal17-11l GET 200 YES: Poleng. I** was a doctor. MGN to agree with pronombre. pleaseDontSpecify but with no effect expected.", () => {
+    it(`#pal17-11l GET 200 YES: Poleng. I** was a doctor. MGN to agree with pronombre. pleaseDontSpecify but with no effect expected.`, () => {
       let ref = [
         {
           ENG: [
@@ -1735,7 +1735,7 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 17C: Possessive pronombres and MGNs. EdusMgn", () => {
-    it("#pal17-07a GET 200 YES: Engpol. Hard-specify an MGN's gender (EdusMgn dummy run).", () => {
+    it(`#pal17-07a GET 200 YES: Engpol. Hard-specify an MGN's gender (EdusMgn dummy run).`, () => {
       let ref = [
         {
           ENG: "Doctor.",
@@ -1744,7 +1744,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy58a", ref, {});
     });
-    it("#pal17-07b GET 200 YES: Poleng. Hard-specify an MGN's gender (EdusMgn dummy run).", () => {
+    it(`#pal17-07b GET 200 YES: Poleng. Hard-specify an MGN's gender (EdusMgn dummy run).`, () => {
       let ref = [
         {
           ENG: ["Doctor."],
@@ -1753,7 +1753,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "dummy58a", ref, {});
     });
-    it("#pal17-08y GET 200 YES: Engpol. pleaseDontSpecify shouldn't override sentenceStructure that wants f solely. And further, we need an annotation, so PDS should be ignored here also.", () => {
+    it(`#pal17-08y GET 200 YES: Engpol. pleaseDontSpecify shouldn't override sentenceStructure that wants f solely. And further, we need an annotation, so PDS should be ignored here also.`, () => {
       let ref = [
         {
           ENG: ["My doctor (female)."],
@@ -1768,7 +1768,7 @@ describe("/api", function () {
         pleaseDontSpecify: true, //Should be ignored.
       });
     });
-    it("#pal17-08x GET 200 YES: Engpol. pleaseDontSpecify shouldn't override sentenceStructure that wants f solely.", () => {
+    it(`#pal17-08x GET 200 YES: Engpol. pleaseDontSpecify shouldn't override sentenceStructure that wants f solely.`, () => {
       let ref = [
         {
           ENG: ["My doctor was a woman."],
@@ -1779,7 +1779,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-08a GET 200 YES: Engpol. No annotations as EdusMgn.", () => {
+    it(`#pal17-08a GET 200 YES: Engpol. No annotations as EdusMgn.`, () => {
       let ref = [
         {
           ENG: "My doctor was a woman.",
@@ -1788,7 +1788,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "116b", ref, {});
     });
-    it("#pal17-08b GET 200 YES: Engpol. pleaseDontSpecify but no annotations anyway as EdusMgn.", () => {
+    it(`#pal17-08b GET 200 YES: Engpol. pleaseDontSpecify but no annotations anyway as EdusMgn.`, () => {
       let ref = [
         {
           ENG: "My doctor was a woman.",
@@ -1799,7 +1799,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-08c GET 200 YES: Poleng. No annotations anyway, aside from this being EdusMgn.", () => {
+    it(`#pal17-08c GET 200 YES: Poleng. No annotations anyway, aside from this being EdusMgn.`, () => {
       let ref = [
         {
           ENG: [
@@ -1816,7 +1816,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "116b", ref, {});
     });
-    it("#pal17-08d GET 200 YES: Poleng. pleaseDontSpecify but no annotations anyway, aside from this being EdusMgn.", () => {
+    it(`#pal17-08d GET 200 YES: Poleng. pleaseDontSpecify but no annotations anyway, aside from this being EdusMgn.`, () => {
       let ref = [
         {
           ENG: [
@@ -1835,7 +1835,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-09a GET 200 YES: Engpol. One annotation absent as EdusMgn.", () => {
+    it(`#pal17-09a GET 200 YES: Engpol. One annotation absent as EdusMgn.`, () => {
       // Was affected by Mungojerry issue, now resolved.
       let ref = [
         {
@@ -1849,7 +1849,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "116a", ref, {});
     });
-    it("#pal17-09b GET 200 YES: Engpol. pleaseDontSpecify. EdusMgn.", () => {
+    it(`#pal17-09b GET 200 YES: Engpol. pleaseDontSpecify. EdusMgn.`, () => {
       let ref = [
         {
           ENG: "My doctor's doctor was a woman.",
@@ -1863,7 +1863,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-09c GET 200 YES: Poleng. No annotations anyway, aside from this being EdusMgn.", () => {
+    it(`#pal17-09c GET 200 YES: Poleng. No annotations anyway, aside from this being EdusMgn.`, () => {
       let ref = [
         {
           ENG: [
@@ -1883,7 +1883,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "116a", ref, {});
     });
-    it("#pal17-09d GET 200 YES: Poleng. pleaseDontSpecify but no annotations anyway, aside from this being EdusMgn.", () => {
+    it(`#pal17-09d GET 200 YES: Poleng. pleaseDontSpecify but no annotations anyway, aside from this being EdusMgn.`, () => {
       let ref = [
         {
           ENG: [
@@ -1905,7 +1905,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-12a GET 200 YES: Engpol. Agreement of npe with npe.", () => {
+    it(`#pal17-12a GET 200 YES: Engpol. Agreement of npe with npe.`, () => {
       let ref = [
         {
           ENG: "My doctor was a woman.",
@@ -1948,7 +1948,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "116c", ref);
     });
-    it("#pal17-12b GET 200 YES: Poleng. Agreement of npe with npe.", () => {
+    it(`#pal17-12b GET 200 YES: Poleng. Agreement of npe with npe.`, () => {
       let ref = [
         {
           POL: "Moja lekarka była kobietą.",
@@ -1981,7 +1981,7 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 17B: Possessive pronombres and MGNs. PP below MGN. ProsMgn.", () => {
-    it("#pal17-04b GET 200 YES: Engpol. Sentence with 2 of same MGN. Some annotations expected. But eventually, this should succeed, as ProsMgn.", () => {
+    it(`#pal17-04b GET 200 YES: Engpol. Sentence with 2 of same MGN. Some annotations expected. But eventually, this should succeed, as ProsMgn.`, () => {
       let ref = [
         {
           ENG: "I (male) saw my doctor and his doctor (male).",
@@ -2022,7 +2022,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "115", ref, {});
     });
-    it("#pal17-04c GET 200 YES: Engpol. Sentence with 2 of same MGN. pleaseDontSpecify should be blocked for ProsMgn MGN but not for other MGN. This tests the change where pleaseDontSpecify is done per stCh and not as a broader variable.", () => {
+    it(`#pal17-04c GET 200 YES: Engpol. Sentence with 2 of same MGN. pleaseDontSpecify should be blocked for ProsMgn MGN but not for other MGN. This tests the change where pleaseDontSpecify is done per stCh and not as a broader variable.`, () => {
       let ref = [
         {
           ENG: "I saw my doctor and his doctor.",
@@ -2047,7 +2047,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-04d GET 200 YES: Poleng. Sentence with 2 of same MGN. Annotations wouldn't appear anyway.", () => {
+    it(`#pal17-04d GET 200 YES: Poleng. Sentence with 2 of same MGN. Annotations wouldn't appear anyway.`, () => {
       let ref = [
         {
           ENG: [
@@ -2079,7 +2079,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "115", ref, {});
     });
-    it("#pal17-04e GET 200 YES: Poleng. Sentence with 2 of same MGN. pleaseDontSpecify but annotations wouldn't appear anyway.", () => {
+    it(`#pal17-04e GET 200 YES: Poleng. Sentence with 2 of same MGN. pleaseDontSpecify but annotations wouldn't appear anyway.`, () => {
       let ref = [
         {
           ENG: [
@@ -2112,7 +2112,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-05a GET 200 YES: Engpol. Possessive pronombre below MGN. No annotation as ProsMgn.", () => {
+    it(`#pal17-05a GET 200 YES: Engpol. Possessive pronombre below MGN. No annotation as ProsMgn.`, () => {
       let ref = [
         {
           ENG: "My doctor and his book.",
@@ -2125,7 +2125,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "118", ref, {});
     });
-    it("#pal17-05b GET 200 YES: Engpol. Possessive pronombre below MGN. pleaseDontSpecify should be BLOCKED for ProsMgn MGN.", () => {
+    it(`#pal17-05b GET 200 YES: Engpol. Possessive pronombre below MGN. pleaseDontSpecify should be BLOCKED for ProsMgn MGN.`, () => {
       let ref = [
         {
           ENG: "My doctor and his book.",
@@ -2140,7 +2140,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-05c GET 200 YES: Poleng. Possessive pronombre below MGN. Annotations wouldn't appear anyway.", () => {
+    it(`#pal17-05c GET 200 YES: Poleng. Possessive pronombre below MGN. Annotations wouldn't appear anyway.`, () => {
       let ref = [
         {
           ENG: ["My doctor and his book."],
@@ -2153,7 +2153,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "118", ref, {});
     });
-    it("#pal17-05d GET 200 YES: Poleng. Possessive pronombre below MGN. pleaseDontSpecify but annotations wouldn't appear anyway.", () => {
+    it(`#pal17-05d GET 200 YES: Poleng. Possessive pronombre below MGN. pleaseDontSpecify but annotations wouldn't appear anyway.`, () => {
       let ref = [
         {
           ENG: ["My doctor and his book."],
@@ -2168,7 +2168,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-06a GET 200 YES: Engpol. Annotation expected as this isn't actually a ProsMgn.", () => {
+    it(`#pal17-06a GET 200 YES: Engpol. Annotation expected as this isn't actually a ProsMgn.`, () => {
       let ref = [
         {
           ENG: "My doctor (male) and my book.",
@@ -2181,7 +2181,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "118a", ref, {});
     });
-    it("#pal17-06b GET 200 YES: Engpol. pleaseDontSpecify.", () => {
+    it(`#pal17-06b GET 200 YES: Engpol. pleaseDontSpecify.`, () => {
       let ref = [
         {
           ENG: "My doctor and my book.",
@@ -2192,7 +2192,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-06c GET 200 YES: Poleng. Annotations wouldn't appear anyway.", () => {
+    it(`#pal17-06c GET 200 YES: Poleng. Annotations wouldn't appear anyway.`, () => {
       let ref = [
         {
           ENG: ["My doctor and my book."],
@@ -2201,7 +2201,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "118a", ref, {});
     });
-    it("#pal17-06c GET 200 YES: Poleng. pleaseDontSpecify but annotations wouldn't appear anyway.", () => {
+    it(`#pal17-06c GET 200 YES: Poleng. pleaseDontSpecify but annotations wouldn't appear anyway.`, () => {
       let ref = [
         {
           ENG: ["My doctor and my book."],
@@ -2215,7 +2215,7 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 17A: Possessive pronombres and MGNs. Pre-testing.", () => {
-    it("#pal17-01a GET 200 YES: Engpol. MGN as sole word, annotation expected.", () => {
+    it(`#pal17-01a GET 200 YES: Engpol. MGN as sole word, annotation expected.`, () => {
       let ref = [
         {
           ENG: "Doctor (female).",
@@ -2236,7 +2236,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy58", ref, {});
     });
-    it("#pal17-01b GET 200 YES: Engpol. MGN as sole word, pleaseDontSpecify.", () => {
+    it(`#pal17-01b GET 200 YES: Engpol. MGN as sole word, pleaseDontSpecify.`, () => {
       let ref = [
         {
           ENG: "Doctor.",
@@ -2251,7 +2251,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-01c-i(by tags) GET 200 YES: Poleng. MGN as sole word, annotation wouldn't appear anyway.", () => {
+    it(`#pal17-01c-i(by tags) GET 200 YES: Poleng. MGN as sole word, annotation wouldn't appear anyway.`, () => {
       let ref = [
         {
           ENG: ["Doctor."],
@@ -2264,7 +2264,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "dummy58", ref, {});
     });
-    it("#pal17-01d GET 200 YES: Poleng. MGN as sole word, pleaseDontSpecify but annotation wouldn't appear anyway.", () => {
+    it(`#pal17-01d GET 200 YES: Poleng. MGN as sole word, pleaseDontSpecify but annotation wouldn't appear anyway.`, () => {
       let ref = [
         {
           ENG: ["Doctor."],
@@ -2279,7 +2279,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-02a GET 200 YES: Engpol. Simple possessive pronombre sentence. Should not be broken by pleaseDontSpecify.", () => {
+    it(`#pal17-02a GET 200 YES: Engpol. Simple possessive pronombre sentence. Should not be broken by pleaseDontSpecify.`, () => {
       let ref = [
         {
           ENG: "My onion.",
@@ -2290,7 +2290,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-02b GET 200 YES: Poleng. Simple possessive pronombre sentence. Should not be broken by pleaseDontSpecify.", () => {
+    it(`#pal17-02b GET 200 YES: Poleng. Simple possessive pronombre sentence. Should not be broken by pleaseDontSpecify.`, () => {
       let ref = [
         {
           ENG: ["My onion."],
@@ -2301,7 +2301,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-03a GET 200 YES: Engpol. Possessive pronombre above MGN. Annotation expected as this isn't actually a ProsMgn.", () => {
+    it(`#pal17-03a GET 200 YES: Engpol. Possessive pronombre above MGN. Annotation expected as this isn't actually a ProsMgn.`, () => {
       let ref = [
         {
           ENG: "My doctor (male).",
@@ -2314,7 +2314,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "118b", ref, {});
     });
-    it("#pal17-03b GET 200 YES: Engpol. Possessive pronombre above MGN. pleaseDontSpecify.", () => {
+    it(`#pal17-03b GET 200 YES: Engpol. Possessive pronombre above MGN. pleaseDontSpecify.`, () => {
       let ref = [
         {
           ENG: "My doctor.",
@@ -2325,7 +2325,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-03c GET 200 YES: Poleng. Possessive pronombre above MGN. Annotation wouldn't appear anyway.", () => {
+    it(`#pal17-03c GET 200 YES: Poleng. Possessive pronombre above MGN. Annotation wouldn't appear anyway.`, () => {
       let ref = [
         {
           ENG: ["My doctor."],
@@ -2334,7 +2334,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "118b", ref, {});
     });
-    it("#pal17-03d GET 200 YES: Poleng. Possessive pronombre above MGN. pleaseDontSpecify but annotation wouldn't appear anyway.", () => {
+    it(`#pal17-03d GET 200 YES: Poleng. Possessive pronombre above MGN. pleaseDontSpecify but annotation wouldn't appear anyway.`, () => {
       let ref = [
         {
           ENG: ["My doctor."],
@@ -2348,7 +2348,7 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 16: NATASHA T. Checking how arrays as terminal points are handled. +extra", () => {
-    it("#pal16-01a GET 200 YES: NATASHA T. Are correct members of an array returned as possible ANSWER, as they should be?", () => {
+    it(`#pal16-01a GET 200 YES: NATASHA T. Are correct members of an array returned as possible ANSWER, as they should be?`, () => {
       let ref = [
         {
           ENG: "The woman will be writing.",
@@ -2357,7 +2357,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy52", ref, {});
     });
-    it("#pal16-01b GET 200 YES: NATASHA T. Battery: Are EITHER members of an array returned as possible QUESTION, as they should be?", () => {
+    it(`#pal16-01b GET 200 YES: NATASHA T. Battery: Are EITHER members of an array returned as possible QUESTION, as they should be?`, () => {
       return Promise.all([
         testOnce(),
         testOnce(),
@@ -2398,7 +2398,7 @@ describe("/api", function () {
           });
       }
     });
-    it("#pal16-01c GET 200 YES: NATASHA T. Are correct answer sentences given for each of those question sentences.", () => {
+    it(`#pal16-01c GET 200 YES: NATASHA T. Are correct answer sentences given for each of those question sentences.`, () => {
       let ref = [
         {
           ENG: [
@@ -2412,7 +2412,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "dummy52", ref, {});
     });
-    it("#pal16-02a GET 200 YES: MGN re stCh. Engpol. PDS.", () => {
+    it(`#pal16-02a GET 200 YES: MGN re stCh. Engpol. PDS.`, () => {
       let ref = [
         {
           ENG: "Doctor.",
@@ -2423,7 +2423,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal16-02b GET 200 YES: MGN re stCh. Engpol. PDS.", () => {
+    it(`#pal16-02b GET 200 YES: MGN re stCh. Engpol. PDS.`, () => {
       let ref = [
         {
           ENG: "Doctor.",

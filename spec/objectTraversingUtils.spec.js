@@ -336,7 +336,7 @@ xdescribe("doesThisInflectionKeyHoldUniqueInflectionValueInLObj", () => {
 });
 
 xdescribe("findSynhomographs", () => {
-  it("#otu4.1 Produces empty array when no lemmaObjects with any synhomographs are given.", () => {
+  it(`#otu4.1 Produces empty array when no lemmaObjects with any synhomographs are given.`, () => {
     const lobjArr = [
       {
         lemma: "bike",
@@ -388,7 +388,7 @@ xdescribe("findSynhomographs", () => {
     consol.log(actual);
     expect(actual).to.eql(expected);
   });
-  it("#otu4.2 Produces synhomographs when one pair present in one lemmaObject.", () => {
+  it(`#otu4.2 Produces synhomographs when one pair present in one lemmaObject.`, () => {
     const lobjArr = [
       {
         lemma: "bike",
@@ -449,7 +449,7 @@ xdescribe("findSynhomographs", () => {
     consol.log(actual);
     expect(actual).to.eql(expected);
   });
-  it("#otu4.3 Produces synhomographs when multiple pairs present in one lemmaObject.", () => {
+  it(`#otu4.3 Produces synhomographs when multiple pairs present in one lemmaObject.`, () => {
     const lobjArr = [
       {
         lemma: "bike",
@@ -528,7 +528,7 @@ xdescribe("findSynhomographs", () => {
     consol.log(actual);
     expect(actual).to.eql(expected);
   });
-  it("#otu4.4 Produces synhomographs when multiple pairs present in multiple lemmaObjects.", () => {
+  it(`#otu4.4 Produces synhomographs when multiple pairs present in multiple lemmaObjects.`, () => {
     const lobjArr = [
       {
         lemma: "bike",
@@ -743,12 +743,12 @@ xdescribe("findObjectInNestedObject", () => {
     },
   };
 
-  it("#otu3.1 NO: Returns undefined from one level of nesting, when no matching object can be found.", () => {
+  it(`#otu3.1 NO: Returns undefined from one level of nesting, when no matching object can be found.`, () => {
     const input1 = testObj1;
     const input2 = { symbol: "nonexistent symbol" };
     expect(findObjectInNestedObject(input1, input2)).to.eql(undefined);
   });
-  it("#otu3.2a YES: Correctly return object from one level of nesting, finding by matching a string.", () => {
+  it(`#otu3.2a YES: Correctly return object from one level of nesting, finding by matching a string.`, () => {
     const input1 = testObj1;
     const input2 = { symbol: "my bird" };
     expect(findObjectInNestedObject(input1, input2)).to.eql({
@@ -756,7 +756,7 @@ xdescribe("findObjectInNestedObject", () => {
       sentenceStructure: ["my", 123, "bird", 456],
     });
   });
-  it("#otu3.2b YES: Correctly return object from one level of nesting, finding by matching an array.", () => {
+  it(`#otu3.2b YES: Correctly return object from one level of nesting, finding by matching an array.`, () => {
     const input1 = testObj1;
     const input2 = { sentenceStructure: ["my", 123, "sharona", 456] };
     expect(findObjectInNestedObject(input1, input2)).to.eql({
@@ -764,7 +764,7 @@ xdescribe("findObjectInNestedObject", () => {
       sentenceStructure: ["my", 123, "sharona", 456],
     });
   });
-  it("#otu3.2c YES: Correctly return object from one level of nesting, finding by matching multiple items.", () => {
+  it(`#otu3.2c YES: Correctly return object from one level of nesting, finding by matching multiple items.`, () => {
     const input1 = testObj1;
     const input2 = {
       symbol: "my aunt",
@@ -776,12 +776,12 @@ xdescribe("findObjectInNestedObject", () => {
       id: "aunt2",
     });
   });
-  it("#otu3.3 NO: Returns undefined from nested object when no matching object can be found.", () => {
+  it(`#otu3.3 NO: Returns undefined from nested object when no matching object can be found.`, () => {
     const input1 = testObj2;
     const input2 = { symbol: "nonexistent symbol" };
     expect(findObjectInNestedObject(input1, input2)).to.eql(undefined);
   });
-  it("#otu3.3a Correctly return object from multi nesting, finding by matching a string.", () => {
+  it(`#otu3.3a Correctly return object from multi nesting, finding by matching a string.`, () => {
     const input1 = testObj2;
     const input2 = { symbol: "my bird" };
     expect(findObjectInNestedObject(input1, input2)).to.eql({
@@ -789,7 +789,7 @@ xdescribe("findObjectInNestedObject", () => {
       sentenceStructure: ["my", 123, "bird", 456],
     });
   });
-  it("#otu3.3b Correctly return object from multi nesting, finding by matching an array.", () => {
+  it(`#otu3.3b Correctly return object from multi nesting, finding by matching an array.`, () => {
     const input1 = testObj2;
     const input2 = { sentenceStructure: ["my", 123, "sharona", 456] };
     expect(findObjectInNestedObject(input1, input2)).to.eql({
@@ -797,7 +797,7 @@ xdescribe("findObjectInNestedObject", () => {
       sentenceStructure: ["my", 123, "sharona", 456],
     });
   });
-  it("#otu3.3c Correctly return object from multi nesting, finding by matching multiple items.", () => {
+  it(`#otu3.3c Correctly return object from multi nesting, finding by matching multiple items.`, () => {
     const input1 = testObj2;
     const input2 = {
       symbol: "my aunt",
@@ -812,28 +812,28 @@ xdescribe("findObjectInNestedObject", () => {
 });
 
 xdescribe("concoctNestedRoutes", () => {
-  it("#otu2.1a Throw error for empty input.", () => {
+  it(`#otu2.1a Throw error for empty input.`, () => {
     const input1 = [];
     const input2 = [];
     expect(() => {
       concoctNestedRoutes(input1, input2);
     }).to.throw();
   });
-  it("#otu2.1b Throw error for partly empty input.", () => {
+  it(`#otu2.1b Throw error for partly empty input.`, () => {
     const input1 = [["singular"], []];
     const input2 = [];
     expect(() => {
       concoctNestedRoutes(input1, input2);
     }).to.throw();
   });
-  it("#otu2.2a Create nested routes for simple input.", () => {
+  it(`#otu2.2a Create nested routes for simple input.`, () => {
     const input1 = [["singular"], ["nom"]];
     const input2 = [];
     const expected = [["singular", "nom"]];
     const actual = concoctNestedRoutes(input1, input2);
     expect(actual).to.eql(expected);
   });
-  it("#otu2.2b Create nested routes for slightly complex input.", () => {
+  it(`#otu2.2b Create nested routes for slightly complex input.`, () => {
     const input1 = [
       ["singular", "plural"],
       ["nom", "gen", "dat"],
@@ -850,7 +850,7 @@ xdescribe("concoctNestedRoutes", () => {
     const actual = concoctNestedRoutes(input1, input2);
     expect(actual).to.eql(expected);
   });
-  it("#otu2.2c Create nested routes for complex input.", () => {
+  it(`#otu2.2c Create nested routes for complex input.`, () => {
     const input1 = [
       ["singular", "plural"],
       ["nom", "gen", "dat", "acc"],
@@ -878,7 +878,7 @@ xdescribe("concoctNestedRoutes", () => {
     const actual = concoctNestedRoutes(input1, input2);
     expect(actual).to.eql(expected);
   });
-  it("#otu2.3 Use second input to fill in empty arrays of first input.", () => {
+  it(`#otu2.3 Use second input to fill in empty arrays of first input.`, () => {
     const input1 = [["singular", "plural"], []];
     const input2 = [["singular"], ["ins", "loc"]];
     const expected = [
@@ -893,7 +893,7 @@ xdescribe("concoctNestedRoutes", () => {
 });
 
 xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
-  it("#otu1.1a Returns empty array for empty object.", () => {
+  it(`#otu1.1a Returns empty array for empty object.`, () => {
     const input = {};
     const expected = {
       routesByNesting: [],
@@ -903,19 +903,19 @@ xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
     expect(actual.routesByNesting).to.eql(expected.routesByNesting);
     expect(actual.routesByLevel).to.eql(expected.routesByLevel);
   });
-  it("#otu1.1b Returns routes for object with one traitKey at single level of nesting.", () => {
+  it(`#otu1.1b Returns routes for object with one traitKey at single level of nesting.`, () => {
     const input = { singular: "apple" };
     const expected = [["singular"]];
     const actual = extractNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
-  it("#otu1.1c Returns routes for object with many traitKeys at single level of nesting.", () => {
+  it(`#otu1.1c Returns routes for object with many traitKeys at single level of nesting.`, () => {
     const input = { singular: "apple", plural: "apples" };
     const expected = [["singular"], ["plural"]];
     const actual = extractNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
-  it("#otu1.1d Returns routes for object with many traitKeys at two levels of nesting.", () => {
+  it(`#otu1.1d Returns routes for object with many traitKeys at two levels of nesting.`, () => {
     const input = {
       singular: { nom: "kobieta", loc: "kobiecie" },
       plural: { nom: "kobiety", loc: "kobietach" },
@@ -929,7 +929,7 @@ xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
     const actual = extractNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
-  it("#otu1.1e Returns routes for object with many traitKeys at various levels of nesting.", () => {
+  it(`#otu1.1e Returns routes for object with many traitKeys at various levels of nesting.`, () => {
     const input = {
       singular: {
         nom: "jabłko",
@@ -974,7 +974,7 @@ xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
     consol.log(actual);
     expect(actual).to.eql(expected);
   });
-  it("#otu1.1f Returns routes when some items are arrays and should not be mapped out.", () => {
+  it(`#otu1.1f Returns routes when some items are arrays and should not be mapped out.`, () => {
     const input = {
       singular: { nom: "chłopak", acc: "chłopaka" },
       plural: {
@@ -991,7 +991,7 @@ xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
     const actual = extractNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
-  it("#otu1.2a get routes from kobieta, plus describedRoutes.", () => {
+  it(`#otu1.2a get routes from kobieta, plus describedRoutes.`, () => {
     const input = {
       //links
       translations: { ENG: ["woman", "lady"] },
@@ -1093,7 +1093,7 @@ xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
     consol.log(actual);
     expect(actual).to.eql(expected);
   });
-  it("#otu1.2b get routes from read.", () => {
+  it(`#otu1.2b get routes from read.`, () => {
     const input = {
       //links
       translations: { ENG: ["read"], POL: ["czytać", "przeczytać"] },
@@ -1126,7 +1126,7 @@ xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
     consol.log(actual);
     expect(actual).to.eql(expected);
   });
-  it("#otu1.2b get routes from read.", () => {
+  it(`#otu1.2b get routes from read.`, () => {
     const input = {
       //links
       translations: { ENG: ["read"], POL: ["czytać", "przeczytać"] },
@@ -1159,7 +1159,7 @@ xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
     consol.log(actual);
     expect(actual).to.eql(expected);
   });
-  it("#otu1.3a get routes from tObj.", () => {
+  it(`#otu1.3a get routes from tObj.`, () => {
     const input = {
       //links
       translations: { ENG: ["read"], POL: ["czytać", "przeczytać"] },
@@ -1187,7 +1187,7 @@ xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
     consol.log(actual);
     expect(actual).to.eql(expected);
   });
-  it("#otu1.3b get routes from tObj.", () => {
+  it(`#otu1.3b get routes from tObj.`, () => {
     const input = {
       //links
       translations: { ENG: ["read"], POL: ["czytać", "przeczytać"] },
@@ -1218,7 +1218,7 @@ xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
 });
 
 xdescribe("findSinglePointMutationArray", () => {
-  it("#otu5.0 Give empty for empty", () => {
+  it(`#otu5.0 Give empty for empty`, () => {
     let input_arrayOfArrays = [];
     let input_currentArray = [];
     let input_position = 0;
@@ -1234,7 +1234,7 @@ xdescribe("findSinglePointMutationArray", () => {
 
     expect(actual).to.eql(expected);
   });
-  it("#otu5.1", () => {
+  it(`#otu5.1`, () => {
     let input_arrayOfArrays = [
       ["sing", "nom"],
       ["sing", "acc"],
@@ -1253,7 +1253,7 @@ xdescribe("findSinglePointMutationArray", () => {
 
     expect(actual).to.eql(expected);
   });
-  it("#otu5.2", () => {
+  it(`#otu5.2`, () => {
     let input_arrayOfArrays = [
       ["sing", "nom"],
       ["sing", "acc"],
@@ -1272,7 +1272,7 @@ xdescribe("findSinglePointMutationArray", () => {
 
     expect(actual).to.eql(expected);
   });
-  it("#otu5.3", () => {
+  it(`#otu5.3`, () => {
     let input_arrayOfArrays = [
       ["sing", "nom"],
       ["sing", "acc"],
@@ -1291,7 +1291,7 @@ xdescribe("findSinglePointMutationArray", () => {
 
     expect(actual).to.eql(expected);
   });
-  it("#otu5.4", () => {
+  it(`#otu5.4`, () => {
     let input_arrayOfArrays = [
       ["sing", "nom", "1per"],
       ["sing", "acc", "1per"],
