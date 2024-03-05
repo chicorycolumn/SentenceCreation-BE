@@ -27,14 +27,13 @@ const runApiTest1 = (req, expected) => {
 describe("/educator/formulas.", () => {
   const testEnv = "ref";
   apiUtils.setEnvir(
-    { body: { envir: testEnv } },
+    { query: { envir: testEnv } },
     'describe("/educator/formulas'
   );
 
   it(`${testEnv}#san04a GET 200 YES: Check that numeric chunkIds are converted to guidewords.`, () => {
     let res = fetchFormulas({
-      query: { id: "POL-101b", lang: "ENG" },
-      body: { envir: testEnv },
+      query: { id: "POL-101b", lang: "ENG", envir: testEnv },
     });
     return res.then((res) => {
       res.questionSentenceFormula =
@@ -55,8 +54,7 @@ describe("/educator/formulas.", () => {
   });
   it(`${testEnv}#san04b GET 200 YES: Check that numeric chunkIds are converted to guidewords.`, () => {
     let res = fetchFormulas({
-      query: { id: "POL-112", lang: "ENG" },
-      body: { envir: testEnv },
+      query: { id: "POL-112", lang: "ENG", envir: testEnv },
     });
     return res.then((res) => {
       res.questionSentenceFormula =
@@ -80,7 +78,7 @@ describe("/educator/formulas.", () => {
 describe("/educator/sentences - Testing API.", () => {
   const testEnv = "ref";
   apiUtils.setEnvir(
-    { body: { envir: testEnv } },
+    { query: { envir: testEnv } },
     'describe("/educator/sentences'
   );
 
@@ -227,7 +225,7 @@ describe("/educator/sentences - Testing API.", () => {
 xdescribe("getEnChsForLemma", () => {
   const testEnv = "ref";
   apiUtils.setEnvir(
-    { body: { envir: testEnv } },
+    { query: { envir: testEnv } },
     'describe("getEnChsForLemma"'
   );
 

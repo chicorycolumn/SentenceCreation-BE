@@ -9,7 +9,7 @@ const shouldConsoleLog = false;
 xdescribe("traverseAndRecordInflections", () => {
   const testEnv = "ref";
   apiUtils.setEnvir(
-    { body: { envir: testEnv } },
+    { query: { envir: testEnv } },
     'describe("traverseAndRecordInflections"'
   );
 

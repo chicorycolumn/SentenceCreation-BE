@@ -20,7 +20,7 @@ describe("/api", function () {
   this.timeout(5000);
 
   const testEnv = "ref";
-  apiUtils.setEnvir({ body: { envir: testEnv } }, "app01.spec");
+  apiUtils.setEnvir({ query: { envir: testEnv } }, "app01.spec");
 
   gpUtils.fillOutWashburneRefObj(
     generalTranslatedSentencesRef,

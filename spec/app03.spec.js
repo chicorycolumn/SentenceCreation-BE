@@ -15,7 +15,7 @@ describe("/api", function () {
   this.timeout(7000);
 
   const testEnv = "ref";
-  apiUtils.setEnvir({ body: { envir: testEnv } }, "app03.spec");
+  apiUtils.setEnvir({ query: { envir: testEnv } }, "app03.spec");
 
   describe("/palette - Stage 21: Step-T: Tantum Nouns.", () => {
     it(`${testEnv}#pal21-01a GET 200 YES: Poleng. Plurale Tantum in POL is allowed to be sing or plur in ENG.`, () => {

@@ -11,7 +11,7 @@ describe("/api", function () {
   this.timeout(7000);
 
   const testEnv = "ref";
-  apiUtils.setEnvir({ body: { envir: testEnv } }, "app04.spec");
+  apiUtils.setEnvir({ query: { envir: testEnv } }, "app04.spec");
 
   describe("/palette - Stage 22: Pronombres, Interrogatives.", () => {
     it(`${testEnv}#pal22-01a GET 200 YES: Poleng. ITG_G. Who is she?`, () => {

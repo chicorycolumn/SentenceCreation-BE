@@ -628,7 +628,7 @@ exports._makeFormula = (
 };
 
 exports.setEnvir = (req, label) => {
-  let { envir } = req.body;
+  let { envir } = req.query;
 
   if (!envir) {
     envir = "ref";

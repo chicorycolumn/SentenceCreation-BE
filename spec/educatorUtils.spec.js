@@ -148,7 +148,7 @@ xdescribe("Create contractionsReverse ref.", () => {
 
 xdescribe("findHomographs", () => {
   const testEnv = "ref";
-  apiUtils.setEnvir({ body: { envir: testEnv } }, 'describe("findHomographs"');
+  apiUtils.setEnvir({ query: { envir: testEnv } }, 'describe("findHomographs"');
 
   it(`${testEnv}#edu1.1 Gives all synhomograph lemma objects in one language.`, () => {
     const currentLanguage = "ENG";
@@ -477,7 +477,7 @@ xdescribe("findHomographs", () => {
 xdescribe("checkLemmaObjectIds", () => {
   const testEnv = "ref";
   apiUtils.setEnvir(
-    { body: { envir: testEnv } },
+    { query: { envir: testEnv } },
     'describe("checkLemmaObjectIds"'
   );
 
@@ -530,7 +530,7 @@ xdescribe("checkLemmaObjectIds", () => {
 xdescribe("checkSentenceFormulaIds", () => {
   const testEnv = "ref";
   apiUtils.setEnvir(
-    { body: { envir: testEnv } },
+    { query: { envir: testEnv } },
     'describe("checkSentenceFormulaIds"'
   );
 
@@ -558,7 +558,7 @@ xdescribe("checkSentenceFormulaIds", () => {
 
 xdescribe("checkWords", () => {
   const testEnv = "ref";
-  apiUtils.setEnvir({ body: { envir: testEnv } }, 'describe("checkWords"');
+  apiUtils.setEnvir({ query: { envir: testEnv } }, 'describe("checkWords"');
 
   it(`${testEnv}#edu4.1 Checks words for specific traitKeys that might not have been specified. POL`, () => {
     const currentLanguage = "POL";
@@ -576,7 +576,7 @@ xdescribe("checkWords", () => {
 xdescribe("Educator Battery", () => {
   const testEnv = "ref";
   apiUtils.setEnvir(
-    { body: { envir: testEnv } },
+    { query: { envir: testEnv } },
     'describe("Educator Battery"'
   );
 

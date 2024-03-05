@@ -8,7 +8,7 @@ const cfUtils = require("../utils/counterfaxUtils.js");
 xdescribe("listCounterfaxSituations", () => {
   const testEnv = "ref";
   apiUtils.setEnvir(
-    { body: { envir: testEnv } },
+    { query: { envir: testEnv } },
     'describe("listCounterfaxSituations"'
   );
 
@@ -755,7 +755,7 @@ xdescribe("listCounterfaxSituations", () => {
 xdescribe("explodeCounterfaxSituations", () => {
   const testEnv = "ref";
   apiUtils.setEnvir(
-    { body: { envir: testEnv } },
+    { query: { envir: testEnv } },
     'describe("explodeCounterfaxSituations"'
   );
 

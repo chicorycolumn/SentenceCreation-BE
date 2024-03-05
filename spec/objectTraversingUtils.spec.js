@@ -339,7 +339,7 @@ xdescribe("doesThisInflectionKeyHoldUniqueInflectionValueInLObj", () => {
 xdescribe("findSynhomographs", () => {
   const testEnv = "ref";
   apiUtils.setEnvir(
-    { body: { envir: testEnv } },
+    { query: { envir: testEnv } },
     'describe("findSynhomographs"'
   );
 
@@ -665,7 +665,7 @@ xdescribe("findSynhomographs", () => {
 xdescribe("findObjectInNestedObject", () => {
   const testEnv = "ref";
   apiUtils.setEnvir(
-    { body: { envir: testEnv } },
+    { query: { envir: testEnv } },
     'describe("findObjectInNestedObject"'
   );
 
@@ -827,7 +827,7 @@ xdescribe("findObjectInNestedObject", () => {
 xdescribe("concoctNestedRoutes", () => {
   const testEnv = "ref";
   apiUtils.setEnvir(
-    { body: { envir: testEnv } },
+    { query: { envir: testEnv } },
     'describe("concoctNestedRoutes"'
   );
 
@@ -914,7 +914,7 @@ xdescribe("concoctNestedRoutes", () => {
 xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
   const testEnv = "ref";
   apiUtils.setEnvir(
-    { body: { envir: testEnv } },
+    { query: { envir: testEnv } },
     'describe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject"'
   );
 
@@ -1245,7 +1245,7 @@ xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
 xdescribe("findSinglePointMutationArray", () => {
   const testEnv = "ref";
   apiUtils.setEnvir(
-    { body: { envir: testEnv } },
+    { query: { envir: testEnv } },
     'describe("findSinglePointMutationArray"'
   );
 
