@@ -10,7 +10,7 @@ exports.grabLObjById = (lObjId) => {
   let split = lObjId.split("-");
   let lang = split[0].toUpperCase();
   let wordtype = split[1].toUpperCase();
-  const envir = apiUtils.getEniv("grabLObjById");
+  const envir = apiUtils.getEnvir("grabLObjById");
 
   const lObjs = require(`../source/${envir}/${lang}/words/${wordtype}.json`);
   let lObj = lObjs.find((l) => l.id === lObjId);
@@ -24,7 +24,7 @@ exports.grabLObjById = (lObjId) => {
 
 exports.grabLObjsByWordtype = (lang, wordtype, useDummy) => {
   lang = lang.toUpperCase();
-  const envir = apiUtils.getEniv("grabLObjsByWordtype");
+  const envir = apiUtils.getEnvir("grabLObjsByWordtype");
 
   const wordsBank = require(`../source/${envir}/${lang}/words/${wordtype}.json`);
 
@@ -47,7 +47,7 @@ exports.grabLObjsByWordtype = (lang, wordtype, useDummy) => {
 
 exports.readAllLObjs = (lang, useDummy, res, lObjCallback, wordsetCallback) => {
   ivUtils.validateLang(lang, 13);
-  const envir = apiUtils.getEniv("readAllLObjs");
+  const envir = apiUtils.getEnvir("readAllLObjs");
 
   const fs = require("fs");
   let filenames = fs.readdirSync(`source/${envir}/${lang}/words`);
@@ -70,7 +70,7 @@ exports.readAllLObjs = (lang, useDummy, res, lObjCallback, wordsetCallback) => {
 };
 
 exports.grabFormulaById = (formulaId, useDummy, lang) => {
-  const envir = apiUtils.getEniv("grabFormulaById");
+  const envir = apiUtils.getEnvir("grabFormulaById");
 
   if (useDummy) {
     const {
@@ -121,7 +121,7 @@ exports.grabFormula = (
 };
 
 exports.grabSkeletonFormulas = (lang) => {
-  const envir = apiUtils.getEniv("grabSkeletonFormulas");
+  const envir = apiUtils.getEnvir("grabSkeletonFormulas");
   lang = lang.toUpperCase();
 
   const fs = require("fs");
@@ -166,7 +166,7 @@ exports.addExtraToLObj = (lObj) => {
 };
 
 exports._grabLObjInfo = (lObjId) => {
-  const envir = apiUtils.getEniv("_grabLObjInfo");
+  const envir = apiUtils.getEnvir("_grabLObjInfo");
 
   let split = lObjId.split("-");
   let lang = split[0].toUpperCase();

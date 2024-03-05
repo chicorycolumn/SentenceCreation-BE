@@ -556,7 +556,7 @@ xdescribe("checkWords", () => {
 });
 
 xdescribe("Educator Battery", () => {
-  apiUtils.setEniv({ body: { envir: "ref" } });
+  apiUtils.setEnvir({ body: { envir: "ref" } });
 
   it("#eduBat-01 Gives ENG synhomograph lemma objects. (Used programmatically for Type 1 Synhomos)", () => {
     const currentLanguage = "ENG";

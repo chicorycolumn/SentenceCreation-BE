@@ -18,7 +18,7 @@ const { runPaletteTest1, runPaletteTest1Multiple, checkProportions } =
 
 describe("/api", function () {
   this.timeout(5000);
-  apiUtils.setEniv({ body: { envir: "ref" } });
+  apiUtils.setEnvir({ body: { envir: "ref" } });
 
   gpUtils.fillOutWashburneRefObj(
     generalTranslatedSentencesRef,

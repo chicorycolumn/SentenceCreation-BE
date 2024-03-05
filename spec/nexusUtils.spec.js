@@ -10,7 +10,7 @@ const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 
 describe("/nexusUtils", function () {
-  apiUtils.setEniv({ body: { envir: "ref" } });
+  apiUtils.setEnvir({ body: { envir: "ref" } });
 
   describe("checkAllLObjsArePresentInNexus", () => {
     it("checkAllLObjsArePresentInNexus ENG", () => {

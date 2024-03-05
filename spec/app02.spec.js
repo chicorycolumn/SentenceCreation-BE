@@ -15,7 +15,7 @@ const { runPaletteTest1 } = testingUtils;
 
 describe("/api", function () {
   this.timeout(7000);
-  apiUtils.setEniv({ body: { envir: "ref" } });
+  apiUtils.setEnvir({ body: { envir: "ref" } });
 
   gpUtils.fillOutWashburneRefObj(
     generalTranslatedSentencesRef,

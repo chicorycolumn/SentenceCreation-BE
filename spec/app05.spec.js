@@ -17,7 +17,7 @@ const {
 
 describe("/api", function () {
   this.timeout(7000);
-  apiUtils.setEniv({ body: { envir: "ref" } });
+  apiUtils.setEnvir({ body: { envir: "ref" } });
 
   xdescribe("/palette - Stage 30: Modal verbs, and contractions.", () => {
     describe("#pal30-01 Will not.", () => {

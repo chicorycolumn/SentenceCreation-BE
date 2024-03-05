@@ -22,7 +22,7 @@ exports.fetchFormulaTopics = (req) => {
 exports.fetchTags = (req) => {
   let { lang } = req.query;
 
-  apiUtils.setEniv(req);
+  apiUtils.setEnvir(req);
 
   let { allTags, allTopics } = apiUtils.getTagsAndTopics(lang);
 
@@ -36,7 +36,7 @@ exports.fetchTags = (req) => {
 exports.fetchWordsByCriteria = (req) => {
   let { lang } = req.query;
 
-  apiUtils.setEniv(req);
+  apiUtils.setEnvir(req);
 
   delete req.query["lang"];
 

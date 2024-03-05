@@ -39,7 +39,7 @@ exports.fetchPalette = (req) => {
     formattingOptions = {},
   } = req.body;
 
-  const envir = apiUtils.getEniv("fetchPalette");
+  const envir = apiUtils.getEnvir("fetchPalette");
   consol.logVeryGreyString(`hnrx env.envir is "${envir}"`);
 
   let multipleMode = !!forceMultipleAndQuestionOnly;

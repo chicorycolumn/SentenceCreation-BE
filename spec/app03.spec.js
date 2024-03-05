@@ -13,7 +13,7 @@ const { runPaletteTest1 } = testingUtils;
 
 describe("/api", function () {
   this.timeout(7000);
-  apiUtils.setEniv({ body: { envir: "ref" } });
+  apiUtils.setEnvir({ body: { envir: "ref" } });
 
   describe("/palette - Stage 21: Step-T: Tantum Nouns.", () => {
     it("#pal21-01a GET 200 YES: Poleng. Plurale Tantum in POL is allowed to be sing or plur in ENG.", () => {

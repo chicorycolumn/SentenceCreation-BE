@@ -20,7 +20,7 @@ const refFxn = require("../reference/referenceFunctions.js");
 const { fetchPalette } = require("../../models/palette.model.js");
 
 exports.getAnAvailableNexusId = () => {
-  const envir = apiUtils.getEniv("getAnAvailableNexusId");
+  const envir = apiUtils.getEnvir("getAnAvailableNexusId");
 
   const existingNexusIds =
     require(`../../source/${envir}/NEXUS/sentenceFormulas.js`).sentenceFormulas.map(
@@ -627,7 +627,7 @@ exports._makeFormula = (
   return formula;
 };
 
-exports.setEniv = (req, label) => {
+exports.setEnvir = (req, label) => {
   let { envir } = req.body;
 
   if (!envir) {
@@ -639,7 +639,7 @@ exports.setEniv = (req, label) => {
   consol.logVeryGreyString(`${label} set envir to ${envir}`);
 };
 
-exports.getEniv = (label) => {
+exports.getEnvir = (label) => {
   const envir = env.envir;
 
   if (!envir) {

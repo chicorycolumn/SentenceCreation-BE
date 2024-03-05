@@ -25,7 +25,7 @@ const runApiTest1 = (req, expected) => {
 };
 
 describe("/educator/formulas.", () => {
-  apiUtils.setEniv({ body: { envir: "ref" } });
+  apiUtils.setEnvir({ body: { envir: "ref" } });
 
   it("#san04a GET 200 YES: Check that numeric chunkIds are converted to guidewords.", () => {
     let res = fetchFormulas({
