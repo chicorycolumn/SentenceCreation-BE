@@ -15,7 +15,7 @@ const refFxn = require("../utils/reference/referenceFunctions.js");
 exports.fetchChunks = (req) => {
   let { lang, lemma } = req.query;
 
-  apiUtils.setEnvir(req);
+  apiUtils.setEnvir(req, "fetchChunks");
 
   let responseObject = {};
 

@@ -338,7 +338,10 @@ xdescribe("doesThisInflectionKeyHoldUniqueInflectionValueInLObj", () => {
 
 xdescribe("findSynhomographs", () => {
   const testEnv = "ref";
-  apiUtils.setEnvir({ body: { envir: testEnv } });
+  apiUtils.setEnvir(
+    { body: { envir: testEnv } },
+    'describe("findSynhomographs"'
+  );
 
   it(`${testEnv}#otu4.1 Produces empty array when no lemmaObjects with any synhomographs are given.`, () => {
     const lobjArr = [
@@ -661,7 +664,10 @@ xdescribe("findSynhomographs", () => {
 
 xdescribe("findObjectInNestedObject", () => {
   const testEnv = "ref";
-  apiUtils.setEnvir({ body: { envir: testEnv } });
+  apiUtils.setEnvir(
+    { body: { envir: testEnv } },
+    'describe("findObjectInNestedObject"'
+  );
 
   let testObj1 = {
     level01: {
@@ -820,7 +826,10 @@ xdescribe("findObjectInNestedObject", () => {
 
 xdescribe("concoctNestedRoutes", () => {
   const testEnv = "ref";
-  apiUtils.setEnvir({ body: { envir: testEnv } });
+  apiUtils.setEnvir(
+    { body: { envir: testEnv } },
+    'describe("concoctNestedRoutes"'
+  );
 
   it(`${testEnv}#otu2.1a Throw error for empty input.`, () => {
     const input1 = [];
@@ -904,7 +913,10 @@ xdescribe("concoctNestedRoutes", () => {
 
 xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
   const testEnv = "ref";
-  apiUtils.setEnvir({ body: { envir: testEnv } });
+  apiUtils.setEnvir(
+    { body: { envir: testEnv } },
+    'describe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject"'
+  );
 
   it(`${testEnv}#otu1.1a Returns empty array for empty object.`, () => {
     const input = {};
@@ -1232,7 +1244,10 @@ xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
 
 xdescribe("findSinglePointMutationArray", () => {
   const testEnv = "ref";
-  apiUtils.setEnvir({ body: { envir: testEnv } });
+  apiUtils.setEnvir(
+    { body: { envir: testEnv } },
+    'describe("findSinglePointMutationArray"'
+  );
 
   it(`${testEnv}#otu5.0 Give empty for empty`, () => {
     let input_arrayOfArrays = [];

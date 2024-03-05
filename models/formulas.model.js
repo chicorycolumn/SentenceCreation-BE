@@ -16,7 +16,7 @@ const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 exports.fetchFormulas = (req) => {
   let { id } = req.query;
 
-  apiUtils.setEnvir(req);
+  apiUtils.setEnvir(req, "fetchFormulas");
 
   let answerLang = req.query.lang;
   let questionLang = idUtils.getLanguageFromFormulaId(id);
@@ -48,7 +48,7 @@ exports.fetchFormulas = (req) => {
 exports.fetchFormulaIds = (req) => {
   let { lang1, lang2 } = req.query;
 
-  apiUtils.setEnvir(req);
+  apiUtils.setEnvir(req, "fetchFormulaIds");
 
   ivUtils.validateLang(lang1, 19);
   ivUtils.validateLang(lang2, 20);

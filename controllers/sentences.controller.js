@@ -69,7 +69,7 @@ exports.getSentencesForEducator = (req, res, next) => {
     requestingSingleWordOnly,
   } = req.body;
 
-  apiUtils.setEnvir(req);
+  apiUtils.setEnvir(req, "getSentencesForEducator");
 
   if (answerFormula) {
     let data = apiUtils.prepareGetDualSentences(

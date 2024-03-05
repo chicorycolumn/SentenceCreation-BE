@@ -11,7 +11,7 @@ const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 
 describe("/nexusUtils", function () {
   const testEnv = "ref";
-  apiUtils.setEnvir({ body: { envir: testEnv } });
+  apiUtils.setEnvir({ body: { envir: testEnv } }, 'describe("/nexusUtils"');
 
   describe("checkAllLObjsArePresentInNexus", () => {
     it(`${testEnv}#checkAllLObjsArePresentInNexus ENG`, () => {

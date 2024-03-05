@@ -148,7 +148,7 @@ xdescribe("Create contractionsReverse ref.", () => {
 
 xdescribe("findHomographs", () => {
   const testEnv = "ref";
-  apiUtils.setEnvir({ body: { envir: testEnv } });
+  apiUtils.setEnvir({ body: { envir: testEnv } }, 'describe("findHomographs"');
 
   it(`${testEnv}#edu1.1 Gives all synhomograph lemma objects in one language.`, () => {
     const currentLanguage = "ENG";
@@ -476,7 +476,10 @@ xdescribe("findHomographs", () => {
 
 xdescribe("checkLemmaObjectIds", () => {
   const testEnv = "ref";
-  apiUtils.setEnvir({ body: { envir: testEnv } });
+  apiUtils.setEnvir(
+    { body: { envir: testEnv } },
+    'describe("checkLemmaObjectIds"'
+  );
 
   it(`${testEnv}#edu2.1 Gives a schematic and duplicateIds. ENG`, () => {
     const currentLanguage = "ENG";
@@ -526,7 +529,10 @@ xdescribe("checkLemmaObjectIds", () => {
 
 xdescribe("checkSentenceFormulaIds", () => {
   const testEnv = "ref";
-  apiUtils.setEnvir({ body: { envir: testEnv } });
+  apiUtils.setEnvir(
+    { body: { envir: testEnv } },
+    'describe("checkSentenceFormulaIds"'
+  );
 
   it(`${testEnv}#edu3.1 Gives a schematic and duplicateIds. ENG`, () => {
     const currentLanguage = "ENG";
@@ -552,7 +558,7 @@ xdescribe("checkSentenceFormulaIds", () => {
 
 xdescribe("checkWords", () => {
   const testEnv = "ref";
-  apiUtils.setEnvir({ body: { envir: testEnv } });
+  apiUtils.setEnvir({ body: { envir: testEnv } }, 'describe("checkWords"');
 
   it(`${testEnv}#edu4.1 Checks words for specific traitKeys that might not have been specified. POL`, () => {
     const currentLanguage = "POL";
@@ -569,7 +575,10 @@ xdescribe("checkWords", () => {
 
 xdescribe("Educator Battery", () => {
   const testEnv = "ref";
-  apiUtils.setEnvir({ body: { envir: testEnv } });
+  apiUtils.setEnvir(
+    { body: { envir: testEnv } },
+    'describe("Educator Battery"'
+  );
 
   it(`${testEnv}#eduBat-01 Gives ENG synhomograph lemma objects. (Used programmatically for Type 1 Synhomos)`, () => {
     const currentLanguage = "ENG";

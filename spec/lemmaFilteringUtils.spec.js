@@ -8,7 +8,10 @@ const shouldConsoleLog = false;
 
 xdescribe("traverseAndRecordInflections", () => {
   const testEnv = "ref";
-  apiUtils.setEnvir({ body: { envir: testEnv } });
+  apiUtils.setEnvir(
+    { body: { envir: testEnv } },
+    'describe("traverseAndRecordInflections"'
+  );
 
   let source = {
     infinitive: "czytać",

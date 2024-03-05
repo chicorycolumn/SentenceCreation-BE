@@ -26,11 +26,15 @@ const runApiTest1 = (req, expected) => {
 
 describe("/educator/formulas.", () => {
   const testEnv = "ref";
-  apiUtils.setEnvir({ body: { envir: testEnv } });
+  apiUtils.setEnvir(
+    { body: { envir: testEnv } },
+    'describe("/educator/formulas'
+  );
 
   it(`${testEnv}#san04a GET 200 YES: Check that numeric chunkIds are converted to guidewords.`, () => {
     let res = fetchFormulas({
       query: { id: "POL-101b", lang: "ENG" },
+      body: { envir: testEnv },
     });
     return res.then((res) => {
       res.questionSentenceFormula =
@@ -52,6 +56,7 @@ describe("/educator/formulas.", () => {
   it(`${testEnv}#san04b GET 200 YES: Check that numeric chunkIds are converted to guidewords.`, () => {
     let res = fetchFormulas({
       query: { id: "POL-112", lang: "ENG" },
+      body: { envir: testEnv },
     });
     return res.then((res) => {
       res.questionSentenceFormula =
@@ -74,7 +79,10 @@ describe("/educator/formulas.", () => {
 
 describe("/educator/sentences - Testing API.", () => {
   const testEnv = "ref";
-  apiUtils.setEnvir({ body: { envir: testEnv } });
+  apiUtils.setEnvir(
+    { body: { envir: testEnv } },
+    'describe("/educator/sentences'
+  );
 
   it(`${testEnv}#san03 GET 200 YES: Deduplicating specially treated imOnly verbs like 'być'.`, () => {
     const questionLanguage = "POL";
@@ -218,7 +226,10 @@ describe("/educator/sentences - Testing API.", () => {
 
 xdescribe("getEnChsForLemma", () => {
   const testEnv = "ref";
-  apiUtils.setEnvir({ body: { envir: testEnv } });
+  apiUtils.setEnvir(
+    { body: { envir: testEnv } },
+    'describe("getEnChsForLemma"'
+  );
 
   it(`${testEnv}1`, () => {
     const actual = getEnChsForLemma("POL", "kobieta");
