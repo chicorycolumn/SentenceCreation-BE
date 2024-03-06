@@ -20,9 +20,11 @@ exports.fetchFormulaTopics = (req) => {
 };
 
 exports.fetchTags = (req) => {
-  let { lang, env } = req.query;
+  let { lang } = req.query;
 
-  let { allTags, allTopics } = apiUtils.getTagsAndTopics(env, lang);
+  apiUtils.setEnvir(req, "fetchTags");
+
+  let { allTags, allTopics } = apiUtils.getTagsAndTopics(lang);
 
   let responseObject = { tags: allTags, topics: allTopics };
 
@@ -32,10 +34,13 @@ exports.fetchTags = (req) => {
 };
 
 exports.fetchWordsByCriteria = (req) => {
-  let { lang, env } = req.query;
+  let { lang } = req.query;
+
+  apiUtils.setEnvir(req, "fetchWordsByCriteria");
+
   delete req.query["lang"];
 
-  let words = apiUtils.getWordsByCriteria(env, lang, req.query);
+  let words = apiUtils.getWordsByCriteria(lang, req.query);
 
   let responseObject = { words };
 

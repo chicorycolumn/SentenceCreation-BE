@@ -1,3 +1,4 @@
+const { env } = require("node:process");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 const idUtils = require("../../utils/identityUtils.js");
 const uUtils = require("../../utils/universalUtils.js");
@@ -18,9 +19,11 @@ const allLangUtils = require("../../utils/allLangUtils.js");
 const refFxn = require("../reference/referenceFunctions.js");
 const { fetchPalette } = require("../../models/palette.model.js");
 
-exports.getAnAvailableNexusId = (env = "ref") => {
+exports.getAnAvailableNexusId = () => {
+  const envir = apiUtils.getEnvir("getAnAvailableNexusId");
+
   const existingNexusIds =
-    require(`../../source/${env}/NEXUS/sentenceFormulas.js`).sentenceFormulas.map(
+    require(`../../source/${envir}/NEXUS/sentenceFormulas.js`).sentenceFormulas.map(
       (nex) => nex.key
     );
 
@@ -37,11 +40,7 @@ exports.getAnAvailableNexusId = (env = "ref") => {
   return "failed to find available nexus id";
 };
 
-exports.getSentenceFormulas = (
-  questionFormulaId,
-  answerLanguage,
-  env = "ref"
-) => {
+exports.getSentenceFormulas = (questionFormulaId, answerLanguage) => {
   let questionLanguage = idUtils.getLanguageFromFormulaId(questionFormulaId);
   ivUtils.validateLang(questionLanguage, 14);
   ivUtils.validateLang(answerLanguage, 15);
@@ -49,24 +48,17 @@ exports.getSentenceFormulas = (
   let questionSentenceFormula = gdUtils.grabFormulaById(
     questionFormulaId,
     false,
-    questionLanguage,
-    env
+    questionLanguage
   );
 
   let answerSentenceFormulaIds = nexusUtils.getEquivalents(
     questionSentenceFormula.id,
-    answerLanguage,
-    env
+    answerLanguage
   );
 
   let answerSentenceFormulas = answerSentenceFormulaIds.map(
     (answerSentenceFormulaId) =>
-      gdUtils.grabFormulaById(
-        answerSentenceFormulaId,
-        false,
-        answerLanguage,
-        env
-      )
+      gdUtils.grabFormulaById(answerSentenceFormulaId, false, answerLanguage)
   );
 
   let res = { questionSentenceFormula, answerSentenceFormulas };
@@ -74,11 +66,7 @@ exports.getSentenceFormulas = (
   return uUtils.copyWithoutReference(res);
 };
 
-exports.getWordsByCriteria = (
-  envir = "ref",
-  currentLanguage,
-  criteriaFromHTTP
-) => {
+exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
   let resObj = {};
 
   let criteria = {};
@@ -124,13 +112,13 @@ exports.getWordsByCriteria = (
     }
   };
 
-  gdUtils.readAllLObjs(currentLanguage, envir, false, resObj, lObjCallback);
+  gdUtils.readAllLObjs(currentLanguage, false, resObj, lObjCallback);
 
   return resObj;
 };
 
-exports.getTagsAndTopics = (envir = "ref", currentLanguage) => {
-  const wordsBank = nexusUtils.getNexusWithAllWordtypes(envir);
+exports.getTagsAndTopics = (currentLanguage) => {
+  const wordsBank = nexusUtils.getNexusWithAllWordtypes();
 
   allTags = gpUtils.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects(
     wordsBank,
@@ -284,7 +272,7 @@ exports.frontendifyOrders = (orders) => {
   return newOrders;
 };
 
-exports.frontendifyFormula = (env, lang, formula) => {
+exports.frontendifyFormula = (lang, formula) => {
   // Frontendify-5: Fetch lObjId and guideword.
   let guideWordsToAdd = [];
   formula.sentenceStructure.forEach((stCh) => {
@@ -296,7 +284,6 @@ exports.frontendifyFormula = (env, lang, formula) => {
 
     if (!guideword || /^\d+$/.test(guideword)) {
       let data = apiUtils.prepareGetSentencesAsQuestionOnly(
-        env,
         lang,
         { sentenceStructure: [stCh] },
         true
@@ -401,12 +388,12 @@ exports.gatherBooleanTraitsForFE = (stCh) => {
   stCh.booleanTraits = booleanTraits;
 };
 
-exports.getEnChsForLemma = (lang, lemma, env = "ref") => {
+exports.getEnChsForLemma = (lang, lemma) => {
   ivUtils.validateLang(lang, 12);
 
   const langUtils = require(`../../source/all/${lang}/langUtils.js`);
 
-  let lObjs = apiUtils.getLObjsForLemma(lang, lemma, env, true);
+  let lObjs = apiUtils.getLObjsForLemma(lang, lemma, true);
 
   let enChs = lObjs.map((lObj) => {
     let wordtype = idUtils.getWordtypeLObj(lObj);
@@ -534,11 +521,11 @@ exports.getEnChsForLemma = (lang, lemma, env = "ref") => {
   return enChs;
 };
 
-exports.getLObjsForLemma = (lang, lemma, env = "ref", addInflections) => {
+exports.getLObjsForLemma = (lang, lemma, addInflections) => {
   let matches = [];
 
   const lObjCallback = (lObj, res) => {
-    let inflections = gdUtils.grabInflections(lObj.id, env);
+    let inflections = gdUtils.grabInflections(lObj.id);
 
     if (lObj.lemma === lemma || uUtils.valueInObject(inflections, lemma)) {
       if (addInflections) {
@@ -548,13 +535,12 @@ exports.getLObjsForLemma = (lang, lemma, env = "ref", addInflections) => {
     }
   };
 
-  gdUtils.readAllLObjs(lang, env, false, matches, lObjCallback);
+  gdUtils.readAllLObjs(lang, false, matches, lObjCallback);
 
   return matches;
 };
 
 exports.prepareGetSentencesAsQuestionOnly = (
-  env,
   questionLanguage,
   sentenceFormula,
   requestingSingleWordOnly
@@ -573,7 +559,6 @@ exports.prepareGetSentencesAsQuestionOnly = (
 
   return {
     body: {
-      env,
       startTime: Date.now(),
       sentenceFormulaFromEducator: sentenceFormula,
       questionLanguage,
@@ -584,7 +569,6 @@ exports.prepareGetSentencesAsQuestionOnly = (
 };
 
 exports.prepareGetDualSentences = (
-  env,
   questionLanguage,
   answerLanguage,
   questionFormula,
@@ -612,7 +596,6 @@ exports.prepareGetDualSentences = (
 
   return {
     body: {
-      env,
       startTime: Date.now(),
       sentenceFormulaFromEducator: questionFormula,
       questionLanguage,
@@ -642,4 +625,22 @@ exports._makeFormula = (
   }
 
   return formula;
+};
+
+exports.setEnvir = (req, label) => {
+  let { envir } = req.query;
+  if (!envir) {
+    envir = "ref";
+  }
+  env.envir = envir;
+  // consol.logVeryGreyString(`"${envir}" set as envir by ${label}`);
+};
+
+exports.getEnvir = (label) => {
+  const envir = env.envir;
+  if (!envir) {
+    envir = "ref";
+  }
+  // consol.logVeryGreyString(`"${envir}" got as envir for ${label}`);
+  return envir;
 };

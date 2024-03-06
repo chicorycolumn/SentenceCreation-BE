@@ -1,9 +1,17 @@
+const apiUtils = require("../utils/secondOrder/apiUtils");
+
 const { expect } = require("chai");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const uUtils = require("../utils/universalUtils.js");
 const cfUtils = require("../utils/counterfaxUtils.js");
 
 xdescribe("listCounterfaxSituations", () => {
+  const testEnv = "ref";
+  apiUtils.setEnvir(
+    { query: { envir: testEnv } },
+    'describe("listCounterfaxSituations"'
+  );
+
   it("Two annotations on one, and one on the other.", () => {
     let questionOutputArray = [
       {
@@ -745,6 +753,12 @@ xdescribe("listCounterfaxSituations", () => {
 });
 
 xdescribe("explodeCounterfaxSituations", () => {
+  const testEnv = "ref";
+  apiUtils.setEnvir(
+    { query: { envir: testEnv } },
+    'describe("explodeCounterfaxSituations"'
+  );
+
   it("Two by three by two makes twelve.", () => {
     let input = {
       headsFirstSequenceChunkIds: ["pro-1", "pro-2"],

@@ -1,3 +1,4 @@
+const apiUtils = require("../utils/secondOrder/apiUtils");
 const app = require("../app");
 const request = require("supertest");
 const { expect } = require("chai");
@@ -18,6 +19,9 @@ const { runPaletteTest1, runPaletteTest1Multiple, checkProportions } =
 describe("/api", function () {
   this.timeout(5000);
 
+  const testEnv = "ref";
+  apiUtils.setEnvir({ query: { envir: testEnv } }, "app01.spec");
+
   gpUtils.fillOutWashburneRefObj(
     generalTranslatedSentencesRef,
     "POL->ENG",
@@ -29,7 +33,7 @@ describe("/api", function () {
   // beforeEach(() => {});
 
   describe("/", () => {
-    it("#api-01 GET 200 Serves up endpoints", () => {
+    it(`${testEnv}#api-01 GET 200 Serves up endpoints`, () => {
       return request(app)
         .get("/api")
         .expect(200)
@@ -37,7 +41,7 @@ describe("/api", function () {
           expect(res.body.endpoints).to.be.an("Object");
         });
     });
-    it("#api-02 Responds 405 if any other methods are used at this endpoint", () => {
+    it(`${testEnv}#api-02 Responds 405 if any other methods are used at this endpoint`, () => {
       const url = "/api";
       return Promise.all([
         request(app).del(url),
@@ -52,7 +56,7 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 1: Basics", () => {
-    it("#pal01-01a GET 200 YES: Returns a sentence", () => {
+    it(`${testEnv}#pal01-01a GET 200 YES: Returns a sentence`, () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -65,7 +69,7 @@ describe("/api", function () {
           consol.log(res.body);
         });
     });
-    it("#pal01-01b GET 200 YES: Returns a sentence", () => {
+    it(`${testEnv}#pal01-01b GET 200 YES: Returns a sentence`, () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -78,7 +82,7 @@ describe("/api", function () {
           consol.log(res.body);
         });
     });
-    it("#pal01-02a GET 200 NO: Returns message to say no sentence can be created from specifications.", () => {
+    it(`${testEnv}#pal01-02a GET 200 NO: Returns message to say no sentence can be created from specifications.`, () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -97,7 +101,7 @@ describe("/api", function () {
           expect(res.body.questionSentenceArr.length).to.equal(0);
         });
     });
-    it("#pal01-02b GET 200 NO: Returns message to say no sentence could possibly be created from specifications. This fails when in dev, as I put a throw. But in PROD the throw will be removed.", () => {
+    it(`${testEnv}#pal01-02b GET 200 NO: Returns message to say no sentence could possibly be created from specifications. This fails when in dev, as I put a throw. But in PROD the throw will be removed.`, () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -117,7 +121,7 @@ describe("/api", function () {
           expect(res.body.questionSentenceArr.length).to.equal(0);
         });
     });
-    it("#pal01-03a GET 200 NO: Returns message to say no sentence, if dummy noun was successfully filtered out.", () => {
+    it(`${testEnv}#pal01-03a GET 200 NO: Returns message to say no sentence, if dummy noun was successfully filtered out.`, () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -136,7 +140,7 @@ describe("/api", function () {
           expect(res.body.questionSentenceArr.length).to.equal(0);
         });
     });
-    it("#pal01-03b GET 200 NO: Returns message to say no sentence, if dummy noun was successfully filtered out.", () => {
+    it(`${testEnv}#pal01-03b GET 200 NO: Returns message to say no sentence, if dummy noun was successfully filtered out.`, () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -155,7 +159,7 @@ describe("/api", function () {
           expect(res.body.questionSentenceArr.length).to.equal(0);
         });
     });
-    it("#pal01-03c GET 200 YES: Returns sentence, as dummy noun did not need to be filtered out.", () => {
+    it(`${testEnv}#pal01-03c GET 200 YES: Returns sentence, as dummy noun did not need to be filtered out.`, () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -170,7 +174,7 @@ describe("/api", function () {
           consol.log(res.body);
         });
     });
-    it("#pal01-03d GET 200 YES: Returns successful sentence 100% of the time, rather than 33%, as one of the dummy nouns should have been filtered out.", () => {
+    it(`${testEnv}#pal01-03d GET 200 YES: Returns successful sentence 100% of the time, rather than 33%, as one of the dummy nouns should have been filtered out.`, () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -185,7 +189,7 @@ describe("/api", function () {
           consol.log(res.body);
         });
     });
-    it("#pal01-03e GET 200 NO: Returns message to say no sentence, as dummy noun should have been filtered out.", () => {
+    it(`${testEnv}#pal01-03e GET 200 NO: Returns message to say no sentence, as dummy noun should have been filtered out.`, () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -204,7 +208,7 @@ describe("/api", function () {
           expect(res.body.questionSentenceArr.length).to.equal(0);
         });
     });
-    it("#pal01-03f GET 200 YES: Returns successful sentence 100% of the time, even though I've tried to trick it, by asking for Singular and Loc, and including an object that does indeed have Singular (but Loc is not within), and has Plural (with Loc within).", () => {
+    it(`${testEnv}#pal01-03f GET 200 YES: Returns successful sentence 100% of the time, even though I've tried to trick it, by asking for Singular and Loc, and including an object that does indeed have Singular (but Loc is not within), and has Plural (with Loc within).`, () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -219,7 +223,7 @@ describe("/api", function () {
           consol.log(res.body);
         });
     });
-    it("#pal01-03g GET 200 YES: Testing whether object traversing fxn can avoid getting stuck by going down dead-ends.", () => {
+    it(`${testEnv}#pal01-03g GET 200 YES: Testing whether object traversing fxn can avoid getting stuck by going down dead-ends.`, () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -234,15 +238,15 @@ describe("/api", function () {
           consol.log(res.body);
         });
     });
-    it("#pal01-04a GET 200 YES: Checking in console logs whether structureChunks have indeed been updated with the traitValues for eg number, gender, gcase of the finally selected word they structure for.", () => {
+    it(`${testEnv}#pal01-04a GET 200 YES: Checking in console logs whether structureChunks have indeed been updated with the traitValues for eg number, gender, gcase of the finally selected word they structure for.`, () => {
       return runPaletteTest1("POL", null, "57");
     });
-    it("#pal01-05a GET 200 YES: Check order of words in final sentence, based on one specified order.", () => {
+    it(`${testEnv}#pal01-05a GET 200 YES: Check order of words in final sentence, based on one specified order.`, () => {
       return runPaletteTest1("POL", null, "dummy09", [
         "Foobar-A foobar-C foobar-B.",
       ]);
     });
-    it("#pal01-05b GET 200 YES: Check order of words in final sentence, based on multiple specified orders.", () => {
+    it(`${testEnv}#pal01-05b GET 200 YES: Check order of words in final sentence, based on multiple specified orders.`, () => {
       return runPaletteTest1("POL", null, "dummy10", [
         "Foobar-A foobar-B foobar-C.",
         "Foobar-A foobar-C foobar-B.",
@@ -250,16 +254,16 @@ describe("/api", function () {
         "Foobar-B foobar-C foobar-A.",
       ]);
     });
-    it("#pal01-06a GET 200 YES: Filter by specified lemma.", () => {
+    it(`${testEnv}#pal01-06a GET 200 YES: Filter by specified lemma.`, () => {
       return runPaletteTest1("POL", null, "dummy11a", ["Mam jabłko."]);
     });
-    it("#pal01-06b GET 200 YES: Filter by a selection of multiple specified lemmas.", () => {
+    it(`${testEnv}#pal01-06b GET 200 YES: Filter by a selection of multiple specified lemmas.`, () => {
       return runPaletteTest1("POL", null, "dummy11b", [
         "Mam jabłka.",
         "Mam majtki.",
       ]);
     });
-    it("#pal01-07 Responds 405 if any other methods are used at this endpoint", () => {
+    it(`${testEnv}#pal01-07 Responds 405 if any other methods are used at this endpoint`, () => {
       const url = "/api/palette";
       return Promise.all([
         request(app).del(url),
@@ -274,7 +278,7 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 2: Nouns", () => {
-    it("#pal02-01a GET 200 YES: Returns a sentence where a tantum plurale was allowed, as no particular grammatical number was requested.", () => {
+    it(`${testEnv}#pal02-01a GET 200 YES: Returns a sentence where a tantum plurale was allowed, as no particular grammatical number was requested.`, () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -291,7 +295,7 @@ describe("/api", function () {
           ).to.equal("majtki.");
         });
     });
-    it("#pal02-01b GET 200 NO: Disallows tantum plurale, as singular grammatical number was requested.", () => {
+    it(`${testEnv}#pal02-01b GET 200 NO: Disallows tantum plurale, as singular grammatical number was requested.`, () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -310,7 +314,7 @@ describe("/api", function () {
           expect(res.body.questionSentenceArr.length).to.equal(0);
         });
     });
-    it("#pal02-01c GET 200 YES: Returns a sentence where a tantum plurale was allowed, as either singular or plural grammatical number was requested.", () => {
+    it(`${testEnv}#pal02-01c GET 200 YES: Returns a sentence where a tantum plurale was allowed, as either singular or plural grammatical number was requested.`, () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -327,13 +331,13 @@ describe("/api", function () {
           ).to.equal("majtki.");
         });
     });
-    it("#pal02-02a GET 200 YES: Returns a sentence where end of inflection chain could be array.", () => {
+    it(`${testEnv}#pal02-02a GET 200 YES: Returns a sentence where end of inflection chain could be array.`, () => {
       return runPaletteTest1("POL", null, "54");
     });
   });
 
   describe("/palette - Stage 3: Adjectives", () => {
-    it("#pal03-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular. Filtered by orTags.", () => {
+    it(`${testEnv}#pal03-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular. Filtered by orTags.`, () => {
       return runPaletteTest1("POL", null, "55b", [
         "Czerwona cebula.",
         "Czerwone jabłko.",
@@ -341,25 +345,25 @@ describe("/api", function () {
         "Niebieskie jabłko.",
       ]);
     });
-    it("#pal03-02a GET 200 YES: Returns a sentence where adjective agrees with noun in singular. Filtered by andTags.", () => {
+    it(`${testEnv}#pal03-02a GET 200 YES: Returns a sentence where adjective agrees with noun in singular. Filtered by andTags.`, () => {
       return runPaletteTest1("POL", null, "55", [
         "Czerwona cebula.",
         "Czerwone jabłko.",
       ]);
     });
-    it("#pal03-02b GET 200 YES: Returns a sentence where adjective agrees with noun in nonvirile plural.", () => {
+    it(`${testEnv}#pal03-02b GET 200 YES: Returns a sentence where adjective agrees with noun in nonvirile plural.`, () => {
       return runPaletteTest1("POL", null, "55a", [
         "Czerwone cebule.",
         "Czerwone jabłka.",
       ]);
     });
-    it("#pal03-02c GET 200 YES: Returns a sentence where adjective agrees with noun in virile or nonvirile plural.", () => {
+    it(`${testEnv}#pal03-02c GET 200 YES: Returns a sentence where adjective agrees with noun in virile or nonvirile plural.`, () => {
       return runPaletteTest1("POL", null, "56", ["Czerwone kobiety."]);
     });
   });
 
   describe("/palette - Stage 4: Verbs", () => {
-    it("#pal04-01a GET 200 YES: Returns a sentence with a single verb, in present.", () => {
+    it(`${testEnv}#pal04-01a GET 200 YES: Returns a sentence with a single verb, in present.`, () => {
       return runPaletteTest1("POL", null, "58", [
         "Czytam.",
         "Czytasz.",
@@ -369,7 +373,7 @@ describe("/api", function () {
         "Czytają.",
       ]);
     });
-    it("#pal04-01b GET 200 YES: Returns a sentence with a single verb, with person specified.", () => {
+    it(`${testEnv}#pal04-01b GET 200 YES: Returns a sentence with a single verb, with person specified.`, () => {
       return runPaletteTest1("POL", null, "dummy12a", [
         "Czytasz.",
         "Czytacie.",
@@ -393,16 +397,16 @@ describe("/api", function () {
         "Czytajcie.",
       ]);
     });
-    it("#pal04-01d GET 200 YES: Returns a sentence with a single verb, with tense number and gender specified.", () => {
+    it(`${testEnv}#pal04-01d GET 200 YES: Returns a sentence with a single verb, with tense number and gender specified.`, () => {
       return runPaletteTest1("POL", null, "dummy13b", [
         "Czytasz.",
         "Czytacie.",
       ]);
     });
-    it("#pal04-01e GET 200 YES: Returns a sentence with a single verb in infinitive.", () => {
+    it(`${testEnv}#pal04-01e GET 200 YES: Returns a sentence with a single verb in infinitive.`, () => {
       return runPaletteTest1("POL", null, "dummy14", ["Czytać."]);
     });
-    it("#pal04-01f GET 200 YES: Returns a sentence with a single verb in impersonal.", () => {
+    it(`${testEnv}#pal04-01f GET 200 YES: Returns a sentence with a single verb in impersonal.`, () => {
       return runPaletteTest1("POL", null, "dummy15", [
         "Czyta się.",
         "Czytano.",
@@ -410,7 +414,7 @@ describe("/api", function () {
         "Czytano by.",
       ]);
     });
-    it("#pal04-01g GET 200 YES: Returns a sentence with a single verb in impersonal, even when plural is specified (returns just those impersonals that have plural use).", () => {
+    it(`${testEnv}#pal04-01g GET 200 YES: Returns a sentence with a single verb in impersonal, even when plural is specified (returns just those impersonals that have plural use).`, () => {
       return runPaletteTest1("POL", null, "dummy15a", [
         "Czytano.",
         "Czytano by.",
@@ -418,35 +422,35 @@ describe("/api", function () {
         "Czyta się.",
       ]);
     });
-    it("#pal04-01h GET 200 YES: Returns a sentence with a single verb in impersonal, even when plural is specified (returns just those impersonals that have plural use).", () => {
+    it(`${testEnv}#pal04-01h GET 200 YES: Returns a sentence with a single verb in impersonal, even when plural is specified (returns just those impersonals that have plural use).`, () => {
       return runPaletteTest1("POL", null, "dummy15b", [
         "Przeczyta się.",
         "Przeczytano.",
         "Przeczytano by.",
       ]);
     });
-    it("#pal04-02a GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle.", () => {
+    it(`${testEnv}#pal04-02a GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle.`, () => {
       return runPaletteTest1("POL", null, "dummy16", ["Czytając."]);
     });
-    it("#pal04-02b GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle, ignoring gender.", () => {
+    it(`${testEnv}#pal04-02b GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle, ignoring gender.`, () => {
       return runPaletteTest1("POL", null, "dummy17", ["Czytając."]);
     });
-    it("#pal04-02c GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle, ignoring gender and person.", () => {
+    it(`${testEnv}#pal04-02c GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle, ignoring gender and person.`, () => {
       return runPaletteTest1("POL", null, "dummy18", ["Czytając."]);
     });
-    it("#pal04-02d GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle.", () => {
+    it(`${testEnv}#pal04-02d GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle.`, () => {
       return runPaletteTest1("POL", null, "dummy16a", ["Przeczytawszy."]);
     });
-    it("#pal04-02e GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle, ignoring gender.", () => {
+    it(`${testEnv}#pal04-02e GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle, ignoring gender.`, () => {
       return runPaletteTest1("POL", null, "dummy17a", ["Przeczytawszy."]);
     });
-    it("#pal04-02f GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle, ignoring gender and person.", () => {
+    it(`${testEnv}#pal04-02f GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle, ignoring gender and person.`, () => {
       return runPaletteTest1("POL", null, "dummy18a", ["Przeczytawszy."]);
     });
-    it("#pal04-03a GET 200 YES: Returns a sentence with a single verb's verbalNoun.", () => {
+    it(`${testEnv}#pal04-03a GET 200 YES: Returns a sentence with a single verb's verbalNoun.`, () => {
       return runPaletteTest1("POL", null, "dummy21", ["Czytanie."]);
     });
-    it("#pal04-04a GET 200 YES: Returns verb in virile when one gender option is given.", () => {
+    it(`${testEnv}#pal04-04a GET 200 YES: Returns verb in virile when one gender option is given.`, () => {
       return runPaletteTest1("POL", null, "dummy23a", [
         "Czytaliśmy.",
         "Czytaliście.",
@@ -456,7 +460,7 @@ describe("/api", function () {
         "Czytaliby.",
       ]);
     });
-    it("#pal04-04b GET 200 YES: Returns verb in nonvirile when one gender option is given.", () => {
+    it(`${testEnv}#pal04-04b GET 200 YES: Returns verb in nonvirile when one gender option is given.`, () => {
       return runPaletteTest1("POL", null, "dummy23b", [
         "Czytałyśmy.",
         "Czytałyście.",
@@ -466,7 +470,7 @@ describe("/api", function () {
         "Czytałyby.",
       ]);
     });
-    it("#pal04-04c GET 200 YES: Returns verb in nonvirile when two gender options are given.", () => {
+    it(`${testEnv}#pal04-04c GET 200 YES: Returns verb in nonvirile when two gender options are given.`, () => {
       return runPaletteTest1("POL", null, "dummy23c", [
         "Czytałyśmy.",
         "Czytałyście.",
@@ -476,7 +480,7 @@ describe("/api", function () {
         "Czytałyby.",
       ]);
     });
-    it("#pal04-05a GET 200 YES: Conjugate verb (as virile or nonvirile) to agree with noun in plural.", () => {
+    it(`${testEnv}#pal04-05a GET 200 YES: Conjugate verb (as virile or nonvirile) to agree with noun in plural.`, () => {
       return runPaletteTest1("POL", null, "60", [
         "Kobiety czytały.",
         "Dzieci czytały.",
@@ -489,34 +493,34 @@ describe("/api", function () {
         "Chłopacy czytali.",
       ]);
     });
-    it("#pal04-05b GET 200 YES: Conjugate verb to agree with noun in singular or plural.", () => {
+    it(`${testEnv}#pal04-05b GET 200 YES: Conjugate verb to agree with noun in singular or plural.`, () => {
       return runPaletteTest1("POL", null, "59", [
         "Kobieta czyta.",
         "Kobiety czytają.",
       ]);
     });
-    it("#pal04-06a GET 200 YES: Select a verb by the Aspect selector.", () => {
+    it(`${testEnv}#pal04-06a GET 200 YES: Select a verb by the Aspect selector.`, () => {
       return runPaletteTest1("POL", null, "dummy20a", [
         "Kobieta czyta.",
         "Kobiety czytają.",
       ]);
     });
-    it("#pal04-06b GET 200 YES: Select a verb by the Aspect selector.", () => {
+    it(`${testEnv}#pal04-06b GET 200 YES: Select a verb by the Aspect selector.`, () => {
       return runPaletteTest1("POL", null, "dummy20b", [
         "Kobieta przeczyta.",
         "Kobiety przeczytają.",
       ]);
     });
-    it("#pal04-07a GET 200 YES: Make two verbs agree.", () => {
+    it(`${testEnv}#pal04-07a GET 200 YES: Make two verbs agree.`, () => {
       return runPaletteTest1("POL", null, "dummy24a", ["Czytam i badam."]);
     });
-    it("#pal04-07b GET 200 YES: Make two verbs agree when there is a choice of person.", () => {
+    it(`${testEnv}#pal04-07b GET 200 YES: Make two verbs agree when there is a choice of person.`, () => {
       return runPaletteTest1("POL", null, "dummy24b", [
         "Czytam i badam.",
         "Czytasz i badasz.",
       ]);
     });
-    it("#pal04-07c GET 200 YES: Make two verbs agree when there is a choice of person, gender, and number.", () => {
+    it(`${testEnv}#pal04-07c GET 200 YES: Make two verbs agree when there is a choice of person, gender, and number.`, () => {
       return runPaletteTest1("POL", null, "dummy24c", [
         "Czytam i badam.",
         "Czytasz i badasz.",
@@ -538,7 +542,7 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 5: Generate rich sentences (nouns adjectives and verbs).", () => {
-    it("#pal05-01a GET 200 YES: Returns a sentence in present.", () => {
+    it(`${testEnv}#pal05-01a GET 200 YES: Returns a sentence in present.`, () => {
       return runPaletteTest1("POL", null, "61", [
         "Kobieta ma czerwone jabłko.",
         "Kobieta ma czerwone jabłka.",
@@ -550,7 +554,7 @@ describe("/api", function () {
         "Kobiety mają czerwone cebule.",
       ]);
     });
-    it("#pal05-01b GET 200 YES: Returns a negative sentence in past.", () => {
+    it(`${testEnv}#pal05-01b GET 200 YES: Returns a negative sentence in past.`, () => {
       return runPaletteTest1("POL", null, "61b", [
         "Kobieta nie miała czerwonego jabłka.",
         "Kobieta nie miała czerwonych jabłek.",
@@ -562,7 +566,7 @@ describe("/api", function () {
         "Kobiety nie miały czerwonych cebul.",
       ]);
     });
-    it("#pal05-01c GET 200 YES: Returns a negative sentence in past.", () => {
+    it(`${testEnv}#pal05-01c GET 200 YES: Returns a negative sentence in past.`, () => {
       return runPaletteTest1("POL", null, "62b", [
         "Czerwona kobieta nie miała czerwonego jabłka.",
         "Czerwona kobieta nie miała czerwonych jabłek.",
@@ -574,19 +578,19 @@ describe("/api", function () {
         "Czerwone kobiety nie miały czerwonych cebul.",
       ]);
     });
-    it("#pal05-02a GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
+    it(`${testEnv}#pal05-02a GET 200 YES: Returns a sentence when selected by tenseDescription.`, () => {
       return runPaletteTest1("POL", null, "63a", [
         "Kobieta czyta.",
         "Kobiety czytają.",
       ]);
     });
-    it("#pal05-02b GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
+    it(`${testEnv}#pal05-02b GET 200 YES: Returns a sentence when selected by tenseDescription.`, () => {
       return runPaletteTest1("POL", null, "63b", [
         "Kobieta przeczytała.",
         "Kobiety przeczytały.",
       ]);
     });
-    it("#pal05-02c GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
+    it(`${testEnv}#pal05-02c GET 200 YES: Returns a sentence when selected by tenseDescription.`, () => {
       return runPaletteTest1("POL", null, "63c", [
         "Kobieta będzie czytała.",
         "Kobiety będą czytały.",
@@ -594,14 +598,14 @@ describe("/api", function () {
         "Kobiety będą czytać.",
       ]);
     });
-    it("#pal05-03a GET 200 YES: Allow specification of multiple radically different tenseDescriptions, without unwanted cross pollination.", () => {
+    it(`${testEnv}#pal05-03a GET 200 YES: Allow specification of multiple radically different tenseDescriptions, without unwanted cross pollination.`, () => {
       return runPaletteTest1("POL", null, "dummy26", [
         "Czytałam.",
         "Przeczytam.",
       ]);
       //If "Będę czytała." or "Przeczytałam." are returned, it's because the unwanted cross pollination is happening.
     });
-    it("#pal05-03b GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. Poleng", () => {
+    it(`${testEnv}#pal05-03b GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. Poleng`, () => {
       //If "Będę czytała." or "Przeczytałam." are returned, it's because the unwanted cross pollination is happening.
       let ref = [
         {
@@ -612,7 +616,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("POL", "ENG", "dummy26", ref);
     });
-    it("#pal05-03c GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. Engpol. Works for tenseDescription.", () => {
+    it(`${testEnv}#pal05-03c GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. Engpol. Works for tenseDescription.`, () => {
       //If "Będę pisał." or ERROR are returned, it's because the unwanted cross pollination is happening.
       let ref = [
         {
@@ -626,7 +630,7 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy27", ref);
     });
-    it("#pal05-03d GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. Engpol. Works for tenseDescription and gender.", () => {
+    it(`${testEnv}#pal05-03d GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. Engpol. Works for tenseDescription and gender.`, () => {
       //If "Będę czytała." or "Przeczytałam." are returned, it's because the unwanted cross pollination is happening.
       let ref = [
         {
@@ -640,13 +644,13 @@ describe("/api", function () {
       ];
       return runPaletteTest1("ENG", "POL", "dummy26", ref);
     });
-    it("#pal05-04a GET 200 YES: It's okay to specify gender: f and number: plural, even though gender will technically be nonvirile. The f gender gets converted to nonvirile gender before drillPath, so the each drillPath does indeed come out correct.", () => {
+    it(`${testEnv}#pal05-04a GET 200 YES: It's okay to specify gender: f and number: plural, even though gender will technically be nonvirile. The f gender gets converted to nonvirile gender before drillPath, so the each drillPath does indeed come out correct.`, () => {
       return runPaletteTest1("POL", null, "dummy32", ["Czytają."]);
     });
   });
 
   describe("/palette - Stage 6: Translate rich sentences (nouns, adjectives, verbs).", () => {
-    it("#pal06-01a GET 200 YES: Returns sentence with all equivalents (RSWAT).", () => {
+    it(`${testEnv}#pal06-01a GET 200 YES: Returns sentence with all equivalents (RSWAT).`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -695,7 +699,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal06-01b GET 200 YES: RSWAT with multiple orders.", () => {
+    it(`${testEnv}#pal06-01b GET 200 YES: RSWAT with multiple orders.`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -752,7 +756,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal06-02a GET 200 YES: RSWAT Poleng, where there are two different sentenceFormulas as answers.", () => {
+    it(`${testEnv}#pal06-02a GET 200 YES: RSWAT Poleng, where there are two different sentenceFormulas as answers.`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -788,7 +792,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal06-02b GET 200 YES: RSWAT Engpol, where there are two different sentenceFormulas as answers.", () => {
+    it(`${testEnv}#pal06-02b GET 200 YES: RSWAT Engpol, where there are two different sentenceFormulas as answers.`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -824,7 +828,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal06-03a GET 200 YES: RSWAT Poleng, ensure a tenseDescription can be translated by multiple such.", () => {
+    it(`${testEnv}#pal06-03a GET 200 YES: RSWAT Poleng, ensure a tenseDescription can be translated by multiple such.`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -847,7 +851,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal06-03b GET 200 YES: RSWAT Engpol, ensure a tenseDescription can be translated by multiple such.", () => {
+    it(`${testEnv}#pal06-03b GET 200 YES: RSWAT Engpol, ensure a tenseDescription can be translated by multiple such.`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -870,7 +874,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal06-03c GET 200 YES: RSWAT Engpol, ignoring tenseDescriptions specified in answer structure that are not translations.", () => {
+    it(`${testEnv}#pal06-03c GET 200 YES: RSWAT Engpol, ignoring tenseDescriptions specified in answer structure that are not translations.`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -893,7 +897,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal06-03d GET 200 YES: RSWAT Poleng, ignoring tenseDescriptions specified in answer structure that are not translations.", () => {
+    it(`${testEnv}#pal06-03d GET 200 YES: RSWAT Poleng, ignoring tenseDescriptions specified in answer structure that are not translations.`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -916,7 +920,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal06-04a GET 200 YES: Returns just the ENG sentence, where tenseDescriptions were left blank.", () => {
+    it(`${testEnv}#pal06-04a GET 200 YES: Returns just the ENG sentence, where tenseDescriptions were left blank.`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = null;
 
@@ -948,7 +952,7 @@ describe("/api", function () {
           expect(res.body.questionSentenceArr).not.to.contain("I writing.");
         });
     });
-    it("#pal06-04b GET 200 YES: Returns just the POL sentence, where tenseDescriptions were left blank.", () => {
+    it(`${testEnv}#pal06-04b GET 200 YES: Returns just the POL sentence, where tenseDescriptions were left blank.`, () => {
       const questionLanguage = "POL";
       const answerLanguage = null;
 
@@ -984,7 +988,7 @@ describe("/api", function () {
           ]).to.contain(res.body.questionSentenceArr[0]);
         });
     });
-    it("#pal06-04c GET 200 YES: RSWAT Poleng, where POL tenseDescriptions are left blank.", () => {
+    it(`${testEnv}#pal06-04c GET 200 YES: RSWAT Poleng, where POL tenseDescriptions are left blank.`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1007,7 +1011,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal06-04d GET 200 YES: RSWAT Engpol, where POL tenseDescriptions are left blank.", () => {
+    it(`${testEnv}#pal06-04d GET 200 YES: RSWAT Engpol, where POL tenseDescriptions are left blank.`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1030,7 +1034,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal06-04e GET 200 YES: RSWAT Poleng, where ENG tenseDescriptions are left blank.", () => {
+    it(`${testEnv}#pal06-04e GET 200 YES: RSWAT Poleng, where ENG tenseDescriptions are left blank.`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1053,7 +1057,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal06-04f GET 200 YES: RSWAT Engpol, where ENG tenseDescriptions are left blank.", () => {
+    it(`${testEnv}#pal06-04f GET 200 YES: RSWAT Engpol, where ENG tenseDescriptions are left blank.`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1076,7 +1080,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal06-04g GET 200 YES: RSWAT Poleng, where tenseDescription is left blank in both question and answer structures.", () => {
+    it(`${testEnv}#pal06-04g GET 200 YES: RSWAT Poleng, where tenseDescription is left blank in both question and answer structures.`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1100,7 +1104,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal06-04h GET 200 YES: RSWAT Poleng, where tenseDescription is left blank in both question and answer structures.", () => {
+    it(`${testEnv}#pal06-04h GET 200 YES: RSWAT Poleng, where tenseDescription is left blank in both question and answer structures.`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1124,7 +1128,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal06-04i GET 200 NEGATIVE IMPERATIVE. YES: RSWAT Poleng, where tenseDescription has one that will work and one that won't.", () => {
+    xit(`${testEnv}#pal06-04i GET 200 NEGATIVE IMPERATIVE. YES: RSWAT Poleng, where tenseDescription has one that will work and one that won't.`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1148,7 +1152,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal06-05a GET 200 YES: RSWAT Engpol. Ensure three masculine genders collapse to one for the verb.", () => {
+    it(`${testEnv}#pal06-05a GET 200 YES: RSWAT Engpol. Ensure three masculine genders collapse to one for the verb.`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1171,7 +1175,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal06-06a GET 200 YES: Battery RSWAT Poleng. Ensure genderProportion masc and fem randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
+    it(`${testEnv}#pal06-06a GET 200 YES: Battery RSWAT Poleng. Ensure genderProportion masc and fem randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.`, () => {
       return runPaletteTest1Multiple(
         100,
         "POL",
@@ -1190,7 +1194,7 @@ describe("/api", function () {
         ]);
       });
     });
-    it("#pal06-06b GET 200 YES: Battery RSWAT Poleng. Ensure genderProportion masc and fem randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
+    it(`${testEnv}#pal06-06b GET 200 YES: Battery RSWAT Poleng. Ensure genderProportion masc and fem randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.`, () => {
       return runPaletteTest1Multiple(
         100,
         "POL",
@@ -1210,7 +1214,7 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 7: 'Be' ENG <-> POL.", () => {
-    it("#pal07-01a GET 200 YES: Conjugate POL be correctly without translations.", () => {
+    it(`${testEnv}#pal07-01a GET 200 YES: Conjugate POL be correctly without translations.`, () => {
       return runPaletteTest1("POL", null, "dummy33", [
         "Jestem.",
         "Jesteś.",
@@ -1233,7 +1237,7 @@ describe("/api", function () {
         "Byli.",
       ]);
     });
-    it("#pal07-01b GET 200 YES: RSWAT Poleng 'be' - past im/pf (Type 2 Allohomograph), pres pf - I.", () => {
+    it(`${testEnv}#pal07-01b GET 200 YES: RSWAT Poleng 'be' - past im/pf (Type 2 Allohomograph), pres pf - I.`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1257,7 +1261,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal07-01c GET 200 YES: RSWAT Poleng 'be' - past im/pf (Type 2 Allohomograph), pres pf - You (with clarifiers).", () => {
+    it(`${testEnv}#pal07-01c GET 200 YES: RSWAT Poleng 'be' - past im/pf (Type 2 Allohomograph), pres pf - You (with clarifiers).`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1281,7 +1285,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal07-01c(ii) GET 200 YES: RSWAT Poleng 'be' - stative set as false.", () => {
+    it(`${testEnv}#pal07-01c(ii) GET 200 YES: RSWAT Poleng 'be' - stative set as false.`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1305,7 +1309,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal07-01d GET 200 YES: RSWAT Poleng 'be' - past im/pf (Type 2 Allohomograph), pres pf - She.", () => {
+    it(`${testEnv}#pal07-01d GET 200 YES: RSWAT Poleng 'be' - past im/pf (Type 2 Allohomograph), pres pf - She.`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1329,7 +1333,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal07-01e GET 200 YES: RSWAT Poleng 'be' - past im/pf (Type 2 Allohomograph), pres pf - We.", () => {
+    it(`${testEnv}#pal07-01e GET 200 YES: RSWAT Poleng 'be' - past im/pf (Type 2 Allohomograph), pres pf - We.`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1353,7 +1357,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal07-01f GET 200 YES: RSWAT Poleng 'be' - past im/pf (Type 2 Allohomograph), pres pf - They.", () => {
+    it(`${testEnv}#pal07-01f GET 200 YES: RSWAT Poleng 'be' - past im/pf (Type 2 Allohomograph), pres pf - They.`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1377,7 +1381,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal07-02a GET 200 YES: Conjugate ENG be correctly without translations.", () => {
+    it(`${testEnv}#pal07-02a GET 200 YES: Conjugate ENG be correctly without translations.`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1397,7 +1401,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal07-02b GET 200 YES: RSWAT Engpol 'be' - pres simp, past simp - I.", () => {
+    it(`${testEnv}#pal07-02b GET 200 YES: RSWAT Engpol 'be' - pres simp, past simp - I.`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1421,7 +1425,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal07-02c GET 200 YES: RSWAT Engpol 'be' - pres simp, past simp - You (with clarifiers).", () => {
+    it(`${testEnv}#pal07-02c GET 200 YES: RSWAT Engpol 'be' - pres simp, past simp - You (with clarifiers).`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1445,7 +1449,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal07-02d GET 200 YES: RSWAT Engpol 'be' - pres simp, past simp - She.", () => {
+    it(`${testEnv}#pal07-02d GET 200 YES: RSWAT Engpol 'be' - pres simp, past simp - She.`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1469,7 +1473,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal07-02e GET 200 YES: RSWAT Engpol 'be' - pres simp, past simp - We.", () => {
+    it(`${testEnv}#pal07-02e GET 200 YES: RSWAT Engpol 'be' - pres simp, past simp - We.`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1493,7 +1497,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal07-02f GET 200 YES: RSWAT Engpol 'be' - pres simp, past simp - They.", () => {
+    it(`${testEnv}#pal07-02f GET 200 YES: RSWAT Engpol 'be' - pres simp, past simp - They.`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1517,7 +1521,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal07-03a GET 200 YES: RSWAT Poleng 'be' correctly (without pronombres).", () => {
+    it(`${testEnv}#pal07-03a GET 200 YES: RSWAT Poleng 'be' correctly (without pronombres).`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1541,7 +1545,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal07-03b GET 200 YES: Conjugate POL 'be' past pf, (should be treated as im and pf both). This related to Operation Ripplemin where we removed preprocessLemmaObjectsMinor which in POL adjusted imperfectiveOnly to have a duplicate lObj with aspect perfective, but instead we have solved this with a meta trait value for aspect for eg być and mieć.", () => {
+    it(`${testEnv}#pal07-03b GET 200 YES: Conjugate POL 'be' past pf, (should be treated as im and pf both). This related to Operation Ripplemin where we removed preprocessLemmaObjectsMinor which in POL adjusted imperfectiveOnly to have a duplicate lObj with aspect perfective, but instead we have solved this with a meta trait value for aspect for eg być and mieć.`, () => {
       return runPaletteTest1("POL", null, "dummy34", [
         "Byłem.",
         "Byłam.",
@@ -1558,7 +1562,7 @@ describe("/api", function () {
         "Byli.",
       ]);
     });
-    it("#pal07-03c GET 200 YES: Conjugate ENG 'be' future, it should NOT give fut cont.", () => {
+    it(`${testEnv}#pal07-03c GET 200 YES: Conjugate ENG 'be' future, it should NOT give fut cont.`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1578,7 +1582,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal07-03d GET 200 YES: RSWAT Poleng 'be' future pf, (Clone Bee VNV issue: should NOT receive 'będę być', but instead just 'będę'.).", () => {
+    it(`${testEnv}#pal07-03d GET 200 YES: RSWAT Poleng 'be' future pf, (Clone Bee VNV issue: should NOT receive 'będę być', but instead just 'będę'.).`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1602,7 +1606,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal07-03e GET 200 YES: RSWAT Poleng 'be' future im, (Clone Bee VNV issue: should NOT receive 'będę być', but instead just 'będę'.).", () => {
+    it(`${testEnv}#pal07-03e GET 200 YES: RSWAT Poleng 'be' future im, (Clone Bee VNV issue: should NOT receive 'będę być', but instead just 'będę'.).`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1626,7 +1630,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal07-04a GET 200 YES: RSWAT Poleng 'be' (checking there's no Clone Bee Cross Pollination issue).", () => {
+    it(`${testEnv}#pal07-04a GET 200 YES: RSWAT Poleng 'be' (checking there's no Clone Bee Cross Pollination issue).`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1653,7 +1657,7 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 8: 'Have' ENG <-> POL.", () => {
-    it("#pal08-01a GET 200 YES: Conjugate POL have correctly without translations.", () => {
+    it(`${testEnv}#pal08-01a GET 200 YES: Conjugate POL have correctly without translations.`, () => {
       return runPaletteTest1("POL", null, "dummy53", [
         "Mam.",
         "Masz.",
@@ -1676,7 +1680,7 @@ describe("/api", function () {
         "Mieli.",
       ]);
     });
-    it("#pal08-01b GET 200 YES: RSWAT Poleng 'have' - past im/pf (Type 2 Allohomograph), pres pf - I.", () => {
+    it(`${testEnv}#pal08-01b GET 200 YES: RSWAT Poleng 'have' - past im/pf (Type 2 Allohomograph), pres pf - I.`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1700,7 +1704,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal08-01c GET 200 YES: RSWAT Poleng 'have' - past im/pf (Type 2 Allohomograph), pres pf - You (with clarifiers).", () => {
+    it(`${testEnv}#pal08-01c GET 200 YES: RSWAT Poleng 'have' - past im/pf (Type 2 Allohomograph), pres pf - You (with clarifiers).`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1724,7 +1728,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal08-01d GET 200 YES: RSWAT Poleng 'have' - past im/pf (Type 2 Allohomograph), pres pf - She.", () => {
+    it(`${testEnv}#pal08-01d GET 200 YES: RSWAT Poleng 'have' - past im/pf (Type 2 Allohomograph), pres pf - She.`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1748,7 +1752,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal08-01e GET 200 YES: RSWAT Poleng 'have' - past im/pf (Type 2 Allohomograph), pres pf - We.", () => {
+    it(`${testEnv}#pal08-01e GET 200 YES: RSWAT Poleng 'have' - past im/pf (Type 2 Allohomograph), pres pf - We.`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1772,7 +1776,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal08-01f GET 200 YES: RSWAT Poleng 'have' - past im/pf (Type 2 Allohomograph), pres pf - They.", () => {
+    it(`${testEnv}#pal08-01f GET 200 YES: RSWAT Poleng 'have' - past im/pf (Type 2 Allohomograph), pres pf - They.`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1796,7 +1800,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal08-02a GET 200 YES: Conjugate ENG have correctly without translations.", () => {
+    it(`${testEnv}#pal08-02a GET 200 YES: Conjugate ENG have correctly without translations.`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1816,7 +1820,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal08-02b GET 200 YES: RSWAT Engpol 'have' - pres simp, past simp - I.", () => {
+    it(`${testEnv}#pal08-02b GET 200 YES: RSWAT Engpol 'have' - pres simp, past simp - I.`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1840,7 +1844,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal08-02c GET 200 YES: RSWAT Engpol 'have' - pres simp, past simp - You (with clarifiers).", () => {
+    it(`${testEnv}#pal08-02c GET 200 YES: RSWAT Engpol 'have' - pres simp, past simp - You (with clarifiers).`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1864,7 +1868,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal08-02d GET 200 YES: RSWAT Engpol 'have' - pres simp, past simp - She.", () => {
+    it(`${testEnv}#pal08-02d GET 200 YES: RSWAT Engpol 'have' - pres simp, past simp - She.`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1888,7 +1892,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal08-02e GET 200 YES: RSWAT Engpol 'have' - pres simp, past simp - We.", () => {
+    it(`${testEnv}#pal08-02e GET 200 YES: RSWAT Engpol 'have' - pres simp, past simp - We.`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1912,7 +1916,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal08-02f GET 200 YES: RSWAT Engpol 'have' - pres simp, past simp - They.", () => {
+    it(`${testEnv}#pal08-02f GET 200 YES: RSWAT Engpol 'have' - pres simp, past simp - They.`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1936,7 +1940,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal08-03a GET 200 YES: RSWAT Poleng 'have' correctly (without pronombres).", () => {
+    it(`${testEnv}#pal08-03a GET 200 YES: RSWAT Poleng 'have' correctly (without pronombres).`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1960,7 +1964,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal08-03b GET 200 YES: Conjugate POL 'have' past pf, (should be treated as im and pf both).", () => {
+    it(`${testEnv}#pal08-03b GET 200 YES: Conjugate POL 'have' past pf, (should be treated as im and pf both).`, () => {
       return runPaletteTest1("POL", null, "dummy54", [
         "Miałem.",
         "Miałam.",
@@ -1977,13 +1981,13 @@ describe("/api", function () {
         "Mieli.",
       ]);
     });
-    it("#pal08-03c GET 200 YES: Conjugate ENG 'have' future, it SHOULD give fut cont.", () => {
+    it(`${testEnv}#pal08-03c GET 200 YES: Conjugate ENG 'have' future, it SHOULD give fut cont.`, () => {
       return runPaletteTest1("ENG", null, "dummy54c", [
         "I will have.",
         "I will have had.",
       ]);
     });
-    it("#pal08-03d GET 200 YES: RSWAT Poleng 'have' future pf, (should indeed give 'będzie miał').", () => {
+    it(`${testEnv}#pal08-03d GET 200 YES: RSWAT Poleng 'have' future pf, (should indeed give 'będzie miał').`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2009,7 +2013,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal08-03e GET 200 YES: RSWAT Poleng 'have' future im, (should indeed give 'będzie miał').", () => {
+    it(`${testEnv}#pal08-03e GET 200 YES: RSWAT Poleng 'have' future im, (should indeed give 'będzie miał').`, () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2033,7 +2037,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal08-03f GET 200 YES: RSWAT Engpol 'have' future im, (should indeed give 'będzie miał').", () => {
+    it(`${testEnv}#pal08-03f GET 200 YES: RSWAT Engpol 'have' future im, (should indeed give 'będzie miał').`, () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

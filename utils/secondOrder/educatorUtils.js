@@ -1,3 +1,4 @@
+const apiUtils = require(".././secondOrder/apiUtils.js");
 const gpUtils = require(".././generalPurposeUtils.js");
 const uUtils = require(".././universalUtils.js");
 const consol = require(".././zerothOrder/consoleLoggingUtils.js");
@@ -36,26 +37,19 @@ exports.checkOutputArrayForMissingUnits = (
 };
 
 exports.getLemmaObjectsWithoutGivenSelectorKey = (
-  envir,
   useDummy,
   currentLanguage,
   wordtype,
   selectorKey
 ) => {
-  let words = gdUtils.grabLObjsByWordtype(
-    currentLanguage,
-    wordtype,
-    envir,
-    useDummy
-  );
+  let words = gdUtils.grabLObjsByWordtype(currentLanguage, wordtype, useDummy);
   return words.filter((lObj) => !lObj[selectorKey]);
 };
 
-exports.checkWords = (envir, currentLanguage) => {
+exports.checkWords = (currentLanguage) => {
   const langUtils = require(`../../source/all/${currentLanguage}/langUtils.js`);
 
   let nounPersonsWithoutGender = edUtils.getLemmaObjectsWithoutGivenSelectorKey(
-    envir,
     useDummy,
     currentLanguage,
     "npe",
@@ -63,7 +57,6 @@ exports.checkWords = (envir, currentLanguage) => {
   );
 
   let nounCommonsWithoutGender = edUtils.getLemmaObjectsWithoutGivenSelectorKey(
-    envir,
     useDummy,
     currentLanguage,
     "nco",
@@ -82,12 +75,11 @@ exports.checkWords = (envir, currentLanguage) => {
 
 /**
  * Gives a list of homographs (allo or syn) to the educator, so that they may take action on these.
- * @param {boolean} envir - Which envir wordsBank to use.
  * @param {string} currentLanguage
  * @param {string} homographType - "syn", "allo", or "all".
  * @param {object} ignore - What to ignore: "ignoreV2V3Synhoms", "ignoreClarifiedAllohoms"
  */
-exports.findHomographs = (envir, currentLanguage, homographType, ignore) => {
+exports.findHomographs = (currentLanguage, homographType, ignore) => {
   if (currentLanguage !== "ENG") {
     ignore.ignoreV2V3Synhoms = false;
   }
@@ -109,7 +101,7 @@ exports.findHomographs = (envir, currentLanguage, homographType, ignore) => {
     langUtils.expandLemmaObjects(wordsBank, wordtype, currentLanguage);
 
     wordsBank.forEach((lObj) => {
-      gdUtils.addInflections(lObj, envir);
+      gdUtils.addInflections(lObj);
 
       let terminalValuesAndPathsArr =
         otUtils.giveRoutesAndTerminalValuesFromObject(lObj);
@@ -123,7 +115,6 @@ exports.findHomographs = (envir, currentLanguage, homographType, ignore) => {
 
   gdUtils.readAllLObjs(
     currentLanguage,
-    envir,
     false,
     recordOfTerminalValuesAndPaths,
     null,
@@ -201,7 +192,7 @@ exports.findHomographs = (envir, currentLanguage, homographType, ignore) => {
     ) {
       let isEveryAllohomAlreadyClarified = firstStepsOfRoute.every(
         (lemmaObjectId) => {
-          let lemmaObject = gdUtils.grabLObjById(lemmaObjectId, envir);
+          let lemmaObject = gdUtils.grabLObjById(lemmaObjectId);
 
           if (!lemmaObject) {
             throw (
@@ -235,14 +226,20 @@ exports.findHomographs = (envir, currentLanguage, homographType, ignore) => {
   }
 };
 
-exports.checkLemmaObjectIds = (envir, currentLanguage) => {
+exports.checkLemmaObjectIds = (currentLanguage) => {
   let schematic = [];
 
   const wordsetCallback = (wordsBank, res, wordtype) => {
     res.push(...wordsBank.map((lObj) => [lObj.id, lObj.lemma]));
   };
 
-  readAllLObjs(currentLanguage, envir, false, schematic, null, wordsetCallback);
+  gdUtils.readAllLObjs(
+    currentLanguage,
+    false,
+    schematic,
+    null,
+    wordsetCallback
+  );
 
   let tempArr = [];
   let duplicateIds = [];
@@ -258,11 +255,8 @@ exports.checkLemmaObjectIds = (envir, currentLanguage) => {
   return { schematic, duplicateIds };
 };
 
-exports.checkSentenceFormulaIds = (envir, currentLanguage) => {
-  const sentenceFormulasBank = edUtils.getSentenceFormulasBank(
-    currentLanguage,
-    envir
-  );
+exports.checkSentenceFormulaIds = (currentLanguage) => {
+  const sentenceFormulasBank = edUtils.getSentenceFormulasBank(currentLanguage);
 
   let schematic = sentenceFormulasBank.map((senFor) => [senFor.id]);
 
@@ -286,7 +280,9 @@ exports.checkSentenceFormulaIds = (envir, currentLanguage) => {
   return { schematic, duplicateIds };
 };
 
-exports.getSentenceFormulasBank = (currentLanguage, envir) => {
+exports.getSentenceFormulasBank = (currentLanguage) => {
+  const envir = apiUtils.getEnvir("getSentenceFormulasBank");
+
   const {
     sentenceFormulasBank,
   } = require(`../../source/${envir}/${currentLanguage}/sentenceFormulas.js`);

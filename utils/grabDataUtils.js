@@ -1,3 +1,4 @@
+const apiUtils = require("./secondOrder/apiUtils.js");
 const uUtils = require("./universalUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
@@ -5,10 +6,11 @@ const gdUtils = require("./grabDataUtils.js");
 const ivUtils = require("./secondOrder/inputValidationUtils.js");
 const nexusUtils = require("./secondOrder/nexusUtils.js");
 
-exports.grabLObjById = (lObjId, envir = "ref") => {
+exports.grabLObjById = (lObjId) => {
   let split = lObjId.split("-");
   let lang = split[0].toUpperCase();
-  let wordtype = split[1].toUpperCase();
+  let wordtype = split[1].toLowerCase();
+  const envir = apiUtils.getEnvir("grabLObjById");
 
   const lObjs = require(`../source/${envir}/${lang}/words/${wordtype}.json`);
   let lObj = lObjs.find((l) => l.id === lObjId);
@@ -20,14 +22,16 @@ exports.grabLObjById = (lObjId, envir = "ref") => {
   return lObj;
 };
 
-exports.grabLObjsByWordtype = (lang, wordtype, envir = "ref", useDummy) => {
+exports.grabLObjsByWordtype = (lang, wordtype, useDummy) => {
   lang = lang.toUpperCase();
+  wordtype = wordtype.toLowerCase();
+  const envir = apiUtils.getEnvir("grabLObjsByWordtype");
 
   const wordsBank = require(`../source/${envir}/${lang}/words/${wordtype}.json`);
 
   if (!wordsBank) {
     console.log(
-      `rhob Failed to find lemma object data for for lang="${lang}" wordtype="${wordtype}" envir="${envir}"`
+      `giek Failed to find lemma object data for for lang="${lang}" wordtype="${wordtype}" envir="${envir}"`
     );
   }
 
@@ -42,28 +46,17 @@ exports.grabLObjsByWordtype = (lang, wordtype, envir = "ref", useDummy) => {
   return wordsBank;
 };
 
-exports.readAllLObjs = (
-  lang,
-  env = "ref",
-  useDummy,
-  res,
-  lObjCallback,
-  wordsetCallback
-) => {
+exports.readAllLObjs = (lang, useDummy, res, lObjCallback, wordsetCallback) => {
   ivUtils.validateLang(lang, 13);
+  const envir = apiUtils.getEnvir("readAllLObjs");
 
   const fs = require("fs");
-  let filenames = fs.readdirSync(`source/${env}/${lang}/words`);
+  let filenames = fs.readdirSync(`source/${envir}/${lang}/words`);
   filenames
     .filter((filename) => filename.split(".")[1] === "json")
     .forEach((filename) => {
       let wordtype = filename.split(".")[0];
-      let wordsBank = gdUtils.grabLObjsByWordtype(
-        lang,
-        wordtype,
-        env,
-        useDummy
-      );
+      let wordsBank = gdUtils.grabLObjsByWordtype(lang, wordtype, useDummy);
 
       if (wordsetCallback) {
         wordsetCallback(wordsBank, res, wordtype);
@@ -77,7 +70,9 @@ exports.readAllLObjs = (
   return res;
 };
 
-exports.grabFormulaById = (formulaId, useDummy, lang, envir = "ref") => {
+exports.grabFormulaById = (formulaId, useDummy, lang) => {
+  const envir = apiUtils.getEnvir("grabFormulaById");
+
   if (useDummy) {
     const {
       dummySentenceFormulasBank,
@@ -98,7 +93,6 @@ exports.grabFormulaById = (formulaId, useDummy, lang, envir = "ref") => {
 };
 
 exports.grabFormula = (
-  env = "ref",
   currentLanguage,
   sentenceFormulaId,
   useDummy,
@@ -115,8 +109,7 @@ exports.grabFormula = (
   let sentenceFormula = gdUtils.grabFormulaById(
     sentenceFormulaId,
     useDummy,
-    currentLanguage,
-    env
+    currentLanguage
   );
 
   if (!sentenceFormula) {
@@ -128,7 +121,8 @@ exports.grabFormula = (
   return uUtils.copyWithoutReference(sentenceFormula);
 };
 
-exports.grabSkeletonFormulas = (lang, envir = "ref") => {
+exports.grabSkeletonFormulas = (lang) => {
+  const envir = apiUtils.getEnvir("grabSkeletonFormulas");
   lang = lang.toUpperCase();
 
   const fs = require("fs");
@@ -137,48 +131,70 @@ exports.grabSkeletonFormulas = (lang, envir = "ref") => {
   let res = filenames.map((filename) => {
     filename = filename.split(".")[0];
 
-    let formulaObject = gdUtils.grabFormulaById(filename, false, lang, envir);
+    let formulaObject = gdUtils.grabFormulaById(filename, false, lang);
 
     return [
       formulaObject.id,
       formulaObject.guide,
-      nexusUtils.getLanguagesOfEquivalents(formulaObject.id, envir),
+      nexusUtils.getLanguagesOfEquivalents(formulaObject.id),
     ];
   });
 
   return res;
 };
 
-exports.grabInflections = (lObjId, envir = "ref") => {
-  let data = gdUtils._grabLObjInfo(lObjId, envir);
+exports.grabInflections = (lObjId) => {
+  let data = gdUtils._grabLObjInfo(lObjId);
   return data.inflections;
 };
 
-exports.addInflections = (lObj, envir = "ref") => {
+exports.addInflections = (lObj) => {
   if (lObj.dummy) {
     return;
   }
 
-  let data = gdUtils._grabLObjInfo(lObj.id, envir);
-  lObj.inflections = data.inflections;
+  lObj.inflections = gdUtils.grabInflections(lObj.id);
 };
 
-exports.addExtraToLObj = (lObj, envir = "ref") => {
+exports.addExtraToLObj = (lObj) => {
   if (lObj.dummy) {
     return;
   }
 
-  let data = gdUtils._grabLObjInfo(lObj.id, envir);
+  let data = gdUtils._grabLObjInfo(lObj.id);
   lObj.extra = data.extra;
 };
 
-exports._grabLObjInfo = (lObjId, envir = "ref") => {
+exports._grabLObjInfo = (lObjId) => {
+  const envir = apiUtils.getEnvir("_grabLObjInfo");
+
   let split = lObjId.split("-");
   let lang = split[0].toUpperCase();
-  let wordtype = split[1];
-  const data = require(`../source/${envir}/${lang}/words/${wordtype}/${lObjId}.json`);
+  let wordtype = split[1].toLowerCase();
+
+  let requestedLObj = gdUtils.grabLObjById(lObjId);
+
+  let idForInflections = requestedLObj._inflectionsRoot
+    ? requestedLObj._inflectionsRoot
+    : lObjId;
+
+  let inputPathForInflections = `../source/${envir}/${lang}/words/${wordtype}/${idForInflections}.json`;
+
+  let data;
+
+  // try {
+  data = require(inputPathForInflections);
+  // } catch (e) {data = require(inputPathForInflections.slice(3));}
+
   if (!data) {
-    console.log(`rhoc Failed to find lemma object data for for ${lObjId}`);
+    consol.throw(`rhob Found no data at path: ${inputPathForInflections}`);
   }
-  return data;
+
+  Object.keys(data).forEach((dataKey) => {
+    if (!Object.keys(requestedLObj).includes(dataKey)) {
+      requestedLObj[dataKey] = data[dataKey];
+    }
+  });
+
+  return requestedLObj;
 };

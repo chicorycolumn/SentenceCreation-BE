@@ -13,14 +13,11 @@ const allLangUtils = require("../utils/allLangUtils.js");
 const refFxn = require("../utils/reference/referenceFunctions.js");
 
 exports.fetchAvailableNexusId = (req) => {
-  let { env } = req.query;
+  apiUtils.setEnvir(req, "fetchAvailableNexusId");
 
   let responseObject = {};
 
-  if (!env) {
-    env = "ref";
-  }
-  responseObject.info = apiUtils.getAnAvailableNexusId(env);
+  responseObject.info = apiUtils.getAnAvailableNexusId();
 
   return Promise.all([responseObject]).then((array) => {
     return array[0];

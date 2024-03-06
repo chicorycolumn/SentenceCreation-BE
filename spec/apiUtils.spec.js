@@ -1,9 +1,9 @@
+const apiUtils = require("../utils/secondOrder/apiUtils");
 const app = require("../app");
 const request = require("supertest");
 const { expect } = require("chai");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const uUtils = require("../utils/universalUtils.js");
-const apiUtils = require("../utils/secondOrder/apiUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
@@ -25,8 +25,16 @@ const runApiTest1 = (req, expected) => {
 };
 
 describe("/educator/formulas.", () => {
-  it("#san04a GET 200 YES: Check that numeric chunkIds are converted to guidewords.", () => {
-    let res = fetchFormulas({ query: { id: "POL-101b", lang: "ENG" } });
+  const testEnv = "ref";
+  apiUtils.setEnvir(
+    { query: { envir: testEnv } },
+    'describe("/educator/formulas'
+  );
+
+  it(`${testEnv}#san04a GET 200 YES: Check that numeric chunkIds are converted to guidewords.`, () => {
+    let res = fetchFormulas({
+      query: { id: "POL-101b", lang: "ENG", envir: testEnv },
+    });
     return res.then((res) => {
       res.questionSentenceFormula =
         res.questionSentenceFormula.sentenceStructure.map(
@@ -44,8 +52,10 @@ describe("/educator/formulas.", () => {
       expect(res).to.eql(desiredRes);
     });
   });
-  it("#san04b GET 200 YES: Check that numeric chunkIds are converted to guidewords.", () => {
-    let res = fetchFormulas({ query: { id: "POL-112", lang: "ENG" } });
+  it(`${testEnv}#san04b GET 200 YES: Check that numeric chunkIds are converted to guidewords.`, () => {
+    let res = fetchFormulas({
+      query: { id: "POL-112", lang: "ENG", envir: testEnv },
+    });
     return res.then((res) => {
       res.questionSentenceFormula =
         res.questionSentenceFormula.sentenceStructure.map(
@@ -66,7 +76,13 @@ describe("/educator/formulas.", () => {
 });
 
 describe("/educator/sentences - Testing API.", () => {
-  it("#san03 GET 200 YES: Deduplicating specially treated imOnly verbs like 'być'.", () => {
+  const testEnv = "ref";
+  apiUtils.setEnvir(
+    { query: { envir: testEnv } },
+    'describe("/educator/sentences'
+  );
+
+  it(`${testEnv}#san03 GET 200 YES: Deduplicating specially treated imOnly verbs like 'być'.`, () => {
     const questionLanguage = "POL";
 
     let numberString = Date.now();
@@ -110,7 +126,7 @@ describe("/educator/sentences - Testing API.", () => {
       }
     );
   });
-  it("#san02 GET 200 YES: Educator queries a sentence, Q only but still wants multiple mode.", () => {
+  it(`${testEnv}#san02 GET 200 YES: Educator queries a sentence, Q only but still wants multiple mode.`, () => {
     const questionLanguage = "POL";
 
     let numberString = Date.now();
@@ -159,7 +175,7 @@ describe("/educator/sentences - Testing API.", () => {
       }
     );
   });
-  it("#san01 GET 200 YES: Educator queries a single word, Q only but still wants multiple mode.", () => {
+  it(`${testEnv}#san01 GET 200 YES: Educator queries a single word, Q only but still wants multiple mode.`, () => {
     const questionLanguage = "ENG";
 
     let numberString = Date.now();
@@ -207,7 +223,13 @@ describe("/educator/sentences - Testing API.", () => {
 });
 
 xdescribe("getEnChsForLemma", () => {
-  it("1", () => {
+  const testEnv = "ref";
+  apiUtils.setEnvir(
+    { query: { envir: testEnv } },
+    'describe("getEnChsForLemma"'
+  );
+
+  it(`${testEnv}1`, () => {
     const actual = getEnChsForLemma("POL", "kobieta");
     console.log(actual);
     // expect(actual).to.eql(expected);

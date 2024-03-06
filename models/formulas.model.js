@@ -14,26 +14,25 @@ const allLangUtils = require("../utils/allLangUtils.js");
 const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 
 exports.fetchFormulas = (req) => {
-  let { id, env } = req.query;
+  let { id } = req.query;
+
+  apiUtils.setEnvir(req, "fetchFormulas");
+
   let answerLang = req.query.lang;
   let questionLang = idUtils.getLanguageFromFormulaId(id);
 
   ivUtils.validateLang(questionLang, 17);
   ivUtils.validateLang(answerLang, 18);
 
-  console.log("tnae fetchFormulas invoked with:", { id, answerLang, env });
-
-  if (!env) {
-    env = "ref";
-  }
+  console.log("tnae fetchFormulas invoked with:", { id, answerLang });
 
   let { questionSentenceFormula, answerSentenceFormulas } =
-    apiUtils.getSentenceFormulas(id, answerLang, env);
+    apiUtils.getSentenceFormulas(id, answerLang);
 
-  apiUtils.frontendifyFormula(questionLang, questionSentenceFormula, env);
+  apiUtils.frontendifyFormula(questionLang, questionSentenceFormula);
 
   answerSentenceFormulas.forEach((answerSentenceFormula) => {
-    apiUtils.frontendifyFormula(answerLang, answerSentenceFormula, env);
+    apiUtils.frontendifyFormula(answerLang, answerSentenceFormula);
   });
 
   let responseObject = {
@@ -47,16 +46,14 @@ exports.fetchFormulas = (req) => {
 };
 
 exports.fetchFormulaIds = (req) => {
-  let { lang1, lang2, env } = req.query;
+  let { lang1, lang2 } = req.query;
+
+  apiUtils.setEnvir(req, "fetchFormulaIds");
 
   ivUtils.validateLang(lang1, 19);
   ivUtils.validateLang(lang2, 20);
 
-  if (!env) {
-    env = "ref";
-  }
-
-  let skeletonFormulas = gdUtils.grabSkeletonFormulas(lang1, env);
+  let skeletonFormulas = gdUtils.grabSkeletonFormulas(lang1);
 
   let responseObject = {
     formulaIds: skeletonFormulas,

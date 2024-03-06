@@ -1,7 +1,7 @@
+const apiUtils = require("../utils/secondOrder/apiUtils");
 const { fetchPalette } = require("../models/palette.model");
 const uUtils = require("../utils/universalUtils");
 const refObj = require("../utils/reference/referenceObjects.js");
-const apiUtils = require("../utils/secondOrder/apiUtils");
 
 exports.getErrors = (responseObj) => {
   let errors = {};
@@ -67,16 +67,12 @@ exports.getSentencesForEducator = (req, res, next) => {
     questionFormula,
     answerFormula,
     requestingSingleWordOnly,
-    env,
   } = req.body;
 
-  if (!env) {
-    env = "ref";
-  }
+  apiUtils.setEnvir(req, "getSentencesForEducator");
 
   if (answerFormula) {
     let data = apiUtils.prepareGetDualSentences(
-      env,
       questionLanguage,
       answerLanguage,
       questionFormula,
@@ -108,7 +104,6 @@ exports.getSentencesForEducator = (req, res, next) => {
       .catch((err) => next(err));
   } else {
     let data = apiUtils.prepareGetSentencesAsQuestionOnly(
-      env,
       questionLanguage,
       sentenceFormula,
       requestingSingleWordOnly
