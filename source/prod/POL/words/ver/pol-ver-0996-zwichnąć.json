@@ -21,38 +21,22 @@
         },
         "1per": {
           "singular": {
-            "m": [
-              "zwichnąłem"
-            ],
-            "f": [
-              "zwichnęłam"
-            ]
+            "m": "zwichnąłem",
+            "f": "zwichnęłam"
           },
           "plural": {
-            "virile": [
-              "zwichnęliśmy"
-            ],
-            "nonvirile": [
-              "zwichnęłyśmy"
-            ]
+            "virile": "zwichnęliśmy",
+            "nonvirile": "zwichnęłyśmy"
           }
         },
         "2per": {
           "singular": {
-            "m": [
-              "zwichnąłeś"
-            ],
-            "f": [
-              "zwichnęłaś"
-            ]
+            "m": "zwichnąłeś",
+            "f": "zwichnęłaś"
           },
           "plural": {
-            "virile": [
-              "zwichnęliście"
-            ],
-            "nonvirile": [
-              "zwichnęłyście"
-            ]
+            "virile": "zwichnęliście",
+            "nonvirile": "zwichnęłyście"
           }
         },
         "3per": {

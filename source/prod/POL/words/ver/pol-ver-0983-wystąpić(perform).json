@@ -54,38 +54,22 @@
         },
         "1per": {
           "singular": {
-            "m": [
-              "wystąpiłem"
-            ],
-            "f": [
-              "wystąpiłam"
-            ]
+            "m": "wystąpiłem",
+            "f": "wystąpiłam"
           },
           "plural": {
-            "virile": [
-              "wystąpiliśmy"
-            ],
-            "nonvirile": [
-              "wystąpiłyśmy"
-            ]
+            "virile": "wystąpiliśmy",
+            "nonvirile": "wystąpiłyśmy"
           }
         },
         "2per": {
           "singular": {
-            "m": [
-              "wystąpiłeś"
-            ],
-            "f": [
-              "wystąpiłaś"
-            ]
+            "m": "wystąpiłeś",
+            "f": "wystąpiłaś"
           },
           "plural": {
-            "virile": [
-              "wystąpiliście"
-            ],
-            "nonvirile": [
-              "wystąpiłyście"
-            ]
+            "virile": "wystąpiliście",
+            "nonvirile": "wystąpiłyście"
           }
         },
         "3per": {

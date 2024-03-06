@@ -21,38 +21,22 @@
         },
         "1per": {
           "singular": {
-            "m": [
-              "sugerowałem"
-            ],
-            "f": [
-              "sugerowałam"
-            ]
+            "m": "sugerowałem",
+            "f": "sugerowałam"
           },
           "plural": {
-            "virile": [
-              "sugerowaliśmy"
-            ],
-            "nonvirile": [
-              "sugerowałyśmy"
-            ]
+            "virile": "sugerowaliśmy",
+            "nonvirile": "sugerowałyśmy"
           }
         },
         "2per": {
           "singular": {
-            "m": [
-              "sugerowałeś"
-            ],
-            "f": [
-              "sugerowałaś"
-            ]
+            "m": "sugerowałeś",
+            "f": "sugerowałaś"
           },
           "plural": {
-            "virile": [
-              "sugerowaliście"
-            ],
-            "nonvirile": [
-              "sugerowałyście"
-            ]
+            "virile": "sugerowaliście",
+            "nonvirile": "sugerowałyście"
           }
         },
         "3per": {

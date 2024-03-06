@@ -21,38 +21,22 @@
         },
         "1per": {
           "singular": {
-            "m": [
-              "złościłem"
-            ],
-            "f": [
-              "złościłam"
-            ]
+            "m": "złościłem",
+            "f": "złościłam"
           },
           "plural": {
-            "virile": [
-              "złościliśmy"
-            ],
-            "nonvirile": [
-              "złościłyśmy"
-            ]
+            "virile": "złościliśmy",
+            "nonvirile": "złościłyśmy"
           }
         },
         "2per": {
           "singular": {
-            "m": [
-              "złościłeś"
-            ],
-            "f": [
-              "złościłaś"
-            ]
+            "m": "złościłeś",
+            "f": "złościłaś"
           },
           "plural": {
-            "virile": [
-              "złościliście"
-            ],
-            "nonvirile": [
-              "złościłyście"
-            ]
+            "virile": "złościliście",
+            "nonvirile": "złościłyście"
           }
         },
         "3per": {

@@ -21,38 +21,22 @@
         },
         "1per": {
           "singular": {
-            "m": [
-              "cuchnąłem"
-            ],
-            "f": [
-              "cuchnęłam"
-            ]
+            "m": "cuchnąłem",
+            "f": "cuchnęłam"
           },
           "plural": {
-            "virile": [
-              "cuchnęliśmy"
-            ],
-            "nonvirile": [
-              "cuchnęłyśmy"
-            ]
+            "virile": "cuchnęliśmy",
+            "nonvirile": "cuchnęłyśmy"
           }
         },
         "2per": {
           "singular": {
-            "m": [
-              "cuchnąłeś"
-            ],
-            "f": [
-              "cuchnęłaś"
-            ]
+            "m": "cuchnąłeś",
+            "f": "cuchnęłaś"
           },
           "plural": {
-            "virile": [
-              "cuchnęliście"
-            ],
-            "nonvirile": [
-              "cuchnęłyście"
-            ]
+            "virile": "cuchnęliście",
+            "nonvirile": "cuchnęłyście"
           }
         },
         "3per": {

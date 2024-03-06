@@ -21,38 +21,22 @@
         },
         "1per": {
           "singular": {
-            "m": [
-              "szkoliłem"
-            ],
-            "f": [
-              "szkoliłam"
-            ]
+            "m": "szkoliłem",
+            "f": "szkoliłam"
           },
           "plural": {
-            "virile": [
-              "szkoliliśmy"
-            ],
-            "nonvirile": [
-              "szkoliłyśmy"
-            ]
+            "virile": "szkoliliśmy",
+            "nonvirile": "szkoliłyśmy"
           }
         },
         "2per": {
           "singular": {
-            "m": [
-              "szkoliłeś"
-            ],
-            "f": [
-              "szkoliłaś"
-            ]
+            "m": "szkoliłeś",
+            "f": "szkoliłaś"
           },
           "plural": {
-            "virile": [
-              "szkoliliście"
-            ],
-            "nonvirile": [
-              "szkoliłyście"
-            ]
+            "virile": "szkoliliście",
+            "nonvirile": "szkoliłyście"
           }
         },
         "3per": {

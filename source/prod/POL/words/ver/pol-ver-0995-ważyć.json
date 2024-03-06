@@ -21,38 +21,22 @@
         },
         "1per": {
           "singular": {
-            "m": [
-              "ważyłem"
-            ],
-            "f": [
-              "ważyłam"
-            ]
+            "m": "ważyłem",
+            "f": "ważyłam"
           },
           "plural": {
-            "virile": [
-              "ważyliśmy"
-            ],
-            "nonvirile": [
-              "ważyłyśmy"
-            ]
+            "virile": "ważyliśmy",
+            "nonvirile": "ważyłyśmy"
           }
         },
         "2per": {
           "singular": {
-            "m": [
-              "ważyłeś"
-            ],
-            "f": [
-              "ważyłaś"
-            ]
+            "m": "ważyłeś",
+            "f": "ważyłaś"
           },
           "plural": {
-            "virile": [
-              "ważyliście"
-            ],
-            "nonvirile": [
-              "ważyłyście"
-            ]
+            "virile": "ważyliście",
+            "nonvirile": "ważyłyście"
           }
         },
         "3per": {

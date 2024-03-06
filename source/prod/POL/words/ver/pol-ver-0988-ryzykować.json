@@ -21,38 +21,22 @@
         },
         "1per": {
           "singular": {
-            "m": [
-              "ryzykowałem"
-            ],
-            "f": [
-              "ryzykowałam"
-            ]
+            "m": "ryzykowałem",
+            "f": "ryzykowałam"
           },
           "plural": {
-            "virile": [
-              "ryzykowaliśmy"
-            ],
-            "nonvirile": [
-              "ryzykowałyśmy"
-            ]
+            "virile": "ryzykowaliśmy",
+            "nonvirile": "ryzykowałyśmy"
           }
         },
         "2per": {
           "singular": {
-            "m": [
-              "ryzykowałeś"
-            ],
-            "f": [
-              "ryzykowałaś"
-            ]
+            "m": "ryzykowałeś",
+            "f": "ryzykowałaś"
           },
           "plural": {
-            "virile": [
-              "ryzykowaliście"
-            ],
-            "nonvirile": [
-              "ryzykowałyście"
-            ]
+            "virile": "ryzykowaliście",
+            "nonvirile": "ryzykowałyście"
           }
         },
         "3per": {

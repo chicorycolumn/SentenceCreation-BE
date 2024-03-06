@@ -54,38 +54,22 @@
         },
         "1per": {
           "singular": {
-            "m": [
-              "zaryzykowałem"
-            ],
-            "f": [
-              "zaryzykowałam"
-            ]
+            "m": "zaryzykowałem",
+            "f": "zaryzykowałam"
           },
           "plural": {
-            "virile": [
-              "zaryzykowaliśmy"
-            ],
-            "nonvirile": [
-              "zaryzykowałyśmy"
-            ]
+            "virile": "zaryzykowaliśmy",
+            "nonvirile": "zaryzykowałyśmy"
           }
         },
         "2per": {
           "singular": {
-            "m": [
-              "zaryzykowałeś"
-            ],
-            "f": [
-              "zaryzykowałaś"
-            ]
+            "m": "zaryzykowałeś",
+            "f": "zaryzykowałaś"
           },
           "plural": {
-            "virile": [
-              "zaryzykowaliście"
-            ],
-            "nonvirile": [
-              "zaryzykowałyście"
-            ]
+            "virile": "zaryzykowaliście",
+            "nonvirile": "zaryzykowałyście"
           }
         },
         "3per": {

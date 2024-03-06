@@ -54,38 +54,22 @@
         },
         "1per": {
           "singular": {
-            "m": [
-              "zasugerowałem"
-            ],
-            "f": [
-              "zasugerowałam"
-            ]
+            "m": "zasugerowałem",
+            "f": "zasugerowałam"
           },
           "plural": {
-            "virile": [
-              "zasugerowaliśmy"
-            ],
-            "nonvirile": [
-              "zasugerowałyśmy"
-            ]
+            "virile": "zasugerowaliśmy",
+            "nonvirile": "zasugerowałyśmy"
           }
         },
         "2per": {
           "singular": {
-            "m": [
-              "zasugerowałeś"
-            ],
-            "f": [
-              "zasugerowałaś"
-            ]
+            "m": "zasugerowałeś",
+            "f": "zasugerowałaś"
           },
           "plural": {
-            "virile": [
-              "zasugerowaliście"
-            ],
-            "nonvirile": [
-              "zasugerowałyście"
-            ]
+            "virile": "zasugerowaliście",
+            "nonvirile": "zasugerowałyście"
           }
         },
         "3per": {

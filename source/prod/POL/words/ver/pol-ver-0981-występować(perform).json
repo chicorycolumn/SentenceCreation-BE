@@ -21,38 +21,22 @@
         },
         "1per": {
           "singular": {
-            "m": [
-              "występowałem"
-            ],
-            "f": [
-              "występowałam"
-            ]
+            "m": "występowałem",
+            "f": "występowałam"
           },
           "plural": {
-            "virile": [
-              "występowaliśmy"
-            ],
-            "nonvirile": [
-              "występowałyśmy"
-            ]
+            "virile": "występowaliśmy",
+            "nonvirile": "występowałyśmy"
           }
         },
         "2per": {
           "singular": {
-            "m": [
-              "występowałeś"
-            ],
-            "f": [
-              "występowałaś"
-            ]
+            "m": "występowałeś",
+            "f": "występowałaś"
           },
           "plural": {
-            "virile": [
-              "występowaliście"
-            ],
-            "nonvirile": [
-              "występowałyście"
-            ]
+            "virile": "występowaliście",
+            "nonvirile": "występowałyście"
           }
         },
         "3per": {

@@ -54,38 +54,22 @@
         },
         "1per": {
           "singular": {
-            "m": [
-              "wyszkoliłem"
-            ],
-            "f": [
-              "wyszkoliłam"
-            ]
+            "m": "wyszkoliłem",
+            "f": "wyszkoliłam"
           },
           "plural": {
-            "virile": [
-              "wyszkoliliśmy"
-            ],
-            "nonvirile": [
-              "wyszkoliłyśmy"
-            ]
+            "virile": "wyszkoliliśmy",
+            "nonvirile": "wyszkoliłyśmy"
           }
         },
         "2per": {
           "singular": {
-            "m": [
-              "wyszkoliłeś"
-            ],
-            "f": [
-              "wyszkoliłaś"
-            ]
+            "m": "wyszkoliłeś",
+            "f": "wyszkoliłaś"
           },
           "plural": {
-            "virile": [
-              "wyszkoliliście"
-            ],
-            "nonvirile": [
-              "wyszkoliłyście"
-            ]
+            "virile": "wyszkoliliście",
+            "nonvirile": "wyszkoliłyście"
           }
         },
         "3per": {

@@ -54,38 +54,22 @@
         },
         "1per": {
           "singular": {
-            "m": [
-              "zezłościłem"
-            ],
-            "f": [
-              "zezłościłam"
-            ]
+            "m": "zezłościłem",
+            "f": "zezłościłam"
           },
           "plural": {
-            "virile": [
-              "zezłościliśmy"
-            ],
-            "nonvirile": [
-              "zezłościłyśmy"
-            ]
+            "virile": "zezłościliśmy",
+            "nonvirile": "zezłościłyśmy"
           }
         },
         "2per": {
           "singular": {
-            "m": [
-              "zezłościłeś"
-            ],
-            "f": [
-              "zezłościłaś"
-            ]
+            "m": "zezłościłeś",
+            "f": "zezłościłaś"
           },
           "plural": {
-            "virile": [
-              "zezłościliście"
-            ],
-            "nonvirile": [
-              "zezłościłyście"
-            ]
+            "virile": "zezłościliście",
+            "nonvirile": "zezłościłyście"
           }
         },
         "3per": {

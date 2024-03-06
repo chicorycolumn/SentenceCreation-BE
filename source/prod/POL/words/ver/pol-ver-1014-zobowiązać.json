@@ -54,38 +54,22 @@
         },
         "1per": {
           "singular": {
-            "m": [
-              "zobowiązałem"
-            ],
-            "f": [
-              "zobowiązałam"
-            ]
+            "m": "zobowiązałem",
+            "f": "zobowiązałam"
           },
           "plural": {
-            "virile": [
-              "zobowiązaliśmy"
-            ],
-            "nonvirile": [
-              "zobowiązałyśmy"
-            ]
+            "virile": "zobowiązaliśmy",
+            "nonvirile": "zobowiązałyśmy"
           }
         },
         "2per": {
           "singular": {
-            "m": [
-              "zobowiązałeś"
-            ],
-            "f": [
-              "zobowiązałaś"
-            ]
+            "m": "zobowiązałeś",
+            "f": "zobowiązałaś"
           },
           "plural": {
-            "virile": [
-              "zobowiązaliście"
-            ],
-            "nonvirile": [
-              "zobowiązałyście"
-            ]
+            "virile": "zobowiązaliście",
+            "nonvirile": "zobowiązałyście"
           }
         },
         "3per": {
