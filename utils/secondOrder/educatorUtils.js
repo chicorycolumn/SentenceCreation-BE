@@ -1,3 +1,4 @@
+const apiUtils = require(".././secondOrder/apiUtils.js");
 const gpUtils = require(".././generalPurposeUtils.js");
 const uUtils = require(".././universalUtils.js");
 const consol = require(".././zerothOrder/consoleLoggingUtils.js");
@@ -232,7 +233,13 @@ exports.checkLemmaObjectIds = (currentLanguage) => {
     res.push(...wordsBank.map((lObj) => [lObj.id, lObj.lemma]));
   };
 
-  readAllLObjs(currentLanguage, false, schematic, null, wordsetCallback);
+  gdUtils.readAllLObjs(
+    currentLanguage,
+    false,
+    schematic,
+    null,
+    wordsetCallback
+  );
 
   let tempArr = [];
   let duplicateIds = [];

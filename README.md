@@ -19,7 +19,7 @@ You can download this repository and run the project locally by following these 
 
 2. Open the project in a code editor, and run `npm install` to install necessary packages. You may also need to install [Node.js](https://nodejs.org/en/) by running `npm install node.js`.
 
-3. Run `npm start` to run the project.
+3. Run `npm start` to run the project with nodemon or `npm run dev` to run it simply.
 
 4. Use an API testing tool like Insomnia to test the endpoints of this project, by sending http requests to [http://localhost:9090](http://localhost:9090).
 
@@ -43,7 +43,7 @@ General instructions for taking a **project with a PSQL database** and hosting i
 
 5. Run `git add .` then `git commit -m "Pushing to Heroku"` then `git push heroku main`.
 
-6. Run `npm run seed:prod` then `npm start`, then repeat step 5.
+6. Run `npm run seed:prod` then `npm start` to run the project with nodemon or `npm run dev` to run it simply, then repeat step 5.
 
 7. The project should now be live and hosted, and can be viewed by running `heroku open`, and issues can be debugged with `heroku logs --tail`.
 

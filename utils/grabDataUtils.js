@@ -9,7 +9,7 @@ const nexusUtils = require("./secondOrder/nexusUtils.js");
 exports.grabLObjById = (lObjId) => {
   let split = lObjId.split("-");
   let lang = split[0].toUpperCase();
-  let wordtype = split[1].toUpperCase();
+  let wordtype = split[1].toLowerCase();
   const envir = apiUtils.getEnvir("grabLObjById");
 
   const lObjs = require(`../source/${envir}/${lang}/words/${wordtype}.json`);
@@ -24,13 +24,14 @@ exports.grabLObjById = (lObjId) => {
 
 exports.grabLObjsByWordtype = (lang, wordtype, useDummy) => {
   lang = lang.toUpperCase();
+  wordtype = wordtype.toLowerCase();
   const envir = apiUtils.getEnvir("grabLObjsByWordtype");
 
   const wordsBank = require(`../source/${envir}/${lang}/words/${wordtype}.json`);
 
   if (!wordsBank) {
     console.log(
-      `rhob Failed to find lemma object data for for lang="${lang}" wordtype="${wordtype}" envir="${envir}"`
+      `giek Failed to find lemma object data for for lang="${lang}" wordtype="${wordtype}" envir="${envir}"`
     );
   }
 
@@ -152,8 +153,7 @@ exports.addInflections = (lObj) => {
     return;
   }
 
-  let data = gdUtils._grabLObjInfo(lObj.id);
-  lObj.inflections = data.inflections;
+  lObj.inflections = gdUtils.grabInflections(lObj.id);
 };
 
 exports.addExtraToLObj = (lObj) => {
@@ -170,10 +170,31 @@ exports._grabLObjInfo = (lObjId) => {
 
   let split = lObjId.split("-");
   let lang = split[0].toUpperCase();
-  let wordtype = split[1];
-  const data = require(`../source/${envir}/${lang}/words/${wordtype}/${lObjId}.json`);
+  let wordtype = split[1].toLowerCase();
+
+  let requestedLObj = gdUtils.grabLObjById(lObjId);
+
+  let idForInflections = requestedLObj._inflectionsRoot
+    ? requestedLObj._inflectionsRoot
+    : lObjId;
+
+  let inputPathForInflections = `../source/${envir}/${lang}/words/${wordtype}/${idForInflections}.json`;
+
+  let data;
+
+  // try {
+  data = require(inputPathForInflections);
+  // } catch (e) {data = require(inputPathForInflections.slice(3));}
+
   if (!data) {
-    console.log(`rhoc Failed to find lemma object data for for ${lObjId}`);
+    consol.throw(`rhob Found no data at path: ${inputPathForInflections}`);
   }
-  return data;
+
+  Object.keys(data).forEach((dataKey) => {
+    if (!Object.keys(requestedLObj).includes(dataKey)) {
+      requestedLObj[dataKey] = data[dataKey];
+    }
+  });
+
+  return requestedLObj;
 };

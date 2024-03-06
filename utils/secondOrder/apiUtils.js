@@ -629,24 +629,18 @@ exports._makeFormula = (
 
 exports.setEnvir = (req, label) => {
   let { envir } = req.query;
-
   if (!envir) {
     envir = "ref";
   }
-
   env.envir = envir;
-
-  consol.logVeryGreyString(`"${envir}" set as envir by ${label}`);
+  // consol.logVeryGreyString(`"${envir}" set as envir by ${label}`);
 };
 
 exports.getEnvir = (label) => {
   const envir = env.envir;
-
   if (!envir) {
     envir = "ref";
   }
-
-  consol.logVeryGreyString(`"${envir}" got as envir for ${label}`);
-
+  // consol.logVeryGreyString(`"${envir}" got as envir for ${label}`);
   return envir;
 };

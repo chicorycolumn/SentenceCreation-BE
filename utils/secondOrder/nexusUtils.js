@@ -51,12 +51,12 @@ exports.getNexusLemmaObjects = (lObj) => {
 
   let lang = idUtils.getLanguageFromLemmaObject(lObj);
 
-  const wordtype = idUtils.getWordtypeLObj(lObj);
+  const wordtype = idUtils.getWordtypeLObj(lObj).toLowerCase();
 
   const nexusWordsBank = require(`../../source/${envir}/NEXUS/words/${wordtype}.json`);
 
-  let resArr = nexusWordsBank.filter((lemmaObject) =>
-    lemmaObject.traductions[lang].some((el) =>
+  let resArr = nexusWordsBank.filter((nexusObject) =>
+    nexusObject.traductions[lang].some((el) =>
       allLangUtils.compareLObjStems(el, lObj.id)
     )
   );
@@ -69,8 +69,9 @@ exports.getNexusLemmaObjects = (lObj) => {
   }
 
   if (!resArr.length) {
+    console.log(nexusWordsBank[0]);
     consol.throw(
-      `dlmb getNexusLemmaObjects for ${lang} ${lObj.id} found 0 ${resArr.length} nexus lObjs.`
+      `dlmb getNexusLemmaObjects for ${lang} ${lObj.id} found ${resArr.length} nexus lObjs.`
     );
   }
 
@@ -261,13 +262,15 @@ exports.getNexusWithAllWordtypes = () => {
 
   const wordsBank = {};
 
-  Object.keys(wordtypes).forEach((wordtype) => {
-    if (wordtype === "fix") {
-      return;
-    }
-    const words = require(`../../source/${envir}/NEXUS/words/${wordtype}.json`);
-    wordsBank[wordtype] = words;
-  });
+  Object.keys(wordtypes)
+    .map((w) => w.toLowerCase())
+    .forEach((wordtype) => {
+      if (wordtype === "fix") {
+        return;
+      }
+      const words = require(`../../source/${envir}/NEXUS/words/${wordtype}.json`);
+      wordsBank[wordtype] = words;
+    });
 
   return wordsBank;
 };

@@ -29,7 +29,7 @@ xdescribe("Sandbox.", () => {
 });
 
 xdescribe("Project Ophiucus: Bravo Wing: Task One.", () => {
-  it("Take large json dicts of lobjs from Scraper and separate into individual files for BE", () => {
+  it("Post-Sanhedrin: Take json dicts of finished lobjs from Scraper and separate into individual files for BE", () => {
     let e = "prod";
     let l = "ENG";
     // let wordtypes = [];

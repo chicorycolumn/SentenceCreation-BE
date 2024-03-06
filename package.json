@@ -8,8 +8,8 @@
     "test": "clear && mocha spec/*.spec.js",
     "test-app": "clear && mocha spec/app.spec.js",
     "test-scu": "clear && mocha spec/objectTraversingUtils.spec.js",
-    "start": "node listen.js",
-    "dev": "nodemon listen.js localhost 9090"
+    "dev": "node listen.js",
+    "start": "nodemon listen.js localhost 9090"
   },
   "repository": {
     "type": "git",
