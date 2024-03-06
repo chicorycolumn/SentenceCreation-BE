@@ -1,0 +1,74 @@
+{
+  "inflections": {
+    "pronombre": {
+      "_Pers": {
+        "_Numbers": {
+          "_Genders": {
+            "nom": "kto",
+            "gen": "kogo",
+            "dat": "komu",
+            "acc": "kogo",
+            "ins": "kim",
+            "loc": "kim"
+          }
+        }
+      }
+    },
+    "determiner": {
+      "_Pers": {
+        "singular": {
+          "m1": {
+            "nom": "który",
+            "gen": "którego",
+            "dat": "któremu",
+            "acc": "którego",
+            "ins": "którym",
+            "loc": "którym"
+          },
+          "m3": {
+            "nom": "który",
+            "gen": "którego",
+            "dat": "któremu",
+            "acc": "który",
+            "ins": "którym",
+            "loc": "którym"
+          },
+          "f": {
+            "nom": "która",
+            "gen": "której",
+            "dat": "której",
+            "acc": "którą",
+            "ins": "którą",
+            "loc": "której"
+          },
+          "n": {
+            "nom": "które",
+            "gen": "którego",
+            "dat": "któremu",
+            "acc": "które",
+            "ins": "którym",
+            "loc": "którym"
+          }
+        },
+        "plural": {
+          "virile": {
+            "nom": "którzy",
+            "gen": "których",
+            "dat": "którym",
+            "acc": "których",
+            "ins": "którymi",
+            "loc": "których"
+          },
+          "nonvirile": {
+            "nom": "które",
+            "gen": "których",
+            "dat": "którym",
+            "acc": "które",
+            "ins": "którymi",
+            "loc": "których"
+          }
+        }
+      }
+    }
+  }
+}

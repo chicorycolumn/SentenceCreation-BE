@@ -1,0 +1,60 @@
+{
+  "inflections": {
+    "_pronombreAndDeterminer": {
+      "_Pers": {
+        "singular": {
+          "m1": {
+            "nom": "jaki",
+            "gen": "jakiego",
+            "dat": "jakiemu",
+            "acc": "jakiego",
+            "ins": "jakim",
+            "loc": "jakim"
+          },
+          "m3": {
+            "nom": "jaki",
+            "gen": "jakiego",
+            "dat": "jakiemu",
+            "acc": "jakiy",
+            "ins": "jakim",
+            "loc": "jakim"
+          },
+          "f": {
+            "nom": "jaka",
+            "gen": "jakiej",
+            "dat": "jakiej",
+            "acc": "jaką",
+            "ins": "jaką",
+            "loc": "jakiej"
+          },
+          "n": {
+            "nom": "jakie",
+            "gen": "jakiego",
+            "dat": "jakiemu",
+            "acc": "jakie",
+            "ins": "jakim",
+            "loc": "jakim"
+          }
+        },
+        "plural": {
+          "virile": {
+            "nom": "jacy",
+            "gen": "jakich",
+            "dat": "jakim",
+            "acc": "jakich",
+            "ins": "jakimi",
+            "loc": "jakich"
+          },
+          "nonvirile": {
+            "nom": "jakie",
+            "gen": "jakich",
+            "dat": "jakim",
+            "acc": "jakie",
+            "ins": "jakimi",
+            "loc": "jakich"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+[
+  {
+    "key": "pro-PERSONAL",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-pro-PERSONAL"],
+      "POL": ["pol-pro-PERSONAL"]
+    },
+    "papers": [],
+    "topics": []
+  },
+  {
+    "key": "pro-POSSESSIVE",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-pro-POSSESSIVE"],
+      "POL": ["pol-pro-POSSESSIVE"]
+    },
+    "papers": [],
+    "topics": []
+  },
+  {
+    "key": "pro-ITG_A",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-pro-ITG_A"],
+      "POL": ["pol-pro-ITG_A"]
+    },
+    "papers": [],
+    "topics": []
+  },
+  {
+    "key": "pro-ITG_B",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-pro-ITG_B"],
+      "POL": ["pol-pro-ITG_B"]
+    },
+    "papers": [],
+    "topics": []
+  },
+  {
+    "key": "pro-ITG_C",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-pro-ITG_C"],
+      "POL": ["pol-pro-ITG_C"]
+    },
+    "papers": [],
+    "topics": []
+  },
+  {
+    "key": "pro-ITG_D",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-pro-ITG_D"],
+      "POL": ["pol-pro-ITG_D"]
+    },
+    "papers": [],
+    "topics": []
+  },
+  {
+    "key": "pro-ITG_E",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-pro-ITG_E"],
+      "POL": ["pol-pro-ITG_E"]
+    },
+    "papers": [],
+    "topics": []
+  },
+  {
+    "key": "pro-ITG_F",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-pro-ITG_F"],
+      "POL": ["pol-pro-ITG_F"]
+    },
+    "papers": [],
+    "topics": []
+  },
+  {
+    "key": "pro-ITG_G",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-pro-ITG_G"],
+      "POL": ["pol-pro-ITG_G"]
+    },
+    "papers": [],
+    "topics": []
+  },
+  {
+    "key": "pro-ITG_J",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-pro-ITG_J"],
+      "POL": ["pol-pro-ITG_J"]
+    },
+    "papers": [],
+    "topics": []
+  },
+  {
+    "key": "pro-ITG_K",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-pro-ITG_K"],
+      "POL": ["pol-pro-ITG_K"]
+    },
+    "papers": [],
+    "topics": []
+  }
+]

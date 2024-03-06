@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "_pronombreAndDeterminer": {
+      "_Pers": {
+        "_Numbers": {
+          "_Genders": {
+            "_Gcases": "what kind"
+          }
+        }
+      }
+    }
+  }
+}

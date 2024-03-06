@@ -1,0 +1,64 @@
+{
+  "inflections": {
+    "pronombre": {
+      "1per": {
+        "singular": {
+          "_PersonalSingularGenders": {
+            "nom": "I",
+            "dat": "me",
+            "acc": "me"
+          }
+        },
+        "plural": {
+          "_PluralGenders": {
+            "nom": "we",
+            "dat": "us",
+            "acc": "us"
+          }
+        }
+      },
+      "2per": {
+        "singular": {
+          "_PersonalSingularGenders": {
+            "nom": "you",
+            "dat": "you",
+            "acc": "you"
+          }
+        },
+        "plural": {
+          "_PluralGenders": {
+            "nom": "you",
+            "dat": "you",
+            "acc": "you"
+          }
+        }
+      },
+      "3per": {
+        "singular": {
+          "m": {
+            "nom": "he",
+            "dat": "him",
+            "acc": "him"
+          },
+          "f": {
+            "nom": "she",
+            "dat": "her",
+            "acc": "her"
+          },
+          "n": {
+            "nom": "it",
+            "dat": "it",
+            "acc": "it"
+          }
+        },
+        "plural": {
+          "_PersonalGenders": {
+            "nom": "they",
+            "dat": "them",
+            "acc": "them"
+          }
+        }
+      }
+    }
+  }
+}
