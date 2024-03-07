@@ -103,26 +103,18 @@
       "present": {
         "1per": {
           "singular": {
-            "allSingularGenders": [
-              "jestem"
-            ]
+            "allSingularGenders": "jestem"
           },
           "plural": {
-            "allPluralGenders": [
-              "jesteśmy"
-            ]
+            "allPluralGenders": "jesteśmy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": [
-              "jesteś"
-            ]
+            "allSingularGenders": "jesteś"
           },
           "plural": {
-            "allPluralGenders": [
-              "jesteście"
-            ]
+            "allPluralGenders": "jesteście"
           }
         },
         "3per": {
