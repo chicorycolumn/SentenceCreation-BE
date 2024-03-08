@@ -22,12 +22,17 @@ exports.grabLObjById = (lObjId) => {
   return lObj;
 };
 
-exports.grabLObjsByWordtype = (lang, wordtype, useDummy) => {
+exports.grabLObjsByWordtype = (
+  lang,
+  wordtype,
+  useDummy,
+  includeUntranslatedLObjs = false
+) => {
   lang = lang.toUpperCase();
   wordtype = wordtype.toLowerCase();
   const envir = apiUtils.getEnvir("grabLObjsByWordtype");
 
-  const wordsBank = require(`../source/${envir}/${lang}/words/${wordtype}.json`);
+  let wordsBank = require(`../source/${envir}/${lang}/words/${wordtype}.json`); //swde
 
   if (!wordsBank) {
     console.log(
@@ -43,6 +48,10 @@ exports.grabLObjsByWordtype = (lang, wordtype, useDummy) => {
     return [...wordsBank, ...dummyWords];
   }
 
+  if (!includeUntranslatedLObjs) {
+    wordsBank = wordsBank.filter((lObj) => !lObj._untranslated);
+  }
+
   return wordsBank;
 };
 
@@ -51,12 +60,14 @@ exports.readAllLObjs = (lang, useDummy, res, lObjCallback, wordsetCallback) => {
   const envir = apiUtils.getEnvir("readAllLObjs");
 
   const fs = require("fs");
-  let filenames = fs.readdirSync(`source/${envir}/${lang}/words`);
+  let filenames = fs.readdirSync(`source/${envir}/${lang}/words`); //swde
   filenames
     .filter((filename) => filename.split(".")[1] === "json")
     .forEach((filename) => {
       let wordtype = filename.split(".")[0];
       let wordsBank = gdUtils.grabLObjsByWordtype(lang, wordtype, useDummy);
+
+      wordsBank = wordsBank.filter((lObj) => !lObj._untranslated);
 
       if (wordsetCallback) {
         wordsetCallback(wordsBank, res, wordtype);

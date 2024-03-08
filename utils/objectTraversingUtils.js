@@ -49,7 +49,8 @@ exports.findMatchingLemmaObjectThenWord = (
   let source = gdUtils.grabLObjsByWordtype(
     currentLanguage,
     idUtils.getWordtypeStCh(structureChunk),
-    useDummy
+    useDummy,
+    structureChunk.specificIds && structureChunk.specificIds.length
   );
 
   let shouldFilterBySelectors;

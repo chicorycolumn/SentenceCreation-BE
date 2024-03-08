@@ -61,15 +61,14 @@ exports.getNexusLemmaObjects = (lObj) => {
     )
   );
 
-  if (resArr.length > 1) {
-    consol.logSpecial(
-      9,
-      `dlma getNexusLemmaObjects for ${lang} ${lObj.id} found ${resArr.length} nexus lObjs, usually only 1.`
-    );
-  }
+  // if (resArr.length > 1) {consol.logSpecial(9, `dlma getNexusLemmaObjects for ${lang} ${lObj.id} found ${resArr.length} nexus lObjs, usually only 1.`);}
 
-  if (!resArr.length) {
+  if (
+    // !lObj._untranslated &&
+    !resArr.length
+  ) {
     console.log(nexusWordsBank[0]);
+    // console.log(lObj);
     consol.throw(
       `dlmb getNexusLemmaObjects for ${lang} ${lObj.id} found ${resArr.length} nexus lObjs.`
     );
@@ -123,6 +122,10 @@ exports.accumulateThisKeyFromLObjs = (lObj, key) => {
 };
 
 exports.getPapers = (lObj) => {
+  if (lObj._untranslated) {
+    return [];
+  }
+
   let papers =
     lObj.devHardcoded_tags ||
     exports.accumulateThisKeyFromLObjs(lObj, "papers");
@@ -131,6 +134,10 @@ exports.getPapers = (lObj) => {
 };
 
 exports.getTraductions = (lObj, targetlang, getAllIds, mapIdsToLObjs) => {
+  if (lObj._untranslated) {
+    return [];
+  }
+
   if (mapIdsToLObjs && !getAllIds) {
     consol.throw("bcct Not possible.");
   }

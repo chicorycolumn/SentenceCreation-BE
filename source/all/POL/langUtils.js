@@ -1,3 +1,4 @@
+const apiUtils = require("../../../utils/secondOrder/apiUtils.js");
 const lfUtils = require("../../../utils/lemmaFilteringUtils.js");
 const otUtils = require("../../../utils/objectTraversingUtils.js");
 const frUtils = require("../../../utils/formattingResponseUtils.js");
@@ -319,6 +320,9 @@ exports.fillVerbInflections = (lemmaObject) => {
     return;
   }
 
+  const envir = apiUtils.getEnvir("fillVerbInflections");
+  let addImpersonal = envir !== "prod";
+
   //To imperfective verbs, add   presentimpersonal,  conditional,  future
   //To perfective verbs,   add   futureimpersonal,   conditional
   //In both, fill out activeAdj and passiveAdj if they are there.
@@ -337,14 +341,6 @@ exports.fillVerbInflections = (lemmaObject) => {
   ) {
     if (_isAvailable(inflections.verbal.future)) {
       inflections.verbal.future = {
-        impersonal: {
-          singular: {
-            _SingularGenders: "będzie" + " " + infinitive + " " + "się",
-          },
-          plural: {
-            _PluralGenders: "będzie" + " " + infinitive + " " + "się",
-          },
-        },
         "1per": {
           singular: {
             m: gpUtils.terminusObjectNormalArray([
@@ -416,8 +412,21 @@ exports.fillVerbInflections = (lemmaObject) => {
           },
         },
       };
+      if (addImpersonal) {
+        inflections.verbal.future["impersonal"] = {
+          singular: {
+            _SingularGenders: "będzie" + " " + infinitive + " " + "się",
+          },
+          plural: {
+            _PluralGenders: "będzie" + " " + infinitive + " " + "się",
+          },
+        };
+      }
     }
-    if (_isAvailable(inflections.verbal.present.impersonal.singular)) {
+    if (
+      addImpersonal &&
+      _isAvailable(inflections.verbal.present.impersonal.singular)
+    ) {
       inflections.verbal.present.impersonal.singular = {
         _SingularGenders:
           inflections.verbal.present["3per"].singular._SingularGenders +
@@ -425,7 +434,10 @@ exports.fillVerbInflections = (lemmaObject) => {
           "się",
       };
     }
-    if (_isAvailable(inflections.verbal.present.impersonal.plural)) {
+    if (
+      addImpersonal &&
+      _isAvailable(inflections.verbal.present.impersonal.plural)
+    ) {
       inflections.verbal.present.impersonal.plural = {
         _PluralGenders:
           inflections.verbal.present["3per"].singular._SingularGenders + //Yes, this is meant to use Singular.
@@ -434,7 +446,10 @@ exports.fillVerbInflections = (lemmaObject) => {
       };
     }
   } else if (aspect === "perfective") {
-    if (_isAvailable(inflections.verbal.future.impersonal.singular)) {
+    if (
+      addImpersonal &&
+      _isAvailable(inflections.verbal.future.impersonal.singular)
+    ) {
       inflections.verbal.future.impersonal.singular = {
         _SingularGenders:
           inflections.verbal.future["3per"].singular._SingularGenders +
@@ -442,7 +457,10 @@ exports.fillVerbInflections = (lemmaObject) => {
           "się",
       };
     }
-    if (_isAvailable(inflections.verbal.future.impersonal.plural)) {
+    if (
+      addImpersonal &&
+      _isAvailable(inflections.verbal.future.impersonal.plural)
+    ) {
       inflections.verbal.future.impersonal.plural = {
         _PluralGenders:
           inflections.verbal.future["3per"].singular._SingularGenders + //Yes, this is meant to use Singular.
@@ -463,11 +481,38 @@ exports.fillVerbInflections = (lemmaObject) => {
 
     let presentThirdSingular = ["imperfective", "_imOnly"].includes(aspect)
       ? inflections.verbal.present["3per"].singular._SingularGenders
-      : inflections.verbal.future["3per"].singular._SingularGenders;
+      : inflections.verbal.future["3per"].singular._SingularGenders ||
+        inflections.verbal.future["3per"].singular.m ||
+        inflections.verbal.future["3per"].singular.m1;
 
     let presentThirdPlural = ["imperfective", "_imOnly"].includes(aspect)
       ? inflections.verbal.present["3per"].plural._PluralGenders
       : inflections.verbal.future["3per"].plural._PluralGenders;
+
+    if (!presentFirstSingular || !presentThirdSingular || !presentThirdPlural) {
+      console.log({
+        presentFirstSingular,
+        presentThirdSingular,
+        presentThirdPlural,
+      });
+      console.log(
+        555,
+        inflections.verbal.future["3per"].singular._SingularGenders,
+        inflections.verbal.future["3per"].singular.m,
+        inflections.verbal.future["3per"].singular.m1
+      );
+
+      console.log(
+        "-----------",
+        aspect,
+        inflections.verbal.future["3per"].singular._SingularGenders |
+          inflections.verbal.future["3per"].singular.m |
+          inflections.verbal.future["3per"].singular.m1,
+        inflections.verbal.future["3per"].singular
+      );
+      consol.logObjectTwoLevels(inflections.verbal);
+      consol.throw(`nohr`);
+    }
 
     let filledOutImperatives = {
       "1per": {
@@ -501,20 +546,6 @@ exports.fillVerbInflections = (lemmaObject) => {
 
   if (_isAvailable(inflections.verbal.conditional)) {
     inflections.verbal.conditional = {
-      impersonal: {
-        singular: {
-          _SingularGenders:
-            inflections.verbal.past.impersonal.singular._SingularGenders +
-            " " +
-            "by",
-        },
-        plural: {
-          _PluralGenders:
-            inflections.verbal.past.impersonal.plural._PluralGenders +
-            " " +
-            "by",
-        },
-      },
       "1per": {
         singular: {
           m: past["3per"].singular.m + "bym",
@@ -547,6 +578,22 @@ exports.fillVerbInflections = (lemmaObject) => {
         },
       },
     };
+    if (addImpersonal) {
+      inflections.verbal.conditional["impersonal"] = {
+        singular: {
+          _SingularGenders:
+            inflections.verbal.past.impersonal.singular._SingularGenders +
+            " " +
+            "by",
+        },
+        plural: {
+          _PluralGenders:
+            inflections.verbal.past.impersonal.plural._PluralGenders +
+            " " +
+            "by",
+        },
+      };
+    }
   }
 
   // Masculinist agenda
