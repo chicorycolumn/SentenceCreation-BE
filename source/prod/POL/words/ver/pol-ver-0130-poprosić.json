@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poprosi się"
+            "_SingularGenders": "poprosi się"
           },
           "plural": {
-            "allPluralGenders": "poprosi się"
+            "_PluralGenders": "poprosi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "poproszę"
+            "_SingularGendersExcludingNeuter": "poproszę"
           },
           "plural": {
-            "allPluralGenders": "poprosimy"
+            "_PluralGenders": "poprosimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "poprosisz"
+            "_SingularGendersExcludingNeuter": "poprosisz"
           },
           "plural": {
-            "allPluralGenders": "poprosicie"
+            "_PluralGenders": "poprosicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "poprosi"
+            "_SingularGenders": "poprosi"
           },
           "plural": {
-            "allPluralGenders": "poproszą"
+            "_PluralGenders": "poproszą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poproszono"
+            "_SingularGenders": "poproszono"
           },
           "plural": {
-            "allPluralGenders": "poproszono"
+            "_PluralGenders": "poproszono"
           }
         },
         "1per": {

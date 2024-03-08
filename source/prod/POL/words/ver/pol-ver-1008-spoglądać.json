@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "spoglądano"
+            "_SingularGenders": "spoglądano"
           },
           "plural": {
-            "allPluralGenders": "spoglądano"
+            "_PluralGenders": "spoglądano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "spogląda się"
+            "_SingularGenders": "spogląda się"
           },
           "plural": {
-            "allPluralGenders": "spogląda się"
+            "_PluralGenders": "spogląda się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "spoglądam"
+            "_SingularGendersExcludingNeuter": "spoglądam"
           },
           "plural": {
-            "allPluralGenders": "spoglądamy"
+            "_PluralGenders": "spoglądamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "spoglądasz"
+            "_SingularGendersExcludingNeuter": "spoglądasz"
           },
           "plural": {
-            "allPluralGenders": "spoglądacie"
+            "_PluralGenders": "spoglądacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "spogląda"
+            "_SingularGenders": "spogląda"
           },
           "plural": {
-            "allPluralGenders": "spoglądają"
+            "_PluralGenders": "spoglądają"
           }
         }
       }

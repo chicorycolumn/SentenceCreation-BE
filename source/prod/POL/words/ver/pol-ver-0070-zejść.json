@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zejdzie się"
+            "_SingularGenders": "zejdzie się"
           },
           "plural": {
-            "allPluralGenders": "zejdzie się"
+            "_PluralGenders": "zejdzie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zejdę"
+            "_SingularGendersExcludingNeuter": "zejdę"
           },
           "plural": {
-            "allPluralGenders": "zejdziemy"
+            "_PluralGenders": "zejdziemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zejdziesz"
+            "_SingularGendersExcludingNeuter": "zejdziesz"
           },
           "plural": {
-            "allPluralGenders": "zejdziecie"
+            "_PluralGenders": "zejdziecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zejdzie"
+            "_SingularGenders": "zejdzie"
           },
           "plural": {
-            "allPluralGenders": "zejdą"
+            "_PluralGenders": "zejdą"
           }
         }
       },

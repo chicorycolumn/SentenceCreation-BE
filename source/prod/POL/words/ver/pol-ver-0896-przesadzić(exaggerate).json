@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przesadzi się"
+            "_SingularGenders": "przesadzi się"
           },
           "plural": {
-            "allPluralGenders": "przesadzi się"
+            "_PluralGenders": "przesadzi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przesadzę"
+            "_SingularGendersExcludingNeuter": "przesadzę"
           },
           "plural": {
-            "allPluralGenders": "przesadzimy"
+            "_PluralGenders": "przesadzimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przesadzisz"
+            "_SingularGendersExcludingNeuter": "przesadzisz"
           },
           "plural": {
-            "allPluralGenders": "przesadzicie"
+            "_PluralGenders": "przesadzicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przesadzi"
+            "_SingularGenders": "przesadzi"
           },
           "plural": {
-            "allPluralGenders": "przesadzą"
+            "_PluralGenders": "przesadzą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przesadzono"
+            "_SingularGenders": "przesadzono"
           },
           "plural": {
-            "allPluralGenders": "przesadzono"
+            "_PluralGenders": "przesadzono"
           }
         },
         "1per": {

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pogada się"
+            "_SingularGenders": "pogada się"
           },
           "plural": {
-            "allPluralGenders": "pogada się"
+            "_PluralGenders": "pogada się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pogadam"
+            "_SingularGendersExcludingNeuter": "pogadam"
           },
           "plural": {
-            "allPluralGenders": "pogadamy"
+            "_PluralGenders": "pogadamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pogadasz"
+            "_SingularGendersExcludingNeuter": "pogadasz"
           },
           "plural": {
-            "allPluralGenders": "pogadacie"
+            "_PluralGenders": "pogadacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pogada"
+            "_SingularGenders": "pogada"
           },
           "plural": {
-            "allPluralGenders": "pogadają"
+            "_PluralGenders": "pogadają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pogadano"
+            "_SingularGenders": "pogadano"
           },
           "plural": {
-            "allPluralGenders": "pogadano"
+            "_PluralGenders": "pogadano"
           }
         },
         "1per": {

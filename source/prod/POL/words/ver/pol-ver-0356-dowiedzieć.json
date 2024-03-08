@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dowie się"
+            "_SingularGenders": "dowie się"
           },
           "plural": {
-            "allPluralGenders": "dowie się"
+            "_PluralGenders": "dowie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dowiem"
+            "_SingularGendersExcludingNeuter": "dowiem"
           },
           "plural": {
-            "allPluralGenders": "dowiemy"
+            "_PluralGenders": "dowiemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dowiesz"
+            "_SingularGendersExcludingNeuter": "dowiesz"
           },
           "plural": {
-            "allPluralGenders": "dowiecie"
+            "_PluralGenders": "dowiecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dowie"
+            "_SingularGenders": "dowie"
           },
           "plural": {
-            "allPluralGenders": "dowiedzą"
+            "_PluralGenders": "dowiedzą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dowiedziano"
+            "_SingularGenders": "dowiedziano"
           },
           "plural": {
-            "allPluralGenders": "dowiedziano"
+            "_PluralGenders": "dowiedziano"
           }
         },
         "1per": {

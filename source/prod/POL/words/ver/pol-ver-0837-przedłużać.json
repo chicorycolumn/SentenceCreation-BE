@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przedłużano"
+            "_SingularGenders": "przedłużano"
           },
           "plural": {
-            "allPluralGenders": "przedłużano"
+            "_PluralGenders": "przedłużano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przedłuża się"
+            "_SingularGenders": "przedłuża się"
           },
           "plural": {
-            "allPluralGenders": "przedłuża się"
+            "_PluralGenders": "przedłuża się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przedłużam"
+            "_SingularGendersExcludingNeuter": "przedłużam"
           },
           "plural": {
-            "allPluralGenders": "przedłużamy"
+            "_PluralGenders": "przedłużamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przedłużasz"
+            "_SingularGendersExcludingNeuter": "przedłużasz"
           },
           "plural": {
-            "allPluralGenders": "przedłużacie"
+            "_PluralGenders": "przedłużacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przedłuża"
+            "_SingularGenders": "przedłuża"
           },
           "plural": {
-            "allPluralGenders": "przedłużają"
+            "_PluralGenders": "przedłużają"
           }
         }
       }

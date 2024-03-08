@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zrobi się"
+            "_SingularGenders": "zrobi się"
           },
           "plural": {
-            "allPluralGenders": "zrobi się"
+            "_PluralGenders": "zrobi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zrobię"
+            "_SingularGendersExcludingNeuter": "zrobię"
           },
           "plural": {
-            "allPluralGenders": "zrobimy"
+            "_PluralGenders": "zrobimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zrobisz"
+            "_SingularGendersExcludingNeuter": "zrobisz"
           },
           "plural": {
-            "allPluralGenders": "zrobicie"
+            "_PluralGenders": "zrobicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zrobi"
+            "_SingularGenders": "zrobi"
           },
           "plural": {
-            "allPluralGenders": "zrobią"
+            "_PluralGenders": "zrobią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zrobiono"
+            "_SingularGenders": "zrobiono"
           },
           "plural": {
-            "allPluralGenders": "zrobiono"
+            "_PluralGenders": "zrobiono"
           }
         },
         "1per": {

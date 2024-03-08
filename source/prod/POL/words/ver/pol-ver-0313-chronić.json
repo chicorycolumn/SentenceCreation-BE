@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "chroniono"
+            "_SingularGenders": "chroniono"
           },
           "plural": {
-            "allPluralGenders": "chroniono"
+            "_PluralGenders": "chroniono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "chroni się"
+            "_SingularGenders": "chroni się"
           },
           "plural": {
-            "allPluralGenders": "chroni się"
+            "_PluralGenders": "chroni się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "chronię"
+            "_SingularGendersExcludingNeuter": "chronię"
           },
           "plural": {
-            "allPluralGenders": "chronimy"
+            "_PluralGenders": "chronimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "chronisz"
+            "_SingularGendersExcludingNeuter": "chronisz"
           },
           "plural": {
-            "allPluralGenders": "chronicie"
+            "_PluralGenders": "chronicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "chroni"
+            "_SingularGenders": "chroni"
           },
           "plural": {
-            "allPluralGenders": "chronią"
+            "_PluralGenders": "chronią"
           }
         }
       }

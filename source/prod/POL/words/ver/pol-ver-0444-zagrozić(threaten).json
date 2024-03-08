@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zagrozi się"
+            "_SingularGenders": "zagrozi się"
           },
           "plural": {
-            "allPluralGenders": "zagrozi się"
+            "_PluralGenders": "zagrozi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zagrożę"
+            "_SingularGendersExcludingNeuter": "zagrożę"
           },
           "plural": {
-            "allPluralGenders": "zagrozimy"
+            "_PluralGenders": "zagrozimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zagrozisz"
+            "_SingularGendersExcludingNeuter": "zagrozisz"
           },
           "plural": {
-            "allPluralGenders": "zagrozicie"
+            "_PluralGenders": "zagrozicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zagrozi"
+            "_SingularGenders": "zagrozi"
           },
           "plural": {
-            "allPluralGenders": "zagrożą"
+            "_PluralGenders": "zagrożą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zagrożono"
+            "_SingularGenders": "zagrożono"
           },
           "plural": {
-            "allPluralGenders": "zagrożono"
+            "_PluralGenders": "zagrożono"
           }
         },
         "1per": {

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zadziała się"
+            "_SingularGenders": "zadziała się"
           },
           "plural": {
-            "allPluralGenders": "zadziała się"
+            "_PluralGenders": "zadziała się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zadziałam"
+            "_SingularGendersExcludingNeuter": "zadziałam"
           },
           "plural": {
-            "allPluralGenders": "zadziałamy"
+            "_PluralGenders": "zadziałamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zadziałasz"
+            "_SingularGendersExcludingNeuter": "zadziałasz"
           },
           "plural": {
-            "allPluralGenders": "zadziałacie"
+            "_PluralGenders": "zadziałacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zadziała"
+            "_SingularGenders": "zadziała"
           },
           "plural": {
-            "allPluralGenders": "zadziałają"
+            "_PluralGenders": "zadziałają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zadziałano"
+            "_SingularGenders": "zadziałano"
           },
           "plural": {
-            "allPluralGenders": "zadziałano"
+            "_PluralGenders": "zadziałano"
           }
         },
         "1per": {

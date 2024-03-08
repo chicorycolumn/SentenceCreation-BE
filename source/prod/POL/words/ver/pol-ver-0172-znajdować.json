@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "znajdowano"
+            "_SingularGenders": "znajdowano"
           },
           "plural": {
-            "allPluralGenders": "znajdowano"
+            "_PluralGenders": "znajdowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "znajduje się"
+            "_SingularGenders": "znajduje się"
           },
           "plural": {
-            "allPluralGenders": "znajduje się"
+            "_PluralGenders": "znajduje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "znajduję"
+            "_SingularGendersExcludingNeuter": "znajduję"
           },
           "plural": {
-            "allPluralGenders": "znajdujemy"
+            "_PluralGenders": "znajdujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "znajdujesz"
+            "_SingularGendersExcludingNeuter": "znajdujesz"
           },
           "plural": {
-            "allPluralGenders": "znajdujecie"
+            "_PluralGenders": "znajdujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "znajduje"
+            "_SingularGenders": "znajduje"
           },
           "plural": {
-            "allPluralGenders": "znajdują"
+            "_PluralGenders": "znajdują"
           }
         }
       }

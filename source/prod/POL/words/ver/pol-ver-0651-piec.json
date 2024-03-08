@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pieczono"
+            "_SingularGenders": "pieczono"
           },
           "plural": {
-            "allPluralGenders": "pieczono"
+            "_PluralGenders": "pieczono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "piecze się"
+            "_SingularGenders": "piecze się"
           },
           "plural": {
-            "allPluralGenders": "piecze się"
+            "_PluralGenders": "piecze się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "piekę"
+            "_SingularGendersExcludingNeuter": "piekę"
           },
           "plural": {
-            "allPluralGenders": "pieczemy"
+            "_PluralGenders": "pieczemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pieczesz"
+            "_SingularGendersExcludingNeuter": "pieczesz"
           },
           "plural": {
-            "allPluralGenders": "pieczecie"
+            "_PluralGenders": "pieczecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "piecze"
+            "_SingularGenders": "piecze"
           },
           "plural": {
-            "allPluralGenders": "pieką"
+            "_PluralGenders": "pieką"
           }
         }
       }

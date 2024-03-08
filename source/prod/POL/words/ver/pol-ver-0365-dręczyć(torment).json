@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dręczono"
+            "_SingularGenders": "dręczono"
           },
           "plural": {
-            "allPluralGenders": "dręczono"
+            "_PluralGenders": "dręczono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dręczy się"
+            "_SingularGenders": "dręczy się"
           },
           "plural": {
-            "allPluralGenders": "dręczy się"
+            "_PluralGenders": "dręczy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dręczę"
+            "_SingularGendersExcludingNeuter": "dręczę"
           },
           "plural": {
-            "allPluralGenders": "dręczymy"
+            "_PluralGenders": "dręczymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dręczysz"
+            "_SingularGendersExcludingNeuter": "dręczysz"
           },
           "plural": {
-            "allPluralGenders": "dręczycie"
+            "_PluralGenders": "dręczycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dręczy"
+            "_SingularGenders": "dręczy"
           },
           "plural": {
-            "allPluralGenders": "dręczą"
+            "_PluralGenders": "dręczą"
           }
         }
       }

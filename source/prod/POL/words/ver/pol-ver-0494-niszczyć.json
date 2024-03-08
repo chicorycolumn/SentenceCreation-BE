@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "niszczono"
+            "_SingularGenders": "niszczono"
           },
           "plural": {
-            "allPluralGenders": "niszczono"
+            "_PluralGenders": "niszczono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "niszczy się"
+            "_SingularGenders": "niszczy się"
           },
           "plural": {
-            "allPluralGenders": "niszczy się"
+            "_PluralGenders": "niszczy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "niszczę"
+            "_SingularGendersExcludingNeuter": "niszczę"
           },
           "plural": {
-            "allPluralGenders": "niszczymy"
+            "_PluralGenders": "niszczymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "niszczysz"
+            "_SingularGendersExcludingNeuter": "niszczysz"
           },
           "plural": {
-            "allPluralGenders": "niszczycie"
+            "_PluralGenders": "niszczycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "niszczy"
+            "_SingularGenders": "niszczy"
           },
           "plural": {
-            "allPluralGenders": "niszczą"
+            "_PluralGenders": "niszczą"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "potrącano"
+            "_SingularGenders": "potrącano"
           },
           "plural": {
-            "allPluralGenders": "potrącano"
+            "_PluralGenders": "potrącano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "potrąca się"
+            "_SingularGenders": "potrąca się"
           },
           "plural": {
-            "allPluralGenders": "potrąca się"
+            "_PluralGenders": "potrąca się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "potrącam"
+            "_SingularGendersExcludingNeuter": "potrącam"
           },
           "plural": {
-            "allPluralGenders": "potrącamy"
+            "_PluralGenders": "potrącamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "potrącasz"
+            "_SingularGendersExcludingNeuter": "potrącasz"
           },
           "plural": {
-            "allPluralGenders": "potrącacie"
+            "_PluralGenders": "potrącacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "potrąca"
+            "_SingularGenders": "potrąca"
           },
           "plural": {
-            "allPluralGenders": "potrącają"
+            "_PluralGenders": "potrącają"
           }
         }
       }

@@ -12,10 +12,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wolano"
+            "_SingularGenders": "wolano"
           },
           "plural": {
-            "allPluralGenders": "wolano"
+            "_PluralGenders": "wolano"
           }
         },
         "1per": {
@@ -53,34 +53,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "woli się"
+            "_SingularGenders": "woli się"
           },
           "plural": {
-            "allPluralGenders": "woli się"
+            "_PluralGenders": "woli się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "wolę"
+            "_SingularGendersExcludingNeuter": "wolę"
           },
           "plural": {
-            "allPluralGenders": "wolimy"
+            "_PluralGenders": "wolimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "wolisz"
+            "_SingularGendersExcludingNeuter": "wolisz"
           },
           "plural": {
-            "allPluralGenders": "wolicie"
+            "_PluralGenders": "wolicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "woli"
+            "_SingularGenders": "woli"
           },
           "plural": {
-            "allPluralGenders": "wolą"
+            "_PluralGenders": "wolą"
           }
         }
       }

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "schowa się"
+            "_SingularGenders": "schowa się"
           },
           "plural": {
-            "allPluralGenders": "schowa się"
+            "_PluralGenders": "schowa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "schowam"
+            "_SingularGendersExcludingNeuter": "schowam"
           },
           "plural": {
-            "allPluralGenders": "schowamy"
+            "_PluralGenders": "schowamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "schowasz"
+            "_SingularGendersExcludingNeuter": "schowasz"
           },
           "plural": {
-            "allPluralGenders": "schowacie"
+            "_PluralGenders": "schowacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "schowa"
+            "_SingularGenders": "schowa"
           },
           "plural": {
-            "allPluralGenders": "schowają"
+            "_PluralGenders": "schowają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "schowano"
+            "_SingularGenders": "schowano"
           },
           "plural": {
-            "allPluralGenders": "schowano"
+            "_PluralGenders": "schowano"
           }
         },
         "1per": {

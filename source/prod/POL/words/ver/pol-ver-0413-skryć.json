@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "skryje się"
+            "_SingularGenders": "skryje się"
           },
           "plural": {
-            "allPluralGenders": "skryje się"
+            "_PluralGenders": "skryje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "skryję"
+            "_SingularGendersExcludingNeuter": "skryję"
           },
           "plural": {
-            "allPluralGenders": "skryjemy"
+            "_PluralGenders": "skryjemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "skryjesz"
+            "_SingularGendersExcludingNeuter": "skryjesz"
           },
           "plural": {
-            "allPluralGenders": "skryjecie"
+            "_PluralGenders": "skryjecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "skryje"
+            "_SingularGenders": "skryje"
           },
           "plural": {
-            "allPluralGenders": "skryją"
+            "_PluralGenders": "skryją"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "skryto"
+            "_SingularGenders": "skryto"
           },
           "plural": {
-            "allPluralGenders": "skryto"
+            "_PluralGenders": "skryto"
           }
         },
         "1per": {

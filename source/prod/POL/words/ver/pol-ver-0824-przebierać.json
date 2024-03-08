@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przebierano"
+            "_SingularGenders": "przebierano"
           },
           "plural": {
-            "allPluralGenders": "przebierano"
+            "_PluralGenders": "przebierano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przebiera się"
+            "_SingularGenders": "przebiera się"
           },
           "plural": {
-            "allPluralGenders": "przebiera się"
+            "_PluralGenders": "przebiera się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przebieram"
+            "_SingularGendersExcludingNeuter": "przebieram"
           },
           "plural": {
-            "allPluralGenders": "przebieramy"
+            "_PluralGenders": "przebieramy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przebierasz"
+            "_SingularGendersExcludingNeuter": "przebierasz"
           },
           "plural": {
-            "allPluralGenders": "przebieracie"
+            "_PluralGenders": "przebieracie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przebiera"
+            "_SingularGenders": "przebiera"
           },
           "plural": {
-            "allPluralGenders": "przebierają"
+            "_PluralGenders": "przebierają"
           }
         }
       }

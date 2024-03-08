@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "domagano"
+            "_SingularGenders": "domagano"
           },
           "plural": {
-            "allPluralGenders": "domagano"
+            "_PluralGenders": "domagano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "domaga się"
+            "_SingularGenders": "domaga się"
           },
           "plural": {
-            "allPluralGenders": "domaga się"
+            "_PluralGenders": "domaga się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "domagam"
+            "_SingularGendersExcludingNeuter": "domagam"
           },
           "plural": {
-            "allPluralGenders": "domagamy"
+            "_PluralGenders": "domagamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "domagasz"
+            "_SingularGendersExcludingNeuter": "domagasz"
           },
           "plural": {
-            "allPluralGenders": "domagacie"
+            "_PluralGenders": "domagacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "domaga"
+            "_SingularGenders": "domaga"
           },
           "plural": {
-            "allPluralGenders": "domagają"
+            "_PluralGenders": "domagają"
           }
         }
       }

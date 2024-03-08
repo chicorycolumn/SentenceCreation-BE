@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zaangażuje się"
+            "_SingularGenders": "zaangażuje się"
           },
           "plural": {
-            "allPluralGenders": "zaangażuje się"
+            "_PluralGenders": "zaangażuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zaangażuję"
+            "_SingularGendersExcludingNeuter": "zaangażuję"
           },
           "plural": {
-            "allPluralGenders": "zaangażujemy"
+            "_PluralGenders": "zaangażujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zaangażujesz"
+            "_SingularGendersExcludingNeuter": "zaangażujesz"
           },
           "plural": {
-            "allPluralGenders": "zaangażujecie"
+            "_PluralGenders": "zaangażujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zaangażuje"
+            "_SingularGenders": "zaangażuje"
           },
           "plural": {
-            "allPluralGenders": "zaangażują"
+            "_PluralGenders": "zaangażują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zaangażowano"
+            "_SingularGenders": "zaangażowano"
           },
           "plural": {
-            "allPluralGenders": "zaangażowano"
+            "_PluralGenders": "zaangażowano"
           }
         },
         "1per": {

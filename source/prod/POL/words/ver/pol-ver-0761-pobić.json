@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pobije się"
+            "_SingularGenders": "pobije się"
           },
           "plural": {
-            "allPluralGenders": "pobije się"
+            "_PluralGenders": "pobije się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pobiję"
+            "_SingularGendersExcludingNeuter": "pobiję"
           },
           "plural": {
-            "allPluralGenders": "pobijemy"
+            "_PluralGenders": "pobijemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pobijesz"
+            "_SingularGendersExcludingNeuter": "pobijesz"
           },
           "plural": {
-            "allPluralGenders": "pobijecie"
+            "_PluralGenders": "pobijecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pobije"
+            "_SingularGenders": "pobije"
           },
           "plural": {
-            "allPluralGenders": "pobiją"
+            "_PluralGenders": "pobiją"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pobito"
+            "_SingularGenders": "pobito"
           },
           "plural": {
-            "allPluralGenders": "pobito"
+            "_PluralGenders": "pobito"
           }
         },
         "1per": {

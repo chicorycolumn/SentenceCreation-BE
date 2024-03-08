@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dawano"
+            "_SingularGenders": "dawano"
           },
           "plural": {
-            "allPluralGenders": "dawano"
+            "_PluralGenders": "dawano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "daje się"
+            "_SingularGenders": "daje się"
           },
           "plural": {
-            "allPluralGenders": "daje się"
+            "_PluralGenders": "daje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "daję"
+            "_SingularGendersExcludingNeuter": "daję"
           },
           "plural": {
-            "allPluralGenders": "dajemy"
+            "_PluralGenders": "dajemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dajesz"
+            "_SingularGendersExcludingNeuter": "dajesz"
           },
           "plural": {
-            "allPluralGenders": "dajecie"
+            "_PluralGenders": "dajecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "daje"
+            "_SingularGenders": "daje"
           },
           "plural": {
-            "allPluralGenders": "dają"
+            "_PluralGenders": "dają"
           }
         }
       }

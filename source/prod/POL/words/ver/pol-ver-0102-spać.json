@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "spano"
+            "_SingularGenders": "spano"
           },
           "plural": {
-            "allPluralGenders": "spano"
+            "_PluralGenders": "spano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "śpi się"
+            "_SingularGenders": "śpi się"
           },
           "plural": {
-            "allPluralGenders": "śpi się"
+            "_PluralGenders": "śpi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "śpię"
+            "_SingularGendersExcludingNeuter": "śpię"
           },
           "plural": {
-            "allPluralGenders": "śpimy"
+            "_PluralGenders": "śpimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "śpisz"
+            "_SingularGendersExcludingNeuter": "śpisz"
           },
           "plural": {
-            "allPluralGenders": "śpicie"
+            "_PluralGenders": "śpicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "śpi"
+            "_SingularGenders": "śpi"
           },
           "plural": {
-            "allPluralGenders": "śpią"
+            "_PluralGenders": "śpią"
           }
         }
       }

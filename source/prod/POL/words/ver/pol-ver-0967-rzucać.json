@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "rzucano"
+            "_SingularGenders": "rzucano"
           },
           "plural": {
-            "allPluralGenders": "rzucano"
+            "_PluralGenders": "rzucano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "rzuca się"
+            "_SingularGenders": "rzuca się"
           },
           "plural": {
-            "allPluralGenders": "rzuca się"
+            "_PluralGenders": "rzuca się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "rzucam"
+            "_SingularGendersExcludingNeuter": "rzucam"
           },
           "plural": {
-            "allPluralGenders": "rzucamy"
+            "_PluralGenders": "rzucamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "rzucasz"
+            "_SingularGendersExcludingNeuter": "rzucasz"
           },
           "plural": {
-            "allPluralGenders": "rzucacie"
+            "_PluralGenders": "rzucacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "rzuca"
+            "_SingularGenders": "rzuca"
           },
           "plural": {
-            "allPluralGenders": "rzucają"
+            "_PluralGenders": "rzucają"
           }
         }
       }

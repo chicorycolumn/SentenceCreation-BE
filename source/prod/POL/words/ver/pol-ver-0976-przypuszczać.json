@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przypuszczano"
+            "_SingularGenders": "przypuszczano"
           },
           "plural": {
-            "allPluralGenders": "przypuszczano"
+            "_PluralGenders": "przypuszczano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przypuszcza się"
+            "_SingularGenders": "przypuszcza się"
           },
           "plural": {
-            "allPluralGenders": "przypuszcza się"
+            "_PluralGenders": "przypuszcza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przypuszczam"
+            "_SingularGendersExcludingNeuter": "przypuszczam"
           },
           "plural": {
-            "allPluralGenders": "przypuszczamy"
+            "_PluralGenders": "przypuszczamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przypuszczasz"
+            "_SingularGendersExcludingNeuter": "przypuszczasz"
           },
           "plural": {
-            "allPluralGenders": "przypuszczacie"
+            "_PluralGenders": "przypuszczacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przypuszcza"
+            "_SingularGenders": "przypuszcza"
           },
           "plural": {
-            "allPluralGenders": "przypuszczają"
+            "_PluralGenders": "przypuszczają"
           }
         }
       }

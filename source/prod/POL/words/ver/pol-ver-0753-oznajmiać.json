@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oznajmiano"
+            "_SingularGenders": "oznajmiano"
           },
           "plural": {
-            "allPluralGenders": "oznajmiano"
+            "_PluralGenders": "oznajmiano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oznajmia się"
+            "_SingularGenders": "oznajmia się"
           },
           "plural": {
-            "allPluralGenders": "oznajmia się"
+            "_PluralGenders": "oznajmia się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "oznajmiam"
+            "_SingularGendersExcludingNeuter": "oznajmiam"
           },
           "plural": {
-            "allPluralGenders": "oznajmiamy"
+            "_PluralGenders": "oznajmiamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "oznajmiasz"
+            "_SingularGendersExcludingNeuter": "oznajmiasz"
           },
           "plural": {
-            "allPluralGenders": "oznajmiacie"
+            "_PluralGenders": "oznajmiacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "oznajmia"
+            "_SingularGenders": "oznajmia"
           },
           "plural": {
-            "allPluralGenders": "oznajmiają"
+            "_PluralGenders": "oznajmiają"
           }
         }
       }

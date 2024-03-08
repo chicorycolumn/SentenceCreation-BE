@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "błyszczano"
+            "_SingularGenders": "błyszczano"
           },
           "plural": {
-            "allPluralGenders": "błyszczano"
+            "_PluralGenders": "błyszczano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "błyszczy się"
+            "_SingularGenders": "błyszczy się"
           },
           "plural": {
-            "allPluralGenders": "błyszczy się"
+            "_PluralGenders": "błyszczy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "błyszczę"
+            "_SingularGendersExcludingNeuter": "błyszczę"
           },
           "plural": {
-            "allPluralGenders": "błyszczymy"
+            "_PluralGenders": "błyszczymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "błyszczysz"
+            "_SingularGendersExcludingNeuter": "błyszczysz"
           },
           "plural": {
-            "allPluralGenders": "błyszczycie"
+            "_PluralGenders": "błyszczycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "błyszczy"
+            "_SingularGenders": "błyszczy"
           },
           "plural": {
-            "allPluralGenders": "błyszczą"
+            "_PluralGenders": "błyszczą"
           }
         }
       }

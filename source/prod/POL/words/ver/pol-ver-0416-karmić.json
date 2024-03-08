@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "karmiono"
+            "_SingularGenders": "karmiono"
           },
           "plural": {
-            "allPluralGenders": "karmiono"
+            "_PluralGenders": "karmiono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "karmi się"
+            "_SingularGenders": "karmi się"
           },
           "plural": {
-            "allPluralGenders": "karmi się"
+            "_PluralGenders": "karmi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "karmię"
+            "_SingularGendersExcludingNeuter": "karmię"
           },
           "plural": {
-            "allPluralGenders": "karmimy"
+            "_PluralGenders": "karmimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "karmisz"
+            "_SingularGendersExcludingNeuter": "karmisz"
           },
           "plural": {
-            "allPluralGenders": "karmicie"
+            "_PluralGenders": "karmicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "karmi"
+            "_SingularGenders": "karmi"
           },
           "plural": {
-            "allPluralGenders": "karmią"
+            "_PluralGenders": "karmią"
           }
         }
       }

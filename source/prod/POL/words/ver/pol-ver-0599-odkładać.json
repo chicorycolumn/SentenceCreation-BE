@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odkładano"
+            "_SingularGenders": "odkładano"
           },
           "plural": {
-            "allPluralGenders": "odkładano"
+            "_PluralGenders": "odkładano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odkłada się"
+            "_SingularGenders": "odkłada się"
           },
           "plural": {
-            "allPluralGenders": "odkłada się"
+            "_PluralGenders": "odkłada się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odkładam"
+            "_SingularGendersExcludingNeuter": "odkładam"
           },
           "plural": {
-            "allPluralGenders": "odkładamy"
+            "_PluralGenders": "odkładamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odkładasz"
+            "_SingularGendersExcludingNeuter": "odkładasz"
           },
           "plural": {
-            "allPluralGenders": "odkładacie"
+            "_PluralGenders": "odkładacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odkłada"
+            "_SingularGenders": "odkłada"
           },
           "plural": {
-            "allPluralGenders": "odkładają"
+            "_PluralGenders": "odkładają"
           }
         }
       }

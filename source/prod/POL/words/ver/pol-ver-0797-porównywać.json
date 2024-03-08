@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "porównywano"
+            "_SingularGenders": "porównywano"
           },
           "plural": {
-            "allPluralGenders": "porównywano"
+            "_PluralGenders": "porównywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "porównuje się"
+            "_SingularGenders": "porównuje się"
           },
           "plural": {
-            "allPluralGenders": "porównuje się"
+            "_PluralGenders": "porównuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "porównuję"
+            "_SingularGendersExcludingNeuter": "porównuję"
           },
           "plural": {
-            "allPluralGenders": "porównujemy"
+            "_PluralGenders": "porównujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "porównujesz"
+            "_SingularGendersExcludingNeuter": "porównujesz"
           },
           "plural": {
-            "allPluralGenders": "porównujecie"
+            "_PluralGenders": "porównujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "porównuje"
+            "_SingularGenders": "porównuje"
           },
           "plural": {
-            "allPluralGenders": "porównują"
+            "_PluralGenders": "porównują"
           }
         }
       }

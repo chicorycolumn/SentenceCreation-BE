@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "owijano"
+            "_SingularGenders": "owijano"
           },
           "plural": {
-            "allPluralGenders": "owijano"
+            "_PluralGenders": "owijano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "owija się"
+            "_SingularGenders": "owija się"
           },
           "plural": {
-            "allPluralGenders": "owija się"
+            "_PluralGenders": "owija się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "owijam"
+            "_SingularGendersExcludingNeuter": "owijam"
           },
           "plural": {
-            "allPluralGenders": "owijamy"
+            "_PluralGenders": "owijamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "owijasz"
+            "_SingularGendersExcludingNeuter": "owijasz"
           },
           "plural": {
-            "allPluralGenders": "owijacie"
+            "_PluralGenders": "owijacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "owija"
+            "_SingularGenders": "owija"
           },
           "plural": {
-            "allPluralGenders": "owijają"
+            "_PluralGenders": "owijają"
           }
         }
       }

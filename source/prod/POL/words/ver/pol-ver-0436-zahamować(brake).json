@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zahamuje się"
+            "_SingularGenders": "zahamuje się"
           },
           "plural": {
-            "allPluralGenders": "zahamuje się"
+            "_PluralGenders": "zahamuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zahamuję"
+            "_SingularGendersExcludingNeuter": "zahamuję"
           },
           "plural": {
-            "allPluralGenders": "zahamujemy"
+            "_PluralGenders": "zahamujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zahamujesz"
+            "_SingularGendersExcludingNeuter": "zahamujesz"
           },
           "plural": {
-            "allPluralGenders": "zahamujecie"
+            "_PluralGenders": "zahamujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zahamuje"
+            "_SingularGenders": "zahamuje"
           },
           "plural": {
-            "allPluralGenders": "zahamują"
+            "_PluralGenders": "zahamują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zahamowano"
+            "_SingularGenders": "zahamowano"
           },
           "plural": {
-            "allPluralGenders": "zahamowano"
+            "_PluralGenders": "zahamowano"
           }
         },
         "1per": {

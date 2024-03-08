@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "rodzono"
+            "_SingularGenders": "rodzono"
           },
           "plural": {
-            "allPluralGenders": "rodzono"
+            "_PluralGenders": "rodzono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "rodzi się"
+            "_SingularGenders": "rodzi się"
           },
           "plural": {
-            "allPluralGenders": "rodzi się"
+            "_PluralGenders": "rodzi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "rodzę"
+            "_SingularGendersExcludingNeuter": "rodzę"
           },
           "plural": {
-            "allPluralGenders": "rodzimy"
+            "_PluralGenders": "rodzimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "rodzisz"
+            "_SingularGendersExcludingNeuter": "rodzisz"
           },
           "plural": {
-            "allPluralGenders": "rodzicie"
+            "_PluralGenders": "rodzicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "rodzi"
+            "_SingularGenders": "rodzi"
           },
           "plural": {
-            "allPluralGenders": "rodzą"
+            "_PluralGenders": "rodzą"
           }
         }
       }

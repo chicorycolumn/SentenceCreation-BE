@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "powiesi się"
+            "_SingularGenders": "powiesi się"
           },
           "plural": {
-            "allPluralGenders": "powiesi się"
+            "_PluralGenders": "powiesi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "powieszę"
+            "_SingularGendersExcludingNeuter": "powieszę"
           },
           "plural": {
-            "allPluralGenders": "powiesimy"
+            "_PluralGenders": "powiesimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "powiesisz"
+            "_SingularGendersExcludingNeuter": "powiesisz"
           },
           "plural": {
-            "allPluralGenders": "powiesicie"
+            "_PluralGenders": "powiesicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "powiesi"
+            "_SingularGenders": "powiesi"
           },
           "plural": {
-            "allPluralGenders": "powieszą"
+            "_PluralGenders": "powieszą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "powieszono"
+            "_SingularGenders": "powieszono"
           },
           "plural": {
-            "allPluralGenders": "powieszono"
+            "_PluralGenders": "powieszono"
           }
         },
         "1per": {

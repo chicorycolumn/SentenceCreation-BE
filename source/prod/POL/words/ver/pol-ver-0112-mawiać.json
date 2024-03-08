@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "mawiano"
+            "_SingularGenders": "mawiano"
           },
           "plural": {
-            "allPluralGenders": "mawiano"
+            "_PluralGenders": "mawiano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "mawia się"
+            "_SingularGenders": "mawia się"
           },
           "plural": {
-            "allPluralGenders": "mawia się"
+            "_PluralGenders": "mawia się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "mawiam"
+            "_SingularGendersExcludingNeuter": "mawiam"
           },
           "plural": {
-            "allPluralGenders": "mawiamy"
+            "_PluralGenders": "mawiamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "mawiasz"
+            "_SingularGendersExcludingNeuter": "mawiasz"
           },
           "plural": {
-            "allPluralGenders": "mawiacie"
+            "_PluralGenders": "mawiacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "mawia"
+            "_SingularGenders": "mawia"
           },
           "plural": {
-            "allPluralGenders": "mawiają"
+            "_PluralGenders": "mawiają"
           }
         }
       }

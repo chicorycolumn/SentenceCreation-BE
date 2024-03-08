@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podda się"
+            "_SingularGenders": "podda się"
           },
           "plural": {
-            "allPluralGenders": "podda się"
+            "_PluralGenders": "podda się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "poddam"
+            "_SingularGendersExcludingNeuter": "poddam"
           },
           "plural": {
-            "allPluralGenders": "poddamy"
+            "_PluralGenders": "poddamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "poddasz"
+            "_SingularGendersExcludingNeuter": "poddasz"
           },
           "plural": {
-            "allPluralGenders": "poddacie"
+            "_PluralGenders": "poddacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "podda"
+            "_SingularGenders": "podda"
           },
           "plural": {
-            "allPluralGenders": "poddadzą"
+            "_PluralGenders": "poddadzą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poddano"
+            "_SingularGenders": "poddano"
           },
           "plural": {
-            "allPluralGenders": "poddano"
+            "_PluralGenders": "poddano"
           }
         },
         "1per": {

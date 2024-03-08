@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "działano"
+            "_SingularGenders": "działano"
           },
           "plural": {
-            "allPluralGenders": "działano"
+            "_PluralGenders": "działano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "działa się"
+            "_SingularGenders": "działa się"
           },
           "plural": {
-            "allPluralGenders": "działa się"
+            "_PluralGenders": "działa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "działam"
+            "_SingularGendersExcludingNeuter": "działam"
           },
           "plural": {
-            "allPluralGenders": "działamy"
+            "_PluralGenders": "działamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "działasz"
+            "_SingularGendersExcludingNeuter": "działasz"
           },
           "plural": {
-            "allPluralGenders": "działacie"
+            "_PluralGenders": "działacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "działa"
+            "_SingularGenders": "działa"
           },
           "plural": {
-            "allPluralGenders": "działają"
+            "_PluralGenders": "działają"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "palono"
+            "_SingularGenders": "palono"
           },
           "plural": {
-            "allPluralGenders": "palono"
+            "_PluralGenders": "palono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pali się"
+            "_SingularGenders": "pali się"
           },
           "plural": {
-            "allPluralGenders": "pali się"
+            "_PluralGenders": "pali się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "palę"
+            "_SingularGendersExcludingNeuter": "palę"
           },
           "plural": {
-            "allPluralGenders": "palimy"
+            "_PluralGenders": "palimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "palisz"
+            "_SingularGendersExcludingNeuter": "palisz"
           },
           "plural": {
-            "allPluralGenders": "palicie"
+            "_PluralGenders": "palicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pali"
+            "_SingularGenders": "pali"
           },
           "plural": {
-            "allPluralGenders": "palą"
+            "_PluralGenders": "palą"
           }
         }
       }

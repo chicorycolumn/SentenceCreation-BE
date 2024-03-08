@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "chwytano"
+            "_SingularGenders": "chwytano"
           },
           "plural": {
-            "allPluralGenders": "chwytano"
+            "_PluralGenders": "chwytano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "chwyta się"
+            "_SingularGenders": "chwyta się"
           },
           "plural": {
-            "allPluralGenders": "chwyta się"
+            "_PluralGenders": "chwyta się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "chwytam"
+            "_SingularGendersExcludingNeuter": "chwytam"
           },
           "plural": {
-            "allPluralGenders": "chwytamy"
+            "_PluralGenders": "chwytamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "chwytasz"
+            "_SingularGendersExcludingNeuter": "chwytasz"
           },
           "plural": {
-            "allPluralGenders": "chwytacie"
+            "_PluralGenders": "chwytacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "chwyta"
+            "_SingularGenders": "chwyta"
           },
           "plural": {
-            "allPluralGenders": "chwytają"
+            "_PluralGenders": "chwytają"
           }
         }
       }

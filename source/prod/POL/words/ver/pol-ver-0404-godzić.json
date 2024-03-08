@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "godzono"
+            "_SingularGenders": "godzono"
           },
           "plural": {
-            "allPluralGenders": "godzono"
+            "_PluralGenders": "godzono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "godzi się"
+            "_SingularGenders": "godzi się"
           },
           "plural": {
-            "allPluralGenders": "godzi się"
+            "_PluralGenders": "godzi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "godzę"
+            "_SingularGendersExcludingNeuter": "godzę"
           },
           "plural": {
-            "allPluralGenders": "godzimy"
+            "_PluralGenders": "godzimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "godzisz"
+            "_SingularGendersExcludingNeuter": "godzisz"
           },
           "plural": {
-            "allPluralGenders": "godzicie"
+            "_PluralGenders": "godzicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "godzi"
+            "_SingularGenders": "godzi"
           },
           "plural": {
-            "allPluralGenders": "godzą"
+            "_PluralGenders": "godzą"
           }
         }
       }

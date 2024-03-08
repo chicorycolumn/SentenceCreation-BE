@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oznaczano"
+            "_SingularGenders": "oznaczano"
           },
           "plural": {
-            "allPluralGenders": "oznaczano"
+            "_PluralGenders": "oznaczano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oznacza się"
+            "_SingularGenders": "oznacza się"
           },
           "plural": {
-            "allPluralGenders": "oznacza się"
+            "_PluralGenders": "oznacza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "oznaczam"
+            "_SingularGendersExcludingNeuter": "oznaczam"
           },
           "plural": {
-            "allPluralGenders": "oznaczamy"
+            "_PluralGenders": "oznaczamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "oznaczasz"
+            "_SingularGendersExcludingNeuter": "oznaczasz"
           },
           "plural": {
-            "allPluralGenders": "oznaczacie"
+            "_PluralGenders": "oznaczacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "oznacza"
+            "_SingularGenders": "oznacza"
           },
           "plural": {
-            "allPluralGenders": "oznaczają"
+            "_PluralGenders": "oznaczają"
           }
         }
       }

@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "anulować",
+    "verbalNoun": "anulowanie",
+    "activeAdjectival": "anulujący",
+    "passiveAdjectival": "anulowany",
+    "contemporaryAdverbial": "anulując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "anuluj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "_SingularGenders": "anulowano"
+          },
+          "plural": {
+            "_PluralGenders": "anulowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "anulowałem",
+            "f": "anulowałam"
+          },
+          "plural": {
+            "virile": "anulowaliśmy",
+            "nonvirile": "anulowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "anulowałeś",
+            "f": "anulowałaś"
+          },
+          "plural": {
+            "virile": "anulowaliście",
+            "nonvirile": "anulowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "anulował",
+            "f": "anulowała",
+            "n": "anulowało"
+          },
+          "plural": {
+            "virile": "anulowali",
+            "nonvirile": "anulowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "_SingularGenders": "anuluje się"
+          },
+          "plural": {
+            "_PluralGenders": "anuluje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "anuluję"
+          },
+          "plural": {
+            "_PluralGenders": "anulujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "anulujesz"
+          },
+          "plural": {
+            "_PluralGenders": "anulujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "_SingularGenders": "anuluje"
+          },
+          "plural": {
+            "_PluralGenders": "anulują"
+          }
+        }
+      }
+    }
+  }
+}

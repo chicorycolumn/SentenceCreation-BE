@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "namaluje się"
+            "_SingularGenders": "namaluje się"
           },
           "plural": {
-            "allPluralGenders": "namaluje się"
+            "_PluralGenders": "namaluje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "namaluję"
+            "_SingularGendersExcludingNeuter": "namaluję"
           },
           "plural": {
-            "allPluralGenders": "namalujemy"
+            "_PluralGenders": "namalujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "namalujesz"
+            "_SingularGendersExcludingNeuter": "namalujesz"
           },
           "plural": {
-            "allPluralGenders": "namalujecie"
+            "_PluralGenders": "namalujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "namaluje"
+            "_SingularGenders": "namaluje"
           },
           "plural": {
-            "allPluralGenders": "namalują"
+            "_PluralGenders": "namalują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "namalowano"
+            "_SingularGenders": "namalowano"
           },
           "plural": {
-            "allPluralGenders": "namalowano"
+            "_PluralGenders": "namalowano"
           }
         },
         "1per": {

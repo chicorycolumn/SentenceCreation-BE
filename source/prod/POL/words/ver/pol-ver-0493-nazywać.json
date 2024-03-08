@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "nazywano"
+            "_SingularGenders": "nazywano"
           },
           "plural": {
-            "allPluralGenders": "nazywano"
+            "_PluralGenders": "nazywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "nazywa się"
+            "_SingularGenders": "nazywa się"
           },
           "plural": {
-            "allPluralGenders": "nazywa się"
+            "_PluralGenders": "nazywa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "nazywam"
+            "_SingularGendersExcludingNeuter": "nazywam"
           },
           "plural": {
-            "allPluralGenders": "nazywamy"
+            "_PluralGenders": "nazywamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "nazywasz"
+            "_SingularGendersExcludingNeuter": "nazywasz"
           },
           "plural": {
-            "allPluralGenders": "nazywacie"
+            "_PluralGenders": "nazywacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "nazywa"
+            "_SingularGenders": "nazywa"
           },
           "plural": {
-            "allPluralGenders": "nazywają"
+            "_PluralGenders": "nazywają"
           }
         }
       }

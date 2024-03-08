@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "jadano"
+            "_SingularGenders": "jadano"
           },
           "plural": {
-            "allPluralGenders": "jadano"
+            "_PluralGenders": "jadano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "jada się"
+            "_SingularGenders": "jada się"
           },
           "plural": {
-            "allPluralGenders": "jada się"
+            "_PluralGenders": "jada się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "jadam"
+            "_SingularGendersExcludingNeuter": "jadam"
           },
           "plural": {
-            "allPluralGenders": "jadamy"
+            "_PluralGenders": "jadamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "jadasz"
+            "_SingularGendersExcludingNeuter": "jadasz"
           },
           "plural": {
-            "allPluralGenders": "jadacie"
+            "_PluralGenders": "jadacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "jada"
+            "_SingularGenders": "jada"
           },
           "plural": {
-            "allPluralGenders": "jadają"
+            "_PluralGenders": "jadają"
           }
         }
       }

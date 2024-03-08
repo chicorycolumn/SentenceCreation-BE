@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kupi się"
+            "_SingularGenders": "kupi się"
           },
           "plural": {
-            "allPluralGenders": "kupi się"
+            "_PluralGenders": "kupi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "kupię"
+            "_SingularGendersExcludingNeuter": "kupię"
           },
           "plural": {
-            "allPluralGenders": "kupimy"
+            "_PluralGenders": "kupimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "kupisz"
+            "_SingularGendersExcludingNeuter": "kupisz"
           },
           "plural": {
-            "allPluralGenders": "kupicie"
+            "_PluralGenders": "kupicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "kupi"
+            "_SingularGenders": "kupi"
           },
           "plural": {
-            "allPluralGenders": "kupią"
+            "_PluralGenders": "kupią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kupiono"
+            "_SingularGenders": "kupiono"
           },
           "plural": {
-            "allPluralGenders": "kupiono"
+            "_PluralGenders": "kupiono"
           }
         },
         "1per": {

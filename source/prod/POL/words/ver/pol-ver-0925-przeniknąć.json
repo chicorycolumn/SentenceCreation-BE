@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przeniknie się"
+            "_SingularGenders": "przeniknie się"
           },
           "plural": {
-            "allPluralGenders": "przeniknie się"
+            "_PluralGenders": "przeniknie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przeniknę"
+            "_SingularGendersExcludingNeuter": "przeniknę"
           },
           "plural": {
-            "allPluralGenders": "przenikniemy"
+            "_PluralGenders": "przenikniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przenikniesz"
+            "_SingularGendersExcludingNeuter": "przenikniesz"
           },
           "plural": {
-            "allPluralGenders": "przenikniecie"
+            "_PluralGenders": "przenikniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przeniknie"
+            "_SingularGenders": "przeniknie"
           },
           "plural": {
-            "allPluralGenders": "przenikną"
+            "_PluralGenders": "przenikną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przeniknięto"
+            "_SingularGenders": "przeniknięto"
           },
           "plural": {
-            "allPluralGenders": "przeniknięto"
+            "_PluralGenders": "przeniknięto"
           }
         },
         "1per": {

@@ -45,34 +45,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "może się"
+            "_SingularGenders": "może się"
           },
           "plural": {
-            "allPluralGenders": "może się"
+            "_PluralGenders": "może się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "mogę"
+            "_SingularGendersExcludingNeuter": "mogę"
           },
           "plural": {
-            "allPluralGenders": "możemy"
+            "_PluralGenders": "możemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "możesz"
+            "_SingularGendersExcludingNeuter": "możesz"
           },
           "plural": {
-            "allPluralGenders": "możecie"
+            "_PluralGenders": "możecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "może"
+            "_SingularGenders": "może"
           },
           "plural": {
-            "allPluralGenders": "mogą"
+            "_PluralGenders": "mogą"
           }
         }
       }

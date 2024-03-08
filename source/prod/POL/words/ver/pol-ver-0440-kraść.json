@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kradziono"
+            "_SingularGenders": "kradziono"
           },
           "plural": {
-            "allPluralGenders": "kradziono"
+            "_PluralGenders": "kradziono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kradnie się"
+            "_SingularGenders": "kradnie się"
           },
           "plural": {
-            "allPluralGenders": "kradnie się"
+            "_PluralGenders": "kradnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "kradnę"
+            "_SingularGendersExcludingNeuter": "kradnę"
           },
           "plural": {
-            "allPluralGenders": "kradniemy"
+            "_PluralGenders": "kradniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "kradniesz"
+            "_SingularGendersExcludingNeuter": "kradniesz"
           },
           "plural": {
-            "allPluralGenders": "kradniecie"
+            "_PluralGenders": "kradniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "kradnie"
+            "_SingularGenders": "kradnie"
           },
           "plural": {
-            "allPluralGenders": "kradną"
+            "_PluralGenders": "kradną"
           }
         }
       }

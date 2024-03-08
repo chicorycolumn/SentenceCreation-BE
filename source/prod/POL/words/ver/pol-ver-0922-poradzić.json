@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poradzi się"
+            "_SingularGenders": "poradzi się"
           },
           "plural": {
-            "allPluralGenders": "poradzi się"
+            "_PluralGenders": "poradzi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "poradzę"
+            "_SingularGendersExcludingNeuter": "poradzę"
           },
           "plural": {
-            "allPluralGenders": "poradzimy"
+            "_PluralGenders": "poradzimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "poradzisz"
+            "_SingularGendersExcludingNeuter": "poradzisz"
           },
           "plural": {
-            "allPluralGenders": "poradzicie"
+            "_PluralGenders": "poradzicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "poradzi"
+            "_SingularGenders": "poradzi"
           },
           "plural": {
-            "allPluralGenders": "poradzą"
+            "_PluralGenders": "poradzą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poradzono"
+            "_SingularGenders": "poradzono"
           },
           "plural": {
-            "allPluralGenders": "poradzono"
+            "_PluralGenders": "poradzono"
           }
         },
         "1per": {

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przeprosi się"
+            "_SingularGenders": "przeprosi się"
           },
           "plural": {
-            "allPluralGenders": "przeprosi się"
+            "_PluralGenders": "przeprosi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przeproszę"
+            "_SingularGendersExcludingNeuter": "przeproszę"
           },
           "plural": {
-            "allPluralGenders": "przeprosimy"
+            "_PluralGenders": "przeprosimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przeprosisz"
+            "_SingularGendersExcludingNeuter": "przeprosisz"
           },
           "plural": {
-            "allPluralGenders": "przeprosicie"
+            "_PluralGenders": "przeprosicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przeprosi"
+            "_SingularGenders": "przeprosi"
           },
           "plural": {
-            "allPluralGenders": "przeproszą"
+            "_PluralGenders": "przeproszą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przeproszono"
+            "_SingularGenders": "przeproszono"
           },
           "plural": {
-            "allPluralGenders": "przeproszono"
+            "_PluralGenders": "przeproszono"
           }
         },
         "1per": {

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kosztowano"
+            "_SingularGenders": "kosztowano"
           },
           "plural": {
-            "allPluralGenders": "kosztowano"
+            "_PluralGenders": "kosztowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kosztuje się"
+            "_SingularGenders": "kosztuje się"
           },
           "plural": {
-            "allPluralGenders": "kosztuje się"
+            "_PluralGenders": "kosztuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "kosztuję"
+            "_SingularGendersExcludingNeuter": "kosztuję"
           },
           "plural": {
-            "allPluralGenders": "kosztujemy"
+            "_PluralGenders": "kosztujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "kosztujesz"
+            "_SingularGendersExcludingNeuter": "kosztujesz"
           },
           "plural": {
-            "allPluralGenders": "kosztujecie"
+            "_PluralGenders": "kosztujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "kosztuje"
+            "_SingularGenders": "kosztuje"
           },
           "plural": {
-            "allPluralGenders": "kosztują"
+            "_PluralGenders": "kosztują"
           }
         }
       }

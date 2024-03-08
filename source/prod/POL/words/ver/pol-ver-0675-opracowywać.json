@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "opracowywano"
+            "_SingularGenders": "opracowywano"
           },
           "plural": {
-            "allPluralGenders": "opracowywano"
+            "_PluralGenders": "opracowywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "opracowuje się"
+            "_SingularGenders": "opracowuje się"
           },
           "plural": {
-            "allPluralGenders": "opracowuje się"
+            "_PluralGenders": "opracowuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "opracowuję"
+            "_SingularGendersExcludingNeuter": "opracowuję"
           },
           "plural": {
-            "allPluralGenders": "opracowujemy"
+            "_PluralGenders": "opracowujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "opracowujesz"
+            "_SingularGendersExcludingNeuter": "opracowujesz"
           },
           "plural": {
-            "allPluralGenders": "opracowujecie"
+            "_PluralGenders": "opracowujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "opracowuje"
+            "_SingularGenders": "opracowuje"
           },
           "plural": {
-            "allPluralGenders": "opracowują"
+            "_PluralGenders": "opracowują"
           }
         }
       }

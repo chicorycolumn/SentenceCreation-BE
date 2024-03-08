@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "narzekano"
+            "_SingularGenders": "narzekano"
           },
           "plural": {
-            "allPluralGenders": "narzekano"
+            "_PluralGenders": "narzekano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "narzeka się"
+            "_SingularGenders": "narzeka się"
           },
           "plural": {
-            "allPluralGenders": "narzeka się"
+            "_PluralGenders": "narzeka się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "narzekam"
+            "_SingularGendersExcludingNeuter": "narzekam"
           },
           "plural": {
-            "allPluralGenders": "narzekamy"
+            "_PluralGenders": "narzekamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "narzekasz"
+            "_SingularGendersExcludingNeuter": "narzekasz"
           },
           "plural": {
-            "allPluralGenders": "narzekacie"
+            "_PluralGenders": "narzekacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "narzeka"
+            "_SingularGenders": "narzeka"
           },
           "plural": {
-            "allPluralGenders": "narzekają"
+            "_PluralGenders": "narzekają"
           }
         }
       }

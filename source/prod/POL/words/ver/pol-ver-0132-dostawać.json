@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dostawano"
+            "_SingularGenders": "dostawano"
           },
           "plural": {
-            "allPluralGenders": "dostawano"
+            "_PluralGenders": "dostawano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dostaje się"
+            "_SingularGenders": "dostaje się"
           },
           "plural": {
-            "allPluralGenders": "dostaje się"
+            "_PluralGenders": "dostaje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dostaję"
+            "_SingularGendersExcludingNeuter": "dostaję"
           },
           "plural": {
-            "allPluralGenders": "dostajemy"
+            "_PluralGenders": "dostajemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dostajesz"
+            "_SingularGendersExcludingNeuter": "dostajesz"
           },
           "plural": {
-            "allPluralGenders": "dostajecie"
+            "_PluralGenders": "dostajecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dostaje"
+            "_SingularGenders": "dostaje"
           },
           "plural": {
-            "allPluralGenders": "dostają"
+            "_PluralGenders": "dostają"
           }
         }
       }

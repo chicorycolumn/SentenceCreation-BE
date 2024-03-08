@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "leciano"
+            "_SingularGenders": "leciano"
           },
           "plural": {
-            "allPluralGenders": "leciano"
+            "_PluralGenders": "leciano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "leci się"
+            "_SingularGenders": "leci się"
           },
           "plural": {
-            "allPluralGenders": "leci się"
+            "_PluralGenders": "leci się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "lecę"
+            "_SingularGendersExcludingNeuter": "lecę"
           },
           "plural": {
-            "allPluralGenders": "lecimy"
+            "_PluralGenders": "lecimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "lecisz"
+            "_SingularGendersExcludingNeuter": "lecisz"
           },
           "plural": {
-            "allPluralGenders": "lecicie"
+            "_PluralGenders": "lecicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "leci"
+            "_SingularGenders": "leci"
           },
           "plural": {
-            "allPluralGenders": "lecą"
+            "_PluralGenders": "lecą"
           }
         }
       }

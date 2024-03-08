@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dbano"
+            "_SingularGenders": "dbano"
           },
           "plural": {
-            "allPluralGenders": "dbano"
+            "_PluralGenders": "dbano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dba się"
+            "_SingularGenders": "dba się"
           },
           "plural": {
-            "allPluralGenders": "dba się"
+            "_PluralGenders": "dba się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dbam"
+            "_SingularGendersExcludingNeuter": "dbam"
           },
           "plural": {
-            "allPluralGenders": "dbamy"
+            "_PluralGenders": "dbamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dbasz"
+            "_SingularGendersExcludingNeuter": "dbasz"
           },
           "plural": {
-            "allPluralGenders": "dbacie"
+            "_PluralGenders": "dbacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dba"
+            "_SingularGenders": "dba"
           },
           "plural": {
-            "allPluralGenders": "dbają"
+            "_PluralGenders": "dbają"
           }
         }
       }

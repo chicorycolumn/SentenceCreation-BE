@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zamorduje się"
+            "_SingularGenders": "zamorduje się"
           },
           "plural": {
-            "allPluralGenders": "zamorduje się"
+            "_PluralGenders": "zamorduje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zamorduję"
+            "_SingularGendersExcludingNeuter": "zamorduję"
           },
           "plural": {
-            "allPluralGenders": "zamordujemy"
+            "_PluralGenders": "zamordujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zamordujesz"
+            "_SingularGendersExcludingNeuter": "zamordujesz"
           },
           "plural": {
-            "allPluralGenders": "zamordujecie"
+            "_PluralGenders": "zamordujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zamorduje"
+            "_SingularGenders": "zamorduje"
           },
           "plural": {
-            "allPluralGenders": "zamordują"
+            "_PluralGenders": "zamordują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zamordowano"
+            "_SingularGenders": "zamordowano"
           },
           "plural": {
-            "allPluralGenders": "zamordowano"
+            "_PluralGenders": "zamordowano"
           }
         },
         "1per": {

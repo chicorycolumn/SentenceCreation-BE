@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przestraszano"
+            "_SingularGenders": "przestraszano"
           },
           "plural": {
-            "allPluralGenders": "przestraszano"
+            "_PluralGenders": "przestraszano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przestrasza się"
+            "_SingularGenders": "przestrasza się"
           },
           "plural": {
-            "allPluralGenders": "przestrasza się"
+            "_PluralGenders": "przestrasza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przestraszam"
+            "_SingularGendersExcludingNeuter": "przestraszam"
           },
           "plural": {
-            "allPluralGenders": "przestraszamy"
+            "_PluralGenders": "przestraszamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przestraszasz"
+            "_SingularGendersExcludingNeuter": "przestraszasz"
           },
           "plural": {
-            "allPluralGenders": "przestraszacie"
+            "_PluralGenders": "przestraszacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przestrasza"
+            "_SingularGenders": "przestrasza"
           },
           "plural": {
-            "allPluralGenders": "przestraszają"
+            "_PluralGenders": "przestraszają"
           }
         }
       }

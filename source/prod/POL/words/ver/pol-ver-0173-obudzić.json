@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "obudzi się"
+            "_SingularGenders": "obudzi się"
           },
           "plural": {
-            "allPluralGenders": "obudzi się"
+            "_PluralGenders": "obudzi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "obudzę"
+            "_SingularGendersExcludingNeuter": "obudzę"
           },
           "plural": {
-            "allPluralGenders": "obudzimy"
+            "_PluralGenders": "obudzimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "obudzisz"
+            "_SingularGendersExcludingNeuter": "obudzisz"
           },
           "plural": {
-            "allPluralGenders": "obudzicie"
+            "_PluralGenders": "obudzicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "obudzi"
+            "_SingularGenders": "obudzi"
           },
           "plural": {
-            "allPluralGenders": "obudzą"
+            "_PluralGenders": "obudzą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "obudzono"
+            "_SingularGenders": "obudzono"
           },
           "plural": {
-            "allPluralGenders": "obudzono"
+            "_PluralGenders": "obudzono"
           }
         },
         "1per": {

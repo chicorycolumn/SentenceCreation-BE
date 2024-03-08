@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przegra się"
+            "_SingularGenders": "przegra się"
           },
           "plural": {
-            "allPluralGenders": "przegra się"
+            "_PluralGenders": "przegra się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przegram"
+            "_SingularGendersExcludingNeuter": "przegram"
           },
           "plural": {
-            "allPluralGenders": "przegramy"
+            "_PluralGenders": "przegramy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przegrasz"
+            "_SingularGendersExcludingNeuter": "przegrasz"
           },
           "plural": {
-            "allPluralGenders": "przegracie"
+            "_PluralGenders": "przegracie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przegra"
+            "_SingularGenders": "przegra"
           },
           "plural": {
-            "allPluralGenders": "przegrają"
+            "_PluralGenders": "przegrają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przegrano"
+            "_SingularGenders": "przegrano"
           },
           "plural": {
-            "allPluralGenders": "przegrano"
+            "_PluralGenders": "przegrano"
           }
         },
         "1per": {

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "sprzątano"
+            "_SingularGenders": "sprzątano"
           },
           "plural": {
-            "allPluralGenders": "sprzątano"
+            "_PluralGenders": "sprzątano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "sprząta się"
+            "_SingularGenders": "sprząta się"
           },
           "plural": {
-            "allPluralGenders": "sprząta się"
+            "_PluralGenders": "sprząta się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "sprzątam"
+            "_SingularGendersExcludingNeuter": "sprzątam"
           },
           "plural": {
-            "allPluralGenders": "sprzątamy"
+            "_PluralGenders": "sprzątamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "sprzątasz"
+            "_SingularGendersExcludingNeuter": "sprzątasz"
           },
           "plural": {
-            "allPluralGenders": "sprzątacie"
+            "_PluralGenders": "sprzątacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "sprząta"
+            "_SingularGenders": "sprząta"
           },
           "plural": {
-            "allPluralGenders": "sprzątają"
+            "_PluralGenders": "sprzątają"
           }
         }
       }

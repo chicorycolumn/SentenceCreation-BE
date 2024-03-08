@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pachniano"
+            "_SingularGenders": "pachniano"
           },
           "plural": {
-            "allPluralGenders": "pachniano"
+            "_PluralGenders": "pachniano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pachnie się"
+            "_SingularGenders": "pachnie się"
           },
           "plural": {
-            "allPluralGenders": "pachnie się"
+            "_PluralGenders": "pachnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pachnę"
+            "_SingularGendersExcludingNeuter": "pachnę"
           },
           "plural": {
-            "allPluralGenders": "pachniemy"
+            "_PluralGenders": "pachniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pachniesz"
+            "_SingularGendersExcludingNeuter": "pachniesz"
           },
           "plural": {
-            "allPluralGenders": "pachniecie"
+            "_PluralGenders": "pachniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pachnie"
+            "_SingularGenders": "pachnie"
           },
           "plural": {
-            "allPluralGenders": "pachną"
+            "_PluralGenders": "pachną"
           }
         }
       }

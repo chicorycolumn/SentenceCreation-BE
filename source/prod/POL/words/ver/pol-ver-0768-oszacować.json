@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oszacuje się"
+            "_SingularGenders": "oszacuje się"
           },
           "plural": {
-            "allPluralGenders": "oszacuje się"
+            "_PluralGenders": "oszacuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "oszacuję"
+            "_SingularGendersExcludingNeuter": "oszacuję"
           },
           "plural": {
-            "allPluralGenders": "oszacujemy"
+            "_PluralGenders": "oszacujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "oszacujesz"
+            "_SingularGendersExcludingNeuter": "oszacujesz"
           },
           "plural": {
-            "allPluralGenders": "oszacujecie"
+            "_PluralGenders": "oszacujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "oszacuje"
+            "_SingularGenders": "oszacuje"
           },
           "plural": {
-            "allPluralGenders": "oszacują"
+            "_PluralGenders": "oszacują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oszacowano"
+            "_SingularGenders": "oszacowano"
           },
           "plural": {
-            "allPluralGenders": "oszacowano"
+            "_PluralGenders": "oszacowano"
           }
         },
         "1per": {

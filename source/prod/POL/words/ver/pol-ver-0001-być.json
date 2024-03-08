@@ -43,26 +43,26 @@
       "future": {
         "1per": {
           "singular": {
-            "allSingularGenders": "będę"
+            "_SingularGendersExcludingNeuter": "będę"
           },
           "plural": {
-            "allPluralGenders": "będziemy"
+            "_PluralGenders": "będziemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "będziesz"
+            "_SingularGendersExcludingNeuter": "będziesz"
           },
           "plural": {
-            "allPluralGenders": "będziecie"
+            "_PluralGenders": "będziecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "będzie"
+            "_SingularGenders": "będzie"
           },
           "plural": {
-            "allPluralGenders": "będą"
+            "_PluralGenders": "będą"
           }
         }
       },
@@ -103,26 +103,26 @@
       "present": {
         "1per": {
           "singular": {
-            "allSingularGenders": "jestem"
+            "_SingularGendersExcludingNeuter": "jestem"
           },
           "plural": {
-            "allPluralGenders": "jesteśmy"
+            "_PluralGenders": "jesteśmy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "jesteś"
+            "_SingularGendersExcludingNeuter": "jesteś"
           },
           "plural": {
-            "allPluralGenders": "jesteście"
+            "_PluralGenders": "jesteście"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "jest"
+            "_SingularGenders": "jest"
           },
           "plural": {
-            "allPluralGenders": "są"
+            "_PluralGenders": "są"
           }
         }
       }

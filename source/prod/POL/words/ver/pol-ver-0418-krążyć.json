@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "krążono"
+            "_SingularGenders": "krążono"
           },
           "plural": {
-            "allPluralGenders": "krążono"
+            "_PluralGenders": "krążono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "krąży się"
+            "_SingularGenders": "krąży się"
           },
           "plural": {
-            "allPluralGenders": "krąży się"
+            "_PluralGenders": "krąży się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "krążę"
+            "_SingularGendersExcludingNeuter": "krążę"
           },
           "plural": {
-            "allPluralGenders": "krążymy"
+            "_PluralGenders": "krążymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "krążysz"
+            "_SingularGendersExcludingNeuter": "krążysz"
           },
           "plural": {
-            "allPluralGenders": "krążycie"
+            "_PluralGenders": "krążycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "krąży"
+            "_SingularGenders": "krąży"
           },
           "plural": {
-            "allPluralGenders": "krążą"
+            "_PluralGenders": "krążą"
           }
         }
       }

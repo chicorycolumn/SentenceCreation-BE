@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przeniesie się"
+            "_SingularGenders": "przeniesie się"
           },
           "plural": {
-            "allPluralGenders": "przeniesie się"
+            "_PluralGenders": "przeniesie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przeniosę"
+            "_SingularGendersExcludingNeuter": "przeniosę"
           },
           "plural": {
-            "allPluralGenders": "przeniesiemy"
+            "_PluralGenders": "przeniesiemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przeniesiesz"
+            "_SingularGendersExcludingNeuter": "przeniesiesz"
           },
           "plural": {
-            "allPluralGenders": "przeniesiecie"
+            "_PluralGenders": "przeniesiecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przeniesie"
+            "_SingularGenders": "przeniesie"
           },
           "plural": {
-            "allPluralGenders": "przeniosą"
+            "_PluralGenders": "przeniosą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przeniesiono"
+            "_SingularGenders": "przeniesiono"
           },
           "plural": {
-            "allPluralGenders": "przeniesiono"
+            "_PluralGenders": "przeniesiono"
           }
         },
         "1per": {

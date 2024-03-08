@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pochwali się"
+            "_SingularGenders": "pochwali się"
           },
           "plural": {
-            "allPluralGenders": "pochwali się"
+            "_PluralGenders": "pochwali się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pochwalę"
+            "_SingularGendersExcludingNeuter": "pochwalę"
           },
           "plural": {
-            "allPluralGenders": "pochwalimy"
+            "_PluralGenders": "pochwalimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pochwalisz"
+            "_SingularGendersExcludingNeuter": "pochwalisz"
           },
           "plural": {
-            "allPluralGenders": "pochwalicie"
+            "_PluralGenders": "pochwalicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pochwali"
+            "_SingularGenders": "pochwali"
           },
           "plural": {
-            "allPluralGenders": "pochwalą"
+            "_PluralGenders": "pochwalą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pochwalono"
+            "_SingularGenders": "pochwalono"
           },
           "plural": {
-            "allPluralGenders": "pochwalono"
+            "_PluralGenders": "pochwalono"
           }
         },
         "1per": {

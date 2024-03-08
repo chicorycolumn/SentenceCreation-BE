@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "obiecywano"
+            "_SingularGenders": "obiecywano"
           },
           "plural": {
-            "allPluralGenders": "obiecywano"
+            "_PluralGenders": "obiecywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "obiecuje się"
+            "_SingularGenders": "obiecuje się"
           },
           "plural": {
-            "allPluralGenders": "obiecuje się"
+            "_PluralGenders": "obiecuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "obiecuję"
+            "_SingularGendersExcludingNeuter": "obiecuję"
           },
           "plural": {
-            "allPluralGenders": "obiecujemy"
+            "_PluralGenders": "obiecujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "obiecujesz"
+            "_SingularGendersExcludingNeuter": "obiecujesz"
           },
           "plural": {
-            "allPluralGenders": "obiecujecie"
+            "_PluralGenders": "obiecujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "obiecuje"
+            "_SingularGenders": "obiecuje"
           },
           "plural": {
-            "allPluralGenders": "obiecują"
+            "_PluralGenders": "obiecują"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poprawiano"
+            "_SingularGenders": "poprawiano"
           },
           "plural": {
-            "allPluralGenders": "poprawiano"
+            "_PluralGenders": "poprawiano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poprawia się"
+            "_SingularGenders": "poprawia się"
           },
           "plural": {
-            "allPluralGenders": "poprawia się"
+            "_PluralGenders": "poprawia się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "poprawiam"
+            "_SingularGendersExcludingNeuter": "poprawiam"
           },
           "plural": {
-            "allPluralGenders": "poprawiamy"
+            "_PluralGenders": "poprawiamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "poprawiasz"
+            "_SingularGendersExcludingNeuter": "poprawiasz"
           },
           "plural": {
-            "allPluralGenders": "poprawiacie"
+            "_PluralGenders": "poprawiacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "poprawia"
+            "_SingularGenders": "poprawia"
           },
           "plural": {
-            "allPluralGenders": "poprawiają"
+            "_PluralGenders": "poprawiają"
           }
         }
       }

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wypije się"
+            "_SingularGenders": "wypije się"
           },
           "plural": {
-            "allPluralGenders": "wypije się"
+            "_PluralGenders": "wypije się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "wypiję"
+            "_SingularGendersExcludingNeuter": "wypiję"
           },
           "plural": {
-            "allPluralGenders": "wypijemy"
+            "_PluralGenders": "wypijemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "wypijesz"
+            "_SingularGendersExcludingNeuter": "wypijesz"
           },
           "plural": {
-            "allPluralGenders": "wypijecie"
+            "_PluralGenders": "wypijecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "wypije"
+            "_SingularGenders": "wypije"
           },
           "plural": {
-            "allPluralGenders": "wypiją"
+            "_PluralGenders": "wypiją"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wypito"
+            "_SingularGenders": "wypito"
           },
           "plural": {
-            "allPluralGenders": "wypito"
+            "_PluralGenders": "wypito"
           }
         },
         "1per": {

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "umierano"
+            "_SingularGenders": "umierano"
           },
           "plural": {
-            "allPluralGenders": "umierano"
+            "_PluralGenders": "umierano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "umiera się"
+            "_SingularGenders": "umiera się"
           },
           "plural": {
-            "allPluralGenders": "umiera się"
+            "_PluralGenders": "umiera się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "umieram"
+            "_SingularGendersExcludingNeuter": "umieram"
           },
           "plural": {
-            "allPluralGenders": "umieramy"
+            "_PluralGenders": "umieramy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "umierasz"
+            "_SingularGendersExcludingNeuter": "umierasz"
           },
           "plural": {
-            "allPluralGenders": "umieracie"
+            "_PluralGenders": "umieracie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "umiera"
+            "_SingularGenders": "umiera"
           },
           "plural": {
-            "allPluralGenders": "umierają"
+            "_PluralGenders": "umierają"
           }
         }
       }

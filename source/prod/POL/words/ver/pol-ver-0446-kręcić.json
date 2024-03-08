@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kręcono"
+            "_SingularGenders": "kręcono"
           },
           "plural": {
-            "allPluralGenders": "kręcono"
+            "_PluralGenders": "kręcono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kręci się"
+            "_SingularGenders": "kręci się"
           },
           "plural": {
-            "allPluralGenders": "kręci się"
+            "_PluralGenders": "kręci się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "kręcę"
+            "_SingularGendersExcludingNeuter": "kręcę"
           },
           "plural": {
-            "allPluralGenders": "kręcimy"
+            "_PluralGenders": "kręcimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "kręcisz"
+            "_SingularGendersExcludingNeuter": "kręcisz"
           },
           "plural": {
-            "allPluralGenders": "kręcicie"
+            "_PluralGenders": "kręcicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "kręci"
+            "_SingularGenders": "kręci"
           },
           "plural": {
-            "allPluralGenders": "kręcą"
+            "_PluralGenders": "kręcą"
           }
         }
       }

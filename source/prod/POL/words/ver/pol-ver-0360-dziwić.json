@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dziwiono"
+            "_SingularGenders": "dziwiono"
           },
           "plural": {
-            "allPluralGenders": "dziwiono"
+            "_PluralGenders": "dziwiono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dziwi się"
+            "_SingularGenders": "dziwi się"
           },
           "plural": {
-            "allPluralGenders": "dziwi się"
+            "_PluralGenders": "dziwi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dziwię"
+            "_SingularGendersExcludingNeuter": "dziwię"
           },
           "plural": {
-            "allPluralGenders": "dziwimy"
+            "_PluralGenders": "dziwimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dziwisz"
+            "_SingularGendersExcludingNeuter": "dziwisz"
           },
           "plural": {
-            "allPluralGenders": "dziwicie"
+            "_PluralGenders": "dziwicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dziwi"
+            "_SingularGenders": "dziwi"
           },
           "plural": {
-            "allPluralGenders": "dziwią"
+            "_PluralGenders": "dziwią"
           }
         }
       }

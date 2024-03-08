@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pomacha się"
+            "_SingularGenders": "pomacha się"
           },
           "plural": {
-            "allPluralGenders": "pomacha się"
+            "_PluralGenders": "pomacha się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pomacham"
+            "_SingularGendersExcludingNeuter": "pomacham"
           },
           "plural": {
-            "allPluralGenders": "pomachamy"
+            "_PluralGenders": "pomachamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pomachasz"
+            "_SingularGendersExcludingNeuter": "pomachasz"
           },
           "plural": {
-            "allPluralGenders": "pomachacie"
+            "_PluralGenders": "pomachacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pomacha"
+            "_SingularGenders": "pomacha"
           },
           "plural": {
-            "allPluralGenders": "pomachają"
+            "_PluralGenders": "pomachają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pomachano"
+            "_SingularGenders": "pomachano"
           },
           "plural": {
-            "allPluralGenders": "pomachano"
+            "_PluralGenders": "pomachano"
           }
         },
         "1per": {

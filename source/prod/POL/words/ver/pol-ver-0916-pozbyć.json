@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pozbędzie się"
+            "_SingularGenders": "pozbędzie się"
           },
           "plural": {
-            "allPluralGenders": "pozbędzie się"
+            "_PluralGenders": "pozbędzie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pozbędę"
+            "_SingularGendersExcludingNeuter": "pozbędę"
           },
           "plural": {
-            "allPluralGenders": "pozbędziemy"
+            "_PluralGenders": "pozbędziemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pozbędziesz"
+            "_SingularGendersExcludingNeuter": "pozbędziesz"
           },
           "plural": {
-            "allPluralGenders": "pozbędziecie"
+            "_PluralGenders": "pozbędziecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pozbędzie"
+            "_SingularGenders": "pozbędzie"
           },
           "plural": {
-            "allPluralGenders": "pozbędą"
+            "_PluralGenders": "pozbędą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pozbyto"
+            "_SingularGenders": "pozbyto"
           },
           "plural": {
-            "allPluralGenders": "pozbyto"
+            "_PluralGenders": "pozbyto"
           }
         },
         "1per": {

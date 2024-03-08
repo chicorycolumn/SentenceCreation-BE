@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "doświadczy się"
+            "_SingularGenders": "doświadczy się"
           },
           "plural": {
-            "allPluralGenders": "doświadczy się"
+            "_PluralGenders": "doświadczy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "doświadczę"
+            "_SingularGendersExcludingNeuter": "doświadczę"
           },
           "plural": {
-            "allPluralGenders": "doświadczymy"
+            "_PluralGenders": "doświadczymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "doświadczysz"
+            "_SingularGendersExcludingNeuter": "doświadczysz"
           },
           "plural": {
-            "allPluralGenders": "doświadczycie"
+            "_PluralGenders": "doświadczycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "doświadczy"
+            "_SingularGenders": "doświadczy"
           },
           "plural": {
-            "allPluralGenders": "doświadczą"
+            "_PluralGenders": "doświadczą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "doświadczono"
+            "_SingularGenders": "doświadczono"
           },
           "plural": {
-            "allPluralGenders": "doświadczono"
+            "_PluralGenders": "doświadczono"
           }
         },
         "1per": {

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "duszono"
+            "_SingularGenders": "duszono"
           },
           "plural": {
-            "allPluralGenders": "duszono"
+            "_PluralGenders": "duszono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dusi się"
+            "_SingularGenders": "dusi się"
           },
           "plural": {
-            "allPluralGenders": "dusi się"
+            "_PluralGenders": "dusi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "duszę"
+            "_SingularGendersExcludingNeuter": "duszę"
           },
           "plural": {
-            "allPluralGenders": "dusimy"
+            "_PluralGenders": "dusimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dusisz"
+            "_SingularGendersExcludingNeuter": "dusisz"
           },
           "plural": {
-            "allPluralGenders": "dusicie"
+            "_PluralGenders": "dusicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dusi"
+            "_SingularGenders": "dusi"
           },
           "plural": {
-            "allPluralGenders": "duszą"
+            "_PluralGenders": "duszą"
           }
         }
       }

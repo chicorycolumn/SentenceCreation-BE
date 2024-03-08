@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "lądowano"
+            "_SingularGenders": "lądowano"
           },
           "plural": {
-            "allPluralGenders": "lądowano"
+            "_PluralGenders": "lądowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ląduje się"
+            "_SingularGenders": "ląduje się"
           },
           "plural": {
-            "allPluralGenders": "ląduje się"
+            "_PluralGenders": "ląduje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "ląduję"
+            "_SingularGendersExcludingNeuter": "ląduję"
           },
           "plural": {
-            "allPluralGenders": "lądujemy"
+            "_PluralGenders": "lądujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "lądujesz"
+            "_SingularGendersExcludingNeuter": "lądujesz"
           },
           "plural": {
-            "allPluralGenders": "lądujecie"
+            "_PluralGenders": "lądujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "ląduje"
+            "_SingularGenders": "ląduje"
           },
           "plural": {
-            "allPluralGenders": "lądują"
+            "_PluralGenders": "lądują"
           }
         }
       }

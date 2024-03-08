@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "skojarzy się"
+            "_SingularGenders": "skojarzy się"
           },
           "plural": {
-            "allPluralGenders": "skojarzy się"
+            "_PluralGenders": "skojarzy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "skojarzę"
+            "_SingularGendersExcludingNeuter": "skojarzę"
           },
           "plural": {
-            "allPluralGenders": "skojarzymy"
+            "_PluralGenders": "skojarzymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "skojarzysz"
+            "_SingularGendersExcludingNeuter": "skojarzysz"
           },
           "plural": {
-            "allPluralGenders": "skojarzycie"
+            "_PluralGenders": "skojarzycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "skojarzy"
+            "_SingularGenders": "skojarzy"
           },
           "plural": {
-            "allPluralGenders": "skojarzą"
+            "_PluralGenders": "skojarzą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "skojarzono"
+            "_SingularGenders": "skojarzono"
           },
           "plural": {
-            "allPluralGenders": "skojarzono"
+            "_PluralGenders": "skojarzono"
           }
         },
         "1per": {

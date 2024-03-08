@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "istniano"
+            "_SingularGenders": "istniano"
           },
           "plural": {
-            "allPluralGenders": "istniano"
+            "_PluralGenders": "istniano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "istnieje się"
+            "_SingularGenders": "istnieje się"
           },
           "plural": {
-            "allPluralGenders": "istnieje się"
+            "_PluralGenders": "istnieje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "istnieję"
+            "_SingularGendersExcludingNeuter": "istnieję"
           },
           "plural": {
-            "allPluralGenders": "istniejemy"
+            "_PluralGenders": "istniejemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "istniejesz"
+            "_SingularGendersExcludingNeuter": "istniejesz"
           },
           "plural": {
-            "allPluralGenders": "istniejecie"
+            "_PluralGenders": "istniejecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "istnieje"
+            "_SingularGenders": "istnieje"
           },
           "plural": {
-            "allPluralGenders": "istnieją"
+            "_PluralGenders": "istnieją"
           }
         }
       }

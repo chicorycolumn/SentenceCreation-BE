@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przestraszy się"
+            "_SingularGenders": "przestraszy się"
           },
           "plural": {
-            "allPluralGenders": "przestraszy się"
+            "_PluralGenders": "przestraszy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przestraszę"
+            "_SingularGendersExcludingNeuter": "przestraszę"
           },
           "plural": {
-            "allPluralGenders": "przestraszymy"
+            "_PluralGenders": "przestraszymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przestraszysz"
+            "_SingularGendersExcludingNeuter": "przestraszysz"
           },
           "plural": {
-            "allPluralGenders": "przestraszycie"
+            "_PluralGenders": "przestraszycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przestraszy"
+            "_SingularGenders": "przestraszy"
           },
           "plural": {
-            "allPluralGenders": "przestraszą"
+            "_PluralGenders": "przestraszą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przestraszono"
+            "_SingularGenders": "przestraszono"
           },
           "plural": {
-            "allPluralGenders": "przestraszono"
+            "_PluralGenders": "przestraszono"
           }
         },
         "1per": {

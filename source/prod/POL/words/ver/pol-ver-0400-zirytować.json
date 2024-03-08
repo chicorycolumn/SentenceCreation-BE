@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zirytuje się"
+            "_SingularGenders": "zirytuje się"
           },
           "plural": {
-            "allPluralGenders": "zirytuje się"
+            "_PluralGenders": "zirytuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zirytuję"
+            "_SingularGendersExcludingNeuter": "zirytuję"
           },
           "plural": {
-            "allPluralGenders": "zirytujemy"
+            "_PluralGenders": "zirytujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zirytujesz"
+            "_SingularGendersExcludingNeuter": "zirytujesz"
           },
           "plural": {
-            "allPluralGenders": "zirytujecie"
+            "_PluralGenders": "zirytujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zirytuje"
+            "_SingularGenders": "zirytuje"
           },
           "plural": {
-            "allPluralGenders": "zirytują"
+            "_PluralGenders": "zirytują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zirytowano"
+            "_SingularGenders": "zirytowano"
           },
           "plural": {
-            "allPluralGenders": "zirytowano"
+            "_PluralGenders": "zirytowano"
           }
         },
         "1per": {

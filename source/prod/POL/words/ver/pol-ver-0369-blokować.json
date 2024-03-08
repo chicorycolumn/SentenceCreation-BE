@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "blokowano"
+            "_SingularGenders": "blokowano"
           },
           "plural": {
-            "allPluralGenders": "blokowano"
+            "_PluralGenders": "blokowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "blokuje się"
+            "_SingularGenders": "blokuje się"
           },
           "plural": {
-            "allPluralGenders": "blokuje się"
+            "_PluralGenders": "blokuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "blokuję"
+            "_SingularGendersExcludingNeuter": "blokuję"
           },
           "plural": {
-            "allPluralGenders": "blokujemy"
+            "_PluralGenders": "blokujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "blokujesz"
+            "_SingularGendersExcludingNeuter": "blokujesz"
           },
           "plural": {
-            "allPluralGenders": "blokujecie"
+            "_PluralGenders": "blokujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "blokuje"
+            "_SingularGenders": "blokuje"
           },
           "plural": {
-            "allPluralGenders": "blokują"
+            "_PluralGenders": "blokują"
           }
         }
       }

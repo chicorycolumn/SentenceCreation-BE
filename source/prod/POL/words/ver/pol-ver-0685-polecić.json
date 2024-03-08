@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poleci się"
+            "_SingularGenders": "poleci się"
           },
           "plural": {
-            "allPluralGenders": "poleci się"
+            "_PluralGenders": "poleci się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "polecę"
+            "_SingularGendersExcludingNeuter": "polecę"
           },
           "plural": {
-            "allPluralGenders": "polecimy"
+            "_PluralGenders": "polecimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "polecisz"
+            "_SingularGendersExcludingNeuter": "polecisz"
           },
           "plural": {
-            "allPluralGenders": "polecicie"
+            "_PluralGenders": "polecicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "poleci"
+            "_SingularGenders": "poleci"
           },
           "plural": {
-            "allPluralGenders": "polecą"
+            "_PluralGenders": "polecą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "polecono"
+            "_SingularGenders": "polecono"
           },
           "plural": {
-            "allPluralGenders": "polecono"
+            "_PluralGenders": "polecono"
           }
         },
         "1per": {

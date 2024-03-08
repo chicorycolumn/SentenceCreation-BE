@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "cieszono"
+            "_SingularGenders": "cieszono"
           },
           "plural": {
-            "allPluralGenders": "cieszono"
+            "_PluralGenders": "cieszono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "cieszy się"
+            "_SingularGenders": "cieszy się"
           },
           "plural": {
-            "allPluralGenders": "cieszy się"
+            "_PluralGenders": "cieszy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "cieszę"
+            "_SingularGendersExcludingNeuter": "cieszę"
           },
           "plural": {
-            "allPluralGenders": "cieszymy"
+            "_PluralGenders": "cieszymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "cieszysz"
+            "_SingularGendersExcludingNeuter": "cieszysz"
           },
           "plural": {
-            "allPluralGenders": "cieszycie"
+            "_PluralGenders": "cieszycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "cieszy"
+            "_SingularGenders": "cieszy"
           },
           "plural": {
-            "allPluralGenders": "cieszą"
+            "_PluralGenders": "cieszą"
           }
         }
       }

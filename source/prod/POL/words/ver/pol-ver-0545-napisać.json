@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "napisze się"
+            "_SingularGenders": "napisze się"
           },
           "plural": {
-            "allPluralGenders": "napisze się"
+            "_PluralGenders": "napisze się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "napiszę"
+            "_SingularGendersExcludingNeuter": "napiszę"
           },
           "plural": {
-            "allPluralGenders": "napiszemy"
+            "_PluralGenders": "napiszemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "napiszesz"
+            "_SingularGendersExcludingNeuter": "napiszesz"
           },
           "plural": {
-            "allPluralGenders": "napiszecie"
+            "_PluralGenders": "napiszecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "napisze"
+            "_SingularGenders": "napisze"
           },
           "plural": {
-            "allPluralGenders": "napiszą"
+            "_PluralGenders": "napiszą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "napisano"
+            "_SingularGenders": "napisano"
           },
           "plural": {
-            "allPluralGenders": "napisano"
+            "_PluralGenders": "napisano"
           }
         },
         "1per": {

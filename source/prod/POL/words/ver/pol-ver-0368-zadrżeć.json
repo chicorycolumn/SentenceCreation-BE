@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zadrży się"
+            "_SingularGenders": "zadrży się"
           },
           "plural": {
-            "allPluralGenders": "zadrży się"
+            "_PluralGenders": "zadrży się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zadrżę"
+            "_SingularGendersExcludingNeuter": "zadrżę"
           },
           "plural": {
-            "allPluralGenders": "zadrżymy"
+            "_PluralGenders": "zadrżymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zadrżysz"
+            "_SingularGendersExcludingNeuter": "zadrżysz"
           },
           "plural": {
-            "allPluralGenders": "zadrżycie"
+            "_PluralGenders": "zadrżycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zadrży"
+            "_SingularGenders": "zadrży"
           },
           "plural": {
-            "allPluralGenders": "zadrżą"
+            "_PluralGenders": "zadrżą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zadrżano"
+            "_SingularGenders": "zadrżano"
           },
           "plural": {
-            "allPluralGenders": "zadrżano"
+            "_PluralGenders": "zadrżano"
           }
         },
         "1per": {

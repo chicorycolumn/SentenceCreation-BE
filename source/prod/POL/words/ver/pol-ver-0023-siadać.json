@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "siadano"
+            "_SingularGenders": "siadano"
           },
           "plural": {
-            "allPluralGenders": "siadano"
+            "_PluralGenders": "siadano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "siada się"
+            "_SingularGenders": "siada się"
           },
           "plural": {
-            "allPluralGenders": "siada się"
+            "_PluralGenders": "siada się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "siadam"
+            "_SingularGendersExcludingNeuter": "siadam"
           },
           "plural": {
-            "allPluralGenders": "siadamy"
+            "_PluralGenders": "siadamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "siadasz"
+            "_SingularGendersExcludingNeuter": "siadasz"
           },
           "plural": {
-            "allPluralGenders": "siadacie"
+            "_PluralGenders": "siadacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "siada"
+            "_SingularGenders": "siada"
           },
           "plural": {
-            "allPluralGenders": "siadają"
+            "_PluralGenders": "siadają"
           }
         }
       }

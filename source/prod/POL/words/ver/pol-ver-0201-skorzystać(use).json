@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "skorzysta się"
+            "_SingularGenders": "skorzysta się"
           },
           "plural": {
-            "allPluralGenders": "skorzysta się"
+            "_PluralGenders": "skorzysta się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "skorzystam"
+            "_SingularGendersExcludingNeuter": "skorzystam"
           },
           "plural": {
-            "allPluralGenders": "skorzystamy"
+            "_PluralGenders": "skorzystamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "skorzystasz"
+            "_SingularGendersExcludingNeuter": "skorzystasz"
           },
           "plural": {
-            "allPluralGenders": "skorzystacie"
+            "_PluralGenders": "skorzystacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "skorzysta"
+            "_SingularGenders": "skorzysta"
           },
           "plural": {
-            "allPluralGenders": "skorzystają"
+            "_PluralGenders": "skorzystają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "skorzystano"
+            "_SingularGenders": "skorzystano"
           },
           "plural": {
-            "allPluralGenders": "skorzystano"
+            "_PluralGenders": "skorzystano"
           }
         },
         "1per": {

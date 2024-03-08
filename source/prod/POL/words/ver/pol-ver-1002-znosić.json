@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "znoszono"
+            "_SingularGenders": "znoszono"
           },
           "plural": {
-            "allPluralGenders": "znoszono"
+            "_PluralGenders": "znoszono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "znosi się"
+            "_SingularGenders": "znosi się"
           },
           "plural": {
-            "allPluralGenders": "znosi się"
+            "_PluralGenders": "znosi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "znoszę"
+            "_SingularGendersExcludingNeuter": "znoszę"
           },
           "plural": {
-            "allPluralGenders": "znosimy"
+            "_PluralGenders": "znosimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "znosisz"
+            "_SingularGendersExcludingNeuter": "znosisz"
           },
           "plural": {
-            "allPluralGenders": "znosicie"
+            "_PluralGenders": "znosicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "znosi"
+            "_SingularGenders": "znosi"
           },
           "plural": {
-            "allPluralGenders": "znoszą"
+            "_PluralGenders": "znoszą"
           }
         }
       }

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pożałuje się"
+            "_SingularGenders": "pożałuje się"
           },
           "plural": {
-            "allPluralGenders": "pożałuje się"
+            "_PluralGenders": "pożałuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pożałuję"
+            "_SingularGendersExcludingNeuter": "pożałuję"
           },
           "plural": {
-            "allPluralGenders": "pożałujemy"
+            "_PluralGenders": "pożałujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pożałujesz"
+            "_SingularGendersExcludingNeuter": "pożałujesz"
           },
           "plural": {
-            "allPluralGenders": "pożałujecie"
+            "_PluralGenders": "pożałujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pożałuje"
+            "_SingularGenders": "pożałuje"
           },
           "plural": {
-            "allPluralGenders": "pożałują"
+            "_PluralGenders": "pożałują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pożałowano"
+            "_SingularGenders": "pożałowano"
           },
           "plural": {
-            "allPluralGenders": "pożałowano"
+            "_PluralGenders": "pożałowano"
           }
         },
         "1per": {

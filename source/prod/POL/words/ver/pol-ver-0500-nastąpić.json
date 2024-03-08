@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "nastąpi się"
+            "_SingularGenders": "nastąpi się"
           },
           "plural": {
-            "allPluralGenders": "nastąpi się"
+            "_PluralGenders": "nastąpi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "nastąpię"
+            "_SingularGendersExcludingNeuter": "nastąpię"
           },
           "plural": {
-            "allPluralGenders": "nastąpimy"
+            "_PluralGenders": "nastąpimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "nastąpisz"
+            "_SingularGendersExcludingNeuter": "nastąpisz"
           },
           "plural": {
-            "allPluralGenders": "nastąpicie"
+            "_PluralGenders": "nastąpicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "nastąpi"
+            "_SingularGenders": "nastąpi"
           },
           "plural": {
-            "allPluralGenders": "nastąpią"
+            "_PluralGenders": "nastąpią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "nastąpiono"
+            "_SingularGenders": "nastąpiono"
           },
           "plural": {
-            "allPluralGenders": "nastąpiono"
+            "_PluralGenders": "nastąpiono"
           }
         },
         "1per": {

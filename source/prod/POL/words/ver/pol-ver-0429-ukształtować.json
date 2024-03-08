@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ukształtuje się"
+            "_SingularGenders": "ukształtuje się"
           },
           "plural": {
-            "allPluralGenders": "ukształtuje się"
+            "_PluralGenders": "ukształtuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "ukształtuję"
+            "_SingularGendersExcludingNeuter": "ukształtuję"
           },
           "plural": {
-            "allPluralGenders": "ukształtujemy"
+            "_PluralGenders": "ukształtujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "ukształtujesz"
+            "_SingularGendersExcludingNeuter": "ukształtujesz"
           },
           "plural": {
-            "allPluralGenders": "ukształtujecie"
+            "_PluralGenders": "ukształtujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "ukształtuje"
+            "_SingularGenders": "ukształtuje"
           },
           "plural": {
-            "allPluralGenders": "ukształtują"
+            "_PluralGenders": "ukształtują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ukształtowano"
+            "_SingularGenders": "ukształtowano"
           },
           "plural": {
-            "allPluralGenders": "ukształtowano"
+            "_PluralGenders": "ukształtowano"
           }
         },
         "1per": {

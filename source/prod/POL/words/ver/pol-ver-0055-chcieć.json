@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "chciano"
+            "_SingularGenders": "chciano"
           },
           "plural": {
-            "allPluralGenders": "chciano"
+            "_PluralGenders": "chciano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "chce się"
+            "_SingularGenders": "chce się"
           },
           "plural": {
-            "allPluralGenders": "chce się"
+            "_PluralGenders": "chce się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "chcę"
+            "_SingularGendersExcludingNeuter": "chcę"
           },
           "plural": {
-            "allPluralGenders": "chcemy"
+            "_PluralGenders": "chcemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "chcesz"
+            "_SingularGendersExcludingNeuter": "chcesz"
           },
           "plural": {
-            "allPluralGenders": "chcecie"
+            "_PluralGenders": "chcecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "chce"
+            "_SingularGenders": "chce"
           },
           "plural": {
-            "allPluralGenders": "chcą"
+            "_PluralGenders": "chcą"
           }
         }
       }

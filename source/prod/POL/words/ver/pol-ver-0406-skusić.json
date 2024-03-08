@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "skusi się"
+            "_SingularGenders": "skusi się"
           },
           "plural": {
-            "allPluralGenders": "skusi się"
+            "_PluralGenders": "skusi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "skuszę"
+            "_SingularGendersExcludingNeuter": "skuszę"
           },
           "plural": {
-            "allPluralGenders": "skusimy"
+            "_PluralGenders": "skusimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "skusisz"
+            "_SingularGendersExcludingNeuter": "skusisz"
           },
           "plural": {
-            "allPluralGenders": "skusicie"
+            "_PluralGenders": "skusicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "skusi"
+            "_SingularGenders": "skusi"
           },
           "plural": {
-            "allPluralGenders": "skuszą"
+            "_PluralGenders": "skuszą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "skuszono"
+            "_SingularGenders": "skuszono"
           },
           "plural": {
-            "allPluralGenders": "skuszono"
+            "_PluralGenders": "skuszono"
           }
         },
         "1per": {

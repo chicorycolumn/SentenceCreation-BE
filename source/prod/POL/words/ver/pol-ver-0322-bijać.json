@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "bijano"
+            "_SingularGenders": "bijano"
           },
           "plural": {
-            "allPluralGenders": "bijano"
+            "_PluralGenders": "bijano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "bija się"
+            "_SingularGenders": "bija się"
           },
           "plural": {
-            "allPluralGenders": "bija się"
+            "_PluralGenders": "bija się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "bijam"
+            "_SingularGendersExcludingNeuter": "bijam"
           },
           "plural": {
-            "allPluralGenders": "bijamy"
+            "_PluralGenders": "bijamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "bijasz"
+            "_SingularGendersExcludingNeuter": "bijasz"
           },
           "plural": {
-            "allPluralGenders": "bijacie"
+            "_PluralGenders": "bijacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "bija"
+            "_SingularGenders": "bija"
           },
           "plural": {
-            "allPluralGenders": "bijają"
+            "_PluralGenders": "bijają"
           }
         }
       }

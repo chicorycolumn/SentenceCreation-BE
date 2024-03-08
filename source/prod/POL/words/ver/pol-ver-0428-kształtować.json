@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kształtowano"
+            "_SingularGenders": "kształtowano"
           },
           "plural": {
-            "allPluralGenders": "kształtowano"
+            "_PluralGenders": "kształtowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kształtuje się"
+            "_SingularGenders": "kształtuje się"
           },
           "plural": {
-            "allPluralGenders": "kształtuje się"
+            "_PluralGenders": "kształtuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "kształtuję"
+            "_SingularGendersExcludingNeuter": "kształtuję"
           },
           "plural": {
-            "allPluralGenders": "kształtujemy"
+            "_PluralGenders": "kształtujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "kształtujesz"
+            "_SingularGendersExcludingNeuter": "kształtujesz"
           },
           "plural": {
-            "allPluralGenders": "kształtujecie"
+            "_PluralGenders": "kształtujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "kształtuje"
+            "_SingularGenders": "kształtuje"
           },
           "plural": {
-            "allPluralGenders": "kształtują"
+            "_PluralGenders": "kształtują"
           }
         }
       }

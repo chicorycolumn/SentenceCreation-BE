@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zbada się"
+            "_SingularGenders": "zbada się"
           },
           "plural": {
-            "allPluralGenders": "zbada się"
+            "_PluralGenders": "zbada się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zbadam"
+            "_SingularGendersExcludingNeuter": "zbadam"
           },
           "plural": {
-            "allPluralGenders": "zbadamy"
+            "_PluralGenders": "zbadamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zbadasz"
+            "_SingularGendersExcludingNeuter": "zbadasz"
           },
           "plural": {
-            "allPluralGenders": "zbadacie"
+            "_PluralGenders": "zbadacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zbada"
+            "_SingularGenders": "zbada"
           },
           "plural": {
-            "allPluralGenders": "zbadają"
+            "_PluralGenders": "zbadają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zbadano"
+            "_SingularGenders": "zbadano"
           },
           "plural": {
-            "allPluralGenders": "zbadano"
+            "_PluralGenders": "zbadano"
           }
         },
         "1per": {

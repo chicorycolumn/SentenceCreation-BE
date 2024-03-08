@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "obroni się"
+            "_SingularGenders": "obroni się"
           },
           "plural": {
-            "allPluralGenders": "obroni się"
+            "_PluralGenders": "obroni się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "obronię"
+            "_SingularGendersExcludingNeuter": "obronię"
           },
           "plural": {
-            "allPluralGenders": "obronimy"
+            "_PluralGenders": "obronimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "obronisz"
+            "_SingularGendersExcludingNeuter": "obronisz"
           },
           "plural": {
-            "allPluralGenders": "obronicie"
+            "_PluralGenders": "obronicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "obroni"
+            "_SingularGenders": "obroni"
           },
           "plural": {
-            "allPluralGenders": "obronią"
+            "_PluralGenders": "obronią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "obroniono"
+            "_SingularGenders": "obroniono"
           },
           "plural": {
-            "allPluralGenders": "obroniono"
+            "_PluralGenders": "obroniono"
           }
         },
         "1per": {

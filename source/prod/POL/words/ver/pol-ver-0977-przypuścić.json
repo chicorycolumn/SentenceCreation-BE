@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przypuści się"
+            "_SingularGenders": "przypuści się"
           },
           "plural": {
-            "allPluralGenders": "przypuści się"
+            "_PluralGenders": "przypuści się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przypuszczę"
+            "_SingularGendersExcludingNeuter": "przypuszczę"
           },
           "plural": {
-            "allPluralGenders": "przypuścimy"
+            "_PluralGenders": "przypuścimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przypuścisz"
+            "_SingularGendersExcludingNeuter": "przypuścisz"
           },
           "plural": {
-            "allPluralGenders": "przypuścicie"
+            "_PluralGenders": "przypuścicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przypuści"
+            "_SingularGenders": "przypuści"
           },
           "plural": {
-            "allPluralGenders": "przypuszczą"
+            "_PluralGenders": "przypuszczą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przypuszczono"
+            "_SingularGenders": "przypuszczono"
           },
           "plural": {
-            "allPluralGenders": "przypuszczono"
+            "_PluralGenders": "przypuszczono"
           }
         },
         "1per": {

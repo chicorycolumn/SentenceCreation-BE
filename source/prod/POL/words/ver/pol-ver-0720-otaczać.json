@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "otaczano"
+            "_SingularGenders": "otaczano"
           },
           "plural": {
-            "allPluralGenders": "otaczano"
+            "_PluralGenders": "otaczano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "otacza się"
+            "_SingularGenders": "otacza się"
           },
           "plural": {
-            "allPluralGenders": "otacza się"
+            "_PluralGenders": "otacza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "otaczam"
+            "_SingularGendersExcludingNeuter": "otaczam"
           },
           "plural": {
-            "allPluralGenders": "otaczamy"
+            "_PluralGenders": "otaczamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "otaczasz"
+            "_SingularGendersExcludingNeuter": "otaczasz"
           },
           "plural": {
-            "allPluralGenders": "otaczacie"
+            "_PluralGenders": "otaczacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "otacza"
+            "_SingularGenders": "otacza"
           },
           "plural": {
-            "allPluralGenders": "otaczają"
+            "_PluralGenders": "otaczają"
           }
         }
       }

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oszaleje się"
+            "_SingularGenders": "oszaleje się"
           },
           "plural": {
-            "allPluralGenders": "oszaleje się"
+            "_PluralGenders": "oszaleje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "oszaleję"
+            "_SingularGendersExcludingNeuter": "oszaleję"
           },
           "plural": {
-            "allPluralGenders": "oszalejemy"
+            "_PluralGenders": "oszalejemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "oszalejesz"
+            "_SingularGendersExcludingNeuter": "oszalejesz"
           },
           "plural": {
-            "allPluralGenders": "oszalejecie"
+            "_PluralGenders": "oszalejecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "oszaleje"
+            "_SingularGenders": "oszaleje"
           },
           "plural": {
-            "allPluralGenders": "oszaleją"
+            "_PluralGenders": "oszaleją"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oszalano"
+            "_SingularGenders": "oszalano"
           },
           "plural": {
-            "allPluralGenders": "oszalano"
+            "_PluralGenders": "oszalano"
           }
         },
         "1per": {

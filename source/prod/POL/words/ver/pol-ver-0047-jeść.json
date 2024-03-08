@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "jedzono"
+            "_SingularGenders": "jedzono"
           },
           "plural": {
-            "allPluralGenders": "jedzono"
+            "_PluralGenders": "jedzono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "je się"
+            "_SingularGenders": "je się"
           },
           "plural": {
-            "allPluralGenders": "je się"
+            "_PluralGenders": "je się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "jem"
+            "_SingularGendersExcludingNeuter": "jem"
           },
           "plural": {
-            "allPluralGenders": "jemy"
+            "_PluralGenders": "jemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "jesz"
+            "_SingularGendersExcludingNeuter": "jesz"
           },
           "plural": {
-            "allPluralGenders": "jecie"
+            "_PluralGenders": "jecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "je"
+            "_SingularGenders": "je"
           },
           "plural": {
-            "allPluralGenders": "jedzą"
+            "_PluralGenders": "jedzą"
           }
         }
       }

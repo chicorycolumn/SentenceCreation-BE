@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "błyśnie się"
+            "_SingularGenders": "błyśnie się"
           },
           "plural": {
-            "allPluralGenders": "błyśnie się"
+            "_PluralGenders": "błyśnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "błysnę"
+            "_SingularGendersExcludingNeuter": "błysnę"
           },
           "plural": {
-            "allPluralGenders": "błyśniemy"
+            "_PluralGenders": "błyśniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "błyśniesz"
+            "_SingularGendersExcludingNeuter": "błyśniesz"
           },
           "plural": {
-            "allPluralGenders": "błyśniecie"
+            "_PluralGenders": "błyśniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "błyśnie"
+            "_SingularGenders": "błyśnie"
           },
           "plural": {
-            "allPluralGenders": "błysną"
+            "_PluralGenders": "błysną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "błyśnięto"
+            "_SingularGenders": "błyśnięto"
           },
           "plural": {
-            "allPluralGenders": "błyśnięto"
+            "_PluralGenders": "błyśnięto"
           }
         },
         "1per": {

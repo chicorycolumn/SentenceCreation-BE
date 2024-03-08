@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "powstanie się"
+            "_SingularGenders": "powstanie się"
           },
           "plural": {
-            "allPluralGenders": "powstanie się"
+            "_PluralGenders": "powstanie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "powstanę"
+            "_SingularGendersExcludingNeuter": "powstanę"
           },
           "plural": {
-            "allPluralGenders": "powstaniemy"
+            "_PluralGenders": "powstaniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "powstaniesz"
+            "_SingularGendersExcludingNeuter": "powstaniesz"
           },
           "plural": {
-            "allPluralGenders": "powstaniecie"
+            "_PluralGenders": "powstaniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "powstanie"
+            "_SingularGenders": "powstanie"
           },
           "plural": {
-            "allPluralGenders": "powstaną"
+            "_PluralGenders": "powstaną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "powstano"
+            "_SingularGenders": "powstano"
           },
           "plural": {
-            "allPluralGenders": "powstano"
+            "_PluralGenders": "powstano"
           }
         },
         "1per": {

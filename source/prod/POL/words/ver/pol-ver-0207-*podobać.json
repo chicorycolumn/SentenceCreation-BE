@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podobano"
+            "_SingularGenders": "podobano"
           },
           "plural": {
-            "allPluralGenders": "podobano"
+            "_PluralGenders": "podobano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podoba się"
+            "_SingularGenders": "podoba się"
           },
           "plural": {
-            "allPluralGenders": "podoba się"
+            "_PluralGenders": "podoba się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "podobam"
+            "_SingularGendersExcludingNeuter": "podobam"
           },
           "plural": {
-            "allPluralGenders": "podobamy"
+            "_PluralGenders": "podobamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "podobasz"
+            "_SingularGendersExcludingNeuter": "podobasz"
           },
           "plural": {
-            "allPluralGenders": "podobacie"
+            "_PluralGenders": "podobacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "podoba"
+            "_SingularGenders": "podoba"
           },
           "plural": {
-            "allPluralGenders": "podobają"
+            "_PluralGenders": "podobają"
           }
         }
       }

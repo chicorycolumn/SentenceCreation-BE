@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "połączy się"
+            "_SingularGenders": "połączy się"
           },
           "plural": {
-            "allPluralGenders": "połączy się"
+            "_PluralGenders": "połączy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "połączę"
+            "_SingularGendersExcludingNeuter": "połączę"
           },
           "plural": {
-            "allPluralGenders": "połączymy"
+            "_PluralGenders": "połączymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "połączysz"
+            "_SingularGendersExcludingNeuter": "połączysz"
           },
           "plural": {
-            "allPluralGenders": "połączycie"
+            "_PluralGenders": "połączycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "połączy"
+            "_SingularGenders": "połączy"
           },
           "plural": {
-            "allPluralGenders": "połączą"
+            "_PluralGenders": "połączą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "połączono"
+            "_SingularGenders": "połączono"
           },
           "plural": {
-            "allPluralGenders": "połączono"
+            "_PluralGenders": "połączono"
           }
         },
         "1per": {

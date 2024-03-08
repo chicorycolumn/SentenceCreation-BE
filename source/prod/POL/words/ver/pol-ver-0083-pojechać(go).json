@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pojedzie się"
+            "_SingularGenders": "pojedzie się"
           },
           "plural": {
-            "allPluralGenders": "pojedzie się"
+            "_PluralGenders": "pojedzie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pojadę"
+            "_SingularGendersExcludingNeuter": "pojadę"
           },
           "plural": {
-            "allPluralGenders": "pojedziemy"
+            "_PluralGenders": "pojedziemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pojedziesz"
+            "_SingularGendersExcludingNeuter": "pojedziesz"
           },
           "plural": {
-            "allPluralGenders": "pojedziecie"
+            "_PluralGenders": "pojedziecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pojedzie"
+            "_SingularGenders": "pojedzie"
           },
           "plural": {
-            "allPluralGenders": "pojadą"
+            "_PluralGenders": "pojadą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pojechano"
+            "_SingularGenders": "pojechano"
           },
           "plural": {
-            "allPluralGenders": "pojechano"
+            "_PluralGenders": "pojechano"
           }
         },
         "1per": {

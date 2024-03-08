@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "nakarmi się"
+            "_SingularGenders": "nakarmi się"
           },
           "plural": {
-            "allPluralGenders": "nakarmi się"
+            "_PluralGenders": "nakarmi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "nakarmię"
+            "_SingularGendersExcludingNeuter": "nakarmię"
           },
           "plural": {
-            "allPluralGenders": "nakarmimy"
+            "_PluralGenders": "nakarmimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "nakarmisz"
+            "_SingularGendersExcludingNeuter": "nakarmisz"
           },
           "plural": {
-            "allPluralGenders": "nakarmicie"
+            "_PluralGenders": "nakarmicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "nakarmi"
+            "_SingularGenders": "nakarmi"
           },
           "plural": {
-            "allPluralGenders": "nakarmią"
+            "_PluralGenders": "nakarmią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "nakarmiono"
+            "_SingularGenders": "nakarmiono"
           },
           "plural": {
-            "allPluralGenders": "nakarmiono"
+            "_PluralGenders": "nakarmiono"
           }
         },
         "1per": {

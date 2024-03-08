@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oddychano"
+            "_SingularGenders": "oddychano"
           },
           "plural": {
-            "allPluralGenders": "oddychano"
+            "_PluralGenders": "oddychano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oddycha się"
+            "_SingularGenders": "oddycha się"
           },
           "plural": {
-            "allPluralGenders": "oddycha się"
+            "_PluralGenders": "oddycha się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "oddycham"
+            "_SingularGendersExcludingNeuter": "oddycham"
           },
           "plural": {
-            "allPluralGenders": "oddychamy"
+            "_PluralGenders": "oddychamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "oddychasz"
+            "_SingularGendersExcludingNeuter": "oddychasz"
           },
           "plural": {
-            "allPluralGenders": "oddychacie"
+            "_PluralGenders": "oddychacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "oddycha"
+            "_SingularGenders": "oddycha"
           },
           "plural": {
-            "allPluralGenders": "oddychają"
+            "_PluralGenders": "oddychają"
           }
         }
       }

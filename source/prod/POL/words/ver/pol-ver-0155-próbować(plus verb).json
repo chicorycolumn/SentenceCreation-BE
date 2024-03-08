@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "próbowano"
+            "_SingularGenders": "próbowano"
           },
           "plural": {
-            "allPluralGenders": "próbowano"
+            "_PluralGenders": "próbowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "próbuje się"
+            "_SingularGenders": "próbuje się"
           },
           "plural": {
-            "allPluralGenders": "próbuje się"
+            "_PluralGenders": "próbuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "próbuję"
+            "_SingularGendersExcludingNeuter": "próbuję"
           },
           "plural": {
-            "allPluralGenders": "próbujemy"
+            "_PluralGenders": "próbujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "próbujesz"
+            "_SingularGendersExcludingNeuter": "próbujesz"
           },
           "plural": {
-            "allPluralGenders": "próbujecie"
+            "_PluralGenders": "próbujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "próbuje"
+            "_SingularGenders": "próbuje"
           },
           "plural": {
-            "allPluralGenders": "próbują"
+            "_PluralGenders": "próbują"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wypijano"
+            "_SingularGenders": "wypijano"
           },
           "plural": {
-            "allPluralGenders": "wypijano"
+            "_PluralGenders": "wypijano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wypija się"
+            "_SingularGenders": "wypija się"
           },
           "plural": {
-            "allPluralGenders": "wypija się"
+            "_PluralGenders": "wypija się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "wypijam"
+            "_SingularGendersExcludingNeuter": "wypijam"
           },
           "plural": {
-            "allPluralGenders": "wypijamy"
+            "_PluralGenders": "wypijamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "wypijasz"
+            "_SingularGendersExcludingNeuter": "wypijasz"
           },
           "plural": {
-            "allPluralGenders": "wypijacie"
+            "_PluralGenders": "wypijacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "wypija"
+            "_SingularGenders": "wypija"
           },
           "plural": {
-            "allPluralGenders": "wypijają"
+            "_PluralGenders": "wypijają"
           }
         }
       }

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pozna się"
+            "_SingularGenders": "pozna się"
           },
           "plural": {
-            "allPluralGenders": "pozna się"
+            "_PluralGenders": "pozna się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "poznam"
+            "_SingularGendersExcludingNeuter": "poznam"
           },
           "plural": {
-            "allPluralGenders": "poznamy"
+            "_PluralGenders": "poznamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "poznasz"
+            "_SingularGendersExcludingNeuter": "poznasz"
           },
           "plural": {
-            "allPluralGenders": "poznacie"
+            "_PluralGenders": "poznacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pozna"
+            "_SingularGenders": "pozna"
           },
           "plural": {
-            "allPluralGenders": "poznają"
+            "_PluralGenders": "poznają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poznano"
+            "_SingularGenders": "poznano"
           },
           "plural": {
-            "allPluralGenders": "poznano"
+            "_PluralGenders": "poznano"
           }
         },
         "1per": {

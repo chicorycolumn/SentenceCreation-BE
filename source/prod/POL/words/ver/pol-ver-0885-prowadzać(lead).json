@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "prowadzano"
+            "_SingularGenders": "prowadzano"
           },
           "plural": {
-            "allPluralGenders": "prowadzano"
+            "_PluralGenders": "prowadzano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "prowadza się"
+            "_SingularGenders": "prowadza się"
           },
           "plural": {
-            "allPluralGenders": "prowadza się"
+            "_PluralGenders": "prowadza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "prowadzam"
+            "_SingularGendersExcludingNeuter": "prowadzam"
           },
           "plural": {
-            "allPluralGenders": "prowadzamy"
+            "_PluralGenders": "prowadzamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "prowadzasz"
+            "_SingularGendersExcludingNeuter": "prowadzasz"
           },
           "plural": {
-            "allPluralGenders": "prowadzacie"
+            "_PluralGenders": "prowadzacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "prowadza"
+            "_SingularGenders": "prowadza"
           },
           "plural": {
-            "allPluralGenders": "prowadzają"
+            "_PluralGenders": "prowadzają"
           }
         }
       }

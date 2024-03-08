@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "postrzeże się"
+            "_SingularGenders": "postrzeże się"
           },
           "plural": {
-            "allPluralGenders": "postrzeże się"
+            "_PluralGenders": "postrzeże się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "postrzegę"
+            "_SingularGendersExcludingNeuter": "postrzegę"
           },
           "plural": {
-            "allPluralGenders": "postrzeżemy"
+            "_PluralGenders": "postrzeżemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "postrzeżesz"
+            "_SingularGendersExcludingNeuter": "postrzeżesz"
           },
           "plural": {
-            "allPluralGenders": "postrzeżecie"
+            "_PluralGenders": "postrzeżecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "postrzeże"
+            "_SingularGenders": "postrzeże"
           },
           "plural": {
-            "allPluralGenders": "postrzegą"
+            "_PluralGenders": "postrzegą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "postrzeżono"
+            "_SingularGenders": "postrzeżono"
           },
           "plural": {
-            "allPluralGenders": "postrzeżono"
+            "_PluralGenders": "postrzeżono"
           }
         },
         "1per": {

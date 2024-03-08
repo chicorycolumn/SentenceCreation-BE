@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podziękuje się"
+            "_SingularGenders": "podziękuje się"
           },
           "plural": {
-            "allPluralGenders": "podziękuje się"
+            "_PluralGenders": "podziękuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "podziękuję"
+            "_SingularGendersExcludingNeuter": "podziękuję"
           },
           "plural": {
-            "allPluralGenders": "podziękujemy"
+            "_PluralGenders": "podziękujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "podziękujesz"
+            "_SingularGendersExcludingNeuter": "podziękujesz"
           },
           "plural": {
-            "allPluralGenders": "podziękujecie"
+            "_PluralGenders": "podziękujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "podziękuje"
+            "_SingularGenders": "podziękuje"
           },
           "plural": {
-            "allPluralGenders": "podziękują"
+            "_PluralGenders": "podziękują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podziękowano"
+            "_SingularGenders": "podziękowano"
           },
           "plural": {
-            "allPluralGenders": "podziękowano"
+            "_PluralGenders": "podziękowano"
           }
         },
         "1per": {

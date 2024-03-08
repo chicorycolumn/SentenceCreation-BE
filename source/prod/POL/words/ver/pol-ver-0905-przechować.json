@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przechowa się"
+            "_SingularGenders": "przechowa się"
           },
           "plural": {
-            "allPluralGenders": "przechowa się"
+            "_PluralGenders": "przechowa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przechowam"
+            "_SingularGendersExcludingNeuter": "przechowam"
           },
           "plural": {
-            "allPluralGenders": "przechowamy"
+            "_PluralGenders": "przechowamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przechowasz"
+            "_SingularGendersExcludingNeuter": "przechowasz"
           },
           "plural": {
-            "allPluralGenders": "przechowacie"
+            "_PluralGenders": "przechowacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przechowa"
+            "_SingularGenders": "przechowa"
           },
           "plural": {
-            "allPluralGenders": "przechowają"
+            "_PluralGenders": "przechowają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przechowano"
+            "_SingularGenders": "przechowano"
           },
           "plural": {
-            "allPluralGenders": "przechowano"
+            "_PluralGenders": "przechowano"
           }
         },
         "1per": {

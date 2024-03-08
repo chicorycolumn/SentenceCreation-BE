@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pomieści się"
+            "_SingularGenders": "pomieści się"
           },
           "plural": {
-            "allPluralGenders": "pomieści się"
+            "_PluralGenders": "pomieści się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pomieszczę"
+            "_SingularGendersExcludingNeuter": "pomieszczę"
           },
           "plural": {
-            "allPluralGenders": "pomieścimy"
+            "_PluralGenders": "pomieścimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pomieścisz"
+            "_SingularGendersExcludingNeuter": "pomieścisz"
           },
           "plural": {
-            "allPluralGenders": "pomieścicie"
+            "_PluralGenders": "pomieścicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pomieści"
+            "_SingularGenders": "pomieści"
           },
           "plural": {
-            "allPluralGenders": "pomieszczą"
+            "_PluralGenders": "pomieszczą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pomieszczono"
+            "_SingularGenders": "pomieszczono"
           },
           "plural": {
-            "allPluralGenders": "pomieszczono"
+            "_PluralGenders": "pomieszczono"
           }
         },
         "1per": {

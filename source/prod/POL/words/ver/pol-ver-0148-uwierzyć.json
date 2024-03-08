@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "uwierzy się"
+            "_SingularGenders": "uwierzy się"
           },
           "plural": {
-            "allPluralGenders": "uwierzy się"
+            "_PluralGenders": "uwierzy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "uwierzę"
+            "_SingularGendersExcludingNeuter": "uwierzę"
           },
           "plural": {
-            "allPluralGenders": "uwierzymy"
+            "_PluralGenders": "uwierzymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "uwierzysz"
+            "_SingularGendersExcludingNeuter": "uwierzysz"
           },
           "plural": {
-            "allPluralGenders": "uwierzycie"
+            "_PluralGenders": "uwierzycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "uwierzy"
+            "_SingularGenders": "uwierzy"
           },
           "plural": {
-            "allPluralGenders": "uwierzą"
+            "_PluralGenders": "uwierzą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "uwierzono"
+            "_SingularGenders": "uwierzono"
           },
           "plural": {
-            "allPluralGenders": "uwierzono"
+            "_PluralGenders": "uwierzono"
           }
         },
         "1per": {

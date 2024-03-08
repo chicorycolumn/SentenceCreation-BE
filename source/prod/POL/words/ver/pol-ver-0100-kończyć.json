@@ -45,34 +45,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kończy się"
+            "_SingularGenders": "kończy się"
           },
           "plural": {
-            "allPluralGenders": "kończy się"
+            "_PluralGenders": "kończy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "kończę"
+            "_SingularGendersExcludingNeuter": "kończę"
           },
           "plural": {
-            "allPluralGenders": "kończymy"
+            "_PluralGenders": "kończymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "kończysz"
+            "_SingularGendersExcludingNeuter": "kończysz"
           },
           "plural": {
-            "allPluralGenders": "kończycie"
+            "_PluralGenders": "kończycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "kończy"
+            "_SingularGenders": "kończy"
           },
           "plural": {
-            "allPluralGenders": "kończą"
+            "_PluralGenders": "kończą"
           }
         }
       }

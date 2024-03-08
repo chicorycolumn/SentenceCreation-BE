@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kłamano"
+            "_SingularGenders": "kłamano"
           },
           "plural": {
-            "allPluralGenders": "kłamano"
+            "_PluralGenders": "kłamano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kłamie się"
+            "_SingularGenders": "kłamie się"
           },
           "plural": {
-            "allPluralGenders": "kłamie się"
+            "_PluralGenders": "kłamie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "kłamię"
+            "_SingularGendersExcludingNeuter": "kłamię"
           },
           "plural": {
-            "allPluralGenders": "kłamiemy"
+            "_PluralGenders": "kłamiemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "kłamiesz"
+            "_SingularGendersExcludingNeuter": "kłamiesz"
           },
           "plural": {
-            "allPluralGenders": "kłamiecie"
+            "_PluralGenders": "kłamiecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "kłamie"
+            "_SingularGenders": "kłamie"
           },
           "plural": {
-            "allPluralGenders": "kłamią"
+            "_PluralGenders": "kłamią"
           }
         }
       }

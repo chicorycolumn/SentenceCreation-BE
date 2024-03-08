@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "padano"
+            "_SingularGenders": "padano"
           },
           "plural": {
-            "allPluralGenders": "padano"
+            "_PluralGenders": "padano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pada się"
+            "_SingularGenders": "pada się"
           },
           "plural": {
-            "allPluralGenders": "pada się"
+            "_PluralGenders": "pada się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "padam"
+            "_SingularGendersExcludingNeuter": "padam"
           },
           "plural": {
-            "allPluralGenders": "padamy"
+            "_PluralGenders": "padamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "padasz"
+            "_SingularGendersExcludingNeuter": "padasz"
           },
           "plural": {
-            "allPluralGenders": "padacie"
+            "_PluralGenders": "padacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pada"
+            "_SingularGenders": "pada"
           },
           "plural": {
-            "allPluralGenders": "padają"
+            "_PluralGenders": "padają"
           }
         }
       }

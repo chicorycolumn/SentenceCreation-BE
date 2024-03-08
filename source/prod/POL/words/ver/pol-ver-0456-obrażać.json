@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "obrażano"
+            "_SingularGenders": "obrażano"
           },
           "plural": {
-            "allPluralGenders": "obrażano"
+            "_PluralGenders": "obrażano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "obraża się"
+            "_SingularGenders": "obraża się"
           },
           "plural": {
-            "allPluralGenders": "obraża się"
+            "_PluralGenders": "obraża się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "obrażam"
+            "_SingularGendersExcludingNeuter": "obrażam"
           },
           "plural": {
-            "allPluralGenders": "obrażamy"
+            "_PluralGenders": "obrażamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "obrażasz"
+            "_SingularGendersExcludingNeuter": "obrażasz"
           },
           "plural": {
-            "allPluralGenders": "obrażacie"
+            "_PluralGenders": "obrażacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "obraża"
+            "_SingularGenders": "obraża"
           },
           "plural": {
-            "allPluralGenders": "obrażają"
+            "_PluralGenders": "obrażają"
           }
         }
       }

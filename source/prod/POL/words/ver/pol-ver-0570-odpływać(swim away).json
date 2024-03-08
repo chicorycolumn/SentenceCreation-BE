@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odpływano"
+            "_SingularGenders": "odpływano"
           },
           "plural": {
-            "allPluralGenders": "odpływano"
+            "_PluralGenders": "odpływano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odpływa się"
+            "_SingularGenders": "odpływa się"
           },
           "plural": {
-            "allPluralGenders": "odpływa się"
+            "_PluralGenders": "odpływa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odpływam"
+            "_SingularGendersExcludingNeuter": "odpływam"
           },
           "plural": {
-            "allPluralGenders": "odpływamy"
+            "_PluralGenders": "odpływamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odpływasz"
+            "_SingularGendersExcludingNeuter": "odpływasz"
           },
           "plural": {
-            "allPluralGenders": "odpływacie"
+            "_PluralGenders": "odpływacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odpływa"
+            "_SingularGenders": "odpływa"
           },
           "plural": {
-            "allPluralGenders": "odpływają"
+            "_PluralGenders": "odpływają"
           }
         }
       }

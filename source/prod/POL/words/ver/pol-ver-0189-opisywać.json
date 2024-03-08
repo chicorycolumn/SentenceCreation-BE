@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "opisywano"
+            "_SingularGenders": "opisywano"
           },
           "plural": {
-            "allPluralGenders": "opisywano"
+            "_PluralGenders": "opisywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "opisuje się"
+            "_SingularGenders": "opisuje się"
           },
           "plural": {
-            "allPluralGenders": "opisuje się"
+            "_PluralGenders": "opisuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "opisuję"
+            "_SingularGendersExcludingNeuter": "opisuję"
           },
           "plural": {
-            "allPluralGenders": "opisujemy"
+            "_PluralGenders": "opisujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "opisujesz"
+            "_SingularGendersExcludingNeuter": "opisujesz"
           },
           "plural": {
-            "allPluralGenders": "opisujecie"
+            "_PluralGenders": "opisujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "opisuje"
+            "_SingularGenders": "opisuje"
           },
           "plural": {
-            "allPluralGenders": "opisują"
+            "_PluralGenders": "opisują"
           }
         }
       }

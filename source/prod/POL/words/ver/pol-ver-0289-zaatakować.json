@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zaatakuje się"
+            "_SingularGenders": "zaatakuje się"
           },
           "plural": {
-            "allPluralGenders": "zaatakuje się"
+            "_PluralGenders": "zaatakuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zaatakuję"
+            "_SingularGendersExcludingNeuter": "zaatakuję"
           },
           "plural": {
-            "allPluralGenders": "zaatakujemy"
+            "_PluralGenders": "zaatakujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zaatakujesz"
+            "_SingularGendersExcludingNeuter": "zaatakujesz"
           },
           "plural": {
-            "allPluralGenders": "zaatakujecie"
+            "_PluralGenders": "zaatakujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zaatakuje"
+            "_SingularGenders": "zaatakuje"
           },
           "plural": {
-            "allPluralGenders": "zaatakują"
+            "_PluralGenders": "zaatakują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zaatakowano"
+            "_SingularGenders": "zaatakowano"
           },
           "plural": {
-            "allPluralGenders": "zaatakowano"
+            "_PluralGenders": "zaatakowano"
           }
         },
         "1per": {

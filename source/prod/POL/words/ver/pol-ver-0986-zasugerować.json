@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zasugeruje się"
+            "_SingularGenders": "zasugeruje się"
           },
           "plural": {
-            "allPluralGenders": "zasugeruje się"
+            "_PluralGenders": "zasugeruje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "zasugeruję"
+            "_SingularGendersExcludingNeuter": "zasugeruję"
           },
           "plural": {
-            "allPluralGenders": "zasugerujemy"
+            "_PluralGenders": "zasugerujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "zasugerujesz"
+            "_SingularGendersExcludingNeuter": "zasugerujesz"
           },
           "plural": {
-            "allPluralGenders": "zasugerujecie"
+            "_PluralGenders": "zasugerujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zasugeruje"
+            "_SingularGenders": "zasugeruje"
           },
           "plural": {
-            "allPluralGenders": "zasugerują"
+            "_PluralGenders": "zasugerują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zasugerowano"
+            "_SingularGenders": "zasugerowano"
           },
           "plural": {
-            "allPluralGenders": "zasugerowano"
+            "_PluralGenders": "zasugerowano"
           }
         },
         "1per": {

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kwitnięto"
+            "_SingularGenders": "kwitnięto"
           },
           "plural": {
-            "allPluralGenders": "kwitnięto"
+            "_PluralGenders": "kwitnięto"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kwitnie się"
+            "_SingularGenders": "kwitnie się"
           },
           "plural": {
-            "allPluralGenders": "kwitnie się"
+            "_PluralGenders": "kwitnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "kwitnę"
+            "_SingularGendersExcludingNeuter": "kwitnę"
           },
           "plural": {
-            "allPluralGenders": "kwitniemy"
+            "_PluralGenders": "kwitniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "kwitniesz"
+            "_SingularGendersExcludingNeuter": "kwitniesz"
           },
           "plural": {
-            "allPluralGenders": "kwitniecie"
+            "_PluralGenders": "kwitniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "kwitnie"
+            "_SingularGenders": "kwitnie"
           },
           "plural": {
-            "allPluralGenders": "kwitną"
+            "_PluralGenders": "kwitną"
           }
         }
       }

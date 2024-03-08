@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przerywano"
+            "_SingularGenders": "przerywano"
           },
           "plural": {
-            "allPluralGenders": "przerywano"
+            "_PluralGenders": "przerywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przerywa się"
+            "_SingularGenders": "przerywa się"
           },
           "plural": {
-            "allPluralGenders": "przerywa się"
+            "_PluralGenders": "przerywa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przerywam"
+            "_SingularGendersExcludingNeuter": "przerywam"
           },
           "plural": {
-            "allPluralGenders": "przerywamy"
+            "_PluralGenders": "przerywamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przerywasz"
+            "_SingularGendersExcludingNeuter": "przerywasz"
           },
           "plural": {
-            "allPluralGenders": "przerywacie"
+            "_PluralGenders": "przerywacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przerywa"
+            "_SingularGenders": "przerywa"
           },
           "plural": {
-            "allPluralGenders": "przerywają"
+            "_PluralGenders": "przerywają"
           }
         }
       }

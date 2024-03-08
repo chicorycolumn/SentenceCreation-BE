@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "złoszczono"
+            "_SingularGenders": "złoszczono"
           },
           "plural": {
-            "allPluralGenders": "złoszczono"
+            "_PluralGenders": "złoszczono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "złości się"
+            "_SingularGenders": "złości się"
           },
           "plural": {
-            "allPluralGenders": "złości się"
+            "_PluralGenders": "złości się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "złoszczę"
+            "_SingularGendersExcludingNeuter": "złoszczę"
           },
           "plural": {
-            "allPluralGenders": "złościmy"
+            "_PluralGenders": "złościmy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "złościsz"
+            "_SingularGendersExcludingNeuter": "złościsz"
           },
           "plural": {
-            "allPluralGenders": "złościcie"
+            "_PluralGenders": "złościcie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "złości"
+            "_SingularGenders": "złości"
           },
           "plural": {
-            "allPluralGenders": "złoszczą"
+            "_PluralGenders": "złoszczą"
           }
         }
       }

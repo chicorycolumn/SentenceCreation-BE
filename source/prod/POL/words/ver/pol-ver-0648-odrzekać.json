@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odrzekano"
+            "_SingularGenders": "odrzekano"
           },
           "plural": {
-            "allPluralGenders": "odrzekano"
+            "_PluralGenders": "odrzekano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odrzeka się"
+            "_SingularGenders": "odrzeka się"
           },
           "plural": {
-            "allPluralGenders": "odrzeka się"
+            "_PluralGenders": "odrzeka się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odrzekam"
+            "_SingularGendersExcludingNeuter": "odrzekam"
           },
           "plural": {
-            "allPluralGenders": "odrzekamy"
+            "_PluralGenders": "odrzekamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odrzekasz"
+            "_SingularGendersExcludingNeuter": "odrzekasz"
           },
           "plural": {
-            "allPluralGenders": "odrzekacie"
+            "_PluralGenders": "odrzekacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odrzeka"
+            "_SingularGenders": "odrzeka"
           },
           "plural": {
-            "allPluralGenders": "odrzekają"
+            "_PluralGenders": "odrzekają"
           }
         }
       }

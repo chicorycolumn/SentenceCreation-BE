@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "irytowano"
+            "_SingularGenders": "irytowano"
           },
           "plural": {
-            "allPluralGenders": "irytowano"
+            "_PluralGenders": "irytowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "irytuje się"
+            "_SingularGenders": "irytuje się"
           },
           "plural": {
-            "allPluralGenders": "irytuje się"
+            "_PluralGenders": "irytuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "irytuję"
+            "_SingularGendersExcludingNeuter": "irytuję"
           },
           "plural": {
-            "allPluralGenders": "irytujemy"
+            "_PluralGenders": "irytujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "irytujesz"
+            "_SingularGendersExcludingNeuter": "irytujesz"
           },
           "plural": {
-            "allPluralGenders": "irytujecie"
+            "_PluralGenders": "irytujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "irytuje"
+            "_SingularGenders": "irytuje"
           },
           "plural": {
-            "allPluralGenders": "irytują"
+            "_PluralGenders": "irytują"
           }
         }
       }

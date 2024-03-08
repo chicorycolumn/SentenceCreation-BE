@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "interesowano"
+            "_SingularGenders": "interesowano"
           },
           "plural": {
-            "allPluralGenders": "interesowano"
+            "_PluralGenders": "interesowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "interesuje się"
+            "_SingularGenders": "interesuje się"
           },
           "plural": {
-            "allPluralGenders": "interesuje się"
+            "_PluralGenders": "interesuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "interesuję"
+            "_SingularGendersExcludingNeuter": "interesuję"
           },
           "plural": {
-            "allPluralGenders": "interesujemy"
+            "_PluralGenders": "interesujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "interesujesz"
+            "_SingularGendersExcludingNeuter": "interesujesz"
           },
           "plural": {
-            "allPluralGenders": "interesujecie"
+            "_PluralGenders": "interesujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "interesuje"
+            "_SingularGenders": "interesuje"
           },
           "plural": {
-            "allPluralGenders": "interesują"
+            "_PluralGenders": "interesują"
           }
         }
       }

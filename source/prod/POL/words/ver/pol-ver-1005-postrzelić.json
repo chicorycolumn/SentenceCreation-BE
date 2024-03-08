@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "postrzeli się"
+            "_SingularGenders": "postrzeli się"
           },
           "plural": {
-            "allPluralGenders": "postrzeli się"
+            "_PluralGenders": "postrzeli się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "postrzelę"
+            "_SingularGendersExcludingNeuter": "postrzelę"
           },
           "plural": {
-            "allPluralGenders": "postrzelimy"
+            "_PluralGenders": "postrzelimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "postrzelisz"
+            "_SingularGendersExcludingNeuter": "postrzelisz"
           },
           "plural": {
-            "allPluralGenders": "postrzelicie"
+            "_PluralGenders": "postrzelicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "postrzeli"
+            "_SingularGenders": "postrzeli"
           },
           "plural": {
-            "allPluralGenders": "postrzelą"
+            "_PluralGenders": "postrzelą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "postrzelono"
+            "_SingularGenders": "postrzelono"
           },
           "plural": {
-            "allPluralGenders": "postrzelono"
+            "_PluralGenders": "postrzelono"
           }
         },
         "1per": {

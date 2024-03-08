@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dogoni się"
+            "_SingularGenders": "dogoni się"
           },
           "plural": {
-            "allPluralGenders": "dogoni się"
+            "_PluralGenders": "dogoni się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dogonię"
+            "_SingularGendersExcludingNeuter": "dogonię"
           },
           "plural": {
-            "allPluralGenders": "dogonimy"
+            "_PluralGenders": "dogonimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dogonisz"
+            "_SingularGendersExcludingNeuter": "dogonisz"
           },
           "plural": {
-            "allPluralGenders": "dogonicie"
+            "_PluralGenders": "dogonicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dogoni"
+            "_SingularGenders": "dogoni"
           },
           "plural": {
-            "allPluralGenders": "dogonią"
+            "_PluralGenders": "dogonią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dogoniono"
+            "_SingularGenders": "dogoniono"
           },
           "plural": {
-            "allPluralGenders": "dogoniono"
+            "_PluralGenders": "dogoniono"
           }
         },
         "1per": {

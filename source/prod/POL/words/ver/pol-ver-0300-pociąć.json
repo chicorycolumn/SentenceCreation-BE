@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "potnie się"
+            "_SingularGenders": "potnie się"
           },
           "plural": {
-            "allPluralGenders": "potnie się"
+            "_PluralGenders": "potnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "potnę"
+            "_SingularGendersExcludingNeuter": "potnę"
           },
           "plural": {
-            "allPluralGenders": "potniemy"
+            "_PluralGenders": "potniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "potniesz"
+            "_SingularGendersExcludingNeuter": "potniesz"
           },
           "plural": {
-            "allPluralGenders": "potniecie"
+            "_PluralGenders": "potniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "potnie"
+            "_SingularGenders": "potnie"
           },
           "plural": {
-            "allPluralGenders": "potną"
+            "_PluralGenders": "potną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pocięto"
+            "_SingularGenders": "pocięto"
           },
           "plural": {
-            "allPluralGenders": "pocięto"
+            "_PluralGenders": "pocięto"
           }
         },
         "1per": {

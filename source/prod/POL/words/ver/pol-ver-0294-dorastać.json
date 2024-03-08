@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dorastano"
+            "_SingularGenders": "dorastano"
           },
           "plural": {
-            "allPluralGenders": "dorastano"
+            "_PluralGenders": "dorastano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dorasta się"
+            "_SingularGenders": "dorasta się"
           },
           "plural": {
-            "allPluralGenders": "dorasta się"
+            "_PluralGenders": "dorasta się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dorastam"
+            "_SingularGendersExcludingNeuter": "dorastam"
           },
           "plural": {
-            "allPluralGenders": "dorastamy"
+            "_PluralGenders": "dorastamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dorastasz"
+            "_SingularGendersExcludingNeuter": "dorastasz"
           },
           "plural": {
-            "allPluralGenders": "dorastacie"
+            "_PluralGenders": "dorastacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dorasta"
+            "_SingularGenders": "dorasta"
           },
           "plural": {
-            "allPluralGenders": "dorastają"
+            "_PluralGenders": "dorastają"
           }
         }
       }

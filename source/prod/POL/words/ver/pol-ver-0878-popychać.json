@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "popychano"
+            "_SingularGenders": "popychano"
           },
           "plural": {
-            "allPluralGenders": "popychano"
+            "_PluralGenders": "popychano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "popycha się"
+            "_SingularGenders": "popycha się"
           },
           "plural": {
-            "allPluralGenders": "popycha się"
+            "_PluralGenders": "popycha się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "popycham"
+            "_SingularGendersExcludingNeuter": "popycham"
           },
           "plural": {
-            "allPluralGenders": "popychamy"
+            "_PluralGenders": "popychamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "popychasz"
+            "_SingularGendersExcludingNeuter": "popychasz"
           },
           "plural": {
-            "allPluralGenders": "popychacie"
+            "_PluralGenders": "popychacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "popycha"
+            "_SingularGenders": "popycha"
           },
           "plural": {
-            "allPluralGenders": "popychają"
+            "_PluralGenders": "popychają"
           }
         }
       }

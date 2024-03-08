@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poszuka się"
+            "_SingularGenders": "poszuka się"
           },
           "plural": {
-            "allPluralGenders": "poszuka się"
+            "_PluralGenders": "poszuka się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "poszukam"
+            "_SingularGendersExcludingNeuter": "poszukam"
           },
           "plural": {
-            "allPluralGenders": "poszukamy"
+            "_PluralGenders": "poszukamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "poszukasz"
+            "_SingularGendersExcludingNeuter": "poszukasz"
           },
           "plural": {
-            "allPluralGenders": "poszukacie"
+            "_PluralGenders": "poszukacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "poszuka"
+            "_SingularGenders": "poszuka"
           },
           "plural": {
-            "allPluralGenders": "poszukają"
+            "_PluralGenders": "poszukają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poszukano"
+            "_SingularGenders": "poszukano"
           },
           "plural": {
-            "allPluralGenders": "poszukano"
+            "_PluralGenders": "poszukano"
           }
         },
         "1per": {

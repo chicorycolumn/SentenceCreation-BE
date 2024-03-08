@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pocałuje się"
+            "_SingularGenders": "pocałuje się"
           },
           "plural": {
-            "allPluralGenders": "pocałuje się"
+            "_PluralGenders": "pocałuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pocałuję"
+            "_SingularGendersExcludingNeuter": "pocałuję"
           },
           "plural": {
-            "allPluralGenders": "pocałujemy"
+            "_PluralGenders": "pocałujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pocałujesz"
+            "_SingularGendersExcludingNeuter": "pocałujesz"
           },
           "plural": {
-            "allPluralGenders": "pocałujecie"
+            "_PluralGenders": "pocałujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pocałuje"
+            "_SingularGenders": "pocałuje"
           },
           "plural": {
-            "allPluralGenders": "pocałują"
+            "_PluralGenders": "pocałują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pocałowano"
+            "_SingularGenders": "pocałowano"
           },
           "plural": {
-            "allPluralGenders": "pocałowano"
+            "_PluralGenders": "pocałowano"
           }
         },
         "1per": {

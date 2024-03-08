@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "obieca się"
+            "_SingularGenders": "obieca się"
           },
           "plural": {
-            "allPluralGenders": "obieca się"
+            "_PluralGenders": "obieca się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "obiecam"
+            "_SingularGendersExcludingNeuter": "obiecam"
           },
           "plural": {
-            "allPluralGenders": "obiecamy"
+            "_PluralGenders": "obiecamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "obiecasz"
+            "_SingularGendersExcludingNeuter": "obiecasz"
           },
           "plural": {
-            "allPluralGenders": "obiecacie"
+            "_PluralGenders": "obiecacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "obieca"
+            "_SingularGenders": "obieca"
           },
           "plural": {
-            "allPluralGenders": "obiecają"
+            "_PluralGenders": "obiecają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "obiecano"
+            "_SingularGenders": "obiecano"
           },
           "plural": {
-            "allPluralGenders": "obiecano"
+            "_PluralGenders": "obiecano"
           }
         },
         "1per": {

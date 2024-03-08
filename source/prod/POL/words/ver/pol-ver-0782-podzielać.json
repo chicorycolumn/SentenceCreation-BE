@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podzielano"
+            "_SingularGenders": "podzielano"
           },
           "plural": {
-            "allPluralGenders": "podzielano"
+            "_PluralGenders": "podzielano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podziela się"
+            "_SingularGenders": "podziela się"
           },
           "plural": {
-            "allPluralGenders": "podziela się"
+            "_PluralGenders": "podziela się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "podzielam"
+            "_SingularGendersExcludingNeuter": "podzielam"
           },
           "plural": {
-            "allPluralGenders": "podzielamy"
+            "_PluralGenders": "podzielamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "podzielasz"
+            "_SingularGendersExcludingNeuter": "podzielasz"
           },
           "plural": {
-            "allPluralGenders": "podzielacie"
+            "_PluralGenders": "podzielacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "podziela"
+            "_SingularGenders": "podziela"
           },
           "plural": {
-            "allPluralGenders": "podzielają"
+            "_PluralGenders": "podzielają"
           }
         }
       }

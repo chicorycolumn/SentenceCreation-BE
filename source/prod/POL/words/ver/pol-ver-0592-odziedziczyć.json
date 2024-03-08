@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odziedziczy się"
+            "_SingularGenders": "odziedziczy się"
           },
           "plural": {
-            "allPluralGenders": "odziedziczy się"
+            "_PluralGenders": "odziedziczy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odziedziczę"
+            "_SingularGendersExcludingNeuter": "odziedziczę"
           },
           "plural": {
-            "allPluralGenders": "odziedziczymy"
+            "_PluralGenders": "odziedziczymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odziedziczysz"
+            "_SingularGendersExcludingNeuter": "odziedziczysz"
           },
           "plural": {
-            "allPluralGenders": "odziedziczycie"
+            "_PluralGenders": "odziedziczycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odziedziczy"
+            "_SingularGenders": "odziedziczy"
           },
           "plural": {
-            "allPluralGenders": "odziedziczą"
+            "_PluralGenders": "odziedziczą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odziedziczono"
+            "_SingularGenders": "odziedziczono"
           },
           "plural": {
-            "allPluralGenders": "odziedziczono"
+            "_PluralGenders": "odziedziczono"
           }
         },
         "1per": {

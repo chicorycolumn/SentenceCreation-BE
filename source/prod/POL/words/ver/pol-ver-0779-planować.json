@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "planowano"
+            "_SingularGenders": "planowano"
           },
           "plural": {
-            "allPluralGenders": "planowano"
+            "_PluralGenders": "planowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "planuje się"
+            "_SingularGenders": "planuje się"
           },
           "plural": {
-            "allPluralGenders": "planuje się"
+            "_PluralGenders": "planuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "planuję"
+            "_SingularGendersExcludingNeuter": "planuję"
           },
           "plural": {
-            "allPluralGenders": "planujemy"
+            "_PluralGenders": "planujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "planujesz"
+            "_SingularGendersExcludingNeuter": "planujesz"
           },
           "plural": {
-            "allPluralGenders": "planujecie"
+            "_PluralGenders": "planujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "planuje"
+            "_SingularGenders": "planuje"
           },
           "plural": {
-            "allPluralGenders": "planują"
+            "_PluralGenders": "planują"
           }
         }
       }

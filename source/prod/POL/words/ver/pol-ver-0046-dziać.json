@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dziano"
+            "_SingularGenders": "dziano"
           },
           "plural": {
-            "allPluralGenders": "dziano"
+            "_PluralGenders": "dziano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dzieje się"
+            "_SingularGenders": "dzieje się"
           },
           "plural": {
-            "allPluralGenders": "dzieje się"
+            "_PluralGenders": "dzieje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dzieję"
+            "_SingularGendersExcludingNeuter": "dzieję"
           },
           "plural": {
-            "allPluralGenders": "dziejemy"
+            "_PluralGenders": "dziejemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dziejesz"
+            "_SingularGendersExcludingNeuter": "dziejesz"
           },
           "plural": {
-            "allPluralGenders": "dziejecie"
+            "_PluralGenders": "dziejecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dzieje"
+            "_SingularGenders": "dzieje"
           },
           "plural": {
-            "allPluralGenders": "dzieją"
+            "_PluralGenders": "dzieją"
           }
         }
       }

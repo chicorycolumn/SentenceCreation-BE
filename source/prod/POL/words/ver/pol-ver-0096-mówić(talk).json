@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "mówiono"
+            "_SingularGenders": "mówiono"
           },
           "plural": {
-            "allPluralGenders": "mówiono"
+            "_PluralGenders": "mówiono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "mówi się"
+            "_SingularGenders": "mówi się"
           },
           "plural": {
-            "allPluralGenders": "mówi się"
+            "_PluralGenders": "mówi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "mówię"
+            "_SingularGendersExcludingNeuter": "mówię"
           },
           "plural": {
-            "allPluralGenders": "mówimy"
+            "_PluralGenders": "mówimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "mówisz"
+            "_SingularGendersExcludingNeuter": "mówisz"
           },
           "plural": {
-            "allPluralGenders": "mówicie"
+            "_PluralGenders": "mówicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "mówi"
+            "_SingularGenders": "mówi"
           },
           "plural": {
-            "allPluralGenders": "mówią"
+            "_PluralGenders": "mówią"
           }
         }
       }

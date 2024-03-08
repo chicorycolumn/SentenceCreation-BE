@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dojrzeje się"
+            "_SingularGenders": "dojrzeje się"
           },
           "plural": {
-            "allPluralGenders": "dojrzeje się"
+            "_PluralGenders": "dojrzeje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dojrzeję"
+            "_SingularGendersExcludingNeuter": "dojrzeję"
           },
           "plural": {
-            "allPluralGenders": "dojrzejemy"
+            "_PluralGenders": "dojrzejemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dojrzejesz"
+            "_SingularGendersExcludingNeuter": "dojrzejesz"
           },
           "plural": {
-            "allPluralGenders": "dojrzejecie"
+            "_PluralGenders": "dojrzejecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dojrzeje"
+            "_SingularGenders": "dojrzeje"
           },
           "plural": {
-            "allPluralGenders": "dojrzeją"
+            "_PluralGenders": "dojrzeją"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dojrzano"
+            "_SingularGenders": "dojrzano"
           },
           "plural": {
-            "allPluralGenders": "dojrzano"
+            "_PluralGenders": "dojrzano"
           }
         },
         "1per": {

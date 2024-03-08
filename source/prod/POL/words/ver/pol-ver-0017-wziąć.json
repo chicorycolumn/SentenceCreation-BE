@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "weźmie się"
+            "_SingularGenders": "weźmie się"
           },
           "plural": {
-            "allPluralGenders": "weźmie się"
+            "_PluralGenders": "weźmie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "wezmę"
+            "_SingularGendersExcludingNeuter": "wezmę"
           },
           "plural": {
-            "allPluralGenders": "weźmiemy"
+            "_PluralGenders": "weźmiemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "weźmiesz"
+            "_SingularGendersExcludingNeuter": "weźmiesz"
           },
           "plural": {
-            "allPluralGenders": "weźmiecie"
+            "_PluralGenders": "weźmiecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "weźmie"
+            "_SingularGenders": "weźmie"
           },
           "plural": {
-            "allPluralGenders": "wezmą"
+            "_PluralGenders": "wezmą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wzięto"
+            "_SingularGenders": "wzięto"
           },
           "plural": {
-            "allPluralGenders": "wzięto"
+            "_PluralGenders": "wzięto"
           }
         },
         "1per": {

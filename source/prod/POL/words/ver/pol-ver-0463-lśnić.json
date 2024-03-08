@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "lśniono"
+            "_SingularGenders": "lśniono"
           },
           "plural": {
-            "allPluralGenders": "lśniono"
+            "_PluralGenders": "lśniono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "lśni się"
+            "_SingularGenders": "lśni się"
           },
           "plural": {
-            "allPluralGenders": "lśni się"
+            "_PluralGenders": "lśni się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "lśnię"
+            "_SingularGendersExcludingNeuter": "lśnię"
           },
           "plural": {
-            "allPluralGenders": "lśnimy"
+            "_PluralGenders": "lśnimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "lśnisz"
+            "_SingularGendersExcludingNeuter": "lśnisz"
           },
           "plural": {
-            "allPluralGenders": "lśnicie"
+            "_PluralGenders": "lśnicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "lśni"
+            "_SingularGenders": "lśni"
           },
           "plural": {
-            "allPluralGenders": "lśnią"
+            "_PluralGenders": "lśnią"
           }
         }
       }

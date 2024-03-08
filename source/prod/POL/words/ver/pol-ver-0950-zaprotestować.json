@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zaprotestuje się"
+            "_SingularGenders": "zaprotestuje się"
           },
           "plural": {
-            "allPluralGenders": "zaprotestuje się"
+            "_PluralGenders": "zaprotestuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zaprotestuję"
+            "_SingularGendersExcludingNeuter": "zaprotestuję"
           },
           "plural": {
-            "allPluralGenders": "zaprotestujemy"
+            "_PluralGenders": "zaprotestujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zaprotestujesz"
+            "_SingularGendersExcludingNeuter": "zaprotestujesz"
           },
           "plural": {
-            "allPluralGenders": "zaprotestujecie"
+            "_PluralGenders": "zaprotestujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zaprotestuje"
+            "_SingularGenders": "zaprotestuje"
           },
           "plural": {
-            "allPluralGenders": "zaprotestują"
+            "_PluralGenders": "zaprotestują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zaprotestowano"
+            "_SingularGenders": "zaprotestowano"
           },
           "plural": {
-            "allPluralGenders": "zaprotestowano"
+            "_PluralGenders": "zaprotestowano"
           }
         },
         "1per": {

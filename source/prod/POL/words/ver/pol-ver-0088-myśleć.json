@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "myślano"
+            "_SingularGenders": "myślano"
           },
           "plural": {
-            "allPluralGenders": "myślano"
+            "_PluralGenders": "myślano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "myśli się"
+            "_SingularGenders": "myśli się"
           },
           "plural": {
-            "allPluralGenders": "myśli się"
+            "_PluralGenders": "myśli się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "myślę"
+            "_SingularGendersExcludingNeuter": "myślę"
           },
           "plural": {
-            "allPluralGenders": "myślimy"
+            "_PluralGenders": "myślimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "myślisz"
+            "_SingularGendersExcludingNeuter": "myślisz"
           },
           "plural": {
-            "allPluralGenders": "myślicie"
+            "_PluralGenders": "myślicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "myśli"
+            "_SingularGenders": "myśli"
           },
           "plural": {
-            "allPluralGenders": "myślą"
+            "_PluralGenders": "myślą"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "robiono"
+            "_SingularGenders": "robiono"
           },
           "plural": {
-            "allPluralGenders": "robiono"
+            "_PluralGenders": "robiono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "robi się"
+            "_SingularGenders": "robi się"
           },
           "plural": {
-            "allPluralGenders": "robi się"
+            "_PluralGenders": "robi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "robię"
+            "_SingularGendersExcludingNeuter": "robię"
           },
           "plural": {
-            "allPluralGenders": "robimy"
+            "_PluralGenders": "robimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "robisz"
+            "_SingularGendersExcludingNeuter": "robisz"
           },
           "plural": {
-            "allPluralGenders": "robicie"
+            "_PluralGenders": "robicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "robi"
+            "_SingularGenders": "robi"
           },
           "plural": {
-            "allPluralGenders": "robią"
+            "_PluralGenders": "robią"
           }
         }
       }

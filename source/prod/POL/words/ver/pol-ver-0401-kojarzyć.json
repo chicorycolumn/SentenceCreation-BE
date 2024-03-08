@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kojarzono"
+            "_SingularGenders": "kojarzono"
           },
           "plural": {
-            "allPluralGenders": "kojarzono"
+            "_PluralGenders": "kojarzono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kojarzy się"
+            "_SingularGenders": "kojarzy się"
           },
           "plural": {
-            "allPluralGenders": "kojarzy się"
+            "_PluralGenders": "kojarzy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "kojarzę"
+            "_SingularGendersExcludingNeuter": "kojarzę"
           },
           "plural": {
-            "allPluralGenders": "kojarzymy"
+            "_PluralGenders": "kojarzymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "kojarzysz"
+            "_SingularGendersExcludingNeuter": "kojarzysz"
           },
           "plural": {
-            "allPluralGenders": "kojarzycie"
+            "_PluralGenders": "kojarzycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "kojarzy"
+            "_SingularGenders": "kojarzy"
           },
           "plural": {
-            "allPluralGenders": "kojarzą"
+            "_PluralGenders": "kojarzą"
           }
         }
       }

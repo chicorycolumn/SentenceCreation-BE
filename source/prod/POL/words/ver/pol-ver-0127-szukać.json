@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "szukano"
+            "_SingularGenders": "szukano"
           },
           "plural": {
-            "allPluralGenders": "szukano"
+            "_PluralGenders": "szukano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "szuka się"
+            "_SingularGenders": "szuka się"
           },
           "plural": {
-            "allPluralGenders": "szuka się"
+            "_PluralGenders": "szuka się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "szukam"
+            "_SingularGendersExcludingNeuter": "szukam"
           },
           "plural": {
-            "allPluralGenders": "szukamy"
+            "_PluralGenders": "szukamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "szukasz"
+            "_SingularGendersExcludingNeuter": "szukasz"
           },
           "plural": {
-            "allPluralGenders": "szukacie"
+            "_PluralGenders": "szukacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "szuka"
+            "_SingularGenders": "szuka"
           },
           "plural": {
-            "allPluralGenders": "szukają"
+            "_PluralGenders": "szukają"
           }
         }
       }

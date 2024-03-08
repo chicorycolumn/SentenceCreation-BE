@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "chodzono"
+            "_SingularGenders": "chodzono"
           },
           "plural": {
-            "allPluralGenders": "chodzono"
+            "_PluralGenders": "chodzono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "chodzi się"
+            "_SingularGenders": "chodzi się"
           },
           "plural": {
-            "allPluralGenders": "chodzi się"
+            "_PluralGenders": "chodzi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "chodzę"
+            "_SingularGendersExcludingNeuter": "chodzę"
           },
           "plural": {
-            "allPluralGenders": "chodzimy"
+            "_PluralGenders": "chodzimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "chodzisz"
+            "_SingularGendersExcludingNeuter": "chodzisz"
           },
           "plural": {
-            "allPluralGenders": "chodzicie"
+            "_PluralGenders": "chodzicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "chodzi"
+            "_SingularGenders": "chodzi"
           },
           "plural": {
-            "allPluralGenders": "chodzą"
+            "_PluralGenders": "chodzą"
           }
         }
       }

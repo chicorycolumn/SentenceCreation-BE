@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "śpieszono"
+            "_SingularGenders": "śpieszono"
           },
           "plural": {
-            "allPluralGenders": "śpieszono"
+            "_PluralGenders": "śpieszono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "śpieszy się"
+            "_SingularGenders": "śpieszy się"
           },
           "plural": {
-            "allPluralGenders": "śpieszy się"
+            "_PluralGenders": "śpieszy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "śpieszę"
+            "_SingularGendersExcludingNeuter": "śpieszę"
           },
           "plural": {
-            "allPluralGenders": "śpieszymy"
+            "_PluralGenders": "śpieszymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "śpieszysz"
+            "_SingularGendersExcludingNeuter": "śpieszysz"
           },
           "plural": {
-            "allPluralGenders": "śpieszycie"
+            "_PluralGenders": "śpieszycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "śpieszy"
+            "_SingularGenders": "śpieszy"
           },
           "plural": {
-            "allPluralGenders": "śpieszą"
+            "_PluralGenders": "śpieszą"
           }
         }
       }

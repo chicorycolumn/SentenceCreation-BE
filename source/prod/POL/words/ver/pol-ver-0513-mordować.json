@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "mordowano"
+            "_SingularGenders": "mordowano"
           },
           "plural": {
-            "allPluralGenders": "mordowano"
+            "_PluralGenders": "mordowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "morduje się"
+            "_SingularGenders": "morduje się"
           },
           "plural": {
-            "allPluralGenders": "morduje się"
+            "_PluralGenders": "morduje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "morduję"
+            "_SingularGendersExcludingNeuter": "morduję"
           },
           "plural": {
-            "allPluralGenders": "mordujemy"
+            "_PluralGenders": "mordujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "mordujesz"
+            "_SingularGendersExcludingNeuter": "mordujesz"
           },
           "plural": {
-            "allPluralGenders": "mordujecie"
+            "_PluralGenders": "mordujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "morduje"
+            "_SingularGenders": "morduje"
           },
           "plural": {
-            "allPluralGenders": "mordują"
+            "_PluralGenders": "mordują"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "traktowano"
+            "_SingularGenders": "traktowano"
           },
           "plural": {
-            "allPluralGenders": "traktowano"
+            "_PluralGenders": "traktowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "traktuje się"
+            "_SingularGenders": "traktuje się"
           },
           "plural": {
-            "allPluralGenders": "traktuje się"
+            "_PluralGenders": "traktuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "traktuję"
+            "_SingularGendersExcludingNeuter": "traktuję"
           },
           "plural": {
-            "allPluralGenders": "traktujemy"
+            "_PluralGenders": "traktujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "traktujesz"
+            "_SingularGendersExcludingNeuter": "traktujesz"
           },
           "plural": {
-            "allPluralGenders": "traktujecie"
+            "_PluralGenders": "traktujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "traktuje"
+            "_SingularGenders": "traktuje"
           },
           "plural": {
-            "allPluralGenders": "traktują"
+            "_PluralGenders": "traktują"
           }
         }
       }

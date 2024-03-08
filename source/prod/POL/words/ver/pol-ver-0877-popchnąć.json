@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "popchnie się"
+            "_SingularGenders": "popchnie się"
           },
           "plural": {
-            "allPluralGenders": "popchnie się"
+            "_PluralGenders": "popchnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "popchnę"
+            "_SingularGendersExcludingNeuter": "popchnę"
           },
           "plural": {
-            "allPluralGenders": "popchniemy"
+            "_PluralGenders": "popchniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "popchniesz"
+            "_SingularGendersExcludingNeuter": "popchniesz"
           },
           "plural": {
-            "allPluralGenders": "popchniecie"
+            "_PluralGenders": "popchniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "popchnie"
+            "_SingularGenders": "popchnie"
           },
           "plural": {
-            "allPluralGenders": "popchną"
+            "_PluralGenders": "popchną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "popchnięto"
+            "_SingularGenders": "popchnięto"
           },
           "plural": {
-            "allPluralGenders": "popchnięto"
+            "_PluralGenders": "popchnięto"
           }
         },
         "1per": {

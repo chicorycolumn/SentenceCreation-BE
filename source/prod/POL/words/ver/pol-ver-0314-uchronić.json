@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "uchroni się"
+            "_SingularGenders": "uchroni się"
           },
           "plural": {
-            "allPluralGenders": "uchroni się"
+            "_PluralGenders": "uchroni się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "uchronię"
+            "_SingularGendersExcludingNeuter": "uchronię"
           },
           "plural": {
-            "allPluralGenders": "uchronimy"
+            "_PluralGenders": "uchronimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "uchronisz"
+            "_SingularGendersExcludingNeuter": "uchronisz"
           },
           "plural": {
-            "allPluralGenders": "uchronicie"
+            "_PluralGenders": "uchronicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "uchroni"
+            "_SingularGenders": "uchroni"
           },
           "plural": {
-            "allPluralGenders": "uchronią"
+            "_PluralGenders": "uchronią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "uchroniono"
+            "_SingularGenders": "uchroniono"
           },
           "plural": {
-            "allPluralGenders": "uchroniono"
+            "_PluralGenders": "uchroniono"
           }
         },
         "1per": {

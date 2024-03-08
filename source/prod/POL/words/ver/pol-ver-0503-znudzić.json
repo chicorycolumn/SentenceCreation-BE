@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "znudzi się"
+            "_SingularGenders": "znudzi się"
           },
           "plural": {
-            "allPluralGenders": "znudzi się"
+            "_PluralGenders": "znudzi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "znudzę"
+            "_SingularGendersExcludingNeuter": "znudzę"
           },
           "plural": {
-            "allPluralGenders": "znudzimy"
+            "_PluralGenders": "znudzimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "znudzisz"
+            "_SingularGendersExcludingNeuter": "znudzisz"
           },
           "plural": {
-            "allPluralGenders": "znudzicie"
+            "_PluralGenders": "znudzicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "znudzi"
+            "_SingularGenders": "znudzi"
           },
           "plural": {
-            "allPluralGenders": "znudzą"
+            "_PluralGenders": "znudzą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "znudzono"
+            "_SingularGenders": "znudzono"
           },
           "plural": {
-            "allPluralGenders": "znudzono"
+            "_PluralGenders": "znudzono"
           }
         },
         "1per": {

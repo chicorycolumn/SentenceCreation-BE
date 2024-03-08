@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zagwarantuje się"
+            "_SingularGenders": "zagwarantuje się"
           },
           "plural": {
-            "allPluralGenders": "zagwarantuje się"
+            "_PluralGenders": "zagwarantuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zagwarantuję"
+            "_SingularGendersExcludingNeuter": "zagwarantuję"
           },
           "plural": {
-            "allPluralGenders": "zagwarantujemy"
+            "_PluralGenders": "zagwarantujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zagwarantujesz"
+            "_SingularGendersExcludingNeuter": "zagwarantujesz"
           },
           "plural": {
-            "allPluralGenders": "zagwarantujecie"
+            "_PluralGenders": "zagwarantujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zagwarantuje"
+            "_SingularGenders": "zagwarantuje"
           },
           "plural": {
-            "allPluralGenders": "zagwarantują"
+            "_PluralGenders": "zagwarantują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zagwarantowano"
+            "_SingularGenders": "zagwarantowano"
           },
           "plural": {
-            "allPluralGenders": "zagwarantowano"
+            "_PluralGenders": "zagwarantowano"
           }
         },
         "1per": {

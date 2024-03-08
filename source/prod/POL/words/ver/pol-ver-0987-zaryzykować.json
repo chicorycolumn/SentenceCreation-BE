@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zaryzykuje się"
+            "_SingularGenders": "zaryzykuje się"
           },
           "plural": {
-            "allPluralGenders": "zaryzykuje się"
+            "_PluralGenders": "zaryzykuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "zaryzykuję"
+            "_SingularGendersExcludingNeuter": "zaryzykuję"
           },
           "plural": {
-            "allPluralGenders": "zaryzykujemy"
+            "_PluralGenders": "zaryzykujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "zaryzykujesz"
+            "_SingularGendersExcludingNeuter": "zaryzykujesz"
           },
           "plural": {
-            "allPluralGenders": "zaryzykujecie"
+            "_PluralGenders": "zaryzykujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zaryzykuje"
+            "_SingularGenders": "zaryzykuje"
           },
           "plural": {
-            "allPluralGenders": "zaryzykują"
+            "_PluralGenders": "zaryzykują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zaryzykowano"
+            "_SingularGenders": "zaryzykowano"
           },
           "plural": {
-            "allPluralGenders": "zaryzykowano"
+            "_PluralGenders": "zaryzykowano"
           }
         },
         "1per": {

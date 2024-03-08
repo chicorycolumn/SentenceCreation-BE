@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przekonywano"
+            "_SingularGenders": "przekonywano"
           },
           "plural": {
-            "allPluralGenders": "przekonywano"
+            "_PluralGenders": "przekonywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przekonuje się"
+            "_SingularGenders": "przekonuje się"
           },
           "plural": {
-            "allPluralGenders": "przekonuje się"
+            "_PluralGenders": "przekonuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przekonuję"
+            "_SingularGendersExcludingNeuter": "przekonuję"
           },
           "plural": {
-            "allPluralGenders": "przekonujemy"
+            "_PluralGenders": "przekonujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przekonujesz"
+            "_SingularGendersExcludingNeuter": "przekonujesz"
           },
           "plural": {
-            "allPluralGenders": "przekonujecie"
+            "_PluralGenders": "przekonujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przekonuje"
+            "_SingularGenders": "przekonuje"
           },
           "plural": {
-            "allPluralGenders": "przekonują"
+            "_PluralGenders": "przekonują"
           }
         }
       }

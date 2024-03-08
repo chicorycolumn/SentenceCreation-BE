@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "badano"
+            "_SingularGenders": "badano"
           },
           "plural": {
-            "allPluralGenders": "badano"
+            "_PluralGenders": "badano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "bada się"
+            "_SingularGenders": "bada się"
           },
           "plural": {
-            "allPluralGenders": "bada się"
+            "_PluralGenders": "bada się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "badam"
+            "_SingularGendersExcludingNeuter": "badam"
           },
           "plural": {
-            "allPluralGenders": "badamy"
+            "_PluralGenders": "badamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "badasz"
+            "_SingularGendersExcludingNeuter": "badasz"
           },
           "plural": {
-            "allPluralGenders": "badacie"
+            "_PluralGenders": "badacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "bada"
+            "_SingularGenders": "bada"
           },
           "plural": {
-            "allPluralGenders": "badają"
+            "_PluralGenders": "badają"
           }
         }
       }

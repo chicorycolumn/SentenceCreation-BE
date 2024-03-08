@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "milczano"
+            "_SingularGenders": "milczano"
           },
           "plural": {
-            "allPluralGenders": "milczano"
+            "_PluralGenders": "milczano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "milczy się"
+            "_SingularGenders": "milczy się"
           },
           "plural": {
-            "allPluralGenders": "milczy się"
+            "_PluralGenders": "milczy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "milczę"
+            "_SingularGendersExcludingNeuter": "milczę"
           },
           "plural": {
-            "allPluralGenders": "milczymy"
+            "_PluralGenders": "milczymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "milczysz"
+            "_SingularGendersExcludingNeuter": "milczysz"
           },
           "plural": {
-            "allPluralGenders": "milczycie"
+            "_PluralGenders": "milczycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "milczy"
+            "_SingularGenders": "milczy"
           },
           "plural": {
-            "allPluralGenders": "milczą"
+            "_PluralGenders": "milczą"
           }
         }
       }

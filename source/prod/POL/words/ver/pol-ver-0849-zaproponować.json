@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zaproponuje się"
+            "_SingularGenders": "zaproponuje się"
           },
           "plural": {
-            "allPluralGenders": "zaproponuje się"
+            "_PluralGenders": "zaproponuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zaproponuję"
+            "_SingularGendersExcludingNeuter": "zaproponuję"
           },
           "plural": {
-            "allPluralGenders": "zaproponujemy"
+            "_PluralGenders": "zaproponujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zaproponujesz"
+            "_SingularGendersExcludingNeuter": "zaproponujesz"
           },
           "plural": {
-            "allPluralGenders": "zaproponujecie"
+            "_PluralGenders": "zaproponujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zaproponuje"
+            "_SingularGenders": "zaproponuje"
           },
           "plural": {
-            "allPluralGenders": "zaproponują"
+            "_PluralGenders": "zaproponują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zaproponowano"
+            "_SingularGenders": "zaproponowano"
           },
           "plural": {
-            "allPluralGenders": "zaproponowano"
+            "_PluralGenders": "zaproponowano"
           }
         },
         "1per": {

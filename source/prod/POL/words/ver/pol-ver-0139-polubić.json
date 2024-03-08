@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "polubi się"
+            "_SingularGenders": "polubi się"
           },
           "plural": {
-            "allPluralGenders": "polubi się"
+            "_PluralGenders": "polubi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "polubię"
+            "_SingularGendersExcludingNeuter": "polubię"
           },
           "plural": {
-            "allPluralGenders": "polubimy"
+            "_PluralGenders": "polubimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "polubisz"
+            "_SingularGendersExcludingNeuter": "polubisz"
           },
           "plural": {
-            "allPluralGenders": "polubicie"
+            "_PluralGenders": "polubicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "polubi"
+            "_SingularGenders": "polubi"
           },
           "plural": {
-            "allPluralGenders": "polubią"
+            "_PluralGenders": "polubią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "polubiono"
+            "_SingularGenders": "polubiono"
           },
           "plural": {
-            "allPluralGenders": "polubiono"
+            "_PluralGenders": "polubiono"
           }
         },
         "1per": {

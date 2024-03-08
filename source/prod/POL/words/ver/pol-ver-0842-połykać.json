@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "połykano"
+            "_SingularGenders": "połykano"
           },
           "plural": {
-            "allPluralGenders": "połykano"
+            "_PluralGenders": "połykano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "połyka się"
+            "_SingularGenders": "połyka się"
           },
           "plural": {
-            "allPluralGenders": "połyka się"
+            "_PluralGenders": "połyka się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "połykam"
+            "_SingularGendersExcludingNeuter": "połykam"
           },
           "plural": {
-            "allPluralGenders": "połykamy"
+            "_PluralGenders": "połykamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "połykasz"
+            "_SingularGendersExcludingNeuter": "połykasz"
           },
           "plural": {
-            "allPluralGenders": "połykacie"
+            "_PluralGenders": "połykacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "połyka"
+            "_SingularGenders": "połyka"
           },
           "plural": {
-            "allPluralGenders": "połykają"
+            "_PluralGenders": "połykają"
           }
         }
       }

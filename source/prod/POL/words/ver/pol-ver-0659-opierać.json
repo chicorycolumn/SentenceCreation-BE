@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "opierano"
+            "_SingularGenders": "opierano"
           },
           "plural": {
-            "allPluralGenders": "opierano"
+            "_PluralGenders": "opierano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "opiera się"
+            "_SingularGenders": "opiera się"
           },
           "plural": {
-            "allPluralGenders": "opiera się"
+            "_PluralGenders": "opiera się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "opieram"
+            "_SingularGendersExcludingNeuter": "opieram"
           },
           "plural": {
-            "allPluralGenders": "opieramy"
+            "_PluralGenders": "opieramy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "opierasz"
+            "_SingularGendersExcludingNeuter": "opierasz"
           },
           "plural": {
-            "allPluralGenders": "opieracie"
+            "_PluralGenders": "opieracie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "opiera"
+            "_SingularGenders": "opiera"
           },
           "plural": {
-            "allPluralGenders": "opierają"
+            "_PluralGenders": "opierają"
           }
         }
       }

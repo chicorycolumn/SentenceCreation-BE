@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zniesie się"
+            "_SingularGenders": "zniesie się"
           },
           "plural": {
-            "allPluralGenders": "zniesie się"
+            "_PluralGenders": "zniesie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zniosę"
+            "_SingularGendersExcludingNeuter": "zniosę"
           },
           "plural": {
-            "allPluralGenders": "zniesiemy"
+            "_PluralGenders": "zniesiemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zniesiesz"
+            "_SingularGendersExcludingNeuter": "zniesiesz"
           },
           "plural": {
-            "allPluralGenders": "zniesiecie"
+            "_PluralGenders": "zniesiecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zniesie"
+            "_SingularGenders": "zniesie"
           },
           "plural": {
-            "allPluralGenders": "zniosą"
+            "_PluralGenders": "zniosą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zniesiono"
+            "_SingularGenders": "zniesiono"
           },
           "plural": {
-            "allPluralGenders": "zniesiono"
+            "_PluralGenders": "zniesiono"
           }
         },
         "1per": {

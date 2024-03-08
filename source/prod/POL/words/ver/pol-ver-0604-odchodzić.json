@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odchodzono"
+            "_SingularGenders": "odchodzono"
           },
           "plural": {
-            "allPluralGenders": "odchodzono"
+            "_PluralGenders": "odchodzono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odchodzi się"
+            "_SingularGenders": "odchodzi się"
           },
           "plural": {
-            "allPluralGenders": "odchodzi się"
+            "_PluralGenders": "odchodzi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odchodzę"
+            "_SingularGendersExcludingNeuter": "odchodzę"
           },
           "plural": {
-            "allPluralGenders": "odchodzimy"
+            "_PluralGenders": "odchodzimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odchodzisz"
+            "_SingularGendersExcludingNeuter": "odchodzisz"
           },
           "plural": {
-            "allPluralGenders": "odchodzicie"
+            "_PluralGenders": "odchodzicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odchodzi"
+            "_SingularGenders": "odchodzi"
           },
           "plural": {
-            "allPluralGenders": "odchodzą"
+            "_PluralGenders": "odchodzą"
           }
         }
       }

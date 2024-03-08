@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "napotka się"
+            "_SingularGenders": "napotka się"
           },
           "plural": {
-            "allPluralGenders": "napotka się"
+            "_PluralGenders": "napotka się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "napotkam"
+            "_SingularGendersExcludingNeuter": "napotkam"
           },
           "plural": {
-            "allPluralGenders": "napotkamy"
+            "_PluralGenders": "napotkamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "napotkasz"
+            "_SingularGendersExcludingNeuter": "napotkasz"
           },
           "plural": {
-            "allPluralGenders": "napotkacie"
+            "_PluralGenders": "napotkacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "napotka"
+            "_SingularGenders": "napotka"
           },
           "plural": {
-            "allPluralGenders": "napotkają"
+            "_PluralGenders": "napotkają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "napotkano"
+            "_SingularGenders": "napotkano"
           },
           "plural": {
-            "allPluralGenders": "napotkano"
+            "_PluralGenders": "napotkano"
           }
         },
         "1per": {

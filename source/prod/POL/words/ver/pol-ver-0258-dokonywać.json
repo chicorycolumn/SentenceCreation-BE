@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dokonywano"
+            "_SingularGenders": "dokonywano"
           },
           "plural": {
-            "allPluralGenders": "dokonywano"
+            "_PluralGenders": "dokonywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dokonuje się"
+            "_SingularGenders": "dokonuje się"
           },
           "plural": {
-            "allPluralGenders": "dokonuje się"
+            "_PluralGenders": "dokonuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dokonuję"
+            "_SingularGendersExcludingNeuter": "dokonuję"
           },
           "plural": {
-            "allPluralGenders": "dokonujemy"
+            "_PluralGenders": "dokonujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dokonujesz"
+            "_SingularGendersExcludingNeuter": "dokonujesz"
           },
           "plural": {
-            "allPluralGenders": "dokonujecie"
+            "_PluralGenders": "dokonujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dokonuje"
+            "_SingularGenders": "dokonuje"
           },
           "plural": {
-            "allPluralGenders": "dokonują"
+            "_PluralGenders": "dokonują"
           }
         }
       }

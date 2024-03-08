@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pożyczano"
+            "_SingularGenders": "pożyczano"
           },
           "plural": {
-            "allPluralGenders": "pożyczano"
+            "_PluralGenders": "pożyczano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pożycza się"
+            "_SingularGenders": "pożycza się"
           },
           "plural": {
-            "allPluralGenders": "pożycza się"
+            "_PluralGenders": "pożycza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pożyczam"
+            "_SingularGendersExcludingNeuter": "pożyczam"
           },
           "plural": {
-            "allPluralGenders": "pożyczamy"
+            "_PluralGenders": "pożyczamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pożyczasz"
+            "_SingularGendersExcludingNeuter": "pożyczasz"
           },
           "plural": {
-            "allPluralGenders": "pożyczacie"
+            "_PluralGenders": "pożyczacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pożycza"
+            "_SingularGenders": "pożycza"
           },
           "plural": {
-            "allPluralGenders": "pożyczają"
+            "_PluralGenders": "pożyczają"
           }
         }
       }

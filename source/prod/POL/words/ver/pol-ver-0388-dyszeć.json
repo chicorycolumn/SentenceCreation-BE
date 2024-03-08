@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dyszano"
+            "_SingularGenders": "dyszano"
           },
           "plural": {
-            "allPluralGenders": "dyszano"
+            "_PluralGenders": "dyszano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dyszy się"
+            "_SingularGenders": "dyszy się"
           },
           "plural": {
-            "allPluralGenders": "dyszy się"
+            "_PluralGenders": "dyszy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dyszę"
+            "_SingularGendersExcludingNeuter": "dyszę"
           },
           "plural": {
-            "allPluralGenders": "dyszymy"
+            "_PluralGenders": "dyszymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dyszysz"
+            "_SingularGendersExcludingNeuter": "dyszysz"
           },
           "plural": {
-            "allPluralGenders": "dyszycie"
+            "_PluralGenders": "dyszycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dyszy"
+            "_SingularGenders": "dyszy"
           },
           "plural": {
-            "allPluralGenders": "dyszą"
+            "_PluralGenders": "dyszą"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "czytywano"
+            "_SingularGenders": "czytywano"
           },
           "plural": {
-            "allPluralGenders": "czytywano"
+            "_PluralGenders": "czytywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "czytuje się"
+            "_SingularGenders": "czytuje się"
           },
           "plural": {
-            "allPluralGenders": "czytuje się"
+            "_PluralGenders": "czytuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "czytuję"
+            "_SingularGendersExcludingNeuter": "czytuję"
           },
           "plural": {
-            "allPluralGenders": "czytujemy"
+            "_PluralGenders": "czytujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "czytujesz"
+            "_SingularGendersExcludingNeuter": "czytujesz"
           },
           "plural": {
-            "allPluralGenders": "czytujecie"
+            "_PluralGenders": "czytujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "czytuje"
+            "_SingularGenders": "czytuje"
           },
           "plural": {
-            "allPluralGenders": "czytują"
+            "_PluralGenders": "czytują"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "grożono"
+            "_SingularGenders": "grożono"
           },
           "plural": {
-            "allPluralGenders": "grożono"
+            "_PluralGenders": "grożono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "grozi się"
+            "_SingularGenders": "grozi się"
           },
           "plural": {
-            "allPluralGenders": "grozi się"
+            "_PluralGenders": "grozi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "grożę"
+            "_SingularGendersExcludingNeuter": "grożę"
           },
           "plural": {
-            "allPluralGenders": "grozimy"
+            "_PluralGenders": "grozimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "grozisz"
+            "_SingularGendersExcludingNeuter": "grozisz"
           },
           "plural": {
-            "allPluralGenders": "grozicie"
+            "_PluralGenders": "grozicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "grozi"
+            "_SingularGenders": "grozi"
           },
           "plural": {
-            "allPluralGenders": "grożą"
+            "_PluralGenders": "grożą"
           }
         }
       }

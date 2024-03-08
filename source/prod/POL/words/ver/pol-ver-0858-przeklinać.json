@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przeklinano"
+            "_SingularGenders": "przeklinano"
           },
           "plural": {
-            "allPluralGenders": "przeklinano"
+            "_PluralGenders": "przeklinano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przeklina się"
+            "_SingularGenders": "przeklina się"
           },
           "plural": {
-            "allPluralGenders": "przeklina się"
+            "_PluralGenders": "przeklina się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przeklinam"
+            "_SingularGendersExcludingNeuter": "przeklinam"
           },
           "plural": {
-            "allPluralGenders": "przeklinamy"
+            "_PluralGenders": "przeklinamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przeklinasz"
+            "_SingularGendersExcludingNeuter": "przeklinasz"
           },
           "plural": {
-            "allPluralGenders": "przeklinacie"
+            "_PluralGenders": "przeklinacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przeklina"
+            "_SingularGenders": "przeklina"
           },
           "plural": {
-            "allPluralGenders": "przeklinają"
+            "_PluralGenders": "przeklinają"
           }
         }
       }

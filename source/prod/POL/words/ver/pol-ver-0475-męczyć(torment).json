@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "męczono"
+            "_SingularGenders": "męczono"
           },
           "plural": {
-            "allPluralGenders": "męczono"
+            "_PluralGenders": "męczono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "męczy się"
+            "_SingularGenders": "męczy się"
           },
           "plural": {
-            "allPluralGenders": "męczy się"
+            "_PluralGenders": "męczy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "męczę"
+            "_SingularGendersExcludingNeuter": "męczę"
           },
           "plural": {
-            "allPluralGenders": "męczymy"
+            "_PluralGenders": "męczymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "męczysz"
+            "_SingularGendersExcludingNeuter": "męczysz"
           },
           "plural": {
-            "allPluralGenders": "męczycie"
+            "_PluralGenders": "męczycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "męczy"
+            "_SingularGenders": "męczy"
           },
           "plural": {
-            "allPluralGenders": "męczą"
+            "_PluralGenders": "męczą"
           }
         }
       }

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zadzwoni się"
+            "_SingularGenders": "zadzwoni się"
           },
           "plural": {
-            "allPluralGenders": "zadzwoni się"
+            "_PluralGenders": "zadzwoni się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zadzwonię"
+            "_SingularGendersExcludingNeuter": "zadzwonię"
           },
           "plural": {
-            "allPluralGenders": "zadzwonimy"
+            "_PluralGenders": "zadzwonimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zadzwonisz"
+            "_SingularGendersExcludingNeuter": "zadzwonisz"
           },
           "plural": {
-            "allPluralGenders": "zadzwonicie"
+            "_PluralGenders": "zadzwonicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zadzwoni"
+            "_SingularGenders": "zadzwoni"
           },
           "plural": {
-            "allPluralGenders": "zadzwonią"
+            "_PluralGenders": "zadzwonią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zadzwoniono"
+            "_SingularGenders": "zadzwoniono"
           },
           "plural": {
-            "allPluralGenders": "zadzwoniono"
+            "_PluralGenders": "zadzwoniono"
           }
         },
         "1per": {

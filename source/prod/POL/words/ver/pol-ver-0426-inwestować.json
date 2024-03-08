@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "inwestowano"
+            "_SingularGenders": "inwestowano"
           },
           "plural": {
-            "allPluralGenders": "inwestowano"
+            "_PluralGenders": "inwestowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "inwestuje się"
+            "_SingularGenders": "inwestuje się"
           },
           "plural": {
-            "allPluralGenders": "inwestuje się"
+            "_PluralGenders": "inwestuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "inwestuję"
+            "_SingularGendersExcludingNeuter": "inwestuję"
           },
           "plural": {
-            "allPluralGenders": "inwestujemy"
+            "_PluralGenders": "inwestujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "inwestujesz"
+            "_SingularGendersExcludingNeuter": "inwestujesz"
           },
           "plural": {
-            "allPluralGenders": "inwestujecie"
+            "_PluralGenders": "inwestujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "inwestuje"
+            "_SingularGenders": "inwestuje"
           },
           "plural": {
-            "allPluralGenders": "inwestują"
+            "_PluralGenders": "inwestują"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "czajono"
+            "_SingularGenders": "czajono"
           },
           "plural": {
-            "allPluralGenders": "czajono"
+            "_PluralGenders": "czajono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "czai się"
+            "_SingularGenders": "czai się"
           },
           "plural": {
-            "allPluralGenders": "czai się"
+            "_PluralGenders": "czai się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "czaję"
+            "_SingularGendersExcludingNeuter": "czaję"
           },
           "plural": {
-            "allPluralGenders": "czaimy"
+            "_PluralGenders": "czaimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "czaisz"
+            "_SingularGendersExcludingNeuter": "czaisz"
           },
           "plural": {
-            "allPluralGenders": "czaicie"
+            "_PluralGenders": "czaicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "czai"
+            "_SingularGenders": "czai"
           },
           "plural": {
-            "allPluralGenders": "czają"
+            "_PluralGenders": "czają"
           }
         }
       }

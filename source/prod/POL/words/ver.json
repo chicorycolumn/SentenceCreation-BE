@@ -18881,21 +18881,20 @@
     "secondaryAspects": [],
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "event",
+      "text": "perfective",
       "emoji": "📅️"
     }
   },
   {
     "lemma": "anulować",
     "id": "pol-ver-0965-anulować(im)",
-    "_inflectionsRoot": "pol-ver-0964-anulować(pf)",
     "frequency": 4,
     "register": 0,
     "aspect": "imperfective",
     "secondaryAspects": [],
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "event",
+      "text": "imperfective",
       "emoji": "📅️"
     }
   },
@@ -19721,5 +19720,13 @@
         "perfective": ["zobowiązać"]
       }
     }
+  },
+  {
+    "lemma": "tolerować",
+    "id": "pol-ver-1016-tolerować",
+    "frequency": 4,
+    "register": 0,
+    "aspect": "imperfective",
+    "secondaryAspects": []
   }
 ]

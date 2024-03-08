@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "modlono"
+            "_SingularGenders": "modlono"
           },
           "plural": {
-            "allPluralGenders": "modlono"
+            "_PluralGenders": "modlono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "modli się"
+            "_SingularGenders": "modli się"
           },
           "plural": {
-            "allPluralGenders": "modli się"
+            "_PluralGenders": "modli się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "modlę"
+            "_SingularGendersExcludingNeuter": "modlę"
           },
           "plural": {
-            "allPluralGenders": "modlimy"
+            "_PluralGenders": "modlimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "modlisz"
+            "_SingularGendersExcludingNeuter": "modlisz"
           },
           "plural": {
-            "allPluralGenders": "modlicie"
+            "_PluralGenders": "modlicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "modli"
+            "_SingularGenders": "modli"
           },
           "plural": {
-            "allPluralGenders": "modlą"
+            "_PluralGenders": "modlą"
           }
         }
       }

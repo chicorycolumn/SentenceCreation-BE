@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "polecano"
+            "_SingularGenders": "polecano"
           },
           "plural": {
-            "allPluralGenders": "polecano"
+            "_PluralGenders": "polecano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poleca się"
+            "_SingularGenders": "poleca się"
           },
           "plural": {
-            "allPluralGenders": "poleca się"
+            "_PluralGenders": "poleca się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "polecam"
+            "_SingularGendersExcludingNeuter": "polecam"
           },
           "plural": {
-            "allPluralGenders": "polecamy"
+            "_PluralGenders": "polecamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "polecasz"
+            "_SingularGendersExcludingNeuter": "polecasz"
           },
           "plural": {
-            "allPluralGenders": "polecacie"
+            "_PluralGenders": "polecacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "poleca"
+            "_SingularGenders": "poleca"
           },
           "plural": {
-            "allPluralGenders": "polecają"
+            "_PluralGenders": "polecają"
           }
         }
       }

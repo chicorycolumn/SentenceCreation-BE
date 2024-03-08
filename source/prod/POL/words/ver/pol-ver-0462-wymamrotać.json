@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wymamrocze się"
+            "_SingularGenders": "wymamrocze się"
           },
           "plural": {
-            "allPluralGenders": "wymamrocze się"
+            "_PluralGenders": "wymamrocze się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "wymamroczę"
+            "_SingularGendersExcludingNeuter": "wymamroczę"
           },
           "plural": {
-            "allPluralGenders": "wymamroczemy"
+            "_PluralGenders": "wymamroczemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "wymamroczesz"
+            "_SingularGendersExcludingNeuter": "wymamroczesz"
           },
           "plural": {
-            "allPluralGenders": "wymamroczecie"
+            "_PluralGenders": "wymamroczecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "wymamrocze"
+            "_SingularGenders": "wymamrocze"
           },
           "plural": {
-            "allPluralGenders": "wymamroczą"
+            "_PluralGenders": "wymamroczą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wymamrotano"
+            "_SingularGenders": "wymamrotano"
           },
           "plural": {
-            "allPluralGenders": "wymamrotano"
+            "_PluralGenders": "wymamrotano"
           }
         },
         "1per": {

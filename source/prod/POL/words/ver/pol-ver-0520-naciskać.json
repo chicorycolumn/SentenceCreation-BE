@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "naciskano"
+            "_SingularGenders": "naciskano"
           },
           "plural": {
-            "allPluralGenders": "naciskano"
+            "_PluralGenders": "naciskano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "naciska się"
+            "_SingularGenders": "naciska się"
           },
           "plural": {
-            "allPluralGenders": "naciska się"
+            "_PluralGenders": "naciska się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "naciskam"
+            "_SingularGendersExcludingNeuter": "naciskam"
           },
           "plural": {
-            "allPluralGenders": "naciskamy"
+            "_PluralGenders": "naciskamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "naciskasz"
+            "_SingularGendersExcludingNeuter": "naciskasz"
           },
           "plural": {
-            "allPluralGenders": "naciskacie"
+            "_PluralGenders": "naciskacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "naciska"
+            "_SingularGenders": "naciska"
           },
           "plural": {
-            "allPluralGenders": "naciskają"
+            "_PluralGenders": "naciskają"
           }
         }
       }

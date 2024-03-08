@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "proponowano"
+            "_SingularGenders": "proponowano"
           },
           "plural": {
-            "allPluralGenders": "proponowano"
+            "_PluralGenders": "proponowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "proponuje się"
+            "_SingularGenders": "proponuje się"
           },
           "plural": {
-            "allPluralGenders": "proponuje się"
+            "_PluralGenders": "proponuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "proponuję"
+            "_SingularGendersExcludingNeuter": "proponuję"
           },
           "plural": {
-            "allPluralGenders": "proponujemy"
+            "_PluralGenders": "proponujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "proponujesz"
+            "_SingularGendersExcludingNeuter": "proponujesz"
           },
           "plural": {
-            "allPluralGenders": "proponujecie"
+            "_PluralGenders": "proponujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "proponuje"
+            "_SingularGenders": "proponuje"
           },
           "plural": {
-            "allPluralGenders": "proponują"
+            "_PluralGenders": "proponują"
           }
         }
       }

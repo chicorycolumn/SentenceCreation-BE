@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "żyto"
+            "_SingularGenders": "żyto"
           },
           "plural": {
-            "allPluralGenders": "żyto"
+            "_PluralGenders": "żyto"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "żyje się"
+            "_SingularGenders": "żyje się"
           },
           "plural": {
-            "allPluralGenders": "żyje się"
+            "_PluralGenders": "żyje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "żyję"
+            "_SingularGendersExcludingNeuter": "żyję"
           },
           "plural": {
-            "allPluralGenders": "żyjemy"
+            "_PluralGenders": "żyjemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "żyjesz"
+            "_SingularGendersExcludingNeuter": "żyjesz"
           },
           "plural": {
-            "allPluralGenders": "żyjecie"
+            "_PluralGenders": "żyjecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "żyje"
+            "_SingularGenders": "żyje"
           },
           "plural": {
-            "allPluralGenders": "żyją"
+            "_PluralGenders": "żyją"
           }
         }
       }

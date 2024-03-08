@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przegrywano"
+            "_SingularGenders": "przegrywano"
           },
           "plural": {
-            "allPluralGenders": "przegrywano"
+            "_PluralGenders": "przegrywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przegrywa się"
+            "_SingularGenders": "przegrywa się"
           },
           "plural": {
-            "allPluralGenders": "przegrywa się"
+            "_PluralGenders": "przegrywa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przegrywam"
+            "_SingularGendersExcludingNeuter": "przegrywam"
           },
           "plural": {
-            "allPluralGenders": "przegrywamy"
+            "_PluralGenders": "przegrywamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przegrywasz"
+            "_SingularGendersExcludingNeuter": "przegrywasz"
           },
           "plural": {
-            "allPluralGenders": "przegrywacie"
+            "_PluralGenders": "przegrywacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przegrywa"
+            "_SingularGenders": "przegrywa"
           },
           "plural": {
-            "allPluralGenders": "przegrywają"
+            "_PluralGenders": "przegrywają"
           }
         }
       }

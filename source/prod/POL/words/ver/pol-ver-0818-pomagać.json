@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pomagano"
+            "_SingularGenders": "pomagano"
           },
           "plural": {
-            "allPluralGenders": "pomagano"
+            "_PluralGenders": "pomagano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pomaga się"
+            "_SingularGenders": "pomaga się"
           },
           "plural": {
-            "allPluralGenders": "pomaga się"
+            "_PluralGenders": "pomaga się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pomagam"
+            "_SingularGendersExcludingNeuter": "pomagam"
           },
           "plural": {
-            "allPluralGenders": "pomagamy"
+            "_PluralGenders": "pomagamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pomagasz"
+            "_SingularGendersExcludingNeuter": "pomagasz"
           },
           "plural": {
-            "allPluralGenders": "pomagacie"
+            "_PluralGenders": "pomagacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pomaga"
+            "_SingularGenders": "pomaga"
           },
           "plural": {
-            "allPluralGenders": "pomagają"
+            "_PluralGenders": "pomagają"
           }
         }
       }

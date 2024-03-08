@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "mieszkano"
+            "_SingularGenders": "mieszkano"
           },
           "plural": {
-            "allPluralGenders": "mieszkano"
+            "_PluralGenders": "mieszkano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "mieszka się"
+            "_SingularGenders": "mieszka się"
           },
           "plural": {
-            "allPluralGenders": "mieszka się"
+            "_PluralGenders": "mieszka się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "mieszkam"
+            "_SingularGendersExcludingNeuter": "mieszkam"
           },
           "plural": {
-            "allPluralGenders": "mieszkamy"
+            "_PluralGenders": "mieszkamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "mieszkasz"
+            "_SingularGendersExcludingNeuter": "mieszkasz"
           },
           "plural": {
-            "allPluralGenders": "mieszkacie"
+            "_PluralGenders": "mieszkacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "mieszka"
+            "_SingularGenders": "mieszka"
           },
           "plural": {
-            "allPluralGenders": "mieszkają"
+            "_PluralGenders": "mieszkają"
           }
         }
       }

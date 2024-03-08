@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "akceptowano"
+            "_SingularGenders": "akceptowano"
           },
           "plural": {
-            "allPluralGenders": "akceptowano"
+            "_PluralGenders": "akceptowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "akceptuje się"
+            "_SingularGenders": "akceptuje się"
           },
           "plural": {
-            "allPluralGenders": "akceptuje się"
+            "_PluralGenders": "akceptuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "akceptuję"
+            "_SingularGendersExcludingNeuter": "akceptuję"
           },
           "plural": {
-            "allPluralGenders": "akceptujemy"
+            "_PluralGenders": "akceptujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "akceptujesz"
+            "_SingularGendersExcludingNeuter": "akceptujesz"
           },
           "plural": {
-            "allPluralGenders": "akceptujecie"
+            "_PluralGenders": "akceptujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "akceptuje"
+            "_SingularGenders": "akceptuje"
           },
           "plural": {
-            "allPluralGenders": "akceptują"
+            "_PluralGenders": "akceptują"
           }
         }
       }

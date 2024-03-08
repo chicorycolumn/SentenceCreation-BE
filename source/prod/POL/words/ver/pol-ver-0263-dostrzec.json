@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dostrzeże się"
+            "_SingularGenders": "dostrzeże się"
           },
           "plural": {
-            "allPluralGenders": "dostrzeże się"
+            "_PluralGenders": "dostrzeże się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dostrzegę"
+            "_SingularGendersExcludingNeuter": "dostrzegę"
           },
           "plural": {
-            "allPluralGenders": "dostrzeżemy"
+            "_PluralGenders": "dostrzeżemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dostrzeżesz"
+            "_SingularGendersExcludingNeuter": "dostrzeżesz"
           },
           "plural": {
-            "allPluralGenders": "dostrzeżecie"
+            "_PluralGenders": "dostrzeżecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dostrzeże"
+            "_SingularGenders": "dostrzeże"
           },
           "plural": {
-            "allPluralGenders": "dostrzegą"
+            "_PluralGenders": "dostrzegą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dostrzeżono"
+            "_SingularGenders": "dostrzeżono"
           },
           "plural": {
-            "allPluralGenders": "dostrzeżono"
+            "_PluralGenders": "dostrzeżono"
           }
         },
         "1per": {

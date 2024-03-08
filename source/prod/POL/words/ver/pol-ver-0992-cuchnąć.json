@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "cuchnięto"
+            "_SingularGenders": "cuchnięto"
           },
           "plural": {
-            "allPluralGenders": "cuchnięto"
+            "_PluralGenders": "cuchnięto"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "cuchnie się"
+            "_SingularGenders": "cuchnie się"
           },
           "plural": {
-            "allPluralGenders": "cuchnie się"
+            "_PluralGenders": "cuchnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "cuchnę"
+            "_SingularGendersExcludingNeuter": "cuchnę"
           },
           "plural": {
-            "allPluralGenders": "cuchniemy"
+            "_PluralGenders": "cuchniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "cuchniesz"
+            "_SingularGendersExcludingNeuter": "cuchniesz"
           },
           "plural": {
-            "allPluralGenders": "cuchniecie"
+            "_PluralGenders": "cuchniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "cuchnie"
+            "_SingularGenders": "cuchnie"
           },
           "plural": {
-            "allPluralGenders": "cuchną"
+            "_PluralGenders": "cuchną"
           }
         }
       }

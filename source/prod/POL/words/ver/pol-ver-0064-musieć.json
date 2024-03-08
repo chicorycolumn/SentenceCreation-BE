@@ -45,34 +45,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "musi się"
+            "_SingularGenders": "musi się"
           },
           "plural": {
-            "allPluralGenders": "musi się"
+            "_PluralGenders": "musi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "muszę"
+            "_SingularGendersExcludingNeuter": "muszę"
           },
           "plural": {
-            "allPluralGenders": "musimy"
+            "_PluralGenders": "musimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "musisz"
+            "_SingularGendersExcludingNeuter": "musisz"
           },
           "plural": {
-            "allPluralGenders": "musicie"
+            "_PluralGenders": "musicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "musi"
+            "_SingularGenders": "musi"
           },
           "plural": {
-            "allPluralGenders": "muszą"
+            "_PluralGenders": "muszą"
           }
         }
       }

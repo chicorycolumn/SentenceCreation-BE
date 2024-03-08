@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "postanowi się"
+            "_SingularGenders": "postanowi się"
           },
           "plural": {
-            "allPluralGenders": "postanowi się"
+            "_PluralGenders": "postanowi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "postanowię"
+            "_SingularGendersExcludingNeuter": "postanowię"
           },
           "plural": {
-            "allPluralGenders": "postanowimy"
+            "_PluralGenders": "postanowimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "postanowisz"
+            "_SingularGendersExcludingNeuter": "postanowisz"
           },
           "plural": {
-            "allPluralGenders": "postanowicie"
+            "_PluralGenders": "postanowicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "postanowi"
+            "_SingularGenders": "postanowi"
           },
           "plural": {
-            "allPluralGenders": "postanowią"
+            "_PluralGenders": "postanowią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "postanowiono"
+            "_SingularGenders": "postanowiono"
           },
           "plural": {
-            "allPluralGenders": "postanowiono"
+            "_PluralGenders": "postanowiono"
           }
         },
         "1per": {

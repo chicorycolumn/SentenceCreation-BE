@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pomoże się"
+            "_SingularGenders": "pomoże się"
           },
           "plural": {
-            "allPluralGenders": "pomoże się"
+            "_PluralGenders": "pomoże się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pomogę"
+            "_SingularGendersExcludingNeuter": "pomogę"
           },
           "plural": {
-            "allPluralGenders": "pomożemy"
+            "_PluralGenders": "pomożemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pomożesz"
+            "_SingularGendersExcludingNeuter": "pomożesz"
           },
           "plural": {
-            "allPluralGenders": "pomożecie"
+            "_PluralGenders": "pomożecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pomoże"
+            "_SingularGenders": "pomoże"
           },
           "plural": {
-            "allPluralGenders": "pomogą"
+            "_PluralGenders": "pomogą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pomożono"
+            "_SingularGenders": "pomożono"
           },
           "plural": {
-            "allPluralGenders": "pomożono"
+            "_PluralGenders": "pomożono"
           }
         },
         "1per": {

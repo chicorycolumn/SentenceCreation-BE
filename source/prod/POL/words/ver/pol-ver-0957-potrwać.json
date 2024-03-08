@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "potrwa się"
+            "_SingularGenders": "potrwa się"
           },
           "plural": {
-            "allPluralGenders": "potrwa się"
+            "_PluralGenders": "potrwa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "potrwam"
+            "_SingularGendersExcludingNeuter": "potrwam"
           },
           "plural": {
-            "allPluralGenders": "potrwamy"
+            "_PluralGenders": "potrwamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "potrwasz"
+            "_SingularGendersExcludingNeuter": "potrwasz"
           },
           "plural": {
-            "allPluralGenders": "potrwacie"
+            "_PluralGenders": "potrwacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "potrwa"
+            "_SingularGenders": "potrwa"
           },
           "plural": {
-            "allPluralGenders": "potrwają"
+            "_PluralGenders": "potrwają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "potrwano"
+            "_SingularGenders": "potrwano"
           },
           "plural": {
-            "allPluralGenders": "potrwano"
+            "_PluralGenders": "potrwano"
           }
         },
         "1per": {

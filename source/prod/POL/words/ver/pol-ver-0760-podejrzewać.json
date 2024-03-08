@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podejrzewano"
+            "_SingularGenders": "podejrzewano"
           },
           "plural": {
-            "allPluralGenders": "podejrzewano"
+            "_PluralGenders": "podejrzewano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podejrzewa się"
+            "_SingularGenders": "podejrzewa się"
           },
           "plural": {
-            "allPluralGenders": "podejrzewa się"
+            "_PluralGenders": "podejrzewa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "podejrzewam"
+            "_SingularGendersExcludingNeuter": "podejrzewam"
           },
           "plural": {
-            "allPluralGenders": "podejrzewamy"
+            "_PluralGenders": "podejrzewamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "podejrzewasz"
+            "_SingularGendersExcludingNeuter": "podejrzewasz"
           },
           "plural": {
-            "allPluralGenders": "podejrzewacie"
+            "_PluralGenders": "podejrzewacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "podejrzewa"
+            "_SingularGenders": "podejrzewa"
           },
           "plural": {
-            "allPluralGenders": "podejrzewają"
+            "_PluralGenders": "podejrzewają"
           }
         }
       }

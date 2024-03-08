@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przełykano"
+            "_SingularGenders": "przełykano"
           },
           "plural": {
-            "allPluralGenders": "przełykano"
+            "_PluralGenders": "przełykano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przełyka się"
+            "_SingularGenders": "przełyka się"
           },
           "plural": {
-            "allPluralGenders": "przełyka się"
+            "_PluralGenders": "przełyka się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przełykam"
+            "_SingularGendersExcludingNeuter": "przełykam"
           },
           "plural": {
-            "allPluralGenders": "przełykamy"
+            "_PluralGenders": "przełykamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przełykasz"
+            "_SingularGendersExcludingNeuter": "przełykasz"
           },
           "plural": {
-            "allPluralGenders": "przełykacie"
+            "_PluralGenders": "przełykacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przełyka"
+            "_SingularGenders": "przełyka"
           },
           "plural": {
-            "allPluralGenders": "przełykają"
+            "_PluralGenders": "przełykają"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "gniewano"
+            "_SingularGenders": "gniewano"
           },
           "plural": {
-            "allPluralGenders": "gniewano"
+            "_PluralGenders": "gniewano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "gniewa się"
+            "_SingularGenders": "gniewa się"
           },
           "plural": {
-            "allPluralGenders": "gniewa się"
+            "_PluralGenders": "gniewa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "gniewam"
+            "_SingularGendersExcludingNeuter": "gniewam"
           },
           "plural": {
-            "allPluralGenders": "gniewamy"
+            "_PluralGenders": "gniewamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "gniewasz"
+            "_SingularGendersExcludingNeuter": "gniewasz"
           },
           "plural": {
-            "allPluralGenders": "gniewacie"
+            "_PluralGenders": "gniewacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "gniewa"
+            "_SingularGenders": "gniewa"
           },
           "plural": {
-            "allPluralGenders": "gniewają"
+            "_PluralGenders": "gniewają"
           }
         }
       }

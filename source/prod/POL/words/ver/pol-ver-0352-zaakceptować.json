@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zaakceptuje się"
+            "_SingularGenders": "zaakceptuje się"
           },
           "plural": {
-            "allPluralGenders": "zaakceptuje się"
+            "_PluralGenders": "zaakceptuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zaakceptuję"
+            "_SingularGendersExcludingNeuter": "zaakceptuję"
           },
           "plural": {
-            "allPluralGenders": "zaakceptujemy"
+            "_PluralGenders": "zaakceptujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zaakceptujesz"
+            "_SingularGendersExcludingNeuter": "zaakceptujesz"
           },
           "plural": {
-            "allPluralGenders": "zaakceptujecie"
+            "_PluralGenders": "zaakceptujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zaakceptuje"
+            "_SingularGenders": "zaakceptuje"
           },
           "plural": {
-            "allPluralGenders": "zaakceptują"
+            "_PluralGenders": "zaakceptują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zaakceptowano"
+            "_SingularGenders": "zaakceptowano"
           },
           "plural": {
-            "allPluralGenders": "zaakceptowano"
+            "_PluralGenders": "zaakceptowano"
           }
         },
         "1per": {

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "chwyci się"
+            "_SingularGenders": "chwyci się"
           },
           "plural": {
-            "allPluralGenders": "chwyci się"
+            "_PluralGenders": "chwyci się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "chwycę"
+            "_SingularGendersExcludingNeuter": "chwycę"
           },
           "plural": {
-            "allPluralGenders": "chwycimy"
+            "_PluralGenders": "chwycimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "chwycisz"
+            "_SingularGendersExcludingNeuter": "chwycisz"
           },
           "plural": {
-            "allPluralGenders": "chwycicie"
+            "_PluralGenders": "chwycicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "chwyci"
+            "_SingularGenders": "chwyci"
           },
           "plural": {
-            "allPluralGenders": "chwycą"
+            "_PluralGenders": "chwycą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "chwycono"
+            "_SingularGenders": "chwycono"
           },
           "plural": {
-            "allPluralGenders": "chwycono"
+            "_PluralGenders": "chwycono"
           }
         },
         "1per": {

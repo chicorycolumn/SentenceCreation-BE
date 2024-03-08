@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "obróci się"
+            "_SingularGenders": "obróci się"
           },
           "plural": {
-            "allPluralGenders": "obróci się"
+            "_PluralGenders": "obróci się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "obrócę"
+            "_SingularGendersExcludingNeuter": "obrócę"
           },
           "plural": {
-            "allPluralGenders": "obrócimy"
+            "_PluralGenders": "obrócimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "obrócisz"
+            "_SingularGendersExcludingNeuter": "obrócisz"
           },
           "plural": {
-            "allPluralGenders": "obrócicie"
+            "_PluralGenders": "obrócicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "obróci"
+            "_SingularGenders": "obróci"
           },
           "plural": {
-            "allPluralGenders": "obrócą"
+            "_PluralGenders": "obrócą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "obrócon"
+            "_SingularGenders": "obrócon"
           },
           "plural": {
-            "allPluralGenders": "obrócon"
+            "_PluralGenders": "obrócon"
           }
         },
         "1per": {

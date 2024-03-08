@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dyskutowano"
+            "_SingularGenders": "dyskutowano"
           },
           "plural": {
-            "allPluralGenders": "dyskutowano"
+            "_PluralGenders": "dyskutowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dyskutuje się"
+            "_SingularGenders": "dyskutuje się"
           },
           "plural": {
-            "allPluralGenders": "dyskutuje się"
+            "_PluralGenders": "dyskutuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dyskutuję"
+            "_SingularGendersExcludingNeuter": "dyskutuję"
           },
           "plural": {
-            "allPluralGenders": "dyskutujemy"
+            "_PluralGenders": "dyskutujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dyskutujesz"
+            "_SingularGendersExcludingNeuter": "dyskutujesz"
           },
           "plural": {
-            "allPluralGenders": "dyskutujecie"
+            "_PluralGenders": "dyskutujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dyskutuje"
+            "_SingularGenders": "dyskutuje"
           },
           "plural": {
-            "allPluralGenders": "dyskutują"
+            "_PluralGenders": "dyskutują"
           }
         }
       }

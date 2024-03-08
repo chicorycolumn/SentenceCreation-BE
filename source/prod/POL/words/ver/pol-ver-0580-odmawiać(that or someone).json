@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odmawiano"
+            "_SingularGenders": "odmawiano"
           },
           "plural": {
-            "allPluralGenders": "odmawiano"
+            "_PluralGenders": "odmawiano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odmawia się"
+            "_SingularGenders": "odmawia się"
           },
           "plural": {
-            "allPluralGenders": "odmawia się"
+            "_PluralGenders": "odmawia się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odmawiam"
+            "_SingularGendersExcludingNeuter": "odmawiam"
           },
           "plural": {
-            "allPluralGenders": "odmawiamy"
+            "_PluralGenders": "odmawiamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odmawiasz"
+            "_SingularGendersExcludingNeuter": "odmawiasz"
           },
           "plural": {
-            "allPluralGenders": "odmawiacie"
+            "_PluralGenders": "odmawiacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odmawia"
+            "_SingularGenders": "odmawia"
           },
           "plural": {
-            "allPluralGenders": "odmawiają"
+            "_PluralGenders": "odmawiają"
           }
         }
       }

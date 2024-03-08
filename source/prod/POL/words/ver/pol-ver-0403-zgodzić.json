@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zgodzi się"
+            "_SingularGenders": "zgodzi się"
           },
           "plural": {
-            "allPluralGenders": "zgodzi się"
+            "_PluralGenders": "zgodzi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zgodzę"
+            "_SingularGendersExcludingNeuter": "zgodzę"
           },
           "plural": {
-            "allPluralGenders": "zgodzimy"
+            "_PluralGenders": "zgodzimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zgodzisz"
+            "_SingularGendersExcludingNeuter": "zgodzisz"
           },
           "plural": {
-            "allPluralGenders": "zgodzicie"
+            "_PluralGenders": "zgodzicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zgodzi"
+            "_SingularGenders": "zgodzi"
           },
           "plural": {
-            "allPluralGenders": "zgodzą"
+            "_PluralGenders": "zgodzą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zgodzono"
+            "_SingularGenders": "zgodzono"
           },
           "plural": {
-            "allPluralGenders": "zgodzono"
+            "_PluralGenders": "zgodzono"
           }
         },
         "1per": {

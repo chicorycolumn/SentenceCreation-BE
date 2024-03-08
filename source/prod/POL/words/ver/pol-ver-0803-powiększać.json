@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "powiększano"
+            "_SingularGenders": "powiększano"
           },
           "plural": {
-            "allPluralGenders": "powiększano"
+            "_PluralGenders": "powiększano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "powiększa się"
+            "_SingularGenders": "powiększa się"
           },
           "plural": {
-            "allPluralGenders": "powiększa się"
+            "_PluralGenders": "powiększa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "powiększam"
+            "_SingularGendersExcludingNeuter": "powiększam"
           },
           "plural": {
-            "allPluralGenders": "powiększamy"
+            "_PluralGenders": "powiększamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "powiększasz"
+            "_SingularGendersExcludingNeuter": "powiększasz"
           },
           "plural": {
-            "allPluralGenders": "powiększacie"
+            "_PluralGenders": "powiększacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "powiększa"
+            "_SingularGenders": "powiększa"
           },
           "plural": {
-            "allPluralGenders": "powiększają"
+            "_PluralGenders": "powiększają"
           }
         }
       }

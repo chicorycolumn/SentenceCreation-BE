@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przemykano"
+            "_SingularGenders": "przemykano"
           },
           "plural": {
-            "allPluralGenders": "przemykano"
+            "_PluralGenders": "przemykano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przemyka się"
+            "_SingularGenders": "przemyka się"
           },
           "plural": {
-            "allPluralGenders": "przemyka się"
+            "_PluralGenders": "przemyka się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przemykam"
+            "_SingularGendersExcludingNeuter": "przemykam"
           },
           "plural": {
-            "allPluralGenders": "przemykamy"
+            "_PluralGenders": "przemykamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przemykasz"
+            "_SingularGendersExcludingNeuter": "przemykasz"
           },
           "plural": {
-            "allPluralGenders": "przemykacie"
+            "_PluralGenders": "przemykacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przemyka"
+            "_SingularGenders": "przemyka"
           },
           "plural": {
-            "allPluralGenders": "przemykają"
+            "_PluralGenders": "przemykają"
           }
         }
       }

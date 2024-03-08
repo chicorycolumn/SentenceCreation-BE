@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "potrząsano"
+            "_SingularGenders": "potrząsano"
           },
           "plural": {
-            "allPluralGenders": "potrząsano"
+            "_PluralGenders": "potrząsano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "potrząsa się"
+            "_SingularGenders": "potrząsa się"
           },
           "plural": {
-            "allPluralGenders": "potrząsa się"
+            "_PluralGenders": "potrząsa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "potrząsam"
+            "_SingularGendersExcludingNeuter": "potrząsam"
           },
           "plural": {
-            "allPluralGenders": "potrząsamy"
+            "_PluralGenders": "potrząsamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "potrząsasz"
+            "_SingularGendersExcludingNeuter": "potrząsasz"
           },
           "plural": {
-            "allPluralGenders": "potrząsacie"
+            "_PluralGenders": "potrząsacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "potrząsa"
+            "_SingularGenders": "potrząsa"
           },
           "plural": {
-            "allPluralGenders": "potrząsają"
+            "_PluralGenders": "potrząsają"
           }
         }
       }

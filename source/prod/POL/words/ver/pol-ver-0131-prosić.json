@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "proszono"
+            "_SingularGenders": "proszono"
           },
           "plural": {
-            "allPluralGenders": "proszono"
+            "_PluralGenders": "proszono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "prosi się"
+            "_SingularGenders": "prosi się"
           },
           "plural": {
-            "allPluralGenders": "prosi się"
+            "_PluralGenders": "prosi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "proszę"
+            "_SingularGendersExcludingNeuter": "proszę"
           },
           "plural": {
-            "allPluralGenders": "prosimy"
+            "_PluralGenders": "prosimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "prosisz"
+            "_SingularGendersExcludingNeuter": "prosisz"
           },
           "plural": {
-            "allPluralGenders": "prosicie"
+            "_PluralGenders": "prosicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "prosi"
+            "_SingularGenders": "prosi"
           },
           "plural": {
-            "allPluralGenders": "proszą"
+            "_PluralGenders": "proszą"
           }
         }
       }

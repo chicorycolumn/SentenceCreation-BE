@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "padnie się"
+            "_SingularGenders": "padnie się"
           },
           "plural": {
-            "allPluralGenders": "padnie się"
+            "_PluralGenders": "padnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "padnę"
+            "_SingularGendersExcludingNeuter": "padnę"
           },
           "plural": {
-            "allPluralGenders": "padniemy"
+            "_PluralGenders": "padniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "padniesz"
+            "_SingularGendersExcludingNeuter": "padniesz"
           },
           "plural": {
-            "allPluralGenders": "padniecie"
+            "_PluralGenders": "padniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "padnie"
+            "_SingularGenders": "padnie"
           },
           "plural": {
-            "allPluralGenders": "padną"
+            "_PluralGenders": "padną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "padnięto"
+            "_SingularGenders": "padnięto"
           },
           "plural": {
-            "allPluralGenders": "padnięto"
+            "_PluralGenders": "padnięto"
           }
         },
         "1per": {

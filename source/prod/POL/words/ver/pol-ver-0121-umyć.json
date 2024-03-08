@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "umyje się"
+            "_SingularGenders": "umyje się"
           },
           "plural": {
-            "allPluralGenders": "umyje się"
+            "_PluralGenders": "umyje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "umyję"
+            "_SingularGendersExcludingNeuter": "umyję"
           },
           "plural": {
-            "allPluralGenders": "umyjemy"
+            "_PluralGenders": "umyjemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "umyjesz"
+            "_SingularGendersExcludingNeuter": "umyjesz"
           },
           "plural": {
-            "allPluralGenders": "umyjecie"
+            "_PluralGenders": "umyjecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "umyje"
+            "_SingularGenders": "umyje"
           },
           "plural": {
-            "allPluralGenders": "umyją"
+            "_PluralGenders": "umyją"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "umyto"
+            "_SingularGenders": "umyto"
           },
           "plural": {
-            "allPluralGenders": "umyto"
+            "_PluralGenders": "umyto"
           }
         },
         "1per": {

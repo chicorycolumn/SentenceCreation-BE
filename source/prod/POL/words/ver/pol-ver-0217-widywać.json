@@ -46,34 +46,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "widuje się"
+            "_SingularGenders": "widuje się"
           },
           "plural": {
-            "allPluralGenders": "widuje się"
+            "_PluralGenders": "widuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "widuję"
+            "_SingularGendersExcludingNeuter": "widuję"
           },
           "plural": {
-            "allPluralGenders": "widujemy"
+            "_PluralGenders": "widujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "widujesz"
+            "_SingularGendersExcludingNeuter": "widujesz"
           },
           "plural": {
-            "allPluralGenders": "widujecie"
+            "_PluralGenders": "widujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "widuje"
+            "_SingularGenders": "widuje"
           },
           "plural": {
-            "allPluralGenders": "widują"
+            "_PluralGenders": "widują"
           }
         }
       }

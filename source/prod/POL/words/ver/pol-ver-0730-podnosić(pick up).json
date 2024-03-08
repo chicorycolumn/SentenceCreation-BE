@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podnoszono"
+            "_SingularGenders": "podnoszono"
           },
           "plural": {
-            "allPluralGenders": "podnoszono"
+            "_PluralGenders": "podnoszono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podnosi się"
+            "_SingularGenders": "podnosi się"
           },
           "plural": {
-            "allPluralGenders": "podnosi się"
+            "_PluralGenders": "podnosi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "podnoszę"
+            "_SingularGendersExcludingNeuter": "podnoszę"
           },
           "plural": {
-            "allPluralGenders": "podnosimy"
+            "_PluralGenders": "podnosimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "podnosisz"
+            "_SingularGendersExcludingNeuter": "podnosisz"
           },
           "plural": {
-            "allPluralGenders": "podnosicie"
+            "_PluralGenders": "podnosicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "podnosi"
+            "_SingularGenders": "podnosi"
           },
           "plural": {
-            "allPluralGenders": "podnoszą"
+            "_PluralGenders": "podnoszą"
           }
         }
       }

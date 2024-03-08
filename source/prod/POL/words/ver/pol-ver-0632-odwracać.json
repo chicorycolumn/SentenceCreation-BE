@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odwracano"
+            "_SingularGenders": "odwracano"
           },
           "plural": {
-            "allPluralGenders": "odwracano"
+            "_PluralGenders": "odwracano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odwraca się"
+            "_SingularGenders": "odwraca się"
           },
           "plural": {
-            "allPluralGenders": "odwraca się"
+            "_PluralGenders": "odwraca się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odwracam"
+            "_SingularGendersExcludingNeuter": "odwracam"
           },
           "plural": {
-            "allPluralGenders": "odwracamy"
+            "_PluralGenders": "odwracamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odwracasz"
+            "_SingularGendersExcludingNeuter": "odwracasz"
           },
           "plural": {
-            "allPluralGenders": "odwracacie"
+            "_PluralGenders": "odwracacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odwraca"
+            "_SingularGenders": "odwraca"
           },
           "plural": {
-            "allPluralGenders": "odwracają"
+            "_PluralGenders": "odwracają"
           }
         }
       }

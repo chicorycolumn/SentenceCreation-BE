@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podzieli się"
+            "_SingularGenders": "podzieli się"
           },
           "plural": {
-            "allPluralGenders": "podzieli się"
+            "_PluralGenders": "podzieli się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "podzielę"
+            "_SingularGendersExcludingNeuter": "podzielę"
           },
           "plural": {
-            "allPluralGenders": "podzielimy"
+            "_PluralGenders": "podzielimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "podzielisz"
+            "_SingularGendersExcludingNeuter": "podzielisz"
           },
           "plural": {
-            "allPluralGenders": "podzielicie"
+            "_PluralGenders": "podzielicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "podzieli"
+            "_SingularGenders": "podzieli"
           },
           "plural": {
-            "allPluralGenders": "podzielą"
+            "_PluralGenders": "podzielą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podzielono"
+            "_SingularGenders": "podzielono"
           },
           "plural": {
-            "allPluralGenders": "podzielono"
+            "_PluralGenders": "podzielono"
           }
         },
         "1per": {

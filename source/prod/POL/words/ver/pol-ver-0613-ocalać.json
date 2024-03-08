@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ocalano"
+            "_SingularGenders": "ocalano"
           },
           "plural": {
-            "allPluralGenders": "ocalano"
+            "_PluralGenders": "ocalano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ocala się"
+            "_SingularGenders": "ocala się"
           },
           "plural": {
-            "allPluralGenders": "ocala się"
+            "_PluralGenders": "ocala się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "ocalam"
+            "_SingularGendersExcludingNeuter": "ocalam"
           },
           "plural": {
-            "allPluralGenders": "ocalamy"
+            "_PluralGenders": "ocalamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "ocalasz"
+            "_SingularGendersExcludingNeuter": "ocalasz"
           },
           "plural": {
-            "allPluralGenders": "ocalacie"
+            "_PluralGenders": "ocalacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "ocala"
+            "_SingularGenders": "ocala"
           },
           "plural": {
-            "allPluralGenders": "ocalają"
+            "_PluralGenders": "ocalają"
           }
         }
       }

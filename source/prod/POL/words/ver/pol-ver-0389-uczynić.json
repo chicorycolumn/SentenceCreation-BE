@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "uczyni się"
+            "_SingularGenders": "uczyni się"
           },
           "plural": {
-            "allPluralGenders": "uczyni się"
+            "_PluralGenders": "uczyni się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "uczynię"
+            "_SingularGendersExcludingNeuter": "uczynię"
           },
           "plural": {
-            "allPluralGenders": "uczynimy"
+            "_PluralGenders": "uczynimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "uczynisz"
+            "_SingularGendersExcludingNeuter": "uczynisz"
           },
           "plural": {
-            "allPluralGenders": "uczynicie"
+            "_PluralGenders": "uczynicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "uczyni"
+            "_SingularGenders": "uczyni"
           },
           "plural": {
-            "allPluralGenders": "uczynią"
+            "_PluralGenders": "uczynią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "uczyniono"
+            "_SingularGenders": "uczyniono"
           },
           "plural": {
-            "allPluralGenders": "uczyniono"
+            "_PluralGenders": "uczyniono"
           }
         },
         "1per": {

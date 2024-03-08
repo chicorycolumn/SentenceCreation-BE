@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "porzucano"
+            "_SingularGenders": "porzucano"
           },
           "plural": {
-            "allPluralGenders": "porzucano"
+            "_PluralGenders": "porzucano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "porzuca się"
+            "_SingularGenders": "porzuca się"
           },
           "plural": {
-            "allPluralGenders": "porzuca się"
+            "_PluralGenders": "porzuca się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "porzucam"
+            "_SingularGendersExcludingNeuter": "porzucam"
           },
           "plural": {
-            "allPluralGenders": "porzucamy"
+            "_PluralGenders": "porzucamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "porzucasz"
+            "_SingularGendersExcludingNeuter": "porzucasz"
           },
           "plural": {
-            "allPluralGenders": "porzucacie"
+            "_PluralGenders": "porzucacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "porzuca"
+            "_SingularGenders": "porzuca"
           },
           "plural": {
-            "allPluralGenders": "porzucają"
+            "_PluralGenders": "porzucają"
           }
         }
       }

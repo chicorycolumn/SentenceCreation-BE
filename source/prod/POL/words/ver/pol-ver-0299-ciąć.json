@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "cięto"
+            "_SingularGenders": "cięto"
           },
           "plural": {
-            "allPluralGenders": "cięto"
+            "_PluralGenders": "cięto"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "tnie się"
+            "_SingularGenders": "tnie się"
           },
           "plural": {
-            "allPluralGenders": "tnie się"
+            "_PluralGenders": "tnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "tnę"
+            "_SingularGendersExcludingNeuter": "tnę"
           },
           "plural": {
-            "allPluralGenders": "tniemy"
+            "_PluralGenders": "tniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "tniesz"
+            "_SingularGendersExcludingNeuter": "tniesz"
           },
           "plural": {
-            "allPluralGenders": "tniecie"
+            "_PluralGenders": "tniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "tnie"
+            "_SingularGenders": "tnie"
           },
           "plural": {
-            "allPluralGenders": "tną"
+            "_PluralGenders": "tną"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "stwarzano"
+            "_SingularGenders": "stwarzano"
           },
           "plural": {
-            "allPluralGenders": "stwarzano"
+            "_PluralGenders": "stwarzano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "stwarza się"
+            "_SingularGenders": "stwarza się"
           },
           "plural": {
-            "allPluralGenders": "stwarza się"
+            "_PluralGenders": "stwarza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "stwarzam"
+            "_SingularGendersExcludingNeuter": "stwarzam"
           },
           "plural": {
-            "allPluralGenders": "stwarzamy"
+            "_PluralGenders": "stwarzamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "stwarzasz"
+            "_SingularGendersExcludingNeuter": "stwarzasz"
           },
           "plural": {
-            "allPluralGenders": "stwarzacie"
+            "_PluralGenders": "stwarzacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "stwarza"
+            "_SingularGenders": "stwarza"
           },
           "plural": {
-            "allPluralGenders": "stwarzają"
+            "_PluralGenders": "stwarzają"
           }
         }
       }

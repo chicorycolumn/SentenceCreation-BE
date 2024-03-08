@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "następowano"
+            "_SingularGenders": "następowano"
           },
           "plural": {
-            "allPluralGenders": "następowano"
+            "_PluralGenders": "następowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "następuje się"
+            "_SingularGenders": "następuje się"
           },
           "plural": {
-            "allPluralGenders": "następuje się"
+            "_PluralGenders": "następuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "następuję"
+            "_SingularGendersExcludingNeuter": "następuję"
           },
           "plural": {
-            "allPluralGenders": "następujemy"
+            "_PluralGenders": "następujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "następujesz"
+            "_SingularGendersExcludingNeuter": "następujesz"
           },
           "plural": {
-            "allPluralGenders": "następujecie"
+            "_PluralGenders": "następujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "następuje"
+            "_SingularGenders": "następuje"
           },
           "plural": {
-            "allPluralGenders": "następują"
+            "_PluralGenders": "następują"
           }
         }
       }

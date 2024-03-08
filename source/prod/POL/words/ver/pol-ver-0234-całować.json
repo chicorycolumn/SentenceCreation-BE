@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "całowano"
+            "_SingularGenders": "całowano"
           },
           "plural": {
-            "allPluralGenders": "całowano"
+            "_PluralGenders": "całowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "całuje się"
+            "_SingularGenders": "całuje się"
           },
           "plural": {
-            "allPluralGenders": "całuje się"
+            "_PluralGenders": "całuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "całuję"
+            "_SingularGendersExcludingNeuter": "całuję"
           },
           "plural": {
-            "allPluralGenders": "całujemy"
+            "_PluralGenders": "całujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "całujesz"
+            "_SingularGendersExcludingNeuter": "całujesz"
           },
           "plural": {
-            "allPluralGenders": "całujecie"
+            "_PluralGenders": "całujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "całuje"
+            "_SingularGenders": "całuje"
           },
           "plural": {
-            "allPluralGenders": "całują"
+            "_PluralGenders": "całują"
           }
         }
       }

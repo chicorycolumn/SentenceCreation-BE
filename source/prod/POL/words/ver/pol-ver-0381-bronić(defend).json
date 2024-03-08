@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "broniono"
+            "_SingularGenders": "broniono"
           },
           "plural": {
-            "allPluralGenders": "broniono"
+            "_PluralGenders": "broniono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "broni się"
+            "_SingularGenders": "broni się"
           },
           "plural": {
-            "allPluralGenders": "broni się"
+            "_PluralGenders": "broni się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "bronię"
+            "_SingularGendersExcludingNeuter": "bronię"
           },
           "plural": {
-            "allPluralGenders": "bronimy"
+            "_PluralGenders": "bronimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "bronisz"
+            "_SingularGendersExcludingNeuter": "bronisz"
           },
           "plural": {
-            "allPluralGenders": "bronicie"
+            "_PluralGenders": "bronicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "broni"
+            "_SingularGenders": "broni"
           },
           "plural": {
-            "allPluralGenders": "bronią"
+            "_PluralGenders": "bronią"
           }
         }
       }

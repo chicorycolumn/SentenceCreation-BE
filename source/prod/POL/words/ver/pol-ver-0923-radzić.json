@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "radzono"
+            "_SingularGenders": "radzono"
           },
           "plural": {
-            "allPluralGenders": "radzono"
+            "_PluralGenders": "radzono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "radzi się"
+            "_SingularGenders": "radzi się"
           },
           "plural": {
-            "allPluralGenders": "radzi się"
+            "_PluralGenders": "radzi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "radzę"
+            "_SingularGendersExcludingNeuter": "radzę"
           },
           "plural": {
-            "allPluralGenders": "radzimy"
+            "_PluralGenders": "radzimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "radzisz"
+            "_SingularGendersExcludingNeuter": "radzisz"
           },
           "plural": {
-            "allPluralGenders": "radzicie"
+            "_PluralGenders": "radzicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "radzi"
+            "_SingularGenders": "radzi"
           },
           "plural": {
-            "allPluralGenders": "radzą"
+            "_PluralGenders": "radzą"
           }
         }
       }

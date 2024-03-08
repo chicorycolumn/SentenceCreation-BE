@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "popatrzy się"
+            "_SingularGenders": "popatrzy się"
           },
           "plural": {
-            "allPluralGenders": "popatrzy się"
+            "_PluralGenders": "popatrzy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "popatrzę"
+            "_SingularGendersExcludingNeuter": "popatrzę"
           },
           "plural": {
-            "allPluralGenders": "popatrzymy"
+            "_PluralGenders": "popatrzymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "popatrzysz"
+            "_SingularGendersExcludingNeuter": "popatrzysz"
           },
           "plural": {
-            "allPluralGenders": "popatrzycie"
+            "_PluralGenders": "popatrzycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "popatrzy"
+            "_SingularGenders": "popatrzy"
           },
           "plural": {
-            "allPluralGenders": "popatrzą"
+            "_PluralGenders": "popatrzą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "popatrzano"
+            "_SingularGenders": "popatrzano"
           },
           "plural": {
-            "allPluralGenders": "popatrzano"
+            "_PluralGenders": "popatrzano"
           }
         },
         "1per": {

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przechowywano"
+            "_SingularGenders": "przechowywano"
           },
           "plural": {
-            "allPluralGenders": "przechowywano"
+            "_PluralGenders": "przechowywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przechowuje się"
+            "_SingularGenders": "przechowuje się"
           },
           "plural": {
-            "allPluralGenders": "przechowuje się"
+            "_PluralGenders": "przechowuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przechowuję"
+            "_SingularGendersExcludingNeuter": "przechowuję"
           },
           "plural": {
-            "allPluralGenders": "przechowujemy"
+            "_PluralGenders": "przechowujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przechowujesz"
+            "_SingularGendersExcludingNeuter": "przechowujesz"
           },
           "plural": {
-            "allPluralGenders": "przechowujecie"
+            "_PluralGenders": "przechowujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przechowuje"
+            "_SingularGenders": "przechowuje"
           },
           "plural": {
-            "allPluralGenders": "przechowują"
+            "_PluralGenders": "przechowują"
           }
         }
       }

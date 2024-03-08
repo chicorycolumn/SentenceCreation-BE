@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kopano"
+            "_SingularGenders": "kopano"
           },
           "plural": {
-            "allPluralGenders": "kopano"
+            "_PluralGenders": "kopano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kopie się"
+            "_SingularGenders": "kopie się"
           },
           "plural": {
-            "allPluralGenders": "kopie się"
+            "_PluralGenders": "kopie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "kopię"
+            "_SingularGendersExcludingNeuter": "kopię"
           },
           "plural": {
-            "allPluralGenders": "kopiemy"
+            "_PluralGenders": "kopiemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "kopiesz"
+            "_SingularGendersExcludingNeuter": "kopiesz"
           },
           "plural": {
-            "allPluralGenders": "kopiecie"
+            "_PluralGenders": "kopiecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "kopie"
+            "_SingularGenders": "kopie"
           },
           "plural": {
-            "allPluralGenders": "kopią"
+            "_PluralGenders": "kopią"
           }
         }
       }

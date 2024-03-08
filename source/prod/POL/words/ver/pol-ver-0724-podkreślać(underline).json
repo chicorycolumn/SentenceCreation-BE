@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podkreślano"
+            "_SingularGenders": "podkreślano"
           },
           "plural": {
-            "allPluralGenders": "podkreślano"
+            "_PluralGenders": "podkreślano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podkreśla się"
+            "_SingularGenders": "podkreśla się"
           },
           "plural": {
-            "allPluralGenders": "podkreśla się"
+            "_PluralGenders": "podkreśla się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "podkreślam"
+            "_SingularGendersExcludingNeuter": "podkreślam"
           },
           "plural": {
-            "allPluralGenders": "podkreślamy"
+            "_PluralGenders": "podkreślamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "podkreślasz"
+            "_SingularGendersExcludingNeuter": "podkreślasz"
           },
           "plural": {
-            "allPluralGenders": "podkreślacie"
+            "_PluralGenders": "podkreślacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "podkreśla"
+            "_SingularGenders": "podkreśla"
           },
           "plural": {
-            "allPluralGenders": "podkreślają"
+            "_PluralGenders": "podkreślają"
           }
         }
       }

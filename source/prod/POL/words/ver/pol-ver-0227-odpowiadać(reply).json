@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odpowiadano"
+            "_SingularGenders": "odpowiadano"
           },
           "plural": {
-            "allPluralGenders": "odpowiadano"
+            "_PluralGenders": "odpowiadano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odpowiada się"
+            "_SingularGenders": "odpowiada się"
           },
           "plural": {
-            "allPluralGenders": "odpowiada się"
+            "_PluralGenders": "odpowiada się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odpowiadam"
+            "_SingularGendersExcludingNeuter": "odpowiadam"
           },
           "plural": {
-            "allPluralGenders": "odpowiadamy"
+            "_PluralGenders": "odpowiadamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odpowiadasz"
+            "_SingularGendersExcludingNeuter": "odpowiadasz"
           },
           "plural": {
-            "allPluralGenders": "odpowiadacie"
+            "_PluralGenders": "odpowiadacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odpowiada"
+            "_SingularGenders": "odpowiada"
           },
           "plural": {
-            "allPluralGenders": "odpowiadają"
+            "_PluralGenders": "odpowiadają"
           }
         }
       }

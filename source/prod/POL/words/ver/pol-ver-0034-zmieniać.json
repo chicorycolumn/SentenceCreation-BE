@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zmieniano"
+            "_SingularGenders": "zmieniano"
           },
           "plural": {
-            "allPluralGenders": "zmieniano"
+            "_PluralGenders": "zmieniano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zmienia się"
+            "_SingularGenders": "zmienia się"
           },
           "plural": {
-            "allPluralGenders": "zmienia się"
+            "_PluralGenders": "zmienia się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zmieniam"
+            "_SingularGendersExcludingNeuter": "zmieniam"
           },
           "plural": {
-            "allPluralGenders": "zmieniamy"
+            "_PluralGenders": "zmieniamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zmieniasz"
+            "_SingularGendersExcludingNeuter": "zmieniasz"
           },
           "plural": {
-            "allPluralGenders": "zmieniacie"
+            "_PluralGenders": "zmieniacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zmienia"
+            "_SingularGenders": "zmienia"
           },
           "plural": {
-            "allPluralGenders": "zmieniają"
+            "_PluralGenders": "zmieniają"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oskarżano"
+            "_SingularGenders": "oskarżano"
           },
           "plural": {
-            "allPluralGenders": "oskarżano"
+            "_PluralGenders": "oskarżano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oskarża się"
+            "_SingularGenders": "oskarża się"
           },
           "plural": {
-            "allPluralGenders": "oskarża się"
+            "_PluralGenders": "oskarża się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "oskarżam"
+            "_SingularGendersExcludingNeuter": "oskarżam"
           },
           "plural": {
-            "allPluralGenders": "oskarżamy"
+            "_PluralGenders": "oskarżamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "oskarżasz"
+            "_SingularGendersExcludingNeuter": "oskarżasz"
           },
           "plural": {
-            "allPluralGenders": "oskarżacie"
+            "_PluralGenders": "oskarżacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "oskarża"
+            "_SingularGenders": "oskarża"
           },
           "plural": {
-            "allPluralGenders": "oskarżają"
+            "_PluralGenders": "oskarżają"
           }
         }
       }

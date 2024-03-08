@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "biegano"
+            "_SingularGenders": "biegano"
           },
           "plural": {
-            "allPluralGenders": "biegano"
+            "_PluralGenders": "biegano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "biega się"
+            "_SingularGenders": "biega się"
           },
           "plural": {
-            "allPluralGenders": "biega się"
+            "_PluralGenders": "biega się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "biegam"
+            "_SingularGendersExcludingNeuter": "biegam"
           },
           "plural": {
-            "allPluralGenders": "biegamy"
+            "_PluralGenders": "biegamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "biegasz"
+            "_SingularGendersExcludingNeuter": "biegasz"
           },
           "plural": {
-            "allPluralGenders": "biegacie"
+            "_PluralGenders": "biegacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "biega"
+            "_SingularGenders": "biega"
           },
           "plural": {
-            "allPluralGenders": "biegają"
+            "_PluralGenders": "biegają"
           }
         }
       }

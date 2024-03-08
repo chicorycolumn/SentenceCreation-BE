@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "nudzono"
+            "_SingularGenders": "nudzono"
           },
           "plural": {
-            "allPluralGenders": "nudzono"
+            "_PluralGenders": "nudzono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "nudzi się"
+            "_SingularGenders": "nudzi się"
           },
           "plural": {
-            "allPluralGenders": "nudzi się"
+            "_PluralGenders": "nudzi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "nudzę"
+            "_SingularGendersExcludingNeuter": "nudzę"
           },
           "plural": {
-            "allPluralGenders": "nudzimy"
+            "_PluralGenders": "nudzimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "nudzisz"
+            "_SingularGendersExcludingNeuter": "nudzisz"
           },
           "plural": {
-            "allPluralGenders": "nudzicie"
+            "_PluralGenders": "nudzicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "nudzi"
+            "_SingularGenders": "nudzi"
           },
           "plural": {
-            "allPluralGenders": "nudzą"
+            "_PluralGenders": "nudzą"
           }
         }
       }

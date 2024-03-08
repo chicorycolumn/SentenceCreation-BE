@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "obracano"
+            "_SingularGenders": "obracano"
           },
           "plural": {
-            "allPluralGenders": "obracano"
+            "_PluralGenders": "obracano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "obraca się"
+            "_SingularGenders": "obraca się"
           },
           "plural": {
-            "allPluralGenders": "obraca się"
+            "_PluralGenders": "obraca się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "obracam"
+            "_SingularGendersExcludingNeuter": "obracam"
           },
           "plural": {
-            "allPluralGenders": "obracamy"
+            "_PluralGenders": "obracamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "obracasz"
+            "_SingularGendersExcludingNeuter": "obracasz"
           },
           "plural": {
-            "allPluralGenders": "obracacie"
+            "_PluralGenders": "obracacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "obraca"
+            "_SingularGenders": "obraca"
           },
           "plural": {
-            "allPluralGenders": "obracają"
+            "_PluralGenders": "obracają"
           }
         }
       }

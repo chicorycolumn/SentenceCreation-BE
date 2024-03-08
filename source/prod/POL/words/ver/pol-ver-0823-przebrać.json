@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przebierze się"
+            "_SingularGenders": "przebierze się"
           },
           "plural": {
-            "allPluralGenders": "przebierze się"
+            "_PluralGenders": "przebierze się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przebiorę"
+            "_SingularGendersExcludingNeuter": "przebiorę"
           },
           "plural": {
-            "allPluralGenders": "przebierzemy"
+            "_PluralGenders": "przebierzemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przebierzesz"
+            "_SingularGendersExcludingNeuter": "przebierzesz"
           },
           "plural": {
-            "allPluralGenders": "przebierzecie"
+            "_PluralGenders": "przebierzecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przebierze"
+            "_SingularGenders": "przebierze"
           },
           "plural": {
-            "allPluralGenders": "przebiorą"
+            "_PluralGenders": "przebiorą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przebrano"
+            "_SingularGenders": "przebrano"
           },
           "plural": {
-            "allPluralGenders": "przebrano"
+            "_PluralGenders": "przebrano"
           }
         },
         "1per": {

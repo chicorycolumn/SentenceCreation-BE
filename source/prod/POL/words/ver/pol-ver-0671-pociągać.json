@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pociągano"
+            "_SingularGenders": "pociągano"
           },
           "plural": {
-            "allPluralGenders": "pociągano"
+            "_PluralGenders": "pociągano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pociąga się"
+            "_SingularGenders": "pociąga się"
           },
           "plural": {
-            "allPluralGenders": "pociąga się"
+            "_PluralGenders": "pociąga się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pociągam"
+            "_SingularGendersExcludingNeuter": "pociągam"
           },
           "plural": {
-            "allPluralGenders": "pociągamy"
+            "_PluralGenders": "pociągamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pociągasz"
+            "_SingularGendersExcludingNeuter": "pociągasz"
           },
           "plural": {
-            "allPluralGenders": "pociągacie"
+            "_PluralGenders": "pociągacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pociąga"
+            "_SingularGenders": "pociąga"
           },
           "plural": {
-            "allPluralGenders": "pociągają"
+            "_PluralGenders": "pociągają"
           }
         }
       }

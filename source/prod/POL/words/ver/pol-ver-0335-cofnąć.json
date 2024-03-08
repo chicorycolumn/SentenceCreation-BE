@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "cofnie się"
+            "_SingularGenders": "cofnie się"
           },
           "plural": {
-            "allPluralGenders": "cofnie się"
+            "_PluralGenders": "cofnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "cofnę"
+            "_SingularGendersExcludingNeuter": "cofnę"
           },
           "plural": {
-            "allPluralGenders": "cofniemy"
+            "_PluralGenders": "cofniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "cofniesz"
+            "_SingularGendersExcludingNeuter": "cofniesz"
           },
           "plural": {
-            "allPluralGenders": "cofniecie"
+            "_PluralGenders": "cofniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "cofnie"
+            "_SingularGenders": "cofnie"
           },
           "plural": {
-            "allPluralGenders": "cofną"
+            "_PluralGenders": "cofną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "cofnięto"
+            "_SingularGenders": "cofnięto"
           },
           "plural": {
-            "allPluralGenders": "cofnięto"
+            "_PluralGenders": "cofnięto"
           }
         },
         "1per": {

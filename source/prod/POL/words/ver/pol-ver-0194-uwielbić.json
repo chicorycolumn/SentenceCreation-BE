@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "uwielbi się"
+            "_SingularGenders": "uwielbi się"
           },
           "plural": {
-            "allPluralGenders": "uwielbi się"
+            "_PluralGenders": "uwielbi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "uwielbię"
+            "_SingularGendersExcludingNeuter": "uwielbię"
           },
           "plural": {
-            "allPluralGenders": "uwielbimy"
+            "_PluralGenders": "uwielbimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "uwielbisz"
+            "_SingularGendersExcludingNeuter": "uwielbisz"
           },
           "plural": {
-            "allPluralGenders": "uwielbicie"
+            "_PluralGenders": "uwielbicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "uwielbi"
+            "_SingularGenders": "uwielbi"
           },
           "plural": {
-            "allPluralGenders": "uwielbią"
+            "_PluralGenders": "uwielbią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "uwielbiono"
+            "_SingularGenders": "uwielbiono"
           },
           "plural": {
-            "allPluralGenders": "uwielbiono"
+            "_PluralGenders": "uwielbiono"
           }
         },
         "1per": {

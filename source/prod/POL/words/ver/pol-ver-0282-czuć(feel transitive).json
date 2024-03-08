@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "czuto"
+            "_SingularGenders": "czuto"
           },
           "plural": {
-            "allPluralGenders": "czuto"
+            "_PluralGenders": "czuto"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "czuje się"
+            "_SingularGenders": "czuje się"
           },
           "plural": {
-            "allPluralGenders": "czuje się"
+            "_PluralGenders": "czuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "czuję"
+            "_SingularGendersExcludingNeuter": "czuję"
           },
           "plural": {
-            "allPluralGenders": "czujemy"
+            "_PluralGenders": "czujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "czujesz"
+            "_SingularGendersExcludingNeuter": "czujesz"
           },
           "plural": {
-            "allPluralGenders": "czujecie"
+            "_PluralGenders": "czujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "czuje"
+            "_SingularGenders": "czuje"
           },
           "plural": {
-            "allPluralGenders": "czują"
+            "_PluralGenders": "czują"
           }
         }
       }

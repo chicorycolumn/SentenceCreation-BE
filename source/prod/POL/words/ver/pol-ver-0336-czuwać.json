@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "czuwano"
+            "_SingularGenders": "czuwano"
           },
           "plural": {
-            "allPluralGenders": "czuwano"
+            "_PluralGenders": "czuwano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "czuwa się"
+            "_SingularGenders": "czuwa się"
           },
           "plural": {
-            "allPluralGenders": "czuwa się"
+            "_PluralGenders": "czuwa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "czuwam"
+            "_SingularGendersExcludingNeuter": "czuwam"
           },
           "plural": {
-            "allPluralGenders": "czuwamy"
+            "_PluralGenders": "czuwamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "czuwasz"
+            "_SingularGendersExcludingNeuter": "czuwasz"
           },
           "plural": {
-            "allPluralGenders": "czuwacie"
+            "_PluralGenders": "czuwacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "czuwa"
+            "_SingularGenders": "czuwa"
           },
           "plural": {
-            "allPluralGenders": "czuwają"
+            "_PluralGenders": "czuwają"
           }
         }
       }

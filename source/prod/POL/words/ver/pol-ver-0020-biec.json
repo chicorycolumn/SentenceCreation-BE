@@ -45,34 +45,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "biegnie się"
+            "_SingularGenders": "biegnie się"
           },
           "plural": {
-            "allPluralGenders": "biegnie się"
+            "_PluralGenders": "biegnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "biegnę"
+            "_SingularGendersExcludingNeuter": "biegnę"
           },
           "plural": {
-            "allPluralGenders": "biegniemy"
+            "_PluralGenders": "biegniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "biegniesz"
+            "_SingularGendersExcludingNeuter": "biegniesz"
           },
           "plural": {
-            "allPluralGenders": "biegniecie"
+            "_PluralGenders": "biegniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "biegnie"
+            "_SingularGenders": "biegnie"
           },
           "plural": {
-            "allPluralGenders": "biegną"
+            "_PluralGenders": "biegną"
           }
         }
       }

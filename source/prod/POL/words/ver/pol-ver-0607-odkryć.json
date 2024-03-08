@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odkryje się"
+            "_SingularGenders": "odkryje się"
           },
           "plural": {
-            "allPluralGenders": "odkryje się"
+            "_PluralGenders": "odkryje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odkryję"
+            "_SingularGendersExcludingNeuter": "odkryję"
           },
           "plural": {
-            "allPluralGenders": "odkryjemy"
+            "_PluralGenders": "odkryjemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odkryjesz"
+            "_SingularGendersExcludingNeuter": "odkryjesz"
           },
           "plural": {
-            "allPluralGenders": "odkryjecie"
+            "_PluralGenders": "odkryjecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odkryje"
+            "_SingularGenders": "odkryje"
           },
           "plural": {
-            "allPluralGenders": "odkryją"
+            "_PluralGenders": "odkryją"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odkryto"
+            "_SingularGenders": "odkryto"
           },
           "plural": {
-            "allPluralGenders": "odkryto"
+            "_PluralGenders": "odkryto"
           }
         },
         "1per": {

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przerwie się"
+            "_SingularGenders": "przerwie się"
           },
           "plural": {
-            "allPluralGenders": "przerwie się"
+            "_PluralGenders": "przerwie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przerwę"
+            "_SingularGendersExcludingNeuter": "przerwę"
           },
           "plural": {
-            "allPluralGenders": "przerwiemy"
+            "_PluralGenders": "przerwiemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przerwiesz"
+            "_SingularGendersExcludingNeuter": "przerwiesz"
           },
           "plural": {
-            "allPluralGenders": "przerwiecie"
+            "_PluralGenders": "przerwiecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przerwie"
+            "_SingularGenders": "przerwie"
           },
           "plural": {
-            "allPluralGenders": "przerwą"
+            "_PluralGenders": "przerwą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przerwano"
+            "_SingularGenders": "przerwano"
           },
           "plural": {
-            "allPluralGenders": "przerwano"
+            "_PluralGenders": "przerwano"
           }
         },
         "1per": {

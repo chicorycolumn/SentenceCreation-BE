@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "domyśli się"
+            "_SingularGenders": "domyśli się"
           },
           "plural": {
-            "allPluralGenders": "domyśli się"
+            "_PluralGenders": "domyśli się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "domyślę"
+            "_SingularGendersExcludingNeuter": "domyślę"
           },
           "plural": {
-            "allPluralGenders": "domyślimy"
+            "_PluralGenders": "domyślimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "domyślisz"
+            "_SingularGendersExcludingNeuter": "domyślisz"
           },
           "plural": {
-            "allPluralGenders": "domyślicie"
+            "_PluralGenders": "domyślicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "domyśli"
+            "_SingularGenders": "domyśli"
           },
           "plural": {
-            "allPluralGenders": "domyślą"
+            "_PluralGenders": "domyślą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "domyślono"
+            "_SingularGenders": "domyślono"
           },
           "plural": {
-            "allPluralGenders": "domyślono"
+            "_PluralGenders": "domyślono"
           }
         },
         "1per": {

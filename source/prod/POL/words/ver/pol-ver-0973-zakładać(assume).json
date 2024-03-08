@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zakładano"
+            "_SingularGenders": "zakładano"
           },
           "plural": {
-            "allPluralGenders": "zakładano"
+            "_PluralGenders": "zakładano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zakłada się"
+            "_SingularGenders": "zakłada się"
           },
           "plural": {
-            "allPluralGenders": "zakłada się"
+            "_PluralGenders": "zakłada się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zakładam"
+            "_SingularGendersExcludingNeuter": "zakładam"
           },
           "plural": {
-            "allPluralGenders": "zakładamy"
+            "_PluralGenders": "zakładamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zakładasz"
+            "_SingularGendersExcludingNeuter": "zakładasz"
           },
           "plural": {
-            "allPluralGenders": "zakładacie"
+            "_PluralGenders": "zakładacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zakłada"
+            "_SingularGenders": "zakłada"
           },
           "plural": {
-            "allPluralGenders": "zakładają"
+            "_PluralGenders": "zakładają"
           }
         }
       }

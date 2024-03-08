@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wchodzono"
+            "_SingularGenders": "wchodzono"
           },
           "plural": {
-            "allPluralGenders": "wchodzono"
+            "_PluralGenders": "wchodzono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wchodzi się"
+            "_SingularGenders": "wchodzi się"
           },
           "plural": {
-            "allPluralGenders": "wchodzi się"
+            "_PluralGenders": "wchodzi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "wchodzę"
+            "_SingularGendersExcludingNeuter": "wchodzę"
           },
           "plural": {
-            "allPluralGenders": "wchodzimy"
+            "_PluralGenders": "wchodzimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "wchodzisz"
+            "_SingularGendersExcludingNeuter": "wchodzisz"
           },
           "plural": {
-            "allPluralGenders": "wchodzicie"
+            "_PluralGenders": "wchodzicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "wchodzi"
+            "_SingularGenders": "wchodzi"
           },
           "plural": {
-            "allPluralGenders": "wchodzą"
+            "_PluralGenders": "wchodzą"
           }
         }
       }

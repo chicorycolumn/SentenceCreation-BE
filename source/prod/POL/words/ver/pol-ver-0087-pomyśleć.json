@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pomyśli się"
+            "_SingularGenders": "pomyśli się"
           },
           "plural": {
-            "allPluralGenders": "pomyśli się"
+            "_PluralGenders": "pomyśli się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pomyślę"
+            "_SingularGendersExcludingNeuter": "pomyślę"
           },
           "plural": {
-            "allPluralGenders": "pomyślimy"
+            "_PluralGenders": "pomyślimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pomyślisz"
+            "_SingularGendersExcludingNeuter": "pomyślisz"
           },
           "plural": {
-            "allPluralGenders": "pomyślicie"
+            "_PluralGenders": "pomyślicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pomyśli"
+            "_SingularGenders": "pomyśli"
           },
           "plural": {
-            "allPluralGenders": "pomyślą"
+            "_PluralGenders": "pomyślą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pomyślano"
+            "_SingularGenders": "pomyślano"
           },
           "plural": {
-            "allPluralGenders": "pomyślano"
+            "_PluralGenders": "pomyślano"
           }
         },
         "1per": {

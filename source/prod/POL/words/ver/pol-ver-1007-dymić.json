@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dymiono"
+            "_SingularGenders": "dymiono"
           },
           "plural": {
-            "allPluralGenders": "dymiono"
+            "_PluralGenders": "dymiono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dymi się"
+            "_SingularGenders": "dymi się"
           },
           "plural": {
-            "allPluralGenders": "dymi się"
+            "_PluralGenders": "dymi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dymię"
+            "_SingularGendersExcludingNeuter": "dymię"
           },
           "plural": {
-            "allPluralGenders": "dymimy"
+            "_PluralGenders": "dymimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dymisz"
+            "_SingularGendersExcludingNeuter": "dymisz"
           },
           "plural": {
-            "allPluralGenders": "dymicie"
+            "_PluralGenders": "dymicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dymi"
+            "_SingularGenders": "dymi"
           },
           "plural": {
-            "allPluralGenders": "dymią"
+            "_PluralGenders": "dymią"
           }
         }
       }

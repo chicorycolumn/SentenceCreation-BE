@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pchnie się"
+            "_SingularGenders": "pchnie się"
           },
           "plural": {
-            "allPluralGenders": "pchnie się"
+            "_PluralGenders": "pchnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pchnę"
+            "_SingularGendersExcludingNeuter": "pchnę"
           },
           "plural": {
-            "allPluralGenders": "pchniemy"
+            "_PluralGenders": "pchniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pchniesz"
+            "_SingularGendersExcludingNeuter": "pchniesz"
           },
           "plural": {
-            "allPluralGenders": "pchniecie"
+            "_PluralGenders": "pchniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pchnie"
+            "_SingularGenders": "pchnie"
           },
           "plural": {
-            "allPluralGenders": "pchną"
+            "_PluralGenders": "pchną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pchnięto"
+            "_SingularGenders": "pchnięto"
           },
           "plural": {
-            "allPluralGenders": "pchnięto"
+            "_PluralGenders": "pchnięto"
           }
         },
         "1per": {

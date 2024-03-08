@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odbijano"
+            "_SingularGenders": "odbijano"
           },
           "plural": {
-            "allPluralGenders": "odbijano"
+            "_PluralGenders": "odbijano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odbija się"
+            "_SingularGenders": "odbija się"
           },
           "plural": {
-            "allPluralGenders": "odbija się"
+            "_PluralGenders": "odbija się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odbijam"
+            "_SingularGendersExcludingNeuter": "odbijam"
           },
           "plural": {
-            "allPluralGenders": "odbijamy"
+            "_PluralGenders": "odbijamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odbijasz"
+            "_SingularGendersExcludingNeuter": "odbijasz"
           },
           "plural": {
-            "allPluralGenders": "odbijacie"
+            "_PluralGenders": "odbijacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odbija"
+            "_SingularGenders": "odbija"
           },
           "plural": {
-            "allPluralGenders": "odbijają"
+            "_PluralGenders": "odbijają"
           }
         }
       }

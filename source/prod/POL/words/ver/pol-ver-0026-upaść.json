@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "upasie się"
+            "_SingularGenders": "upasie się"
           },
           "plural": {
-            "allPluralGenders": "upasie się"
+            "_PluralGenders": "upasie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "upasę"
+            "_SingularGendersExcludingNeuter": "upasę"
           },
           "plural": {
-            "allPluralGenders": "upasiemy"
+            "_PluralGenders": "upasiemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "upasiesz"
+            "_SingularGendersExcludingNeuter": "upasiesz"
           },
           "plural": {
-            "allPluralGenders": "upasiecie"
+            "_PluralGenders": "upasiecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "upasie"
+            "_SingularGenders": "upasie"
           },
           "plural": {
-            "allPluralGenders": "upasą"
+            "_PluralGenders": "upasą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "upasiono"
+            "_SingularGenders": "upasiono"
           },
           "plural": {
-            "allPluralGenders": "upasiono"
+            "_PluralGenders": "upasiono"
           }
         },
         "1per": {

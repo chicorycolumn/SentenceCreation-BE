@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "bywano"
+            "_SingularGenders": "bywano"
           },
           "plural": {
-            "allPluralGenders": "bywano"
+            "_PluralGenders": "bywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "bywa się"
+            "_SingularGenders": "bywa się"
           },
           "plural": {
-            "allPluralGenders": "bywa się"
+            "_PluralGenders": "bywa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "bywam"
+            "_SingularGendersExcludingNeuter": "bywam"
           },
           "plural": {
-            "allPluralGenders": "bywamy"
+            "_PluralGenders": "bywamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "bywasz"
+            "_SingularGendersExcludingNeuter": "bywasz"
           },
           "plural": {
-            "allPluralGenders": "bywacie"
+            "_PluralGenders": "bywacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "bywa"
+            "_SingularGenders": "bywa"
           },
           "plural": {
-            "allPluralGenders": "bywają"
+            "_PluralGenders": "bywają"
           }
         }
       }

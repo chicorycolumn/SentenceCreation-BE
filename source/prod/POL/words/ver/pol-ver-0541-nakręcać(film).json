@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "nakręcano"
+            "_SingularGenders": "nakręcano"
           },
           "plural": {
-            "allPluralGenders": "nakręcano"
+            "_PluralGenders": "nakręcano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "nakręca się"
+            "_SingularGenders": "nakręca się"
           },
           "plural": {
-            "allPluralGenders": "nakręca się"
+            "_PluralGenders": "nakręca się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "nakręcam"
+            "_SingularGendersExcludingNeuter": "nakręcam"
           },
           "plural": {
-            "allPluralGenders": "nakręcamy"
+            "_PluralGenders": "nakręcamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "nakręcasz"
+            "_SingularGendersExcludingNeuter": "nakręcasz"
           },
           "plural": {
-            "allPluralGenders": "nakręcacie"
+            "_PluralGenders": "nakręcacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "nakręca"
+            "_SingularGenders": "nakręca"
           },
           "plural": {
-            "allPluralGenders": "nakręcają"
+            "_PluralGenders": "nakręcają"
           }
         }
       }

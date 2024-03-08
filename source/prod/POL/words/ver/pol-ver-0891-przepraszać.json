@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przepraszano"
+            "_SingularGenders": "przepraszano"
           },
           "plural": {
-            "allPluralGenders": "przepraszano"
+            "_PluralGenders": "przepraszano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przeprasza się"
+            "_SingularGenders": "przeprasza się"
           },
           "plural": {
-            "allPluralGenders": "przeprasza się"
+            "_PluralGenders": "przeprasza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przepraszam"
+            "_SingularGendersExcludingNeuter": "przepraszam"
           },
           "plural": {
-            "allPluralGenders": "przepraszamy"
+            "_PluralGenders": "przepraszamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przepraszasz"
+            "_SingularGendersExcludingNeuter": "przepraszasz"
           },
           "plural": {
-            "allPluralGenders": "przepraszacie"
+            "_PluralGenders": "przepraszacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przeprasza"
+            "_SingularGenders": "przeprasza"
           },
           "plural": {
-            "allPluralGenders": "przepraszają"
+            "_PluralGenders": "przepraszają"
           }
         }
       }

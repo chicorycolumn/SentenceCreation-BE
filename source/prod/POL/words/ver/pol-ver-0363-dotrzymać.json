@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dotrzyma się"
+            "_SingularGenders": "dotrzyma się"
           },
           "plural": {
-            "allPluralGenders": "dotrzyma się"
+            "_PluralGenders": "dotrzyma się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dotrzymam"
+            "_SingularGendersExcludingNeuter": "dotrzymam"
           },
           "plural": {
-            "allPluralGenders": "dotrzymamy"
+            "_PluralGenders": "dotrzymamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dotrzymasz"
+            "_SingularGendersExcludingNeuter": "dotrzymasz"
           },
           "plural": {
-            "allPluralGenders": "dotrzymacie"
+            "_PluralGenders": "dotrzymacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dotrzyma"
+            "_SingularGenders": "dotrzyma"
           },
           "plural": {
-            "allPluralGenders": "dotrzymają"
+            "_PluralGenders": "dotrzymają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dotrzymano"
+            "_SingularGenders": "dotrzymano"
           },
           "plural": {
-            "allPluralGenders": "dotrzymano"
+            "_PluralGenders": "dotrzymano"
           }
         },
         "1per": {

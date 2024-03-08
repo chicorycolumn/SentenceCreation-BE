@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odrzucano"
+            "_SingularGenders": "odrzucano"
           },
           "plural": {
-            "allPluralGenders": "odrzucano"
+            "_PluralGenders": "odrzucano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odrzuca się"
+            "_SingularGenders": "odrzuca się"
           },
           "plural": {
-            "allPluralGenders": "odrzuca się"
+            "_PluralGenders": "odrzuca się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odrzucam"
+            "_SingularGendersExcludingNeuter": "odrzucam"
           },
           "plural": {
-            "allPluralGenders": "odrzucamy"
+            "_PluralGenders": "odrzucamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odrzucasz"
+            "_SingularGendersExcludingNeuter": "odrzucasz"
           },
           "plural": {
-            "allPluralGenders": "odrzucacie"
+            "_PluralGenders": "odrzucacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odrzuca"
+            "_SingularGenders": "odrzuca"
           },
           "plural": {
-            "allPluralGenders": "odrzucają"
+            "_PluralGenders": "odrzucają"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dotyczono"
+            "_SingularGenders": "dotyczono"
           },
           "plural": {
-            "allPluralGenders": "dotyczono"
+            "_PluralGenders": "dotyczono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dotyczy się"
+            "_SingularGenders": "dotyczy się"
           },
           "plural": {
-            "allPluralGenders": "dotyczy się"
+            "_PluralGenders": "dotyczy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dotyczę"
+            "_SingularGendersExcludingNeuter": "dotyczę"
           },
           "plural": {
-            "allPluralGenders": "dotyczymy"
+            "_PluralGenders": "dotyczymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dotyczysz"
+            "_SingularGendersExcludingNeuter": "dotyczysz"
           },
           "plural": {
-            "allPluralGenders": "dotyczycie"
+            "_PluralGenders": "dotyczycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dotyczy"
+            "_SingularGenders": "dotyczy"
           },
           "plural": {
-            "allPluralGenders": "dotyczą"
+            "_PluralGenders": "dotyczą"
           }
         }
       }

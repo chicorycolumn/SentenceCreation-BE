@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "denerwowano"
+            "_SingularGenders": "denerwowano"
           },
           "plural": {
-            "allPluralGenders": "denerwowano"
+            "_PluralGenders": "denerwowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "denerwuje się"
+            "_SingularGenders": "denerwuje się"
           },
           "plural": {
-            "allPluralGenders": "denerwuje się"
+            "_PluralGenders": "denerwuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "denerwuję"
+            "_SingularGendersExcludingNeuter": "denerwuję"
           },
           "plural": {
-            "allPluralGenders": "denerwujemy"
+            "_PluralGenders": "denerwujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "denerwujesz"
+            "_SingularGendersExcludingNeuter": "denerwujesz"
           },
           "plural": {
-            "allPluralGenders": "denerwujecie"
+            "_PluralGenders": "denerwujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "denerwuje"
+            "_SingularGenders": "denerwuje"
           },
           "plural": {
-            "allPluralGenders": "denerwują"
+            "_PluralGenders": "denerwują"
           }
         }
       }

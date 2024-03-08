@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zmarnuje się"
+            "_SingularGenders": "zmarnuje się"
           },
           "plural": {
-            "allPluralGenders": "zmarnuje się"
+            "_PluralGenders": "zmarnuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zmarnuję"
+            "_SingularGendersExcludingNeuter": "zmarnuję"
           },
           "plural": {
-            "allPluralGenders": "zmarnujemy"
+            "_PluralGenders": "zmarnujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zmarnujesz"
+            "_SingularGendersExcludingNeuter": "zmarnujesz"
           },
           "plural": {
-            "allPluralGenders": "zmarnujecie"
+            "_PluralGenders": "zmarnujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zmarnuje"
+            "_SingularGenders": "zmarnuje"
           },
           "plural": {
-            "allPluralGenders": "zmarnują"
+            "_PluralGenders": "zmarnują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zmarnowano"
+            "_SingularGenders": "zmarnowano"
           },
           "plural": {
-            "allPluralGenders": "zmarnowano"
+            "_PluralGenders": "zmarnowano"
           }
         },
         "1per": {

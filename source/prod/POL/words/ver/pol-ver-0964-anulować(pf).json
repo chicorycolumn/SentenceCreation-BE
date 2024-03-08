@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "anuluje się"
+            "_SingularGenders": "anuluje się"
           },
           "plural": {
-            "allPluralGenders": "anuluje się"
+            "_PluralGenders": "anuluje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "anuluję"
+            "_SingularGendersExcludingNeuter": "anuluję"
           },
           "plural": {
-            "allPluralGenders": "anulujemy"
+            "_PluralGenders": "anulujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "anulujesz"
+            "_SingularGendersExcludingNeuter": "anulujesz"
           },
           "plural": {
-            "allPluralGenders": "anulujecie"
+            "_PluralGenders": "anulujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "anuluje"
+            "_SingularGenders": "anuluje"
           },
           "plural": {
-            "allPluralGenders": "anulują"
+            "_PluralGenders": "anulują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "anulowano"
+            "_SingularGenders": "anulowano"
           },
           "plural": {
-            "allPluralGenders": "anulowano"
+            "_PluralGenders": "anulowano"
           }
         },
         "1per": {

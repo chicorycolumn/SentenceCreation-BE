@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "bano"
+            "_SingularGenders": "bano"
           },
           "plural": {
-            "allPluralGenders": "bano"
+            "_PluralGenders": "bano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "boi się"
+            "_SingularGenders": "boi się"
           },
           "plural": {
-            "allPluralGenders": "boi się"
+            "_PluralGenders": "boi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "boję"
+            "_SingularGendersExcludingNeuter": "boję"
           },
           "plural": {
-            "allPluralGenders": "boimy"
+            "_PluralGenders": "boimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "boisz"
+            "_SingularGendersExcludingNeuter": "boisz"
           },
           "plural": {
-            "allPluralGenders": "boicie"
+            "_PluralGenders": "boicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "boi"
+            "_SingularGenders": "boi"
           },
           "plural": {
-            "allPluralGenders": "boją"
+            "_PluralGenders": "boją"
           }
         }
       }

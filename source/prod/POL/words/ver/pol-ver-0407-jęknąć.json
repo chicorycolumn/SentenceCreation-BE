@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "jęknie się"
+            "_SingularGenders": "jęknie się"
           },
           "plural": {
-            "allPluralGenders": "jęknie się"
+            "_PluralGenders": "jęknie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "jęknę"
+            "_SingularGendersExcludingNeuter": "jęknę"
           },
           "plural": {
-            "allPluralGenders": "jękniemy"
+            "_PluralGenders": "jękniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "jękniesz"
+            "_SingularGendersExcludingNeuter": "jękniesz"
           },
           "plural": {
-            "allPluralGenders": "jękniecie"
+            "_PluralGenders": "jękniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "jęknie"
+            "_SingularGenders": "jęknie"
           },
           "plural": {
-            "allPluralGenders": "jękną"
+            "_PluralGenders": "jękną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "jęknięto"
+            "_SingularGenders": "jęknięto"
           },
           "plural": {
-            "allPluralGenders": "jęknięto"
+            "_PluralGenders": "jęknięto"
           }
         },
         "1per": {

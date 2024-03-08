@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dojedzie się"
+            "_SingularGenders": "dojedzie się"
           },
           "plural": {
-            "allPluralGenders": "dojedzie się"
+            "_PluralGenders": "dojedzie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dojadę"
+            "_SingularGendersExcludingNeuter": "dojadę"
           },
           "plural": {
-            "allPluralGenders": "dojedziemy"
+            "_PluralGenders": "dojedziemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dojedziesz"
+            "_SingularGendersExcludingNeuter": "dojedziesz"
           },
           "plural": {
-            "allPluralGenders": "dojedziecie"
+            "_PluralGenders": "dojedziecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dojedzie"
+            "_SingularGenders": "dojedzie"
           },
           "plural": {
-            "allPluralGenders": "dojadą"
+            "_PluralGenders": "dojadą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dojechano"
+            "_SingularGenders": "dojechano"
           },
           "plural": {
-            "allPluralGenders": "dojechano"
+            "_PluralGenders": "dojechano"
           }
         },
         "1per": {

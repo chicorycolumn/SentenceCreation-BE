@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "uwielbiano"
+            "_SingularGenders": "uwielbiano"
           },
           "plural": {
-            "allPluralGenders": "uwielbiano"
+            "_PluralGenders": "uwielbiano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "uwielbia się"
+            "_SingularGenders": "uwielbia się"
           },
           "plural": {
-            "allPluralGenders": "uwielbia się"
+            "_PluralGenders": "uwielbia się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "uwielbiam"
+            "_SingularGendersExcludingNeuter": "uwielbiam"
           },
           "plural": {
-            "allPluralGenders": "uwielbiamy"
+            "_PluralGenders": "uwielbiamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "uwielbiasz"
+            "_SingularGendersExcludingNeuter": "uwielbiasz"
           },
           "plural": {
-            "allPluralGenders": "uwielbiacie"
+            "_PluralGenders": "uwielbiacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "uwielbia"
+            "_SingularGenders": "uwielbia"
           },
           "plural": {
-            "allPluralGenders": "uwielbiają"
+            "_PluralGenders": "uwielbiają"
           }
         }
       }

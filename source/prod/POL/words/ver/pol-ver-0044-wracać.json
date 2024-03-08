@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wracano"
+            "_SingularGenders": "wracano"
           },
           "plural": {
-            "allPluralGenders": "wracano"
+            "_PluralGenders": "wracano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wraca się"
+            "_SingularGenders": "wraca się"
           },
           "plural": {
-            "allPluralGenders": "wraca się"
+            "_PluralGenders": "wraca się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "wracam"
+            "_SingularGendersExcludingNeuter": "wracam"
           },
           "plural": {
-            "allPluralGenders": "wracamy"
+            "_PluralGenders": "wracamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "wracasz"
+            "_SingularGendersExcludingNeuter": "wracasz"
           },
           "plural": {
-            "allPluralGenders": "wracacie"
+            "_PluralGenders": "wracacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "wraca"
+            "_SingularGenders": "wraca"
           },
           "plural": {
-            "allPluralGenders": "wracają"
+            "_PluralGenders": "wracają"
           }
         }
       }

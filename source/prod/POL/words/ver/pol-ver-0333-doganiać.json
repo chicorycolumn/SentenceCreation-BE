@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "doganiano"
+            "_SingularGenders": "doganiano"
           },
           "plural": {
-            "allPluralGenders": "doganiano"
+            "_PluralGenders": "doganiano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dogania się"
+            "_SingularGenders": "dogania się"
           },
           "plural": {
-            "allPluralGenders": "dogania się"
+            "_PluralGenders": "dogania się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "doganiam"
+            "_SingularGendersExcludingNeuter": "doganiam"
           },
           "plural": {
-            "allPluralGenders": "doganiamy"
+            "_PluralGenders": "doganiamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "doganiasz"
+            "_SingularGendersExcludingNeuter": "doganiasz"
           },
           "plural": {
-            "allPluralGenders": "doganiacie"
+            "_PluralGenders": "doganiacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dogania"
+            "_SingularGenders": "dogania"
           },
           "plural": {
-            "allPluralGenders": "doganiają"
+            "_PluralGenders": "doganiają"
           }
         }
       }

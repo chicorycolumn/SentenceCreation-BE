@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dotrzymywano"
+            "_SingularGenders": "dotrzymywano"
           },
           "plural": {
-            "allPluralGenders": "dotrzymywano"
+            "_PluralGenders": "dotrzymywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dotrzymuje się"
+            "_SingularGenders": "dotrzymuje się"
           },
           "plural": {
-            "allPluralGenders": "dotrzymuje się"
+            "_PluralGenders": "dotrzymuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dotrzymuję"
+            "_SingularGendersExcludingNeuter": "dotrzymuję"
           },
           "plural": {
-            "allPluralGenders": "dotrzymujemy"
+            "_PluralGenders": "dotrzymujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dotrzymujesz"
+            "_SingularGendersExcludingNeuter": "dotrzymujesz"
           },
           "plural": {
-            "allPluralGenders": "dotrzymujecie"
+            "_PluralGenders": "dotrzymujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dotrzymuje"
+            "_SingularGenders": "dotrzymuje"
           },
           "plural": {
-            "allPluralGenders": "dotrzymują"
+            "_PluralGenders": "dotrzymują"
           }
         }
       }

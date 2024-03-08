@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zlekceważy się"
+            "_SingularGenders": "zlekceważy się"
           },
           "plural": {
-            "allPluralGenders": "zlekceważy się"
+            "_PluralGenders": "zlekceważy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zlekceważę"
+            "_SingularGendersExcludingNeuter": "zlekceważę"
           },
           "plural": {
-            "allPluralGenders": "zlekceważymy"
+            "_PluralGenders": "zlekceważymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zlekceważysz"
+            "_SingularGendersExcludingNeuter": "zlekceważysz"
           },
           "plural": {
-            "allPluralGenders": "zlekceważycie"
+            "_PluralGenders": "zlekceważycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zlekceważy"
+            "_SingularGenders": "zlekceważy"
           },
           "plural": {
-            "allPluralGenders": "zlekceważą"
+            "_PluralGenders": "zlekceważą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zlekceważono"
+            "_SingularGenders": "zlekceważono"
           },
           "plural": {
-            "allPluralGenders": "zlekceważono"
+            "_PluralGenders": "zlekceważono"
           }
         },
         "1per": {

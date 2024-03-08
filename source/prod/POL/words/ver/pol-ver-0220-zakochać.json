@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zakocha się"
+            "_SingularGenders": "zakocha się"
           },
           "plural": {
-            "allPluralGenders": "zakocha się"
+            "_PluralGenders": "zakocha się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zakocham"
+            "_SingularGendersExcludingNeuter": "zakocham"
           },
           "plural": {
-            "allPluralGenders": "zakochamy"
+            "_PluralGenders": "zakochamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zakochasz"
+            "_SingularGendersExcludingNeuter": "zakochasz"
           },
           "plural": {
-            "allPluralGenders": "zakochacie"
+            "_PluralGenders": "zakochacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zakocha"
+            "_SingularGenders": "zakocha"
           },
           "plural": {
-            "allPluralGenders": "zakochają"
+            "_PluralGenders": "zakochają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zakochano"
+            "_SingularGenders": "zakochano"
           },
           "plural": {
-            "allPluralGenders": "zakochano"
+            "_PluralGenders": "zakochano"
           }
         },
         "1per": {

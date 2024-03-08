@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dojeżdżano"
+            "_SingularGenders": "dojeżdżano"
           },
           "plural": {
-            "allPluralGenders": "dojeżdżano"
+            "_PluralGenders": "dojeżdżano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dojeżdża się"
+            "_SingularGenders": "dojeżdża się"
           },
           "plural": {
-            "allPluralGenders": "dojeżdża się"
+            "_PluralGenders": "dojeżdża się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dojeżdżam"
+            "_SingularGendersExcludingNeuter": "dojeżdżam"
           },
           "plural": {
-            "allPluralGenders": "dojeżdżamy"
+            "_PluralGenders": "dojeżdżamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dojeżdżasz"
+            "_SingularGendersExcludingNeuter": "dojeżdżasz"
           },
           "plural": {
-            "allPluralGenders": "dojeżdżacie"
+            "_PluralGenders": "dojeżdżacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dojeżdża"
+            "_SingularGenders": "dojeżdża"
           },
           "plural": {
-            "allPluralGenders": "dojeżdżają"
+            "_PluralGenders": "dojeżdżają"
           }
         }
       }

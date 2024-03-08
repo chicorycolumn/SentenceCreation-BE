@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kładziono"
+            "_SingularGenders": "kładziono"
           },
           "plural": {
-            "allPluralGenders": "kładziono"
+            "_PluralGenders": "kładziono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kładzie się"
+            "_SingularGenders": "kładzie się"
           },
           "plural": {
-            "allPluralGenders": "kładzie się"
+            "_PluralGenders": "kładzie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "kładę"
+            "_SingularGendersExcludingNeuter": "kładę"
           },
           "plural": {
-            "allPluralGenders": "kładziemy"
+            "_PluralGenders": "kładziemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "kładziesz"
+            "_SingularGendersExcludingNeuter": "kładziesz"
           },
           "plural": {
-            "allPluralGenders": "kładziecie"
+            "_PluralGenders": "kładziecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "kładzie"
+            "_SingularGenders": "kładzie"
           },
           "plural": {
-            "allPluralGenders": "kładą"
+            "_PluralGenders": "kładą"
           }
         }
       }

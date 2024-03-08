@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "witano"
+            "_SingularGenders": "witano"
           },
           "plural": {
-            "allPluralGenders": "witano"
+            "_PluralGenders": "witano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wita się"
+            "_SingularGenders": "wita się"
           },
           "plural": {
-            "allPluralGenders": "wita się"
+            "_PluralGenders": "wita się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "witam"
+            "_SingularGendersExcludingNeuter": "witam"
           },
           "plural": {
-            "allPluralGenders": "witamy"
+            "_PluralGenders": "witamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "witasz"
+            "_SingularGendersExcludingNeuter": "witasz"
           },
           "plural": {
-            "allPluralGenders": "witacie"
+            "_PluralGenders": "witacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "wita"
+            "_SingularGenders": "wita"
           },
           "plural": {
-            "allPluralGenders": "witają"
+            "_PluralGenders": "witają"
           }
         }
       }

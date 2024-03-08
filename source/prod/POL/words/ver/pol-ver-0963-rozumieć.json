@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "rozumiano"
+            "_SingularGenders": "rozumiano"
           },
           "plural": {
-            "allPluralGenders": "rozumiano"
+            "_PluralGenders": "rozumiano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "rozumie się"
+            "_SingularGenders": "rozumie się"
           },
           "plural": {
-            "allPluralGenders": "rozumie się"
+            "_PluralGenders": "rozumie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "rozumiem"
+            "_SingularGendersExcludingNeuter": "rozumiem"
           },
           "plural": {
-            "allPluralGenders": "rozumiemy"
+            "_PluralGenders": "rozumiemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "rozumiesz"
+            "_SingularGendersExcludingNeuter": "rozumiesz"
           },
           "plural": {
-            "allPluralGenders": "rozumiecie"
+            "_PluralGenders": "rozumiecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "rozumie"
+            "_SingularGenders": "rozumie"
           },
           "plural": {
-            "allPluralGenders": "rozumieją"
+            "_PluralGenders": "rozumieją"
           }
         }
       }

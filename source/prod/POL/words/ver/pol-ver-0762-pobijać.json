@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podbijano"
+            "_SingularGenders": "podbijano"
           },
           "plural": {
-            "allPluralGenders": "podbijano"
+            "_PluralGenders": "podbijano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podbija się"
+            "_SingularGenders": "podbija się"
           },
           "plural": {
-            "allPluralGenders": "podbija się"
+            "_PluralGenders": "podbija się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "podbijam"
+            "_SingularGendersExcludingNeuter": "podbijam"
           },
           "plural": {
-            "allPluralGenders": "podbijamy"
+            "_PluralGenders": "podbijamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "podbijasz"
+            "_SingularGendersExcludingNeuter": "podbijasz"
           },
           "plural": {
-            "allPluralGenders": "podbijacie"
+            "_PluralGenders": "podbijacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "podbija"
+            "_SingularGenders": "podbija"
           },
           "plural": {
-            "allPluralGenders": "podbijają"
+            "_PluralGenders": "podbijają"
           }
         }
       }

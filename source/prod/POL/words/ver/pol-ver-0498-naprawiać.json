@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "naprawiano"
+            "_SingularGenders": "naprawiano"
           },
           "plural": {
-            "allPluralGenders": "naprawiano"
+            "_PluralGenders": "naprawiano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "naprawia się"
+            "_SingularGenders": "naprawia się"
           },
           "plural": {
-            "allPluralGenders": "naprawia się"
+            "_PluralGenders": "naprawia się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "naprawiam"
+            "_SingularGendersExcludingNeuter": "naprawiam"
           },
           "plural": {
-            "allPluralGenders": "naprawiamy"
+            "_PluralGenders": "naprawiamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "naprawiasz"
+            "_SingularGendersExcludingNeuter": "naprawiasz"
           },
           "plural": {
-            "allPluralGenders": "naprawiacie"
+            "_PluralGenders": "naprawiacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "naprawia"
+            "_SingularGenders": "naprawia"
           },
           "plural": {
-            "allPluralGenders": "naprawiają"
+            "_PluralGenders": "naprawiają"
           }
         }
       }

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "skłamie się"
+            "_SingularGenders": "skłamie się"
           },
           "plural": {
-            "allPluralGenders": "skłamie się"
+            "_PluralGenders": "skłamie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "skłamię"
+            "_SingularGendersExcludingNeuter": "skłamię"
           },
           "plural": {
-            "allPluralGenders": "skłamiemy"
+            "_PluralGenders": "skłamiemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "skłamiesz"
+            "_SingularGendersExcludingNeuter": "skłamiesz"
           },
           "plural": {
-            "allPluralGenders": "skłamiecie"
+            "_PluralGenders": "skłamiecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "skłamie"
+            "_SingularGenders": "skłamie"
           },
           "plural": {
-            "allPluralGenders": "skłamią"
+            "_PluralGenders": "skłamią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "skłamano"
+            "_SingularGenders": "skłamano"
           },
           "plural": {
-            "allPluralGenders": "skłamano"
+            "_PluralGenders": "skłamano"
           }
         },
         "1per": {

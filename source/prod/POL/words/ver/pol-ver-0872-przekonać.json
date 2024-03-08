@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przekona się"
+            "_SingularGenders": "przekona się"
           },
           "plural": {
-            "allPluralGenders": "przekona się"
+            "_PluralGenders": "przekona się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przekonam"
+            "_SingularGendersExcludingNeuter": "przekonam"
           },
           "plural": {
-            "allPluralGenders": "przekonamy"
+            "_PluralGenders": "przekonamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przekonasz"
+            "_SingularGendersExcludingNeuter": "przekonasz"
           },
           "plural": {
-            "allPluralGenders": "przekonacie"
+            "_PluralGenders": "przekonacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przekona"
+            "_SingularGenders": "przekona"
           },
           "plural": {
-            "allPluralGenders": "przekonają"
+            "_PluralGenders": "przekonają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przekonano"
+            "_SingularGenders": "przekonano"
           },
           "plural": {
-            "allPluralGenders": "przekonano"
+            "_PluralGenders": "przekonano"
           }
         },
         "1per": {

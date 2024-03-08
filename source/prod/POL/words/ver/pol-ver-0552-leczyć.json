@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "leczono"
+            "_SingularGenders": "leczono"
           },
           "plural": {
-            "allPluralGenders": "leczono"
+            "_PluralGenders": "leczono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "leczy się"
+            "_SingularGenders": "leczy się"
           },
           "plural": {
-            "allPluralGenders": "leczy się"
+            "_PluralGenders": "leczy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "leczę"
+            "_SingularGendersExcludingNeuter": "leczę"
           },
           "plural": {
-            "allPluralGenders": "leczymy"
+            "_PluralGenders": "leczymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "leczysz"
+            "_SingularGendersExcludingNeuter": "leczysz"
           },
           "plural": {
-            "allPluralGenders": "leczycie"
+            "_PluralGenders": "leczycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "leczy"
+            "_SingularGenders": "leczy"
           },
           "plural": {
-            "allPluralGenders": "leczą"
+            "_PluralGenders": "leczą"
           }
         }
       }

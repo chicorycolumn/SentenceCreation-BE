@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "bolano"
+            "_SingularGenders": "bolano"
           },
           "plural": {
-            "allPluralGenders": "bolano"
+            "_PluralGenders": "bolano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "boli się"
+            "_SingularGenders": "boli się"
           },
           "plural": {
-            "allPluralGenders": "boli się"
+            "_PluralGenders": "boli się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "bolę"
+            "_SingularGendersExcludingNeuter": "bolę"
           },
           "plural": {
-            "allPluralGenders": "bolimy"
+            "_PluralGenders": "bolimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "bolisz"
+            "_SingularGendersExcludingNeuter": "bolisz"
           },
           "plural": {
-            "allPluralGenders": "bolicie"
+            "_PluralGenders": "bolicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "boli"
+            "_SingularGenders": "boli"
           },
           "plural": {
-            "allPluralGenders": "bolą"
+            "_PluralGenders": "bolą"
           }
         }
       }

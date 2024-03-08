@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poczuje się"
+            "_SingularGenders": "poczuje się"
           },
           "plural": {
-            "allPluralGenders": "poczuje się"
+            "_PluralGenders": "poczuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "poczuję"
+            "_SingularGendersExcludingNeuter": "poczuję"
           },
           "plural": {
-            "allPluralGenders": "poczujemy"
+            "_PluralGenders": "poczujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "poczujesz"
+            "_SingularGendersExcludingNeuter": "poczujesz"
           },
           "plural": {
-            "allPluralGenders": "poczujecie"
+            "_PluralGenders": "poczujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "poczuje"
+            "_SingularGenders": "poczuje"
           },
           "plural": {
-            "allPluralGenders": "poczują"
+            "_PluralGenders": "poczują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poczuto"
+            "_SingularGenders": "poczuto"
           },
           "plural": {
-            "allPluralGenders": "poczuto"
+            "_PluralGenders": "poczuto"
           }
         },
         "1per": {

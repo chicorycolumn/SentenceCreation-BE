@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dostanie się"
+            "_SingularGenders": "dostanie się"
           },
           "plural": {
-            "allPluralGenders": "dostanie się"
+            "_PluralGenders": "dostanie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dostanę"
+            "_SingularGendersExcludingNeuter": "dostanę"
           },
           "plural": {
-            "allPluralGenders": "dostaniemy"
+            "_PluralGenders": "dostaniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dostaniesz"
+            "_SingularGendersExcludingNeuter": "dostaniesz"
           },
           "plural": {
-            "allPluralGenders": "dostaniecie"
+            "_PluralGenders": "dostaniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dostanie"
+            "_SingularGenders": "dostanie"
           },
           "plural": {
-            "allPluralGenders": "dostaną"
+            "_PluralGenders": "dostaną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dostano"
+            "_SingularGenders": "dostano"
           },
           "plural": {
-            "allPluralGenders": "dostano"
+            "_PluralGenders": "dostano"
           }
         },
         "1per": {

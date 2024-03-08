@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wygrywano"
+            "_SingularGenders": "wygrywano"
           },
           "plural": {
-            "allPluralGenders": "wygrywano"
+            "_PluralGenders": "wygrywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wygrywa się"
+            "_SingularGenders": "wygrywa się"
           },
           "plural": {
-            "allPluralGenders": "wygrywa się"
+            "_PluralGenders": "wygrywa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "wygrywam"
+            "_SingularGendersExcludingNeuter": "wygrywam"
           },
           "plural": {
-            "allPluralGenders": "wygrywamy"
+            "_PluralGenders": "wygrywamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "wygrywasz"
+            "_SingularGendersExcludingNeuter": "wygrywasz"
           },
           "plural": {
-            "allPluralGenders": "wygrywacie"
+            "_PluralGenders": "wygrywacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "wygrywa"
+            "_SingularGenders": "wygrywa"
           },
           "plural": {
-            "allPluralGenders": "wygrywają"
+            "_PluralGenders": "wygrywają"
           }
         }
       }

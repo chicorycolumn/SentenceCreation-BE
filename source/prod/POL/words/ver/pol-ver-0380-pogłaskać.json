@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pogłaszcze się"
+            "_SingularGenders": "pogłaszcze się"
           },
           "plural": {
-            "allPluralGenders": "pogłaszcze się"
+            "_PluralGenders": "pogłaszcze się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pogłaszczę"
+            "_SingularGendersExcludingNeuter": "pogłaszczę"
           },
           "plural": {
-            "allPluralGenders": "pogłaszczemy"
+            "_PluralGenders": "pogłaszczemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pogłaszczesz"
+            "_SingularGendersExcludingNeuter": "pogłaszczesz"
           },
           "plural": {
-            "allPluralGenders": "pogłaszczecie"
+            "_PluralGenders": "pogłaszczecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pogłaszcze"
+            "_SingularGenders": "pogłaszcze"
           },
           "plural": {
-            "allPluralGenders": "pogłaszczą"
+            "_PluralGenders": "pogłaszczą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pogłaskano"
+            "_SingularGenders": "pogłaskano"
           },
           "plural": {
-            "allPluralGenders": "pogłaskano"
+            "_PluralGenders": "pogłaskano"
           }
         },
         "1per": {

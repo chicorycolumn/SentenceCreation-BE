@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oznajmi się"
+            "_SingularGenders": "oznajmi się"
           },
           "plural": {
-            "allPluralGenders": "oznajmi się"
+            "_PluralGenders": "oznajmi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "oznajmię"
+            "_SingularGendersExcludingNeuter": "oznajmię"
           },
           "plural": {
-            "allPluralGenders": "oznajmimy"
+            "_PluralGenders": "oznajmimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "oznajmisz"
+            "_SingularGendersExcludingNeuter": "oznajmisz"
           },
           "plural": {
-            "allPluralGenders": "oznajmicie"
+            "_PluralGenders": "oznajmicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "oznajmi"
+            "_SingularGenders": "oznajmi"
           },
           "plural": {
-            "allPluralGenders": "oznajmią"
+            "_PluralGenders": "oznajmią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oznajmiono"
+            "_SingularGenders": "oznajmiono"
           },
           "plural": {
-            "allPluralGenders": "oznajmiono"
+            "_PluralGenders": "oznajmiono"
           }
         },
         "1per": {

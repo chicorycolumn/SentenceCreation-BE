@@ -1844,7 +1844,7 @@
     "traductions": {
       "SPA": [],
       "ENG": ["eng-ver-0761-subtract"],
-      "POL": ["pol-ver-0999-odjąć", "pol-ver-8888-odejmwać"]
+      "POL": ["pol-ver-0999-odjąć", "pol-ver-1000-odejmować"]
     },
     "papers": [],
     "topics": ["math"]
@@ -2347,7 +2347,7 @@
     "traductions": {
       "SPA": [],
       "ENG": ["eng-ver-0344-not be able to wait"],
-      "POL": ["pol-ver-0370-doczekać(negative only)"]
+      "POL": ["pol-ver-0377-doczekać[negative only]"]
     },
     "papers": [],
     "topics": ["planning", "time"]
@@ -5011,7 +5011,7 @@
     "traductions": {
       "SPA": [],
       "ENG": ["eng-ver-0699-consider(think about)"],
-      "POL": ["pol-ver-8888-rozważyc", "pol-ver-8888-rozważac"]
+      "POL": ["pol-ver-1013-rozważyć", "pol-ver-1012-rozważać"]
     },
     "papers": ["thought"],
     "topics": ["people", "mental"]
@@ -5569,7 +5569,7 @@
       "POL": [
         "pol-ver-1002-znosić",
         "pol-ver-1001-znieść",
-        "pol-ver-8888-tolerować"
+        "pol-ver-1016-tolerować"
       ]
     },
     "papers": ["emotion", "negative judgment"],

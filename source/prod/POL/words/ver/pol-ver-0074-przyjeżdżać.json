@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przyjeżdżano"
+            "_SingularGenders": "przyjeżdżano"
           },
           "plural": {
-            "allPluralGenders": "przyjeżdżano"
+            "_PluralGenders": "przyjeżdżano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przyjeżdża się"
+            "_SingularGenders": "przyjeżdża się"
           },
           "plural": {
-            "allPluralGenders": "przyjeżdża się"
+            "_PluralGenders": "przyjeżdża się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przyjeżdżam"
+            "_SingularGendersExcludingNeuter": "przyjeżdżam"
           },
           "plural": {
-            "allPluralGenders": "przyjeżdżamy"
+            "_PluralGenders": "przyjeżdżamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przyjeżdżasz"
+            "_SingularGendersExcludingNeuter": "przyjeżdżasz"
           },
           "plural": {
-            "allPluralGenders": "przyjeżdżacie"
+            "_PluralGenders": "przyjeżdżacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przyjeżdża"
+            "_SingularGenders": "przyjeżdża"
           },
           "plural": {
-            "allPluralGenders": "przyjeżdżają"
+            "_PluralGenders": "przyjeżdżają"
           }
         }
       }

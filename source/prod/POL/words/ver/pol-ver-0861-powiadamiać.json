@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "powiadamiano"
+            "_SingularGenders": "powiadamiano"
           },
           "plural": {
-            "allPluralGenders": "powiadamiano"
+            "_PluralGenders": "powiadamiano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "powiadamia się"
+            "_SingularGenders": "powiadamia się"
           },
           "plural": {
-            "allPluralGenders": "powiadamia się"
+            "_PluralGenders": "powiadamia się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "powiadamiam"
+            "_SingularGendersExcludingNeuter": "powiadamiam"
           },
           "plural": {
-            "allPluralGenders": "powiadamiamy"
+            "_PluralGenders": "powiadamiamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "powiadamiasz"
+            "_SingularGendersExcludingNeuter": "powiadamiasz"
           },
           "plural": {
-            "allPluralGenders": "powiadamiacie"
+            "_PluralGenders": "powiadamiacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "powiadamia"
+            "_SingularGenders": "powiadamia"
           },
           "plural": {
-            "allPluralGenders": "powiadamiają"
+            "_PluralGenders": "powiadamiają"
           }
         }
       }

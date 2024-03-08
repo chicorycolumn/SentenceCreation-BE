@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "spakuje się"
+            "_SingularGenders": "spakuje się"
           },
           "plural": {
-            "allPluralGenders": "spakuje się"
+            "_PluralGenders": "spakuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "spakuję"
+            "_SingularGendersExcludingNeuter": "spakuję"
           },
           "plural": {
-            "allPluralGenders": "spakujemy"
+            "_PluralGenders": "spakujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "spakujesz"
+            "_SingularGendersExcludingNeuter": "spakujesz"
           },
           "plural": {
-            "allPluralGenders": "spakujecie"
+            "_PluralGenders": "spakujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "spakuje"
+            "_SingularGenders": "spakuje"
           },
           "plural": {
-            "allPluralGenders": "spakują"
+            "_PluralGenders": "spakują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "spakowano"
+            "_SingularGenders": "spakowano"
           },
           "plural": {
-            "allPluralGenders": "spakowano"
+            "_PluralGenders": "spakowano"
           }
         },
         "1per": {

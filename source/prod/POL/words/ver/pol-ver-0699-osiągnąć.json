@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "osiągnie się"
+            "_SingularGenders": "osiągnie się"
           },
           "plural": {
-            "allPluralGenders": "osiągnie się"
+            "_PluralGenders": "osiągnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "osiągnę"
+            "_SingularGendersExcludingNeuter": "osiągnę"
           },
           "plural": {
-            "allPluralGenders": "osiągniemy"
+            "_PluralGenders": "osiągniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "osiągniesz"
+            "_SingularGendersExcludingNeuter": "osiągniesz"
           },
           "plural": {
-            "allPluralGenders": "osiągniecie"
+            "_PluralGenders": "osiągniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "osiągnie"
+            "_SingularGenders": "osiągnie"
           },
           "plural": {
-            "allPluralGenders": "osiągną"
+            "_PluralGenders": "osiągną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "osiągnięto"
+            "_SingularGenders": "osiągnięto"
           },
           "plural": {
-            "allPluralGenders": "osiągnięto"
+            "_PluralGenders": "osiągnięto"
           }
         },
         "1per": {

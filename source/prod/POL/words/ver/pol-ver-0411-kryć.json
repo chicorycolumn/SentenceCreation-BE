@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kryto"
+            "_SingularGenders": "kryto"
           },
           "plural": {
-            "allPluralGenders": "kryto"
+            "_PluralGenders": "kryto"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kryje się"
+            "_SingularGenders": "kryje się"
           },
           "plural": {
-            "allPluralGenders": "kryje się"
+            "_PluralGenders": "kryje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "kryję"
+            "_SingularGendersExcludingNeuter": "kryję"
           },
           "plural": {
-            "allPluralGenders": "kryjemy"
+            "_PluralGenders": "kryjemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "kryjesz"
+            "_SingularGendersExcludingNeuter": "kryjesz"
           },
           "plural": {
-            "allPluralGenders": "kryjecie"
+            "_PluralGenders": "kryjecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "kryje"
+            "_SingularGenders": "kryje"
           },
           "plural": {
-            "allPluralGenders": "kryją"
+            "_PluralGenders": "kryją"
           }
         }
       }

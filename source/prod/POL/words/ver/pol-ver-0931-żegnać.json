@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "żegnano"
+            "_SingularGenders": "żegnano"
           },
           "plural": {
-            "allPluralGenders": "żegnano"
+            "_PluralGenders": "żegnano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "żegna się"
+            "_SingularGenders": "żegna się"
           },
           "plural": {
-            "allPluralGenders": "żegna się"
+            "_PluralGenders": "żegna się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "żegnam"
+            "_SingularGendersExcludingNeuter": "żegnam"
           },
           "plural": {
-            "allPluralGenders": "żegnamy"
+            "_PluralGenders": "żegnamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "żegnasz"
+            "_SingularGendersExcludingNeuter": "żegnasz"
           },
           "plural": {
-            "allPluralGenders": "żegnacie"
+            "_PluralGenders": "żegnacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "żegna"
+            "_SingularGenders": "żegna"
           },
           "plural": {
-            "allPluralGenders": "żegnają"
+            "_PluralGenders": "żegnają"
           }
         }
       }

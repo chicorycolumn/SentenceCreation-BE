@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ogłosi się"
+            "_SingularGenders": "ogłosi się"
           },
           "plural": {
-            "allPluralGenders": "ogłosi się"
+            "_PluralGenders": "ogłosi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "ogłoszę"
+            "_SingularGendersExcludingNeuter": "ogłoszę"
           },
           "plural": {
-            "allPluralGenders": "ogłosimy"
+            "_PluralGenders": "ogłosimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "ogłosisz"
+            "_SingularGendersExcludingNeuter": "ogłosisz"
           },
           "plural": {
-            "allPluralGenders": "ogłosicie"
+            "_PluralGenders": "ogłosicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "ogłosi"
+            "_SingularGenders": "ogłosi"
           },
           "plural": {
-            "allPluralGenders": "ogłoszą"
+            "_PluralGenders": "ogłoszą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ogłoszono"
+            "_SingularGenders": "ogłoszono"
           },
           "plural": {
-            "allPluralGenders": "ogłoszono"
+            "_PluralGenders": "ogłoszono"
           }
         },
         "1per": {

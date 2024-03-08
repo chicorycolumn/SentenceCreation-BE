@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "popełniano"
+            "_SingularGenders": "popełniano"
           },
           "plural": {
-            "allPluralGenders": "popełniano"
+            "_PluralGenders": "popełniano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "popełnia się"
+            "_SingularGenders": "popełnia się"
           },
           "plural": {
-            "allPluralGenders": "popełnia się"
+            "_PluralGenders": "popełnia się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "popełniam"
+            "_SingularGendersExcludingNeuter": "popełniam"
           },
           "plural": {
-            "allPluralGenders": "popełniamy"
+            "_PluralGenders": "popełniamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "popełniasz"
+            "_SingularGendersExcludingNeuter": "popełniasz"
           },
           "plural": {
-            "allPluralGenders": "popełniacie"
+            "_PluralGenders": "popełniacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "popełnia"
+            "_SingularGenders": "popełnia"
           },
           "plural": {
-            "allPluralGenders": "popełniają"
+            "_PluralGenders": "popełniają"
           }
         }
       }

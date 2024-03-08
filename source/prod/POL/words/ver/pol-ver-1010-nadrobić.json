@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "nadrobi się"
+            "_SingularGenders": "nadrobi się"
           },
           "plural": {
-            "allPluralGenders": "nadrobi się"
+            "_PluralGenders": "nadrobi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "nadrobię"
+            "_SingularGendersExcludingNeuter": "nadrobię"
           },
           "plural": {
-            "allPluralGenders": "nadrobimy"
+            "_PluralGenders": "nadrobimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "nadrobisz"
+            "_SingularGendersExcludingNeuter": "nadrobisz"
           },
           "plural": {
-            "allPluralGenders": "nadrobicie"
+            "_PluralGenders": "nadrobicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "nadrobi"
+            "_SingularGenders": "nadrobi"
           },
           "plural": {
-            "allPluralGenders": "nadrobią"
+            "_PluralGenders": "nadrobią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "nadrobiono"
+            "_SingularGenders": "nadrobiono"
           },
           "plural": {
-            "allPluralGenders": "nadrobiono"
+            "_PluralGenders": "nadrobiono"
           }
         },
         "1per": {

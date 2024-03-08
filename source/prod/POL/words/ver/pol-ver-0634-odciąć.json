@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odetnie się"
+            "_SingularGenders": "odetnie się"
           },
           "plural": {
-            "allPluralGenders": "odetnie się"
+            "_PluralGenders": "odetnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odetnę"
+            "_SingularGendersExcludingNeuter": "odetnę"
           },
           "plural": {
-            "allPluralGenders": "odetniemy"
+            "_PluralGenders": "odetniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odetniesz"
+            "_SingularGendersExcludingNeuter": "odetniesz"
           },
           "plural": {
-            "allPluralGenders": "odetniecie"
+            "_PluralGenders": "odetniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odetnie"
+            "_SingularGenders": "odetnie"
           },
           "plural": {
-            "allPluralGenders": "odetną"
+            "_PluralGenders": "odetną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odcięto"
+            "_SingularGenders": "odcięto"
           },
           "plural": {
-            "allPluralGenders": "odcięto"
+            "_PluralGenders": "odcięto"
           }
         },
         "1per": {

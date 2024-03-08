@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odsuwano"
+            "_SingularGenders": "odsuwano"
           },
           "plural": {
-            "allPluralGenders": "odsuwano"
+            "_PluralGenders": "odsuwano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odsuwa się"
+            "_SingularGenders": "odsuwa się"
           },
           "plural": {
-            "allPluralGenders": "odsuwa się"
+            "_PluralGenders": "odsuwa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odsuwam"
+            "_SingularGendersExcludingNeuter": "odsuwam"
           },
           "plural": {
-            "allPluralGenders": "odsuwamy"
+            "_PluralGenders": "odsuwamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odsuwasz"
+            "_SingularGendersExcludingNeuter": "odsuwasz"
           },
           "plural": {
-            "allPluralGenders": "odsuwacie"
+            "_PluralGenders": "odsuwacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odsuwa"
+            "_SingularGenders": "odsuwa"
           },
           "plural": {
-            "allPluralGenders": "odsuwają"
+            "_PluralGenders": "odsuwają"
           }
         }
       }

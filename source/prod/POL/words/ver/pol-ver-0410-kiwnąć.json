@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kiwnie się"
+            "_SingularGenders": "kiwnie się"
           },
           "plural": {
-            "allPluralGenders": "kiwnie się"
+            "_PluralGenders": "kiwnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "kiwnę"
+            "_SingularGendersExcludingNeuter": "kiwnę"
           },
           "plural": {
-            "allPluralGenders": "kiwniemy"
+            "_PluralGenders": "kiwniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "kiwniesz"
+            "_SingularGendersExcludingNeuter": "kiwniesz"
           },
           "plural": {
-            "allPluralGenders": "kiwniecie"
+            "_PluralGenders": "kiwniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "kiwnie"
+            "_SingularGenders": "kiwnie"
           },
           "plural": {
-            "allPluralGenders": "kiwną"
+            "_PluralGenders": "kiwną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kiwnięto"
+            "_SingularGenders": "kiwnięto"
           },
           "plural": {
-            "allPluralGenders": "kiwnięto"
+            "_PluralGenders": "kiwnięto"
           }
         },
         "1per": {

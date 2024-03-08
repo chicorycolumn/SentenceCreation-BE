@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zaplanuje się"
+            "_SingularGenders": "zaplanuje się"
           },
           "plural": {
-            "allPluralGenders": "zaplanuje się"
+            "_PluralGenders": "zaplanuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zaplanuję"
+            "_SingularGendersExcludingNeuter": "zaplanuję"
           },
           "plural": {
-            "allPluralGenders": "zaplanujemy"
+            "_PluralGenders": "zaplanujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zaplanujesz"
+            "_SingularGendersExcludingNeuter": "zaplanujesz"
           },
           "plural": {
-            "allPluralGenders": "zaplanujecie"
+            "_PluralGenders": "zaplanujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zaplanuje"
+            "_SingularGenders": "zaplanuje"
           },
           "plural": {
-            "allPluralGenders": "zaplanują"
+            "_PluralGenders": "zaplanują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zaplanowano"
+            "_SingularGenders": "zaplanowano"
           },
           "plural": {
-            "allPluralGenders": "zaplanowano"
+            "_PluralGenders": "zaplanowano"
           }
         },
         "1per": {

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zapragnie się"
+            "_SingularGenders": "zapragnie się"
           },
           "plural": {
-            "allPluralGenders": "zapragnie się"
+            "_PluralGenders": "zapragnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zapragnę"
+            "_SingularGendersExcludingNeuter": "zapragnę"
           },
           "plural": {
-            "allPluralGenders": "zapragniemy"
+            "_PluralGenders": "zapragniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zapragniesz"
+            "_SingularGendersExcludingNeuter": "zapragniesz"
           },
           "plural": {
-            "allPluralGenders": "zapragniecie"
+            "_PluralGenders": "zapragniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zapragnie"
+            "_SingularGenders": "zapragnie"
           },
           "plural": {
-            "allPluralGenders": "zapragną"
+            "_PluralGenders": "zapragną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zapragnięto"
+            "_SingularGenders": "zapragnięto"
           },
           "plural": {
-            "allPluralGenders": "zapragnięto"
+            "_PluralGenders": "zapragnięto"
           }
         },
         "1per": {

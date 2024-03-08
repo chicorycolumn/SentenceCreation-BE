@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "opiekowano"
+            "_SingularGenders": "opiekowano"
           },
           "plural": {
-            "allPluralGenders": "opiekowano"
+            "_PluralGenders": "opiekowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "opiekuje się"
+            "_SingularGenders": "opiekuje się"
           },
           "plural": {
-            "allPluralGenders": "opiekuje się"
+            "_PluralGenders": "opiekuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "opiekuję"
+            "_SingularGendersExcludingNeuter": "opiekuję"
           },
           "plural": {
-            "allPluralGenders": "opiekujemy"
+            "_PluralGenders": "opiekujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "opiekujesz"
+            "_SingularGendersExcludingNeuter": "opiekujesz"
           },
           "plural": {
-            "allPluralGenders": "opiekujecie"
+            "_PluralGenders": "opiekujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "opiekuje"
+            "_SingularGenders": "opiekuje"
           },
           "plural": {
-            "allPluralGenders": "opiekują"
+            "_PluralGenders": "opiekują"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dochodzono"
+            "_SingularGenders": "dochodzono"
           },
           "plural": {
-            "allPluralGenders": "dochodzono"
+            "_PluralGenders": "dochodzono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dochodzi się"
+            "_SingularGenders": "dochodzi się"
           },
           "plural": {
-            "allPluralGenders": "dochodzi się"
+            "_PluralGenders": "dochodzi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dochodzę"
+            "_SingularGendersExcludingNeuter": "dochodzę"
           },
           "plural": {
-            "allPluralGenders": "dochodzimy"
+            "_PluralGenders": "dochodzimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dochodzisz"
+            "_SingularGendersExcludingNeuter": "dochodzisz"
           },
           "plural": {
-            "allPluralGenders": "dochodzicie"
+            "_PluralGenders": "dochodzicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dochodzi"
+            "_SingularGenders": "dochodzi"
           },
           "plural": {
-            "allPluralGenders": "dochodzą"
+            "_PluralGenders": "dochodzą"
           }
         }
       }

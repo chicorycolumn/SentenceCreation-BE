@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ugryzie się"
+            "_SingularGenders": "ugryzie się"
           },
           "plural": {
-            "allPluralGenders": "ugryzie się"
+            "_PluralGenders": "ugryzie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "ugryzę"
+            "_SingularGendersExcludingNeuter": "ugryzę"
           },
           "plural": {
-            "allPluralGenders": "ugryziemy"
+            "_PluralGenders": "ugryziemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "ugryziesz"
+            "_SingularGendersExcludingNeuter": "ugryziesz"
           },
           "plural": {
-            "allPluralGenders": "ugryziecie"
+            "_PluralGenders": "ugryziecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "ugryzie"
+            "_SingularGenders": "ugryzie"
           },
           "plural": {
-            "allPluralGenders": "ugryzą"
+            "_PluralGenders": "ugryzą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ugryziono"
+            "_SingularGenders": "ugryziono"
           },
           "plural": {
-            "allPluralGenders": "ugryziono"
+            "_PluralGenders": "ugryziono"
           }
         },
         "1per": {

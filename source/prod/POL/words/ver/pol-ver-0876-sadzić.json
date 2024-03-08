@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "sadzono"
+            "_SingularGenders": "sadzono"
           },
           "plural": {
-            "allPluralGenders": "sadzono"
+            "_PluralGenders": "sadzono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "sadzi się"
+            "_SingularGenders": "sadzi się"
           },
           "plural": {
-            "allPluralGenders": "sadzi się"
+            "_PluralGenders": "sadzi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "sadzę"
+            "_SingularGendersExcludingNeuter": "sadzę"
           },
           "plural": {
-            "allPluralGenders": "sadzimy"
+            "_PluralGenders": "sadzimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "sadzisz"
+            "_SingularGendersExcludingNeuter": "sadzisz"
           },
           "plural": {
-            "allPluralGenders": "sadzicie"
+            "_PluralGenders": "sadzicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "sadzi"
+            "_SingularGenders": "sadzi"
           },
           "plural": {
-            "allPluralGenders": "sadzą"
+            "_PluralGenders": "sadzą"
           }
         }
       }

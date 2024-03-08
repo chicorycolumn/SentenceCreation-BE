@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pomyli się"
+            "_SingularGenders": "pomyli się"
           },
           "plural": {
-            "allPluralGenders": "pomyli się"
+            "_PluralGenders": "pomyli się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pomylę"
+            "_SingularGendersExcludingNeuter": "pomylę"
           },
           "plural": {
-            "allPluralGenders": "pomylimy"
+            "_PluralGenders": "pomylimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pomylisz"
+            "_SingularGendersExcludingNeuter": "pomylisz"
           },
           "plural": {
-            "allPluralGenders": "pomylicie"
+            "_PluralGenders": "pomylicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pomyli"
+            "_SingularGenders": "pomyli"
           },
           "plural": {
-            "allPluralGenders": "pomylą"
+            "_PluralGenders": "pomylą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pomylono"
+            "_SingularGenders": "pomylono"
           },
           "plural": {
-            "allPluralGenders": "pomylono"
+            "_PluralGenders": "pomylono"
           }
         },
         "1per": {

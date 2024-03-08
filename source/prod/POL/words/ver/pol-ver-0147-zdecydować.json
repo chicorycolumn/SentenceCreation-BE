@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zdecyduje się"
+            "_SingularGenders": "zdecyduje się"
           },
           "plural": {
-            "allPluralGenders": "zdecyduje się"
+            "_PluralGenders": "zdecyduje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zdecyduję"
+            "_SingularGendersExcludingNeuter": "zdecyduję"
           },
           "plural": {
-            "allPluralGenders": "zdecydujemy"
+            "_PluralGenders": "zdecydujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zdecydujesz"
+            "_SingularGendersExcludingNeuter": "zdecydujesz"
           },
           "plural": {
-            "allPluralGenders": "zdecydujecie"
+            "_PluralGenders": "zdecydujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zdecyduje"
+            "_SingularGenders": "zdecyduje"
           },
           "plural": {
-            "allPluralGenders": "zdecydują"
+            "_PluralGenders": "zdecydują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zdecydowano"
+            "_SingularGenders": "zdecydowano"
           },
           "plural": {
-            "allPluralGenders": "zdecydowano"
+            "_PluralGenders": "zdecydowano"
           }
         },
         "1per": {

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "omówi się"
+            "_SingularGenders": "omówi się"
           },
           "plural": {
-            "allPluralGenders": "omówi się"
+            "_PluralGenders": "omówi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "omówię"
+            "_SingularGendersExcludingNeuter": "omówię"
           },
           "plural": {
-            "allPluralGenders": "omówimy"
+            "_PluralGenders": "omówimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "omówisz"
+            "_SingularGendersExcludingNeuter": "omówisz"
           },
           "plural": {
-            "allPluralGenders": "omówicie"
+            "_PluralGenders": "omówicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "omówi"
+            "_SingularGenders": "omówi"
           },
           "plural": {
-            "allPluralGenders": "omówią"
+            "_PluralGenders": "omówią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "omówiono"
+            "_SingularGenders": "omówiono"
           },
           "plural": {
-            "allPluralGenders": "omówiono"
+            "_PluralGenders": "omówiono"
           }
         },
         "1per": {

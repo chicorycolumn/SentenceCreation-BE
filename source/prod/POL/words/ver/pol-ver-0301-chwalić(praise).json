@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "chwalono"
+            "_SingularGenders": "chwalono"
           },
           "plural": {
-            "allPluralGenders": "chwalono"
+            "_PluralGenders": "chwalono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "chwali się"
+            "_SingularGenders": "chwali się"
           },
           "plural": {
-            "allPluralGenders": "chwali się"
+            "_PluralGenders": "chwali się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "chwalę"
+            "_SingularGendersExcludingNeuter": "chwalę"
           },
           "plural": {
-            "allPluralGenders": "chwalimy"
+            "_PluralGenders": "chwalimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "chwalisz"
+            "_SingularGendersExcludingNeuter": "chwalisz"
           },
           "plural": {
-            "allPluralGenders": "chwalicie"
+            "_PluralGenders": "chwalicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "chwali"
+            "_SingularGenders": "chwali"
           },
           "plural": {
-            "allPluralGenders": "chwalą"
+            "_PluralGenders": "chwalą"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "potykano"
+            "_SingularGenders": "potykano"
           },
           "plural": {
-            "allPluralGenders": "potykano"
+            "_PluralGenders": "potykano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "potyka się"
+            "_SingularGenders": "potyka się"
           },
           "plural": {
-            "allPluralGenders": "potyka się"
+            "_PluralGenders": "potyka się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "potykam"
+            "_SingularGendersExcludingNeuter": "potykam"
           },
           "plural": {
-            "allPluralGenders": "potykamy"
+            "_PluralGenders": "potykamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "potykasz"
+            "_SingularGendersExcludingNeuter": "potykasz"
           },
           "plural": {
-            "allPluralGenders": "potykacie"
+            "_PluralGenders": "potykacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "potyka"
+            "_SingularGenders": "potyka"
           },
           "plural": {
-            "allPluralGenders": "potykają"
+            "_PluralGenders": "potykają"
           }
         }
       }

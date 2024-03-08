@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "polegano"
+            "_SingularGenders": "polegano"
           },
           "plural": {
-            "allPluralGenders": "polegano"
+            "_PluralGenders": "polegano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "polega się"
+            "_SingularGenders": "polega się"
           },
           "plural": {
-            "allPluralGenders": "polega się"
+            "_PluralGenders": "polega się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "polegam"
+            "_SingularGendersExcludingNeuter": "polegam"
           },
           "plural": {
-            "allPluralGenders": "polegamy"
+            "_PluralGenders": "polegamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "polegasz"
+            "_SingularGendersExcludingNeuter": "polegasz"
           },
           "plural": {
-            "allPluralGenders": "polegacie"
+            "_PluralGenders": "polegacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "polega"
+            "_SingularGenders": "polega"
           },
           "plural": {
-            "allPluralGenders": "polegają"
+            "_PluralGenders": "polegają"
           }
         }
       }

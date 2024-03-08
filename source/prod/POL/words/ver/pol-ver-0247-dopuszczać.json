@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dopuszczano"
+            "_SingularGenders": "dopuszczano"
           },
           "plural": {
-            "allPluralGenders": "dopuszczano"
+            "_PluralGenders": "dopuszczano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dopuszcza się"
+            "_SingularGenders": "dopuszcza się"
           },
           "plural": {
-            "allPluralGenders": "dopuszcza się"
+            "_PluralGenders": "dopuszcza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dopuszczam"
+            "_SingularGendersExcludingNeuter": "dopuszczam"
           },
           "plural": {
-            "allPluralGenders": "dopuszczamy"
+            "_PluralGenders": "dopuszczamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dopuszczasz"
+            "_SingularGendersExcludingNeuter": "dopuszczasz"
           },
           "plural": {
-            "allPluralGenders": "dopuszczacie"
+            "_PluralGenders": "dopuszczacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dopuszcza"
+            "_SingularGenders": "dopuszcza"
           },
           "plural": {
-            "allPluralGenders": "dopuszczają"
+            "_PluralGenders": "dopuszczają"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "żałowano"
+            "_SingularGenders": "żałowano"
           },
           "plural": {
-            "allPluralGenders": "żałowano"
+            "_PluralGenders": "żałowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "żałuje się"
+            "_SingularGenders": "żałuje się"
           },
           "plural": {
-            "allPluralGenders": "żałuje się"
+            "_PluralGenders": "żałuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "żałuję"
+            "_SingularGendersExcludingNeuter": "żałuję"
           },
           "plural": {
-            "allPluralGenders": "żałujemy"
+            "_PluralGenders": "żałujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "żałujesz"
+            "_SingularGendersExcludingNeuter": "żałujesz"
           },
           "plural": {
-            "allPluralGenders": "żałujecie"
+            "_PluralGenders": "żałujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "żałuje"
+            "_SingularGenders": "żałuje"
           },
           "plural": {
-            "allPluralGenders": "żałują"
+            "_PluralGenders": "żałują"
           }
         }
       }

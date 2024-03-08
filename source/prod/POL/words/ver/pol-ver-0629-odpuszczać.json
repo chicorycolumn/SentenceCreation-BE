@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odpuszczano"
+            "_SingularGenders": "odpuszczano"
           },
           "plural": {
-            "allPluralGenders": "odpuszczano"
+            "_PluralGenders": "odpuszczano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odpuszcza się"
+            "_SingularGenders": "odpuszcza się"
           },
           "plural": {
-            "allPluralGenders": "odpuszcza się"
+            "_PluralGenders": "odpuszcza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odpuszczam"
+            "_SingularGendersExcludingNeuter": "odpuszczam"
           },
           "plural": {
-            "allPluralGenders": "odpuszczamy"
+            "_PluralGenders": "odpuszczamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odpuszczasz"
+            "_SingularGendersExcludingNeuter": "odpuszczasz"
           },
           "plural": {
-            "allPluralGenders": "odpuszczacie"
+            "_PluralGenders": "odpuszczacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odpuszcza"
+            "_SingularGenders": "odpuszcza"
           },
           "plural": {
-            "allPluralGenders": "odpuszczają"
+            "_PluralGenders": "odpuszczają"
           }
         }
       }

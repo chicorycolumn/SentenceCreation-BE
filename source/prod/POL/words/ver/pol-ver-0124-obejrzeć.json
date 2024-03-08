@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "obejrzy się"
+            "_SingularGenders": "obejrzy się"
           },
           "plural": {
-            "allPluralGenders": "obejrzy się"
+            "_PluralGenders": "obejrzy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "obejrzę"
+            "_SingularGendersExcludingNeuter": "obejrzę"
           },
           "plural": {
-            "allPluralGenders": "obejrzymy"
+            "_PluralGenders": "obejrzymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "obejrzysz"
+            "_SingularGendersExcludingNeuter": "obejrzysz"
           },
           "plural": {
-            "allPluralGenders": "obejrzycie"
+            "_PluralGenders": "obejrzycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "obejrzy"
+            "_SingularGenders": "obejrzy"
           },
           "plural": {
-            "allPluralGenders": "obejrzą"
+            "_PluralGenders": "obejrzą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "obejrzano"
+            "_SingularGenders": "obejrzano"
           },
           "plural": {
-            "allPluralGenders": "obejrzano"
+            "_PluralGenders": "obejrzano"
           }
         },
         "1per": {

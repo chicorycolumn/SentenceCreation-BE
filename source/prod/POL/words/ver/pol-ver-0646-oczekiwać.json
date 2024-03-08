@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oczekiwano"
+            "_SingularGenders": "oczekiwano"
           },
           "plural": {
-            "allPluralGenders": "oczekiwano"
+            "_PluralGenders": "oczekiwano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oczekuje się"
+            "_SingularGenders": "oczekuje się"
           },
           "plural": {
-            "allPluralGenders": "oczekuje się"
+            "_PluralGenders": "oczekuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "oczekuję"
+            "_SingularGendersExcludingNeuter": "oczekuję"
           },
           "plural": {
-            "allPluralGenders": "oczekujemy"
+            "_PluralGenders": "oczekujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "oczekujesz"
+            "_SingularGendersExcludingNeuter": "oczekujesz"
           },
           "plural": {
-            "allPluralGenders": "oczekujecie"
+            "_PluralGenders": "oczekujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "oczekuje"
+            "_SingularGenders": "oczekuje"
           },
           "plural": {
-            "allPluralGenders": "oczekują"
+            "_PluralGenders": "oczekują"
           }
         }
       }

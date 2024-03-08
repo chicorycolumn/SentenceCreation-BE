@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odpocznie się"
+            "_SingularGenders": "odpocznie się"
           },
           "plural": {
-            "allPluralGenders": "odpocznie się"
+            "_PluralGenders": "odpocznie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odpocznę"
+            "_SingularGendersExcludingNeuter": "odpocznę"
           },
           "plural": {
-            "allPluralGenders": "odpoczniemy"
+            "_PluralGenders": "odpoczniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odpoczniesz"
+            "_SingularGendersExcludingNeuter": "odpoczniesz"
           },
           "plural": {
-            "allPluralGenders": "odpoczniecie"
+            "_PluralGenders": "odpoczniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odpocznie"
+            "_SingularGenders": "odpocznie"
           },
           "plural": {
-            "allPluralGenders": "odpoczną"
+            "_PluralGenders": "odpoczną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odpoczęto"
+            "_SingularGenders": "odpoczęto"
           },
           "plural": {
-            "allPluralGenders": "odpoczęto"
+            "_PluralGenders": "odpoczęto"
           }
         },
         "1per": {

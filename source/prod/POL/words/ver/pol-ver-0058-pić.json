@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pito"
+            "_SingularGenders": "pito"
           },
           "plural": {
-            "allPluralGenders": "pito"
+            "_PluralGenders": "pito"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pije się"
+            "_SingularGenders": "pije się"
           },
           "plural": {
-            "allPluralGenders": "pije się"
+            "_PluralGenders": "pije się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "piję"
+            "_SingularGendersExcludingNeuter": "piję"
           },
           "plural": {
-            "allPluralGenders": "pijemy"
+            "_PluralGenders": "pijemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pijesz"
+            "_SingularGendersExcludingNeuter": "pijesz"
           },
           "plural": {
-            "allPluralGenders": "pijecie"
+            "_PluralGenders": "pijecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pije"
+            "_SingularGenders": "pije"
           },
           "plural": {
-            "allPluralGenders": "piją"
+            "_PluralGenders": "piją"
           }
         }
       }

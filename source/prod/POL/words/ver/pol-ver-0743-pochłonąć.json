@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pochłonie się"
+            "_SingularGenders": "pochłonie się"
           },
           "plural": {
-            "allPluralGenders": "pochłonie się"
+            "_PluralGenders": "pochłonie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pochłonę"
+            "_SingularGendersExcludingNeuter": "pochłonę"
           },
           "plural": {
-            "allPluralGenders": "pochłoniemy"
+            "_PluralGenders": "pochłoniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pochłoniesz"
+            "_SingularGendersExcludingNeuter": "pochłoniesz"
           },
           "plural": {
-            "allPluralGenders": "pochłoniecie"
+            "_PluralGenders": "pochłoniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pochłonie"
+            "_SingularGenders": "pochłonie"
           },
           "plural": {
-            "allPluralGenders": "pochłoną"
+            "_PluralGenders": "pochłoną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pochłonięto"
+            "_SingularGenders": "pochłonięto"
           },
           "plural": {
-            "allPluralGenders": "pochłonięto"
+            "_PluralGenders": "pochłonięto"
           }
         },
         "1per": {

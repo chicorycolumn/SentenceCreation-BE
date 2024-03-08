@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przekładano"
+            "_SingularGenders": "przekładano"
           },
           "plural": {
-            "allPluralGenders": "przekładano"
+            "_PluralGenders": "przekładano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przekłada się"
+            "_SingularGenders": "przekłada się"
           },
           "plural": {
-            "allPluralGenders": "przekłada się"
+            "_PluralGenders": "przekłada się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przekładam"
+            "_SingularGendersExcludingNeuter": "przekładam"
           },
           "plural": {
-            "allPluralGenders": "przekładamy"
+            "_PluralGenders": "przekładamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przekładasz"
+            "_SingularGendersExcludingNeuter": "przekładasz"
           },
           "plural": {
-            "allPluralGenders": "przekładacie"
+            "_PluralGenders": "przekładacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przekłada"
+            "_SingularGenders": "przekłada"
           },
           "plural": {
-            "allPluralGenders": "przekładają"
+            "_PluralGenders": "przekładają"
           }
         }
       }

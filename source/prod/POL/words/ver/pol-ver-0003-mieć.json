@@ -12,10 +12,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "miano"
+            "_SingularGenders": "miano"
           },
           "plural": {
-            "allPluralGenders": "miano"
+            "_PluralGenders": "miano"
           }
         },
         "1per": {
@@ -53,34 +53,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ma się"
+            "_SingularGenders": "ma się"
           },
           "plural": {
-            "allPluralGenders": "ma się"
+            "_PluralGenders": "ma się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "mam"
+            "_SingularGendersExcludingNeuter": "mam"
           },
           "plural": {
-            "allPluralGenders": "mamy"
+            "_PluralGenders": "mamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "masz"
+            "_SingularGendersExcludingNeuter": "masz"
           },
           "plural": {
-            "allPluralGenders": "macie"
+            "_PluralGenders": "macie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "ma"
+            "_SingularGenders": "ma"
           },
           "plural": {
-            "allPluralGenders": "mają"
+            "_PluralGenders": "mają"
           }
         }
       }

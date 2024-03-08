@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "doceni się"
+            "_SingularGenders": "doceni się"
           },
           "plural": {
-            "allPluralGenders": "doceni się"
+            "_PluralGenders": "doceni się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "docenię"
+            "_SingularGendersExcludingNeuter": "docenię"
           },
           "plural": {
-            "allPluralGenders": "docenimy"
+            "_PluralGenders": "docenimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "docenisz"
+            "_SingularGendersExcludingNeuter": "docenisz"
           },
           "plural": {
-            "allPluralGenders": "docenicie"
+            "_PluralGenders": "docenicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "doceni"
+            "_SingularGenders": "doceni"
           },
           "plural": {
-            "allPluralGenders": "docenią"
+            "_PluralGenders": "docenią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "doceniono"
+            "_SingularGenders": "doceniono"
           },
           "plural": {
-            "allPluralGenders": "doceniono"
+            "_PluralGenders": "doceniono"
           }
         },
         "1per": {

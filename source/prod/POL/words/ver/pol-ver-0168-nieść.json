@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "niesiono"
+            "_SingularGenders": "niesiono"
           },
           "plural": {
-            "allPluralGenders": "niesiono"
+            "_PluralGenders": "niesiono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "niesie się"
+            "_SingularGenders": "niesie się"
           },
           "plural": {
-            "allPluralGenders": "niesie się"
+            "_PluralGenders": "niesie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "niosę"
+            "_SingularGendersExcludingNeuter": "niosę"
           },
           "plural": {
-            "allPluralGenders": "niesiemy"
+            "_PluralGenders": "niesiemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "niesiesz"
+            "_SingularGendersExcludingNeuter": "niesiesz"
           },
           "plural": {
-            "allPluralGenders": "niesiecie"
+            "_PluralGenders": "niesiecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "niesie"
+            "_SingularGenders": "niesie"
           },
           "plural": {
-            "allPluralGenders": "niosą"
+            "_PluralGenders": "niosą"
           }
         }
       }

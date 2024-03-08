@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pomijano"
+            "_SingularGenders": "pomijano"
           },
           "plural": {
-            "allPluralGenders": "pomijano"
+            "_PluralGenders": "pomijano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pomija się"
+            "_SingularGenders": "pomija się"
           },
           "plural": {
-            "allPluralGenders": "pomija się"
+            "_PluralGenders": "pomija się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pomijam"
+            "_SingularGendersExcludingNeuter": "pomijam"
           },
           "plural": {
-            "allPluralGenders": "pomijamy"
+            "_PluralGenders": "pomijamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pomijasz"
+            "_SingularGendersExcludingNeuter": "pomijasz"
           },
           "plural": {
-            "allPluralGenders": "pomijacie"
+            "_PluralGenders": "pomijacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pomija"
+            "_SingularGenders": "pomija"
           },
           "plural": {
-            "allPluralGenders": "pomijają"
+            "_PluralGenders": "pomijają"
           }
         }
       }

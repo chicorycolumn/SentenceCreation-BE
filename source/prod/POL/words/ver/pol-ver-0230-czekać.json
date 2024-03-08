@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "czekano"
+            "_SingularGenders": "czekano"
           },
           "plural": {
-            "allPluralGenders": "czekano"
+            "_PluralGenders": "czekano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "czeka się"
+            "_SingularGenders": "czeka się"
           },
           "plural": {
-            "allPluralGenders": "czeka się"
+            "_PluralGenders": "czeka się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "czekam"
+            "_SingularGendersExcludingNeuter": "czekam"
           },
           "plural": {
-            "allPluralGenders": "czekamy"
+            "_PluralGenders": "czekamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "czekasz"
+            "_SingularGendersExcludingNeuter": "czekasz"
           },
           "plural": {
-            "allPluralGenders": "czekacie"
+            "_PluralGenders": "czekacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "czeka"
+            "_SingularGenders": "czeka"
           },
           "plural": {
-            "allPluralGenders": "czekają"
+            "_PluralGenders": "czekają"
           }
         }
       }

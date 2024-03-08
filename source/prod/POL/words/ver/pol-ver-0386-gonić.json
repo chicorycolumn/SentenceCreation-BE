@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "goniono"
+            "_SingularGenders": "goniono"
           },
           "plural": {
-            "allPluralGenders": "goniono"
+            "_PluralGenders": "goniono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "goni się"
+            "_SingularGenders": "goni się"
           },
           "plural": {
-            "allPluralGenders": "goni się"
+            "_PluralGenders": "goni się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "gonię"
+            "_SingularGendersExcludingNeuter": "gonię"
           },
           "plural": {
-            "allPluralGenders": "gonimy"
+            "_PluralGenders": "gonimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "gonisz"
+            "_SingularGendersExcludingNeuter": "gonisz"
           },
           "plural": {
-            "allPluralGenders": "gonicie"
+            "_PluralGenders": "gonicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "goni"
+            "_SingularGenders": "goni"
           },
           "plural": {
-            "allPluralGenders": "gonią"
+            "_PluralGenders": "gonią"
           }
         }
       }

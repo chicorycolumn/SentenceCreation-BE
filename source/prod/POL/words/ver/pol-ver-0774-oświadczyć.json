@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oświadczy się"
+            "_SingularGenders": "oświadczy się"
           },
           "plural": {
-            "allPluralGenders": "oświadczy się"
+            "_PluralGenders": "oświadczy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "oświadczę"
+            "_SingularGendersExcludingNeuter": "oświadczę"
           },
           "plural": {
-            "allPluralGenders": "oświadczymy"
+            "_PluralGenders": "oświadczymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "oświadczysz"
+            "_SingularGendersExcludingNeuter": "oświadczysz"
           },
           "plural": {
-            "allPluralGenders": "oświadczycie"
+            "_PluralGenders": "oświadczycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "oświadczy"
+            "_SingularGenders": "oświadczy"
           },
           "plural": {
-            "allPluralGenders": "oświadczą"
+            "_PluralGenders": "oświadczą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oświadczono"
+            "_SingularGenders": "oświadczono"
           },
           "plural": {
-            "allPluralGenders": "oświadczono"
+            "_PluralGenders": "oświadczono"
           }
         },
         "1per": {

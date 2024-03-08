@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "głoszono"
+            "_SingularGenders": "głoszono"
           },
           "plural": {
-            "allPluralGenders": "głoszono"
+            "_PluralGenders": "głoszono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "głosi się"
+            "_SingularGenders": "głosi się"
           },
           "plural": {
-            "allPluralGenders": "głosi się"
+            "_PluralGenders": "głosi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "głoszę"
+            "_SingularGendersExcludingNeuter": "głoszę"
           },
           "plural": {
-            "allPluralGenders": "głosimy"
+            "_PluralGenders": "głosimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "głosisz"
+            "_SingularGendersExcludingNeuter": "głosisz"
           },
           "plural": {
-            "allPluralGenders": "głosicie"
+            "_PluralGenders": "głosicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "głosi"
+            "_SingularGenders": "głosi"
           },
           "plural": {
-            "allPluralGenders": "głoszą"
+            "_PluralGenders": "głoszą"
           }
         }
       }

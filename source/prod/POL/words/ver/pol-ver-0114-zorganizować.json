@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zorganizuje się"
+            "_SingularGenders": "zorganizuje się"
           },
           "plural": {
-            "allPluralGenders": "zorganizuje się"
+            "_PluralGenders": "zorganizuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zorganizuję"
+            "_SingularGendersExcludingNeuter": "zorganizuję"
           },
           "plural": {
-            "allPluralGenders": "zorganizujemy"
+            "_PluralGenders": "zorganizujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zorganizujesz"
+            "_SingularGendersExcludingNeuter": "zorganizujesz"
           },
           "plural": {
-            "allPluralGenders": "zorganizujecie"
+            "_PluralGenders": "zorganizujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zorganizuje"
+            "_SingularGenders": "zorganizuje"
           },
           "plural": {
-            "allPluralGenders": "zorganizują"
+            "_PluralGenders": "zorganizują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zorganizowano"
+            "_SingularGenders": "zorganizowano"
           },
           "plural": {
-            "allPluralGenders": "zorganizowano"
+            "_PluralGenders": "zorganizowano"
           }
         },
         "1per": {

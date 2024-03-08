@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "minie się"
+            "_SingularGenders": "minie się"
           },
           "plural": {
-            "allPluralGenders": "minie się"
+            "_PluralGenders": "minie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "minę"
+            "_SingularGendersExcludingNeuter": "minę"
           },
           "plural": {
-            "allPluralGenders": "miniemy"
+            "_PluralGenders": "miniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "miniesz"
+            "_SingularGendersExcludingNeuter": "miniesz"
           },
           "plural": {
-            "allPluralGenders": "miniecie"
+            "_PluralGenders": "miniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "minie"
+            "_SingularGenders": "minie"
           },
           "plural": {
-            "allPluralGenders": "miną"
+            "_PluralGenders": "miną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "minięto"
+            "_SingularGenders": "minięto"
           },
           "plural": {
-            "allPluralGenders": "minięto"
+            "_PluralGenders": "minięto"
           }
         },
         "1per": {

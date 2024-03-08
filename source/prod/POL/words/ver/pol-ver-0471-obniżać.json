@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "obniżano"
+            "_SingularGenders": "obniżano"
           },
           "plural": {
-            "allPluralGenders": "obniżano"
+            "_PluralGenders": "obniżano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "obniża się"
+            "_SingularGenders": "obniża się"
           },
           "plural": {
-            "allPluralGenders": "obniża się"
+            "_PluralGenders": "obniża się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "obniżam"
+            "_SingularGendersExcludingNeuter": "obniżam"
           },
           "plural": {
-            "allPluralGenders": "obniżamy"
+            "_PluralGenders": "obniżamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "obniżasz"
+            "_SingularGendersExcludingNeuter": "obniżasz"
           },
           "plural": {
-            "allPluralGenders": "obniżacie"
+            "_PluralGenders": "obniżacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "obniża"
+            "_SingularGenders": "obniża"
           },
           "plural": {
-            "allPluralGenders": "obniżają"
+            "_PluralGenders": "obniżają"
           }
         }
       }

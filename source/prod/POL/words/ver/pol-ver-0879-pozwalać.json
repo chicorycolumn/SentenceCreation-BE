@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pozwalano"
+            "_SingularGenders": "pozwalano"
           },
           "plural": {
-            "allPluralGenders": "pozwalano"
+            "_PluralGenders": "pozwalano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pozwala się"
+            "_SingularGenders": "pozwala się"
           },
           "plural": {
-            "allPluralGenders": "pozwala się"
+            "_PluralGenders": "pozwala się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pozwalam"
+            "_SingularGendersExcludingNeuter": "pozwalam"
           },
           "plural": {
-            "allPluralGenders": "pozwalamy"
+            "_PluralGenders": "pozwalamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pozwalasz"
+            "_SingularGendersExcludingNeuter": "pozwalasz"
           },
           "plural": {
-            "allPluralGenders": "pozwalacie"
+            "_PluralGenders": "pozwalacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pozwala"
+            "_SingularGenders": "pozwala"
           },
           "plural": {
-            "allPluralGenders": "pozwalają"
+            "_PluralGenders": "pozwalają"
           }
         }
       }

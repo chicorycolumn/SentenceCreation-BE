@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przekształcano"
+            "_SingularGenders": "przekształcano"
           },
           "plural": {
-            "allPluralGenders": "przekształcano"
+            "_PluralGenders": "przekształcano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przekształca się"
+            "_SingularGenders": "przekształca się"
           },
           "plural": {
-            "allPluralGenders": "przekształca się"
+            "_PluralGenders": "przekształca się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przekształcam"
+            "_SingularGendersExcludingNeuter": "przekształcam"
           },
           "plural": {
-            "allPluralGenders": "przekształcamy"
+            "_PluralGenders": "przekształcamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przekształcasz"
+            "_SingularGendersExcludingNeuter": "przekształcasz"
           },
           "plural": {
-            "allPluralGenders": "przekształcacie"
+            "_PluralGenders": "przekształcacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przekształca"
+            "_SingularGenders": "przekształca"
           },
           "plural": {
-            "allPluralGenders": "przekształcają"
+            "_PluralGenders": "przekształcają"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "myto"
+            "_SingularGenders": "myto"
           },
           "plural": {
-            "allPluralGenders": "myto"
+            "_PluralGenders": "myto"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "myje się"
+            "_SingularGenders": "myje się"
           },
           "plural": {
-            "allPluralGenders": "myje się"
+            "_PluralGenders": "myje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "myję"
+            "_SingularGendersExcludingNeuter": "myję"
           },
           "plural": {
-            "allPluralGenders": "myjemy"
+            "_PluralGenders": "myjemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "myjesz"
+            "_SingularGendersExcludingNeuter": "myjesz"
           },
           "plural": {
-            "allPluralGenders": "myjecie"
+            "_PluralGenders": "myjecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "myje"
+            "_SingularGenders": "myje"
           },
           "plural": {
-            "allPluralGenders": "myją"
+            "_PluralGenders": "myją"
           }
         }
       }

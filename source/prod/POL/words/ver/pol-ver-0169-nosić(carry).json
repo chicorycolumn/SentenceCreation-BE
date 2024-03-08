@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "noszono"
+            "_SingularGenders": "noszono"
           },
           "plural": {
-            "allPluralGenders": "noszono"
+            "_PluralGenders": "noszono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "nosi się"
+            "_SingularGenders": "nosi się"
           },
           "plural": {
-            "allPluralGenders": "nosi się"
+            "_PluralGenders": "nosi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "noszę"
+            "_SingularGendersExcludingNeuter": "noszę"
           },
           "plural": {
-            "allPluralGenders": "nosimy"
+            "_PluralGenders": "nosimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "nosisz"
+            "_SingularGendersExcludingNeuter": "nosisz"
           },
           "plural": {
-            "allPluralGenders": "nosicie"
+            "_PluralGenders": "nosicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "nosi"
+            "_SingularGenders": "nosi"
           },
           "plural": {
-            "allPluralGenders": "noszą"
+            "_PluralGenders": "noszą"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pasowano"
+            "_SingularGenders": "pasowano"
           },
           "plural": {
-            "allPluralGenders": "pasowano"
+            "_PluralGenders": "pasowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pasuje się"
+            "_SingularGenders": "pasuje się"
           },
           "plural": {
-            "allPluralGenders": "pasuje się"
+            "_PluralGenders": "pasuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pasuję"
+            "_SingularGendersExcludingNeuter": "pasuję"
           },
           "plural": {
-            "allPluralGenders": "pasujemy"
+            "_PluralGenders": "pasujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pasujesz"
+            "_SingularGendersExcludingNeuter": "pasujesz"
           },
           "plural": {
-            "allPluralGenders": "pasujecie"
+            "_PluralGenders": "pasujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pasuje"
+            "_SingularGenders": "pasuje"
           },
           "plural": {
-            "allPluralGenders": "pasują"
+            "_PluralGenders": "pasują"
           }
         }
       }

@@ -46,34 +46,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "bierze się"
+            "_SingularGenders": "bierze się"
           },
           "plural": {
-            "allPluralGenders": "bierze się"
+            "_PluralGenders": "bierze się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "biorę"
+            "_SingularGendersExcludingNeuter": "biorę"
           },
           "plural": {
-            "allPluralGenders": "bierzemy"
+            "_PluralGenders": "bierzemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "bierzesz"
+            "_SingularGendersExcludingNeuter": "bierzesz"
           },
           "plural": {
-            "allPluralGenders": "bierzecie"
+            "_PluralGenders": "bierzecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "bierze"
+            "_SingularGenders": "bierze"
           },
           "plural": {
-            "allPluralGenders": "biorą"
+            "_PluralGenders": "biorą"
           }
         }
       }

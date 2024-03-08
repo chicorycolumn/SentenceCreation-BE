@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pospieszy się"
+            "_SingularGenders": "pospieszy się"
           },
           "plural": {
-            "allPluralGenders": "pospieszy się"
+            "_PluralGenders": "pospieszy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pospieszę"
+            "_SingularGendersExcludingNeuter": "pospieszę"
           },
           "plural": {
-            "allPluralGenders": "pospieszymy"
+            "_PluralGenders": "pospieszymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pospieszysz"
+            "_SingularGendersExcludingNeuter": "pospieszysz"
           },
           "plural": {
-            "allPluralGenders": "pospieszycie"
+            "_PluralGenders": "pospieszycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pospieszy"
+            "_SingularGenders": "pospieszy"
           },
           "plural": {
-            "allPluralGenders": "pospieszą"
+            "_PluralGenders": "pospieszą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pospieszono"
+            "_SingularGenders": "pospieszono"
           },
           "plural": {
-            "allPluralGenders": "pospieszono"
+            "_PluralGenders": "pospieszono"
           }
         },
         "1per": {

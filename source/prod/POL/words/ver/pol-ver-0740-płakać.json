@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "płakano"
+            "_SingularGenders": "płakano"
           },
           "plural": {
-            "allPluralGenders": "płakano"
+            "_PluralGenders": "płakano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "płacze się"
+            "_SingularGenders": "płacze się"
           },
           "plural": {
-            "allPluralGenders": "płacze się"
+            "_PluralGenders": "płacze się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "płaczę"
+            "_SingularGendersExcludingNeuter": "płaczę"
           },
           "plural": {
-            "allPluralGenders": "płaczemy"
+            "_PluralGenders": "płaczemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "płaczesz"
+            "_SingularGendersExcludingNeuter": "płaczesz"
           },
           "plural": {
-            "allPluralGenders": "płaczecie"
+            "_PluralGenders": "płaczecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "płacze"
+            "_SingularGenders": "płacze"
           },
           "plural": {
-            "allPluralGenders": "płaczą"
+            "_PluralGenders": "płaczą"
           }
         }
       }

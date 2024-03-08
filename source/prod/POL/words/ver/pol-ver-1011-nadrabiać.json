@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "nadrabiano"
+            "_SingularGenders": "nadrabiano"
           },
           "plural": {
-            "allPluralGenders": "nadrabiano"
+            "_PluralGenders": "nadrabiano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "nadrabia się"
+            "_SingularGenders": "nadrabia się"
           },
           "plural": {
-            "allPluralGenders": "nadrabia się"
+            "_PluralGenders": "nadrabia się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "nadrabiam"
+            "_SingularGendersExcludingNeuter": "nadrabiam"
           },
           "plural": {
-            "allPluralGenders": "nadrabiamy"
+            "_PluralGenders": "nadrabiamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "nadrabiasz"
+            "_SingularGendersExcludingNeuter": "nadrabiasz"
           },
           "plural": {
-            "allPluralGenders": "nadrabiacie"
+            "_PluralGenders": "nadrabiacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "nadrabia"
+            "_SingularGenders": "nadrabia"
           },
           "plural": {
-            "allPluralGenders": "nadrabiają"
+            "_PluralGenders": "nadrabiają"
           }
         }
       }

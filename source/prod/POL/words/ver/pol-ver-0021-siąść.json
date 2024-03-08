@@ -10,34 +10,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "siądzie się"
+            "_SingularGenders": "siądzie się"
           },
           "plural": {
-            "allPluralGenders": "siądzie się"
+            "_PluralGenders": "siądzie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "siądę"
+            "_SingularGendersExcludingNeuter": "siądę"
           },
           "plural": {
-            "allPluralGenders": "siądziemy"
+            "_PluralGenders": "siądziemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "siądziesz"
+            "_SingularGendersExcludingNeuter": "siądziesz"
           },
           "plural": {
-            "allPluralGenders": "siądziecie"
+            "_PluralGenders": "siądziecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "siądzie"
+            "_SingularGenders": "siądzie"
           },
           "plural": {
-            "allPluralGenders": "siądą"
+            "_PluralGenders": "siądą"
           }
         }
       },

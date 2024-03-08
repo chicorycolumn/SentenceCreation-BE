@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "drażniono"
+            "_SingularGenders": "drażniono"
           },
           "plural": {
-            "allPluralGenders": "drażniono"
+            "_PluralGenders": "drażniono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "drażni się"
+            "_SingularGenders": "drażni się"
           },
           "plural": {
-            "allPluralGenders": "drażni się"
+            "_PluralGenders": "drażni się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "drażnię"
+            "_SingularGendersExcludingNeuter": "drażnię"
           },
           "plural": {
-            "allPluralGenders": "drażnimy"
+            "_PluralGenders": "drażnimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "drażnisz"
+            "_SingularGendersExcludingNeuter": "drażnisz"
           },
           "plural": {
-            "allPluralGenders": "drażnicie"
+            "_PluralGenders": "drażnicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "drażni"
+            "_SingularGenders": "drażni"
           },
           "plural": {
-            "allPluralGenders": "drażnią"
+            "_PluralGenders": "drażnią"
           }
         }
       }

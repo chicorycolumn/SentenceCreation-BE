@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wierzono"
+            "_SingularGenders": "wierzono"
           },
           "plural": {
-            "allPluralGenders": "wierzono"
+            "_PluralGenders": "wierzono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wierzy się"
+            "_SingularGenders": "wierzy się"
           },
           "plural": {
-            "allPluralGenders": "wierzy się"
+            "_PluralGenders": "wierzy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "wierzę"
+            "_SingularGendersExcludingNeuter": "wierzę"
           },
           "plural": {
-            "allPluralGenders": "wierzymy"
+            "_PluralGenders": "wierzymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "wierzysz"
+            "_SingularGendersExcludingNeuter": "wierzysz"
           },
           "plural": {
-            "allPluralGenders": "wierzycie"
+            "_PluralGenders": "wierzycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "wierzy"
+            "_SingularGenders": "wierzy"
           },
           "plural": {
-            "allPluralGenders": "wierzą"
+            "_PluralGenders": "wierzą"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "jęczano"
+            "_SingularGenders": "jęczano"
           },
           "plural": {
-            "allPluralGenders": "jęczano"
+            "_PluralGenders": "jęczano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "jęczy się"
+            "_SingularGenders": "jęczy się"
           },
           "plural": {
-            "allPluralGenders": "jęczy się"
+            "_PluralGenders": "jęczy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "jęczę"
+            "_SingularGendersExcludingNeuter": "jęczę"
           },
           "plural": {
-            "allPluralGenders": "jęczymy"
+            "_PluralGenders": "jęczymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "jęczysz"
+            "_SingularGendersExcludingNeuter": "jęczysz"
           },
           "plural": {
-            "allPluralGenders": "jęczycie"
+            "_PluralGenders": "jęczycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "jęczy"
+            "_SingularGenders": "jęczy"
           },
           "plural": {
-            "allPluralGenders": "jęczą"
+            "_PluralGenders": "jęczą"
           }
         }
       }

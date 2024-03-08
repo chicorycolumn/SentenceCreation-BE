@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "strzeli się"
+            "_SingularGenders": "strzeli się"
           },
           "plural": {
-            "allPluralGenders": "strzeli się"
+            "_PluralGenders": "strzeli się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "strzelę"
+            "_SingularGendersExcludingNeuter": "strzelę"
           },
           "plural": {
-            "allPluralGenders": "strzelimy"
+            "_PluralGenders": "strzelimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "strzelisz"
+            "_SingularGendersExcludingNeuter": "strzelisz"
           },
           "plural": {
-            "allPluralGenders": "strzelicie"
+            "_PluralGenders": "strzelicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "strzeli"
+            "_SingularGenders": "strzeli"
           },
           "plural": {
-            "allPluralGenders": "strzelą"
+            "_PluralGenders": "strzelą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "strzelono"
+            "_SingularGenders": "strzelono"
           },
           "plural": {
-            "allPluralGenders": "strzelono"
+            "_PluralGenders": "strzelono"
           }
         },
         "1per": {

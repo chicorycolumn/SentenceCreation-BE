@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "da się"
+            "_SingularGenders": "da się"
           },
           "plural": {
-            "allPluralGenders": "da się"
+            "_PluralGenders": "da się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dam"
+            "_SingularGendersExcludingNeuter": "dam"
           },
           "plural": {
-            "allPluralGenders": "damy"
+            "_PluralGenders": "damy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dasz"
+            "_SingularGendersExcludingNeuter": "dasz"
           },
           "plural": {
-            "allPluralGenders": "dacie"
+            "_PluralGenders": "dacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "da"
+            "_SingularGenders": "da"
           },
           "plural": {
-            "allPluralGenders": "dadzą"
+            "_PluralGenders": "dadzą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dano"
+            "_SingularGenders": "dano"
           },
           "plural": {
-            "allPluralGenders": "dano"
+            "_PluralGenders": "dano"
           }
         },
         "1per": {

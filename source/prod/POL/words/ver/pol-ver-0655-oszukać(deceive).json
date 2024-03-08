@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oszuka się"
+            "_SingularGenders": "oszuka się"
           },
           "plural": {
-            "allPluralGenders": "oszuka się"
+            "_PluralGenders": "oszuka się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "oszukam"
+            "_SingularGendersExcludingNeuter": "oszukam"
           },
           "plural": {
-            "allPluralGenders": "oszukamy"
+            "_PluralGenders": "oszukamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "oszukasz"
+            "_SingularGendersExcludingNeuter": "oszukasz"
           },
           "plural": {
-            "allPluralGenders": "oszukacie"
+            "_PluralGenders": "oszukacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "oszuka"
+            "_SingularGenders": "oszuka"
           },
           "plural": {
-            "allPluralGenders": "oszukają"
+            "_PluralGenders": "oszukają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oszukano"
+            "_SingularGenders": "oszukano"
           },
           "plural": {
-            "allPluralGenders": "oszukano"
+            "_PluralGenders": "oszukano"
           }
         },
         "1per": {

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przerazi się"
+            "_SingularGenders": "przerazi się"
           },
           "plural": {
-            "allPluralGenders": "przerazi się"
+            "_PluralGenders": "przerazi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przerażę"
+            "_SingularGendersExcludingNeuter": "przerażę"
           },
           "plural": {
-            "allPluralGenders": "przerazimy"
+            "_PluralGenders": "przerazimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przerazisz"
+            "_SingularGendersExcludingNeuter": "przerazisz"
           },
           "plural": {
-            "allPluralGenders": "przerazicie"
+            "_PluralGenders": "przerazicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przerazi"
+            "_SingularGenders": "przerazi"
           },
           "plural": {
-            "allPluralGenders": "przerażą"
+            "_PluralGenders": "przerażą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przerażono"
+            "_SingularGenders": "przerażono"
           },
           "plural": {
-            "allPluralGenders": "przerażono"
+            "_PluralGenders": "przerażono"
           }
         },
         "1per": {

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odwoływano"
+            "_SingularGenders": "odwoływano"
           },
           "plural": {
-            "allPluralGenders": "odwoływano"
+            "_PluralGenders": "odwoływano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odwołuje się"
+            "_SingularGenders": "odwołuje się"
           },
           "plural": {
-            "allPluralGenders": "odwołuje się"
+            "_PluralGenders": "odwołuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odwołuję"
+            "_SingularGendersExcludingNeuter": "odwołuję"
           },
           "plural": {
-            "allPluralGenders": "odwołujemy"
+            "_PluralGenders": "odwołujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odwołujesz"
+            "_SingularGendersExcludingNeuter": "odwołujesz"
           },
           "plural": {
-            "allPluralGenders": "odwołujecie"
+            "_PluralGenders": "odwołujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odwołuje"
+            "_SingularGenders": "odwołuje"
           },
           "plural": {
-            "allPluralGenders": "odwołują"
+            "_PluralGenders": "odwołują"
           }
         }
       }

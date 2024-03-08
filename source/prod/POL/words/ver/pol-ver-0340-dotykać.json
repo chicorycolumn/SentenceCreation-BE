@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dotykano"
+            "_SingularGenders": "dotykano"
           },
           "plural": {
-            "allPluralGenders": "dotykano"
+            "_PluralGenders": "dotykano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dotyka się"
+            "_SingularGenders": "dotyka się"
           },
           "plural": {
-            "allPluralGenders": "dotyka się"
+            "_PluralGenders": "dotyka się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dotykam"
+            "_SingularGendersExcludingNeuter": "dotykam"
           },
           "plural": {
-            "allPluralGenders": "dotykamy"
+            "_PluralGenders": "dotykamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dotykasz"
+            "_SingularGendersExcludingNeuter": "dotykasz"
           },
           "plural": {
-            "allPluralGenders": "dotykacie"
+            "_PluralGenders": "dotykacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dotyka"
+            "_SingularGenders": "dotyka"
           },
           "plural": {
-            "allPluralGenders": "dotykają"
+            "_PluralGenders": "dotykają"
           }
         }
       }

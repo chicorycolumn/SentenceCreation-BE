@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "stanie się"
+            "_SingularGenders": "stanie się"
           },
           "plural": {
-            "allPluralGenders": "stanie się"
+            "_PluralGenders": "stanie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "stanę"
+            "_SingularGendersExcludingNeuter": "stanę"
           },
           "plural": {
-            "allPluralGenders": "staniemy"
+            "_PluralGenders": "staniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "staniesz"
+            "_SingularGendersExcludingNeuter": "staniesz"
           },
           "plural": {
-            "allPluralGenders": "staniecie"
+            "_PluralGenders": "staniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "stanie"
+            "_SingularGenders": "stanie"
           },
           "plural": {
-            "allPluralGenders": "staną"
+            "_PluralGenders": "staną"
           }
         }
       },

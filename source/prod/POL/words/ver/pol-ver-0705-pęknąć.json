@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pęknie się"
+            "_SingularGenders": "pęknie się"
           },
           "plural": {
-            "allPluralGenders": "pęknie się"
+            "_PluralGenders": "pęknie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pęknę"
+            "_SingularGendersExcludingNeuter": "pęknę"
           },
           "plural": {
-            "allPluralGenders": "pękniemy"
+            "_PluralGenders": "pękniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pękniesz"
+            "_SingularGendersExcludingNeuter": "pękniesz"
           },
           "plural": {
-            "allPluralGenders": "pękniecie"
+            "_PluralGenders": "pękniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pęknie"
+            "_SingularGenders": "pęknie"
           },
           "plural": {
-            "allPluralGenders": "pękną"
+            "_PluralGenders": "pękną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pęknięto"
+            "_SingularGenders": "pęknięto"
           },
           "plural": {
-            "allPluralGenders": "pęknięto"
+            "_PluralGenders": "pęknięto"
           }
         },
         "1per": {

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "potwierdzano"
+            "_SingularGenders": "potwierdzano"
           },
           "plural": {
-            "allPluralGenders": "potwierdzano"
+            "_PluralGenders": "potwierdzano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "potwierdza się"
+            "_SingularGenders": "potwierdza się"
           },
           "plural": {
-            "allPluralGenders": "potwierdza się"
+            "_PluralGenders": "potwierdza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "potwierdzam"
+            "_SingularGendersExcludingNeuter": "potwierdzam"
           },
           "plural": {
-            "allPluralGenders": "potwierdzamy"
+            "_PluralGenders": "potwierdzamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "potwierdzasz"
+            "_SingularGendersExcludingNeuter": "potwierdzasz"
           },
           "plural": {
-            "allPluralGenders": "potwierdzacie"
+            "_PluralGenders": "potwierdzacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "potwierdza"
+            "_SingularGenders": "potwierdza"
           },
           "plural": {
-            "allPluralGenders": "potwierdzają"
+            "_PluralGenders": "potwierdzają"
           }
         }
       }

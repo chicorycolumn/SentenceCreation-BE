@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dzwoniono"
+            "_SingularGenders": "dzwoniono"
           },
           "plural": {
-            "allPluralGenders": "dzwoniono"
+            "_PluralGenders": "dzwoniono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dzwoni się"
+            "_SingularGenders": "dzwoni się"
           },
           "plural": {
-            "allPluralGenders": "dzwoni się"
+            "_PluralGenders": "dzwoni się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dzwonię"
+            "_SingularGendersExcludingNeuter": "dzwonię"
           },
           "plural": {
-            "allPluralGenders": "dzwonimy"
+            "_PluralGenders": "dzwonimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dzwonisz"
+            "_SingularGendersExcludingNeuter": "dzwonisz"
           },
           "plural": {
-            "allPluralGenders": "dzwonicie"
+            "_PluralGenders": "dzwonicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dzwoni"
+            "_SingularGenders": "dzwoni"
           },
           "plural": {
-            "allPluralGenders": "dzwonią"
+            "_PluralGenders": "dzwonią"
           }
         }
       }

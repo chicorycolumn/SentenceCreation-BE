@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przekaże się"
+            "_SingularGenders": "przekaże się"
           },
           "plural": {
-            "allPluralGenders": "przekaże się"
+            "_PluralGenders": "przekaże się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przekażę"
+            "_SingularGendersExcludingNeuter": "przekażę"
           },
           "plural": {
-            "allPluralGenders": "przekażemy"
+            "_PluralGenders": "przekażemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przekażesz"
+            "_SingularGendersExcludingNeuter": "przekażesz"
           },
           "plural": {
-            "allPluralGenders": "przekażecie"
+            "_PluralGenders": "przekażecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przekaże"
+            "_SingularGenders": "przekaże"
           },
           "plural": {
-            "allPluralGenders": "przekażą"
+            "_PluralGenders": "przekażą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przekazano"
+            "_SingularGenders": "przekazano"
           },
           "plural": {
-            "allPluralGenders": "przekazano"
+            "_PluralGenders": "przekazano"
           }
         },
         "1per": {

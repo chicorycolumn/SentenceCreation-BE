@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "obawiano"
+            "_SingularGenders": "obawiano"
           },
           "plural": {
-            "allPluralGenders": "obawiano"
+            "_PluralGenders": "obawiano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "obawia się"
+            "_SingularGenders": "obawia się"
           },
           "plural": {
-            "allPluralGenders": "obawia się"
+            "_PluralGenders": "obawia się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "obawiam"
+            "_SingularGendersExcludingNeuter": "obawiam"
           },
           "plural": {
-            "allPluralGenders": "obawiamy"
+            "_PluralGenders": "obawiamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "obawiasz"
+            "_SingularGendersExcludingNeuter": "obawiasz"
           },
           "plural": {
-            "allPluralGenders": "obawiacie"
+            "_PluralGenders": "obawiacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "obawia"
+            "_SingularGenders": "obawia"
           },
           "plural": {
-            "allPluralGenders": "obawiają"
+            "_PluralGenders": "obawiają"
           }
         }
       }

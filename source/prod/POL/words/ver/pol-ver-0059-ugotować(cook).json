@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ugotuje się"
+            "_SingularGenders": "ugotuje się"
           },
           "plural": {
-            "allPluralGenders": "ugotuje się"
+            "_PluralGenders": "ugotuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "ugotuję"
+            "_SingularGendersExcludingNeuter": "ugotuję"
           },
           "plural": {
-            "allPluralGenders": "ugotujemy"
+            "_PluralGenders": "ugotujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "ugotujesz"
+            "_SingularGendersExcludingNeuter": "ugotujesz"
           },
           "plural": {
-            "allPluralGenders": "ugotujecie"
+            "_PluralGenders": "ugotujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "ugotuje"
+            "_SingularGenders": "ugotuje"
           },
           "plural": {
-            "allPluralGenders": "ugotują"
+            "_PluralGenders": "ugotują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ugotowano"
+            "_SingularGenders": "ugotowano"
           },
           "plural": {
-            "allPluralGenders": "ugotowano"
+            "_PluralGenders": "ugotowano"
           }
         },
         "1per": {

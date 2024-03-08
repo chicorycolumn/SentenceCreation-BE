@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pogarszano"
+            "_SingularGenders": "pogarszano"
           },
           "plural": {
-            "allPluralGenders": "pogarszano"
+            "_PluralGenders": "pogarszano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pogarsza się"
+            "_SingularGenders": "pogarsza się"
           },
           "plural": {
-            "allPluralGenders": "pogarsza się"
+            "_PluralGenders": "pogarsza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pogarszam"
+            "_SingularGendersExcludingNeuter": "pogarszam"
           },
           "plural": {
-            "allPluralGenders": "pogarszamy"
+            "_PluralGenders": "pogarszamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pogarszasz"
+            "_SingularGendersExcludingNeuter": "pogarszasz"
           },
           "plural": {
-            "allPluralGenders": "pogarszacie"
+            "_PluralGenders": "pogarszacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pogarsza"
+            "_SingularGenders": "pogarsza"
           },
           "plural": {
-            "allPluralGenders": "pogarszają"
+            "_PluralGenders": "pogarszają"
           }
         }
       }

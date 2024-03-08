@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "nauczy się"
+            "_SingularGenders": "nauczy się"
           },
           "plural": {
-            "allPluralGenders": "nauczy się"
+            "_PluralGenders": "nauczy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "nauczę"
+            "_SingularGendersExcludingNeuter": "nauczę"
           },
           "plural": {
-            "allPluralGenders": "nauczymy"
+            "_PluralGenders": "nauczymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "nauczysz"
+            "_SingularGendersExcludingNeuter": "nauczysz"
           },
           "plural": {
-            "allPluralGenders": "nauczycie"
+            "_PluralGenders": "nauczycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "nauczy"
+            "_SingularGenders": "nauczy"
           },
           "plural": {
-            "allPluralGenders": "nauczą"
+            "_PluralGenders": "nauczą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "nauczono"
+            "_SingularGenders": "nauczono"
           },
           "plural": {
-            "allPluralGenders": "nauczono"
+            "_PluralGenders": "nauczono"
           }
         },
         "1per": {

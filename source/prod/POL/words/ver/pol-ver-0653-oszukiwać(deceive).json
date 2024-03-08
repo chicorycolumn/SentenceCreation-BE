@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oszukiwano"
+            "_SingularGenders": "oszukiwano"
           },
           "plural": {
-            "allPluralGenders": "oszukiwano"
+            "_PluralGenders": "oszukiwano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oszukuje się"
+            "_SingularGenders": "oszukuje się"
           },
           "plural": {
-            "allPluralGenders": "oszukuje się"
+            "_PluralGenders": "oszukuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "oszukuję"
+            "_SingularGendersExcludingNeuter": "oszukuję"
           },
           "plural": {
-            "allPluralGenders": "oszukujemy"
+            "_PluralGenders": "oszukujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "oszukujesz"
+            "_SingularGendersExcludingNeuter": "oszukujesz"
           },
           "plural": {
-            "allPluralGenders": "oszukujecie"
+            "_PluralGenders": "oszukujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "oszukuje"
+            "_SingularGenders": "oszukuje"
           },
           "plural": {
-            "allPluralGenders": "oszukują"
+            "_PluralGenders": "oszukują"
           }
         }
       }

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "upiecze się"
+            "_SingularGenders": "upiecze się"
           },
           "plural": {
-            "allPluralGenders": "upiecze się"
+            "_PluralGenders": "upiecze się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "upiekę"
+            "_SingularGendersExcludingNeuter": "upiekę"
           },
           "plural": {
-            "allPluralGenders": "upieczemy"
+            "_PluralGenders": "upieczemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "upieczesz"
+            "_SingularGendersExcludingNeuter": "upieczesz"
           },
           "plural": {
-            "allPluralGenders": "upieczecie"
+            "_PluralGenders": "upieczecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "upiecze"
+            "_SingularGenders": "upiecze"
           },
           "plural": {
-            "allPluralGenders": "upieką"
+            "_PluralGenders": "upieką"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "upieczono"
+            "_SingularGenders": "upieczono"
           },
           "plural": {
-            "allPluralGenders": "upieczono"
+            "_PluralGenders": "upieczono"
           }
         },
         "1per": {

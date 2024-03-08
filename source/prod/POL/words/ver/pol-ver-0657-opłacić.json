@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "opłaci się"
+            "_SingularGenders": "opłaci się"
           },
           "plural": {
-            "allPluralGenders": "opłaci się"
+            "_PluralGenders": "opłaci się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "opłacę"
+            "_SingularGendersExcludingNeuter": "opłacę"
           },
           "plural": {
-            "allPluralGenders": "opłacimy"
+            "_PluralGenders": "opłacimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "opłacisz"
+            "_SingularGendersExcludingNeuter": "opłacisz"
           },
           "plural": {
-            "allPluralGenders": "opłacicie"
+            "_PluralGenders": "opłacicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "opłaci"
+            "_SingularGenders": "opłaci"
           },
           "plural": {
-            "allPluralGenders": "opłacą"
+            "_PluralGenders": "opłacą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "opłacono"
+            "_SingularGenders": "opłacono"
           },
           "plural": {
-            "allPluralGenders": "opłacono"
+            "_PluralGenders": "opłacono"
           }
         },
         "1per": {

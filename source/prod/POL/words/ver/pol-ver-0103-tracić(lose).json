@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "tracono"
+            "_SingularGenders": "tracono"
           },
           "plural": {
-            "allPluralGenders": "tracono"
+            "_PluralGenders": "tracono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "traci się"
+            "_SingularGenders": "traci się"
           },
           "plural": {
-            "allPluralGenders": "traci się"
+            "_PluralGenders": "traci się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "tracę"
+            "_SingularGendersExcludingNeuter": "tracę"
           },
           "plural": {
-            "allPluralGenders": "tracimy"
+            "_PluralGenders": "tracimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "tracisz"
+            "_SingularGendersExcludingNeuter": "tracisz"
           },
           "plural": {
-            "allPluralGenders": "tracicie"
+            "_PluralGenders": "tracicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "traci"
+            "_SingularGenders": "traci"
           },
           "plural": {
-            "allPluralGenders": "tracą"
+            "_PluralGenders": "tracą"
           }
         }
       }

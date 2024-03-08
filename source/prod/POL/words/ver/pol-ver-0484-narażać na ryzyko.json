@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "narażano na ryzyko"
+            "_SingularGenders": "narażano na ryzyko"
           },
           "plural": {
-            "allPluralGenders": "narażano na ryzyko"
+            "_PluralGenders": "narażano na ryzyko"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "naraża się na ryzyko"
+            "_SingularGenders": "naraża się na ryzyko"
           },
           "plural": {
-            "allPluralGenders": "naraża się na ryzyko"
+            "_PluralGenders": "naraża się na ryzyko"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "narażam na ryzyko"
+            "_SingularGendersExcludingNeuter": "narażam na ryzyko"
           },
           "plural": {
-            "allPluralGenders": "narażamy na ryzyko"
+            "_PluralGenders": "narażamy na ryzyko"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "narażasz na ryzyko"
+            "_SingularGendersExcludingNeuter": "narażasz na ryzyko"
           },
           "plural": {
-            "allPluralGenders": "narażacie na ryzyko"
+            "_PluralGenders": "narażacie na ryzyko"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "naraża na ryzyko"
+            "_SingularGenders": "naraża na ryzyko"
           },
           "plural": {
-            "allPluralGenders": "narażają na ryzyko"
+            "_PluralGenders": "narażają na ryzyko"
           }
         }
       }

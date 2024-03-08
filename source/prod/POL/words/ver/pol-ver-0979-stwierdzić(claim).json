@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "stwierdzi się"
+            "_SingularGenders": "stwierdzi się"
           },
           "plural": {
-            "allPluralGenders": "stwierdzi się"
+            "_PluralGenders": "stwierdzi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "stwierdzę"
+            "_SingularGendersExcludingNeuter": "stwierdzę"
           },
           "plural": {
-            "allPluralGenders": "stwierdzimy"
+            "_PluralGenders": "stwierdzimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "stwierdzisz"
+            "_SingularGendersExcludingNeuter": "stwierdzisz"
           },
           "plural": {
-            "allPluralGenders": "stwierdzicie"
+            "_PluralGenders": "stwierdzicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "stwierdzi"
+            "_SingularGenders": "stwierdzi"
           },
           "plural": {
-            "allPluralGenders": "stwierdzą"
+            "_PluralGenders": "stwierdzą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "stwierdzono"
+            "_SingularGenders": "stwierdzono"
           },
           "plural": {
-            "allPluralGenders": "stwierdzono"
+            "_PluralGenders": "stwierdzono"
           }
         },
         "1per": {

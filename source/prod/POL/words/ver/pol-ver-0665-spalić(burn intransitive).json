@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "spali się"
+            "_SingularGenders": "spali się"
           },
           "plural": {
-            "allPluralGenders": "spali się"
+            "_PluralGenders": "spali się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "spalę"
+            "_SingularGendersExcludingNeuter": "spalę"
           },
           "plural": {
-            "allPluralGenders": "spalimy"
+            "_PluralGenders": "spalimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "spalisz"
+            "_SingularGendersExcludingNeuter": "spalisz"
           },
           "plural": {
-            "allPluralGenders": "spalicie"
+            "_PluralGenders": "spalicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "spali"
+            "_SingularGenders": "spali"
           },
           "plural": {
-            "allPluralGenders": "spalą"
+            "_PluralGenders": "spalą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "spalono"
+            "_SingularGenders": "spalono"
           },
           "plural": {
-            "allPluralGenders": "spalono"
+            "_PluralGenders": "spalono"
           }
         },
         "1per": {

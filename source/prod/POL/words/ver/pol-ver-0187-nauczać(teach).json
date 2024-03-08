@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "nauczano"
+            "_SingularGenders": "nauczano"
           },
           "plural": {
-            "allPluralGenders": "nauczano"
+            "_PluralGenders": "nauczano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "naucza się"
+            "_SingularGenders": "naucza się"
           },
           "plural": {
-            "allPluralGenders": "naucza się"
+            "_PluralGenders": "naucza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "nauczam"
+            "_SingularGendersExcludingNeuter": "nauczam"
           },
           "plural": {
-            "allPluralGenders": "nauczamy"
+            "_PluralGenders": "nauczamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "nauczasz"
+            "_SingularGendersExcludingNeuter": "nauczasz"
           },
           "plural": {
-            "allPluralGenders": "nauczacie"
+            "_PluralGenders": "nauczacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "naucza"
+            "_SingularGenders": "naucza"
           },
           "plural": {
-            "allPluralGenders": "nauczają"
+            "_PluralGenders": "nauczają"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podziwiano"
+            "_SingularGenders": "podziwiano"
           },
           "plural": {
-            "allPluralGenders": "podziwiano"
+            "_PluralGenders": "podziwiano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podziwia się"
+            "_SingularGenders": "podziwia się"
           },
           "plural": {
-            "allPluralGenders": "podziwia się"
+            "_PluralGenders": "podziwia się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "podziwiam"
+            "_SingularGendersExcludingNeuter": "podziwiam"
           },
           "plural": {
-            "allPluralGenders": "podziwiamy"
+            "_PluralGenders": "podziwiamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "podziwiasz"
+            "_SingularGendersExcludingNeuter": "podziwiasz"
           },
           "plural": {
-            "allPluralGenders": "podziwiacie"
+            "_PluralGenders": "podziwiacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "podziwia"
+            "_SingularGenders": "podziwia"
           },
           "plural": {
-            "allPluralGenders": "podziwiają"
+            "_PluralGenders": "podziwiają"
           }
         }
       }

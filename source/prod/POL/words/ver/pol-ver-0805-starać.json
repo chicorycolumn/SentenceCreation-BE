@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "starano"
+            "_SingularGenders": "starano"
           },
           "plural": {
-            "allPluralGenders": "starano"
+            "_PluralGenders": "starano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "stara się"
+            "_SingularGenders": "stara się"
           },
           "plural": {
-            "allPluralGenders": "stara się"
+            "_PluralGenders": "stara się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "staram"
+            "_SingularGendersExcludingNeuter": "staram"
           },
           "plural": {
-            "allPluralGenders": "staramy"
+            "_PluralGenders": "staramy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "starasz"
+            "_SingularGendersExcludingNeuter": "starasz"
           },
           "plural": {
-            "allPluralGenders": "staracie"
+            "_PluralGenders": "staracie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "stara"
+            "_SingularGenders": "stara"
           },
           "plural": {
-            "allPluralGenders": "starają"
+            "_PluralGenders": "starają"
           }
         }
       }

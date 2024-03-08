@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dostosowywano"
+            "_SingularGenders": "dostosowywano"
           },
           "plural": {
-            "allPluralGenders": "dostosowywano"
+            "_PluralGenders": "dostosowywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dostosowuje się"
+            "_SingularGenders": "dostosowuje się"
           },
           "plural": {
-            "allPluralGenders": "dostosowuje się"
+            "_PluralGenders": "dostosowuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dostosowuję"
+            "_SingularGendersExcludingNeuter": "dostosowuję"
           },
           "plural": {
-            "allPluralGenders": "dostosowujemy"
+            "_PluralGenders": "dostosowujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dostosowujesz"
+            "_SingularGendersExcludingNeuter": "dostosowujesz"
           },
           "plural": {
-            "allPluralGenders": "dostosowujecie"
+            "_PluralGenders": "dostosowujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dostosowuje"
+            "_SingularGenders": "dostosowuje"
           },
           "plural": {
-            "allPluralGenders": "dostosowują"
+            "_PluralGenders": "dostosowują"
           }
         }
       }

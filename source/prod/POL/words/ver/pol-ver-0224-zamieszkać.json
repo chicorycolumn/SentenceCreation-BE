@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zamieszka się"
+            "_SingularGenders": "zamieszka się"
           },
           "plural": {
-            "allPluralGenders": "zamieszka się"
+            "_PluralGenders": "zamieszka się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zamieszkam"
+            "_SingularGendersExcludingNeuter": "zamieszkam"
           },
           "plural": {
-            "allPluralGenders": "zamieszkamy"
+            "_PluralGenders": "zamieszkamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zamieszkasz"
+            "_SingularGendersExcludingNeuter": "zamieszkasz"
           },
           "plural": {
-            "allPluralGenders": "zamieszkacie"
+            "_PluralGenders": "zamieszkacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zamieszka"
+            "_SingularGenders": "zamieszka"
           },
           "plural": {
-            "allPluralGenders": "zamieszkają"
+            "_PluralGenders": "zamieszkają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zamieszkano"
+            "_SingularGenders": "zamieszkano"
           },
           "plural": {
-            "allPluralGenders": "zamieszkano"
+            "_PluralGenders": "zamieszkano"
           }
         },
         "1per": {

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "omijano"
+            "_SingularGenders": "omijano"
           },
           "plural": {
-            "allPluralGenders": "omijano"
+            "_PluralGenders": "omijano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "omija się"
+            "_SingularGenders": "omija się"
           },
           "plural": {
-            "allPluralGenders": "omija się"
+            "_PluralGenders": "omija się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "omijam"
+            "_SingularGendersExcludingNeuter": "omijam"
           },
           "plural": {
-            "allPluralGenders": "omijamy"
+            "_PluralGenders": "omijamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "omijasz"
+            "_SingularGendersExcludingNeuter": "omijasz"
           },
           "plural": {
-            "allPluralGenders": "omijacie"
+            "_PluralGenders": "omijacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "omija"
+            "_SingularGenders": "omija"
           },
           "plural": {
-            "allPluralGenders": "omijają"
+            "_PluralGenders": "omijają"
           }
         }
       }

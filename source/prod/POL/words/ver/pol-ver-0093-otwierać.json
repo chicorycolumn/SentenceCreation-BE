@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "otwierano"
+            "_SingularGenders": "otwierano"
           },
           "plural": {
-            "allPluralGenders": "otwierano"
+            "_PluralGenders": "otwierano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "otwiera się"
+            "_SingularGenders": "otwiera się"
           },
           "plural": {
-            "allPluralGenders": "otwiera się"
+            "_PluralGenders": "otwiera się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "otwieram"
+            "_SingularGendersExcludingNeuter": "otwieram"
           },
           "plural": {
-            "allPluralGenders": "otwieramy"
+            "_PluralGenders": "otwieramy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "otwierasz"
+            "_SingularGendersExcludingNeuter": "otwierasz"
           },
           "plural": {
-            "allPluralGenders": "otwieracie"
+            "_PluralGenders": "otwieracie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "otwiera"
+            "_SingularGenders": "otwiera"
           },
           "plural": {
-            "allPluralGenders": "otwierają"
+            "_PluralGenders": "otwierają"
           }
         }
       }

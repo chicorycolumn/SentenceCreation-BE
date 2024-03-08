@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podjeżdżano"
+            "_SingularGenders": "podjeżdżano"
           },
           "plural": {
-            "allPluralGenders": "podjeżdżano"
+            "_PluralGenders": "podjeżdżano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podjeżdża się"
+            "_SingularGenders": "podjeżdża się"
           },
           "plural": {
-            "allPluralGenders": "podjeżdża się"
+            "_PluralGenders": "podjeżdża się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "podjeżdżam"
+            "_SingularGendersExcludingNeuter": "podjeżdżam"
           },
           "plural": {
-            "allPluralGenders": "podjeżdżamy"
+            "_PluralGenders": "podjeżdżamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "podjeżdżasz"
+            "_SingularGendersExcludingNeuter": "podjeżdżasz"
           },
           "plural": {
-            "allPluralGenders": "podjeżdżacie"
+            "_PluralGenders": "podjeżdżacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "podjeżdża"
+            "_SingularGenders": "podjeżdża"
           },
           "plural": {
-            "allPluralGenders": "podjeżdżają"
+            "_PluralGenders": "podjeżdżają"
           }
         }
       }

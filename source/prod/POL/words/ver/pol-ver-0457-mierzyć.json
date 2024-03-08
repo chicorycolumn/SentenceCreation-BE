@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "mierzono"
+            "_SingularGenders": "mierzono"
           },
           "plural": {
-            "allPluralGenders": "mierzono"
+            "_PluralGenders": "mierzono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "mierzy się"
+            "_SingularGenders": "mierzy się"
           },
           "plural": {
-            "allPluralGenders": "mierzy się"
+            "_PluralGenders": "mierzy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "mierzę"
+            "_SingularGendersExcludingNeuter": "mierzę"
           },
           "plural": {
-            "allPluralGenders": "mierzymy"
+            "_PluralGenders": "mierzymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "mierzysz"
+            "_SingularGendersExcludingNeuter": "mierzysz"
           },
           "plural": {
-            "allPluralGenders": "mierzycie"
+            "_PluralGenders": "mierzycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "mierzy"
+            "_SingularGenders": "mierzy"
           },
           "plural": {
-            "allPluralGenders": "mierzą"
+            "_PluralGenders": "mierzą"
           }
         }
       }

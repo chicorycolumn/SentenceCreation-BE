@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odkrywano"
+            "_SingularGenders": "odkrywano"
           },
           "plural": {
-            "allPluralGenders": "odkrywano"
+            "_PluralGenders": "odkrywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odkrywa się"
+            "_SingularGenders": "odkrywa się"
           },
           "plural": {
-            "allPluralGenders": "odkrywa się"
+            "_PluralGenders": "odkrywa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odkrywam"
+            "_SingularGendersExcludingNeuter": "odkrywam"
           },
           "plural": {
-            "allPluralGenders": "odkrywamy"
+            "_PluralGenders": "odkrywamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odkrywasz"
+            "_SingularGendersExcludingNeuter": "odkrywasz"
           },
           "plural": {
-            "allPluralGenders": "odkrywacie"
+            "_PluralGenders": "odkrywacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odkrywa"
+            "_SingularGenders": "odkrywa"
           },
           "plural": {
-            "allPluralGenders": "odkrywają"
+            "_PluralGenders": "odkrywają"
           }
         }
       }

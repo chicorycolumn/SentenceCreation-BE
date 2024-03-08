@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "powita się"
+            "_SingularGenders": "powita się"
           },
           "plural": {
-            "allPluralGenders": "powita się"
+            "_PluralGenders": "powita się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "powitam"
+            "_SingularGendersExcludingNeuter": "powitam"
           },
           "plural": {
-            "allPluralGenders": "powitamy"
+            "_PluralGenders": "powitamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "powitasz"
+            "_SingularGendersExcludingNeuter": "powitasz"
           },
           "plural": {
-            "allPluralGenders": "powitacie"
+            "_PluralGenders": "powitacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "powita"
+            "_SingularGenders": "powita"
           },
           "plural": {
-            "allPluralGenders": "powitają"
+            "_PluralGenders": "powitają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "powitano"
+            "_SingularGenders": "powitano"
           },
           "plural": {
-            "allPluralGenders": "powitano"
+            "_PluralGenders": "powitano"
           }
         },
         "1per": {

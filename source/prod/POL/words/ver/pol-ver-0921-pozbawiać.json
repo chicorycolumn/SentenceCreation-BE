@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pozbawiano"
+            "_SingularGenders": "pozbawiano"
           },
           "plural": {
-            "allPluralGenders": "pozbawiano"
+            "_PluralGenders": "pozbawiano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pozbawia się"
+            "_SingularGenders": "pozbawia się"
           },
           "plural": {
-            "allPluralGenders": "pozbawia się"
+            "_PluralGenders": "pozbawia się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pozbawiam"
+            "_SingularGendersExcludingNeuter": "pozbawiam"
           },
           "plural": {
-            "allPluralGenders": "pozbawiamy"
+            "_PluralGenders": "pozbawiamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pozbawiasz"
+            "_SingularGendersExcludingNeuter": "pozbawiasz"
           },
           "plural": {
-            "allPluralGenders": "pozbawiacie"
+            "_PluralGenders": "pozbawiacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pozbawia"
+            "_SingularGenders": "pozbawia"
           },
           "plural": {
-            "allPluralGenders": "pozbawiają"
+            "_PluralGenders": "pozbawiają"
           }
         }
       }

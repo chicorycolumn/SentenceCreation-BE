@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "powstrzymywano"
+            "_SingularGenders": "powstrzymywano"
           },
           "plural": {
-            "allPluralGenders": "powstrzymywano"
+            "_PluralGenders": "powstrzymywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "powstrzymuje się"
+            "_SingularGenders": "powstrzymuje się"
           },
           "plural": {
-            "allPluralGenders": "powstrzymuje się"
+            "_PluralGenders": "powstrzymuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "powstrzymuję"
+            "_SingularGendersExcludingNeuter": "powstrzymuję"
           },
           "plural": {
-            "allPluralGenders": "powstrzymujemy"
+            "_PluralGenders": "powstrzymujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "powstrzymujesz"
+            "_SingularGendersExcludingNeuter": "powstrzymujesz"
           },
           "plural": {
-            "allPluralGenders": "powstrzymujecie"
+            "_PluralGenders": "powstrzymujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "powstrzymuje"
+            "_SingularGenders": "powstrzymuje"
           },
           "plural": {
-            "allPluralGenders": "powstrzymują"
+            "_PluralGenders": "powstrzymują"
           }
         }
       }

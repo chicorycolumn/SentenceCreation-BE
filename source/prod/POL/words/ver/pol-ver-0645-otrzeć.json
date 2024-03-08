@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "otrze się"
+            "_SingularGenders": "otrze się"
           },
           "plural": {
-            "allPluralGenders": "otrze się"
+            "_PluralGenders": "otrze się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "otrę"
+            "_SingularGendersExcludingNeuter": "otrę"
           },
           "plural": {
-            "allPluralGenders": "otrzemy"
+            "_PluralGenders": "otrzemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "otrzesz"
+            "_SingularGendersExcludingNeuter": "otrzesz"
           },
           "plural": {
-            "allPluralGenders": "otrzecie"
+            "_PluralGenders": "otrzecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "otrze"
+            "_SingularGenders": "otrze"
           },
           "plural": {
-            "allPluralGenders": "otrą"
+            "_PluralGenders": "otrą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "otarto"
+            "_SingularGenders": "otarto"
           },
           "plural": {
-            "allPluralGenders": "otarto"
+            "_PluralGenders": "otarto"
           }
         },
         "1per": {

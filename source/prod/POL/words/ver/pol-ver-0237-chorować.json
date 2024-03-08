@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "chorowano"
+            "_SingularGenders": "chorowano"
           },
           "plural": {
-            "allPluralGenders": "chorowano"
+            "_PluralGenders": "chorowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "choruje się"
+            "_SingularGenders": "choruje się"
           },
           "plural": {
-            "allPluralGenders": "choruje się"
+            "_PluralGenders": "choruje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "choruję"
+            "_SingularGendersExcludingNeuter": "choruję"
           },
           "plural": {
-            "allPluralGenders": "chorujemy"
+            "_PluralGenders": "chorujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "chorujesz"
+            "_SingularGendersExcludingNeuter": "chorujesz"
           },
           "plural": {
-            "allPluralGenders": "chorujecie"
+            "_PluralGenders": "chorujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "choruje"
+            "_SingularGenders": "choruje"
           },
           "plural": {
-            "allPluralGenders": "chorują"
+            "_PluralGenders": "chorują"
           }
         }
       }

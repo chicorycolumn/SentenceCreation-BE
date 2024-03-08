@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "siedziano"
+            "_SingularGenders": "siedziano"
           },
           "plural": {
-            "allPluralGenders": "siedziano"
+            "_PluralGenders": "siedziano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "siedzi się"
+            "_SingularGenders": "siedzi się"
           },
           "plural": {
-            "allPluralGenders": "siedzi się"
+            "_PluralGenders": "siedzi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "siedzę"
+            "_SingularGendersExcludingNeuter": "siedzę"
           },
           "plural": {
-            "allPluralGenders": "siedzimy"
+            "_PluralGenders": "siedzimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "siedzisz"
+            "_SingularGendersExcludingNeuter": "siedzisz"
           },
           "plural": {
-            "allPluralGenders": "siedzicie"
+            "_PluralGenders": "siedzicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "siedzi"
+            "_SingularGenders": "siedzi"
           },
           "plural": {
-            "allPluralGenders": "siedzą"
+            "_PluralGenders": "siedzą"
           }
         }
       }

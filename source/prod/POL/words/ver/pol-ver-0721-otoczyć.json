@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "otoczy się"
+            "_SingularGenders": "otoczy się"
           },
           "plural": {
-            "allPluralGenders": "otoczy się"
+            "_PluralGenders": "otoczy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "otoczę"
+            "_SingularGendersExcludingNeuter": "otoczę"
           },
           "plural": {
-            "allPluralGenders": "otoczymy"
+            "_PluralGenders": "otoczymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "otoczysz"
+            "_SingularGendersExcludingNeuter": "otoczysz"
           },
           "plural": {
-            "allPluralGenders": "otoczycie"
+            "_PluralGenders": "otoczycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "otoczy"
+            "_SingularGenders": "otoczy"
           },
           "plural": {
-            "allPluralGenders": "otoczą"
+            "_PluralGenders": "otoczą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "otoczono"
+            "_SingularGenders": "otoczono"
           },
           "plural": {
-            "allPluralGenders": "otoczono"
+            "_PluralGenders": "otoczono"
           }
         },
         "1per": {

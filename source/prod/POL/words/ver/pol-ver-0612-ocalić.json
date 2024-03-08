@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ocali się"
+            "_SingularGenders": "ocali się"
           },
           "plural": {
-            "allPluralGenders": "ocali się"
+            "_PluralGenders": "ocali się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "ocalę"
+            "_SingularGendersExcludingNeuter": "ocalę"
           },
           "plural": {
-            "allPluralGenders": "ocalimy"
+            "_PluralGenders": "ocalimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "ocalisz"
+            "_SingularGendersExcludingNeuter": "ocalisz"
           },
           "plural": {
-            "allPluralGenders": "ocalicie"
+            "_PluralGenders": "ocalicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "ocali"
+            "_SingularGenders": "ocali"
           },
           "plural": {
-            "allPluralGenders": "ocalą"
+            "_PluralGenders": "ocalą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ocalono"
+            "_SingularGenders": "ocalono"
           },
           "plural": {
-            "allPluralGenders": "ocalono"
+            "_PluralGenders": "ocalono"
           }
         },
         "1per": {

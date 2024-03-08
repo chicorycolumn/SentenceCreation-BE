@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "chowano"
+            "_SingularGenders": "chowano"
           },
           "plural": {
-            "allPluralGenders": "chowano"
+            "_PluralGenders": "chowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "chowa się"
+            "_SingularGenders": "chowa się"
           },
           "plural": {
-            "allPluralGenders": "chowa się"
+            "_PluralGenders": "chowa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "chowam"
+            "_SingularGendersExcludingNeuter": "chowam"
           },
           "plural": {
-            "allPluralGenders": "chowamy"
+            "_PluralGenders": "chowamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "chowasz"
+            "_SingularGendersExcludingNeuter": "chowasz"
           },
           "plural": {
-            "allPluralGenders": "chowacie"
+            "_PluralGenders": "chowacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "chowa"
+            "_SingularGenders": "chowa"
           },
           "plural": {
-            "allPluralGenders": "chowają"
+            "_PluralGenders": "chowają"
           }
         }
       }

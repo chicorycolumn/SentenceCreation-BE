@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "leżano"
+            "_SingularGenders": "leżano"
           },
           "plural": {
-            "allPluralGenders": "leżano"
+            "_PluralGenders": "leżano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "leży się"
+            "_SingularGenders": "leży się"
           },
           "plural": {
-            "allPluralGenders": "leży się"
+            "_PluralGenders": "leży się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "leżę"
+            "_SingularGendersExcludingNeuter": "leżę"
           },
           "plural": {
-            "allPluralGenders": "leżymy"
+            "_PluralGenders": "leżymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "leżysz"
+            "_SingularGendersExcludingNeuter": "leżysz"
           },
           "plural": {
-            "allPluralGenders": "leżycie"
+            "_PluralGenders": "leżycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "leży"
+            "_SingularGenders": "leży"
           },
           "plural": {
-            "allPluralGenders": "leżą"
+            "_PluralGenders": "leżą"
           }
         }
       }

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zainwestuje się"
+            "_SingularGenders": "zainwestuje się"
           },
           "plural": {
-            "allPluralGenders": "zainwestuje się"
+            "_PluralGenders": "zainwestuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zainwestuję"
+            "_SingularGendersExcludingNeuter": "zainwestuję"
           },
           "plural": {
-            "allPluralGenders": "zainwestujemy"
+            "_PluralGenders": "zainwestujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zainwestujesz"
+            "_SingularGendersExcludingNeuter": "zainwestujesz"
           },
           "plural": {
-            "allPluralGenders": "zainwestujecie"
+            "_PluralGenders": "zainwestujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zainwestuje"
+            "_SingularGenders": "zainwestuje"
           },
           "plural": {
-            "allPluralGenders": "zainwestują"
+            "_PluralGenders": "zainwestują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zainwestowano"
+            "_SingularGenders": "zainwestowano"
           },
           "plural": {
-            "allPluralGenders": "zainwestowano"
+            "_PluralGenders": "zainwestowano"
           }
         },
         "1per": {

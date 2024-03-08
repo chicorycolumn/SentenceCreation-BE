@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przesadzano"
+            "_SingularGenders": "przesadzano"
           },
           "plural": {
-            "allPluralGenders": "przesadzano"
+            "_PluralGenders": "przesadzano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przesadza się"
+            "_SingularGenders": "przesadza się"
           },
           "plural": {
-            "allPluralGenders": "przesadza się"
+            "_PluralGenders": "przesadza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przesadzam"
+            "_SingularGendersExcludingNeuter": "przesadzam"
           },
           "plural": {
-            "allPluralGenders": "przesadzamy"
+            "_PluralGenders": "przesadzamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przesadzasz"
+            "_SingularGendersExcludingNeuter": "przesadzasz"
           },
           "plural": {
-            "allPluralGenders": "przesadzacie"
+            "_PluralGenders": "przesadzacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przesadza"
+            "_SingularGenders": "przesadza"
           },
           "plural": {
-            "allPluralGenders": "przesadzają"
+            "_PluralGenders": "przesadzają"
           }
         }
       }

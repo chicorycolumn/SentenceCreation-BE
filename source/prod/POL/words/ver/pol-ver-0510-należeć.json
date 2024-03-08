@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "należano"
+            "_SingularGenders": "należano"
           },
           "plural": {
-            "allPluralGenders": "należano"
+            "_PluralGenders": "należano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "należy się"
+            "_SingularGenders": "należy się"
           },
           "plural": {
-            "allPluralGenders": "należy się"
+            "_PluralGenders": "należy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "należę"
+            "_SingularGendersExcludingNeuter": "należę"
           },
           "plural": {
-            "allPluralGenders": "należymy"
+            "_PluralGenders": "należymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "należysz"
+            "_SingularGendersExcludingNeuter": "należysz"
           },
           "plural": {
-            "allPluralGenders": "należycie"
+            "_PluralGenders": "należycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "należy"
+            "_SingularGenders": "należy"
           },
           "plural": {
-            "allPluralGenders": "należą"
+            "_PluralGenders": "należą"
           }
         }
       }

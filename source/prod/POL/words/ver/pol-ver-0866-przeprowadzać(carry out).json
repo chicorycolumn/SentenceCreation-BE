@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przeprowadzano"
+            "_SingularGenders": "przeprowadzano"
           },
           "plural": {
-            "allPluralGenders": "przeprowadzano"
+            "_PluralGenders": "przeprowadzano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przeprowadza się"
+            "_SingularGenders": "przeprowadza się"
           },
           "plural": {
-            "allPluralGenders": "przeprowadza się"
+            "_PluralGenders": "przeprowadza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przeprowadzam"
+            "_SingularGendersExcludingNeuter": "przeprowadzam"
           },
           "plural": {
-            "allPluralGenders": "przeprowadzamy"
+            "_PluralGenders": "przeprowadzamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przeprowadzasz"
+            "_SingularGendersExcludingNeuter": "przeprowadzasz"
           },
           "plural": {
-            "allPluralGenders": "przeprowadzacie"
+            "_PluralGenders": "przeprowadzacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przeprowadza"
+            "_SingularGenders": "przeprowadza"
           },
           "plural": {
-            "allPluralGenders": "przeprowadzają"
+            "_PluralGenders": "przeprowadzają"
           }
         }
       }

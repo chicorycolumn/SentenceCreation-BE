@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dziękowano"
+            "_SingularGenders": "dziękowano"
           },
           "plural": {
-            "allPluralGenders": "dziękowano"
+            "_PluralGenders": "dziękowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dziękuje się"
+            "_SingularGenders": "dziękuje się"
           },
           "plural": {
-            "allPluralGenders": "dziękuje się"
+            "_PluralGenders": "dziękuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dziękuję"
+            "_SingularGendersExcludingNeuter": "dziękuję"
           },
           "plural": {
-            "allPluralGenders": "dziękujemy"
+            "_PluralGenders": "dziękujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dziękujesz"
+            "_SingularGendersExcludingNeuter": "dziękujesz"
           },
           "plural": {
-            "allPluralGenders": "dziękujecie"
+            "_PluralGenders": "dziękujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dziękuje"
+            "_SingularGenders": "dziękuje"
           },
           "plural": {
-            "allPluralGenders": "dziękują"
+            "_PluralGenders": "dziękują"
           }
         }
       }

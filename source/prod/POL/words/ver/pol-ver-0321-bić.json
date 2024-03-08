@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "bito"
+            "_SingularGenders": "bito"
           },
           "plural": {
-            "allPluralGenders": "bito"
+            "_PluralGenders": "bito"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "bije się"
+            "_SingularGenders": "bije się"
           },
           "plural": {
-            "allPluralGenders": "bije się"
+            "_PluralGenders": "bije się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "biję"
+            "_SingularGendersExcludingNeuter": "biję"
           },
           "plural": {
-            "allPluralGenders": "bijemy"
+            "_PluralGenders": "bijemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "bijesz"
+            "_SingularGendersExcludingNeuter": "bijesz"
           },
           "plural": {
-            "allPluralGenders": "bijecie"
+            "_PluralGenders": "bijecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "bije"
+            "_SingularGenders": "bije"
           },
           "plural": {
-            "allPluralGenders": "biją"
+            "_PluralGenders": "biją"
           }
         }
       }

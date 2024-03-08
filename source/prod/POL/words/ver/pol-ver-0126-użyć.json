@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "użyje się"
+            "_SingularGenders": "użyje się"
           },
           "plural": {
-            "allPluralGenders": "użyje się"
+            "_PluralGenders": "użyje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "użyję"
+            "_SingularGendersExcludingNeuter": "użyję"
           },
           "plural": {
-            "allPluralGenders": "użyjemy"
+            "_PluralGenders": "użyjemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "użyjesz"
+            "_SingularGendersExcludingNeuter": "użyjesz"
           },
           "plural": {
-            "allPluralGenders": "użyjecie"
+            "_PluralGenders": "użyjecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "użyje"
+            "_SingularGenders": "użyje"
           },
           "plural": {
-            "allPluralGenders": "użyją"
+            "_PluralGenders": "użyją"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "użyto"
+            "_SingularGenders": "użyto"
           },
           "plural": {
-            "allPluralGenders": "użyto"
+            "_PluralGenders": "użyto"
           }
         },
         "1per": {

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dostarczy się"
+            "_SingularGenders": "dostarczy się"
           },
           "plural": {
-            "allPluralGenders": "dostarczy się"
+            "_PluralGenders": "dostarczy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dostarczę"
+            "_SingularGendersExcludingNeuter": "dostarczę"
           },
           "plural": {
-            "allPluralGenders": "dostarczymy"
+            "_PluralGenders": "dostarczymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dostarczysz"
+            "_SingularGendersExcludingNeuter": "dostarczysz"
           },
           "plural": {
-            "allPluralGenders": "dostarczycie"
+            "_PluralGenders": "dostarczycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dostarczy"
+            "_SingularGenders": "dostarczy"
           },
           "plural": {
-            "allPluralGenders": "dostarczą"
+            "_PluralGenders": "dostarczą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dostarczono"
+            "_SingularGenders": "dostarczono"
           },
           "plural": {
-            "allPluralGenders": "dostarczono"
+            "_PluralGenders": "dostarczono"
           }
         },
         "1per": {

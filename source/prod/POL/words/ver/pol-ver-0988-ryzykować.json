@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ryzykowano"
+            "_SingularGenders": "ryzykowano"
           },
           "plural": {
-            "allPluralGenders": "ryzykowano"
+            "_PluralGenders": "ryzykowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ryzykuje się"
+            "_SingularGenders": "ryzykuje się"
           },
           "plural": {
-            "allPluralGenders": "ryzykuje się"
+            "_PluralGenders": "ryzykuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "ryzykuję"
+            "_SingularGendersExcludingNeuter": "ryzykuję"
           },
           "plural": {
-            "allPluralGenders": "ryzykujemy"
+            "_PluralGenders": "ryzykujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "ryzykujesz"
+            "_SingularGendersExcludingNeuter": "ryzykujesz"
           },
           "plural": {
-            "allPluralGenders": "ryzykujecie"
+            "_PluralGenders": "ryzykujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "ryzykuje"
+            "_SingularGenders": "ryzykuje"
           },
           "plural": {
-            "allPluralGenders": "ryzykują"
+            "_PluralGenders": "ryzykują"
           }
         }
       }

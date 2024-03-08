@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "otrzymywano"
+            "_SingularGenders": "otrzymywano"
           },
           "plural": {
-            "allPluralGenders": "otrzymywano"
+            "_PluralGenders": "otrzymywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "otrzymuje się"
+            "_SingularGenders": "otrzymuje się"
           },
           "plural": {
-            "allPluralGenders": "otrzymuje się"
+            "_PluralGenders": "otrzymuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "otrzymuję"
+            "_SingularGendersExcludingNeuter": "otrzymuję"
           },
           "plural": {
-            "allPluralGenders": "otrzymujemy"
+            "_PluralGenders": "otrzymujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "otrzymujesz"
+            "_SingularGendersExcludingNeuter": "otrzymujesz"
           },
           "plural": {
-            "allPluralGenders": "otrzymujecie"
+            "_PluralGenders": "otrzymujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "otrzymuje"
+            "_SingularGenders": "otrzymuje"
           },
           "plural": {
-            "allPluralGenders": "otrzymują"
+            "_PluralGenders": "otrzymują"
           }
         }
       }

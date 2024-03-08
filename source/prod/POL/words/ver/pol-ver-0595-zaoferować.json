@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zaoferuje się"
+            "_SingularGenders": "zaoferuje się"
           },
           "plural": {
-            "allPluralGenders": "zaoferuje się"
+            "_PluralGenders": "zaoferuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zaoferuję"
+            "_SingularGendersExcludingNeuter": "zaoferuję"
           },
           "plural": {
-            "allPluralGenders": "zaoferujemy"
+            "_PluralGenders": "zaoferujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zaoferujesz"
+            "_SingularGendersExcludingNeuter": "zaoferujesz"
           },
           "plural": {
-            "allPluralGenders": "zaoferujecie"
+            "_PluralGenders": "zaoferujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zaoferuje"
+            "_SingularGenders": "zaoferuje"
           },
           "plural": {
-            "allPluralGenders": "zaoferują"
+            "_PluralGenders": "zaoferują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zaoferowano"
+            "_SingularGenders": "zaoferowano"
           },
           "plural": {
-            "allPluralGenders": "zaoferowano"
+            "_PluralGenders": "zaoferowano"
           }
         },
         "1per": {

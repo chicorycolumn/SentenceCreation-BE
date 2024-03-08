@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poddawano"
+            "_SingularGenders": "poddawano"
           },
           "plural": {
-            "allPluralGenders": "poddawano"
+            "_PluralGenders": "poddawano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poddaje się"
+            "_SingularGenders": "poddaje się"
           },
           "plural": {
-            "allPluralGenders": "poddaje się"
+            "_PluralGenders": "poddaje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "poddaję"
+            "_SingularGendersExcludingNeuter": "poddaję"
           },
           "plural": {
-            "allPluralGenders": "poddajemy"
+            "_PluralGenders": "poddajemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "poddajesz"
+            "_SingularGendersExcludingNeuter": "poddajesz"
           },
           "plural": {
-            "allPluralGenders": "poddajecie"
+            "_PluralGenders": "poddajecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "poddaje"
+            "_SingularGenders": "poddaje"
           },
           "plural": {
-            "allPluralGenders": "poddają"
+            "_PluralGenders": "poddają"
           }
         }
       }

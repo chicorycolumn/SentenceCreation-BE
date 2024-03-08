@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odpoczywano"
+            "_SingularGenders": "odpoczywano"
           },
           "plural": {
-            "allPluralGenders": "odpoczywano"
+            "_PluralGenders": "odpoczywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odpoczywa się"
+            "_SingularGenders": "odpoczywa się"
           },
           "plural": {
-            "allPluralGenders": "odpoczywa się"
+            "_PluralGenders": "odpoczywa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odpoczywam"
+            "_SingularGendersExcludingNeuter": "odpoczywam"
           },
           "plural": {
-            "allPluralGenders": "odpoczywamy"
+            "_PluralGenders": "odpoczywamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odpoczywasz"
+            "_SingularGendersExcludingNeuter": "odpoczywasz"
           },
           "plural": {
-            "allPluralGenders": "odpoczywacie"
+            "_PluralGenders": "odpoczywacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odpoczywa"
+            "_SingularGenders": "odpoczywa"
           },
           "plural": {
-            "allPluralGenders": "odpoczywają"
+            "_PluralGenders": "odpoczywają"
           }
         }
       }

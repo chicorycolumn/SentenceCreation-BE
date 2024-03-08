@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ośmieli się"
+            "_SingularGenders": "ośmieli się"
           },
           "plural": {
-            "allPluralGenders": "ośmieli się"
+            "_PluralGenders": "ośmieli się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "ośmielę"
+            "_SingularGendersExcludingNeuter": "ośmielę"
           },
           "plural": {
-            "allPluralGenders": "ośmielimy"
+            "_PluralGenders": "ośmielimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "ośmielisz"
+            "_SingularGendersExcludingNeuter": "ośmielisz"
           },
           "plural": {
-            "allPluralGenders": "ośmielicie"
+            "_PluralGenders": "ośmielicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "ośmieli"
+            "_SingularGenders": "ośmieli"
           },
           "plural": {
-            "allPluralGenders": "ośmielą"
+            "_PluralGenders": "ośmielą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ośmielono"
+            "_SingularGenders": "ośmielono"
           },
           "plural": {
-            "allPluralGenders": "ośmielono"
+            "_PluralGenders": "ośmielono"
           }
         },
         "1per": {

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "potrzebowano"
+            "_SingularGenders": "potrzebowano"
           },
           "plural": {
-            "allPluralGenders": "potrzebowano"
+            "_PluralGenders": "potrzebowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "potrzebuje się"
+            "_SingularGenders": "potrzebuje się"
           },
           "plural": {
-            "allPluralGenders": "potrzebuje się"
+            "_PluralGenders": "potrzebuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "potrzebuję"
+            "_SingularGendersExcludingNeuter": "potrzebuję"
           },
           "plural": {
-            "allPluralGenders": "potrzebujemy"
+            "_PluralGenders": "potrzebujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "potrzebujesz"
+            "_SingularGendersExcludingNeuter": "potrzebujesz"
           },
           "plural": {
-            "allPluralGenders": "potrzebujecie"
+            "_PluralGenders": "potrzebujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "potrzebuje"
+            "_SingularGenders": "potrzebuje"
           },
           "plural": {
-            "allPluralGenders": "potrzebują"
+            "_PluralGenders": "potrzebują"
           }
         }
       }

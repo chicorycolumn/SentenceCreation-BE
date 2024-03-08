@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "opowiadano"
+            "_SingularGenders": "opowiadano"
           },
           "plural": {
-            "allPluralGenders": "opowiadano"
+            "_PluralGenders": "opowiadano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "opowiada się"
+            "_SingularGenders": "opowiada się"
           },
           "plural": {
-            "allPluralGenders": "opowiada się"
+            "_PluralGenders": "opowiada się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "opowiadam"
+            "_SingularGendersExcludingNeuter": "opowiadam"
           },
           "plural": {
-            "allPluralGenders": "opowiadamy"
+            "_PluralGenders": "opowiadamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "opowiadasz"
+            "_SingularGendersExcludingNeuter": "opowiadasz"
           },
           "plural": {
-            "allPluralGenders": "opowiadacie"
+            "_PluralGenders": "opowiadacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "opowiada"
+            "_SingularGenders": "opowiada"
           },
           "plural": {
-            "allPluralGenders": "opowiadają"
+            "_PluralGenders": "opowiadają"
           }
         }
       }

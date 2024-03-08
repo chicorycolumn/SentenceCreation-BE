@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przestawano"
+            "_SingularGenders": "przestawano"
           },
           "plural": {
-            "allPluralGenders": "przestawano"
+            "_PluralGenders": "przestawano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przestaje się"
+            "_SingularGenders": "przestaje się"
           },
           "plural": {
-            "allPluralGenders": "przestaje się"
+            "_PluralGenders": "przestaje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przestaję"
+            "_SingularGendersExcludingNeuter": "przestaję"
           },
           "plural": {
-            "allPluralGenders": "przestajemy"
+            "_PluralGenders": "przestajemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przestajesz"
+            "_SingularGendersExcludingNeuter": "przestajesz"
           },
           "plural": {
-            "allPluralGenders": "przestajecie"
+            "_PluralGenders": "przestajecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przestaje"
+            "_SingularGenders": "przestaje"
           },
           "plural": {
-            "allPluralGenders": "przestają"
+            "_PluralGenders": "przestają"
           }
         }
       }

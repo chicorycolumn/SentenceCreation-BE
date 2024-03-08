@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "potrąci się"
+            "_SingularGenders": "potrąci się"
           },
           "plural": {
-            "allPluralGenders": "potrąci się"
+            "_PluralGenders": "potrąci się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "potrącę"
+            "_SingularGendersExcludingNeuter": "potrącę"
           },
           "plural": {
-            "allPluralGenders": "potrącimy"
+            "_PluralGenders": "potrącimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "potrącisz"
+            "_SingularGendersExcludingNeuter": "potrącisz"
           },
           "plural": {
-            "allPluralGenders": "potrącicie"
+            "_PluralGenders": "potrącicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "potrąci"
+            "_SingularGenders": "potrąci"
           },
           "plural": {
-            "allPluralGenders": "potrącą"
+            "_PluralGenders": "potrącą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "potrącono"
+            "_SingularGenders": "potrącono"
           },
           "plural": {
-            "allPluralGenders": "potrącono"
+            "_PluralGenders": "potrącono"
           }
         },
         "1per": {

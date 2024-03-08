@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "naruszano"
+            "_SingularGenders": "naruszano"
           },
           "plural": {
-            "allPluralGenders": "naruszano"
+            "_PluralGenders": "naruszano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "narusza się"
+            "_SingularGenders": "narusza się"
           },
           "plural": {
-            "allPluralGenders": "narusza się"
+            "_PluralGenders": "narusza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "naruszam"
+            "_SingularGendersExcludingNeuter": "naruszam"
           },
           "plural": {
-            "allPluralGenders": "naruszamy"
+            "_PluralGenders": "naruszamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "naruszasz"
+            "_SingularGendersExcludingNeuter": "naruszasz"
           },
           "plural": {
-            "allPluralGenders": "naruszacie"
+            "_PluralGenders": "naruszacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "narusza"
+            "_SingularGenders": "narusza"
           },
           "plural": {
-            "allPluralGenders": "naruszają"
+            "_PluralGenders": "naruszają"
           }
         }
       }

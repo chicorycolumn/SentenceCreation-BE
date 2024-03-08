@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "uczono"
+            "_SingularGenders": "uczono"
           },
           "plural": {
-            "allPluralGenders": "uczono"
+            "_PluralGenders": "uczono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "uczy się"
+            "_SingularGenders": "uczy się"
           },
           "plural": {
-            "allPluralGenders": "uczy się"
+            "_PluralGenders": "uczy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "uczę"
+            "_SingularGendersExcludingNeuter": "uczę"
           },
           "plural": {
-            "allPluralGenders": "uczymy"
+            "_PluralGenders": "uczymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "uczysz"
+            "_SingularGendersExcludingNeuter": "uczysz"
           },
           "plural": {
-            "allPluralGenders": "uczycie"
+            "_PluralGenders": "uczycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "uczy"
+            "_SingularGenders": "uczy"
           },
           "plural": {
-            "allPluralGenders": "uczą"
+            "_PluralGenders": "uczą"
           }
         }
       }

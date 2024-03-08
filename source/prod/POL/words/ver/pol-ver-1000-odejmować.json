@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odejmowano"
+            "_SingularGenders": "odejmowano"
           },
           "plural": {
-            "allPluralGenders": "odejmowano"
+            "_PluralGenders": "odejmowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odejmuje się"
+            "_SingularGenders": "odejmuje się"
           },
           "plural": {
-            "allPluralGenders": "odejmuje się"
+            "_PluralGenders": "odejmuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odejmuję"
+            "_SingularGendersExcludingNeuter": "odejmuję"
           },
           "plural": {
-            "allPluralGenders": "odejmujemy"
+            "_PluralGenders": "odejmujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odejmujesz"
+            "_SingularGendersExcludingNeuter": "odejmujesz"
           },
           "plural": {
-            "allPluralGenders": "odejmujecie"
+            "_PluralGenders": "odejmujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odejmuje"
+            "_SingularGenders": "odejmuje"
           },
           "plural": {
-            "allPluralGenders": "odejmują"
+            "_PluralGenders": "odejmują"
           }
         }
       }

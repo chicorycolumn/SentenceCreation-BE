@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przedstawi się"
+            "_SingularGenders": "przedstawi się"
           },
           "plural": {
-            "allPluralGenders": "przedstawi się"
+            "_PluralGenders": "przedstawi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przedstawię"
+            "_SingularGendersExcludingNeuter": "przedstawię"
           },
           "plural": {
-            "allPluralGenders": "przedstawimy"
+            "_PluralGenders": "przedstawimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przedstawisz"
+            "_SingularGendersExcludingNeuter": "przedstawisz"
           },
           "plural": {
-            "allPluralGenders": "przedstawicie"
+            "_PluralGenders": "przedstawicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przedstawi"
+            "_SingularGenders": "przedstawi"
           },
           "plural": {
-            "allPluralGenders": "przedstawią"
+            "_PluralGenders": "przedstawią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przedstawiono"
+            "_SingularGenders": "przedstawiono"
           },
           "plural": {
-            "allPluralGenders": "przedstawiono"
+            "_PluralGenders": "przedstawiono"
           }
         },
         "1per": {

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ogłaszano"
+            "_SingularGenders": "ogłaszano"
           },
           "plural": {
-            "allPluralGenders": "ogłaszano"
+            "_PluralGenders": "ogłaszano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ogłasza się"
+            "_SingularGenders": "ogłasza się"
           },
           "plural": {
-            "allPluralGenders": "ogłasza się"
+            "_PluralGenders": "ogłasza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "ogłaszam"
+            "_SingularGendersExcludingNeuter": "ogłaszam"
           },
           "plural": {
-            "allPluralGenders": "ogłaszamy"
+            "_PluralGenders": "ogłaszamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "ogłaszasz"
+            "_SingularGendersExcludingNeuter": "ogłaszasz"
           },
           "plural": {
-            "allPluralGenders": "ogłaszacie"
+            "_PluralGenders": "ogłaszacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "ogłasza"
+            "_SingularGenders": "ogłasza"
           },
           "plural": {
-            "allPluralGenders": "ogłaszają"
+            "_PluralGenders": "ogłaszają"
           }
         }
       }

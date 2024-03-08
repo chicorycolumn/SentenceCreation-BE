@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "umiano"
+            "_SingularGenders": "umiano"
           },
           "plural": {
-            "allPluralGenders": "umiano"
+            "_PluralGenders": "umiano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "umie się"
+            "_SingularGenders": "umie się"
           },
           "plural": {
-            "allPluralGenders": "umie się"
+            "_PluralGenders": "umie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "umiem"
+            "_SingularGendersExcludingNeuter": "umiem"
           },
           "plural": {
-            "allPluralGenders": "umiemy"
+            "_PluralGenders": "umiemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "umiesz"
+            "_SingularGendersExcludingNeuter": "umiesz"
           },
           "plural": {
-            "allPluralGenders": "umiecie"
+            "_PluralGenders": "umiecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "umie"
+            "_SingularGenders": "umie"
           },
           "plural": {
-            "allPluralGenders": "umieją"
+            "_PluralGenders": "umieją"
           }
         }
       }

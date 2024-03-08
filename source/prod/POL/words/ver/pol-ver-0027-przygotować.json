@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przygotuje się"
+            "_SingularGenders": "przygotuje się"
           },
           "plural": {
-            "allPluralGenders": "przygotuje się"
+            "_PluralGenders": "przygotuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przygotuję"
+            "_SingularGendersExcludingNeuter": "przygotuję"
           },
           "plural": {
-            "allPluralGenders": "przygotujemy"
+            "_PluralGenders": "przygotujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przygotujesz"
+            "_SingularGendersExcludingNeuter": "przygotujesz"
           },
           "plural": {
-            "allPluralGenders": "przygotujecie"
+            "_PluralGenders": "przygotujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przygotuje"
+            "_SingularGenders": "przygotuje"
           },
           "plural": {
-            "allPluralGenders": "przygotują"
+            "_PluralGenders": "przygotują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przygotowano"
+            "_SingularGenders": "przygotowano"
           },
           "plural": {
-            "allPluralGenders": "przygotowano"
+            "_PluralGenders": "przygotowano"
           }
         },
         "1per": {

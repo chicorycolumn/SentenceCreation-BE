@@ -46,34 +46,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "stoi się"
+            "_SingularGenders": "stoi się"
           },
           "plural": {
-            "allPluralGenders": "stoi się"
+            "_PluralGenders": "stoi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "stoję"
+            "_SingularGendersExcludingNeuter": "stoję"
           },
           "plural": {
-            "allPluralGenders": "stoimy"
+            "_PluralGenders": "stoimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "stoisz"
+            "_SingularGendersExcludingNeuter": "stoisz"
           },
           "plural": {
-            "allPluralGenders": "stoicie"
+            "_PluralGenders": "stoicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "stoi"
+            "_SingularGenders": "stoi"
           },
           "plural": {
-            "allPluralGenders": "stoją"
+            "_PluralGenders": "stoją"
           }
         }
       }

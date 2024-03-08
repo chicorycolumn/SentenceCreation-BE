@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podrywano"
+            "_SingularGenders": "podrywano"
           },
           "plural": {
-            "allPluralGenders": "podrywano"
+            "_PluralGenders": "podrywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podrywa się"
+            "_SingularGenders": "podrywa się"
           },
           "plural": {
-            "allPluralGenders": "podrywa się"
+            "_PluralGenders": "podrywa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "podrywam"
+            "_SingularGendersExcludingNeuter": "podrywam"
           },
           "plural": {
-            "allPluralGenders": "podrywamy"
+            "_PluralGenders": "podrywamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "podrywasz"
+            "_SingularGendersExcludingNeuter": "podrywasz"
           },
           "plural": {
-            "allPluralGenders": "podrywacie"
+            "_PluralGenders": "podrywacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "podrywa"
+            "_SingularGenders": "podrywa"
           },
           "plural": {
-            "allPluralGenders": "podrywają"
+            "_PluralGenders": "podrywają"
           }
         }
       }

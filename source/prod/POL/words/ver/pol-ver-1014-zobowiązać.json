@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zobowiąże się"
+            "_SingularGenders": "zobowiąże się"
           },
           "plural": {
-            "allPluralGenders": "zobowiąże się"
+            "_PluralGenders": "zobowiąże się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "zobowiążę"
+            "_SingularGendersExcludingNeuter": "zobowiążę"
           },
           "plural": {
-            "allPluralGenders": "zobowiążemy"
+            "_PluralGenders": "zobowiążemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "zobowiążesz"
+            "_SingularGendersExcludingNeuter": "zobowiążesz"
           },
           "plural": {
-            "allPluralGenders": "zobowiążecie"
+            "_PluralGenders": "zobowiążecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zobowiąże"
+            "_SingularGenders": "zobowiąże"
           },
           "plural": {
-            "allPluralGenders": "zobowiążą"
+            "_PluralGenders": "zobowiążą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zobowiązano"
+            "_SingularGenders": "zobowiązano"
           },
           "plural": {
-            "allPluralGenders": "zobowiązano"
+            "_PluralGenders": "zobowiązano"
           }
         },
         "1per": {

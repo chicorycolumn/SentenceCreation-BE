@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "porzuci się"
+            "_SingularGenders": "porzuci się"
           },
           "plural": {
-            "allPluralGenders": "porzuci się"
+            "_PluralGenders": "porzuci się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "porzucę"
+            "_SingularGendersExcludingNeuter": "porzucę"
           },
           "plural": {
-            "allPluralGenders": "porzucimy"
+            "_PluralGenders": "porzucimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "porzucisz"
+            "_SingularGendersExcludingNeuter": "porzucisz"
           },
           "plural": {
-            "allPluralGenders": "porzucicie"
+            "_PluralGenders": "porzucicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "porzuci"
+            "_SingularGenders": "porzuci"
           },
           "plural": {
-            "allPluralGenders": "porzucą"
+            "_PluralGenders": "porzucą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "porzucono"
+            "_SingularGenders": "porzucono"
           },
           "plural": {
-            "allPluralGenders": "porzucono"
+            "_PluralGenders": "porzucono"
           }
         },
         "1per": {

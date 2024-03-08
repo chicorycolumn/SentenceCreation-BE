@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podróżowano"
+            "_SingularGenders": "podróżowano"
           },
           "plural": {
-            "allPluralGenders": "podróżowano"
+            "_PluralGenders": "podróżowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podróżuje się"
+            "_SingularGenders": "podróżuje się"
           },
           "plural": {
-            "allPluralGenders": "podróżuje się"
+            "_PluralGenders": "podróżuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "podróżuję"
+            "_SingularGendersExcludingNeuter": "podróżuję"
           },
           "plural": {
-            "allPluralGenders": "podróżujemy"
+            "_PluralGenders": "podróżujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "podróżujesz"
+            "_SingularGendersExcludingNeuter": "podróżujesz"
           },
           "plural": {
-            "allPluralGenders": "podróżujecie"
+            "_PluralGenders": "podróżujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "podróżuje"
+            "_SingularGenders": "podróżuje"
           },
           "plural": {
-            "allPluralGenders": "podróżują"
+            "_PluralGenders": "podróżują"
           }
         }
       }

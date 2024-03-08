@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zgubi się"
+            "_SingularGenders": "zgubi się"
           },
           "plural": {
-            "allPluralGenders": "zgubi się"
+            "_PluralGenders": "zgubi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zgubię"
+            "_SingularGendersExcludingNeuter": "zgubię"
           },
           "plural": {
-            "allPluralGenders": "zgubimy"
+            "_PluralGenders": "zgubimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zgubisz"
+            "_SingularGendersExcludingNeuter": "zgubisz"
           },
           "plural": {
-            "allPluralGenders": "zgubicie"
+            "_PluralGenders": "zgubicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zgubi"
+            "_SingularGenders": "zgubi"
           },
           "plural": {
-            "allPluralGenders": "zgubią"
+            "_PluralGenders": "zgubią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zgubiono"
+            "_SingularGenders": "zgubiono"
           },
           "plural": {
-            "allPluralGenders": "zgubiono"
+            "_PluralGenders": "zgubiono"
           }
         },
         "1per": {

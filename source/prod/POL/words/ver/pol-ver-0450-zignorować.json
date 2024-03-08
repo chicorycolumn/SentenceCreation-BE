@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zignoruje się"
+            "_SingularGenders": "zignoruje się"
           },
           "plural": {
-            "allPluralGenders": "zignoruje się"
+            "_PluralGenders": "zignoruje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zignoruję"
+            "_SingularGendersExcludingNeuter": "zignoruję"
           },
           "plural": {
-            "allPluralGenders": "zignorujemy"
+            "_PluralGenders": "zignorujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zignorujesz"
+            "_SingularGendersExcludingNeuter": "zignorujesz"
           },
           "plural": {
-            "allPluralGenders": "zignorujecie"
+            "_PluralGenders": "zignorujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zignoruje"
+            "_SingularGenders": "zignoruje"
           },
           "plural": {
-            "allPluralGenders": "zignorują"
+            "_PluralGenders": "zignorują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zignorowano"
+            "_SingularGenders": "zignorowano"
           },
           "plural": {
-            "allPluralGenders": "zignorowano"
+            "_PluralGenders": "zignorowano"
           }
         },
         "1per": {

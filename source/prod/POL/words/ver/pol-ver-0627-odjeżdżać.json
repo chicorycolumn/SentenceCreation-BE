@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odjeżdżano"
+            "_SingularGenders": "odjeżdżano"
           },
           "plural": {
-            "allPluralGenders": "odjeżdżano"
+            "_PluralGenders": "odjeżdżano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odjeżdża się"
+            "_SingularGenders": "odjeżdża się"
           },
           "plural": {
-            "allPluralGenders": "odjeżdża się"
+            "_PluralGenders": "odjeżdża się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odjeżdżam"
+            "_SingularGendersExcludingNeuter": "odjeżdżam"
           },
           "plural": {
-            "allPluralGenders": "odjeżdżamy"
+            "_PluralGenders": "odjeżdżamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odjeżdżasz"
+            "_SingularGendersExcludingNeuter": "odjeżdżasz"
           },
           "plural": {
-            "allPluralGenders": "odjeżdżacie"
+            "_PluralGenders": "odjeżdżacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odjeżdża"
+            "_SingularGenders": "odjeżdża"
           },
           "plural": {
-            "allPluralGenders": "odjeżdżają"
+            "_PluralGenders": "odjeżdżają"
           }
         }
       }

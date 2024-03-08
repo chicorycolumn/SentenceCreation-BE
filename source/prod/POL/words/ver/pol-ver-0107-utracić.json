@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "utraci się"
+            "_SingularGenders": "utraci się"
           },
           "plural": {
-            "allPluralGenders": "utraci się"
+            "_PluralGenders": "utraci się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "utracę"
+            "_SingularGendersExcludingNeuter": "utracę"
           },
           "plural": {
-            "allPluralGenders": "utracimy"
+            "_PluralGenders": "utracimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "utracisz"
+            "_SingularGendersExcludingNeuter": "utracisz"
           },
           "plural": {
-            "allPluralGenders": "utracicie"
+            "_PluralGenders": "utracicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "utraci"
+            "_SingularGenders": "utraci"
           },
           "plural": {
-            "allPluralGenders": "utracą"
+            "_PluralGenders": "utracą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "utracono"
+            "_SingularGenders": "utracono"
           },
           "plural": {
-            "allPluralGenders": "utracono"
+            "_PluralGenders": "utracono"
           }
         },
         "1per": {

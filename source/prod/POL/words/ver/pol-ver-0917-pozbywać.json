@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pozbywano"
+            "_SingularGenders": "pozbywano"
           },
           "plural": {
-            "allPluralGenders": "pozbywano"
+            "_PluralGenders": "pozbywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pozbywa się"
+            "_SingularGenders": "pozbywa się"
           },
           "plural": {
-            "allPluralGenders": "pozbywa się"
+            "_PluralGenders": "pozbywa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pozbywam"
+            "_SingularGendersExcludingNeuter": "pozbywam"
           },
           "plural": {
-            "allPluralGenders": "pozbywamy"
+            "_PluralGenders": "pozbywamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pozbywasz"
+            "_SingularGendersExcludingNeuter": "pozbywasz"
           },
           "plural": {
-            "allPluralGenders": "pozbywacie"
+            "_PluralGenders": "pozbywacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pozbywa"
+            "_SingularGenders": "pozbywa"
           },
           "plural": {
-            "allPluralGenders": "pozbywają"
+            "_PluralGenders": "pozbywają"
           }
         }
       }

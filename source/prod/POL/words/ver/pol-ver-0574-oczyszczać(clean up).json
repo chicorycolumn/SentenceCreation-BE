@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oczyszczano"
+            "_SingularGenders": "oczyszczano"
           },
           "plural": {
-            "allPluralGenders": "oczyszczano"
+            "_PluralGenders": "oczyszczano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oczyszcza się"
+            "_SingularGenders": "oczyszcza się"
           },
           "plural": {
-            "allPluralGenders": "oczyszcza się"
+            "_PluralGenders": "oczyszcza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "oczyszczam"
+            "_SingularGendersExcludingNeuter": "oczyszczam"
           },
           "plural": {
-            "allPluralGenders": "oczyszczamy"
+            "_PluralGenders": "oczyszczamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "oczyszczasz"
+            "_SingularGendersExcludingNeuter": "oczyszczasz"
           },
           "plural": {
-            "allPluralGenders": "oczyszczacie"
+            "_PluralGenders": "oczyszczacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "oczyszcza"
+            "_SingularGenders": "oczyszcza"
           },
           "plural": {
-            "allPluralGenders": "oczyszczają"
+            "_PluralGenders": "oczyszczają"
           }
         }
       }

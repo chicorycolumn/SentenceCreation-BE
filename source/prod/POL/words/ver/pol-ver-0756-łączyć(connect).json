@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "łączono"
+            "_SingularGenders": "łączono"
           },
           "plural": {
-            "allPluralGenders": "łączono"
+            "_PluralGenders": "łączono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "łączy się"
+            "_SingularGenders": "łączy się"
           },
           "plural": {
-            "allPluralGenders": "łączy się"
+            "_PluralGenders": "łączy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "łączę"
+            "_SingularGendersExcludingNeuter": "łączę"
           },
           "plural": {
-            "allPluralGenders": "łączymy"
+            "_PluralGenders": "łączymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "łączysz"
+            "_SingularGendersExcludingNeuter": "łączysz"
           },
           "plural": {
-            "allPluralGenders": "łączycie"
+            "_PluralGenders": "łączycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "łączy"
+            "_SingularGenders": "łączy"
           },
           "plural": {
-            "allPluralGenders": "łączą"
+            "_PluralGenders": "łączą"
           }
         }
       }

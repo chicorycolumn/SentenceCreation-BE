@@ -45,34 +45,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pragnie się"
+            "_SingularGenders": "pragnie się"
           },
           "plural": {
-            "allPluralGenders": "pragnie się"
+            "_PluralGenders": "pragnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pragnę"
+            "_SingularGendersExcludingNeuter": "pragnę"
           },
           "plural": {
-            "allPluralGenders": "pragniemy"
+            "_PluralGenders": "pragniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pragniesz"
+            "_SingularGendersExcludingNeuter": "pragniesz"
           },
           "plural": {
-            "allPluralGenders": "pragniecie"
+            "_PluralGenders": "pragniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pragnie"
+            "_SingularGenders": "pragnie"
           },
           "plural": {
-            "allPluralGenders": "pragną"
+            "_PluralGenders": "pragną"
           }
         }
       }

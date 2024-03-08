@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "lubiano"
+            "_SingularGenders": "lubiano"
           },
           "plural": {
-            "allPluralGenders": "lubiano"
+            "_PluralGenders": "lubiano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "lubi się"
+            "_SingularGenders": "lubi się"
           },
           "plural": {
-            "allPluralGenders": "lubi się"
+            "_PluralGenders": "lubi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "lubię"
+            "_SingularGendersExcludingNeuter": "lubię"
           },
           "plural": {
-            "allPluralGenders": "lubimy"
+            "_PluralGenders": "lubimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "lubisz"
+            "_SingularGendersExcludingNeuter": "lubisz"
           },
           "plural": {
-            "allPluralGenders": "lubicie"
+            "_PluralGenders": "lubicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "lubi"
+            "_SingularGenders": "lubi"
           },
           "plural": {
-            "allPluralGenders": "lubią"
+            "_PluralGenders": "lubią"
           }
         }
       }

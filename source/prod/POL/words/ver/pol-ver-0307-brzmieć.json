@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "brzmiano"
+            "_SingularGenders": "brzmiano"
           },
           "plural": {
-            "allPluralGenders": "brzmiano"
+            "_PluralGenders": "brzmiano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "brzmi się"
+            "_SingularGenders": "brzmi się"
           },
           "plural": {
-            "allPluralGenders": "brzmi się"
+            "_PluralGenders": "brzmi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "brzmię"
+            "_SingularGendersExcludingNeuter": "brzmię"
           },
           "plural": {
-            "allPluralGenders": "brzmimy"
+            "_PluralGenders": "brzmimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "brzmisz"
+            "_SingularGendersExcludingNeuter": "brzmisz"
           },
           "plural": {
-            "allPluralGenders": "brzmicie"
+            "_PluralGenders": "brzmicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "brzmi"
+            "_SingularGenders": "brzmi"
           },
           "plural": {
-            "allPluralGenders": "brzmią"
+            "_PluralGenders": "brzmią"
           }
         }
       }

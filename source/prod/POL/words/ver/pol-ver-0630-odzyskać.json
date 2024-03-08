@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odzyska się"
+            "_SingularGenders": "odzyska się"
           },
           "plural": {
-            "allPluralGenders": "odzyska się"
+            "_PluralGenders": "odzyska się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odzyskam"
+            "_SingularGendersExcludingNeuter": "odzyskam"
           },
           "plural": {
-            "allPluralGenders": "odzyskamy"
+            "_PluralGenders": "odzyskamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odzyskasz"
+            "_SingularGendersExcludingNeuter": "odzyskasz"
           },
           "plural": {
-            "allPluralGenders": "odzyskacie"
+            "_PluralGenders": "odzyskacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odzyska"
+            "_SingularGenders": "odzyska"
           },
           "plural": {
-            "allPluralGenders": "odzyskają"
+            "_PluralGenders": "odzyskają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odzyskano"
+            "_SingularGenders": "odzyskano"
           },
           "plural": {
-            "allPluralGenders": "odzyskano"
+            "_PluralGenders": "odzyskano"
           }
         },
         "1per": {

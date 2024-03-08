@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "korzystano"
+            "_SingularGenders": "korzystano"
           },
           "plural": {
-            "allPluralGenders": "korzystano"
+            "_PluralGenders": "korzystano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "korzysta się"
+            "_SingularGenders": "korzysta się"
           },
           "plural": {
-            "allPluralGenders": "korzysta się"
+            "_PluralGenders": "korzysta się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "korzystam"
+            "_SingularGendersExcludingNeuter": "korzystam"
           },
           "plural": {
-            "allPluralGenders": "korzystamy"
+            "_PluralGenders": "korzystamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "korzystasz"
+            "_SingularGendersExcludingNeuter": "korzystasz"
           },
           "plural": {
-            "allPluralGenders": "korzystacie"
+            "_PluralGenders": "korzystacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "korzysta"
+            "_SingularGenders": "korzysta"
           },
           "plural": {
-            "allPluralGenders": "korzystają"
+            "_PluralGenders": "korzystają"
           }
         }
       }

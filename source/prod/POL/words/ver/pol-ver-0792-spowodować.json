@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "spowoduje się"
+            "_SingularGenders": "spowoduje się"
           },
           "plural": {
-            "allPluralGenders": "spowoduje się"
+            "_PluralGenders": "spowoduje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "spowoduję"
+            "_SingularGendersExcludingNeuter": "spowoduję"
           },
           "plural": {
-            "allPluralGenders": "spowodujemy"
+            "_PluralGenders": "spowodujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "spowodujesz"
+            "_SingularGendersExcludingNeuter": "spowodujesz"
           },
           "plural": {
-            "allPluralGenders": "spowodujecie"
+            "_PluralGenders": "spowodujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "spowoduje"
+            "_SingularGenders": "spowoduje"
           },
           "plural": {
-            "allPluralGenders": "spowodują"
+            "_PluralGenders": "spowodują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "spowodowano"
+            "_SingularGenders": "spowodowano"
           },
           "plural": {
-            "allPluralGenders": "spowodowano"
+            "_PluralGenders": "spowodowano"
           }
         },
         "1per": {

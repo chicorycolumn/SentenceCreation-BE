@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "policzy się"
+            "_SingularGenders": "policzy się"
           },
           "plural": {
-            "allPluralGenders": "policzy się"
+            "_PluralGenders": "policzy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "policzę"
+            "_SingularGendersExcludingNeuter": "policzę"
           },
           "plural": {
-            "allPluralGenders": "policzymy"
+            "_PluralGenders": "policzymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "policzysz"
+            "_SingularGendersExcludingNeuter": "policzysz"
           },
           "plural": {
-            "allPluralGenders": "policzycie"
+            "_PluralGenders": "policzycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "policzy"
+            "_SingularGenders": "policzy"
           },
           "plural": {
-            "allPluralGenders": "policzą"
+            "_PluralGenders": "policzą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "policzono"
+            "_SingularGenders": "policzono"
           },
           "plural": {
-            "allPluralGenders": "policzono"
+            "_PluralGenders": "policzono"
           }
         },
         "1per": {

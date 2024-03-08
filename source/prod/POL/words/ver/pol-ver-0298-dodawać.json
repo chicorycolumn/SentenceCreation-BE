@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dodawano"
+            "_SingularGenders": "dodawano"
           },
           "plural": {
-            "allPluralGenders": "dodawano"
+            "_PluralGenders": "dodawano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dodaje się"
+            "_SingularGenders": "dodaje się"
           },
           "plural": {
-            "allPluralGenders": "dodaje się"
+            "_PluralGenders": "dodaje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dodaję"
+            "_SingularGendersExcludingNeuter": "dodaję"
           },
           "plural": {
-            "allPluralGenders": "dodajemy"
+            "_PluralGenders": "dodajemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dodajesz"
+            "_SingularGendersExcludingNeuter": "dodajesz"
           },
           "plural": {
-            "allPluralGenders": "dodajecie"
+            "_PluralGenders": "dodajecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dodaje"
+            "_SingularGenders": "dodaje"
           },
           "plural": {
-            "allPluralGenders": "dodają"
+            "_PluralGenders": "dodają"
           }
         }
       }

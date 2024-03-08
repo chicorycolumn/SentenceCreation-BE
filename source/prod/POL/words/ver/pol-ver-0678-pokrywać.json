@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pokrywano"
+            "_SingularGenders": "pokrywano"
           },
           "plural": {
-            "allPluralGenders": "pokrywano"
+            "_PluralGenders": "pokrywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pokrywa się"
+            "_SingularGenders": "pokrywa się"
           },
           "plural": {
-            "allPluralGenders": "pokrywa się"
+            "_PluralGenders": "pokrywa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pokrywam"
+            "_SingularGendersExcludingNeuter": "pokrywam"
           },
           "plural": {
-            "allPluralGenders": "pokrywamy"
+            "_PluralGenders": "pokrywamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pokrywasz"
+            "_SingularGendersExcludingNeuter": "pokrywasz"
           },
           "plural": {
-            "allPluralGenders": "pokrywacie"
+            "_PluralGenders": "pokrywacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pokrywa"
+            "_SingularGenders": "pokrywa"
           },
           "plural": {
-            "allPluralGenders": "pokrywają"
+            "_PluralGenders": "pokrywają"
           }
         }
       }

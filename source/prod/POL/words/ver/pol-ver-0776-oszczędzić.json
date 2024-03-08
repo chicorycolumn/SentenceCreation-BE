@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oszczędzą się"
+            "_SingularGenders": "oszczędzą się"
           },
           "plural": {
-            "allPluralGenders": "oszczędzą się"
+            "_PluralGenders": "oszczędzą się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "oszczędzę"
+            "_SingularGendersExcludingNeuter": "oszczędzę"
           },
           "plural": {
-            "allPluralGenders": "oszczędząmy"
+            "_PluralGenders": "oszczędząmy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "oszczędząsz"
+            "_SingularGendersExcludingNeuter": "oszczędząsz"
           },
           "plural": {
-            "allPluralGenders": "oszczędzącie"
+            "_PluralGenders": "oszczędzącie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "oszczędzą"
+            "_SingularGenders": "oszczędzą"
           },
           "plural": {
-            "allPluralGenders": "oszczędzi"
+            "_PluralGenders": "oszczędzi"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oszczędzono"
+            "_SingularGenders": "oszczędzono"
           },
           "plural": {
-            "allPluralGenders": "oszczędzono"
+            "_PluralGenders": "oszczędzono"
           }
         },
         "1per": {

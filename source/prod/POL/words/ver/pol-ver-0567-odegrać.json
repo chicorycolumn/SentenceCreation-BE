@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odegra się"
+            "_SingularGenders": "odegra się"
           },
           "plural": {
-            "allPluralGenders": "odegra się"
+            "_PluralGenders": "odegra się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odegram"
+            "_SingularGendersExcludingNeuter": "odegram"
           },
           "plural": {
-            "allPluralGenders": "odegramy"
+            "_PluralGenders": "odegramy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odegrasz"
+            "_SingularGendersExcludingNeuter": "odegrasz"
           },
           "plural": {
-            "allPluralGenders": "odegracie"
+            "_PluralGenders": "odegracie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odegra"
+            "_SingularGenders": "odegra"
           },
           "plural": {
-            "allPluralGenders": "odegrają"
+            "_PluralGenders": "odegrają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odegrano"
+            "_SingularGenders": "odegrano"
           },
           "plural": {
-            "allPluralGenders": "odegrano"
+            "_PluralGenders": "odegrano"
           }
         },
         "1per": {

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "błagano"
+            "_SingularGenders": "błagano"
           },
           "plural": {
-            "allPluralGenders": "błagano"
+            "_PluralGenders": "błagano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "błaga się"
+            "_SingularGenders": "błaga się"
           },
           "plural": {
-            "allPluralGenders": "błaga się"
+            "_PluralGenders": "błaga się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "błagam"
+            "_SingularGendersExcludingNeuter": "błagam"
           },
           "plural": {
-            "allPluralGenders": "błagamy"
+            "_PluralGenders": "błagamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "błagasz"
+            "_SingularGendersExcludingNeuter": "błagasz"
           },
           "plural": {
-            "allPluralGenders": "błagacie"
+            "_PluralGenders": "błagacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "błaga"
+            "_SingularGenders": "błaga"
           },
           "plural": {
-            "allPluralGenders": "błagają"
+            "_PluralGenders": "błagają"
           }
         }
       }

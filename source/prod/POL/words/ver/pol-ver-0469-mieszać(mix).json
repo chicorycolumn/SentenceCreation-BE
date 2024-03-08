@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "mieszano"
+            "_SingularGenders": "mieszano"
           },
           "plural": {
-            "allPluralGenders": "mieszano"
+            "_PluralGenders": "mieszano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "miesza się"
+            "_SingularGenders": "miesza się"
           },
           "plural": {
-            "allPluralGenders": "miesza się"
+            "_PluralGenders": "miesza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "mieszam"
+            "_SingularGendersExcludingNeuter": "mieszam"
           },
           "plural": {
-            "allPluralGenders": "mieszamy"
+            "_PluralGenders": "mieszamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "mieszasz"
+            "_SingularGendersExcludingNeuter": "mieszasz"
           },
           "plural": {
-            "allPluralGenders": "mieszacie"
+            "_PluralGenders": "mieszacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "miesza"
+            "_SingularGenders": "miesza"
           },
           "plural": {
-            "allPluralGenders": "mieszają"
+            "_PluralGenders": "mieszają"
           }
         }
       }

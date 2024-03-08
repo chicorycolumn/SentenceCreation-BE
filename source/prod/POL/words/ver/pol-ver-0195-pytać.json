@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pytano"
+            "_SingularGenders": "pytano"
           },
           "plural": {
-            "allPluralGenders": "pytano"
+            "_PluralGenders": "pytano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pyta się"
+            "_SingularGenders": "pyta się"
           },
           "plural": {
-            "allPluralGenders": "pyta się"
+            "_PluralGenders": "pyta się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pytam"
+            "_SingularGendersExcludingNeuter": "pytam"
           },
           "plural": {
-            "allPluralGenders": "pytamy"
+            "_PluralGenders": "pytamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pytasz"
+            "_SingularGendersExcludingNeuter": "pytasz"
           },
           "plural": {
-            "allPluralGenders": "pytacie"
+            "_PluralGenders": "pytacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pyta"
+            "_SingularGenders": "pyta"
           },
           "plural": {
-            "allPluralGenders": "pytają"
+            "_PluralGenders": "pytają"
           }
         }
       }

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zezłości się"
+            "_SingularGenders": "zezłości się"
           },
           "plural": {
-            "allPluralGenders": "zezłości się"
+            "_PluralGenders": "zezłości się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "zezłoszczę"
+            "_SingularGendersExcludingNeuter": "zezłoszczę"
           },
           "plural": {
-            "allPluralGenders": "zezłościmy"
+            "_PluralGenders": "zezłościmy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "zezłościsz"
+            "_SingularGendersExcludingNeuter": "zezłościsz"
           },
           "plural": {
-            "allPluralGenders": "zezłościcie"
+            "_PluralGenders": "zezłościcie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zezłości"
+            "_SingularGenders": "zezłości"
           },
           "plural": {
-            "allPluralGenders": "zezłoszczą"
+            "_PluralGenders": "zezłoszczą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zezłoszczono"
+            "_SingularGenders": "zezłoszczono"
           },
           "plural": {
-            "allPluralGenders": "zezłoszczono"
+            "_PluralGenders": "zezłoszczono"
           }
         },
         "1per": {

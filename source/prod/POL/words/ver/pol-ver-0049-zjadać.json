@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zjadano"
+            "_SingularGenders": "zjadano"
           },
           "plural": {
-            "allPluralGenders": "zjadano"
+            "_PluralGenders": "zjadano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zjada się"
+            "_SingularGenders": "zjada się"
           },
           "plural": {
-            "allPluralGenders": "zjada się"
+            "_PluralGenders": "zjada się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zjadam"
+            "_SingularGendersExcludingNeuter": "zjadam"
           },
           "plural": {
-            "allPluralGenders": "zjadamy"
+            "_PluralGenders": "zjadamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zjadasz"
+            "_SingularGendersExcludingNeuter": "zjadasz"
           },
           "plural": {
-            "allPluralGenders": "zjadacie"
+            "_PluralGenders": "zjadacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zjada"
+            "_SingularGenders": "zjada"
           },
           "plural": {
-            "allPluralGenders": "zjadają"
+            "_PluralGenders": "zjadają"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "omawiano"
+            "_SingularGenders": "omawiano"
           },
           "plural": {
-            "allPluralGenders": "omawiano"
+            "_PluralGenders": "omawiano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "omawia się"
+            "_SingularGenders": "omawia się"
           },
           "plural": {
-            "allPluralGenders": "omawia się"
+            "_PluralGenders": "omawia się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "omawiam"
+            "_SingularGendersExcludingNeuter": "omawiam"
           },
           "plural": {
-            "allPluralGenders": "omawiamy"
+            "_PluralGenders": "omawiamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "omawiasz"
+            "_SingularGendersExcludingNeuter": "omawiasz"
           },
           "plural": {
-            "allPluralGenders": "omawiacie"
+            "_PluralGenders": "omawiacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "omawia"
+            "_SingularGenders": "omawia"
           },
           "plural": {
-            "allPluralGenders": "omawiają"
+            "_PluralGenders": "omawiają"
           }
         }
       }

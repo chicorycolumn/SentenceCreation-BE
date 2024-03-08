@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ważono"
+            "_SingularGenders": "ważono"
           },
           "plural": {
-            "allPluralGenders": "ważono"
+            "_PluralGenders": "ważono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "waży się"
+            "_SingularGenders": "waży się"
           },
           "plural": {
-            "allPluralGenders": "waży się"
+            "_PluralGenders": "waży się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "ważę"
+            "_SingularGendersExcludingNeuter": "ważę"
           },
           "plural": {
-            "allPluralGenders": "ważymy"
+            "_PluralGenders": "ważymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "ważysz"
+            "_SingularGendersExcludingNeuter": "ważysz"
           },
           "plural": {
-            "allPluralGenders": "ważycie"
+            "_PluralGenders": "ważycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "waży"
+            "_SingularGenders": "waży"
           },
           "plural": {
-            "allPluralGenders": "ważą"
+            "_PluralGenders": "ważą"
           }
         }
       }

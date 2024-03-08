@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "mruknie się"
+            "_SingularGenders": "mruknie się"
           },
           "plural": {
-            "allPluralGenders": "mruknie się"
+            "_PluralGenders": "mruknie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "mruknę"
+            "_SingularGendersExcludingNeuter": "mruknę"
           },
           "plural": {
-            "allPluralGenders": "mrukniemy"
+            "_PluralGenders": "mrukniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "mrukniesz"
+            "_SingularGendersExcludingNeuter": "mrukniesz"
           },
           "plural": {
-            "allPluralGenders": "mrukniecie"
+            "_PluralGenders": "mrukniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "mruknie"
+            "_SingularGenders": "mruknie"
           },
           "plural": {
-            "allPluralGenders": "mrukną"
+            "_PluralGenders": "mrukną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "mruknięto"
+            "_SingularGenders": "mruknięto"
           },
           "plural": {
-            "allPluralGenders": "mruknięto"
+            "_PluralGenders": "mruknięto"
           }
         },
         "1per": {

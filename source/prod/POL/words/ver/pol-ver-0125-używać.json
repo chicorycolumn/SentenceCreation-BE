@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "używano"
+            "_SingularGenders": "używano"
           },
           "plural": {
-            "allPluralGenders": "używano"
+            "_PluralGenders": "używano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "używa się"
+            "_SingularGenders": "używa się"
           },
           "plural": {
-            "allPluralGenders": "używa się"
+            "_PluralGenders": "używa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "używam"
+            "_SingularGendersExcludingNeuter": "używam"
           },
           "plural": {
-            "allPluralGenders": "używamy"
+            "_PluralGenders": "używamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "używasz"
+            "_SingularGendersExcludingNeuter": "używasz"
           },
           "plural": {
-            "allPluralGenders": "używacie"
+            "_PluralGenders": "używacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "używa"
+            "_SingularGenders": "używa"
           },
           "plural": {
-            "allPluralGenders": "używają"
+            "_PluralGenders": "używają"
           }
         }
       }

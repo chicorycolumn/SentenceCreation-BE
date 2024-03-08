@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "porozmawia się"
+            "_SingularGenders": "porozmawia się"
           },
           "plural": {
-            "allPluralGenders": "porozmawia się"
+            "_PluralGenders": "porozmawia się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "porozmawiam"
+            "_SingularGendersExcludingNeuter": "porozmawiam"
           },
           "plural": {
-            "allPluralGenders": "porozmawiamy"
+            "_PluralGenders": "porozmawiamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "porozmawiasz"
+            "_SingularGendersExcludingNeuter": "porozmawiasz"
           },
           "plural": {
-            "allPluralGenders": "porozmawiacie"
+            "_PluralGenders": "porozmawiacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "porozmawia"
+            "_SingularGenders": "porozmawia"
           },
           "plural": {
-            "allPluralGenders": "porozmawiają"
+            "_PluralGenders": "porozmawiają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "porozmawiano"
+            "_SingularGenders": "porozmawiano"
           },
           "plural": {
-            "allPluralGenders": "porozmawiano"
+            "_PluralGenders": "porozmawiano"
           }
         },
         "1per": {

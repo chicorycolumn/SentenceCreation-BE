@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "organizowano"
+            "_SingularGenders": "organizowano"
           },
           "plural": {
-            "allPluralGenders": "organizowano"
+            "_PluralGenders": "organizowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "organizuje się"
+            "_SingularGenders": "organizuje się"
           },
           "plural": {
-            "allPluralGenders": "organizuje się"
+            "_PluralGenders": "organizuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "organizuję"
+            "_SingularGendersExcludingNeuter": "organizuję"
           },
           "plural": {
-            "allPluralGenders": "organizujemy"
+            "_PluralGenders": "organizujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "organizujesz"
+            "_SingularGendersExcludingNeuter": "organizujesz"
           },
           "plural": {
-            "allPluralGenders": "organizujecie"
+            "_PluralGenders": "organizujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "organizuje"
+            "_SingularGenders": "organizuje"
           },
           "plural": {
-            "allPluralGenders": "organizują"
+            "_PluralGenders": "organizują"
           }
         }
       }

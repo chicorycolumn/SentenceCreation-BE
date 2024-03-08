@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pogorszy się"
+            "_SingularGenders": "pogorszy się"
           },
           "plural": {
-            "allPluralGenders": "pogorszy się"
+            "_PluralGenders": "pogorszy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pogorszę"
+            "_SingularGendersExcludingNeuter": "pogorszę"
           },
           "plural": {
-            "allPluralGenders": "pogorszymy"
+            "_PluralGenders": "pogorszymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pogorszysz"
+            "_SingularGendersExcludingNeuter": "pogorszysz"
           },
           "plural": {
-            "allPluralGenders": "pogorszycie"
+            "_PluralGenders": "pogorszycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pogorszy"
+            "_SingularGenders": "pogorszy"
           },
           "plural": {
-            "allPluralGenders": "pogorszą"
+            "_PluralGenders": "pogorszą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pogorszono"
+            "_SingularGenders": "pogorszono"
           },
           "plural": {
-            "allPluralGenders": "pogorszono"
+            "_PluralGenders": "pogorszono"
           }
         },
         "1per": {

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pływano"
+            "_SingularGenders": "pływano"
           },
           "plural": {
-            "allPluralGenders": "pływano"
+            "_PluralGenders": "pływano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pływa się"
+            "_SingularGenders": "pływa się"
           },
           "plural": {
-            "allPluralGenders": "pływa się"
+            "_PluralGenders": "pływa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pływam"
+            "_SingularGendersExcludingNeuter": "pływam"
           },
           "plural": {
-            "allPluralGenders": "pływamy"
+            "_PluralGenders": "pływamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pływasz"
+            "_SingularGendersExcludingNeuter": "pływasz"
           },
           "plural": {
-            "allPluralGenders": "pływacie"
+            "_PluralGenders": "pływacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pływa"
+            "_SingularGenders": "pływa"
           },
           "plural": {
-            "allPluralGenders": "pływają"
+            "_PluralGenders": "pływają"
           }
         }
       }

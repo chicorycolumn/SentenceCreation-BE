@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "narażano"
+            "_SingularGenders": "narażano"
           },
           "plural": {
-            "allPluralGenders": "narażano"
+            "_PluralGenders": "narażano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "naraża się"
+            "_SingularGenders": "naraża się"
           },
           "plural": {
-            "allPluralGenders": "naraża się"
+            "_PluralGenders": "naraża się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "narażam"
+            "_SingularGendersExcludingNeuter": "narażam"
           },
           "plural": {
-            "allPluralGenders": "narażamy"
+            "_PluralGenders": "narażamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "narażasz"
+            "_SingularGendersExcludingNeuter": "narażasz"
           },
           "plural": {
-            "allPluralGenders": "narażacie"
+            "_PluralGenders": "narażacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "naraża"
+            "_SingularGenders": "naraża"
           },
           "plural": {
-            "allPluralGenders": "narażają"
+            "_PluralGenders": "narażają"
           }
         }
       }

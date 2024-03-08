@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "czyniono"
+            "_SingularGenders": "czyniono"
           },
           "plural": {
-            "allPluralGenders": "czyniono"
+            "_PluralGenders": "czyniono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "czyni się"
+            "_SingularGenders": "czyni się"
           },
           "plural": {
-            "allPluralGenders": "czyni się"
+            "_PluralGenders": "czyni się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "czynię"
+            "_SingularGendersExcludingNeuter": "czynię"
           },
           "plural": {
-            "allPluralGenders": "czynimy"
+            "_PluralGenders": "czynimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "czynisz"
+            "_SingularGendersExcludingNeuter": "czynisz"
           },
           "plural": {
-            "allPluralGenders": "czynicie"
+            "_PluralGenders": "czynicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "czyni"
+            "_SingularGenders": "czyni"
           },
           "plural": {
-            "allPluralGenders": "czynią"
+            "_PluralGenders": "czynią"
           }
         }
       }

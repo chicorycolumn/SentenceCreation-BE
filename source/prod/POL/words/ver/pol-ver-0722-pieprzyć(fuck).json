@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pieprzono"
+            "_SingularGenders": "pieprzono"
           },
           "plural": {
-            "allPluralGenders": "pieprzono"
+            "_PluralGenders": "pieprzono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pieprzy się"
+            "_SingularGenders": "pieprzy się"
           },
           "plural": {
-            "allPluralGenders": "pieprzy się"
+            "_PluralGenders": "pieprzy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pieprzę"
+            "_SingularGendersExcludingNeuter": "pieprzę"
           },
           "plural": {
-            "allPluralGenders": "pieprzymy"
+            "_PluralGenders": "pieprzymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pieprzysz"
+            "_SingularGendersExcludingNeuter": "pieprzysz"
           },
           "plural": {
-            "allPluralGenders": "pieprzycie"
+            "_PluralGenders": "pieprzycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pieprzy"
+            "_SingularGenders": "pieprzy"
           },
           "plural": {
-            "allPluralGenders": "pieprzą"
+            "_PluralGenders": "pieprzą"
           }
         }
       }

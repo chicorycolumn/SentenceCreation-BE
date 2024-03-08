@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "głaskano"
+            "_SingularGenders": "głaskano"
           },
           "plural": {
-            "allPluralGenders": "głaskano"
+            "_PluralGenders": "głaskano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "głaszcze się"
+            "_SingularGenders": "głaszcze się"
           },
           "plural": {
-            "allPluralGenders": "głaszcze się"
+            "_PluralGenders": "głaszcze się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "głaszczę"
+            "_SingularGendersExcludingNeuter": "głaszczę"
           },
           "plural": {
-            "allPluralGenders": "głaszczemy"
+            "_PluralGenders": "głaszczemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "głaszczesz"
+            "_SingularGendersExcludingNeuter": "głaszczesz"
           },
           "plural": {
-            "allPluralGenders": "głaszczecie"
+            "_PluralGenders": "głaszczecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "głaszcze"
+            "_SingularGenders": "głaszcze"
           },
           "plural": {
-            "allPluralGenders": "głaszczą"
+            "_PluralGenders": "głaszczą"
           }
         }
       }

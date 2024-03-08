@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "lekceważono"
+            "_SingularGenders": "lekceważono"
           },
           "plural": {
-            "allPluralGenders": "lekceważono"
+            "_PluralGenders": "lekceważono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "lekceważy się"
+            "_SingularGenders": "lekceważy się"
           },
           "plural": {
-            "allPluralGenders": "lekceważy się"
+            "_PluralGenders": "lekceważy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "lekceważę"
+            "_SingularGendersExcludingNeuter": "lekceważę"
           },
           "plural": {
-            "allPluralGenders": "lekceważymy"
+            "_PluralGenders": "lekceważymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "lekceważysz"
+            "_SingularGendersExcludingNeuter": "lekceważysz"
           },
           "plural": {
-            "allPluralGenders": "lekceważycie"
+            "_PluralGenders": "lekceważycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "lekceważy"
+            "_SingularGenders": "lekceważy"
           },
           "plural": {
-            "allPluralGenders": "lekceważą"
+            "_PluralGenders": "lekceważą"
           }
         }
       }

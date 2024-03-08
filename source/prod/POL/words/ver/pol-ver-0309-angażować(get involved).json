@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "angażowano"
+            "_SingularGenders": "angażowano"
           },
           "plural": {
-            "allPluralGenders": "angażowano"
+            "_PluralGenders": "angażowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "angażuje się"
+            "_SingularGenders": "angażuje się"
           },
           "plural": {
-            "allPluralGenders": "angażuje się"
+            "_PluralGenders": "angażuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "angażuję"
+            "_SingularGendersExcludingNeuter": "angażuję"
           },
           "plural": {
-            "allPluralGenders": "angażujemy"
+            "_PluralGenders": "angażujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "angażujesz"
+            "_SingularGendersExcludingNeuter": "angażujesz"
           },
           "plural": {
-            "allPluralGenders": "angażujecie"
+            "_PluralGenders": "angażujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "angażuje"
+            "_SingularGenders": "angażuje"
           },
           "plural": {
-            "allPluralGenders": "angażują"
+            "_PluralGenders": "angażują"
           }
         }
       }

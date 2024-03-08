@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "półknie się"
+            "_SingularGenders": "półknie się"
           },
           "plural": {
-            "allPluralGenders": "półknie się"
+            "_PluralGenders": "półknie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "półknę"
+            "_SingularGendersExcludingNeuter": "półknę"
           },
           "plural": {
-            "allPluralGenders": "półkniemy"
+            "_PluralGenders": "półkniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "półkniesz"
+            "_SingularGendersExcludingNeuter": "półkniesz"
           },
           "plural": {
-            "allPluralGenders": "półkniecie"
+            "_PluralGenders": "półkniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "półknie"
+            "_SingularGenders": "półknie"
           },
           "plural": {
-            "allPluralGenders": "półkną"
+            "_PluralGenders": "półkną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "półknięto"
+            "_SingularGenders": "półknięto"
           },
           "plural": {
-            "allPluralGenders": "półknięto"
+            "_PluralGenders": "półknięto"
           }
         },
         "1per": {

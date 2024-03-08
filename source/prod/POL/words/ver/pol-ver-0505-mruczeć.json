@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "mruczano"
+            "_SingularGenders": "mruczano"
           },
           "plural": {
-            "allPluralGenders": "mruczano"
+            "_PluralGenders": "mruczano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "mruczy się"
+            "_SingularGenders": "mruczy się"
           },
           "plural": {
-            "allPluralGenders": "mruczy się"
+            "_PluralGenders": "mruczy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "mruczę"
+            "_SingularGendersExcludingNeuter": "mruczę"
           },
           "plural": {
-            "allPluralGenders": "mruczymy"
+            "_PluralGenders": "mruczymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "mruczysz"
+            "_SingularGendersExcludingNeuter": "mruczysz"
           },
           "plural": {
-            "allPluralGenders": "mruczycie"
+            "_PluralGenders": "mruczycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "mruczy"
+            "_SingularGenders": "mruczy"
           },
           "plural": {
-            "allPluralGenders": "mruczą"
+            "_PluralGenders": "mruczą"
           }
         }
       }

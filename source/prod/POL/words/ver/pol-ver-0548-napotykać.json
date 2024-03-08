@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "napotykano"
+            "_SingularGenders": "napotykano"
           },
           "plural": {
-            "allPluralGenders": "napotykano"
+            "_PluralGenders": "napotykano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "napotyka się"
+            "_SingularGenders": "napotyka się"
           },
           "plural": {
-            "allPluralGenders": "napotyka się"
+            "_PluralGenders": "napotyka się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "napotykam"
+            "_SingularGendersExcludingNeuter": "napotykam"
           },
           "plural": {
-            "allPluralGenders": "napotykamy"
+            "_PluralGenders": "napotykamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "napotykasz"
+            "_SingularGendersExcludingNeuter": "napotykasz"
           },
           "plural": {
-            "allPluralGenders": "napotykacie"
+            "_PluralGenders": "napotykacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "napotyka"
+            "_SingularGenders": "napotyka"
           },
           "plural": {
-            "allPluralGenders": "napotykają"
+            "_PluralGenders": "napotykają"
           }
         }
       }

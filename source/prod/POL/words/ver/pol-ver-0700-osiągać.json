@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "osiągano"
+            "_SingularGenders": "osiągano"
           },
           "plural": {
-            "allPluralGenders": "osiągano"
+            "_PluralGenders": "osiągano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "osiąga się"
+            "_SingularGenders": "osiąga się"
           },
           "plural": {
-            "allPluralGenders": "osiąga się"
+            "_PluralGenders": "osiąga się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "osiągam"
+            "_SingularGendersExcludingNeuter": "osiągam"
           },
           "plural": {
-            "allPluralGenders": "osiągamy"
+            "_PluralGenders": "osiągamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "osiągasz"
+            "_SingularGendersExcludingNeuter": "osiągasz"
           },
           "plural": {
-            "allPluralGenders": "osiągacie"
+            "_PluralGenders": "osiągacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "osiąga"
+            "_SingularGenders": "osiąga"
           },
           "plural": {
-            "allPluralGenders": "osiągają"
+            "_PluralGenders": "osiągają"
           }
         }
       }

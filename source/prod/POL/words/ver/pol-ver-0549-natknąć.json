@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "natknie się"
+            "_SingularGenders": "natknie się"
           },
           "plural": {
-            "allPluralGenders": "natknie się"
+            "_PluralGenders": "natknie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "natknę"
+            "_SingularGendersExcludingNeuter": "natknę"
           },
           "plural": {
-            "allPluralGenders": "natkniemy"
+            "_PluralGenders": "natkniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "natkniesz"
+            "_SingularGendersExcludingNeuter": "natkniesz"
           },
           "plural": {
-            "allPluralGenders": "natkniecie"
+            "_PluralGenders": "natkniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "natknie"
+            "_SingularGenders": "natknie"
           },
           "plural": {
-            "allPluralGenders": "natkną"
+            "_PluralGenders": "natkną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "natknięto"
+            "_SingularGenders": "natknięto"
           },
           "plural": {
-            "allPluralGenders": "natknięto"
+            "_PluralGenders": "natknięto"
           }
         },
         "1per": {

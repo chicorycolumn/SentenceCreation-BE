@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zachoruje się"
+            "_SingularGenders": "zachoruje się"
           },
           "plural": {
-            "allPluralGenders": "zachoruje się"
+            "_PluralGenders": "zachoruje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zachoruję"
+            "_SingularGendersExcludingNeuter": "zachoruję"
           },
           "plural": {
-            "allPluralGenders": "zachorujemy"
+            "_PluralGenders": "zachorujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zachorujesz"
+            "_SingularGendersExcludingNeuter": "zachorujesz"
           },
           "plural": {
-            "allPluralGenders": "zachorujecie"
+            "_PluralGenders": "zachorujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zachoruje"
+            "_SingularGenders": "zachoruje"
           },
           "plural": {
-            "allPluralGenders": "zachorują"
+            "_PluralGenders": "zachorują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zachorowano"
+            "_SingularGenders": "zachorowano"
           },
           "plural": {
-            "allPluralGenders": "zachorowano"
+            "_PluralGenders": "zachorowano"
           }
         },
         "1per": {

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "hamowano"
+            "_SingularGenders": "hamowano"
           },
           "plural": {
-            "allPluralGenders": "hamowano"
+            "_PluralGenders": "hamowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "hamuje się"
+            "_SingularGenders": "hamuje się"
           },
           "plural": {
-            "allPluralGenders": "hamuje się"
+            "_PluralGenders": "hamuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "hamuję"
+            "_SingularGendersExcludingNeuter": "hamuję"
           },
           "plural": {
-            "allPluralGenders": "hamujemy"
+            "_PluralGenders": "hamujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "hamujesz"
+            "_SingularGendersExcludingNeuter": "hamujesz"
           },
           "plural": {
-            "allPluralGenders": "hamujecie"
+            "_PluralGenders": "hamujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "hamuje"
+            "_SingularGenders": "hamuje"
           },
           "plural": {
-            "allPluralGenders": "hamują"
+            "_PluralGenders": "hamują"
           }
         }
       }

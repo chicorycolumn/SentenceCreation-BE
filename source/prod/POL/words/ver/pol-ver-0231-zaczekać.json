@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zaczeka się"
+            "_SingularGenders": "zaczeka się"
           },
           "plural": {
-            "allPluralGenders": "zaczeka się"
+            "_PluralGenders": "zaczeka się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zaczekam"
+            "_SingularGendersExcludingNeuter": "zaczekam"
           },
           "plural": {
-            "allPluralGenders": "zaczekamy"
+            "_PluralGenders": "zaczekamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zaczekasz"
+            "_SingularGendersExcludingNeuter": "zaczekasz"
           },
           "plural": {
-            "allPluralGenders": "zaczekacie"
+            "_PluralGenders": "zaczekacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zaczeka"
+            "_SingularGenders": "zaczeka"
           },
           "plural": {
-            "allPluralGenders": "zaczekają"
+            "_PluralGenders": "zaczekają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zaczekano"
+            "_SingularGenders": "zaczekano"
           },
           "plural": {
-            "allPluralGenders": "zaczekano"
+            "_PluralGenders": "zaczekano"
           }
         },
         "1per": {

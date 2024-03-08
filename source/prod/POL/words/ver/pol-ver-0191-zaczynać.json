@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zaczynano"
+            "_SingularGenders": "zaczynano"
           },
           "plural": {
-            "allPluralGenders": "zaczynano"
+            "_PluralGenders": "zaczynano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zaczyna się"
+            "_SingularGenders": "zaczyna się"
           },
           "plural": {
-            "allPluralGenders": "zaczyna się"
+            "_PluralGenders": "zaczyna się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zaczynam"
+            "_SingularGendersExcludingNeuter": "zaczynam"
           },
           "plural": {
-            "allPluralGenders": "zaczynamy"
+            "_PluralGenders": "zaczynamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zaczynasz"
+            "_SingularGendersExcludingNeuter": "zaczynasz"
           },
           "plural": {
-            "allPluralGenders": "zaczynacie"
+            "_PluralGenders": "zaczynacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zaczyna"
+            "_SingularGenders": "zaczyna"
           },
           "plural": {
-            "allPluralGenders": "zaczynają"
+            "_PluralGenders": "zaczynają"
           }
         }
       }

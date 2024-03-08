@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "urodzi się"
+            "_SingularGenders": "urodzi się"
           },
           "plural": {
-            "allPluralGenders": "urodzi się"
+            "_PluralGenders": "urodzi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "urodzę"
+            "_SingularGendersExcludingNeuter": "urodzę"
           },
           "plural": {
-            "allPluralGenders": "urodzimy"
+            "_PluralGenders": "urodzimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "urodzisz"
+            "_SingularGendersExcludingNeuter": "urodzisz"
           },
           "plural": {
-            "allPluralGenders": "urodzicie"
+            "_PluralGenders": "urodzicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "urodzi"
+            "_SingularGenders": "urodzi"
           },
           "plural": {
-            "allPluralGenders": "urodzą"
+            "_PluralGenders": "urodzą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "urodzono"
+            "_SingularGenders": "urodzono"
           },
           "plural": {
-            "allPluralGenders": "urodzono"
+            "_PluralGenders": "urodzono"
           }
         },
         "1per": {

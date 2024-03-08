@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "budowano"
+            "_SingularGenders": "budowano"
           },
           "plural": {
-            "allPluralGenders": "budowano"
+            "_PluralGenders": "budowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "buduje się"
+            "_SingularGenders": "buduje się"
           },
           "plural": {
-            "allPluralGenders": "buduje się"
+            "_PluralGenders": "buduje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "buduję"
+            "_SingularGendersExcludingNeuter": "buduję"
           },
           "plural": {
-            "allPluralGenders": "budujemy"
+            "_PluralGenders": "budujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "budujesz"
+            "_SingularGendersExcludingNeuter": "budujesz"
           },
           "plural": {
-            "allPluralGenders": "budujecie"
+            "_PluralGenders": "budujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "buduje"
+            "_SingularGenders": "buduje"
           },
           "plural": {
-            "allPluralGenders": "budują"
+            "_PluralGenders": "budują"
           }
         }
       }

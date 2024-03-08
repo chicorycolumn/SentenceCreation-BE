@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ginięto"
+            "_SingularGenders": "ginięto"
           },
           "plural": {
-            "allPluralGenders": "ginięto"
+            "_PluralGenders": "ginięto"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ginie się"
+            "_SingularGenders": "ginie się"
           },
           "plural": {
-            "allPluralGenders": "ginie się"
+            "_PluralGenders": "ginie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "ginę"
+            "_SingularGendersExcludingNeuter": "ginę"
           },
           "plural": {
-            "allPluralGenders": "giniemy"
+            "_PluralGenders": "giniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "giniesz"
+            "_SingularGendersExcludingNeuter": "giniesz"
           },
           "plural": {
-            "allPluralGenders": "giniecie"
+            "_PluralGenders": "giniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "ginie"
+            "_SingularGenders": "ginie"
           },
           "plural": {
-            "allPluralGenders": "giną"
+            "_PluralGenders": "giną"
           }
         }
       }

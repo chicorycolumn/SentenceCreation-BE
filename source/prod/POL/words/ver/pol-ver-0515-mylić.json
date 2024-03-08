@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "mylono"
+            "_SingularGenders": "mylono"
           },
           "plural": {
-            "allPluralGenders": "mylono"
+            "_PluralGenders": "mylono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "myli się"
+            "_SingularGenders": "myli się"
           },
           "plural": {
-            "allPluralGenders": "myli się"
+            "_PluralGenders": "myli się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "mylę"
+            "_SingularGendersExcludingNeuter": "mylę"
           },
           "plural": {
-            "allPluralGenders": "mylimy"
+            "_PluralGenders": "mylimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "mylisz"
+            "_SingularGendersExcludingNeuter": "mylisz"
           },
           "plural": {
-            "allPluralGenders": "mylicie"
+            "_PluralGenders": "mylicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "myli"
+            "_SingularGenders": "myli"
           },
           "plural": {
-            "allPluralGenders": "mylą"
+            "_PluralGenders": "mylą"
           }
         }
       }

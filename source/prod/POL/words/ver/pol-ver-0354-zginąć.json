@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zginie się"
+            "_SingularGenders": "zginie się"
           },
           "plural": {
-            "allPluralGenders": "zginie się"
+            "_PluralGenders": "zginie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zginę"
+            "_SingularGendersExcludingNeuter": "zginę"
           },
           "plural": {
-            "allPluralGenders": "zginiemy"
+            "_PluralGenders": "zginiemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zginiesz"
+            "_SingularGendersExcludingNeuter": "zginiesz"
           },
           "plural": {
-            "allPluralGenders": "zginiecie"
+            "_PluralGenders": "zginiecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zginie"
+            "_SingularGenders": "zginie"
           },
           "plural": {
-            "allPluralGenders": "zginą"
+            "_PluralGenders": "zginą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zginięto"
+            "_SingularGenders": "zginięto"
           },
           "plural": {
-            "allPluralGenders": "zginięto"
+            "_PluralGenders": "zginięto"
           }
         },
         "1per": {

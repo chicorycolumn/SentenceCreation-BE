@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podkreśli się"
+            "_SingularGenders": "podkreśli się"
           },
           "plural": {
-            "allPluralGenders": "podkreśli się"
+            "_PluralGenders": "podkreśli się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "podkreślę"
+            "_SingularGendersExcludingNeuter": "podkreślę"
           },
           "plural": {
-            "allPluralGenders": "podkreślimy"
+            "_PluralGenders": "podkreślimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "podkreślisz"
+            "_SingularGendersExcludingNeuter": "podkreślisz"
           },
           "plural": {
-            "allPluralGenders": "podkreślicie"
+            "_PluralGenders": "podkreślicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "podkreśli"
+            "_SingularGenders": "podkreśli"
           },
           "plural": {
-            "allPluralGenders": "podkreślą"
+            "_PluralGenders": "podkreślą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "podkreślono"
+            "_SingularGenders": "podkreślono"
           },
           "plural": {
-            "allPluralGenders": "podkreślono"
+            "_PluralGenders": "podkreślono"
           }
         },
         "1per": {

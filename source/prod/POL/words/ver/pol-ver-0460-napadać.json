@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "napadano"
+            "_SingularGenders": "napadano"
           },
           "plural": {
-            "allPluralGenders": "napadano"
+            "_PluralGenders": "napadano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "napada się"
+            "_SingularGenders": "napada się"
           },
           "plural": {
-            "allPluralGenders": "napada się"
+            "_PluralGenders": "napada się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "napadam"
+            "_SingularGendersExcludingNeuter": "napadam"
           },
           "plural": {
-            "allPluralGenders": "napadamy"
+            "_PluralGenders": "napadamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "napadasz"
+            "_SingularGendersExcludingNeuter": "napadasz"
           },
           "plural": {
-            "allPluralGenders": "napadacie"
+            "_PluralGenders": "napadacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "napada"
+            "_SingularGenders": "napada"
           },
           "plural": {
-            "allPluralGenders": "napadają"
+            "_PluralGenders": "napadają"
           }
         }
       }

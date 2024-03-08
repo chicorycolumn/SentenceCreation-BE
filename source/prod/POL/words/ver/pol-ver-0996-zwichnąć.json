@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zwichnięto"
+            "_SingularGenders": "zwichnięto"
           },
           "plural": {
-            "allPluralGenders": "zwichnięto"
+            "_PluralGenders": "zwichnięto"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zwichnie się"
+            "_SingularGenders": "zwichnie się"
           },
           "plural": {
-            "allPluralGenders": "zwichnie się"
+            "_PluralGenders": "zwichnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "zwichnę"
+            "_SingularGendersExcludingNeuter": "zwichnę"
           },
           "plural": {
-            "allPluralGenders": "zwichniemy"
+            "_PluralGenders": "zwichniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "zwichniesz"
+            "_SingularGendersExcludingNeuter": "zwichniesz"
           },
           "plural": {
-            "allPluralGenders": "zwichniecie"
+            "_PluralGenders": "zwichniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zwichnie"
+            "_SingularGenders": "zwichnie"
           },
           "plural": {
-            "allPluralGenders": "zwichną"
+            "_PluralGenders": "zwichną"
           }
         }
       }

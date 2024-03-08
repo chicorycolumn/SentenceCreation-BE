@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "machnie się"
+            "_SingularGenders": "machnie się"
           },
           "plural": {
-            "allPluralGenders": "machnie się"
+            "_PluralGenders": "machnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "machnę"
+            "_SingularGendersExcludingNeuter": "machnę"
           },
           "plural": {
-            "allPluralGenders": "machniemy"
+            "_PluralGenders": "machniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "machniesz"
+            "_SingularGendersExcludingNeuter": "machniesz"
           },
           "plural": {
-            "allPluralGenders": "machniecie"
+            "_PluralGenders": "machniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "machnie"
+            "_SingularGenders": "machnie"
           },
           "plural": {
-            "allPluralGenders": "machną"
+            "_PluralGenders": "machną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "machnięto"
+            "_SingularGenders": "machnięto"
           },
           "plural": {
-            "allPluralGenders": "machnięto"
+            "_PluralGenders": "machnięto"
           }
         },
         "1per": {

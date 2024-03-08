@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "nakazywano"
+            "_SingularGenders": "nakazywano"
           },
           "plural": {
-            "allPluralGenders": "nakazywano"
+            "_PluralGenders": "nakazywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "nakazuje się"
+            "_SingularGenders": "nakazuje się"
           },
           "plural": {
-            "allPluralGenders": "nakazuje się"
+            "_PluralGenders": "nakazuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "nakazuję"
+            "_SingularGendersExcludingNeuter": "nakazuję"
           },
           "plural": {
-            "allPluralGenders": "nakazujemy"
+            "_PluralGenders": "nakazujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "nakazujesz"
+            "_SingularGendersExcludingNeuter": "nakazujesz"
           },
           "plural": {
-            "allPluralGenders": "nakazujecie"
+            "_PluralGenders": "nakazujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "nakazuje"
+            "_SingularGenders": "nakazuje"
           },
           "plural": {
-            "allPluralGenders": "nakazują"
+            "_PluralGenders": "nakazują"
           }
         }
       }

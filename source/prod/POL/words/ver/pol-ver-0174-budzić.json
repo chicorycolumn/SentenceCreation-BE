@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "budzono"
+            "_SingularGenders": "budzono"
           },
           "plural": {
-            "allPluralGenders": "budzono"
+            "_PluralGenders": "budzono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "budzi się"
+            "_SingularGenders": "budzi się"
           },
           "plural": {
-            "allPluralGenders": "budzi się"
+            "_PluralGenders": "budzi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "budzę"
+            "_SingularGendersExcludingNeuter": "budzę"
           },
           "plural": {
-            "allPluralGenders": "budzimy"
+            "_PluralGenders": "budzimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "budzisz"
+            "_SingularGendersExcludingNeuter": "budzisz"
           },
           "plural": {
-            "allPluralGenders": "budzicie"
+            "_PluralGenders": "budzicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "budzi"
+            "_SingularGenders": "budzi"
           },
           "plural": {
-            "allPluralGenders": "budzą"
+            "_PluralGenders": "budzą"
           }
         }
       }

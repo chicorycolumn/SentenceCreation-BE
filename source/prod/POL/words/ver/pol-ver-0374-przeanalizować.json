@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przeanalizuje się"
+            "_SingularGenders": "przeanalizuje się"
           },
           "plural": {
-            "allPluralGenders": "przeanalizuje się"
+            "_PluralGenders": "przeanalizuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przeanalizuję"
+            "_SingularGendersExcludingNeuter": "przeanalizuję"
           },
           "plural": {
-            "allPluralGenders": "przeanalizujemy"
+            "_PluralGenders": "przeanalizujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przeanalizujesz"
+            "_SingularGendersExcludingNeuter": "przeanalizujesz"
           },
           "plural": {
-            "allPluralGenders": "przeanalizujecie"
+            "_PluralGenders": "przeanalizujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przeanalizuje"
+            "_SingularGenders": "przeanalizuje"
           },
           "plural": {
-            "allPluralGenders": "przeanalizują"
+            "_PluralGenders": "przeanalizują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przeanalizowano"
+            "_SingularGenders": "przeanalizowano"
           },
           "plural": {
-            "allPluralGenders": "przeanalizowano"
+            "_PluralGenders": "przeanalizowano"
           }
         },
         "1per": {

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kierowano"
+            "_SingularGenders": "kierowano"
           },
           "plural": {
-            "allPluralGenders": "kierowano"
+            "_PluralGenders": "kierowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kieruje się"
+            "_SingularGenders": "kieruje się"
           },
           "plural": {
-            "allPluralGenders": "kieruje się"
+            "_PluralGenders": "kieruje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "kieruję"
+            "_SingularGendersExcludingNeuter": "kieruję"
           },
           "plural": {
-            "allPluralGenders": "kierujemy"
+            "_PluralGenders": "kierujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "kierujesz"
+            "_SingularGendersExcludingNeuter": "kierujesz"
           },
           "plural": {
-            "allPluralGenders": "kierujecie"
+            "_PluralGenders": "kierujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "kieruje"
+            "_SingularGenders": "kieruje"
           },
           "plural": {
-            "allPluralGenders": "kierują"
+            "_PluralGenders": "kierują"
           }
         }
       }

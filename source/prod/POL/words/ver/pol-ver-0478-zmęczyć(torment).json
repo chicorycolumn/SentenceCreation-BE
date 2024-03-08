@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zmęczy się"
+            "_SingularGenders": "zmęczy się"
           },
           "plural": {
-            "allPluralGenders": "zmęczy się"
+            "_PluralGenders": "zmęczy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zmęczę"
+            "_SingularGendersExcludingNeuter": "zmęczę"
           },
           "plural": {
-            "allPluralGenders": "zmęczymy"
+            "_PluralGenders": "zmęczymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zmęczysz"
+            "_SingularGendersExcludingNeuter": "zmęczysz"
           },
           "plural": {
-            "allPluralGenders": "zmęczycie"
+            "_PluralGenders": "zmęczycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zmęczy"
+            "_SingularGenders": "zmęczy"
           },
           "plural": {
-            "allPluralGenders": "zmęczą"
+            "_PluralGenders": "zmęczą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zmęczono"
+            "_SingularGenders": "zmęczono"
           },
           "plural": {
-            "allPluralGenders": "zmęczono"
+            "_PluralGenders": "zmęczono"
           }
         },
         "1per": {

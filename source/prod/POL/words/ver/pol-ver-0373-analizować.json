@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "analizowano"
+            "_SingularGenders": "analizowano"
           },
           "plural": {
-            "allPluralGenders": "analizowano"
+            "_PluralGenders": "analizowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "analizuje się"
+            "_SingularGenders": "analizuje się"
           },
           "plural": {
-            "allPluralGenders": "analizuje się"
+            "_PluralGenders": "analizuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "analizuję"
+            "_SingularGendersExcludingNeuter": "analizuję"
           },
           "plural": {
-            "allPluralGenders": "analizujemy"
+            "_PluralGenders": "analizujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "analizujesz"
+            "_SingularGendersExcludingNeuter": "analizujesz"
           },
           "plural": {
-            "allPluralGenders": "analizujecie"
+            "_PluralGenders": "analizujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "analizuje"
+            "_SingularGenders": "analizuje"
           },
           "plural": {
-            "allPluralGenders": "analizują"
+            "_PluralGenders": "analizują"
           }
         }
       }

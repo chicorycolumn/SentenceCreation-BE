@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wyłączano"
+            "_SingularGenders": "wyłączano"
           },
           "plural": {
-            "allPluralGenders": "wyłączano"
+            "_PluralGenders": "wyłączano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wyłącza się"
+            "_SingularGenders": "wyłącza się"
           },
           "plural": {
-            "allPluralGenders": "wyłącza się"
+            "_PluralGenders": "wyłącza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "wyłączam"
+            "_SingularGendersExcludingNeuter": "wyłączam"
           },
           "plural": {
-            "allPluralGenders": "wyłączamy"
+            "_PluralGenders": "wyłączamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "wyłączasz"
+            "_SingularGendersExcludingNeuter": "wyłączasz"
           },
           "plural": {
-            "allPluralGenders": "wyłączacie"
+            "_PluralGenders": "wyłączacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "wyłącza"
+            "_SingularGenders": "wyłącza"
           },
           "plural": {
-            "allPluralGenders": "wyłączają"
+            "_PluralGenders": "wyłączają"
           }
         }
       }

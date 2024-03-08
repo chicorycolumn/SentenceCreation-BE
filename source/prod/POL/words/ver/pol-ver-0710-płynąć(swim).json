@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "płynięto"
+            "_SingularGenders": "płynięto"
           },
           "plural": {
-            "allPluralGenders": "płynięto"
+            "_PluralGenders": "płynięto"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "płynie się"
+            "_SingularGenders": "płynie się"
           },
           "plural": {
-            "allPluralGenders": "płynie się"
+            "_PluralGenders": "płynie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "płynę"
+            "_SingularGendersExcludingNeuter": "płynę"
           },
           "plural": {
-            "allPluralGenders": "płyniemy"
+            "_PluralGenders": "płyniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "płyniesz"
+            "_SingularGendersExcludingNeuter": "płyniesz"
           },
           "plural": {
-            "allPluralGenders": "płyniecie"
+            "_PluralGenders": "płyniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "płynie"
+            "_SingularGenders": "płynie"
           },
           "plural": {
-            "allPluralGenders": "płyną"
+            "_PluralGenders": "płyną"
           }
         }
       }

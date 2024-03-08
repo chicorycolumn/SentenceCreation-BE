@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "rozważano"
+            "_SingularGenders": "rozważano"
           },
           "plural": {
-            "allPluralGenders": "rozważano"
+            "_PluralGenders": "rozważano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "rozważa się"
+            "_SingularGenders": "rozważa się"
           },
           "plural": {
-            "allPluralGenders": "rozważa się"
+            "_PluralGenders": "rozważa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "rozważam"
+            "_SingularGendersExcludingNeuter": "rozważam"
           },
           "plural": {
-            "allPluralGenders": "rozważamy"
+            "_PluralGenders": "rozważamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "rozważasz"
+            "_SingularGendersExcludingNeuter": "rozważasz"
           },
           "plural": {
-            "allPluralGenders": "rozważacie"
+            "_PluralGenders": "rozważacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "rozważa"
+            "_SingularGenders": "rozważa"
           },
           "plural": {
-            "allPluralGenders": "rozważają"
+            "_PluralGenders": "rozważają"
           }
         }
       }

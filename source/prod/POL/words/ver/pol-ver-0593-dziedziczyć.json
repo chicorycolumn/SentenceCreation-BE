@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dziedziczono"
+            "_SingularGenders": "dziedziczono"
           },
           "plural": {
-            "allPluralGenders": "dziedziczono"
+            "_PluralGenders": "dziedziczono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dziedziczy się"
+            "_SingularGenders": "dziedziczy się"
           },
           "plural": {
-            "allPluralGenders": "dziedziczy się"
+            "_PluralGenders": "dziedziczy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dziedziczę"
+            "_SingularGendersExcludingNeuter": "dziedziczę"
           },
           "plural": {
-            "allPluralGenders": "dziedziczymy"
+            "_PluralGenders": "dziedziczymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dziedziczysz"
+            "_SingularGendersExcludingNeuter": "dziedziczysz"
           },
           "plural": {
-            "allPluralGenders": "dziedziczycie"
+            "_PluralGenders": "dziedziczycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dziedziczy"
+            "_SingularGenders": "dziedziczy"
           },
           "plural": {
-            "allPluralGenders": "dziedziczą"
+            "_PluralGenders": "dziedziczą"
           }
         }
       }

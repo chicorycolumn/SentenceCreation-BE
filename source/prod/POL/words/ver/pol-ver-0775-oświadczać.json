@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oświadczano"
+            "_SingularGenders": "oświadczano"
           },
           "plural": {
-            "allPluralGenders": "oświadczano"
+            "_PluralGenders": "oświadczano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oświadcza się"
+            "_SingularGenders": "oświadcza się"
           },
           "plural": {
-            "allPluralGenders": "oświadcza się"
+            "_PluralGenders": "oświadcza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "oświadczam"
+            "_SingularGendersExcludingNeuter": "oświadczam"
           },
           "plural": {
-            "allPluralGenders": "oświadczamy"
+            "_PluralGenders": "oświadczamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "oświadczasz"
+            "_SingularGendersExcludingNeuter": "oświadczasz"
           },
           "plural": {
-            "allPluralGenders": "oświadczacie"
+            "_PluralGenders": "oświadczacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "oświadcza"
+            "_SingularGenders": "oświadcza"
           },
           "plural": {
-            "allPluralGenders": "oświadczają"
+            "_PluralGenders": "oświadczają"
           }
         }
       }

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zje się"
+            "_SingularGenders": "zje się"
           },
           "plural": {
-            "allPluralGenders": "zje się"
+            "_PluralGenders": "zje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zjem"
+            "_SingularGendersExcludingNeuter": "zjem"
           },
           "plural": {
-            "allPluralGenders": "zjemy"
+            "_PluralGenders": "zjemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zjesz"
+            "_SingularGendersExcludingNeuter": "zjesz"
           },
           "plural": {
-            "allPluralGenders": "zjecie"
+            "_PluralGenders": "zjecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zje"
+            "_SingularGenders": "zje"
           },
           "plural": {
-            "allPluralGenders": "zjedzą"
+            "_PluralGenders": "zjedzą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zjedzono"
+            "_SingularGenders": "zjedzono"
           },
           "plural": {
-            "allPluralGenders": "zjedzono"
+            "_PluralGenders": "zjedzono"
           }
         },
         "1per": {

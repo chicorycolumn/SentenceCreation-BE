@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "machano"
+            "_SingularGenders": "machano"
           },
           "plural": {
-            "allPluralGenders": "machano"
+            "_PluralGenders": "machano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "macha się"
+            "_SingularGenders": "macha się"
           },
           "plural": {
-            "allPluralGenders": "macha się"
+            "_PluralGenders": "macha się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "macham"
+            "_SingularGendersExcludingNeuter": "macham"
           },
           "plural": {
-            "allPluralGenders": "machamy"
+            "_PluralGenders": "machamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "machasz"
+            "_SingularGendersExcludingNeuter": "machasz"
           },
           "plural": {
-            "allPluralGenders": "machacie"
+            "_PluralGenders": "machacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "macha"
+            "_SingularGenders": "macha"
           },
           "plural": {
-            "allPluralGenders": "machają"
+            "_PluralGenders": "machają"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pilnowano"
+            "_SingularGenders": "pilnowano"
           },
           "plural": {
-            "allPluralGenders": "pilnowano"
+            "_PluralGenders": "pilnowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pilnuje się"
+            "_SingularGenders": "pilnuje się"
           },
           "plural": {
-            "allPluralGenders": "pilnuje się"
+            "_PluralGenders": "pilnuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pilnuję"
+            "_SingularGendersExcludingNeuter": "pilnuję"
           },
           "plural": {
-            "allPluralGenders": "pilnujemy"
+            "_PluralGenders": "pilnujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pilnujesz"
+            "_SingularGendersExcludingNeuter": "pilnujesz"
           },
           "plural": {
-            "allPluralGenders": "pilnujecie"
+            "_PluralGenders": "pilnujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pilnuje"
+            "_SingularGenders": "pilnuje"
           },
           "plural": {
-            "allPluralGenders": "pilnują"
+            "_PluralGenders": "pilnują"
           }
         }
       }

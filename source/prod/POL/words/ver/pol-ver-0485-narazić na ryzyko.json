@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "narazi się na ryzyko"
+            "_SingularGenders": "narazi się na ryzyko"
           },
           "plural": {
-            "allPluralGenders": "narazi się na ryzyko"
+            "_PluralGenders": "narazi się na ryzyko"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "narażę na ryzyko"
+            "_SingularGendersExcludingNeuter": "narażę na ryzyko"
           },
           "plural": {
-            "allPluralGenders": "narazimy na ryzyko"
+            "_PluralGenders": "narazimy na ryzyko"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "narazisz na ryzyko"
+            "_SingularGendersExcludingNeuter": "narazisz na ryzyko"
           },
           "plural": {
-            "allPluralGenders": "narazicie na ryzyko"
+            "_PluralGenders": "narazicie na ryzyko"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "narazi na ryzyko"
+            "_SingularGenders": "narazi na ryzyko"
           },
           "plural": {
-            "allPluralGenders": "narażą na ryzyko"
+            "_PluralGenders": "narażą na ryzyko"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "narażono na ryzyko"
+            "_SingularGenders": "narażono na ryzyko"
           },
           "plural": {
-            "allPluralGenders": "narażono na ryzyko"
+            "_PluralGenders": "narażono na ryzyko"
           }
         },
         "1per": {

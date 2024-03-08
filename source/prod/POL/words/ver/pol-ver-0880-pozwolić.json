@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pozwoli się"
+            "_SingularGenders": "pozwoli się"
           },
           "plural": {
-            "allPluralGenders": "pozwoli się"
+            "_PluralGenders": "pozwoli się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pozwolę"
+            "_SingularGendersExcludingNeuter": "pozwolę"
           },
           "plural": {
-            "allPluralGenders": "pozwolimy"
+            "_PluralGenders": "pozwolimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pozwolisz"
+            "_SingularGendersExcludingNeuter": "pozwolisz"
           },
           "plural": {
-            "allPluralGenders": "pozwolicie"
+            "_PluralGenders": "pozwolicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pozwoli"
+            "_SingularGenders": "pozwoli"
           },
           "plural": {
-            "allPluralGenders": "pozwolą"
+            "_PluralGenders": "pozwolą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pozwolono"
+            "_SingularGenders": "pozwolono"
           },
           "plural": {
-            "allPluralGenders": "pozwolono"
+            "_PluralGenders": "pozwolono"
           }
         },
         "1per": {

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "schroni się"
+            "_SingularGenders": "schroni się"
           },
           "plural": {
-            "allPluralGenders": "schroni się"
+            "_PluralGenders": "schroni się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "schronię"
+            "_SingularGendersExcludingNeuter": "schronię"
           },
           "plural": {
-            "allPluralGenders": "schronimy"
+            "_PluralGenders": "schronimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "schronisz"
+            "_SingularGendersExcludingNeuter": "schronisz"
           },
           "plural": {
-            "allPluralGenders": "schronicie"
+            "_PluralGenders": "schronicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "schroni"
+            "_SingularGenders": "schroni"
           },
           "plural": {
-            "allPluralGenders": "schronią"
+            "_PluralGenders": "schronią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "schroniono"
+            "_SingularGenders": "schroniono"
           },
           "plural": {
-            "allPluralGenders": "schroniono"
+            "_PluralGenders": "schroniono"
           }
         },
         "1per": {

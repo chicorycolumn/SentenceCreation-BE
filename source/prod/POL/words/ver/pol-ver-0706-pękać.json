@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pękano"
+            "_SingularGenders": "pękano"
           },
           "plural": {
-            "allPluralGenders": "pękano"
+            "_PluralGenders": "pękano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pęka się"
+            "_SingularGenders": "pęka się"
           },
           "plural": {
-            "allPluralGenders": "pęka się"
+            "_PluralGenders": "pęka się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pękam"
+            "_SingularGendersExcludingNeuter": "pękam"
           },
           "plural": {
-            "allPluralGenders": "pękamy"
+            "_PluralGenders": "pękamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pękasz"
+            "_SingularGendersExcludingNeuter": "pękasz"
           },
           "plural": {
-            "allPluralGenders": "pękacie"
+            "_PluralGenders": "pękacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pęka"
+            "_SingularGenders": "pęka"
           },
           "plural": {
-            "allPluralGenders": "pękają"
+            "_PluralGenders": "pękają"
           }
         }
       }

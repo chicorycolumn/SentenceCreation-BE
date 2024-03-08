@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "naśladowano"
+            "_SingularGenders": "naśladowano"
           },
           "plural": {
-            "allPluralGenders": "naśladowano"
+            "_PluralGenders": "naśladowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "naśladuje się"
+            "_SingularGenders": "naśladuje się"
           },
           "plural": {
-            "allPluralGenders": "naśladuje się"
+            "_PluralGenders": "naśladuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "naśladuję"
+            "_SingularGendersExcludingNeuter": "naśladuję"
           },
           "plural": {
-            "allPluralGenders": "naśladujemy"
+            "_PluralGenders": "naśladujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "naśladujesz"
+            "_SingularGendersExcludingNeuter": "naśladujesz"
           },
           "plural": {
-            "allPluralGenders": "naśladujecie"
+            "_PluralGenders": "naśladujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "naśladuje"
+            "_SingularGenders": "naśladuje"
           },
           "plural": {
-            "allPluralGenders": "naśladują"
+            "_PluralGenders": "naśladują"
           }
         }
       }

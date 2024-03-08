@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dorośnie się"
+            "_SingularGenders": "dorośnie się"
           },
           "plural": {
-            "allPluralGenders": "dorośnie się"
+            "_PluralGenders": "dorośnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dorosnę"
+            "_SingularGendersExcludingNeuter": "dorosnę"
           },
           "plural": {
-            "allPluralGenders": "dorośniemy"
+            "_PluralGenders": "dorośniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dorośniesz"
+            "_SingularGendersExcludingNeuter": "dorośniesz"
           },
           "plural": {
-            "allPluralGenders": "dorośniecie"
+            "_PluralGenders": "dorośniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dorośnie"
+            "_SingularGenders": "dorośnie"
           },
           "plural": {
-            "allPluralGenders": "dorosną"
+            "_PluralGenders": "dorosną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dorośnięto"
+            "_SingularGenders": "dorośnięto"
           },
           "plural": {
-            "allPluralGenders": "dorośnięto"
+            "_PluralGenders": "dorośnięto"
           }
         },
         "1per": {

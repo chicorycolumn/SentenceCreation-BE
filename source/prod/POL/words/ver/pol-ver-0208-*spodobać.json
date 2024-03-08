@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "spodoba się"
+            "_SingularGenders": "spodoba się"
           },
           "plural": {
-            "allPluralGenders": "spodoba się"
+            "_PluralGenders": "spodoba się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "spodobam"
+            "_SingularGendersExcludingNeuter": "spodobam"
           },
           "plural": {
-            "allPluralGenders": "spodobamy"
+            "_PluralGenders": "spodobamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "spodobasz"
+            "_SingularGendersExcludingNeuter": "spodobasz"
           },
           "plural": {
-            "allPluralGenders": "spodobacie"
+            "_PluralGenders": "spodobacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "spodoba"
+            "_SingularGenders": "spodoba"
           },
           "plural": {
-            "allPluralGenders": "spodobają"
+            "_PluralGenders": "spodobają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "spodobano"
+            "_SingularGenders": "spodobano"
           },
           "plural": {
-            "allPluralGenders": "spodobano"
+            "_PluralGenders": "spodobano"
           }
         },
         "1per": {

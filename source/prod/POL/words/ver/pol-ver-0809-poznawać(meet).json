@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poznawano"
+            "_SingularGenders": "poznawano"
           },
           "plural": {
-            "allPluralGenders": "poznawano"
+            "_PluralGenders": "poznawano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poznaje się"
+            "_SingularGenders": "poznaje się"
           },
           "plural": {
-            "allPluralGenders": "poznaje się"
+            "_PluralGenders": "poznaje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "poznaję"
+            "_SingularGendersExcludingNeuter": "poznaję"
           },
           "plural": {
-            "allPluralGenders": "poznajemy"
+            "_PluralGenders": "poznajemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "poznajesz"
+            "_SingularGendersExcludingNeuter": "poznajesz"
           },
           "plural": {
-            "allPluralGenders": "poznajecie"
+            "_PluralGenders": "poznajecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "poznaje"
+            "_SingularGenders": "poznaje"
           },
           "plural": {
-            "allPluralGenders": "poznają"
+            "_PluralGenders": "poznają"
           }
         }
       }

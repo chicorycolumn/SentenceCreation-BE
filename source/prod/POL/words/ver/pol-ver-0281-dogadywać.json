@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dogadywano"
+            "_SingularGenders": "dogadywano"
           },
           "plural": {
-            "allPluralGenders": "dogadywano"
+            "_PluralGenders": "dogadywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dogaduje się"
+            "_SingularGenders": "dogaduje się"
           },
           "plural": {
-            "allPluralGenders": "dogaduje się"
+            "_PluralGenders": "dogaduje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dogaduję"
+            "_SingularGendersExcludingNeuter": "dogaduję"
           },
           "plural": {
-            "allPluralGenders": "dogadujemy"
+            "_PluralGenders": "dogadujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dogadujesz"
+            "_SingularGendersExcludingNeuter": "dogadujesz"
           },
           "plural": {
-            "allPluralGenders": "dogadujecie"
+            "_PluralGenders": "dogadujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dogaduje"
+            "_SingularGenders": "dogaduje"
           },
           "plural": {
-            "allPluralGenders": "dogadują"
+            "_PluralGenders": "dogadują"
           }
         }
       }

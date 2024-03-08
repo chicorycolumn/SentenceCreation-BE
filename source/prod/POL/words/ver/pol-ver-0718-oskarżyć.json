@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oskarży się"
+            "_SingularGenders": "oskarży się"
           },
           "plural": {
-            "allPluralGenders": "oskarży się"
+            "_PluralGenders": "oskarży się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "oskarżę"
+            "_SingularGendersExcludingNeuter": "oskarżę"
           },
           "plural": {
-            "allPluralGenders": "oskarżymy"
+            "_PluralGenders": "oskarżymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "oskarżysz"
+            "_SingularGendersExcludingNeuter": "oskarżysz"
           },
           "plural": {
-            "allPluralGenders": "oskarżycie"
+            "_PluralGenders": "oskarżycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "oskarży"
+            "_SingularGenders": "oskarży"
           },
           "plural": {
-            "allPluralGenders": "oskarżą"
+            "_PluralGenders": "oskarżą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oskarżono"
+            "_SingularGenders": "oskarżono"
           },
           "plural": {
-            "allPluralGenders": "oskarżono"
+            "_PluralGenders": "oskarżono"
           }
         },
         "1per": {

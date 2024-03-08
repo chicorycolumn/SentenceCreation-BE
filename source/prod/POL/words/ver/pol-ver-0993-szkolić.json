@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "szkolono"
+            "_SingularGenders": "szkolono"
           },
           "plural": {
-            "allPluralGenders": "szkolono"
+            "_PluralGenders": "szkolono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "szkoli się"
+            "_SingularGenders": "szkoli się"
           },
           "plural": {
-            "allPluralGenders": "szkoli się"
+            "_PluralGenders": "szkoli się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "szkolę"
+            "_SingularGendersExcludingNeuter": "szkolę"
           },
           "plural": {
-            "allPluralGenders": "szkolimy"
+            "_PluralGenders": "szkolimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "szkolisz"
+            "_SingularGendersExcludingNeuter": "szkolisz"
           },
           "plural": {
-            "allPluralGenders": "szkolicie"
+            "_PluralGenders": "szkolicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "szkoli"
+            "_SingularGenders": "szkoli"
           },
           "plural": {
-            "allPluralGenders": "szkolą"
+            "_PluralGenders": "szkolą"
           }
         }
       }

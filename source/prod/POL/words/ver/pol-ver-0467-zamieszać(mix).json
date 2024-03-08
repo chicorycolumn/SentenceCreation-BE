@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zamiesza się"
+            "_SingularGenders": "zamiesza się"
           },
           "plural": {
-            "allPluralGenders": "zamiesza się"
+            "_PluralGenders": "zamiesza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zamieszam"
+            "_SingularGendersExcludingNeuter": "zamieszam"
           },
           "plural": {
-            "allPluralGenders": "zamieszamy"
+            "_PluralGenders": "zamieszamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zamieszasz"
+            "_SingularGendersExcludingNeuter": "zamieszasz"
           },
           "plural": {
-            "allPluralGenders": "zamieszacie"
+            "_PluralGenders": "zamieszacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zamiesza"
+            "_SingularGenders": "zamiesza"
           },
           "plural": {
-            "allPluralGenders": "zamieszają"
+            "_PluralGenders": "zamieszają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zamieszano"
+            "_SingularGenders": "zamieszano"
           },
           "plural": {
-            "allPluralGenders": "zamieszano"
+            "_PluralGenders": "zamieszano"
           }
         },
         "1per": {

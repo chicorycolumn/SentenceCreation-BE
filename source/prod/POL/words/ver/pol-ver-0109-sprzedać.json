@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "sprzeda się"
+            "_SingularGenders": "sprzeda się"
           },
           "plural": {
-            "allPluralGenders": "sprzeda się"
+            "_PluralGenders": "sprzeda się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "sprzedam"
+            "_SingularGendersExcludingNeuter": "sprzedam"
           },
           "plural": {
-            "allPluralGenders": "sprzedamy"
+            "_PluralGenders": "sprzedamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "sprzedasz"
+            "_SingularGendersExcludingNeuter": "sprzedasz"
           },
           "plural": {
-            "allPluralGenders": "sprzedacie"
+            "_PluralGenders": "sprzedacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "sprzeda"
+            "_SingularGenders": "sprzeda"
           },
           "plural": {
-            "allPluralGenders": "sprzedadzą"
+            "_PluralGenders": "sprzedadzą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "sprzedano"
+            "_SingularGenders": "sprzedano"
           },
           "plural": {
-            "allPluralGenders": "sprzedano"
+            "_PluralGenders": "sprzedano"
           }
         },
         "1per": {

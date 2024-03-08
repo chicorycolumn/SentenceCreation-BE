@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poślubiano"
+            "_SingularGenders": "poślubiano"
           },
           "plural": {
-            "allPluralGenders": "poślubiano"
+            "_PluralGenders": "poślubiano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poślubia się"
+            "_SingularGenders": "poślubia się"
           },
           "plural": {
-            "allPluralGenders": "poślubia się"
+            "_PluralGenders": "poślubia się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "poślubiam"
+            "_SingularGendersExcludingNeuter": "poślubiam"
           },
           "plural": {
-            "allPluralGenders": "poślubiamy"
+            "_PluralGenders": "poślubiamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "poślubiasz"
+            "_SingularGendersExcludingNeuter": "poślubiasz"
           },
           "plural": {
-            "allPluralGenders": "poślubiacie"
+            "_PluralGenders": "poślubiacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "poślubia"
+            "_SingularGenders": "poślubia"
           },
           "plural": {
-            "allPluralGenders": "poślubiają"
+            "_PluralGenders": "poślubiają"
           }
         }
       }

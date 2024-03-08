@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "docierano"
+            "_SingularGenders": "docierano"
           },
           "plural": {
-            "allPluralGenders": "docierano"
+            "_PluralGenders": "docierano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dociera się"
+            "_SingularGenders": "dociera się"
           },
           "plural": {
-            "allPluralGenders": "dociera się"
+            "_PluralGenders": "dociera się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "docieram"
+            "_SingularGendersExcludingNeuter": "docieram"
           },
           "plural": {
-            "allPluralGenders": "docieramy"
+            "_PluralGenders": "docieramy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "docierasz"
+            "_SingularGendersExcludingNeuter": "docierasz"
           },
           "plural": {
-            "allPluralGenders": "docieracie"
+            "_PluralGenders": "docieracie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dociera"
+            "_SingularGenders": "dociera"
           },
           "plural": {
-            "allPluralGenders": "docierają"
+            "_PluralGenders": "docierają"
           }
         }
       }

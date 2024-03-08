@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "owinie się"
+            "_SingularGenders": "owinie się"
           },
           "plural": {
-            "allPluralGenders": "owinie się"
+            "_PluralGenders": "owinie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "owinę"
+            "_SingularGendersExcludingNeuter": "owinę"
           },
           "plural": {
-            "allPluralGenders": "owiniemy"
+            "_PluralGenders": "owiniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "owiniesz"
+            "_SingularGendersExcludingNeuter": "owiniesz"
           },
           "plural": {
-            "allPluralGenders": "owiniecie"
+            "_PluralGenders": "owiniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "owinie"
+            "_SingularGenders": "owinie"
           },
           "plural": {
-            "allPluralGenders": "owiną"
+            "_PluralGenders": "owiną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "owinięto"
+            "_SingularGenders": "owinięto"
           },
           "plural": {
-            "allPluralGenders": "owinięto"
+            "_PluralGenders": "owinięto"
           }
         },
         "1per": {

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "cierpiano"
+            "_SingularGenders": "cierpiano"
           },
           "plural": {
-            "allPluralGenders": "cierpiano"
+            "_PluralGenders": "cierpiano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "cierpi się"
+            "_SingularGenders": "cierpi się"
           },
           "plural": {
-            "allPluralGenders": "cierpi się"
+            "_PluralGenders": "cierpi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "cierpię"
+            "_SingularGendersExcludingNeuter": "cierpię"
           },
           "plural": {
-            "allPluralGenders": "cierpimy"
+            "_PluralGenders": "cierpimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "cierpisz"
+            "_SingularGendersExcludingNeuter": "cierpisz"
           },
           "plural": {
-            "allPluralGenders": "cierpicie"
+            "_PluralGenders": "cierpicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "cierpi"
+            "_SingularGenders": "cierpi"
           },
           "plural": {
-            "allPluralGenders": "cierpią"
+            "_PluralGenders": "cierpią"
           }
         }
       }

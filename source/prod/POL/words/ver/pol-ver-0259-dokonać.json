@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dokona się"
+            "_SingularGenders": "dokona się"
           },
           "plural": {
-            "allPluralGenders": "dokona się"
+            "_PluralGenders": "dokona się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dokonam"
+            "_SingularGendersExcludingNeuter": "dokonam"
           },
           "plural": {
-            "allPluralGenders": "dokonamy"
+            "_PluralGenders": "dokonamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dokonasz"
+            "_SingularGendersExcludingNeuter": "dokonasz"
           },
           "plural": {
-            "allPluralGenders": "dokonacie"
+            "_PluralGenders": "dokonacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dokona"
+            "_SingularGenders": "dokona"
           },
           "plural": {
-            "allPluralGenders": "dokonają"
+            "_PluralGenders": "dokonają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dokonano"
+            "_SingularGenders": "dokonano"
           },
           "plural": {
-            "allPluralGenders": "dokonano"
+            "_PluralGenders": "dokonano"
           }
         },
         "1per": {

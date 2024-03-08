@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ciskano"
+            "_SingularGenders": "ciskano"
           },
           "plural": {
-            "allPluralGenders": "ciskano"
+            "_PluralGenders": "ciskano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ciska się"
+            "_SingularGenders": "ciska się"
           },
           "plural": {
-            "allPluralGenders": "ciska się"
+            "_PluralGenders": "ciska się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "ciskam"
+            "_SingularGendersExcludingNeuter": "ciskam"
           },
           "plural": {
-            "allPluralGenders": "ciskamy"
+            "_PluralGenders": "ciskamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "ciskasz"
+            "_SingularGendersExcludingNeuter": "ciskasz"
           },
           "plural": {
-            "allPluralGenders": "ciskacie"
+            "_PluralGenders": "ciskacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "ciska"
+            "_SingularGenders": "ciska"
           },
           "plural": {
-            "allPluralGenders": "ciskają"
+            "_PluralGenders": "ciskają"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pojmowano"
+            "_SingularGenders": "pojmowano"
           },
           "plural": {
-            "allPluralGenders": "pojmowano"
+            "_PluralGenders": "pojmowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pojmuje się"
+            "_SingularGenders": "pojmuje się"
           },
           "plural": {
-            "allPluralGenders": "pojmuje się"
+            "_PluralGenders": "pojmuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pojmuję"
+            "_SingularGendersExcludingNeuter": "pojmuję"
           },
           "plural": {
-            "allPluralGenders": "pojmujemy"
+            "_PluralGenders": "pojmujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pojmujesz"
+            "_SingularGendersExcludingNeuter": "pojmujesz"
           },
           "plural": {
-            "allPluralGenders": "pojmujecie"
+            "_PluralGenders": "pojmujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pojmuje"
+            "_SingularGenders": "pojmuje"
           },
           "plural": {
-            "allPluralGenders": "pojmują"
+            "_PluralGenders": "pojmują"
           }
         }
       }

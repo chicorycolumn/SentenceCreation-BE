@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "tolerować",
+    "verbalNoun": "tolerowanie",
+    "activeAdjectival": "tolerujący",
+    "passiveAdjectival": "tolerowany",
+    "contemporaryAdverbial": "tolerując",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "toleruj",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "_SingularGenders": "tolerowano"
+          },
+          "plural": {
+            "_PluralGenders": "tolerowano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "tolerowałem",
+            "f": "tolerowałam"
+          },
+          "plural": {
+            "virile": "tolerowaliśmy",
+            "nonvirile": "tolerowałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "tolerowałeś",
+            "f": "tolerowałaś"
+          },
+          "plural": {
+            "virile": "tolerowaliście",
+            "nonvirile": "tolerowałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "tolerował",
+            "f": "tolerowała",
+            "n": "tolerowało"
+          },
+          "plural": {
+            "virile": "tolerowali",
+            "nonvirile": "tolerowały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "_SingularGenders": "toleruje się"
+          },
+          "plural": {
+            "_PluralGenders": "toleruje się"
+          }
+        },
+        "1per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "toleruję"
+          },
+          "plural": {
+            "_PluralGenders": "tolerujemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "tolerujesz"
+          },
+          "plural": {
+            "_PluralGenders": "tolerujecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "_SingularGenders": "toleruje"
+          },
+          "plural": {
+            "_PluralGenders": "tolerują"
+          }
+        }
+      }
+    }
+  }
+}

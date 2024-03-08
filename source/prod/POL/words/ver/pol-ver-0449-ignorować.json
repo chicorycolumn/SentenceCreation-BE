@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ignorowano"
+            "_SingularGenders": "ignorowano"
           },
           "plural": {
-            "allPluralGenders": "ignorowano"
+            "_PluralGenders": "ignorowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ignoruje się"
+            "_SingularGenders": "ignoruje się"
           },
           "plural": {
-            "allPluralGenders": "ignoruje się"
+            "_PluralGenders": "ignoruje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "ignoruję"
+            "_SingularGendersExcludingNeuter": "ignoruję"
           },
           "plural": {
-            "allPluralGenders": "ignorujemy"
+            "_PluralGenders": "ignorujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "ignorujesz"
+            "_SingularGendersExcludingNeuter": "ignorujesz"
           },
           "plural": {
-            "allPluralGenders": "ignorujecie"
+            "_PluralGenders": "ignorujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "ignoruje"
+            "_SingularGenders": "ignoruje"
           },
           "plural": {
-            "allPluralGenders": "ignorują"
+            "_PluralGenders": "ignorują"
           }
         }
       }

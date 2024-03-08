@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wyszkoli się"
+            "_SingularGenders": "wyszkoli się"
           },
           "plural": {
-            "allPluralGenders": "wyszkoli się"
+            "_PluralGenders": "wyszkoli się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "wyszkolę"
+            "_SingularGendersExcludingNeuter": "wyszkolę"
           },
           "plural": {
-            "allPluralGenders": "wyszkolimy"
+            "_PluralGenders": "wyszkolimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGendersExcludingNeuter": "wyszkolisz"
+            "_SingularGendersExcludingNeuter": "wyszkolisz"
           },
           "plural": {
-            "allPluralGenders": "wyszkolicie"
+            "_PluralGenders": "wyszkolicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "wyszkoli"
+            "_SingularGenders": "wyszkoli"
           },
           "plural": {
-            "allPluralGenders": "wyszkolą"
+            "_PluralGenders": "wyszkolą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wyszkolono"
+            "_SingularGenders": "wyszkolono"
           },
           "plural": {
-            "allPluralGenders": "wyszkolono"
+            "_PluralGenders": "wyszkolono"
           }
         },
         "1per": {

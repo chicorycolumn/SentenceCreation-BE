@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "gadano"
+            "_SingularGenders": "gadano"
           },
           "plural": {
-            "allPluralGenders": "gadano"
+            "_PluralGenders": "gadano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "gada się"
+            "_SingularGenders": "gada się"
           },
           "plural": {
-            "allPluralGenders": "gada się"
+            "_PluralGenders": "gada się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "gadam"
+            "_SingularGendersExcludingNeuter": "gadam"
           },
           "plural": {
-            "allPluralGenders": "gadamy"
+            "_PluralGenders": "gadamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "gadasz"
+            "_SingularGendersExcludingNeuter": "gadasz"
           },
           "plural": {
-            "allPluralGenders": "gadacie"
+            "_PluralGenders": "gadacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "gada"
+            "_SingularGenders": "gada"
           },
           "plural": {
-            "allPluralGenders": "gadają"
+            "_PluralGenders": "gadają"
           }
         }
       }

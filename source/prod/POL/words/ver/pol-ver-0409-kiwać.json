@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kiwano"
+            "_SingularGenders": "kiwano"
           },
           "plural": {
-            "allPluralGenders": "kiwano"
+            "_PluralGenders": "kiwano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kiwa się"
+            "_SingularGenders": "kiwa się"
           },
           "plural": {
-            "allPluralGenders": "kiwa się"
+            "_PluralGenders": "kiwa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "kiwam"
+            "_SingularGendersExcludingNeuter": "kiwam"
           },
           "plural": {
-            "allPluralGenders": "kiwamy"
+            "_PluralGenders": "kiwamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "kiwasz"
+            "_SingularGendersExcludingNeuter": "kiwasz"
           },
           "plural": {
-            "allPluralGenders": "kiwacie"
+            "_PluralGenders": "kiwacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "kiwa"
+            "_SingularGenders": "kiwa"
           },
           "plural": {
-            "allPluralGenders": "kiwają"
+            "_PluralGenders": "kiwają"
           }
         }
       }

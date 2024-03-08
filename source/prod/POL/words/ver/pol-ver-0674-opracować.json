@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "opracuje się"
+            "_SingularGenders": "opracuje się"
           },
           "plural": {
-            "allPluralGenders": "opracuje się"
+            "_PluralGenders": "opracuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "opracuję"
+            "_SingularGendersExcludingNeuter": "opracuję"
           },
           "plural": {
-            "allPluralGenders": "opracujemy"
+            "_PluralGenders": "opracujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "opracujesz"
+            "_SingularGendersExcludingNeuter": "opracujesz"
           },
           "plural": {
-            "allPluralGenders": "opracujecie"
+            "_PluralGenders": "opracujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "opracuje"
+            "_SingularGenders": "opracuje"
           },
           "plural": {
-            "allPluralGenders": "opracują"
+            "_PluralGenders": "opracują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "opracowano"
+            "_SingularGenders": "opracowano"
           },
           "plural": {
-            "allPluralGenders": "opracowano"
+            "_PluralGenders": "opracowano"
           }
         },
         "1per": {

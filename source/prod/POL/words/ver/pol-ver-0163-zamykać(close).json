@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zamykano"
+            "_SingularGenders": "zamykano"
           },
           "plural": {
-            "allPluralGenders": "zamykano"
+            "_PluralGenders": "zamykano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zamyka się"
+            "_SingularGenders": "zamyka się"
           },
           "plural": {
-            "allPluralGenders": "zamyka się"
+            "_PluralGenders": "zamyka się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zamykam"
+            "_SingularGendersExcludingNeuter": "zamykam"
           },
           "plural": {
-            "allPluralGenders": "zamykamy"
+            "_PluralGenders": "zamykamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zamykasz"
+            "_SingularGendersExcludingNeuter": "zamykasz"
           },
           "plural": {
-            "allPluralGenders": "zamykacie"
+            "_PluralGenders": "zamykacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zamyka"
+            "_SingularGenders": "zamyka"
           },
           "plural": {
-            "allPluralGenders": "zamykają"
+            "_PluralGenders": "zamykają"
           }
         }
       }

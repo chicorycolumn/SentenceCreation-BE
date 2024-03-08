@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ukradnie się"
+            "_SingularGenders": "ukradnie się"
           },
           "plural": {
-            "allPluralGenders": "ukradnie się"
+            "_PluralGenders": "ukradnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "ukradnę"
+            "_SingularGendersExcludingNeuter": "ukradnę"
           },
           "plural": {
-            "allPluralGenders": "ukradniemy"
+            "_PluralGenders": "ukradniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "ukradniesz"
+            "_SingularGendersExcludingNeuter": "ukradniesz"
           },
           "plural": {
-            "allPluralGenders": "ukradniecie"
+            "_PluralGenders": "ukradniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "ukradnie"
+            "_SingularGenders": "ukradnie"
           },
           "plural": {
-            "allPluralGenders": "ukradną"
+            "_PluralGenders": "ukradną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ukradziono"
+            "_SingularGenders": "ukradziono"
           },
           "plural": {
-            "allPluralGenders": "ukradziono"
+            "_PluralGenders": "ukradziono"
           }
         },
         "1per": {

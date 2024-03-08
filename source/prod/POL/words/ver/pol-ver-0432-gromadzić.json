@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "gromadzono"
+            "_SingularGenders": "gromadzono"
           },
           "plural": {
-            "allPluralGenders": "gromadzono"
+            "_PluralGenders": "gromadzono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "gromadzi się"
+            "_SingularGenders": "gromadzi się"
           },
           "plural": {
-            "allPluralGenders": "gromadzi się"
+            "_PluralGenders": "gromadzi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "gromadzę"
+            "_SingularGendersExcludingNeuter": "gromadzę"
           },
           "plural": {
-            "allPluralGenders": "gromadzimy"
+            "_PluralGenders": "gromadzimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "gromadzisz"
+            "_SingularGendersExcludingNeuter": "gromadzisz"
           },
           "plural": {
-            "allPluralGenders": "gromadzicie"
+            "_PluralGenders": "gromadzicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "gromadzi"
+            "_SingularGenders": "gromadzi"
           },
           "plural": {
-            "allPluralGenders": "gromadzą"
+            "_PluralGenders": "gromadzą"
           }
         }
       }

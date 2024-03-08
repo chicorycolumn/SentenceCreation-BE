@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zmartwi się"
+            "_SingularGenders": "zmartwi się"
           },
           "plural": {
-            "allPluralGenders": "zmartwi się"
+            "_PluralGenders": "zmartwi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zmartwię"
+            "_SingularGendersExcludingNeuter": "zmartwię"
           },
           "plural": {
-            "allPluralGenders": "zmartwimy"
+            "_PluralGenders": "zmartwimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zmartwisz"
+            "_SingularGendersExcludingNeuter": "zmartwisz"
           },
           "plural": {
-            "allPluralGenders": "zmartwicie"
+            "_PluralGenders": "zmartwicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zmartwi"
+            "_SingularGenders": "zmartwi"
           },
           "plural": {
-            "allPluralGenders": "zmartwią"
+            "_PluralGenders": "zmartwią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zmartwiono"
+            "_SingularGenders": "zmartwiono"
           },
           "plural": {
-            "allPluralGenders": "zmartwiono"
+            "_PluralGenders": "zmartwiono"
           }
         },
         "1per": {

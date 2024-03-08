@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "jechano"
+            "_SingularGenders": "jechano"
           },
           "plural": {
-            "allPluralGenders": "jechano"
+            "_PluralGenders": "jechano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "jedzie się"
+            "_SingularGenders": "jedzie się"
           },
           "plural": {
-            "allPluralGenders": "jedzie się"
+            "_PluralGenders": "jedzie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "jadę"
+            "_SingularGendersExcludingNeuter": "jadę"
           },
           "plural": {
-            "allPluralGenders": "jedziemy"
+            "_PluralGenders": "jedziemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "jedziesz"
+            "_SingularGendersExcludingNeuter": "jedziesz"
           },
           "plural": {
-            "allPluralGenders": "jedziecie"
+            "_PluralGenders": "jedziecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "jedzie"
+            "_SingularGenders": "jedzie"
           },
           "plural": {
-            "allPluralGenders": "jadą"
+            "_PluralGenders": "jadą"
           }
         }
       }

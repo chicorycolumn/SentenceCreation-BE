@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "krzyknie się"
+            "_SingularGenders": "krzyknie się"
           },
           "plural": {
-            "allPluralGenders": "krzyknie się"
+            "_PluralGenders": "krzyknie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "krzyknę"
+            "_SingularGendersExcludingNeuter": "krzyknę"
           },
           "plural": {
-            "allPluralGenders": "krzykniemy"
+            "_PluralGenders": "krzykniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "krzykniesz"
+            "_SingularGendersExcludingNeuter": "krzykniesz"
           },
           "plural": {
-            "allPluralGenders": "krzykniecie"
+            "_PluralGenders": "krzykniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "krzyknie"
+            "_SingularGenders": "krzyknie"
           },
           "plural": {
-            "allPluralGenders": "krzykną"
+            "_PluralGenders": "krzykną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "krzyknięto"
+            "_SingularGenders": "krzyknięto"
           },
           "plural": {
-            "allPluralGenders": "krzyknięto"
+            "_PluralGenders": "krzyknięto"
           }
         },
         "1per": {

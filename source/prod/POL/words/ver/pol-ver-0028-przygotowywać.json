@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przygotowywano"
+            "_SingularGenders": "przygotowywano"
           },
           "plural": {
-            "allPluralGenders": "przygotowywano"
+            "_PluralGenders": "przygotowywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przygotowuje się"
+            "_SingularGenders": "przygotowuje się"
           },
           "plural": {
-            "allPluralGenders": "przygotowuje się"
+            "_PluralGenders": "przygotowuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przygotowuję"
+            "_SingularGendersExcludingNeuter": "przygotowuję"
           },
           "plural": {
-            "allPluralGenders": "przygotowujemy"
+            "_PluralGenders": "przygotowujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przygotowujesz"
+            "_SingularGendersExcludingNeuter": "przygotowujesz"
           },
           "plural": {
-            "allPluralGenders": "przygotowujecie"
+            "_PluralGenders": "przygotowujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przygotowuje"
+            "_SingularGenders": "przygotowuje"
           },
           "plural": {
-            "allPluralGenders": "przygotowują"
+            "_PluralGenders": "przygotowują"
           }
         }
       }

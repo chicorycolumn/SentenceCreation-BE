@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pamiętano"
+            "_SingularGenders": "pamiętano"
           },
           "plural": {
-            "allPluralGenders": "pamiętano"
+            "_PluralGenders": "pamiętano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pamięta się"
+            "_SingularGenders": "pamięta się"
           },
           "plural": {
-            "allPluralGenders": "pamięta się"
+            "_PluralGenders": "pamięta się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pamiętam"
+            "_SingularGendersExcludingNeuter": "pamiętam"
           },
           "plural": {
-            "allPluralGenders": "pamiętamy"
+            "_PluralGenders": "pamiętamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pamiętasz"
+            "_SingularGendersExcludingNeuter": "pamiętasz"
           },
           "plural": {
-            "allPluralGenders": "pamiętacie"
+            "_PluralGenders": "pamiętacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pamięta"
+            "_SingularGenders": "pamięta"
           },
           "plural": {
-            "allPluralGenders": "pamiętają"
+            "_PluralGenders": "pamiętają"
           }
         }
       }

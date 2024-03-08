@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pobiegnie się"
+            "_SingularGenders": "pobiegnie się"
           },
           "plural": {
-            "allPluralGenders": "pobiegnie się"
+            "_PluralGenders": "pobiegnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pobiegnę"
+            "_SingularGendersExcludingNeuter": "pobiegnę"
           },
           "plural": {
-            "allPluralGenders": "pobiegniemy"
+            "_PluralGenders": "pobiegniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pobiegniesz"
+            "_SingularGendersExcludingNeuter": "pobiegniesz"
           },
           "plural": {
-            "allPluralGenders": "pobiegniecie"
+            "_PluralGenders": "pobiegniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pobiegnie"
+            "_SingularGenders": "pobiegnie"
           },
           "plural": {
-            "allPluralGenders": "pobiegną"
+            "_PluralGenders": "pobiegną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pobiegnięto"
+            "_SingularGenders": "pobiegnięto"
           },
           "plural": {
-            "allPluralGenders": "pobiegnięto"
+            "_PluralGenders": "pobiegnięto"
           }
         },
         "1per": {

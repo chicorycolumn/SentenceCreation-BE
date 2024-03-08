@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poszukiwano"
+            "_SingularGenders": "poszukiwano"
           },
           "plural": {
-            "allPluralGenders": "poszukiwano"
+            "_PluralGenders": "poszukiwano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poszukuje się"
+            "_SingularGenders": "poszukuje się"
           },
           "plural": {
-            "allPluralGenders": "poszukuje się"
+            "_PluralGenders": "poszukuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "poszukuję"
+            "_SingularGendersExcludingNeuter": "poszukuję"
           },
           "plural": {
-            "allPluralGenders": "poszukujemy"
+            "_PluralGenders": "poszukujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "poszukujesz"
+            "_SingularGendersExcludingNeuter": "poszukujesz"
           },
           "plural": {
-            "allPluralGenders": "poszukujecie"
+            "_PluralGenders": "poszukujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "poszukuje"
+            "_SingularGenders": "poszukuje"
           },
           "plural": {
-            "allPluralGenders": "poszukują"
+            "_PluralGenders": "poszukują"
           }
         }
       }

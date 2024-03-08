@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "rozgniewa się"
+            "_SingularGenders": "rozgniewa się"
           },
           "plural": {
-            "allPluralGenders": "rozgniewa się"
+            "_PluralGenders": "rozgniewa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "rozgniewam"
+            "_SingularGendersExcludingNeuter": "rozgniewam"
           },
           "plural": {
-            "allPluralGenders": "rozgniewamy"
+            "_PluralGenders": "rozgniewamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "rozgniewasz"
+            "_SingularGendersExcludingNeuter": "rozgniewasz"
           },
           "plural": {
-            "allPluralGenders": "rozgniewacie"
+            "_PluralGenders": "rozgniewacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "rozgniewa"
+            "_SingularGenders": "rozgniewa"
           },
           "plural": {
-            "allPluralGenders": "rozgniewają"
+            "_PluralGenders": "rozgniewają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "rozgniewano"
+            "_SingularGenders": "rozgniewano"
           },
           "plural": {
-            "allPluralGenders": "rozgniewano"
+            "_PluralGenders": "rozgniewano"
           }
         },
         "1per": {

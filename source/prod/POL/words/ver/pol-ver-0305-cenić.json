@@ -12,10 +12,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ceniono"
+            "_SingularGenders": "ceniono"
           },
           "plural": {
-            "allPluralGenders": "ceniono"
+            "_PluralGenders": "ceniono"
           }
         },
         "1per": {
@@ -53,34 +53,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ceni się"
+            "_SingularGenders": "ceni się"
           },
           "plural": {
-            "allPluralGenders": "ceni się"
+            "_PluralGenders": "ceni się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "cenię"
+            "_SingularGendersExcludingNeuter": "cenię"
           },
           "plural": {
-            "allPluralGenders": "cenimy"
+            "_PluralGenders": "cenimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "cenisz"
+            "_SingularGendersExcludingNeuter": "cenisz"
           },
           "plural": {
-            "allPluralGenders": "cenicie"
+            "_PluralGenders": "cenicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "ceni"
+            "_SingularGenders": "ceni"
           },
           "plural": {
-            "allPluralGenders": "cenią"
+            "_PluralGenders": "cenią"
           }
         }
       }

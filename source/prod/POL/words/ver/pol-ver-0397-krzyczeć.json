@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "krzyczano"
+            "_SingularGenders": "krzyczano"
           },
           "plural": {
-            "allPluralGenders": "krzyczano"
+            "_PluralGenders": "krzyczano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "krzyczy się"
+            "_SingularGenders": "krzyczy się"
           },
           "plural": {
-            "allPluralGenders": "krzyczy się"
+            "_PluralGenders": "krzyczy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "krzyczę"
+            "_SingularGendersExcludingNeuter": "krzyczę"
           },
           "plural": {
-            "allPluralGenders": "krzyczymy"
+            "_PluralGenders": "krzyczymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "krzyczysz"
+            "_SingularGendersExcludingNeuter": "krzyczysz"
           },
           "plural": {
-            "allPluralGenders": "krzyczycie"
+            "_PluralGenders": "krzyczycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "krzyczy"
+            "_SingularGenders": "krzyczy"
           },
           "plural": {
-            "allPluralGenders": "krzyczą"
+            "_PluralGenders": "krzyczą"
           }
         }
       }

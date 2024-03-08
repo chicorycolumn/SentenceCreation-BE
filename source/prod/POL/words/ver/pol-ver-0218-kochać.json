@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kochano"
+            "_SingularGenders": "kochano"
           },
           "plural": {
-            "allPluralGenders": "kochano"
+            "_PluralGenders": "kochano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kocha się"
+            "_SingularGenders": "kocha się"
           },
           "plural": {
-            "allPluralGenders": "kocha się"
+            "_PluralGenders": "kocha się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "kocham"
+            "_SingularGendersExcludingNeuter": "kocham"
           },
           "plural": {
-            "allPluralGenders": "kochamy"
+            "_PluralGenders": "kochamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "kochasz"
+            "_SingularGendersExcludingNeuter": "kochasz"
           },
           "plural": {
-            "allPluralGenders": "kochacie"
+            "_PluralGenders": "kochacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "kocha"
+            "_SingularGenders": "kocha"
           },
           "plural": {
-            "allPluralGenders": "kochają"
+            "_PluralGenders": "kochają"
           }
         }
       }

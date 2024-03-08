@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "porówna się"
+            "_SingularGenders": "porówna się"
           },
           "plural": {
-            "allPluralGenders": "porówna się"
+            "_PluralGenders": "porówna się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "porównam"
+            "_SingularGendersExcludingNeuter": "porównam"
           },
           "plural": {
-            "allPluralGenders": "porównamy"
+            "_PluralGenders": "porównamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "porównasz"
+            "_SingularGendersExcludingNeuter": "porównasz"
           },
           "plural": {
-            "allPluralGenders": "porównacie"
+            "_PluralGenders": "porównacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "porówna"
+            "_SingularGenders": "porówna"
           },
           "plural": {
-            "allPluralGenders": "porównają"
+            "_PluralGenders": "porównają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "porównano"
+            "_SingularGenders": "porównano"
           },
           "plural": {
-            "allPluralGenders": "porównano"
+            "_PluralGenders": "porównano"
           }
         },
         "1per": {

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wstawano"
+            "_SingularGenders": "wstawano"
           },
           "plural": {
-            "allPluralGenders": "wstawano"
+            "_PluralGenders": "wstawano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wstaje się"
+            "_SingularGenders": "wstaje się"
           },
           "plural": {
-            "allPluralGenders": "wstaje się"
+            "_PluralGenders": "wstaje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "wstaję"
+            "_SingularGendersExcludingNeuter": "wstaję"
           },
           "plural": {
-            "allPluralGenders": "wstajemy"
+            "_PluralGenders": "wstajemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "wstajesz"
+            "_SingularGendersExcludingNeuter": "wstajesz"
           },
           "plural": {
-            "allPluralGenders": "wstajecie"
+            "_PluralGenders": "wstajecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "wstaje"
+            "_SingularGenders": "wstaje"
           },
           "plural": {
-            "allPluralGenders": "wstają"
+            "_PluralGenders": "wstają"
           }
         }
       }

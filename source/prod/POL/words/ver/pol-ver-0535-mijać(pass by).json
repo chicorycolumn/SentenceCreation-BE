@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "mijano"
+            "_SingularGenders": "mijano"
           },
           "plural": {
-            "allPluralGenders": "mijano"
+            "_PluralGenders": "mijano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "mija się"
+            "_SingularGenders": "mija się"
           },
           "plural": {
-            "allPluralGenders": "mija się"
+            "_PluralGenders": "mija się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "mijam"
+            "_SingularGendersExcludingNeuter": "mijam"
           },
           "plural": {
-            "allPluralGenders": "mijamy"
+            "_PluralGenders": "mijamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "mijasz"
+            "_SingularGendersExcludingNeuter": "mijasz"
           },
           "plural": {
-            "allPluralGenders": "mijacie"
+            "_PluralGenders": "mijacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "mija"
+            "_SingularGenders": "mija"
           },
           "plural": {
-            "allPluralGenders": "mijają"
+            "_PluralGenders": "mijają"
           }
         }
       }

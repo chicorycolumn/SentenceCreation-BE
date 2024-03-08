@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "postanawiano"
+            "_SingularGenders": "postanawiano"
           },
           "plural": {
-            "allPluralGenders": "postanawiano"
+            "_PluralGenders": "postanawiano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "postanawia się"
+            "_SingularGenders": "postanawia się"
           },
           "plural": {
-            "allPluralGenders": "postanawia się"
+            "_PluralGenders": "postanawia się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "postanawiam"
+            "_SingularGendersExcludingNeuter": "postanawiam"
           },
           "plural": {
-            "allPluralGenders": "postanawiamy"
+            "_PluralGenders": "postanawiamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "postanawiasz"
+            "_SingularGendersExcludingNeuter": "postanawiasz"
           },
           "plural": {
-            "allPluralGenders": "postanawiacie"
+            "_PluralGenders": "postanawiacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "postanawia"
+            "_SingularGenders": "postanawia"
           },
           "plural": {
-            "allPluralGenders": "postanawiają"
+            "_PluralGenders": "postanawiają"
           }
         }
       }

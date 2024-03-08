@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odda się"
+            "_SingularGenders": "odda się"
           },
           "plural": {
-            "allPluralGenders": "odda się"
+            "_PluralGenders": "odda się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "oddam"
+            "_SingularGendersExcludingNeuter": "oddam"
           },
           "plural": {
-            "allPluralGenders": "oddamy"
+            "_PluralGenders": "oddamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "oddasz"
+            "_SingularGendersExcludingNeuter": "oddasz"
           },
           "plural": {
-            "allPluralGenders": "oddacie"
+            "_PluralGenders": "oddacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odda"
+            "_SingularGenders": "odda"
           },
           "plural": {
-            "allPluralGenders": "oddadzą"
+            "_PluralGenders": "oddadzą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oddano"
+            "_SingularGenders": "oddano"
           },
           "plural": {
-            "allPluralGenders": "oddano"
+            "_PluralGenders": "oddano"
           }
         },
         "1per": {

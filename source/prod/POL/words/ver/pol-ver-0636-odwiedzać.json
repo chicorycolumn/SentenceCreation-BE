@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odwiedzano"
+            "_SingularGenders": "odwiedzano"
           },
           "plural": {
-            "allPluralGenders": "odwiedzano"
+            "_PluralGenders": "odwiedzano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odwiedza się"
+            "_SingularGenders": "odwiedza się"
           },
           "plural": {
-            "allPluralGenders": "odwiedza się"
+            "_PluralGenders": "odwiedza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odwiedzam"
+            "_SingularGendersExcludingNeuter": "odwiedzam"
           },
           "plural": {
-            "allPluralGenders": "odwiedzamy"
+            "_PluralGenders": "odwiedzamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odwiedzasz"
+            "_SingularGendersExcludingNeuter": "odwiedzasz"
           },
           "plural": {
-            "allPluralGenders": "odwiedzacie"
+            "_PluralGenders": "odwiedzacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odwiedza"
+            "_SingularGenders": "odwiedza"
           },
           "plural": {
-            "allPluralGenders": "odwiedzają"
+            "_PluralGenders": "odwiedzają"
           }
         }
       }

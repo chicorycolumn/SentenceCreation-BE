@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oceniano"
+            "_SingularGenders": "oceniano"
           },
           "plural": {
-            "allPluralGenders": "oceniano"
+            "_PluralGenders": "oceniano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ocenia się"
+            "_SingularGenders": "ocenia się"
           },
           "plural": {
-            "allPluralGenders": "ocenia się"
+            "_PluralGenders": "ocenia się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "oceniam"
+            "_SingularGendersExcludingNeuter": "oceniam"
           },
           "plural": {
-            "allPluralGenders": "oceniamy"
+            "_PluralGenders": "oceniamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "oceniasz"
+            "_SingularGendersExcludingNeuter": "oceniasz"
           },
           "plural": {
-            "allPluralGenders": "oceniacie"
+            "_PluralGenders": "oceniacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "ocenia"
+            "_SingularGenders": "ocenia"
           },
           "plural": {
-            "allPluralGenders": "oceniają"
+            "_PluralGenders": "oceniają"
           }
         }
       }

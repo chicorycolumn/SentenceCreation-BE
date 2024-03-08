@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "gryziono"
+            "_SingularGenders": "gryziono"
           },
           "plural": {
-            "allPluralGenders": "gryziono"
+            "_PluralGenders": "gryziono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "gryzie się"
+            "_SingularGenders": "gryzie się"
           },
           "plural": {
-            "allPluralGenders": "gryzie się"
+            "_PluralGenders": "gryzie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "gryzę"
+            "_SingularGendersExcludingNeuter": "gryzę"
           },
           "plural": {
-            "allPluralGenders": "gryziemy"
+            "_PluralGenders": "gryziemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "gryziesz"
+            "_SingularGendersExcludingNeuter": "gryziesz"
           },
           "plural": {
-            "allPluralGenders": "gryziecie"
+            "_PluralGenders": "gryziecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "gryzie"
+            "_SingularGenders": "gryzie"
           },
           "plural": {
-            "allPluralGenders": "gryzą"
+            "_PluralGenders": "gryzą"
           }
         }
       }

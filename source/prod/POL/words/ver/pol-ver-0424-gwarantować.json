@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "gwarantowano"
+            "_SingularGenders": "gwarantowano"
           },
           "plural": {
-            "allPluralGenders": "gwarantowano"
+            "_PluralGenders": "gwarantowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "gwarantuje się"
+            "_SingularGenders": "gwarantuje się"
           },
           "plural": {
-            "allPluralGenders": "gwarantuje się"
+            "_PluralGenders": "gwarantuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "gwarantuję"
+            "_SingularGendersExcludingNeuter": "gwarantuję"
           },
           "plural": {
-            "allPluralGenders": "gwarantujemy"
+            "_PluralGenders": "gwarantujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "gwarantujesz"
+            "_SingularGendersExcludingNeuter": "gwarantujesz"
           },
           "plural": {
-            "allPluralGenders": "gwarantujecie"
+            "_PluralGenders": "gwarantujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "gwarantuje"
+            "_SingularGenders": "gwarantuje"
           },
           "plural": {
-            "allPluralGenders": "gwarantują"
+            "_PluralGenders": "gwarantują"
           }
         }
       }

@@ -45,34 +45,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wkłada się"
+            "_SingularGenders": "wkłada się"
           },
           "plural": {
-            "allPluralGenders": "wkłada się"
+            "_PluralGenders": "wkłada się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "wkładam"
+            "_SingularGendersExcludingNeuter": "wkładam"
           },
           "plural": {
-            "allPluralGenders": "wkładamy"
+            "_PluralGenders": "wkładamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "wkładasz"
+            "_SingularGendersExcludingNeuter": "wkładasz"
           },
           "plural": {
-            "allPluralGenders": "wkładacie"
+            "_PluralGenders": "wkładacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "wkłada"
+            "_SingularGenders": "wkłada"
           },
           "plural": {
-            "allPluralGenders": "wkładają"
+            "_PluralGenders": "wkładają"
           }
         }
       }

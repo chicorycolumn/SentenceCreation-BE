@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "drżano"
+            "_SingularGenders": "drżano"
           },
           "plural": {
-            "allPluralGenders": "drżano"
+            "_PluralGenders": "drżano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "drży się"
+            "_SingularGenders": "drży się"
           },
           "plural": {
-            "allPluralGenders": "drży się"
+            "_PluralGenders": "drży się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "drżę"
+            "_SingularGendersExcludingNeuter": "drżę"
           },
           "plural": {
-            "allPluralGenders": "drżymy"
+            "_PluralGenders": "drżymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "drżysz"
+            "_SingularGendersExcludingNeuter": "drżysz"
           },
           "plural": {
-            "allPluralGenders": "drżycie"
+            "_PluralGenders": "drżycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "drży"
+            "_SingularGenders": "drży"
           },
           "plural": {
-            "allPluralGenders": "drżą"
+            "_PluralGenders": "drżą"
           }
         }
       }

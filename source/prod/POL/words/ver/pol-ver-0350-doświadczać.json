@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "doświadczano"
+            "_SingularGenders": "doświadczano"
           },
           "plural": {
-            "allPluralGenders": "doświadczano"
+            "_PluralGenders": "doświadczano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "doświadcza się"
+            "_SingularGenders": "doświadcza się"
           },
           "plural": {
-            "allPluralGenders": "doświadcza się"
+            "_PluralGenders": "doświadcza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "doświadczam"
+            "_SingularGendersExcludingNeuter": "doświadczam"
           },
           "plural": {
-            "allPluralGenders": "doświadczamy"
+            "_PluralGenders": "doświadczamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "doświadczasz"
+            "_SingularGendersExcludingNeuter": "doświadczasz"
           },
           "plural": {
-            "allPluralGenders": "doświadczacie"
+            "_PluralGenders": "doświadczacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "doświadcza"
+            "_SingularGenders": "doświadcza"
           },
           "plural": {
-            "allPluralGenders": "doświadczają"
+            "_PluralGenders": "doświadczają"
           }
         }
       }

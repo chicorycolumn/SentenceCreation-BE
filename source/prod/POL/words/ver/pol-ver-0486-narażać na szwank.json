@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "narażano na szwank"
+            "_SingularGenders": "narażano na szwank"
           },
           "plural": {
-            "allPluralGenders": "narażano na szwank"
+            "_PluralGenders": "narażano na szwank"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "naraża się na szwank"
+            "_SingularGenders": "naraża się na szwank"
           },
           "plural": {
-            "allPluralGenders": "naraża się na szwank"
+            "_PluralGenders": "naraża się na szwank"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "narażam na szwank"
+            "_SingularGendersExcludingNeuter": "narażam na szwank"
           },
           "plural": {
-            "allPluralGenders": "narażamy na szwank"
+            "_PluralGenders": "narażamy na szwank"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "narażasz na szwank"
+            "_SingularGendersExcludingNeuter": "narażasz na szwank"
           },
           "plural": {
-            "allPluralGenders": "narażacie na szwank"
+            "_PluralGenders": "narażacie na szwank"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "naraża na szwank"
+            "_SingularGenders": "naraża na szwank"
           },
           "plural": {
-            "allPluralGenders": "narażają na szwank"
+            "_PluralGenders": "narażają na szwank"
           }
         }
       }

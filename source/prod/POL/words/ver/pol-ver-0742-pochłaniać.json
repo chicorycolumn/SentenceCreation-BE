@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pochłaniano"
+            "_SingularGenders": "pochłaniano"
           },
           "plural": {
-            "allPluralGenders": "pochłaniano"
+            "_PluralGenders": "pochłaniano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pochłania się"
+            "_SingularGenders": "pochłania się"
           },
           "plural": {
-            "allPluralGenders": "pochłania się"
+            "_PluralGenders": "pochłania się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pochłaniam"
+            "_SingularGendersExcludingNeuter": "pochłaniam"
           },
           "plural": {
-            "allPluralGenders": "pochłaniamy"
+            "_PluralGenders": "pochłaniamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pochłaniasz"
+            "_SingularGendersExcludingNeuter": "pochłaniasz"
           },
           "plural": {
-            "allPluralGenders": "pochłaniacie"
+            "_PluralGenders": "pochłaniacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pochłania"
+            "_SingularGenders": "pochłania"
           },
           "plural": {
-            "allPluralGenders": "pochłaniają"
+            "_PluralGenders": "pochłaniają"
           }
         }
       }

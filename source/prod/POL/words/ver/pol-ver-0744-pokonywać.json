@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pokonywano"
+            "_SingularGenders": "pokonywano"
           },
           "plural": {
-            "allPluralGenders": "pokonywano"
+            "_PluralGenders": "pokonywano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pokonuje się"
+            "_SingularGenders": "pokonuje się"
           },
           "plural": {
-            "allPluralGenders": "pokonuje się"
+            "_PluralGenders": "pokonuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pokonuję"
+            "_SingularGendersExcludingNeuter": "pokonuję"
           },
           "plural": {
-            "allPluralGenders": "pokonujemy"
+            "_PluralGenders": "pokonujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pokonujesz"
+            "_SingularGendersExcludingNeuter": "pokonujesz"
           },
           "plural": {
-            "allPluralGenders": "pokonujecie"
+            "_PluralGenders": "pokonujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pokonuje"
+            "_SingularGenders": "pokonuje"
           },
           "plural": {
-            "allPluralGenders": "pokonują"
+            "_PluralGenders": "pokonują"
           }
         }
       }

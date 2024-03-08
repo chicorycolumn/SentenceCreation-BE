@@ -12,10 +12,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "miano na sobie"
+            "_SingularGenders": "miano na sobie"
           },
           "plural": {
-            "allPluralGenders": "miano na sobie"
+            "_PluralGenders": "miano na sobie"
           }
         },
         "1per": {
@@ -53,34 +53,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ma się na sobie"
+            "_SingularGenders": "ma się na sobie"
           },
           "plural": {
-            "allPluralGenders": "ma się na sobie"
+            "_PluralGenders": "ma się na sobie"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "mam na sobie"
+            "_SingularGendersExcludingNeuter": "mam na sobie"
           },
           "plural": {
-            "allPluralGenders": "mamy na sobie"
+            "_PluralGenders": "mamy na sobie"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "masz na sobie"
+            "_SingularGendersExcludingNeuter": "masz na sobie"
           },
           "plural": {
-            "allPluralGenders": "macie na sobie"
+            "_PluralGenders": "macie na sobie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "ma na sobie"
+            "_SingularGenders": "ma na sobie"
           },
           "plural": {
-            "allPluralGenders": "mają na sobie"
+            "_PluralGenders": "mają na sobie"
           }
         }
       }

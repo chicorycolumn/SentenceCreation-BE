@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "doczeka się"
+            "_SingularGenders": "doczeka się"
           },
           "plural": {
-            "allPluralGenders": "doczeka się"
+            "_PluralGenders": "doczeka się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "doczekam"
+            "_SingularGendersExcludingNeuter": "doczekam"
           },
           "plural": {
-            "allPluralGenders": "doczekamy"
+            "_PluralGenders": "doczekamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "doczekasz"
+            "_SingularGendersExcludingNeuter": "doczekasz"
           },
           "plural": {
-            "allPluralGenders": "doczekacie"
+            "_PluralGenders": "doczekacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "doczeka"
+            "_SingularGenders": "doczeka"
           },
           "plural": {
-            "allPluralGenders": "doczekają"
+            "_PluralGenders": "doczekają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "doczekano"
+            "_SingularGenders": "doczekano"
           },
           "plural": {
-            "allPluralGenders": "doczekano"
+            "_PluralGenders": "doczekano"
           }
         },
         "1per": {

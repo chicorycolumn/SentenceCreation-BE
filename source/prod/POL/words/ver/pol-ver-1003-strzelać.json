@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "strzelano"
+            "_SingularGenders": "strzelano"
           },
           "plural": {
-            "allPluralGenders": "strzelano"
+            "_PluralGenders": "strzelano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "strzela się"
+            "_SingularGenders": "strzela się"
           },
           "plural": {
-            "allPluralGenders": "strzela się"
+            "_PluralGenders": "strzela się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "strzelam"
+            "_SingularGendersExcludingNeuter": "strzelam"
           },
           "plural": {
-            "allPluralGenders": "strzelamy"
+            "_PluralGenders": "strzelamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "strzelasz"
+            "_SingularGendersExcludingNeuter": "strzelasz"
           },
           "plural": {
-            "allPluralGenders": "strzelacie"
+            "_PluralGenders": "strzelacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "strzela"
+            "_SingularGenders": "strzela"
           },
           "plural": {
-            "allPluralGenders": "strzelają"
+            "_PluralGenders": "strzelają"
           }
         }
       }

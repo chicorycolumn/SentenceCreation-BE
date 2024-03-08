@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "miewano"
+            "_SingularGenders": "miewano"
           },
           "plural": {
-            "allPluralGenders": "miewano"
+            "_PluralGenders": "miewano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "miewa się"
+            "_SingularGenders": "miewa się"
           },
           "plural": {
-            "allPluralGenders": "miewa się"
+            "_PluralGenders": "miewa się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "miewam"
+            "_SingularGendersExcludingNeuter": "miewam"
           },
           "plural": {
-            "allPluralGenders": "miewamy"
+            "_PluralGenders": "miewamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "miewasz"
+            "_SingularGendersExcludingNeuter": "miewasz"
           },
           "plural": {
-            "allPluralGenders": "miewacie"
+            "_PluralGenders": "miewacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "miewa"
+            "_SingularGenders": "miewa"
           },
           "plural": {
-            "allPluralGenders": "miewają"
+            "_PluralGenders": "miewają"
           }
         }
       }

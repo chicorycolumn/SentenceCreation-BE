@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "doda się"
+            "_SingularGenders": "doda się"
           },
           "plural": {
-            "allPluralGenders": "doda się"
+            "_PluralGenders": "doda się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dodam"
+            "_SingularGendersExcludingNeuter": "dodam"
           },
           "plural": {
-            "allPluralGenders": "dodamy"
+            "_PluralGenders": "dodamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dodasz"
+            "_SingularGendersExcludingNeuter": "dodasz"
           },
           "plural": {
-            "allPluralGenders": "dodacie"
+            "_PluralGenders": "dodacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "doda"
+            "_SingularGenders": "doda"
           },
           "plural": {
-            "allPluralGenders": "dodadzą"
+            "_PluralGenders": "dodadzą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dodano"
+            "_SingularGenders": "dodano"
           },
           "plural": {
-            "allPluralGenders": "dodano"
+            "_PluralGenders": "dodano"
           }
         },
         "1per": {

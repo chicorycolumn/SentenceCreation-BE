@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "liczono"
+            "_SingularGenders": "liczono"
           },
           "plural": {
-            "allPluralGenders": "liczono"
+            "_PluralGenders": "liczono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "liczy się"
+            "_SingularGenders": "liczy się"
           },
           "plural": {
-            "allPluralGenders": "liczy się"
+            "_PluralGenders": "liczy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "liczę"
+            "_SingularGendersExcludingNeuter": "liczę"
           },
           "plural": {
-            "allPluralGenders": "liczymy"
+            "_PluralGenders": "liczymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "liczysz"
+            "_SingularGendersExcludingNeuter": "liczysz"
           },
           "plural": {
-            "allPluralGenders": "liczycie"
+            "_PluralGenders": "liczycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "liczy"
+            "_SingularGenders": "liczy"
           },
           "plural": {
-            "allPluralGenders": "liczą"
+            "_PluralGenders": "liczą"
           }
         }
       }

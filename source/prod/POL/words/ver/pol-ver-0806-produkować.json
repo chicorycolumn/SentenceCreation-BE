@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "produkowano"
+            "_SingularGenders": "produkowano"
           },
           "plural": {
-            "allPluralGenders": "produkowano"
+            "_PluralGenders": "produkowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "produkuje się"
+            "_SingularGenders": "produkuje się"
           },
           "plural": {
-            "allPluralGenders": "produkuje się"
+            "_PluralGenders": "produkuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "produkuję"
+            "_SingularGendersExcludingNeuter": "produkuję"
           },
           "plural": {
-            "allPluralGenders": "produkujemy"
+            "_PluralGenders": "produkujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "produkujesz"
+            "_SingularGendersExcludingNeuter": "produkujesz"
           },
           "plural": {
-            "allPluralGenders": "produkujecie"
+            "_PluralGenders": "produkujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "produkuje"
+            "_SingularGenders": "produkuje"
           },
           "plural": {
-            "allPluralGenders": "produkują"
+            "_PluralGenders": "produkują"
           }
         }
       }

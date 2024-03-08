@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "namówi się"
+            "_SingularGenders": "namówi się"
           },
           "plural": {
-            "allPluralGenders": "namówi się"
+            "_PluralGenders": "namówi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "namówię"
+            "_SingularGendersExcludingNeuter": "namówię"
           },
           "plural": {
-            "allPluralGenders": "namówimy"
+            "_PluralGenders": "namówimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "namówisz"
+            "_SingularGendersExcludingNeuter": "namówisz"
           },
           "plural": {
-            "allPluralGenders": "namówicie"
+            "_PluralGenders": "namówicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "namówi"
+            "_SingularGenders": "namówi"
           },
           "plural": {
-            "allPluralGenders": "namówią"
+            "_PluralGenders": "namówią"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "namówiono"
+            "_SingularGenders": "namówiono"
           },
           "plural": {
-            "allPluralGenders": "namówiono"
+            "_PluralGenders": "namówiono"
           }
         },
         "1per": {

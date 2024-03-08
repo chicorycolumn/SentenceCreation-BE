@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wyleczy się"
+            "_SingularGenders": "wyleczy się"
           },
           "plural": {
-            "allPluralGenders": "wyleczy się"
+            "_PluralGenders": "wyleczy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "wyleczę"
+            "_SingularGendersExcludingNeuter": "wyleczę"
           },
           "plural": {
-            "allPluralGenders": "wyleczymy"
+            "_PluralGenders": "wyleczymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "wyleczysz"
+            "_SingularGendersExcludingNeuter": "wyleczysz"
           },
           "plural": {
-            "allPluralGenders": "wyleczycie"
+            "_PluralGenders": "wyleczycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "wyleczy"
+            "_SingularGenders": "wyleczy"
           },
           "plural": {
-            "allPluralGenders": "wyleczą"
+            "_PluralGenders": "wyleczą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "wyleczono"
+            "_SingularGenders": "wyleczono"
           },
           "plural": {
-            "allPluralGenders": "wyleczono"
+            "_PluralGenders": "wyleczono"
           }
         },
         "1per": {

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przekształci się"
+            "_SingularGenders": "przekształci się"
           },
           "plural": {
-            "allPluralGenders": "przekształci się"
+            "_PluralGenders": "przekształci się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przekształcę"
+            "_SingularGendersExcludingNeuter": "przekształcę"
           },
           "plural": {
-            "allPluralGenders": "przekształcimy"
+            "_PluralGenders": "przekształcimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przekształcisz"
+            "_SingularGendersExcludingNeuter": "przekształcisz"
           },
           "plural": {
-            "allPluralGenders": "przekształcicie"
+            "_PluralGenders": "przekształcicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przekształci"
+            "_SingularGenders": "przekształci"
           },
           "plural": {
-            "allPluralGenders": "przekształcą"
+            "_PluralGenders": "przekształcą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przekształcono"
+            "_SingularGenders": "przekształcono"
           },
           "plural": {
-            "allPluralGenders": "przekształcono"
+            "_PluralGenders": "przekształcono"
           }
         },
         "1per": {

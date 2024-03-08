@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oszczędzano"
+            "_SingularGenders": "oszczędzano"
           },
           "plural": {
-            "allPluralGenders": "oszczędzano"
+            "_PluralGenders": "oszczędzano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "oszczędza się"
+            "_SingularGenders": "oszczędza się"
           },
           "plural": {
-            "allPluralGenders": "oszczędza się"
+            "_PluralGenders": "oszczędza się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "oszczędzam"
+            "_SingularGendersExcludingNeuter": "oszczędzam"
           },
           "plural": {
-            "allPluralGenders": "oszczędzamy"
+            "_PluralGenders": "oszczędzamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "oszczędzasz"
+            "_SingularGendersExcludingNeuter": "oszczędzasz"
           },
           "plural": {
-            "allPluralGenders": "oszczędzacie"
+            "_PluralGenders": "oszczędzacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "oszczędza"
+            "_SingularGenders": "oszczędza"
           },
           "plural": {
-            "allPluralGenders": "oszczędzają"
+            "_PluralGenders": "oszczędzają"
           }
         }
       }

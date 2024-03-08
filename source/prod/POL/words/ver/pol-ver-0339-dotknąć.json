@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dotknie się"
+            "_SingularGenders": "dotknie się"
           },
           "plural": {
-            "allPluralGenders": "dotknie się"
+            "_PluralGenders": "dotknie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dotknę"
+            "_SingularGendersExcludingNeuter": "dotknę"
           },
           "plural": {
-            "allPluralGenders": "dotkniemy"
+            "_PluralGenders": "dotkniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dotkniesz"
+            "_SingularGendersExcludingNeuter": "dotkniesz"
           },
           "plural": {
-            "allPluralGenders": "dotkniecie"
+            "_PluralGenders": "dotkniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dotknie"
+            "_SingularGenders": "dotknie"
           },
           "plural": {
-            "allPluralGenders": "dotkną"
+            "_PluralGenders": "dotkną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dotknięto"
+            "_SingularGenders": "dotknięto"
           },
           "plural": {
-            "allPluralGenders": "dotknięto"
+            "_PluralGenders": "dotknięto"
           }
         },
         "1per": {

@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "posprząta się"
+            "_SingularGenders": "posprząta się"
           },
           "plural": {
-            "allPluralGenders": "posprząta się"
+            "_PluralGenders": "posprząta się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "posprzątam"
+            "_SingularGendersExcludingNeuter": "posprzątam"
           },
           "plural": {
-            "allPluralGenders": "posprzątamy"
+            "_PluralGenders": "posprzątamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "posprzątasz"
+            "_SingularGendersExcludingNeuter": "posprzątasz"
           },
           "plural": {
-            "allPluralGenders": "posprzątacie"
+            "_PluralGenders": "posprzątacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "posprząta"
+            "_SingularGenders": "posprząta"
           },
           "plural": {
-            "allPluralGenders": "posprzątają"
+            "_PluralGenders": "posprzątają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "posprzątano"
+            "_SingularGenders": "posprzątano"
           },
           "plural": {
-            "allPluralGenders": "posprzątano"
+            "_PluralGenders": "posprzątano"
           }
         },
         "1per": {

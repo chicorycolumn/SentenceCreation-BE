@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pakowano"
+            "_SingularGenders": "pakowano"
           },
           "plural": {
-            "allPluralGenders": "pakowano"
+            "_PluralGenders": "pakowano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pakuje się"
+            "_SingularGenders": "pakuje się"
           },
           "plural": {
-            "allPluralGenders": "pakuje się"
+            "_PluralGenders": "pakuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pakuję"
+            "_SingularGendersExcludingNeuter": "pakuję"
           },
           "plural": {
-            "allPluralGenders": "pakujemy"
+            "_PluralGenders": "pakujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pakujesz"
+            "_SingularGendersExcludingNeuter": "pakujesz"
           },
           "plural": {
-            "allPluralGenders": "pakujecie"
+            "_PluralGenders": "pakujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pakuje"
+            "_SingularGenders": "pakuje"
           },
           "plural": {
-            "allPluralGenders": "pakują"
+            "_PluralGenders": "pakują"
           }
         }
       }

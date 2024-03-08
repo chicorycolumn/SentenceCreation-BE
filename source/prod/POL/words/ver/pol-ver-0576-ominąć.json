@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ominie się"
+            "_SingularGenders": "ominie się"
           },
           "plural": {
-            "allPluralGenders": "ominie się"
+            "_PluralGenders": "ominie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "ominę"
+            "_SingularGendersExcludingNeuter": "ominę"
           },
           "plural": {
-            "allPluralGenders": "ominiemy"
+            "_PluralGenders": "ominiemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "ominiesz"
+            "_SingularGendersExcludingNeuter": "ominiesz"
           },
           "plural": {
-            "allPluralGenders": "ominiecie"
+            "_PluralGenders": "ominiecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "ominie"
+            "_SingularGenders": "ominie"
           },
           "plural": {
-            "allPluralGenders": "ominą"
+            "_PluralGenders": "ominą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "ominięto"
+            "_SingularGenders": "ominięto"
           },
           "plural": {
-            "allPluralGenders": "ominięto"
+            "_PluralGenders": "ominięto"
           }
         },
         "1per": {

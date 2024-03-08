@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odrzeknie się"
+            "_SingularGenders": "odrzeknie się"
           },
           "plural": {
-            "allPluralGenders": "odrzeknie się"
+            "_PluralGenders": "odrzeknie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "odrzeknę"
+            "_SingularGendersExcludingNeuter": "odrzeknę"
           },
           "plural": {
-            "allPluralGenders": "odrzekniemy"
+            "_PluralGenders": "odrzekniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "odrzekniesz"
+            "_SingularGendersExcludingNeuter": "odrzekniesz"
           },
           "plural": {
-            "allPluralGenders": "odrzekniecie"
+            "_PluralGenders": "odrzekniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "odrzeknie"
+            "_SingularGenders": "odrzeknie"
           },
           "plural": {
-            "allPluralGenders": "odrzekną"
+            "_PluralGenders": "odrzekną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "odrzeknięto"
+            "_SingularGenders": "odrzeknięto"
           },
           "plural": {
-            "allPluralGenders": "odrzeknięto"
+            "_PluralGenders": "odrzeknięto"
           }
         },
         "1per": {

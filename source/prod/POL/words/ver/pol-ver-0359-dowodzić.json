@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dowodzono"
+            "_SingularGenders": "dowodzono"
           },
           "plural": {
-            "allPluralGenders": "dowodzono"
+            "_PluralGenders": "dowodzono"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dowodzi się"
+            "_SingularGenders": "dowodzi się"
           },
           "plural": {
-            "allPluralGenders": "dowodzi się"
+            "_PluralGenders": "dowodzi się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dowodzę"
+            "_SingularGendersExcludingNeuter": "dowodzę"
           },
           "plural": {
-            "allPluralGenders": "dowodzimy"
+            "_PluralGenders": "dowodzimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dowodzisz"
+            "_SingularGendersExcludingNeuter": "dowodzisz"
           },
           "plural": {
-            "allPluralGenders": "dowodzicie"
+            "_PluralGenders": "dowodzicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dowodzi"
+            "_SingularGenders": "dowodzi"
           },
           "plural": {
-            "allPluralGenders": "dowodzą"
+            "_PluralGenders": "dowodzą"
           }
         }
       }

@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "natrafiano"
+            "_SingularGenders": "natrafiano"
           },
           "plural": {
-            "allPluralGenders": "natrafiano"
+            "_PluralGenders": "natrafiano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "natrafia się"
+            "_SingularGenders": "natrafia się"
           },
           "plural": {
-            "allPluralGenders": "natrafia się"
+            "_PluralGenders": "natrafia się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "natrafiam"
+            "_SingularGendersExcludingNeuter": "natrafiam"
           },
           "plural": {
-            "allPluralGenders": "natrafiamy"
+            "_PluralGenders": "natrafiamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "natrafiasz"
+            "_SingularGendersExcludingNeuter": "natrafiasz"
           },
           "plural": {
-            "allPluralGenders": "natrafiacie"
+            "_PluralGenders": "natrafiacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "natrafia"
+            "_SingularGenders": "natrafia"
           },
           "plural": {
-            "allPluralGenders": "natrafiają"
+            "_PluralGenders": "natrafiają"
           }
         }
       }

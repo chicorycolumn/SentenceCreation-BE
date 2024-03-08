@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przesyłano"
+            "_SingularGenders": "przesyłano"
           },
           "plural": {
-            "allPluralGenders": "przesyłano"
+            "_PluralGenders": "przesyłano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przesyła się"
+            "_SingularGenders": "przesyła się"
           },
           "plural": {
-            "allPluralGenders": "przesyła się"
+            "_PluralGenders": "przesyła się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przesyłam"
+            "_SingularGendersExcludingNeuter": "przesyłam"
           },
           "plural": {
-            "allPluralGenders": "przesyłamy"
+            "_PluralGenders": "przesyłamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przesyłasz"
+            "_SingularGendersExcludingNeuter": "przesyłasz"
           },
           "plural": {
-            "allPluralGenders": "przesyłacie"
+            "_PluralGenders": "przesyłacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przesyła"
+            "_SingularGenders": "przesyła"
           },
           "plural": {
-            "allPluralGenders": "przesyłają"
+            "_PluralGenders": "przesyłają"
           }
         }
       }

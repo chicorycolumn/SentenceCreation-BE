@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dopuści się"
+            "_SingularGenders": "dopuści się"
           },
           "plural": {
-            "allPluralGenders": "dopuści się"
+            "_PluralGenders": "dopuści się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dopuszczę"
+            "_SingularGendersExcludingNeuter": "dopuszczę"
           },
           "plural": {
-            "allPluralGenders": "dopuścimy"
+            "_PluralGenders": "dopuścimy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dopuścisz"
+            "_SingularGendersExcludingNeuter": "dopuścisz"
           },
           "plural": {
-            "allPluralGenders": "dopuścicie"
+            "_PluralGenders": "dopuścicie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dopuści"
+            "_SingularGenders": "dopuści"
           },
           "plural": {
-            "allPluralGenders": "dopuszczą"
+            "_PluralGenders": "dopuszczą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dopuszczono"
+            "_SingularGenders": "dopuszczono"
           },
           "plural": {
-            "allPluralGenders": "dopuszczono"
+            "_PluralGenders": "dopuszczono"
           }
         },
         "1per": {

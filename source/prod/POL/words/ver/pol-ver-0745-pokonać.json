@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pokona się"
+            "_SingularGenders": "pokona się"
           },
           "plural": {
-            "allPluralGenders": "pokona się"
+            "_PluralGenders": "pokona się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "pokonam"
+            "_SingularGendersExcludingNeuter": "pokonam"
           },
           "plural": {
-            "allPluralGenders": "pokonamy"
+            "_PluralGenders": "pokonamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "pokonasz"
+            "_SingularGendersExcludingNeuter": "pokonasz"
           },
           "plural": {
-            "allPluralGenders": "pokonacie"
+            "_PluralGenders": "pokonacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "pokona"
+            "_SingularGenders": "pokona"
           },
           "plural": {
-            "allPluralGenders": "pokonają"
+            "_PluralGenders": "pokonają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "pokonano"
+            "_SingularGenders": "pokonano"
           },
           "plural": {
-            "allPluralGenders": "pokonano"
+            "_PluralGenders": "pokonano"
           }
         },
         "1per": {

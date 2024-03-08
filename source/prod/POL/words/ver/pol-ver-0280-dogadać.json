@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dogada się"
+            "_SingularGenders": "dogada się"
           },
           "plural": {
-            "allPluralGenders": "dogada się"
+            "_PluralGenders": "dogada się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "dogadam"
+            "_SingularGendersExcludingNeuter": "dogadam"
           },
           "plural": {
-            "allPluralGenders": "dogadamy"
+            "_PluralGenders": "dogadamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "dogadasz"
+            "_SingularGendersExcludingNeuter": "dogadasz"
           },
           "plural": {
-            "allPluralGenders": "dogadacie"
+            "_PluralGenders": "dogadacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "dogada"
+            "_SingularGenders": "dogada"
           },
           "plural": {
-            "allPluralGenders": "dogadają"
+            "_PluralGenders": "dogadają"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "dogadano"
+            "_SingularGenders": "dogadano"
           },
           "plural": {
-            "allPluralGenders": "dogadano"
+            "_PluralGenders": "dogadano"
           }
         },
         "1per": {

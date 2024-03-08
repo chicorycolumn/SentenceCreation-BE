@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poderwie się"
+            "_SingularGenders": "poderwie się"
           },
           "plural": {
-            "allPluralGenders": "poderwie się"
+            "_PluralGenders": "poderwie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "poderwę"
+            "_SingularGendersExcludingNeuter": "poderwę"
           },
           "plural": {
-            "allPluralGenders": "poderwiemy"
+            "_PluralGenders": "poderwiemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "poderwiesz"
+            "_SingularGendersExcludingNeuter": "poderwiesz"
           },
           "plural": {
-            "allPluralGenders": "poderwiecie"
+            "_PluralGenders": "poderwiecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "poderwie"
+            "_SingularGenders": "poderwie"
           },
           "plural": {
-            "allPluralGenders": "poderwą"
+            "_PluralGenders": "poderwą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "poderwano"
+            "_SingularGenders": "poderwano"
           },
           "plural": {
-            "allPluralGenders": "poderwano"
+            "_PluralGenders": "poderwano"
           }
         },
         "1per": {

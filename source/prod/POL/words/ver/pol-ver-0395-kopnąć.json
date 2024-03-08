@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kopnie się"
+            "_SingularGenders": "kopnie się"
           },
           "plural": {
-            "allPluralGenders": "kopnie się"
+            "_PluralGenders": "kopnie się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "kopnę"
+            "_SingularGendersExcludingNeuter": "kopnę"
           },
           "plural": {
-            "allPluralGenders": "kopniemy"
+            "_PluralGenders": "kopniemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "kopniesz"
+            "_SingularGendersExcludingNeuter": "kopniesz"
           },
           "plural": {
-            "allPluralGenders": "kopniecie"
+            "_PluralGenders": "kopniecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "kopnie"
+            "_SingularGenders": "kopnie"
           },
           "plural": {
-            "allPluralGenders": "kopną"
+            "_PluralGenders": "kopną"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "kopnięto"
+            "_SingularGenders": "kopnięto"
           },
           "plural": {
-            "allPluralGenders": "kopnięto"
+            "_PluralGenders": "kopnięto"
           }
         },
         "1per": {

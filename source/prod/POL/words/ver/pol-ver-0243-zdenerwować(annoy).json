@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zdenerwuje się"
+            "_SingularGenders": "zdenerwuje się"
           },
           "plural": {
-            "allPluralGenders": "zdenerwuje się"
+            "_PluralGenders": "zdenerwuje się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "zdenerwuję"
+            "_SingularGendersExcludingNeuter": "zdenerwuję"
           },
           "plural": {
-            "allPluralGenders": "zdenerwujemy"
+            "_PluralGenders": "zdenerwujemy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "zdenerwujesz"
+            "_SingularGendersExcludingNeuter": "zdenerwujesz"
           },
           "plural": {
-            "allPluralGenders": "zdenerwujecie"
+            "_PluralGenders": "zdenerwujecie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "zdenerwuje"
+            "_SingularGenders": "zdenerwuje"
           },
           "plural": {
-            "allPluralGenders": "zdenerwują"
+            "_PluralGenders": "zdenerwują"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "zdenerwowano"
+            "_SingularGenders": "zdenerwowano"
           },
           "plural": {
-            "allPluralGenders": "zdenerwowano"
+            "_PluralGenders": "zdenerwowano"
           }
         },
         "1per": {

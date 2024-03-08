@@ -11,34 +11,34 @@
       "future": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "rozważy się"
+            "_SingularGenders": "rozważy się"
           },
           "plural": {
-            "allPluralGenders": "rozważy się"
+            "_PluralGenders": "rozważy się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "rozważę"
+            "_SingularGendersExcludingNeuter": "rozważę"
           },
           "plural": {
-            "allPluralGenders": "rozważymy"
+            "_PluralGenders": "rozważymy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "rozważysz"
+            "_SingularGendersExcludingNeuter": "rozważysz"
           },
           "plural": {
-            "allPluralGenders": "rozważycie"
+            "_PluralGenders": "rozważycie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "rozważy"
+            "_SingularGenders": "rozważy"
           },
           "plural": {
-            "allPluralGenders": "rozważą"
+            "_PluralGenders": "rozważą"
           }
         }
       },
@@ -46,10 +46,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "rozważono"
+            "_SingularGenders": "rozważono"
           },
           "plural": {
-            "allPluralGenders": "rozważono"
+            "_PluralGenders": "rozważono"
           }
         },
         "1per": {

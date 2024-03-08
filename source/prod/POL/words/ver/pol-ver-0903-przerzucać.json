@@ -13,10 +13,10 @@
       "past": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przerzucano"
+            "_SingularGenders": "przerzucano"
           },
           "plural": {
-            "allPluralGenders": "przerzucano"
+            "_PluralGenders": "przerzucano"
           }
         },
         "1per": {
@@ -54,34 +54,34 @@
       "present": {
         "impersonal": {
           "singular": {
-            "allSingularGenders": "przerzuca się"
+            "_SingularGenders": "przerzuca się"
           },
           "plural": {
-            "allPluralGenders": "przerzuca się"
+            "_PluralGenders": "przerzuca się"
           }
         },
         "1per": {
           "singular": {
-            "allSingularGenders": "przerzucam"
+            "_SingularGendersExcludingNeuter": "przerzucam"
           },
           "plural": {
-            "allPluralGenders": "przerzucamy"
+            "_PluralGenders": "przerzucamy"
           }
         },
         "2per": {
           "singular": {
-            "allSingularGenders": "przerzucasz"
+            "_SingularGendersExcludingNeuter": "przerzucasz"
           },
           "plural": {
-            "allPluralGenders": "przerzucacie"
+            "_PluralGenders": "przerzucacie"
           }
         },
         "3per": {
           "singular": {
-            "allSingularGenders": "przerzuca"
+            "_SingularGenders": "przerzuca"
           },
           "plural": {
-            "allPluralGenders": "przerzucają"
+            "_PluralGenders": "przerzucają"
           }
         }
       }
