@@ -16,11 +16,13 @@ const { runPaletteTest1, runPaletteTest1Multiple, checkProportions } =
 // ProsMgn:        "My doctor and her book." Connected pronombre reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
 // EdusMgn:        "My doctor is a man."     Educator specifies MGN's gender. Sentence where educator knows that this MGN will need no clarifying.
 
+describe("Set test environment for all tests", function () {
+  // apiUtils.setEnvir({ query: { envir: "ref" } }, "app01.spec");
+});
+
 describe("/api", function () {
   this.timeout(5000);
-
-  const testEnv = "ref";
-  apiUtils.setEnvir({ query: { envir: testEnv } }, "app01.spec");
+  const testEnv = apiUtils.getEnvir();
 
   gpUtils.fillOutWashburneRefObj(
     generalTranslatedSentencesRef,

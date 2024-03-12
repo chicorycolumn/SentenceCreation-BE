@@ -16,8 +16,7 @@ const { runPaletteTest1 } = testingUtils;
 describe("/api", function () {
   this.timeout(7000);
 
-  const testEnv = "ref";
-  apiUtils.setEnvir({ query: { envir: testEnv } }, "app02.spec");
+  const testEnv = apiUtils.getEnvir();
 
   gpUtils.fillOutWashburneRefObj(
     generalTranslatedSentencesRef,

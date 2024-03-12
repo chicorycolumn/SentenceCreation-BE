@@ -337,11 +337,7 @@ xdescribe("doesThisInflectionKeyHoldUniqueInflectionValueInLObj", () => {
 });
 
 xdescribe("findSynhomographs", () => {
-  const testEnv = "ref";
-  apiUtils.setEnvir(
-    { query: { envir: testEnv } },
-    'describe("findSynhomographs"'
-  );
+  const testEnv = apiUtils.getEnvir();
 
   it(`${testEnv}#otu4.1 Produces empty array when no lemmaObjects with any synhomographs are given.`, () => {
     const lobjArr = [
@@ -663,11 +659,7 @@ xdescribe("findSynhomographs", () => {
 });
 
 xdescribe("findObjectInNestedObject", () => {
-  const testEnv = "ref";
-  apiUtils.setEnvir(
-    { query: { envir: testEnv } },
-    'describe("findObjectInNestedObject"'
-  );
+  const testEnv = apiUtils.getEnvir();
 
   let testObj1 = {
     level01: {
@@ -825,11 +817,7 @@ xdescribe("findObjectInNestedObject", () => {
 });
 
 xdescribe("concoctNestedRoutes", () => {
-  const testEnv = "ref";
-  apiUtils.setEnvir(
-    { query: { envir: testEnv } },
-    'describe("concoctNestedRoutes"'
-  );
+  const testEnv = apiUtils.getEnvir();
 
   it(`${testEnv}#otu2.1a Throw error for empty input.`, () => {
     const input1 = [];
@@ -912,11 +900,7 @@ xdescribe("concoctNestedRoutes", () => {
 });
 
 xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
-  const testEnv = "ref";
-  apiUtils.setEnvir(
-    { query: { envir: testEnv } },
-    'describe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject"'
-  );
+  const testEnv = apiUtils.getEnvir();
 
   it(`${testEnv}#otu1.1a Returns empty array for empty object.`, () => {
     const input = {};
@@ -1243,11 +1227,7 @@ xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
 });
 
 xdescribe("findSinglePointMutationArray", () => {
-  const testEnv = "ref";
-  apiUtils.setEnvir(
-    { query: { envir: testEnv } },
-    'describe("findSinglePointMutationArray"'
-  );
+  const testEnv = apiUtils.getEnvir();
 
   it(`${testEnv}#otu5.0 Give empty for empty`, () => {
     let input_arrayOfArrays = [];

@@ -10,8 +10,7 @@ const { runPaletteTest1 } = testingUtils;
 describe("/api", function () {
   this.timeout(7000);
 
-  const testEnv = "ref";
-  apiUtils.setEnvir({ query: { envir: testEnv } }, "app04.spec");
+  const testEnv = apiUtils.getEnvir();
 
   describe("/palette - Stage 22: Pronombres, Interrogatives.", () => {
     it(`${testEnv}#pal22-01a GET 200 YES: Poleng. ITG_G. Who is she?`, () => {

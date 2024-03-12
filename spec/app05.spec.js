@@ -18,8 +18,21 @@ const {
 describe("/api", function () {
   this.timeout(7000);
 
-  const testEnv = "ref";
+  const testEnv = "prod*ref";
   apiUtils.setEnvir({ query: { envir: testEnv } }, "app05.spec");
+
+  describe("/palette - Stage 31: Lobjs in prod fine tuning and error resolving.", () => {
+    describe("#pal31-01 Ignore imperative requested for modal verbs.", () => {
+      it.only(`${testEnv}#pal31-01a GET 200 YES: Pol.`, () => {
+        return runPaletteTest2("POL", "ENG", "126", [
+          {
+            ENG: ["."],
+            POL: ["."],
+          },
+        ]);
+      });
+    });
+  });
 
   xdescribe("/palette - Stage 30: Modal verbs, and contractions.", () => {
     describe("#pal30-01 Will not.", () => {

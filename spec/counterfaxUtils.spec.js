@@ -6,11 +6,7 @@ const uUtils = require("../utils/universalUtils.js");
 const cfUtils = require("../utils/counterfaxUtils.js");
 
 xdescribe("listCounterfaxSituations", () => {
-  const testEnv = "ref";
-  apiUtils.setEnvir(
-    { query: { envir: testEnv } },
-    'describe("listCounterfaxSituations"'
-  );
+  const testEnv = apiUtils.getEnvir();
 
   it("Two annotations on one, and one on the other.", () => {
     let questionOutputArray = [
@@ -753,11 +749,7 @@ xdescribe("listCounterfaxSituations", () => {
 });
 
 xdescribe("explodeCounterfaxSituations", () => {
-  const testEnv = "ref";
-  apiUtils.setEnvir(
-    { query: { envir: testEnv } },
-    'describe("explodeCounterfaxSituations"'
-  );
+  const testEnv = apiUtils.getEnvir();
 
   it("Two by three by two makes twelve.", () => {
     let input = {
