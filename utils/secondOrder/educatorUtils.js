@@ -281,7 +281,7 @@ exports.checkSentenceFormulaIds = (currentLanguage) => {
 };
 
 exports.getSentenceFormulasBank = (currentLanguage) => {
-  const envir = apiUtils.getEnvir("getSentenceFormulasBank");
+  const envir = apiUtils.getEnvirForFormulaBank("getSentenceFormulasBank");
 
   const {
     sentenceFormulasBank,

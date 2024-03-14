@@ -20,7 +20,7 @@ const refFxn = require("../reference/referenceFunctions.js");
 const { fetchPalette } = require("../../models/palette.model.js");
 
 exports.getAnAvailableNexusId = () => {
-  const envir = apiUtils.getEnvir("getAnAvailableNexusId");
+  const envir = apiUtils.getEnvirForFormulaBank("getAnAvailableNexusId");
 
   const existingNexusIds =
     require(`../../source/${envir}/NEXUS/sentenceFormulas.js`).sentenceFormulas.map(
@@ -633,14 +633,35 @@ exports.setEnvir = (req, label) => {
     envir = "ref";
   }
   env.envir = envir;
-  // consol.logVeryGreyString(`"${envir}" set as envir by ${label}`);
+  consol.logVeryGreyString(
+    `"${envir}" set as envir${label ? " by " + label : ""}`
+  );
 };
 
 exports.getEnvir = (label) => {
-  const envir = env.envir;
+  let envir = env.envir;
   if (!envir) {
     envir = "ref";
   }
-  // consol.logVeryGreyString(`"${envir}" got as envir for ${label}`);
+
+  if (envir == "prod*ref") {
+    envir = "prod";
+  }
+  consol.logVeryGreyString(
+    `"${envir}" got as envir${label ? " for " + label : ""}`
+  );
+  return envir;
+};
+
+exports.getEnvirForFormulaBank = (label) => {
+  let envir = env.envir;
+  if (!envir) {
+    envir = "ref";
+  }
+
+  if (envir == "prod*ref") {
+    envir = "ref";
+  }
+  consol.logVeryGreyString(`"${envir}" got as envir for ${label}`);
   return envir;
 };

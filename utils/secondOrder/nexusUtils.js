@@ -9,7 +9,7 @@ const gdUtils = require("../grabDataUtils.js");
 const refObj = require("../../utils/reference/referenceObjects.js");
 
 exports.getLanguagesOfEquivalents = (sentenceFormulaId) => {
-  const envir = apiUtils.getEnvir("getLanguagesOfEquivalents");
+  const envir = apiUtils.getEnvirForFormulaBank("getLanguagesOfEquivalents");
 
   let lang = sentenceFormulaId.split("-")[0];
   const nexusSentenceFormulasBank =
@@ -30,7 +30,7 @@ exports.getLanguagesOfEquivalents = (sentenceFormulaId) => {
 };
 
 exports.getEquivalents = (sentenceFormulaId, answerLanguage) => {
-  const envir = apiUtils.getEnvir("getEquivalents");
+  const envir = apiUtils.getEnvirForFormulaBank("getEquivalents");
 
   let lang = sentenceFormulaId.split("-")[0];
   const nexusSentenceFormulasBank =

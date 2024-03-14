@@ -82,7 +82,7 @@ exports.readAllLObjs = (lang, useDummy, res, lObjCallback, wordsetCallback) => {
 };
 
 exports.grabFormulaById = (formulaId, useDummy, lang) => {
-  const envir = apiUtils.getEnvir("grabFormulaById");
+  const envir = apiUtils.getEnvirForFormulaBank("grabFormulaById");
 
   if (useDummy) {
     const {
@@ -133,7 +133,7 @@ exports.grabFormula = (
 };
 
 exports.grabSkeletonFormulas = (lang) => {
-  const envir = apiUtils.getEnvir("grabSkeletonFormulas");
+  const envir = apiUtils.getEnvirForFormulaBank("grabSkeletonFormulas");
   lang = lang.toUpperCase();
 
   const fs = require("fs");
