@@ -22,7 +22,7 @@ describe("Set test environment for all tests", function () {
 
 describe("/api", function () {
   this.timeout(5000);
-  const testEnv = apiUtils.getEnvir();
+  const testEnv = apiUtils.getEnvir("app01.spec");
 
   gpUtils.fillOutWashburneRefObj(
     generalTranslatedSentencesRef,

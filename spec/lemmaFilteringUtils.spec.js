@@ -7,7 +7,7 @@ const {
 const shouldConsoleLog = false;
 
 xdescribe("traverseAndRecordInflections", () => {
-  const testEnv = apiUtils.getEnvir();
+  const testEnv = apiUtils.getEnvir("lemmaFilteringUtils.spec");
 
   let source = {
     infinitive: "czytać",
