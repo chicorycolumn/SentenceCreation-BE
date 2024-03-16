@@ -66,17 +66,69 @@ exports.getSentenceFormulas = (questionFormulaId, answerLanguage) => {
   return uUtils.copyWithoutReference(res);
 };
 
-exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
-  let resObj = {};
-
+exports.getLemmasByCriteria = (currentLanguage, criteriaFromHTTP) => {
   let criteria = {};
   Object.keys(criteriaFromHTTP)
     .filter((k) => !["envir"].includes(k))
     .forEach((critKey) => {
       let critValue = criteriaFromHTTP[critKey];
-      critValue = critValue.split(" ");
+      critValue = critValue.split(",");
       criteria[critKey] = critValue;
     });
+
+  if (!Object.keys(criteria).length) {
+    return {};
+  }
+
+  let resArr = [];
+  let recordArr = [];
+
+  if (
+    Object.keys(criteria).every((k) =>
+      ["andTags", "orTags", "wordtype", "envir"].includes(k)
+    )
+  ) {
+    // Fetch only the Nexus data, not the individual lobjs.
+    const wordtype = criteria["wordtype"];
+    const nexusObjects = nexusUtils.getNexusForOneWordtype(wordtype);
+
+    nexusObjects.forEach((nexObj) => {
+      if (
+        Object.keys(criteria)
+          .filter((k) => !["envir", "wordtype"].includes(k))
+          .every((critKey) => {
+            let critValue = criteria[critKey];
+
+            if (critKey === "andTags") {
+              return uUtils.doStringsOrArraysMatch(nexObj.papers, critValue);
+            } else if (critKey === "orTags") {
+              return uUtils.doStringsOrArraysMatch(
+                nexObj.papers,
+                critValue,
+                false
+              );
+            }
+          })
+      ) {
+        nexObj.traductions[currentLanguage.toUpperCase()].forEach((lObjId) => {
+          if (!recordArr.includes(lObjId)) {
+            let split = lObjId.split("-");
+
+            recordArr.push(lObjId);
+            resArr.push({
+              lemma: split.slice(-1)[0],
+              id: split.slice(0, 3).join("-") + "-",
+              tags: nexObj.papers,
+            });
+          }
+        });
+      }
+    });
+
+    return resArr;
+  }
+
+  let resObj = {};
 
   const lObjCallback = (lObj, resObj, wordtype) => {
     if (!resObj[wordtype]) {
@@ -86,18 +138,12 @@ exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
     if (
       Object.keys(criteria).every((critKey) => {
         let critValue = criteria[critKey];
+        const papers = nexusUtils.getPapers(lObj);
 
         if (critKey === "andTags") {
-          return uUtils.doStringsOrArraysMatch(
-            nexusUtils.getPapers(lObj),
-            critValue
-          );
+          return uUtils.doStringsOrArraysMatch(papers, critValue);
         } else if (critKey === "orTags") {
-          return uUtils.doStringsOrArraysMatch(
-            nexusUtils.getPapers(lObj),
-            critValue,
-            false
-          );
+          return uUtils.doStringsOrArraysMatch(papers, critValue, false);
         } else {
           return (
             lObj[critKey] &&
@@ -109,7 +155,7 @@ exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
       resObj[wordtype].push({
         lemma: lObj.lemma,
         id: lObj.id,
-        tags: nexusUtils.getPapers(lObj),
+        tags: papers,
       });
     }
   };

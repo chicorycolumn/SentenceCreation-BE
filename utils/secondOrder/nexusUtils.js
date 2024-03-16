@@ -285,3 +285,8 @@ exports.getNexusWithAllWordtypes = () => {
 
   return wordsBank;
 };
+
+exports.getNexusForOneWordtype = (wordtype) => {
+  const envir = apiUtils.getEnvir("getNexusForOneWordtype");
+  return require(`../../source/${envir}/NEXUS/words/${wordtype}.json`);
+};

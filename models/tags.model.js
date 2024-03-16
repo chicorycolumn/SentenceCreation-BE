@@ -40,7 +40,7 @@ exports.fetchWordsByCriteria = (req) => {
 
   delete req.query["lang"];
 
-  let words = apiUtils.getWordsByCriteria(lang, req.query);
+  let words = apiUtils.getLemmasByCriteria(lang, req.query);
 
   let responseObject = { words };
 
