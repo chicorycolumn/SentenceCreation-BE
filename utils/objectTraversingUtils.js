@@ -580,14 +580,22 @@ exports.findMatchingLemmaObjectThenWord = (
           consol.log("[1;33m " + `nvnĸ findMatching outputArray null` + "[0m");
         }
 
-        let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
-          selectedLemmaObject,
-          structureChunk,
-          currentLanguage,
-          maqModes,
-          outputArray,
-          isPHD
-        );
+        let deliberatelyEmptySubArrayOfOutputUnits =
+          otUtils.getEmptySubArrayOfOutputUnitsIfExceptionalCases(
+            selectedLemmaObject,
+            structureChunk
+          );
+
+        let subArrayOfOutputUnits =
+          deliberatelyEmptySubArrayOfOutputUnits ||
+          lfUtils.filterWithinSelectedLemmaObject(
+            selectedLemmaObject,
+            structureChunk,
+            currentLanguage,
+            maqModes,
+            outputArray,
+            isPHD
+          );
 
         subArrayOfOutputUnits.forEach((unit) => {
           let { errorInDrilling, selectedWordArray, drillPath } = unit;
@@ -1497,4 +1505,22 @@ exports.getDepUnits = (
   }
 
   return res;
+};
+
+exports.getEmptySubArrayOfOutputUnitsIfExceptionalCases = (
+  selectedLemmaObject,
+  structureChunk
+) => {
+  if (
+    (selectedLemmaObject.isModal &&
+      structureChunk.tense &&
+      ["imperative"].some((x) => structureChunk.tense.includes(x))) ||
+    (selectedLemmaObject.isModal &&
+      structureChunk.tense &&
+      ["imperative im", "imperative pf"].some((x) =>
+        structureChunk.tenseDescription.includes(x)
+      ))
+  ) {
+    return [];
+  }
 };

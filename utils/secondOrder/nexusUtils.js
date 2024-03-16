@@ -47,6 +47,10 @@ exports.getEquivalents = (sentenceFormulaId, answerLanguage) => {
 };
 
 exports.getNexusLemmaObjects = (lObj) => {
+  if (lObj._untranslated) {
+    return [];
+  }
+
   const envir = apiUtils.getEnvir("getNexusLemmaObjects");
 
   let lang = idUtils.getLanguageFromLemmaObject(lObj);
