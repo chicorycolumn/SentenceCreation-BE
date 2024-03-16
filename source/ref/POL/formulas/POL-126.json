@@ -1,0 +1,14 @@
+{
+  "id": "POL-126",
+  "guide": "Can.",
+  "sentenceStructure": [
+    {
+      "chunkId": "ver-1-can",
+      "specificIds": ["pol-ver-0052-móc(can or be able to).json"],
+      "tenseDescription": ["imperative im"]
+    }
+  ],
+  "orders": {
+    "primary": [["ver-1-can"]]
+  }
+}

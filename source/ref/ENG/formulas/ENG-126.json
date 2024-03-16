@@ -1,0 +1,14 @@
+{
+  "id": "ENG-126",
+  "guide": "Can.",
+  "sentenceStructure": [
+    {
+      "chunkId": "ver-1-can",
+      "specificIds": ["eng-ver-0048-can(able).json"],
+      "tenseDescription": ["imperative"]
+    }
+  ],
+  "orders": {
+    "primary": [["ver-1-can"]]
+  }
+}

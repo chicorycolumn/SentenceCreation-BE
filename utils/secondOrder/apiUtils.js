@@ -70,11 +70,13 @@ exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
   let resObj = {};
 
   let criteria = {};
-  Object.keys(criteriaFromHTTP).forEach((critKey) => {
-    let critValue = criteriaFromHTTP[critKey];
-    critValue = critValue.split(" ");
-    criteria[critKey] = critValue;
-  });
+  Object.keys(criteriaFromHTTP)
+    .filter((k) => !["envir"].includes(k))
+    .forEach((critKey) => {
+      let critValue = criteriaFromHTTP[critKey];
+      critValue = critValue.split(" ");
+      criteria[critKey] = critValue;
+    });
 
   const lObjCallback = (lObj, resObj, wordtype) => {
     if (!resObj[wordtype]) {
@@ -424,6 +426,7 @@ exports.getEnChsForLemma = (lang, lemma) => {
             enCh[traitKey].possibleTraitValues &&
             !enCh[traitKey].possibleTraitValues.includes(traitValue)
           ) {
+            console.log(">>", enCh[traitKey].possibleTraitValues);
             consol.log(
               routeObj,
               `pmio Error: For lObj "${lObj.id}" I fetched RoutesAndTerminalValuesFromObject. From routeObj printed above I found that traitValue "${traitValue}" not compatible with "${traitKey}" even though that's what I gleaned using giveRoutesAndTerminalValuesFromObject.`
@@ -647,9 +650,13 @@ exports.getEnvir = (label) => {
   if (envir == "prod*ref") {
     envir = "prod";
   }
-  consol.logVeryGreyString(
-    `"${envir}" got as envir${label ? " for " + label : ""}`
-  );
+
+  let printFunction =
+    label && label.slice(label.length - 5, label.length) == ".spec"
+      ? consol.logGreyString
+      : consol.logVeryGreyString;
+
+  // printFunction(`"${envir}" got as envir${label ? " for " + label : ""}`);
   return envir;
 };
 

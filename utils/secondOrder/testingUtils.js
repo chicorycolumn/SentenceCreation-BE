@@ -138,6 +138,43 @@ exports.runPaletteTest2 = (...argumentos) => {
   return testingUtils._runPaletteTest(...argumentos);
 };
 
+exports.runPaletteTestExpectingNoSentence = (
+  questionLanguage,
+  answerLanguage,
+  sentenceFormulaId,
+  args = {},
+  useDummy = sentenceFormulaId.includes("dummy"),
+  skipConsoleLog
+) => {
+  if (
+    sentenceFormulaId.startsWith("dummy") ||
+    /\d/.test(sentenceFormulaId[0])
+  ) {
+    sentenceFormulaId = questionLanguage + "-" + sentenceFormulaId;
+  }
+
+  return request(app)
+    .get("/api/palette")
+    .send({
+      questionLanguage,
+      answerLanguage,
+      useDummy,
+      sentenceFormulaId,
+      ...args,
+    })
+    .expect(200)
+    .then((res) => {
+      if (!skipConsoleLog) {
+        consol.logTestOutputSolely("\n\nHere's res.body:", res.body);
+      }
+
+      expect(res.body.questionSentenceArr).to.have.length(0);
+      expect(res.body.questionMessage).to.equal(
+        "No sentence could be created from the specifications in Q."
+      );
+    });
+};
+
 exports._runPaletteTest = (
   questionLanguage,
   answerLanguage,
