@@ -26,6 +26,8 @@ exports.fetchTags = (req) => {
 
   let { allTags, allTopics } = apiUtils.getTagsAndTopics(lang);
 
+  allTags.push("_NO_TAGS");
+
   let responseObject = { tags: allTags, topics: allTopics };
 
   return Promise.all([responseObject]).then((array) => {

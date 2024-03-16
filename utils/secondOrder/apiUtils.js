@@ -71,9 +71,9 @@ exports.getLemmasByCriteria = (currentLanguage, criteriaFromHTTP) => {
   Object.keys(criteriaFromHTTP)
     .filter((k) => !["envir"].includes(k))
     .forEach((critKey) => {
-      let critValue = criteriaFromHTTP[critKey];
-      critValue = critValue.split(",");
-      criteria[critKey] = critValue;
+      let critValueArrStr = criteriaFromHTTP[critKey];
+      let critValues = critValueArrStr.split(",");
+      criteria[critKey] = critValues;
     });
 
   if (!Object.keys(criteria).length) {
@@ -85,7 +85,7 @@ exports.getLemmasByCriteria = (currentLanguage, criteriaFromHTTP) => {
 
   if (
     Object.keys(criteria).every((k) =>
-      ["andTags", "orTags", "wordtype", "envir"].includes(k)
+      ["andTags", "orTags", "wordtype"].includes(k)
     )
   ) {
     // Fetch only the Nexus data, not the individual lobjs.
@@ -97,16 +97,20 @@ exports.getLemmasByCriteria = (currentLanguage, criteriaFromHTTP) => {
         Object.keys(criteria)
           .filter((k) => !["envir", "wordtype"].includes(k))
           .every((critKey) => {
-            let critValue = criteria[critKey];
+            let critValues = criteria[critKey];
 
             if (critKey === "andTags") {
-              return uUtils.doStringsOrArraysMatch(nexObj.papers, critValue);
+              return critValues.length === 1 && critValues[0] === "_NO_TAGS"
+                ? !nexObj.papers.length
+                : uUtils.doStringsOrArraysMatch(nexObj.papers, critValues);
             } else if (critKey === "orTags") {
-              return uUtils.doStringsOrArraysMatch(
-                nexObj.papers,
-                critValue,
-                false
-              );
+              return critValues.length === 1 && critValues[0] === "_NO_TAGS"
+                ? !nexObj.papers.length
+                : uUtils.doStringsOrArraysMatch(
+                    nexObj.papers,
+                    critValues,
+                    false
+                  );
             }
           })
       ) {
@@ -137,17 +141,17 @@ exports.getLemmasByCriteria = (currentLanguage, criteriaFromHTTP) => {
 
     if (
       Object.keys(criteria).every((critKey) => {
-        let critValue = criteria[critKey];
+        let critValues = criteria[critKey];
         const papers = nexusUtils.getPapers(lObj);
 
         if (critKey === "andTags") {
-          return uUtils.doStringsOrArraysMatch(papers, critValue);
+          return uUtils.doStringsOrArraysMatch(papers, critValues);
         } else if (critKey === "orTags") {
-          return uUtils.doStringsOrArraysMatch(papers, critValue, false);
+          return uUtils.doStringsOrArraysMatch(papers, critValues, false);
         } else {
           return (
             lObj[critKey] &&
-            uUtils.doStringsOrArraysMatch(lObj[critKey], critValue)
+            uUtils.doStringsOrArraysMatch(lObj[critKey], critValues)
           );
         }
       })
