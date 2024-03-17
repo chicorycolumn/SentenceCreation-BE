@@ -671,7 +671,7 @@
     "traductions": {
       "SPA": [],
       "ENG": [
-        "eng-adj-0109-true(truthful)",
+        "eng-adj-0111-true(truthful)",
         "eng-adj-0112-authentic",
         "eng-adj-0113-real",
         "eng-adj-0160-genuine",
@@ -1769,7 +1769,7 @@
     "key": "adj-0146-tiny",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-adj-0299-tiny", "eng-adj-0300-minute"],
+      "ENG": ["eng-adj-1055-tiny", "eng-adj-0301-minute"],
       "POL": ["pol-adj-0177-malutki"]
     },
     "papers": ["concrete", "abstract", "dimension"],
@@ -1790,7 +1790,7 @@
     "traductions": {
       "SPA": [],
       "ENG": [
-        "eng-adj-0299-small(abstract)",
+        "eng-adj-0300-small(abstract)",
         "eng-adj-1053-minor",
         "eng-adj-1054-slight"
       ],

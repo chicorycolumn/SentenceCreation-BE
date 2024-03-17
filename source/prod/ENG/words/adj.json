@@ -836,7 +836,7 @@
   },
   {
     "lemma": "true",
-    "id": "eng-adj-0111-true",
+    "id": "eng-adj-0111-true(truthful)",
     "register": 0,
     "frequency": 2
   },
@@ -2135,20 +2135,20 @@
     "frequency": 4
   },
   {
-    "lemma": "tiny",
-    "id": "eng-adj-0299-tiny",
-    "register": 0,
-    "frequency": 3
-  },
-  {
     "lemma": "minute",
-    "id": "eng-adj-0300-minute",
+    "id": "eng-adj-0301-minute",
     "register": 0,
     "frequency": 3
   },
   {
     "lemma": "small",
-    "id": "eng-adj-0301-small",
+    "id": "eng-adj-0299-small(concrete)",
+    "register": 0,
+    "frequency": 1
+  },
+  {
+    "lemma": "small",
+    "id": "eng-adj-0300-small(abstract)",
     "register": 0,
     "frequency": 1
   },
@@ -6944,5 +6944,11 @@
     "id": "eng-adj-1054-slight",
     "register": 0,
     "frequency": 4
+  },
+  {
+    "lemma": "tiny",
+    "id": "eng-adj-1055-tiny",
+    "register": 0,
+    "frequency": 3
   }
 ]
