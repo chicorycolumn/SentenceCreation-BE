@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "kwietnie",
-      "gen": [
-        "kwietni",
-        "kwietniów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["kwietni", "kwietniów"] },
       "dat": "kwietniom",
       "acc": "kwietnie",
       "ins": "kwietniami",

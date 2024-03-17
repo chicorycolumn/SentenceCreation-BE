@@ -11,15 +11,9 @@
     },
     "plural": {
       "nom": "skurwiele",
-      "gen": [
-        "skurwieli",
-        "skurwielów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["skurwieli", "skurwielów"] },
       "dat": "skurwielom",
-      "acc": [
-        "skurwieli",
-        "skurwielów"
-      ],
+      "acc": { "isTerminus": true, "normal": ["skurwieli", "skurwielów"] },
       "ins": "skurwielami",
       "loc": "skurwielach",
       "voc": "skurwiele"

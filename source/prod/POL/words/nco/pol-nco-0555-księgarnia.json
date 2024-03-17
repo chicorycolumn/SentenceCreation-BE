@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "księgarnie",
-      "gen": [
-        "księgarni",
-        "księgarń"
-      ],
+      "gen": { "isTerminus": true, "normal": ["księgarni", "księgarń"] },
       "dat": "księgarniom",
       "acc": "księgarnie",
       "ins": "księgarniami",

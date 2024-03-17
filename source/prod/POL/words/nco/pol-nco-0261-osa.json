@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "osy",
-      "gen": [
-        "os",
-        "ós"
-      ],
+      "gen": { "isTerminus": true, "normal": ["os", "ós"] },
       "dat": "osom",
       "acc": "osy",
       "ins": "osami",

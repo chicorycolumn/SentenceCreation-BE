@@ -10,22 +10,13 @@
       "voc": "dystansie"
     },
     "plural": {
-      "nom": [
-        "dystanse",
-        "dystansy"
-      ],
+      "nom": { "isTerminus": true, "normal": ["dystanse", "dystansy"] },
       "gen": "dystansów",
       "dat": "dystansom",
-      "acc": [
-        "dystanse",
-        "dystansy"
-      ],
+      "acc": { "isTerminus": true, "normal": ["dystanse", "dystansy"] },
       "ins": "dystansami",
       "loc": "dystansach",
-      "voc": [
-        "dystanse",
-        "dystansy"
-      ]
+      "voc": { "isTerminus": true, "normal": ["dystanse", "dystansy"] }
     }
   }
 }

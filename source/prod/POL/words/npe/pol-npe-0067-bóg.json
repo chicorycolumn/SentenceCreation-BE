@@ -3,10 +3,7 @@
     "singular": {
       "nom": "bóg",
       "gen": "boga",
-      "dat": [
-        "bogu",
-        "bogowi"
-      ],
+      "dat": { "isTerminus": true, "normal": ["bogu", "bogowi"] },
       "acc": "boga",
       "ins": "bogiem",
       "loc": "bogu",

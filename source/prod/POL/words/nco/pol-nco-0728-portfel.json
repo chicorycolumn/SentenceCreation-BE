@@ -2,10 +2,7 @@
   "inflections": {
     "singular": {
       "nom": "portfel",
-      "gen": [
-        "portfela",
-        "portfelu"
-      ],
+      "gen": { "isTerminus": true, "normal": ["portfela", "portfelu"] },
       "dat": "portfelowi",
       "acc": "portfel",
       "ins": "portfelem",
@@ -14,10 +11,7 @@
     },
     "plural": {
       "nom": "portfele",
-      "gen": [
-        "portfeli",
-        "portfelów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["portfeli", "portfelów"] },
       "dat": "portfelom",
       "acc": "portfele",
       "ins": "portfelami",

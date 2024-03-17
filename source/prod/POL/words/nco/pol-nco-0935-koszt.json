@@ -10,22 +10,13 @@
       "voc": "koszcie"
     },
     "plural": {
-      "nom": [
-        "koszty",
-        "koszta"
-      ],
+      "nom": { "isTerminus": true, "normal": ["koszty", "koszta"] },
       "gen": "kosztów",
       "dat": "kosztom",
-      "acc": [
-        "koszty",
-        "koszta"
-      ],
+      "acc": { "isTerminus": true, "normal": ["koszty", "koszta"] },
       "ins": "kosztami",
       "loc": "kosztach",
-      "voc": [
-        "koszty",
-        "koszta"
-      ]
+      "voc": { "isTerminus": true, "normal": ["koszty", "koszta"] }
     }
   }
 }

@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "jezdnie",
-      "gen": [
-        "jezdni",
-        "jezdń"
-      ],
+      "gen": { "isTerminus": true, "normal": ["jezdni", "jezdń"] },
       "dat": "jezdniom",
       "acc": "jezdnie",
       "ins": "jezdniami",

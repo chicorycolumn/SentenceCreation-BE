@@ -11,17 +11,10 @@
     },
     "plural": {
       "nom": "oczy",
-      "gen": [
-        "oczu",
-        "ócz",
-        "oczów"
-      ],
+      "gen": ["oczu", "ócz", "oczów"],
       "dat": "oczom",
       "acc": "oczy",
-      "ins": [
-        "oczami",
-        "oczyma"
-      ],
+      "ins": { "isTerminus": true, "normal": ["oczami", "oczyma"] },
       "loc": "oczach",
       "voc": "oczy"
     }

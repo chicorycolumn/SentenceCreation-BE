@@ -10,22 +10,13 @@
       "voc": "cudzie"
     },
     "plural": {
-      "nom": [
-        "cuda",
-        "cudy"
-      ],
+      "nom": { "isTerminus": true, "normal": ["cuda", "cudy"] },
       "gen": "cudów",
       "dat": "cudom",
-      "acc": [
-        "cuda",
-        "cudy"
-      ],
+      "acc": { "isTerminus": true, "normal": ["cuda", "cudy"] },
       "ins": "cudami",
       "loc": "cudach",
-      "voc": [
-        "cuda",
-        "cudy"
-      ]
+      "voc": { "isTerminus": true, "normal": ["cuda", "cudy"] }
     }
   }
 }

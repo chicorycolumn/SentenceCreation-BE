@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "grudnie",
-      "gen": [
-        "grudni",
-        "grudniów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["grudni", "grudniów"] },
       "dat": "grudniom",
       "acc": "grudnie",
       "ins": "grudniami",

@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "fotele",
-      "gen": [
-        "foteli",
-        "fotelów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["foteli", "fotelów"] },
       "dat": "fotelom",
       "acc": "fotele",
       "ins": "fotelami",

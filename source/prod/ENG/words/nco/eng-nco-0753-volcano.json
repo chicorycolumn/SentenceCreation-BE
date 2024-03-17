@@ -5,14 +5,8 @@
       "gen": "volcano's"
     },
     "plural": {
-      "nom": [
-        "volcanoes",
-        "volcanos"
-      ],
-      "gen": [
-        "volcanoes'",
-        "volcanos'"
-      ]
+      "nom": { "isTerminus": true, "normal": ["volcanoes", "volcanos"] },
+      "gen": { "isTerminus": true, "normal": ["volcanoes'", "volcanos'"] }
     }
   }
 }

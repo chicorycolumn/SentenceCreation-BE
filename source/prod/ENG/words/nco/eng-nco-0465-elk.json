@@ -5,14 +5,8 @@
       "gen": "elk's"
     },
     "plural": {
-      "nom": [
-        "elk",
-        "elks"
-      ],
-      "gen": [
-        "elk's",
-        "elks'"
-      ]
+      "nom": { "isTerminus": true, "normal": ["elk", "elks"] },
+      "gen": { "isTerminus": true, "normal": ["elk's", "elks'"] }
     }
   }
 }

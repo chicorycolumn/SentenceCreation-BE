@@ -14,10 +14,7 @@
       "gen": "gwoździ",
       "dat": "gwoździom",
       "acc": "gwoździe",
-      "ins": [
-        "gwoździami",
-        "gwoźdźmi"
-      ],
+      "ins": { "isTerminus": true, "normal": ["gwoździami", "gwoźdźmi"] },
       "loc": "gwoździach",
       "voc": "gwoździe"
     }

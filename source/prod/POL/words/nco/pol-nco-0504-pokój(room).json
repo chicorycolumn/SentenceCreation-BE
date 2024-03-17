@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "pokoje",
-      "gen": [
-        "pokojów",
-        "pokoi"
-      ],
+      "gen": { "isTerminus": true, "normal": ["pokojów", "pokoi"] },
       "dat": "pokojom",
       "acc": "pokoje",
       "ins": "pokojami",

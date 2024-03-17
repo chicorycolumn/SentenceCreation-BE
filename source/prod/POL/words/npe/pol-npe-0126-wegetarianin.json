@@ -11,15 +11,9 @@
     },
     "plural": {
       "nom": "wegetarianie",
-      "gen": [
-        "wegetarian",
-        "wegetarianów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["wegetarian", "wegetarianów"] },
       "dat": "wegetarianom",
-      "acc": [
-        "wegetarian",
-        "wegetarianów"
-      ],
+      "acc": { "isTerminus": true, "normal": ["wegetarian", "wegetarianów"] },
       "ins": "wegetarianami",
       "loc": "wegetarianach",
       "voc": "wegetarianie"

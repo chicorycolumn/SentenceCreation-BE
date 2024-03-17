@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "łyżwy",
-      "gen": [
-        "łyżew",
-        "łyżw"
-      ],
+      "gen": { "isTerminus": true, "normal": ["łyżew", "łyżw"] },
       "dat": "łyżwom",
       "acc": "łyżwy",
       "ins": "łyżwami",

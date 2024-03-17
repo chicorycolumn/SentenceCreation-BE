@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "ule",
-      "gen": [
-        "uli",
-        "ulów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["uli", "ulów"] },
       "dat": "ulom",
       "acc": "ule",
       "ins": "ulami",

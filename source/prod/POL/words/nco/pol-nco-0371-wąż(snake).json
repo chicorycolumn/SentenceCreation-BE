@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "węże",
-      "gen": [
-        "węży",
-        "wężów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["węży", "wężów"] },
       "dat": "wężom",
       "acc": "węże",
       "ins": "wężami",

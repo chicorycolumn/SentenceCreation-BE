@@ -3,10 +3,7 @@
     "singular": {
       "nom": "kwiat",
       "gen": "kwiatu",
-      "dat": [
-        "kwiatowi",
-        "kwiatu"
-      ],
+      "dat": { "isTerminus": true, "normal": ["kwiatowi", "kwiatu"] },
       "acc": "kwiat",
       "ins": "kwiatem",
       "loc": "kwiecie",

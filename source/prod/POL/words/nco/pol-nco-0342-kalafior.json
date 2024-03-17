@@ -4,10 +4,7 @@
       "nom": "kalafior",
       "gen": "kalafiora",
       "dat": "kalafiorowi",
-      "acc": [
-        "kalafior",
-        "kalafiora"
-      ],
+      "acc": { "isTerminus": true, "normal": ["kalafior", "kalafiora"] },
       "ins": "kalafiorem",
       "loc": "kalafiorze",
       "voc": "kalafiorze"

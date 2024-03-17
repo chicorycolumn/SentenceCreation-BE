@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "kosze",
-      "gen": [
-        "koszy",
-        "koszów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["koszy", "koszów"] },
       "dat": "koszom",
       "acc": "kosze",
       "ins": "koszami",

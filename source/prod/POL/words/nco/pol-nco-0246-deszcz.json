@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "deszcze",
-      "gen": [
-        "deszczy",
-        "deszczów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["deszczy", "deszczów"] },
       "dat": "deszczom",
       "acc": "deszcze",
       "ins": "deszczami",

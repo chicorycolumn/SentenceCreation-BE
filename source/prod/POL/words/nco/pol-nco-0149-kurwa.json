@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "kurwy",
-      "gen": [
-        "kurew",
-        "kurw"
-      ],
+      "gen": { "isTerminus": true, "normal": ["kurew", "kurw"] },
       "dat": "kurwom",
       "acc": "kurwy",
       "ins": "kurwami",

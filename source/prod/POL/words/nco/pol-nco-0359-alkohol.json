@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "alkohole",
-      "gen": [
-        "alkoholi",
-        "alkoholów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["alkoholi", "alkoholów"] },
       "dat": "alkoholom",
       "acc": "alkohole",
       "ins": "alkoholami",

@@ -10,19 +10,13 @@
       "voc": "bohaterze"
     },
     "plural": {
-      "nom": [
-        "bohaterowie",
-        "bohaterzy"
-      ],
+      "nom": { "isTerminus": true, "normal": ["bohaterowie", "bohaterzy"] },
       "gen": "bohaterów",
       "dat": "bohaterom",
       "acc": "bohaterów",
       "ins": "bohaterami",
       "loc": "bohaterach",
-      "voc": [
-        "bohaterowie",
-        "bohaterzy"
-      ]
+      "voc": { "isTerminus": true, "normal": ["bohaterowie", "bohaterzy"] }
     }
   }
 }

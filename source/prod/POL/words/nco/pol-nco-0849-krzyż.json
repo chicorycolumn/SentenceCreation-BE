@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "krzyże",
-      "gen": [
-        "krzyży",
-        "krzyżów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["krzyży", "krzyżów"] },
       "dat": "krzyżom",
       "acc": "krzyże",
       "ins": "krzyżami",

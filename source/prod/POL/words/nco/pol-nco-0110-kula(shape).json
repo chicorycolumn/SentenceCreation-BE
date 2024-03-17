@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "kule",
-      "gen": [
-        "kul",
-        "kuli"
-      ],
+      "gen": { "isTerminus": true, "normal": ["kul", "kuli"] },
       "dat": "kulom",
       "acc": "kule",
       "ins": "kulami",

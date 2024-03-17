@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "sypialnie",
-      "gen": [
-        "sypialni",
-        "sypialń"
-      ],
+      "gen": { "isTerminus": true, "normal": ["sypialni", "sypialń"] },
       "dat": "sypialniom",
       "acc": "sypialnie",
       "ins": "sypialniami",

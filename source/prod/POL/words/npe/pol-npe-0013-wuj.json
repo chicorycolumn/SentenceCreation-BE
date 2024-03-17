@@ -11,15 +11,9 @@
     },
     "plural": {
       "nom": "wujowie",
-      "gen": [
-        "wujów",
-        "wui"
-      ],
+      "gen": { "isTerminus": true, "normal": ["wujów", "wui"] },
       "dat": "wujom",
-      "acc": [
-        "wujów",
-        "wui"
-      ],
+      "acc": { "isTerminus": true, "normal": ["wujów", "wui"] },
       "ins": "wujami",
       "loc": "wujach",
       "voc": "wujowie"

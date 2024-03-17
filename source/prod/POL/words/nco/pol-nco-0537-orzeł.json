@@ -3,10 +3,7 @@
     "singular": {
       "nom": "orzeł",
       "gen": "orła",
-      "dat": [
-        "orłu",
-        "orłowi"
-      ],
+      "dat": { "isTerminus": true, "normal": ["orłu", "orłowi"] },
       "acc": "orła",
       "ins": "orłem",
       "loc": "orle",

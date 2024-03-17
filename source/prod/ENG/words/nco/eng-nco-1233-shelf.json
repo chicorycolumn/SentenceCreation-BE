@@ -5,12 +5,8 @@
       "gen": "shelf's"
     },
     "plural": {
-      "nom": [
-        "shelves"
-      ],
-      "gen": [
-        "shelves'"
-      ]
+      "nom": { "isTerminus": true, "normal": ["shelves"] },
+      "gen": { "isTerminus": true, "normal": ["shelves'"] }
     }
   }
 }

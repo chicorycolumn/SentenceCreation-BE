@@ -4,10 +4,7 @@
       "nom": "pączek",
       "gen": "pączka",
       "dat": "pączkowi",
-      "acc": [
-        "pączek",
-        "pączka"
-      ],
+      "acc": { "isTerminus": true, "normal": ["pączek", "pączka"] },
       "ins": "pączkiem",
       "loc": "pączku",
       "voc": "pączku"

@@ -14,10 +14,7 @@
       "gen": "słów",
       "dat": "słowom",
       "acc": "słowa",
-      "ins": [
-        "słowami",
-        "słowy¹"
-      ],
+      "ins": { "isTerminus": true, "normal": ["słowami", "słowy¹"] },
       "loc": "słowach",
       "voc": "słowa"
     }

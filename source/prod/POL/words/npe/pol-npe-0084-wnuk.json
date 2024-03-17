@@ -10,22 +10,13 @@
       "voc": "wnuku"
     },
     "plural": {
-      "nom": [
-        "wnukowie",
-        "wnuki"
-      ],
+      "nom": { "isTerminus": true, "normal": ["wnukowie", "wnuki"] },
       "gen": "wnuków",
       "dat": "wnukom",
-      "acc": [
-        "wnuków",
-        "wnuki"
-      ],
+      "acc": { "isTerminus": true, "normal": ["wnuków", "wnuki"] },
       "ins": "wnukami",
       "loc": "wnukach",
-      "voc": [
-        "wnukowie",
-        "wnuki"
-      ]
+      "voc": { "isTerminus": true, "normal": ["wnukowie", "wnuki"] }
     }
   }
 }

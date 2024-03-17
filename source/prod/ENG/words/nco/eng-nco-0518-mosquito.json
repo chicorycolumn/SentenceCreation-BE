@@ -5,14 +5,8 @@
       "gen": "mosquito's"
     },
     "plural": {
-      "nom": [
-        "mosquitoes",
-        "mosquitos"
-      ],
-      "gen": [
-        "mosquitoes'",
-        "mosquitos'"
-      ]
+      "nom": { "isTerminus": true, "normal": ["mosquitoes", "mosquitos"] },
+      "gen": { "isTerminus": true, "normal": ["mosquitoes'", "mosquitos'"] }
     }
   }
 }

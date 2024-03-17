@@ -5,12 +5,8 @@
       "gen": "cough's"
     },
     "plural": {
-      "nom": [
-        "coughs"
-      ],
-      "gen": [
-        "coughs'"
-      ]
+      "nom": { "isTerminus": true, "normal": ["coughs"] },
+      "gen": { "isTerminus": true, "normal": ["coughs'"] }
     }
   }
 }

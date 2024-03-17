@@ -5,14 +5,8 @@
       "gen": "armadillo's"
     },
     "plural": {
-      "nom": [
-        "armadillos",
-        "armadilloes"
-      ],
-      "gen": [
-        "armadillos'",
-        "armadilloes'"
-      ]
+      "nom": { "isTerminus": true, "normal": ["armadillos", "armadilloes"] },
+      "gen": { "isTerminus": true, "normal": ["armadillos'", "armadilloes'"] }
     }
   }
 }

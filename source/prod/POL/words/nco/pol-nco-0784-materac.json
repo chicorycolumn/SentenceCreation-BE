@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "materace",
-      "gen": [
-        "materaców",
-        "materacy"
-      ],
+      "gen": { "isTerminus": true, "normal": ["materaców", "materacy"] },
       "dat": "materacom",
       "acc": "materace",
       "ins": "materacami",

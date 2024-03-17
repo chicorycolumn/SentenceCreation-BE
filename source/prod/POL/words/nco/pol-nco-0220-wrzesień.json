@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "wrześnie",
-      "gen": [
-        "wrześni",
-        "wrześniów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["wrześni", "wrześniów"] },
       "dat": "wrześniom",
       "acc": "wrześnie",
       "ins": "wrześniami",

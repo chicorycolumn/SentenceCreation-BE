@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "stycznie",
-      "gen": [
-        "styczniów",
-        "styczni"
-      ],
+      "gen": { "isTerminus": true, "normal": ["styczniów", "styczni"] },
       "dat": "styczniom",
       "acc": "stycznie",
       "ins": "styczniami",

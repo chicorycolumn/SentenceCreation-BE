@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "jeże",
-      "gen": [
-        "jeży",
-        "jeżów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["jeży", "jeżów"] },
       "dat": "jeżom",
       "acc": "jeże",
       "ins": "jeżami",

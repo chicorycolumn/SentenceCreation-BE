@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "zające",
-      "gen": [
-        "zajęcy",
-        "zająców"
-      ],
+      "gen": { "isTerminus": true, "normal": ["zajęcy", "zająców"] },
       "dat": "zającom",
       "acc": "zające",
       "ins": "zającami",

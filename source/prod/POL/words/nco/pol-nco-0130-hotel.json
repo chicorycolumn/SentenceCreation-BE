@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "hotele",
-      "gen": [
-        "hoteli",
-        "hotelów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["hoteli", "hotelów"] },
       "dat": "hotelom",
       "acc": "hotele",
       "ins": "hotelami",

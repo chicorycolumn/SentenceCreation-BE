@@ -5,14 +5,8 @@
       "gen": "radius's"
     },
     "plural": {
-      "nom": [
-        "radiuses",
-        "radii"
-      ],
-      "gen": [
-        "radiuses'",
-        "radii's"
-      ]
+      "nom": { "isTerminus": true, "normal": ["radiuses", "radii"] },
+      "gen": { "isTerminus": true, "normal": ["radiuses'", "radii's"] }
     }
   }
 }

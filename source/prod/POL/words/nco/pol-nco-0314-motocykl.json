@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "motocykle",
-      "gen": [
-        "motocykli",
-        "motocycklów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["motocykli", "motocycklów"] },
       "dat": "motocyklom",
       "acc": "motocykle",
       "ins": "motocyklami",

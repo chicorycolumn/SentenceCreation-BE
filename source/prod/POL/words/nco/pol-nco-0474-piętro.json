@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "piętra",
-      "gen": [
-        "pięter",
-        "piętr"
-      ],
+      "gen": { "isTerminus": true, "normal": ["pięter", "piętr"] },
       "dat": "piętrom",
       "acc": "piętra",
       "ins": "piętrami",

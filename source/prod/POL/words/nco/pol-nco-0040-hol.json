@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "hole",
-      "gen": [
-        "holi",
-        "holów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["holi", "holów"] },
       "dat": "holom",
       "acc": "hole",
       "ins": "holami",

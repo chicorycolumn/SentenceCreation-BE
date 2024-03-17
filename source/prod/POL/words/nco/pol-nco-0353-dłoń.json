@@ -14,10 +14,7 @@
       "gen": "dłoni",
       "dat": "dłoniom",
       "acc": "dłonie",
-      "ins": [
-        "dłońmi",
-        "dłoniami"
-      ],
+      "ins": { "isTerminus": true, "normal": ["dłońmi", "dłoniami"] },
       "loc": "dłoniach",
       "voc": "dłonie"
     }

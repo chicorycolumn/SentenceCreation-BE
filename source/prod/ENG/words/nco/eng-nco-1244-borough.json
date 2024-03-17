@@ -5,12 +5,8 @@
       "gen": "borough's"
     },
     "plural": {
-      "nom": [
-        "boroughs"
-      ],
-      "gen": [
-        "boroughs'"
-      ]
+      "nom": { "isTerminus": true, "normal": ["boroughs"] },
+      "gen": { "isTerminus": true, "normal": ["boroughs'"] }
     }
   }
 }

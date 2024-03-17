@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "torby",
-      "gen": [
-        "toreb",
-        "torb"
-      ],
+      "gen": { "isTerminus": true, "normal": ["toreb", "torb"] },
       "dat": "torbom",
       "acc": "torby",
       "ins": "torbami",

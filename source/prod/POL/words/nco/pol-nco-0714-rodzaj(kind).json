@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "rodzaje",
-      "gen": [
-        "rodzajów",
-        "rodzai"
-      ],
+      "gen": { "isTerminus": true, "normal": ["rodzajów", "rodzai"] },
       "dat": "rodzajom",
       "acc": "rodzaje",
       "ins": "rodzajami",

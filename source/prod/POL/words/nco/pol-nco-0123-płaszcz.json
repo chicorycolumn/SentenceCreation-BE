@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "płaszcze",
-      "gen": [
-        "płaszczy",
-        "płaszczów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["płaszczy", "płaszczów"] },
       "dat": "płaszczom",
       "acc": "płaszcze",
       "ins": "płaszczami",

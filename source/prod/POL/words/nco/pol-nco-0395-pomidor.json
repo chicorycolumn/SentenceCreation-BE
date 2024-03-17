@@ -4,10 +4,7 @@
       "nom": "pomidor",
       "gen": "pomidora",
       "dat": "pomidorowi",
-      "acc": [
-        "pomidor",
-        "pomidora"
-      ],
+      "acc": { "isTerminus": true, "normal": ["pomidor", "pomidora"] },
       "ins": "pomidorem",
       "loc": "pomidorze",
       "voc": "pomidorze"

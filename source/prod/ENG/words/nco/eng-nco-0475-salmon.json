@@ -5,14 +5,8 @@
       "gen": "salmon's"
     },
     "plural": {
-      "nom": [
-        "salmon",
-        "salmons"
-      ],
-      "gen": [
-        "salmon's",
-        "salmons'"
-      ]
+      "nom": { "isTerminus": true, "normal": ["salmon", "salmons"] },
+      "gen": { "isTerminus": true, "normal": ["salmon's", "salmons'"] }
     }
   }
 }

@@ -10,19 +10,13 @@
       "voc": "chłopaku"
     },
     "plural": {
-      "nom": [
-        "chłopacy",
-        "chłopaki"
-      ],
+      "nom": { "isTerminus": true, "normal": ["chłopacy", "chłopaki"] },
       "gen": "chłopaków",
       "dat": "chłopakom",
       "acc": "chłopaków",
       "ins": "chłopakami",
       "loc": "chłopakach",
-      "voc": [
-        "chłopacy",
-        "chłopaki"
-      ]
+      "voc": { "isTerminus": true, "normal": ["chłopacy", "chłopaki"] }
     }
   }
 }

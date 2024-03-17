@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "dorsze",
-      "gen": [
-        "dorszów",
-        "dorszy"
-      ],
+      "gen": { "isTerminus": true, "normal": ["dorszów", "dorszy"] },
       "dat": "dorszom",
       "acc": "dorsze",
       "ins": "dorszami",

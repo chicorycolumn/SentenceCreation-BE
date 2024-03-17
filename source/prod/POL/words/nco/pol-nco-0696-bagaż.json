@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "bagaże",
-      "gen": [
-        "bagaży",
-        "bagażów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["bagaży", "bagażów"] },
       "dat": "bagażom",
       "acc": "bagaże",
       "ins": "bagażami",

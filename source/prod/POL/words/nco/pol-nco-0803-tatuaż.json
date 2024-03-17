@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "tatuaże",
-      "gen": [
-        "tatuaży",
-        "tatuażów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["tatuaży", "tatuażów"] },
       "dat": "tatuażom",
       "acc": "tatuaże",
       "ins": "tatuażami",

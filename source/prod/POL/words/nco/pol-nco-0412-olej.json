@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "oleje",
-      "gen": [
-        "olejów",
-        "olei"
-      ],
+      "gen": { "isTerminus": true, "normal": ["olejów", "olei"] },
       "dat": "olejom",
       "acc": "oleje",
       "ins": "olejami",

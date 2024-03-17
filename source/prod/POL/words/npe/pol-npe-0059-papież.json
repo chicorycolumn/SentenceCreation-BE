@@ -11,15 +11,9 @@
     },
     "plural": {
       "nom": "papieże",
-      "gen": [
-        "papieżów",
-        "papieży"
-      ],
+      "gen": { "isTerminus": true, "normal": ["papieżów", "papieży"] },
       "dat": "papieżom",
-      "acc": [
-        "papieżów",
-        "papieży"
-      ],
+      "acc": { "isTerminus": true, "normal": ["papieżów", "papieży"] },
       "ins": "papieżami",
       "loc": "papieżach",
       "voc": "papieże"

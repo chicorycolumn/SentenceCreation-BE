@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "piekarnie",
-      "gen": [
-        "piekarni",
-        "piekarń"
-      ],
+      "gen": { "isTerminus": true, "normal": ["piekarni", "piekarń"] },
       "dat": "piekarniom",
       "acc": "piekarnie",
       "ins": "piekarniami",

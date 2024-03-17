@@ -4,10 +4,7 @@
       "nom": "orzech",
       "gen": "orzecha",
       "dat": "orzechowi",
-      "acc": [
-        "orzech",
-        "orzecha"
-      ],
+      "acc": { "isTerminus": true, "normal": ["orzech", "orzecha"] },
       "ins": "orzechem",
       "loc": "orzechu",
       "voc": "orzechu"

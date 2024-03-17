@@ -14,14 +14,8 @@
       "gen": "rąk",
       "dat": "rękom",
       "acc": "ręce",
-      "ins": [
-        "rękami",
-        "rękoma"
-      ],
-      "loc": [
-        "rękach",
-        "ręku"
-      ],
+      "ins": { "isTerminus": true, "normal": ["rękami", "rękoma"] },
+      "loc": { "isTerminus": true, "normal": ["rękach", "ręku"] },
       "voc": "ręce"
     }
   }

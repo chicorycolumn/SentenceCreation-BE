@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "bóle",
-      "gen": [
-        "bólów",
-        "bóli"
-      ],
+      "gen": { "isTerminus": true, "normal": ["bólów", "bóli"] },
       "dat": "bólom",
       "acc": "bóle",
       "ins": "bólami",

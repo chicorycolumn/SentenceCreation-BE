@@ -10,22 +10,13 @@
       "voc": "ambulansie"
     },
     "plural": {
-      "nom": [
-        "ambulanse",
-        "ambulansy"
-      ],
+      "nom": { "isTerminus": true, "normal": ["ambulanse", "ambulansy"] },
       "gen": "ambulansów",
       "dat": "ambulansom",
-      "acc": [
-        "ambulanse",
-        "ambulansy"
-      ],
+      "acc": { "isTerminus": true, "normal": ["ambulanse", "ambulansy"] },
       "ins": "ambulansami",
       "loc": "ambulansach",
-      "voc": [
-        "ambulanse",
-        "ambulansy"
-      ]
+      "voc": { "isTerminus": true, "normal": ["ambulanse", "ambulansy"] }
     }
   }
 }

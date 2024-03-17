@@ -2,10 +2,7 @@
   "inflections": {
     "singular": {
       "nom": "śrubokręt",
-      "gen": [
-        "śrubokrętu",
-        "śrubokręta"
-      ],
+      "gen": { "isTerminus": true, "normal": ["śrubokrętu", "śrubokręta"] },
       "dat": "śrubokrętowi",
       "acc": "śrubokręt",
       "ins": "śrubokrętem",

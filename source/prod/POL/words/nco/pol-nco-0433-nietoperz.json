@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "nietoperze",
-      "gen": [
-        "nietoperzy",
-        "nietoperzów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["nietoperzy", "nietoperzów"] },
       "dat": "nietoperzom",
       "acc": "nietoperze",
       "ins": "nietoperzami",

@@ -10,22 +10,13 @@
       "voc": "wsi"
     },
     "plural": {
-      "nom": [
-        "wsie",
-        "wsi"
-      ],
+      "nom": { "isTerminus": true, "normal": ["wsie", "wsi"] },
       "gen": "wsi",
       "dat": "wsiom",
-      "acc": [
-        "wsie",
-        "wsi"
-      ],
+      "acc": { "isTerminus": true, "normal": ["wsie", "wsi"] },
       "ins": "wsiami",
       "loc": "wsiach",
-      "voc": [
-        "wsie",
-        "wsi"
-      ]
+      "voc": { "isTerminus": true, "normal": ["wsie", "wsi"] }
     }
   }
 }

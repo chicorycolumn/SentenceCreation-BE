@@ -5,14 +5,8 @@
       "gen": "scarf's"
     },
     "plural": {
-      "nom": [
-        "scarves",
-        "scarfs"
-      ],
-      "gen": [
-        "scarves'",
-        "scarfs'"
-      ]
+      "nom": { "isTerminus": true, "normal": ["scarves", "scarfs"] },
+      "gen": { "isTerminus": true, "normal": ["scarves'", "scarfs'"] }
     }
   }
 }

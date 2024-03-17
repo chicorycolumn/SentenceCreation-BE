@@ -14,10 +14,7 @@
       "gen": "gałęzi",
       "dat": "gałęziom",
       "acc": "gałęzie",
-      "ins": [
-        "gałęziami",
-        "gałęźmi"
-      ],
+      "ins": { "isTerminus": true, "normal": ["gałęziami", "gałęźmi"] },
       "loc": "gałęziach",
       "voc": "gałęzie"
     }

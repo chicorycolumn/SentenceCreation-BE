@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "cienie",
-      "gen": [
-        "cieni",
-        "cieniów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["cieni", "cieniów"] },
       "dat": "cieniom",
       "acc": "cienie",
       "ins": "cieniami",

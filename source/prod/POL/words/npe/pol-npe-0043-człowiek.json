@@ -7,10 +7,7 @@
       "acc": "człowieka",
       "ins": "człowiekiem",
       "loc": "człowieku",
-      "voc": [
-        "człowiecze",
-        "człowieku"
-      ]
+      "voc": { "isTerminus": true, "normal": ["człowiecze", "człowieku"] }
     },
     "plural": {
       "nom": "ludzie",

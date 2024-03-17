@@ -11,15 +11,9 @@
     },
     "plural": {
       "nom": "złodzieje",
-      "gen": [
-        "złodziei",
-        "złodziejów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["złodziei", "złodziejów"] },
       "dat": "złodziejom",
-      "acc": [
-        "złodziei",
-        "złodziejów"
-      ],
+      "acc": { "isTerminus": true, "normal": ["złodziei", "złodziejów"] },
       "ins": "złodziejami",
       "loc": "złodziejach",
       "voc": "złodzieje"

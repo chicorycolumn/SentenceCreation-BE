@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "pomarańcze",
-      "gen": [
-        "pomarańczy",
-        "pomarańcz"
-      ],
+      "gen": { "isTerminus": true, "normal": ["pomarańczy", "pomarańcz"] },
       "dat": "pomarańczom",
       "acc": "pomarańcze",
       "ins": "pomarańczami",

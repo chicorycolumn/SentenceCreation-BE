@@ -7,10 +7,7 @@
       "acc": "siostrzeńca",
       "ins": "siostrzeńcem",
       "loc": "siostrzeńcu",
-      "voc": [
-        "siostrzeńcu",
-        "siostrzeńcze"
-      ]
+      "voc": { "isTerminus": true, "normal": ["siostrzeńcu", "siostrzeńcze"] }
     },
     "plural": {
       "nom": "siostrzeńcy",

@@ -10,22 +10,13 @@
       "voc": "dniu"
     },
     "plural": {
-      "nom": [
-        "dni",
-        "dnie"
-      ],
+      "nom": { "isTerminus": true, "normal": ["dni", "dnie"] },
       "gen": "dni",
       "dat": "dniom",
-      "acc": [
-        "dni",
-        "dnie"
-      ],
+      "acc": { "isTerminus": true, "normal": ["dni", "dnie"] },
       "ins": "dniami",
       "loc": "dniach",
-      "voc": [
-        "dni",
-        "dnie"
-      ]
+      "voc": { "isTerminus": true, "normal": ["dni", "dnie"] }
     }
   }
 }

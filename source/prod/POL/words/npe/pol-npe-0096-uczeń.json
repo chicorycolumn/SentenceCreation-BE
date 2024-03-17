@@ -11,15 +11,9 @@
     },
     "plural": {
       "nom": "uczniowie",
-      "gen": [
-        "uczniów",
-        "uczni"
-      ],
+      "gen": { "isTerminus": true, "normal": ["uczniów", "uczni"] },
       "dat": "uczniom",
-      "acc": [
-        "uczniów",
-        "uczni"
-      ],
+      "acc": { "isTerminus": true, "normal": ["uczniów", "uczni"] },
       "ins": "uczniami",
       "loc": "uczniach",
       "voc": "uczniowie"

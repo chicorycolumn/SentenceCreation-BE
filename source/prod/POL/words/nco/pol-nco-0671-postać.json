@@ -10,22 +10,13 @@
       "voc": "postaci"
     },
     "plural": {
-      "nom": [
-        "postacie",
-        "postaci"
-      ],
+      "nom": { "isTerminus": true, "normal": ["postacie", "postaci"] },
       "gen": "postaci",
       "dat": "postaciom",
-      "acc": [
-        "postacie",
-        "postaci"
-      ],
+      "acc": { "isTerminus": true, "normal": ["postacie", "postaci"] },
       "ins": "postaciami",
       "loc": "postaciach",
-      "voc": [
-        "postacie",
-        "postaci"
-      ]
+      "voc": { "isTerminus": true, "normal": ["postacie", "postaci"] }
     }
   }
 }

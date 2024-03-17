@@ -2,10 +2,7 @@
   "inflections": {
     "singular": {
       "nom": "wrak",
-      "gen": [
-        "wraka",
-        "wraku"
-      ],
+      "gen": { "isTerminus": true, "normal": ["wraka", "wraku"] },
       "dat": "wrakowi",
       "acc": "wrak",
       "ins": "wrakiem",

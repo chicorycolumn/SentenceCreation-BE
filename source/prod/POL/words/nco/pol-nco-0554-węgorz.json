@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "węgorze",
-      "gen": [
-        "węgorzy",
-        "węgorzów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["węgorzy", "węgorzów"] },
       "dat": "węgorzom",
       "acc": "węgorze",
       "ins": "węgorzami",

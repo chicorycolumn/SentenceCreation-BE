@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "wydry",
-      "gen": [
-        "wyder",
-        "wydr"
-      ],
+      "gen": { "isTerminus": true, "normal": ["wyder", "wydr"] },
       "dat": "wydrom",
       "acc": "wydry",
       "ins": "wydrami",

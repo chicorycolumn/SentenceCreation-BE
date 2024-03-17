@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "niedziele",
-      "gen": [
-        "niedzieli",
-        "niedziel"
-      ],
+      "gen": { "isTerminus": true, "normal": ["niedzieli", "niedziel"] },
       "dat": "niedzielom",
       "acc": "niedziele",
       "ins": "niedzielami",

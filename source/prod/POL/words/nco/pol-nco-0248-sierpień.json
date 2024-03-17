@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "sierpnie",
-      "gen": [
-        "sierpni",
-        "sierpniów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["sierpni", "sierpniów"] },
       "dat": "sierpniom",
       "acc": "sierpnie",
       "ins": "sierpniami",

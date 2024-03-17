@@ -2,10 +2,7 @@
   "inflections": {
     "singular": {
       "nom": "bandaż",
-      "gen": [
-        "bandaża",
-        "bandażu"
-      ],
+      "gen": { "isTerminus": true, "normal": ["bandaża", "bandażu"] },
       "dat": "bandażowi",
       "acc": "bandaż",
       "ins": "bandażem",
@@ -14,10 +11,7 @@
     },
     "plural": {
       "nom": "bandaże",
-      "gen": [
-        "bandaży",
-        "bandażów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["bandaży", "bandażów"] },
       "dat": "bandażom",
       "acc": "bandaże",
       "ins": "bandażami",

@@ -11,16 +11,10 @@
     },
     "plural": {
       "nom": "uszy",
-      "gen": [
-        "uszu",
-        "uszów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["uszu", "uszów"] },
       "dat": "uszom",
       "acc": "uszy",
-      "ins": [
-        "uszami",
-        "uszyma"
-      ],
+      "ins": { "isTerminus": true, "normal": ["uszami", "uszyma"] },
       "loc": "uszach",
       "voc": "uszy"
     }

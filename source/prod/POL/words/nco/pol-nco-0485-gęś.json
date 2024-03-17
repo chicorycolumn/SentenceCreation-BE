@@ -14,10 +14,7 @@
       "gen": "gęsi",
       "dat": "gęsiom",
       "acc": "gęsi",
-      "ins": [
-        "gęśmi",
-        "gęsiami"
-      ],
+      "ins": { "isTerminus": true, "normal": ["gęśmi", "gęsiami"] },
       "loc": "gęsiach",
       "voc": "gęsi"
     }

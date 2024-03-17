@@ -2,10 +2,7 @@
   "inflections": {
     "singular": {
       "nom": "prysznic",
-      "gen": [
-        "prysznica",
-        "prysznicu"
-      ],
+      "gen": { "isTerminus": true, "normal": ["prysznica", "prysznicu"] },
       "dat": "prysznicowi",
       "acc": "prysznic",
       "ins": "prysznicem",

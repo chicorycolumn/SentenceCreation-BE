@@ -5,14 +5,8 @@
       "gen": "jellyfish's"
     },
     "plural": {
-      "nom": [
-        "jellyfishes",
-        "jellyfish"
-      ],
-      "gen": [
-        "jellyfishes'",
-        "jellyfish's"
-      ]
+      "nom": { "isTerminus": true, "normal": ["jellyfishes", "jellyfish"] },
+      "gen": { "isTerminus": true, "normal": ["jellyfishes'", "jellyfish's"] }
     }
   }
 }

@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "cele",
-      "gen": [
-        "celi",
-        "celów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["celi", "celów"] },
       "dat": "celom",
       "acc": "cele",
       "ins": "celami",

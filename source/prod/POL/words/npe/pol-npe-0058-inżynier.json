@@ -10,19 +10,19 @@
       "voc": "inżynierze"
     },
     "plural": {
-      "nom": [
+      "nom":{"isTerminus":true,"normal":[
         "inżynierowie",
         "inżynierzy"
-      ],
+      ]},
       "gen": "inżynierów",
       "dat": "inżynierom",
       "acc": "inżynierów",
       "ins": "inżynierami",
       "loc": "inżynierach",
-      "voc": [
+      "voc":{"isTerminus":true,"normal":[
         "inżynierowie",
         "inżynierzy"
-      ]
+      ]}
     }
   }
 }

@@ -10,22 +10,13 @@
       "voc": "bilansie"
     },
     "plural": {
-      "nom": [
-        "bilanse",
-        "bilansy"
-      ],
+      "nom": { "isTerminus": true, "normal": ["bilanse", "bilansy"] },
       "gen": "bilansów",
       "dat": "bilansom",
-      "acc": [
-        "bilanse",
-        "bilansy"
-      ],
+      "acc": { "isTerminus": true, "normal": ["bilanse", "bilansy"] },
       "ins": "bilansami",
       "loc": "bilansach",
-      "voc": [
-        "bilanse",
-        "bilansy"
-      ]
+      "voc": { "isTerminus": true, "normal": ["bilanse", "bilansy"] }
     }
   }
 }

@@ -2,10 +2,7 @@
   "inflections": {
     "singular": {
       "nom": "wieczór",
-      "gen": [
-        "wieczoru",
-        "wieczora"
-      ],
+      "gen": { "isTerminus": true, "normal": ["wieczoru", "wieczora"] },
       "dat": "wieczorowi",
       "acc": "wieczór",
       "ins": "wieczorem",

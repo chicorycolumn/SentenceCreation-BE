@@ -5,12 +5,8 @@
       "gen": "bolt of lightning's"
     },
     "plural": {
-      "nom": [
-        "bolts of lightning"
-      ],
-      "gen": [
-        "bolts of lightning's"
-      ]
+      "nom": { "isTerminus": true, "normal": ["bolts of lightning"] },
+      "gen": { "isTerminus": true, "normal": ["bolts of lightning's"] }
     }
   }
 }

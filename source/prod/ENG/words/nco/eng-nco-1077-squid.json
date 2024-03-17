@@ -5,14 +5,8 @@
       "gen": "squid's"
     },
     "plural": {
-      "nom": [
-        "squids",
-        "squid"
-      ],
-      "gen": [
-        "squids'",
-        "squid's"
-      ]
+      "nom": { "isTerminus": true, "normal": ["squids", "squid"] },
+      "gen": { "isTerminus": true, "normal": ["squids'", "squid's"] }
     }
   }
 }

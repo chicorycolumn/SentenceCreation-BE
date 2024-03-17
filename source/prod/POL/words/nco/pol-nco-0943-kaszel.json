@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "kaszle",
-      "gen": [
-        "kaszli",
-        "kaszlów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["kaszli", "kaszlów"] },
       "dat": "kaszlom",
       "acc": "kaszle",
       "ins": "kaszlami",

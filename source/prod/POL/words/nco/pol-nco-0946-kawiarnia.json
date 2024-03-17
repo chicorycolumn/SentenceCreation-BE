@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "kawiarnie",
-      "gen": [
-        "kawiarni",
-        "kawiarń"
-      ],
+      "gen": { "isTerminus": true, "normal": ["kawiarni", "kawiarń"] },
       "dat": "kawiarniom",
       "acc": "kawiarnie",
       "ins": "kawiarniami",

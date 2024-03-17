@@ -10,19 +10,13 @@
       "voc": "bratanku"
     },
     "plural": {
-      "nom": [
-        "bratankowie",
-        "bratanki"
-      ],
+      "nom": { "isTerminus": true, "normal": ["bratankowie", "bratanki"] },
       "gen": "bratanków",
       "dat": "bratankom",
       "acc": "bratanków",
       "ins": "bratankami",
       "loc": "bratankach",
-      "voc": [
-        "bratankowie",
-        "bratanki"
-      ]
+      "voc": { "isTerminus": true, "normal": ["bratankowie", "bratanki"] }
     }
   }
 }

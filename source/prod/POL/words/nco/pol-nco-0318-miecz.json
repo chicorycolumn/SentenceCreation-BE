@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "miecze",
-      "gen": [
-        "mieczy",
-        "mieczów"
-      ],
+      "gen": { "isTerminus": true, "normal": ["mieczy", "mieczów"] },
       "dat": "mieczom",
       "acc": "miecze",
       "ins": "mieczami",

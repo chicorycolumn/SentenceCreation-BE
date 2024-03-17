@@ -11,10 +11,7 @@
     },
     "plural": {
       "nom": "pieprze",
-      "gen": [
-        "pieprzów",
-        "pieprzy"
-      ],
+      "gen": { "isTerminus": true, "normal": ["pieprzów", "pieprzy"] },
       "dat": "pieprzom",
       "acc": "pieprze",
       "ins": "pieprzami",
