@@ -116,12 +116,10 @@ exports.getLemmasByCriteria = (currentLanguage, criteriaFromHTTP) => {
       ) {
         nexObj.traductions[currentLanguage.toUpperCase()].forEach((lObjId) => {
           if (!recordArr.includes(lObjId)) {
-            let split = lObjId.split("-");
-
             recordArr.push(lObjId);
             resArr.push({
-              lemma: split.slice(-1)[0],
-              id: split.slice(0, 3).join("-") + "-",
+              lemma: lObjId.split("-").slice(-1)[0],
+              id: lObjId,
               tags: nexObj.papers,
             });
           }

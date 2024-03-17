@@ -17749,6 +17749,7 @@
   {
     "lemma": "samica",
     "id": "pol-nco-1099-samica",
+    "_untranslated": true,
     "frequency": 5,
     "register": 0,
     "gender": "f",
@@ -17763,6 +17764,7 @@
   {
     "lemma": "samiec",
     "id": "pol-nco-1100-samiec",
+    "_untranslated": true,
     "frequency": 5,
     "register": 0,
     "gender": "m2",

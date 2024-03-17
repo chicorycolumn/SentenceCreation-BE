@@ -5674,7 +5674,7 @@
       "ENG": ["eng-nco-0687-watch"],
       "POL": ["pol-nco-0557-zegarek"]
     },
-    "papers": ["s1", "concrete", "title", "clothes", "living", "person"],
+    "papers": ["s1", "concrete", "clothes"],
     "topics": ["fashion", "people"]
   },
   {
