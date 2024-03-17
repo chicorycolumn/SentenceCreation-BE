@@ -2393,5 +2393,88 @@
     "frequency": 3,
     "register": 7,
     "gender": "m2"
+  },
+  {
+    "lemma": "bogini",
+    "id": "pol-npe-0156-bogini",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["boginka"],
+        "masculine": ["bogini"]
+      }
+    },
+    "frequency": 4,
+    "register": 0,
+    "gender": "f"
+  },
+  {
+    "lemma": "właścicielka",
+    "id": "pol-npe-0157-właścicielka(owner)",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "of anything",
+      "emoji": "🔲"
+    },
+    "extra": {
+      "otherShapes": {
+        "masculine": ["właściciel"]
+      }
+    }
+  },
+  {
+    "lemma": "właścicielka",
+    "id": "pol-npe-0158-właścicielka(landlady)",
+    "_inflectionsRoot": "pol-npe-0157-właścicielka(owner)",
+    "frequency": 3,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "of a building",
+      "emoji": "🏠"
+    },
+    "extra": {
+      "otherShapes": {
+        "masculine": ["właściciel"]
+      }
+    }
+  },
+  {
+    "lemma": "bohaterka",
+    "id": "pol-npe-0159-bohaterka(heroine)",
+    "frequency": 4,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "positive term",
+      "emoji": "👍"
+    },
+    "extra": {
+      "otherShapes": {
+        "masculine": ["bohater"]
+      }
+    }
+  },
+  {
+    "lemma": "bohaterka",
+    "id": "pol-npe-0160-bohaterka(protagonist)",
+    "_inflectionsRoot": "pol-npe-0159-bohaterka(heroine)",
+    "frequency": 4,
+    "register": 0,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "writing",
+      "emoji": "📖"
+    },
+    "extra": {
+      "otherShapes": {
+        "masculine": ["bohater"]
+      }
+    }
   }
 ]

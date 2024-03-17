@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "bogini",
+      "gen": "bogini",
+      "dat": "bogini",
+      "acc": "boginię",
+      "ins": "boginią",
+      "loc": "bogini",
+      "voc": "bogini"
+    },
+    "plural": {
+      "nom": "boginie",
+      "gen": "bogiń",
+      "dat": "boginiom",
+      "acc": "boginie",
+      "ins": "boginiami",
+      "loc": "boginiach",
+      "voc": "boginie"
+    }
+  }
+}

@@ -400,8 +400,8 @@
     "key": "npe-0039-hero",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0036-hero"],
-      "POL": ["pol-npe-0045-bohater(hero)"]
+      "ENG": ["eng-npe-0036-hero", "eng-npe-0154-heroine"],
+      "POL": ["pol-npe-0045-bohater(hero)", "pol-npe-0159-bohaterka(heroine)"]
     },
     "papers": ["concrete", "positive judgment", "person", "living"],
     "topics": ["people", "judgment"]
@@ -411,7 +411,10 @@
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0037-protagonist"],
-      "POL": ["pol-npe-0046-bohater(protagonist)"]
+      "POL": [
+        "pol-npe-0046-bohater(protagonist)",
+        "pol-npe-0160-bohaterka(protagonist)"
+      ]
     },
     "papers": ["concrete", "person", "living"],
     "topics": ["fantasy", "people", "writing"]
@@ -630,8 +633,8 @@
     "key": "npe-0062-god",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0057-god"],
-      "POL": ["pol-npe-0067-bóg"]
+      "ENG": ["eng-npe-0057-god", "eng-npe-0155-goddess"],
+      "POL": ["pol-npe-0067-bóg", "pol-npe-0156-bogini"]
     },
     "papers": ["concrete"],
     "topics": ["philosophy and ethics", "religion"]
@@ -885,7 +888,10 @@
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0088-owner"],
-      "POL": ["pol-npe-0097-właściciel(owner)"]
+      "POL": [
+        "pol-npe-0097-właściciel(owner)",
+        "pol-npe-0157-właścicielka(owner)"
+      ]
     },
     "papers": ["concrete", "person", "living"],
     "topics": ["people", "possession"]
@@ -894,8 +900,11 @@
     "key": "npe-0088-landlord",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0089-landlord"],
-      "POL": ["pol-npe-0098-właściciel(landlord)"]
+      "ENG": ["eng-npe-0089-landlord", "eng-npe-0156-landlady"],
+      "POL": [
+        "pol-npe-0098-właściciel(landlord)",
+        "pol-npe-0158-właścicielka(landlady)"
+      ]
     },
     "papers": ["concrete", "person", "living"],
     "topics": ["people", "possession"]
