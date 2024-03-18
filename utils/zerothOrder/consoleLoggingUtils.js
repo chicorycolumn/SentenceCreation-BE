@@ -85,19 +85,28 @@ exports.logObjectTwoLevels = (obj, etiquette, originEtiquette) => {
   );
   consol.log("[1;32m " + `------` + "[0m");
   consol.log("[1;32m " + `----------` + "[0m");
-  Object.keys(obj).forEach((key) => {
-    let value = obj[key];
-    if (value) {
-      Object.keys(value).forEach((key2) => {
-        let value2 = value[key2];
-        consol.log("[1;30m " + `${key}:${key2}` + "[0m");
-        consol.log("subvalue:", value2);
-      });
-    } else {
-      consol.log("[1;30m " + `${key}` + "[0m");
-      consol.log("value:", value);
-    }
-  });
+  if (typeof obj == "string") {
+    consol.log(obj);
+  } else {
+    Object.keys(obj).forEach((key) => {
+      let value = obj[key];
+      if (value) {
+        if (typeof value == "string") {
+          consol.log("[1;30m " + `${key}` + "[0m");
+          consol.log("value:", value);
+        } else {
+          Object.keys(value).forEach((key2) => {
+            let value2 = value[key2];
+            consol.log("[1;30m " + `${key}:${key2}` + "[0m");
+            consol.log("subvalue:", value2);
+          });
+        }
+      } else {
+        consol.log("[1;30m " + `${key}` + "[0m");
+        consol.log("value:", value);
+      }
+    });
+  }
   consol.log("[1;32m " + `----------` + "[0m");
   consol.log("[1;32m " + `------` + "[0m");
   consol.log("[1;32m " + `--` + "[0m");
