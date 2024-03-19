@@ -51,7 +51,7 @@ exports.fetchPalette = (req) => {
   }
   let timeOutCheck;
   if (!timeLimit) {
-    timeLimit = 8000;
+    timeLimit = 20000;
   }
 
   const finishAndSendErrorMessages = (errorMessage, sentenceData, isAnswer) => {
