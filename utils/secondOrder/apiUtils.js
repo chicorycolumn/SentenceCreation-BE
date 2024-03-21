@@ -68,8 +68,10 @@ exports.getSentenceFormulas = (questionFormulaId, answerLanguage) => {
 
 exports.getLemmasByCriteria = (currentLanguage, criteriaFromHTTP) => {
   let criteria = {};
+  let includeFrequency = criteriaFromHTTP["include_frequency"];
+
   Object.keys(criteriaFromHTTP)
-    .filter((k) => !["envir"].includes(k))
+    .filter((k) => !["envir", "include_frequency"].includes(k))
     .forEach((critKey) => {
       let critValueArrStr = criteriaFromHTTP[critKey];
       let critValues = critValueArrStr.split(",");
@@ -126,6 +128,17 @@ exports.getLemmasByCriteria = (currentLanguage, criteriaFromHTTP) => {
         });
       }
     });
+
+    if (includeFrequency) {
+      resArr.forEach((resItem) => {
+        let skeletalLObj = apiUtils.getRegisterAndFrequencyOfLObj(
+          currentLanguage.toUpperCase(),
+          resItem.id
+        );
+        resItem.frequency = skeletalLObj.frequency;
+        resItem.register = skeletalLObj.register;
+      });
+    }
 
     return resArr;
   }
@@ -570,6 +583,20 @@ exports.getEnChsForLemma = (lang, lemma) => {
   });
 
   return enChs;
+};
+
+exports.getRegisterAndFrequencyOfLObj = (lang, id) => {
+  let wordsBank = gdUtils.grabLObjsByWordtype(
+    lang,
+    idUtils.getWordtypeLObj({ id })
+  );
+
+  let matches = wordsBank.filter((l) => l.id === id);
+
+  if (!matches.length) {
+    console.log(`lpma No matches found for lObjId "${id}"`);
+  }
+  return matches[0];
 };
 
 exports.getLObjsForLemma = (lang, lemma, addInflections) => {
