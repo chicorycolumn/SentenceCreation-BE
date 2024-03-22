@@ -3,7 +3,7 @@
     "lemma": "matka",
     "id": "pol-npe-0001-matka",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "derivedTerms": [
@@ -21,7 +21,7 @@
     "lemma": "ojciec",
     "id": "pol-npe-0002-ojciec",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -50,7 +50,7 @@
     "lemma": "brat",
     "id": "pol-npe-0003-brat",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -95,7 +95,7 @@
     "lemma": "siostra",
     "id": "pol-npe-0004-siostra",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "otherShapes": {
@@ -108,7 +108,7 @@
     "lemma": "kobieta",
     "id": "pol-npe-0005-kobieta",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "otherShapes": {
@@ -122,7 +122,7 @@
     "lemma": "mężczyzna",
     "id": "pol-npe-0006-mężczyzna",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "antonyms": ["kobieta"]
@@ -132,7 +132,7 @@
     "lemma": "córka",
     "id": "pol-npe-0007-córka",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "otherShapes": {
@@ -145,7 +145,7 @@
     "lemma": "syn",
     "id": "pol-npe-0008-syn",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -166,7 +166,7 @@
     "lemma": "dziadek",
     "id": "pol-npe-0009-dziadek",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -183,7 +183,7 @@
     "lemma": "babcia",
     "id": "pol-npe-0010-babcia",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "otherShapes": {
@@ -210,7 +210,7 @@
     "lemma": "mąż",
     "id": "pol-npe-0011-mąż",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "derivedTerms": [
@@ -230,7 +230,7 @@
     "lemma": "żona",
     "id": "pol-npe-0012-żona",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "derivedTerms": [
@@ -255,7 +255,7 @@
     "lemma": "wuj",
     "id": "pol-npe-0013-wuj",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "synonyms": ["wujek"],
@@ -278,7 +278,7 @@
     "lemma": "wujek",
     "id": "pol-npe-0014-wujek",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -291,7 +291,7 @@
     "lemma": "ciocia",
     "id": "pol-npe-0015-ciocia",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "synonyms": ["ciotka"]
@@ -301,7 +301,7 @@
     "lemma": "kuzyn",
     "id": "pol-npe-0016-kuzyn",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -313,28 +313,28 @@
     "lemma": "siostrzenica",
     "id": "pol-npe-0017-siostrzenica",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "f"
   },
   {
     "lemma": "bratanica",
     "id": "pol-npe-0018-bratanica",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "f"
   },
   {
     "lemma": "siostrzeniec",
     "id": "pol-npe-0019-siostrzeniec",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1"
   },
   {
     "lemma": "bratanek",
     "id": "pol-npe-0020-bratanek",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "synonyms": ["brataniec", "synowiec"]
@@ -344,7 +344,7 @@
     "lemma": "partner",
     "id": "pol-npe-0021-partner",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -357,7 +357,7 @@
     "lemma": "partnerka",
     "id": "pol-npe-0022-partnerka",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "otherShapes": {
@@ -369,7 +369,7 @@
     "lemma": "chłopak",
     "id": "pol-npe-0023-chłopak(boy)",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "allohomInfo": {
       "singleWordtype": true,
@@ -387,7 +387,7 @@
     "id": "pol-npe-0024-chłopak(boyfriend)",
     "_inflectionsRoot": "pol-npe-0023-chłopak(boy)",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "allohomInfo": {
       "singleWordtype": true,
@@ -404,7 +404,7 @@
     "lemma": "chłopiec",
     "id": "pol-npe-0025-chłopiec",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -442,7 +442,7 @@
     "lemma": "dziewczyna",
     "id": "pol-npe-0026-dziewczyna(girl)",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "allohomInfo": {
       "singleWordtype": true,
@@ -462,7 +462,7 @@
     "id": "pol-npe-0027-dziewczyna(girlfriend)",
     "_inflectionsRoot": "pol-npe-0026-dziewczyna(girl)",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "allohomInfo": {
       "singleWordtype": true,
@@ -481,7 +481,7 @@
     "lemma": "nauczycielka",
     "id": "pol-npe-0028-nauczycielka",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "otherShapes": {
@@ -493,7 +493,7 @@
     "lemma": "nauczyciel",
     "id": "pol-npe-0029-nauczyciel",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -541,7 +541,7 @@
     "lemma": "aktorka",
     "id": "pol-npe-0033-aktorka",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "otherShapes": {
@@ -555,7 +555,7 @@
     "lemma": "aktor",
     "id": "pol-npe-0034-aktor",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -580,7 +580,7 @@
     "lemma": "przyjaciółka",
     "id": "pol-npe-0035-przyjaciółka",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "otherShapes": {
@@ -592,7 +592,7 @@
     "lemma": "przyjaciel",
     "id": "pol-npe-0036-przyjaciel",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -608,7 +608,7 @@
     "lemma": "kolega",
     "id": "pol-npe-0037-kolega(friend)",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "allohomInfo": {
       "singleWordtype": true,
@@ -627,7 +627,7 @@
     "id": "pol-npe-0038-kolega(colleague)",
     "_inflectionsRoot": "pol-npe-0037-kolega(friend)",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "allohomInfo": {
       "singleWordtype": true,
@@ -645,7 +645,7 @@
     "lemma": "koleżanka",
     "id": "pol-npe-0039-koleżanka(friend)",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "allohomInfo": {
       "singleWordtype": true,
@@ -664,7 +664,7 @@
     "id": "pol-npe-0040-koleżanka(colleague)",
     "_inflectionsRoot": "pol-npe-0039-koleżanka(friend)",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "allohomInfo": {
       "singleWordtype": true,
@@ -702,7 +702,7 @@
     "lemma": "człowiek",
     "id": "pol-npe-0043-człowiek",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -741,7 +741,7 @@
     "lemma": "turysta",
     "id": "pol-npe-0044-turysta",
     "frequency": 4,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -754,7 +754,7 @@
     "lemma": "bohater",
     "id": "pol-npe-0045-bohater(hero)",
     "frequency": 4,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "allohomInfo": {
       "singleWordtype": true,
@@ -782,7 +782,7 @@
     "id": "pol-npe-0046-bohater(protagonist)",
     "_inflectionsRoot": "pol-npe-0045-bohater(hero)",
     "frequency": 4,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "allohomInfo": {
       "singleWordtype": true,
@@ -844,7 +844,7 @@
     "lemma": "polityk",
     "id": "pol-npe-0047-polityk",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -856,7 +856,7 @@
     "lemma": "chirurg",
     "id": "pol-npe-0048-chirurg",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "synonyms": ["operator"]
@@ -866,7 +866,7 @@
     "lemma": "sąsiad",
     "id": "pol-npe-0049-sąsiad",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "derivedTerms": ["sąsiadka", "sąsiedni", "sąsiedztwo"]
@@ -876,14 +876,14 @@
     "lemma": "sąsiadka",
     "id": "pol-npe-0050-sąsiadka",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "f"
   },
   {
     "lemma": "tłumacz",
     "id": "pol-npe-0051-tłumacz",
     "frequency": 4,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -896,7 +896,7 @@
     "lemma": "kierownik",
     "id": "pol-npe-0052-kierownik",
     "frequency": 4,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -909,7 +909,7 @@
     "lemma": "rycerz",
     "id": "pol-npe-0053-rycerz",
     "frequency": 4,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -928,14 +928,14 @@
     "lemma": "osoba",
     "id": "pol-npe-0054-osoba",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "f"
   },
   {
     "lemma": "złodziej",
     "id": "pol-npe-0055-złodziej",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -950,7 +950,7 @@
     "lemma": "kelner",
     "id": "pol-npe-0056-kelner",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -962,14 +962,14 @@
     "lemma": "kelnerka",
     "id": "pol-npe-0057-kelnerka",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "f"
   },
   {
     "lemma": "inżynier",
     "id": "pol-npe-0058-inżynier",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -982,7 +982,7 @@
     "lemma": "papież",
     "id": "pol-npe-0059-papież",
     "frequency": 4,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1002,7 +1002,7 @@
     "lemma": "policja",
     "id": "pol-npe-0060-policja",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "derivedTerms": [
@@ -1020,7 +1020,7 @@
     "lemma": "obcy",
     "id": "pol-npe-0061-obcy(alien)",
     "frequency": 4,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "allohomInfo": {
       "singleWordtype": true,
@@ -1037,7 +1037,7 @@
     "id": "pol-npe-0062-obcy(stranger)",
     "_inflectionsRoot": "pol-npe-0061-obcy(alien)",
     "frequency": 4,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "allohomInfo": {
       "singleWordtype": true,
@@ -1053,7 +1053,7 @@
     "lemma": "kierowca",
     "id": "pol-npe-0063-kierowca",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "synonyms": ["(", "archaic", ")", "automobilista"]
@@ -1063,14 +1063,14 @@
     "lemma": "pułkownik",
     "id": "pol-npe-0064-pułkownik",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1"
   },
   {
     "lemma": "przestępca",
     "id": "pol-npe-0065-przestępca",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1082,7 +1082,7 @@
     "lemma": "teść",
     "id": "pol-npe-0066-teść",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1095,7 +1095,7 @@
     "lemma": "bóg",
     "id": "pol-npe-0067-bóg",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1215,7 +1215,7 @@
     "lemma": "strażak",
     "id": "pol-npe-0068-strażak",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1227,7 +1227,7 @@
     "lemma": "adwokat",
     "id": "pol-npe-0069-adwokat",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1250,7 +1250,7 @@
     "lemma": "pracownik",
     "id": "pol-npe-0070-pracownik",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1262,7 +1262,7 @@
     "lemma": "narzeczony",
     "id": "pol-npe-0071-narzeczony",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1277,7 +1277,7 @@
     "lemma": "narzeczona",
     "id": "pol-npe-0072-narzeczona",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "otherShapes": {
@@ -1292,7 +1292,7 @@
     "lemma": "ogrodnik",
     "id": "pol-npe-0073-ogrodnik",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1305,7 +1305,7 @@
     "lemma": "nastolatek",
     "id": "pol-npe-0074-nastolatek",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1318,7 +1318,7 @@
     "lemma": "nastolatka",
     "id": "pol-npe-0075-nastolatka",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "otherShapes": {
@@ -1330,7 +1330,7 @@
     "lemma": "student",
     "id": "pol-npe-0076-student",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1344,7 +1344,7 @@
     "lemma": "studentka",
     "id": "pol-npe-0077-studentka",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "otherShapes": {
@@ -1357,7 +1357,7 @@
     "lemma": "optyk",
     "id": "pol-npe-0078-optyk",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "derivedTerms": ["optyka"]
@@ -1367,7 +1367,7 @@
     "lemma": "modelka",
     "id": "pol-npe-0079-modelka",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "otherShapes": {
@@ -1379,7 +1379,7 @@
     "lemma": "książę",
     "id": "pol-npe-0080-książę",
     "frequency": 4,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1391,14 +1391,14 @@
     "lemma": "księżniczka",
     "id": "pol-npe-0081-księżniczka",
     "frequency": 4,
-    "register": 0,
+    "register": 1,
     "gender": "f"
   },
   {
     "lemma": "gość",
     "id": "pol-npe-0082-gość(guest)",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "allohomInfo": {
       "singleWordtype": true,
@@ -1443,7 +1443,7 @@
     "lemma": "wnuk",
     "id": "pol-npe-0084-wnuk",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1455,7 +1455,7 @@
     "lemma": "wnuczka",
     "id": "pol-npe-0085-wnuczka",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "otherShapes": {
@@ -1468,7 +1468,7 @@
     "lemma": "kucharz",
     "id": "pol-npe-0086-kucharz",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1480,7 +1480,7 @@
     "lemma": "przewodnik",
     "id": "pol-npe-0087-przewodnik(person)",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "allohomInfo": {
       "singleWordtype": false,
@@ -1497,7 +1497,7 @@
     "lemma": "akuszerka",
     "id": "pol-npe-0088-akuszerka",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "otherShapes": {
@@ -1515,7 +1515,7 @@
     "lemma": "kapłan",
     "id": "pol-npe-0089-kapłan",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1538,7 +1538,7 @@
     "lemma": "wróg",
     "id": "pol-npe-0090-wróg",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "synonyms": ["nieprzyjaciel", "przeciwnik"],
@@ -1549,7 +1549,7 @@
     "lemma": "pasażer",
     "id": "pol-npe-0091-pasażer",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1562,7 +1562,7 @@
     "lemma": "żołnierz",
     "id": "pol-npe-0092-żołnierz",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1578,7 +1578,7 @@
     "lemma": "dentysta",
     "id": "pol-npe-0093-dentysta",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "synonyms": ["stomatolog"]
@@ -1588,7 +1588,7 @@
     "lemma": "rodzic",
     "id": "pol-npe-0094-rodzic",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "m1"
   },
   {
@@ -1602,7 +1602,7 @@
     "lemma": "uczeń",
     "id": "pol-npe-0096-uczeń",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1615,7 +1615,7 @@
     "lemma": "właściciel",
     "id": "pol-npe-0097-właściciel(owner)",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "allohomInfo": {
       "singleWordtype": true,
@@ -1633,7 +1633,7 @@
     "id": "pol-npe-0098-właściciel(landlord)",
     "_inflectionsRoot": "pol-npe-0097-właściciel(owner)",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "allohomInfo": {
       "singleWordtype": true,
@@ -1650,7 +1650,7 @@
     "lemma": "pisarz",
     "id": "pol-npe-0099-pisarz",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1662,7 +1662,7 @@
     "lemma": "lekarz",
     "id": "pol-npe-0100-lekarz",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1676,7 +1676,7 @@
     "lemma": "lekarka",
     "id": "pol-npe-0101-lekarka",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "otherShapes": {
@@ -1689,7 +1689,7 @@
     "lemma": "sędzia",
     "id": "pol-npe-0102-sędzia(judge)",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "allohomInfo": {
       "singleWordtype": true,
@@ -1709,7 +1709,7 @@
     "id": "pol-npe-0103-sędzia(referee)",
     "_inflectionsRoot": "pol-npe-0102-sędzia(judge)",
     "frequency": 4,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "allohomInfo": {
       "singleWordtype": true,
@@ -1739,7 +1739,7 @@
     "lemma": "turystka",
     "id": "pol-npe-0105-turystka",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "otherShapes": {
@@ -1751,7 +1751,7 @@
     "lemma": "dziennikarz",
     "id": "pol-npe-0106-dziennikarz",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1766,7 +1766,7 @@
     "lemma": "celnik",
     "id": "pol-npe-0107-celnik",
     "frequency": 4,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1778,7 +1778,7 @@
     "lemma": "klient",
     "id": "pol-npe-0108-klient",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1791,7 +1791,7 @@
     "lemma": "fryzjer",
     "id": "pol-npe-0109-fryzjer",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1804,7 +1804,7 @@
     "lemma": "śpiewak",
     "id": "pol-npe-0110-śpiewak",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1817,7 +1817,7 @@
     "lemma": "morderca",
     "id": "pol-npe-0111-morderca",
     "frequency": 4,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1830,7 +1830,7 @@
     "lemma": "policjant",
     "id": "pol-npe-0112-policjant",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1842,7 +1842,7 @@
     "lemma": "policjantka",
     "id": "pol-npe-0113-policjantka",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "otherShapes": {
@@ -1854,14 +1854,14 @@
     "lemma": "pielęgniarka",
     "id": "pol-npe-0114-pielęgniarka",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "f"
   },
   {
     "lemma": "pielęgniarz",
     "id": "pol-npe-0115-pielęgniarz",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1873,7 +1873,7 @@
     "lemma": "obywatel",
     "id": "pol-npe-0116-obywatel",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1886,7 +1886,7 @@
     "lemma": "strażnik",
     "id": "pol-npe-0117-strażnik",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1898,21 +1898,21 @@
     "lemma": "naukowiec",
     "id": "pol-npe-0118-naukowiec",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1"
   },
   {
     "lemma": "pacjent",
     "id": "pol-npe-0119-pacjent",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1"
   },
   {
     "lemma": "krewna",
     "id": "pol-npe-0120-krewna",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "otherShapes": {
@@ -1924,7 +1924,7 @@
     "lemma": "krewny",
     "id": "pol-npe-0121-krewny",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1936,7 +1936,7 @@
     "lemma": "rolnik",
     "id": "pol-npe-0122-rolnik",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -1950,7 +1950,7 @@
     "lemma": "ofiara",
     "id": "pol-npe-0123-ofiara(victim)",
     "frequency": 4,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "allohomInfo": {
       "singleWordtype": false,
@@ -1966,7 +1966,7 @@
     "lemma": "detektyw",
     "id": "pol-npe-0124-detektyw",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "synonyms": ["śledczy"],
@@ -1977,7 +1977,7 @@
     "lemma": "mistrz",
     "id": "pol-npe-0125-mistrz",
     "frequency": 5,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -2000,7 +2000,7 @@
     "lemma": "wegetarianin",
     "id": "pol-npe-0126-wegetarianin",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -2013,7 +2013,7 @@
     "lemma": "sekretarz",
     "id": "pol-npe-0127-sekretarz",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -2025,7 +2025,7 @@
     "lemma": "znajoma",
     "id": "pol-npe-0128-znajoma",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "otherShapes": {
@@ -2037,7 +2037,7 @@
     "lemma": "znajomy",
     "id": "pol-npe-0129-znajomy",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -2049,7 +2049,7 @@
     "lemma": "artysta",
     "id": "pol-npe-0130-artysta",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -2073,7 +2073,7 @@
     "lemma": "artystka",
     "id": "pol-npe-0131-artystka",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "otherShapes": {
@@ -2086,7 +2086,7 @@
     "lemma": "kryminalista",
     "id": "pol-npe-0132-kryminalista",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "synonyms": ["przestępca"]
@@ -2096,7 +2096,7 @@
     "lemma": "prezydent",
     "id": "pol-npe-0133-prezydent",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -2108,7 +2108,7 @@
     "lemma": "więzień",
     "id": "pol-npe-0134-więzień",
     "frequency": 4,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -2120,35 +2120,35 @@
     "lemma": "miliarder",
     "id": "pol-npe-0135-miliarder",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1"
   },
   {
     "lemma": "milioner",
     "id": "pol-npe-0136-milioner",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1"
   },
   {
     "lemma": "pieszy",
     "id": "pol-npe-0137-pieszy",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1"
   },
   {
     "lemma": "piesza",
     "id": "pol-npe-0138-piesza",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "f"
   },
   {
     "lemma": "pan",
     "id": "pol-npe-0139-pan(title)",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "allohomInfo": {
       "singleWordtype": true,
@@ -2161,7 +2161,7 @@
     "id": "pol-npe-0140-pan(address)",
     "_inflectionsRoot": "pol-npe-0139-pan(title)",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "allohomInfo": {
       "singleWordtype": true,
@@ -2174,7 +2174,7 @@
     "id": "pol-npe-0141-pan(man)",
     "_inflectionsRoot": "pol-npe-0139-pan(title)",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "allohomInfo": {
       "singleWordtype": true,
@@ -2186,7 +2186,7 @@
     "lemma": "pani",
     "id": "pol-npe-0142-pani(title)",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "allohomInfo": {
       "singleWordtype": true,
@@ -2199,7 +2199,7 @@
     "id": "pol-npe-0143-pani(address)",
     "_inflectionsRoot": "pol-npe-0142-pani(title)",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "allohomInfo": {
       "singleWordtype": true,
@@ -2212,7 +2212,7 @@
     "id": "pol-npe-0144-pani(woman)",
     "_inflectionsRoot": "pol-npe-0142-pani(title)",
     "frequency": 2,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "allohomInfo": {
       "singleWordtype": true,
@@ -2224,7 +2224,7 @@
     "lemma": "panna",
     "id": "pol-npe-0145-panna",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "otherShapes": {
@@ -2238,7 +2238,7 @@
     "lemma": "pilot",
     "id": "pol-npe-0146-pilot(pilot)",
     "frequency": 4,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "allohomInfo": {
       "singleWordtype": false,
@@ -2250,7 +2250,7 @@
     "lemma": "lider",
     "id": "pol-npe-0147-lider",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -2263,7 +2263,7 @@
     "lemma": "król",
     "id": "pol-npe-0148-król",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m1",
     "extra": {
       "otherShapes": {
@@ -2295,7 +2295,7 @@
     "lemma": "królowa",
     "id": "pol-npe-0149-królowa",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "extra": {
       "synonyms": ["dama", "hetman", "królówka"]
@@ -2305,7 +2305,7 @@
     "lemma": "dziecko",
     "id": "pol-npe-0150-dziecko",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "n",
     "extra": {
       "synonyms": ["dziecko"],
@@ -2322,14 +2322,14 @@
     "lemma": "niemowlę",
     "id": "pol-npe-0151-niemowlę",
     "frequency": 1,
-    "register": 0,
+    "register": 1,
     "gender": "n"
   },
   {
     "lemma": "anioł",
     "id": "pol-npe-0152-anioł",
     "frequency": 4,
-    "register": 0,
+    "register": 1,
     "gender": "m2",
     "extra": {
       "otherShapes": {
@@ -2366,7 +2366,7 @@
     "lemma": "ksiądz",
     "id": "pol-npe-0153-ksiądz",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "m3",
     "extra": {
       "otherShapes": {
@@ -2404,14 +2404,14 @@
       }
     },
     "frequency": 4,
-    "register": 0,
+    "register": 1,
     "gender": "f"
   },
   {
     "lemma": "właścicielka",
     "id": "pol-npe-0157-właścicielka(owner)",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "allohomInfo": {
       "singleWordtype": true,
@@ -2429,7 +2429,7 @@
     "id": "pol-npe-0158-właścicielka(landlady)",
     "_inflectionsRoot": "pol-npe-0157-właścicielka(owner)",
     "frequency": 3,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "allohomInfo": {
       "singleWordtype": true,
@@ -2446,7 +2446,7 @@
     "lemma": "bohaterka",
     "id": "pol-npe-0159-bohaterka(heroine)",
     "frequency": 4,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "allohomInfo": {
       "singleWordtype": true,
@@ -2464,7 +2464,7 @@
     "id": "pol-npe-0160-bohaterka(protagonist)",
     "_inflectionsRoot": "pol-npe-0159-bohaterka(heroine)",
     "frequency": 4,
-    "register": 0,
+    "register": 1,
     "gender": "f",
     "allohomInfo": {
       "singleWordtype": true,

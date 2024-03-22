@@ -2,19 +2,19 @@
   {
     "lemma": "be",
     "id": "eng-ver-0001-be",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "have",
     "id": "eng-ver-0002-have",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "do",
     "id": "eng-ver-0003-do(general)",
-    "register": 0,
+    "register": 1,
     "frequency": 1,
     "allohomInfo": {
       "singleWordtype": true,
@@ -25,7 +25,7 @@
   {
     "lemma": "do",
     "id": "eng-ver-0004-do(perform)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -36,7 +36,7 @@
   {
     "lemma": "make",
     "id": "eng-ver-0005-make(create)",
-    "register": 0,
+    "register": 1,
     "frequency": 1,
     "allohomInfo": {
       "singleWordtype": true,
@@ -47,7 +47,7 @@
   {
     "lemma": "make",
     "id": "eng-ver-0006-make(perform)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -58,7 +58,7 @@
   {
     "lemma": "make",
     "id": "eng-ver-0007-make(causative)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -69,7 +69,7 @@
   {
     "lemma": "make",
     "id": "eng-ver-0008-make(decision)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -80,7 +80,7 @@
   {
     "lemma": "make",
     "id": "eng-ver-0009-make(a mistake)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -91,14 +91,14 @@
   {
     "lemma": "create",
     "id": "eng-ver-0010-create",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "stand",
     "transitivity": ["i"],
     "id": "eng-ver-0011-stand(on your feet)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -110,7 +110,7 @@
     "lemma": "stand",
     "transitivity": ["t"],
     "id": "eng-ver-0012-stand(tolerate)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -122,27 +122,27 @@
     "lemma": "become",
     "transitivity": ["r"],
     "id": "eng-ver-0013-become",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "get up",
     "transitivity": ["i"],
     "id": "eng-ver-0014-getup",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "stand up",
     "transitivity": ["i"],
     "id": "eng-ver-0015-standup",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "take",
     "id": "eng-ver-0016-take(general)",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -153,7 +153,7 @@
   {
     "lemma": "take",
     "id": "eng-ver-0017-take(decision)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -165,7 +165,7 @@
     "lemma": "run",
     "transitivity": ["i"],
     "id": "eng-ver-0018-run(around)",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -177,7 +177,7 @@
     "lemma": "run",
     "transitivity": ["i"],
     "id": "eng-ver-0019-run(to)",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -188,7 +188,7 @@
   {
     "lemma": "run",
     "id": "eng-ver-0020-run(lead)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -200,42 +200,42 @@
     "lemma": "jog",
     "transitivity": ["i"],
     "id": "eng-ver-0021-jog",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "go jogging",
     "transitivity": ["i"],
     "id": "eng-ver-0022-gojogging",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "sit down",
     "transitivity": ["i"],
     "id": "eng-ver-0023-sitdown",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "sit",
     "transitivity": ["i"],
     "id": "eng-ver-0024-sit",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "fall down",
     "transitivity": ["i"],
     "id": "eng-ver-0025-falldown",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "fall",
     "transitivity": ["i"],
     "id": "eng-ver-0026-fall(person)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -246,7 +246,7 @@
   {
     "lemma": "fall",
     "id": "eng-ver-0027-fall(general)",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -257,25 +257,25 @@
   {
     "lemma": "prepare",
     "id": "eng-ver-0028-prepare",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "put",
     "id": "eng-ver-0029-put",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "put in",
     "id": "eng-ver-0030-putin",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "change",
     "id": "eng-ver-0031-change(general)",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -286,7 +286,7 @@
   {
     "lemma": "change",
     "id": "eng-ver-0032-change(clothes)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -297,7 +297,7 @@
   {
     "lemma": "count",
     "id": "eng-ver-0033-count(numbers)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -308,7 +308,7 @@
   {
     "lemma": "count",
     "id": "eng-ver-0034-count(matter)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -319,44 +319,44 @@
   {
     "lemma": "count on",
     "id": "eng-ver-0035-counton",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "matter",
     "id": "eng-ver-0036-matter",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "give",
     "id": "eng-ver-0037-give",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "let",
     "id": "eng-ver-0038-let",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "allow",
     "id": "eng-ver-0039-allow",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "permit",
     "id": "eng-ver-0040-permit",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "return",
     "transitivity": ["i"],
     "id": "eng-ver-0041-return(travel)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -367,7 +367,7 @@
   {
     "lemma": "return",
     "id": "eng-ver-0042-return(give back)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -379,40 +379,40 @@
     "lemma": "come back",
     "transitivity": ["i"],
     "id": "eng-ver-0043-comeback",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "prefer",
     "transitivity": ["i"],
     "id": "eng-ver-0044-prefer",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "happen",
     "transitivity": ["r"],
     "id": "eng-ver-0045-happen",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "eat",
     "id": "eng-ver-0046-eat",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "eat up",
     "id": "eng-ver-0047-eatup",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "can",
     "id": "eng-ver-0048-can(able)",
     "isModal": true,
-    "register": 0,
+    "register": 1,
     "frequency": 1,
     "allohomInfo": {
       "singleWordtype": true,
@@ -424,7 +424,7 @@
     "lemma": "can",
     "id": "eng-ver-0049-can(allowed)",
     "isModal": true,
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -436,7 +436,7 @@
     "lemma": "can",
     "id": "eng-ver-0050-can(might)",
     "isModal": true,
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -448,124 +448,124 @@
     "lemma": "be able to",
     "transitivity": ["i"],
     "id": "eng-ver-0051-beableto",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "know how",
     "id": "eng-ver-0052-knowhow",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "be allowed",
     "transitivity": ["i"],
     "id": "eng-ver-0053-beallowed",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "may",
     "id": "eng-ver-0054-may",
     "isModal": true,
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "might",
     "id": "eng-ver-0055-might",
     "isModal": true,
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "want",
     "id": "eng-ver-0056-want",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "drink up",
     "id": "eng-ver-0057-drinkup",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "drink",
     "id": "eng-ver-0058-drink",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "cook",
     "id": "eng-ver-0059-cook",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "boil",
     "id": "eng-ver-0060-boil",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "need",
     "id": "eng-ver-0061-need",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "must",
     "id": "eng-ver-0062-must",
     "isModal": true,
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "have to",
     "transitivity": ["i"],
     "id": "eng-ver-0063-haveto",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "need to",
     "transitivity": ["i"],
     "id": "eng-ver-0064-needto",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "bring",
     "id": "eng-ver-0065-bring",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "fetch",
     "id": "eng-ver-0066-fetch",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "descend",
     "transitivity": ["i"],
     "id": "eng-ver-0067-descend",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "go down",
     "transitivity": ["i"],
     "id": "eng-ver-0068-godown",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "arrive",
     "transitivity": ["i"],
     "id": "eng-ver-0069-arrive(foot)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -577,7 +577,7 @@
     "lemma": "arrive",
     "transitivity": ["i"],
     "id": "eng-ver-0070-arrive(vehicle)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -589,7 +589,7 @@
     "lemma": "come",
     "transitivity": ["i"],
     "id": "eng-ver-0071-come(foot)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -601,7 +601,7 @@
     "lemma": "come",
     "transitivity": ["i"],
     "id": "eng-ver-0072-come(vehicle)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -612,7 +612,7 @@
   {
     "lemma": "come",
     "id": "eng-ver-0073-come(origin)",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -624,7 +624,7 @@
     "lemma": "go",
     "transitivity": ["i"],
     "id": "eng-ver-0074-go(foot)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -636,7 +636,7 @@
     "lemma": "go",
     "transitivity": ["i"],
     "id": "eng-ver-0075-go(vehicle)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -648,14 +648,14 @@
     "lemma": "walk",
     "transitivity": ["i"],
     "id": "eng-ver-0076-walk",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "drive",
     "transitivity": ["i"],
     "id": "eng-ver-0077-drive(intransitive)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -666,7 +666,7 @@
   {
     "lemma": "drive",
     "id": "eng-ver-0078-drive(transitive)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -678,51 +678,51 @@
     "lemma": "think",
     "transitivity": ["i"],
     "id": "eng-ver-0079-think",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "turn off",
     "id": "eng-ver-0080-turnoff",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "switch off",
     "id": "eng-ver-0081-switchoff",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "exclude",
     "id": "eng-ver-0082-exclude",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "open",
     "id": "eng-ver-0083-open",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "tell",
     "id": "eng-ver-0084-tell",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "say",
     "transitivity": ["t", "i"],
     "id": "eng-ver-0085-say",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "speak",
     "transitivity": ["i"],
     "id": "eng-ver-0086-speak(talk)",
-    "register": 0,
+    "register": 1,
     "frequency": 1,
     "allohomInfo": {
       "singleWordtype": true,
@@ -734,7 +734,7 @@
     "lemma": "speak",
     "transitivity": ["i"],
     "id": "eng-ver-0087-speakalanguage(language)",
-    "register": 0,
+    "register": 1,
     "frequency": 1,
     "allohomInfo": {
       "singleWordtype": true,
@@ -746,28 +746,28 @@
     "lemma": "talk",
     "transitivity": ["i"],
     "id": "eng-ver-0088-talk",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "converse",
     "transitivity": ["i"],
     "id": "eng-ver-0089-converse",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "chat",
     "transitivity": ["i"],
     "id": "eng-ver-0090-chat",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "end",
     "transitivity": ["i"],
     "id": "eng-ver-0091-end(intransitive)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -778,7 +778,7 @@
   {
     "lemma": "end",
     "id": "eng-ver-0092-end(transitive)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -790,7 +790,7 @@
     "lemma": "finish",
     "transitivity": ["i"],
     "id": "eng-ver-0093-finish(intransitive)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -801,7 +801,7 @@
   {
     "lemma": "finish",
     "id": "eng-ver-0094-finish(transitive)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -813,13 +813,13 @@
     "lemma": "sleep",
     "transitivity": ["i"],
     "id": "eng-ver-0095-sleep",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "lose",
     "id": "eng-ver-0096-lose(possession)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -830,7 +830,7 @@
   {
     "lemma": "lose",
     "id": "eng-ver-0097-lose(misplace)",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -841,7 +841,7 @@
   {
     "lemma": "lose",
     "id": "eng-ver-0098-lose(game)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -852,25 +852,25 @@
   {
     "lemma": "waste",
     "id": "eng-ver-0099-waste",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "sell",
     "id": "eng-ver-0100-sell",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "pay",
     "id": "eng-ver-0101-pay",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "organise",
     "id": "eng-ver-0102-organise(general)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "additionalSpellings": ["organize"],
     "allohomInfo": {
@@ -882,7 +882,7 @@
   {
     "lemma": "organise",
     "id": "eng-ver-0103-organise(event)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "additionalSpellings": ["organize"],
     "allohomInfo": {
@@ -894,13 +894,13 @@
   {
     "lemma": "switch on",
     "id": "eng-ver-0104-switchon",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "turn on",
     "id": "eng-ver-0105-turnon(device)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -911,7 +911,7 @@
   {
     "lemma": "turn on",
     "id": "eng-ver-0106-turnon(sexually)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -922,7 +922,7 @@
   {
     "lemma": "include",
     "id": "eng-ver-0107-include(include)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -933,7 +933,7 @@
   {
     "lemma": "include",
     "id": "eng-ver-0108-include(comprise)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -944,26 +944,26 @@
   {
     "lemma": "enter",
     "id": "eng-ver-0109-enter",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "go into",
     "transitivity": ["i"],
     "id": "eng-ver-0110-gointo",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "wash",
     "id": "eng-ver-0111-wash",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "clean",
     "id": "eng-ver-0112-clean(wash)",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -974,7 +974,7 @@
   {
     "lemma": "clean",
     "id": "eng-ver-0113-clean(tidy)",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -985,7 +985,7 @@
   {
     "lemma": "watch",
     "id": "eng-ver-0114-watch(film)",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -996,7 +996,7 @@
   {
     "lemma": "watch",
     "id": "eng-ver-0115-watch(child)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1007,7 +1007,7 @@
   {
     "lemma": "use",
     "id": "eng-ver-0116-use(use)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1018,7 +1018,7 @@
   {
     "lemma": "use",
     "id": "eng-ver-0117-use(takeadvantage)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1029,19 +1029,19 @@
   {
     "lemma": "look for",
     "id": "eng-ver-0118-lookfor",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "search for",
     "id": "eng-ver-0119-searchfor",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "clean up",
     "id": "eng-ver-0120-cleanup(tidy)",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1052,7 +1052,7 @@
   {
     "lemma": "clean up",
     "id": "eng-ver-0121-cleanup(cleananobject)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1063,20 +1063,20 @@
   {
     "lemma": "tidy up",
     "id": "eng-ver-0122-tidyup",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "tidy",
     "id": "eng-ver-0123-tidy",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "live",
     "transitivity": ["i"],
     "id": "eng-ver-0124-live(be alive)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1087,7 +1087,7 @@
   {
     "lemma": "live",
     "id": "eng-ver-0125-live(location)",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1098,13 +1098,13 @@
   {
     "lemma": "ask for",
     "id": "eng-ver-0126-askfor",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "get",
     "id": "eng-ver-0127-get(receive)",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1115,7 +1115,7 @@
   {
     "lemma": "get",
     "id": "eng-ver-0128-get(understand)",
-    "register": 0,
+    "register": 1,
     "frequency": 5,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1126,39 +1126,39 @@
   {
     "lemma": "receive",
     "id": "eng-ver-0129-receive",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "give birth",
     "id": "eng-ver-0130-givebirth",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "be born",
     "transitivity": ["r"],
     "id": "eng-ver-0131-beborn",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "exit",
     "id": "eng-ver-0132-exit",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "go out",
     "id": "eng-ver-0133-goout",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "leave",
     "transitivity": ["i"],
     "id": "eng-ver-0134-leave(foot)",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1170,7 +1170,7 @@
     "lemma": "leave",
     "transitivity": ["i"],
     "id": "eng-ver-0135-leave(vehicle)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1181,7 +1181,7 @@
   {
     "lemma": "leave",
     "id": "eng-ver-0136-leave(behind)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1192,7 +1192,7 @@
   {
     "lemma": "leave",
     "id": "eng-ver-0137-leave(exit)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1203,7 +1203,7 @@
   {
     "lemma": "leave",
     "id": "eng-ver-0138-leave(abandon)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1214,13 +1214,13 @@
   {
     "lemma": "like",
     "id": "eng-ver-0139-like",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "send",
     "id": "eng-ver-0140-send(send)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1231,7 +1231,7 @@
   {
     "lemma": "send",
     "id": "eng-ver-0141-send(mail)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1242,46 +1242,46 @@
   {
     "lemma": "mail",
     "id": "eng-ver-0142-mail",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "win",
     "id": "eng-ver-0143-win",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "decide",
     "id": "eng-ver-0144-decide",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "believe",
     "transitivity": ["i"],
     "id": "eng-ver-0145-believe",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "trust",
     "transitivity": ["i"],
     "id": "eng-ver-0146-trust",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "have fun",
     "transitivity": ["r"],
     "id": "eng-ver-0147-havefun",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "play",
     "id": "eng-ver-0148-play(have fun)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1292,7 +1292,7 @@
   {
     "lemma": "play",
     "id": "eng-ver-0149-play(game)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1303,7 +1303,7 @@
   {
     "lemma": "play",
     "id": "eng-ver-0150-play(instrument)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1314,7 +1314,7 @@
   {
     "lemma": "play",
     "id": "eng-ver-0151-play(role)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1325,26 +1325,26 @@
   {
     "lemma": "buy",
     "id": "eng-ver-0152-buy",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "purchase",
     "id": "eng-ver-0153-purchase",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "die",
     "transitivity": ["i"],
     "id": "eng-ver-0154-die",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "try",
     "id": "eng-ver-0155-try(plus noun)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1356,7 +1356,7 @@
     "lemma": "try",
     "transitivity": ["r"],
     "id": "eng-ver-0156-try(to)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1367,148 +1367,148 @@
   {
     "lemma": "attempt",
     "id": "eng-ver-0157-attempt",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "leave behind",
     "id": "eng-ver-0158-leavebehind",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "close",
     "id": "eng-ver-0159-close",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "shut",
     "id": "eng-ver-0160-shut",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "lock",
     "id": "eng-ver-0161-lock",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "hate",
     "id": "eng-ver-0162-hate",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "detest",
     "id": "eng-ver-0163-detest",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "despise",
     "id": "eng-ver-0164-despise",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "carry",
     "id": "eng-ver-0165-carry",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "wear",
     "id": "eng-ver-0166-wear",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "find",
     "id": "eng-ver-0167-find",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "wake",
     "id": "eng-ver-0168-wake",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "wake up",
     "id": "eng-ver-0169-wakeup",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "awake",
     "id": "eng-ver-0170-awake",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "thank",
     "id": "eng-ver-0171-thank",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "mislay",
     "id": "eng-ver-0172-mislay",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "misplace",
     "id": "eng-ver-0173-misplace",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "get lost",
     "transitivity": ["r"],
     "id": "eng-ver-0174-getlost",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "promise",
     "id": "eng-ver-0175-promise",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "hear out",
     "id": "eng-ver-0176-hearout",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "repeat",
     "id": "eng-ver-0177-repeat",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "teach",
     "id": "eng-ver-0178-teach",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "learn",
     "transitivity": ["r"],
     "id": "eng-ver-0179-learn",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "study",
     "transitivity": ["r"],
     "id": "eng-ver-0180-study(learn)",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1519,7 +1519,7 @@
   {
     "lemma": "study",
     "id": "eng-ver-0181-study(research)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1530,37 +1530,37 @@
   {
     "lemma": "train",
     "id": "eng-ver-0182-train",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "describe",
     "id": "eng-ver-0183-describe",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "start",
     "id": "eng-ver-0184-start",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "begin",
     "id": "eng-ver-0185-begin",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "adore",
     "id": "eng-ver-0186-adore",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "love",
     "id": "eng-ver-0187-love(adore)",
-    "register": 0,
+    "register": 1,
     "frequency": 1,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1571,7 +1571,7 @@
   {
     "lemma": "love",
     "id": "eng-ver-0188-love(romantic)",
-    "register": 0,
+    "register": 1,
     "frequency": 1,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1582,278 +1582,278 @@
   {
     "lemma": "ask",
     "id": "eng-ver-0189-ask",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "benefit",
     "id": "eng-ver-0190-benefit",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "profit",
     "id": "eng-ver-0191-profit",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "take advantage",
     "id": "eng-ver-0192-takeadvantage",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "listen",
     "id": "eng-ver-0193-listen",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "see",
     "id": "eng-ver-0194-see",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "fall in love",
     "id": "eng-ver-0195-fallinlove",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "fall for",
     "id": "eng-ver-0196-fallfor",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "look at",
     "id": "eng-ver-0197-lookat",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "reside",
     "id": "eng-ver-0198-reside",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "reply",
     "id": "eng-ver-0199-reply",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "respond",
     "id": "eng-ver-0200-respond",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "answer",
     "id": "eng-ver-0201-answer",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "answer for",
     "id": "eng-ver-0202-answerfor",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "be accountable for",
     "id": "eng-ver-0203-beaccountablefor",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "be responsible for",
     "id": "eng-ver-0204-beresponsiblefor",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "wait",
     "id": "eng-ver-0205-wait",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "complain",
     "id": "eng-ver-0206-complain",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "kiss",
     "id": "eng-ver-0207-kiss",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "lurk",
     "transitivity": ["i"],
     "id": "eng-ver-0208-lurk",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "skulk",
     "transitivity": ["i"],
     "id": "eng-ver-0209-skulk",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "lie in wait",
     "id": "eng-ver-0210-lieinwait",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "get ill",
     "id": "eng-ver-0211-getill",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "get sick",
     "id": "eng-ver-0212-getsick",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "appreciate",
     "id": "eng-ver-0213-appreciate",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "annoy",
     "id": "eng-ver-0214-annoy",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "irritate",
     "id": "eng-ver-0215-irritate",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "be nervous",
     "transitivity": ["r"],
     "id": "eng-ver-0216-benervous",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "be irritated",
     "id": "eng-ver-0217-beirritated",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "be annoyed",
     "id": "eng-ver-0218-beannoyed",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "strive",
     "id": "eng-ver-0219-strive",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "enjoy",
     "id": "eng-ver-0220-enjoy",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "figure out",
     "id": "eng-ver-0221-figureout",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "work out",
     "id": "eng-ver-0222-workout",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "hide",
     "id": "eng-ver-0223-hide",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "conceal",
     "id": "eng-ver-0224-conceal",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "ripen",
     "transitivity": ["i"],
     "id": "eng-ver-0225-ripen",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "mature",
     "transitivity": ["i"],
     "id": "eng-ver-0226-mature",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "carry out",
     "id": "eng-ver-0227-carryout",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "hurl",
     "id": "eng-ver-0228-hurl",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "fling",
     "id": "eng-ver-0229-fling",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "throw",
     "id": "eng-ver-0230-throw",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "hurt",
     "transitivity": ["i"],
     "id": "eng-ver-0231-hurt",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "ache",
     "transitivity": ["i"],
     "id": "eng-ver-0232-ache",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "perceive",
     "id": "eng-ver-0233-perceive(visually)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1864,7 +1864,7 @@
   {
     "lemma": "perceive",
     "id": "eng-ver-0234-perceive(generally)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1875,31 +1875,31 @@
   {
     "lemma": "make out",
     "id": "eng-ver-0235-makeout",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "spot",
     "id": "eng-ver-0236-spot",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "spy",
     "id": "eng-ver-0237-spy",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "grab",
     "id": "eng-ver-0238-grab",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "grasp",
     "id": "eng-ver-0239-grasp(physically)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1910,7 +1910,7 @@
   {
     "lemma": "grasp",
     "id": "eng-ver-0240-grasp(mentally)",
-    "register": 0,
+    "register": 1,
     "frequency": 5,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1921,63 +1921,63 @@
   {
     "lemma": "catch",
     "id": "eng-ver-0241-catch",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "adjust",
     "transitivity": ["i"],
     "id": "eng-ver-0242-adjust",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "adapt",
     "id": "eng-ver-0243-adapt",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "complete",
     "id": "eng-ver-0244-complete",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "research",
     "id": "eng-ver-0245-research",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "investigate",
     "id": "eng-ver-0246-investigate",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "test",
     "id": "eng-ver-0247-test",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "explore",
     "id": "eng-ver-0248-explore",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "get along with",
     "transitivity": ["r"],
     "id": "eng-ver-0249-getalongwith",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "feel",
     "id": "eng-ver-0250-feel(transitive)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -1989,7 +1989,7 @@
     "lemma": "feel",
     "transitivity": ["r"],
     "id": "eng-ver-0251-feel(intransitive)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2000,7 +2000,7 @@
   {
     "lemma": "smell",
     "id": "eng-ver-0252-smell(transitive)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2012,7 +2012,7 @@
     "lemma": "smell",
     "transitivity": ["i"],
     "id": "eng-ver-0253-smell(intransitive)",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2024,122 +2024,122 @@
     "lemma": "stink",
     "transitivity": ["i"],
     "id": "eng-ver-0254-stink",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "attack",
     "id": "eng-ver-0255-attack",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "build",
     "id": "eng-ver-0256-build",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "construct",
     "id": "eng-ver-0257-construct",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "deliver",
     "id": "eng-ver-0258-deliver",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "grow",
     "id": "eng-ver-0259-grow",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "grow up",
     "id": "eng-ver-0260-growup",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "exercise",
     "transitivity": ["i"],
     "id": "eng-ver-0261-exercise",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "do exercise",
     "id": "eng-ver-0262-doexercise",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "add",
     "id": "eng-ver-0263-add",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "cut",
     "id": "eng-ver-0264-cut",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "praise",
     "id": "eng-ver-0265-praise",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "boast",
     "id": "eng-ver-0266-boast",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "value",
     "id": "eng-ver-0267-value",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "plead",
     "id": "eng-ver-0268-plead",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "beg",
     "id": "eng-ver-0269-beg",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "sound",
     "id": "eng-ver-0270-sound",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "engage",
     "id": "eng-ver-0271-engage",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "get involved",
     "id": "eng-ver-0272-getinvolved",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "protect",
     "id": "eng-ver-0273-protect(general)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2150,7 +2150,7 @@
   {
     "lemma": "protect",
     "id": "eng-ver-0274-protect(military)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2161,19 +2161,19 @@
   {
     "lemma": "read",
     "id": "eng-ver-0275-read",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "reach",
     "id": "eng-ver-0276-reach",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "beat",
     "id": "eng-ver-0277-beat(strike)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2184,7 +2184,7 @@
   {
     "lemma": "beat",
     "id": "eng-ver-0278-beat(defeat)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2195,75 +2195,75 @@
   {
     "lemma": "suffer",
     "id": "eng-ver-0279-suffer",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "pull",
     "id": "eng-ver-0280-pull",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "attach",
     "id": "eng-ver-0281-attach",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "join",
     "transitivity": ["i"],
     "id": "eng-ver-0282-join",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "join in",
     "transitivity": ["r"],
     "id": "eng-ver-0283-joinin",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "fear",
     "id": "eng-ver-0284-fear",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "be afraid of",
     "id": "eng-ver-0285-beafraidof",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "be scared of",
     "id": "eng-ver-0286-bescaredof",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "care for",
     "id": "eng-ver-0287-carefor",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "take care of",
     "id": "eng-ver-0288-takecareof",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "look after",
     "id": "eng-ver-0289-lookafter",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "catch up with",
     "id": "eng-ver-0290-catch up with(in a race)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2274,7 +2274,7 @@
   {
     "lemma": "catch up with",
     "id": "eng-ver-0291-catch up with(conversation)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2285,38 +2285,38 @@
   {
     "lemma": "catch up to",
     "id": "eng-ver-0292-catch up to",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "withdraw",
     "id": "eng-ver-0293-withdraw",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "back off",
     "id": "eng-ver-0294-backoff",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "back down",
     "id": "eng-ver-0295-backdown",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "stay awake",
     "transitivity": ["i"],
     "id": "eng-ver-0296-stayawake",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "get to(arrive)",
     "id": "eng-ver-0297-get to",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2327,33 +2327,33 @@
   {
     "lemma": "touch",
     "id": "eng-ver-0298-touch",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "be angry",
     "transitivity": ["r"],
     "id": "eng-ver-0299-be angry",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "get angry",
     "transitivity": ["r"],
     "id": "eng-ver-0300-get angry",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "demand",
     "id": "eng-ver-0301-demand",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "claim",
     "id": "eng-ver-0302-claim(compensation)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2364,7 +2364,7 @@
   {
     "lemma": "claim",
     "id": "eng-ver-0303-claim(that)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2375,7 +2375,7 @@
   {
     "lemma": "claim",
     "id": "eng-ver-0304-conclude(that)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2386,88 +2386,88 @@
   {
     "lemma": "state",
     "id": "eng-ver-0305-state",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "share",
     "id": "eng-ver-0306-share",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "divide",
     "id": "eng-ver-0307-divide",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "split",
     "id": "eng-ver-0308-split",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "stare",
     "id": "eng-ver-0309-stare",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "gawk",
     "id": "eng-ver-0310-gawk",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "ring",
     "id": "eng-ver-0311-ring",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "call",
     "id": "eng-ver-0312-call",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "experience",
     "id": "eng-ver-0313-experience",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "accept",
     "id": "eng-ver-0314-accept",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "perish",
     "transitivity": ["i"],
     "id": "eng-ver-0315-perish",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "find out",
     "transitivity": ["r"],
     "id": "eng-ver-0316-findout",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "flash",
     "transitivity": ["i"],
     "id": "eng-ver-0317-flash",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "command",
     "id": "eng-ver-0318-command(lead)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2478,7 +2478,7 @@
   {
     "lemma": "command",
     "id": "eng-ver-0319-command(order)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2489,31 +2489,31 @@
   {
     "lemma": "lead",
     "id": "eng-ver-0320-lead",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "surprise",
     "id": "eng-ver-0321-surprise",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "concern",
     "id": "eng-ver-0322-concern",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "pertain to",
     "id": "eng-ver-0323-pertainto",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "apply",
     "id": "eng-ver-0324-apply(abstract)",
-    "register": 0,
+    "register": 1,
     "frequency": 5,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2524,7 +2524,7 @@
   {
     "lemma": "apply",
     "id": "eng-ver-0325-apply(eg sunscreen)",
-    "register": 0,
+    "register": 1,
     "frequency": 5,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2535,7 +2535,7 @@
   {
     "lemma": "keep",
     "id": "eng-ver-0326-keep(promise)",
-    "register": 0,
+    "register": 1,
     "frequency": 5,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2546,7 +2546,7 @@
   {
     "lemma": "keep",
     "id": "eng-ver-0327-keep(general)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2557,79 +2557,79 @@
   {
     "lemma": "torment",
     "id": "eng-ver-0328-torment",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "bother",
     "id": "eng-ver-0329-bother",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "trouble",
     "id": "eng-ver-0330-trouble",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "tire",
     "id": "eng-ver-0331-tire",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "nag",
     "id": "eng-ver-0332-nag",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "tremble",
     "id": "eng-ver-0333-tremble",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "shiver",
     "id": "eng-ver-0334-shiver",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "block",
     "id": "eng-ver-0335-block",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "suffocate",
     "id": "eng-ver-0336-suffocate",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "asphyxiate",
     "id": "eng-ver-0337-asphyxiate",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "strangle",
     "id": "eng-ver-0338-strangle",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "choke",
     "id": "eng-ver-0339-choke",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "analyse",
     "id": "eng-ver-0340-analyse",
-    "register": 0,
+    "register": 1,
     "frequency": 5,
     "additionalSpellings": ["analyze"]
   },
@@ -2637,7 +2637,7 @@
     "lemma": "work",
     "transitivity": ["i"],
     "id": "eng-ver-0341-work(device)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2648,7 +2648,7 @@
   {
     "lemma": "work",
     "id": "eng-ver-0342-work(person)",
-    "register": 0,
+    "register": 1,
     "frequency": 1,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2660,326 +2660,326 @@
     "lemma": "function",
     "transitivity": ["i"],
     "id": "eng-ver-0343-function",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "not be able to wait",
     "transitivity": ["r"],
     "id": "eng-ver-0344-not be able to wait",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "shine",
     "id": "eng-ver-0345-shine",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "glitter",
     "id": "eng-ver-0346-glitter",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "shimmer",
     "id": "eng-ver-0347-shimmer",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "sparkle",
     "id": "eng-ver-0348-sparkle",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "stroke",
     "id": "eng-ver-0349-stroke",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "defend",
     "id": "eng-ver-0350-defend",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "guard",
     "id": "eng-ver-0351-guard",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "fight back",
     "transitivity": ["r"],
     "id": "eng-ver-0352-fightback",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "tease",
     "transitivity": ["r"],
     "id": "eng-ver-0353-tease",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "chase",
     "id": "eng-ver-0354-chase",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "pursue",
     "id": "eng-ver-0355-pursue",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "preach",
     "id": "eng-ver-0356-preach",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "proclaim",
     "id": "eng-ver-0357-proclaim",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "pant",
     "transitivity": ["i"],
     "id": "eng-ver-0358-pant",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "direct",
     "id": "eng-ver-0359-direct",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "head",
     "id": "eng-ver-0360-head",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "manage",
     "id": "eng-ver-0361-manage",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "exist",
     "transitivity": ["i"],
     "id": "eng-ver-0362-exist",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "kick",
     "id": "eng-ver-0363-kick",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "dig",
     "id": "eng-ver-0364-dig",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "shout",
     "id": "eng-ver-0365-shout",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "yell",
     "id": "eng-ver-0366-yell",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "associate",
     "id": "eng-ver-0367-associate",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "agree",
     "id": "eng-ver-0368-agree",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "tempt",
     "id": "eng-ver-0369-tempt",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "moan",
     "transitivity": ["i"],
     "id": "eng-ver-0370-moan",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "nod",
     "transitivity": ["i"],
     "id": "eng-ver-0371-nod",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "land",
     "transitivity": ["i"],
     "id": "eng-ver-0372-land",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "feed",
     "id": "eng-ver-0373-feed",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "circulate",
     "transitivity": ["i"],
     "id": "eng-ver-0374-circulate",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "discuss",
     "id": "eng-ver-0375-discuss",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "continue",
     "id": "eng-ver-0376-continue",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "fly",
     "transitivity": ["i"],
     "id": "eng-ver-0377-fly",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "guarantee",
     "id": "eng-ver-0378-guarantee",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "invest",
     "id": "eng-ver-0379-invest",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "form",
     "id": "eng-ver-0380-form",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "shape",
     "id": "eng-ver-0381-shape",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "flourish",
     "id": "eng-ver-0382-flourish",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "thrive",
     "id": "eng-ver-0383-thrive",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "blossom",
     "id": "eng-ver-0384-blossom",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "bloom",
     "id": "eng-ver-0385-bloom",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "gather",
     "id": "eng-ver-0386-gather",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "collect",
     "id": "eng-ver-0387-collect",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "brake",
     "transitivity": ["i"],
     "id": "eng-ver-0388-brake",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "inhibit",
     "id": "eng-ver-0389-inhibit",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "suppress",
     "id": "eng-ver-0390-suppress",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "interest",
     "id": "eng-ver-0391-interest",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "steal",
     "id": "eng-ver-0392-steal",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "cost",
     "transitivity": ["i"],
     "id": "eng-ver-0393-cost",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "threaten",
     "transitivity": ["t", "i"],
     "id": "eng-ver-0394-threaten(speech)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -2990,7 +2990,7 @@
   {
     "lemma": "threaten",
     "id": "eng-ver-0395-threaten(endanger)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3001,39 +3001,39 @@
   {
     "lemma": "endanger",
     "id": "eng-ver-0396-endanger",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "jeopardise",
     "id": "eng-ver-0397-jeopardise",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "additionalSpellings": ["jeopardize"]
   },
   {
     "lemma": "spin",
     "id": "eng-ver-0398-spin",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "bite",
     "id": "eng-ver-0399-bite",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "ignore",
     "id": "eng-ver-0400-ignore",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "lie",
     "transitivity": ["i"],
     "id": "eng-ver-0401-lie(untruth)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3045,7 +3045,7 @@
     "lemma": "lie",
     "transitivity": ["i"],
     "id": "eng-ver-0402-lie(bodily)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3056,123 +3056,123 @@
   {
     "lemma": "rotate",
     "id": "eng-ver-0403-rotate",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "turn",
     "id": "eng-ver-0404-turn",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "revolve",
     "id": "eng-ver-0405-revolve",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "offend",
     "id": "eng-ver-0406-offend",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "upset",
     "id": "eng-ver-0407-upset",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "measure",
     "id": "eng-ver-0408-measure",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "assault",
     "id": "eng-ver-0409-assault",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "mug",
     "id": "eng-ver-0410-mug",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "mutter",
     "id": "eng-ver-0411-mutter",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "murmur",
     "id": "eng-ver-0412-murmur",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "glisten",
     "transitivity": ["i", "r"],
     "id": "eng-ver-0413-glisten",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "blink",
     "transitivity": ["i"],
     "id": "eng-ver-0414-blink",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "acquire",
     "id": "eng-ver-0415-acquire",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "mix",
     "id": "eng-ver-0416-mix",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "stir",
     "id": "eng-ver-0417-stir",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "decrease",
     "id": "eng-ver-0418-decrease",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "reduce",
     "id": "eng-ver-0419-reduce",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "lower",
     "id": "eng-ver-0420-lower",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "encompass",
     "id": "eng-ver-0421-encompass",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "worry",
     "id": "eng-ver-0422-worry(mind)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3184,7 +3184,7 @@
     "lemma": "worry",
     "transitivity": ["r"],
     "id": "eng-ver-0423-worry(emotion)",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3195,138 +3195,138 @@
   {
     "lemma": "put at risk",
     "id": "eng-ver-0424-put at risk",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "risk",
     "id": "eng-ver-0425-risk",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "put in danger",
     "id": "eng-ver-0426-put in danger",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "impose",
     "id": "eng-ver-0427-impose",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "be called",
     "transitivity": ["r"],
     "id": "eng-ver-0428-becalled",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "destroy",
     "id": "eng-ver-0429-destroy",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "keep quiet",
     "id": "eng-ver-0430-keepquiet",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "be quiet",
     "id": "eng-ver-0431-bequiet",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "keep silent",
     "id": "eng-ver-0432-keepsilent",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "be silent",
     "id": "eng-ver-0433-besilent",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "repair",
     "id": "eng-ver-0434-repair",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "mend",
     "id": "eng-ver-0435-mend",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "fix",
     "id": "eng-ver-0436-fix",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "insist",
     "transitivity": ["i"],
     "id": "eng-ver-0437-insist",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "take place",
     "id": "eng-ver-0438-takeplace",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "occur",
     "id": "eng-ver-0439-occur",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "be bored",
     "transitivity": ["r"],
     "id": "eng-ver-0440-bebored",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "mumble",
     "id": "eng-ver-0441-mumble",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "record",
     "id": "eng-ver-0442-record",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "wave",
     "id": "eng-ver-0443-wave",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "belong",
     "transitivity": ["i"],
     "id": "eng-ver-0444-belong",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "fit",
     "transitivity": ["r"],
     "id": "eng-ver-0445-fit(into)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3338,7 +3338,7 @@
     "lemma": "fit",
     "transitivity": ["i"],
     "id": "eng-ver-0446-fit(match)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3349,7 +3349,7 @@
   {
     "lemma": "fit",
     "id": "eng-ver-0447-fit(accommodate)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3360,49 +3360,49 @@
   {
     "lemma": "murder",
     "id": "eng-ver-0448-murder",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "confuse",
     "id": "eng-ver-0449-confuse",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "mix up",
     "id": "eng-ver-0450-mixup",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "mistake",
     "id": "eng-ver-0451-mistake",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "underestimate",
     "id": "eng-ver-0452-underestimate",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "disregard",
     "id": "eng-ver-0453-disregard",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "press",
     "id": "eng-ver-0454-press",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "push",
     "id": "eng-ver-0455-push(button)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3413,7 +3413,7 @@
   {
     "lemma": "push",
     "id": "eng-ver-0456-push(general)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3424,7 +3424,7 @@
   {
     "lemma": "paint",
     "id": "eng-ver-0457-paint(wall)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3435,7 +3435,7 @@
   {
     "lemma": "paint",
     "id": "eng-ver-0458-paint(picture)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3446,43 +3446,43 @@
   {
     "lemma": "order",
     "id": "eng-ver-0459-order",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "persuade",
     "id": "eng-ver-0460-persuade",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "encourage",
     "id": "eng-ver-0461-encourage",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "convince",
     "id": "eng-ver-0462-convince",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "talk into",
     "id": "eng-ver-0463-talkinto",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "pass by",
     "id": "eng-ver-0464-passby",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "pass",
     "id": "eng-ver-0465-pass(travel)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3493,7 +3493,7 @@
   {
     "lemma": "pass",
     "id": "eng-ver-0466-pass(time)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3504,7 +3504,7 @@
   {
     "lemma": "pass",
     "id": "eng-ver-0467-pass(salt)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3516,13 +3516,13 @@
     "lemma": "elapse",
     "transitivity": ["i"],
     "id": "eng-ver-0468-elapse",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "shoot",
     "id": "eng-ver-0469-shoot(film)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3533,7 +3533,7 @@
   {
     "lemma": "shoot",
     "id": "eng-ver-0470-shoot(gun)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3544,73 +3544,73 @@
   {
     "lemma": "arouse",
     "id": "eng-ver-0471-arouse",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "violate",
     "id": "eng-ver-0472-violate",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "contravene",
     "id": "eng-ver-0473-contravene",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "infringe",
     "id": "eng-ver-0474-infringe",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "write",
     "id": "eng-ver-0475-write",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "encounter",
     "id": "eng-ver-0476-encounter",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "come across",
     "id": "eng-ver-0477-comeacross",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "run into",
     "id": "eng-ver-0478-runinto",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "pray",
     "id": "eng-ver-0479-pray",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "cure",
     "id": "eng-ver-0480-cure",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "heal",
     "id": "eng-ver-0481-heal",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "treat",
     "id": "eng-ver-0482-treat(medical)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3621,7 +3621,7 @@
   {
     "lemma": "treat",
     "id": "eng-ver-0483-treat(consider)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3632,120 +3632,120 @@
   {
     "lemma": "pour",
     "id": "eng-ver-0484-pour",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "oversee",
     "id": "eng-ver-0485-oversee",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "supervise",
     "id": "eng-ver-0486-supervise",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "imitate",
     "id": "eng-ver-0487-imitate",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "mimic",
     "id": "eng-ver-0488-mimic",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "copy",
     "id": "eng-ver-0489-copy",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "breathe",
     "transitivity": ["i"],
     "id": "eng-ver-0490-breathe",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "restrict",
     "id": "eng-ver-0491-restrict",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "limit",
     "id": "eng-ver-0492-limit",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "swim away",
     "transitivity": ["i"],
     "id": "eng-ver-0493-swimaway",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "swim off",
     "transitivity": ["i"],
     "id": "eng-ver-0494-swimoff",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "sail away",
     "transitivity": ["i"],
     "id": "eng-ver-0495-sailaway",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "sail off",
     "transitivity": ["i"],
     "id": "eng-ver-0496-sailoff",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "purify",
     "id": "eng-ver-0497-purify",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "miss",
     "id": "eng-ver-0498-miss",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "avoid",
     "id": "eng-ver-0499-avoid",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "cancel",
     "id": "eng-ver-0500-cancel",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "say no",
     "id": "eng-ver-0501-sayno",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "refuse",
     "id": "eng-ver-0502-refuse(plus noun)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3756,7 +3756,7 @@
   {
     "lemma": "refuse",
     "id": "eng-ver-0503-refuse(plus verb)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3767,7 +3767,7 @@
   {
     "lemma": "refuse",
     "id": "eng-ver-0504-refuse(intransitive)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3778,13 +3778,13 @@
   {
     "lemma": "deny",
     "id": "eng-ver-0505-deny",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "hold",
     "id": "eng-ver-0506-hold(party)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3795,7 +3795,7 @@
   {
     "lemma": "hold",
     "id": "eng-ver-0507-hold(storage)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3806,7 +3806,7 @@
   {
     "lemma": "put on",
     "id": "eng-ver-0508-puton(event)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3817,7 +3817,7 @@
   {
     "lemma": "put on",
     "id": "eng-ver-0509-puton(clothes)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3828,105 +3828,105 @@
   {
     "lemma": "inherit",
     "id": "eng-ver-0510-inherit",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "offer",
     "id": "eng-ver-0511-offer",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "propose",
     "id": "eng-ver-0512-propose",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "fly away",
     "transitivity": ["i"],
     "id": "eng-ver-0513-flyaway",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "fly off",
     "transitivity": ["i"],
     "id": "eng-ver-0514-flyoff",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "postpone",
     "id": "eng-ver-0515-postpone",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "put off",
     "id": "eng-ver-0516-putoff",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "defer",
     "id": "eng-ver-0517-defer",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "give back",
     "id": "eng-ver-0518-giveback",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "donate",
     "id": "eng-ver-0519-donate",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "walk away",
     "id": "eng-ver-0520-walkaway",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "walk off",
     "id": "eng-ver-0521-walkoff",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "discover",
     "id": "eng-ver-0522-discover",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "reject",
     "id": "eng-ver-0523-reject",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "take back",
     "id": "eng-ver-0524-takeback",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "take away",
     "id": "eng-ver-0525-takeaway",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "save",
     "id": "eng-ver-0526-save(life)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3937,7 +3937,7 @@
   {
     "lemma": "save",
     "id": "eng-ver-0527-save(money)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -3948,214 +3948,214 @@
   {
     "lemma": "rescue",
     "id": "eng-ver-0528-rescue",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "rest",
     "id": "eng-ver-0529-rest",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "relax",
     "transitivity": ["i"],
     "id": "eng-ver-0530-relax",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "announce",
     "id": "eng-ver-0531-announce",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "declare",
     "id": "eng-ver-0532-declare",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "turn out",
     "transitivity": ["r"],
     "id": "eng-ver-0533-turnout",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "transpire",
     "transitivity": ["r"],
     "id": "eng-ver-0534-transpire",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "step back",
     "id": "eng-ver-0535-stepback",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "step aside",
     "id": "eng-ver-0536-stepaside",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "reflect",
     "id": "eng-ver-0537-reflect",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "bounce",
     "id": "eng-ver-0538-bounce",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "depart",
     "id": "eng-ver-0539-depart",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "drive off",
     "id": "eng-ver-0540-driveoff",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "drive away",
     "id": "eng-ver-0541-driveaway",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "let go",
     "id": "eng-ver-0542-letgo",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "regain",
     "id": "eng-ver-0543-regain",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "recover",
     "id": "eng-ver-0544-recover",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "retrieve",
     "id": "eng-ver-0545-retrieve",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "get back",
     "id": "eng-ver-0546-getback",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "reverse",
     "id": "eng-ver-0547-reverse",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "turn around",
     "id": "eng-ver-0548-turnaround",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "cut off",
     "id": "eng-ver-0549-cutoff",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "visit",
     "id": "eng-ver-0550-visit",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "rate",
     "id": "eng-ver-0551-rate",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "evaluate",
     "id": "eng-ver-0552-evaluate",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "mark",
     "id": "eng-ver-0553-mark",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "grade",
     "id": "eng-ver-0554-grade",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "assess",
     "id": "eng-ver-0555-assess",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "wipe away",
     "id": "eng-ver-0556-wipeaway",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "wipe",
     "id": "eng-ver-0557-wipe",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "expect",
     "id": "eng-ver-0558-expect",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "show",
     "id": "eng-ver-0559-show",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "roast",
     "id": "eng-ver-0560-roast",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "bake",
     "id": "eng-ver-0561-bake",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "cheat",
     "id": "eng-ver-0562-cheat(deceive)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -4166,7 +4166,7 @@
   {
     "lemma": "cheat",
     "id": "eng-ver-0563-cheat(game)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -4177,32 +4177,32 @@
   {
     "lemma": "deceive",
     "id": "eng-ver-0564-deceive",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "trick",
     "id": "eng-ver-0565-trick",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "pay for",
     "id": "eng-ver-0566-payfor",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "lean on",
     "id": "eng-ver-0567-leanon",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "smoke",
     "transitivity": ["i"],
     "id": "eng-ver-0568-smoke(tobacco)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -4214,7 +4214,7 @@
     "lemma": "smoke",
     "transitivity": ["i"],
     "id": "eng-ver-0569-smoke(on fire)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -4225,7 +4225,7 @@
   {
     "lemma": "burn",
     "id": "eng-ver-0570-burn(transitive)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -4237,7 +4237,7 @@
     "lemma": "burn",
     "transitivity": ["i"],
     "id": "eng-ver-0571-burn(intransitive)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -4249,7 +4249,7 @@
     "lemma": "approach",
     "transitivity": ["i"],
     "id": "eng-ver-0572-approach(on foot)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -4261,7 +4261,7 @@
     "lemma": "approach",
     "transitivity": ["i"],
     "id": "eng-ver-0573-approach(vehicle)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -4272,138 +4272,138 @@
   {
     "lemma": "surrender",
     "id": "eng-ver-0574-surrender",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "give up",
     "id": "eng-ver-0575-giveup",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "develop",
     "id": "eng-ver-0576-develop",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "cover",
     "id": "eng-ver-0577-cover",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "pack",
     "id": "eng-ver-0578-pack",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "pack up",
     "id": "eng-ver-0579-packup",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "shove",
     "id": "eng-ver-0580-shove",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "recommend",
     "id": "eng-ver-0581-recommend",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "sign",
     "id": "eng-ver-0582-sign",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "go crazy",
     "transitivity": ["i"],
     "id": "eng-ver-0583-gocrazy",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "go mad",
     "transitivity": ["i"],
     "id": "eng-ver-0584-gomad",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "go nuts",
     "transitivity": ["i"],
     "id": "eng-ver-0585-gonuts",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "dare",
     "transitivity": ["r"],
     "id": "eng-ver-0586-dare",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "abandon",
     "id": "eng-ver-0587-abandon",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "be on fire",
     "transitivity": ["i"],
     "id": "eng-ver-0588-beonfire",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "achieve",
     "id": "eng-ver-0589-achieve",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "accomplish",
     "id": "eng-ver-0590-accomplish",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "download",
     "id": "eng-ver-0591-download",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "hand",
     "id": "eng-ver-0592-hand",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "burst",
     "id": "eng-ver-0593-burst",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "crack",
     "id": "eng-ver-0594-crack",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "break",
     "id": "eng-ver-0595-break(burst)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -4414,7 +4414,7 @@
   {
     "lemma": "break",
     "id": "eng-ver-0596-break(breaktime)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -4426,45 +4426,45 @@
     "lemma": "swim",
     "transitivity": ["i"],
     "id": "eng-ver-0597-swim",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "sail",
     "transitivity": ["i"],
     "id": "eng-ver-0598-sail",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "float",
     "transitivity": ["i"],
     "id": "eng-ver-0599-float",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "flow",
     "id": "eng-ver-0600-flow",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "accuse",
     "id": "eng-ver-0601-accuse",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "surround",
     "id": "eng-ver-0602-surround",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "encircle",
     "id": "eng-ver-0603-encircle",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
@@ -4482,26 +4482,26 @@
   {
     "lemma": "underline",
     "id": "eng-ver-0606-underline",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "emphasise",
     "id": "eng-ver-0607-emphasise",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "additionalSpellings": ["emphasize"]
   },
   {
     "lemma": "stress",
     "id": "eng-ver-0608-stress",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "pick up",
     "id": "eng-ver-0609-pickup(object)",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -4512,7 +4512,7 @@
   {
     "lemma": "pick up",
     "id": "eng-ver-0610-pick up(romantic)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -4523,227 +4523,227 @@
   {
     "lemma": "raise",
     "id": "eng-ver-0611-raise",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "lift",
     "id": "eng-ver-0612-lift",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "wrap",
     "id": "eng-ver-0613-wrap",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "hit on",
     "id": "eng-ver-0614-hiton",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "appear",
     "id": "eng-ver-0615-appear",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "cry",
     "transitivity": ["i"],
     "id": "eng-ver-0616-cry",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "mean",
     "id": "eng-ver-0617-mean",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "signify",
     "id": "eng-ver-0618-signify",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "absorb",
     "id": "eng-ver-0619-absorb",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "defeat",
     "id": "eng-ver-0620-defeat",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "remember",
     "id": "eng-ver-0621-remember",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "recall",
     "id": "eng-ver-0622-recall",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "worsen",
     "id": "eng-ver-0623-worsen",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "make worse",
     "id": "eng-ver-0624-makeworse",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "get worse",
     "id": "eng-ver-0625-getworse",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "deteriorate",
     "id": "eng-ver-0626-deteriorate",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "connect",
     "id": "eng-ver-0627-connect",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "combine",
     "id": "eng-ver-0628-combine",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "travel",
     "transitivity": ["i"],
     "id": "eng-ver-0629-travel",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "suit",
     "id": "eng-ver-0630-suit",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "match",
     "transitivity": ["i"],
     "id": "eng-ver-0631-match",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "suspect",
     "id": "eng-ver-0632-suspect",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "beat up",
     "id": "eng-ver-0633-beatup",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "understand",
     "id": "eng-ver-0634-understand",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "comprehend",
     "id": "eng-ver-0635-comprehend",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "estimate",
     "id": "eng-ver-0636-estimate",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "warn",
     "id": "eng-ver-0637-warn",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "propose to",
     "id": "eng-ver-0638-proposeto",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "keep an eye on",
     "id": "eng-ver-0639-keepaneyeon",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "plan",
     "id": "eng-ver-0640-plan",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "hunt",
     "id": "eng-ver-0641-hunt",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "depend on",
     "id": "eng-ver-0642-dependon",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "rely on",
     "id": "eng-ver-0643-relyon",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "admire",
     "id": "eng-ver-0644-admire",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "pierce",
     "id": "eng-ver-0645-pierce",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "puncture",
     "id": "eng-ver-0646-puncture",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "penetrate",
     "transitivity": ["r"],
     "id": "eng-ver-0647-penetrate(pierce)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -4754,7 +4754,7 @@
   {
     "lemma": "penetrate",
     "id": "eng-ver-0648-penetrate(permeate)",
-    "register": 0,
+    "register": 1,
     "frequency": 5,
     "allohomInfo": {
       "singleWordtype": true,
@@ -4765,305 +4765,305 @@
   {
     "lemma": "keep from",
     "id": "eng-ver-0649-keepfrom",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "refrain from",
     "id": "eng-ver-0650-refrainfrom",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "prevent from",
     "id": "eng-ver-0651-preventfrom",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "stop from",
     "id": "eng-ver-0652-stopfrom",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "cause",
     "id": "eng-ver-0653-cause",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "induce",
     "id": "eng-ver-0654-induce",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "bring on",
     "id": "eng-ver-0655-bring on",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "drag",
     "id": "eng-ver-0656-drag",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "welcome",
     "id": "eng-ver-0657-welcome",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "greet",
     "id": "eng-ver-0658-greet",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "compare",
     "id": "eng-ver-0659-compare",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "convey",
     "id": "eng-ver-0660-convey",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "transmit",
     "id": "eng-ver-0661-transmit",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "own",
     "id": "eng-ver-0662-own",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "possess",
     "id": "eng-ver-0663-possess",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "enlarge",
     "id": "eng-ver-0664-enlarge",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "increase",
     "id": "eng-ver-0665-increase",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "expand",
     "id": "eng-ver-0666-expand",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "produce",
     "id": "eng-ver-0667-produce",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "transform",
     "id": "eng-ver-0668-transform",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "meet",
     "id": "eng-ver-0669-meet",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "get to know",
     "id": "eng-ver-0670-get to know",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "recognise",
     "id": "eng-ver-0671-recognise",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "additionalSpellings": ["recognize"]
   },
   {
     "lemma": "shake",
     "id": "eng-ver-0672-shake",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "help",
     "id": "eng-ver-0673-help",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "omit",
     "id": "eng-ver-0674-omit",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "leave out",
     "id": "eng-ver-0675-leaveout",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "skip",
     "id": "eng-ver-0676-skip",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "get changed",
     "id": "eng-ver-0677-getchanged",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "go through",
     "id": "eng-ver-0678-gothrough",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "run over",
     "id": "eng-ver-0679-run over",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "remain",
     "id": "eng-ver-0680-remain",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "stay",
     "transitivity": ["i"],
     "id": "eng-ver-0681-stay",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "improve",
     "id": "eng-ver-0682-improve",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "correct",
     "id": "eng-ver-0683-correct",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "extend",
     "id": "eng-ver-0684-extend",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "prolong",
     "id": "eng-ver-0685-prolong",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "succeed",
     "id": "eng-ver-0686-succeed",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "be going well for",
     "id": "eng-ver-0687-begoingwellfor",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "swallow",
     "id": "eng-ver-0688-swallow",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "confirm",
     "id": "eng-ver-0689-confirm",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "suggest",
     "id": "eng-ver-0690-suggest",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "take over",
     "id": "eng-ver-0691-takeover",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "seize",
     "id": "eng-ver-0692-seize",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "mind",
     "id": "eng-ver-0693-mind",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "swear",
     "transitivity": ["i"],
     "id": "eng-ver-0694-swear",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "curse",
     "transitivity": ["i"],
     "id": "eng-ver-0695-curse",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "notify",
     "id": "eng-ver-0696-notify",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "inform",
     "id": "eng-ver-0697-inform",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "consider",
     "id": "eng-ver-0698-consider(as)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -5074,7 +5074,7 @@
   {
     "lemma": "consider",
     "id": "eng-ver-0699-consider(think about)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -5085,7 +5085,7 @@
   {
     "lemma": "perform",
     "id": "eng-ver-0700-perform(carry out)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -5096,7 +5096,7 @@
   {
     "lemma": "perform",
     "id": "eng-ver-0701-perform(in a show)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -5108,7 +5108,7 @@
     "lemma": "move",
     "transitivity": ["i", "r"],
     "id": "eng-ver-0702-move(house)",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
@@ -5119,7 +5119,7 @@
   {
     "lemma": "move",
     "id": "eng-ver-0703-move(object)",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -5130,39 +5130,39 @@
   {
     "lemma": "transfer",
     "id": "eng-ver-0704-transfer",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "trip",
     "transitivity": ["i"],
     "id": "eng-ver-0705-trip",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "trip over",
     "id": "eng-ver-0706-tripover",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "stumble",
     "transitivity": ["i"],
     "id": "eng-ver-0707-stumble",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "plant",
     "id": "eng-ver-0708-plant",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "commit",
     "id": "eng-ver-0709-commit(error)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -5173,7 +5173,7 @@
   {
     "lemma": "commit",
     "id": "eng-ver-0710-commit(to)",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
@@ -5184,13 +5184,13 @@
   {
     "lemma": "regret",
     "id": "eng-ver-0711-regret",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "apologise",
     "id": "eng-ver-0712-apologise",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "additionalSpellings": ["apologize"]
   },
@@ -5198,86 +5198,86 @@
     "lemma": "be sorry",
     "transitivity": ["i"],
     "id": "eng-ver-0713-besorry",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "startle",
     "id": "eng-ver-0714-startle",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "frighten",
     "id": "eng-ver-0715-frighten",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "scare",
     "id": "eng-ver-0716-scare",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "exaggerate",
     "transitivity": ["i"],
     "id": "eng-ver-0717-exaggerate",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "overdo",
     "id": "eng-ver-0718-overdo",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "horrify",
     "id": "eng-ver-0719-horrify",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "appall",
     "id": "eng-ver-0720-appall",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "flip",
     "id": "eng-ver-0721-flip",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "store",
     "id": "eng-ver-0722-store",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "stop",
     "id": "eng-ver-0723-stop",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "interrupt",
     "id": "eng-ver-0724-interrupt",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "hang",
     "id": "eng-ver-0725-hang",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "look through",
     "id": "eng-ver-0726-lookthrough(documents)",
-    "register": 0,
+    "register": 1,
     "frequency": 5,
     "allohomInfo": {
       "singleWordtype": true,
@@ -5288,224 +5288,224 @@
   {
     "lemma": "browse",
     "id": "eng-ver-0727-browse",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "peruse",
     "id": "eng-ver-0728-peruse",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "get rid of",
     "id": "eng-ver-0729-getridof",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "deprive",
     "id": "eng-ver-0730-deprive",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "advise",
     "id": "eng-ver-0731-advise",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "permeate",
     "id": "eng-ver-0732-permeate",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "introduce",
     "id": "eng-ver-0733-introduce",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "present",
     "id": "eng-ver-0734-present",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "bid farewell",
     "id": "eng-ver-0735-bidfarewell",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "bid goodbye",
     "id": "eng-ver-0736-bidgoodbye",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "move around",
     "id": "eng-ver-0737-movearound",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "rearrange",
     "id": "eng-ver-0738-rearrange",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "support",
     "id": "eng-ver-0739-support",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "back",
     "id": "eng-ver-0740-back",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "desire",
     "id": "eng-ver-0741-desire",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "long for",
     "id": "eng-ver-0742-longfor",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "wish for",
     "id": "eng-ver-0743-wishfor",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "accommodate",
     "id": "eng-ver-0744-accommodate",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "marry",
     "id": "eng-ver-0745-marry",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "hurry",
     "id": "eng-ver-0746-hurry",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "protest",
     "id": "eng-ver-0747-protest",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "slip past",
     "id": "eng-ver-0748-slippast",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "sneak past",
     "id": "eng-ver-0749-sneakpast",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "lend",
     "id": "eng-ver-0750-lend",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "borrow",
     "id": "eng-ver-0751-borrow",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "last",
     "id": "eng-ver-0752-last",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "memorise",
     "id": "eng-ver-0753-memorise",
-    "register": 0,
+    "register": 1,
     "frequency": 4,
     "additionalSpellings": ["memorize"]
   },
   {
     "lemma": "assume",
     "id": "eng-ver-0754-assume",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "presume",
     "id": "eng-ver-0755-presume",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "suppose",
     "id": "eng-ver-0756-suppose",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "bet",
     "id": "eng-ver-0757-bet",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "expose",
     "id": "eng-ver-0758-expose",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "weigh",
     "id": "eng-ver-0759-weigh",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "dislocate",
     "id": "eng-ver-0760-dislocate",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "subtract",
     "id": "eng-ver-0761-subtract",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "deduct",
     "id": "eng-ver-0762-deduct",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "bear",
     "id": "eng-ver-0763-bear",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": false,
@@ -5516,25 +5516,25 @@
   {
     "lemma": "put up with",
     "id": "eng-ver-0764-put up with",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "tolerate",
     "id": "eng-ver-0765-tolerate",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "endure",
     "id": "eng-ver-0766-endure",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "make up for",
     "id": "eng-ver-0767-make up for",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   }
 ]

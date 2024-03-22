@@ -3,280 +3,280 @@
     "lemma": "mother",
     "id": "eng-npe-0001-mother",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "father",
     "id": "eng-npe-0002-father",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "brother",
     "id": "eng-npe-0003-brother",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "niece",
     "id": "eng-npe-0004-niece",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "husband",
     "id": "eng-npe-0005-husband",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "daughter",
     "id": "eng-npe-0006-daughter",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "son",
     "id": "eng-npe-0007-son",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "nephew",
     "id": "eng-npe-0008-nephew",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "grandfather",
     "id": "eng-npe-0009-grandfather",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "grandmother",
     "id": "eng-npe-0010-grandmother",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "aunt",
     "id": "eng-npe-0011-aunt",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "auntie",
     "id": "eng-npe-0012-auntie",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "uncle",
     "id": "eng-npe-0013-uncle",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "cousin",
     "id": "eng-npe-0014-cousin",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "wife",
     "id": "eng-npe-0015-wife",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "man",
     "id": "eng-npe-0016-man",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "woman",
     "id": "eng-npe-0017-woman",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "lady",
     "id": "eng-npe-0018-lady",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "sister",
     "id": "eng-npe-0019-sister",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "partner",
     "id": "eng-npe-0020-partner",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "boy",
     "id": "eng-npe-0021-boy",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "boyfriend",
     "id": "eng-npe-0022-boyfriend",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "teacher",
     "id": "eng-npe-0023-teacher",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "student",
     "id": "eng-npe-0024-student",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "girl",
     "id": "eng-npe-0025-girl",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "girlfriend",
     "id": "eng-npe-0026-girlfriend",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "friend",
     "id": "eng-npe-0027-friend",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "actress",
     "id": "eng-npe-0028-actress",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "actor",
     "id": "eng-npe-0029-actor",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "king",
     "id": "eng-npe-0030-king",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "queen",
     "id": "eng-npe-0031-queen",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "leader",
     "id": "eng-npe-0032-leader",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "human",
     "id": "eng-npe-0033-human",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "person",
     "id": "eng-npe-0034-person",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "tourist",
     "id": "eng-npe-0035-tourist",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "hero",
     "id": "eng-npe-0036-hero",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "protagonist",
     "id": "eng-npe-0037-protagonist",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "politician",
     "id": "eng-npe-0038-politician",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "surgeon",
     "id": "eng-npe-0039-surgeon",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "neighbour",
     "id": "eng-npe-0040-neighbour",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3,
     "additionalSpellings": ["neighbor"]
   },
@@ -284,70 +284,70 @@
     "lemma": "translator",
     "id": "eng-npe-0041-translator",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "interpreter",
     "id": "eng-npe-0042-interpreter",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "manager",
     "id": "eng-npe-0043-manager",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "head",
     "id": "eng-npe-0044-head",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "knight",
     "id": "eng-npe-0045-knight",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "thief",
     "id": "eng-npe-0046-thief",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "waiter",
     "id": "eng-npe-0047-waiter",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "engineer",
     "id": "eng-npe-0048-engineer",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "pope",
     "id": "eng-npe-0049-pope",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "police",
     "id": "eng-npe-0050-police",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "_uncountableType": 2
   },
@@ -355,245 +355,245 @@
     "lemma": "alien",
     "id": "eng-npe-0051-alien",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "stranger",
     "id": "eng-npe-0052-stranger",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "driver",
     "id": "eng-npe-0053-driver",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "colonel",
     "id": "eng-npe-0054-colonel",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "criminal",
     "id": "eng-npe-0055-criminal",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "father-in-law",
     "id": "eng-npe-0056-fatherinlaw",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "god",
     "id": "eng-npe-0057-god",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "firefighter",
     "id": "eng-npe-0058-firefighter",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "fireman",
     "id": "eng-npe-0059-fireman",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "lawyer",
     "id": "eng-npe-0060-lawyer",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "attorney",
     "id": "eng-npe-0061-attorney",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "solicitor",
     "id": "eng-npe-0062-solicitor",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "employee",
     "id": "eng-npe-0063-employee",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "worker",
     "id": "eng-npe-0064-worker",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "fiancé",
     "id": "eng-npe-0065-fiancé",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "fiancée",
     "id": "eng-npe-0066-fiancée",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "gardener",
     "id": "eng-npe-0067-gardener",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "teenager",
     "id": "eng-npe-0068-teenager",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "optician",
     "id": "eng-npe-0069-optician",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "model",
     "id": "eng-npe-0070-model",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "prince",
     "id": "eng-npe-0071-prince",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "princess",
     "id": "eng-npe-0072-princess",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "guest",
     "id": "eng-npe-0073-guest",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "grandson",
     "id": "eng-npe-0074-grandson",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "cook",
     "id": "eng-npe-0075-cook",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "chef",
     "id": "eng-npe-0076-chef",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "guide",
     "id": "eng-npe-0077-guide",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "midwife",
     "id": "eng-npe-0078-midwife",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "priest",
     "id": "eng-npe-0079-priest",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "granddaughter",
     "id": "eng-npe-0080-granddaughter",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "enemy",
     "id": "eng-npe-0081-enemy",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "passenger",
     "id": "eng-npe-0082-passenger",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "soldier",
     "id": "eng-npe-0083-soldier",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "dentist",
     "id": "eng-npe-0084-dentist",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "parent",
     "id": "eng-npe-0085-parent",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
@@ -614,175 +614,175 @@
     "lemma": "owner",
     "id": "eng-npe-0088-owner",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "landlord",
     "id": "eng-npe-0089-landlord",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "writer",
     "id": "eng-npe-0090-writer",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "physician",
     "id": "eng-npe-0091-physician",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "doctor",
     "id": "eng-npe-0092-doctor",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "judge",
     "id": "eng-npe-0093-judge",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "journalist",
     "id": "eng-npe-0094-journalist",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "customs officer",
     "id": "eng-npe-0095-customsofficer",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "client",
     "id": "eng-npe-0096-client",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "customer",
     "id": "eng-npe-0097-customer",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "hairdresser",
     "id": "eng-npe-0098-hairdresser",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "singer",
     "id": "eng-npe-0099-singer",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "murderer",
     "id": "eng-npe-0100-murderer",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "policeman",
     "id": "eng-npe-0101-policeman",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "policewoman",
     "id": "eng-npe-0102-policewoman",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "police officer",
     "id": "eng-npe-0103-policeofficer",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "nurse",
     "id": "eng-npe-0104-nurse",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "citizen",
     "id": "eng-npe-0105-citizen",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "guard",
     "id": "eng-npe-0106-guard",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "scientist",
     "id": "eng-npe-0107-scientist",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "patient",
     "id": "eng-npe-0108-patient",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "relative",
     "id": "eng-npe-0109-relative",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "farmer",
     "id": "eng-npe-0110-farmer",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "victim",
     "id": "eng-npe-0111-victim",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "detective",
     "id": "eng-npe-0112-detective",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
@@ -803,91 +803,91 @@
     "lemma": "master",
     "id": "eng-npe-0115-master",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "champion",
     "id": "eng-npe-0116-champion",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 5
   },
   {
     "lemma": "vegetarian",
     "id": "eng-npe-0117-vegetarian",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "secretary",
     "id": "eng-npe-0118-secretary",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "acquaintance",
     "id": "eng-npe-0119-acquaintance",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "artist",
     "id": "eng-npe-0120-artist",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "president",
     "id": "eng-npe-0121-president",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "prisoner",
     "id": "eng-npe-0122-prisoner",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "waitress",
     "id": "eng-npe-0123-waitress",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "billionaire",
     "id": "eng-npe-0124-billionaire",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "millionaire",
     "id": "eng-npe-0125-millionaire",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "pedestrian",
     "id": "eng-npe-0126-pedestrian",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "Mr",
     "id": "eng-npe-0127-Mr",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "_lacking": true
   },
@@ -895,21 +895,21 @@
     "lemma": "Sir",
     "id": "eng-npe-0128-Sir",
     "gender": "m",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "Madam",
     "id": "eng-npe-0129-Madam",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "Mrs",
     "id": "eng-npe-0130-Mrs",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "_lacking": true
   },
@@ -917,7 +917,7 @@
     "lemma": "Miss",
     "id": "eng-npe-0131-Miss(address)",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -930,7 +930,7 @@
     "lemma": "Miss",
     "id": "eng-npe-0132-Miss(title)",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
@@ -943,7 +943,7 @@
     "lemma": "pilot",
     "id": "eng-npe-0133-pilot",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
@@ -1011,42 +1011,42 @@
     "lemma": "colleague",
     "id": "eng-npe-0142-colleague",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "workmate",
     "id": "eng-npe-0143-workmate",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   },
   {
     "lemma": "child",
     "id": "eng-npe-0144-child",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "baby",
     "id": "eng-npe-0145-baby",
     "gender": "_Genders",
-    "register": 0,
+    "register": 1,
     "frequency": 1
   },
   {
     "lemma": "angel",
     "id": "eng-npe-0146-angel",
     "gender": "_Genders",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "referee",
     "id": "eng-npe-0147-referee",
     "gender": "_PersonalGenders",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
@@ -1105,21 +1105,21 @@
     "lemma": "heroine",
     "id": "eng-npe-0154-heroine",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 4
   },
   {
     "lemma": "goddess",
     "id": "eng-npe-0155-goddess",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 2
   },
   {
     "lemma": "landlady",
     "id": "eng-npe-0156-landlady",
     "gender": "f",
-    "register": 0,
+    "register": 1,
     "frequency": 3
   }
 ]
