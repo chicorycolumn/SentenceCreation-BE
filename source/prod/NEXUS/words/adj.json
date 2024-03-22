@@ -3807,7 +3807,7 @@
     "traductions": {
       "SPA": [],
       "ENG": ["eng-adj-0734-female(animal)"],
-      "POL": ["pol-nco-1099-samica"]
+      "POL": ["pol-nco-1099-samica‰"]
     },
     "papers": ["concrete", "animal", "living"],
     "topics": ["outside"]
@@ -3817,7 +3817,7 @@
     "traductions": {
       "SPA": [],
       "ENG": ["eng-adj-0735-male(animal)"],
-      "POL": ["pol-nco-1100-samiec"]
+      "POL": ["pol-nco-1100-samiec‰"]
     },
     "papers": ["concrete", "animal", "living"],
     "topics": ["outside"]

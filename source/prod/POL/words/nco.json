@@ -17422,9 +17422,8 @@
   },
   {
     "lemma": "dół",
-    "id": "pol-nco-1085-dół(the blues)",
+    "id": "pol-nco-1085-dół(the blues)‰",
     "_inflectionsRoot": "pol-nco-1083-dół(hole)",
-    "_untranslated": true,
     "frequency": 4,
     "register": 0,
     "gender": "m2",
@@ -17748,8 +17747,7 @@
   },
   {
     "lemma": "samica",
-    "id": "pol-nco-1099-samica",
-    "_untranslated": true,
+    "id": "pol-nco-1099-samica‰",
     "frequency": 5,
     "register": 0,
     "gender": "f",
@@ -17763,8 +17761,7 @@
   },
   {
     "lemma": "samiec",
-    "id": "pol-nco-1100-samiec",
-    "_untranslated": true,
+    "id": "pol-nco-1100-samiec‰",
     "frequency": 5,
     "register": 0,
     "gender": "m2",

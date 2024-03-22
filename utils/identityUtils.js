@@ -78,3 +78,7 @@ exports.isTerminusObject = (selectedWord) => {
 
   return uUtils.isKeyValueTypeObject(selectedWord) && selectedWord.isTerminus;
 };
+
+exports.isUntranslated = (l) => {
+  return l.id.includes("‰");
+};

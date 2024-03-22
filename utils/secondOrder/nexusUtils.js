@@ -47,7 +47,7 @@ exports.getEquivalents = (sentenceFormulaId, answerLanguage) => {
 };
 
 exports.getNexusLemmaObjects = (lObj) => {
-  if (lObj._untranslated) {
+  if (idUtils.isUntranslated(lObj)) {
     return [];
   }
 
@@ -68,7 +68,7 @@ exports.getNexusLemmaObjects = (lObj) => {
   // if (resArr.length > 1) {consol.logSpecial(9, `dlma getNexusLemmaObjects for ${lang} ${lObj.id} found ${resArr.length} nexus lObjs, usually only 1.`);}
 
   if (
-    // !lObj._untranslated &&
+    // !idUtils.isUntranslated(lObj) &&
     !resArr.length
   ) {
     console.log(nexusWordsBank[0]);
@@ -126,7 +126,7 @@ exports.accumulateThisKeyFromLObjs = (lObj, key) => {
 };
 
 exports.getPapers = (lObj) => {
-  if (lObj._untranslated) {
+  if (idUtils.isUntranslated(lObj)) {
     return [];
   }
 
@@ -138,7 +138,7 @@ exports.getPapers = (lObj) => {
 };
 
 exports.getTraductions = (lObj, targetlang, getAllIds, mapIdsToLObjs) => {
-  if (lObj._untranslated) {
+  if (idUtils.isUntranslated(lObj)) {
     return [];
   }
 

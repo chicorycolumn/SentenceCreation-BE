@@ -3,6 +3,7 @@ const uUtils = require("./universalUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const gdUtils = require("./grabDataUtils.js");
+const idUtils = require("./identityUtils.js");
 const ivUtils = require("./secondOrder/inputValidationUtils.js");
 const nexusUtils = require("./secondOrder/nexusUtils.js");
 
@@ -49,7 +50,7 @@ exports.grabLObjsByWordtype = (
   }
 
   if (!includeUntranslatedLObjs) {
-    wordsBank = wordsBank.filter((lObj) => !lObj._untranslated);
+    wordsBank = wordsBank.filter((lObj) => !idUtils.isUntranslated(lObj));
   }
 
   return wordsBank;
@@ -67,7 +68,7 @@ exports.readAllLObjs = (lang, useDummy, res, lObjCallback, wordsetCallback) => {
       let wordtype = filename.split(".")[0];
       let wordsBank = gdUtils.grabLObjsByWordtype(lang, wordtype, useDummy);
 
-      wordsBank = wordsBank.filter((lObj) => !lObj._untranslated);
+      wordsBank = wordsBank.filter((lObj) => !idUtils.isUntranslated(lObj));
 
       if (wordsetCallback) {
         wordsetCallback(wordsBank, res, wordtype);
