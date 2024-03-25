@@ -10,13 +10,16 @@
       "voc": "aniele"
     },
     "plural": {
-      "nom": ["anioły", "aniołowie", "anieli"],
+      "nom": {
+        "isTerminus": true,
+        "normal": ["anioły", "aniołowie", "anieli"]
+      },
       "gen": "aniołów",
       "dat": "aniołom",
       "acc": { "isTerminus": true, "normal": ["anioły", "aniołów"] },
       "ins": "aniołami",
       "loc": "aniołach",
-      "voc": ["anioły", "aniołowie", "anieli"]
+      "voc": { "isTerminus": true, "normal": ["anioły", "aniołowie", "anieli"] }
     }
   }
 }
