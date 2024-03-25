@@ -17839,5 +17839,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "f"
+  },
+  {
+    "lemma": "pies",
+    "id": "pol-nco-1109-pies",
+    "frequency": 1,
+    "register": 1,
+    "gender": "m2"
   }
 ]

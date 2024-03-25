@@ -10611,5 +10611,12 @@
       "text": "direction",
       "emoji": "🧭"
     }
+  },
+  {
+    "lemma": "dog",
+    "id": "eng-nco-1337-dog",
+    "gender": "n",
+    "register": 1,
+    "frequency": 1
   }
 ]

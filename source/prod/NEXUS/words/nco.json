@@ -10652,5 +10652,15 @@
     },
     "papers": ["special location", "abstract"],
     "topics": ["geography", "outside", "travel"]
+  },
+  {
+    "key": "nco-1038-dog",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1337-dog"],
+      "POL": ["pol-nco-1109-dog"]
+    },
+    "papers": ["s3", "living", "pet", "concrete", "animal"],
+    "topics": ["home", "inside"]
   }
 ]

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pies",
+      "gen": "psa",
+      "dat": "psu",
+      "acc": "psa",
+      "ins": "psem",
+      "loc": "psie",
+      "voc": "psie"
+    },
+    "plural": {
+      "nom": "psy",
+      "gen": "psów",
+      "dat": "psom",
+      "acc": "psy",
+      "ins": "psami",
+      "loc": "psach",
+      "voc": "psy"
+    }
+  }
+}
