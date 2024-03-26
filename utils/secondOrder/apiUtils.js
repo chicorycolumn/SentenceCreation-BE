@@ -594,9 +594,22 @@ exports.getRegisterAndFrequencyOfLObj = (lang, id) => {
   let matches = wordsBank.filter((l) => l.id === id);
 
   if (!matches.length) {
+    if (idUtils.isUntranslated({ id })) {
+      return { register: 0, frequency: 0 };
+    }
     console.log(`lpma No matches found for lObjId "${id}"`);
   }
-  return matches[0];
+
+  let l = matches[0];
+
+  if (!l.frequency) {
+    console.log(`lpmb No frequency key on "${l.id}": ${l.frequency}`);
+  }
+  if (!l.register) {
+    console.log(`lpmc No register key on "${l.id}": ${l.register}`);
+  }
+
+  return l;
 };
 
 exports.getLObjsForLemma = (lang, lemma, addInflections) => {
