@@ -180,18 +180,31 @@ exports.getLemmasByCriteria = (currentLanguage, criteriaFromHTTP) => {
   return resObj;
 };
 
-exports.getTagsAndTopics = (currentLanguage) => {
+exports.getAllTags = (currentLanguage) => {
   const wordsBank = nexusUtils.getNexusWithAllWordtypes();
 
-  allTags = gpUtils.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects(
+  let allTags = gpUtils.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects(
     wordsBank,
     "papers"
   );
-  allTopics = gpUtils.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects(
-    wordsBank,
-    "topics"
-  );
-  return { allTags, allTopics };
+
+  allTags.sort((a, b) => a.localeCompare(b));
+
+  return { allTags };
+};
+
+exports.getTopics = (currentLanguage) => {
+  const wordsBank = nexusUtils.getNexusWithAllWordtypes();
+
+  let allTopics =
+    gpUtils.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects(
+      wordsBank,
+      "topics"
+    );
+
+  allTopics.sort((a, b) => a.localeCompare(b));
+
+  return { allTopics };
 };
 
 exports.getBlankEnhancedStructureChunkForThisWordtype = (

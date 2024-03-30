@@ -1,7 +1,7 @@
 const {
   fetchTags,
   fetchWordsByCriteria,
-  fetchFormulaTopics,
+  fetchTopics,
 } = require("../models/tags.model");
 const { fetchAvailableNexusId } = require("../models/info.model");
 const { fetchChunks } = require("../models/chunks.model");
@@ -43,8 +43,8 @@ exports.getTags = (req, res, next) => {
     .catch((err) => next(err));
 };
 
-exports.getFormulaTopics = (req, res, next) => {
-  fetchFormulaTopics(req)
+exports.getTopics = (req, res, next) => {
+  fetchTopics(req)
     .then((responseObj) => {
       if (responseObj.topics) {
         res.status(200).send(responseObj);

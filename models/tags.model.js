@@ -11,8 +11,14 @@ const refObj = require("../utils/reference/referenceObjects.js");
 const apiUtils = require("../utils/secondOrder/apiUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
-exports.fetchFormulaTopics = (req) => {
-  let responseObject = { topics: refObj.formulaTopics };
+exports.fetchTopics = (req) => {
+  let { lang } = req.query;
+
+  apiUtils.setEnvir(req, "fetchTopics");
+
+  let { allTopics } = apiUtils.getTopics(lang);
+
+  let responseObject = { topics: allTopics };
 
   return Promise.all([responseObject]).then((array) => {
     return array[0];
@@ -24,11 +30,11 @@ exports.fetchTags = (req) => {
 
   apiUtils.setEnvir(req, "fetchTags");
 
-  let { allTags, allTopics } = apiUtils.getTagsAndTopics(lang);
+  let { allTags } = apiUtils.getAllTags(lang);
 
   allTags.push("_NO_TAGS");
 
-  let responseObject = { tags: allTags, topics: allTopics };
+  let responseObject = { tags: allTags };
 
   return Promise.all([responseObject]).then((array) => {
     return array[0];
