@@ -773,3 +773,7 @@ exports.getEnvirForFormulaBank = (label) => {
   consol.logVeryGreyString(`"${envir}" got as envir for ${label}`);
   return envir;
 };
+
+exports.getFormulaIdFromSpecifications = (difficulty, topics) => {
+  console.log("alpha", difficulty, topics);
+};

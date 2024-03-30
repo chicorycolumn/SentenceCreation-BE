@@ -112,6 +112,10 @@ exports.fetchPalette = (req) => {
     sentenceFormulaFromEducator
   );
 
+  consol.logVeryPurpleString("      ");
+  consol.logVeryPurpleString(sentenceFormula.id);
+  consol.logVeryPurpleString("      ");
+
   let answerResponseObj;
   let firstAnswerSentenceFormula;
   let answerSentenceData;
