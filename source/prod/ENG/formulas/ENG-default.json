@@ -3,8 +3,12 @@
   "guide": "1 eats 2.",
   "sentenceStructure": [
     {
+      "chunkId": "fix-0",
+      "chunkValue": "the"
+    },
+    {
       "chunkId": "npe-1",
-      "andTags": ["personTest3"],
+      "andTags": ["person"],
       "number": ["singular"]
     },
     {
@@ -13,12 +17,13 @@
     },
     {
       "chunkId": "nco-2",
-      "andTags": ["edible"],
+      "andTags": ["food"],
+      "number": ["plural"],
       "gcase": ["acc"]
     }
   ],
   "orders": {
-    "primary": [["npe-1", "fix-1", "nco-2"]],
+    "primary": [["fix-0", "npe-1", "fix-1", "nco-2"]],
     "additional": []
   }
 }
