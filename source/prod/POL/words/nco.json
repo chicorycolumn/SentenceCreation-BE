@@ -17846,5 +17846,12 @@
     "frequency": 1,
     "register": 1,
     "gender": "m2"
+  },
+  {
+    "lemma": "banan",
+    "id": "pol-nco-1110-banan",
+    "frequency": 1,
+    "register": 1,
+    "gender": "m3"
   }
 ]

@@ -10662,5 +10662,15 @@
     },
     "papers": ["s3", "living", "pet", "concrete", "animal"],
     "topics": ["home", "inside"]
-  }
+  },
+  {
+    "key": "nco-1039-banana",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1338-banana"],
+      "POL": ["pol-nco-1110-banan"]
+    },
+    "papers": ["s1", "food", "concrete", "fruit"],
+    "topics": ["kitchen", "inside", "restaurant"]
+  },
 ]

@@ -10618,5 +10618,12 @@
     "gender": "n",
     "register": 1,
     "frequency": 1
+  },
+  {
+    "lemma": "banana",
+    "id": "eng-nco-1338-banana",
+    "gender": "n",
+    "register": 1,
+    "frequency": 1
   }
 ]

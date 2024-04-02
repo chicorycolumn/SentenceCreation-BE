@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "banan",
+      "gen": "banana",
+      "dat": "bananowi",
+      "acc": "banan",
+      "ins": "bananem",
+      "loc": "bananie",
+      "voc": "bananie"
+    },
+    "plural": {
+      "nom": "banany",
+      "gen": "bananów",
+      "dat": "bananom",
+      "acc": "banany",
+      "ins": "bananami",
+      "loc": "bananach",
+      "voc": "banany"
+    }
+  }
+}
