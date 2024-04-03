@@ -17853,5 +17853,12 @@
     "frequency": 1,
     "register": 1,
     "gender": "m3"
+  },
+  {
+    "lemma": "limonka",
+    "id": "pol-nco-1111-limonka",
+    "frequency": 1,
+    "register": 1,
+    "gender": "f"
   }
 ]

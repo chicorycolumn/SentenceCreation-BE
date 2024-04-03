@@ -10625,5 +10625,12 @@
     "gender": "n",
     "register": 1,
     "frequency": 1
+  },
+  {
+    "lemma": "lime",
+    "id": "eng-nco-1339-lime",
+    "gender": "n",
+    "register": 1,
+    "frequency": 1
   }
 ]

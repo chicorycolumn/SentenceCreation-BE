@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "limonka",
+      "gen": "limonki",
+      "dat": "limonce",
+      "acc": "limonkę",
+      "ins": "limonką",
+      "loc": "limonce",
+      "voc": "limonko"
+    },
+    "plural": {
+      "nom": "limonki",
+      "gen": "limonek",
+      "dat": "limonkom",
+      "acc": "limonki",
+      "ins": "limonkami",
+      "loc": "limonkach",
+      "voc": "limonki"
+    }
+  }
+}

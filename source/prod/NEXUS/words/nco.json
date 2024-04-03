@@ -10673,4 +10673,14 @@
     "papers": ["s1", "food", "concrete", "fruit"],
     "topics": ["kitchen", "inside", "restaurant"]
   },
+  {
+    "key": "nco-1040-lime",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1339-lime"],
+      "POL": ["pol-nco-1111-limonka"]
+    },
+    "papers": ["s1", "food", "concrete", "fruit"],
+    "topics": ["kitchen", "inside", "restaurant"]
+  }
 ]
