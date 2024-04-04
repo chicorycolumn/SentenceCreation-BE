@@ -1,0 +1,24 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "passionfruit",
+      "gen": "passionfruit's"
+    },
+    "plural": {
+      "nom": {
+        "isTerminus": true,
+        "normal": [
+          "passionfruit",
+          "passionfruits"
+        ]
+      },
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "passionfruit's",
+          "passionfruits'"
+        ]
+      }
+    }
+  }
+}

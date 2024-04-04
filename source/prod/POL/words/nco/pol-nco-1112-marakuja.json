@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "marakuja",
+      "gen": "marakui",
+      "dat": "marakui",
+      "acc": "marakuję",
+      "ins": "marakują",
+      "loc": "marakui",
+      "voc": "marakujo"
+    },
+    "plural": {
+      "nom": "marakuje",
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "marakui",
+          "marakuj"
+        ]
+      },
+      "dat": "marakujom",
+      "acc": "marakuje",
+      "ins": "marakujami",
+      "loc": "marakujach",
+      "voc": "marakuje"
+    }
+  }
+}

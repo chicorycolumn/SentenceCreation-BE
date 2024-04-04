@@ -17860,5 +17860,12 @@
     "frequency": 1,
     "register": 1,
     "gender": "f"
+  },
+  {
+    "lemma": "marakuja",
+    "id": "pol-nco-1112-marakuja",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
   }
 ]

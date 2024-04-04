@@ -10682,5 +10682,15 @@
     },
     "papers": ["s1", "food", "concrete", "fruit"],
     "topics": ["kitchen", "inside", "restaurant"]
+  },
+  {
+    "key": "nco-1041-passionfruit",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1340-passionfruit"],
+      "POL": ["pol-nco-1112-marakuja"]
+    },
+    "papers": ["s1", "food", "concrete", "fruit"],
+    "topics": ["kitchen", "inside", "restaurant"]
   }
 ]

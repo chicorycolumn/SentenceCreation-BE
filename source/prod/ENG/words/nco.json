@@ -10632,5 +10632,12 @@
     "gender": "n",
     "register": 1,
     "frequency": 1
+  },
+  {
+    "lemma": "passionfruit",
+    "id": "eng-nco-1340-passionfruit",
+    "gender": "n",
+    "register": 1,
+    "frequency": 4
   }
 ]
