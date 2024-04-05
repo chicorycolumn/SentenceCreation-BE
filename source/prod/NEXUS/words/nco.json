@@ -10692,5 +10692,15 @@
     },
     "papers": ["s1", "food", "concrete", "fruit"],
     "topics": ["kitchen", "inside", "restaurant"]
+  },
+  {
+    "key": "nco-1042-pineapple",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1341-pineapple"],
+      "POL": ["pol-nco-1113-ananas"]
+    },
+    "papers": ["s1", "food", "concrete", "fruit"],
+    "topics": ["kitchen", "inside", "restaurant"]
   }
 ]

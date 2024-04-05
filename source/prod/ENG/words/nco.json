@@ -10639,5 +10639,12 @@
     "gender": "n",
     "register": 1,
     "frequency": 4
+  },
+  {
+    "lemma": "pineapple",
+    "id": "eng-nco-1341-pineapple",
+    "gender": "n",
+    "frequency": 2,
+    "register": 1
   }
 ]

@@ -17867,5 +17867,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "f"
+  },
+  {
+    "lemma": "ananas",
+    "id": "pol-nco-1113-ananas",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m3"
   }
 ]

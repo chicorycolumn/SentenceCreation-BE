@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ananas",
+      "gen": "ananasa",
+      "dat": "ananasowi",
+      "acc": {
+        "isTerminus": true,
+        "normal": [
+          "ananas",
+          "ananasa"
+        ]
+      },
+      "ins": "ananasem",
+      "loc": "ananasie",
+      "voc": "ananasie"
+    },
+    "plural": {
+      "nom": "ananasy",
+      "gen": "ananasów",
+      "dat": "ananasom",
+      "acc": "ananasy",
+      "ins": "ananasami",
+      "loc": "ananasach",
+      "voc": "ananasy"
+    }
+  }
+}
