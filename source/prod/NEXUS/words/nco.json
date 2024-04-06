@@ -10702,5 +10702,15 @@
     },
     "papers": ["s1", "food", "concrete", "fruit"],
     "topics": ["kitchen", "inside", "restaurant"]
+  },
+  {
+    "key": "nco-1043-blueberry",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1342-blueberry"],
+      "POL": ["pol-nco-1114-borówka"]
+    },
+    "papers": ["s1", "food", "concrete", "fruit"],
+    "topics": ["kitchen", "inside", "restaurant"]
   }
 ]

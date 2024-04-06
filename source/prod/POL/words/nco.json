@@ -17874,5 +17874,12 @@
     "frequency": 2,
     "register": 1,
     "gender": "m3"
+  },
+  {
+    "lemma": "borówka",
+    "id": "pol-nco-1114-borówka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
   }
 ]

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "borówka",
+      "gen": "borówki",
+      "dat": "borówce",
+      "acc": "borówkę",
+      "ins": "borówką",
+      "loc": "borówce",
+      "voc": "borówko"
+    },
+    "plural": {
+      "nom": "borówki",
+      "gen": "borówek",
+      "dat": "borówkom",
+      "acc": "borówki",
+      "ins": "borówkami",
+      "loc": "borówkach",
+      "voc": "borówki"
+    }
+  }
+}

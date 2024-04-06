@@ -10646,5 +10646,12 @@
     "gender": "n",
     "frequency": 2,
     "register": 1
+  },
+  {
+    "lemma": "blueberry",
+    "id": "eng-nco-1342-blueberry",
+    "gender": "n",
+    "frequency": 2,
+    "register": 1
   }
 ]
