@@ -17881,5 +17881,12 @@
     "frequency": 2,
     "register": 1,
     "gender": "f"
+  },
+  {
+    "lemma": "agrest",
+    "id": "pol-nco-1115-agrest",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
   }
 ]

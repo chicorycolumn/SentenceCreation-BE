@@ -10712,5 +10712,15 @@
     },
     "papers": ["s1", "food", "concrete", "fruit"],
     "topics": ["kitchen", "inside", "restaurant"]
+  },
+  {
+    "key": "nco-1044-gooseberry",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1343-gooseberry"],
+      "POL": ["pol-nco-1115-agrest"]
+    },
+    "papers": ["s1", "food", "concrete", "fruit"],
+    "topics": ["kitchen", "inside", "restaurant"]
   }
 ]

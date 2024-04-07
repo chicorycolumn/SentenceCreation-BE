@@ -10653,5 +10653,12 @@
     "gender": "n",
     "frequency": 2,
     "register": 1
+  },
+  {
+    "lemma": "gooseberry",
+    "id": "eng-nco-1343-gooseberry",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
   }
 ]

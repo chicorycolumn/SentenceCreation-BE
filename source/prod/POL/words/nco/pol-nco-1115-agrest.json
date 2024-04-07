@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+        "nom": "agrest",
+        "gen": "agrestu",
+        "dat": "agrestowi",
+        "acc": "agrest",
+        "ins": "agrestem",
+        "loc": "agreście",
+        "voc": "agreście"
+    },
+    "plural": {
+        "nom": "agresty",
+        "gen": "agrestów",
+        "dat": "agrestom",
+        "acc": "agresty",
+        "ins": "agrestami",
+        "loc": "agrestach",
+        "voc": "agresty"
+    }
+  }
+}
