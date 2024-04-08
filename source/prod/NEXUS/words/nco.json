@@ -10700,7 +10700,7 @@
       "ENG": ["eng-nco-1341-pineapple"],
       "POL": ["pol-nco-1113-ananas"]
     },
-    "papers": ["s1", "food", "concrete", "fruit"],
+    "papers": ["s2", "food", "concrete", "fruit"],
     "topics": ["kitchen", "inside", "restaurant"]
   },
   {
@@ -10721,6 +10721,16 @@
       "POL": ["pol-nco-1115-agrest"]
     },
     "papers": ["s1", "food", "concrete", "fruit"],
+    "topics": ["kitchen", "inside", "restaurant"]
+  },
+  {
+    "key": "nco-1045-melon",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1344-melon"],
+      "POL": ["pol-nco-1116-melon"]
+    },
+    "papers": ["s2", "food", "concrete", "fruit"],
     "topics": ["kitchen", "inside", "restaurant"]
   }
 ]

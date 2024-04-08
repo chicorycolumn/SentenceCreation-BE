@@ -17888,5 +17888,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "m3"
+  },
+  {
+    "lemma": "melon",
+    "id": "pol-nco-1116-melon",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
   }
 ]

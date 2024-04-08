@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+        "nom": "melon",
+        "gen": "melona",
+        "dat": "melonowi",
+        "acc": "melon",
+        "ins": "melonem",
+        "loc": "melonie",
+        "voc": "melonie"
+    },
+    "plural": {
+        "nom": "melony",
+        "gen": "melonów",
+        "dat": "melonom",
+        "acc": "melony",
+        "ins": "melonami",
+        "loc": "melonach",
+        "voc": "melony"
+    }
+  }
+}

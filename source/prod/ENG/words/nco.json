@@ -10660,5 +10660,12 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "melon",
+    "id": "eng-nco-1344-melon",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
   }
 ]
