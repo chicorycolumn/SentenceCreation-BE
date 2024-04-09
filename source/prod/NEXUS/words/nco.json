@@ -10732,5 +10732,15 @@
     },
     "papers": ["s2", "food", "concrete", "fruit"],
     "topics": ["kitchen", "inside", "restaurant"]
+  },
+  {
+    "key": "nco-1046-apricot",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1345-apricot"],
+      "POL": ["pol-nco-1117-morela"]
+    },
+    "papers": ["s1", "food", "concrete", "fruit"],
+    "topics": ["kitchen", "inside", "restaurant"]
   }
 ]

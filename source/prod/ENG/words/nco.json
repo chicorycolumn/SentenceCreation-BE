@@ -10667,5 +10667,12 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "apricot",
+    "id": "eng-nco-1345-apricot",
+    "gender": "n",
+    "frequency": 2,
+    "register": 1
   }
 ]

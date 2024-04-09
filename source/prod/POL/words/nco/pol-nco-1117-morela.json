@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+        "nom": "morela",
+        "gen": "moreli",
+        "dat": "moreli",
+        "acc": "morelę",
+        "ins": "morelą",
+        "loc": "moreli",
+        "voc": "morelo"
+    },
+    "plural": {
+        "nom": "morele",
+        "gen": {
+          "isTerminus": true,
+          "normal": [
+            "morel",
+            "moreli"
+          ]
+        },
+        "dat": "morelom",
+        "acc": "morele",
+        "ins": "morelami",
+        "loc": "morelach",
+        "voc": "morele"
+    }
+  }
+}
