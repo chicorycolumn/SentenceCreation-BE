@@ -10742,5 +10742,15 @@
     },
     "papers": ["s1", "food", "concrete", "fruit"],
     "topics": ["kitchen", "inside", "restaurant"]
+  },
+  {
+    "key": "nco-1047-peach",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1346-peach"],
+      "POL": ["pol-nco-1118-brzoskwinia"]
+    },
+    "papers": ["s1", "food", "concrete", "fruit"],
+    "topics": ["kitchen", "inside", "restaurant"]
   }
 ]

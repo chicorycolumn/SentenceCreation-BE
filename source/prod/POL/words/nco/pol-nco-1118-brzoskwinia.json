@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+        "nom": "brzoskwinia",
+        "gen": "brzoskwini",
+        "dat": "brzoskwini",
+        "acc": "brzoskwinię",
+        "ins": "brzoskwinią",
+        "loc": "brzoskwini",
+        "voc": "brzoskwinio"
+    },
+    "plural": {
+        "nom": "brzoskwinie",
+        "gen": "brzoskwiń",
+        "dat": "brzoskwiniom",
+        "acc": "brzoskwinie",
+        "ins": "brzoskwiniami",
+        "loc": "brzoskwiniach",
+        "voc": "brzoskwinie"
+    }
+  }
+}

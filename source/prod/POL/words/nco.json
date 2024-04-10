@@ -17902,5 +17902,12 @@
     "frequency": 2,
     "register": 1,
     "gender": "f"
+  },
+  {
+    "lemma": "brzoskwinia",
+    "id": "pol-nco-1118-brzoskwinia",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
   }
 ]

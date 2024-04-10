@@ -10674,5 +10674,12 @@
     "gender": "n",
     "frequency": 2,
     "register": 1
+  },
+  {
+    "lemma": "peach",
+    "id": "eng-nco-1346-peach",
+    "gender": "n",
+    "frequency": 2,
+    "register": 1
   }
 ]
