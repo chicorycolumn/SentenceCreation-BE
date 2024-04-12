@@ -10752,5 +10752,15 @@
     },
     "papers": ["s1", "food", "concrete", "fruit"],
     "topics": ["kitchen", "inside", "restaurant"]
+  },
+  {
+    "key": "nco-1048-avocado",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1347-avocado"],
+      "POL": ["pol-nco-1119-smaczliwka"]
+    },
+    "papers": ["s1", "food", "concrete", "vegetable"],
+    "topics": ["kitchen", "inside", "restaurant"]
   }
 ]

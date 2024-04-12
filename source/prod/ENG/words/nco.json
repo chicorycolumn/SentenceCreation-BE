@@ -10681,5 +10681,12 @@
     "gender": "n",
     "frequency": 2,
     "register": 1
+  },
+  {
+    "lemma": "avocado",
+    "id": "eng-nco-1347-avocado",
+    "gender": "n",
+    "frequency": 2,
+    "register": 1
   }
 ]

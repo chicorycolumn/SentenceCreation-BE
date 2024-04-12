@@ -1,0 +1,24 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "avocado",
+      "gen": "avocado's"
+    },
+    "plural": {
+      "nom": {
+        "isTerminus": true,
+        "normal": [
+          "avocados",
+          "avocadoes"
+        ]
+      },
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "avocados'",
+          "avocadoes'"
+        ]
+      }
+    }
+  }
+}

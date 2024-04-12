@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+        "nom": "smaczliwka",
+        "gen": "smaczliwki",
+        "dat": "smaczliwce",
+        "acc": "smaczliwkę",
+        "ins": "smaczliwką",
+        "loc": "smaczliwce",
+        "voc": "smaczliwko"
+    },
+    "plural": {
+        "nom": "smaczliwki",
+        "gen": "smaczliwek",
+        "dat": "smaczliwkom",
+        "acc": "smaczliwki",
+        "ins": "smaczliwkami",
+        "loc": "smaczliwkach",
+        "voc": "smaczliwki"
+    }
+  }
+}

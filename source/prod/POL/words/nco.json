@@ -17909,5 +17909,12 @@
     "frequency": 2,
     "register": 1,
     "gender": "f"
+  },
+  {
+    "lemma": "smaczliwka",
+    "id": "pol-nco-1119-smaczliwka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
   }
 ]
