@@ -17916,5 +17916,12 @@
     "frequency": 2,
     "register": 1,
     "gender": "f"
+  },
+  {
+    "lemma": "batat",
+    "id": "pol-nco-1120-batat",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
   }
 ]

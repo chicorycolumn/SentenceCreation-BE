@@ -1,0 +1,34 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "batat",
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "batata",
+          "batatu"
+        ]
+      },
+      "dat": "batatowi",
+      "acc": {
+        "isTerminus": true,
+        "normal": [
+          "batat",
+          "batata"
+        ]
+      },
+      "ins": "batatem",
+      "loc": "batacie",
+      "voc": "batacie"
+    },
+    "plural": {
+      "nom": "bataty",
+      "gen": "batatów",
+      "dat": "batatom",
+      "acc": "bataty",
+      "ins": "batatami",
+      "loc": "batatach",
+      "voc": "bataty"
+    }
+  }
+}

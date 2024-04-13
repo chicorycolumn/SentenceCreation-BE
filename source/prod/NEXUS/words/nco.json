@@ -10762,5 +10762,15 @@
     },
     "papers": ["s1", "food", "concrete", "vegetable"],
     "topics": ["kitchen", "inside", "restaurant"]
+  },
+  {
+    "key": "nco-1049-sweetpotato",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1348-sweetpotato"],
+      "POL": ["pol-nco-1120-batat"]
+    },
+    "papers": ["s1", "food", "concrete", "vegetable"],
+    "topics": ["kitchen", "inside", "restaurant"]
   }
 ]
