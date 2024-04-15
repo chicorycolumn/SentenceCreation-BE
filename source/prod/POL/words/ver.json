@@ -19724,5 +19724,21 @@
     "register": 1,
     "aspect": "imperfective",
     "secondaryAspects": []
+  },
+  {
+    "lemma": "nadrobić zaległości",
+    "id": "pol-ver-1017-©nadrobić zaległości",
+    "frequency": 4,
+    "register": 1,
+    "aspect": "perfective",
+    "secondaryAspects": []
+  },
+  {
+    "lemma": "nadrabiać zaległości",
+    "id": "pol-ver-1018-©nadrabiać zaległości",
+    "frequency": 4,
+    "register": 1,
+    "aspect": "imperfective",
+    "secondaryAspects": []
   }
 ]

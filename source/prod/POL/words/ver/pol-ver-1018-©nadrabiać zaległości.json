@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nadrabiać zaległości",
+    "verbalNoun": "nadrabianie zaległości",
+    "activeAdjectival": "nadrabiający zaległości",
+    "passiveAdjectival": "nadrabiany zaległości",
+    "contemporaryAdverbial": "nadrabiając zaległości",
+    "anteriorAdverbial": false,
+    "verbal": {
+      "conditional": true,
+      "future": true,
+      "imperative": "nadrabiaj zaległości",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "_SingularGenders": "nadrabiano zaległości"
+          },
+          "plural": {
+            "_PluralGenders": "nadrabiano zaległości"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nadrabiałem zaległości",
+            "f": "nadrabiałam zaległości"
+          },
+          "plural": {
+            "virile": "nadrabialiśmy zaległości",
+            "nonvirile": "nadrabiałyśmy zaległości"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nadrabiałeś zaległości",
+            "f": "nadrabiałaś zaległości"
+          },
+          "plural": {
+            "virile": "nadrabialiście zaległości",
+            "nonvirile": "nadrabiałyście zaległości"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nadrabiał zaległości",
+            "f": "nadrabiała zaległości",
+            "n": "nadrabiało zaległości"
+          },
+          "plural": {
+            "virile": "nadrabiali zaległości",
+            "nonvirile": "nadrabiały zaległości"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": {
+            "_SingularGenders": "nadrabia się zaległości"
+          },
+          "plural": {
+            "_PluralGenders": "nadrabia się zaległości"
+          }
+        },
+        "1per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "nadrabiam zaległości"
+          },
+          "plural": {
+            "_PluralGenders": "nadrabiamy zaległości"
+          }
+        },
+        "2per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "nadrabiasz zaległości"
+          },
+          "plural": {
+            "_PluralGenders": "nadrabiacie zaległości"
+          }
+        },
+        "3per": {
+          "singular": {
+            "_SingularGenders": "nadrabia zaległości"
+          },
+          "plural": {
+            "_PluralGenders": "nadrabiają zaległości"
+          }
+        }
+      }
+    }
+  }
+}

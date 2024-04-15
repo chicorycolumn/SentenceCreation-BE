@@ -1,0 +1,90 @@
+{
+  "inflections": {
+    "infinitive": "nadrobić zaległości",
+    "verbalNoun": "nadrobienie zaległości",
+    "activeAdjectival": false,
+    "passiveAdjectival": "nadrobiony zaległości",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "nadrobiwszy zaległości",
+    "verbal": {
+      "conditional": true,
+      "future": {
+        "impersonal": {
+          "singular": {
+            "_SingularGenders": "nadrobi się zaległości"
+          },
+          "plural": {
+            "_PluralGenders": "nadrobi się zaległości"
+          }
+        },
+        "1per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "nadrobię zaległości"
+          },
+          "plural": {
+            "_PluralGenders": "nadrobimy zaległości"
+          }
+        },
+        "2per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "nadrobisz zaległości"
+          },
+          "plural": {
+            "_PluralGenders": "nadrobicie zaległości"
+          }
+        },
+        "3per": {
+          "singular": {
+            "_SingularGenders": "nadrobi zaległości"
+          },
+          "plural": {
+            "_PluralGenders": "nadrobią zaległości"
+          }
+        }
+      },
+      "imperative": "nadrób zaległości",
+      "past": {
+        "impersonal": {
+          "singular": {
+            "_SingularGenders": "nadrobiono zaległości"
+          },
+          "plural": {
+            "_PluralGenders": "nadrobiono zaległości"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "nadrobiłem zaległości",
+            "f": "nadrobiłam zaległości"
+          },
+          "plural": {
+            "virile": "nadrobiliśmy zaległości",
+            "nonvirile": "nadrobiłyśmy zaległości"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "nadrobiłeś zaległości",
+            "f": "nadrobiłaś zaległości"
+          },
+          "plural": {
+            "virile": "nadrobiliście zaległości",
+            "nonvirile": "nadrobiłyście zaległości"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "nadrobił zaległości",
+            "f": "nadrobiła zaległości",
+            "n": "nadrobiło zaległości"
+          },
+          "plural": {
+            "virile": "nadrobili zaległości",
+            "nonvirile": "nadrobiły zaległości"
+          }
+        }
+      },
+      "present": false
+    }
+  }
+}

@@ -5584,5 +5584,18 @@
     },
     "papers": ["money"],
     "topics": ["hobbies", "time"]
+  },
+  {
+    "key": "ver-0476-catch up with(conversation)",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-ver-0291-©catch up with(conversation)"],
+      "POL": [
+        "pol-ver-1017-©nadrobić zaległości",
+        "pol-ver-1018-©nadrabiać zaległości"
+      ]
+    },
+    "papers": ["speech"],
+    "topics": ["body", "language"]
   }
 ]
