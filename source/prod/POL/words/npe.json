@@ -174,6 +174,68 @@
       ]
     }
   },
+  {
+    "lemma": "chłopak",
+    "id": "pol-npe-0004-chłopak(boy)",
+    "frequency": 1,
+    "register": 1,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "general",
+      "emoji": "🔲"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["chłopiec"]
+      }
+    }
+  },
+  {
+    "lemma": "chłopiec",
+    "id": "pol-npe-0004-chłopiec",
+    "frequency": 1,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["chłopczyk"]
+      },
+      "synonyms": [
+        "chłopak",
+        "małolat",
+        "młodzieniec",
+        "młodzik",
+        "podrostek",
+        "chłopak",
+        "partner",
+        "dziewczyna",
+        "partnerka"
+      ],
+      "usage": [
+        "Usage notes [ edit ] The word chłopiec is usually used for people younger than chłopak ."
+      ]
+    }
+  },
+  {
+    "lemma": "dziewczyna",
+    "id": "pol-npe-0004-dziewczyna(girl)",
+    "frequency": 1,
+    "register": 1,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "general",
+      "emoji": "🔲"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["dziewczynka"]
+      },
+      "synonyms": ["dziewczę", "dziewka"],
+      "antonyms": ["chłopak"]
+    }
+  },
 
   {
     "lemma": "kobieta",
@@ -404,23 +466,6 @@
   },
   {
     "lemma": "chłopak",
-    "id": "pol-npe-0023-chłopak(boy)",
-    "frequency": 1,
-    "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "general",
-      "emoji": "🔲"
-    },
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["chłopiec"]
-      }
-    }
-  },
-  {
-    "lemma": "chłopak",
     "id": "pol-npe-0024-chłopak(boyfriend)",
     "_inflectionsRoot": "pol-npe-0023-chłopak(boy)",
     "frequency": 1,
@@ -435,63 +480,6 @@
       "otherShapes": {
         "diminutive": ["chłopiec"]
       }
-    }
-  },
-  {
-    "lemma": "chłopiec",
-    "id": "pol-npe-0025-chłopiec",
-    "frequency": 1,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["chłopczyk"]
-      },
-      "synonyms": [
-        "chłopak",
-        "małolat",
-        "młodzieniec",
-        "młodzik",
-        "podrostek",
-        "chłopak",
-        "partner",
-        "dziewczyna",
-        "partnerka"
-      ],
-      "antonyms": [
-        "(",
-        "by",
-        "age",
-        ")",
-        "mężczyzna",
-        "(",
-        "by",
-        "gender",
-        ")",
-        "dziewczyna"
-      ],
-      "usage": [
-        "Usage notes [ edit ] The word chłopiec is usually used for people younger than chłopak ."
-      ]
-    }
-  },
-  {
-    "lemma": "dziewczyna",
-    "id": "pol-npe-0026-dziewczyna(girl)",
-    "frequency": 1,
-    "register": 1,
-    "gender": "f",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "general",
-      "emoji": "🔲"
-    },
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["dziewczynka"]
-      },
-      "synonyms": ["dziewczę", "dziewka"],
-      "antonyms": ["chłopak"]
     }
   },
   {

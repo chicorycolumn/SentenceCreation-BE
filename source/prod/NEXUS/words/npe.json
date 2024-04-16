@@ -29,6 +29,26 @@
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
   },
+  {
+    "key": "npe-0004-boy/girl/child",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0004-boy/girl/child"],
+      "POL": ["pol-npe-0004-chłop/dziew", "^pol-npe-0003-dziecko-£"]
+    },
+    "papers": ["concrete", "person", "living"],
+    "topics": ["people"]
+  },
+  {
+    "key": "npe-0005-baby",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0005-baby"],
+      "POL": ["pol-npe-0005-niemowlę", "^pol-npe-0003-dziecko-£"]
+    },
+    "papers": ["concrete", "person", "living"],
+    "topics": ["people"]
+  },
 
   {
     "key": "npe-0032-baby",
@@ -41,16 +61,6 @@
     "topics": ["people"]
   },
 
-  {
-    "key": "npe-0002-boy",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0021-boy"],
-      "POL": ["pol-npe-0023-chłopak(boy)", "pol-npe-0025-chłopiec"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["people"]
-  },
   {
     "key": "npe-0003-boyfriend",
     "traductions": {
@@ -195,16 +205,6 @@
     },
     "papers": ["concrete", "person", "living"],
     "topics": ["love", "people"]
-  },
-  {
-    "key": "npe-0020-girl",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0025-girl"],
-      "POL": ["pol-npe-0026-dziewczyna(girl)"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["people"]
   },
   {
     "key": "npe-0021-girlfriend",
