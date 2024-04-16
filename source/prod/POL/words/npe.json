@@ -244,6 +244,51 @@
     "gender": "n",
     "semanticGender": "_Genders"
   },
+  {
+    "lemma": "mąż",
+    "id": "pol-npe-0006-mąż",
+    "frequency": 1,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "derivedTerms": [
+        "mężowski",
+        "mężowy",
+        "mąż stanu",
+        "mężulek",
+        "mężuś",
+        "mężysko"
+      ],
+      "usage": [
+        "Usage notes [ edit ] The sense of \"male human being\" carries connotations of bravery honour or responsibility ; in other words, the stereotypical quality of \" manliness \"."
+      ]
+    }
+  },
+  {
+    "lemma": "żona",
+    "id": "pol-npe-0006-żona",
+    "frequency": 1,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "derivedTerms": [
+        "bezżenny",
+        "nieżonaty",
+        "żonaty",
+        "żonin",
+        "żoniny",
+        "bezżennie",
+        "bezżeństwo",
+        "bezżenność",
+        "żoncia",
+        "żoneczka",
+        "żonisko",
+        "żonka",
+        "żonkoś",
+        "żonusia"
+      ]
+    }
+  },
 
   {
     "lemma": "kobieta",
@@ -310,51 +355,6 @@
         "babcia klozetowa",
         "gdyby babcia miała wąsy, toby była dziadkiem",
         "skończyło się babci sranie"
-      ]
-    }
-  },
-  {
-    "lemma": "mąż",
-    "id": "pol-npe-0011-mąż",
-    "frequency": 1,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "derivedTerms": [
-        "mężowski",
-        "mężowy",
-        "mąż stanu",
-        "mężulek",
-        "mężuś",
-        "mężysko"
-      ],
-      "usage": [
-        "Usage notes [ edit ] The sense of \"male human being\" carries connotations of bravery honour or responsibility ; in other words, the stereotypical quality of \" manliness \"."
-      ]
-    }
-  },
-  {
-    "lemma": "żona",
-    "id": "pol-npe-0012-żona",
-    "frequency": 1,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "derivedTerms": [
-        "bezżenny",
-        "nieżonaty",
-        "żonaty",
-        "żonin",
-        "żoniny",
-        "bezżennie",
-        "bezżeństwo",
-        "bezżenność",
-        "żoncia",
-        "żoneczka",
-        "żonisko",
-        "żonka",
-        "żonkoś",
-        "żonusia"
       ]
     }
   },

@@ -49,15 +49,14 @@
     "papers": ["concrete", "person", "living"],
     "topics": ["people"]
   },
-
   {
-    "key": "npe-0032-baby",
+    "key": "npe-0006-wife/husband",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0145-baby"],
-      "POL": ["pol-npe-0151-niemowlę"]
+      "ENG": ["eng-npe-0006"],
+      "POL": ["pol-npe-0006"]
     },
-    "papers": ["living", "concrete", "person"],
+    "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
   },
 
@@ -227,16 +226,6 @@
     "topics": ["people"]
   },
   {
-    "key": "npe-0023-husband",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0005-husband"],
-      "POL": ["pol-npe-0011-mąż"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
     "key": "npe-0025-friend",
     "traductions": {
       "SPA": [],
@@ -285,16 +274,6 @@
         "pol-npe-0038-kolega(colleague)",
         "pol-npe-0040-koleżanka(colleague)"
       ]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0029-wife",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0015-wife"],
-      "POL": ["pol-npe-0012-żona"]
     },
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
