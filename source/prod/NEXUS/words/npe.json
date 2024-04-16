@@ -57,7 +57,17 @@
       "POL": ["pol-npe-0006"]
     },
     "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
+    "topics": ["love", "people"]
+  },
+  {
+    "key": "npe-0007-partner",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0007"],
+      "POL": ["pol-npe-0007"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["love", "people"]
   },
 
   {
@@ -194,16 +204,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
-  },
-  {
-    "key": "npe-0018-partner",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0020-partner"],
-      "POL": ["pol-npe-0021-partner", "pol-npe-0022-partnerka"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["love", "people"]
   },
   {
     "key": "npe-0021-girlfriend",

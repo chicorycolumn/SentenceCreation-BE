@@ -289,6 +289,31 @@
       ]
     }
   },
+  {
+    "lemma": "partner",
+    "id": "pol-npe-0007-partner",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["partnerka"]
+      },
+      "derivedTerms": ["partnerski", "partnerstwo", "partnerować"]
+    }
+  },
+  {
+    "lemma": "partnerka",
+    "id": "pol-npe-0007-partnerka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": ["partner"]
+      }
+    }
+  },
 
   {
     "lemma": "kobieta",
@@ -445,31 +470,6 @@
     "gender": "m1",
     "extra": {
       "synonyms": ["brataniec", "synowiec"]
-    }
-  },
-  {
-    "lemma": "partner",
-    "id": "pol-npe-0021-partner",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["partnerka"]
-      },
-      "derivedTerms": ["partnerski", "partnerstwo", "partnerować"]
-    }
-  },
-  {
-    "lemma": "partnerka",
-    "id": "pol-npe-0022-partnerka",
-    "frequency": 2,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "masculine": ["partner"]
-      }
     }
   },
   {
