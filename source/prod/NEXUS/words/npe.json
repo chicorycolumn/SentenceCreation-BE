@@ -80,21 +80,11 @@
     "topics": ["people"]
   },
   {
-    "key": "npe-0009-nephew",
+    "key": "npe-0009-niece/nephew",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0008-nephew"],
-      "POL": ["pol-npe-0019-siostrzeniec", "pol-npe-0020-bratanek"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0022-niece",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0004-niece"],
-      "POL": ["pol-npe-0017-siostrzenica", "pol-npe-0018-bratanica"]
+      "ENG": ["eng-npe-0009"],
+      "POL": ["pol-npe-0009"]
     },
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]

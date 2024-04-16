@@ -360,6 +360,37 @@
       "synonyms": ["ciotka"]
     }
   },
+  {
+    "lemma": "siostrzenica",
+    "id": "pol-npe-0009-siostrzenica",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "bratanica",
+    "id": "pol-npe-0009-bratanica",
+    "frequency": 1,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "siostrzeniec",
+    "id": "pol-npe-0009-siostrzeniec",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1"
+  },
+  {
+    "lemma": "bratanek",
+    "id": "pol-npe-0009-bratanek",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "synonyms": ["brataniec", "synowiec"]
+    }
+  },
 
   {
     "lemma": "kobieta",
@@ -439,37 +470,6 @@
       "otherShapes": {
         "feminine": ["kuzynka"]
       }
-    }
-  },
-  {
-    "lemma": "siostrzenica",
-    "id": "pol-npe-0017-siostrzenica",
-    "frequency": 3,
-    "register": 1,
-    "gender": "f"
-  },
-  {
-    "lemma": "bratanica",
-    "id": "pol-npe-0018-bratanica",
-    "frequency": 1,
-    "register": 1,
-    "gender": "f"
-  },
-  {
-    "lemma": "siostrzeniec",
-    "id": "pol-npe-0019-siostrzeniec",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1"
-  },
-  {
-    "lemma": "bratanek",
-    "id": "pol-npe-0020-bratanek",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "synonyms": ["brataniec", "synowiec"]
     }
   },
   {
