@@ -56,7 +56,7 @@
   },
   {
     "lemma": "brat",
-    "id": "pol-npe-0003-brat",
+    "id": "pol-npe-0002-brat",
     "frequency": 1,
     "register": 1,
     "gender": "m1",
@@ -101,7 +101,7 @@
   },
   {
     "lemma": "siostra",
-    "id": "pol-npe-0004-siostra",
+    "id": "pol-npe-0002-siostra",
     "frequency": 1,
     "register": 1,
     "gender": "f",
@@ -111,6 +111,16 @@
       },
       "derivedTerms": ["siostrzany", "siostrunia", "siostrzyca", "siostrzyczka"]
     }
+  },
+  {
+    "lemma": "rodzeństwo",
+    "id": "pol-npe-0002-rodzeństwo-£",
+    "frequency": 1,
+    "register": 1,
+    "gender": "n",
+    "semanticGender": "_PersonalGenders",
+    "_lacking": true,
+    "tantumSingulare": true
   },
   {
     "lemma": "kobieta",

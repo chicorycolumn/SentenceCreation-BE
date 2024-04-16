@@ -9,17 +9,17 @@
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
   },
-
   {
-    "key": "npe-0001-brother",
+    "key": "npe-0002-brother/sister/sibling",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0003-brother"],
-      "POL": ["pol-npe-0003-brat"]
+      "ENG": ["eng-npe-0002"],
+      "POL": ["pol-npe-0002"]
     },
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
   },
+
   {
     "key": "npe-0002-boy",
     "traductions": {
@@ -173,16 +173,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
-  },
-  {
-    "key": "npe-0017-sister",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0019-sister"],
-      "POL": ["pol-npe-0004-siostra"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
   },
   {
     "key": "npe-0018-partner",
