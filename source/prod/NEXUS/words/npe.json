@@ -1,5 +1,16 @@
 [
   {
+    "key": "npe-0001-mother/father/parent",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0001"],
+      "POL": ["pol-npe-0001"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
+
+  {
     "key": "npe-0001-brother",
     "traductions": {
       "SPA": [],
@@ -182,16 +193,6 @@
     },
     "papers": ["concrete", "person", "living"],
     "topics": ["love", "people"]
-  },
-  {
-    "key": "npe-0019-mother",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0001-mother"],
-      "POL": ["pol-npe-0001-matka"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
   },
   {
     "key": "npe-0020-girl",
@@ -384,16 +385,6 @@
       "POL": ["pol-npe-0044-turysta", "pol-npe-0105-turystka"]
     },
     "papers": ["concrete", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0038-father",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0002-father"],
-      "POL": ["pol-npe-0002-ojciec"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
   },
   {
@@ -862,16 +853,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]
-  },
-  {
-    "key": "npe-0085-parent",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0085-parent"],
-      "POL": ["pol-npe-0094-rodzic"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
   },
   {
     "key": "npe-0086-asshole",
