@@ -236,6 +236,14 @@
       "antonyms": ["chłopak"]
     }
   },
+  {
+    "lemma": "niemowlę",
+    "id": "pol-npe-0005-niemowlę",
+    "frequency": 1,
+    "register": 1,
+    "gender": "n",
+    "semanticGender": "_Genders"
+  },
 
   {
     "lemma": "kobieta",
@@ -2318,13 +2326,6 @@
     "extra": {
       "synonyms": ["dama", "hetman", "królówka"]
     }
-  },
-  {
-    "lemma": "niemowlę",
-    "id": "pol-npe-0151-niemowlę",
-    "frequency": 1,
-    "register": 1,
-    "gender": "n"
   },
   {
     "lemma": "anioł",
