@@ -391,34 +391,9 @@
       "synonyms": ["brataniec", "synowiec"]
     }
   },
-
-  {
-    "lemma": "kobieta",
-    "id": "pol-npe-0005-kobieta",
-    "frequency": 1,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["kobietka"]
-      },
-      "antonyms": ["mężczyzna"],
-      "derivedTerms": ["kobiecy", "(adjective)"]
-    }
-  },
-  {
-    "lemma": "mężczyzna",
-    "id": "pol-npe-0006-mężczyzna",
-    "frequency": 1,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "antonyms": ["kobieta"]
-    }
-  },
   {
     "lemma": "dziadek",
-    "id": "pol-npe-0009-dziadek",
+    "id": "pol-npe-0010-dziadek",
     "frequency": 1,
     "register": 1,
     "gender": "m1",
@@ -458,6 +433,31 @@
         "gdyby babcia miała wąsy, toby była dziadkiem",
         "skończyło się babci sranie"
       ]
+    }
+  },
+
+  {
+    "lemma": "kobieta",
+    "id": "pol-npe-0005-kobieta",
+    "frequency": 1,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["kobietka"]
+      },
+      "antonyms": ["mężczyzna"],
+      "derivedTerms": ["kobiecy", "(adjective)"]
+    }
+  },
+  {
+    "lemma": "mężczyzna",
+    "id": "pol-npe-0006-mężczyzna",
+    "frequency": 1,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "antonyms": ["kobieta"]
     }
   },
   {

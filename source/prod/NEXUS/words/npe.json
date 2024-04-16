@@ -89,6 +89,16 @@
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
   },
+  {
+    "key": "npe-0010-grandmother/grandfather",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0010"],
+      "POL": ["pol-npe-0010"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
 
   {
     "key": "npe-0003-boyfriend",
@@ -279,16 +289,6 @@
     "topics": ["people"]
   },
   {
-    "key": "npe-0030-grandmother",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0010-grandmother"],
-      "POL": ["pol-npe-0010-babcia"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
     "key": "npe-0033-queen",
     "traductions": {
       "SPA": [],
@@ -410,16 +410,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
-  },
-  {
-    "key": "npe-0047-grandfather",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0009-grandfather"],
-      "POL": ["pol-npe-0009-dziadek"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
   },
   {
     "key": "npe-0048-knight",
