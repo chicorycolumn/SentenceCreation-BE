@@ -99,6 +99,16 @@
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
   },
+  {
+    "key": "npe-0011-grandson/granddaughter",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0011"],
+      "POL": ["pol-npe-0011"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
 
   {
     "key": "npe-0003-boyfriend",
@@ -315,7 +325,7 @@
       "ENG": ["eng-npe-0032-leader"],
       "POL": ["pol-npe-0147-lider"]
     },
-    "papers": ["concrete", "relative", "person", "profession", "living"],
+    "papers": ["concrete", "person", "profession", "living"],
     "topics": ["work", "people"]
   },
   {
@@ -676,16 +686,6 @@
     "topics": ["holiday", "people"]
   },
   {
-    "key": "npe-0075-grandson",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0074-grandson"],
-      "POL": ["pol-npe-0084-wnuk"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
     "key": "npe-0076-cook",
     "traductions": {
       "SPA": [],
@@ -724,16 +724,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["religion", "work", "people"]
-  },
-  {
-    "key": "npe-0080-granddaughter",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0080-granddaughter"],
-      "POL": ["pol-npe-0085-wnuczka"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
   },
   {
     "key": "npe-0081-enemy",

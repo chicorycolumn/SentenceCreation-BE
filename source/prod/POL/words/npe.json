@@ -435,6 +435,31 @@
       ]
     }
   },
+  {
+    "lemma": "wnuk",
+    "id": "pol-npe-0011-wnuk",
+    "frequency": 1,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["wnuczek", "wnuś"]
+      }
+    }
+  },
+  {
+    "lemma": "wnuczka",
+    "id": "pol-npe-0011-wnuczka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["wnusia"],
+        "masculine": ["wnuk"]
+      }
+    }
+  },
 
   {
     "lemma": "kobieta",
@@ -1470,31 +1495,6 @@
         "gość w dom, Bóg w dom",
         "gościć"
       ]
-    }
-  },
-  {
-    "lemma": "wnuk",
-    "id": "pol-npe-0084-wnuk",
-    "frequency": 1,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["wnuczek", "wnuś"]
-      }
-    }
-  },
-  {
-    "lemma": "wnuczka",
-    "id": "pol-npe-0085-wnuczka",
-    "frequency": 2,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["wnusia"],
-        "masculine": ["wnuk"]
-      }
     }
   },
   {
