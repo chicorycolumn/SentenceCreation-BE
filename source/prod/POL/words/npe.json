@@ -314,6 +314,52 @@
       }
     }
   },
+  {
+    "lemma": "wuj",
+    "id": "pol-npe-0008-wuj",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "synonyms": ["wujek"],
+      "derivedTerms": [
+        "wujaszkowy",
+        "wujeczny",
+        "wujowski",
+        "wujowy",
+        "wujanka",
+        "wujaszek",
+        "wujek",
+        "wujenka",
+        "wujostwo",
+        "wujaszkować"
+      ],
+      "usage": ["Coordinate term: stryj"]
+    }
+  },
+  {
+    "lemma": "wujek",
+    "id": "pol-npe-0008-wujek",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["wujcio", "wujaszek"]
+      },
+      "synonyms": ["wuj"]
+    }
+  },
+  {
+    "lemma": "ciocia",
+    "id": "pol-npe-0008-ciocia",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "synonyms": ["ciotka"]
+    }
+  },
 
   {
     "lemma": "kobieta",
@@ -381,52 +427,6 @@
         "gdyby babcia miała wąsy, toby była dziadkiem",
         "skończyło się babci sranie"
       ]
-    }
-  },
-  {
-    "lemma": "wuj",
-    "id": "pol-npe-0013-wuj",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "synonyms": ["wujek"],
-      "derivedTerms": [
-        "wujaszkowy",
-        "wujeczny",
-        "wujowski",
-        "wujowy",
-        "wujanka",
-        "wujaszek",
-        "wujek",
-        "wujenka",
-        "wujostwo",
-        "wujaszkować"
-      ],
-      "usage": ["Coordinate term: stryj"]
-    }
-  },
-  {
-    "lemma": "wujek",
-    "id": "pol-npe-0014-wujek",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["wujcio", "wujaszek"]
-      },
-      "synonyms": ["wuj"]
-    }
-  },
-  {
-    "lemma": "ciocia",
-    "id": "pol-npe-0015-ciocia",
-    "frequency": 2,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "synonyms": ["ciotka"]
     }
   },
   {

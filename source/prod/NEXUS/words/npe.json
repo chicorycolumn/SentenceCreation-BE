@@ -69,6 +69,36 @@
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["love", "people"]
   },
+  {
+    "key": "npe-0008-aunt/uncle",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0008"],
+      "POL": ["pol-npe-0008"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
+  {
+    "key": "npe-0009-nephew",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0008-nephew"],
+      "POL": ["pol-npe-0019-siostrzeniec", "pol-npe-0020-bratanek"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
+  {
+    "key": "npe-0022-niece",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0004-niece"],
+      "POL": ["pol-npe-0017-siostrzenica", "pol-npe-0018-bratanica"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
 
   {
     "key": "npe-0003-boyfriend",
@@ -119,16 +149,6 @@
       "POL": ["pol-npe-0145-panna"]
     },
     "papers": ["concrete", "title", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0009-nephew",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0008-nephew"],
-      "POL": ["pol-npe-0019-siostrzeniec", "pol-npe-0020-bratanek"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
   },
   {
@@ -214,16 +234,6 @@
     },
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["love", "people"]
-  },
-  {
-    "key": "npe-0022-niece",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0004-niece"],
-      "POL": ["pol-npe-0017-siostrzenica", "pol-npe-0018-bratanica"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
   },
   {
     "key": "npe-0025-friend",
@@ -370,16 +380,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
-  },
-  {
-    "key": "npe-0042-uncle",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0013-uncle"],
-      "POL": ["pol-npe-0013-wuj", "pol-npe-0014-wujek"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
   },
   {
     "key": "npe-0043-surgeon",
@@ -557,16 +557,6 @@
       "SPA": [],
       "ENG": ["eng-npe-0056-fatherinlaw"],
       "POL": ["pol-npe-0066-teść"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0061-aunt",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0011-aunt", "eng-npe-0012-auntie"],
-      "POL": ["pol-npe-0015-ciocia"]
     },
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
