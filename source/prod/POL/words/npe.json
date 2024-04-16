@@ -123,6 +123,59 @@
     "tantumSingulare": true
   },
   {
+    "lemma": "córka",
+    "id": "pol-npe-0003-córka",
+    "frequency": 1,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["córeczka"],
+        "augmentative": ["córa"]
+      }
+    }
+  },
+  {
+    "lemma": "syn",
+    "id": "pol-npe-0003-syn",
+    "frequency": 1,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["synek"]
+      },
+      "derivedTerms": [
+        "syneczek",
+        "synek",
+        "syncio",
+        "synulek",
+        "synuś",
+        "synal",
+        "synalek"
+      ]
+    }
+  },
+  {
+    "lemma": "dziecko",
+    "id": "pol-npe-0003-dziecko-£",
+    "frequency": 1,
+    "register": 1,
+    "gender": "n",
+    "semanticGender": "_PersonalGenders",
+    "extra": {
+      "synonyms": ["dziecko"],
+      "derivedTerms": [
+        "bezdzietny",
+        "bezdzietnie",
+        "bezdzietność",
+        "wylać dziecko z kąpielą",
+        "wylewać dziecko z kąpielą"
+      ]
+    }
+  },
+
+  {
     "lemma": "kobieta",
     "id": "pol-npe-0005-kobieta",
     "frequency": 1,
@@ -144,40 +197,6 @@
     "gender": "m1",
     "extra": {
       "antonyms": ["kobieta"]
-    }
-  },
-  {
-    "lemma": "córka",
-    "id": "pol-npe-0007-córka",
-    "frequency": 1,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["córeczka"],
-        "augmentative": ["córa"]
-      }
-    }
-  },
-  {
-    "lemma": "syn",
-    "id": "pol-npe-0008-syn",
-    "frequency": 1,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["synek"]
-      },
-      "derivedTerms": [
-        "syneczek",
-        "synek",
-        "syncio",
-        "synulek",
-        "synuś",
-        "synal",
-        "synalek"
-      ]
     }
   },
   {
@@ -2310,23 +2329,6 @@
     "gender": "f",
     "extra": {
       "synonyms": ["dama", "hetman", "królówka"]
-    }
-  },
-  {
-    "lemma": "dziecko",
-    "id": "pol-npe-0150-dziecko",
-    "frequency": 1,
-    "register": 1,
-    "gender": "n",
-    "extra": {
-      "synonyms": ["dziecko"],
-      "derivedTerms": [
-        "bezdzietny",
-        "bezdzietnie",
-        "bezdzietność",
-        "wylać dziecko z kąpielą",
-        "wylewać dziecko z kąpielą"
-      ]
     }
   },
   {

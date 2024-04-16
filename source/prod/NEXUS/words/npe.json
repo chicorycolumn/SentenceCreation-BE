@@ -19,6 +19,27 @@
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
   },
+  {
+    "key": "npe-0003-son/daughter/child",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0003"],
+      "POL": ["pol-npe-0003"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
+
+  {
+    "key": "npe-0032-baby",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0145-baby"],
+      "POL": ["pol-npe-0151-niemowlę"]
+    },
+    "papers": ["living", "concrete", "person"],
+    "topics": ["people"]
+  },
 
   {
     "key": "npe-0002-boy",
@@ -50,16 +71,7 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["school", "work", "people"]
   },
-  {
-    "key": "npe-0005-son",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0007-son"],
-      "POL": ["pol-npe-0008-syn"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
+
   {
     "key": "npe-0006-guy",
     "traductions": {
@@ -225,16 +237,6 @@
     "topics": ["people"]
   },
   {
-    "key": "npe-0024-daughter",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0006-daughter"],
-      "POL": ["pol-npe-0007-córka"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
     "key": "npe-0025-friend",
     "traductions": {
       "SPA": [],
@@ -305,26 +307,6 @@
       "POL": ["pol-npe-0010-babcia"]
     },
     "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0031-child",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0144-child"],
-      "POL": ["pol-npe-0150-dziecko"]
-    },
-    "papers": ["living", "concrete", "person"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0032-baby",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0145-baby"],
-      "POL": ["pol-npe-0151-niemowlę"]
-    },
-    "papers": ["living", "concrete", "person"],
     "topics": ["people"]
   },
   {
