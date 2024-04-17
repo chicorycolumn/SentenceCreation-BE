@@ -109,6 +109,16 @@
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
   },
+  {
+    "key": "npe-0012-cousin",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0012"],
+      "POL": ["pol-npe-0012"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
 
   {
     "key": "npe-0003-boyfriend",
@@ -431,16 +441,7 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people", "history"]
   },
-  {
-    "key": "npe-0049-cousin",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0014-cousin"],
-      "POL": ["pol-npe-0016-kuzyn"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
+
   {
     "key": "npe-0050-thief",
     "traductions": {

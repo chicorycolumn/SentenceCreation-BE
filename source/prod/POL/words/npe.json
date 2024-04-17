@@ -462,6 +462,31 @@
       }
     }
   },
+  {
+    "lemma": "kuzyn",
+    "id": "pol-npe-0012-kuzyn-€",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["kuzynka"]
+      }
+    }
+  },
+  {
+    "lemma": "kuzynka",
+    "id": "pol-npe-0012-kuzyn",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": ["kuzyn"]
+      }
+    }
+  },
 
   {
     "lemma": "kobieta",
@@ -485,18 +510,6 @@
     "gender": "m1",
     "extra": {
       "antonyms": ["kobieta"]
-    }
-  },
-  {
-    "lemma": "kuzyn",
-    "id": "pol-npe-0016-kuzyn",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["kuzynka"]
-      }
     }
   },
   {
