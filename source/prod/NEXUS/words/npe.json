@@ -119,6 +119,16 @@
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
   },
+  {
+    "key": "npe-0013-fatherinlaw/motherinlaw",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0013"],
+      "POL": ["pol-npe-0013"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
 
   {
     "key": "npe-0003-boyfriend",
@@ -541,16 +551,6 @@
     },
     "papers": ["crime", "concrete"],
     "topics": ["law", "crime", "people"]
-  },
-  {
-    "key": "npe-0060-fatherinlaw",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0056-fatherinlaw"],
-      "POL": ["pol-npe-0066-teść"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
   },
   {
     "key": "npe-0062-god",

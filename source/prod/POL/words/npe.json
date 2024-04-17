@@ -487,6 +487,26 @@
       }
     }
   },
+  {
+    "lemma": "teść",
+    "id": "pol-npe-0013-teść",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["teściowa"]
+      },
+      "derivedTerms": ["teściowy", "teściostwo"]
+    }
+  },
+  {
+    "lemma": "teściowa",
+    "id": "pol-npe-0013-teściowa",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kobieta",
@@ -1149,19 +1169,6 @@
       "otherShapes": {
         "feminine": ["przestępczyni"]
       }
-    }
-  },
-  {
-    "lemma": "teść",
-    "id": "pol-npe-0066-teść",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["teściowa"]
-      },
-      "derivedTerms": ["teściowy", "teściostwo"]
     }
   },
   {
