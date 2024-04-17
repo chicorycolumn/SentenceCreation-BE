@@ -10772,5 +10772,15 @@
     },
     "papers": ["s1", "food", "concrete", "vegetable"],
     "topics": ["kitchen", "inside", "restaurant"]
+  },
+  {
+    "key": "nco-1050-parsnip",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1349-parsnip"],
+      "POL": ["pol-nco-1121-pasternak"]
+    },
+    "papers": ["s1", "food", "concrete", "vegetable"],
+    "topics": ["kitchen", "inside", "restaurant"]
   }
 ]

@@ -17923,5 +17923,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "m3"
+  },
+  {
+    "lemma": "pasternak",
+    "id": "pol-nco-1121-pasternak",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
   }
 ]
