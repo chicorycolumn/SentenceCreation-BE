@@ -129,6 +129,16 @@
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
   },
+  {
+    "key": "npe-0014-fiancé/fiancée",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0014"],
+      "POL": ["pol-npe-0014"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["love", "people"]
+  },
 
   {
     "key": "npe-0003-boyfriend",
@@ -595,26 +605,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
-  },
-  {
-    "key": "npe-0066-fiancé",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0065-fiancé"],
-      "POL": ["pol-npe-0071-narzeczony"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["love", "people"]
-  },
-  {
-    "key": "npe-0067-fiancée",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0066-fiancée"],
-      "POL": ["pol-npe-0072-narzeczona"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["love", "people"]
   },
   {
     "key": "npe-0068-gardener",

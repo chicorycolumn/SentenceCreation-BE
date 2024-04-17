@@ -507,6 +507,36 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "narzeczony",
+    "id": "pol-npe-0014-narzeczony",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["narzeczona"]
+      },
+      "usage": [
+        "Usage notes [ edit ] The plural of this masculine form is also used to refer to couples."
+      ]
+    }
+  },
+  {
+    "lemma": "narzeczona",
+    "id": "pol-npe-0014-narzeczona",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": ["narzeczony"]
+      },
+      "usage": [
+        "Usage notes [ edit ] The plural of this word refers to multiple female fiancées. The plural of the masculine form is used to refer to couples."
+      ]
+    }
+  },
 
   {
     "lemma": "kobieta",
@@ -1336,36 +1366,6 @@
       "otherShapes": {
         "feminine": ["pracownica", "pracowniczka"]
       }
-    }
-  },
-  {
-    "lemma": "narzeczony",
-    "id": "pol-npe-0071-narzeczony",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["narzeczona"]
-      },
-      "usage": [
-        "Usage notes [ edit ] The plural of this masculine form is also used to refer to couples."
-      ]
-    }
-  },
-  {
-    "lemma": "narzeczona",
-    "id": "pol-npe-0072-narzeczona",
-    "frequency": 3,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "masculine": ["narzeczony"]
-      },
-      "usage": [
-        "Usage notes [ edit ] The plural of this word refers to multiple female fiancées. The plural of the masculine form is used to refer to couples."
-      ]
     }
   },
   {
