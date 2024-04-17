@@ -393,10 +393,11 @@
   },
   {
     "lemma": "dziadek",
-    "id": "pol-npe-0010-dziadek",
+    "id": "pol-npe-0010-dziadek-€",
     "frequency": 1,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "diminutive": ["dziadziuś"],
@@ -437,10 +438,11 @@
   },
   {
     "lemma": "wnuk",
-    "id": "pol-npe-0011-wnuk",
+    "id": "pol-npe-0011-wnuk-€",
     "frequency": 1,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "diminutive": ["wnuczek", "wnuś"]

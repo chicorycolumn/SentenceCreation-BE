@@ -90,7 +90,7 @@
     "topics": ["people"]
   },
   {
-    "key": "npe-0010-grandmother/grandfather",
+    "key": "npe-0010-grandmother/grandfather/grandparent",
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0010"],
@@ -100,7 +100,7 @@
     "topics": ["people"]
   },
   {
-    "key": "npe-0011-grandson/granddaughter",
+    "key": "npe-0011-grandson/granddaughter/grandchild",
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0011"],
