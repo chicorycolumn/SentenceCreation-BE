@@ -1161,6 +1161,31 @@
       "synonyms": ["dama", "hetman", "królówka"]
     }
   },
+  {
+    "lemma": "turysta",
+    "id": "pol-npe-0032-turysta",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["turystka"]
+      },
+      "derivedTerms": ["agroturysta", "agroturystka"]
+    }
+  },
+  {
+    "lemma": "turystka",
+    "id": "pol-npe-0032-turystka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": ["turysta"]
+      }
+    }
+  },
 
   {
     "lemma": "aktorka",
@@ -1199,19 +1224,6 @@
         "aktorsko",
         "aktorować"
       ]
-    }
-  },
-  {
-    "lemma": "turysta",
-    "id": "pol-npe-0044-turysta",
-    "frequency": 4,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["turystka"]
-      },
-      "derivedTerms": ["agroturysta", "agroturystka"]
     }
   },
   {
@@ -1999,18 +2011,6 @@
     "extra": {
       "otherShapes": {
         "masculine": ["sędzia"]
-      }
-    }
-  },
-  {
-    "lemma": "turystka",
-    "id": "pol-npe-0105-turystka",
-    "frequency": 3,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "masculine": ["turysta"]
       }
     }
   },

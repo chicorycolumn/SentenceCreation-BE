@@ -309,6 +309,16 @@
     "papers": ["living", "profession", "concrete", "person", "title"],
     "topics": ["work", "people", "history"]
   },
+  {
+    "key": "npe-0032-tourist",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0032"],
+      "POL": ["pol-npe-0032"]
+    },
+    "papers": ["concrete", "person", "living"],
+    "topics": ["people"]
+  },
 
   {
     "key": "npe-0015-actress",
@@ -339,16 +349,6 @@
     },
     "papers": ["concrete", "person", "profession", "living"],
     "topics": ["work", "people"]
-  },
-  {
-    "key": "npe-0037-tourist",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0035-tourist"],
-      "POL": ["pol-npe-0044-turysta", "pol-npe-0105-turystka"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["people"]
   },
   {
     "key": "npe-0039-hero",
