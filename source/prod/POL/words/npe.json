@@ -564,7 +564,7 @@
   {
     "lemma": "pani",
     "id": "pol-npe-0015-pani(woman)",
-    "_inflectionsRoot": "pol-npe-0142-pani(title)",
+    "_inflectionsRoot": "pol-npe-0025-pani(title)",
     "frequency": 2,
     "register": 1,
     "gender": "f",
@@ -577,7 +577,7 @@
   {
     "lemma": "pan",
     "id": "pol-npe-0015-pan(man)",
-    "_inflectionsRoot": "pol-npe-0139-pan(title)",
+    "_inflectionsRoot": "pol-npe-0025-pan(title)",
     "frequency": 2,
     "register": 1,
     "gender": "m1",
@@ -949,6 +949,70 @@
     "gender": "m1",
     "extra": {
       "synonyms": ["facet", "kolo", "typ", "hiter"]
+    }
+  },
+  {
+    "lemma": "pan",
+    "id": "pol-npe-0025-pan(title)",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "title",
+      "emoji": "🙇"
+    }
+  },
+  {
+    "lemma": "pani",
+    "id": "pol-npe-0025-pani(title)",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "title",
+      "emoji": "🙇"
+    }
+  },
+  {
+    "lemma": "panna",
+    "id": "pol-npe-0025-panna",
+    "frequency": 1,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["panienka"],
+        "augmentative": ["pannica", "pannisko"]
+      },
+      "derivedTerms": ["panieński", "panieństwo", "Panna"]
+    }
+  },
+  {
+    "lemma": "pan",
+    "id": "pol-npe-0026-pan(address)",
+    "_inflectionsRoot": "pol-npe-0025-pan(title)",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "form of address",
+      "emoji": "👋"
+    }
+  },
+  {
+    "lemma": "pani",
+    "id": "pol-npe-0026-pani(address)",
+    "_inflectionsRoot": "pol-npe-0025-pani(title)",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "form of address",
+      "emoji": "👋"
     }
   },
 
@@ -2237,70 +2301,6 @@
     "frequency": 3,
     "register": 1,
     "gender": "f"
-  },
-  {
-    "lemma": "pan",
-    "id": "pol-npe-0139-pan(title)",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "title",
-      "emoji": "🙇"
-    }
-  },
-  {
-    "lemma": "pan",
-    "id": "pol-npe-0140-pan(address)",
-    "_inflectionsRoot": "pol-npe-0139-pan(title)",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "form of address",
-      "emoji": "👋"
-    }
-  },
-  {
-    "lemma": "pani",
-    "id": "pol-npe-0142-pani(title)",
-    "frequency": 2,
-    "register": 1,
-    "gender": "f",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "title",
-      "emoji": "🙇"
-    }
-  },
-  {
-    "lemma": "pani",
-    "id": "pol-npe-0143-pani(address)",
-    "_inflectionsRoot": "pol-npe-0142-pani(title)",
-    "frequency": 2,
-    "register": 1,
-    "gender": "f",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "form of address",
-      "emoji": "👋"
-    }
-  },
-  {
-    "lemma": "panna",
-    "id": "pol-npe-0145-panna",
-    "frequency": 1,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["panienka"],
-        "augmentative": ["pannica", "pannisko"]
-      },
-      "derivedTerms": ["panieński", "panieństwo", "Panna"]
-    }
   },
   {
     "lemma": "pilot",

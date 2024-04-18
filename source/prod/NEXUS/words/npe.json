@@ -239,6 +239,26 @@
     "papers": ["concrete", "person", "address"],
     "topics": ["people", "social life"]
   },
+  {
+    "key": "npe-0025-Mr/Mrs/Miss",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0025"],
+      "POL": ["pol-npe-0025"]
+    },
+    "papers": ["concrete", "title", "person", "living"],
+    "topics": ["people"]
+  },
+  {
+    "key": "npe-0026-Sir/Madam",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0026"],
+      "POL": ["pol-npe-0026"]
+    },
+    "papers": ["concrete", "address", "person", "living"],
+    "topics": ["people"]
+  },
 
   {
     "key": "npe-0004-teacher",
@@ -249,16 +269,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["school", "work", "people"]
-  },
-  {
-    "key": "npe-0008-Miss(title)",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0132-Miss(title)"],
-      "POL": ["pol-npe-0145-panna"]
-    },
-    "papers": ["concrete", "title", "person", "living"],
-    "topics": ["people"]
   },
   {
     "key": "npe-0010-student",
@@ -1022,46 +1032,6 @@
     },
     "papers": ["concrete", "transport", "person", "living"],
     "topics": ["people", "travel"]
-  },
-  {
-    "key": "npe-0118-Mr",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0127-Mr"],
-      "POL": ["pol-npe-0139-pan(title)"]
-    },
-    "papers": ["concrete", "title", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0119-Mrs",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0130-Mrs"],
-      "POL": ["pol-npe-0142-pani(title)"]
-    },
-    "papers": ["concrete", "title", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0120-Sir",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0128-Sir"],
-      "POL": ["pol-npe-0140-pan(address)"]
-    },
-    "papers": ["concrete", "address", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0121-Madam",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0129-Madam", "eng-npe-0131-Miss(address)"],
-      "POL": ["pol-npe-0143-pani(address)"]
-    },
-    "papers": ["concrete", "address", "person", "living"],
-    "topics": ["people"]
   },
   {
     "key": "npe-0122-angel",
