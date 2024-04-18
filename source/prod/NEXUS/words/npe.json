@@ -159,17 +159,17 @@
     "papers": ["concrete", "person", "living"],
     "topics": ["people", "biology"]
   },
-
   {
-    "key": "npe-0003-boyfriend",
+    "key": "npe-0017-boyfriend",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0022-boyfriend"],
-      "POL": ["pol-npe-0024-chłopak(boyfriend)"]
+      "ENG": ["eng-npe-0017"],
+      "POL": ["pol-npe-0017"]
     },
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["love", "people"]
   },
+
   {
     "key": "npe-0004-teacher",
     "traductions": {
@@ -265,16 +265,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
-  },
-  {
-    "key": "npe-0021-girlfriend",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0026-girlfriend"],
-      "POL": ["pol-npe-0027-dziewczyna(girlfriend)"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["love", "people"]
   },
   {
     "key": "npe-0025-friend",

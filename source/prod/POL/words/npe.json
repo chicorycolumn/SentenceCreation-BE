@@ -646,11 +646,10 @@
       "emoji": "🧬"
     }
   },
-
   {
     "lemma": "chłopak",
-    "id": "pol-npe-0024-chłopak(boyfriend)",
-    "_inflectionsRoot": "pol-npe-0023-chłopak(boy)",
+    "id": "pol-npe-0017-chłopak(boyfriend)",
+    "_inflectionsRoot": "pol-npe-0004-chłopak(boy)",
     "frequency": 1,
     "register": 1,
     "gender": "m1",
@@ -667,8 +666,8 @@
   },
   {
     "lemma": "dziewczyna",
-    "id": "pol-npe-0027-dziewczyna(girlfriend)",
-    "_inflectionsRoot": "pol-npe-0026-dziewczyna(girl)",
+    "id": "pol-npe-0017-dziewczyna(girlfriend)",
+    "_inflectionsRoot": "pol-npe-0004-dziewczyna(girl)",
     "frequency": 1,
     "register": 1,
     "gender": "f",
@@ -685,6 +684,7 @@
       "antonyms": ["chłopak"]
     }
   },
+
   {
     "lemma": "nauczycielka",
     "id": "pol-npe-0028-nauczycielka",
