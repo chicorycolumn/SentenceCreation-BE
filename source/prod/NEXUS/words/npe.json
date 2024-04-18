@@ -269,17 +269,17 @@
     "papers": ["concrete", "person", "address"],
     "topics": ["people", "social life", "love"]
   },
-
   {
-    "key": "npe-0004-teacher",
+    "key": "npe-0028-teacher",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0023-teacher"],
-      "POL": ["pol-npe-0028-nauczycielka", "pol-npe-0029-nauczyciel"]
+      "ENG": ["eng-npe-0028"],
+      "POL": ["pol-npe-0028"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["school", "work", "people"]
   },
+
   {
     "key": "npe-0010-student",
     "traductions": {

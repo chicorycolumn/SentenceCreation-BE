@@ -1035,7 +1035,6 @@
       ]
     }
   },
-
   {
     "lemma": "nauczycielka",
     "id": "pol-npe-0028-nauczycielka",
@@ -1050,7 +1049,7 @@
   },
   {
     "lemma": "nauczyciel",
-    "id": "pol-npe-0029-nauczyciel",
+    "id": "pol-npe-0028-nauczyciel",
     "frequency": 2,
     "register": 1,
     "gender": "m1",
@@ -1061,6 +1060,7 @@
       "derivedTerms": ["nauczycielski", "nauczycielstwo"]
     }
   },
+
   {
     "lemma": "aktorka",
     "id": "pol-npe-0033-aktorka",
