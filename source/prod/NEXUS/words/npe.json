@@ -229,6 +229,16 @@
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["holiday", "people"]
   },
+  {
+    "key": "npe-0024-homie",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0024"],
+      "POL": ["pol-npe-0024"]
+    },
+    "papers": ["concrete", "person", "address"],
+    "topics": ["people", "social life"]
+  },
 
   {
     "key": "npe-0004-teacher",
@@ -263,16 +273,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
-  },
-  {
-    "key": "npe-0011-homie",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0138-homie", "eng-npe-0139-bro", "eng-npe-0140-dude"],
-      "POL": ["pol-npe-0032-ziom"]
-    },
-    "papers": ["concrete", "person", "address"],
-    "topics": ["people", "social life"]
   },
   {
     "key": "npe-0012-pilot",

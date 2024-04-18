@@ -941,6 +941,16 @@
       ]
     }
   },
+  {
+    "lemma": "ziom",
+    "id": "pol-npe-0024-ziom",
+    "frequency": 4,
+    "register": 6,
+    "gender": "m1",
+    "extra": {
+      "synonyms": ["facet", "kolo", "typ", "hiter"]
+    }
+  },
 
   {
     "lemma": "nauczycielka",
@@ -965,16 +975,6 @@
         "feminine": ["nauczycielka"]
       },
       "derivedTerms": ["nauczycielski", "nauczycielstwo"]
-    }
-  },
-  {
-    "lemma": "ziom",
-    "id": "pol-npe-0032-ziom",
-    "frequency": 4,
-    "register": 6,
-    "gender": "m1",
-    "extra": {
-      "synonyms": ["facet", "kolo", "typ", "hiter"]
     }
   },
   {
