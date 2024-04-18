@@ -139,6 +139,16 @@
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["love", "people"]
   },
+  {
+    "key": "npe-0015-woman/man/person",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0015"],
+      "POL": ["pol-npe-0015"]
+    },
+    "papers": ["concrete", "person", "living"],
+    "topics": ["people"]
+  },
 
   {
     "key": "npe-0003-boyfriend",
@@ -225,26 +235,7 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
   },
-  {
-    "key": "npe-0013-woman",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0017-woman", "eng-npe-0018-lady"],
-      "POL": ["pol-npe-0005-kobieta", "pol-npe-0144-pani(woman)"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0014-man",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0016-man"],
-      "POL": ["pol-npe-0006-mężczyzna", "pol-npe-0141-pan(man)"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["people"]
-  },
+
   {
     "key": "npe-0015-actress",
     "traductions": {

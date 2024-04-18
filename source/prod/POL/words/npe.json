@@ -537,10 +537,9 @@
       ]
     }
   },
-
   {
     "lemma": "kobieta",
-    "id": "pol-npe-0005-kobieta",
+    "id": "pol-npe-0015-kobieta",
     "frequency": 1,
     "register": 1,
     "gender": "f",
@@ -554,7 +553,7 @@
   },
   {
     "lemma": "mężczyzna",
-    "id": "pol-npe-0006-mężczyzna",
+    "id": "pol-npe-0015-mężczyzna",
     "frequency": 1,
     "register": 1,
     "gender": "m1",
@@ -562,6 +561,33 @@
       "antonyms": ["kobieta"]
     }
   },
+  {
+    "lemma": "pani",
+    "id": "pol-npe-0015-pani(woman)",
+    "_inflectionsRoot": "pol-npe-0142-pani(title)",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "a gender",
+      "emoji": "👫"
+    }
+  },
+  {
+    "lemma": "pan",
+    "id": "pol-npe-0015-pan(man)",
+    "_inflectionsRoot": "pol-npe-0139-pan(title)",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "a gender",
+      "emoji": "👫"
+    }
+  },
+
   {
     "lemma": "chłopak",
     "id": "pol-npe-0024-chłopak(boyfriend)",
@@ -2218,19 +2244,6 @@
     }
   },
   {
-    "lemma": "pan",
-    "id": "pol-npe-0141-pan(man)",
-    "_inflectionsRoot": "pol-npe-0139-pan(title)",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "a gender",
-      "emoji": "👫"
-    }
-  },
-  {
     "lemma": "pani",
     "id": "pol-npe-0142-pani(title)",
     "frequency": 2,
@@ -2253,19 +2266,6 @@
       "singleWordtype": true,
       "text": "form of address",
       "emoji": "👋"
-    }
-  },
-  {
-    "lemma": "pani",
-    "id": "pol-npe-0144-pani(woman)",
-    "_inflectionsRoot": "pol-npe-0142-pani(title)",
-    "frequency": 2,
-    "register": 1,
-    "gender": "f",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "a gender",
-      "emoji": "👫"
     }
   },
   {
