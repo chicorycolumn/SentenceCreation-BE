@@ -1119,6 +1119,48 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "król",
+    "id": "pol-npe-0031-król",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["królewiątko"],
+        "feminine": ["królowa"]
+      },
+      "derivedTerms": [
+        "bezkrólewie",
+        "Król",
+        "królestwo",
+        "królewiątko",
+        "królewiacki",
+        "królewiak",
+        "królewicz",
+        "królewna",
+        "królewski",
+        "królewskość",
+        "królewszczyzna",
+        "króliczek",
+        "królik",
+        "królowa",
+        "królować",
+        "królowanie",
+        "Trzej Królowie"
+      ]
+    }
+  },
+  {
+    "lemma": "królowa",
+    "id": "pol-npe-0031-królowa",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "synonyms": ["dama", "hetman", "królówka"]
+    }
+  },
 
   {
     "lemma": "aktorka",
@@ -2332,48 +2374,6 @@
         "feminine": ["liderka"]
       },
       "synonyms": ["przywódca"]
-    }
-  },
-  {
-    "lemma": "król",
-    "id": "pol-npe-0148-król",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["królewiątko"],
-        "feminine": ["królowa"]
-      },
-      "derivedTerms": [
-        "bezkrólewie",
-        "Król",
-        "królestwo",
-        "królewiątko",
-        "królewiacki",
-        "królewiak",
-        "królewicz",
-        "królewna",
-        "królewski",
-        "królewskość",
-        "królewszczyzna",
-        "króliczek",
-        "królik",
-        "królowa",
-        "królować",
-        "królowanie",
-        "Trzej Królowie"
-      ]
-    }
-  },
-  {
-    "lemma": "królowa",
-    "id": "pol-npe-0149-królowa",
-    "frequency": 3,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "synonyms": ["dama", "hetman", "królówka"]
     }
   },
   {

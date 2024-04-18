@@ -299,6 +299,16 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
   },
+  {
+    "key": "npe-0031-king/queen",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0031"],
+      "POL": ["pol-npe-0031"]
+    },
+    "papers": ["living", "profession", "concrete", "person", "title"],
+    "topics": ["work", "people", "history"]
+  },
 
   {
     "key": "npe-0015-actress",
@@ -319,26 +329,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
-  },
-  {
-    "key": "npe-0033-queen",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0031-queen"],
-      "POL": ["pol-npe-0149-królowa"]
-    },
-    "papers": ["living", "profession", "concrete", "person", "title"],
-    "topics": ["work", "people", "history"]
-  },
-  {
-    "key": "npe-0034-king",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0030-king"],
-      "POL": ["pol-npe-0148-król"]
-    },
-    "papers": ["concrete", "profession", "person", "living", "title"],
-    "topics": ["work", "people", "history"]
   },
   {
     "key": "npe-0035-leader",
