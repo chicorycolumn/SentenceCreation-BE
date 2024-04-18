@@ -1060,6 +1060,46 @@
       "derivedTerms": ["nauczycielski", "nauczycielstwo"]
     }
   },
+  {
+    "lemma": "student",
+    "id": "pol-npe-0029-student",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["studentka"]
+      },
+      "derivedTerms": ["studencki"],
+      "usage": ["Hypernyms: uczeń uczennica"]
+    }
+  },
+  {
+    "lemma": "studentka",
+    "id": "pol-npe-0029-studentka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": ["student"]
+      },
+      "usage": ["Hypernym: uczennica"]
+    }
+  },
+  {
+    "lemma": "uczeń",
+    "id": "pol-npe-0029-uczeń",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["uczennica"]
+      },
+      "usage": ["Hyponyms: student studentka"]
+    }
+  },
 
   {
     "lemma": "aktorka",
@@ -1623,33 +1663,6 @@
     }
   },
   {
-    "lemma": "student",
-    "id": "pol-npe-0076-student",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["studentka"]
-      },
-      "derivedTerms": ["studencki"],
-      "usage": ["Hypernyms: uczeń uczennica"]
-    }
-  },
-  {
-    "lemma": "studentka",
-    "id": "pol-npe-0077-studentka",
-    "frequency": 2,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "masculine": ["student"]
-      },
-      "usage": ["Hypernym: uczennica"]
-    }
-  },
-  {
     "lemma": "optyk",
     "id": "pol-npe-0078-optyk",
     "frequency": 3,
@@ -1816,19 +1829,6 @@
     "frequency": 3,
     "register": 7,
     "gender": "m1"
-  },
-  {
-    "lemma": "uczeń",
-    "id": "pol-npe-0096-uczeń",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["uczennica"]
-      },
-      "usage": ["Hyponyms: student studentka"]
-    }
   },
   {
     "lemma": "właściciel",

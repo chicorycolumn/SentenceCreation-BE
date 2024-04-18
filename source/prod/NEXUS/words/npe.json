@@ -279,21 +279,17 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["school", "work", "people"]
   },
-
   {
-    "key": "npe-0010-student",
+    "key": "npe-0029-student",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0024-student"],
-      "POL": [
-        "pol-npe-0076-student",
-        "pol-npe-0077-studentka",
-        "pol-npe-0096-uczeń"
-      ]
+      "ENG": ["eng-npe-0029"],
+      "POL": ["pol-npe-0029"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
   },
+
   {
     "key": "npe-0012-pilot",
     "traductions": {
