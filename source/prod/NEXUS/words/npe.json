@@ -1,361 +1,335 @@
 [
   {
-    "key": "npe-0001-brother",
+    "key": "npe-0001-mother/father/parent",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0003-brother"],
-      "POL": ["pol-npe-0003-brat"]
+      "ENG": ["eng-npe-0001"],
+      "POL": ["pol-npe-0001"]
     },
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
   },
   {
-    "key": "npe-0002-boy",
+    "key": "npe-0002-brother/sister/sibling",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0021-boy"],
-      "POL": ["pol-npe-0023-chłopak(boy)", "pol-npe-0025-chłopiec"]
+      "ENG": ["eng-npe-0002"],
+      "POL": ["pol-npe-0002"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
+  {
+    "key": "npe-0003-son/daughter/child",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0003"],
+      "POL": ["pol-npe-0003"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
+  {
+    "key": "npe-0004-boy/girl/child",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0004-boy/girl/child"],
+      "POL": ["pol-npe-0004-chłop/dziew", "^pol-npe-0003-dziecko-£"]
     },
     "papers": ["concrete", "person", "living"],
     "topics": ["people"]
   },
   {
-    "key": "npe-0003-boyfriend",
+    "key": "npe-0005-baby",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0022-boyfriend"],
-      "POL": ["pol-npe-0024-chłopak(boyfriend)"]
+      "ENG": ["eng-npe-0005-baby"],
+      "POL": ["pol-npe-0005-niemowlę", "^pol-npe-0003-dziecko-£"]
+    },
+    "papers": ["concrete", "person", "living"],
+    "topics": ["people"]
+  },
+  {
+    "key": "npe-0006-wife/husband",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0006"],
+      "POL": ["pol-npe-0006"]
     },
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["love", "people"]
   },
   {
-    "key": "npe-0004-teacher",
+    "key": "npe-0007-partner",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0023-teacher"],
-      "POL": ["pol-npe-0028-nauczycielka", "pol-npe-0029-nauczyciel"]
+      "ENG": ["eng-npe-0007"],
+      "POL": ["pol-npe-0007"]
     },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["school", "work", "people"]
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["love", "people"]
   },
   {
-    "key": "npe-0005-son",
+    "key": "npe-0008-aunt/uncle",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0007-son"],
-      "POL": ["pol-npe-0008-syn"]
+      "ENG": ["eng-npe-0008"],
+      "POL": ["pol-npe-0008"]
     },
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
   },
   {
-    "key": "npe-0006-guy",
+    "key": "npe-0009-niece/nephew",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0134-guy", "eng-npe-0136-fellow", "eng-npe-0137-chap"],
-      "POL": ["pol-npe-0031-facet", "pol-npe-0083-gość(guy)"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0007-chick(woman)",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0135-chick(woman)"],
-      "POL": ["pol-npe-0030-laska(woman)"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0008-Miss(title)",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0132-Miss(title)"],
-      "POL": ["pol-npe-0145-panna"]
-    },
-    "papers": ["concrete", "title", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0009-nephew",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0008-nephew"],
-      "POL": ["pol-npe-0019-siostrzeniec", "pol-npe-0020-bratanek"]
+      "ENG": ["eng-npe-0009"],
+      "POL": ["pol-npe-0009"]
     },
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
   },
   {
-    "key": "npe-0010-student",
+    "key": "npe-0010-grandmother/grandfather/grandparent",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0024-student"],
-      "POL": [
-        "pol-npe-0076-student",
-        "pol-npe-0077-studentka",
-        "pol-npe-0096-uczeń"
-      ]
+      "ENG": ["eng-npe-0010"],
+      "POL": ["pol-npe-0010"]
     },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["work", "people"]
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
   },
   {
-    "key": "npe-0011-homie",
+    "key": "npe-0011-grandson/granddaughter/grandchild",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0138-homie", "eng-npe-0139-bro", "eng-npe-0140-dude"],
-      "POL": ["pol-npe-0032-ziom"]
+      "ENG": ["eng-npe-0011"],
+      "POL": ["pol-npe-0011"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
+  {
+    "key": "npe-0012-cousin",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0012"],
+      "POL": ["pol-npe-0012"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
+  {
+    "key": "npe-0013-fatherinlaw/motherinlaw",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0013"],
+      "POL": ["pol-npe-0013"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
+  {
+    "key": "npe-0014-fiancé/fiancée",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0014"],
+      "POL": ["pol-npe-0014"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["love", "people"]
+  },
+  {
+    "key": "npe-0015-woman/man/person",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0015"],
+      "POL": ["pol-npe-0015"]
+    },
+    "papers": ["concrete", "person", "living"],
+    "topics": ["people"]
+  },
+  {
+    "key": "npe-0016-human",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0016"],
+      "POL": ["pol-npe-0016"]
+    },
+    "papers": ["concrete", "person", "living"],
+    "topics": ["people", "biology"]
+  },
+  {
+    "key": "npe-0017-boyfriend",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0017"],
+      "POL": ["pol-npe-0017"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["love", "people"]
+  },
+  {
+    "key": "npe-0018-friend/buddy",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0018"],
+      "POL": ["pol-npe-0018"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
+  {
+    "key": "npe-0019-acquaintance",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0019"],
+      "POL": ["pol-npe-0019"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
+  {
+    "key": "npe-0020-colleague/workmate",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0020"],
+      "POL": ["pol-npe-0020"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people", "work"]
+  },
+  {
+    "key": "npe-0021-neighbour",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0021"],
+      "POL": ["pol-npe-0021"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
+  {
+    "key": "npe-0022-relative",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0022"],
+      "POL": ["pol-npe-0022"]
+    },
+    "papers": ["relative", "relative hypernym", "concrete", "living", "person"],
+    "topics": ["people"]
+  },
+  {
+    "key": "npe-0023-guest",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0023"],
+      "POL": ["pol-npe-0023"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["holiday", "people"]
+  },
+  {
+    "key": "npe-0024-homie",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0024"],
+      "POL": ["pol-npe-0024"]
     },
     "papers": ["concrete", "person", "address"],
     "topics": ["people", "social life"]
   },
   {
-    "key": "npe-0012-pilot",
+    "key": "npe-0025-Mr/Mrs/Miss",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0133-pilot"],
-      "POL": ["pol-npe-0146-pilot(pilot)"]
+      "ENG": ["eng-npe-0025"],
+      "POL": ["pol-npe-0025"]
+    },
+    "papers": ["concrete", "title", "person", "living"],
+    "topics": ["people"]
+  },
+  {
+    "key": "npe-0026-Sir/Madam",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0026"],
+      "POL": ["pol-npe-0026"]
+    },
+    "papers": ["concrete", "address", "person", "living"],
+    "topics": ["people"]
+  },
+  {
+    "key": "npe-0027-love(darling)",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0027"],
+      "POL": ["pol-npe-0027"]
+    },
+    "papers": ["concrete", "person", "address"],
+    "topics": ["people", "social life", "love"]
+  },
+  {
+    "key": "npe-0028-teacher",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0028"],
+      "POL": ["pol-npe-0028"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["school", "work", "people"]
+  },
+  {
+    "key": "npe-0029-student",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0029"],
+      "POL": ["pol-npe-0029"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
   },
   {
-    "key": "npe-0013-woman",
+    "key": "npe-0030-pilot",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0017-woman", "eng-npe-0018-lady"],
-      "POL": ["pol-npe-0005-kobieta", "pol-npe-0144-pani(woman)"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0014-man",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0016-man"],
-      "POL": ["pol-npe-0006-mężczyzna", "pol-npe-0141-pan(man)"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0015-actress",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0028-actress"],
-      "POL": ["pol-npe-0033-aktorka"]
+      "ENG": ["eng-npe-0030-pilot"],
+      "POL": ["pol-npe-0030-pilot(pilot)"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
   },
   {
-    "key": "npe-0016-actor",
+    "key": "npe-0031-king/queen",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0029-actor"],
-      "POL": ["pol-npe-0034-aktor"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["work", "people"]
-  },
-  {
-    "key": "npe-0017-sister",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0019-sister"],
-      "POL": ["pol-npe-0004-siostra"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0018-partner",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0020-partner"],
-      "POL": ["pol-npe-0021-partner", "pol-npe-0022-partnerka"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["love", "people"]
-  },
-  {
-    "key": "npe-0019-mother",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0001-mother"],
-      "POL": ["pol-npe-0001-matka"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0020-girl",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0025-girl"],
-      "POL": ["pol-npe-0026-dziewczyna(girl)"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0021-girlfriend",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0026-girlfriend"],
-      "POL": ["pol-npe-0027-dziewczyna(girlfriend)"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["love", "people"]
-  },
-  {
-    "key": "npe-0022-niece",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0004-niece"],
-      "POL": ["pol-npe-0017-siostrzenica", "pol-npe-0018-bratanica"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0023-husband",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0005-husband"],
-      "POL": ["pol-npe-0011-mąż"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0024-daughter",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0006-daughter"],
-      "POL": ["pol-npe-0007-córka"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0025-friend",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0027-friend"],
-      "POL": [
-        "pol-npe-0036-przyjaciel",
-        "pol-npe-0037-kolega(friend)",
-        "pol-npe-0039-koleżanka(friend)",
-        "pol-npe-0035-przyjaciółka"
-      ]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0026-buddy",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0141-buddy", "eng-npe-0113-mate", "eng-npe-0114-pal"],
-      "POL": [
-        "pol-npe-0041-kumpel",
-        "pol-npe-0042-kumpela",
-        "pol-npe-0037-kolega(friend)",
-        "pol-npe-0039-koleżanka(friend)"
-      ]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0027-acquaintance",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0119-acquaintance"],
-      "POL": ["pol-npe-0128-znajoma", "pol-npe-0129-znajomy"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0028-colleague",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0142-colleague", "eng-npe-0143-workmate"],
-      "POL": [
-        "pol-npe-0038-kolega(colleague)",
-        "pol-npe-0040-koleżanka(colleague)"
-      ]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0029-wife",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0015-wife"],
-      "POL": ["pol-npe-0012-żona"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0030-grandmother",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0010-grandmother"],
-      "POL": ["pol-npe-0010-babcia"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0031-child",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0144-child"],
-      "POL": ["pol-npe-0150-dziecko"]
-    },
-    "papers": ["living", "concrete", "person"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0032-baby",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0145-baby"],
-      "POL": ["pol-npe-0151-niemowlę"]
-    },
-    "papers": ["living", "concrete", "person"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0033-queen",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0031-queen"],
-      "POL": ["pol-npe-0149-królowa"]
+      "ENG": ["eng-npe-0031"],
+      "POL": ["pol-npe-0031"]
     },
     "papers": ["living", "profession", "concrete", "person", "title"],
     "topics": ["work", "people", "history"]
   },
   {
-    "key": "npe-0034-king",
+    "key": "npe-0032-tourist",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0030-king"],
-      "POL": ["pol-npe-0148-król"]
+      "ENG": ["eng-npe-0032"],
+      "POL": ["pol-npe-0032"]
     },
-    "papers": ["concrete", "profession", "person", "living", "title"],
-    "topics": ["work", "people", "history"]
+    "papers": ["concrete", "person", "living"],
+    "topics": ["people"]
   },
+  {
+    "key": "npe-0033-actress",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0033-actress"],
+      "POL": ["pol-npe-0033-aktorka"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["work", "people"]
+  },
+
   {
     "key": "npe-0035-leader",
     "traductions": {
@@ -363,38 +337,8 @@
       "ENG": ["eng-npe-0032-leader"],
       "POL": ["pol-npe-0147-lider"]
     },
-    "papers": ["concrete", "relative", "person", "profession", "living"],
+    "papers": ["concrete", "person", "profession", "living"],
     "topics": ["work", "people"]
-  },
-  {
-    "key": "npe-0036-human",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0033-human", "eng-npe-0034-person"],
-      "POL": ["pol-npe-0043-człowiek", "pol-npe-0054-osoba"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0037-tourist",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0035-tourist"],
-      "POL": ["pol-npe-0044-turysta", "pol-npe-0105-turystka"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0038-father",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0002-father"],
-      "POL": ["pol-npe-0002-ojciec"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
   },
   {
     "key": "npe-0039-hero",
@@ -430,16 +374,6 @@
     "topics": ["work", "people"]
   },
   {
-    "key": "npe-0042-uncle",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0013-uncle"],
-      "POL": ["pol-npe-0013-wuj", "pol-npe-0014-wujek"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
     "key": "npe-0043-surgeon",
     "traductions": {
       "SPA": [],
@@ -448,16 +382,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]
-  },
-  {
-    "key": "npe-0044-neighbour",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0040-neighbour"],
-      "POL": ["pol-npe-0049-sąsiad", "pol-npe-0050-sąsiadka"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
   },
   {
     "key": "npe-0045-translator",
@@ -480,16 +404,6 @@
     "topics": ["work", "people"]
   },
   {
-    "key": "npe-0047-grandfather",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0009-grandfather"],
-      "POL": ["pol-npe-0009-dziadek"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
     "key": "npe-0048-knight",
     "traductions": {
       "SPA": [],
@@ -499,16 +413,7 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people", "history"]
   },
-  {
-    "key": "npe-0049-cousin",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0014-cousin"],
-      "POL": ["pol-npe-0016-kuzyn"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
+
   {
     "key": "npe-0050-thief",
     "traductions": {
@@ -610,26 +515,6 @@
     "topics": ["law", "crime", "people"]
   },
   {
-    "key": "npe-0060-fatherinlaw",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0056-fatherinlaw"],
-      "POL": ["pol-npe-0066-teść"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0061-aunt",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0011-aunt", "eng-npe-0012-auntie"],
-      "POL": ["pol-npe-0015-ciocia"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
     "key": "npe-0062-god",
     "traductions": {
       "SPA": [],
@@ -672,26 +557,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
-  },
-  {
-    "key": "npe-0066-fiancé",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0065-fiancé"],
-      "POL": ["pol-npe-0071-narzeczony"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["love", "people"]
-  },
-  {
-    "key": "npe-0067-fiancée",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0066-fiancée"],
-      "POL": ["pol-npe-0072-narzeczona"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["love", "people"]
   },
   {
     "key": "npe-0068-gardener",
@@ -754,26 +619,6 @@
     "topics": ["work", "people", "history"]
   },
   {
-    "key": "npe-0074-guest",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0073-guest"],
-      "POL": ["pol-npe-0082-gość(guest)"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["holiday", "people"]
-  },
-  {
-    "key": "npe-0075-grandson",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0074-grandson"],
-      "POL": ["pol-npe-0084-wnuk"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
     "key": "npe-0076-cook",
     "traductions": {
       "SPA": [],
@@ -814,16 +659,6 @@
     "topics": ["religion", "work", "people"]
   },
   {
-    "key": "npe-0080-granddaughter",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0080-granddaughter"],
-      "POL": ["pol-npe-0085-wnuczka"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
     "key": "npe-0081-enemy",
     "traductions": {
       "SPA": [],
@@ -862,16 +697,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]
-  },
-  {
-    "key": "npe-0085-parent",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0085-parent"],
-      "POL": ["pol-npe-0094-rodzic"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
   },
   {
     "key": "npe-0086-asshole",
@@ -1064,16 +889,6 @@
     "topics": ["medicine", "people"]
   },
   {
-    "key": "npe-0104-relative",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0109-relative"],
-      "POL": ["pol-npe-0120-krewna", "pol-npe-0121-krewny"]
-    },
-    "papers": ["relative", "relative hypernym", "concrete", "living", "person"],
-    "topics": ["people"]
-  },
-  {
     "key": "npe-0105-farmer",
     "traductions": {
       "SPA": [],
@@ -1204,46 +1019,6 @@
     "topics": ["people", "travel"]
   },
   {
-    "key": "npe-0118-Mr",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0127-Mr"],
-      "POL": ["pol-npe-0139-pan(title)"]
-    },
-    "papers": ["concrete", "title", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0119-Mrs",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0130-Mrs"],
-      "POL": ["pol-npe-0142-pani(title)"]
-    },
-    "papers": ["concrete", "title", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0120-Sir",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0128-Sir"],
-      "POL": ["pol-npe-0140-pan(address)"]
-    },
-    "papers": ["concrete", "address", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0121-Madam",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0129-Madam", "eng-npe-0131-Miss(address)"],
-      "POL": ["pol-npe-0143-pani(address)"]
-    },
-    "papers": ["concrete", "address", "person", "living"],
-    "topics": ["people"]
-  },
-  {
     "key": "npe-0122-angel",
     "traductions": {
       "SPA": [],
@@ -1288,20 +1063,5 @@
       "curseword"
     ],
     "topics": ["people"]
-  },
-  {
-    "key": "npe-0126-love(darling)",
-    "traductions": {
-      "SPA": [],
-      "ENG": [
-        "eng-npe-0150-love(darling)",
-        "eng-npe-0151-honey(darling)",
-        "eng-npe-0152-darling",
-        "eng-npe-0153-sweetheart"
-      ],
-      "POL": ["pol-npe-0104-kochanie"]
-    },
-    "papers": ["concrete", "person", "address"],
-    "topics": ["people", "social life", "love"]
   }
 ]

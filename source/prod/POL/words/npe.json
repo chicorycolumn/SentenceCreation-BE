@@ -19,7 +19,7 @@
   },
   {
     "lemma": "ojciec",
-    "id": "pol-npe-0002-ojciec",
+    "id": "pol-npe-0001-ojciec",
     "frequency": 1,
     "register": 1,
     "gender": "m1",
@@ -47,8 +47,16 @@
     }
   },
   {
+    "lemma": "rodzic",
+    "id": "pol-npe-0001-rodzic-£",
+    "frequency": 1,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_PersonalGenders"
+  },
+  {
     "lemma": "brat",
-    "id": "pol-npe-0003-brat",
+    "id": "pol-npe-0002-brat",
     "frequency": 1,
     "register": 1,
     "gender": "m1",
@@ -93,7 +101,7 @@
   },
   {
     "lemma": "siostra",
-    "id": "pol-npe-0004-siostra",
+    "id": "pol-npe-0002-siostra",
     "frequency": 1,
     "register": 1,
     "gender": "f",
@@ -105,32 +113,18 @@
     }
   },
   {
-    "lemma": "kobieta",
-    "id": "pol-npe-0005-kobieta",
+    "lemma": "rodzeństwo",
+    "id": "pol-npe-0002-rodzeństwo-£",
     "frequency": 1,
     "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["kobietka"]
-      },
-      "antonyms": ["mężczyzna"],
-      "derivedTerms": ["kobiecy", "(adjective)"]
-    }
-  },
-  {
-    "lemma": "mężczyzna",
-    "id": "pol-npe-0006-mężczyzna",
-    "frequency": 1,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "antonyms": ["kobieta"]
-    }
+    "gender": "n",
+    "semanticGender": "_PersonalGenders",
+    "_lacking": true,
+    "tantumSingulare": true
   },
   {
     "lemma": "córka",
-    "id": "pol-npe-0007-córka",
+    "id": "pol-npe-0003-córka",
     "frequency": 1,
     "register": 1,
     "gender": "f",
@@ -143,7 +137,7 @@
   },
   {
     "lemma": "syn",
-    "id": "pol-npe-0008-syn",
+    "id": "pol-npe-0003-syn",
     "frequency": 1,
     "register": 1,
     "gender": "m1",
@@ -163,11 +157,247 @@
     }
   },
   {
-    "lemma": "dziadek",
-    "id": "pol-npe-0009-dziadek",
+    "lemma": "dziecko",
+    "id": "pol-npe-0003-dziecko-£",
+    "frequency": 1,
+    "register": 1,
+    "gender": "n",
+    "semanticGender": "_PersonalGenders",
+    "extra": {
+      "synonyms": ["dziecko"],
+      "derivedTerms": [
+        "bezdzietny",
+        "bezdzietnie",
+        "bezdzietność",
+        "wylać dziecko z kąpielą",
+        "wylewać dziecko z kąpielą"
+      ]
+    }
+  },
+  {
+    "lemma": "chłopak",
+    "id": "pol-npe-0004-chłopak(boy)",
     "frequency": 1,
     "register": 1,
     "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "general",
+      "emoji": "🔲"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["chłopiec"]
+      }
+    }
+  },
+  {
+    "lemma": "chłopiec",
+    "id": "pol-npe-0004-chłopiec",
+    "frequency": 1,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["chłopczyk"]
+      },
+      "synonyms": [
+        "chłopak",
+        "małolat",
+        "młodzieniec",
+        "młodzik",
+        "podrostek",
+        "chłopak",
+        "partner",
+        "dziewczyna",
+        "partnerka"
+      ],
+      "usage": [
+        "Usage notes [ edit ] The word chłopiec is usually used for people younger than chłopak ."
+      ]
+    }
+  },
+  {
+    "lemma": "dziewczyna",
+    "id": "pol-npe-0004-dziewczyna(girl)",
+    "frequency": 1,
+    "register": 1,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "general",
+      "emoji": "🔲"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["dziewczynka"]
+      },
+      "synonyms": ["dziewczę", "dziewka"],
+      "antonyms": ["chłopak"]
+    }
+  },
+  {
+    "lemma": "niemowlę",
+    "id": "pol-npe-0005-niemowlę",
+    "frequency": 1,
+    "register": 1,
+    "gender": "n",
+    "semanticGender": "_Genders"
+  },
+  {
+    "lemma": "mąż",
+    "id": "pol-npe-0006-mąż",
+    "frequency": 1,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "derivedTerms": [
+        "mężowski",
+        "mężowy",
+        "mąż stanu",
+        "mężulek",
+        "mężuś",
+        "mężysko"
+      ],
+      "usage": [
+        "Usage notes [ edit ] The sense of \"male human being\" carries connotations of bravery honour or responsibility ; in other words, the stereotypical quality of \" manliness \"."
+      ]
+    }
+  },
+  {
+    "lemma": "żona",
+    "id": "pol-npe-0006-żona",
+    "frequency": 1,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "derivedTerms": [
+        "bezżenny",
+        "nieżonaty",
+        "żonaty",
+        "żonin",
+        "żoniny",
+        "bezżennie",
+        "bezżeństwo",
+        "bezżenność",
+        "żoncia",
+        "żoneczka",
+        "żonisko",
+        "żonka",
+        "żonkoś",
+        "żonusia"
+      ]
+    }
+  },
+  {
+    "lemma": "partner",
+    "id": "pol-npe-0007-partner",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["partnerka"]
+      },
+      "derivedTerms": ["partnerski", "partnerstwo", "partnerować"]
+    }
+  },
+  {
+    "lemma": "partnerka",
+    "id": "pol-npe-0007-partnerka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": ["partner"]
+      }
+    }
+  },
+  {
+    "lemma": "wuj",
+    "id": "pol-npe-0008-wuj",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "synonyms": ["wujek"],
+      "derivedTerms": [
+        "wujaszkowy",
+        "wujeczny",
+        "wujowski",
+        "wujowy",
+        "wujanka",
+        "wujaszek",
+        "wujek",
+        "wujenka",
+        "wujostwo",
+        "wujaszkować"
+      ],
+      "usage": ["Coordinate term: stryj"]
+    }
+  },
+  {
+    "lemma": "wujek",
+    "id": "pol-npe-0008-wujek",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["wujcio", "wujaszek"]
+      },
+      "synonyms": ["wuj"]
+    }
+  },
+  {
+    "lemma": "ciocia",
+    "id": "pol-npe-0008-ciocia",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "synonyms": ["ciotka"]
+    }
+  },
+  {
+    "lemma": "siostrzenica",
+    "id": "pol-npe-0009-siostrzenica",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "bratanica",
+    "id": "pol-npe-0009-bratanica",
+    "frequency": 1,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "siostrzeniec",
+    "id": "pol-npe-0009-siostrzeniec",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1"
+  },
+  {
+    "lemma": "bratanek",
+    "id": "pol-npe-0009-bratanek",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "synonyms": ["brataniec", "synowiec"]
+    }
+  },
+  {
+    "lemma": "dziadek",
+    "id": "pol-npe-0010-dziadek-€",
+    "frequency": 1,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "diminutive": ["dziadziuś"],
@@ -207,102 +437,38 @@
     }
   },
   {
-    "lemma": "mąż",
-    "id": "pol-npe-0011-mąż",
+    "lemma": "wnuk",
+    "id": "pol-npe-0011-wnuk-€",
     "frequency": 1,
     "register": 1,
     "gender": "m1",
-    "extra": {
-      "derivedTerms": [
-        "mężowski",
-        "mężowy",
-        "mąż stanu",
-        "mężulek",
-        "mężuś",
-        "mężysko"
-      ],
-      "usage": [
-        "Usage notes [ edit ] The sense of \"male human being\" carries connotations of bravery honour or responsibility ; in other words, the stereotypical quality of \" manliness \"."
-      ]
-    }
-  },
-  {
-    "lemma": "żona",
-    "id": "pol-npe-0012-żona",
-    "frequency": 1,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "derivedTerms": [
-        "bezżenny",
-        "nieżonaty",
-        "żonaty",
-        "żonin",
-        "żoniny",
-        "bezżennie",
-        "bezżeństwo",
-        "bezżenność",
-        "żoncia",
-        "żoneczka",
-        "żonisko",
-        "żonka",
-        "żonkoś",
-        "żonusia"
-      ]
-    }
-  },
-  {
-    "lemma": "wuj",
-    "id": "pol-npe-0013-wuj",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "synonyms": ["wujek"],
-      "derivedTerms": [
-        "wujaszkowy",
-        "wujeczny",
-        "wujowski",
-        "wujowy",
-        "wujanka",
-        "wujaszek",
-        "wujek",
-        "wujenka",
-        "wujostwo",
-        "wujaszkować"
-      ],
-      "usage": ["Coordinate term: stryj"]
-    }
-  },
-  {
-    "lemma": "wujek",
-    "id": "pol-npe-0014-wujek",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
-        "diminutive": ["wujcio", "wujaszek"]
-      },
-      "synonyms": ["wuj"]
+        "diminutive": ["wnuczek", "wnuś"]
+      }
     }
   },
   {
-    "lemma": "ciocia",
-    "id": "pol-npe-0015-ciocia",
+    "lemma": "wnuczka",
+    "id": "pol-npe-0011-wnuczka",
     "frequency": 2,
     "register": 1,
     "gender": "f",
     "extra": {
-      "synonyms": ["ciotka"]
+      "otherShapes": {
+        "diminutive": ["wnusia"],
+        "masculine": ["wnuk"]
+      }
     }
   },
   {
     "lemma": "kuzyn",
-    "id": "pol-npe-0016-kuzyn",
+    "id": "pol-npe-0012-kuzyn-€",
     "frequency": 2,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "feminine": ["kuzynka"]
@@ -310,400 +476,124 @@
     }
   },
   {
-    "lemma": "siostrzenica",
-    "id": "pol-npe-0017-siostrzenica",
+    "lemma": "kuzynka",
+    "id": "pol-npe-0012-kuzyn",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": ["kuzyn"]
+      }
+    }
+  },
+  {
+    "lemma": "teść",
+    "id": "pol-npe-0013-teść",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["teściowa"]
+      },
+      "derivedTerms": ["teściowy", "teściostwo"]
+    }
+  },
+  {
+    "lemma": "teściowa",
+    "id": "pol-npe-0013-teściowa",
     "frequency": 3,
     "register": 1,
     "gender": "f"
   },
   {
-    "lemma": "bratanica",
-    "id": "pol-npe-0018-bratanica",
-    "frequency": 1,
-    "register": 1,
-    "gender": "f"
-  },
-  {
-    "lemma": "siostrzeniec",
-    "id": "pol-npe-0019-siostrzeniec",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1"
-  },
-  {
-    "lemma": "bratanek",
-    "id": "pol-npe-0020-bratanek",
+    "lemma": "narzeczony",
+    "id": "pol-npe-0014-narzeczony",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
     "extra": {
-      "synonyms": ["brataniec", "synowiec"]
-    }
-  },
-  {
-    "lemma": "partner",
-    "id": "pol-npe-0021-partner",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
       "otherShapes": {
-        "feminine": ["partnerka"]
+        "feminine": ["narzeczona"]
       },
-      "derivedTerms": ["partnerski", "partnerstwo", "partnerować"]
-    }
-  },
-  {
-    "lemma": "partnerka",
-    "id": "pol-npe-0022-partnerka",
-    "frequency": 2,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "masculine": ["partner"]
-      }
-    }
-  },
-  {
-    "lemma": "chłopak",
-    "id": "pol-npe-0023-chłopak(boy)",
-    "frequency": 1,
-    "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "general",
-      "emoji": "🔲"
-    },
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["chłopiec"]
-      }
-    }
-  },
-  {
-    "lemma": "chłopak",
-    "id": "pol-npe-0024-chłopak(boyfriend)",
-    "_inflectionsRoot": "pol-npe-0023-chłopak(boy)",
-    "frequency": 1,
-    "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "romantic",
-      "emoji": "💕"
-    },
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["chłopiec"]
-      }
-    }
-  },
-  {
-    "lemma": "chłopiec",
-    "id": "pol-npe-0025-chłopiec",
-    "frequency": 1,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["chłopczyk"]
-      },
-      "synonyms": [
-        "chłopak",
-        "małolat",
-        "młodzieniec",
-        "młodzik",
-        "podrostek",
-        "chłopak",
-        "partner",
-        "dziewczyna",
-        "partnerka"
-      ],
-      "antonyms": [
-        "(",
-        "by",
-        "age",
-        ")",
-        "mężczyzna",
-        "(",
-        "by",
-        "gender",
-        ")",
-        "dziewczyna"
-      ],
       "usage": [
-        "Usage notes [ edit ] The word chłopiec is usually used for people younger than chłopak ."
+        "Usage notes [ edit ] The plural of this masculine form is also used to refer to couples."
       ]
     }
   },
   {
-    "lemma": "dziewczyna",
-    "id": "pol-npe-0026-dziewczyna(girl)",
-    "frequency": 1,
+    "lemma": "narzeczona",
+    "id": "pol-npe-0014-narzeczona",
+    "frequency": 3,
     "register": 1,
     "gender": "f",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "general",
-      "emoji": "🔲"
-    },
     "extra": {
       "otherShapes": {
-        "diminutive": ["dziewczynka"]
+        "masculine": ["narzeczony"]
       },
-      "synonyms": ["dziewczę", "dziewka"],
-      "antonyms": ["chłopak"]
-    }
-  },
-  {
-    "lemma": "dziewczyna",
-    "id": "pol-npe-0027-dziewczyna(girlfriend)",
-    "_inflectionsRoot": "pol-npe-0026-dziewczyna(girl)",
-    "frequency": 1,
-    "register": 1,
-    "gender": "f",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "romantic",
-      "emoji": "💕"
-    },
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["dziewczynka"]
-      },
-      "synonyms": ["dziewczę", "dziewka"],
-      "antonyms": ["chłopak"]
-    }
-  },
-  {
-    "lemma": "nauczycielka",
-    "id": "pol-npe-0028-nauczycielka",
-    "frequency": 2,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "masculine": ["nauczyciel"]
-      }
-    }
-  },
-  {
-    "lemma": "nauczyciel",
-    "id": "pol-npe-0029-nauczyciel",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["nauczycielka"]
-      },
-      "derivedTerms": ["nauczycielski", "nauczycielstwo"]
-    }
-  },
-  {
-    "lemma": "laska",
-    "id": "pol-npe-0030-laska(woman)",
-    "frequency": 4,
-    "register": 6,
-    "gender": "f",
-    "allohomInfo": {
-      "singleWordtype": false,
-      "text": "person",
-      "emoji": "🏃"
-    }
-  },
-  {
-    "lemma": "facet",
-    "id": "pol-npe-0031-facet",
-    "frequency": 1,
-    "register": 6,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["facecik"],
-        "feminine": ["facetka"]
-      }
-    }
-  },
-  {
-    "lemma": "ziom",
-    "id": "pol-npe-0032-ziom",
-    "frequency": 4,
-    "register": 6,
-    "gender": "m1",
-    "extra": {
-      "synonyms": ["facet", "kolo", "typ", "hiter"]
-    }
-  },
-  {
-    "lemma": "aktorka",
-    "id": "pol-npe-0033-aktorka",
-    "frequency": 2,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["aktoreczka"],
-        "augmentative": ["aktorzyca"],
-        "masculine": ["aktor"]
-      }
-    }
-  },
-  {
-    "lemma": "aktor",
-    "id": "pol-npe-0034-aktor",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["aktorzyk"],
-        "augmentative": ["aktorzyna", "aktorzysko"],
-        "feminine": ["aktorka"]
-      },
-      "derivedTerms": [
-        "aktor charakterystyczny",
-        "aktoreczka",
-        "aktorstwo",
-        "aktorszczyzna",
-        "aktorzysko",
-        "teatr jednego aktora",
-        "aktorski",
-        "aktorsko",
-        "aktorować"
-      ]
-    }
-  },
-  {
-    "lemma": "przyjaciółka",
-    "id": "pol-npe-0035-przyjaciółka",
-    "frequency": 1,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "masculine": ["przyjaciel"]
-      }
-    }
-  },
-  {
-    "lemma": "przyjaciel",
-    "id": "pol-npe-0036-przyjaciel",
-    "frequency": 1,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["przyjaciółka"]
-      },
-      "derivedTerms": ["prawdziwych przyjaciół poznaje się w biedzie"],
       "usage": [
-        "Usage notes [ edit ] Not used for casual relationships; znajomy or kolega is preferable for that."
+        "Usage notes [ edit ] The plural of this word refers to multiple female fiancées. The plural of the masculine form is used to refer to couples."
       ]
     }
   },
   {
-    "lemma": "kolega",
-    "id": "pol-npe-0037-kolega(friend)",
-    "frequency": 3,
+    "lemma": "kobieta",
+    "id": "pol-npe-0015-kobieta",
+    "frequency": 1,
     "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "more close",
-      "emoji": "🫂"
-    },
+    "gender": "f",
     "extra": {
       "otherShapes": {
-        "diminutive": ["koleżka"],
-        "feminine": ["koleżanka"]
-      }
+        "diminutive": ["kobietka"]
+      },
+      "antonyms": ["mężczyzna"],
+      "derivedTerms": ["kobiecy", "(adjective)"]
     }
   },
   {
-    "lemma": "kolega",
-    "id": "pol-npe-0038-kolega(colleague)",
-    "_inflectionsRoot": "pol-npe-0037-kolega(friend)",
-    "frequency": 3,
+    "lemma": "mężczyzna",
+    "id": "pol-npe-0015-mężczyzna",
+    "frequency": 1,
     "register": 1,
     "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "more distant",
-      "emoji": "👋"
-    },
     "extra": {
-      "otherShapes": {
-        "diminutive": ["koleżka"],
-        "feminine": ["koleżanka"]
-      }
+      "antonyms": ["kobieta"]
     }
   },
   {
-    "lemma": "koleżanka",
-    "id": "pol-npe-0039-koleżanka(friend)",
-    "frequency": 3,
+    "lemma": "pani",
+    "id": "pol-npe-0015-pani(woman)",
+    "_inflectionsRoot": "pol-npe-0025-pani(title)",
+    "frequency": 2,
     "register": 1,
     "gender": "f",
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "more close",
-      "emoji": "🫂"
-    },
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["koleżaneczka"],
-        "masculine": ["kolega"]
-      }
+      "text": "a gender",
+      "emoji": "👫"
     }
   },
   {
-    "lemma": "koleżanka",
-    "id": "pol-npe-0040-koleżanka(colleague)",
-    "_inflectionsRoot": "pol-npe-0039-koleżanka(friend)",
-    "frequency": 3,
+    "lemma": "pan",
+    "id": "pol-npe-0015-pan(man)",
+    "_inflectionsRoot": "pol-npe-0025-pan(title)",
+    "frequency": 2,
     "register": 1,
-    "gender": "f",
+    "gender": "m1",
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "more distant",
-      "emoji": "👋"
-    },
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["koleżaneczka"],
-        "masculine": ["kolega"]
-      }
-    }
-  },
-  {
-    "lemma": "kumpel",
-    "id": "pol-npe-0041-kumpel",
-    "frequency": 3,
-    "register": 6,
-    "gender": "m1",
-    "extra": {
-      "synonyms": ["znajomy"]
-    }
-  },
-  {
-    "lemma": "kumpela",
-    "id": "pol-npe-0042-kumpela",
-    "frequency": 3,
-    "register": 6,
-    "gender": "f",
-    "extra": {
-      "synonyms": ["znajoma"]
+      "text": "a gender",
+      "emoji": "👫"
     }
   },
   {
     "lemma": "człowiek",
-    "id": "pol-npe-0043-człowiek",
+    "id": "pol-npe-0015-człowiek(person)-€",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "diminutive": ["człowieczek"],
@@ -735,11 +625,545 @@
         "uczłowieczać",
         "uczłowieczyć"
       ]
+    },
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "general",
+      "emoji": "🔲"
+    }
+  },
+  {
+    "lemma": "osoba",
+    "id": "pol-npe-0015-osoba",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "gość",
+    "id": "pol-npe-0015-gość(guy)",
+    "_inflectionsRoot": "pol-npe-0023-gość(guest)",
+    "frequency": 2,
+    "register": 6,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    },
+    "extra": {
+      "derivedTerms": [
+        "gościnny",
+        "w gości",
+        "gościna",
+        "gościniec",
+        "gość w dom, Bóg w dom",
+        "gościć"
+      ]
+    }
+  },
+  {
+    "lemma": "facet",
+    "id": "pol-npe-0015-facet",
+    "frequency": 1,
+    "register": 6,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["facecik"],
+        "feminine": ["facetka"]
+      }
+    }
+  },
+  {
+    "lemma": "laska",
+    "id": "pol-npe-0015-laska(woman)",
+    "frequency": 4,
+    "register": 6,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": false,
+      "text": "person",
+      "emoji": "🏃"
+    }
+  },
+  {
+    "lemma": "człowiek",
+    "id": "pol-npe-0016-człowiek(human)-€",
+    "_inflectionsRoot": "pol-npe-0015-człowiek(person)-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "biology",
+      "emoji": "🧬"
+    }
+  },
+  {
+    "lemma": "chłopak",
+    "id": "pol-npe-0017-chłopak(boyfriend)",
+    "_inflectionsRoot": "pol-npe-0004-chłopak(boy)",
+    "frequency": 1,
+    "register": 1,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "romantic",
+      "emoji": "💕"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["chłopiec"]
+      }
+    }
+  },
+  {
+    "lemma": "dziewczyna",
+    "id": "pol-npe-0017-dziewczyna(girlfriend)",
+    "_inflectionsRoot": "pol-npe-0004-dziewczyna(girl)",
+    "frequency": 1,
+    "register": 1,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "romantic",
+      "emoji": "💕"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["dziewczynka"]
+      },
+      "synonyms": ["dziewczę", "dziewka"],
+      "antonyms": ["chłopak"]
+    }
+  },
+  {
+    "lemma": "przyjaciółka",
+    "id": "pol-npe-0018-przyjaciółka",
+    "frequency": 1,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": ["przyjaciel"]
+      }
+    }
+  },
+  {
+    "lemma": "przyjaciel",
+    "id": "pol-npe-0018-przyjaciel",
+    "frequency": 1,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["przyjaciółka"]
+      },
+      "derivedTerms": ["prawdziwych przyjaciół poznaje się w biedzie"],
+      "usage": [
+        "Usage notes [ edit ] Not used for casual relationships; znajomy or kolega is preferable for that."
+      ]
+    }
+  },
+  {
+    "lemma": "kolega",
+    "id": "pol-npe-0018-kolega(friend)",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "more close",
+      "emoji": "🫂"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["koleżka"],
+        "feminine": ["koleżanka"]
+      }
+    }
+  },
+  {
+    "lemma": "koleżanka",
+    "id": "pol-npe-0018-koleżanka(friend)",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "more close",
+      "emoji": "🫂"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["koleżaneczka"],
+        "masculine": ["kolega"]
+      }
+    }
+  },
+  {
+    "lemma": "kumpel",
+    "id": "pol-npe-0018-kumpel",
+    "frequency": 3,
+    "register": 6,
+    "gender": "m1",
+    "extra": {
+      "synonyms": ["znajomy"]
+    }
+  },
+  {
+    "lemma": "kumpela",
+    "id": "pol-npe-0018-kumpela",
+    "frequency": 3,
+    "register": 6,
+    "gender": "f",
+    "extra": {
+      "synonyms": ["znajoma"]
+    }
+  },
+  {
+    "lemma": "znajoma",
+    "id": "pol-npe-0019-znajoma",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": ["znajomy"]
+      }
+    }
+  },
+  {
+    "lemma": "znajomy",
+    "id": "pol-npe-0019-znajomy",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["znajoma"]
+      }
+    }
+  },
+  {
+    "lemma": "kolega",
+    "id": "pol-npe-0020-kolega(colleague)",
+    "_inflectionsRoot": "pol-npe-0018-kolega(friend)",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "more distant",
+      "emoji": "👋"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["koleżka"],
+        "feminine": ["koleżanka"]
+      }
+    }
+  },
+  {
+    "lemma": "koleżanka",
+    "id": "pol-npe-0020-koleżanka(colleague)",
+    "_inflectionsRoot": "pol-npe-0018-koleżanka(friend)",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "more distant",
+      "emoji": "👋"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["koleżaneczka"],
+        "masculine": ["kolega"]
+      }
+    }
+  },
+  {
+    "lemma": "sąsiad",
+    "id": "pol-npe-0021-sąsiad",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "derivedTerms": ["sąsiadka", "sąsiedni", "sąsiedztwo"]
+    }
+  },
+  {
+    "lemma": "sąsiadka",
+    "id": "pol-npe-0021-sąsiadka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "krewna",
+    "id": "pol-npe-0022-krewna",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": ["krewny"]
+      }
+    }
+  },
+  {
+    "lemma": "krewny",
+    "id": "pol-npe-0022-krewny",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["krewna"]
+      }
+    }
+  },
+  {
+    "lemma": "gość",
+    "id": "pol-npe-0023-gość(guest)",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "hospitality",
+      "emoji": "🏨"
+    },
+    "extra": {
+      "derivedTerms": [
+        "gościnny",
+        "w gości",
+        "gościna",
+        "gościniec",
+        "gość w dom, Bóg w dom",
+        "gościć"
+      ]
+    }
+  },
+  {
+    "lemma": "ziom",
+    "id": "pol-npe-0024-ziom",
+    "frequency": 4,
+    "register": 6,
+    "gender": "m1",
+    "extra": {
+      "synonyms": ["facet", "kolo", "typ", "hiter"]
+    }
+  },
+  {
+    "lemma": "pan",
+    "id": "pol-npe-0025-pan(title)",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "title",
+      "emoji": "🙇"
+    }
+  },
+  {
+    "lemma": "pani",
+    "id": "pol-npe-0025-pani(title)",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "title",
+      "emoji": "🙇"
+    }
+  },
+  {
+    "lemma": "panna",
+    "id": "pol-npe-0025-panna",
+    "frequency": 1,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["panienka"],
+        "augmentative": ["pannica", "pannisko"]
+      },
+      "derivedTerms": ["panieński", "panieństwo", "Panna"]
+    }
+  },
+  {
+    "lemma": "pan",
+    "id": "pol-npe-0026-pan(address)",
+    "_inflectionsRoot": "pol-npe-0025-pan(title)",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "form of address",
+      "emoji": "👋"
+    }
+  },
+  {
+    "lemma": "pani",
+    "id": "pol-npe-0026-pani(address)",
+    "_inflectionsRoot": "pol-npe-0025-pani(title)",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "form of address",
+      "emoji": "👋"
+    }
+  },
+  {
+    "lemma": "kochanie",
+    "id": "pol-npe-0027-kochanie",
+    "frequency": 4,
+    "register": 6,
+    "gender": "n",
+    "extra": {
+      "usage": [
+        "Moim dwóm największym kochaniom , temu dużemu i temu małemu. To my two most darling dear s, the big one and the little one.",
+        "Od tego kochania całkiem już straciła głowę. ― She almost went crazy from all this loving ."
+      ]
+    }
+  },
+  {
+    "lemma": "nauczycielka",
+    "id": "pol-npe-0028-nauczycielka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": ["nauczyciel"]
+      }
+    }
+  },
+  {
+    "lemma": "nauczyciel",
+    "id": "pol-npe-0028-nauczyciel",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["nauczycielka"]
+      },
+      "derivedTerms": ["nauczycielski", "nauczycielstwo"]
+    }
+  },
+  {
+    "lemma": "student",
+    "id": "pol-npe-0029-student",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["studentka"]
+      },
+      "derivedTerms": ["studencki"],
+      "usage": ["Hypernyms: uczeń uczennica"]
+    }
+  },
+  {
+    "lemma": "studentka",
+    "id": "pol-npe-0029-studentka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": ["student"]
+      },
+      "usage": ["Hypernym: uczennica"]
+    }
+  },
+  {
+    "lemma": "uczeń",
+    "id": "pol-npe-0029-uczeń",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["uczennica"]
+      },
+      "usage": ["Hyponyms: student studentka"]
+    }
+  },
+  {
+    "lemma": "pilot",
+    "id": "pol-npe-0030-pilot(pilot)",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": false,
+      "text": "a job",
+      "emoji": "✈️"
+    }
+  },
+  {
+    "lemma": "pilotka",
+    "id": "pol-npe-0030-pilotka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "król",
+    "id": "pol-npe-0031-król",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["królewiątko"],
+        "feminine": ["królowa"]
+      },
+      "derivedTerms": [
+        "bezkrólewie",
+        "Król",
+        "królestwo",
+        "królewiątko",
+        "królewiacki",
+        "królewiak",
+        "królewicz",
+        "królewna",
+        "królewski",
+        "królewskość",
+        "królewszczyzna",
+        "króliczek",
+        "królik",
+        "królowa",
+        "królować",
+        "królowanie",
+        "Trzej Królowie"
+      ]
+    }
+  },
+  {
+    "lemma": "królowa",
+    "id": "pol-npe-0031-królowa",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "synonyms": ["dama", "hetman", "królówka"]
     }
   },
   {
     "lemma": "turysta",
-    "id": "pol-npe-0044-turysta",
+    "id": "pol-npe-0032-turysta",
     "frequency": 4,
     "register": 1,
     "gender": "m1",
@@ -750,6 +1174,58 @@
       "derivedTerms": ["agroturysta", "agroturystka"]
     }
   },
+  {
+    "lemma": "turystka",
+    "id": "pol-npe-0032-turystka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": ["turysta"]
+      }
+    }
+  },
+  {
+    "lemma": "aktorka",
+    "id": "pol-npe-0033-aktorka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["aktoreczka"],
+        "augmentative": ["aktorzyca"],
+        "masculine": ["aktor"]
+      }
+    }
+  },
+  {
+    "lemma": "aktor",
+    "id": "pol-npe-0033-aktor",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["aktorzyk"],
+        "augmentative": ["aktorzyna", "aktorzysko"],
+        "feminine": ["aktorka"]
+      },
+      "derivedTerms": [
+        "aktor charakterystyczny",
+        "aktoreczka",
+        "aktorstwo",
+        "aktorszczyzna",
+        "aktorzysko",
+        "teatr jednego aktora",
+        "aktorski",
+        "aktorsko",
+        "aktorować"
+      ]
+    }
+  },
+
   {
     "lemma": "bohater",
     "id": "pol-npe-0045-bohater(hero)",
@@ -863,23 +1339,6 @@
     }
   },
   {
-    "lemma": "sąsiad",
-    "id": "pol-npe-0049-sąsiad",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "derivedTerms": ["sąsiadka", "sąsiedni", "sąsiedztwo"]
-    }
-  },
-  {
-    "lemma": "sąsiadka",
-    "id": "pol-npe-0050-sąsiadka",
-    "frequency": 3,
-    "register": 1,
-    "gender": "f"
-  },
-  {
     "lemma": "tłumacz",
     "id": "pol-npe-0051-tłumacz",
     "frequency": 4,
@@ -923,13 +1382,6 @@
         "rycerstwo"
       ]
     }
-  },
-  {
-    "lemma": "osoba",
-    "id": "pol-npe-0054-osoba",
-    "frequency": 2,
-    "register": 1,
-    "gender": "f"
   },
   {
     "lemma": "złodziej",
@@ -1076,19 +1528,6 @@
       "otherShapes": {
         "feminine": ["przestępczyni"]
       }
-    }
-  },
-  {
-    "lemma": "teść",
-    "id": "pol-npe-0066-teść",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["teściowa"]
-      },
-      "derivedTerms": ["teściowy", "teściostwo"]
     }
   },
   {
@@ -1259,36 +1698,6 @@
     }
   },
   {
-    "lemma": "narzeczony",
-    "id": "pol-npe-0071-narzeczony",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["narzeczona"]
-      },
-      "usage": [
-        "Usage notes [ edit ] The plural of this masculine form is also used to refer to couples."
-      ]
-    }
-  },
-  {
-    "lemma": "narzeczona",
-    "id": "pol-npe-0072-narzeczona",
-    "frequency": 3,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "masculine": ["narzeczony"]
-      },
-      "usage": [
-        "Usage notes [ edit ] The plural of this word refers to multiple female fiancées. The plural of the masculine form is used to refer to couples."
-      ]
-    }
-  },
-  {
     "lemma": "ogrodnik",
     "id": "pol-npe-0073-ogrodnik",
     "frequency": 3,
@@ -1324,33 +1733,6 @@
       "otherShapes": {
         "masculine": ["nastolatek"]
       }
-    }
-  },
-  {
-    "lemma": "student",
-    "id": "pol-npe-0076-student",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["studentka"]
-      },
-      "derivedTerms": ["studencki"],
-      "usage": ["Hypernyms: uczeń uczennica"]
-    }
-  },
-  {
-    "lemma": "studentka",
-    "id": "pol-npe-0077-studentka",
-    "frequency": 2,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "masculine": ["student"]
-      },
-      "usage": ["Hypernym: uczennica"]
     }
   },
   {
@@ -1393,76 +1775,6 @@
     "frequency": 4,
     "register": 1,
     "gender": "f"
-  },
-  {
-    "lemma": "gość",
-    "id": "pol-npe-0082-gość(guest)",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "hospitality",
-      "emoji": "🏨"
-    },
-    "extra": {
-      "derivedTerms": [
-        "gościnny",
-        "w gości",
-        "gościna",
-        "gościniec",
-        "gość w dom, Bóg w dom",
-        "gościć"
-      ]
-    }
-  },
-  {
-    "lemma": "gość",
-    "id": "pol-npe-0083-gość(guy)",
-    "_inflectionsRoot": "pol-npe-0082-gość(guest)",
-    "frequency": 2,
-    "register": 6,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "person",
-      "emoji": "🏃"
-    },
-    "extra": {
-      "derivedTerms": [
-        "gościnny",
-        "w gości",
-        "gościna",
-        "gościniec",
-        "gość w dom, Bóg w dom",
-        "gościć"
-      ]
-    }
-  },
-  {
-    "lemma": "wnuk",
-    "id": "pol-npe-0084-wnuk",
-    "frequency": 1,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["wnuczek", "wnuś"]
-      }
-    }
-  },
-  {
-    "lemma": "wnuczka",
-    "id": "pol-npe-0085-wnuczka",
-    "frequency": 2,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["wnusia"],
-        "masculine": ["wnuk"]
-      }
-    }
   },
   {
     "lemma": "kucharz",
@@ -1585,31 +1897,11 @@
     }
   },
   {
-    "lemma": "rodzic",
-    "id": "pol-npe-0094-rodzic",
-    "frequency": 1,
-    "register": 1,
-    "gender": "m1"
-  },
-  {
     "lemma": "dupek",
     "id": "pol-npe-0095-dupek",
     "frequency": 3,
     "register": 7,
     "gender": "m1"
-  },
-  {
-    "lemma": "uczeń",
-    "id": "pol-npe-0096-uczeń",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["uczennica"]
-      },
-      "usage": ["Hyponyms: student studentka"]
-    }
   },
   {
     "lemma": "właściciel",
@@ -1719,31 +2011,6 @@
     "extra": {
       "otherShapes": {
         "masculine": ["sędzia"]
-      }
-    }
-  },
-  {
-    "lemma": "kochanie",
-    "id": "pol-npe-0104-kochanie",
-    "frequency": 4,
-    "register": 6,
-    "gender": "n",
-    "extra": {
-      "usage": [
-        "Moim dwóm największym kochaniom , temu dużemu i temu małemu. To my two most darling dear s, the big one and the little one.",
-        "Od tego kochania całkiem już straciła głowę. ― She almost went crazy from all this loving ."
-      ]
-    }
-  },
-  {
-    "lemma": "turystka",
-    "id": "pol-npe-0105-turystka",
-    "frequency": 3,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "masculine": ["turysta"]
       }
     }
   },
@@ -1909,30 +2176,6 @@
     "gender": "m1"
   },
   {
-    "lemma": "krewna",
-    "id": "pol-npe-0120-krewna",
-    "frequency": 3,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "masculine": ["krewny"]
-      }
-    }
-  },
-  {
-    "lemma": "krewny",
-    "id": "pol-npe-0121-krewny",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["krewna"]
-      }
-    }
-  },
-  {
     "lemma": "rolnik",
     "id": "pol-npe-0122-rolnik",
     "frequency": 2,
@@ -2018,30 +2261,6 @@
     "extra": {
       "otherShapes": {
         "feminine": ["sekretarka"]
-      }
-    }
-  },
-  {
-    "lemma": "znajoma",
-    "id": "pol-npe-0128-znajoma",
-    "frequency": 3,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "masculine": ["znajomy"]
-      }
-    }
-  },
-  {
-    "lemma": "znajomy",
-    "id": "pol-npe-0129-znajomy",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["znajoma"]
       }
     }
   },
@@ -2145,108 +2364,6 @@
     "gender": "f"
   },
   {
-    "lemma": "pan",
-    "id": "pol-npe-0139-pan(title)",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "title",
-      "emoji": "🙇"
-    }
-  },
-  {
-    "lemma": "pan",
-    "id": "pol-npe-0140-pan(address)",
-    "_inflectionsRoot": "pol-npe-0139-pan(title)",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "form of address",
-      "emoji": "👋"
-    }
-  },
-  {
-    "lemma": "pan",
-    "id": "pol-npe-0141-pan(man)",
-    "_inflectionsRoot": "pol-npe-0139-pan(title)",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "a gender",
-      "emoji": "👫"
-    }
-  },
-  {
-    "lemma": "pani",
-    "id": "pol-npe-0142-pani(title)",
-    "frequency": 2,
-    "register": 1,
-    "gender": "f",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "title",
-      "emoji": "🙇"
-    }
-  },
-  {
-    "lemma": "pani",
-    "id": "pol-npe-0143-pani(address)",
-    "_inflectionsRoot": "pol-npe-0142-pani(title)",
-    "frequency": 2,
-    "register": 1,
-    "gender": "f",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "form of address",
-      "emoji": "👋"
-    }
-  },
-  {
-    "lemma": "pani",
-    "id": "pol-npe-0144-pani(woman)",
-    "_inflectionsRoot": "pol-npe-0142-pani(title)",
-    "frequency": 2,
-    "register": 1,
-    "gender": "f",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "a gender",
-      "emoji": "👫"
-    }
-  },
-  {
-    "lemma": "panna",
-    "id": "pol-npe-0145-panna",
-    "frequency": 1,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["panienka"],
-        "augmentative": ["pannica", "pannisko"]
-      },
-      "derivedTerms": ["panieński", "panieństwo", "Panna"]
-    }
-  },
-  {
-    "lemma": "pilot",
-    "id": "pol-npe-0146-pilot(pilot)",
-    "frequency": 4,
-    "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": false,
-      "text": "a job",
-      "emoji": "✈️"
-    }
-  },
-  {
     "lemma": "lider",
     "id": "pol-npe-0147-lider",
     "frequency": 3,
@@ -2258,72 +2375,6 @@
       },
       "synonyms": ["przywódca"]
     }
-  },
-  {
-    "lemma": "król",
-    "id": "pol-npe-0148-król",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["królewiątko"],
-        "feminine": ["królowa"]
-      },
-      "derivedTerms": [
-        "bezkrólewie",
-        "Król",
-        "królestwo",
-        "królewiątko",
-        "królewiacki",
-        "królewiak",
-        "królewicz",
-        "królewna",
-        "królewski",
-        "królewskość",
-        "królewszczyzna",
-        "króliczek",
-        "królik",
-        "królowa",
-        "królować",
-        "królowanie",
-        "Trzej Królowie"
-      ]
-    }
-  },
-  {
-    "lemma": "królowa",
-    "id": "pol-npe-0149-królowa",
-    "frequency": 3,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "synonyms": ["dama", "hetman", "królówka"]
-    }
-  },
-  {
-    "lemma": "dziecko",
-    "id": "pol-npe-0150-dziecko",
-    "frequency": 1,
-    "register": 1,
-    "gender": "n",
-    "extra": {
-      "synonyms": ["dziecko"],
-      "derivedTerms": [
-        "bezdzietny",
-        "bezdzietnie",
-        "bezdzietność",
-        "wylać dziecko z kąpielą",
-        "wylewać dziecko z kąpielą"
-      ]
-    }
-  },
-  {
-    "lemma": "niemowlę",
-    "id": "pol-npe-0151-niemowlę",
-    "frequency": 1,
-    "register": 1,
-    "gender": "n"
   },
   {
     "lemma": "anioł",

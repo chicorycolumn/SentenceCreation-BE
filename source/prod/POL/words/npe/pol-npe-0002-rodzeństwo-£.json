@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rodzeństwo",
+      "gen": "rodzeństwa",
+      "dat": "rodzeństwu",
+      "acc": "rodzeństwo",
+      "ins": "rodzeństwem",
+      "loc": "rodzeństwie",
+      "voc": "rodzeństwo"
+    }
+  }
+}
