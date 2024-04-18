@@ -847,6 +847,30 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "krewna",
+    "id": "pol-npe-0022-krewna",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": ["krewny"]
+      }
+    }
+  },
+  {
+    "lemma": "krewny",
+    "id": "pol-npe-0022-krewny",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["krewna"]
+      }
+    }
+  },
 
   {
     "lemma": "nauczycielka",
@@ -2025,30 +2049,6 @@
     "frequency": 3,
     "register": 1,
     "gender": "m1"
-  },
-  {
-    "lemma": "krewna",
-    "id": "pol-npe-0120-krewna",
-    "frequency": 3,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "masculine": ["krewny"]
-      }
-    }
-  },
-  {
-    "lemma": "krewny",
-    "id": "pol-npe-0121-krewny",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["krewna"]
-      }
-    }
   },
   {
     "lemma": "rolnik",

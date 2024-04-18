@@ -209,6 +209,16 @@
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
   },
+  {
+    "key": "npe-0022-relative",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0022"],
+      "POL": ["pol-npe-0022"]
+    },
+    "papers": ["relative", "relative hypernym", "concrete", "living", "person"],
+    "topics": ["people"]
+  },
 
   {
     "key": "npe-0004-teacher",
@@ -902,16 +912,6 @@
     },
     "papers": ["concrete", "person", "living"],
     "topics": ["medicine", "people"]
-  },
-  {
-    "key": "npe-0104-relative",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0109-relative"],
-      "POL": ["pol-npe-0120-krewna", "pol-npe-0121-krewny"]
-    },
-    "papers": ["relative", "relative hypernym", "concrete", "living", "person"],
-    "topics": ["people"]
   },
   {
     "key": "npe-0105-farmer",
