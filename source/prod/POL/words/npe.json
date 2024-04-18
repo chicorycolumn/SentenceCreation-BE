@@ -633,6 +633,13 @@
     }
   },
   {
+    "lemma": "osoba",
+    "id": "pol-npe-0015-osoba",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
+  },
+  {
     "lemma": "gość",
     "id": "pol-npe-0015-gość(guy)",
     "_inflectionsRoot": "pol-npe-0023-gość(guest)",
@@ -1262,13 +1269,6 @@
         "rycerstwo"
       ]
     }
-  },
-  {
-    "lemma": "osoba",
-    "id": "pol-npe-0054-osoba",
-    "frequency": 2,
-    "register": 1,
-    "gender": "f"
   },
   {
     "lemma": "złodziej",
