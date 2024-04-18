@@ -10782,5 +10782,15 @@
     },
     "papers": ["s1", "food", "concrete", "vegetable"],
     "topics": ["kitchen", "inside", "restaurant"]
+  },
+  {
+    "key": "nco-1051-pea",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1350-pea"],
+      "POL": ["pol-nco-1122-groch", "pol-nco-1123-groszek"]
+    },
+    "papers": ["s1", "food", "concrete", "vegetable"],
+    "topics": ["kitchen", "inside", "restaurant"]
   }
 ]

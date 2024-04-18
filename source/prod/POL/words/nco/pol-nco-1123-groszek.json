@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "groszek",
+      "gen": "groszku",
+      "dat": "groszkowi",
+      "acc": "groszek",
+      "ins": "groszkiem",
+      "loc": "groszku",
+      "voc": "groszku"
+    },
+    "plural": {
+      "nom": "groszki",
+      "gen": "groszków",
+      "dat": "groszkom",
+      "acc": "groszki",
+      "ins": "groszkami",
+      "loc": "groszkach",
+      "voc": "groszki"
+    }
+  }
+}
