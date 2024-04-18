@@ -1100,6 +1100,25 @@
       "usage": ["Hyponyms: student studentka"]
     }
   },
+  {
+    "lemma": "pilot",
+    "id": "pol-npe-0030-pilot(pilot)",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": false,
+      "text": "a job",
+      "emoji": "✈️"
+    }
+  },
+  {
+    "lemma": "pilotka",
+    "id": "pol-npe-0030-pilotka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "aktorka",
@@ -2301,18 +2320,6 @@
     "frequency": 3,
     "register": 1,
     "gender": "f"
-  },
-  {
-    "lemma": "pilot",
-    "id": "pol-npe-0146-pilot(pilot)",
-    "frequency": 4,
-    "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": false,
-      "text": "a job",
-      "emoji": "✈️"
-    }
   },
   {
     "lemma": "lider",

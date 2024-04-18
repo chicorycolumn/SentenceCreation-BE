@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pilotka",
+      "gen": "pilotki",
+      "dat": "pilotce",
+      "acc": "pilotkę",
+      "ins": "pilotką",
+      "loc": "pilotce",
+      "voc": "pilotko"
+    },
+    "plural": {
+      "nom": "pilotki",
+      "gen": "pilotek",
+      "dat": "pilotkom",
+      "acc": "pilotki",
+      "ins": "pilotkami",
+      "loc": "pilotkach",
+      "voc": "pilotki"
+    }
+  }
+}

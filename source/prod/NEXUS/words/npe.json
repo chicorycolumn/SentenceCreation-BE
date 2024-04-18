@@ -289,13 +289,12 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
   },
-
   {
-    "key": "npe-0012-pilot",
+    "key": "npe-0030-pilot",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0133-pilot"],
-      "POL": ["pol-npe-0146-pilot(pilot)"]
+      "ENG": ["eng-npe-0030-pilot"],
+      "POL": ["pol-npe-0030-pilot(pilot)"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
