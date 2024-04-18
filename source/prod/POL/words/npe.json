@@ -792,6 +792,44 @@
       }
     }
   },
+  {
+    "lemma": "kolega",
+    "id": "pol-npe-0020-kolega(colleague)",
+    "_inflectionsRoot": "pol-npe-0018-kolega(friend)",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "more distant",
+      "emoji": "👋"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["koleżka"],
+        "feminine": ["koleżanka"]
+      }
+    }
+  },
+  {
+    "lemma": "koleżanka",
+    "id": "pol-npe-0020-koleżanka(colleague)",
+    "_inflectionsRoot": "pol-npe-0018-koleżanka(friend)",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "more distant",
+      "emoji": "👋"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["koleżaneczka"],
+        "masculine": ["kolega"]
+      }
+    }
+  },
 
   {
     "lemma": "nauczycielka",
@@ -890,44 +928,6 @@
         "aktorsko",
         "aktorować"
       ]
-    }
-  },
-  {
-    "lemma": "kolega",
-    "id": "pol-npe-0038-kolega(colleague)",
-    "_inflectionsRoot": "pol-npe-0037-kolega(friend)",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "more distant",
-      "emoji": "👋"
-    },
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["koleżka"],
-        "feminine": ["koleżanka"]
-      }
-    }
-  },
-  {
-    "lemma": "koleżanka",
-    "id": "pol-npe-0040-koleżanka(colleague)",
-    "_inflectionsRoot": "pol-npe-0039-koleżanka(friend)",
-    "frequency": 3,
-    "register": 1,
-    "gender": "f",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "more distant",
-      "emoji": "👋"
-    },
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["koleżaneczka"],
-        "masculine": ["kolega"]
-      }
     }
   },
   {

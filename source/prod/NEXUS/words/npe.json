@@ -189,19 +189,15 @@
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
   },
-
   {
-    "key": "npe-0028-colleague",
+    "key": "npe-0020-colleague",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0142-colleague", "eng-npe-0143-workmate"],
-      "POL": [
-        "pol-npe-0038-kolega(colleague)",
-        "pol-npe-0040-koleżanka(colleague)"
-      ]
+      "ENG": ["eng-npe-0020"],
+      "POL": ["pol-npe-0020"]
     },
     "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
+    "topics": ["people", "work"]
   },
 
   {
