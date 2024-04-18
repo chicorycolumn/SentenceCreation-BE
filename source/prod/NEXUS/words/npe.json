@@ -319,27 +319,17 @@
     "papers": ["concrete", "person", "living"],
     "topics": ["people"]
   },
-
   {
-    "key": "npe-0015-actress",
+    "key": "npe-0033-actress",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0028-actress"],
+      "ENG": ["eng-npe-0033-actress"],
       "POL": ["pol-npe-0033-aktorka"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
   },
-  {
-    "key": "npe-0016-actor",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0029-actor"],
-      "POL": ["pol-npe-0034-aktor"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["work", "people"]
-  },
+
   {
     "key": "npe-0035-leader",
     "traductions": {

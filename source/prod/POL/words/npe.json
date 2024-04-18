@@ -1186,7 +1186,6 @@
       }
     }
   },
-
   {
     "lemma": "aktorka",
     "id": "pol-npe-0033-aktorka",
@@ -1203,7 +1202,7 @@
   },
   {
     "lemma": "aktor",
-    "id": "pol-npe-0034-aktor",
+    "id": "pol-npe-0033-aktor",
     "frequency": 2,
     "register": 1,
     "gender": "m1",
@@ -1226,6 +1225,7 @@
       ]
     }
   },
+
   {
     "lemma": "bohater",
     "id": "pol-npe-0045-bohater(hero)",
