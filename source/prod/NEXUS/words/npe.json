@@ -259,6 +259,16 @@
     "papers": ["concrete", "address", "person", "living"],
     "topics": ["people"]
   },
+  {
+    "key": "npe-0027-love(darling)",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0027"],
+      "POL": ["pol-npe-0027"]
+    },
+    "papers": ["concrete", "person", "address"],
+    "topics": ["people", "social life", "love"]
+  },
 
   {
     "key": "npe-0004-teacher",
@@ -1078,20 +1088,5 @@
       "curseword"
     ],
     "topics": ["people"]
-  },
-  {
-    "key": "npe-0126-love(darling)",
-    "traductions": {
-      "SPA": [],
-      "ENG": [
-        "eng-npe-0150-love(darling)",
-        "eng-npe-0151-honey(darling)",
-        "eng-npe-0152-darling",
-        "eng-npe-0153-sweetheart"
-      ],
-      "POL": ["pol-npe-0104-kochanie"]
-    },
-    "papers": ["concrete", "person", "address"],
-    "topics": ["people", "social life", "love"]
   }
 ]

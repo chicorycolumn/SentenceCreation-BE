@@ -1015,6 +1015,19 @@
       "emoji": "👋"
     }
   },
+  {
+    "lemma": "kochanie",
+    "id": "pol-npe-0027-kochanie",
+    "frequency": 4,
+    "register": 6,
+    "gender": "n",
+    "extra": {
+      "usage": [
+        "Moim dwóm największym kochaniom , temu dużemu i temu małemu. To my two most darling dear s, the big one and the little one.",
+        "Od tego kochania całkiem już straciła głowę. ― She almost went crazy from all this loving ."
+      ]
+    }
+  },
 
   {
     "lemma": "nauczycielka",
@@ -1926,19 +1939,6 @@
       "otherShapes": {
         "masculine": ["sędzia"]
       }
-    }
-  },
-  {
-    "lemma": "kochanie",
-    "id": "pol-npe-0104-kochanie",
-    "frequency": 4,
-    "register": 6,
-    "gender": "n",
-    "extra": {
-      "usage": [
-        "Moim dwóm największym kochaniom , temu dużemu i temu małemu. To my two most darling dear s, the big one and the little one.",
-        "Od tego kochania całkiem już straciła głowę. ― She almost went crazy from all this loving ."
-      ]
     }
   },
   {
