@@ -830,6 +830,23 @@
       }
     }
   },
+  {
+    "lemma": "sąsiad",
+    "id": "pol-npe-0021-sąsiad",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "derivedTerms": ["sąsiadka", "sąsiedni", "sąsiedztwo"]
+    }
+  },
+  {
+    "lemma": "sąsiadka",
+    "id": "pol-npe-0021-sąsiadka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "nauczycielka",
@@ -1054,23 +1071,6 @@
     "extra": {
       "synonyms": ["operator"]
     }
-  },
-  {
-    "lemma": "sąsiad",
-    "id": "pol-npe-0049-sąsiad",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "derivedTerms": ["sąsiadka", "sąsiedni", "sąsiedztwo"]
-    }
-  },
-  {
-    "lemma": "sąsiadka",
-    "id": "pol-npe-0050-sąsiadka",
-    "frequency": 3,
-    "register": 1,
-    "gender": "f"
   },
   {
     "lemma": "tłumacz",

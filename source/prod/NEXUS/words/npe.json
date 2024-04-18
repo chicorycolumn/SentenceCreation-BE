@@ -190,7 +190,7 @@
     "topics": ["people"]
   },
   {
-    "key": "npe-0020-colleague",
+    "key": "npe-0020-colleague/workmate",
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0020"],
@@ -198,6 +198,16 @@
     },
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people", "work"]
+  },
+  {
+    "key": "npe-0021-neighbour",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0021"],
+      "POL": ["pol-npe-0021"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
   },
 
   {
@@ -377,16 +387,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]
-  },
-  {
-    "key": "npe-0044-neighbour",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0040-neighbour"],
-      "POL": ["pol-npe-0049-sąsiad", "pol-npe-0050-sąsiadka"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
   },
   {
     "key": "npe-0045-translator",
