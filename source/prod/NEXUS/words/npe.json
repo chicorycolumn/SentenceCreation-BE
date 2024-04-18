@@ -241,26 +241,6 @@
     "topics": ["school", "work", "people"]
   },
   {
-    "key": "npe-0006-guy",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0134-guy", "eng-npe-0136-fellow", "eng-npe-0137-chap"],
-      "POL": ["pol-npe-0031-facet", "pol-npe-0083-gość(guy)"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0007-chick(woman)",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0135-chick(woman)"],
-      "POL": ["pol-npe-0030-laska(woman)"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["people"]
-  },
-  {
     "key": "npe-0008-Miss(title)",
     "traductions": {
       "SPA": [],

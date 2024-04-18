@@ -633,6 +633,54 @@
     }
   },
   {
+    "lemma": "gość",
+    "id": "pol-npe-0015-gość(guy)",
+    "_inflectionsRoot": "pol-npe-0023-gość(guest)",
+    "frequency": 2,
+    "register": 6,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "person",
+      "emoji": "🏃"
+    },
+    "extra": {
+      "derivedTerms": [
+        "gościnny",
+        "w gości",
+        "gościna",
+        "gościniec",
+        "gość w dom, Bóg w dom",
+        "gościć"
+      ]
+    }
+  },
+  {
+    "lemma": "facet",
+    "id": "pol-npe-0015-facet",
+    "frequency": 1,
+    "register": 6,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["facecik"],
+        "feminine": ["facetka"]
+      }
+    }
+  },
+  {
+    "lemma": "laska",
+    "id": "pol-npe-0015-laska(woman)",
+    "frequency": 4,
+    "register": 6,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": false,
+      "text": "person",
+      "emoji": "🏃"
+    }
+  },
+  {
     "lemma": "człowiek",
     "id": "pol-npe-0016-człowiek(human)-€",
     "_inflectionsRoot": "pol-npe-0015-człowiek(person)-€",
@@ -917,31 +965,6 @@
         "feminine": ["nauczycielka"]
       },
       "derivedTerms": ["nauczycielski", "nauczycielstwo"]
-    }
-  },
-  {
-    "lemma": "laska",
-    "id": "pol-npe-0030-laska(woman)",
-    "frequency": 4,
-    "register": 6,
-    "gender": "f",
-    "allohomInfo": {
-      "singleWordtype": false,
-      "text": "person",
-      "emoji": "🏃"
-    }
-  },
-  {
-    "lemma": "facet",
-    "id": "pol-npe-0031-facet",
-    "frequency": 1,
-    "register": 6,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["facecik"],
-        "feminine": ["facetka"]
-      }
     }
   },
   {
@@ -1589,29 +1612,6 @@
     "frequency": 4,
     "register": 1,
     "gender": "f"
-  },
-  {
-    "lemma": "gość",
-    "id": "pol-npe-0083-gość(guy)",
-    "_inflectionsRoot": "pol-npe-0023-gość(guest)",
-    "frequency": 2,
-    "register": 6,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "person",
-      "emoji": "🏃"
-    },
-    "extra": {
-      "derivedTerms": [
-        "gościnny",
-        "w gości",
-        "gościna",
-        "gościniec",
-        "gość w dom, Bóg w dom",
-        "gościć"
-      ]
-    }
   },
   {
     "lemma": "kucharz",
