@@ -684,6 +684,90 @@
       "antonyms": ["chłopak"]
     }
   },
+  {
+    "lemma": "przyjaciółka",
+    "id": "pol-npe-0018-przyjaciółka",
+    "frequency": 1,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": ["przyjaciel"]
+      }
+    }
+  },
+  {
+    "lemma": "przyjaciel",
+    "id": "pol-npe-0018-przyjaciel",
+    "frequency": 1,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["przyjaciółka"]
+      },
+      "derivedTerms": ["prawdziwych przyjaciół poznaje się w biedzie"],
+      "usage": [
+        "Usage notes [ edit ] Not used for casual relationships; znajomy or kolega is preferable for that."
+      ]
+    }
+  },
+  {
+    "lemma": "kolega",
+    "id": "pol-npe-0018-kolega(friend)",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "more close",
+      "emoji": "🫂"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["koleżka"],
+        "feminine": ["koleżanka"]
+      }
+    }
+  },
+  {
+    "lemma": "koleżanka",
+    "id": "pol-npe-0018-koleżanka(friend)",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "more close",
+      "emoji": "🫂"
+    },
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["koleżaneczka"],
+        "masculine": ["kolega"]
+      }
+    }
+  },
+  {
+    "lemma": "kumpel",
+    "id": "pol-npe-0018-kumpel",
+    "frequency": 3,
+    "register": 6,
+    "gender": "m1",
+    "extra": {
+      "synonyms": ["znajomy"]
+    }
+  },
+  {
+    "lemma": "kumpela",
+    "id": "pol-npe-0018-kumpela",
+    "frequency": 3,
+    "register": 6,
+    "gender": "f",
+    "extra": {
+      "synonyms": ["znajoma"]
+    }
+  },
 
   {
     "lemma": "nauczycielka",
@@ -785,52 +869,6 @@
     }
   },
   {
-    "lemma": "przyjaciółka",
-    "id": "pol-npe-0035-przyjaciółka",
-    "frequency": 1,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "masculine": ["przyjaciel"]
-      }
-    }
-  },
-  {
-    "lemma": "przyjaciel",
-    "id": "pol-npe-0036-przyjaciel",
-    "frequency": 1,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["przyjaciółka"]
-      },
-      "derivedTerms": ["prawdziwych przyjaciół poznaje się w biedzie"],
-      "usage": [
-        "Usage notes [ edit ] Not used for casual relationships; znajomy or kolega is preferable for that."
-      ]
-    }
-  },
-  {
-    "lemma": "kolega",
-    "id": "pol-npe-0037-kolega(friend)",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "more close",
-      "emoji": "🫂"
-    },
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["koleżka"],
-        "feminine": ["koleżanka"]
-      }
-    }
-  },
-  {
     "lemma": "kolega",
     "id": "pol-npe-0038-kolega(colleague)",
     "_inflectionsRoot": "pol-npe-0037-kolega(friend)",
@@ -851,24 +889,6 @@
   },
   {
     "lemma": "koleżanka",
-    "id": "pol-npe-0039-koleżanka(friend)",
-    "frequency": 3,
-    "register": 1,
-    "gender": "f",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "more close",
-      "emoji": "🫂"
-    },
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["koleżaneczka"],
-        "masculine": ["kolega"]
-      }
-    }
-  },
-  {
-    "lemma": "koleżanka",
     "id": "pol-npe-0040-koleżanka(colleague)",
     "_inflectionsRoot": "pol-npe-0039-koleżanka(friend)",
     "frequency": 3,
@@ -884,26 +904,6 @@
         "diminutive": ["koleżaneczka"],
         "masculine": ["kolega"]
       }
-    }
-  },
-  {
-    "lemma": "kumpel",
-    "id": "pol-npe-0041-kumpel",
-    "frequency": 3,
-    "register": 6,
-    "gender": "m1",
-    "extra": {
-      "synonyms": ["znajomy"]
-    }
-  },
-  {
-    "lemma": "kumpela",
-    "id": "pol-npe-0042-kumpela",
-    "frequency": 3,
-    "register": 6,
-    "gender": "f",
-    "extra": {
-      "synonyms": ["znajoma"]
     }
   },
   {

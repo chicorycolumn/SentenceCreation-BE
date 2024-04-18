@@ -169,6 +169,40 @@
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["love", "people"]
   },
+  {
+    "key": "npe-0018-friend",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0018"],
+      "POL": ["pol-npe-0018"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
+
+  {
+    "key": "npe-0027-acquaintance",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0119-acquaintance"],
+      "POL": ["pol-npe-0128-znajoma", "pol-npe-0129-znajomy"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
+  {
+    "key": "npe-0028-colleague",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0142-colleague", "eng-npe-0143-workmate"],
+      "POL": [
+        "pol-npe-0038-kolega(colleague)",
+        "pol-npe-0040-koleżanka(colleague)"
+      ]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
 
   {
     "key": "npe-0004-teacher",
@@ -180,7 +214,6 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["school", "work", "people"]
   },
-
   {
     "key": "npe-0006-guy",
     "traductions": {
@@ -265,59 +298,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
-  },
-  {
-    "key": "npe-0025-friend",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0027-friend"],
-      "POL": [
-        "pol-npe-0036-przyjaciel",
-        "pol-npe-0037-kolega(friend)",
-        "pol-npe-0039-koleżanka(friend)",
-        "pol-npe-0035-przyjaciółka"
-      ]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0026-buddy",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0141-buddy", "eng-npe-0113-mate", "eng-npe-0114-pal"],
-      "POL": [
-        "pol-npe-0041-kumpel",
-        "pol-npe-0042-kumpela",
-        "pol-npe-0037-kolega(friend)",
-        "pol-npe-0039-koleżanka(friend)"
-      ]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0027-acquaintance",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0119-acquaintance"],
-      "POL": ["pol-npe-0128-znajoma", "pol-npe-0129-znajomy"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
-  },
-  {
-    "key": "npe-0028-colleague",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0142-colleague", "eng-npe-0143-workmate"],
-      "POL": [
-        "pol-npe-0038-kolega(colleague)",
-        "pol-npe-0040-koleżanka(colleague)"
-      ]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["people"]
   },
   {
     "key": "npe-0033-queen",
