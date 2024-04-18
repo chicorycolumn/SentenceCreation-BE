@@ -219,6 +219,16 @@
     "papers": ["relative", "relative hypernym", "concrete", "living", "person"],
     "topics": ["people"]
   },
+  {
+    "key": "npe-0023-guest",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0023"],
+      "POL": ["pol-npe-0023"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["holiday", "people"]
+  },
 
   {
     "key": "npe-0004-teacher",
@@ -632,16 +642,6 @@
     },
     "papers": ["concrete", "person", "profession", "living", "title"],
     "topics": ["work", "people", "history"]
-  },
-  {
-    "key": "npe-0074-guest",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0073-guest"],
-      "POL": ["pol-npe-0082-gość(guest)"]
-    },
-    "papers": ["concrete", "relative", "person", "living"],
-    "topics": ["holiday", "people"]
   },
   {
     "key": "npe-0076-cook",

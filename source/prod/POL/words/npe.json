@@ -871,6 +871,28 @@
       }
     }
   },
+  {
+    "lemma": "gość",
+    "id": "pol-npe-0023-gość(guest)",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "hospitality",
+      "emoji": "🏨"
+    },
+    "extra": {
+      "derivedTerms": [
+        "gościnny",
+        "w gości",
+        "gościna",
+        "gościniec",
+        "gość w dom, Bóg w dom",
+        "gościć"
+      ]
+    }
+  },
 
   {
     "lemma": "nauczycielka",
@@ -1570,30 +1592,8 @@
   },
   {
     "lemma": "gość",
-    "id": "pol-npe-0082-gość(guest)",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "hospitality",
-      "emoji": "🏨"
-    },
-    "extra": {
-      "derivedTerms": [
-        "gościnny",
-        "w gości",
-        "gościna",
-        "gościniec",
-        "gość w dom, Bóg w dom",
-        "gościć"
-      ]
-    }
-  },
-  {
-    "lemma": "gość",
     "id": "pol-npe-0083-gość(guy)",
-    "_inflectionsRoot": "pol-npe-0082-gość(guest)",
+    "_inflectionsRoot": "pol-npe-0023-gość(guest)",
     "frequency": 2,
     "register": 6,
     "gender": "m1",
