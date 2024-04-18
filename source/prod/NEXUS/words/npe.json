@@ -149,6 +149,16 @@
     "papers": ["concrete", "person", "living"],
     "topics": ["people"]
   },
+  {
+    "key": "npe-0016-human",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0016"],
+      "POL": ["pol-npe-0016"]
+    },
+    "papers": ["concrete", "person", "living"],
+    "topics": ["people", "biology"]
+  },
 
   {
     "key": "npe-0003-boyfriend",
@@ -348,16 +358,6 @@
     },
     "papers": ["concrete", "person", "profession", "living"],
     "topics": ["work", "people"]
-  },
-  {
-    "key": "npe-0036-human",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0033-human", "eng-npe-0034-person"],
-      "POL": ["pol-npe-0043-człowiek", "pol-npe-0054-osoba"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["people"]
   },
   {
     "key": "npe-0037-tourist",

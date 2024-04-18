@@ -587,6 +587,65 @@
       "emoji": "👫"
     }
   },
+  {
+    "lemma": "człowiek",
+    "id": "pol-npe-0015-człowiek(person)-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["człowieczek"],
+        "augmentative": ["człowieczysko"]
+      },
+      "derivedTerms": [
+        "człowieczy",
+        "jak człowiek",
+        "biały człowiek",
+        "człeczyna",
+        "człek",
+        "człowieczę",
+        "człowieczeństwo",
+        "człowieczość",
+        "człowieczyna",
+        "człowiek czynu",
+        "człowiek honoru",
+        "człowiek interesu",
+        "człowiek orkiestra",
+        "człowiekowate",
+        "człowiek pióra",
+        "człowiek renesansu",
+        "człowiek rozumny",
+        "człowiek śniegu",
+        "dusza człowiek",
+        "swój człowiek",
+        "odczłowieczać",
+        "odczłowieczyć",
+        "uczłowieczać",
+        "uczłowieczyć"
+      ]
+    },
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "general",
+      "emoji": "🔲"
+    }
+  },
+  {
+    "lemma": "człowiek",
+    "id": "pol-npe-0016-człowiek(human)-€",
+    "_inflectionsRoot": "pol-npe-0015-człowiek(person)-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "biology",
+      "emoji": "🧬"
+    }
+  },
 
   {
     "lemma": "chłopak",
@@ -845,45 +904,6 @@
     "gender": "f",
     "extra": {
       "synonyms": ["znajoma"]
-    }
-  },
-  {
-    "lemma": "człowiek",
-    "id": "pol-npe-0043-człowiek",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["człowieczek"],
-        "augmentative": ["człowieczysko"]
-      },
-      "derivedTerms": [
-        "człowieczy",
-        "jak człowiek",
-        "biały człowiek",
-        "człeczyna",
-        "człek",
-        "człowieczę",
-        "człowieczeństwo",
-        "człowieczość",
-        "człowieczyna",
-        "człowiek czynu",
-        "człowiek honoru",
-        "człowiek interesu",
-        "człowiek orkiestra",
-        "człowiekowate",
-        "człowiek pióra",
-        "człowiek renesansu",
-        "człowiek rozumny",
-        "człowiek śniegu",
-        "dusza człowiek",
-        "swój człowiek",
-        "odczłowieczać",
-        "odczłowieczyć",
-        "uczłowieczać",
-        "uczłowieczyć"
-      ]
     }
   },
   {
