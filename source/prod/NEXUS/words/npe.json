@@ -170,7 +170,7 @@
     "topics": ["love", "people"]
   },
   {
-    "key": "npe-0018-friend",
+    "key": "npe-0018-friend/buddy",
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0018"],
@@ -179,17 +179,17 @@
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
   },
-
   {
-    "key": "npe-0027-acquaintance",
+    "key": "npe-0019-acquaintance",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0119-acquaintance"],
-      "POL": ["pol-npe-0128-znajoma", "pol-npe-0129-znajomy"]
+      "ENG": ["eng-npe-0019"],
+      "POL": ["pol-npe-0019"]
     },
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
   },
+
   {
     "key": "npe-0028-colleague",
     "traductions": {

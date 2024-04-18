@@ -768,6 +768,30 @@
       "synonyms": ["znajoma"]
     }
   },
+  {
+    "lemma": "znajoma",
+    "id": "pol-npe-0019-znajoma",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": ["znajomy"]
+      }
+    }
+  },
+  {
+    "lemma": "znajomy",
+    "id": "pol-npe-0019-znajomy",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["znajoma"]
+      }
+    }
+  },
 
   {
     "lemma": "nauczycielka",
@@ -2112,30 +2136,6 @@
     "extra": {
       "otherShapes": {
         "feminine": ["sekretarka"]
-      }
-    }
-  },
-  {
-    "lemma": "znajoma",
-    "id": "pol-npe-0128-znajoma",
-    "frequency": 3,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "masculine": ["znajomy"]
-      }
-    }
-  },
-  {
-    "lemma": "znajomy",
-    "id": "pol-npe-0129-znajomy",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["znajoma"]
       }
     }
   },
