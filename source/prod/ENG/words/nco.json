@@ -10713,10 +10713,11 @@
   {
     "lemma": "police",
     "id": "eng-nco-1351-police",
-    "gender": "n",
+    "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 2,
     "_lacking": true,
-    "tantumPlurale": true
+    "tantumPlurale": true,
+    "_uncountableType": 2
   }
 ]

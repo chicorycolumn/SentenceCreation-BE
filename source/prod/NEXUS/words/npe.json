@@ -451,16 +451,6 @@
     "topics": ["religion"]
   },
   {
-    "key": "npe-0054-police",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0050-police"],
-      "POL": ["pol-npe-0060-policja"]
-    },
-    "papers": ["concrete", "title", "person", "living"],
-    "topics": ["law", "crime"]
-  },
-  {
     "key": "npe-0055-alien",
     "traductions": {
       "SPA": [],
