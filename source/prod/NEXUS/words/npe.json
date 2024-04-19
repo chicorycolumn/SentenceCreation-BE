@@ -439,7 +439,6 @@
     "papers": ["concrete", "person", "living"],
     "topics": ["law", "crime"]
   },
-
   {
     "key": "npe-0045-pope",
     "traductions": {
@@ -451,25 +450,26 @@
     "topics": ["religion"]
   },
   {
-    "key": "npe-0055-alien",
+    "key": "npe-0046-alien",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0051-alien"],
-      "POL": ["pol-npe-0061-obcy(alien)"]
+      "ENG": ["eng-npe-0046"],
+      "POL": ["pol-npe-0046"]
     },
     "papers": ["concrete"],
     "topics": ["astronomy"]
   },
   {
-    "key": "npe-0056-stranger",
+    "key": "npe-0047-stranger",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0052-stranger"],
-      "POL": ["pol-npe-0062-obcy(stranger)"]
+      "ENG": ["eng-npe-0047"],
+      "POL": ["pol-npe-0047"]
     },
     "papers": ["concrete", "person", "living"],
     "topics": ["people"]
   },
+
   {
     "key": "npe-0057-driver",
     "traductions": {

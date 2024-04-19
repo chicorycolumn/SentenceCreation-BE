@@ -1435,10 +1435,9 @@
       ]
     }
   },
-
   {
     "lemma": "obcy",
-    "id": "pol-npe-0061-obcy(alien)",
+    "id": "pol-npe-0046-obcy(alien)",
     "frequency": 4,
     "register": 1,
     "gender": "m1",
@@ -1454,8 +1453,8 @@
   },
   {
     "lemma": "obcy",
-    "id": "pol-npe-0062-obcy(stranger)",
-    "_inflectionsRoot": "pol-npe-0061-obcy(alien)",
+    "id": "pol-npe-0047-obcy(stranger)",
+    "_inflectionsRoot": "pol-npe-0046-obcy(alien)",
     "frequency": 4,
     "register": 1,
     "gender": "m1",
@@ -1469,6 +1468,7 @@
       "derivedTerms": ["obczyzna"]
     }
   },
+
   {
     "lemma": "kierowca",
     "id": "pol-npe-0063-kierowca",
