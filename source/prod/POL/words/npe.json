@@ -999,24 +999,6 @@
     }
   },
   {
-    "lemma": "policja",
-    "id": "pol-npe-0060-policja",
-    "frequency": 2,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "derivedTerms": [
-        "policyjny",
-        "policja dochodzeniowa",
-        "policja drogowa",
-        "policja obyczajowa",
-        "policja polityczna",
-        "policjant",
-        "policjantka"
-      ]
-    }
-  },
-  {
     "lemma": "obcy",
     "id": "pol-npe-0061-obcy(alien)",
     "frequency": 4,

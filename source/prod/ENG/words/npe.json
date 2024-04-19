@@ -344,14 +344,6 @@
     "frequency": 4
   },
   {
-    "lemma": "police",
-    "id": "eng-npe-0050-police",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 2,
-    "_uncountableType": 2
-  },
-  {
     "lemma": "alien",
     "id": "eng-npe-0051-alien",
     "gender": "_PersonalGenders",
