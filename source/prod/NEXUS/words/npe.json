@@ -441,14 +441,14 @@
   },
 
   {
-    "key": "npe-0053-pope",
+    "key": "npe-0045-pope",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0049-pope"],
-      "POL": ["pol-npe-0059-papież"]
+      "ENG": ["eng-npe-0045"],
+      "POL": ["pol-npe-0045"]
     },
     "papers": ["concrete", "title", "person", "living"],
-    "topics": ["religion", "people"]
+    "topics": ["religion"]
   },
   {
     "key": "npe-0054-police",
@@ -458,7 +458,7 @@
       "POL": ["pol-npe-0060-policja"]
     },
     "papers": ["concrete", "title", "person", "living"],
-    "topics": ["people"]
+    "topics": ["law", "crime"]
   },
   {
     "key": "npe-0055-alien",

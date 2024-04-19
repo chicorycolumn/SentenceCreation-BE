@@ -1415,10 +1415,9 @@
     "register": 1,
     "gender": "f"
   },
-
   {
     "lemma": "papież",
-    "id": "pol-npe-0059-papież",
+    "id": "pol-npe-0045-papież",
     "frequency": 4,
     "register": 1,
     "gender": "m1",
@@ -1436,6 +1435,7 @@
       ]
     }
   },
+
   {
     "lemma": "policja",
     "id": "pol-npe-0060-policja",
