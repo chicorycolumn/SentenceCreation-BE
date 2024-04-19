@@ -17953,5 +17953,23 @@
     "frequency": 2,
     "register": 1,
     "gender": "f"
+  },
+  {
+    "lemma": "policja",
+    "id": "pol-nco-1125-policja",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "derivedTerms": [
+        "policyjny",
+        "policja dochodzeniowa",
+        "policja drogowa",
+        "policja obyczajowa",
+        "policja polityczna",
+        "policjant",
+        "policjantka"
+      ]
+    }
   }
 ]
