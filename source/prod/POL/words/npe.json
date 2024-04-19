@@ -589,11 +589,11 @@
   },
   {
     "lemma": "człowiek",
-    "id": "pol-npe-0015-człowiek(person)-€",
+    "id": "pol-npe-0015-człowiek(person)-£",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
-    "semanticGender": "_VypernymGenders",
+    "semanticGender": "_PersonalGenders",
     "extra": {
       "otherShapes": {
         "diminutive": ["człowieczek"],
@@ -634,10 +634,11 @@
   },
   {
     "lemma": "osoba",
-    "id": "pol-npe-0015-osoba",
+    "id": "pol-npe-0015-osoba-£",
     "frequency": 2,
     "register": 1,
-    "gender": "f"
+    "gender": "f",
+    "semanticGender": "_PersonalGenders"
   },
   {
     "lemma": "gość",
@@ -753,10 +754,11 @@
   },
   {
     "lemma": "przyjaciel",
-    "id": "pol-npe-0018-przyjaciel",
+    "id": "pol-npe-0018-przyjaciel-€",
     "frequency": 1,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "feminine": ["przyjaciółka"]
@@ -769,10 +771,11 @@
   },
   {
     "lemma": "kolega",
-    "id": "pol-npe-0018-kolega(friend)",
+    "id": "pol-npe-0018-kolega(friend)-€",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "allohomInfo": {
       "singleWordtype": true,
       "text": "more close",
@@ -805,10 +808,11 @@
   },
   {
     "lemma": "kumpel",
-    "id": "pol-npe-0018-kumpel",
+    "id": "pol-npe-0018-kumpel-€",
     "frequency": 3,
     "register": 6,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "synonyms": ["znajomy"]
     }
@@ -837,10 +841,11 @@
   },
   {
     "lemma": "znajomy",
-    "id": "pol-npe-0019-znajomy",
+    "id": "pol-npe-0019-znajomy-€",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "feminine": ["znajoma"]
@@ -849,11 +854,12 @@
   },
   {
     "lemma": "kolega",
-    "id": "pol-npe-0020-kolega(colleague)",
-    "_inflectionsRoot": "pol-npe-0018-kolega(friend)",
+    "id": "pol-npe-0020-kolega(colleague)-€",
+    "_inflectionsRoot": "pol-npe-0018-kolega(friend)-€",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "allohomInfo": {
       "singleWordtype": true,
       "text": "more distant",
@@ -887,10 +893,11 @@
   },
   {
     "lemma": "sąsiad",
-    "id": "pol-npe-0021-sąsiad",
+    "id": "pol-npe-0021-sąsiad-€",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "derivedTerms": ["sąsiadka", "sąsiedni", "sąsiedztwo"]
     }
@@ -916,10 +923,11 @@
   },
   {
     "lemma": "krewny",
-    "id": "pol-npe-0022-krewny",
+    "id": "pol-npe-0022-krewny-€",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "feminine": ["krewna"]
@@ -928,10 +936,11 @@
   },
   {
     "lemma": "gość",
-    "id": "pol-npe-0023-gość(guest)",
+    "id": "pol-npe-0023-gość(guest)-£",
     "frequency": 2,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_PersonalGenders",
     "allohomInfo": {
       "singleWordtype": true,
       "text": "hospitality",
@@ -1024,10 +1033,11 @@
   },
   {
     "lemma": "kochanie",
-    "id": "pol-npe-0027-kochanie",
+    "id": "pol-npe-0027-kochanie-£",
     "frequency": 4,
     "register": 6,
     "gender": "n",
+    "semanticGender": "_PersonalGenders",
     "extra": {
       "usage": [
         "Moim dwóm największym kochaniom , temu dużemu i temu małemu. To my two most darling dear s, the big one and the little one.",
@@ -1049,10 +1059,11 @@
   },
   {
     "lemma": "nauczyciel",
-    "id": "pol-npe-0028-nauczyciel",
+    "id": "pol-npe-0028-nauczyciel-€",
     "frequency": 2,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "feminine": ["nauczycielka"]
@@ -1062,10 +1073,11 @@
   },
   {
     "lemma": "student",
-    "id": "pol-npe-0029-student",
+    "id": "pol-npe-0029-student-€",
     "frequency": 2,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "feminine": ["studentka"]
@@ -1089,10 +1101,11 @@
   },
   {
     "lemma": "uczeń",
-    "id": "pol-npe-0029-uczeń",
+    "id": "pol-npe-0029-uczeń-€",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "feminine": ["uczennica"]
@@ -1102,10 +1115,11 @@
   },
   {
     "lemma": "pilot",
-    "id": "pol-npe-0030-pilot(pilot)",
+    "id": "pol-npe-0030-pilot(pilot)-€",
     "frequency": 4,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "allohomInfo": {
       "singleWordtype": false,
       "text": "a job",
@@ -1163,10 +1177,11 @@
   },
   {
     "lemma": "turysta",
-    "id": "pol-npe-0032-turysta",
+    "id": "pol-npe-0032-turysta-€",
     "frequency": 4,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "feminine": ["turystka"]
@@ -1202,10 +1217,11 @@
   },
   {
     "lemma": "aktor",
-    "id": "pol-npe-0033-aktor",
+    "id": "pol-npe-0033-aktor-€",
     "frequency": 2,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "diminutive": ["aktorzyk"],
@@ -1227,11 +1243,11 @@
   },
   {
     "lemma": "polityk",
-    "id": "pol-npe-0034-polityk-€",
+    "id": "pol-npe-0034-polityk-£",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
-    "semanticGender": "_VypernymGenders",
+    "semanticGender": "_PersonalGenders",
     "extra": {
       "otherShapes": {
         "feminine": ["polityk", "polityczka"]
@@ -1240,19 +1256,19 @@
   },
   {
     "lemma": "premier",
-    "id": "pol-npe-0035-premier-€",
+    "id": "pol-npe-0035-premier-£",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
-    "semanticGender": "_VypernymGenders"
+    "semanticGender": "_PersonalGenders"
   },
   {
     "lemma": "prezydent",
-    "id": "pol-npe-0036-prezydent-€",
+    "id": "pol-npe-0036-prezydent-£",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
-    "semanticGender": "_VypernymGenders"
+    "semanticGender": "_PersonalGenders"
   },
   {
     "lemma": "lekarz",
@@ -1303,11 +1319,11 @@
   },
   {
     "lemma": "chirurg",
-    "id": "pol-npe-0039-chirurg-€",
+    "id": "pol-npe-0039-chirurg-£",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
-    "semanticGender": "_VypernymGenders",
+    "semanticGender": "_PersonalGenders",
     "extra": {
       "synonyms": ["operator"]
     }
@@ -1470,14 +1486,11 @@
   },
   {
     "lemma": "kierowca",
-    "id": "pol-npe-0048-kierowca-€",
+    "id": "pol-npe-0048-kierowca-£",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
-    "semanticGender": "_VypernymGenders",
-    "extra": {
-      "synonyms": ["(", "archaic", ")", "automobilista"]
-    }
+    "semanticGender": "_PersonalGenders"
   },
 
   {
