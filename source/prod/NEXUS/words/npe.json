@@ -339,6 +339,26 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people", "politics"]
   },
+  {
+    "key": "npe-0035-premier",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0035"],
+      "POL": ["pol-npe-0035"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["work", "people", "politics"]
+  },
+  {
+    "key": "npe-0036-president",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0036"],
+      "POL": ["pol-npe-0036"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["work", "people", "politics"]
+  },
 
   {
     "key": "npe-0035-leader",
@@ -957,16 +977,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["art", "work", "people"]
-  },
-  {
-    "key": "npe-0112-president",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0121-president"],
-      "POL": ["pol-npe-0133-prezydent"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["work", "people", "politics"]
   },
   {
     "key": "npe-0113-prisoner",

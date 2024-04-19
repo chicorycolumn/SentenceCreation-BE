@@ -1238,6 +1238,22 @@
       }
     }
   },
+  {
+    "lemma": "premier",
+    "id": "pol-npe-0035-premier-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "prezydent",
+    "id": "pol-npe-0036-prezydent-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
 
   {
     "lemma": "bohater",
@@ -2310,18 +2326,6 @@
     "gender": "m1",
     "extra": {
       "synonyms": ["przestępca"]
-    }
-  },
-  {
-    "lemma": "prezydent",
-    "id": "pol-npe-0133-prezydent",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["prezydentka"]
-      }
     }
   },
   {
