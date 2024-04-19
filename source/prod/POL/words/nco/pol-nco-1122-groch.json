@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "groch",
+      "gen": "grochu",
+      "dat": "grochowi",
+      "acc": "groch",
+      "ins": "grochem",
+      "loc": "grochu",
+      "voc": "grochu"
+    }
+  }
+}

@@ -10695,5 +10695,19 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "parsnip",
+    "id": "eng-nco-1349-parsnip",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "pea",
+    "id": "eng-nco-1350-pea",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
   }
 ]

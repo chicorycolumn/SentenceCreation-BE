@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pasternak",
+      "gen": "pasternaku",
+      "dat": "pasternakowi",
+      "acc": "pasternak",
+      "ins": "pasternakiem",
+      "loc": "pasternaku",
+      "voc": "pasternaku"
+  },
+  "plural": {
+      "nom": "pasternaki",
+      "gen": "pasternaków",
+      "dat": "pasternakom",
+      "acc": "pasternaki",
+      "ins": "pasternakami",
+      "loc": "pasternakach",
+      "voc": "pasternaki"
+    }
+  }
+}
