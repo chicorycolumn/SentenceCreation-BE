@@ -1333,13 +1333,13 @@
     "register": 1,
     "gender": "f"
   },
-
   {
     "lemma": "tłumacz",
-    "id": "pol-npe-0051-tłumacz",
+    "id": "pol-npe-0041-tłumacz-€",
     "frequency": 4,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "feminine": ["tłumaczka"]
@@ -1347,6 +1347,33 @@
       "derivedTerms": ["tłumaczenie", "tłumaczka", "tłumaczyć", "тлума́ч"]
     }
   },
+  {
+    "lemma": "tłumaczka",
+    "id": "pol-npe-0041-tłumaczka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "kelner",
+    "id": "pol-npe-0042-kelner",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["kelnerka"]
+      }
+    }
+  },
+  {
+    "lemma": "kelnerka",
+    "id": "pol-npe-0042-kelnerka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
+  },
+
   {
     "lemma": "kierownik",
     "id": "pol-npe-0052-kierownik",
@@ -1393,25 +1420,6 @@
       "synonyms": ["złodziej"],
       "derivedTerms": ["złodziejski", "złodziejstwo"]
     }
-  },
-  {
-    "lemma": "kelner",
-    "id": "pol-npe-0056-kelner",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["kelnerka"]
-      }
-    }
-  },
-  {
-    "lemma": "kelnerka",
-    "id": "pol-npe-0057-kelnerka",
-    "frequency": 2,
-    "register": 1,
-    "gender": "f"
   },
   {
     "lemma": "papież",
