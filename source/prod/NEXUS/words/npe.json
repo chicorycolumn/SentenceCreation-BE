@@ -479,17 +479,27 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["car", "travel", "work", "people"]
   },
-
   {
-    "key": "npe-0058-colonel",
+    "key": "npe-0049-colonel",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0054-colonel"],
-      "POL": ["pol-npe-0064-pułkownik"]
+      "ENG": ["eng-npe-0049-colonel"],
+      "POL": ["pol-npe-0049-pułkownik"]
     },
     "papers": ["concrete", "title", "person", "living"],
     "topics": ["war", "people"]
   },
+  {
+    "key": "npe-0050-god",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0050-god", "eng-npe-0050-goddess"],
+      "POL": ["pol-npe-0050-bóg", "pol-npe-0050-bogini"]
+    },
+    "papers": ["abstract"],
+    "topics": ["philosophy and ethics", "religion"]
+  },
+
   {
     "key": "npe-0059-criminal",
     "traductions": {
@@ -499,16 +509,6 @@
     },
     "papers": ["crime", "concrete"],
     "topics": ["law", "crime", "people"]
-  },
-  {
-    "key": "npe-0062-god",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0057-god", "eng-npe-0155-goddess"],
-      "POL": ["pol-npe-0067-bóg", "pol-npe-0156-bogini"]
-    },
-    "papers": ["concrete"],
-    "topics": ["philosophy and ethics", "religion"]
   },
   {
     "key": "npe-0063-firefighter",

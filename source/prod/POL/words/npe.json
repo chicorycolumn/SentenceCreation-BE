@@ -1492,42 +1492,17 @@
     "gender": "m1",
     "semanticGender": "_PersonalGenders"
   },
-
-  {
-    "lemma": "kierownik",
-    "id": "pol-npe-0052-kierownik",
-    "frequency": 4,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["kierowniczka"]
-      },
-      "synonyms": ["zarządca", "dyrektor"]
-    }
-  },
   {
     "lemma": "pułkownik",
-    "id": "pol-npe-0064-pułkownik",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1"
-  },
-  {
-    "lemma": "przestępca",
-    "id": "pol-npe-0065-przestępca",
+    "id": "pol-npe-0049-pułkownik-£",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["przestępczyni"]
-      }
-    }
+    "semanticGender": "_PersonalGenders"
   },
   {
     "lemma": "bóg",
-    "id": "pol-npe-0067-bóg",
+    "id": "pol-npe-0050-bóg",
     "frequency": 2,
     "register": 1,
     "gender": "m1",
@@ -1643,6 +1618,45 @@
         "ubóstwiać",
         "ubóstwić"
       ]
+    }
+  },
+  {
+    "lemma": "bogini",
+    "id": "pol-npe-0050-bogini",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["boginka"],
+        "masculine": ["bogini"]
+      }
+    },
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+
+  {
+    "lemma": "kierownik",
+    "id": "pol-npe-0052-kierownik",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["kierowniczka"]
+      },
+      "synonyms": ["zarządca", "dyrektor"]
+    }
+  },
+  {
+    "lemma": "przestępca",
+    "id": "pol-npe-0065-przestępca",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["przestępczyni"]
+      }
     }
   },
   {
@@ -2381,19 +2395,6 @@
     "frequency": 3,
     "register": 7,
     "gender": "m2"
-  },
-  {
-    "lemma": "bogini",
-    "id": "pol-npe-0156-bogini",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["boginka"],
-        "masculine": ["bogini"]
-      }
-    },
-    "frequency": 4,
-    "register": 1,
-    "gender": "f"
   },
   {
     "lemma": "właścicielka",
