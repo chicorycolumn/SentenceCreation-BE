@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pieczarka",
+      "gen": "pieczarki",
+      "dat": "pieczarce",
+      "acc": "pieczarkę",
+      "ins": "pieczarką",
+      "loc": "pieczarce",
+      "voc": "pieczarko"
+  },
+  "plural": {
+      "nom": "pieczarki",
+      "gen": "pieczarek",
+      "dat": "pieczarkom",
+      "acc": "pieczarki",
+      "ins": "pieczarkami",
+      "loc": "pieczarkach",
+      "voc": "pieczarki"
+    }
+  }
+}

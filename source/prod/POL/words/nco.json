@@ -17946,5 +17946,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "m3"
+  },
+  {
+    "lemma": "pieczarka",
+    "id": "pol-nco-1124-pieczarka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
   }
 ]

@@ -5787,7 +5787,7 @@
     "traductions": {
       "SPA": [],
       "ENG": ["eng-nco-0706-fungus", "eng-nco-0707-mushroom"],
-      "POL": ["pol-nco-0571-grzyb"]
+      "POL": ["pol-nco-0571-grzyb", "pol-nco-1124-pieczarka"]
     },
     "papers": ["s2", "food", "concrete", "savoury"],
     "topics": ["restaurant", "inside", "disease", "medicine", "kitchen"]
