@@ -469,17 +469,17 @@
     "papers": ["concrete", "person", "living"],
     "topics": ["people"]
   },
-
   {
-    "key": "npe-0057-driver",
+    "key": "npe-0048-driver",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0053-driver"],
-      "POL": ["pol-npe-0063-kierowca"]
+      "ENG": ["eng-npe-0048"],
+      "POL": ["pol-npe-0048"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["car", "travel", "work", "people"]
   },
+
   {
     "key": "npe-0058-colonel",
     "traductions": {

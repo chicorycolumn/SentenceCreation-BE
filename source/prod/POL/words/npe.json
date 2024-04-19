@@ -1468,17 +1468,18 @@
       "derivedTerms": ["obczyzna"]
     }
   },
-
   {
     "lemma": "kierowca",
-    "id": "pol-npe-0063-kierowca",
+    "id": "pol-npe-0048-kierowca-€",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "synonyms": ["(", "archaic", ")", "automobilista"]
     }
   },
+
   {
     "lemma": "kierownik",
     "id": "pol-npe-0052-kierownik",
