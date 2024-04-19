@@ -373,8 +373,8 @@
     "key": "npe-0038-nurse",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0104-nurse"],
-      "POL": ["pol-npe-0114-pielęgniarka", "pol-npe-0115-pielęgniarz"]
+      "ENG": ["eng-npe-0038"],
+      "POL": ["pol-npe-0038"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]
@@ -383,8 +383,8 @@
     "key": "npe-0039-surgeon",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0039-surgeon"],
-      "POL": ["pol-npe-0048-chirurg"]
+      "ENG": ["eng-npe-0039"],
+      "POL": ["pol-npe-0039"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]

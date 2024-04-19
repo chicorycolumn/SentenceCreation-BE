@@ -1282,17 +1282,37 @@
       "synonyms": ["doktorka", "medyczka"]
     }
   },
-
+  {
+    "lemma": "pielęgniarka",
+    "id": "pol-npe-0038-pielęgniarka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "pielęgniarz",
+    "id": "pol-npe-0038-pielęgniarz",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["pielęgniarka"]
+      }
+    }
+  },
   {
     "lemma": "chirurg",
-    "id": "pol-npe-0048-chirurg",
+    "id": "pol-npe-0039-chirurg-€",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "synonyms": ["operator"]
     }
   },
+
   {
     "lemma": "tłumacz",
     "id": "pol-npe-0051-tłumacz",
@@ -2042,25 +2062,6 @@
     "extra": {
       "otherShapes": {
         "masculine": ["policjant"]
-      }
-    }
-  },
-  {
-    "lemma": "pielęgniarka",
-    "id": "pol-npe-0114-pielęgniarka",
-    "frequency": 2,
-    "register": 1,
-    "gender": "f"
-  },
-  {
-    "lemma": "pielęgniarz",
-    "id": "pol-npe-0115-pielęgniarz",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["pielęgniarka"]
       }
     }
   },
