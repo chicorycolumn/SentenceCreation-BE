@@ -10792,5 +10792,15 @@
     },
     "papers": ["s1", "food", "concrete", "vegetable"],
     "topics": ["kitchen", "inside", "restaurant"]
+  },
+  {
+    "key": "nco-1052-police",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1351-police"],
+      "POL": ["pol-nco-1125-policja"]
+    },
+    "papers": ["s6", "concrete"],
+    "topics": ["law", "crime", "people"]
   }
 ]
