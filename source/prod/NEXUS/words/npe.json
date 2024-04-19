@@ -389,6 +389,16 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]
   },
+  {
+    "key": "npe-0040-engineer",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0040"],
+      "POL": ["pol-npe-0040"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["engineering", "people", "work"]
+  },
 
   {
     "key": "npe-0035-leader",
@@ -473,16 +483,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["holiday", "restaurant", "work", "inside", "kitchen", "people"]
-  },
-  {
-    "key": "npe-0052-engineer",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0048-engineer"],
-      "POL": ["pol-npe-0058-inżynier"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["engineering", "people", "work"]
   },
   {
     "key": "npe-0053-pope",

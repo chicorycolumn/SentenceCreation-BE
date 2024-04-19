@@ -1312,6 +1312,27 @@
       "synonyms": ["operator"]
     }
   },
+  {
+    "lemma": "inżynier",
+    "id": "pol-npe-0040-inżynier-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "extra": {
+      "otherShapes": {
+        "abbreviation": ["inż."]
+      },
+      "derivedTerms": ["inżynierski", "inżynierstwo"]
+    }
+  },
+  {
+    "lemma": "inżynierka",
+    "id": "pol-npe-0040-inżynierka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "tłumacz",
@@ -1391,19 +1412,6 @@
     "frequency": 2,
     "register": 1,
     "gender": "f"
-  },
-  {
-    "lemma": "inżynier",
-    "id": "pol-npe-0058-inżynier",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "abbreviation": ["inż."]
-      },
-      "derivedTerms": ["inżynierski", "inżynierstwo"]
-    }
   },
   {
     "lemma": "papież",
