@@ -359,6 +359,36 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people", "politics"]
   },
+  {
+    "key": "npe-0037-physician",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0037"],
+      "POL": ["pol-npe-0037"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["medicine", "work", "people"]
+  },
+  {
+    "key": "npe-0038-nurse",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0104-nurse"],
+      "POL": ["pol-npe-0114-pielęgniarka", "pol-npe-0115-pielęgniarz"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["medicine", "work", "people"]
+  },
+  {
+    "key": "npe-0039-surgeon",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0039-surgeon"],
+      "POL": ["pol-npe-0048-chirurg"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["medicine", "work", "people"]
+  },
 
   {
     "key": "npe-0035-leader",
@@ -392,16 +422,6 @@
     },
     "papers": ["concrete", "person", "living"],
     "topics": ["fantasy", "people", "writing"]
-  },
-  {
-    "key": "npe-0043-surgeon",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0039-surgeon"],
-      "POL": ["pol-npe-0048-chirurg"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["medicine", "work", "people"]
   },
   {
     "key": "npe-0045-translator",
@@ -765,16 +785,6 @@
     "topics": ["work", "people", "writing"]
   },
   {
-    "key": "npe-0090-physician",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0091-physician", "eng-npe-0092-doctor"],
-      "POL": ["pol-npe-0100-lekarz", "pol-npe-0101-lekarka"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["medicine", "work", "people"]
-  },
-  {
     "key": "npe-0091-judge",
     "traductions": {
       "SPA": [],
@@ -857,16 +867,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["law", "work", "people"]
-  },
-  {
-    "key": "npe-0099-nurse",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0104-nurse"],
-      "POL": ["pol-npe-0114-pielęgniarka", "pol-npe-0115-pielęgniarz"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["medicine", "work", "people"]
   },
   {
     "key": "npe-0100-citizen",
