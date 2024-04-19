@@ -419,27 +419,25 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["holiday", "restaurant", "work", "inside", "kitchen", "people"]
   },
-
   {
-    "key": "npe-0048-knight",
+    "key": "npe-0043-knight",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0045-knight"],
-      "POL": ["pol-npe-0053-rycerz"]
+      "ENG": ["eng-npe-0043"],
+      "POL": ["pol-npe-0043"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people", "history"]
   },
-
   {
-    "key": "npe-0050-thief",
+    "key": "npe-0044-thief",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0046-thief"],
-      "POL": ["pol-npe-0055-złodziej"]
+      "ENG": ["eng-npe-0044"],
+      "POL": ["pol-npe-0044"]
     },
-    "papers": ["crime", "concrete", "person", "living"],
-    "topics": ["law", "crime", "people"]
+    "papers": ["concrete", "person", "living"],
+    "topics": ["law", "crime"]
   },
 
   {

@@ -1373,23 +1373,9 @@
     "register": 1,
     "gender": "f"
   },
-
-  {
-    "lemma": "kierownik",
-    "id": "pol-npe-0052-kierownik",
-    "frequency": 4,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["kierowniczka"]
-      },
-      "synonyms": ["zarządca", "dyrektor"]
-    }
-  },
   {
     "lemma": "rycerz",
-    "id": "pol-npe-0053-rycerz",
+    "id": "pol-npe-0043-rycerz",
     "frequency": 4,
     "register": 1,
     "gender": "m1",
@@ -1408,10 +1394,11 @@
   },
   {
     "lemma": "złodziej",
-    "id": "pol-npe-0055-złodziej",
+    "id": "pol-npe-0044-złodziej-€",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "diminutive": ["złodziejaszek"],
@@ -1421,6 +1408,14 @@
       "derivedTerms": ["złodziejski", "złodziejstwo"]
     }
   },
+  {
+    "lemma": "złodziejka",
+    "id": "pol-npe-0044-złodziejka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+
   {
     "lemma": "papież",
     "id": "pol-npe-0059-papież",
@@ -1500,6 +1495,19 @@
     "gender": "m1",
     "extra": {
       "synonyms": ["(", "archaic", ")", "automobilista"]
+    }
+  },
+  {
+    "lemma": "kierownik",
+    "id": "pol-npe-0052-kierownik",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["kierowniczka"]
+      },
+      "synonyms": ["zarządca", "dyrektor"]
     }
   },
   {
