@@ -329,6 +329,16 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
   },
+  {
+    "key": "npe-0034-politician",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0034"],
+      "POL": ["pol-npe-0034"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["work", "people", "politics"]
+  },
 
   {
     "key": "npe-0035-leader",
@@ -362,16 +372,6 @@
     },
     "papers": ["concrete", "person", "living"],
     "topics": ["fantasy", "people", "writing"]
-  },
-  {
-    "key": "npe-0041-politician",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0038-politician"],
-      "POL": ["pol-npe-0047-polityk"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["work", "people"]
   },
   {
     "key": "npe-0043-surgeon",
