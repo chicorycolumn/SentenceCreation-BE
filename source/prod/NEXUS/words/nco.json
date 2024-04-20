@@ -10794,7 +10794,17 @@
     "topics": ["kitchen", "inside", "restaurant"]
   },
   {
-    "key": "nco-1052-information",
+    "key": "nco-1052-police",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1351-police"],
+      "POL": ["pol-nco-1125-policja"]
+    },
+    "papers": ["s6", "concrete"],
+    "topics": ["law", "crime", "people"]
+  },
+  {
+    "key": "nco-1053-information",
     "traductions": {
       "SPA": [],
       "ENG": ["eng-nco-0705-information"],
@@ -10802,5 +10812,5 @@
     },
     "papers": ["abstract"],
     "topics": ["communications", "work", "school", "knowledge and existence"]
-  },
+  }
 ]
