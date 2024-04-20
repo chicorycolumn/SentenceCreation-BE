@@ -5773,24 +5773,24 @@
     "topics": ["home", "inside"]
   },
   {
-    "key": "nco-0564-information",
+    "key": "nco-0564-mushroom(food)",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-nco-0705-information"],
-      "POL": ["pol-nco-0570-informacja"]
-    },
-    "papers": ["abstract"],
-    "topics": ["communications", "work", "school", "knowledge and existence"]
-  },
-  {
-    "key": "nco-0565-fungus",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-nco-0706-fungus", "eng-nco-0707-mushroom"],
-      "POL": ["pol-nco-0571-grzyb", "pol-nco-1124-pieczarka"]
+      "ENG": ["eng-nco-0707-mushroom"],
+      "POL": ["pol-nco-0570-grzyb(food)", "pol-nco-1124-pieczarka"]
     },
     "papers": ["s2", "food", "concrete", "savoury"],
-    "topics": ["restaurant", "inside", "disease", "medicine", "kitchen"]
+    "topics": ["restaurant", "inside", "kitchen"]
+  },
+  {
+    "key": "nco-0565-fungus(disease)",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-0706-fungus"],
+      "POL": ["pol-nco-0571-grzyb(disease)"]
+    },
+    "papers": ["s0", "disease agent", "concrete"],
+    "topics": ["disease", "medicine"]
   },
   {
     "key": "nco-0566-movement",
@@ -10792,5 +10792,15 @@
     },
     "papers": ["s1", "food", "concrete", "vegetable"],
     "topics": ["kitchen", "inside", "restaurant"]
-  }
+  },
+  {
+    "key": "nco-1052-information",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-0705-information"],
+      "POL": ["pol-nco-1125-informacja"]
+    },
+    "papers": ["abstract"],
+    "topics": ["communications", "work", "school", "knowledge and existence"]
+  },
 ]

@@ -9797,19 +9797,21 @@
     }
   },
   {
-    "lemma": "informacja",
-    "id": "pol-nco-0570-informacja",
+    "lemma": "grzyb",
+    "id": "pol-nco-0570-grzyb(food)",
     "frequency": 3,
     "register": 1,
-    "gender": "f",
+    "gender": "m3",
     "extra": {
-      "synonyms": ["wiadomość"],
-      "derivedTerms": ["informacyjny"]
+      "otherShapes": {
+        "diminutive": ["grzybek"]
+      }
     }
   },
   {
     "lemma": "grzyb",
-    "id": "pol-nco-0571-grzyb",
+    "id": "pol-nco-0571-grzyb(disease)",
+    "_inflectionsRoot": "pol-nco-0570-grzyb(food)",
     "frequency": 3,
     "register": 1,
     "gender": "m3",
@@ -17953,5 +17955,16 @@
     "frequency": 2,
     "register": 1,
     "gender": "f"
-  }
+  },
+  {
+    "lemma": "informacja",
+    "id": "pol-nco-1125-informacja",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "synonyms": ["wiadomość"],
+      "derivedTerms": ["informacyjny"]
+    }
+  },
 ]
