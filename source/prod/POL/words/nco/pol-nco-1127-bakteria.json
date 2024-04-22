@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+        "nom": "bakteria",
+        "gen": "bakterii",
+        "dat": "bakterii",
+        "acc": "bakterię",
+        "ins": "bakterią",
+        "loc": "bakterii",
+        "voc": "bakterio"
+    },
+    "plural": {
+        "nom": "bakterie",
+        "gen": "bakterii",
+        "dat": "bakteriom",
+        "acc": "bakterie",
+        "ins": "bakteriami",
+        "loc": "bakteriach",
+        "voc": "bakterie"
+    }
+  }
+}

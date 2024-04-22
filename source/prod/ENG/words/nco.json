@@ -10719,5 +10719,12 @@
     "_lacking": true,
     "tantumPlurale": true,
     "_uncountableType": 2
+  },
+  {
+    "lemma": "bacterium",
+    "id": "eng-nco-1352-bacterium",
+    "gender": "n",
+    "frequency": 3,
+    "register": 1
   }
 ]

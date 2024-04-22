@@ -10812,5 +10812,15 @@
     },
     "papers": ["abstract"],
     "topics": ["communications", "work", "school", "knowledge and existence"]
-  }
+  },
+  {
+    "key": "nco-1054-bakteria",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1352-bacterium"],
+      "POL": ["pol-nco-1127-bakteria"]
+    },
+    "papers": ["s0", "disease agent", "concrete"],
+    "topics": ["disease", "medicine"]
+  },
 ]

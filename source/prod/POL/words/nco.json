@@ -17985,4 +17985,11 @@
       "derivedTerms": ["informacyjny"]
     }
   },
+  {
+    "lemma": "bakteria",
+    "id": "pol-nco-1127-bakteria",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  }
 ]
