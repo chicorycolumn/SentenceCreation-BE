@@ -17991,5 +17991,12 @@
     "frequency": 3,
     "register": 1,
     "gender": "f"
+  },
+  {
+    "lemma": "wirus",
+    "id": "pol-nco-1128-wirus",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m2"
   }
 ]

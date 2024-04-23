@@ -10726,5 +10726,12 @@
     "gender": "n",
     "frequency": 3,
     "register": 1
+  },
+  {
+    "lemma": "virus",
+    "id": "eng-nco-1353-virus",
+    "gender": "n",
+    "frequency": 3,
+    "register": 1
   }
 ]

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "virus",
+      "gen": "virus's"
+    },
+    "plural": {
+      "nom": "viruses",
+      "gen": "viruses'"
+    }
+  }
+}

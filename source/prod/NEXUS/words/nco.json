@@ -10823,4 +10823,14 @@
     "papers": ["s0", "disease agent", "concrete"],
     "topics": ["disease", "medicine"]
   },
+  {
+    "key": "nco-1055-virus",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1353-virus"],
+      "POL": ["pol-nco-1128-wirus"]
+    },
+    "papers": ["s0", "disease agent", "concrete"],
+    "topics": ["disease", "medicine"]
+  }
 ]
