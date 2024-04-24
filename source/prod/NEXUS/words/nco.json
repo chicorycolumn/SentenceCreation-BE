@@ -10832,5 +10832,15 @@
     },
     "papers": ["s0", "disease agent", "concrete"],
     "topics": ["disease", "medicine"]
+  },
+  {
+    "key": "nco-1056-seed",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1354-seed"],
+      "POL": ["pol-nco-1129-nasiono"]
+    },
+    "papers": ["s1", "natural", "concrete"],
+    "topics": ["outside"]
   }
 ]
