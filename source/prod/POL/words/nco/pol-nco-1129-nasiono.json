@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "nasiono",
+      "gen": "nasiona",
+      "dat": "nasionu",
+      "acc": "nasiono",
+      "ins": "nasionem",
+      "loc": "nasionie",
+      "voc": "nasiono"
+    },
+    "plural": {
+      "nom": "nasiona",
+      "gen": "nasion",
+      "dat": "nasionom",
+      "acc": "nasiona",
+      "ins": "nasionami",
+      "loc": "nasionach",
+      "voc": "nasiona"
+    }
+  }
+}

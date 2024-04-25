@@ -10733,5 +10733,12 @@
     "gender": "n",
     "frequency": 3,
     "register": 1
+  },
+  {
+    "lemma": "seed",
+    "id": "eng-nco-1354-seed",
+    "gender": "n",
+    "frequency": 3,
+    "register": 1
   }
 ]
