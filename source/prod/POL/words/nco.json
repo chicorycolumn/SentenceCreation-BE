@@ -18005,5 +18005,14 @@
     "frequency": 3,
     "register": 1,
     "gender": "n"
+  },
+  {
+    "lemma": "kora",
+    "id": "pol-nco-1130-kora",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f",
+    "_lacking": true,
+    "tantumSingulare": true
   }
 ]

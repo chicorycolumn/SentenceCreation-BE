@@ -10740,5 +10740,13 @@
     "gender": "n",
     "frequency": 3,
     "register": 1
+  },
+  {
+    "lemma": "bark",
+    "id": "eng-nco-1355-bark",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1,
+    "_uncountableType": 2
   }
 ]

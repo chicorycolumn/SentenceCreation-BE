@@ -10842,5 +10842,15 @@
     },
     "papers": ["s1", "natural", "concrete"],
     "topics": ["outside"]
+  },
+  {
+    "key": "nco-1057-bark",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1355-bark"],
+      "POL": ["pol-nco-1130-kora"]
+    },
+    "papers": ["s6", "natural", "concrete"],
+    "topics": ["outside"]
   }
 ]
