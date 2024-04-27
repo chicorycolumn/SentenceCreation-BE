@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "warzywo",
+      "gen": "warzywa",
+      "dat": "warzywu",
+      "acc": "warzywo",
+      "ins": "warzywem",
+      "loc": "warzywie",
+      "voc": "warzywo"
+    },
+    "plural": {
+      "nom": "warzywa",
+      "gen": "warzyw",
+      "dat": "warzywom",
+      "acc": "warzywa",
+      "ins": "warzywami",
+      "loc": "warzywach",
+      "voc": "warzywa"
+    }
+  }
+}
