@@ -10748,5 +10748,12 @@
     "frequency": 4,
     "register": 1,
     "_uncountableType": 2
+  },
+  {
+    "lemma": "vegetable",
+    "id": "eng-nco-1356-vegetable",
+    "gender": "n",
+    "frequency": 2,
+    "register": 1
   }
 ]

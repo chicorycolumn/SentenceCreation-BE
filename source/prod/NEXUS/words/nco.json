@@ -10852,5 +10852,15 @@
     },
     "papers": ["s6", "natural", "concrete"],
     "topics": ["outside"]
+  },
+  {
+    "key": "nco-1058-vegetable",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1356-vegetable"],
+      "POL": ["pol-nco-1131-warzywo", "pol-nco-1132-jarzyna"]
+    },
+    "papers": ["s2", "vegetable hypernym", "food", "concrete", "vegetable"],
+    "topics": ["kitchen", "inside", "restaurant"]
   }
 ]
