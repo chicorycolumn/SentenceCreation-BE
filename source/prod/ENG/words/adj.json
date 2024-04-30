@@ -6950,5 +6950,11 @@
     "id": "eng-adj-1055-tiny",
     "register": 1,
     "frequency": 3
+  },
+  {
+    "lemma": "own",
+    "id": "eng-adj-1056-©own",
+    "frequency": 3,
+    "register": 1
   }
 ]

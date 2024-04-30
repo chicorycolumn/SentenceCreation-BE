@@ -1,0 +1,61 @@
+{
+  "inflections": {
+    "adverb": false,
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "własny",
+          "gen": "własnego",
+          "dat": "własnemu",
+          "acc": "własnego",
+          "ins": "własnym",
+          "loc": "własnym"
+        },
+        "m3": {
+          "nom": "własny",
+          "gen": "własnego",
+          "dat": "własnemu",
+          "acc": "własny",
+          "ins": "własnym",
+          "loc": "własnym"
+        },
+        "f": {
+          "nom": "własna",
+          "gen": "własnej",
+          "dat": "własnej",
+          "acc": "własną",
+          "ins": "własną",
+          "loc": "własnej"
+        },
+        "n": {
+          "nom": "własne",
+          "gen": "własnego",
+          "dat": "własnemu",
+          "acc": "własne",
+          "ins": "własnym",
+          "loc": "własnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "właśni",
+          "gen": "własnych",
+          "dat": "własnym",
+          "acc": "własnych",
+          "ins": "własnymi",
+          "loc": "własnych"
+        },
+        "nonvirile": {
+          "nom": "własne",
+          "gen": "własnych",
+          "dat": "własnym",
+          "acc": "własne",
+          "ins": "własnymi",
+          "loc": "własnych"
+        }
+      }
+    },
+    "comparative": false,
+    "superlative": false
+  }
+}
