@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "szklany",
+          "gen": "szklanego",
+          "dat": "szklanemu",
+          "acc": "szklanego",
+          "ins": "szklanym",
+          "loc": "szklanym"
+        },
+        "m3": {
+          "nom": "szklany",
+          "gen": "szklanego",
+          "dat": "szklanemu",
+          "acc": "szklany",
+          "ins": "szklanym",
+          "loc": "szklanym"
+        },
+        "f": {
+          "nom": "szklana",
+          "gen": "szklanej",
+          "dat": "szklanej",
+          "acc": "szklaną",
+          "ins": "szklaną",
+          "loc": "szklanej"
+        },
+        "n": {
+          "nom": "szklane",
+          "gen": "szklanego",
+          "dat": "szklanemu",
+          "acc": "szklane",
+          "ins": "szklanym",
+          "loc": "szklanym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "szklani",
+          "gen": "szklanych",
+          "dat": "szklanym",
+          "acc": "szklanych",
+          "ins": "szklanymi",
+          "loc": "szklanych"
+        },
+        "nonvirile": {
+          "nom": "szklane",
+          "gen": "szklanych",
+          "dat": "szklanym",
+          "acc": "szklane",
+          "ins": "szklanymi",
+          "loc": "szklanych"
+        }
+      }
+    }
+  }
+}

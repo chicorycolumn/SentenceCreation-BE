@@ -7052,5 +7052,15 @@
     },
     "papers": ["concrete", "abstract"],
     "topics": ["possession"]
+  },
+  {
+    "key": "adj-0629-glass",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-adj-1057-glass"],
+      "POL": ["pol-adj-0817-szklany"]
+    },
+    "papers": ["concrete", "uncountable", "material"],
+    "topics": ["engineering"]
   }
 ]
