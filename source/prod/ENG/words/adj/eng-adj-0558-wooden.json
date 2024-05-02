@@ -1,8 +1,8 @@
 {
   "inflections": {
     "simple": "wooden",
-    "comparative": "more wooden",
-    "superlative": "the most wooden",
-    "adverb": "woodenly"
+    "comparative": false,
+    "superlative": false,
+    "adverb": false
   }
 }
