@@ -3415,8 +3415,8 @@
       "ENG": ["eng-nco-0426-circle"],
       "POL": ["pol-nco-0334-koło(circle)"]
     },
-    "papers": ["concrete", "abstract", "shape"],
-    "topics": ["travel", "geometry"]
+    "papers": ["abstract", "shape"],
+    "topics": ["geometry"]
   },
   {
     "key": "nco-0335-wheel",
@@ -6277,7 +6277,7 @@
       "ENG": ["eng-nco-0775-cube"],
       "POL": ["pol-nco-0624-sześcian"]
     },
-    "papers": ["abstract"],
+    "papers": ["abstract", "shape"],
     "topics": ["geometry"]
   },
   {
@@ -10862,5 +10862,15 @@
     },
     "papers": ["s2", "vegetable hypernym", "food", "concrete", "vegetable"],
     "topics": ["kitchen", "inside", "restaurant"]
+  },
+  {
+    "key": "nco-1059-oval",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1357-oval"],
+      "POL": ["pol-nco-1132-owal"]
+    },
+    "papers": ["abstract", "shape"],
+    "topics": ["geometry"]
   }
 ]
