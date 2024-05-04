@@ -10755,5 +10755,12 @@
     "gender": "n",
     "frequency": 2,
     "register": 1
+  },
+  {
+    "lemma": "oval",
+    "id": "eng-nco-1357-oval",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
   }
 ]

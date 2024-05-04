@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "owal",
+      "gen": "owalu",
+      "dat": "owalowi",
+      "acc": "owal",
+      "ins": "owalem",
+      "loc": "owalu",
+      "voc": "owalu"
+    },
+    "plural": {
+      "nom": "owale",
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "owali",
+          "owalów"
+        ]
+      },
+      "dat": "owalom",
+      "acc": "owale",
+      "ins": "owalami",
+      "loc": "owalach",
+      "voc": "owale"
+    }
+  }
+}

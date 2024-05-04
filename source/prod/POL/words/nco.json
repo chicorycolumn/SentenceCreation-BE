@@ -18028,5 +18028,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "f"
+  },
+  {
+    "lemma": "owal",
+    "id": "pol-nco-1133-owal",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
   }
 ]
