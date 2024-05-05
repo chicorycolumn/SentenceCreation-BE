@@ -10872,5 +10872,15 @@
     },
     "papers": ["abstract", "shape"],
     "topics": ["geometry"]
+  },
+  {
+    "key": "nco-1060-cylinder",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1358-cylinder"],
+      "POL": ["pol-nco-1134-walec"]
+    },
+    "papers": ["abstract", "shape"],
+    "topics": ["geometry"]
   }
 ]
