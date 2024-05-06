@@ -1790,6 +1790,45 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "przestępca",
+    "id": "pol-npe-0069-przestępca",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["przestępczyni"]
+      }
+    }
+  },
+  {
+    "lemma": "przestępczyni",
+    "id": "pol-npe-0069-przestępczyni",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "kryminalista",
+    "id": "pol-npe-0070-kryminalista",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "synonyms": ["przestępca"]
+    }
+  },
+  {
+    "lemma": "kryminalistka",
+    "id": "pol-npe-0070-kryminalistka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "synonyms": ["przestępczyni"]
+    }
+  },
 
   {
     "lemma": "kierownik",
@@ -1802,18 +1841,6 @@
         "feminine": ["kierowniczka"]
       },
       "synonyms": ["zarządca", "dyrektor"]
-    }
-  },
-  {
-    "lemma": "przestępca",
-    "id": "pol-npe-0065-przestępca",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["przestępczyni"]
-      }
     }
   },
   {
@@ -2339,16 +2366,6 @@
         "masculine": ["artysta"]
       },
       "synonyms": ["profesjonalistka", "specjalistka"]
-    }
-  },
-  {
-    "lemma": "kryminalista",
-    "id": "pol-npe-0132-kryminalista",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "synonyms": ["przestępca"]
     }
   },
   {

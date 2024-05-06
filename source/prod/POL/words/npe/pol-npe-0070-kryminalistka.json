@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kryminalistka",
+      "gen": "kryminalistki",
+      "dat": "kryminalistce",
+      "acc": "kryminalistkę",
+      "ins": "kryminalistką",
+      "loc": "kryminalistce",
+      "voc": "kryminalistko"
+    },
+    "plural": {
+      "nom": "kryminalistki",
+      "gen": "kryminalistek",
+      "dat": "kryminalistkom",
+      "acc": "kryminalistki",
+      "ins": "kryminalistkami",
+      "loc": "kryminalistkach",
+      "voc": "kryminalistki"
+    }
+  }
+}

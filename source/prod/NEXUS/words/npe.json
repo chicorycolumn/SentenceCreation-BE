@@ -563,17 +563,17 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["holiday", "work", "people"]
   },
-
   {
-    "key": "npe-0059-criminal",
+    "key": "npe-0057-criminal",
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0055-criminal"],
-      "POL": ["pol-npe-0065-przestępca", "pol-npe-0132-kryminalista"]
+      "POL": ["pol-npe-0069", "pol-npe-0070"]
     },
-    "papers": ["crime", "concrete"],
+    "papers": ["concrete", "profession", "person", "living"],
     "topics": ["law", "crime", "people"]
   },
+
   {
     "key": "npe-0063-firefighter",
     "traductions": {
