@@ -1677,6 +1677,60 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "ogrodnik",
+    "id": "pol-npe-0063-ogrodnik",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["ogrodniczka"]
+      },
+      "derivedTerms": ["ogrodnictwo", "ogrodniczki", "ogrodniczy"]
+    }
+  },
+  {
+    "lemma": "ogrodniczka",
+    "id": "pol-npe-0063-ogrodniczka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "wegetarianin",
+    "id": "pol-npe-0064-wegetarianin",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["wegetarianka"]
+      },
+      "synonyms": ["jarosz"]
+    }
+  },
+  {
+    "lemma": "wegetarianka",
+    "id": "pol-npe-0064-wegetarianka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "weganin",
+    "id": "pol-npe-0065-weganin",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1"
+  },
+  {
+    "lemma": "weganka",
+    "id": "pol-npe-0065-weganka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kierownik",
@@ -1725,19 +1779,6 @@
       "otherShapes": {
         "feminine": ["pracownica", "pracowniczka"]
       }
-    }
-  },
-  {
-    "lemma": "ogrodnik",
-    "id": "pol-npe-0073-ogrodnik",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["ogrodniczka"]
-      },
-      "derivedTerms": ["ogrodnictwo", "ogrodniczki", "ogrodniczy"]
     }
   },
   {
@@ -2221,19 +2262,6 @@
         "mistrzostwo",
         "zegarmistrz"
       ]
-    }
-  },
-  {
-    "lemma": "wegetarianin",
-    "id": "pol-npe-0126-wegetarianin",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["wegetarianka"]
-      },
-      "synonyms": ["jarosz"]
     }
   },
   {

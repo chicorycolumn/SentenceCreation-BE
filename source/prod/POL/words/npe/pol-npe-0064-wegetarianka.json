@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wegetarianka",
+      "gen": "wegetarianki",
+      "dat": "wegetariance",
+      "acc": "wegetariankę",
+      "ins": "wegetarianką",
+      "loc": "wegetariance",
+      "voc": "wegetarianko"
+    },
+    "plural": {
+      "nom": "wegetarianki",
+      "gen": "wegetarianek",
+      "dat": "wegetariankom",
+      "acc": "wegetarianki",
+      "ins": "wegetariankami",
+      "loc": "wegetariankach",
+      "voc": "wegetarianki"
+    }
+  }
+}

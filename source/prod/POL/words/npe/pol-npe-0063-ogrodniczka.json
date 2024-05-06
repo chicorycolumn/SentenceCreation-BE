@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ogrodniczka",
+      "gen": "ogrodniczki",
+      "dat": "ogrodniczce",
+      "acc": "ogrodniczkę",
+      "ins": "ogrodniczką",
+      "loc": "ogrodniczce",
+      "voc": "ogrodniczko"
+    },
+    "plural": {
+      "nom": "ogrodniczki",
+      "gen": "ogrodniczek",
+      "dat": "ogrodniczkom",
+      "acc": "ogrodniczki",
+      "ins": "ogrodniczkami",
+      "loc": "ogrodniczkach",
+      "voc": "ogrodniczki"
+    }
+  }
+}

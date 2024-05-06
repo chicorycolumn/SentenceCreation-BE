@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "weganka",
+      "gen": "weganki",
+      "dat": "wegance",
+      "acc": "wegankę",
+      "ins": "weganką",
+      "loc": "wegance",
+      "voc": "weganko"
+    },
+    "plural": {
+      "nom": "weganki",
+      "gen": "weganek",
+      "dat": "wegankom",
+      "acc": "weganki",
+      "ins": "wegankami",
+      "loc": "wegankach",
+      "voc": "weganki"
+    }
+  }
+}

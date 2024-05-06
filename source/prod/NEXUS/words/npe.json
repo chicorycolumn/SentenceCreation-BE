@@ -500,7 +500,7 @@
     "topics": ["philosophy and ethics", "religion"]
   },
   {
-    "key": "npe-0064-lawyer",
+    "key": "npe-0051-lawyer",
     "traductions": {
       "SPA": [],
       "ENG": [
@@ -512,6 +512,36 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["law", "work", "people"]
+  },
+  {
+    "key": "npe-0052-gardener",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0067-gardener"],
+      "POL": ["pol-npe-0063-ogrodnik"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["agriculture", "people", "work"]
+  },
+  {
+    "key": "npe-0053-vegetarian",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0117-vegetarian"],
+      "POL": ["pol-npe-0064"]
+    },
+    "papers": ["concrete", "person", "living"],
+    "topics": ["restaurant", "inside", "kitchen", "people"]
+  },
+  {
+    "key": "npe-0054-vegan",
+    "traductions": {
+      "SPA": [],
+      "ENG": [],
+      "POL": ["pol-npe-0065"]
+    },
+    "papers": ["concrete", "person", "living"],
+    "topics": ["restaurant", "inside", "kitchen", "people"]
   },
 
   {
@@ -543,16 +573,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
-  },
-  {
-    "key": "npe-0068-gardener",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0067-gardener"],
-      "POL": ["pol-npe-0073-ogrodnik"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["agriculture", "people", "work"]
   },
   {
     "key": "npe-0069-teenager",
@@ -893,16 +913,6 @@
     },
     "papers": ["concrete", "person", "living"],
     "topics": ["game", "people"]
-  },
-  {
-    "key": "npe-0109-vegetarian",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0117-vegetarian"],
-      "POL": ["pol-npe-0126-wegetarianin"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["restaurant", "inside", "kitchen", "people"]
   },
   {
     "key": "npe-0110-secretary",
