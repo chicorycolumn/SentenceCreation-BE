@@ -593,27 +593,27 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
   },
-
   {
-    "key": "npe-0069-teenager",
+    "key": "npe-0060-teenager",
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0068-teenager"],
-      "POL": ["pol-npe-0074-nastolatek", "pol-npe-0075-nastolatka"]
+      "POL": ["pol-npe-0073"]
     },
     "papers": ["concrete", "person", "living"],
     "topics": ["time", "people"]
   },
   {
-    "key": "npe-0070-optician",
+    "key": "npe-0061-optician",
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0069-optician"],
-      "POL": ["pol-npe-0078-optyk"]
+      "POL": ["pol-npe-0074"]
     },
     "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["work", "people"]
+    "topics": ["work", "people", "medicine"]
   },
+
   {
     "key": "npe-0071-model",
     "traductions": {

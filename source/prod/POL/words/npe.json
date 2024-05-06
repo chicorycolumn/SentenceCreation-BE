@@ -1874,23 +1874,9 @@
     "register": 1,
     "gender": "f"
   },
-
-  {
-    "lemma": "kierownik",
-    "id": "pol-npe-0052-kierownik",
-    "frequency": 4,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["kierowniczka"]
-      },
-      "synonyms": ["zarządca", "dyrektor"]
-    }
-  },
   {
     "lemma": "nastolatek",
-    "id": "pol-npe-0074-nastolatek",
+    "id": "pol-npe-0073-nastolatek",
     "frequency": 2,
     "register": 1,
     "gender": "m1",
@@ -1903,7 +1889,7 @@
   },
   {
     "lemma": "nastolatka",
-    "id": "pol-npe-0075-nastolatka",
+    "id": "pol-npe-0073-nastolatka",
     "frequency": 2,
     "register": 1,
     "gender": "f",
@@ -1915,12 +1901,26 @@
   },
   {
     "lemma": "optyk",
-    "id": "pol-npe-0078-optyk",
+    "id": "pol-npe-0074-optyk",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
     "extra": {
       "derivedTerms": ["optyka"]
+    }
+  },
+
+  {
+    "lemma": "kierownik",
+    "id": "pol-npe-0052-kierownik",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["kierowniczka"]
+      },
+      "synonyms": ["zarządca", "dyrektor"]
     }
   },
   {
