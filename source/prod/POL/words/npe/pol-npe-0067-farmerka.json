@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "farmerka",
+      "gen": "farmerki",
+      "dat": "farmerce",
+      "acc": "farmerkę",
+      "ins": "farmerką",
+      "loc": "farmerce",
+      "voc": "farmerko"
+    },
+    "plural": {
+      "nom": "farmerki",
+      "gen": "farmerek",
+      "dat": "farmerkom",
+      "acc": "farmerki",
+      "ins": "farmerkami",
+      "loc": "farmerkach",
+      "voc": "farmerki"
+    }
+  }
+}

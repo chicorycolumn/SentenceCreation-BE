@@ -1731,6 +1731,65 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "rolnik",
+    "id": "pol-npe-0066-rolnik",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["rolniczka"]
+      },
+      "synonyms": ["farmer"],
+      "derivedTerms": ["rolniczy", "rolnictwo"]
+    }
+  },
+  {
+    "lemma": "rolniczka",
+    "id": "pol-npe-0066-rolniczka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "farmer",
+    "id": "pol-npe-0067-farmer",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1"
+  },
+  {
+    "lemma": "farmerka",
+    "id": "pol-npe-0067-farmerka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "przewodnik",
+    "id": "pol-npe-0068-przewodnik(person)",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "allohomInfo": {
+      "singleWordtype": false,
+      "text": "person",
+      "emoji": "🏃"
+    },
+    "extra": {
+      "otherShapes": {
+        "feminine": ["przewodniczka"]
+      }
+    }
+  },
+  {
+    "lemma": "przewodniczka",
+    "id": "pol-npe-0068-przewodniczka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kierownik",
@@ -1856,23 +1915,6 @@
     "extra": {
       "otherShapes": {
         "feminine": ["kucharka"]
-      }
-    }
-  },
-  {
-    "lemma": "przewodnik",
-    "id": "pol-npe-0087-przewodnik(person)",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": false,
-      "text": "person",
-      "emoji": "🏃"
-    },
-    "extra": {
-      "otherShapes": {
-        "feminine": ["przewodniczka"]
       }
     }
   },
@@ -2199,20 +2241,6 @@
     "frequency": 3,
     "register": 1,
     "gender": "m1"
-  },
-  {
-    "lemma": "rolnik",
-    "id": "pol-npe-0122-rolnik",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["rolniczka"]
-      },
-      "synonyms": ["farmer"],
-      "derivedTerms": ["rolniczy", "rolnictwo"]
-    }
   },
   {
     "lemma": "ofiara",

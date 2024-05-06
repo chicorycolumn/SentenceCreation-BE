@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "farmer",
+      "gen": "farmera",
+      "dat": "farmerowi",
+      "acc": "farmera",
+      "ins": "farmerem",
+      "loc": "farmerze",
+      "voc": "farmerze"
+    },
+    "plural": {
+      "nom": "farmerzy",
+      "gen": "farmerów",
+      "dat": "farmerom",
+      "acc": "farmerów",
+      "ins": "farmerami",
+      "loc": "farmerach",
+      "voc": "farmerzy"
+    }
+  }
+}

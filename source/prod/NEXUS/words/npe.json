@@ -543,6 +543,26 @@
     "papers": ["concrete", "person", "living"],
     "topics": ["restaurant", "inside", "kitchen", "people"]
   },
+  {
+    "key": "npe-0055-farmer",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0110-farmer"],
+      "POL": ["pol-npe-0066", "pol-npe-0067"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["agriculture", "people", "work"]
+  },
+  {
+    "key": "npe-0056-guide",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0077-guide"],
+      "POL": ["pol-npe-0068"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["holiday", "work", "people"]
+  },
 
   {
     "key": "npe-0059-criminal",
@@ -633,16 +653,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["restaurant", "work", "inside", "kitchen", "people"]
-  },
-  {
-    "key": "npe-0077-guide",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0077-guide"],
-      "POL": ["pol-npe-0087-przewodnik(person)"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["holiday", "work", "people"]
   },
   {
     "key": "npe-0078-midwife",
@@ -875,16 +885,6 @@
     "topics": ["medicine", "people"]
   },
   {
-    "key": "npe-0105-farmer",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0110-farmer"],
-      "POL": ["pol-npe-0122-rolnik"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["agriculture", "people", "work"]
-  },
-  {
     "key": "npe-0106-victim",
     "traductions": {
       "SPA": [],
@@ -943,16 +943,6 @@
     },
     "papers": ["concrete", "person", "living"],
     "topics": ["law", "people"]
-  },
-  {
-    "key": "npe-0114-waitress",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0123-waitress"],
-      "POL": ["pol-npe-0057-kelnerka"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["holiday", "restaurant", "work", "inside", "kitchen", "people"]
   },
   {
     "key": "npe-0115-billionaire",
