@@ -573,27 +573,27 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["law", "crime", "people"]
   },
-
   {
-    "key": "npe-0063-firefighter",
+    "key": "npe-0058-firefighter",
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0058-firefighter", "eng-npe-0059-fireman"],
-      "POL": ["pol-npe-0068-strażak"]
+      "POL": ["pol-npe-0071"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
   },
   {
-    "key": "npe-0065-employee",
+    "key": "npe-0059-employee",
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0063-employee", "eng-npe-0064-worker"],
-      "POL": ["pol-npe-0070-pracownik"]
+      "POL": ["pol-npe-0072"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
   },
+
   {
     "key": "npe-0069-teenager",
     "traductions": {

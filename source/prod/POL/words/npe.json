@@ -1829,6 +1829,51 @@
       "synonyms": ["przestępczyni"]
     }
   },
+  {
+    "lemma": "strażak",
+    "id": "pol-npe-0071-strażak",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["strażaczek"]
+      }
+    }
+  },
+  {
+    "lemma": "strażaczka",
+    "id": "pol-npe-0071-strażaczka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "pracownik",
+    "id": "pol-npe-0072-pracownik",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["pracownica", "pracowniczka"]
+      }
+    }
+  },
+  {
+    "lemma": "pracownica",
+    "id": "pol-npe-0072-pracownica",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "pracowniczka",
+    "id": "pol-npe-0072-pracowniczka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kierownik",
@@ -1841,30 +1886,6 @@
         "feminine": ["kierowniczka"]
       },
       "synonyms": ["zarządca", "dyrektor"]
-    }
-  },
-  {
-    "lemma": "strażak",
-    "id": "pol-npe-0068-strażak",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["strażaczek"]
-      }
-    }
-  },
-  {
-    "lemma": "pracownik",
-    "id": "pol-npe-0070-pracownik",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["pracownica", "pracowniczka"]
-      }
     }
   },
   {
