@@ -1,0 +1,30 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wirus",
+      "gen": "wirusa",
+      "dat": "wirusowi",
+      "acc": {
+        "isTerminus": true,
+        "normal": [
+          "wirusa"
+        ],
+        "additionalInfrequent": [
+          "wirus"
+        ]
+      },
+      "ins": "wirusem",
+      "loc": "wirusie",
+      "voc": "wirusie"
+    },
+    "plural": {
+      "nom": "wirusy",
+      "gen": "wirusów",
+      "dat": "wirusom",
+      "acc": "wirusy",
+      "ins": "wirusami",
+      "loc": "wirusach",
+      "voc": "wirusy"
+    }
+  }
+}

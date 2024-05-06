@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+        "nom": "kora",
+        "gen": "kory",
+        "dat": "korze",
+        "acc": "korę",
+        "ins": "korą",
+        "loc": "korze",
+        "voc": "koro"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "jarzyna",
+      "gen": "jarzyny",
+      "dat": "jarzynie",
+      "acc": "jarzynę",
+      "ins": "jarzyną",
+      "loc": "jarzynie",
+      "voc": "jarzyno"
+    },
+    "plural": {
+      "nom": "jarzyny",
+      "gen": "jarzyn",
+      "dat": "jarzynom",
+      "acc": "jarzyny",
+      "ins": "jarzynami",
+      "loc": "jarzynach",
+      "voc": "jarzyny"
+    }
+  }
+}

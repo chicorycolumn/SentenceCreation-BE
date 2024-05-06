@@ -3415,8 +3415,8 @@
       "ENG": ["eng-nco-0426-circle"],
       "POL": ["pol-nco-0334-koło(circle)"]
     },
-    "papers": ["concrete", "abstract", "shape"],
-    "topics": ["travel", "geometry"]
+    "papers": ["abstract", "shape"],
+    "topics": ["geometry"]
   },
   {
     "key": "nco-0335-wheel",
@@ -5773,24 +5773,24 @@
     "topics": ["home", "inside"]
   },
   {
-    "key": "nco-0564-information",
+    "key": "nco-0564-mushroom(food)",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-nco-0705-information"],
-      "POL": ["pol-nco-0570-informacja"]
-    },
-    "papers": ["abstract"],
-    "topics": ["communications", "work", "school", "knowledge and existence"]
-  },
-  {
-    "key": "nco-0565-fungus",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-nco-0706-fungus", "eng-nco-0707-mushroom"],
-      "POL": ["pol-nco-0571-grzyb", "pol-nco-1124-pieczarka"]
+      "ENG": ["eng-nco-0707-mushroom"],
+      "POL": ["pol-nco-0570-grzyb(food)", "pol-nco-1124-pieczarka"]
     },
     "papers": ["s2", "food", "concrete", "savoury"],
-    "topics": ["restaurant", "inside", "disease", "medicine", "kitchen"]
+    "topics": ["restaurant", "inside", "kitchen"]
+  },
+  {
+    "key": "nco-0565-fungus(disease)",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-0706-fungus"],
+      "POL": ["pol-nco-0571-grzyb(disease)"]
+    },
+    "papers": ["s0", "disease agent", "concrete"],
+    "topics": ["disease", "medicine"]
   },
   {
     "key": "nco-0566-movement",
@@ -6277,7 +6277,7 @@
       "ENG": ["eng-nco-0775-cube"],
       "POL": ["pol-nco-0624-sześcian"]
     },
-    "papers": ["abstract"],
+    "papers": ["abstract", "shape"],
     "topics": ["geometry"]
   },
   {
@@ -10802,5 +10802,85 @@
     },
     "papers": ["s6", "concrete"],
     "topics": ["law", "crime", "people"]
+  },
+  {
+    "key": "nco-1053-information",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-0705-information"],
+      "POL": ["pol-nco-1126-informacja"]
+    },
+    "papers": ["abstract"],
+    "topics": ["communications", "work", "school", "knowledge and existence"]
+  },
+  {
+    "key": "nco-1054-bakteria",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1352-bacterium"],
+      "POL": ["pol-nco-1127-bakteria"]
+    },
+    "papers": ["s0", "disease agent", "concrete"],
+    "topics": ["disease", "medicine"]
+  },
+  {
+    "key": "nco-1055-virus",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1353-virus"],
+      "POL": ["pol-nco-1128-wirus"]
+    },
+    "papers": ["s0", "disease agent", "concrete"],
+    "topics": ["disease", "medicine"]
+  },
+  {
+    "key": "nco-1056-seed",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1354-seed"],
+      "POL": ["pol-nco-1129-nasiono"]
+    },
+    "papers": ["s1", "natural", "concrete"],
+    "topics": ["outside"]
+  },
+  {
+    "key": "nco-1057-bark",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1355-bark"],
+      "POL": ["pol-nco-1130-kora"]
+    },
+    "papers": ["s6", "natural", "concrete"],
+    "topics": ["outside"]
+  },
+  {
+    "key": "nco-1058-vegetable",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1356-vegetable"],
+      "POL": ["pol-nco-1131-warzywo", "pol-nco-1132-jarzyna"]
+    },
+    "papers": ["s2", "vegetable hypernym", "food", "concrete", "vegetable"],
+    "topics": ["kitchen", "inside", "restaurant"]
+  },
+  {
+    "key": "nco-1059-oval",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1357-oval"],
+      "POL": ["pol-nco-1133-owal"]
+    },
+    "papers": ["abstract", "shape"],
+    "topics": ["geometry"]
+  },
+  {
+    "key": "nco-1060-cylinder",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1358-cylinder"],
+      "POL": ["pol-nco-1134-walec"]
+    },
+    "papers": ["abstract", "shape"],
+    "topics": ["geometry"]
   }
 ]

@@ -10719,5 +10719,55 @@
     "_lacking": true,
     "tantumPlurale": true,
     "_uncountableType": 2
+  },
+  {
+    "lemma": "bacterium",
+    "id": "eng-nco-1352-bacterium",
+    "gender": "n",
+    "frequency": 3,
+    "register": 1
+  },
+  {
+    "lemma": "virus",
+    "id": "eng-nco-1353-virus",
+    "gender": "n",
+    "frequency": 3,
+    "register": 1
+  },
+  {
+    "lemma": "seed",
+    "id": "eng-nco-1354-seed",
+    "gender": "n",
+    "frequency": 3,
+    "register": 1
+  },
+  {
+    "lemma": "bark",
+    "id": "eng-nco-1355-bark",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1,
+    "_uncountableType": 2
+  },
+  {
+    "lemma": "vegetable",
+    "id": "eng-nco-1356-vegetable",
+    "gender": "n",
+    "frequency": 2,
+    "register": 1
+  },
+  {
+    "lemma": "oval",
+    "id": "eng-nco-1357-oval",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "cylinder",
+    "id": "eng-nco-1358-cylinder",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
   }
 ]

@@ -9797,19 +9797,21 @@
     }
   },
   {
-    "lemma": "informacja",
-    "id": "pol-nco-0570-informacja",
+    "lemma": "grzyb",
+    "id": "pol-nco-0570-grzyb(food)",
     "frequency": 3,
     "register": 1,
-    "gender": "f",
+    "gender": "m3",
     "extra": {
-      "synonyms": ["wiadomość"],
-      "derivedTerms": ["informacyjny"]
+      "otherShapes": {
+        "diminutive": ["grzybek"]
+      }
     }
   },
   {
     "lemma": "grzyb",
-    "id": "pol-nco-0571-grzyb",
+    "id": "pol-nco-0571-grzyb(disease)",
+    "_inflectionsRoot": "pol-nco-0570-grzyb(food)",
     "frequency": 3,
     "register": 1,
     "gender": "m3",
@@ -17971,5 +17973,74 @@
         "policjantka"
       ]
     }
+  },
+  {
+    "lemma": "informacja",
+    "id": "pol-nco-1126-informacja",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "synonyms": ["wiadomość"],
+      "derivedTerms": ["informacyjny"]
+    }
+  },
+  {
+    "lemma": "bakteria",
+    "id": "pol-nco-1127-bakteria",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "wirus",
+    "id": "pol-nco-1128-wirus",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m2"
+  },
+  {
+    "lemma": "nasiono",
+    "id": "pol-nco-1129-nasiono",
+    "frequency": 3,
+    "register": 1,
+    "gender": "n"
+  },
+  {
+    "lemma": "kora",
+    "id": "pol-nco-1130-kora",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f",
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "warzywo",
+    "id": "pol-nco-1131-warzywo",
+    "frequency": 3,
+    "register": 1,
+    "gender": "n"
+  },
+  {
+    "lemma": "jarzyna",
+    "id": "pol-nco-1132-jarzyna",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "owal",
+    "id": "pol-nco-1133-owal",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
+  },
+  {
+    "lemma": "walec",
+    "id": "pol-nco-1134-walec",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
   }
 ]

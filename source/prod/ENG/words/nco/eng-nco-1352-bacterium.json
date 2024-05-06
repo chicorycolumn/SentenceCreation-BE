@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "bacterium",
+      "gen": "bacterium's"
+    },
+    "plural": {
+      "nom": "bacteria",
+      "gen": "bacteria's"
+    }
+  }
+}
