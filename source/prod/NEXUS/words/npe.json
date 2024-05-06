@@ -613,37 +613,27 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people", "medicine"]
   },
-
   {
-    "key": "npe-0071-model",
+    "key": "npe-0062-model",
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0070-model"],
-      "POL": ["pol-npe-0079-modelka"]
+      "POL": ["pol-npe-0075"]
     },
     "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["work", "people"]
+    "topics": ["work", "people", "fashion"]
   },
   {
-    "key": "npe-0072-prince",
+    "key": "npe-0063-prince",
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0071-prince"],
-      "POL": ["pol-npe-0080-książę"]
+      "POL": ["pol-npe-0076"]
     },
     "papers": ["concrete", "person", "profession", "living", "title"],
     "topics": ["work", "people", "history"]
   },
-  {
-    "key": "npe-0073-princess",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0072-princess"],
-      "POL": ["pol-npe-0081-księżniczka"]
-    },
-    "papers": ["concrete", "person", "profession", "living", "title"],
-    "topics": ["work", "people", "history"]
-  },
+
   {
     "key": "npe-0076-cook",
     "traductions": {
