@@ -10762,5 +10762,12 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "cylinder",
+    "id": "eng-nco-1358-cylinder",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
   }
 ]

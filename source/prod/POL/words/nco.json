@@ -18035,5 +18035,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "m3"
+  },
+  {
+    "lemma": "walec",
+    "id": "pol-nco-1134-walec",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
   }
 ]
