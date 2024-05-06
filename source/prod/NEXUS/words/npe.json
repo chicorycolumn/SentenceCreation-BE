@@ -499,6 +499,20 @@
     "papers": ["abstract"],
     "topics": ["philosophy and ethics", "religion"]
   },
+  {
+    "key": "npe-0064-lawyer",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-npe-0060-lawyer",
+        "eng-npe-0061-attorney",
+        "eng-npe-0062-solicitor"
+      ],
+      "POL": ["pol-npe-0061", "pol-npe-0062"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["law", "work", "people"]
+  },
 
   {
     "key": "npe-0059-criminal",
@@ -519,20 +533,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
-  },
-  {
-    "key": "npe-0064-lawyer",
-    "traductions": {
-      "SPA": [],
-      "ENG": [
-        "eng-npe-0060-lawyer",
-        "eng-npe-0061-attorney",
-        "eng-npe-0062-solicitor"
-      ],
-      "POL": ["pol-npe-0069-adwokat"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["law", "work", "people"]
   },
   {
     "key": "npe-0065-employee",

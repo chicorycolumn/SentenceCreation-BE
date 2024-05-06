@@ -1633,6 +1633,50 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "adwokat",
+    "id": "pol-npe-0061-adwokat",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["adwokacik"],
+        "feminine": ["adwokatka"]
+      },
+      "synonyms": ["prawnik", "rzecznik"],
+      "derivedTerms": [
+        "adwokacki",
+        "adwokacina",
+        "adwokacja",
+        "adwokat diabła",
+        "adwokatowa",
+        "adwokatura",
+        "adwokatować"
+      ]
+    }
+  },
+  {
+    "lemma": "adwokatka",
+    "id": "pol-npe-0061-adwokatka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "prawnik",
+    "id": "pol-npe-0062-prawnik",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1"
+  },
+  {
+    "lemma": "prawniczka",
+    "id": "pol-npe-0062-prawniczka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kierownik",
@@ -1669,29 +1713,6 @@
       "otherShapes": {
         "diminutive": ["strażaczek"]
       }
-    }
-  },
-  {
-    "lemma": "adwokat",
-    "id": "pol-npe-0069-adwokat",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["adwokacik"],
-        "feminine": ["adwokatka"]
-      },
-      "synonyms": ["prawnik", "rzecznik"],
-      "derivedTerms": [
-        "adwokacki",
-        "adwokacina",
-        "adwokacja",
-        "adwokat diabła",
-        "adwokatowa",
-        "adwokatura",
-        "adwokatować"
-      ]
     }
   },
   {
