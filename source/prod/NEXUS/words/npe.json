@@ -633,17 +633,27 @@
     "papers": ["concrete", "person", "profession", "living", "title"],
     "topics": ["work", "people", "history"]
   },
-
   {
-    "key": "npe-0076-cook",
+    "key": "npe-0064-cook",
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0075-cook", "eng-npe-0076-chef"],
-      "POL": ["pol-npe-0086-kucharz"]
+      "POL": ["pol-npe-0077"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["restaurant", "work", "inside", "kitchen", "people"]
   },
+  {
+    "key": "npe-0065-priest",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0079-priest"],
+      "POL": ["pol-npe-0078", "pol-npe-0079"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["religion", "work", "people"]
+  },
+
   {
     "key": "npe-0078-midwife",
     "traductions": {
@@ -653,16 +663,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]
-  },
-  {
-    "key": "npe-0079-priest",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0079-priest"],
-      "POL": ["pol-npe-0089-kapłan"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["religion", "work", "people"]
   },
   {
     "key": "npe-0081-enemy",

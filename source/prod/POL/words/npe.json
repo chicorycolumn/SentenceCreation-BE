@@ -1947,23 +1947,9 @@
     "register": 1,
     "gender": "f"
   },
-
-  {
-    "lemma": "kierownik",
-    "id": "pol-npe-0052-kierownik",
-    "frequency": 4,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["kierowniczka"]
-      },
-      "synonyms": ["zarządca", "dyrektor"]
-    }
-  },
   {
     "lemma": "kucharz",
-    "id": "pol-npe-0086-kucharz",
+    "id": "pol-npe-0077-kucharz",
     "frequency": 2,
     "register": 1,
     "gender": "m1",
@@ -1974,26 +1960,31 @@
     }
   },
   {
-    "lemma": "akuszerka",
-    "id": "pol-npe-0088-akuszerka",
+    "lemma": "kucharka",
+    "id": "pol-npe-0077-kucharka",
     "frequency": 2,
     "register": 1,
-    "gender": "f",
+    "gender": "f"
+  },
+  {
+    "lemma": "ksiądz",
+    "id": "pol-npe-0078-ksiądz",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
     "extra": {
       "otherShapes": {
-        "masculine": ["akuszer"]
+        "abbreviation": ["ks."]
       },
-      "synonyms": ["położna"],
+      "derivedTerms": ["kto ma księdza w rodzie, tego bieda nie ubodzie"],
       "usage": [
-        "wiejska akuszerka ― a rural/village accoucheuse",
-        "stara akuszerka ― an old accoucheuse",
-        "rola akuszerki ― the role of an accoucheuse"
+        "Nasza szefowa, pani Magdalena, na zarzut księdza , że jej nieskromny dekolt wzbudza grzeszne myśli odpowiedziała, że on nie skusiłby jej, nawet gdyby stanął przed nią nago. Our boss, Ms. Magdalena, to the priest's objection that her immodest décolletage evokes sinful thoughts replied that he would not tempt her even if he stood naked in front of her."
       ]
     }
   },
   {
     "lemma": "kapłan",
-    "id": "pol-npe-0089-kapłan",
+    "id": "pol-npe-0079-kapłan",
     "frequency": 2,
     "register": 1,
     "gender": "m1",
@@ -2011,6 +2002,38 @@
       ],
       "usage": [
         "Usage notes [ edit ] This term is neutral and can apply to a priest of any religion."
+      ]
+    }
+  },
+
+  {
+    "lemma": "kierownik",
+    "id": "pol-npe-0052-kierownik",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["kierowniczka"]
+      },
+      "synonyms": ["zarządca", "dyrektor"]
+    }
+  },
+  {
+    "lemma": "akuszerka",
+    "id": "pol-npe-0088-akuszerka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": ["akuszer"]
+      },
+      "synonyms": ["położna"],
+      "usage": [
+        "wiejska akuszerka ― a rural/village accoucheuse",
+        "stara akuszerka ― an old accoucheuse",
+        "rola akuszerki ― the role of an accoucheuse"
       ]
     }
   },
@@ -2483,23 +2506,6 @@
         "anieleć",
         "rozanielać",
         "rozanielić"
-      ]
-    }
-  },
-  {
-    "lemma": "ksiądz",
-    "id": "pol-npe-0153-ksiądz",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m3",
-    "extra": {
-      "otherShapes": {
-        "abbreviation": ["ks."]
-      },
-      "synonyms": ["ksiądz"],
-      "derivedTerms": ["kto ma księdza w rodzie, tego bieda nie ubodzie"],
-      "usage": [
-        "Nasza szefowa, pani Magdalena, na zarzut księdza , że jej nieskromny dekolt wzbudza grzeszne myśli odpowiedziała, że on nie skusiłby jej, nawet gdyby stanął przed nią nago. Our boss, Ms. Magdalena, to the priest's objection that her immodest décolletage evokes sinful thoughts replied that he would not tempt her even if he stood naked in front of her."
       ]
     }
   },
