@@ -713,6 +713,26 @@
     "papers": ["concrete", "person", "living"],
     "topics": ["people", "possession"]
   },
+  {
+    "key": "npe-0072-judge",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0093-judge"],
+      "POL": ["pol-npe-0086"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["law", "work", "people"]
+  },
+  {
+    "key": "npe-0073-referee",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0147-referee"],
+      "POL": ["pol-npe-0087"]
+    },
+    "papers": ["living", "profession", "concrete", "person"],
+    "topics": ["work", "people", "sport"]
+  },
 
   {
     "key": "npe-0078-midwife",
@@ -743,16 +763,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people", "writing"]
-  },
-  {
-    "key": "npe-0091-judge",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0093-judge"],
-      "POL": ["pol-npe-0102-sędzia(judge)"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["law", "work", "people"]
   },
   {
     "key": "npe-0092-journalist",
@@ -977,16 +987,6 @@
     },
     "papers": ["living", "profession", "concrete", "person"],
     "topics": ["work", "religion", "people"]
-  },
-  {
-    "key": "npe-0124-referee",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0147-referee"],
-      "POL": ["pol-npe-0103-sędzia(referee)"]
-    },
-    "papers": ["living", "profession", "concrete", "person"],
-    "topics": ["work", "people", "sport"]
   },
   {
     "key": "npe-0125-fucker",

@@ -2134,7 +2134,7 @@
   {
     "lemma": "właściciel",
     "id": "pol-npe-0085-właściciel(landlord)-€",
-    "_inflectionsRoot": "pol-npe-0084-właściciel(owner)",
+    "_inflectionsRoot": "pol-npe-0084-właściciel(owner)-€",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
@@ -2165,6 +2165,82 @@
     "extra": {
       "otherShapes": {
         "masculine": ["właściciel"]
+      }
+    }
+  },
+  {
+    "lemma": "sędzia",
+    "id": "pol-npe-0086-sędzia(judge man)-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "law/justice man",
+      "emoji": "⚖️ ♂️"
+    },
+    "extra": {
+      "otherShapes": {
+        "feminine": ["sędzia", "sędzina"]
+      },
+      "synonyms": ["arbiter"],
+      "derivedTerms": ["sędziowski"]
+    }
+  },
+  {
+    "lemma": "sędzia",
+    "id": "pol-npe-0086-sędzia(judge woman)",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "law/justice woman",
+      "emoji": "⚖️ ♀️"
+    },
+    "extra": {
+      "otherShapes": {
+        "feminine": ["sędzia", "sędzina"]
+      },
+      "synonyms": ["arbiter"],
+      "derivedTerms": ["sędziowski"]
+    }
+  },
+  {
+    "lemma": "sędzia",
+    "id": "pol-npe-0087-sędzia(referee man)",
+    "_inflectionsRoot": "pol-npe-0086-sędzia(judge)-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "games/sports man",
+      "emoji": "🎲 ♂️"
+    },
+    "extra": {
+      "otherShapes": {
+        "masculine": ["sędzia"]
+      }
+    }
+  },
+  {
+    "lemma": "sędzia",
+    "id": "pol-npe-0087-sędzia(referee woman)",
+    "_inflectionsRoot": "pol-npe-0086-sędzia(judge woman)",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "games/sports woman",
+      "emoji": "🎲 ♀️"
+    },
+    "extra": {
+      "otherShapes": {
+        "masculine": ["sędzia"]
       }
     }
   },
@@ -2216,43 +2292,6 @@
     "extra": {
       "otherShapes": {
         "feminine": ["pisarka"]
-      }
-    }
-  },
-  {
-    "lemma": "sędzia",
-    "id": "pol-npe-0102-sędzia(judge)",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "law/justice",
-      "emoji": "⚖️"
-    },
-    "extra": {
-      "otherShapes": {
-        "feminine": ["sędzia", "sędzina"]
-      },
-      "synonyms": ["arbiter"],
-      "derivedTerms": ["sędziowski"]
-    }
-  },
-  {
-    "lemma": "sędzia",
-    "id": "pol-npe-0103-sędzia(referee)",
-    "_inflectionsRoot": "pol-npe-0102-sędzia(judge)",
-    "frequency": 4,
-    "register": 1,
-    "gender": "f",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "games/sports",
-      "emoji": "🎲"
-    },
-    "extra": {
-      "otherShapes": {
-        "masculine": ["sędzia"]
       }
     }
   },
