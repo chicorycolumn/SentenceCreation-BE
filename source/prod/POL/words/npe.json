@@ -2096,6 +2096,78 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "właściciel",
+    "id": "pol-npe-0084-właściciel(owner)-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "of anything",
+      "emoji": "🔲"
+    },
+    "extra": {
+      "otherShapes": {
+        "feminine": ["właścicielka"]
+      }
+    }
+  },
+  {
+    "lemma": "właścicielka",
+    "id": "pol-npe-0084-właścicielka(owner)",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "of anything",
+      "emoji": "🔲"
+    },
+    "extra": {
+      "otherShapes": {
+        "masculine": ["właściciel"]
+      }
+    }
+  },
+  {
+    "lemma": "właściciel",
+    "id": "pol-npe-0085-właściciel(landlord)-€",
+    "_inflectionsRoot": "pol-npe-0084-właściciel(owner)",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "of a building",
+      "emoji": "🏠"
+    },
+    "extra": {
+      "otherShapes": {
+        "feminine": ["właścicielka"]
+      }
+    }
+  },
+  {
+    "lemma": "właścicielka",
+    "id": "pol-npe-0085-właścicielka(landlady)",
+    "_inflectionsRoot": "pol-npe-0084-właścicielka(owner)",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "of a building",
+      "emoji": "🏠"
+    },
+    "extra": {
+      "otherShapes": {
+        "masculine": ["właściciel"]
+      }
+    }
+  },
 
   {
     "lemma": "kierownik",
@@ -2134,41 +2206,6 @@
     "frequency": 3,
     "register": 7,
     "gender": "m1"
-  },
-  {
-    "lemma": "właściciel",
-    "id": "pol-npe-0097-właściciel(owner)",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "of anything",
-      "emoji": "🔲"
-    },
-    "extra": {
-      "otherShapes": {
-        "feminine": ["właścicielka"]
-      }
-    }
-  },
-  {
-    "lemma": "właściciel",
-    "id": "pol-npe-0098-właściciel(landlord)",
-    "_inflectionsRoot": "pol-npe-0097-właściciel(owner)",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "of a building",
-      "emoji": "🏠"
-    },
-    "extra": {
-      "otherShapes": {
-        "feminine": ["właścicielka"]
-      }
-    }
   },
   {
     "lemma": "pisarz",
@@ -2564,41 +2601,6 @@
     "frequency": 3,
     "register": 7,
     "gender": "m2"
-  },
-  {
-    "lemma": "właścicielka",
-    "id": "pol-npe-0157-właścicielka(owner)",
-    "frequency": 3,
-    "register": 1,
-    "gender": "f",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "of anything",
-      "emoji": "🔲"
-    },
-    "extra": {
-      "otherShapes": {
-        "masculine": ["właściciel"]
-      }
-    }
-  },
-  {
-    "lemma": "właścicielka",
-    "id": "pol-npe-0158-właścicielka(landlady)",
-    "_inflectionsRoot": "pol-npe-0157-właścicielka(owner)",
-    "frequency": 3,
-    "register": 1,
-    "gender": "f",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "of a building",
-      "emoji": "🏠"
-    },
-    "extra": {
-      "otherShapes": {
-        "masculine": ["właściciel"]
-      }
-    }
   },
   {
     "lemma": "bohaterka",

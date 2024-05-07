@@ -693,6 +693,26 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]
   },
+  {
+    "key": "npe-0070-owner",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0088-owner"],
+      "POL": ["pol-npe-0084"]
+    },
+    "papers": ["concrete", "person", "living"],
+    "topics": ["people", "possession"]
+  },
+  {
+    "key": "npe-0071-landlord",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0089-landlord", "eng-npe-0156-landlady"],
+      "POL": ["pol-npe-0085"]
+    },
+    "papers": ["concrete", "person", "living"],
+    "topics": ["people", "possession"]
+  },
 
   {
     "key": "npe-0078-midwife",
@@ -713,32 +733,6 @@
     },
     "papers": ["concrete", "negative judgment", "person"],
     "topics": ["judgment", "people"]
-  },
-  {
-    "key": "npe-0087-owner",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0088-owner"],
-      "POL": [
-        "pol-npe-0097-właściciel(owner)",
-        "pol-npe-0157-właścicielka(owner)"
-      ]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["people", "possession"]
-  },
-  {
-    "key": "npe-0088-landlord",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0089-landlord", "eng-npe-0156-landlady"],
-      "POL": [
-        "pol-npe-0098-właściciel(landlord)",
-        "pol-npe-0158-właścicielka(landlady)"
-      ]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["people", "possession"]
   },
   {
     "key": "npe-0089-writer",
