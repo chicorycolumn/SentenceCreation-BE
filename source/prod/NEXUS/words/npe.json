@@ -673,6 +673,26 @@
     "papers": ["concrete", "person", "living"],
     "topics": ["travel", "people"]
   },
+  {
+    "key": "npe-0068-soldier",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0083-soldier"],
+      "POL": ["pol-npe-0082"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["war", "work", "people"]
+  },
+  {
+    "key": "npe-0069-dentist",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0084-dentist"],
+      "POL": ["pol-npe-0083"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["medicine", "work", "people"]
+  },
 
   {
     "key": "npe-0078-midwife",
@@ -680,26 +700,6 @@
       "SPA": [],
       "ENG": ["eng-npe-0078-midwife"],
       "POL": ["pol-npe-0088-akuszerka"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["medicine", "work", "people"]
-  },
-  {
-    "key": "npe-0083-soldier",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0083-soldier"],
-      "POL": ["pol-npe-0092-żołnierz"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["war", "work", "people"]
-  },
-  {
-    "key": "npe-0084-dentist",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0084-dentist"],
-      "POL": ["pol-npe-0093-dentysta"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]

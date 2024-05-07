@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dentystka",
+      "gen": "dentystki",
+      "dat": "dentystce",
+      "acc": "dentystkę",
+      "ins": "dentystką",
+      "loc": "dentystce",
+      "voc": "dentystko"
+    },
+    "plural": {
+      "nom": "dentystki",
+      "gen": "dentystek",
+      "dat": "dentystkom",
+      "acc": "dentystki",
+      "ins": "dentystkami",
+      "loc": "dentystkach",
+      "voc": "dentystki"
+    }
+  }
+}

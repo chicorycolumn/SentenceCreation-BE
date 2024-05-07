@@ -2054,6 +2054,48 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "żołnierz",
+    "id": "pol-npe-0082-żołnierz-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "extra": {
+      "otherShapes": {
+        "diminutive": ["żołnierzyk"],
+        "feminine": ["żołnierka"]
+      },
+      "synonyms": ["wojak", "wojskowy"],
+      "derivedTerms": ["żołnierski"],
+      "usage": ["Hyponyms: najemnik najmita"]
+    }
+  },
+  {
+    "lemma": "żołnierka",
+    "id": "pol-npe-0082-żołnierka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "dentysta",
+    "id": "pol-npe-0083-dentysta-€",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "extra": {
+      "synonyms": ["stomatolog"]
+    }
+  },
+  {
+    "lemma": "dentystka",
+    "id": "pol-npe-0083-dentystka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kierownik",
@@ -2084,32 +2126,6 @@
         "stara akuszerka ― an old accoucheuse",
         "rola akuszerki ― the role of an accoucheuse"
       ]
-    }
-  },
-  {
-    "lemma": "żołnierz",
-    "id": "pol-npe-0092-żołnierz",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "diminutive": ["żołnierzyk"],
-        "feminine": ["żołnierka"]
-      },
-      "synonyms": ["wojak", "wojskowy"],
-      "derivedTerms": ["żołnierski"],
-      "usage": ["Hyponyms: najemnik najmita"]
-    }
-  },
-  {
-    "lemma": "dentysta",
-    "id": "pol-npe-0093-dentysta",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "synonyms": ["stomatolog"]
     }
   },
   {
