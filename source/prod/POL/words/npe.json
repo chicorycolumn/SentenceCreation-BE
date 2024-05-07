@@ -1635,10 +1635,11 @@
   },
   {
     "lemma": "adwokat",
-    "id": "pol-npe-0061-adwokat",
+    "id": "pol-npe-0061-adwokat-€",
     "frequency": 2,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "diminutive": ["adwokacik"],
@@ -1665,10 +1666,11 @@
   },
   {
     "lemma": "prawnik",
-    "id": "pol-npe-0062-prawnik",
+    "id": "pol-npe-0062-prawnik-€",
     "frequency": 2,
     "register": 1,
-    "gender": "m1"
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
   },
   {
     "lemma": "prawniczka",
@@ -1679,10 +1681,11 @@
   },
   {
     "lemma": "ogrodnik",
-    "id": "pol-npe-0063-ogrodnik",
+    "id": "pol-npe-0063-ogrodnik-€",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "feminine": ["ogrodniczka"]
@@ -1699,10 +1702,11 @@
   },
   {
     "lemma": "wegetarianin",
-    "id": "pol-npe-0064-wegetarianin",
+    "id": "pol-npe-0064-wegetarianin-€",
     "frequency": 2,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "feminine": ["wegetarianka"]
@@ -1719,10 +1723,11 @@
   },
   {
     "lemma": "weganin",
-    "id": "pol-npe-0065-weganin",
+    "id": "pol-npe-0065-weganin-€",
     "frequency": 2,
     "register": 1,
-    "gender": "m1"
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
   },
   {
     "lemma": "weganka",
@@ -1733,10 +1738,11 @@
   },
   {
     "lemma": "rolnik",
-    "id": "pol-npe-0066-rolnik",
+    "id": "pol-npe-0066-rolnik-€",
     "frequency": 2,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "feminine": ["rolniczka"]
@@ -1754,10 +1760,11 @@
   },
   {
     "lemma": "farmer",
-    "id": "pol-npe-0067-farmer",
+    "id": "pol-npe-0067-farmer-€",
     "frequency": 2,
     "register": 1,
-    "gender": "m1"
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
   },
   {
     "lemma": "farmerka",
@@ -1768,10 +1775,11 @@
   },
   {
     "lemma": "przewodnik",
-    "id": "pol-npe-0068-przewodnik(person)",
+    "id": "pol-npe-0068-przewodnik(person)-€",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "allohomInfo": {
       "singleWordtype": false,
       "text": "person",
@@ -1792,10 +1800,11 @@
   },
   {
     "lemma": "przestępca",
-    "id": "pol-npe-0069-przestępca",
+    "id": "pol-npe-0069-przestępca-€",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "feminine": ["przestępczyni"]
@@ -1811,10 +1820,11 @@
   },
   {
     "lemma": "kryminalista",
-    "id": "pol-npe-0070-kryminalista",
+    "id": "pol-npe-0070-kryminalista-€",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "synonyms": ["przestępca"]
     }
@@ -1831,10 +1841,11 @@
   },
   {
     "lemma": "strażak",
-    "id": "pol-npe-0071-strażak",
+    "id": "pol-npe-0071-strażak-€",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "diminutive": ["strażaczek"]
@@ -1850,10 +1861,11 @@
   },
   {
     "lemma": "pracownik",
-    "id": "pol-npe-0072-pracownik",
+    "id": "pol-npe-0072-pracownik-€",
     "frequency": 2,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "feminine": ["pracownica", "pracowniczka"]
@@ -1876,10 +1888,11 @@
   },
   {
     "lemma": "nastolatek",
-    "id": "pol-npe-0073-nastolatek",
+    "id": "pol-npe-0073-nastolatek-€",
     "frequency": 2,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "feminine": ["nastolatka"]
@@ -1901,10 +1914,11 @@
   },
   {
     "lemma": "optyk",
-    "id": "pol-npe-0074-optyk",
+    "id": "pol-npe-0074-optyk-£",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_PersonalGenders",
     "extra": {
       "derivedTerms": ["optyka"]
     }
@@ -1923,10 +1937,11 @@
   },
   {
     "lemma": "model",
-    "id": "pol-npe-0075-model",
+    "id": "pol-npe-0075-model-€",
     "frequency": 3,
     "register": 1,
-    "gender": "m1"
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
   },
   {
     "lemma": "książę",
@@ -1949,10 +1964,11 @@
   },
   {
     "lemma": "kucharz",
-    "id": "pol-npe-0077-kucharz",
+    "id": "pol-npe-0077-kucharz-€",
     "frequency": 2,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "feminine": ["kucharka"]
