@@ -10882,5 +10882,15 @@
     },
     "papers": ["abstract", "shape"],
     "topics": ["geometry"]
+  },
+  {
+    "key": "nco-1061-pentagon",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1359-pentagon"],
+      "POL": ["pol-nco-1135-pięciokąt"]
+    },
+    "papers": ["abstract", "shape"],
+    "topics": ["geometry"]
   }
 ]
