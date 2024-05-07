@@ -653,6 +653,26 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["religion", "work", "people"]
   },
+  {
+    "key": "npe-0066-enemy",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0081-enemy"],
+      "POL": ["pol-npe-0080"]
+    },
+    "papers": ["concrete", "person", "living"],
+    "topics": ["war", "people"]
+  },
+  {
+    "key": "npe-0067-passenger",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0082-passenger"],
+      "POL": ["pol-npe-0081"]
+    },
+    "papers": ["concrete", "person", "living"],
+    "topics": ["travel", "people"]
+  },
 
   {
     "key": "npe-0078-midwife",
@@ -663,26 +683,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]
-  },
-  {
-    "key": "npe-0081-enemy",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0081-enemy"],
-      "POL": ["pol-npe-0090-wróg"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["war", "people"]
-  },
-  {
-    "key": "npe-0082-passenger",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0082-passenger"],
-      "POL": ["pol-npe-0091-pasażer"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["travel", "people"]
   },
   {
     "key": "npe-0083-soldier",

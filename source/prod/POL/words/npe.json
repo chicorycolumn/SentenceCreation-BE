@@ -2021,6 +2021,39 @@
       ]
     }
   },
+  {
+    "lemma": "wróg",
+    "id": "pol-npe-0080-wróg-£",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_PersonalGenders",
+    "extra": {
+      "synonyms": ["nieprzyjaciel", "przeciwnik"],
+      "derivedTerms": ["wrogi", "wrogość"]
+    }
+  },
+  {
+    "lemma": "pasażer",
+    "id": "pol-npe-0081-pasażer-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["pasażerka"]
+      },
+      "derivedTerms": ["pasażerski"]
+    }
+  },
+  {
+    "lemma": "pasażerka",
+    "id": "pol-npe-0081-pasażerka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kierownik",
@@ -2051,30 +2084,6 @@
         "stara akuszerka ― an old accoucheuse",
         "rola akuszerki ― the role of an accoucheuse"
       ]
-    }
-  },
-  {
-    "lemma": "wróg",
-    "id": "pol-npe-0090-wróg",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "synonyms": ["nieprzyjaciel", "przeciwnik"],
-      "derivedTerms": ["wrogi", "wrogość"]
-    }
-  },
-  {
-    "lemma": "pasażer",
-    "id": "pol-npe-0091-pasażer",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["pasażerka"]
-      },
-      "derivedTerms": ["pasażerski"]
     }
   },
   {

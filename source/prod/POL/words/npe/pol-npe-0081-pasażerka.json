@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pasażerka",
+      "gen": "pasażerki",
+      "dat": "pasażerce",
+      "acc": "pasażerkę",
+      "ins": "pasażerką",
+      "loc": "pasażerce",
+      "voc": "pasażerko"
+    },
+    "plural": {
+      "nom": "pasażerki",
+      "gen": "pasażerek",
+      "dat": "pasażerkom",
+      "acc": "pasażerki",
+      "ins": "pasażerkami",
+      "loc": "pasażerkach",
+      "voc": "pasażerki"
+    }
+  }
+}
