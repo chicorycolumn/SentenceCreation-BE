@@ -18042,5 +18042,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "m3"
+  },
+  {
+    "lemma": "pięciokąt",
+    "id": "pol-nco-1135-pięciokąt",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
   }
 ]
