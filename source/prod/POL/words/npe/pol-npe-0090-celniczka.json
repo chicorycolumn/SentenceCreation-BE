@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "celniczka",
+      "gen": "celniczki",
+      "dat": "celniczce",
+      "acc": "celniczkę",
+      "ins": "celniczką",
+      "loc": "celniczce",
+      "voc": "celniczko"
+    },
+    "plural": {
+      "nom": "celniczki",
+      "gen": "celniczek",
+      "dat": "celniczkom",
+      "acc": "celniczki",
+      "ins": "celniczkami",
+      "loc": "celniczkach",
+      "voc": "celniczki"
+    }
+  }
+}

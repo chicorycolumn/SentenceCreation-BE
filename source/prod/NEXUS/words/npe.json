@@ -753,6 +753,26 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["communications", "work", "people", "writing"]
   },
+  {
+    "key": "npe-0076-customsofficer",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0095-customsofficer"],
+      "POL": ["pol-npe-0090"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["travel", "work", "people"]
+  },
+  {
+    "key": "npe-0077-client",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0096-client", "eng-npe-0097-customer"],
+      "POL": ["pol-npe-0091"]
+    },
+    "papers": ["money", "concrete", "person", "living"],
+    "topics": ["business", "shopping", "people"]
+  },
 
   {
     "key": "npe-0078-midwife",
@@ -773,26 +793,6 @@
     },
     "papers": ["concrete", "negative judgment", "person"],
     "topics": ["judgment", "people"]
-  },
-  {
-    "key": "npe-0093-customsofficer",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0095-customsofficer"],
-      "POL": ["pol-npe-0107-celnik"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["travel", "work", "people"]
-  },
-  {
-    "key": "npe-0094-client",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0096-client", "eng-npe-0097-customer"],
-      "POL": ["pol-npe-0108-klient"]
-    },
-    "papers": ["money", "concrete", "person", "living"],
-    "topics": ["business", "shopping", "people"]
   },
   {
     "key": "npe-0095-hairdresser",

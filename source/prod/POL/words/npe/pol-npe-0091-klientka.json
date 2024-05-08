@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "klientka",
+      "gen": "klientki",
+      "dat": "klientce",
+      "acc": "klientkę",
+      "ins": "klientką",
+      "loc": "klientce",
+      "voc": "klientko"
+    },
+    "plural": {
+      "nom": "klientki",
+      "gen": "klientek",
+      "dat": "klientkom",
+      "acc": "klientki",
+      "ins": "klientkami",
+      "loc": "klientkach",
+      "voc": "klientki"
+    }
+  }
+}

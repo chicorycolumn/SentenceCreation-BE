@@ -2287,6 +2287,47 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "celnik",
+    "id": "pol-npe-0090-celnik-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["celniczka"]
+      }
+    }
+  },
+  {
+    "lemma": "celniczka",
+    "id": "pol-npe-0090-celniczka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "klient",
+    "id": "pol-npe-0091-klient-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["klientka"]
+      },
+      "synonyms": ["delikwent", "interesant", "petent"]
+    }
+  },
+  {
+    "lemma": "klientka",
+    "id": "pol-npe-0091-klientka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kierownik",
@@ -2325,31 +2366,6 @@
     "frequency": 3,
     "register": 7,
     "gender": "m1"
-  },
-  {
-    "lemma": "celnik",
-    "id": "pol-npe-0107-celnik",
-    "frequency": 4,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["celniczka"]
-      }
-    }
-  },
-  {
-    "lemma": "klient",
-    "id": "pol-npe-0108-klient",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["klientka"]
-      },
-      "synonyms": ["delikwent", "interesant", "petent"]
-    }
   },
   {
     "lemma": "fryzjer",
