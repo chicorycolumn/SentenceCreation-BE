@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "obywatelka",
+      "gen": "obywatelki",
+      "dat": "obywatelce",
+      "acc": "obywatelkę",
+      "ins": "obywatelką",
+      "loc": "obywatelce",
+      "voc": "obywatelko"
+    },
+    "plural": {
+      "nom": "obywatelki",
+      "gen": "obywatelek",
+      "dat": "obywatelkom",
+      "acc": "obywatelki",
+      "ins": "obywatelkami",
+      "loc": "obywatelkach",
+      "voc": "obywatelki"
+    }
+  }
+}

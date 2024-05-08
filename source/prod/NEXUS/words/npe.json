@@ -793,6 +793,30 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["music", "work", "people"]
   },
+  {
+    "key": "npe-0080-policeman",
+    "traductions": {
+      "SPA": [],
+      "ENG": [
+        "eng-npe-0101-policeman",
+        "eng-npe-0102-policewoman",
+        "eng-npe-0103-policeofficer"
+      ],
+      "POL": ["pol-npe-0096"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["law", "work", "people"]
+  },
+  {
+    "key": "npe-0081-citizen",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0105-citizen"],
+      "POL": ["pol-npe-0097"]
+    },
+    "papers": ["concrete", "person", "living"],
+    "topics": ["geography", "people"]
+  },
 
   {
     "key": "npe-0078-midwife",
@@ -823,30 +847,6 @@
     },
     "papers": ["concrete", "person", "living"],
     "topics": ["law", "violence", "people"]
-  },
-  {
-    "key": "npe-0098-policeman",
-    "traductions": {
-      "SPA": [],
-      "ENG": [
-        "eng-npe-0101-policeman",
-        "eng-npe-0102-policewoman",
-        "eng-npe-0103-policeofficer"
-      ],
-      "POL": ["pol-npe-0112-policjant", "pol-npe-0113-policjantka"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["law", "work", "people"]
-  },
-  {
-    "key": "npe-0100-citizen",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0105-citizen"],
-      "POL": ["pol-npe-0116-obywatel"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["geography", "people"]
   },
   {
     "key": "npe-0101-guard",

@@ -2400,6 +2400,47 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "policjant",
+    "id": "pol-npe-0096-policjant-€",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["policjantka"]
+      }
+    }
+  },
+  {
+    "lemma": "policjantka",
+    "id": "pol-npe-0096-policjantka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "obywatel",
+    "id": "pol-npe-0097-obywatel-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["obywatelka"]
+      },
+      "derivedTerms": ["współobywatel"]
+    }
+  },
+  {
+    "lemma": "obywatelka",
+    "id": "pol-npe-0097-obywatelka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kierownik",
@@ -2450,43 +2491,6 @@
         "feminine": ["morderczyni"]
       },
       "synonyms": ["zabójca", "rezun"]
-    }
-  },
-  {
-    "lemma": "policjant",
-    "id": "pol-npe-0112-policjant",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["policjantka"]
-      }
-    }
-  },
-  {
-    "lemma": "policjantka",
-    "id": "pol-npe-0113-policjantka",
-    "frequency": 3,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "masculine": ["policjant"]
-      }
-    }
-  },
-  {
-    "lemma": "obywatel",
-    "id": "pol-npe-0116-obywatel",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["obywatelka"]
-      },
-      "derivedTerms": ["współobywatel"]
     }
   },
   {
