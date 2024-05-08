@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pisarka",
+      "gen": "pisarki",
+      "dat": "pisarce",
+      "acc": "pisarkę",
+      "ins": "pisarką",
+      "loc": "pisarce",
+      "voc": "pisarko"
+    },
+    "plural": {
+      "nom": "pisarki",
+      "gen": "pisarek",
+      "dat": "pisarkom",
+      "acc": "pisarki",
+      "ins": "pisarkami",
+      "loc": "pisarkach",
+      "voc": "pisarki"
+    }
+  }
+}

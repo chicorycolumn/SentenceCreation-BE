@@ -2244,6 +2244,49 @@
       }
     }
   },
+  {
+    "lemma": "pisarz",
+    "id": "pol-npe-0088-pisarz-€",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["pisarka"]
+      }
+    }
+  },
+  {
+    "lemma": "pisarka",
+    "id": "pol-npe-0088-pisarka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "dziennikarz-€",
+    "id": "pol-npe-0089-dziennikarz",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "extra": {
+      "otherShapes": {
+        "augmentative": ["dziennikarzyna"],
+        "feminine": ["dziennikarka"]
+      },
+      "synonyms": ["żurnalista"],
+      "derivedTerms": ["dziennikarski", "dziennikarstwo"]
+    }
+  },
+  {
+    "lemma": "dziennikarka",
+    "id": "pol-npe-0089-dziennikarka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kierownik",
@@ -2282,33 +2325,6 @@
     "frequency": 3,
     "register": 7,
     "gender": "m1"
-  },
-  {
-    "lemma": "pisarz",
-    "id": "pol-npe-0099-pisarz",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["pisarka"]
-      }
-    }
-  },
-  {
-    "lemma": "dziennikarz",
-    "id": "pol-npe-0106-dziennikarz",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "augmentative": ["dziennikarzyna"],
-        "feminine": ["dziennikarka"]
-      },
-      "synonyms": ["żurnalista"],
-      "derivedTerms": ["dziennikarski", "dziennikarstwo"]
-    }
   },
   {
     "lemma": "celnik",

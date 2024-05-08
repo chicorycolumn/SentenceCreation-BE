@@ -733,6 +733,26 @@
     "papers": ["living", "profession", "concrete", "person"],
     "topics": ["work", "people", "sport"]
   },
+  {
+    "key": "npe-0074-writer",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0090-writer"],
+      "POL": ["pol-npe-0088"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["work", "people", "writing"]
+  },
+  {
+    "key": "npe-0075-journalist",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0094-journalist"],
+      "POL": ["pol-npe-0089"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["communications", "work", "people", "writing"]
+  },
 
   {
     "key": "npe-0078-midwife",
@@ -753,26 +773,6 @@
     },
     "papers": ["concrete", "negative judgment", "person"],
     "topics": ["judgment", "people"]
-  },
-  {
-    "key": "npe-0089-writer",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0090-writer"],
-      "POL": ["pol-npe-0099-pisarz"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["work", "people", "writing"]
-  },
-  {
-    "key": "npe-0092-journalist",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0094-journalist"],
-      "POL": ["pol-npe-0106-dziennikarz"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["communications", "work", "people", "writing"]
   },
   {
     "key": "npe-0093-customsofficer",
