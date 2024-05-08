@@ -773,6 +773,26 @@
     "papers": ["money", "concrete", "person", "living"],
     "topics": ["business", "shopping", "people"]
   },
+  {
+    "key": "npe-0078-hairdresser",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0098-hairdresser"],
+      "POL": ["pol-npe-0092"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["fashion", "work", "people"]
+  },
+  {
+    "key": "npe-0079-singer",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0099-singer"],
+      "POL": ["pol-npe-0093", "pol-npe-0094", "pol-npe-0095"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["music", "work", "people"]
+  },
 
   {
     "key": "npe-0078-midwife",
@@ -793,26 +813,6 @@
     },
     "papers": ["concrete", "negative judgment", "person"],
     "topics": ["judgment", "people"]
-  },
-  {
-    "key": "npe-0095-hairdresser",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0098-hairdresser"],
-      "POL": ["pol-npe-0109-fryzjer"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["fashion", "work", "people"]
-  },
-  {
-    "key": "npe-0096-singer",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0099-singer"],
-      "POL": ["pol-npe-0110-śpiewak"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["music", "work", "people"]
   },
   {
     "key": "npe-0097-murderer",

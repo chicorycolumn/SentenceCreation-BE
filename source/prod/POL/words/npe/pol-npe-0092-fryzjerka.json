@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "fryzjerka",
+      "gen": "fryzjerki",
+      "dat": "fryzjerce",
+      "acc": "fryzjerkę",
+      "ins": "fryzjerką",
+      "loc": "fryzjerce",
+      "voc": "fryzjerko"
+    },
+    "plural": {
+      "nom": "fryzjerki",
+      "gen": "fryzjerek",
+      "dat": "fryzjerkom",
+      "acc": "fryzjerki",
+      "ins": "fryzjerkami",
+      "loc": "fryzjerkach",
+      "voc": "fryzjerki"
+    }
+  }
+}

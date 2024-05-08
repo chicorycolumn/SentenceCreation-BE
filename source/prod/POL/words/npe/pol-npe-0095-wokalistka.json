@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wokalistka",
+      "gen": "wokalistki",
+      "dat": "wokalistce",
+      "acc": "wokalistkę",
+      "ins": "wokalistką",
+      "loc": "wokalistce",
+      "voc": "wokalistko"
+    },
+    "plural": {
+      "nom": "wokalistki",
+      "gen": "wokalistek",
+      "dat": "wokalistkom",
+      "acc": "wokalistki",
+      "ins": "wokalistkami",
+      "loc": "wokalistkach",
+      "voc": "wokalistki"
+    }
+  }
+}

@@ -2328,6 +2328,78 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "fryzjer",
+    "id": "pol-npe-0092-fryzjer-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["fryzjerka"]
+      },
+      "derivedTerms": ["fryzjerski", "fryzjerczyk", "fryzjernia", "fryzjerstwo"]
+    }
+  },
+  {
+    "lemma": "fryzjerka",
+    "id": "pol-npe-0092-fryzjerka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "śpiewak",
+    "id": "pol-npe-0093-śpiewak-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["śpiewaczka"]
+      },
+      "synonyms": ["piosenkarz"]
+    }
+  },
+  {
+    "lemma": "śpiewaczka",
+    "id": "pol-npe-0093-śpiewaczka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "piosenkarz",
+    "id": "pol-npe-0094-piosenkarz-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "piosenkarka",
+    "id": "pol-npe-0094-piosenkarka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "wokalista",
+    "id": "pol-npe-0095-wokalista-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "wokalistka",
+    "id": "pol-npe-0095-wokalistka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kierownik",
@@ -2366,32 +2438,6 @@
     "frequency": 3,
     "register": 7,
     "gender": "m1"
-  },
-  {
-    "lemma": "fryzjer",
-    "id": "pol-npe-0109-fryzjer",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["fryzjerka"]
-      },
-      "derivedTerms": ["fryzjerski", "fryzjerczyk", "fryzjernia", "fryzjerstwo"]
-    }
-  },
-  {
-    "lemma": "śpiewak",
-    "id": "pol-npe-0110-śpiewak",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["śpiewaczka"]
-      },
-      "synonyms": ["piosenkarz"]
-    }
   },
   {
     "lemma": "morderca",
