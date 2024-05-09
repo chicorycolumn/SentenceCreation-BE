@@ -10892,5 +10892,15 @@
     },
     "papers": ["abstract", "shape"],
     "topics": ["geometry"]
+  },
+  {
+    "key": "nco-1062-hexagon",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1360-hexagon"],
+      "POL": ["pol-nco-1136-sześciokąt"]
+    },
+    "papers": ["abstract", "shape"],
+    "topics": ["geometry"]
   }
 ]
