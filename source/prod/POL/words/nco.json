@@ -18049,5 +18049,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "m3"
+  },
+  {
+    "lemma": "sześciokąt",
+    "id": "pol-nco-1136-sześciokąt",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
   }
 ]

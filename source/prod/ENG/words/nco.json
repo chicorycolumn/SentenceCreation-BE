@@ -10776,5 +10776,12 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "hexagon",
+    "id": "eng-nco-1360-hexagon",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
   }
 ]

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "hexagon",
+      "gen": "hexagon's"
+    },
+    "plural": {
+      "nom": "hexagons",
+      "gen": "hexagons'"
+    }
+  }
+}
