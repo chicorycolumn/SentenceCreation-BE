@@ -10902,5 +10902,15 @@
     },
     "papers": ["abstract", "shape"],
     "topics": ["geometry"]
+  },
+  {
+    "key": "nco-1063-octagon",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1361-octagon"],
+      "POL": ["pol-nco-1137-ośmiokąt"]
+    },
+    "papers": ["abstract", "shape"],
+    "topics": ["geometry"]
   }
 ]
