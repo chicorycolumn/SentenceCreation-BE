@@ -10783,5 +10783,12 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "octagon",
+    "id": "eng-nco-1361-octagon",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
   }
 ]

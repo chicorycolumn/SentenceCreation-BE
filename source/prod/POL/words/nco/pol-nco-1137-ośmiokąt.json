@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ośmiokąt",
+      "gen": "ośmiokątu",
+      "dat": "ośmiokątowi",
+      "acc": "ośmiokąt",
+      "ins": "ośmiokątem",
+      "loc": "ośmiokącie",
+      "voc": "ośmiokącie"
+    },
+    "plural": {
+      "nom": "ośmiokąty",
+      "gen": "ośmiokątów",
+      "dat": "ośmiokątom",
+      "acc": "ośmiokąty",
+      "ins": "ośmiokątami",
+      "loc": "ośmiokątach",
+      "voc": "ośmiokąty"
+    }
+  }
+}
