@@ -10320,7 +10320,7 @@
       "ENG": ["eng-nco-1304-fluid", "eng-nco-1305-liquid"],
       "POL": ["pol-nco-1052-płyn"]
     },
-    "papers": ["s2", "material", "uncountable", "concrete"],
+    "papers": ["material", "uncountable", "concrete"],
     "topics": ["science", "engineering", "physics"]
   },
   {
@@ -10670,7 +10670,7 @@
       "ENG": ["eng-nco-1338-banana"],
       "POL": ["pol-nco-1110-banan"]
     },
-    "papers": ["s1", "food", "concrete", "fruit"],
+    "papers": ["s2", "food", "concrete", "fruit"],
     "topics": ["kitchen", "inside", "restaurant"]
   },
   {
@@ -10770,7 +10770,7 @@
       "ENG": ["eng-nco-1348-sweetpotato"],
       "POL": ["pol-nco-1120-batat"]
     },
-    "papers": ["s1", "food", "concrete", "vegetable"],
+    "papers": ["s2", "food", "concrete", "vegetable"],
     "topics": ["kitchen", "inside", "restaurant"]
   },
   {
@@ -10780,7 +10780,7 @@
       "ENG": ["eng-nco-1349-parsnip"],
       "POL": ["pol-nco-1121-pasternak"]
     },
-    "papers": ["s1", "food", "concrete", "vegetable"],
+    "papers": ["s2", "food", "concrete", "vegetable"],
     "topics": ["kitchen", "inside", "restaurant"]
   },
   {
