@@ -1823,8 +1823,8 @@
     "gender": "f",
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     },
     "extra": {
       "otherShapes": {
@@ -4476,7 +4476,7 @@
   },
   {
     "lemma": "kość",
-    "id": "pol-nco-0263-kość",
+    "id": "pol-nco-0263-kość(bone)",
     "frequency": 3,
     "register": 1,
     "gender": "f",
@@ -5704,8 +5704,8 @@
     "gender": "n",
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     },
     "extra": {
       "otherShapes": {
@@ -7858,8 +7858,8 @@
     "gender": "m3",
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     }
   },
   {
@@ -9531,8 +9531,8 @@
     "gender": "m3",
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     },
     "extra": {
       "otherShapes": {
@@ -9888,8 +9888,8 @@
     "gender": "m3",
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     },
     "extra": {
       "derivedTerms": ["środkowy", "wśród", "złoty środek"],
@@ -10820,8 +10820,8 @@
     "gender": "f",
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     },
     "extra": {
       "derivedTerms": [
@@ -11705,8 +11705,8 @@
     "gender": "m3",
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     },
     "extra": {
       "derivedTerms": [
@@ -12510,8 +12510,8 @@
     "gender": "m3",
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     },
     "extra": {
       "derivedTerms": ["łucznik", "łuczysko", "łukowaty", "łukowy"]
@@ -17608,8 +17608,8 @@
     "gender": "m3",
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     }
   },
   {
