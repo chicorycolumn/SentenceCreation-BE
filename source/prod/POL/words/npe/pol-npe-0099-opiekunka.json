@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "opiekunka",
+      "gen": "opiekunki",
+      "dat": "opiekunce",
+      "acc": "opiekunkę",
+      "ins": "opiekunką",
+      "loc": "opiekunce",
+      "voc": "opiekunko"
+    },
+    "plural": {
+      "nom": "opiekunki",
+      "gen": "opiekunek",
+      "dat": "opiekunkom",
+      "acc": "opiekunki",
+      "ins": "opiekunkami",
+      "loc": "opiekunkach",
+      "voc": "opiekunki"
+    }
+  }
+}

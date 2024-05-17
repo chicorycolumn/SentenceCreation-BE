@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "opiekun",
+      "gen": "opiekuna",
+      "dat": "opiekunowi",
+      "acc": "opiekuna",
+      "ins": "opiekunem",
+      "loc": "opiekunie",
+      "voc": "opiekunie"
+    },
+    "plural": {
+      "nom": { "isTerminus": true, "normal": ["opiekuni", "opiekunowie"] },
+      "gen": "opiekunów",
+      "dat": "opiekunom",
+      "acc": "opiekunów",
+      "ins": "opiekunami",
+      "loc": "opiekunach",
+      "voc": { "isTerminus": true, "normal": ["opiekuni", "opiekunowie"] }
+    }
+  }
+}

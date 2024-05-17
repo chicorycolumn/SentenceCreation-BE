@@ -2441,6 +2441,44 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "strażnik",
+    "id": "pol-npe-0098-strażnik-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["strażniczka"]
+      }
+    }
+  },
+  {
+    "lemma": "strażniczka",
+    "id": "pol-npe-0098-strażniczka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "opiekun",
+    "id": "pol-npe-0099-opiekun-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["opiekunka"]
+      }
+    }
+  },
+  {
+    "lemma": "opiekunka",
+    "id": "pol-npe-0099-opiekunka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kierownik",
@@ -2491,18 +2529,6 @@
         "feminine": ["morderczyni"]
       },
       "synonyms": ["zabójca", "rezun"]
-    }
-  },
-  {
-    "lemma": "strażnik",
-    "id": "pol-npe-0117-strażnik",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["strażniczka"]
-      }
     }
   },
   {

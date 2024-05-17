@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "strażniczka",
+      "gen": "strażniczki",
+      "dat": "strażniczce",
+      "acc": "strażniczkę",
+      "ins": "strażniczką",
+      "loc": "strażniczce",
+      "voc": "strażniczko"
+    },
+    "plural": {
+      "nom": "strażniczki",
+      "gen": "strażniczek",
+      "dat": "strażniczkom",
+      "acc": "strażniczki",
+      "ins": "strażniczkami",
+      "loc": "strażniczkach",
+      "voc": "strażniczki"
+    }
+  }
+}

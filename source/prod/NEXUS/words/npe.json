@@ -817,6 +817,26 @@
     "papers": ["concrete", "person", "living"],
     "topics": ["geography", "people"]
   },
+  {
+    "key": "npe-0082-guard",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0106-guard"],
+      "POL": ["pol-npe-0098"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["work", "people"]
+  },
+  {
+    "key": "npe-0083-bodyguard",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0106-bodyguard"],
+      "POL": ["pol-npe-0099"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["work", "people"]
+  },
 
   {
     "key": "npe-0078-midwife",
@@ -847,16 +867,6 @@
     },
     "papers": ["concrete", "person", "living"],
     "topics": ["law", "violence", "people"]
-  },
-  {
-    "key": "npe-0101-guard",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0106-guard"],
-      "POL": ["pol-npe-0117-strażnik"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["work", "people"]
   },
   {
     "key": "npe-0102-scientist",
