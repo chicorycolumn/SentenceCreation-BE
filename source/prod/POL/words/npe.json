@@ -2447,6 +2447,7 @@
     "frequency": 3,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "feminine": ["strażniczka"]
@@ -2466,6 +2467,7 @@
     "frequency": 3,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "feminine": ["opiekunka"]
@@ -2484,7 +2486,8 @@
     "id": "pol-npe-0100-naukowiec-€",
     "frequency": 3,
     "register": 1,
-    "gender": "m1"
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
   },
   {
     "lemma": "naukowczyni",
@@ -2499,6 +2502,7 @@
     "frequency": 4,
     "register": 1,
     "gender": "m1",
+    "semanticGender": "_VypernymGenders",
     "extra": {
       "otherShapes": {
         "feminine": ["badaczka"]
