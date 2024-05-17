@@ -837,6 +837,26 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
   },
+  {
+    "key": "npe-0084-scientist",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0107-scientist"],
+      "POL": ["pol-npe-0100"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["chemistry", "physics", "science", "biology", "work", "people"]
+  },
+  {
+    "key": "npe-0085-researcher",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0107-researcher"],
+      "POL": ["pol-npe-0101"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["chemistry", "physics", "science", "biology", "work", "people"]
+  },
 
   {
     "key": "npe-0078-midwife",
@@ -867,16 +887,6 @@
     },
     "papers": ["concrete", "person", "living"],
     "topics": ["law", "violence", "people"]
-  },
-  {
-    "key": "npe-0102-scientist",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0107-scientist"],
-      "POL": ["pol-npe-0118-naukowiec"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["chemistry", "physics", "science", "biology", "work", "people"]
   },
   {
     "key": "npe-0103-patient",

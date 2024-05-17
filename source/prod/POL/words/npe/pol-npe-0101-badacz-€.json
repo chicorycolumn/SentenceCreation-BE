@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "badacz",
+      "gen": "badacza",
+      "dat": "badaczowi",
+      "acc": "badacza",
+      "ins": "badaczem",
+      "loc": "badaczu",
+      "voc": "badaczu"
+    },
+    "plural": {
+      "nom": "badacze",
+      "gen": "badaczy",
+      "dat": "badaczom",
+      "acc": "badaczy",
+      "ins": "badaczami",
+      "loc": "badaczach",
+      "voc": "badacze"
+    }
+  }
+}

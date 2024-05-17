@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "naukowczyni",
+      "gen": "naukowczyni",
+      "dat": "naukowczyni",
+      "acc": "naukowczynię",
+      "ins": "naukowczynią",
+      "loc": "naukowczyni",
+      "voc": "naukowczyni"
+    },
+    "plural": {
+      "nom": "naukowczynie",
+      "gen": "naukowczyń",
+      "dat": "naukowczyniom",
+      "acc": "naukowczynie",
+      "ins": "naukowczyniami",
+      "loc": "naukowczyniach",
+      "voc": "naukowczynie"
+    }
+  }
+}

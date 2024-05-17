@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "badaczka",
+      "gen": "badaczki",
+      "dat": "badaczce",
+      "acc": "badaczkę",
+      "ins": "badaczką",
+      "loc": "badaczce",
+      "voc": "badaczko"
+    },
+    "plural": {
+      "nom": "badaczki",
+      "gen": "badaczek",
+      "dat": "badaczkom",
+      "acc": "badaczki",
+      "ins": "badaczkami",
+      "loc": "badaczkach",
+      "voc": "badaczki"
+    }
+  }
+}

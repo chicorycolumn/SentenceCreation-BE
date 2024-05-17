@@ -2479,6 +2479,39 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "naukowiec",
+    "id": "pol-npe-0100-naukowiec-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1"
+  },
+  {
+    "lemma": "naukowczyni",
+    "id": "pol-npe-0100-naukowczyni",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "badacz",
+    "id": "pol-npe-0101-badacz-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["badaczka"]
+      }
+    }
+  },
+  {
+    "lemma": "badaczka",
+    "id": "pol-npe-0101-badaczka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kierownik",
@@ -2530,13 +2563,6 @@
       },
       "synonyms": ["zabójca", "rezun"]
     }
-  },
-  {
-    "lemma": "naukowiec",
-    "id": "pol-npe-0118-naukowiec",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1"
   },
   {
     "lemma": "pacjent",
