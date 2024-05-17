@@ -857,6 +857,36 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["chemistry", "physics", "science", "biology", "work", "people"]
   },
+  {
+    "key": "npe-0086-biologist",
+    "traductions": {
+      "SPA": [],
+      "ENG": [],
+      "POL": ["pol-npe-0102"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["science", "biology", "work", "people"]
+  },
+  {
+    "key": "npe-0087-physicist",
+    "traductions": {
+      "SPA": [],
+      "ENG": [],
+      "POL": ["pol-npe-0103"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["physics", "science", "work", "people"]
+  },
+  {
+    "key": "npe-0088-chemist(scientist)",
+    "traductions": {
+      "SPA": [],
+      "ENG": [],
+      "POL": ["pol-npe-0104"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["chemistry", "science", "work", "people"]
+  },
 
   {
     "key": "npe-0078-midwife",

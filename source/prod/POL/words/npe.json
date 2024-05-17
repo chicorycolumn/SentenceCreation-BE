@@ -2516,6 +2516,30 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "biolog",
+    "id": "pol-npe-0102-biolog-£",
+    "frequency": 1,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_PersonalGenders"
+  },
+  {
+    "lemma": "fizyk",
+    "id": "pol-npe-0103-fizyk-£",
+    "frequency": 1,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_PersonalGenders"
+  },
+  {
+    "lemma": "chemik",
+    "id": "pol-npe-0104-chemik-£",
+    "frequency": 1,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_PersonalGenders"
+  },
 
   {
     "lemma": "kierownik",
