@@ -6275,7 +6275,7 @@
     "traductions": {
       "SPA": [],
       "ENG": ["eng-nco-0775-cube"],
-      "POL": ["pol-nco-0624-sześcian"]
+      "POL": ["pol-nco-0624-sześcian", "pol-nco-1138-kostka(cube)"]
     },
     "papers": ["abstract", "shape"],
     "topics": ["geometry"]
@@ -10912,5 +10912,25 @@
     },
     "papers": ["abstract", "shape"],
     "topics": ["geometry"]
+  },
+  {
+    "key": "nco-1064-knuckle",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1362-knuckle"],
+      "POL": ["pol-nco-1139-kostka(knuckle)"]
+    },
+    "papers": ["concrete", "bodypart external"],
+    "topics": ["medicine", "body"]
+  },
+  {
+    "key": "nco-1065-ankle",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1363-ankle"],
+      "POL": ["pol-nco-1140-kostka(ankle)"]
+    },
+    "papers": ["concrete", "bodypart external"],
+    "topics": ["medicine", "body"]
   }
 ]

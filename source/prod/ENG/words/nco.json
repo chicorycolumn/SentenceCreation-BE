@@ -10790,5 +10790,19 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "knuckle",
+    "id": "eng-nco-1362-knuckle",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "ankle",
+    "id": "eng-nco-1363-ankle",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
   }
 ]

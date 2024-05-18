@@ -18063,5 +18063,43 @@
     "frequency": 4,
     "register": 1,
     "gender": "m3"
+  },
+  {
+    "lemma": "kostka",
+    "id": "pol-nco-1138-kostka(cube)",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "geometry",
+      "emoji": "📐"
+    }
+  },
+  {
+    "lemma": "kostka",
+    "id": "pol-nco-1139-kostka(knuckle)",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f",
+    "_inflectionsRoot": "pol-nco-1138-kostka(cube)",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "body, part of hand",
+      "emoji": "🧍🖐️"
+    }
+  },
+  {
+    "lemma": "kostka",
+    "id": "pol-nco-1140-kostka(ankle)",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f",
+    "_inflectionsRoot": "pol-nco-1138-kostka(cube)",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "body, part of leg",
+      "emoji": "🧍🦵"
+    }
   }
 ]
