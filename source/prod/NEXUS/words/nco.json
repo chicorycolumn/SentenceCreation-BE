@@ -10932,5 +10932,15 @@
     },
     "papers": ["concrete", "bodypart external"],
     "topics": ["medicine", "body"]
+  },
+  {
+    "key": "nco-1066-die",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1364-die"],
+      "POL": ["pol-nco-1141", "pol-nco-1142"]
+    },
+    "papers": ["s1", "concrete"],
+    "topics": ["game"]
   }
 ]
