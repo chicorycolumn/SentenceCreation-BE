@@ -10804,5 +10804,12 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "die",
+    "id": "eng-nco-1364-die",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
   }
 ]

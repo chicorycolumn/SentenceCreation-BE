@@ -18101,5 +18101,31 @@
       "text": "body, part of leg",
       "emoji": "🧍🦵"
     }
+  },
+  {
+    "lemma": "kostka",
+    "id": "pol-nco-1141-kostka(dice)",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "_inflectionsRoot": "pol-nco-1138-kostka(cube)",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "games/sports",
+      "emoji": "🎲"
+    }
+  },
+  {
+    "lemma": "kość",
+    "id": "pol-nco-1142-kość(dice)",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "_inflectionsRoot": "pol-nco-0263-kość(bone)",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "games/sports",
+      "emoji": "🎲"
+    }
   }
 ]
