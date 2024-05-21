@@ -10942,5 +10942,15 @@
     },
     "papers": ["s1", "concrete"],
     "topics": ["game"]
+  },
+  {
+    "key": "nco-1067-pool",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1365"],
+      "POL": ["pol-nco-1143"]
+    },
+    "papers": ["s6", "location", "concrete"],
+    "topics": ["sport"]
   }
 ]
