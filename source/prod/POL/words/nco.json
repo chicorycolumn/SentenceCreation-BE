@@ -18127,5 +18127,12 @@
       "text": "games/sports",
       "emoji": "🎲"
     }
+  },
+  {
+    "lemma": "basen",
+    "id": "pol-nco-1143-basen",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m3"
   }
 ]

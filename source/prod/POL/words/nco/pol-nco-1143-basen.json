@@ -1,0 +1,22 @@
+{    	
+  "inflections": {
+    "singular": {
+      "nom": "basen",
+      "gen": "basenu",
+      "dat": "basenowi",
+      "acc": "basen",
+      "ins": "basenem",
+      "loc": "basenie",
+      "voc": "basenie"
+    },
+    "plural": {
+      "nom": "baseny",
+      "gen": "basenów",
+      "dat": "basenom",
+      "acc": "baseny",
+      "ins": "basenami",
+      "loc": "basenach",
+      "voc": "baseny"
+    }
+  }
+}

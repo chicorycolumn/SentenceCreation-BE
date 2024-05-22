@@ -10811,5 +10811,12 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "pool",
+    "id": "eng-nco-1365-pool",
+    "gender": "n",
+    "frequency": 3,
+    "register": 1
   }
 ]
