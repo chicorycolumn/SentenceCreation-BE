@@ -10952,5 +10952,15 @@
     },
     "papers": ["s6", "location", "concrete"],
     "topics": ["sport"]
+  },
+  {
+    "key": "nco-1068-group",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1366"],
+      "POL": ["pol-nco-1144"]
+    },
+    "papers": ["abstract"],
+    "topics": ["knowledge and existence", "math"]
   }
 ]
