@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "group",
+      "gen": "group's"
+    },
+    "plural": {
+      "nom": "groups",
+      "gen": "groups'"
+    }
+  }
+}

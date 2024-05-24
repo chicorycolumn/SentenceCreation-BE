@@ -10818,5 +10818,12 @@
     "gender": "n",
     "frequency": 3,
     "register": 1
+  },
+  {
+    "lemma": "group",
+    "id": "eng-nco-1366-group",
+    "gender": "n",
+    "frequency": 2,
+    "register": 1
   }
 ]

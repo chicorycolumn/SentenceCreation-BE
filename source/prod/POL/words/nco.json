@@ -18134,5 +18134,12 @@
     "frequency": 3,
     "register": 1,
     "gender": "m3"
+  },
+  {
+    "lemma": "grupa",
+    "id": "pol-nco-1144-grupa",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
   }
 ]

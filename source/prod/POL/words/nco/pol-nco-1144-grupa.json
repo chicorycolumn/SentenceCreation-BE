@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "grupa",
+      "gen": "grupy",
+      "dat": "grupie",
+      "acc": "grupę",
+      "ins": "grupą",
+      "loc": "grupie",
+      "voc": "grupo"
+    },
+    "plural": {
+      "nom": "grupy",
+      "gen": "grup",
+      "dat": "grupom",
+      "acc": "grupy",
+      "ins": "grupami",
+      "loc": "grupach",
+      "voc": "grupy"
+    }
+  }
+}
