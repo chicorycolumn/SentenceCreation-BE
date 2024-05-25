@@ -3078,7 +3078,7 @@
     "traductions": {
       "SPA": [],
       "ENG": ["eng-nco-0384-word"],
-      "POL": ["pol-nco-0301-słowo"]
+      "POL": ["pol-nco-0301-słowo", "pol-nco-1145-wyraz"]
     },
     "papers": ["abstract"],
     "topics": ["language"]

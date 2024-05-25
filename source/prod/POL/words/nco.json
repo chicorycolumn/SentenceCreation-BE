@@ -18141,5 +18141,12 @@
     "frequency": 2,
     "register": 1,
     "gender": "f"
+  },
+  {
+    "lemma": "wyraz",
+    "id": "pol-nco-1145-wyraz",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
   }
 ]
