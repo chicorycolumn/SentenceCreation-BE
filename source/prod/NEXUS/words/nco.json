@@ -10962,5 +10962,15 @@
     },
     "papers": ["abstract"],
     "topics": ["knowledge and existence", "math"]
+  },
+  {
+    "key": "nco-1069-adjective",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1367"],
+      "POL": ["pol-nco-1146"]
+    },
+    "papers": ["wordtype", "abstract"],
+    "topics": ["language"]
   }
 ]
