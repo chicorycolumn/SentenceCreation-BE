@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przymiotnik",
+      "gen": "przymiotnika",
+      "dat": "przymiotnikowi",
+      "acc": "przymiotnik",
+      "ins": "przymiotnikiem",
+      "loc": "przymiotniku",
+      "voc": "przymiotniku"
+    },
+    "plural": {
+      "nom": "przymiotniki",
+      "gen": "przymiotników",
+      "dat": "przymiotnikom",
+      "acc": "przymiotniki",
+      "ins": "przymiotnikami",
+      "loc": "przymiotnikach",
+      "voc": "przymiotniki"
+    }
+  }
+}

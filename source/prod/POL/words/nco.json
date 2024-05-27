@@ -18148,5 +18148,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "m3"
+  },
+  {
+    "lemma": "przymiotnik",
+    "id": "pol-nco-1146-przymiotnik",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m3"
   }
 ]

@@ -10825,5 +10825,12 @@
     "gender": "n",
     "frequency": 2,
     "register": 1
+  },
+  {
+    "lemma": "adjective",
+    "id": "eng-nco-1367-adjective",
+    "gender": "n",
+    "frequency": 2,
+    "register": 1
   }
 ]
