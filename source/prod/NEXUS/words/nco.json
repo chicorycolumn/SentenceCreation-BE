@@ -76,7 +76,7 @@
       "ENG": ["eng-nco-0010-school"],
       "POL": ["pol-nco-0008-szkoła"]
     },
-    "papers": ["s6", "location", "building", "concrete", "school hypernym"],
+    "papers": ["s6", "location", "workplace", "building", "concrete", "school hypernym"],
     "topics": ["inside", "school"]
   },
   {
@@ -500,7 +500,7 @@
       "ENG": ["eng-nco-0062-hospital"],
       "POL": ["pol-nco-0051-szpital"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["inside", "medicine"]
   },
   {
@@ -762,7 +762,7 @@
       "ENG": ["eng-nco-0090-port", "eng-nco-0091-harbour"],
       "POL": ["pol-nco-0074-port"]
     },
-    "papers": ["s6", "location", "concrete"],
+    "papers": ["s6", "location", "workplace", "concrete"],
     "topics": ["travel"]
   },
   {
@@ -1232,7 +1232,7 @@
       "ENG": ["eng-nco-0149-bank(financial)"],
       "POL": ["pol-nco-0122-bank"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["money", "business", "inside", "shopping"]
   },
   {
@@ -1325,7 +1325,7 @@
       "ENG": ["eng-nco-0160-hotel"],
       "POL": ["pol-nco-0130-hotel"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["holiday", "inside"]
   },
   {
@@ -1802,7 +1802,7 @@
       "ENG": ["eng-nco-0216-park"],
       "POL": ["pol-nco-0174-park"]
     },
-    "papers": ["s6", "natural", "location", "concrete"],
+    "papers": ["s6", "natural", "location", "workplace", "concrete"],
     "topics": ["geography", "outside"]
   },
   {
@@ -2507,7 +2507,7 @@
       "ENG": ["eng-nco-0311-cinema"],
       "POL": ["pol-nco-0244-kino"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["inside", "entertainment"]
   },
   {
@@ -2607,7 +2607,7 @@
       "ENG": ["eng-nco-0326-airport"],
       "POL": ["pol-nco-0255-lotnisko"]
     },
-    "papers": ["s6", "location", "concrete"],
+    "papers": ["s6", "location", "workplace", "concrete"],
     "topics": ["holiday", "travel"]
   },
   {
@@ -3870,7 +3870,7 @@
       "ENG": ["eng-nco-0478-museum"],
       "POL": ["pol-nco-0380-muzeum"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["holiday", "inside"]
   },
   {
@@ -4024,7 +4024,7 @@
       "ENG": ["eng-nco-0500-branch"],
       "POL": ["pol-nco-0400-gałąź"]
     },
-    "papers": ["s4", "natural", "location", "concrete"],
+    "papers": ["s4", "natural", "concrete"],
     "topics": ["geography", "outside"]
   },
   {
@@ -4034,7 +4034,7 @@
       "ENG": ["eng-nco-0403-plant(factory)", "eng-nco-0501-factory"],
       "POL": ["pol-nco-0401-zakład(plant)", "pol-nco-0448-fabryka"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["inside", "engineering"]
   },
   {
@@ -4114,7 +4114,7 @@
       "ENG": ["eng-nco-0510-castle"],
       "POL": ["pol-nco-0409-zamek(castle)"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["history", "inside"]
   },
   {
@@ -4673,7 +4673,7 @@
       "ENG": ["eng-nco-0579-church"],
       "POL": ["pol-nco-0467-kościół"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["inside", "religion"]
   },
   {
@@ -5026,7 +5026,7 @@
       "ENG": ["eng-nco-0603-pharmacy"],
       "POL": ["pol-nco-0484-apteka"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["inside", "medicine"]
   },
   {
@@ -5222,7 +5222,7 @@
       "ENG": ["eng-nco-0629-shop", "eng-nco-0630-store"],
       "POL": ["pol-nco-0509-sklep"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["money", "business", "inside", "shopping"]
   },
   {
@@ -5382,7 +5382,7 @@
       "ENG": ["eng-nco-0652-prison", "eng-nco-0653-jail"],
       "POL": ["pol-nco-0527-więzienie"]
     },
-    "papers": ["s6", "crime", "location", "building", "concrete"],
+    "papers": ["s6", "crime", "location", "workplace", "building", "concrete"],
     "topics": ["law", "crime", "inside"]
   },
   {
@@ -5654,7 +5654,7 @@
       "ENG": ["eng-nco-0684-bookshop", "eng-nco-0685-bookstore"],
       "POL": ["pol-nco-0555-księgarnia"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["money", "business", "inside", "school", "shopping"]
   },
   {
@@ -5869,7 +5869,7 @@
       "ENG": ["eng-nco-0722-postoffice"],
       "POL": ["pol-nco-0581-poczta(post office)"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["communications", "inside"]
   },
   {
@@ -6671,7 +6671,7 @@
       "ENG": ["eng-nco-0831-launderette", "eng-nco-0832-laundromat"],
       "POL": ["pol-nco-0662-pralnia"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["daily routine", "inside"]
   },
   {
@@ -6781,7 +6781,7 @@
       "ENG": ["eng-nco-0845-cathedral"],
       "POL": ["pol-nco-0675-katedra"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["inside", "religion"]
   },
   {
@@ -6951,7 +6951,7 @@
       "ENG": ["eng-nco-0869-bakery"],
       "POL": ["pol-nco-0693-piekarnia"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["kitchen", "inside", "restaurant"]
   },
   {
@@ -7061,7 +7061,7 @@
       "ENG": ["eng-nco-0883-station"],
       "POL": ["pol-nco-0704-stacja", "pol-nco-0814-dworzec"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["holiday", "travel", "inside"]
   },
   {
@@ -7969,7 +7969,7 @@
       "ENG": ["eng-nco-0989-mosque"],
       "POL": ["pol-nco-0795-meczet"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["inside", "religion"]
   },
   {
@@ -8559,7 +8559,7 @@
       "ENG": ["eng-nco-1070-theatre"],
       "POL": ["pol-nco-0858-teatr"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["theatre", "inside"]
   },
   {
@@ -8776,7 +8776,7 @@
       "ENG": ["eng-nco-1097-office"],
       "POL": ["pol-nco-0883-biuro"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["work", "inside"]
   },
   {
@@ -8826,7 +8826,7 @@
       "ENG": ["eng-nco-1102-palace"],
       "POL": ["pol-nco-0888-pałac"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["history", "inside"]
   },
   {
@@ -9352,7 +9352,7 @@
       "ENG": ["eng-nco-1167-café", "eng-nco-1168-coffeeshop"],
       "POL": ["pol-nco-0946-kawiarnia"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["restaurant", "inside", "people", "social life", "kitchen"]
   },
   {
@@ -10420,7 +10420,7 @@
       "ENG": ["eng-nco-1313-laboratory"],
       "POL": ["pol-nco-1062-laboratorium"]
     },
-    "papers": ["s6", "room", "location", "concrete"],
+    "papers": ["s6", "room", "location", "workplace", "concrete"],
     "topics": ["biology", "physics", "inside", "science", "chemistry"]
   },
   {
