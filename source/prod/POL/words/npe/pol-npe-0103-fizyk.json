@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "fizyk",
+      "gen": "fizyk",
+      "dat": "fizyk",
+      "acc": "fizyk",
+      "ins": "fizyk",
+      "loc": "fizyk",
+      "voc": "fizyk"
+    },
+    "plural": {
+      "nom": "fizyk",
+      "gen": "fizyk",
+      "dat": "fizyk",
+      "acc": "fizyk",
+      "ins": "fizyk",
+      "loc": "fizyk",
+      "voc": "fizyk"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "biolog",
+      "gen": "biolog",
+      "dat": "biolog",
+      "acc": "biolog",
+      "ins": "biolog",
+      "loc": "biolog",
+      "voc": "biolog"
+    },
+    "plural": {
+      "nom": "biolog",
+      "gen": "biolog",
+      "dat": "biolog",
+      "acc": "biolog",
+      "ins": "biolog",
+      "loc": "biolog",
+      "voc": "biolog"
+    }
+  }
+}

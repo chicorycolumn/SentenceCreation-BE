@@ -2518,27 +2518,69 @@
   },
   {
     "lemma": "biolog",
-    "id": "pol-npe-0102-biolog-£",
-    "frequency": 1,
+    "id": "pol-npe-0102-biolog-€",
+    "frequency": 3,
     "register": 1,
     "gender": "m1",
-    "semanticGender": "_PersonalGenders"
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "biolog",
+    "id": "pol-npe-0102-biolog",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "biolożka",
+    "id": "pol-npe-0102-biolożka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
   },
   {
     "lemma": "fizyk",
-    "id": "pol-npe-0103-fizyk-£",
-    "frequency": 1,
+    "id": "pol-npe-0103-fizyk-€",
+    "frequency": 3,
     "register": 1,
     "gender": "m1",
-    "semanticGender": "_PersonalGenders"
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "fizyk",
+    "id": "pol-npe-0103-fizyk",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "fizyczka",
+    "id": "pol-npe-0103-fizyczka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
   },
   {
     "lemma": "chemik",
-    "id": "pol-npe-0104-chemik-£",
-    "frequency": 1,
+    "id": "pol-npe-0104-chemik-€",
+    "frequency": 3,
     "register": 1,
     "gender": "m1",
-    "semanticGender": "_PersonalGenders"
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "chemik",
+    "id": "pol-npe-0104-chemik",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "chemiczka",
+    "id": "pol-npe-0104-chemiczka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
   },
   {
     "lemma": "aptekarz",

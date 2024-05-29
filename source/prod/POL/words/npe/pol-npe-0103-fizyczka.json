@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "fizyczka",
+      "gen": "fizyczki",
+      "dat": "fizyczce",
+      "acc": "fizyczkę",
+      "ins": "fizyczką",
+      "loc": "fizyczce",
+      "voc": "fizyczko"
+    },
+    "plural": {
+      "nom": "fizyczki",
+      "gen": "fizyczek",
+      "dat": "fizyczkom",
+      "acc": "fizyczki",
+      "ins": "fizyczkami",
+      "loc": "fizyczkach",
+      "voc": "fizyczki"
+    }
+  }
+}
