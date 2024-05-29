@@ -907,6 +907,16 @@
     "papers": ["concrete", "person", "living"],
     "topics": ["medicine", "people"]
   },
+  {
+    "key": "npe-0091-artist",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0120-artist"],
+      "POL": ["pol-npe-0107"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["art", "work", "people"]
+  },
 
   {
     "key": "npe-0078-midwife",
@@ -977,16 +987,6 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
-  },
-  {
-    "key": "npe-0111-artist",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0120-artist"],
-      "POL": ["pol-npe-0130-artysta", "pol-npe-0131-artystka"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["art", "work", "people"]
   },
   {
     "key": "npe-0113-prisoner",

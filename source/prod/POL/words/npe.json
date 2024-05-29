@@ -2602,7 +2602,8 @@
     "id": "pol-npe-0106-pacjent-€",
     "frequency": 3,
     "register": 1,
-    "gender": "m1"
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
   },
   {
     "lemma": "pacjentka",
@@ -2610,6 +2611,44 @@
     "frequency": 3,
     "register": 1,
     "gender": "f"
+  },
+  {
+    "lemma": "artysta",
+    "id": "pol-npe-0107-artysta-€",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "extra": {
+      "otherShapes": {
+        "abbreviation": ["art."],
+        "feminine": ["artystka"]
+      },
+      "synonyms": ["fachman", "fachowiec", "fachura", "profesjonalista"],
+      "antonyms": ["partacz"],
+      "derivedTerms": [
+        "antyartystyczny",
+        "artystowski",
+        "artystyczny",
+        "artystycznie",
+        "artystostwo",
+        "artystyczność",
+        "artyzm"
+      ]
+    }
+  },
+  {
+    "lemma": "artystka",
+    "id": "pol-npe-0107-artystka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f",
+    "extra": {
+      "otherShapes": {
+        "masculine": ["artysta"]
+      },
+      "synonyms": ["profesjonalistka", "specjalistka"]
+    }
   },
 
   {
@@ -2723,43 +2762,6 @@
       "otherShapes": {
         "feminine": ["sekretarka"]
       }
-    }
-  },
-  {
-    "lemma": "artysta",
-    "id": "pol-npe-0130-artysta",
-    "frequency": 2,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "abbreviation": ["art."],
-        "feminine": ["artystka"]
-      },
-      "synonyms": ["fachman", "fachowiec", "fachura", "profesjonalista"],
-      "antonyms": ["partacz"],
-      "derivedTerms": [
-        "antyartystyczny",
-        "artystowski",
-        "artystyczny",
-        "artystycznie",
-        "artystostwo",
-        "artystyczność",
-        "artyzm"
-      ]
-    }
-  },
-  {
-    "lemma": "artystka",
-    "id": "pol-npe-0131-artystka",
-    "frequency": 2,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "otherShapes": {
-        "masculine": ["artysta"]
-      },
-      "synonyms": ["profesjonalistka", "specjalistka"]
     }
   },
   {
