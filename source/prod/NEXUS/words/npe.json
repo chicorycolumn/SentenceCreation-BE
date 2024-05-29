@@ -360,7 +360,7 @@
     "topics": ["work", "people", "politics"]
   },
   {
-    "key": "npe-0037-physician",
+    "key": "npe-0037-doctor(physician)",
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0037"],
@@ -881,11 +881,21 @@
     "key": "npe-0088-chemist(scientist)",
     "traductions": {
       "SPA": [],
-      "ENG": [],
+      "ENG": ["chemist(scientist)"],
       "POL": ["pol-npe-0104"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["chemistry", "science", "work", "people"]
+  },
+  {
+    "key": "npe-0089-pharmacist",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["chemist(pharmacist)"],
+      "POL": ["pol-npe-0105"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["medicine", "work", "people"]
   },
 
   {

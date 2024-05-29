@@ -2540,6 +2540,21 @@
     "gender": "m1",
     "semanticGender": "_PersonalGenders"
   },
+  {
+    "lemma": "aptekarz",
+    "id": "pol-npe-0105-aptekarz-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "aptekarka",
+    "id": "pol-npe-0105-aptekarka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kierownik",
