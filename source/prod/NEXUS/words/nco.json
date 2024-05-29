@@ -10972,5 +10972,15 @@
     },
     "papers": ["wordtype", "abstract"],
     "topics": ["language"]
+  },
+  {
+    "key": "nco-1070-adverb",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1368"],
+      "POL": ["pol-nco-1147"]
+    },
+    "papers": ["wordtype", "abstract"],
+    "topics": ["language"]
   }
 ]
