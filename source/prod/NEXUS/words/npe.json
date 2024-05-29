@@ -897,6 +897,16 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]
   },
+  {
+    "key": "npe-0090-patient",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0108-patient"],
+      "POL": ["pol-npe-0106"]
+    },
+    "papers": ["concrete", "person", "living"],
+    "topics": ["medicine", "people"]
+  },
 
   {
     "key": "npe-0078-midwife",
@@ -927,16 +937,6 @@
     },
     "papers": ["concrete", "person", "living"],
     "topics": ["law", "violence", "people"]
-  },
-  {
-    "key": "npe-0103-patient",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0108-patient"],
-      "POL": ["pol-npe-0119-pacjent"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["medicine", "people"]
   },
   {
     "key": "npe-0106-victim",

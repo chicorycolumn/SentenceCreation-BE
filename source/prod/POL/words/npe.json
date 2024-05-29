@@ -2597,6 +2597,20 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "pacjent",
+    "id": "pol-npe-0106-pacjent-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1"
+  },
+  {
+    "lemma": "pacjentka",
+    "id": "pol-npe-0106-pacjentka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kierownik",
@@ -2648,13 +2662,6 @@
       },
       "synonyms": ["zabójca", "rezun"]
     }
-  },
-  {
-    "lemma": "pacjent",
-    "id": "pol-npe-0119-pacjent",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1"
   },
   {
     "lemma": "ofiara",
