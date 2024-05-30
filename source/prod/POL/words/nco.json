@@ -18155,5 +18155,12 @@
     "frequency": 2,
     "register": 1,
     "gender": "m3"
+  },
+  {
+    "lemma": "przysłówek",
+    "id": "pol-nco-1147-przysłówek",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m3"
   }
 ]

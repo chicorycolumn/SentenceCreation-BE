@@ -10832,5 +10832,12 @@
     "gender": "n",
     "frequency": 2,
     "register": 1
+  },
+  {
+    "lemma": "adverb",
+    "id": "eng-nco-1368-adverb",
+    "gender": "n",
+    "frequency": 2,
+    "register": 1
   }
 ]
