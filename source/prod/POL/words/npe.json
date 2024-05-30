@@ -2650,24 +2650,10 @@
       "synonyms": ["profesjonalistka", "specjalistka"]
     }
   },
-
-  {
-    "lemma": "kierownik",
-    "id": "pol-npe-0052-kierownik",
-    "frequency": 4,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["kierowniczka"]
-      },
-      "synonyms": ["zarządca", "dyrektor"]
-    }
-  },
   {
     "lemma": "akuszerka",
-    "id": "pol-npe-0088-akuszerka",
-    "frequency": 2,
+    "id": "pol-npe-0108-akuszerka",
+    "frequency": 3,
     "register": 1,
     "gender": "f",
     "extra": {
@@ -2680,6 +2666,43 @@
         "stara akuszerka ― an old accoucheuse",
         "rola akuszerki ― the role of an accoucheuse"
       ]
+    }
+  },
+  {
+    "lemma": "akuszer",
+    "id": "pol-npe-0108-akuszer-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "położna",
+    "id": "pol-npe-0109-położna",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "położny",
+    "id": "pol-npe-0109-położny-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+
+  {
+    "lemma": "kierownik",
+    "id": "pol-npe-0052-kierownik",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["kierowniczka"]
+      },
+      "synonyms": ["zarządca", "dyrektor"]
     }
   },
   {

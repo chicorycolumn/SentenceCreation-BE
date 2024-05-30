@@ -917,17 +917,27 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["art", "work", "people"]
   },
-
   {
-    "key": "npe-0078-midwife",
+    "key": "npe-0092-midwife",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0078-midwife"],
+      "ENG": [],
+      "POL": ["pol-npe-0108", "pol-npe-0109"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["medicine", "work", "people"]
+  },
+  {
+    "key": "npe-0093-gynaecologist",
+    "traductions": {
+      "SPA": [],
+      "ENG": [],
       "POL": ["pol-npe-0088-akuszerka"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]
   },
+
   {
     "key": "npe-0086-asshole",
     "traductions": {
