@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "psychiatra",
+      "gen": "psychiatry",
+      "dat": "psychiatrze",
+      "acc": "psychiatrę",
+      "ins": "psychiatrą",
+      "loc": "psychiatrze",
+      "voc": "psychiatro"
+    },
+    "plural": {
+      "nom": "psychiatrzy",
+      "gen": "psychiatrów",
+      "dat": "psychiatrom",
+      "acc": "psychiatrów",
+      "ins": "psychiatrami",
+      "loc": "psychiatrach",
+      "voc": "psychiatrzy"
+    }
+  }
+}

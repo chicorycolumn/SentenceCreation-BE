@@ -947,6 +947,26 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]
   },
+  {
+    "key": "npe-0095-psychiatrist",
+    "traductions": {
+      "SPA": [],
+      "ENG": [],
+      "POL": ["pol-npe-0112"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["medicine", "work", "people"]
+  },
+  {
+    "key": "npe-0096-optyk",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["optician"],
+      "POL": ["pol-npe-0113"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["medicine", "work", "people"]
+  },
 
   {
     "key": "npe-0086-asshole",
