@@ -967,6 +967,16 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]
   },
+  {
+    "key": "npe-0097-detective",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0112-detective", "investigator"],
+      "POL": ["pol-npe-0114", "pol-npe-0115"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["law", "work", "people"]
+  },
 
   {
     "key": "npe-0086-asshole",
@@ -997,16 +1007,6 @@
     },
     "papers": ["concrete", "person", "living"],
     "topics": ["law", "people"]
-  },
-  {
-    "key": "npe-0107-detective",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0112-detective"],
-      "POL": ["pol-npe-0124-detektyw"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["law", "work", "people"]
   },
   {
     "key": "npe-0108-master",

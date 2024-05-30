@@ -2751,6 +2751,33 @@
     "gender": "m1",
     "semanticGender": "_PersonalGenders"
   },
+  {
+    "lemma": "detektyw",
+    "id": "pol-npe-0114-detektyw-£",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_PersonalGenders",
+    "extra": {
+      "synonyms": ["śledczy"],
+      "derivedTerms": ["detektywistyczny"]
+    }
+  },
+  {
+    "lemma": "śledczy",
+    "id": "pol-npe-0115-śledczy-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "śledcza",
+    "id": "pol-npe-0115-śledcza",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kierownik",
@@ -2799,17 +2826,6 @@
     "extra": {
       "synonyms": ["niezdara"],
       "derivedTerms": ["ofiarny", "ofiarować"]
-    }
-  },
-  {
-    "lemma": "detektyw",
-    "id": "pol-npe-0124-detektyw",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "synonyms": ["śledczy"],
-      "derivedTerms": ["detektywistyczny"]
     }
   },
   {
