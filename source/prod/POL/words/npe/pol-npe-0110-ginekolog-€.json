@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ginekolog",
+      "gen": "ginekologa",
+      "dat": "ginekologowi",
+      "acc": "ginekologa",
+      "ins": "ginekologiem",
+      "loc": "ginekologu",
+      "voc": "ginekologu"
+    },
+    "plural": {
+      "nom": "ginekolodzy",
+      "gen": "ginekologów",
+      "dat": "ginekologom",
+      "acc": "ginekologów",
+      "ins": "ginekologami",
+      "loc": "ginekologach",
+      "voc": "ginekolodzy"
+    }
+  }
+}

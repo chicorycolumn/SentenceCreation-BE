@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "psycholog",
+      "gen": "psycholog",
+      "dat": "psycholog",
+      "acc": "psycholog",
+      "ins": "psycholog",
+      "loc": "psycholog",
+      "voc": "psycholog"
+    },
+    "plural": {
+      "nom": "psycholog",
+      "gen": "psycholog",
+      "dat": "psycholog",
+      "acc": "psycholog",
+      "ins": "psycholog",
+      "loc": "psycholog",
+      "voc": "psycholog"
+    }
+  }
+}

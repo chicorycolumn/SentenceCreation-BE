@@ -2691,6 +2691,50 @@
     "gender": "m1",
     "semanticGender": "_VypernymGenders"
   },
+  {
+    "lemma": "ginekolog",
+    "id": "pol-npe-0110-ginekolog-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "ginekolog",
+    "id": "pol-npe-0110-ginekolog",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "ginekolożka",
+    "id": "pol-npe-0110-ginekolożka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "psycholog",
+    "id": "pol-npe-0111-psycholog-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "psycholog",
+    "id": "pol-npe-0111-psycholog",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "psycholożka",
+    "id": "pol-npe-0111-psycholożka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kierownik",

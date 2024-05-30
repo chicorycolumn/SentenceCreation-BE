@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "psycholog",
+      "gen": "psychologa",
+      "dat": "psychologowi",
+      "acc": "psychologa",
+      "ins": "psychologiem",
+      "loc": "psychologu",
+      "voc": "psychologu"
+    },
+    "plural": {
+      "nom": "psycholodzy",
+      "gen": "psychologów",
+      "dat": "psychologom",
+      "acc": "psychologów",
+      "ins": "psychologami",
+      "loc": "psychologach",
+      "voc": "psycholodzy"
+    }
+  }
+}

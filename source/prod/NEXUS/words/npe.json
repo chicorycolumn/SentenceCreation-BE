@@ -932,7 +932,17 @@
     "traductions": {
       "SPA": [],
       "ENG": [],
-      "POL": ["pol-npe-0088-akuszerka"]
+      "POL": ["pol-npe-0110"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["medicine", "work", "people"]
+  },
+  {
+    "key": "npe-0094-psychologist",
+    "traductions": {
+      "SPA": [],
+      "ENG": [],
+      "POL": ["pol-npe-0111"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]

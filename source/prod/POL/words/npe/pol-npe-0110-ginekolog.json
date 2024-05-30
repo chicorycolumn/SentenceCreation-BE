@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "ginekolog",
+      "gen": "ginekolog",
+      "dat": "ginekolog",
+      "acc": "ginekolog",
+      "ins": "ginekolog",
+      "loc": "ginekolog",
+      "voc": "ginekolog"
+    },
+    "plural": {
+      "nom": "ginekolog",
+      "gen": "ginekolog",
+      "dat": "ginekolog",
+      "acc": "ginekolog",
+      "ins": "ginekolog",
+      "loc": "ginekolog",
+      "voc": "ginekolog"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "psycholożka",
+      "gen": "psycholożki",
+      "dat": "psycholożce",
+      "acc": "psycholożkę",
+      "ins": "psycholożką",
+      "loc": "psycholożce",
+      "voc": "psycholożko"
+    },
+    "plural": {
+      "nom": "psycholożki",
+      "gen": "psycholożek",
+      "dat": "psycholożkom",
+      "acc": "psycholożki",
+      "ins": "psycholożkami",
+      "loc": "psycholożkach",
+      "voc": "psycholożki"
+    }
+  }
+}
