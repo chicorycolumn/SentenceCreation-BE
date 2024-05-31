@@ -10982,5 +10982,15 @@
     },
     "papers": ["wordtype", "abstract"],
     "topics": ["language"]
+  },
+  {
+    "key": "nco-1071-preposition",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1369"],
+      "POL": ["pol-nco-1148"]
+    },
+    "papers": ["wordtype", "abstract"],
+    "topics": ["language"]
   }
 ]
