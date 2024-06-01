@@ -18159,7 +18159,14 @@
   {
     "lemma": "przysłówek",
     "id": "pol-nco-1147-przysłówek",
-    "frequency": 2,
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
+  },
+  {
+    "lemma": "przyimek",
+    "id": "pol-nco-1148-przyimek",
+    "frequency": 4,
     "register": 1,
     "gender": "m3"
   }

@@ -10837,7 +10837,14 @@
     "lemma": "adverb",
     "id": "eng-nco-1368-adverb",
     "gender": "n",
-    "frequency": 2,
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "preposition",
+    "id": "eng-nco-1369-preposition",
+    "gender": "n",
+    "frequency": 4,
     "register": 1
   }
 ]

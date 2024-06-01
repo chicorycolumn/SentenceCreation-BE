@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przyimek",
+      "gen": "przyimka",
+      "dat": "przyimkowi",
+      "acc": "przyimek",
+      "ins": "przyimkiem",
+      "loc": "przyimku",
+      "voc": "przyimku"
+    },
+    "plural": {
+      "nom": "przyimki",
+      "gen": "przyimków",
+      "dat": "przyimkom",
+      "acc": "przyimki",
+      "ins": "przyimkami",
+      "loc": "przyimkach",
+      "voc": "przyimki"
+    }
+  }
+}
