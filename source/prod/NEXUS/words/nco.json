@@ -10992,5 +10992,15 @@
     },
     "papers": ["wordtype", "abstract"],
     "topics": ["language"]
-  }
+  },
+  {
+    "key": "nco-1072-temple",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1370"],
+      "POL": ["pol-nco-1149"]
+    },
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
+    "topics": ["inside", "religion"]
+  },
 ]
