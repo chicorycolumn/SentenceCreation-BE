@@ -18169,5 +18169,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "m3"
+  },
+  {
+    "lemma": "świątynia",
+    "id": "pol-nco-1149-świątynia",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
   }
 ]
