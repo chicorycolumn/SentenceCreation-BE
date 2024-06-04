@@ -2828,6 +2828,46 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "morderca",
+    "id": "pol-npe-0119-morderca-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["morderczyni"]
+      }
+    }
+  },
+  {
+    "lemma": "morderczyni",
+    "id": "pol-npe-0119-morderczyni",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "zabójca",
+    "id": "pol-npe-0120-zabójca-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["zabójczyni"]
+      }
+    }
+  },
+  {
+    "lemma": "zabójczyni",
+    "id": "pol-npe-0120-zabójczyni",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kierownik",
@@ -2848,19 +2888,6 @@
     "frequency": 3,
     "register": 7,
     "gender": "m1"
-  },
-  {
-    "lemma": "morderca",
-    "id": "pol-npe-0111-morderca",
-    "frequency": 4,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["morderczyni"]
-      },
-      "synonyms": ["zabójca", "rezun"]
-    }
   },
   {
     "lemma": "ofiara",

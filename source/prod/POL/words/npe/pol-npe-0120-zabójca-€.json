@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zabójca",
+      "gen": "zabójcy",
+      "dat": "zabójcy",
+      "acc": "zabójcę",
+      "ins": "zabójcą",
+      "loc": "zabójcy",
+      "voc": "zabójco"
+    },
+    "plural": {
+      "nom": "zabójcy",
+      "gen": "zabójców",
+      "dat": "zabójcom",
+      "acc": "zabójców",
+      "ins": "zabójcami",
+      "loc": "zabójcach",
+      "voc": "zabójcy"
+    }
+  }
+}

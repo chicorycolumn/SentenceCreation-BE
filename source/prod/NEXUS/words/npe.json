@@ -1007,6 +1007,36 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
   },
+  {
+    "key": "npe-0101-murderer",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0100-murderer"],
+      "POL": ["pol-npe-0119"]
+    },
+    "papers": ["concrete", "person", "living"],
+    "topics": ["law", "violence", "people"]
+  },
+  {
+    "key": "npe-0102-killer",
+    "traductions": {
+      "SPA": [],
+      "ENG": [],
+      "POL": ["pol-npe-0120"]
+    },
+    "papers": ["concrete", "person", "living"],
+    "topics": ["law", "violence", "people"]
+  },
+  {
+    "key": "npe-0103-assassin",
+    "traductions": {
+      "SPA": [],
+      "ENG": [],
+      "POL": ["pol-npe-0121"]
+    },
+    "papers": ["concrete", "person", "living"],
+    "topics": ["law", "violence", "people"]
+  },
 
   {
     "key": "npe-0086-asshole",
@@ -1018,16 +1048,7 @@
     "papers": ["concrete", "negative judgment", "person"],
     "topics": ["judgment", "people"]
   },
-  {
-    "key": "npe-0097-murderer",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0100-murderer"],
-      "POL": ["pol-npe-0111-morderca"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["law", "violence", "people"]
-  },
+
   {
     "key": "npe-0106-victim",
     "traductions": {
