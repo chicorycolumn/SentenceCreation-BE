@@ -2868,6 +2868,21 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "zamachowiec",
+    "id": "pol-npe-0121-zamachowiec-€",
+    "frequency": 5,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "zamachowczyni",
+    "id": "pol-npe-0121-zamachowczyni",
+    "frequency": 5,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kierownik",

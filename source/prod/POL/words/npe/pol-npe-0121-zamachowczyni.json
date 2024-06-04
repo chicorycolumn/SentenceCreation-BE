@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zamachowczyni",
+      "gen": "zamachowczyni",
+      "dat": "zamachowczyni",
+      "acc": "zamachowczynię",
+      "ins": "zamachowczynią",
+      "loc": "zamachowczyni",
+      "voc": "zamachowczyni"
+    },
+    "plural": {
+      "nom": "zamachowczynie",
+      "gen": "zamachowczyń",
+      "dat": "zamachowczyniom",
+      "acc": "zamachowczynie",
+      "ins": "zamachowczyniami",
+      "loc": "zamachowczyniach",
+      "voc": "zamachowczynie"
+    }
+  }
+}
