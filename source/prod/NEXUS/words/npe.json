@@ -977,6 +977,36 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["law", "work", "people"]
   },
+  {
+    "key": "npe-0098-millionaire",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0125-millionaire"],
+      "POL": ["pol-npe-0116"]
+    },
+    "papers": ["money", "concrete", "person", "living"],
+    "topics": ["business", "shopping", "people"]
+  },
+  {
+    "key": "npe-0099-billionaire",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0124-billionaire"],
+      "POL": ["pol-npe-0117"]
+    },
+    "papers": ["money", "concrete", "person", "living"],
+    "topics": ["business", "shopping", "people"]
+  },
+  {
+    "key": "npe-0100-secretary",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0118-secretary"],
+      "POL": ["pol-npe-0127-sekretarz"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["work", "people"]
+  },
 
   {
     "key": "npe-0086-asshole",
@@ -1019,16 +1049,6 @@
     "topics": ["game", "people"]
   },
   {
-    "key": "npe-0110-secretary",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0118-secretary"],
-      "POL": ["pol-npe-0127-sekretarz"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["work", "people"]
-  },
-  {
     "key": "npe-0113-prisoner",
     "traductions": {
       "SPA": [],
@@ -1037,26 +1057,6 @@
     },
     "papers": ["concrete", "person", "living"],
     "topics": ["law", "people"]
-  },
-  {
-    "key": "npe-0115-billionaire",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0124-billionaire"],
-      "POL": ["pol-npe-0135-miliarder"]
-    },
-    "papers": ["money", "concrete", "person", "living"],
-    "topics": ["business", "shopping", "people"]
-  },
-  {
-    "key": "npe-0116-millionaire",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0125-millionaire"],
-      "POL": ["pol-npe-0136-milioner"]
-    },
-    "papers": ["money", "concrete", "person", "living"],
-    "topics": ["business", "shopping", "people"]
   },
   {
     "key": "npe-0117-pedestrian",

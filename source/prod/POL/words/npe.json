@@ -2778,6 +2778,36 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "milioner",
+    "id": "pol-npe-0116-milioner-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "milionerka",
+    "id": "pol-npe-0116-milionerka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "miliarder",
+    "id": "pol-npe-0117-miliarder-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "miliarderka",
+    "id": "pol-npe-0117-miliarderka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kierownik",
@@ -2874,20 +2904,6 @@
         "feminine": ["więźniarka"]
       }
     }
-  },
-  {
-    "lemma": "miliarder",
-    "id": "pol-npe-0135-miliarder",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1"
-  },
-  {
-    "lemma": "milioner",
-    "id": "pol-npe-0136-milioner",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1"
   },
   {
     "lemma": "pieszy",

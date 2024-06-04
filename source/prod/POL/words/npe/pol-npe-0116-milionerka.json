@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "milionerka",
+      "gen": "milionerki",
+      "dat": "milionerce",
+      "acc": "milionerkę",
+      "ins": "milionerką",
+      "loc": "milionerce",
+      "voc": "milionerko"
+    },
+    "plural": {
+      "nom": "milionerki",
+      "gen": "milionerek",
+      "dat": "milionerkom",
+      "acc": "milionerki",
+      "ins": "milionerkami",
+      "loc": "milionerkach",
+      "voc": "milionerki"
+    }
+  }
+}
