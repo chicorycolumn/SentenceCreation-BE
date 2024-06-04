@@ -10853,5 +10853,12 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "synagogue",
+    "id": "eng-nco-1371-synagogue",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
   }
 ]

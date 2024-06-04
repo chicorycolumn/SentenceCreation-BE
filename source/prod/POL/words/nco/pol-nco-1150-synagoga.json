@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "synagoga",
+      "gen": "synagogi",
+      "dat": "synagodze",
+      "acc": "synagogę",
+      "ins": "synagogą",
+      "loc": "synagodze",
+      "voc": "synagogo"
+    },
+    "plural": {
+      "nom": "synagogi",
+      "gen": "synagog",
+      "dat": "synagogom",
+      "acc": "synagogi",
+      "ins": "synagogami",
+      "loc": "synagogach",
+      "voc": "synagogi"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "synagogue",
+      "gen": "synagogue's"
+    },
+    "plural": {
+      "nom": "synagogues",
+      "gen": "synagogues'"
+    }
+  }
+}
