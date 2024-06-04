@@ -2808,6 +2808,26 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "sekretarz",
+    "id": "pol-npe-0118-sekretarz-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "extra": {
+      "otherShapes": {
+        "feminine": ["sekretarka"]
+      }
+    }
+  },
+  {
+    "lemma": "sekretarka",
+    "id": "pol-npe-0118-sekretarka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kierownik",
@@ -2879,18 +2899,6 @@
         "mistrzostwo",
         "zegarmistrz"
       ]
-    }
-  },
-  {
-    "lemma": "sekretarz",
-    "id": "pol-npe-0127-sekretarz",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1",
-    "extra": {
-      "otherShapes": {
-        "feminine": ["sekretarka"]
-      }
     }
   },
   {

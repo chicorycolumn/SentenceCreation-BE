@@ -1002,7 +1002,7 @@
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0118-secretary"],
-      "POL": ["pol-npe-0127-sekretarz"]
+      "POL": ["pol-npe-0118"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
