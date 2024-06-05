@@ -1037,6 +1037,36 @@
     "papers": ["concrete", "person", "living"],
     "topics": ["law", "violence", "people"]
   },
+  {
+    "key": "npe-0104-victim",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0111-victim"],
+      "POL": ["pol-npe-0122"]
+    },
+    "papers": ["concrete", "person", "living"],
+    "topics": ["law", "violence", "people"]
+  },
+  {
+    "key": "npe-0105-hero",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0036-hero", "eng-npe-0154-heroine"],
+      "POL": ["pol-npe-0123"]
+    },
+    "papers": ["concrete", "positive judgment", "person", "living"],
+    "topics": ["people", "judgment"]
+  },
+  {
+    "key": "npe-0106-protagonist",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0037-protagonist"],
+      "POL": ["pol-npe-0124"]
+    },
+    "papers": ["concrete", "person", "living"],
+    "topics": ["fantasy", "people", "writing"]
+  },
 
   {
     "key": "npe-0086-asshole",
@@ -1047,17 +1077,6 @@
     },
     "papers": ["concrete", "negative judgment", "person"],
     "topics": ["judgment", "people"]
-  },
-
-  {
-    "key": "npe-0106-victim",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0111-victim"],
-      "POL": ["pol-npe-0123-ofiara(victim)"]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["law", "people"]
   },
   {
     "key": "npe-0108-master",
@@ -1134,29 +1153,6 @@
     },
     "papers": ["concrete", "person", "profession", "living"],
     "topics": ["work", "people"]
-  },
-  {
-    "key": "npe-0039-hero",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0036-hero", "eng-npe-0154-heroine"],
-      "POL": ["pol-npe-0045-bohater(hero)", "pol-npe-0159-bohaterka(heroine)"]
-    },
-    "papers": ["concrete", "positive judgment", "person", "living"],
-    "topics": ["people", "judgment"]
-  },
-  {
-    "key": "npe-0040-protagonist",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0037-protagonist"],
-      "POL": [
-        "pol-npe-0046-bohater(protagonist)",
-        "pol-npe-0160-bohaterka(protagonist)"
-      ]
-    },
-    "papers": ["concrete", "person", "living"],
-    "topics": ["fantasy", "people", "writing"]
   },
   {
     "key": "npe-0046-manager",

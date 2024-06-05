@@ -2883,6 +2883,100 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "ofiara",
+    "id": "pol-npe-0122-ofiara(victim)-£",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f",
+    "semanticGender": "_PersonalGenders",
+    "allohomInfo": {
+      "singleWordtype": false,
+      "text": "person",
+      "emoji": "🏃"
+    },
+    "extra": {
+      "synonyms": ["niezdara"],
+      "derivedTerms": ["ofiarny", "ofiarować"]
+    }
+  },
+  {
+    "lemma": "bohater",
+    "id": "pol-npe-0123-bohater(hero)-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "positive term",
+      "emoji": "👍"
+    },
+    "extra": {
+      "otherShapes": {
+        "feminine": ["bohaterka"]
+      },
+      "derivedTerms": [
+        "antybohaterski",
+        "bohaterski",
+        "antybohater",
+        "antybohaterka",
+        "bohater mojej bajki",
+        "bohaterskość",
+        "bohaterstwo",
+        "bohaterszczyzna"
+      ]
+    }
+  },
+  {
+    "lemma": "bohaterka",
+    "id": "pol-npe-0123-bohaterka(heroine)",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "positive term",
+      "emoji": "👍"
+    },
+    "extra": {
+      "otherShapes": {
+        "masculine": ["bohater"]
+      }
+    }
+  },
+  {
+    "lemma": "bohater",
+    "id": "pol-npe-0124-bohater(protagonist)-€",
+    "_inflectionsRoot": "pol-npe-0123-bohater(hero)-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "writing",
+      "emoji": "📖"
+    }
+  },
+  {
+    "lemma": "bohaterka",
+    "id": "pol-npe-0124-bohaterka(protagonist)",
+    "_inflectionsRoot": "pol-npe-0123-bohaterka(heroine)",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "writing",
+      "emoji": "📖"
+    },
+    "extra": {
+      "otherShapes": {
+        "masculine": ["bohater"]
+      }
+    }
+  }
 
   {
     "lemma": "kierownik",
@@ -2903,22 +2997,6 @@
     "frequency": 3,
     "register": 7,
     "gender": "m1"
-  },
-  {
-    "lemma": "ofiara",
-    "id": "pol-npe-0123-ofiara(victim)",
-    "frequency": 4,
-    "register": 1,
-    "gender": "f",
-    "allohomInfo": {
-      "singleWordtype": false,
-      "text": "person",
-      "emoji": "🏃"
-    },
-    "extra": {
-      "synonyms": ["niezdara"],
-      "derivedTerms": ["ofiarny", "ofiarować"]
-    }
   },
   {
     "lemma": "mistrz",
@@ -3033,130 +3111,5 @@
     "frequency": 3,
     "register": 7,
     "gender": "m2"
-  },
-  {
-    "lemma": "bohaterka",
-    "id": "pol-npe-0159-bohaterka(heroine)",
-    "frequency": 4,
-    "register": 1,
-    "gender": "f",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "positive term",
-      "emoji": "👍"
-    },
-    "extra": {
-      "otherShapes": {
-        "masculine": ["bohater"]
-      }
-    }
-  },
-  {
-    "lemma": "bohaterka",
-    "id": "pol-npe-0160-bohaterka(protagonist)",
-    "_inflectionsRoot": "pol-npe-0159-bohaterka(heroine)",
-    "frequency": 4,
-    "register": 1,
-    "gender": "f",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "writing",
-      "emoji": "📖"
-    },
-    "extra": {
-      "otherShapes": {
-        "masculine": ["bohater"]
-      }
-    }
-  },
-  {
-    "lemma": "bohater",
-    "id": "pol-npe-0045-bohater(hero)",
-    "frequency": 4,
-    "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "positive term",
-      "emoji": "👍"
-    },
-    "extra": {
-      "otherShapes": {
-        "feminine": ["bohaterka"]
-      },
-      "derivedTerms": [
-        "antybohaterski",
-        "bohaterski",
-        "antybohater",
-        "antybohaterka",
-        "bohater mojej bajki",
-        "bohaterskość",
-        "bohaterstwo",
-        "bohaterszczyzna"
-      ]
-    }
-  },
-  {
-    "lemma": "bohater",
-    "id": "pol-npe-0046-bohater(protagonist)",
-    "_inflectionsRoot": "pol-npe-0045-bohater(hero)",
-    "frequency": 4,
-    "register": 1,
-    "gender": "m1",
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "writing",
-      "emoji": "📖"
-    },
-    "extra": {
-      "otherShapes": {
-        "feminine": ["bohaterka"]
-      },
-      "synonyms": ["heros"],
-      "derivedTerms": [
-        "antybohaterski",
-        "bohaterski",
-        "antybohater",
-        "antybohaterka",
-        "bohater mojej bajki",
-        "bohaterskość",
-        "bohaterstwo",
-        "bohaterszczyzna"
-      ],
-      "usage": [
-        "wojenny bohater ― a hero warrior",
-        "bohater narodowy ― a national hero",
-        "bohater powstania ― a hero of a uprising",
-        "bohater rewolucji ― a hero of a revolution",
-        "bohater wojny ― a war hero",
-        "bohaterowie pól bitewnych ― battlefield heroes",
-        "składać hołd bohaterom ― to honor heroes",
-        "bohater dnia ― the man of the hour/the hero of the day",
-        "antyczny bohater ― an antique hero",
-        "mitologiczny bohater ― a mythological hero",
-        "mityczny bohater ― a mythical hero",
-        "bohater liryczny ― Llyrical subject",
-        "główny bohater ― the main character",
-        "tytułowy bohater ― title character",
-        "filmowy bohater ― a film protagonist",
-        "bohater literacki ― a literary protagonist",
-        "bohater pierwszoplanowy bohater ― the lead protagonist",
-        "ekranowy bohater ― a screen protagonist",
-        "telewizyjny bohater bohater ― a television protagonist",
-        "bohater bajki/baśni ― the protagonist of a fairy tell",
-        "bohater dramatu ― the protagonist of a drama",
-        "bohater noweli ― the protagonist of a novel",
-        "bohater opowiadani/powieścia ― the protagonist of a story",
-        "bohater utworu ― the protagonist of a piece of work",
-        "bohater filmu ― the protagonist of a movie",
-        "bohater książki ― the protagonist of a book",
-        "bohater epopei/eposów ― the protagonist of epics",
-        "bohater seriali ― the protagonist of a series",
-        "dzieje bohatera ― the history of a protagonist",
-        "losy bohatera ― the fate of a protagonist",
-        "przygody bohatera ― the adventures of a protagonist",
-        "śledzić losy bohaterów ― to follow the fate of a protagonist"
-      ]
-    }
   }
 ]
