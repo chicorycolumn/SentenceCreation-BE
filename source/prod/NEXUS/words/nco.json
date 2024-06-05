@@ -11003,4 +11003,14 @@
     "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["inside", "religion"]
   },
+  {
+    "key": "nco-1073-synagogue",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1371"],
+      "POL": ["pol-nco-1150", "pol-nco-1151"]
+    },
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
+    "topics": ["inside", "religion"]
+  }
 ]
