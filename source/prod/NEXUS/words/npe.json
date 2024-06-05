@@ -1087,6 +1087,16 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["religion", "work", "people"]
   },
+  {
+    "key": "npe-0109-pedestrian",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0126-pedestrian"],
+      "POL": ["pol-npe-0127"]
+    },
+    "papers": ["concrete", "transport", "person", "living"],
+    "topics": ["people", "travel"]
+  },
 
   {
     "key": "npe-0086-asshole",
@@ -1117,16 +1127,6 @@
     },
     "papers": ["concrete", "person", "living"],
     "topics": ["law", "people"]
-  },
-  {
-    "key": "npe-0117-pedestrian",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0126-pedestrian"],
-      "POL": ["pol-npe-0137-pieszy", "pol-npe-0138-piesza"]
-    },
-    "papers": ["concrete", "transport", "person", "living"],
-    "topics": ["people", "travel"]
   },
   {
     "key": "npe-0122-angel",

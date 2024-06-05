@@ -2992,6 +2992,21 @@
     "register": 1,
     "gender": "m1"
   },
+  {
+    "lemma": "pieszy",
+    "id": "pol-npe-0127-pieszy-€",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "piesza",
+    "id": "pol-npe-0127-piesza",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
 
   {
     "lemma": "kierownik",
@@ -3047,20 +3062,6 @@
         "feminine": ["więźniarka"]
       }
     }
-  },
-  {
-    "lemma": "pieszy",
-    "id": "pol-npe-0137-pieszy",
-    "frequency": 3,
-    "register": 1,
-    "gender": "m1"
-  },
-  {
-    "lemma": "piesza",
-    "id": "pol-npe-0138-piesza",
-    "frequency": 3,
-    "register": 1,
-    "gender": "f"
   },
   {
     "lemma": "lider",
