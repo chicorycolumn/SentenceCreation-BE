@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rabin",
+      "gen": "rabina",
+      "dat": "rabinowi",
+      "acc": "rabina",
+      "ins": "rabinem",
+      "loc": "rabinie",
+      "voc": "rabinie"
+    },
+    "plural": {
+      "nom": { "isTerminus": true, "normal": ["rabini", "rabinowie"] },
+      "gen": "rabinów",
+      "dat": "rabinom",
+      "acc": "rabinów",
+      "ins": "rabinami",
+      "loc": "rabinach",
+      "voc": { "isTerminus": true, "normal": ["rabini", "rabinowie"] }
+    }
+  }
+}

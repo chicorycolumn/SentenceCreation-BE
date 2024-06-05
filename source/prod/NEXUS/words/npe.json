@@ -1067,6 +1067,26 @@
     "papers": ["concrete", "person", "living"],
     "topics": ["fantasy", "people", "writing"]
   },
+  {
+    "key": "npe-0107-rabbi",
+    "traductions": {
+      "SPA": [],
+      "ENG": [],
+      "POL": ["pol-npe-0125"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["religion", "work", "people"]
+  },
+  {
+    "key": "npe-0108-imam",
+    "traductions": {
+      "SPA": [],
+      "ENG": [],
+      "POL": ["pol-npe-0126"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["religion", "work", "people"]
+  },
 
   {
     "key": "npe-0086-asshole",
@@ -1117,16 +1137,6 @@
     },
     "papers": ["living", "concrete", "person"],
     "topics": ["religion", "people", "fantasy"]
-  },
-  {
-    "key": "npe-0123-priest",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0866-priest"],
-      "POL": ["pol-npe-0153-ksiądz"]
-    },
-    "papers": ["living", "profession", "concrete", "person"],
-    "topics": ["work", "religion", "people"]
   },
   {
     "key": "npe-0125-fucker",
