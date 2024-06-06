@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "bożnica",
+      "gen": "bożnicy",
+      "dat": "bożnicy",
+      "acc": "bożnicę",
+      "ins": "bożnicą",
+      "loc": "bożnicy",
+      "voc": "bożnico"
+    },
+    "plural": {
+      "nom": "bożnice",
+      "gen": "bożnic",
+      "dat": "bożnicom",
+      "acc": "bożnice",
+      "ins": "bożnicami",
+      "loc": "bożnicach",
+      "voc": "bożnice"
+    }
+  }
+}
