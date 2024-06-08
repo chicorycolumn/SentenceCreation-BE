@@ -1097,6 +1097,26 @@
     "papers": ["concrete", "transport", "person", "living"],
     "topics": ["people", "travel"]
   },
+  {
+    "key": "npe-0110-manager/boss",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0043-manager", "boss"],
+      "POL": ["pol-npe-0128", "pol-npe-0129", "pol-npe-0130"]
+    },
+    "papers": ["concrete", "profession", "person", "living", "relative"],
+    "topics": ["work", "people"]
+  },
+  {
+    "key": "npe-0111-leader",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0032-leader"],
+      "POL": ["pol-npe-0147-lider"]
+    },
+    "papers": ["concrete", "person", "profession", "living"],
+    "topics": ["work", "people"]
+  },
 
   {
     "key": "npe-0086-asshole",
@@ -1153,25 +1173,5 @@
       "curseword"
     ],
     "topics": ["people"]
-  },
-  {
-    "key": "npe-0035-leader",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0032-leader"],
-      "POL": ["pol-npe-0147-lider"]
-    },
-    "papers": ["concrete", "person", "profession", "living"],
-    "topics": ["work", "people"]
-  },
-  {
-    "key": "npe-0046-manager",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-npe-0043-manager", "eng-npe-0044-head"],
-      "POL": ["pol-npe-0052-kierownik"]
-    },
-    "papers": ["concrete", "profession", "person", "living"],
-    "topics": ["work", "people"]
   }
 ]
