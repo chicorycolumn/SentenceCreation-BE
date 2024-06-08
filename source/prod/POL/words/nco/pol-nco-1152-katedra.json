@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "katedra",
+      "gen": "katedry",
+      "dat": "katedrze",
+      "acc": "katedrę",
+      "ins": "katedrą",
+      "loc": "katedrze",
+      "voc": "katedro"
+    },
+    "plural": {
+      "nom": "katedry",
+      "gen": "katedr",
+      "dat": "katedrom",
+      "acc": "katedry",
+      "ins": "katedrami",
+      "loc": "katedrach",
+      "voc": "katedry"
+    }
+  }
+}
