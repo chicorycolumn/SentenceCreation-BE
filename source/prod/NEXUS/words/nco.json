@@ -11022,5 +11022,15 @@
     },
     "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["inside", "religion"]
-  }
+  },
+  {
+    "key": "nco-1075-orthodox church",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1373"],
+      "POL": ["pol-nco-1153"]
+    },
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
+    "topics": ["inside", "religion"]
+  },
 ]
