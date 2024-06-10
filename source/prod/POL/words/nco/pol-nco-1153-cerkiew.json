@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cerkiew",
+      "gen": "cerkwi",
+      "dat": "cerkwi",
+      "acc": "cerkiew",
+      "ins": "cerkwią",
+      "loc": "cerkwi",
+      "voc": "cerkwi"
+    },
+    "plural": {
+      "nom": "cerkwie",
+      "gen": "cerkwi",
+      "dat": "cerkwiom",
+      "acc": "cerkwie",
+      "ins": "cerkwiami",
+      "loc": "cerkwiach",
+      "voc": "cerkwie"
+    }
+  }
+}

@@ -18197,5 +18197,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "f"
+  },
+  {
+    "lemma": "cerkiew",
+    "id": "pol-nco-1153-katedra",
+    "frequency": 5,
+    "register": 1,
+    "gender": "f"
   }
 ]

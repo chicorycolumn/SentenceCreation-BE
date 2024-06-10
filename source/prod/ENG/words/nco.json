@@ -10867,5 +10867,12 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
-  }
+  },
+  {
+    "lemma": "orthodox church",
+    "id": "eng-nco-1373-orthodox church",
+    "gender": "n",
+    "register": 1,
+    "frequency": 5
+  },
 ]
