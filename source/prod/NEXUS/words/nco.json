@@ -11033,4 +11033,14 @@
     "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["inside", "religion"]
   },
+  {
+    "key": "nco-1076-orthodox cathedral",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1374"],
+      "POL": ["pol-nco-1154"]
+    },
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
+    "topics": ["inside", "religion"]
+  },
 ]
