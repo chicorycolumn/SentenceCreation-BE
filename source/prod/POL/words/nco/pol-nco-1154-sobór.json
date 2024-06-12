@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sobór",
+      "gen": "soboru",
+      "dat": "soborowi",
+      "acc": "sobór",
+      "ins": "soborem",
+      "loc": "soborze",
+      "voc": "soborze"
+    },
+    "plural": {
+      "nom": "sobory",
+      "gen": "soborów",
+      "dat": "soborom",
+      "acc": "sobory",
+      "ins": "soborami",
+      "loc": "soborach",
+      "voc": "sobory"
+    }
+  }
+}

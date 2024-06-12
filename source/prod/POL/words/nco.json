@@ -18204,5 +18204,12 @@
     "frequency": 5,
     "register": 1,
     "gender": "f"
+  },
+  {
+    "lemma": "sobór",
+    "id": "pol-nco-1154-sobór",
+    "frequency": 5,
+    "register": 1,
+    "gender": "m3"
   }
 ]
