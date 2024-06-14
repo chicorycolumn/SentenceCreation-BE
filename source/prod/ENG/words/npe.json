@@ -8,15 +8,36 @@
   },
   {
     "lemma": "father",
-    "id": "eng-npe-0002-father",
+    "id": "eng-npe-0001-father",
     "gender": "m",
     "register": 1,
     "frequency": 1
   },
   {
+    "lemma": "parent",
+    "id": "eng-npe-0001-parent",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 1
+  },
+  {
     "lemma": "brother",
-    "id": "eng-npe-0003-brother",
+    "id": "eng-npe-0002-brother",
     "gender": "m",
+    "register": 1,
+    "frequency": 1
+  },
+  {
+    "lemma": "sister",
+    "id": "eng-npe-0002-sister",
+    "gender": "f",
+    "register": 1,
+    "frequency": 1
+  },
+  {
+    "lemma": "sibling",
+    "id": "eng-npe-0002-sibling",
+    "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 1
   },
@@ -121,13 +142,6 @@
   {
     "lemma": "lady",
     "id": "eng-npe-0018-lady",
-    "gender": "f",
-    "register": 1,
-    "frequency": 1
-  },
-  {
-    "lemma": "sister",
-    "id": "eng-npe-0019-sister",
     "gender": "f",
     "register": 1,
     "frequency": 1
@@ -580,13 +594,6 @@
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
-  },
-  {
-    "lemma": "parent",
-    "id": "eng-npe-0085-parent",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 1
   },
   {
     "lemma": "asshole",
