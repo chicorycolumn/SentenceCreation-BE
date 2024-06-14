@@ -11043,4 +11043,14 @@
     "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["inside", "religion"]
   },
+  {
+    "key": "nco-1077-creche",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1375"],
+      "POL": ["pol-nco-1155"]
+    },
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
+    "topics": ["inside", "childcare"]
+  },
 ]
