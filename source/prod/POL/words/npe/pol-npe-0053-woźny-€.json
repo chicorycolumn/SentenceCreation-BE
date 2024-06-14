@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "woźny",
+      "gen": "woźnego",
+      "dat": "woźnemu",
+      "acc": "woźnego",
+      "ins": "woźnym",
+      "loc": "woźnym",
+      "voc": "woźny"
+    },
+    "plural": {
+      "nom": "woźni",
+      "gen": "woźnych",
+      "dat": "woźnym",
+      "acc": "woźnych",
+      "ins": "woźnymi",
+      "loc": "woźnych",
+      "voc": "woźni"
+    }
+  }
+}

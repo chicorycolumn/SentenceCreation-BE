@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sprzątacz",
+      "gen": "sprzątacza",
+      "dat": "sprzątaczowi",
+      "acc": "sprzątacza",
+      "ins": "sprzątaczem",
+      "loc": "sprzątaczu",
+      "voc": "sprzątaczu"
+    },
+    "plural": {
+      "nom": "sprzątacze",
+      "gen": "sprzątaczy",
+      "dat": "sprzątaczom",
+      "acc": "sprzątaczy",
+      "ins": "sprzątaczami",
+      "loc": "sprzątaczach",
+      "voc": "sprzątacze"
+    }
+  }
+}

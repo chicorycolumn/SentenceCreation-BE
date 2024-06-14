@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "elektryczka",
+      "gen": "elektryczki",
+      "dat": "elektryczce",
+      "acc": "elektryczkę",
+      "ins": "elektryczką",
+      "loc": "elektryczce",
+      "voc": "elektryczko"
+    },
+    "plural": {
+      "nom": "elektryczki",
+      "gen": "elektryczek",
+      "dat": "elektryczkom",
+      "acc": "elektryczki",
+      "ins": "elektryczkami",
+      "loc": "elektryczkach",
+      "voc": "elektryczki"
+    }
+  }
+}

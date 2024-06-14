@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rzeźnik",
+      "gen": "rzeźnika",
+      "dat": "rzeźnikowi",
+      "acc": "rzeźnika",
+      "ins": "rzeźnikiem",
+      "loc": "rzeźniku",
+      "voc": "rzeźniku"
+    },
+    "plural": {
+      "nom": "rzeźnicy",
+      "gen": "rzeźników",
+      "dat": "rzeźnikom",
+      "acc": "rzeźników",
+      "ins": "rzeźnikami",
+      "loc": "rzeźnikach",
+      "voc": "rzeźnicy"
+    }
+  }
+}

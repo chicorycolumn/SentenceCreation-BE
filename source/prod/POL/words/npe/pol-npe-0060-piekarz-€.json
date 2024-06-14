@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "piekarz",
+      "gen": "piekarza",
+      "dat": "piekarzowi",
+      "acc": "piekarza",
+      "ins": "piekarzem",
+      "loc": "piekarzu",
+      "voc": "piekarzu"
+    },
+    "plural": {
+      "nom": "piekarze",
+      "gen": { "isTerminus": true, "normal": ["piekarzy", "piekarzów"] },
+      "dat": "piekarzom",
+      "acc": { "isTerminus": true, "normal": ["piekarzy", "piekarzów"] },
+      "ins": "piekarzami",
+      "loc": "piekarzach",
+      "voc": "piekarze"
+    }
+  }
+}

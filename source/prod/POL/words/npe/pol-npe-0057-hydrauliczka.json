@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "hydrauliczka",
+      "gen": "hydrauliczki",
+      "dat": "hydrauliczce",
+      "acc": "hydrauliczkę",
+      "ins": "hydrauliczką",
+      "loc": "hydrauliczce",
+      "voc": "hydrauliczko"
+    },
+    "plural": {
+      "nom": "hydrauliczki",
+      "gen": "hydrauliczek",
+      "dat": "hydrauliczkom",
+      "acc": "hydrauliczki",
+      "ins": "hydrauliczkami",
+      "loc": "hydrauliczkach",
+      "voc": "hydrauliczki"
+    }
+  }
+}

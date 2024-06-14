@@ -1096,5 +1096,86 @@
     },
     "papers": ["concrete", "transport", "person", "living"],
     "topics": ["people", "travel"]
+  },
+
+  {
+    "key": "npe-0110-athlete",
+    "traductions": {
+      "SPA": [],
+      "ENG": [],
+      "POL": ["pol-npe-0051", "pol-npe-0052"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["sport", "work", "people"]
+  },
+  {
+    "key": "npe-0111-janitor",
+    "traductions": {
+      "SPA": [],
+      "ENG": [],
+      "POL": ["pol-npe-0053", "pol-npe-0054"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["work", "people"]
+  },
+  {
+    "key": "npe-0112-cleaner",
+    "traductions": {
+      "SPA": [],
+      "ENG": [],
+      "POL": ["pol-npe-0055"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["work", "people"]
+  },
+  {
+    "key": "npe-0113-electrician",
+    "traductions": {
+      "SPA": [],
+      "ENG": [],
+      "POL": ["pol-npe-0056"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["work", "people"]
+  },
+  {
+    "key": "npe-0114-plumber",
+    "traductions": {
+      "SPA": [],
+      "ENG": [],
+      "POL": ["pol-npe-0057"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["work", "people"]
+  },
+  {
+    "key": "npe-0115-builder",
+    "traductions": {
+      "SPA": [],
+      "ENG": [],
+      "POL": ["pol-npe-0058"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["work", "people"]
+  },
+  {
+    "key": "npe-0116-butcher",
+    "traductions": {
+      "SPA": [],
+      "ENG": [],
+      "POL": ["pol-npe-0059"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["food", "work", "people"]
+  },
+  {
+    "key": "npe-0117-butcher",
+    "traductions": {
+      "SPA": [],
+      "ENG": [],
+      "POL": ["pol-npe-0060"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["food", "work", "people"]
   }
 ]

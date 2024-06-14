@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "elektryk",
+      "gen": "elektryka",
+      "dat": "elektrykowi",
+      "acc": "elektryka",
+      "ins": "elektrykiem",
+      "loc": "elektryku",
+      "voc": "elektryku"
+    },
+    "plural": {
+      "nom": "elektrycy",
+      "gen": "elektryków",
+      "dat": "elektrykom",
+      "acc": "elektryków",
+      "ins": "elektrykami",
+      "loc": "elektrykach",
+      "voc": "elektrycy"
+    }
+  }
+}

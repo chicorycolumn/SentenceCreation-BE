@@ -1634,6 +1634,157 @@
     "gender": "f"
   },
   {
+    "lemma": "sportowiec",
+    "id": "pol-npe-0051-sportowiec-£",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_PersonalGenders"
+  },
+  {
+    "lemma": "atleta",
+    "id": "pol-npe-0052-atleta-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "atletka",
+    "id": "pol-npe-0052-atletka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "lekkoatleta",
+    "id": "pol-npe-0052-lekkoatleta-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "lekkoatletka",
+    "id": "pol-npe-0052-lekkoatletka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "woźny",
+    "id": "pol-npe-0053-woźny-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "woźna",
+    "id": "pol-npe-0053-woźna",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "dozorca",
+    "id": "pol-npe-0054-dozorca-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "dozorczyni",
+    "id": "pol-npe-0054-dozorczyni",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "sprzątacz",
+    "id": "pol-npe-0055-sprzątacz-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "sprzątaczka",
+    "id": "pol-npe-0055-sprzątaczka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "elektryk",
+    "id": "pol-npe-0056-elektryk-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "elektryczka",
+    "id": "pol-npe-0056-elektryczka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "hydraulik",
+    "id": "pol-npe-0057-hydraulik-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "hydrauliczka",
+    "id": "pol-npe-0057-hydrauliczka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "budowniczy",
+    "id": "pol-npe-0058-budowniczy-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "budownicza",
+    "id": "pol-npe-0058-budownicza",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "rzeźnik",
+    "id": "pol-npe-0059-rzeźnik-£",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_PersonalGenders"
+  },
+  {
+    "lemma": "piekarz",
+    "id": "pol-npe-0060-piekarz-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "piekarka",
+    "id": "pol-npe-0060-piekarka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
     "lemma": "adwokat",
     "id": "pol-npe-0061-adwokat-€",
     "frequency": 2,
