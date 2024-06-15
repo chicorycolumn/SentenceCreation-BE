@@ -18211,5 +18211,12 @@
     "frequency": 5,
     "register": 1,
     "gender": "m3"
+  },
+  {
+    "lemma": "żłobek",
+    "id": "pol-nco-1155-żłobek",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
   }
 ]
