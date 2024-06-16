@@ -11053,4 +11053,14 @@
     "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["inside", "childcare"]
   },
+  {
+    "key": "nco-1078-library",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1376"],
+      "POL": ["pol-nco-1156"]
+    },
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
+    "topics": ["inside", "school"]
+  },
 ]
