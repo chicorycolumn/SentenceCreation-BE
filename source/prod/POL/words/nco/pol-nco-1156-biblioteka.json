@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "biblioteka",
+      "gen": "biblioteki",
+      "dat": "bibliotece",
+      "acc": "bibliotekę",
+      "ins": "biblioteką",
+      "loc": "bibliotece",
+      "voc": "biblioteko"
+    },
+    "plural": {
+      "nom": "biblioteki",
+      "gen": "bibliotek",
+      "dat": "bibliotekom",
+      "acc": "biblioteki",
+      "ins": "bibliotekami",
+      "loc": "bibliotekach",
+      "voc": "biblioteki"
+    }
+  }
+}

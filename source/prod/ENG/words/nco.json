@@ -10889,4 +10889,11 @@
     "register": 1,
     "frequency": 4
   },
+  {
+    "lemma": "library",
+    "id": "eng-nco-1376-library",
+    "gender": "n",
+    "register": 1,
+    "frequency": 2
+  },
 ]

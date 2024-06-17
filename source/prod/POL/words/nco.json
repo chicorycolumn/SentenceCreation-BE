@@ -18218,5 +18218,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "m3"
+  },
+  {
+    "lemma": "biblioteka",
+    "id": "pol-nco-1156-biblioteka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
   }
 ]
