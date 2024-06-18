@@ -8463,7 +8463,7 @@
     "traductions": {
       "SPA": [],
       "ENG": ["eng-nco-1056-company", "eng-nco-1057-corporation"],
-      "POL": ["pol-nco-0848-przedsiębiorstwo"]
+      "POL": ["pol-nco-0848-przedsiębiorstwo", "pol-nco-1157", "pol-nco-1158"]
     },
     "papers": ["abstract"],
     "topics": ["business"]
