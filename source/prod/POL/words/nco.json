@@ -14174,7 +14174,7 @@
   {
     "lemma": "przedsiębiorstwo",
     "id": "pol-nco-0848-przedsiębiorstwo",
-    "frequency": 3,
+    "frequency": 4,
     "register": 1,
     "gender": "n",
     "extra": {
@@ -18225,5 +18225,19 @@
     "frequency": 2,
     "register": 1,
     "gender": "f"
-  }
+  },
+  {
+    "lemma": "firma",
+    "id": "pol-nco-1157-firma",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "spółka",
+    "id": "pol-nco-1158-spółka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
 ]
