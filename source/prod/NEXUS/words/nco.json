@@ -1140,7 +1140,7 @@
     "traductions": {
       "SPA": [],
       "ENG": ["eng-nco-0137-dust"],
-      "POL": ["pol-nco-0113-kurz"]
+      "POL": ["pol-nco-0113-kurz", "pol-nco-1159-pył"]
     },
     "papers": ["s1", "concrete", "household object"],
     "topics": ["daily routine", "home", "inside"]
