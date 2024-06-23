@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pył",
+      "gen": "pyłu",
+      "dat": "pyłowi",
+      "acc": "pył",
+      "ins": "pyłem",
+      "loc": "pyle",
+      "voc": "pyle"
+    },
+    "plural": {
+      "nom": "pyły",
+      "gen": "pyłów",
+      "dat": "pyłom",
+      "acc": "pyły",
+      "ins": "pyłami",
+      "loc": "pyłach",
+      "voc": "pyły"
+    }
+  }
+}
