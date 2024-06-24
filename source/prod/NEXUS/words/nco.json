@@ -11063,4 +11063,14 @@
     "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["inside", "school"]
   },
+  {
+    "key": "nco-1079-homework",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1377"],
+      "POL": ["pol-nco-1160"]
+    },
+    "papers": ["abstract"],
+    "topics": ["inside", "school"]
+  },
 ]
