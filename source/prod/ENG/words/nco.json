@@ -5319,7 +5319,8 @@
     "register": 1,
     "frequency": 2,
     "_lacking": true,
-    "tantumSingulare": true
+    "tantumSingulare": true,
+    "_uncountableType": 1
   },
   {
     "lemma": "job",
@@ -5389,8 +5390,7 @@
     "id": "eng-nco-0668-plum",
     "gender": "n",
     "register": 1,
-    "frequency": 2,
-    "_uncountableType": 2
+    "frequency": 2
   },
   {
     "lemma": "village",
