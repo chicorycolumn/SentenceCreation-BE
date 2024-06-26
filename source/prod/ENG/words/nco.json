@@ -10896,4 +10896,14 @@
     "register": 1,
     "frequency": 2
   },
+  {
+    "lemma": "homework",
+    "id": "eng-nco-1377-homework",
+    "gender": "n",
+    "register": 1,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true,
+    "_uncountableType": 1
+  },
 ]

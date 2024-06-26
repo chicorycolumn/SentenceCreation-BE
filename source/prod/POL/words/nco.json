@@ -18247,4 +18247,11 @@
     "register": 1,
     "gender": "m3"
   },
+  {
+    "lemma": "praca domowa",
+    "id": "pol-nco-1160-praca domowa",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
 ]
