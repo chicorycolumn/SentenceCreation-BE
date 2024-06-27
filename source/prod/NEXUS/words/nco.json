@@ -11073,4 +11073,14 @@
     "papers": ["abstract"],
     "topics": ["inside", "school"]
   },
+  {
+    "key": "nco-1080-housework",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1378"],
+      "POL": ["pol-nco-1161"]
+    },
+    "papers": ["abstract"],
+    "topics": ["inside", "home"]
+  },
 ]
