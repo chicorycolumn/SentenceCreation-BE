@@ -18254,4 +18254,13 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "prace domowe",
+    "id": "pol-nco-1161-prace domowe",
+    "frequency": 4,
+    "register": 1,
+    "gender": "nonvirile",
+    "_lacking": true,
+    "tantumPlurale": true
+  },
 ]

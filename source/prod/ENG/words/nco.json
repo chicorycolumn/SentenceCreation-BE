@@ -10906,4 +10906,14 @@
     "tantumSingulare": true,
     "_uncountableType": 1
   },
+  {
+    "lemma": "housework",
+    "id": "eng-nco-1378-housework",
+    "gender": "n",
+    "register": 1,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true,
+    "_uncountableType": 1
+  },
 ]
