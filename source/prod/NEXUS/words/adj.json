@@ -2989,7 +2989,7 @@
       ],
       "POL": ["pol-adj-0324-sztuczny"]
     },
-    "papers": ["concrete", "abstract", "uncountable", "material", "manmade"],
+    "papers": ["concrete", "abstract",  "material", "manmade"],
     "topics": ["engineering"]
   },
   {
@@ -3212,7 +3212,7 @@
       "ENG": ["eng-adj-0520-resistant", "eng-adj-0521-immune"],
       "POL": ["pol-adj-0355-odporny"]
     },
-    "papers": ["concrete", "abstract", "uncountable", "material"],
+    "papers": ["concrete", "abstract",  "material"],
     "topics": ["biology", "engineering"]
   },
   {
@@ -3479,7 +3479,7 @@
       "ENG": ["eng-adj-0558-wooden"],
       "POL": ["pol-adj-0384-drewniany"]
     },
-    "papers": ["concrete", "uncountable", "material"],
+    "papers": ["concrete",  "material"],
     "topics": ["engineering"]
   },
   {
@@ -5281,7 +5281,7 @@
       "ENG": ["eng-adj-0816-stone"],
       "POL": ["pol-adj-0590-kamienny"]
     },
-    "papers": ["concrete", "uncountable", "material"],
+    "papers": ["concrete",  "material"],
     "topics": ["engineering"]
   },
   {
@@ -5321,7 +5321,7 @@
       "ENG": ["eng-adj-0820-silk", "eng-adj-0821-silken"],
       "POL": ["pol-adj-0594-jedwabny"]
     },
-    "papers": ["concrete", "clothes", "holdable", "material", "uncountable"],
+    "papers": ["concrete", "clothes", "holdable", "material"],
     "topics": ["engineering", "fashion"]
   },
   {
@@ -5365,7 +5365,7 @@
       ],
       "POL": ["pol-adj-0602-gumowy"]
     },
-    "papers": ["concrete", "uncountable", "material"],
+    "papers": ["concrete",  "material"],
     "topics": ["engineering"]
   },
   {
@@ -5405,7 +5405,7 @@
       "ENG": ["eng-adj-0833-metal"],
       "POL": ["pol-adj-0606-metalowy"]
     },
-    "papers": ["concrete", "uncountable", "material"],
+    "papers": ["concrete",  "material"],
     "topics": ["engineering"]
   },
   {
@@ -6145,7 +6145,7 @@
       "ENG": ["eng-adj-0930-paper"],
       "POL": ["pol-adj-0698-papierowy"]
     },
-    "papers": ["concrete", "uncountable", "material"],
+    "papers": ["concrete",  "material"],
     "topics": ["engineering"]
   },
   {
@@ -6199,7 +6199,7 @@
       "ENG": ["eng-adj-0942-plastic"],
       "POL": ["pol-adj-0704-plastikowy"]
     },
-    "papers": ["concrete", "uncountable", "material"],
+    "papers": ["concrete",  "material"],
     "topics": ["engineering"]
   },
   {
@@ -7060,7 +7060,7 @@
       "ENG": ["eng-adj-1057-glass"],
       "POL": ["pol-adj-0817-szklany"]
     },
-    "papers": ["concrete", "uncountable", "material"],
+    "papers": ["concrete",  "material"],
     "topics": ["engineering"]
-  }
+  },
 ]
