@@ -7063,4 +7063,14 @@
     "papers": ["concrete",  "material"],
     "topics": ["engineering"]
   },
+  {
+    "key": "adj-0630-iron",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-adj-1058"],
+      "POL": ["pol-adj-0818"]
+    },
+    "papers": ["concrete", "material"],
+    "topics": ["sense and perception", "appearance", "engineering"]
+  },
 ]
