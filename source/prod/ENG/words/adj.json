@@ -6962,5 +6962,11 @@
     "id": "eng-adj-1057-glass",
     "frequency": 3,
     "register": 1
+  },
+  {
+    "lemma": "iron",
+    "id": "eng-adj-1058-iron",
+    "frequency": 3,
+    "register": 1
   }
 ]
