@@ -7073,4 +7073,14 @@
     "papers": ["concrete", "material"],
     "topics": ["sense and perception", "appearance", "engineering"]
   },
+  {
+    "key": "adj-0631-brass",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-adj-1059"],
+      "POL": ["pol-adj-0819"]
+    },
+    "papers": ["concrete", "material"],
+    "topics": ["sense and perception", "appearance", "engineering"]
+  },
 ]
