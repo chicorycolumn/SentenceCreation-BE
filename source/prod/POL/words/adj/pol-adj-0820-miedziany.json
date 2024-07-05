@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "miedziany",
+          "gen": "miedzianego",
+          "dat": "miedzianemu",
+          "acc": "miedzianego",
+          "ins": "miedzianym",
+          "loc": "miedzianym"
+        },
+        "m3": {
+          "nom": "miedziany",
+          "gen": "miedzianego",
+          "dat": "miedzianemu",
+          "acc": "miedziany",
+          "ins": "miedzianym",
+          "loc": "miedzianym"
+        },
+        "f": {
+          "nom": "miedziana",
+          "gen": "miedzianej",
+          "dat": "miedzianej",
+          "acc": "miedzianą",
+          "ins": "miedzianą",
+          "loc": "miedzianej"
+        },
+        "n": {
+          "nom": "miedziane",
+          "gen": "miedzianego",
+          "dat": "miedzianemu",
+          "acc": "miedziane",
+          "ins": "miedzianym",
+          "loc": "miedzianym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "miedziani",
+          "gen": "miedzianych",
+          "dat": "miedzianym",
+          "acc": "miedzianych",
+          "ins": "miedzianymi",
+          "loc": "miedzianych"
+        },
+        "nonvirile": {
+          "nom": "miedziane",
+          "gen": "miedzianych",
+          "dat": "miedzianym",
+          "acc": "miedziane",
+          "ins": "miedzianymi",
+          "loc": "miedzianych"
+        }
+      }
+    }
+  }
+}

@@ -6974,5 +6974,11 @@
     "id": "eng-adj-1059-brass",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "copper",
+    "id": "eng-adj-1060-copper",
+    "frequency": 4,
+    "register": 1
   }
 ]
