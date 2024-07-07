@@ -6980,5 +6980,11 @@
     "id": "eng-adj-1060-copper",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "steel",
+    "id": "eng-adj-1061-steel",
+    "frequency": 4,
+    "register": 1
   }
 ]
