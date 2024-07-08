@@ -1409,7 +1409,7 @@
       "ENG": ["eng-nco-0171-oxygen"],
       "POL": ["pol-nco-0138-tlen"]
     },
-    "papers": ["material", "uncountable", "chemical", "concrete"],
+    "papers": ["gas", "uncountable", "chemical", "concrete"],
     "topics": ["chemistry"]
   },
   {
@@ -2068,7 +2068,7 @@
       "ENG": ["eng-nco-0250-nitrogen"],
       "POL": ["pol-nco-0200-azot"]
     },
-    "papers": ["material", "uncountable", "chemical", "concrete"],
+    "papers": ["material", "gas", "uncountable", "chemical", "concrete"],
     "topics": ["chemistry"]
   },
   {
@@ -3100,7 +3100,7 @@
       "ENG": ["eng-nco-0386-air"],
       "POL": ["pol-nco-0303-powietrze"]
     },
-    "papers": ["natural", "weather", "concrete"],
+    "papers": ["natural", "weather", "concrete", "gas"],
     "topics": ["outdoor", "outside", "geography", "science", "chemistry"]
   },
   {
@@ -7715,7 +7715,7 @@
       "ENG": ["eng-nco-0955-hydrogen"],
       "POL": ["pol-nco-0768-wodór"]
     },
-    "papers": ["material", "uncountable", "chemical", "concrete"],
+    "papers": ["material", "gas", "uncountable", "chemical", "concrete"],
     "topics": ["chemistry"]
   },
   {
