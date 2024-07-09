@@ -1409,7 +1409,7 @@
       "ENG": ["eng-nco-0171-oxygen"],
       "POL": ["pol-nco-0138-tlen"]
     },
-    "papers": ["gas", "uncountable", "chemical", "concrete"],
+    "papers": ["gas", "uncountable", "chemical"],
     "topics": ["chemistry"]
   },
   {
@@ -3100,7 +3100,7 @@
       "ENG": ["eng-nco-0386-air"],
       "POL": ["pol-nco-0303-powietrze"]
     },
-    "papers": ["natural", "weather", "concrete", "gas"],
+    "papers": ["natural", "weather", "gas"],
     "topics": ["outdoor", "outside", "geography", "science", "chemistry"]
   },
   {
@@ -11082,5 +11082,15 @@
     },
     "papers": ["abstract"],
     "topics": ["inside", "home"]
+  },
+  {
+    "key": "nco-1081-carbon dioxide",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1379-carbon dioxide"],
+      "POL": ["pol-nco-1162-dwutlenek węgla"]
+    },
+    "papers": ["gas", "uncountable", "chemical"],
+    "topics": ["chemistry"]
   },
 ]
