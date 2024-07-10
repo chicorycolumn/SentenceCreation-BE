@@ -18263,4 +18263,13 @@
     "_lacking": true,
     "tantumPlurale": true
   },
+  {
+    "lemma": "dwutlenek węgla",
+    "id": "pol-nco-1162-dwutlenek węgla",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3",
+    "_lacking": true,
+    "tantumSingulare": true
+  },
 ]

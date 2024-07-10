@@ -10916,4 +10916,13 @@
     "tantumSingulare": true,
     "_uncountableType": 1
   },
+  {
+    "lemma": "carbon dioxide",
+    "id": "eng-nco-1379-carbon dioxide",
+    "gender": "n",
+    "register": 1,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
 ]
