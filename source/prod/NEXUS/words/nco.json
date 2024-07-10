@@ -11093,4 +11093,14 @@
     "papers": ["gas", "uncountable", "chemical"],
     "topics": ["chemistry"]
   },
+  {
+    "key": "nco-1082-carbon monoxide",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1380-carbon monoxide"],
+      "POL": ["pol-nco-1163-tlenek węgla", "pol-nco-1164-czad"]
+    },
+    "papers": ["gas", "uncountable", "chemical", "danger"],
+    "topics": ["chemistry"]
+  },
 ]
