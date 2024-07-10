@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pięciokąt",
+      "gen": "pięciokątu",
+      "dat": "pięciokątowi",
+      "acc": "pięciokąt",
+      "ins": "pięciokątem",
+      "loc": "pięciokącie",
+      "voc": "pięciokącie"
+    },
+    "plural": {
+      "nom": "pięciokąty",
+      "gen": "pięciokątów",
+      "dat": "pięciokątom",
+      "acc": "pięciokąty",
+      "ins": "pięciokątami",
+      "loc": "pięciokątach",
+      "voc": "pięciokąty"
+    }
+  }
+}

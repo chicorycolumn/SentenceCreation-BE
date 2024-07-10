@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przysłówek",
+      "gen": "przysłówka",
+      "dat": "przysłówkowi",
+      "acc": "przysłówek",
+      "ins": "przysłówkiem",
+      "loc": "przysłówku",
+      "voc": "przysłówku"
+    },
+    "plural": {
+      "nom": "przysłówki",
+      "gen": "przysłówków",
+      "dat": "przysłówkom",
+      "acc": "przysłówki",
+      "ins": "przysłówkami",
+      "loc": "przysłówkach",
+      "voc": "przysłówki"
+    }
+  }
+}

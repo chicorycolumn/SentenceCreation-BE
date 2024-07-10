@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "orthodox cathedral",
+      "gen": "orthodox cathedral's"
+    },
+    "plural": {
+      "nom": "orthodox cathedrals",
+      "gen": "orthodox cathedrals'"
+    }
+  }
+}

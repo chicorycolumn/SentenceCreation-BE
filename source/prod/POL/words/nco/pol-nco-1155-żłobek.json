@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "żłobek",
+      "gen": "żłobka",
+      "dat": "żłobkowi",
+      "acc": "żłobek",
+      "ins": "żłobkiem",
+      "loc": "żłobku",
+      "voc": "żłobku"
+    },
+    "plural": {
+      "nom": "żłobki",
+      "gen": "żłobków",
+      "dat": "żłobkom",
+      "acc": "żłobki",
+      "ins": "żłobkami",
+      "loc": "żłobkach",
+      "voc": "żłobki"
+    }
+  }
+}

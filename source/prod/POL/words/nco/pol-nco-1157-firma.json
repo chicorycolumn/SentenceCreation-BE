@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "firma",
+      "gen": "firmy",
+      "dat": "firmie",
+      "acc": "firmę",
+      "ins": "firmą",
+      "loc": "firmie",
+      "voc": "firmo"
+    },
+    "plural": {
+      "nom": "firmy",
+      "gen": "firm",
+      "dat": "firmom",
+      "acc": "firmy",
+      "ins": "firmami",
+      "loc": "firmach",
+      "voc": "firmy"
+    }
+  }
+}

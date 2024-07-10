@@ -1823,8 +1823,8 @@
     "gender": "f",
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     },
     "extra": {
       "otherShapes": {
@@ -4476,7 +4476,7 @@
   },
   {
     "lemma": "kość",
-    "id": "pol-nco-0263-kość",
+    "id": "pol-nco-0263-kość(bone)",
     "frequency": 3,
     "register": 1,
     "gender": "f",
@@ -5704,8 +5704,8 @@
     "gender": "n",
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     },
     "extra": {
       "otherShapes": {
@@ -7858,8 +7858,8 @@
     "gender": "m3",
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     }
   },
   {
@@ -7871,8 +7871,8 @@
     "gender": "m3",
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "person",
-      "emoji": "🏃"
+      "text": "law/justice",
+      "emoji": "⚖️"
     },
     "extra": {
       "antonyms": ["nierząd"],
@@ -9531,8 +9531,8 @@
     "gender": "m3",
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     },
     "extra": {
       "otherShapes": {
@@ -9888,8 +9888,8 @@
     "gender": "m3",
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     },
     "extra": {
       "derivedTerms": ["środkowy", "wśród", "złoty środek"],
@@ -10820,8 +10820,8 @@
     "gender": "f",
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     },
     "extra": {
       "derivedTerms": [
@@ -11705,8 +11705,8 @@
     "gender": "m3",
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     },
     "extra": {
       "derivedTerms": [
@@ -12510,8 +12510,8 @@
     "gender": "m3",
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     },
     "extra": {
       "derivedTerms": ["łucznik", "łuczysko", "łukowaty", "łukowy"]
@@ -14174,7 +14174,7 @@
   {
     "lemma": "przedsiębiorstwo",
     "id": "pol-nco-0848-przedsiębiorstwo",
-    "frequency": 3,
+    "frequency": 4,
     "register": 1,
     "gender": "n",
     "extra": {
@@ -17608,8 +17608,8 @@
     "gender": "m3",
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     }
   },
   {
@@ -18042,5 +18042,234 @@
     "frequency": 4,
     "register": 1,
     "gender": "m3"
-  }
+  },
+  {
+    "lemma": "pięciokąt",
+    "id": "pol-nco-1135-pięciokąt",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
+  },
+  {
+    "lemma": "sześciokąt",
+    "id": "pol-nco-1136-sześciokąt",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
+  },
+  {
+    "lemma": "ośmiokąt",
+    "id": "pol-nco-1137-ośmiokąt",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
+  },
+  {
+    "lemma": "kostka",
+    "id": "pol-nco-1138-kostka(cube)",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "geometry",
+      "emoji": "📐"
+    }
+  },
+  {
+    "lemma": "kostka",
+    "id": "pol-nco-1139-kostka(knuckle)",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f",
+    "_inflectionsRoot": "pol-nco-1138-kostka(cube)",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "body, part of hand",
+      "emoji": "🧍🖐️"
+    }
+  },
+  {
+    "lemma": "kostka",
+    "id": "pol-nco-1140-kostka(ankle)",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f",
+    "_inflectionsRoot": "pol-nco-1138-kostka(cube)",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "body, part of leg",
+      "emoji": "🧍🦵"
+    }
+  },
+  {
+    "lemma": "kostka",
+    "id": "pol-nco-1141-kostka(dice)",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "_inflectionsRoot": "pol-nco-1138-kostka(cube)",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "games/sports",
+      "emoji": "🎲"
+    }
+  },
+  {
+    "lemma": "kość",
+    "id": "pol-nco-1142-kość(dice)",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "_inflectionsRoot": "pol-nco-0263-kość(bone)",
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "games/sports",
+      "emoji": "🎲"
+    }
+  },
+  {
+    "lemma": "basen",
+    "id": "pol-nco-1143-basen",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m3"
+  },
+  {
+    "lemma": "grupa",
+    "id": "pol-nco-1144-grupa",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "wyraz",
+    "id": "pol-nco-1145-wyraz",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
+  },
+  {
+    "lemma": "przymiotnik",
+    "id": "pol-nco-1146-przymiotnik",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m3"
+  },
+  {
+    "lemma": "przysłówek",
+    "id": "pol-nco-1147-przysłówek",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
+  },
+  {
+    "lemma": "przyimek",
+    "id": "pol-nco-1148-przyimek",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
+  },
+  {
+    "lemma": "świątynia",
+    "id": "pol-nco-1149-świątynia",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "synagoga",
+    "id": "pol-nco-1150-synagoga",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "bożnica",
+    "id": "pol-nco-1151-bożnica",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "katedra",
+    "id": "pol-nco-1152-katedra",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "cerkiew",
+    "id": "pol-nco-1153-katedra",
+    "frequency": 5,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "sobór",
+    "id": "pol-nco-1154-sobór",
+    "frequency": 5,
+    "register": 1,
+    "gender": "m3"
+  },
+  {
+    "lemma": "żłobek",
+    "id": "pol-nco-1155-żłobek",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
+  },
+  {
+    "lemma": "biblioteka",
+    "id": "pol-nco-1156-biblioteka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "firma",
+    "id": "pol-nco-1157-firma",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "spółka",
+    "id": "pol-nco-1158-spółka",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "pył",
+    "id": "pol-nco-1159-pył",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
+  },
+  {
+    "lemma": "praca domowa",
+    "id": "pol-nco-1160-praca domowa",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "prace domowe",
+    "id": "pol-nco-1161-prace domowe",
+    "frequency": 4,
+    "register": 1,
+    "gender": "nonvirile",
+    "_lacking": true,
+    "tantumPlurale": true
+  },
+  {
+    "lemma": "dwutlenek węgla",
+    "id": "pol-nco-1162-dwutlenek węgla",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3",
+    "_lacking": true,
+    "tantumSingulare": true
+  },
 ]

@@ -1,0 +1,22 @@
+{    	
+  "inflections": {
+    "singular": {
+      "nom": "wyraz",
+      "gen": "wyrazu",
+      "dat": "wyrazowi",
+      "acc": "wyraz",
+      "ins": "wyrazem",
+      "loc": "wyrazie",
+      "voc": "wyrazie"
+    },
+    "plural": {
+      "nom": "wyrazy",
+      "gen": "wyrazów",
+      "dat": "wyrazom",
+      "acc": "wyrazy",
+      "ins": "wyrazami",
+      "loc": "wyrazach",
+      "voc": "wyrazy"
+    }
+  }
+}

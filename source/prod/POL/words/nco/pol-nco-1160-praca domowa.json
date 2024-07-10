@@ -1,0 +1,22 @@
+{	
+  "inflections": {
+    "singular": {
+      "nom": "praca domowa",
+      "gen": "pracy domowej",
+      "dat": "pracy domowej",
+      "acc": "pracę domową",
+      "ins": "pracą domową",
+      "loc": "pracy domowej",
+      "voc": "praco domowa"
+    },
+    "plural": {
+      "nom": "prace domowe",
+      "gen": "prac domowych",
+      "dat": "pracom domowym",
+      "acc": "prace domowe",
+      "ins": "pracami domowymi",
+      "loc": "pracach domowych",
+      "voc": "prace domowe"
+    }
+  }
+}

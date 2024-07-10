@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "stalowy",
+          "gen": "stalowego",
+          "dat": "stalowemu",
+          "acc": "stalowego",
+          "ins": "stalowym",
+          "loc": "stalowym"
+        },
+        "m3": {
+          "nom": "stalowy",
+          "gen": "stalowego",
+          "dat": "stalowemu",
+          "acc": "stalowy",
+          "ins": "stalowym",
+          "loc": "stalowym"
+        },
+        "f": {
+          "nom": "stalowa",
+          "gen": "stalowej",
+          "dat": "stalowej",
+          "acc": "stalową",
+          "ins": "stalową",
+          "loc": "stalowej"
+        },
+        "n": {
+          "nom": "stalowe",
+          "gen": "stalowego",
+          "dat": "stalowemu",
+          "acc": "stalowe",
+          "ins": "stalowym",
+          "loc": "stalowym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "stalowi",
+          "gen": "stalowych",
+          "dat": "stalowym",
+          "acc": "stalowych",
+          "ins": "stalowymi",
+          "loc": "stalowych"
+        },
+        "nonvirile": {
+          "nom": "stalowe",
+          "gen": "stalowych",
+          "dat": "stalowym",
+          "acc": "stalowe",
+          "ins": "stalowymi",
+          "loc": "stalowych"
+        }
+      }
+    }
+  }
+}

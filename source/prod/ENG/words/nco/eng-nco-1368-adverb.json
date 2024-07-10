@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "adverb",
+      "gen": "adverb's"
+    },
+    "plural": {
+      "nom": "adverbs",
+      "gen": "adverbs'"
+    }
+  }
+}

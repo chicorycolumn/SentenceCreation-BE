@@ -1,0 +1,32 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": {
+        "isTerminus": true,
+        "normal": [
+          "pool", "swimming pool"
+        ]
+      },
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "pool's", "swimming pool's"
+        ]
+      }
+    },
+    "plural": {
+      "nom": {
+        "isTerminus": true,
+        "normal": [
+          "pools", "swimming pools"
+        ]
+      },
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "pools'", "swimming pools'"
+        ]
+      }
+    }
+  }
+}

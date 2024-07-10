@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "świątynia",
+      "gen": "świątyni",
+      "dat": "świątyni",
+      "acc": "świątynię",
+      "ins": "świątynią",
+      "loc": "świątyni",
+      "voc": "świątynio"
+    },
+    "plural": {
+      "nom": "świątynie",
+      "gen": "świątyń",
+      "dat": "świątyniom",
+      "acc": "świątynie",
+      "ins": "świątyniami",
+      "loc": "świątyniach",
+      "voc": "świątynie"
+    }
+  }
+}

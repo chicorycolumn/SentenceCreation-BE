@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": {
+        "isTerminus": true,
+        "normal": [
+          "die"
+        ],
+        "additionalInfrequent": [
+          "dice"
+        ]
+      },
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "die's"
+        ],
+        "additionalInfrequent": [
+          "dice's"
+        ]
+      }
+    },
+    "plural": {
+      "nom": "dice",
+      "gen": "dice's"
+    }
+  }
+}

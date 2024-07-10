@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "żelazny",
+          "gen": "żelaznego",
+          "dat": "żelaznemu",
+          "acc": "żelaznego",
+          "ins": "żelaznym",
+          "loc": "żelaznym"
+        },
+        "m3": {
+          "nom": "żelazny",
+          "gen": "żelaznego",
+          "dat": "żelaznemu",
+          "acc": "żelazny",
+          "ins": "żelaznym",
+          "loc": "żelaznym"
+        },
+        "f": {
+          "nom": "żelazna",
+          "gen": "żelaznej",
+          "dat": "żelaznej",
+          "acc": "żelazną",
+          "ins": "żelazną",
+          "loc": "żelaznej"
+        },
+        "n": {
+          "nom": "żelazne",
+          "gen": "żelaznego",
+          "dat": "żelaznemu",
+          "acc": "żelazne",
+          "ins": "żelaznym",
+          "loc": "żelaznym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "żelaźni",
+          "gen": "żelaznych",
+          "dat": "żelaznym",
+          "acc": "żelaznych",
+          "ins": "żelaznymi",
+          "loc": "żelaznych"
+        },
+        "nonvirile": {
+          "nom": "żelazne",
+          "gen": "żelaznych",
+          "dat": "żelaznym",
+          "acc": "żelazne",
+          "ins": "żelaznymi",
+          "loc": "żelaznych"
+        }
+      }
+    }
+  }
+}

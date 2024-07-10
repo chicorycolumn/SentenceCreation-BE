@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "spółka",
+      "gen": "spółki",
+      "dat": "spółce",
+      "acc": "spółkę",
+      "ins": "spółką",
+      "loc": "spółce",
+      "voc": "spółko"
+    },
+    "plural": {
+      "nom": "spółki",
+      "gen": "spółek",
+      "dat": "spółkom",
+      "acc": "spółki",
+      "ins": "spółkami",
+      "loc": "spółkach",
+      "voc": "spółki"
+    }
+  }
+}

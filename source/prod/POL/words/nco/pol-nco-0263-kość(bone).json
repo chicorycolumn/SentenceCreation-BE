@@ -14,7 +14,7 @@
       "gen": "kości",
       "dat": "kościom",
       "acc": "kości",
-      "ins": { "isTerminus": true, "normal": ["kośćmi", "kościami"] },
+      "ins": { "isTerminus": true, "normal": ["kośćmi"], "additionalInfrequent": ["kościami"]},
       "loc": "kościach",
       "voc": "kości"
     }

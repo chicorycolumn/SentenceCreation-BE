@@ -7357,5 +7357,29 @@
     "id": "pol-adj-0817-szklany",
     "frequency": 3,
     "register": 1
+  },
+  {
+    "lemma": "żelazny",
+    "id": "pol-adj-0818-żelazny",
+    "frequency": 3,
+    "register": 1
+  },
+  {
+    "lemma": "mosiężny",
+    "id": "pol-adj-0819-mosiężny",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "miedziany",
+    "id": "pol-adj-0820-miedziany",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "stalowy",
+    "id": "pol-adj-0821-stalowy",
+    "frequency": 4,
+    "register": 1
   }
 ]

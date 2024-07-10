@@ -1027,8 +1027,8 @@
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     }
   },
   {
@@ -1570,8 +1570,8 @@
     "frequency": 3,
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     }
   },
   {
@@ -1611,8 +1611,8 @@
     "frequency": 4,
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     }
   },
   {
@@ -5319,7 +5319,8 @@
     "register": 1,
     "frequency": 2,
     "_lacking": true,
-    "tantumSingulare": true
+    "tantumSingulare": true,
+    "_uncountableType": 1
   },
   {
     "lemma": "job",
@@ -5389,8 +5390,7 @@
     "id": "eng-nco-0668-plum",
     "gender": "n",
     "register": 1,
-    "frequency": 2,
-    "_uncountableType": 2
+    "frequency": 2
   },
   {
     "lemma": "village",
@@ -9629,8 +9629,8 @@
     "frequency": 2,
     "allohomInfo": {
       "singleWordtype": true,
-      "text": "abstract",
-      "emoji": "💭"
+      "text": "geometry",
+      "emoji": "📐"
     }
   },
   {
@@ -10769,5 +10769,160 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
-  }
+  },
+  {
+    "lemma": "pentagon",
+    "id": "eng-nco-1359-pentagon",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "hexagon",
+    "id": "eng-nco-1360-hexagon",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "octagon",
+    "id": "eng-nco-1361-octagon",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "knuckle",
+    "id": "eng-nco-1362-knuckle",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "ankle",
+    "id": "eng-nco-1363-ankle",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "die",
+    "id": "eng-nco-1364-die",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "pool",
+    "id": "eng-nco-1365-pool",
+    "gender": "n",
+    "frequency": 3,
+    "register": 1
+  },
+  {
+    "lemma": "group",
+    "id": "eng-nco-1366-group",
+    "gender": "n",
+    "frequency": 2,
+    "register": 1
+  },
+  {
+    "lemma": "adjective",
+    "id": "eng-nco-1367-adjective",
+    "gender": "n",
+    "frequency": 2,
+    "register": 1
+  },
+  {
+    "lemma": "adverb",
+    "id": "eng-nco-1368-adverb",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "preposition",
+    "id": "eng-nco-1369-preposition",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "temple",
+    "id": "eng-nco-1370-temple",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "synagogue",
+    "id": "eng-nco-1371-synagogue",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "cathedral",
+    "id": "eng-nco-1372-cathedral",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "orthodox church",
+    "id": "eng-nco-1373-orthodox church",
+    "gender": "n",
+    "register": 1,
+    "frequency": 5
+  },
+  {
+    "lemma": "orthodox cathedral",
+    "id": "eng-nco-1374-orthodox cathedral",
+    "gender": "n",
+    "register": 1,
+    "frequency": 5
+  },
+  {
+    "lemma": "creche",
+    "id": "eng-nco-1375-creche",
+    "gender": "n",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "library",
+    "id": "eng-nco-1376-library",
+    "gender": "n",
+    "register": 1,
+    "frequency": 2
+  },
+  {
+    "lemma": "homework",
+    "id": "eng-nco-1377-homework",
+    "gender": "n",
+    "register": 1,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "housework",
+    "id": "eng-nco-1378-housework",
+    "gender": "n",
+    "register": 1,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true,
+    "_uncountableType": 1
+  },
+  {
+    "lemma": "carbon dioxide",
+    "id": "eng-nco-1379-carbon dioxide",
+    "gender": "n",
+    "register": 1,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
 ]

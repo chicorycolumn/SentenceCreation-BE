@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kostka",
+      "gen": "kostki",
+      "dat": "kostce",
+      "acc": "kostkę",
+      "ins": "kostką",
+      "loc": "kostce",
+      "voc": "kostko"
+    },
+    "plural": {
+      "nom": "kostki",
+      "gen": "kostek",
+      "dat": "kostkom",
+      "acc": "kostki",
+      "ins": "kostkami",
+      "loc": "kostkach",
+      "voc": "kostki"
+    }
+  }
+}

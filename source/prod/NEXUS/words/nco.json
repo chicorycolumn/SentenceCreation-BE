@@ -76,7 +76,7 @@
       "ENG": ["eng-nco-0010-school"],
       "POL": ["pol-nco-0008-szkoła"]
     },
-    "papers": ["s6", "location", "building", "concrete", "school hypernym"],
+    "papers": ["s6", "location", "workplace", "building", "concrete", "school hypernym"],
     "topics": ["inside", "school"]
   },
   {
@@ -500,7 +500,7 @@
       "ENG": ["eng-nco-0062-hospital"],
       "POL": ["pol-nco-0051-szpital"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["inside", "medicine"]
   },
   {
@@ -762,7 +762,7 @@
       "ENG": ["eng-nco-0090-port", "eng-nco-0091-harbour"],
       "POL": ["pol-nco-0074-port"]
     },
-    "papers": ["s6", "location", "concrete"],
+    "papers": ["s6", "location", "workplace", "concrete"],
     "topics": ["travel"]
   },
   {
@@ -1140,7 +1140,7 @@
     "traductions": {
       "SPA": [],
       "ENG": ["eng-nco-0137-dust"],
-      "POL": ["pol-nco-0113-kurz"]
+      "POL": ["pol-nco-0113-kurz", "pol-nco-1159-pył"]
     },
     "papers": ["s1", "concrete", "household object"],
     "topics": ["daily routine", "home", "inside"]
@@ -1232,7 +1232,7 @@
       "ENG": ["eng-nco-0149-bank(financial)"],
       "POL": ["pol-nco-0122-bank"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["money", "business", "inside", "shopping"]
   },
   {
@@ -1325,7 +1325,7 @@
       "ENG": ["eng-nco-0160-hotel"],
       "POL": ["pol-nco-0130-hotel"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["holiday", "inside"]
   },
   {
@@ -1409,7 +1409,7 @@
       "ENG": ["eng-nco-0171-oxygen"],
       "POL": ["pol-nco-0138-tlen"]
     },
-    "papers": ["material", "uncountable", "chemical", "concrete"],
+    "papers": ["gas", "uncountable", "chemical"],
     "topics": ["chemistry"]
   },
   {
@@ -1802,7 +1802,7 @@
       "ENG": ["eng-nco-0216-park"],
       "POL": ["pol-nco-0174-park"]
     },
-    "papers": ["s6", "natural", "location", "concrete"],
+    "papers": ["s6", "natural", "location", "workplace", "concrete"],
     "topics": ["geography", "outside"]
   },
   {
@@ -2068,7 +2068,7 @@
       "ENG": ["eng-nco-0250-nitrogen"],
       "POL": ["pol-nco-0200-azot"]
     },
-    "papers": ["material", "uncountable", "chemical", "concrete"],
+    "papers": ["material", "gas", "uncountable", "chemical", "concrete"],
     "topics": ["chemistry"]
   },
   {
@@ -2507,7 +2507,7 @@
       "ENG": ["eng-nco-0311-cinema"],
       "POL": ["pol-nco-0244-kino"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["inside", "entertainment"]
   },
   {
@@ -2607,7 +2607,7 @@
       "ENG": ["eng-nco-0326-airport"],
       "POL": ["pol-nco-0255-lotnisko"]
     },
-    "papers": ["s6", "location", "concrete"],
+    "papers": ["s6", "location", "workplace", "concrete"],
     "topics": ["holiday", "travel"]
   },
   {
@@ -3078,7 +3078,7 @@
     "traductions": {
       "SPA": [],
       "ENG": ["eng-nco-0384-word"],
-      "POL": ["pol-nco-0301-słowo"]
+      "POL": ["pol-nco-0301-słowo", "pol-nco-1145-wyraz"]
     },
     "papers": ["abstract"],
     "topics": ["language"]
@@ -3100,7 +3100,7 @@
       "ENG": ["eng-nco-0386-air"],
       "POL": ["pol-nco-0303-powietrze"]
     },
-    "papers": ["natural", "weather", "concrete"],
+    "papers": ["natural", "weather", "gas"],
     "topics": ["outdoor", "outside", "geography", "science", "chemistry"]
   },
   {
@@ -3870,7 +3870,7 @@
       "ENG": ["eng-nco-0478-museum"],
       "POL": ["pol-nco-0380-muzeum"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["holiday", "inside"]
   },
   {
@@ -4024,7 +4024,7 @@
       "ENG": ["eng-nco-0500-branch"],
       "POL": ["pol-nco-0400-gałąź"]
     },
-    "papers": ["s4", "natural", "location", "concrete"],
+    "papers": ["s4", "natural", "concrete"],
     "topics": ["geography", "outside"]
   },
   {
@@ -4034,7 +4034,7 @@
       "ENG": ["eng-nco-0403-plant(factory)", "eng-nco-0501-factory"],
       "POL": ["pol-nco-0401-zakład(plant)", "pol-nco-0448-fabryka"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["inside", "engineering"]
   },
   {
@@ -4114,7 +4114,7 @@
       "ENG": ["eng-nco-0510-castle"],
       "POL": ["pol-nco-0409-zamek(castle)"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["history", "inside"]
   },
   {
@@ -4673,7 +4673,7 @@
       "ENG": ["eng-nco-0579-church"],
       "POL": ["pol-nco-0467-kościół"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["inside", "religion"]
   },
   {
@@ -5026,7 +5026,7 @@
       "ENG": ["eng-nco-0603-pharmacy"],
       "POL": ["pol-nco-0484-apteka"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["inside", "medicine"]
   },
   {
@@ -5222,7 +5222,7 @@
       "ENG": ["eng-nco-0629-shop", "eng-nco-0630-store"],
       "POL": ["pol-nco-0509-sklep"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["money", "business", "inside", "shopping"]
   },
   {
@@ -5382,7 +5382,7 @@
       "ENG": ["eng-nco-0652-prison", "eng-nco-0653-jail"],
       "POL": ["pol-nco-0527-więzienie"]
     },
-    "papers": ["s6", "crime", "location", "building", "concrete"],
+    "papers": ["s6", "crime", "location", "workplace", "building", "concrete"],
     "topics": ["law", "crime", "inside"]
   },
   {
@@ -5654,7 +5654,7 @@
       "ENG": ["eng-nco-0684-bookshop", "eng-nco-0685-bookstore"],
       "POL": ["pol-nco-0555-księgarnia"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["money", "business", "inside", "school", "shopping"]
   },
   {
@@ -5869,7 +5869,7 @@
       "ENG": ["eng-nco-0722-postoffice"],
       "POL": ["pol-nco-0581-poczta(post office)"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["communications", "inside"]
   },
   {
@@ -6275,7 +6275,7 @@
     "traductions": {
       "SPA": [],
       "ENG": ["eng-nco-0775-cube"],
-      "POL": ["pol-nco-0624-sześcian"]
+      "POL": ["pol-nco-0624-sześcian", "pol-nco-1138-kostka(cube)"]
     },
     "papers": ["abstract", "shape"],
     "topics": ["geometry"]
@@ -6671,7 +6671,7 @@
       "ENG": ["eng-nco-0831-launderette", "eng-nco-0832-laundromat"],
       "POL": ["pol-nco-0662-pralnia"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["daily routine", "inside"]
   },
   {
@@ -6781,7 +6781,7 @@
       "ENG": ["eng-nco-0845-cathedral"],
       "POL": ["pol-nco-0675-katedra"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["inside", "religion"]
   },
   {
@@ -6951,7 +6951,7 @@
       "ENG": ["eng-nco-0869-bakery"],
       "POL": ["pol-nco-0693-piekarnia"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["kitchen", "inside", "restaurant"]
   },
   {
@@ -7061,7 +7061,7 @@
       "ENG": ["eng-nco-0883-station"],
       "POL": ["pol-nco-0704-stacja", "pol-nco-0814-dworzec"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["holiday", "travel", "inside"]
   },
   {
@@ -7715,7 +7715,7 @@
       "ENG": ["eng-nco-0955-hydrogen"],
       "POL": ["pol-nco-0768-wodór"]
     },
-    "papers": ["material", "uncountable", "chemical", "concrete"],
+    "papers": ["material", "gas", "uncountable", "chemical", "concrete"],
     "topics": ["chemistry"]
   },
   {
@@ -7969,7 +7969,7 @@
       "ENG": ["eng-nco-0989-mosque"],
       "POL": ["pol-nco-0795-meczet"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["inside", "religion"]
   },
   {
@@ -8463,7 +8463,7 @@
     "traductions": {
       "SPA": [],
       "ENG": ["eng-nco-1056-company", "eng-nco-1057-corporation"],
-      "POL": ["pol-nco-0848-przedsiębiorstwo"]
+      "POL": ["pol-nco-0848-przedsiębiorstwo", "pol-nco-1157", "pol-nco-1158"]
     },
     "papers": ["abstract"],
     "topics": ["business"]
@@ -8559,7 +8559,7 @@
       "ENG": ["eng-nco-1070-theatre"],
       "POL": ["pol-nco-0858-teatr"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["theatre", "inside"]
   },
   {
@@ -8776,7 +8776,7 @@
       "ENG": ["eng-nco-1097-office"],
       "POL": ["pol-nco-0883-biuro"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["work", "inside"]
   },
   {
@@ -8826,7 +8826,7 @@
       "ENG": ["eng-nco-1102-palace"],
       "POL": ["pol-nco-0888-pałac"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["history", "inside"]
   },
   {
@@ -9352,7 +9352,7 @@
       "ENG": ["eng-nco-1167-café", "eng-nco-1168-coffeeshop"],
       "POL": ["pol-nco-0946-kawiarnia"]
     },
-    "papers": ["s6", "location", "building", "concrete"],
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
     "topics": ["restaurant", "inside", "people", "social life", "kitchen"]
   },
   {
@@ -10320,7 +10320,7 @@
       "ENG": ["eng-nco-1304-fluid", "eng-nco-1305-liquid"],
       "POL": ["pol-nco-1052-płyn"]
     },
-    "papers": ["s2", "material", "uncountable", "concrete"],
+    "papers": ["material", "uncountable", "concrete"],
     "topics": ["science", "engineering", "physics"]
   },
   {
@@ -10420,7 +10420,7 @@
       "ENG": ["eng-nco-1313-laboratory"],
       "POL": ["pol-nco-1062-laboratorium"]
     },
-    "papers": ["s6", "room", "location", "concrete"],
+    "papers": ["s6", "room", "location", "workplace", "concrete"],
     "topics": ["biology", "physics", "inside", "science", "chemistry"]
   },
   {
@@ -10670,7 +10670,7 @@
       "ENG": ["eng-nco-1338-banana"],
       "POL": ["pol-nco-1110-banan"]
     },
-    "papers": ["s1", "food", "concrete", "fruit"],
+    "papers": ["s2", "food", "concrete", "fruit"],
     "topics": ["kitchen", "inside", "restaurant"]
   },
   {
@@ -10770,7 +10770,7 @@
       "ENG": ["eng-nco-1348-sweetpotato"],
       "POL": ["pol-nco-1120-batat"]
     },
-    "papers": ["s1", "food", "concrete", "vegetable"],
+    "papers": ["s2", "food", "concrete", "vegetable"],
     "topics": ["kitchen", "inside", "restaurant"]
   },
   {
@@ -10780,7 +10780,7 @@
       "ENG": ["eng-nco-1349-parsnip"],
       "POL": ["pol-nco-1121-pasternak"]
     },
-    "papers": ["s1", "food", "concrete", "vegetable"],
+    "papers": ["s2", "food", "concrete", "vegetable"],
     "topics": ["kitchen", "inside", "restaurant"]
   },
   {
@@ -10882,5 +10882,225 @@
     },
     "papers": ["abstract", "shape"],
     "topics": ["geometry"]
-  }
+  },
+  {
+    "key": "nco-1061-pentagon",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1359-pentagon"],
+      "POL": ["pol-nco-1135-pięciokąt"]
+    },
+    "papers": ["abstract", "shape"],
+    "topics": ["geometry"]
+  },
+  {
+    "key": "nco-1062-hexagon",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1360-hexagon"],
+      "POL": ["pol-nco-1136-sześciokąt"]
+    },
+    "papers": ["abstract", "shape"],
+    "topics": ["geometry"]
+  },
+  {
+    "key": "nco-1063-octagon",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1361-octagon"],
+      "POL": ["pol-nco-1137-ośmiokąt"]
+    },
+    "papers": ["abstract", "shape"],
+    "topics": ["geometry"]
+  },
+  {
+    "key": "nco-1064-knuckle",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1362-knuckle"],
+      "POL": ["pol-nco-1139-kostka(knuckle)"]
+    },
+    "papers": ["concrete", "bodypart external"],
+    "topics": ["medicine", "body"]
+  },
+  {
+    "key": "nco-1065-ankle",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1363-ankle"],
+      "POL": ["pol-nco-1140-kostka(ankle)"]
+    },
+    "papers": ["concrete", "bodypart external"],
+    "topics": ["medicine", "body"]
+  },
+  {
+    "key": "nco-1066-die",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1364-die"],
+      "POL": ["pol-nco-1141", "pol-nco-1142"]
+    },
+    "papers": ["s1", "concrete"],
+    "topics": ["game"]
+  },
+  {
+    "key": "nco-1067-pool",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1365"],
+      "POL": ["pol-nco-1143"]
+    },
+    "papers": ["s6", "location", "concrete"],
+    "topics": ["sport"]
+  },
+  {
+    "key": "nco-1068-group",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1366"],
+      "POL": ["pol-nco-1144"]
+    },
+    "papers": ["abstract"],
+    "topics": ["knowledge and existence", "math"]
+  },
+  {
+    "key": "nco-1069-adjective",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1367"],
+      "POL": ["pol-nco-1146"]
+    },
+    "papers": ["wordtype", "abstract"],
+    "topics": ["language"]
+  },
+  {
+    "key": "nco-1070-adverb",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1368"],
+      "POL": ["pol-nco-1147"]
+    },
+    "papers": ["wordtype", "abstract"],
+    "topics": ["language"]
+  },
+  {
+    "key": "nco-1071-preposition",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1369"],
+      "POL": ["pol-nco-1148"]
+    },
+    "papers": ["wordtype", "abstract"],
+    "topics": ["language"]
+  },
+  {
+    "key": "nco-1072-temple",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1370"],
+      "POL": ["pol-nco-1149"]
+    },
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
+    "topics": ["inside", "religion"]
+  },
+  {
+    "key": "nco-1073-synagogue",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1371"],
+      "POL": ["pol-nco-1150", "pol-nco-1151"]
+    },
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
+    "topics": ["inside", "religion"]
+  },
+  {
+    "key": "nco-1074-cathedral",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1372"],
+      "POL": ["pol-nco-1152"]
+    },
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
+    "topics": ["inside", "religion"]
+  },
+  {
+    "key": "nco-1075-orthodox church",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1373"],
+      "POL": ["pol-nco-1153"]
+    },
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
+    "topics": ["inside", "religion"]
+  },
+  {
+    "key": "nco-1076-orthodox cathedral",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1374"],
+      "POL": ["pol-nco-1154"]
+    },
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
+    "topics": ["inside", "religion"]
+  },
+  {
+    "key": "nco-1077-creche",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1375"],
+      "POL": ["pol-nco-1155"]
+    },
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
+    "topics": ["inside", "childcare"]
+  },
+  {
+    "key": "nco-1078-library",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1376"],
+      "POL": ["pol-nco-1156"]
+    },
+    "papers": ["s6", "location", "workplace", "building", "concrete"],
+    "topics": ["inside", "school"]
+  },
+  {
+    "key": "nco-1079-homework",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1377"],
+      "POL": ["pol-nco-1160"]
+    },
+    "papers": ["abstract"],
+    "topics": ["inside", "school"]
+  },
+  {
+    "key": "nco-1080-housework",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1378"],
+      "POL": ["pol-nco-1161"]
+    },
+    "papers": ["abstract"],
+    "topics": ["inside", "home"]
+  },
+  {
+    "key": "nco-1081-carbon dioxide",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1379-carbon dioxide"],
+      "POL": ["pol-nco-1162-dwutlenek węgla"]
+    },
+    "papers": ["gas", "uncountable", "chemical"],
+    "topics": ["chemistry"]
+  },
+  {
+    "key": "nco-1082-carbon monoxide",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1380-carbon monoxide"],
+      "POL": ["pol-nco-1163-tlenek węgla", "pol-nco-1164-czad"]
+    },
+    "papers": ["gas", "uncountable", "chemical", "danger"],
+    "topics": ["chemistry"]
+  },
 ]

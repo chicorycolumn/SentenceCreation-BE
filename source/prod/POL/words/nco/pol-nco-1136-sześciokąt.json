@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sześciokąt",
+      "gen": "sześciokątu",
+      "dat": "sześciokątowi",
+      "acc": "sześciokąt",
+      "ins": "sześciokątem",
+      "loc": "sześciokącie",
+      "voc": "sześciokącie"
+    },
+    "plural": {
+      "nom": "sześciokąty",
+      "gen": "sześciokątów",
+      "dat": "sześciokątom",
+      "acc": "sześciokąty",
+      "ins": "sześciokątami",
+      "loc": "sześciokątach",
+      "voc": "sześciokąty"
+    }
+  }
+}

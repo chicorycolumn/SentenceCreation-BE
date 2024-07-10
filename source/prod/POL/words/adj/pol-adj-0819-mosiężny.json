@@ -1,0 +1,58 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "mosiężny",
+          "gen": "mosiężnego",
+          "dat": "mosiężnemu",
+          "acc": "mosiężnego",
+          "ins": "mosiężnym",
+          "loc": "mosiężnym"
+        },
+        "m3": {
+          "nom": "mosiężny",
+          "gen": "mosiężnego",
+          "dat": "mosiężnemu",
+          "acc": "mosiężny",
+          "ins": "mosiężnym",
+          "loc": "mosiężnym"
+        },
+        "f": {
+          "nom": "mosiężna",
+          "gen": "mosiężnej",
+          "dat": "mosiężnej",
+          "acc": "mosiężną",
+          "ins": "mosiężną",
+          "loc": "mosiężnej"
+        },
+        "n": {
+          "nom": "mosiężne",
+          "gen": "mosiężnego",
+          "dat": "mosiężnemu",
+          "acc": "mosiężne",
+          "ins": "mosiężnym",
+          "loc": "mosiężnym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "mosiężni",
+          "gen": "mosiężnych",
+          "dat": "mosiężnym",
+          "acc": "mosiężnych",
+          "ins": "mosiężnymi",
+          "loc": "mosiężnych"
+        },
+        "nonvirile": {
+          "nom": "mosiężne",
+          "gen": "mosiężnych",
+          "dat": "mosiężnym",
+          "acc": "mosiężne",
+          "ins": "mosiężnymi",
+          "loc": "mosiężnych"
+        }
+      }
+    }
+  }
+}

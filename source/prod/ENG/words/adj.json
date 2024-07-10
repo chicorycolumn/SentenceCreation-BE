@@ -6962,5 +6962,29 @@
     "id": "eng-adj-1057-glass",
     "frequency": 3,
     "register": 1
+  },
+  {
+    "lemma": "iron",
+    "id": "eng-adj-1058-iron",
+    "frequency": 3,
+    "register": 1
+  },
+  {
+    "lemma": "brass",
+    "id": "eng-adj-1059-brass",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "copper",
+    "id": "eng-adj-1060-copper",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "steel",
+    "id": "eng-adj-1061-steel",
+    "frequency": 4,
+    "register": 1
   }
 ]
