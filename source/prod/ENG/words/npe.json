@@ -76,6 +76,48 @@
     "register": 1,
     "frequency": 1
   },
+  {
+    "lemma": "baby",
+    "id": "eng-npe-0005-baby",
+    "gender": "_Genders",
+    "register": 1,
+    "frequency": 1
+  },
+  {
+    "lemma": "wife",
+    "id": "eng-npe-0006-wife",
+    "gender": "f",
+    "register": 1,
+    "frequency": 1
+  },
+  {
+    "lemma": "husband",
+    "id": "eng-npe-0006-husband",
+    "gender": "m",
+    "register": 1,
+    "frequency": 1
+  },
+  {
+    "lemma": "spouse",
+    "id": "eng-npe-0006-spouse",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 2
+  },
+  {
+    "lemma": "partner",
+    "id": "eng-npe-0006-partner",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 2
+  },
+
+  //
+  //
+  //
+  //
+  //
+  //
 
   {
     "lemma": "niece",
@@ -83,13 +125,6 @@
     "gender": "f",
     "register": 1,
     "frequency": 2
-  },
-  {
-    "lemma": "husband",
-    "id": "eng-npe-0005-husband",
-    "gender": "m",
-    "register": 1,
-    "frequency": 1
   },
 
   {
@@ -142,13 +177,6 @@
     "frequency": 2
   },
   {
-    "lemma": "wife",
-    "id": "eng-npe-0015-wife",
-    "gender": "f",
-    "register": 1,
-    "frequency": 1
-  },
-  {
     "lemma": "man",
     "id": "eng-npe-0016-man",
     "gender": "m",
@@ -168,13 +196,6 @@
     "gender": "f",
     "register": 1,
     "frequency": 1
-  },
-  {
-    "lemma": "partner",
-    "id": "eng-npe-0020-partner",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 2
   },
 
   {
@@ -1029,13 +1050,6 @@
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
-  },
-  {
-    "lemma": "baby",
-    "id": "eng-npe-0145-baby",
-    "gender": "_Genders",
-    "register": 1,
-    "frequency": 1
   },
   {
     "lemma": "angel",
