@@ -42,6 +42,42 @@
     "frequency": 1
   },
   {
+    "lemma": "daughter",
+    "id": "eng-npe-0003-daughter",
+    "gender": "f",
+    "register": 1,
+    "frequency": 1
+  },
+  {
+    "lemma": "son",
+    "id": "eng-npe-0003-son",
+    "gender": "m",
+    "register": 1,
+    "frequency": 1
+  },
+  {
+    "lemma": "child",
+    "id": "eng-npe-0003-child",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 1
+  },
+  {
+    "lemma": "boy",
+    "id": "eng-npe-0004-boy",
+    "gender": "m",
+    "register": 1,
+    "frequency": 1
+  },
+  {
+    "lemma": "girl",
+    "id": "eng-npe-0004-girl",
+    "gender": "f",
+    "register": 1,
+    "frequency": 1
+  },
+
+  {
     "lemma": "niece",
     "id": "eng-npe-0004-niece",
     "gender": "f",
@@ -55,20 +91,7 @@
     "register": 1,
     "frequency": 1
   },
-  {
-    "lemma": "daughter",
-    "id": "eng-npe-0006-daughter",
-    "gender": "f",
-    "register": 1,
-    "frequency": 1
-  },
-  {
-    "lemma": "son",
-    "id": "eng-npe-0007-son",
-    "gender": "m",
-    "register": 1,
-    "frequency": 1
-  },
+
   {
     "lemma": "nephew",
     "id": "eng-npe-0008-nephew",
@@ -153,13 +176,7 @@
     "register": 1,
     "frequency": 2
   },
-  {
-    "lemma": "boy",
-    "id": "eng-npe-0021-boy",
-    "gender": "m",
-    "register": 1,
-    "frequency": 1
-  },
+
   {
     "lemma": "boyfriend",
     "id": "eng-npe-0022-boyfriend",
@@ -180,13 +197,6 @@
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 2
-  },
-  {
-    "lemma": "girl",
-    "id": "eng-npe-0025-girl",
-    "gender": "f",
-    "register": 1,
-    "frequency": 1
   },
   {
     "lemma": "girlfriend",
@@ -1019,13 +1029,6 @@
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
-  },
-  {
-    "lemma": "child",
-    "id": "eng-npe-0144-child",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 1
   },
   {
     "lemma": "baby",
