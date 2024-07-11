@@ -18272,4 +18272,22 @@
     "_lacking": true,
     "tantumSingulare": true
   },
+  {
+    "lemma": "tlenek węgla",
+    "id": "pol-nco-1163-tlenek węgla",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3",
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "czad",
+    "id": "pol-nco-1164-czad",
+    "frequency": 4,
+    "register": 6,
+    "gender": "m3",
+    "_lacking": true,
+    "tantumSingulare": true
+  },
 ]

@@ -10925,4 +10925,13 @@
     "_lacking": true,
     "tantumSingulare": true
   },
+  {
+    "lemma": "carbon monoxide",
+    "id": "eng-nco-1380-carbon monoxide",
+    "gender": "n",
+    "register": 1,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
 ]

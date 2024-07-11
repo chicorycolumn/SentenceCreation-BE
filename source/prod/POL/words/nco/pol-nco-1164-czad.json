@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "czad",
+      "gen": "czadu",
+      "dat": "czadowi",
+      "acc": "czad",
+      "ins": "czadem",
+      "loc": "czadzie",
+      "voc": "czadzie"
+    }
+  }
+}
