@@ -11103,4 +11103,14 @@
     "papers": ["gas", "uncountable", "chemical", "danger"],
     "topics": ["chemistry"]
   },
+  {
+    "key": "nco-1083-rope",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1381-rope"],
+      "POL": ["pol-nco-1165-lina", "pol-nco-1166-sznur"]
+    },
+    "papers": ["s2", "concrete"],
+    "topics": ["engineering"]
+  },
 ]
