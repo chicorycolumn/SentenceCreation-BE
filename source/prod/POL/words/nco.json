@@ -18290,4 +18290,18 @@
     "_lacking": true,
     "tantumSingulare": true
   },
+  {
+    "lemma": "lina",
+    "id": "pol-nco-1165-lina",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "sznur",
+    "id": "pol-nco-1166-sznur",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m3"
+  },
 ]
