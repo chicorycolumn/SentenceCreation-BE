@@ -346,7 +346,7 @@ exports.splitLemmaObjectsFromBigJsonToIndividualJsons = (
   e,
   l,
   suffix = "",
-  wordtypes = ["adj", "art", "nco", "npe", "pre", "pro", "ver"]
+  wordtypes = ["adj", "art", "nco", "npe", "pre", "pro", "ver", "adv"]
 ) => {
   fs.mkdirSync(`source/${e}/${l}/words`);
 
@@ -407,7 +407,7 @@ exports.splitLemmaObjectsAndWriteAsJsonFromJsDict = (e, l) => {
 
   const { wordsBank } = require(`../../source/${e}/${l}/words.js`);
 
-  ["adj", "art", "nco", "npe", "pre", "pro", "ver"].forEach((wordtype) => {
+  ["adj", "art", "nco", "npe", "pre", "pro", "ver", "adv"].forEach((wordtype) => {
     let words = wordsBank[wordtype];
     if (!words) {
       return;

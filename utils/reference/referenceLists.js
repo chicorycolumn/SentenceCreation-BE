@@ -521,6 +521,7 @@ exports.structureChunkTraits = {
         "pre",
         "art",
         "fix",
+        "adv"
       ],
     },
     agreeWith: {
