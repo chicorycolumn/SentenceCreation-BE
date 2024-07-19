@@ -278,6 +278,7 @@ exports.lemmaObjectTraitKeys = {
       // pronombrePOSSESSIVE: ["form", "person", "number", "gender", "number", "gender", "gcase"],
       // art: NONE
       pre: ["form"],
+      adv: ["form"],
     },
     inheritableInflectionKeys: {
       nco: ["number", "gcase"],
@@ -300,6 +301,7 @@ exports.lemmaObjectTraitKeys = {
       ver: ["tenseDescription", "person", "number", "gender", "semanticGender"],
       pro: ["person", "number", "gender"],
       pre: [],
+      adv: [],
     },
     allowableExtraClarifiersInSingleWordSentences: {
       nco: ["gcase"],
@@ -325,6 +327,7 @@ exports.lemmaObjectTraitKeys = {
       pro: ["form", "person", "number", "gender", "gcase"],
       art: ["form", "number", "gender"],
       pre: ["form"],
+      adv: ["form"],
     },
     inheritableInflectionKeys: {
       nco: ["number", "gcase"],
@@ -348,6 +351,7 @@ exports.lemmaObjectTraitKeys = {
       pro: ["form", "person", "number", "gender", "semanticGender"],
       art: [],
       pre: [],
+      adv: [],
     },
     allowableExtraClarifiersInSingleWordSentences: {
       nco: [],
@@ -373,6 +377,7 @@ exports.lemmaObjectTraitKeys = {
       pro: ["form", "person", "number", "gender", "gcase"],
       art: ["form", "number"],
       pre: ["form"],
+      adv: ["form"],
     },
     inheritableInflectionKeys: {
       nco: ["number", "gcase"],
@@ -390,6 +395,7 @@ exports.lemmaObjectTraitKeys = {
       pro: ["form", "person", "number", "gender", "semanticGender"],
       art: [],
       pre: [],
+      adv: [],
     },
     allowableExtraClarifiersInSingleWordSentences: {
       nco: [],
@@ -628,6 +634,7 @@ exports.structureChunkTraits = {
           "verbalNoun",
         ],
         pre: ["onlyForm"],
+        adv: ["onlyForm"],
       },
     },
     //
@@ -716,6 +723,7 @@ exports.structureChunkTraits = {
         art: ["definite", "indefinite"],
         ver: ["verbal", "infinitive", "pastParticiple", "gerund"],
         pre: ["onlyForm"],
+        adv: ["onlyForm"],
       },
     },
     //
@@ -795,6 +803,7 @@ exports.structureChunkTraits = {
         art: ["definite", "indefinite"],
         ver: ["verbal", "infinitive", "v2", "v3", "thirdPS", "gerund"],
         pre: ["onlyForm"],
+        adv: ["onlyForm"],
       },
     },
     //
