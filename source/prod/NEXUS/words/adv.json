@@ -6,7 +6,7 @@
       "ENG": ["eng-adv-0001-today"],
       "POL": ["pol-adv-0001-dzisiaj"]
     },
-    "papers": [],
-    "topics": []
+    "papers": ["abstract"],
+    "topics": ["time"]
   }
 ]
