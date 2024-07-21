@@ -8,5 +8,15 @@
     },
     "papers": ["abstract"],
     "topics": ["time"]
+  },
+  {
+    "key": "adv-0002-tomorrow",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-adv-0002-tomorrow"],
+      "POL": ["pol-adv-0002-jutro"]
+    },
+    "papers": ["abstract"],
+    "topics": ["time"]
   }
 ]
