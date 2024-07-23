@@ -18,5 +18,15 @@
     },
     "papers": ["abstract"],
     "topics": ["time"]
+  },
+  {
+    "key": "adv-0003-yesterday",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-adv-0003-yesterday"],
+      "POL": ["pol-adv-0003-wczoraj"]
+    },
+    "papers": ["abstract"],
+    "topics": ["time"]
   }
 ]
