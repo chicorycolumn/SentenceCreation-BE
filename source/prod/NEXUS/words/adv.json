@@ -28,5 +28,15 @@
     },
     "papers": ["abstract"],
     "topics": ["time"]
+  },
+  {
+    "key": "adv-0004-always",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-adv-0004-always"],
+      "POL": ["pol-adv-0004-zawsze"]
+    },
+    "papers": ["abstract"],
+    "topics": ["time"]
   }
 ]
