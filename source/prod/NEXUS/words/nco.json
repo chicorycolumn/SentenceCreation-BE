@@ -11113,4 +11113,14 @@
     "papers": ["s2", "concrete"],
     "topics": ["engineering"]
   },
+  {
+    "key": "nco-1084-watermelon",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1382-watermelon"],
+      "POL": ["pol-nco-1167-arbuz"]
+    },
+    "papers": ["s3", "food", "concrete", "fruit"],
+    "topics": ["kitchen", "inside", "restaurant"]
+  },
 ]
