@@ -10941,4 +10941,11 @@
     "register": 2,
     "frequency": 1
   },
+  {
+    "lemma": "watermelon",
+    "id": "eng-nco-1382-watermelon",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
 ]
