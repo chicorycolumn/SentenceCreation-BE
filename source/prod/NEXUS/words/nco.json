@@ -11123,4 +11123,14 @@
     "papers": ["s3", "food", "concrete", "fruit"],
     "topics": ["kitchen", "inside", "restaurant"]
   },
+  {
+    "key": "nco-1085-grapefruit",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1383-grapefruit"],
+      "POL": ["pol-nco-1168-grejpfrut"]
+    },
+    "papers": ["s2", "food", "concrete", "fruit"],
+    "topics": ["kitchen", "inside", "restaurant"]
+  },
 ]
