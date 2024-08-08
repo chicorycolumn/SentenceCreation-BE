@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "grejpfrut",
+      "gen": "grejpfruta",
+      "dat": "grejpfrutowi",
+      "acc": "grejpfrut",
+      "ins": "grejpfrutem",
+      "loc": "grejpfrucie",
+      "voc": "grejpfrucie"
+    },
+    "plural": {
+      "nom": "grejpfruty",
+      "gen": "grejpfrutów",
+      "dat": "grejpfrutom",
+      "acc": "grejpfruty",
+      "ins": "grejpfrutami",
+      "loc": "grejpfrutach",
+      "voc": "grejpfruty"
+    }
+  }
+}
