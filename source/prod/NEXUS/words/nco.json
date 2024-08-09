@@ -11133,4 +11133,14 @@
     "papers": ["s2", "food", "concrete", "fruit"],
     "topics": ["kitchen", "inside", "restaurant"]
   },
+  {
+    "key": "nco-1086-artichoke",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1384-artichoke"],
+      "POL": ["pol-nco-1169-karczoch"]
+    },
+    "papers": ["s2", "food", "concrete", "vegetable"],
+    "topics": ["kitchen", "inside", "restaurant"]
+  },
 ]
