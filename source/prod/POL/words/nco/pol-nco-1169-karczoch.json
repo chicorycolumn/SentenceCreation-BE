@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "karczoch",
+      "gen": "karczocha",
+      "dat": "karczochowi",
+      "acc": "karczoch",
+      "ins": "karczochem",
+      "loc": "karczochu",
+      "voc": "karczochu"
+    },
+    "plural": {
+      "nom": "karczochy",
+      "gen": "karczochów",
+      "dat": "karczochom",
+      "acc": "karczochy",
+      "ins": "karczochami",
+      "loc": "karczochach",
+      "voc": "karczochy"
+    }
+  }
+}
