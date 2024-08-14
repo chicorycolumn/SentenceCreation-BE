@@ -11143,4 +11143,14 @@
     "papers": ["s2", "food", "concrete", "vegetable"],
     "topics": ["kitchen", "inside", "restaurant"]
   },
+  {
+    "key": "nco-1087-fig",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1385-fig"],
+      "POL": ["pol-nco-1170-figa"]
+    },
+    "papers": ["s1", "food", "concrete", "fruit"],
+    "topics": ["kitchen", "inside", "restaurant"]
+  },
 ]
