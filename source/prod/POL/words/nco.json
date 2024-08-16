@@ -18325,4 +18325,11 @@
     "register": 1,
     "gender": "m3"
   },
+  {
+    "lemma": "figa",
+    "id": "pol-nco-1170-figa",
+    "frequency": 5,
+    "register": 1,
+    "gender": "f"
+  },
 ]
