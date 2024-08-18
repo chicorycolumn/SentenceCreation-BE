@@ -11153,4 +11153,14 @@
     "papers": ["s1", "food", "concrete", "fruit"],
     "topics": ["kitchen", "inside", "restaurant"]
   },
+  {
+    "key": "nco-1088-wart",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1386-wart"],
+      "POL": ["pol-nco-1171-brodawka", "pol-nco-1172-kurzajka"]
+    },
+    "papers": ["concrete"],
+    "topics": ["disease", "medicine", "appearance"]
+  },
 ]
