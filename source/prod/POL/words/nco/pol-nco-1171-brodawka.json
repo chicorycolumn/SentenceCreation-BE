@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "brodawka",
+      "gen": "brodawki",
+      "dat": "brodawce",
+      "acc": "brodawkę",
+      "ins": "brodawką",
+      "loc": "brodawce",
+      "voc": "brodawko"
+    },
+    "plural": {
+      "nom": "brodawki",
+      "gen": "brodawek",
+      "dat": "brodawkom",
+      "acc": "brodawki",
+      "ins": "brodawkami",
+      "loc": "brodawkach",
+      "voc": "brodawki"
+    }
+  }
+}

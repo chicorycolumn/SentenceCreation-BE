@@ -18332,4 +18332,18 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "brodawka",
+    "id": "pol-nco-1171-brodawka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "kurzajka",
+    "id": "pol-nco-1172-kurzajka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
 ]
