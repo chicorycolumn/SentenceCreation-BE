@@ -589,6 +589,83 @@
     "register": 1,
     "frequency": 3
   },
+  {
+    "lemma": "translator",
+    "id": "eng-npe-0041-translator",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "waiter",
+    "id": "eng-npe-0042-waiter",
+    "gender": "m",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "waitress",
+    "id": "eng-npe-0042-waitress",
+    "gender": "f",
+    "register": 1,
+    "frequency": 2
+  },
+  {
+    "lemma": "knight",
+    "id": "eng-npe-0043-knight",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "thief",
+    "id": "eng-npe-0044-thief",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "pope",
+    "id": "eng-npe-0045-pope",
+    "gender": "m",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "alien",
+    "id": "eng-npe-0046-alien",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "stranger",
+    "id": "eng-npe-0047-stranger",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "driver",
+    "id": "eng-npe-0048-driver",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "colonel",
+    "id": "eng-npe-0049-colonel",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 5
+  },
+  {
+    "lemma": "god",
+    "id": "eng-npe-0050-god",
+    "gender": "m",
+    "register": 1,
+    "frequency": 2
+  },
 
   //
   //
@@ -619,13 +696,6 @@
     "frequency": 4
   },
   {
-    "lemma": "translator",
-    "id": "eng-npe-0041-translator",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 4
-  },
-  {
     "lemma": "interpreter",
     "id": "eng-npe-0042-interpreter",
     "gender": "_PersonalGenders",
@@ -647,74 +717,11 @@
     "frequency": 4
   },
   {
-    "lemma": "knight",
-    "id": "eng-npe-0045-knight",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 4
-  },
-  {
-    "lemma": "thief",
-    "id": "eng-npe-0046-thief",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "waiter",
-    "id": "eng-npe-0047-waiter",
-    "gender": "m",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "pope",
-    "id": "eng-npe-0049-pope",
-    "gender": "m",
-    "register": 1,
-    "frequency": 4
-  },
-  {
-    "lemma": "alien",
-    "id": "eng-npe-0051-alien",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 4
-  },
-  {
-    "lemma": "stranger",
-    "id": "eng-npe-0052-stranger",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "driver",
-    "id": "eng-npe-0053-driver",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "colonel",
-    "id": "eng-npe-0054-colonel",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 5
-  },
-  {
     "lemma": "criminal",
     "id": "eng-npe-0055-criminal",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
-  },
-  {
-    "lemma": "god",
-    "id": "eng-npe-0057-god",
-    "gender": "m",
-    "register": 1,
-    "frequency": 2
   },
   {
     "lemma": "firefighter",
@@ -1086,13 +1093,6 @@
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4
-  },
-  {
-    "lemma": "waitress",
-    "id": "eng-npe-0123-waitress",
-    "gender": "f",
-    "register": 1,
-    "frequency": 2
   },
   {
     "lemma": "billionaire",
