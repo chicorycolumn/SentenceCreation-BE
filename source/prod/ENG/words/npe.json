@@ -446,45 +446,68 @@
     },
     "_lacking": true
   },
-
-  //
-  //
-  //
-  //
-  //
-  //
-
+  {
+    "lemma": "love",
+    "id": "eng-npe-0027-love(darling)",
+    "gender": "_PersonalGenders",
+    "register": 6,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": false,
+      "text": "person",
+      "emoji": "🏃"
+    }
+  },
+  {
+    "lemma": "darling",
+    "id": "eng-npe-0027-darling",
+    "gender": "_PersonalGenders",
+    "register": 6,
+    "frequency": 4
+  },
+  {
+    "lemma": "sweetheart",
+    "id": "eng-npe-0027-sweetheart",
+    "gender": "_PersonalGenders",
+    "register": 6,
+    "frequency": 4
+  },
+  {
+    "lemma": "honey",
+    "id": "eng-npe-0027-honey(darling)",
+    "gender": "_PersonalGenders",
+    "register": 6,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": false,
+      "text": "person",
+      "emoji": "🏃"
+    }
+  },
   {
     "lemma": "teacher",
-    "id": "eng-npe-0023-teacher",
+    "id": "eng-npe-0028-teacher",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 2
   },
   {
     "lemma": "student",
-    "id": "eng-npe-0024-student",
+    "id": "eng-npe-0029-student",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 2
   },
   {
-    "lemma": "actress",
-    "id": "eng-npe-0028-actress",
-    "gender": "f",
+    "lemma": "pilot",
+    "id": "eng-npe-0030-pilot",
+    "gender": "_PersonalGenders",
     "register": 1,
-    "frequency": 2
-  },
-  {
-    "lemma": "actor",
-    "id": "eng-npe-0029-actor",
-    "gender": "m",
-    "register": 1,
-    "frequency": 2
+    "frequency": 4
   },
   {
     "lemma": "king",
-    "id": "eng-npe-0030-king",
+    "id": "eng-npe-0031-king",
     "gender": "m",
     "register": 1,
     "frequency": 3
@@ -497,15 +520,37 @@
     "frequency": 3
   },
   {
-    "lemma": "leader",
-    "id": "eng-npe-0032-leader",
+    "lemma": "tourist",
+    "id": "eng-npe-0032-tourist",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
   },
   {
-    "lemma": "tourist",
-    "id": "eng-npe-0035-tourist",
+    "lemma": "actress",
+    "id": "eng-npe-0033-actress",
+    "gender": "f",
+    "register": 1,
+    "frequency": 2
+  },
+  {
+    "lemma": "actor",
+    "id": "eng-npe-0033-actor",
+    "gender": "m",
+    "register": 1,
+    "frequency": 2
+  },
+
+  //
+  //
+  //
+  //
+  //
+  //
+
+  {
+    "lemma": "leader",
+    "id": "eng-npe-0032-leader",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
@@ -1064,13 +1109,6 @@
     "frequency": 3
   },
   {
-    "lemma": "pilot",
-    "id": "eng-npe-0133-pilot",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 4
-  },
-  {
     "lemma": "angel",
     "id": "eng-npe-0146-angel",
     "gender": "_Genders",
@@ -1097,44 +1135,6 @@
     "gender": "_PersonalGenders",
     "register": 7,
     "frequency": 3
-  },
-  {
-    "lemma": "love",
-    "id": "eng-npe-0150-love(darling)",
-    "gender": "_PersonalGenders",
-    "register": 6,
-    "frequency": 4,
-    "allohomInfo": {
-      "singleWordtype": false,
-      "text": "person",
-      "emoji": "🏃"
-    }
-  },
-  {
-    "lemma": "honey",
-    "id": "eng-npe-0151-honey(darling)",
-    "gender": "_PersonalGenders",
-    "register": 6,
-    "frequency": 4,
-    "allohomInfo": {
-      "singleWordtype": false,
-      "text": "person",
-      "emoji": "🏃"
-    }
-  },
-  {
-    "lemma": "darling",
-    "id": "eng-npe-0152-darling",
-    "gender": "_PersonalGenders",
-    "register": 6,
-    "frequency": 4
-  },
-  {
-    "lemma": "sweetheart",
-    "id": "eng-npe-0153-sweetheart",
-    "gender": "_PersonalGenders",
-    "register": 6,
-    "frequency": 4
   },
   {
     "lemma": "heroine",
