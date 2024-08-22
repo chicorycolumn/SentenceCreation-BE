@@ -11163,4 +11163,14 @@
     "papers": ["concrete"],
     "topics": ["disease", "medicine", "appearance"]
   },
+  {
+    "key": "nco-1089-mole(medical)",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1387"],
+      "POL": ["pol-nco-1173-pieprzyk"]
+    },
+    "papers": ["concrete"],
+    "topics": ["disease", "medicine", "appearance"]
+  },
 ]
