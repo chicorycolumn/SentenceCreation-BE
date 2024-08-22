@@ -403,7 +403,7 @@
     "key": "npe-0041-translator",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0041"],
+      "ENG": ["eng-npe-0041-translator", "eng-npe-0041-interpreter"],
       "POL": ["pol-npe-0041"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -433,7 +433,7 @@
     "key": "npe-0044-thief",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0044"],
+      "ENG": ["eng-npe-0044-thief", "eng-npe-0051-robber"],
       "POL": ["pol-npe-0044"]
     },
     "papers": ["concrete", "person", "living"],
@@ -454,7 +454,7 @@
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0046"],
-      "POL": ["pol-npe-0046"]
+      "POL": ["pol-npe-0046", "swde-9999-kosmita"]
     },
     "papers": ["concrete"],
     "topics": ["astronomy"]
@@ -504,9 +504,9 @@
     "traductions": {
       "SPA": [],
       "ENG": [
-        "eng-npe-0060-lawyer",
-        "eng-npe-0061-attorney",
-        "eng-npe-0062-solicitor"
+        "eng-npe-0052-lawyer",
+        "eng-npe-0053-attorney",
+        "eng-npe-0054-solicitor"
       ],
       "POL": ["pol-npe-0061", "pol-npe-0062"]
     },
@@ -517,7 +517,7 @@
     "key": "npe-0052-gardener",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0067-gardener"],
+      "ENG": ["eng-npe-0055-gardener"],
       "POL": ["pol-npe-0063-ogrodnik"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -527,7 +527,7 @@
     "key": "npe-0053-vegetarian",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0117-vegetarian"],
+      "ENG": ["eng-npe-0056-vegetarian"],
       "POL": ["pol-npe-0064"]
     },
     "papers": ["concrete", "person", "living"],
@@ -537,7 +537,7 @@
     "key": "npe-0054-vegan",
     "traductions": {
       "SPA": [],
-      "ENG": [],
+      "ENG": ["eng-npe-0057-vegan"],
       "POL": ["pol-npe-0065"]
     },
     "papers": ["concrete", "person", "living"],
@@ -547,7 +547,7 @@
     "key": "npe-0055-farmer",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0110-farmer"],
+      "ENG": ["eng-npe-0058-farmer"],
       "POL": ["pol-npe-0066", "pol-npe-0067"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -557,7 +557,7 @@
     "key": "npe-0056-guide",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0077-guide"],
+      "ENG": ["eng-npe-0059-guide"],
       "POL": ["pol-npe-0068"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -567,7 +567,7 @@
     "key": "npe-0057-criminal",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0055-criminal"],
+      "ENG": ["eng-npe-0060-criminal"],
       "POL": ["pol-npe-0069", "pol-npe-0070"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -577,7 +577,7 @@
     "key": "npe-0058-firefighter",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0058-firefighter", "eng-npe-0059-fireman"],
+      "ENG": ["eng-npe-0061-firefighter"],
       "POL": ["pol-npe-0071"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -587,7 +587,7 @@
     "key": "npe-0059-employee",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0063-employee", "eng-npe-0064-worker"],
+      "ENG": ["eng-npe-0063-employee", "eng-npe-0062-worker"],
       "POL": ["pol-npe-0072"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -597,7 +597,7 @@
     "key": "npe-0060-teenager",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0068-teenager"],
+      "ENG": ["eng-npe-0064-teenager"],
       "POL": ["pol-npe-0073"]
     },
     "papers": ["concrete", "person", "living"],
@@ -607,7 +607,7 @@
     "key": "npe-0061-optician",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0069-optician"],
+      "ENG": ["eng-npe-0065-optician"],
       "POL": ["pol-npe-0074"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -617,17 +617,17 @@
     "key": "npe-0062-model",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0070-model"],
+      "ENG": ["eng-npe-0066-model"],
       "POL": ["pol-npe-0075"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people", "fashion"]
   },
   {
-    "key": "npe-0063-prince",
+    "key": "npe-0063-prince/princess",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0071-prince"],
+      "ENG": ["eng-npe-0067"],
       "POL": ["pol-npe-0076"]
     },
     "papers": ["concrete", "person", "profession", "living", "title"],
