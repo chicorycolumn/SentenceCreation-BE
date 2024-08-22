@@ -312,6 +312,140 @@
     "register": 1,
     "frequency": 1
   },
+  {
+    "lemma": "buddy",
+    "id": "eng-npe-0018-buddy",
+    "gender": "_PersonalGenders",
+    "register": 6,
+    "frequency": 3
+  },
+  {
+    "lemma": "pal",
+    "id": "eng-npe-0018-pal",
+    "gender": "_PersonalGenders",
+    "register": 6,
+    "frequency": 3
+  },
+  {
+    "lemma": "acquaintance",
+    "id": "eng-npe-0019-acquaintance",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "colleague",
+    "id": "eng-npe-0020-colleague",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "workmate",
+    "id": "eng-npe-0020-workmate",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "neighbour",
+    "id": "eng-npe-0021-neighbour",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3,
+    "additionalSpellings": ["neighbor"]
+  },
+  {
+    "lemma": "relative",
+    "id": "eng-npe-0022-relative",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "guest",
+    "id": "eng-npe-0023-guest",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 2
+  },
+  {
+    "lemma": "homie",
+    "id": "eng-npe-0024-homie",
+    "gender": "m",
+    "register": 6,
+    "frequency": 4
+  },
+  {
+    "lemma": "bro",
+    "id": "eng-npe-0024-bro",
+    "gender": "m",
+    "register": 6,
+    "frequency": 4
+  },
+  {
+    "lemma": "dude",
+    "id": "eng-npe-0024-dude",
+    "gender": "m",
+    "register": 6,
+    "frequency": 4
+  },
+  {
+    "lemma": "Mr",
+    "id": "eng-npe-0025-Mr",
+    "gender": "m",
+    "register": 1,
+    "frequency": 2,
+    "_lacking": true
+  },
+  {
+    "lemma": "Mrs",
+    "id": "eng-npe-0025-Mrs",
+    "gender": "f",
+    "register": 1,
+    "frequency": 2,
+    "_lacking": true
+  },
+  {
+    "lemma": "Miss",
+    "id": "eng-npe-0025-Miss(title)",
+    "gender": "f",
+    "register": 1,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "title",
+      "emoji": "🙇"
+    },
+    "_lacking": true
+  },
+  {
+    "lemma": "Sir",
+    "id": "eng-npe-0026-Sir",
+    "gender": "m",
+    "register": 1,
+    "frequency": 2
+  },
+  {
+    "lemma": "Madam",
+    "id": "eng-npe-0026-Madam",
+    "gender": "f",
+    "register": 1,
+    "frequency": 2
+  },
+  {
+    "lemma": "Miss",
+    "id": "eng-npe-0026-Miss(address)",
+    "gender": "f",
+    "register": 1,
+    "frequency": 2,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "form of address",
+      "emoji": "👋"
+    },
+    "_lacking": true
+  },
 
   //
   //
@@ -403,14 +537,6 @@
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4
-  },
-  {
-    "lemma": "neighbour",
-    "id": "eng-npe-0040-neighbour",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3,
-    "additionalSpellings": ["neighbor"]
   },
   {
     "lemma": "translator",
@@ -607,13 +733,6 @@
     "gender": "f",
     "register": 1,
     "frequency": 4
-  },
-  {
-    "lemma": "guest",
-    "id": "eng-npe-0073-guest",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 2
   },
   {
     "lemma": "cook",
@@ -840,13 +959,6 @@
     "frequency": 3
   },
   {
-    "lemma": "relative",
-    "id": "eng-npe-0109-relative",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
     "lemma": "farmer",
     "id": "eng-npe-0110-farmer",
     "gender": "_PersonalGenders",
@@ -875,13 +987,6 @@
     "frequency": 3
   },
   {
-    "lemma": "pal",
-    "id": "eng-npe-0114-pal",
-    "gender": "_PersonalGenders",
-    "register": 6,
-    "frequency": 3
-  },
-  {
     "lemma": "master",
     "id": "eng-npe-0115-master",
     "gender": "_PersonalGenders",
@@ -905,13 +1010,6 @@
   {
     "lemma": "secretary",
     "id": "eng-npe-0118-secretary",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "acquaintance",
-    "id": "eng-npe-0119-acquaintance",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
@@ -966,109 +1064,11 @@
     "frequency": 3
   },
   {
-    "lemma": "Mr",
-    "id": "eng-npe-0127-Mr",
-    "gender": "m",
-    "register": 1,
-    "frequency": 2,
-    "_lacking": true
-  },
-  {
-    "lemma": "Sir",
-    "id": "eng-npe-0128-Sir",
-    "gender": "m",
-    "register": 1,
-    "frequency": 2
-  },
-  {
-    "lemma": "Madam",
-    "id": "eng-npe-0129-Madam",
-    "gender": "f",
-    "register": 1,
-    "frequency": 2
-  },
-  {
-    "lemma": "Mrs",
-    "id": "eng-npe-0130-Mrs",
-    "gender": "f",
-    "register": 1,
-    "frequency": 2,
-    "_lacking": true
-  },
-  {
-    "lemma": "Miss",
-    "id": "eng-npe-0131-Miss(address)",
-    "gender": "f",
-    "register": 1,
-    "frequency": 2,
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "form of address",
-      "emoji": "👋"
-    },
-    "_lacking": true
-  },
-  {
-    "lemma": "Miss",
-    "id": "eng-npe-0132-Miss(title)",
-    "gender": "f",
-    "register": 1,
-    "frequency": 2,
-    "allohomInfo": {
-      "singleWordtype": true,
-      "text": "title",
-      "emoji": "🙇"
-    },
-    "_lacking": true
-  },
-  {
     "lemma": "pilot",
     "id": "eng-npe-0133-pilot",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4
-  },
-  {
-    "lemma": "homie",
-    "id": "eng-npe-0138-homie",
-    "gender": "m",
-    "register": 6,
-    "frequency": 4
-  },
-  {
-    "lemma": "bro",
-    "id": "eng-npe-0139-bro",
-    "gender": "m",
-    "register": 6,
-    "frequency": 4
-  },
-  {
-    "lemma": "dude",
-    "id": "eng-npe-0140-dude",
-    "gender": "m",
-    "register": 6,
-    "frequency": 4
-  },
-  {
-    "lemma": "buddy",
-    "id": "eng-npe-0141-buddy",
-    "gender": "_PersonalGenders",
-    "register": 6,
-    "frequency": 3
-  },
-  {
-    "lemma": "colleague",
-    "id": "eng-npe-0142-colleague",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "workmate",
-    "id": "eng-npe-0143-workmate",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
   },
   {
     "lemma": "angel",
