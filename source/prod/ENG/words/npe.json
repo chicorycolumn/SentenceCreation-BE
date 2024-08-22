@@ -540,6 +540,55 @@
     "register": 1,
     "frequency": 2
   },
+  {
+    "lemma": "politician",
+    "id": "eng-npe-0034-politician",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "prime minister",
+    "id": "eng-npe-0035-primeminister",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "president",
+    "id": "eng-npe-0036-president",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "doctor",
+    "id": "eng-npe-0037-doctor",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 2
+  },
+  {
+    "lemma": "nurse",
+    "id": "eng-npe-0038-nurse",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 2
+  },
+  {
+    "lemma": "surgeon",
+    "id": "eng-npe-0039-surgeon",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "engineer",
+    "id": "eng-npe-0040-engineer",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
 
   //
   //
@@ -565,20 +614,6 @@
   {
     "lemma": "protagonist",
     "id": "eng-npe-0037-protagonist",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 4
-  },
-  {
-    "lemma": "politician",
-    "id": "eng-npe-0038-politician",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "surgeon",
-    "id": "eng-npe-0039-surgeon",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4
@@ -629,13 +664,6 @@
     "lemma": "waiter",
     "id": "eng-npe-0047-waiter",
     "gender": "m",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "engineer",
-    "id": "eng-npe-0048-engineer",
-    "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
   },
@@ -885,13 +913,6 @@
     "frequency": 4
   },
   {
-    "lemma": "doctor",
-    "id": "eng-npe-0092-doctor",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 2
-  },
-  {
     "lemma": "judge",
     "id": "eng-npe-0093-judge",
     "gender": "_PersonalGenders",
@@ -967,13 +988,6 @@
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
-  },
-  {
-    "lemma": "nurse",
-    "id": "eng-npe-0104-nurse",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 2
   },
   {
     "lemma": "citizen",
@@ -1065,13 +1079,6 @@
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 2
-  },
-  {
-    "lemma": "president",
-    "id": "eng-npe-0121-president",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
   },
   {
     "lemma": "prisoner",
