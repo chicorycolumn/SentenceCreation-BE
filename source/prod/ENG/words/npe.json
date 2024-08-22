@@ -99,44 +99,56 @@
   },
   {
     "lemma": "spouse",
-    "id": "eng-npe-0006-spouse",
+    "id": "eng-npe-0007-spouse",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 2
   },
   {
     "lemma": "partner",
-    "id": "eng-npe-0006-partner",
+    "id": "eng-npe-0007-partner",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 2
   },
-
-  //
-  //
-  //
-  //
-  //
-  //
-
   {
-    "lemma": "niece",
-    "id": "eng-npe-0004-niece",
+    "lemma": "aunt",
+    "id": "eng-npe-0008-aunt",
     "gender": "f",
     "register": 1,
     "frequency": 2
   },
-
+  {
+    "lemma": "auntie",
+    "id": "eng-npe-0008-auntie",
+    "gender": "f",
+    "register": 1,
+    "frequency": 2
+  },
+  {
+    "lemma": "uncle",
+    "id": "eng-npe-0008-uncle",
+    "gender": "m",
+    "register": 1,
+    "frequency": 2
+  },
+  {
+    "lemma": "niece",
+    "id": "eng-npe-0009-niece",
+    "gender": "f",
+    "register": 1,
+    "frequency": 2
+  },
   {
     "lemma": "nephew",
-    "id": "eng-npe-0008-nephew",
+    "id": "eng-npe-0009-nephew",
     "gender": "m",
     "register": 1,
     "frequency": 3
   },
   {
     "lemma": "grandfather",
-    "id": "eng-npe-0009-grandfather",
+    "id": "eng-npe-0010-grandfather",
     "gender": "m",
     "register": 1,
     "frequency": 1
@@ -149,62 +161,165 @@
     "frequency": 1
   },
   {
-    "lemma": "aunt",
-    "id": "eng-npe-0011-aunt",
+    "lemma": "grandparent",
+    "id": "eng-npe-0010-grandparent",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 1
+  },
+  {
+    "lemma": "granddaughter",
+    "id": "eng-npe-0011-granddaughter",
     "gender": "f",
     "register": 1,
     "frequency": 2
   },
   {
-    "lemma": "auntie",
-    "id": "eng-npe-0012-auntie",
-    "gender": "f",
-    "register": 1,
-    "frequency": 2
-  },
-  {
-    "lemma": "uncle",
-    "id": "eng-npe-0013-uncle",
+    "lemma": "grandson",
+    "id": "eng-npe-0011-grandson",
     "gender": "m",
     "register": 1,
     "frequency": 2
   },
   {
-    "lemma": "cousin",
-    "id": "eng-npe-0014-cousin",
+    "lemma": "grandchild",
+    "id": "eng-npe-0011-grandchild",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 2
   },
   {
+    "lemma": "cousin",
+    "id": "eng-npe-0012-cousin",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 2
+  },
+  {
+    "lemma": "father-in-law",
+    "id": "eng-npe-0013-fatherinlaw",
+    "gender": "m",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "mother-in-law",
+    "id": "eng-npe-0013-motherinlaw",
+    "gender": "m",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "fiancé",
+    "id": "eng-npe-0014-fiancé",
+    "gender": "m",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "fiancée",
+    "id": "eng-npe-0014-fiancée",
+    "gender": "f",
+    "register": 1,
+    "frequency": 3
+  },
+  {
     "lemma": "man",
-    "id": "eng-npe-0016-man",
+    "id": "eng-npe-0015-man",
     "gender": "m",
     "register": 1,
     "frequency": 1
   },
   {
     "lemma": "woman",
-    "id": "eng-npe-0017-woman",
+    "id": "eng-npe-0015-woman",
     "gender": "f",
     "register": 1,
     "frequency": 1
   },
   {
     "lemma": "lady",
-    "id": "eng-npe-0018-lady",
+    "id": "eng-npe-0015-lady",
     "gender": "f",
     "register": 1,
     "frequency": 1
   },
-
+  {
+    "lemma": "guy",
+    "id": "eng-npe-0015-guy",
+    "gender": "m",
+    "register": 6,
+    "frequency": 2
+  },
+  {
+    "lemma": "chick",
+    "id": "eng-npe-0015-chick(woman)",
+    "gender": "f",
+    "register": 6,
+    "frequency": 4,
+    "allohomInfo": {
+      "singleWordtype": false,
+      "text": "person",
+      "emoji": "🏃"
+    }
+  },
+  {
+    "lemma": "fellow",
+    "id": "eng-npe-0015-fellow",
+    "gender": "m",
+    "register": 6,
+    "frequency": 4
+  },
+  {
+    "lemma": "chap",
+    "id": "eng-npe-0015-chap",
+    "gender": "m",
+    "register": 6,
+    "frequency": 4
+  },
+  {
+    "lemma": "person",
+    "id": "eng-npe-0015-person",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 2
+  },
+  {
+    "lemma": "human",
+    "id": "eng-npe-0016-human",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
   {
     "lemma": "boyfriend",
-    "id": "eng-npe-0022-boyfriend",
+    "id": "eng-npe-0017-boyfriend",
     "gender": "m",
     "register": 1,
     "frequency": 1
   },
+  {
+    "lemma": "girlfriend",
+    "id": "eng-npe-0017-girlfriend",
+    "gender": "f",
+    "register": 1,
+    "frequency": 1
+  },
+  {
+    "lemma": "friend",
+    "id": "eng-npe-0018-friend",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 1
+  },
+
+  //
+  //
+  //
+  //
+  //
+  //
+
   {
     "lemma": "teacher",
     "id": "eng-npe-0023-teacher",
@@ -218,20 +333,6 @@
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 2
-  },
-  {
-    "lemma": "girlfriend",
-    "id": "eng-npe-0026-girlfriend",
-    "gender": "f",
-    "register": 1,
-    "frequency": 1
-  },
-  {
-    "lemma": "friend",
-    "id": "eng-npe-0027-friend",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 1
   },
   {
     "lemma": "actress",
@@ -267,20 +368,6 @@
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
-  },
-  {
-    "lemma": "human",
-    "id": "eng-npe-0033-human",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "person",
-    "id": "eng-npe-0034-person",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 2
   },
   {
     "lemma": "tourist",
@@ -424,13 +511,6 @@
     "frequency": 3
   },
   {
-    "lemma": "father-in-law",
-    "id": "eng-npe-0056-fatherinlaw",
-    "gender": "m",
-    "register": 1,
-    "frequency": 3
-  },
-  {
     "lemma": "god",
     "id": "eng-npe-0057-god",
     "gender": "m",
@@ -487,20 +567,6 @@
     "frequency": 2
   },
   {
-    "lemma": "fiancé",
-    "id": "eng-npe-0065-fiancé",
-    "gender": "m",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "fiancée",
-    "id": "eng-npe-0066-fiancée",
-    "gender": "f",
-    "register": 1,
-    "frequency": 3
-  },
-  {
     "lemma": "gardener",
     "id": "eng-npe-0067-gardener",
     "gender": "_PersonalGenders",
@@ -550,13 +616,6 @@
     "frequency": 2
   },
   {
-    "lemma": "grandson",
-    "id": "eng-npe-0074-grandson",
-    "gender": "m",
-    "register": 1,
-    "frequency": 1
-  },
-  {
     "lemma": "cook",
     "id": "eng-npe-0075-cook",
     "gender": "_PersonalGenders",
@@ -590,13 +649,6 @@
     "gender": "m",
     "register": 1,
     "frequency": 3
-  },
-  {
-    "lemma": "granddaughter",
-    "id": "eng-npe-0080-granddaughter",
-    "gender": "f",
-    "register": 1,
-    "frequency": 2
   },
   {
     "lemma": "enemy",
@@ -974,39 +1026,6 @@
     "id": "eng-npe-0133-pilot",
     "gender": "_PersonalGenders",
     "register": 1,
-    "frequency": 4
-  },
-  {
-    "lemma": "guy",
-    "id": "eng-npe-0134-guy",
-    "gender": "m",
-    "register": 6,
-    "frequency": 2
-  },
-  {
-    "lemma": "chick",
-    "id": "eng-npe-0135-chick(woman)",
-    "gender": "f",
-    "register": 6,
-    "frequency": 4,
-    "allohomInfo": {
-      "singleWordtype": false,
-      "text": "person",
-      "emoji": "🏃"
-    }
-  },
-  {
-    "lemma": "fellow",
-    "id": "eng-npe-0136-fellow",
-    "gender": "m",
-    "register": 6,
-    "frequency": 4
-  },
-  {
-    "lemma": "chap",
-    "id": "eng-npe-0137-chap",
-    "gender": "m",
-    "register": 6,
     "frequency": 4
   },
   {
