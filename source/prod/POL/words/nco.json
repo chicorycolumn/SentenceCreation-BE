@@ -18346,4 +18346,11 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "pieprzyk",
+    "id": "pol-nco-1173-pieprzyk",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
+  },
 ]
