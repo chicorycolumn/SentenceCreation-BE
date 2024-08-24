@@ -10976,4 +10976,16 @@
     "frequency": 4,
     "register": 1
   },
+  {
+    "lemma": "mole",
+    "id": "eng-nco-1387-mole(medical)",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "medical",
+      "emoji": "🩺"
+    }
+  },
 ]
