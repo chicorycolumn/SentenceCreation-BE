@@ -11173,4 +11173,14 @@
     "papers": ["concrete"],
     "topics": ["disease", "medicine", "appearance"]
   },
+  {
+    "key": "nco-1090-scar",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1388-scar"],
+      "POL": ["pol-nco-1174-blizna"]
+    },
+    "papers": ["concrete"],
+    "topics": ["disease", "medicine", "appearance"]
+  },
 ]
