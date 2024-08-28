@@ -799,6 +799,111 @@
     "register": 1,
     "frequency": 4
   },
+  {
+    "lemma": "cook",
+    "id": "eng-npe-0069-cook",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 2
+  },
+  {
+    "lemma": "priest",
+    "id": "eng-npe-0070-priest",
+    "gender": "m",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "enemy",
+    "id": "eng-npe-0071-enemy",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "passenger",
+    "id": "eng-npe-0072-passenger",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "soldier",
+    "id": "eng-npe-0073-soldier",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 2
+  },
+  {
+    "lemma": "dentist",
+    "id": "eng-npe-0074-dentist",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "owner",
+    "id": "eng-npe-0075-owner",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "landlord",
+    "id": "eng-npe-0076-landlord",
+    "gender": "m",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "judge",
+    "id": "eng-npe-0077-judge",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "referee",
+    "id": "eng-npe-0078-referee",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "writer",
+    "id": "eng-npe-0079-writer",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "journalist",
+    "id": "eng-npe-0080-journalist",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "customs officer",
+    "id": "eng-npe-0081-customsofficer",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "client",
+    "id": "eng-npe-0082-client",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "customer",
+    "id": "eng-npe-0083-customer",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
 
   //
   //
@@ -850,13 +955,6 @@
     "frequency": 4
   },
   {
-    "lemma": "cook",
-    "id": "eng-npe-0075-cook",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 2
-  },
-  {
     "lemma": "chef",
     "id": "eng-npe-0076-chef",
     "gender": "_PersonalGenders",
@@ -866,41 +964,6 @@
   {
     "lemma": "midwife",
     "id": "eng-npe-0078-midwife",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "priest",
-    "id": "eng-npe-0079-priest",
-    "gender": "m",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "enemy",
-    "id": "eng-npe-0081-enemy",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "passenger",
-    "id": "eng-npe-0082-passenger",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "soldier",
-    "id": "eng-npe-0083-soldier",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 2
-  },
-  {
-    "lemma": "dentist",
-    "id": "eng-npe-0084-dentist",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
@@ -920,67 +983,11 @@
     "frequency": 3
   },
   {
-    "lemma": "owner",
-    "id": "eng-npe-0088-owner",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "landlord",
-    "id": "eng-npe-0089-landlord",
-    "gender": "m",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "writer",
-    "id": "eng-npe-0090-writer",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
     "lemma": "physician",
     "id": "eng-npe-0091-physician",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4
-  },
-  {
-    "lemma": "judge",
-    "id": "eng-npe-0093-judge",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "journalist",
-    "id": "eng-npe-0094-journalist",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 4
-  },
-  {
-    "lemma": "customs officer",
-    "id": "eng-npe-0095-customsofficer",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 4
-  },
-  {
-    "lemma": "client",
-    "id": "eng-npe-0096-client",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "customer",
-    "id": "eng-npe-0097-customer",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
   },
   {
     "lemma": "hairdresser",
@@ -1133,13 +1140,6 @@
     "lemma": "angel",
     "id": "eng-npe-0146-angel",
     "gender": "_Genders",
-    "register": 1,
-    "frequency": 4
-  },
-  {
-    "lemma": "referee",
-    "id": "eng-npe-0147-referee",
-    "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4
   },
