@@ -3157,5 +3157,28 @@
     "frequency": 3,
     "register": 1,
     "gender": "f"
+  },
+  {
+    "lemma": "szef kuchni",
+    "id": "pol-npe-0128-szef kuchni-£",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_PersonalGenders"
+  },
+  {
+    "lemma": "lekarz rodzinny",
+    "id": "pol-npe-0129-lekarz rodzinny-€",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "lekarka rodzinna",
+    "id": "pol-npe-0129-lekarka rodzinna",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
   }
 ]

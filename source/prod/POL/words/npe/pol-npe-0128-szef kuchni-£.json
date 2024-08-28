@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "szef kuchni",
+      "gen": "szefa kuchni",
+      "dat": "szefowi kuchni",
+      "acc": "szefa kuchni",
+      "ins": "szefem kuchni",
+      "loc": "szefie kuchni",
+      "voc": "szefie kuchni"
+    },
+    "plural": {
+      "nom": "szefowie kuchni",
+      "gen": "szefów kuchni",
+      "dat": "szefom kuchni",
+      "acc": "szefów kuchni",
+      "ins": "szefami kuchni",
+      "loc": "szefach kuchni",
+      "voc": "szefowie kuchni"
+    }
+  }
+}

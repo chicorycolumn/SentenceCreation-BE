@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "imam",
+      "gen": "imam's"
+    },
+    "plural": {
+      "nom": "imams",
+      "gen": "imams'"
+    }
+  }
+}

@@ -668,6 +668,13 @@
     "frequency": 2
   },
   {
+    "lemma": "goddess",
+    "id": "eng-npe-0050-goddess",
+    "gender": "f",
+    "register": 1,
+    "frequency": 2
+  },
+  {
     "lemma": "robber",
     "id": "eng-npe-0051-robber",
     "gender": "_PersonalGenders",
@@ -773,13 +780,6 @@
     "frequency": 2
   },
   {
-    "lemma": "optician",
-    "id": "eng-npe-0065-optician",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
     "lemma": "model",
     "id": "eng-npe-0066-model",
     "gender": "_PersonalGenders",
@@ -860,6 +860,13 @@
     "lemma": "landlord",
     "id": "eng-npe-0076-landlord",
     "gender": "m",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "landlady",
+    "id": "eng-npe-0076-landlady",
+    "gender": "f",
     "register": 1,
     "frequency": 3
   },
@@ -1046,28 +1053,112 @@
     "register": 1,
     "frequency": 3
   },
-
-  //
-  //
-  //
-  //
-  //
-  //
-
   {
-    "lemma": "leader",
-    "id": "eng-npe-0032-leader",
+    "lemma": "psychologist",
+    "id": "eng-npe-0101-psychologist",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
   },
   {
+    "lemma": "psychiatrist",
+    "id": "eng-npe-0102-psychiatrist",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "counsellor",
+    "id": "eng-npe-0103-counsellor",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "detective",
+    "id": "eng-npe-0104-detective",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "investigator",
+    "id": "eng-npe-0105-investigator",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "millionaire",
+    "id": "eng-npe-0106-millionaire",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "billionaire",
+    "id": "eng-npe-0107-billionaire",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "secretary",
+    "id": "eng-npe-0108-secretary",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "murderer",
+    "id": "eng-npe-0109-murderer",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "killer",
+    "id": "eng-npe-0110-killer",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "assassin",
+    "id": "eng-npe-0111-assassin",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "victim",
+    "id": "eng-npe-0112-victim",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+  {
     "lemma": "hero",
-    "id": "eng-npe-0036-hero",
+    "id": "eng-npe-0113-hero",
     "gender": "m",
     "register": 1,
     "frequency": 4
   },
+  {
+    "lemma": "heroine",
+    "id": "eng-npe-0113-heroine",
+    "gender": "f",
+    "register": 1,
+    "frequency": 4
+  },
+
+  //
+  //
+  //
+  //
+  //
+  //
+
   {
     "lemma": "protagonist",
     "id": "eng-npe-0037-protagonist",
@@ -1076,114 +1167,16 @@
     "frequency": 4
   },
   {
-    "lemma": "manager",
-    "id": "eng-npe-0043-manager",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "head",
-    "id": "eng-npe-0044-head",
+    "lemma": "rabbi",
+    "id": "eng-npe-9999-rabbi",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4
   },
   {
-    "lemma": "chef",
-    "id": "eng-npe-0076-chef",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "asshole",
-    "id": "eng-npe-0086-asshole",
-    "gender": "_PersonalGenders",
-    "register": 7,
-    "frequency": 3
-  },
-  {
-    "lemma": "jerk",
-    "id": "eng-npe-0087-jerk",
-    "gender": "_PersonalGenders",
-    "register": 7,
-    "frequency": 3
-  },
-  {
-    "lemma": "physician",
-    "id": "eng-npe-0091-physician",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 4
-  },
-  {
-    "lemma": "murderer",
-    "id": "eng-npe-0100-murderer",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 4
-  },
-  {
-    "lemma": "victim",
-    "id": "eng-npe-0111-victim",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 4
-  },
-  {
-    "lemma": "detective",
-    "id": "eng-npe-0112-detective",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "mate",
-    "id": "eng-npe-0113-mate",
-    "gender": "_PersonalGenders",
-    "register": 6,
-    "frequency": 3
-  },
-  {
-    "lemma": "master",
-    "id": "eng-npe-0115-master",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 5
-  },
-  {
-    "lemma": "champion",
-    "id": "eng-npe-0116-champion",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 5
-  },
-  {
-    "lemma": "secretary",
-    "id": "eng-npe-0118-secretary",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "prisoner",
-    "id": "eng-npe-0122-prisoner",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 4
-  },
-  {
-    "lemma": "billionaire",
-    "id": "eng-npe-0124-billionaire",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 4
-  },
-  {
-    "lemma": "millionaire",
-    "id": "eng-npe-0125-millionaire",
-    "gender": "_PersonalGenders",
+    "lemma": "imam",
+    "id": "eng-npe-9999-imam",
+    "gender": "m",
     "register": 1,
     "frequency": 4
   },
@@ -1195,45 +1188,167 @@
     "frequency": 3
   },
   {
+    "lemma": "athlete",
+    "id": "eng-npe-9999-athlete",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "janitor",
+    "id": "eng-npe-9999-janitor",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "cleaner",
+    "id": "eng-npe-9999-cleaner",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "electrician",
+    "id": "eng-npe-9999-electrician",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "plumber",
+    "id": "eng-npe-9999-plumber",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "builder",
+    "id": "eng-npe-9999-builder",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "butcher",
+    "id": "eng-npe-9999-butcher",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "baker",
+    "id": "eng-npe-9999-baker",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "optician",
+    "id": "eng-npe-9999-optician",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "chef",
+    "id": "eng-npe-9999-chef",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "physician",
+    "id": "eng-npe-9999-physician",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "GP",
+    "id": "eng-npe-9999-GP",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "medic",
+    "id": "eng-npe-9999-medic",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+
+  {
+    "lemma": "mate",
+    "id": "eng-npe-8888-mate",
+    "gender": "_PersonalGenders",
+    "register": 6,
+    "frequency": 3
+  },
+  {
     "lemma": "angel",
-    "id": "eng-npe-0146-angel",
+    "id": "eng-npe-8888-angel",
     "gender": "_Genders",
     "register": 1,
     "frequency": 4
   },
   {
+    "lemma": "prisoner",
+    "id": "eng-npe-8888-prisoner",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+
+  {
+    "lemma": "leader",
+    "id": "eng-npe-8888-leader",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "manager",
+    "id": "eng-npe-8888-manager",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "head",
+    "id": "eng-npe-8888-head",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+
+  {
+    "lemma": "asshole",
+    "id": "eng-npe-8888-asshole",
+    "gender": "_PersonalGenders",
+    "register": 7,
+    "frequency": 3
+  },
+  {
+    "lemma": "jerk",
+    "id": "eng-npe-8888-jerk",
+    "gender": "_PersonalGenders",
+    "register": 7,
+    "frequency": 3
+  },
+  {
     "lemma": "fucker",
-    "id": "eng-npe-0148-fucker",
+    "id": "eng-npe-8888-fucker",
     "gender": "_PersonalGenders",
     "register": 7,
     "frequency": 3
   },
   {
     "lemma": "motherfucker",
-    "id": "eng-npe-0149-motherfucker",
+    "id": "eng-npe-8888-motherfucker",
     "gender": "_PersonalGenders",
     "register": 7,
-    "frequency": 3
-  },
-  {
-    "lemma": "heroine",
-    "id": "eng-npe-0154-heroine",
-    "gender": "f",
-    "register": 1,
-    "frequency": 4
-  },
-  {
-    "lemma": "goddess",
-    "id": "eng-npe-0155-goddess",
-    "gender": "f",
-    "register": 1,
-    "frequency": 2
-  },
-  {
-    "lemma": "landlady",
-    "id": "eng-npe-0156-landlady",
-    "gender": "f",
-    "register": 1,
     "frequency": 3
   }
 ]

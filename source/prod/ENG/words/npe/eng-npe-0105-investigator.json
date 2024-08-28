@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "investigator",
+      "gen": "investigator's"
+    },
+    "plural": {
+      "nom": "investigators",
+      "gen": "investigators'"
+    }
+  }
+}

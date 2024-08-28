@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lekarka rodzinna",
+      "gen": "lekarki rodzinnej",
+      "dat": "lekarce rodzinnej",
+      "acc": "lekarkę rodzinną",
+      "ins": "lekarką rodzinną",
+      "loc": "lekarce rodzinnej",
+      "voc": "lekarko rodzinna"
+    },
+    "plural": {
+      "nom": "lekarki rodzinne",
+      "gen": "lekarek rodzinnych",
+      "dat": "lekarkom rodzinnym",
+      "acc": "lekarki rodzinne",
+      "ins": "lekarkami rodzinnymi",
+      "loc": "lekarkach rodzinnych",
+      "voc": "lekarki rodzinne"
+    }
+  }
+}

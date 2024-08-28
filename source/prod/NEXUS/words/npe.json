@@ -937,7 +937,7 @@
     "key": "npe-0094-psychologist",
     "traductions": {
       "SPA": [],
-      "ENG": [],
+      "ENG": ["eng-npe-0101"],
       "POL": ["pol-npe-0111"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -947,18 +947,18 @@
     "key": "npe-0095-psychiatrist",
     "traductions": {
       "SPA": [],
-      "ENG": [],
+      "ENG": ["eng-npe-0102"],
       "POL": ["pol-npe-0112"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]
   },
   {
-    "key": "npe-0096-optyk",
+    "key": "npe-0096-counsellor",
     "traductions": {
       "SPA": [],
-      "ENG": ["optician"],
-      "POL": ["pol-npe-0113"]
+      "ENG": ["eng-npe-0103"],
+      "POL": ["pol-npe-9999-doradca"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]
@@ -967,7 +967,7 @@
     "key": "npe-0097-detective",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0112-detective", "investigator"],
+      "ENG": ["eng-npe-0104-detective", "eng-npe-0105-investigator"],
       "POL": ["pol-npe-0114", "pol-npe-0115"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -977,7 +977,7 @@
     "key": "npe-0098-millionaire",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0125-millionaire"],
+      "ENG": ["eng-npe-0106-millionaire"],
       "POL": ["pol-npe-0116"]
     },
     "papers": ["money", "concrete", "person", "living"],
@@ -987,7 +987,7 @@
     "key": "npe-0099-billionaire",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0124-billionaire"],
+      "ENG": ["eng-npe-0107-billionaire"],
       "POL": ["pol-npe-0117"]
     },
     "papers": ["money", "concrete", "person", "living"],
@@ -997,7 +997,7 @@
     "key": "npe-0100-secretary",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0118-secretary"],
+      "ENG": ["eng-npe-0108-secretary"],
       "POL": ["pol-npe-0118"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -1007,7 +1007,7 @@
     "key": "npe-0101-murderer",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0100-murderer"],
+      "ENG": ["eng-npe-0109-murderer"],
       "POL": ["pol-npe-0119"]
     },
     "papers": ["concrete", "person", "living"],
@@ -1017,7 +1017,7 @@
     "key": "npe-0102-killer",
     "traductions": {
       "SPA": [],
-      "ENG": [],
+      "ENG": ["eng-npe-0110-killer"],
       "POL": ["pol-npe-0120"]
     },
     "papers": ["concrete", "person", "living"],
@@ -1027,7 +1027,7 @@
     "key": "npe-0103-assassin",
     "traductions": {
       "SPA": [],
-      "ENG": [],
+      "ENG": ["eng-npe-0111-assassin"],
       "POL": ["pol-npe-0121"]
     },
     "papers": ["concrete", "person", "living"],
@@ -1037,7 +1037,7 @@
     "key": "npe-0104-victim",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0111-victim"],
+      "ENG": ["eng-npe-0112-victim"],
       "POL": ["pol-npe-0122"]
     },
     "papers": ["concrete", "person", "living"],
@@ -1047,7 +1047,7 @@
     "key": "npe-0105-hero",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0036-hero", "eng-npe-0154-heroine"],
+      "ENG": ["eng-npe-0113"],
       "POL": ["pol-npe-0123"]
     },
     "papers": ["concrete", "positive judgment", "person", "living"],
@@ -1165,7 +1165,7 @@
     "topics": ["food", "work", "people"]
   },
   {
-    "key": "npe-0117-butcher",
+    "key": "npe-0117-baker",
     "traductions": {
       "SPA": [],
       "ENG": [],
@@ -1173,5 +1173,35 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["food", "work", "people"]
+  },
+  {
+    "key": "npe-0118-optyk",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-9999-optician"],
+      "POL": ["pol-npe-0113"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["medicine", "work", "people"]
+  },
+  {
+    "key": "npe-0119-chef",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-9999-chef"],
+      "POL": ["pol-npe-0128"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["restaurant", "work", "inside", "kitchen", "people"]
+  },
+  {
+    "key": "npe-0120-GP",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-9999-GP", "eng-npe-9999-physician"],
+      "POL": ["pol-npe-0129"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["medicine", "work", "people"]
   }
 ]
