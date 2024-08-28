@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "chemist",
+      "gen": "chemist's"
+    },
+    "plural": {
+      "nom": "chemists",
+      "gen": "chemists'"
+    }
+  }
+}

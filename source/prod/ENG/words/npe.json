@@ -436,6 +436,7 @@
   {
     "lemma": "Miss",
     "id": "eng-npe-0026-Miss(address)",
+    "_inflectionsRoot": "eng-npe-0025-Miss(title)",
     "gender": "f",
     "register": 1,
     "frequency": 2,
@@ -793,6 +794,13 @@
     "frequency": 4
   },
   {
+    "lemma": "princess",
+    "id": "eng-npe-0067-princess",
+    "gender": "f",
+    "register": 1,
+    "frequency": 4
+  },
+  {
     "lemma": "interpreter",
     "id": "eng-npe-0068-interpreter",
     "gender": "_PersonalGenders",
@@ -904,6 +912,140 @@
     "register": 1,
     "frequency": 3
   },
+  {
+    "lemma": "hairdresser",
+    "id": "eng-npe-0084-hairdresser",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "singer",
+    "id": "eng-npe-0085-singer",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "policeman",
+    "id": "eng-npe-0086-policeman",
+    "gender": "m",
+    "register": 1,
+    "frequency": 2
+  },
+  {
+    "lemma": "policewoman",
+    "id": "eng-npe-0086-policewoman",
+    "gender": "f",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "police officer",
+    "id": "eng-npe-0086-policeofficer",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "citizen",
+    "id": "eng-npe-0087-citizen",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "guard",
+    "id": "eng-npe-0088-guard",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "guard",
+    "id": "eng-npe-0089-guard",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "scientist",
+    "id": "eng-npe-0090-scientist",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "researcher",
+    "id": "eng-npe-0091-researcher",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "biologist",
+    "id": "eng-npe-0092-biologist",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "physicist",
+    "id": "eng-npe-0093-physicist",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "chemist",
+    "id": "eng-npe-0094-chemist(scientist)",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "chemist",
+    "id": "eng-npe-0095-chemist(pharmacist)",
+    "_inflectionsRoot": "eng-npe-0094-chemist(scientist)",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "pharmacist",
+    "id": "eng-npe-0096-pharmacist",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "patient",
+    "id": "eng-npe-0097-patient",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "artist",
+    "id": "eng-npe-0098-artist",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 2
+  },
+  {
+    "lemma": "midwife",
+    "id": "eng-npe-0099-midwife",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "gynaecologist",
+    "id": "eng-npe-0100-gynaecologist",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
 
   //
   //
@@ -948,22 +1090,8 @@
     "frequency": 4
   },
   {
-    "lemma": "princess",
-    "id": "eng-npe-0072-princess",
-    "gender": "f",
-    "register": 1,
-    "frequency": 4
-  },
-  {
     "lemma": "chef",
     "id": "eng-npe-0076-chef",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "midwife",
-    "id": "eng-npe-0078-midwife",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
@@ -990,74 +1118,11 @@
     "frequency": 4
   },
   {
-    "lemma": "hairdresser",
-    "id": "eng-npe-0098-hairdresser",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "singer",
-    "id": "eng-npe-0099-singer",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
     "lemma": "murderer",
     "id": "eng-npe-0100-murderer",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4
-  },
-  {
-    "lemma": "policeman",
-    "id": "eng-npe-0101-policeman",
-    "gender": "m",
-    "register": 1,
-    "frequency": 2
-  },
-  {
-    "lemma": "policewoman",
-    "id": "eng-npe-0102-policewoman",
-    "gender": "f",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "police officer",
-    "id": "eng-npe-0103-policeofficer",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "citizen",
-    "id": "eng-npe-0105-citizen",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "guard",
-    "id": "eng-npe-0106-guard",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "scientist",
-    "id": "eng-npe-0107-scientist",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
-  },
-  {
-    "lemma": "patient",
-    "id": "eng-npe-0108-patient",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 3
   },
   {
     "lemma": "victim",
@@ -1100,13 +1165,6 @@
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
-  },
-  {
-    "lemma": "artist",
-    "id": "eng-npe-0120-artist",
-    "gender": "_PersonalGenders",
-    "register": 1,
-    "frequency": 2
   },
   {
     "lemma": "prisoner",

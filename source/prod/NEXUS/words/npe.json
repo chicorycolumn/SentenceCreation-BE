@@ -777,7 +777,7 @@
     "key": "npe-0078-hairdresser",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0098-hairdresser"],
+      "ENG": ["eng-npe-0084-hairdresser"],
       "POL": ["pol-npe-0092"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -787,7 +787,7 @@
     "key": "npe-0079-singer",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0099-singer"],
+      "ENG": ["eng-npe-0085-singer"],
       "POL": ["pol-npe-0093", "pol-npe-0094", "pol-npe-0095"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -797,11 +797,7 @@
     "key": "npe-0080-policeman",
     "traductions": {
       "SPA": [],
-      "ENG": [
-        "eng-npe-0101-policeman",
-        "eng-npe-0102-policewoman",
-        "eng-npe-0103-policeofficer"
-      ],
+      "ENG": ["eng-npe-0086"],
       "POL": ["pol-npe-0096"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -811,7 +807,7 @@
     "key": "npe-0081-citizen",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0105-citizen"],
+      "ENG": ["eng-npe-0087-citizen"],
       "POL": ["pol-npe-0097"]
     },
     "papers": ["concrete", "person", "living"],
@@ -821,7 +817,7 @@
     "key": "npe-0082-guard",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0106-guard"],
+      "ENG": ["eng-npe-0088-guard"],
       "POL": ["pol-npe-0098"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -831,7 +827,7 @@
     "key": "npe-0083-bodyguard",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0106-bodyguard"],
+      "ENG": ["eng-npe-0089-bodyguard"],
       "POL": ["pol-npe-0099"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -841,7 +837,7 @@
     "key": "npe-0084-scientist",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0107-scientist"],
+      "ENG": ["eng-npe-0090-scientist"],
       "POL": ["pol-npe-0100"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -851,7 +847,7 @@
     "key": "npe-0085-researcher",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0107-researcher"],
+      "ENG": ["eng-npe-0091-researcher"],
       "POL": ["pol-npe-0101"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -861,7 +857,7 @@
     "key": "npe-0086-biologist",
     "traductions": {
       "SPA": [],
-      "ENG": [],
+      "ENG": ["eng-npe-0092"],
       "POL": ["pol-npe-0102"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -871,7 +867,7 @@
     "key": "npe-0087-physicist",
     "traductions": {
       "SPA": [],
-      "ENG": [],
+      "ENG": ["eng-npe-0093"],
       "POL": ["pol-npe-0103"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -881,7 +877,7 @@
     "key": "npe-0088-chemist(scientist)",
     "traductions": {
       "SPA": [],
-      "ENG": ["chemist(scientist)"],
+      "ENG": ["eng-npe-0094-chemist(scientist)"],
       "POL": ["pol-npe-0104"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -891,7 +887,7 @@
     "key": "npe-0089-pharmacist",
     "traductions": {
       "SPA": [],
-      "ENG": ["chemist(pharmacist)"],
+      "ENG": ["eng-npe-0095-chemist(pharmacist)", "eng-npe-0096"],
       "POL": ["pol-npe-0105"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -901,7 +897,7 @@
     "key": "npe-0090-patient",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0108-patient"],
+      "ENG": ["eng-npe-0097-patient"],
       "POL": ["pol-npe-0106"]
     },
     "papers": ["concrete", "person", "living"],
@@ -911,7 +907,7 @@
     "key": "npe-0091-artist",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0120-artist"],
+      "ENG": ["eng-npe-0098-artist"],
       "POL": ["pol-npe-0107"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -921,7 +917,7 @@
     "key": "npe-0092-midwife",
     "traductions": {
       "SPA": [],
-      "ENG": [],
+      "ENG": ["eng-npe-0099-midwife"],
       "POL": ["pol-npe-0108", "pol-npe-0109"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -931,7 +927,7 @@
     "key": "npe-0093-gynaecologist",
     "traductions": {
       "SPA": [],
-      "ENG": [],
+      "ENG": ["eng-npe-0100-gynaecologist"],
       "POL": ["pol-npe-0110"]
     },
     "papers": ["concrete", "profession", "person", "living"],

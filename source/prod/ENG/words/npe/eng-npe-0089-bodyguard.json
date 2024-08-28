@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "bodyguard",
+      "gen": "bodyguard's"
+    },
+    "plural": {
+      "nom": "bodyguards",
+      "gen": "bodyguards'"
+    }
+  }
+}
