@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pracownica",
+      "gen": "pracownicy",
+      "dat": "pracownicy",
+      "acc": "pracownicę",
+      "ins": "pracownicą",
+      "loc": "pracownicy",
+      "voc": "pracownico"
+    },
+    "plural": {
+      "nom": "pracownice",
+      "gen": "pracownic",
+      "dat": "pracownicom",
+      "acc": "pracownice",
+      "ins": "pracownicami",
+      "loc": "pracownicach",
+      "voc": "pracownice"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "paramedic",
+      "gen": "paramedic's"
+    },
+    "plural": {
+      "nom": "paramedics",
+      "gen": "paramedics'"
+    }
+  }
+}

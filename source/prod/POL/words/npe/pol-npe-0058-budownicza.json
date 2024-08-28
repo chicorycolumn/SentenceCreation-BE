@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "budownicza",
+      "gen": "budowniczej",
+      "dat": "budowniczej",
+      "acc": "budowniczą",
+      "ins": "budowniczą",
+      "loc": "budowniczej",
+      "voc": "budowniczo"
+    },
+    "plural": {
+      "nom": "budownicze",
+      "gen": "budowniczych",
+      "dat": "budowniczym",
+      "acc": "budownicze",
+      "ins": "budowniczymi",
+      "loc": "budowniczych",
+      "voc": "budownicze"
+    }
+  }
+}

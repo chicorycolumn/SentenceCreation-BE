@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dozorczyni",
+      "gen": "dozorczyni",
+      "dat": "dozorczyni",
+      "acc": "dozorczynię",
+      "ins": "dozorczynią",
+      "loc": "dozorczyni",
+      "voc": "dozorczyni"
+    },
+    "plural": {
+      "nom": "dozorczynie",
+      "gen": "dozorczyń",
+      "dat": "dozorczyniom",
+      "acc": "dozorczynie",
+      "ins": "dozorczyniami",
+      "loc": "dozorczyniach",
+      "voc": "dozorczynie"
+    }
+  }
+}

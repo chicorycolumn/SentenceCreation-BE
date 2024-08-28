@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "prawniczka",
+      "gen": "prawniczki",
+      "dat": "prawniczce",
+      "acc": "prawniczkę",
+      "ins": "prawniczką",
+      "loc": "prawniczce",
+      "voc": "prawniczko"
+    },
+    "plural": {
+      "nom": "prawniczki",
+      "gen": "prawniczek",
+      "dat": "prawniczkom",
+      "acc": "prawniczki",
+      "ins": "prawniczkami",
+      "loc": "prawniczkach",
+      "voc": "prawniczki"
+    }
+  }
+}

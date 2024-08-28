@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "biolożka",
+      "gen": "biolożki",
+      "dat": "biolożce",
+      "acc": "biolożkę",
+      "ins": "biolożką",
+      "loc": "biolożce",
+      "voc": "biolożko"
+    },
+    "plural": {
+      "nom": "biolożki",
+      "gen": "biolożek",
+      "dat": "biolożkom",
+      "acc": "biolożki",
+      "ins": "biolożkami",
+      "loc": "biolożkach",
+      "voc": "biolożki"
+    }
+  }
+}

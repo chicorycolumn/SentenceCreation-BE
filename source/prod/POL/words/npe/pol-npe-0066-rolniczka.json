@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rolniczka",
+      "gen": "rolniczki",
+      "dat": "rolniczce",
+      "acc": "rolniczkę",
+      "ins": "rolniczką",
+      "loc": "rolniczce",
+      "voc": "rolniczko"
+    },
+    "plural": {
+      "nom": "rolniczki",
+      "gen": "rolniczek",
+      "dat": "rolniczkom",
+      "acc": "rolniczki",
+      "ins": "rolniczkami",
+      "loc": "rolniczkach",
+      "voc": "rolniczki"
+    }
+  }
+}

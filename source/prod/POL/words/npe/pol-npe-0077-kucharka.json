@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kucharka",
+      "gen": "kucharki",
+      "dat": "kucharce",
+      "acc": "kucharkę",
+      "ins": "kucharką",
+      "loc": "kucharce",
+      "voc": "kucharko"
+    },
+    "plural": {
+      "nom": "kucharki",
+      "gen": "kucharek",
+      "dat": "kucharkom",
+      "acc": "kucharki",
+      "ins": "kucharkami",
+      "loc": "kucharkach",
+      "voc": "kucharki"
+    }
+  }
+}

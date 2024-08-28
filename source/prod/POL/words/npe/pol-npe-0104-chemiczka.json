@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "chemiczka",
+      "gen": "chemiczki",
+      "dat": "chemiczce",
+      "acc": "chemiczkę",
+      "ins": "chemiczką",
+      "loc": "chemiczce",
+      "voc": "chemiczko"
+    },
+    "plural": {
+      "nom": "chemiczki",
+      "gen": "chemiczek",
+      "dat": "chemiczkom",
+      "acc": "chemiczki",
+      "ins": "chemiczkami",
+      "loc": "chemiczkach",
+      "voc": "chemiczki"
+    }
+  }
+}

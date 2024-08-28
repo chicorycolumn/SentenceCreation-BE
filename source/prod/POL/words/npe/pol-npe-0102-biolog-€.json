@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "biolog",
+      "gen": "biologa",
+      "dat": "biologowi",
+      "acc": "biologa",
+      "ins": "biologiem",
+      "loc": "biologu",
+      "voc": "biologu"
+    },
+    "plural": {
+      "nom": "biolodzy",
+      "gen": "biologów",
+      "dat": "biologom",
+      "acc": "biologów",
+      "ins": "biologami",
+      "loc": "biologach",
+      "voc": "biolodzy"
+    }
+  }
+}

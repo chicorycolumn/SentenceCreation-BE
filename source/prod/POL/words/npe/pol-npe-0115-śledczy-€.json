@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "śledczy",
+      "gen": "śledczego",
+      "dat": "śledczemu",
+      "acc": "śledczego",
+      "ins": "śledczym",
+      "loc": "śledczym",
+      "voc": "śledczy"
+    },
+    "plural": {
+      "nom": "śledczy",
+      "gen": "śledczych",
+      "dat": "śledczym",
+      "acc": "śledczych",
+      "ins": "śledczymi",
+      "loc": "śledczych",
+      "voc": "śledczy"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "psychologist",
+      "gen": "psychologist's"
+    },
+    "plural": {
+      "nom": "psychologists",
+      "gen": "psychologists'"
+    }
+  }
+}

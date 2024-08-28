@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "assassin",
+      "gen": "assassin's"
+    },
+    "plural": {
+      "nom": "assassins",
+      "gen": "assassins'"
+    }
+  }
+}

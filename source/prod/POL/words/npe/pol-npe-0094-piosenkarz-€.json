@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "piosenkarz",
+      "gen": "piosenkarza",
+      "dat": "piosenkarzowi",
+      "acc": "piosenkarza",
+      "ins": "piosenkarzem",
+      "loc": "piosenkarzu",
+      "voc": "piosenkarzu"
+    },
+    "plural": {
+      "nom": "piosenkarze",
+      "gen": "piosenkarzy",
+      "dat": "piosenkarzom",
+      "acc": "piosenkarzy",
+      "ins": "piosenkarzami",
+      "loc": "piosenkarzach",
+      "voc": "piosenkarze"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "imam",
+      "gen": "imama",
+      "dat": "imamowi",
+      "acc": "imama",
+      "ins": "imamem",
+      "loc": "imamie",
+      "voc": "imamie"
+    },
+    "plural": {
+      "nom": "imamowie",
+      "gen": "imamów",
+      "dat": "imamom",
+      "acc": "imamów",
+      "ins": "imamami",
+      "loc": "imamach",
+      "voc": "imamowie"
+    }
+  }
+}

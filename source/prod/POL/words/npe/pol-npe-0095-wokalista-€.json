@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "wokalista",
+      "gen": "wokalisty",
+      "dat": "wokaliście",
+      "acc": "wokalistę",
+      "ins": "wokalistą",
+      "loc": "wokaliście",
+      "voc": "wokalisto"
+    },
+    "plural": {
+      "nom": "wokaliści",
+      "gen": "wokalistów",
+      "dat": "wokalistom",
+      "acc": "wokalistów",
+      "ins": "wokalistami",
+      "loc": "wokalistach",
+      "voc": "wokaliści"
+    }
+  }
+}

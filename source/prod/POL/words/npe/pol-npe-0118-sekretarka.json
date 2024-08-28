@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sekretarka",
+      "gen": "sekretarki",
+      "dat": "sekretarce",
+      "acc": "sekretarkę",
+      "ins": "sekretarką",
+      "loc": "sekretarce",
+      "voc": "sekretarko"
+    },
+    "plural": {
+      "nom": "sekretarki",
+      "gen": "sekretarek",
+      "dat": "sekretarkom",
+      "acc": "sekretarki",
+      "ins": "sekretarkami",
+      "loc": "sekretarkach",
+      "voc": "sekretarki"
+    }
+  }
+}

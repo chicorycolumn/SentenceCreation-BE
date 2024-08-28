@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "położna",
+      "gen": "położnej",
+      "dat": "położnej",
+      "acc": "położną",
+      "ins": "położną",
+      "loc": "położnej",
+      "voc": "położno"
+    },
+    "plural": {
+      "nom": "położne",
+      "gen": "położnych",
+      "dat": "położnym",
+      "acc": "położne",
+      "ins": "położnymi",
+      "loc": "położnych",
+      "voc": "położne"
+    }
+  }
+}

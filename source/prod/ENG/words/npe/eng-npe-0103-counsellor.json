@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "counsellor",
+      "gen": "counsellor's"
+    },
+    "plural": {
+      "nom": "counsellors",
+      "gen": "counsellors'"
+    }
+  }
+}

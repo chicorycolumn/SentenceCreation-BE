@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "żołnierka",
+      "gen": "żołnierki",
+      "dat": "żołnierce",
+      "acc": "żołnierkę",
+      "ins": "żołnierką",
+      "loc": "żołnierce",
+      "voc": "żołnierko"
+    },
+    "plural": {
+      "nom": "żołnierki",
+      "gen": "żołnierek",
+      "dat": "żołnierkom",
+      "acc": "żołnierki",
+      "ins": "żołnierkami",
+      "loc": "żołnierkach",
+      "voc": "żołnierki"
+    }
+  }
+}

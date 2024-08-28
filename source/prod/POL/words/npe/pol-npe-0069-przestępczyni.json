@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przestępczyni",
+      "gen": "przestępczyni",
+      "dat": "przestępczyni",
+      "acc": "przestępczynię",
+      "ins": "przestępczynią",
+      "loc": "przestępczyni",
+      "voc": "przestępczyni"
+    },
+    "plural": {
+      "nom": "przestępczynie",
+      "gen": "przestępczyń",
+      "dat": "przestępczyniom",
+      "acc": "przestępczynie",
+      "ins": "przestępczyniami",
+      "loc": "przestępczyniach",
+      "voc": "przestępczynie"
+    }
+  }
+}

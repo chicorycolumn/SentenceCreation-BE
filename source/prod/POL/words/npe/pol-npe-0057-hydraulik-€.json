@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "hydraulik",
+      "gen": "hydraulika",
+      "dat": "hydraulikowi",
+      "acc": "hydraulika",
+      "ins": "hydraulikiem",
+      "loc": "hydrauliku",
+      "voc": "hydrauliku"
+    },
+    "plural": {
+      "nom": "hydraulicy",
+      "gen": "hydraulików",
+      "dat": "hydraulikom",
+      "acc": "hydraulików",
+      "ins": "hydraulikami",
+      "loc": "hydraulikach",
+      "voc": "hydraulicy"
+    }
+  }
+}

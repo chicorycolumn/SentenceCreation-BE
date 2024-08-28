@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pacjentka",
+      "gen": "pacjentki",
+      "dat": "pacjentce",
+      "acc": "pacjentkę",
+      "ins": "pacjentką",
+      "loc": "pacjentce",
+      "voc": "pacjentko"
+    },
+    "plural": {
+      "nom": "pacjentki",
+      "gen": "pacjentek",
+      "dat": "pacjentkom",
+      "acc": "pacjentki",
+      "ins": "pacjentkami",
+      "loc": "pacjentkach",
+      "voc": "pacjentki"
+    }
+  }
+}

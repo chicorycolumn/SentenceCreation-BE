@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "optyk",
+      "gen": "optyka",
+      "dat": "optykowi",
+      "acc": "optyka",
+      "ins": "optykiem",
+      "loc": "optyku",
+      "voc": "optyku"
+    },
+    "plural": {
+      "nom": "optycy",
+      "gen": "optyków",
+      "dat": "optykom",
+      "acc": "optyków",
+      "ins": "optykami",
+      "loc": "optykach",
+      "voc": "optycy"
+    }
+  }
+}

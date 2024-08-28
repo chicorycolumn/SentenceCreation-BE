@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "chemik",
+      "gen": "chemik",
+      "dat": "chemik",
+      "acc": "chemik",
+      "ins": "chemik",
+      "loc": "chemik",
+      "voc": "chemik"
+    },
+    "plural": {
+      "nom": "chemik",
+      "gen": "chemik",
+      "dat": "chemik",
+      "acc": "chemik",
+      "ins": "chemik",
+      "loc": "chemik",
+      "voc": "chemik"
+    }
+  }
+}

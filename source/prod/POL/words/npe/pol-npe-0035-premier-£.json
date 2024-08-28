@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "premier",
+      "gen": "premiera",
+      "dat": "premierowi",
+      "acc": "premiera",
+      "ins": "premierem",
+      "loc": "premierze",
+      "voc": "premierze"
+    },
+    "plural": {
+      "nom": "premierzy",
+      "gen": "premierów",
+      "dat": "premierom",
+      "acc": "premierów",
+      "ins": "premierami",
+      "loc": "premierach",
+      "voc": "premierzy"
+    }
+  }
+}

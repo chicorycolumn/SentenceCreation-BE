@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "akuszer",
+      "gen": "akuszera",
+      "dat": "akuszerowi",
+      "acc": "akuszera",
+      "ins": "akuszerem",
+      "loc": "akuszerze",
+      "voc": "akuszerze"
+    },
+    "plural": {
+      "nom": "akuszerzy",
+      "gen": "akuszerów",
+      "dat": "akuszerom",
+      "acc": "akuszerów",
+      "ins": "akuszerami",
+      "loc": "akuszerach",
+      "voc": "akuszerzy"
+    }
+  }
+}

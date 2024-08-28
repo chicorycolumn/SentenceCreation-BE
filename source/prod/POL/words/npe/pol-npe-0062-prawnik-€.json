@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "prawnik",
+      "gen": "prawnika",
+      "dat": "prawnikowi",
+      "acc": "prawnika",
+      "ins": "prawnikiem",
+      "loc": "prawniku",
+      "voc": "prawniku"
+    },
+    "plural": {
+      "nom": "prawnicy",
+      "gen": "prawników",
+      "dat": "prawnikom",
+      "acc": "prawników",
+      "ins": "prawnikami",
+      "loc": "prawnikach",
+      "voc": "prawnicy"
+    }
+  }
+}

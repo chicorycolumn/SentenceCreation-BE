@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "śpiewaczka",
+      "gen": "śpiewaczki",
+      "dat": "śpiewaczce",
+      "acc": "śpiewaczkę",
+      "ins": "śpiewaczką",
+      "loc": "śpiewaczce",
+      "voc": "śpiewaczko"
+    },
+    "plural": {
+      "nom": "śpiewaczki",
+      "gen": "śpiewaczek",
+      "dat": "śpiewaczkom",
+      "acc": "śpiewaczki",
+      "ins": "śpiewaczkami",
+      "loc": "śpiewaczkach",
+      "voc": "śpiewaczki"
+    }
+  }
+}

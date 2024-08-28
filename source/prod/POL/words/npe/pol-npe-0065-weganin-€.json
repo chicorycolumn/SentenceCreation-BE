@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "weganin",
+      "gen": "weganina",
+      "dat": "weganinowi",
+      "acc": "weganina",
+      "ins": "weganinem",
+      "loc": "weganinie",
+      "voc": "weganinie"
+    },
+    "plural": {
+      "nom": "weganie",
+      "gen": { "isTerminus": true, "normal": ["wegan", "weganów"] },
+      "dat": "weganom",
+      "acc": { "isTerminus": true, "normal": ["wegan", "weganów"] },
+      "ins": "weganami",
+      "loc": "weganach",
+      "voc": "weganie"
+    }
+  }
+}

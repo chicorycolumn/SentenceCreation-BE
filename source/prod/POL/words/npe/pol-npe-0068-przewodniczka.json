@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "przewodniczka",
+      "gen": "przewodniczki",
+      "dat": "przewodniczce",
+      "acc": "przewodniczkę",
+      "ins": "przewodniczką",
+      "loc": "przewodniczce",
+      "voc": "przewodniczko"
+    },
+    "plural": {
+      "nom": "przewodniczki",
+      "gen": "przewodniczek",
+      "dat": "przewodniczkom",
+      "acc": "przewodniczki",
+      "ins": "przewodniczkami",
+      "loc": "przewodniczkach",
+      "voc": "przewodniczki"
+    }
+  }
+}

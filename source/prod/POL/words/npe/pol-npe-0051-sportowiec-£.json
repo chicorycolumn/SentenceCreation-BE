@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sportowiec",
+      "gen": "sportowca",
+      "dat": "sportowcowi",
+      "acc": "sportowca",
+      "ins": "sportowcem",
+      "loc": "sportowcu",
+      "voc": "sportowcze"
+    },
+    "plural": {
+      "nom": "sportowcy",
+      "gen": "sportowców",
+      "dat": "sportowcom",
+      "acc": "sportowców",
+      "ins": "sportowcami",
+      "loc": "sportowcach",
+      "voc": "sportowcy"
+    }
+  }
+}

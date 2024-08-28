@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "piosenkarka",
+      "gen": "piosenkarki",
+      "dat": "piosenkarce",
+      "acc": "piosenkarkę",
+      "ins": "piosenkarką",
+      "loc": "piosenkarce",
+      "voc": "piosenkarko"
+    },
+    "plural": {
+      "nom": "piosenkarki",
+      "gen": "piosenkarek",
+      "dat": "piosenkarkom",
+      "acc": "piosenkarki",
+      "ins": "piosenkarkami",
+      "loc": "piosenkarkach",
+      "voc": "piosenkarki"
+    }
+  }
+}

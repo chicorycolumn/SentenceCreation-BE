@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "teściowa",
+      "gen": "teściowej",
+      "dat": "teściowej",
+      "acc": "teściową",
+      "ins": "teściową",
+      "loc": "teściowej",
+      "voc": "teściowo"
+    },
+    "plural": {
+      "nom": "teściowe",
+      "gen": "teściowych",
+      "dat": "teściowym",
+      "acc": "teściowe",
+      "ins": "teściowymi",
+      "loc": "teściowych",
+      "voc": "teściowe"
+    }
+  }
+}

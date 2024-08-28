@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "prime minister",
+      "gen": "prime minister's"
+    },
+    "plural": {
+      "nom": "prime ministers",
+      "gen": "prime ministers'"
+    }
+  }
+}

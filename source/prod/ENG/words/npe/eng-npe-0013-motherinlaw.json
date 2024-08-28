@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mother-in-law",
+      "gen": "mother-in-law's"
+    },
+    "plural": {
+      "nom": "mothers-in-law",
+      "gen": false
+    }
+  }
+}

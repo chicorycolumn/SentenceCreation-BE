@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "aptekarka",
+      "gen": "aptekarki",
+      "dat": "aptekarce",
+      "acc": "aptekarkę",
+      "ins": "aptekarką",
+      "loc": "aptekarce",
+      "voc": "aptekarko"
+    },
+    "plural": {
+      "nom": "aptekarki",
+      "gen": "aptekarek",
+      "dat": "aptekarkom",
+      "acc": "aptekarki",
+      "ins": "aptekarkami",
+      "loc": "aptekarkach",
+      "voc": "aptekarki"
+    }
+  }
+}

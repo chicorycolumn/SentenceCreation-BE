@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "athlete",
+      "gen": "athlete's"
+    },
+    "plural": {
+      "nom": "athletes",
+      "gen": "athletes'"
+    }
+  }
+}

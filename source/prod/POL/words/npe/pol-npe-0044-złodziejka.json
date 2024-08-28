@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "złodziejka",
+      "gen": "złodziejki",
+      "dat": "złodziejce",
+      "acc": "złodziejkę",
+      "ins": "złodziejką",
+      "loc": "złodziejce",
+      "voc": "złodziejko"
+    },
+    "plural": {
+      "nom": "złodziejki",
+      "gen": "złodziejek",
+      "dat": "złodziejkom",
+      "acc": "złodziejki",
+      "ins": "złodziejkami",
+      "loc": "złodziejkach",
+      "voc": "złodziejki"
+    }
+  }
+}

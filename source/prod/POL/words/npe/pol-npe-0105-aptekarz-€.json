@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "aptekarz",
+      "gen": "aptekarza",
+      "dat": "aptekarzowi",
+      "acc": "aptekarza",
+      "ins": "aptekarzem",
+      "loc": "aptekarzu",
+      "voc": "aptekarzu"
+    },
+    "plural": {
+      "nom": "aptekarze",
+      "gen": "aptekarzy",
+      "dat": "aptekarzom",
+      "acc": "aptekarzy",
+      "ins": "aptekarzami",
+      "loc": "aptekarzach",
+      "voc": "aptekarze"
+    }
+  }
+}

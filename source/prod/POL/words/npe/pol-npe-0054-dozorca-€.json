@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dozorca",
+      "gen": "dozorcy",
+      "dat": "dozorcy",
+      "acc": "dozorcę",
+      "ins": "dozorcą",
+      "loc": "dozorcy",
+      "voc": "dozorco"
+    },
+    "plural": {
+      "nom": "dozorcy",
+      "gen": "dozorców",
+      "dat": "dozorcom",
+      "acc": "dozorców",
+      "ins": "dozorcami",
+      "loc": "dozorcach",
+      "voc": "dozorcy"
+    }
+  }
+}

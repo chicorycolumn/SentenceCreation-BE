@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "budowniczy",
+      "gen": "budowniczego",
+      "dat": "budowniczemu",
+      "acc": "budowniczego",
+      "ins": "budowniczym",
+      "loc": "budowniczym",
+      "voc": "budowniczy"
+    },
+    "plural": {
+      "nom": { "isTerminus": true, "normal": ["budowniczy", "budowniczowie"] },
+      "gen": "budowniczych",
+      "dat": "budowniczym",
+      "acc": "budowniczych",
+      "ins": "budowniczymi",
+      "loc": "budowniczych",
+      "voc": { "isTerminus": true, "normal": ["budowniczy", "budowniczowie"] }
+    }
+  }
+}

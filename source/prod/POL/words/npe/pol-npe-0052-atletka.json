@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "atletka",
+      "gen": "atletki",
+      "dat": "atletce",
+      "acc": "atletkę",
+      "ins": "atletką",
+      "loc": "atletce",
+      "voc": "atletko"
+    },
+    "plural": {
+      "nom": "atletki",
+      "gen": "atletek",
+      "dat": "atletkom",
+      "acc": "atletki",
+      "ins": "atletkami",
+      "loc": "atletkach",
+      "voc": "atletki"
+    }
+  }
+}

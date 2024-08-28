@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dziennikarka",
+      "gen": "dziennikarki",
+      "dat": "dziennikarce",
+      "acc": "dziennikarkę",
+      "ins": "dziennikarką",
+      "loc": "dziennikarce",
+      "voc": "dziennikarko"
+    },
+    "plural": {
+      "nom": "dziennikarki",
+      "gen": "dziennikarek",
+      "dat": "dziennikarkom",
+      "acc": "dziennikarki",
+      "ins": "dziennikarkami",
+      "loc": "dziennikarkach",
+      "voc": "dziennikarki"
+    }
+  }
+}

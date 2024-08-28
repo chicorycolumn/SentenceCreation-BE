@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "medyk",
+      "gen": "medyka",
+      "dat": "medykowi",
+      "acc": "medyka",
+      "ins": "medykiem",
+      "loc": "medyku",
+      "voc": "medyku"
+    },
+    "plural": {
+      "nom": "medycy",
+      "gen": "medyków",
+      "dat": "medykom",
+      "acc": "medyków",
+      "ins": "medykami",
+      "loc": "medykach",
+      "voc": "medycy"
+    }
+  }
+}

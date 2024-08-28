@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sprzątaczka",
+      "gen": "sprzątaczki",
+      "dat": "sprzątaczce",
+      "acc": "sprzątaczkę",
+      "ins": "sprzątaczką",
+      "loc": "sprzątaczce",
+      "voc": "sprzątaczko"
+    },
+    "plural": {
+      "nom": "sprzątaczki",
+      "gen": "sprzątaczek",
+      "dat": "sprzątaczkom",
+      "acc": "sprzątaczki",
+      "ins": "sprzątaczkami",
+      "loc": "sprzątaczkach",
+      "voc": "sprzątaczki"
+    }
+  }
+}

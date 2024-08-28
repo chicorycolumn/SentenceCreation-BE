@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "caretaker",
+      "gen": "caretaker's"
+    },
+    "plural": {
+      "nom": "caretakers",
+      "gen": "caretakers'"
+    }
+  }
+}

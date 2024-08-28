@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lekkoatleta",
+      "gen": "lekkoatlety",
+      "dat": "lekkoatlecie",
+      "acc": "lekkoatletę",
+      "ins": "lekkoatletą",
+      "loc": "lekkoatlecie",
+      "voc": "lekkoatleto"
+    },
+    "plural": {
+      "nom": "lekkoatleci",
+      "gen": "lekkoatletów",
+      "dat": "lekkoatletom",
+      "acc": "lekkoatletów",
+      "ins": "lekkoatletami",
+      "loc": "lekkoatletach",
+      "voc": "lekkoatleci"
+    }
+  }
+}

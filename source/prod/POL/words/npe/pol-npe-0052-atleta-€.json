@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "atleta",
+      "gen": "atlety",
+      "dat": "atlecie",
+      "acc": "atletę",
+      "ins": "atletą",
+      "loc": "atlecie",
+      "voc": "atleto"
+    },
+    "plural": {
+      "nom": "atleci",
+      "gen": "atletów",
+      "dat": "atletom",
+      "acc": "atletów",
+      "ins": "atletami",
+      "loc": "atletach",
+      "voc": "atleci"
+    }
+  }
+}

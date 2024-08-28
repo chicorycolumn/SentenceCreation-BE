@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "model",
+      "gen": "modela",
+      "dat": "modelowi",
+      "acc": "modela",
+      "ins": "modelem",
+      "loc": "modelu",
+      "voc": "modelu"
+    },
+    "plural": {
+      "nom": "modele",
+      "gen": {
+        "isTerminus": true,
+        "normal": ["modeli", "modelów"]
+      },
+      "dat": "modelom",
+      "acc": {
+        "isTerminus": true,
+        "normal": ["modeli", "modelów"]
+      },
+      "ins": "modelami",
+      "loc": "modelach",
+      "voc": "modele"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kierowca",
+      "gen": "kierowcy",
+      "dat": "kierowcy",
+      "acc": "kierowcę",
+      "ins": "kierowcą",
+      "loc": "kierowcy",
+      "voc": "kierowco"
+    },
+    "plural": {
+      "nom": "kierowcy",
+      "gen": "kierowców",
+      "dat": "kierowcom",
+      "acc": "kierowców",
+      "ins": "kierowcami",
+      "loc": "kierowcach",
+      "voc": "kierowcy"
+    }
+  }
+}

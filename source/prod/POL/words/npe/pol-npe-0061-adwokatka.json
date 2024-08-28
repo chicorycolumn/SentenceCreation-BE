@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "adwokatka",
+      "gen": "adwokatki",
+      "dat": "adwokatce",
+      "acc": "adwokatkę",
+      "ins": "adwokatką",
+      "loc": "adwokatce",
+      "voc": "adwokatko"
+    },
+    "plural": {
+      "nom": "adwokatki",
+      "gen": "adwokatek",
+      "dat": "adwokatkom",
+      "acc": "adwokatki",
+      "ins": "adwokatkami",
+      "loc": "adwokatkach",
+      "voc": "adwokatki"
+    }
+  }
+}

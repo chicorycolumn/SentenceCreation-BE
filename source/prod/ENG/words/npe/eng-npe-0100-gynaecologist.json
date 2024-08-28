@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "gynaecologist",
+      "gen": "gynaecologist's"
+    },
+    "plural": {
+      "nom": "gynaecologists",
+      "gen": "gynaecologists'"
+    }
+  }
+}

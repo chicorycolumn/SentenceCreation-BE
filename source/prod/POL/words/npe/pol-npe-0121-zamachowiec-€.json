@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zamachowiec",
+      "gen": "zamachowca",
+      "dat": "zamachowcowi",
+      "acc": "zamachowca",
+      "ins": "zamachowcem",
+      "loc": "zamachowcu",
+      "voc": "zamachowcze"
+    },
+    "plural": {
+      "nom": "zamachowcy",
+      "gen": "zamachowców",
+      "dat": "zamachowcom",
+      "acc": "zamachowców",
+      "ins": "zamachowcami",
+      "loc": "zamachowcach",
+      "voc": "zamachowcy"
+    }
+  }
+}
