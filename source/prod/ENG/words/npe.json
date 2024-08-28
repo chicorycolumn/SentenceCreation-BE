@@ -1151,94 +1151,101 @@
     "register": 1,
     "frequency": 4
   },
-
-  //
-  //
-  //
-  //
-  //
-  //
-
   {
-    "lemma": "protagonist",
-    "id": "eng-npe-0037-protagonist",
+    "lemma": "character",
+    "id": "eng-npe-0114-character",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4
   },
+
+  //
+  //
+  //
+  //
+  //
+  //
+
   {
     "lemma": "rabbi",
-    "id": "eng-npe-9999-rabbi",
+    "id": "eng-npe-0115-rabbi",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4
   },
   {
     "lemma": "imam",
-    "id": "eng-npe-9999-imam",
+    "id": "eng-npe-0116-imam",
     "gender": "m",
     "register": 1,
     "frequency": 4
   },
   {
     "lemma": "pedestrian",
-    "id": "eng-npe-0126-pedestrian",
+    "id": "eng-npe-0117-pedestrian",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
   },
   {
     "lemma": "athlete",
-    "id": "eng-npe-9999-athlete",
+    "id": "eng-npe-0118-athlete",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
   },
   {
     "lemma": "janitor",
-    "id": "eng-npe-9999-janitor",
+    "id": "eng-npe-0119-janitor",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
+  {
+    "lemma": "caretaker",
+    "id": "eng-npe-0120-caretaker",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
   },
   {
     "lemma": "cleaner",
-    "id": "eng-npe-9999-cleaner",
+    "id": "eng-npe-0121-cleaner",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
   },
   {
     "lemma": "electrician",
-    "id": "eng-npe-9999-electrician",
+    "id": "eng-npe-0122-electrician",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
   },
   {
     "lemma": "plumber",
-    "id": "eng-npe-9999-plumber",
+    "id": "eng-npe-0123-plumber",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
   },
   {
     "lemma": "builder",
-    "id": "eng-npe-9999-builder",
+    "id": "eng-npe-0124-builder",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
   },
   {
     "lemma": "butcher",
-    "id": "eng-npe-9999-butcher",
+    "id": "eng-npe-0125-butcher",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
   },
   {
     "lemma": "baker",
-    "id": "eng-npe-9999-baker",
+    "id": "eng-npe-0126-baker",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3

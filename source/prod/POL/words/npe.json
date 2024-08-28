@@ -3098,7 +3098,7 @@
   },
   {
     "lemma": "bohater",
-    "id": "pol-npe-0124-bohater(protagonist)-€",
+    "id": "pol-npe-0124-bohater(character)-€",
     "_inflectionsRoot": "pol-npe-0123-bohater(hero)-€",
     "frequency": 4,
     "register": 1,
@@ -3112,7 +3112,7 @@
   },
   {
     "lemma": "bohaterka",
-    "id": "pol-npe-0124-bohaterka(protagonist)",
+    "id": "pol-npe-0124-bohaterka(character)",
     "_inflectionsRoot": "pol-npe-0123-bohaterka(heroine)",
     "frequency": 4,
     "register": 1,

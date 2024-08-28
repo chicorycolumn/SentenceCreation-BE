@@ -1048,26 +1048,26 @@
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0113"],
-      "POL": ["pol-npe-0123"]
+      "POL": ["pol-npe-0123-bohater(hero)"]
     },
     "papers": ["concrete", "positive judgment", "person", "living"],
     "topics": ["people", "judgment"]
   },
   {
-    "key": "npe-0106-protagonist",
+    "key": "npe-0106-character",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0037-protagonist"],
-      "POL": ["pol-npe-0124"]
+      "ENG": ["eng-npe-0114-character"],
+      "POL": ["pol-npe-0124-bohater(character)"]
     },
-    "papers": ["concrete", "person", "living"],
+    "papers": ["abstract"],
     "topics": ["fantasy", "people", "writing"]
   },
   {
     "key": "npe-0107-rabbi",
     "traductions": {
       "SPA": [],
-      "ENG": [],
+      "ENG": ["eng-npe-0115"],
       "POL": ["pol-npe-0125"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -1077,7 +1077,7 @@
     "key": "npe-0108-imam",
     "traductions": {
       "SPA": [],
-      "ENG": [],
+      "ENG": ["eng-npe-0116"],
       "POL": ["pol-npe-0126"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -1087,7 +1087,7 @@
     "key": "npe-0109-pedestrian",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0126-pedestrian"],
+      "ENG": ["eng-npe-0117-pedestrian"],
       "POL": ["pol-npe-0127"]
     },
     "papers": ["concrete", "transport", "person", "living"],
@@ -1098,7 +1098,7 @@
     "key": "npe-0110-athlete",
     "traductions": {
       "SPA": [],
-      "ENG": [],
+      "ENG": ["eng-npe-0118"],
       "POL": ["pol-npe-0051", "pol-npe-0052"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -1108,7 +1108,7 @@
     "key": "npe-0111-janitor",
     "traductions": {
       "SPA": [],
-      "ENG": [],
+      "ENG": ["eng-npe-0119", "eng-npe-0120"],
       "POL": ["pol-npe-0053", "pol-npe-0054"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -1118,7 +1118,7 @@
     "key": "npe-0112-cleaner",
     "traductions": {
       "SPA": [],
-      "ENG": [],
+      "ENG": ["eng-npe-0121"],
       "POL": ["pol-npe-0055"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -1128,7 +1128,7 @@
     "key": "npe-0113-electrician",
     "traductions": {
       "SPA": [],
-      "ENG": [],
+      "ENG": ["eng-npe-0122"],
       "POL": ["pol-npe-0056"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -1138,7 +1138,7 @@
     "key": "npe-0114-plumber",
     "traductions": {
       "SPA": [],
-      "ENG": [],
+      "ENG": ["eng-npe-0123"],
       "POL": ["pol-npe-0057"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -1148,7 +1148,7 @@
     "key": "npe-0115-builder",
     "traductions": {
       "SPA": [],
-      "ENG": [],
+      "ENG": ["eng-npe-0124"],
       "POL": ["pol-npe-0058"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -1158,7 +1158,7 @@
     "key": "npe-0116-butcher",
     "traductions": {
       "SPA": [],
-      "ENG": [],
+      "ENG": ["eng-npe-0125"],
       "POL": ["pol-npe-0059"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -1168,7 +1168,7 @@
     "key": "npe-0117-baker",
     "traductions": {
       "SPA": [],
-      "ENG": [],
+      "ENG": ["eng-npe-0126"],
       "POL": ["pol-npe-0060"]
     },
     "papers": ["concrete", "profession", "person", "living"],
