@@ -1178,7 +1178,7 @@
     "key": "npe-0118-optyk",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-9999-optician"],
+      "ENG": ["eng-npe-0127-optician"],
       "POL": ["pol-npe-0113"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -1188,7 +1188,7 @@
     "key": "npe-0119-chef",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-9999-chef"],
+      "ENG": ["eng-npe-0128-chef"],
       "POL": ["pol-npe-0128"]
     },
     "papers": ["concrete", "profession", "person", "living"],
@@ -1198,8 +1198,28 @@
     "key": "npe-0120-GP",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-9999-GP", "eng-npe-9999-physician"],
+      "ENG": ["eng-npe-0129-GP", "eng-npe-0130-physician"],
       "POL": ["pol-npe-0129"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["medicine", "work", "people"]
+  },
+  {
+    "key": "npe-0121-paramedic",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0131"],
+      "POL": ["pol-npe-0130"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["medicine", "work", "people"]
+  },
+  {
+    "key": "npe-0122-medic",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0132"],
+      "POL": ["pol-npe-0131"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]

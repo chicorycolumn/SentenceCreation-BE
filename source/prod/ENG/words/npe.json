@@ -1158,14 +1158,6 @@
     "register": 1,
     "frequency": 4
   },
-
-  //
-  //
-  //
-  //
-  //
-  //
-
   {
     "lemma": "rabbi",
     "id": "eng-npe-0115-rabbi",
@@ -1252,39 +1244,53 @@
   },
   {
     "lemma": "optician",
-    "id": "eng-npe-9999-optician",
+    "id": "eng-npe-0127-optician",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
   },
   {
     "lemma": "chef",
-    "id": "eng-npe-9999-chef",
+    "id": "eng-npe-0128-chef",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
   },
   {
-    "lemma": "physician",
-    "id": "eng-npe-9999-physician",
+    "lemma": "GP",
+    "id": "eng-npe-0129-GP",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4
   },
   {
-    "lemma": "GP",
-    "id": "eng-npe-9999-GP",
+    "lemma": "physician",
+    "id": "eng-npe-0130-physician",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "paramedic",
+    "id": "eng-npe-0131-paramedic",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4
   },
   {
     "lemma": "medic",
-    "id": "eng-npe-9999-medic",
+    "id": "eng-npe-0132-medic",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4
   },
+
+  //
+  //
+  //
+  //
+  //
+  //
 
   {
     "lemma": "mate",

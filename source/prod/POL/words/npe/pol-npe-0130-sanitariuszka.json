@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sanitariuszka",
+      "gen": "sanitariuszki",
+      "dat": "sanitariuszce",
+      "acc": "sanitariuszkę",
+      "ins": "sanitariuszką",
+      "loc": "sanitariuszce",
+      "voc": "sanitariuszko"
+    },
+    "plural": {
+      "nom": "sanitariuszki",
+      "gen": "sanitariuszek",
+      "dat": "sanitariuszkom",
+      "acc": "sanitariuszki",
+      "ins": "sanitariuszkami",
+      "loc": "sanitariuszkach",
+      "voc": "sanitariuszki"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "sanitariusz",
+      "gen": "sanitariusza",
+      "dat": "sanitariuszowi",
+      "acc": "sanitariusza",
+      "ins": "sanitariuszem",
+      "loc": "sanitariuszu",
+      "voc": "sanitariuszu"
+    },
+    "plural": {
+      "nom": "sanitariusze",
+      "gen": {
+        "isTerminus": true,
+        "normal": ["sanitariuszy", "sanitariuszów"]
+      },
+      "dat": "sanitariuszom",
+      "acc": {
+        "isTerminus": true,
+        "normal": ["sanitariuszy", "sanitariuszów"]
+      },
+      "ins": "sanitariuszami",
+      "loc": "sanitariuszach",
+      "voc": "sanitariusze"
+    }
+  }
+}

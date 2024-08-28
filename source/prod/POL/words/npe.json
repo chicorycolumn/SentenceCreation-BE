@@ -3180,5 +3180,28 @@
     "frequency": 2,
     "register": 1,
     "gender": "f"
+  },
+  {
+    "lemma": "sanitariusz",
+    "id": "pol-npe-0130-sanitariusz-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "sanitariuszka",
+    "id": "pol-npe-0130-sanitariuszka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "medyk",
+    "id": "pol-npe-0131-medyk-£",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_PersonalGenders"
   }
 ]
