@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kurzajka",
+      "gen": "kurzajki",
+      "dat": "kurzajce",
+      "acc": "kurzajkę",
+      "ins": "kurzajką",
+      "loc": "kurzajce",
+      "voc": "kurzajko"
+    },
+    "plural": {
+      "nom": "kurzajki",
+      "gen": "kurzajek",
+      "dat": "kurzajkom",
+      "acc": "kurzajki",
+      "ins": "kurzajkami",
+      "loc": "kurzajkach",
+      "voc": "kurzajki"
+    }
+  }
+}

@@ -18272,4 +18272,92 @@
     "_lacking": true,
     "tantumSingulare": true
   },
+  {
+    "lemma": "tlenek węgla",
+    "id": "pol-nco-1163-tlenek węgla",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3",
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "czad",
+    "id": "pol-nco-1164-czad",
+    "frequency": 4,
+    "register": 6,
+    "gender": "m3",
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "lina",
+    "id": "pol-nco-1165-lina",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "sznur",
+    "id": "pol-nco-1166-sznur",
+    "frequency": 2,
+    "register": 1,
+    "gender": "m3"
+  },
+  {
+    "lemma": "arbuz",
+    "id": "pol-nco-1167-arbuz",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
+  },
+  {
+    "lemma": "grejpfrut",
+    "id": "pol-nco-1168-grejpfrut",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
+  },
+  {
+    "lemma": "karczoch",
+    "id": "pol-nco-1169-karczoch",
+    "frequency": 5,
+    "register": 1,
+    "gender": "m3"
+  },
+  {
+    "lemma": "figa",
+    "id": "pol-nco-1170-figa",
+    "frequency": 5,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "brodawka",
+    "id": "pol-nco-1171-brodawka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "kurzajka",
+    "id": "pol-nco-1172-kurzajka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "pieprzyk",
+    "id": "pol-nco-1173-pieprzyk",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
+  },
+  {
+    "lemma": "blizna",
+    "id": "pol-nco-1174-blizna",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
 ]

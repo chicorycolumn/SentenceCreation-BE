@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lina",
+      "gen": "liny",
+      "dat": "linie",
+      "acc": "linę",
+      "ins": "liną",
+      "loc": "linie",
+      "voc": "lino"
+    },
+    "plural": {
+      "nom": "liny",
+      "gen": "lin",
+      "dat": "linom",
+      "acc": "liny",
+      "ins": "linami",
+      "loc": "linach",
+      "voc": "liny"
+    }
+  }
+}

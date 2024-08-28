@@ -1,0 +1,27 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "arbuz",
+      "gen": "arbuza",
+      "dat": "arbuzowi",
+      "acc": {
+        "isTerminus": true,
+        "normal": [
+          "arbuza", "arbuz"
+        ]
+      },
+      "ins": "arbuzem",
+      "loc": "arbuzie",
+      "voc": "arbuzie"
+    },
+    "plural": {
+      "nom": "arbuzy",
+      "gen": "arbuzów",
+      "dat": "arbuzom",
+      "acc": "arbuzy",
+      "ins": "arbuzami",
+      "loc": "arbuzach",
+      "voc": "arbuzy"
+    }
+  }
+}

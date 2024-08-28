@@ -5393,7 +5393,7 @@
       "POL": ["pol-nco-0528-orzech"]
     },
     "papers": ["s1", "food", "concrete"],
-    "topics": ["kitchen", "inside", "restaurant", "medicine"]
+    "topics": ["kitchen", "inside", "restaurant"]
   },
   {
     "key": "nco-0528-belly",
@@ -11102,5 +11102,85 @@
     },
     "papers": ["gas", "uncountable", "chemical", "danger"],
     "topics": ["chemistry"]
+  },
+  {
+    "key": "nco-1083-rope",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1381-rope"],
+      "POL": ["pol-nco-1165-lina", "pol-nco-1166-sznur"]
+    },
+    "papers": ["s2", "concrete"],
+    "topics": ["engineering"]
+  },
+  {
+    "key": "nco-1084-watermelon",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1382-watermelon"],
+      "POL": ["pol-nco-1167-arbuz"]
+    },
+    "papers": ["s3", "food", "concrete", "fruit"],
+    "topics": ["kitchen", "inside", "restaurant"]
+  },
+  {
+    "key": "nco-1085-grapefruit",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1383-grapefruit"],
+      "POL": ["pol-nco-1168-grejpfrut"]
+    },
+    "papers": ["s2", "food", "concrete", "fruit"],
+    "topics": ["kitchen", "inside", "restaurant"]
+  },
+  {
+    "key": "nco-1086-artichoke",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1384-artichoke"],
+      "POL": ["pol-nco-1169-karczoch"]
+    },
+    "papers": ["s2", "food", "concrete", "vegetable"],
+    "topics": ["kitchen", "inside", "restaurant"]
+  },
+  {
+    "key": "nco-1087-fig",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1385-fig"],
+      "POL": ["pol-nco-1170-figa"]
+    },
+    "papers": ["s1", "food", "concrete", "fruit"],
+    "topics": ["kitchen", "inside", "restaurant"]
+  },
+  {
+    "key": "nco-1088-wart",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1386-wart"],
+      "POL": ["pol-nco-1171-brodawka", "pol-nco-1172-kurzajka"]
+    },
+    "papers": ["concrete"],
+    "topics": ["disease", "medicine", "appearance"]
+  },
+  {
+    "key": "nco-1089-mole(medical)",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1387"],
+      "POL": ["pol-nco-1173-pieprzyk"]
+    },
+    "papers": ["concrete"],
+    "topics": ["disease", "medicine", "appearance"]
+  },
+  {
+    "key": "nco-1090-scar",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1388-scar"],
+      "POL": ["pol-nco-1174-blizna"]
+    },
+    "papers": ["concrete"],
+    "topics": ["disease", "medicine", "appearance"]
   },
 ]

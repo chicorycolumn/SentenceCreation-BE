@@ -10925,4 +10925,67 @@
     "_lacking": true,
     "tantumSingulare": true
   },
+  {
+    "lemma": "carbon monoxide",
+    "id": "eng-nco-1380-carbon monoxide",
+    "gender": "n",
+    "register": 1,
+    "frequency": 4,
+    "_lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "rope",
+    "id": "eng-nco-1381-rope",
+    "gender": "n",
+    "register": 2,
+    "frequency": 1
+  },
+  {
+    "lemma": "watermelon",
+    "id": "eng-nco-1382-watermelon",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "grapefruit",
+    "id": "eng-nco-1383-grapefruit",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "artichoke",
+    "id": "eng-nco-1384-artichoke",
+    "gender": "n",
+    "frequency": 5,
+    "register": 1
+  },
+  {
+    "lemma": "fig",
+    "id": "eng-nco-1385-fig",
+    "gender": "n",
+    "frequency": 5,
+    "register": 1
+  },
+  {
+    "lemma": "wart",
+    "id": "eng-nco-1386-wart",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "mole",
+    "id": "eng-nco-1387-mole(medical)",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "medical",
+      "emoji": "🩺"
+    }
+  },
 ]

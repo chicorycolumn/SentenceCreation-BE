@@ -1,0 +1,10 @@
+{
+  "inflections": {
+    "onlyForm": {
+      "isTerminus": true,
+      "normal": [
+        "dzisiaj", "dziś"
+      ]
+    }
+  }
+}

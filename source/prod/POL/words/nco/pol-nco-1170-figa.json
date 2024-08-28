@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "figa",
+      "gen": "figi",
+      "dat": "fidze",
+      "acc": "figę",
+      "ins": "figą",
+      "loc": "fidze",
+      "voc": "figo"
+    },
+    "plural": {
+      "nom": "figi",
+      "gen": "fig",
+      "dat": "figom",
+      "acc": "figi",
+      "ins": "figami",
+      "loc": "figach",
+      "voc": "figi"
+    }
+  }
+}

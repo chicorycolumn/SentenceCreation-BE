@@ -1,0 +1,27 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pieprzyk",
+      "gen": {
+        "isTerminus": true,
+        "normal": [
+          "pieprzyka", "pieprzyku"
+        ]
+      },
+      "dat": "pieprzykowi",
+      "acc": "pieprzyk",
+      "ins": "pieprzykiem",
+      "loc": "pieprzyku",
+      "voc": "pieprzyku"
+    },
+    "plural": {
+      "nom": "pieprzyki",
+      "gen": "pieprzyków",
+      "dat": "pieprzykom",
+      "acc": "pieprzyki",
+      "ins": "pieprzykami",
+      "loc": "pieprzykach",
+      "voc": "pieprzyki"
+    }
+  }
+}

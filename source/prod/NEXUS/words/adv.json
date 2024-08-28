@@ -1,0 +1,42 @@
+[
+  {
+    "key": "adv-0001-today",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-adv-0001-today"],
+      "POL": ["pol-adv-0001-dzisiaj"]
+    },
+    "papers": ["abstract"],
+    "topics": ["time"]
+  },
+  {
+    "key": "adv-0002-tomorrow",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-adv-0002-tomorrow"],
+      "POL": ["pol-adv-0002-jutro"]
+    },
+    "papers": ["abstract"],
+    "topics": ["time"]
+  },
+  {
+    "key": "adv-0003-yesterday",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-adv-0003-yesterday"],
+      "POL": ["pol-adv-0003-wczoraj"]
+    },
+    "papers": ["abstract"],
+    "topics": ["time"]
+  },
+  {
+    "key": "adv-0004-always",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-adv-0004-always"],
+      "POL": ["pol-adv-0004-zawsze"]
+    },
+    "papers": ["abstract"],
+    "topics": ["time"]
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "blizna",
+      "gen": "blizny",
+      "dat": "bliźnie",
+      "acc": "bliznę",
+      "ins": "blizną",
+      "loc": "bliźnie",
+      "voc": "blizno"
+    },
+    "plural": {
+      "nom": "blizny",
+      "gen": "blizn",
+      "dat": "bliznom",
+      "acc": "blizny",
+      "ins": "bliznami",
+      "loc": "bliznach",
+      "voc": "blizny"
+    }
+  }
+}
