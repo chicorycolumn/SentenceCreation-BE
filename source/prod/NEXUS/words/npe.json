@@ -1223,5 +1223,15 @@
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]
-  }
+  },
+  {
+    "key": "npe-0123-prisoner",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0133"],
+      "POL": ["pol-npe-0132"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["law", "crime", "people"]
+  },
 ]

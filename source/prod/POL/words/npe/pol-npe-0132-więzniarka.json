@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "więźniarka",
+      "gen": "więźniarki",
+      "dat": "więźniarce",
+      "acc": "więźniarkę",
+      "ins": "więźniarką",
+      "loc": "więźniarce",
+      "voc": "więźniarko"
+    },
+    "plural": {
+      "nom": "więźniarki",
+      "gen": "więźniarek",
+      "dat": "więźniarkom",
+      "acc": "więźniarki",
+      "ins": "więźniarkami",
+      "loc": "więźniarkach",
+      "voc": "więźniarki"
+    }
+  }
+}

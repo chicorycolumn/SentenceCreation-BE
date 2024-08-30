@@ -1285,6 +1285,13 @@
     "frequency": 4
   },
   {
+    "lemma": "prisoner",
+    "id": "eng-npe-0133-prisoner",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+  {
     "lemma": "mate",
     "id": "eng-npe-8888-mate",
     "gender": "_PersonalGenders",
@@ -1295,13 +1302,6 @@
     "lemma": "angel",
     "id": "eng-npe-8888-angel",
     "gender": "_Genders",
-    "register": 1,
-    "frequency": 4
-  },
-  {
-    "lemma": "prisoner",
-    "id": "eng-npe-8888-prisoner",
-    "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4
   },
