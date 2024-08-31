@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "prababcia",
+      "gen": "prababci",
+      "dat": "prababci",
+      "acc": "prababcię",
+      "ins": "prababcią",
+      "loc": "prababci",
+      "voc": "prababciu"
+    },
+    "plural": {
+      "nom": "prababcie",
+      "gen": "prababć",
+      "dat": "prababciom",
+      "acc": "prababcie",
+      "ins": "prababciami",
+      "loc": "prababciach",
+      "voc": "prababcie"
+    }
+  }
+}

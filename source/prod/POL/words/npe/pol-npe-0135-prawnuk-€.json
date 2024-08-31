@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "prawnuk",
+      "gen": "prawnuka",
+      "dat": "prawnukowi",
+      "acc": "prawnuka",
+      "ins": "prawnukiem",
+      "loc": "prawnuku",
+      "voc": "prawnuku"
+    },
+    "plural": {
+      "nom": { "isTerminus": true, "normal": ["prawnukowie", "prawnuki"] },
+      "gen": "prawnuków",
+      "dat": "prawnukom",
+      "acc": "prawnuków",
+      "ins": "prawnukami",
+      "loc": "prawnukach",
+      "voc": { "isTerminus": true, "normal": ["prawnukowie", "prawnucy"] }
+    }
+  }
+}

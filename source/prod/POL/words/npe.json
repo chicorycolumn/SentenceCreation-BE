@@ -3218,5 +3218,35 @@
     "frequency": 4,
     "register": 1,
     "gender": "f"
-  }
+  },
+  {
+    "lemma": "pradziadek",
+    "id": "pol-npe-0133-pradziadek-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "prababcia",
+    "id": "pol-npe-0133-prababcia",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "prawnuk",
+    "id": "pol-npe-0134-prawnuk-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "prawnuczka",
+    "id": "pol-npe-0134-prawnuczka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
 ]

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pradziadek",
+      "gen": "pradziadka",
+      "dat": "pradziadkowi",
+      "acc": "pradziadka",
+      "ins": "pradziadkiem",
+      "loc": "pradziadku",
+      "voc": "pradziadku"
+    },
+    "plural": {
+      "nom": "pradziadkowie",
+      "gen": "pradziadków",
+      "dat": "pradziadkom",
+      "acc": "pradziadków",
+      "ins": "pradziadkami",
+      "loc": "pradziadkach",
+      "voc": "pradziadkowie"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "great-grandparent",
+      "gen": "great-grandparent's"
+    },
+    "plural": {
+      "nom": "great-grandparents",
+      "gen": "great-grandparents'"
+    }
+  }
+}

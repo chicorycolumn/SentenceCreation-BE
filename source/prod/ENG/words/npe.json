@@ -1292,6 +1292,49 @@
     "frequency": 4
   },
   {
+    "lemma": "great-grandfather",
+    "id": "eng-npe-0134-greatgrandfather",
+    "gender": "m",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "great-grandmother",
+    "id": "eng-npe-0134-greatgrandmother",
+    "gender": "f",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "great-grandparent",
+    "id": "eng-npe-0134-greatgrandparent",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "great-grandson",
+    "id": "eng-npe-0135-greatgrandson",
+    "gender": "m",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "great-granddaughter",
+    "id": "eng-npe-0135-greatgranddaughter",
+    "gender": "f",
+    "register": 1,
+    "frequency": 4
+  },
+  {
+    "lemma": "great-grandchild",
+    "id": "eng-npe-0135-greatgrandchild",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+  
+  {
     "lemma": "mate",
     "id": "eng-npe-8888-mate",
     "gender": "_PersonalGenders",
@@ -1355,5 +1398,5 @@
     "gender": "_PersonalGenders",
     "register": 7,
     "frequency": 3
-  }
+  },
 ]

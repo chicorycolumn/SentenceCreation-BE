@@ -1234,4 +1234,24 @@
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["law", "crime", "people"]
   },
+  {
+    "key": "npe-0123-greatgrandmother/greatgrandfather/greatgrandparent",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0134"],
+      "POL": ["pol-npe-0133"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
+  {
+    "key": "npe-0124-greatgranddaughter/greatgrandson/greatgrandchild",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0135"],
+      "POL": ["pol-npe-0134"]
+    },
+    "papers": ["concrete", "relative", "person", "living"],
+    "topics": ["people"]
+  },
 ]

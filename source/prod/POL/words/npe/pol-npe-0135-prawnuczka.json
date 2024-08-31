@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "prawnuczka",
+      "gen": "prawnuczki",
+      "dat": "prawnuczce",
+      "acc": "prawnuczkę",
+      "ins": "prawnuczką",
+      "loc": "prawnuczce",
+      "voc": "prawnuczko"
+    },
+    "plural": {
+      "nom": "prawnuczki",
+      "gen": "prawnuczek",
+      "dat": "prawnuczkom",
+      "acc": "prawnuczki",
+      "ins": "prawnuczkami",
+      "loc": "prawnuczkach",
+      "voc": "prawnuczki"
+    }
+  }
+}
