@@ -1271,64 +1271,71 @@
     "frequency": 4
   },
   {
+    "lemma": "carpenter",
+    "id": "eng-npe-0131-carpenter",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+  {
     "lemma": "paramedic",
-    "id": "eng-npe-0131-paramedic",
+    "id": "eng-npe-0132-paramedic",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4
   },
   {
     "lemma": "medic",
-    "id": "eng-npe-0132-medic",
+    "id": "eng-npe-0133-medic",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4
   },
   {
     "lemma": "prisoner",
-    "id": "eng-npe-0133-prisoner",
+    "id": "eng-npe-0134-prisoner",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4
   },
   {
     "lemma": "great-grandfather",
-    "id": "eng-npe-0134-greatgrandfather",
+    "id": "eng-npe-0135-greatgrandfather",
     "gender": "m",
     "register": 1,
     "frequency": 4
   },
   {
     "lemma": "great-grandmother",
-    "id": "eng-npe-0134-greatgrandmother",
+    "id": "eng-npe-0135-greatgrandmother",
     "gender": "f",
     "register": 1,
     "frequency": 4
   },
   {
     "lemma": "great-grandparent",
-    "id": "eng-npe-0134-greatgrandparent",
+    "id": "eng-npe-0135-greatgrandparent",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4
   },
   {
     "lemma": "great-grandson",
-    "id": "eng-npe-0135-greatgrandson",
+    "id": "eng-npe-0136-greatgrandson",
     "gender": "m",
     "register": 1,
     "frequency": 4
   },
   {
     "lemma": "great-granddaughter",
-    "id": "eng-npe-0135-greatgranddaughter",
+    "id": "eng-npe-0136-greatgranddaughter",
     "gender": "f",
     "register": 1,
     "frequency": 4
   },
   {
     "lemma": "great-grandchild",
-    "id": "eng-npe-0135-greatgrandchild",
+    "id": "eng-npe-0136-greatgrandchild",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4

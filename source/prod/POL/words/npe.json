@@ -3182,8 +3182,24 @@
     "gender": "f"
   },
   {
+    "lemma": "stolarz",
+    "id": "pol-npe-0130-stolarz-£",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_PersonalGenders"
+  },
+  {
+    "lemma": "cieśla",
+    "id": "pol-npe-0131-cieśla-£",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_PersonalGenders"
+  },
+  {
     "lemma": "sanitariusz",
-    "id": "pol-npe-0130-sanitariusz-€",
+    "id": "pol-npe-0132-sanitariusz-€",
     "frequency": 4,
     "register": 1,
     "gender": "m1",
@@ -3191,14 +3207,14 @@
   },
   {
     "lemma": "sanitariuszka",
-    "id": "pol-npe-0130-sanitariuszka",
+    "id": "pol-npe-0132-sanitariuszka",
     "frequency": 4,
     "register": 1,
     "gender": "f"
   },
   {
     "lemma": "medyk",
-    "id": "pol-npe-0131-medyk-£",
+    "id": "pol-npe-0133-medyk-£",
     "frequency": 4,
     "register": 1,
     "gender": "m1",
@@ -3206,7 +3222,7 @@
   },
   {
     "lemma": "więzień",
-    "id": "pol-npe-0132-więzień-€",
+    "id": "pol-npe-0134-więzień-€",
     "frequency": 4,
     "register": 1,
     "gender": "m1",
@@ -3214,14 +3230,14 @@
   },
   {
     "lemma": "więźniarka",
-    "id": "pol-npe-0132-więźniarka",
+    "id": "pol-npe-0134-więźniarka",
     "frequency": 4,
     "register": 1,
     "gender": "f"
   },
   {
     "lemma": "pradziadek",
-    "id": "pol-npe-0133-pradziadek-€",
+    "id": "pol-npe-0135-pradziadek-€",
     "frequency": 4,
     "register": 1,
     "gender": "m1",
@@ -3229,14 +3245,14 @@
   },
   {
     "lemma": "prababcia",
-    "id": "pol-npe-0133-prababcia",
+    "id": "pol-npe-0135-prababcia",
     "frequency": 4,
     "register": 1,
     "gender": "f"
   },
   {
     "lemma": "prawnuk",
-    "id": "pol-npe-0134-prawnuk-€",
+    "id": "pol-npe-0136-prawnuk-€",
     "frequency": 4,
     "register": 1,
     "gender": "m1",
@@ -3244,7 +3260,7 @@
   },
   {
     "lemma": "prawnuczka",
-    "id": "pol-npe-0134-prawnuczka",
+    "id": "pol-npe-0136-prawnuczka",
     "frequency": 4,
     "register": 1,
     "gender": "f"

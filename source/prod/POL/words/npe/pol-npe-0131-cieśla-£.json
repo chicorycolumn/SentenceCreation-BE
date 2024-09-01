@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cieśla",
+      "gen": "cieśli",
+      "dat": "cieśli",
+      "acc": "cieślę",
+      "ins": "cieślą",
+      "loc": "cieśli",
+      "voc": "cieślo"
+    },
+    "plural": {
+      "nom": "cieśle",
+      "gen": { "isTerminus": true, "normal": ["cieśli", "cieślów"] },
+      "dat": "cieślom",
+      "acc": { "isTerminus": true, "normal": ["cieśli", "cieślów"] },
+      "ins": "cieślami",
+      "loc": "cieślach",
+      "voc": "cieśle"
+    }
+  }
+}

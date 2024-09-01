@@ -1205,51 +1205,61 @@
     "topics": ["medicine", "work", "people"]
   },
   {
-    "key": "npe-0121-paramedic",
+    "key": "npe-0121-GP",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0131"],
-      "POL": ["pol-npe-0130"]
+      "ENG": ["eng-npe-0131-carpenter"],
+      "POL": ["pol-npe-0130-stolarz", "pol-npe-0131-cieśla"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]
   },
   {
-    "key": "npe-0122-medic",
+    "key": "npe-0122-paramedic",
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0132"],
-      "POL": ["pol-npe-0131"]
+      "POL": ["pol-npe-0132"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]
   },
   {
-    "key": "npe-0123-prisoner",
+    "key": "npe-0123-medic",
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0133"],
-      "POL": ["pol-npe-0132"]
+      "POL": ["pol-npe-0133"]
+    },
+    "papers": ["concrete", "profession", "person", "living"],
+    "topics": ["medicine", "work", "people"]
+  },
+  {
+    "key": "npe-0124-prisoner",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0134"],
+      "POL": ["pol-npe-0134"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["law", "crime", "people"]
   },
   {
-    "key": "npe-0123-greatgrandmother/greatgrandfather/greatgrandparent",
+    "key": "npe-0125-greatgrandmother/greatgrandfather/greatgrandparent",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0134"],
-      "POL": ["pol-npe-0133"]
+      "ENG": ["eng-npe-0135"],
+      "POL": ["pol-npe-0135"]
     },
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
   },
   {
-    "key": "npe-0124-greatgranddaughter/greatgrandson/greatgrandchild",
+    "key": "npe-0126-greatgranddaughter/greatgrandson/greatgrandchild",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0135"],
-      "POL": ["pol-npe-0134"]
+      "ENG": ["eng-npe-0136"],
+      "POL": ["pol-npe-0136"]
     },
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]

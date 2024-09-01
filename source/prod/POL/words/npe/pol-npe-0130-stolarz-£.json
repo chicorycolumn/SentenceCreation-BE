@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "stolarz",
+      "gen": "stolarza",
+      "dat": "stolarzowi",
+      "acc": "stolarza",
+      "ins": "stolarzem",
+      "loc": "stolarzu",
+      "voc": "stolarzu"
+    },
+    "plural": {
+      "nom": "stolarze",
+      "gen": "stolarzy",
+      "dat": "stolarzom",
+      "acc": "stolarzy",
+      "ins": "stolarzami",
+      "loc": "stolarzach",
+      "voc": "stolarze"
+    }
+  }
+}
