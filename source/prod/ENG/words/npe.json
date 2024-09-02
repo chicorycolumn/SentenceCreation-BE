@@ -1340,6 +1340,13 @@
     "register": 1,
     "frequency": 4
   },
+  {
+    "lemma": "footballer",
+    "id": "eng-npe-0137-footballer",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
   
   {
     "lemma": "mate",

@@ -3265,4 +3265,19 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "piłkarz",
+    "id": "pol-npe-0137-piłkarz-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "piłkarka",
+    "id": "pol-npe-0137-piłkarka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
 ]

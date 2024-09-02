@@ -1264,4 +1264,14 @@
     "papers": ["concrete", "relative", "person", "living"],
     "topics": ["people"]
   },
+  {
+    "key": "npe-0127-footballer",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0137"],
+      "POL": ["pol-npe-0137"]
+    },
+    "papers": ["living", "profession", "concrete", "person"],
+    "topics": ["work", "people", "sport"]
+  },
 ]

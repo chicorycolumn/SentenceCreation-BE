@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "piłkarz",
+      "gen": "piłkarza",
+      "dat": "piłkarzowi",
+      "acc": "piłkarza",
+      "ins": "piłkarzem",
+      "loc": "piłkarzu",
+      "voc": "piłkarzu"
+    },
+    "plural": {
+      "nom": "piłkarze",
+      "gen": "piłkarzy",
+      "dat": "piłkarzom",
+      "acc": "piłkarzy",
+      "ins": "piłkarzami",
+      "loc": "piłkarzach",
+      "voc": "piłkarze"
+    }
+  }
+}

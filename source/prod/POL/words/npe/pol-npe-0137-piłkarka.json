@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "piłkarka",
+      "gen": "piłkarki",
+      "dat": "piłkarce",
+      "acc": "piłkarkę",
+      "ins": "piłkarką",
+      "loc": "piłkarce",
+      "voc": "piłkarko"
+    },
+    "plural": {
+      "nom": "piłkarki",
+      "gen": "piłkarek",
+      "dat": "piłkarkom",
+      "acc": "piłkarki",
+      "ins": "piłkarkami",
+      "loc": "piłkarkach",
+      "voc": "piłkarki"
+    }
+  }
+}
