@@ -770,8 +770,8 @@
       "ENG": ["eng-npe-0082-client", "eng-npe-0083-customer"],
       "POL": ["pol-npe-0091"]
     },
-    "papers": ["money", "concrete", "person", "living"],
-    "topics": ["business", "shopping", "people"]
+    "papers": ["concrete", "person", "living"],
+    "topics": ["money", "business", "shopping", "people"]
   },
   {
     "key": "npe-0078-hairdresser",
@@ -980,8 +980,8 @@
       "ENG": ["eng-npe-0106-millionaire"],
       "POL": ["pol-npe-0116"]
     },
-    "papers": ["money", "concrete", "person", "living"],
-    "topics": ["business", "shopping", "people"]
+    "papers": ["concrete", "person", "living"],
+    "topics": ["money", "business", "shopping", "people"]
   },
   {
     "key": "npe-0099-billionaire",
@@ -990,8 +990,8 @@
       "ENG": ["eng-npe-0107-billionaire"],
       "POL": ["pol-npe-0117"]
     },
-    "papers": ["money", "concrete", "person", "living"],
-    "topics": ["business", "shopping", "people"]
+    "papers": ["concrete", "person", "living"],
+    "topics": ["money", "business", "shopping", "people"]
   },
   {
     "key": "npe-0100-secretary",
@@ -1273,5 +1273,15 @@
     },
     "papers": ["living", "profession", "concrete", "person"],
     "topics": ["work", "people", "sport"]
+  },
+  {
+    "key": "npe-0128-cashier",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-npe-0138"],
+      "POL": ["pol-npe-0138"]
+    },
+    "papers": ["concrete", "person", "living", "profession"],
+    "topics": ["money", "business", "shopping", "people"]
   },
 ]

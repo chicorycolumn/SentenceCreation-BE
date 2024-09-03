@@ -6681,8 +6681,8 @@
       "ENG": ["eng-nco-0833-balance"],
       "POL": ["pol-nco-0664-bilans"]
     },
-    "papers": ["abstract", "money"],
-    "topics": ["business", "work", "shopping"]
+    "papers": ["abstract"],
+    "topics": ["business", "work", "shopping", "money"]
   },
   {
     "key": "nco-0651-smell",
