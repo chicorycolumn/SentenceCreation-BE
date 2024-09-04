@@ -10,6 +10,7 @@ const gdUtils = require("./grabDataUtils.js");
 const allLangUtils = require("./allLangUtils.js");
 
 exports.findMatchingLemmaObjectThenWord = (
+  checkTimeout,
   dependenceType,
   useDummy,
   useDummyWords,
@@ -22,6 +23,12 @@ exports.findMatchingLemmaObjectThenWord = (
   outputArray,
   isPHD
 ) => {
+  timeOutCheck = checkTimeout(
+    `findMatchingLemmaObjectThenWord:${dependenceType}`
+  );
+  if (timeOutCheck) {
+    return timeOutCheck;
+  }
   consol.log(
     "[1;33m " +
       `ligw ot:findMatchingLemmaObjectThenWord for stCh: "${structureChunk.chunkId}"` +

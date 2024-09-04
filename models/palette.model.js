@@ -156,6 +156,7 @@ exports.fetchPalette = (req) => {
   );
 
   let questionSentenceData = scUtils.processSentenceFormula(
+    checkTimeout,
     useDummy,
     useDummyWords,
     { currentLanguage: questionLanguage },
@@ -489,6 +490,7 @@ exports.fetchPalette = (req) => {
       }
 
       answerSentenceData = scUtils.processSentenceFormula(
+        checkTimeout,
         useDummy,
         useDummyWords,
         {

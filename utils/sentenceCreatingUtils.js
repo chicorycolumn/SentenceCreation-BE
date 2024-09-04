@@ -16,6 +16,7 @@ const eaUtils = require("./extraAttributeUtils.js");
 const { HY } = refObj;
 
 exports.selectDependentChunkWordsAndAddToOutputArray = (
+  checkTimeout,
   dependenceTypeToUpdate,
   explodedOutputArraysWithHeads,
   grandOutputArray,
@@ -79,6 +80,7 @@ exports.selectDependentChunkWordsAndAddToOutputArray = (
             consol.log(`weoe dependentChunk "${dependentChunk.chunkId}"`);
             let allPossOutputUnits_dependent =
               otUtils.findMatchingLemmaObjectThenWord(
+                checkTimeout,
                 "dependent",
                 useDummy,
                 useDummyWords,
@@ -176,6 +178,7 @@ exports.selectDependentChunkWordsAndAddToOutputArray = (
 };
 
 exports.processSentenceFormula = (
+  checkTimeout,
   useDummy,
   useDummyWords,
   languagesObj,
@@ -236,6 +239,7 @@ exports.processSentenceFormula = (
     consol.log("evga sc:processSentenceFormula STEP ONE", headChunk.chunkId);
 
     let allPossOutputUnits_head = otUtils.findMatchingLemmaObjectThenWord(
+      checkTimeout,
       "head",
       useDummy,
       useDummyWords,
@@ -301,6 +305,7 @@ exports.processSentenceFormula = (
   };
 
   const _selectDependentChunkWordsAndAddToOutputArray = (
+    _checkTimeout,
     _dependenceTypeToUpdate,
     _explodedOutputArraysWithHeads,
     _grandOutputArray,
@@ -308,6 +313,7 @@ exports.processSentenceFormula = (
     _dependentChunks
   ) => {
     return scUtils.selectDependentChunkWordsAndAddToOutputArray(
+      _checkTimeout,
       _dependenceTypeToUpdate,
       _explodedOutputArraysWithHeads,
       _grandOutputArray,
@@ -332,6 +338,7 @@ exports.processSentenceFormula = (
     let halfwayGrandOutputArray = [];
 
     _selectDependentChunkWordsAndAddToOutputArray(
+      checkTimeout,
       "head",
       explodedOutputArraysWithHeads,
       halfwayGrandOutputArray,
@@ -354,6 +361,7 @@ exports.processSentenceFormula = (
     });
 
     _selectDependentChunkWordsAndAddToOutputArray(
+      checkTimeout,
       "dependentHead",
       halfwayGrandOutputArray,
       grandOutputArray,
@@ -364,6 +372,7 @@ exports.processSentenceFormula = (
     // There are no head chunks which depend on other head chunk, so just do depependentChunks as normal.
 
     _selectDependentChunkWordsAndAddToOutputArray(
+      checkTimeout,
       "head",
       explodedOutputArraysWithHeads,
       grandOutputArray,
@@ -410,6 +419,7 @@ exports.processSentenceFormula = (
       );
 
       let allPossOutputUnits_PHD = otUtils.findMatchingLemmaObjectThenWord(
+        checkTimeout,
         "PHD",
         useDummy,
         useDummyWords,
@@ -544,6 +554,7 @@ exports.processSentenceFormula = (
 
     consol.log(`weoi otherChunk "${otherChunk.chunkId}"`);
     let allPossOutputUnits_other = otUtils.findMatchingLemmaObjectThenWord(
+      checkTimeout,
       "other",
       useDummy,
       useDummyWords,
