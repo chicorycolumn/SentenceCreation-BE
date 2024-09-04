@@ -3280,4 +3280,19 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "kasjer",
+    "id": "pol-npe-0138-kasjer-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "kasjerka",
+    "id": "pol-npe-0138-kasjerka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
 ]

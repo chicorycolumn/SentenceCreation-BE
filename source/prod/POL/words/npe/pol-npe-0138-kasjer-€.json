@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kasjer",
+      "gen": "kasjera",
+      "dat": "kasjerowi",
+      "acc": "kasjera",
+      "ins": "kasjerem",
+      "loc": "kasjerze",
+      "voc": "kasjerze"
+    },
+    "plural": {
+      "nom": "kasjerzy",
+      "gen": "kasjerów",
+      "dat": "kasjerom",
+      "acc": "kasjerów",
+      "ins": "kasjerami",
+      "loc": "kasjerach",
+      "voc": "kasjerzy"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kasjerka",
+      "gen": "kasjerki",
+      "dat": "kasjerce",
+      "acc": "kasjerkę",
+      "ins": "kasjerką",
+      "loc": "kasjerce",
+      "voc": "kasjerko"
+    },
+    "plural": {
+      "nom": "kasjerki",
+      "gen": "kasjerek",
+      "dat": "kasjerkom",
+      "acc": "kasjerki",
+      "ins": "kasjerkami",
+      "loc": "kasjerkach",
+      "voc": "kasjerki"
+    }
+  }
+}
