@@ -91,7 +91,15 @@ exports.getLemmasByCriteria = (currentLanguage, criteriaFromHTTP) => {
     )
   ) {
     // Fetch only the Nexus data, not the individual lobjs.
-    const wordtype = criteria["wordtype"];
+    const wordtypes = criteria["wordtype"];
+    if (wordtypes.length !== 1) {
+      consol.throw(
+        `zcew Wordtypes must be length 1 but was length ${wordtypes.length}.`
+      );
+      consol.log(wordtypes);
+    }
+    let wordtype = wordtypes[0];
+
     const nexusObjects = nexusUtils.getNexusForOneWordtype(wordtype);
 
     nexusObjects.forEach((nexObj) => {
@@ -116,16 +124,30 @@ exports.getLemmasByCriteria = (currentLanguage, criteriaFromHTTP) => {
             }
           })
       ) {
-        nexObj.traductions[currentLanguage.toUpperCase()].forEach((lObjId) => {
-          if (!recordArr.includes(lObjId)) {
-            recordArr.push(lObjId);
-            resArr.push({
-              lemma: lObjId.split("-").slice(-1)[0],
-              id: lObjId,
-              tags: nexObj.papers,
+        let source = gdUtils.grabLObjsByWordtype(currentLanguage, wordtype);
+
+        nexObj.traductions[currentLanguage.toUpperCase()].forEach(
+          (lObjIdNexusStem) => {
+            let lObjsForNexusStem = lfUtils.getLObjAndSiblings(
+              source,
+              [lObjIdNexusStem],
+              false,
+              "getLemmasByCriteria"
+            );
+
+            lObjsForNexusStem.forEach((lObjsForNexusStem) => {
+              let lObjId = lObjsForNexusStem.id;
+              if (!recordArr.includes(lObjId)) {
+                recordArr.push(lObjId);
+                resArr.push({
+                  lemma: lObjId.split("-")[3],
+                  id: lObjId,
+                  tags: nexObj.papers,
+                });
+              }
             });
           }
-        });
+        );
       }
     });
 
