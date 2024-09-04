@@ -1347,6 +1347,13 @@
     "register": 1,
     "frequency": 4
   },
+  {
+    "lemma": "cashier",
+    "id": "eng-npe-0138-cashier",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
 
   {
     "lemma": "mate",
