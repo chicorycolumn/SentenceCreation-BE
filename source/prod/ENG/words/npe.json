@@ -780,6 +780,13 @@
     "frequency": 2
   },
   {
+    "lemma": "optician",
+    "id": "eng-npe-0065-optician",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 4
+  },
+  {
     "lemma": "model",
     "id": "eng-npe-0066-model",
     "gender": "_PersonalGenders",
@@ -969,8 +976,8 @@
     "frequency": 3
   },
   {
-    "lemma": "guard",
-    "id": "eng-npe-0089-guard",
+    "lemma": "bodyguard",
+    "id": "eng-npe-0089-bodyguard",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
@@ -1369,7 +1376,6 @@
     "register": 1,
     "frequency": 4
   },
-
   {
     "lemma": "leader",
     "id": "eng-npe-8888-leader",

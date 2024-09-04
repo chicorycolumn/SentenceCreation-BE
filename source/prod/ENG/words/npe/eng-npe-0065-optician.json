@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "optician",
+      "gen": "optician's"
+    },
+    "plural": {
+      "nom": "opticians",
+      "gen": "opticians'"
+    }
+  }
+}
