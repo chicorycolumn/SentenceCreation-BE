@@ -320,11 +320,11 @@
     "topics": ["people"]
   },
   {
-    "key": "npe-0033-actress",
+    "key": "npe-0033-actor/actress",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0033-actress"],
-      "POL": ["pol-npe-0033-aktorka"]
+      "ENG": ["eng-npe-0033-actor/actress"],
+      "POL": ["pol-npe-0033"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["work", "people"]
@@ -1283,5 +1283,5 @@
     },
     "papers": ["concrete", "person", "living", "profession"],
     "topics": ["money", "business", "shopping", "people"]
-  },
+  }
 ]

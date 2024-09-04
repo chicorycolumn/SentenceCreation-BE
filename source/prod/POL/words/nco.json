@@ -11554,16 +11554,6 @@
     }
   },
   {
-    "lemma": "katedra",
-    "id": "pol-nco-0675-katedra",
-    "frequency": 3,
-    "register": 1,
-    "gender": "f",
-    "extra": {
-      "derivedTerms": ["katedralny"]
-    }
-  },
-  {
     "lemma": "hasło",
     "id": "pol-nco-0676-hasło(password)",
     "frequency": 2,
@@ -18200,7 +18190,7 @@
   },
   {
     "lemma": "cerkiew",
-    "id": "pol-nco-1153-katedra",
+    "id": "pol-nco-1153-cerkiew",
     "frequency": 5,
     "register": 1,
     "gender": "f"
@@ -18359,5 +18349,5 @@
     "frequency": 4,
     "register": 1,
     "gender": "f"
-  },
+  }
 ]

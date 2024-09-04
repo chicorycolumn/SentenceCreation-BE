@@ -76,7 +76,14 @@
       "ENG": ["eng-nco-0010-school"],
       "POL": ["pol-nco-0008-szkoła"]
     },
-    "papers": ["s6", "location", "workplace", "building", "concrete", "school hypernym"],
+    "papers": [
+      "s6",
+      "location",
+      "workplace",
+      "building",
+      "concrete",
+      "school hypernym"
+    ],
     "topics": ["inside", "school"]
   },
   {
@@ -6775,16 +6782,6 @@
     "topics": ["tech"]
   },
   {
-    "key": "nco-0660-cathedral",
-    "traductions": {
-      "SPA": [],
-      "ENG": ["eng-nco-0845-cathedral"],
-      "POL": ["pol-nco-0675-katedra"]
-    },
-    "papers": ["s6", "location", "workplace", "building", "concrete"],
-    "topics": ["inside", "religion"]
-  },
-  {
     "key": "nco-0661-password",
     "traductions": {
       "SPA": [],
@@ -11182,5 +11179,5 @@
     },
     "papers": ["concrete"],
     "topics": ["disease", "medicine", "appearance"]
-  },
+  }
 ]

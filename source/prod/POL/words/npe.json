@@ -477,7 +477,7 @@
   },
   {
     "lemma": "kuzynka",
-    "id": "pol-npe-0012-kuzyn",
+    "id": "pol-npe-0012-kuzynka",
     "frequency": 2,
     "register": 1,
     "gender": "f",
@@ -643,7 +643,7 @@
   {
     "lemma": "gość",
     "id": "pol-npe-0015-gość(guy)",
-    "_inflectionsRoot": "pol-npe-0023-gość(guest)",
+    "_inflectionsRoot": "pol-npe-0023-gość(guest)-£",
     "frequency": 2,
     "register": 6,
     "gender": "m1",
@@ -690,8 +690,8 @@
   },
   {
     "lemma": "człowiek",
-    "id": "pol-npe-0016-człowiek(human)-€",
-    "_inflectionsRoot": "pol-npe-0015-człowiek(person)-€",
+    "id": "pol-npe-0016-człowiek(human)-£",
+    "_inflectionsRoot": "pol-npe-0015-człowiek(person)-£",
     "frequency": 3,
     "register": 1,
     "gender": "m1",
@@ -2361,7 +2361,7 @@
   {
     "lemma": "sędzia",
     "id": "pol-npe-0087-sędzia(referee man)",
-    "_inflectionsRoot": "pol-npe-0086-sędzia(judge)-€",
+    "_inflectionsRoot": "pol-npe-0086-sędzia(judge man)-€",
     "frequency": 4,
     "register": 1,
     "gender": "m1",
@@ -2416,8 +2416,8 @@
     "gender": "f"
   },
   {
-    "lemma": "dziennikarz-€",
-    "id": "pol-npe-0089-dziennikarz",
+    "lemma": "dziennikarz",
+    "id": "pol-npe-0089-dziennikarz-€",
     "frequency": 2,
     "register": 1,
     "gender": "m1",
@@ -3294,5 +3294,5 @@
     "frequency": 4,
     "register": 1,
     "gender": "f"
-  },
+  }
 ]

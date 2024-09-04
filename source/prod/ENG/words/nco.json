@@ -6811,13 +6811,6 @@
     "frequency": 3
   },
   {
-    "lemma": "cathedral",
-    "id": "eng-nco-0845-cathedral",
-    "gender": "n",
-    "register": 1,
-    "frequency": 3
-  },
-  {
     "lemma": "password",
     "id": "eng-nco-0846-password",
     "gender": "n",
@@ -10994,5 +10987,5 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
-  },
+  }
 ]
