@@ -1,0 +1,22 @@
+{	
+  "inflections": {
+    "singular": {
+      "nom": "kosmita",
+      "gen": "kosmity",
+      "dat": "kosmicie",
+      "acc": "kosmitę",
+      "ins": "kosmitą",
+      "loc": "kosmicie",
+      "voc": "kosmito"
+    },
+    "plural": {
+      "nom": "kosmici",
+      "gen": "kosmitów",
+      "dat": "kosmitom",
+      "acc": "kosmitów",
+      "ins": "kosmitami",
+      "loc": "kosmitach",
+      "voc": "kosmici"
+    }
+  }
+}

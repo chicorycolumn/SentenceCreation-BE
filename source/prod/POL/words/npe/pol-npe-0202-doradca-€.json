@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "doradca",
+      "gen": "doradcy",
+      "dat": "doradcy",
+      "acc": "doradcę",
+      "ins": "doradcą",
+      "loc": "doradcy",
+      "voc": "doradco"
+    },
+    "plural": {
+      "nom": "doradcy",
+      "gen": "doradców",
+      "dat": "doradcom",
+      "acc": "doradców",
+      "ins": "doradcami",
+      "loc": "doradcach",
+      "voc": "doradcy"
+    }
+  }
+}

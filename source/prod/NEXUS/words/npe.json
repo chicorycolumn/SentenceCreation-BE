@@ -454,7 +454,7 @@
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0046"],
-      "POL": ["pol-npe-0046", "swde-9999-kosmita"]
+      "POL": ["pol-npe-0046", "pol-npe-0201-kosmita"]
     },
     "papers": ["concrete"],
     "topics": ["astronomy"]
@@ -958,7 +958,7 @@
     "traductions": {
       "SPA": [],
       "ENG": ["eng-npe-0103"],
-      "POL": ["pol-npe-9999-doradca"]
+      "POL": ["pol-npe-0202-doradca"]
     },
     "papers": ["concrete", "profession", "person", "living"],
     "topics": ["medicine", "work", "people"]

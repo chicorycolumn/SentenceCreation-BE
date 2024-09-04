@@ -3294,5 +3294,28 @@
     "frequency": 4,
     "register": 1,
     "gender": "f"
+  },
+  {
+    "lemma": "kosmita",
+    "id": "pol-npe-0201-kosmita-£",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_PersonalGenders"
+  },
+  {
+    "lemma": "doradca",
+    "id": "pol-npe-0202-doradca-€",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "doradczyni",
+    "id": "pol-npe-0202-doradczyni",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
   }
 ]

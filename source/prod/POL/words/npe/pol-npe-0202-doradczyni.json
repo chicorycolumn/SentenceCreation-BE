@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "doradczyni",
+      "gen": "doradczyni",
+      "dat": "doradczyni",
+      "acc": "doradczynię",
+      "ins": "doradczynią",
+      "loc": "doradczyni",
+      "voc": "doradczyni"
+    },
+    "plural": {
+      "nom": "doradczynie",
+      "gen": "doradczyń",
+      "dat": "doradczyniom",
+      "acc": "doradczynie",
+      "ins": "doradczyniami",
+      "loc": "doradczyniach",
+      "voc": "doradczynie"
+    }
+  }
+}
