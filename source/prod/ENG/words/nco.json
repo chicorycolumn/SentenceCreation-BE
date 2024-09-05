@@ -53,6 +53,7 @@
   {
     "lemma": "spring",
     "id": "eng-nco-0006-spring(metal)",
+    "_inflectionsRoot": "eng-nco-0005-spring(season)",
     "gender": "n",
     "register": 1,
     "frequency": 4,
@@ -10984,6 +10985,14 @@
   {
     "lemma": "scar",
     "id": "eng-nco-1388-scar",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "mole",
+    "id": "eng-nco-1389-mole(animal)",
+    "_inflectionsRoot": "eng-nco-1387-mole(medical)",
     "gender": "n",
     "frequency": 4,
     "register": 1

@@ -18349,5 +18349,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "f"
+  },
+  {
+    "lemma": "kret",
+    "id": "pol-nco-1175-kret",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m2"
   }
 ]
