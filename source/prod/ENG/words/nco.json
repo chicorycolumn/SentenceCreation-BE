@@ -334,6 +334,7 @@
   {
     "lemma": "way",
     "id": "eng-nco-0040-way(direction)",
+    "_inflectionsRoot": "eng-nco-0039-way(method)",
     "gender": "n",
     "register": 1,
     "frequency": 3,
