@@ -1,0 +1,19 @@
+{
+  "id": "POL-127a",
+  "guide": "Kobieta czyta.",
+  "sentenceStructure": [
+    {
+      "chunkId": "npe-1-woman",
+      "specificIds": ["pol-npe-0001"]
+    },
+    {
+      "chunkId": "ver-1-reads",
+      "agreeWith": "npe-1-woman",
+      "specificIds": ["pol-ver-0316"],
+      "tenseDescription": ["present im"]
+    }
+  ],
+  "orders": {
+    "primary": [["npe-1-woman", "ver-1-reads"]]
+  }
+}

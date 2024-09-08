@@ -1,0 +1,24 @@
+{
+  "id": "ENG-127a",
+  "guide": "The woman reads.",
+  "sentenceStructure": [
+    {
+      "chunkId": "fix-1-the",
+      "chunkValue": "the"
+    },
+    {
+      "chunkId": "npe-1-woman",
+      "specificIds": ["eng-npe-0001"]
+    },
+    {
+      "chunkId": "ver-1-reads",
+      "agreeWith": "npe-1-woman",
+      "specificIds": ["eng-ver-0275"],
+      "tenseDescription": ["present simple"]
+    }
+  ],
+  "orders": {
+    "primary": [["fix-1-the", "npe-1-woman", "ver-1-reads"]],
+    "additional": []
+  }
+}
