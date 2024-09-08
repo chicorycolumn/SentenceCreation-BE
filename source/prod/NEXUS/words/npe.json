@@ -33,7 +33,7 @@
     "key": "npe-0004-boy/girl/child",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0004-boy/girl", "^eng-npe-0003-child"],
+      "ENG": ["eng-npe-0004-boy/girl", "^eng-npe-0003-child-£"],
       "POL": ["pol-npe-0004-chłop/dziew", "^pol-npe-0003-dziecko-£"]
     },
     "papers": ["concrete", "person", "living"],

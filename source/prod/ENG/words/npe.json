@@ -15,7 +15,7 @@
   },
   {
     "lemma": "parent",
-    "id": "eng-npe-0001-parent",
+    "id": "eng-npe-0001-parent-£",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 1
@@ -36,7 +36,7 @@
   },
   {
     "lemma": "sibling",
-    "id": "eng-npe-0002-sibling",
+    "id": "eng-npe-0002-sibling-£",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 1
@@ -57,7 +57,7 @@
   },
   {
     "lemma": "child",
-    "id": "eng-npe-0003-child",
+    "id": "eng-npe-0003-child-£",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 1
@@ -99,14 +99,14 @@
   },
   {
     "lemma": "spouse",
-    "id": "eng-npe-0007-spouse",
+    "id": "eng-npe-0007-spouse-£",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 2
   },
   {
     "lemma": "partner",
-    "id": "eng-npe-0007-partner",
+    "id": "eng-npe-0007-partner-£",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 2
@@ -162,7 +162,7 @@
   },
   {
     "lemma": "grandparent",
-    "id": "eng-npe-0010-grandparent",
+    "id": "eng-npe-0010-grandparent-£",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 1
@@ -183,7 +183,7 @@
   },
   {
     "lemma": "grandchild",
-    "id": "eng-npe-0011-grandchild",
+    "id": "eng-npe-0011-grandchild-£",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 2
@@ -279,7 +279,7 @@
   },
   {
     "lemma": "person",
-    "id": "eng-npe-0015-person",
+    "id": "eng-npe-0015-person-£",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 2
@@ -536,8 +536,8 @@
   },
   {
     "lemma": "actor",
-    "id": "eng-npe-0033-actor",
-    "gender": "m",
+    "id": "eng-npe-0033-actor-€",
+    "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 2
   },
@@ -956,7 +956,7 @@
   },
   {
     "lemma": "police officer",
-    "id": "eng-npe-0086-policeofficer",
+    "id": "eng-npe-0086-policeofficer-£",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
@@ -1321,7 +1321,7 @@
   },
   {
     "lemma": "great-grandparent",
-    "id": "eng-npe-0135-greatgrandparent",
+    "id": "eng-npe-0135-greatgrandparent-£",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4
@@ -1342,7 +1342,7 @@
   },
   {
     "lemma": "great-grandchild",
-    "id": "eng-npe-0136-greatgrandchild",
+    "id": "eng-npe-0136-greatgrandchild-£",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4
