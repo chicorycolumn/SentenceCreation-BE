@@ -53,6 +53,7 @@
   {
     "lemma": "spring",
     "id": "eng-nco-0006-spring(metal)",
+    "_inflectionsRoot": "eng-nco-0005-spring(season)",
     "gender": "n",
     "register": 1,
     "frequency": 4,
@@ -333,6 +334,7 @@
   {
     "lemma": "way",
     "id": "eng-nco-0040-way(direction)",
+    "_inflectionsRoot": "eng-nco-0039-way(method)",
     "gender": "n",
     "register": 1,
     "frequency": 3,
@@ -557,6 +559,7 @@
   {
     "lemma": "floor",
     "id": "eng-nco-0069-floor(storey)",
+    "_inflectionsRoot": "eng-nco-0068-floor(!ceiling)",
     "gender": "n",
     "register": 1,
     "frequency": 4,
@@ -10984,6 +10987,14 @@
   {
     "lemma": "scar",
     "id": "eng-nco-1388-scar",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "mole",
+    "id": "eng-nco-1389-mole(animal)",
+    "_inflectionsRoot": "eng-nco-1387-mole(medical)",
     "gender": "n",
     "frequency": 4,
     "register": 1
