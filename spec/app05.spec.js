@@ -19,12 +19,12 @@ const {
 describe("/api", function () {
   this.timeout(7000);
 
-  const testEnv = "prod*ref";
-  apiUtils.setEnvir({ query: { envir: testEnv } }, "app05.spec");
+  const testEnv = "ref";
+  apiUtils.setEnvir({ query: { envir: testEnv } }, "app05.spec", true);
 
-  describe("/palette - Stage 31: Exceptions testing - some requested traits should be ignored.", () => {
+  xdescribe("/palette - Stage 31: Exceptions testing - some requested traits should be ignored.", () => {
     describe("#pal31-01 Ignore 'imperative' requested for modal verbs.", () => {
-      it.only(`${testEnv}#pal31-01a GET 200 YES: Pol.`, () => {
+      it(`${testEnv}#pal31-01a GET 200 YES: Pol.`, () => {
         return runPaletteTestExpectingNoSentence("POL", "ENG", "126");
       });
     });

@@ -753,9 +753,17 @@ exports._makeFormula = (
   return formula;
 };
 
-exports.setEnvir = (req, label) => {
+exports.setEnvir = (req, label, force) => {
   let { envir } = req.query;
   if (!envir) {
+    if (env.envir && !force) {
+      consol.logVeryGreyString(
+        `"${env.envir}" is current envir${
+          label ? " so ignoring setEnvir call from " + label : ""
+        }`
+      );
+      return;
+    }
     envir = "ref";
   }
   env.envir = envir;
