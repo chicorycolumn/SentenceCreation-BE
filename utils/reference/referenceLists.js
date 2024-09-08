@@ -414,8 +414,8 @@ exports._tenseDescriptions = {
     "future im",
     "past pf",
     "future pf",
-    "imperative im",
-    "imperative pf",
+    // "imperative im",
+    // "imperative pf",
     // "imperative",
     // "negative imperative",
     // "conditional im",
@@ -527,7 +527,7 @@ exports.structureChunkTraits = {
         "pre",
         "art",
         "fix",
-        "adv"
+        "adv",
       ],
     },
     agreeWith: {

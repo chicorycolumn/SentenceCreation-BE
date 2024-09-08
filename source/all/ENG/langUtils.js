@@ -477,7 +477,8 @@ exports.generateAdhocForms = (
   adhocInflectionCategory,
   structureChunk,
   lObj,
-  currentLanguage
+  currentLanguage,
+  label
 ) => {
   let resArr = [];
 
@@ -486,7 +487,7 @@ exports.generateAdhocForms = (
 
     structureChunk.form.forEach((selectedForm) => {
       consol.log(
-        "pqdw generateAdhocForms giving _addToResArrAdhocForms this selectedWordArr",
+        `pqdw generateAdhocForms${label} giving _addToResArrAdhocForms this selectedWordArr`,
         [lObj.inflections[selectedForm]]
       );
 

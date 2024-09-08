@@ -984,7 +984,7 @@ describe("/api", function () {
           POL: ["Lekarz napisał.", "Lekarka napisała."],
         },
         {
-          ENG: "The doctor read (past).",
+          ENG: "The doctor read.",
           POL: ["Lekarz przeczytał.", "Lekarka przeczytała."],
         },
       ];

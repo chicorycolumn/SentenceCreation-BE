@@ -191,17 +191,12 @@ exports.findMatchingLemmaObjectThenWord = (
           "form",
           structureChunk,
           selectedLemmaObject,
-          currentLanguage
+          currentLanguage,
+          "L1"
         );
 
         adhocArr.forEach((adhocResultObj) => {
           let { selectedWordArr, structureChunkUpdated } = adhocResultObj;
-
-          otUtils.stripOutInflectionCategorys(
-            currentLanguage,
-            structureChunkUpdated,
-            "Ad-PW-F"
-          );
 
           selectedFormsArray.push({
             selectedWordArr,
@@ -221,7 +216,8 @@ exports.findMatchingLemmaObjectThenWord = (
         "form",
         structureChunk,
         selectedLemmaObject,
-        currentLanguage
+        currentLanguage,
+        "L2"
       );
 
       if (!adhocArr || !adhocArr.length) {
@@ -231,12 +227,6 @@ exports.findMatchingLemmaObjectThenWord = (
       let selectedAdhocResultObj = uUtils.selectRandom(adhocArr);
 
       let { selectedWordArr, structureChunkUpdated } = selectedAdhocResultObj;
-
-      otUtils.stripOutInflectionCategorys(
-        currentLanguage,
-        structureChunkUpdated,
-        "Ad-PW-F"
-      );
 
       selectedFormsArray.push({
         selectedWordArr,
@@ -268,17 +258,12 @@ exports.findMatchingLemmaObjectThenWord = (
               adhocInflectionCategory,
               structureChunk,
               selectedLemmaObject,
-              currentLanguage
+              currentLanguage,
+              "L3"
             );
 
             adhocArr.forEach((adhocResultObj) => {
               let { selectedWordArr, structureChunkUpdated } = adhocResultObj;
-
-              otUtils.stripOutInflectionCategorys(
-                currentLanguage,
-                structureChunkUpdated,
-                "Ad-PW-I"
-              );
 
               selectedFormsArray.push({
                 selectedWordArr,
@@ -299,7 +284,8 @@ exports.findMatchingLemmaObjectThenWord = (
             adhocInflectionCategory,
             structureChunk,
             selectedLemmaObject,
-            currentLanguage
+            currentLanguage,
+            "L4"
           );
 
           if (!adhocArr || !adhocArr.length) {
@@ -310,12 +296,6 @@ exports.findMatchingLemmaObjectThenWord = (
 
           let { selectedWordArr, structureChunkUpdated } =
             selectedAdhocResultObj;
-
-          otUtils.stripOutInflectionCategorys(
-            currentLanguage,
-            structureChunkUpdated,
-            "Ad-PW-I"
-          );
 
           selectedFormsArray.push({
             selectedWordArr,
@@ -382,12 +362,6 @@ exports.findMatchingLemmaObjectThenWord = (
                     selectedUninflectedForm,
                   ];
 
-                  otUtils.stripOutInflectionCategorys(
-                    currentLanguage,
-                    structureChunkUpdatedByAdhocOrUninflected,
-                    "Un-PW"
-                  );
-
                   selectedFormsArray.push({
                     selectedWordArr,
                     selectedLemmaObject,
@@ -437,12 +411,6 @@ exports.findMatchingLemmaObjectThenWord = (
               structureChunkUpdatedByAdhocOrUninflected.form = [
                 selectedUninflectedForm,
               ];
-
-              otUtils.stripOutInflectionCategorys(
-                currentLanguage,
-                structureChunkUpdatedByAdhocOrUninflected,
-                "Un-PW"
-              );
 
               selectedFormsArray.push({
                 selectedWordArr,
@@ -1262,12 +1230,12 @@ exports.stripOutInflectionCategorys = (
   allInflectionCategorysForThisWordtype
     .filter((inflectionCategory) => !["form"].includes(inflectionCategory))
     .forEach((inflectionCategory) => {
-      if (structureChunk["inflectionCategory"]) {
-        consol.log(
+      if (structureChunk[inflectionCategory]) {
+        let x =
           "[1;35m " +
-            `milm stripOutInflectionCategorys Deleting "${inflectionCategory}" from stCh "${structureChunk.chunkId}" because this is #${PWetiquette} in ${currentLanguage}` +
-            "[0m"
-        );
+          `milm stripOutInflectionCategorys Deleting "${inflectionCategory}" from stCh "${structureChunk.chunkId}" because this is #${PWetiquette} in ${currentLanguage}` +
+          "[0m";
+        consol.log(x);
       }
 
       delete structureChunk[inflectionCategory];
