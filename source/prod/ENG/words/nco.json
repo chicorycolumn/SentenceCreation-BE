@@ -619,6 +619,7 @@
   {
     "lemma": "state",
     "id": "eng-nco-0076-state(political entity)",
+    "_inflectionsRoot": "eng-nco-0075-state(condition)",
     "gender": "n",
     "register": 1,
     "frequency": 4,
