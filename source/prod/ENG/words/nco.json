@@ -1038,6 +1038,7 @@
   {
     "lemma": "ball",
     "id": "eng-nco-0132-ball(object)",
+    "_inflectionsRoot": "eng-nco-0131-ball(shape)",
     "gender": "n",
     "register": 1,
     "frequency": 2,
