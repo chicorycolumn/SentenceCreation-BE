@@ -1134,6 +1134,7 @@
   {
     "lemma": "dream",
     "id": "eng-nco-0142-dream(hope)",
+    "_inflectionsRoot": "eng-nco-0141-dream(sleeping)",
     "gender": "n",
     "register": 1,
     "frequency": 4,
