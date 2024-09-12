@@ -1189,6 +1189,7 @@
   {
     "lemma": "letter",
     "id": "eng-nco-0148-letter(alphabet)",
+    "_inflectionsRoot": "eng-nco-0147-letter(postal)",
     "gender": "n",
     "register": 1,
     "frequency": 2,
