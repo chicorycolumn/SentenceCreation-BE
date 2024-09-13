@@ -1214,6 +1214,7 @@
   {
     "lemma": "bank",
     "id": "eng-nco-0150-bank(river)",
+    "_inflectionsRoot": "eng-nco-0149-bank(financial)",
     "gender": "n",
     "register": 1,
     "frequency": 3,
