@@ -1255,6 +1255,7 @@
   {
     "lemma": "taste",
     "id": "eng-nco-0154-taste(flavour)",
+    "_inflectionsRoot": "eng-nco-0153-taste(preference)",
     "gender": "n",
     "register": 1,
     "frequency": 3,
