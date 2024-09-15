@@ -1331,6 +1331,7 @@
   {
     "lemma": "sign",
     "id": "eng-nco-0163-sign(abstract)",
+    "_inflectionsRoot": "eng-nco-0162-sign(concrete)",
     "gender": "n",
     "register": 1,
     "frequency": 5,
