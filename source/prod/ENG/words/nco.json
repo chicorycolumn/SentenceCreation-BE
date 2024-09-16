@@ -1575,6 +1575,7 @@
   {
     "lemma": "pyramid",
     "id": "eng-nco-0194-pyramid(shape)",
+    "_inflectionsRoot": "eng-nco-0193-pyramid(egypt)",
     "gender": "n",
     "register": 1,
     "frequency": 3,
