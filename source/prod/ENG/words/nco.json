@@ -1629,6 +1629,7 @@
   {
     "lemma": "height",
     "id": "eng-nco-0200-height(personal)",
+    "_inflectionsRoot": "eng-nco-0199-height(altitude)",
     "gender": "n",
     "register": 1,
     "frequency": 4,
