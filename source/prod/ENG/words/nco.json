@@ -1740,6 +1740,7 @@
   {
     "lemma": "price",
     "id": "eng-nco-0213-price(abstract)",
+    "_inflectionsRoot": "eng-nco-0212-price(in a shop)",
     "gender": "n",
     "register": 1,
     "frequency": 3,
