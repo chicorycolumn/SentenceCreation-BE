@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kret",
+      "gen": "kreta",
+      "dat": "kretowi",
+      "acc": "kreta",
+      "ins": "kretem",
+      "loc": "krecie",
+      "voc": "krecie"
+    },
+    "plural": {
+      "nom": "krety",
+      "gen": "kretów",
+      "dat": "kretom",
+      "acc": "krety",
+      "ins": "kretami",
+      "loc": "kretach",
+      "voc": "krety"
+    }
+  }
+}
