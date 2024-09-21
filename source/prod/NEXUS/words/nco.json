@@ -11179,5 +11179,15 @@
     },
     "papers": ["concrete"],
     "topics": ["disease", "medicine", "appearance"]
+  },
+  {
+    "key": "nco-1091-mole(animal)",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1389-mole(animal)"],
+      "POL": ["pol-nco-1175-kret"]
+    },
+    "papers": ["s1", "living", "concrete", "animal"],
+    "topics": ["outside"]
   }
 ]
