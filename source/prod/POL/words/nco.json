@@ -18356,5 +18356,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "m2"
+  },
+  {
+    "lemma": "skunks",
+    "id": "pol-nco-1176-skunks",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m2"
   }
 ]
