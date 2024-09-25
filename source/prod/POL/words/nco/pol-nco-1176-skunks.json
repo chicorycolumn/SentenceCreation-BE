@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "skunks",
+      "gen": "skunksa",
+      "dat": "skunksowi",
+      "acc": "skunksa",
+      "ins": "skunksem",
+      "loc": "skunksie",
+      "voc": "skunksie"
+    },
+    "plural": {
+      "nom": "skunksy",
+      "gen": "skunksów",
+      "dat": "skunksom",
+      "acc": "skunksy",
+      "ins": "skunksami",
+      "loc": "skunksach",
+      "voc": "skunksy"
+    }
+  }
+}
