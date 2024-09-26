@@ -11189,5 +11189,15 @@
     },
     "papers": ["s1", "living", "concrete", "animal"],
     "topics": ["outside"]
+  },
+  {
+    "key": "nco-1092-skunk",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1390"],
+      "POL": ["pol-nco-1176"]
+    },
+    "papers": ["s3", "living", "concrete", "animal"],
+    "topics": ["outside"]
   }
 ]
