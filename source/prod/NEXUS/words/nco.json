@@ -11199,5 +11199,15 @@
     },
     "papers": ["s3", "living", "concrete", "animal"],
     "topics": ["outside"]
+  },
+  {
+    "key": "nco-1093-raccoon",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1391"],
+      "POL": ["pol-nco-1177"]
+    },
+    "papers": ["s3", "living", "concrete", "animal"],
+    "topics": ["outside"]
   }
 ]
