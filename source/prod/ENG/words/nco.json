@@ -11016,5 +11016,12 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "raccoon",
+    "id": "eng-nco-1391-raccoon",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
   }
 ]
