@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+        "nom": "szop",
+        "gen": "szopa",
+        "dat": "szopowi",
+        "acc": "szopa",
+        "ins": "szopem",
+        "loc": "szopie",
+        "voc": "szopie"
+    },
+    "plural": {
+        "nom": "szopy",
+        "gen": "szopów",
+        "dat": "szopom",
+        "acc": "szopy",
+        "ins": "szopami",
+        "loc": "szopach",
+        "voc": "szopy"
+    }
+  }
+}
