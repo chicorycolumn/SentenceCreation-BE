@@ -11209,5 +11209,15 @@
     },
     "papers": ["s3", "living", "concrete", "animal"],
     "topics": ["outside"]
+  },
+  {
+    "key": "nco-1094-panda",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1392"],
+      "POL": ["pol-nco-1178"]
+    },
+    "papers": ["s4", "living", "concrete", "animal"],
+    "topics": ["outside"]
   }
 ]
