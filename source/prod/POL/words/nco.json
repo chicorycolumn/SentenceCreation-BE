@@ -18370,5 +18370,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "m2"
+  },
+  {
+    "lemma": "panda",
+    "id": "pol-nco-1178-panda",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
   }
 ]

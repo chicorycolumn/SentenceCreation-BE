@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "panda",
+      "gen": "pandy",
+      "dat": "pandzie",
+      "acc": "pandę",
+      "ins": "pandą",
+      "loc": "pandzie",
+      "voc": "pando"
+    },
+    "plural": {
+      "nom": "pandy",
+      "gen": "pand",
+      "dat": "pandom",
+      "acc": "pandy",
+      "ins": "pandami",
+      "loc": "pandach",
+      "voc": "pandy"
+    }
+  }
+}
