@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kangur",
+      "gen": "kangura",
+      "dat": "kangurowi",
+      "acc": "kangura",
+      "ins": "kangurem",
+      "loc": "kangurze",
+      "voc": "kangurze"
+    },
+    "plural": {
+      "nom": "kangury",
+      "gen": "kangurów",
+      "dat": "kangurom",
+      "acc": "kangury",
+      "ins": "kangurami",
+      "loc": "kangurach",
+      "voc": "kangury"
+    }
+  }
+}

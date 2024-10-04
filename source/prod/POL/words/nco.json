@@ -18377,5 +18377,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "f"
+  },
+  {
+    "lemma": "kangur",
+    "id": "pol-nco-1179-kangur",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m2"
   }
 ]
