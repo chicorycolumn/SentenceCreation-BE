@@ -11023,10 +11023,17 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
-  }
+  },
   {
     "lemma": "panda",
     "id": "eng-nco-1392-panda",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "kangaroo",
+    "id": "eng-nco-1393-kangaroo",
     "gender": "n",
     "frequency": 4,
     "register": 1
