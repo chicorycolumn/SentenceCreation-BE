@@ -11037,5 +11037,12 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "alligator",
+    "id": "eng-nco-1394-alligator",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
   }
 ]
