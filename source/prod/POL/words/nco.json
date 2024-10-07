@@ -18384,5 +18384,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "m2"
+  },
+  {
+    "lemma": "aligator",
+    "id": "pol-nco-1180-aligator",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m2"
   }
 ]

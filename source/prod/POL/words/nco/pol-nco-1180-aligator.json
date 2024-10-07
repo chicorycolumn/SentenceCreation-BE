@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "aligator",
+      "gen": "aligatora",
+      "dat": "aligatorowi",
+      "acc": "aligatora",
+      "ins": "aligatorem",
+      "loc": "aligatorze",
+      "voc": "aligatorze"
+    },
+    "plural": {
+      "nom": "aligatory",
+      "gen": "aligatorów",
+      "dat": "aligatorom",
+      "acc": "aligatory",
+      "ins": "aligatorami",
+      "loc": "aligatorach",
+      "voc": "aligatory"
+    }
+  }
+}
