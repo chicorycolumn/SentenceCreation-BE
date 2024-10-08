@@ -11044,5 +11044,12 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "koala",
+    "id": "eng-nco-1395-koala",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
   }
 ]
