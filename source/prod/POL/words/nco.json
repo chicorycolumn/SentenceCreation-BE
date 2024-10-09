@@ -18391,5 +18391,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "m2"
+  },
+  {
+    "lemma": "koala",
+    "id": "pol-nco-1181-koala",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m2"
   }
 ]

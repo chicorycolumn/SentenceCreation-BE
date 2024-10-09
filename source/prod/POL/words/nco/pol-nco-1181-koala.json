@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "koala",
+      "gen": "koali",
+      "dat": "koali",
+      "acc": "koalę",
+      "ins": "koalą",
+      "loc": "koali",
+      "voc": "koalo"
+    },
+    "plural": {
+      "nom": "koale",
+      "gen": "koali",
+      "dat": "koalom",
+      "acc": "koale",
+      "ins": "koalami",
+      "loc": "koalach",
+      "voc": "koale"
+    }
+  }
+}
