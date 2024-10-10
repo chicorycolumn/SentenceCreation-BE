@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "hippopotamus",
+      "gen": "hippopotamus's"
+    },
+    "plural": {
+      "nom": "hippopotamuses",
+      "gen": "hippopotamuses'"
+    }
+  }
+}

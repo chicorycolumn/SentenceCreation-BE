@@ -11051,5 +11051,12 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "hippopotamus",
+    "id": "eng-nco-1396-hippopotamus",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
   }
 ]
