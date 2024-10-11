@@ -18397,6 +18397,13 @@
     "id": "pol-nco-1181-koala",
     "frequency": 4,
     "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "hipopotam",
+    "id": "pol-nco-1182-hipopotam",
+    "frequency": 4,
+    "register": 1,
     "gender": "m2"
   }
 ]

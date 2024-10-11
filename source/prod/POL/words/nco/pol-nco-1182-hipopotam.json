@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "hipopotam",
+      "gen": "hipopotama",
+      "dat": "hipopotamowi",
+      "acc": "hipopotama",
+      "ins": "hipopotamem",
+      "loc": "hipopotamie",
+      "voc": "hipopotamie"
+    },
+    "plural": {
+      "nom": "hipopotamy",
+      "gen": "hipopotamów",
+      "dat": "hipopotamom",
+      "acc": "hipopotamy",
+      "ins": "hipopotamami",
+      "loc": "hipopotamach",
+      "voc": "hipopotamy"
+    }
+  }
+}
