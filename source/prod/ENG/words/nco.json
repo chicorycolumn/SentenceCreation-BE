@@ -11058,5 +11058,12 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "leopard",
+    "id": "eng-nco-1397-leopard",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
   }
 ]
