@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lampart",
+      "gen": "lamparta",
+      "dat": "lampartowi",
+      "acc": "lamparta",
+      "ins": "lampartem",
+      "loc": "lamparcie",
+      "voc": "lamparcie"
+    },
+    "plural": {
+      "nom": "lamparty",
+      "gen": "lampartów",
+      "dat": "lampartom",
+      "acc": "lamparty",
+      "ins": "lampartami",
+      "loc": "lampartach",
+      "voc": "lamparty"
+    }
+  }
+}
