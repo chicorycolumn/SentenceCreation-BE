@@ -11065,5 +11065,12 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "termite",
+    "id": "eng-nco-1398-termite",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
   }
 ]
