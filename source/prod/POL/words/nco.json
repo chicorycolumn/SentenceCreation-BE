@@ -18412,5 +18412,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "m2"
+  },
+  {
+    "lemma": "termit",
+    "id": "pol-nco-1184-termit",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m2"
   }
 ]

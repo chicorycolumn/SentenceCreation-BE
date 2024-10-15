@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "termit",
+      "gen": "termita",
+      "dat": "termitowi",
+      "acc": "termita",
+      "ins": "termitem",
+      "loc": "termicie",
+      "voc": "termicie"
+    },
+    "plural": {
+      "nom": "termity",
+      "gen": "termitów",
+      "dat": "termitom",
+      "acc": "termity",
+      "ins": "termitami",
+      "loc": "termitach",
+      "voc": "termity"
+    }
+  }
+}
