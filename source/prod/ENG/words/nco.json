@@ -11072,5 +11072,12 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "louse",
+    "id": "eng-nco-1399-louse",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
   }
 ]
