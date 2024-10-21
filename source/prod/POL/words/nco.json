@@ -18419,5 +18419,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "m2"
+  },
+  {
+    "lemma": "wesz",
+    "id": "pol-nco-1185-wesz",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m2"
   }
 ]

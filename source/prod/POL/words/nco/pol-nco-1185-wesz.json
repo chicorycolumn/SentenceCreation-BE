@@ -1,0 +1,22 @@
+{
+  "inflections": {	
+    "singular": {
+      "nom": "wesz",
+      "gen": "wszy",
+      "dat": "wszy",
+      "acc": "wesz",
+      "ins": "wszą",
+      "loc": "wszy",
+      "voc": "wszy"
+    },
+    "plural": {
+      "nom": "wszy",
+      "gen": "wszy",
+      "dat": "wszom",
+      "acc": "wszy",
+      "ins": "wszami",
+      "loc": "wszach",
+      "voc": "wszy"
+    }
+  }
+}
