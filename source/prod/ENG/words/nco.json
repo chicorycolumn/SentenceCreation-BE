@@ -11079,5 +11079,12 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "scorpion",
+    "id": "eng-nco-1400-scorpion",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
   }
 ]
