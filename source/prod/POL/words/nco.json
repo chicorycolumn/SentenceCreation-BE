@@ -18426,5 +18426,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "m2"
+  },
+  {
+    "lemma": "skorpion",
+    "id": "pol-nco-1186-skorpion",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m2"
   }
 ]

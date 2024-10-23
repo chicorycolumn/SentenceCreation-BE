@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "skorpion",
+      "gen": "skorpiona",
+      "dat": "skorpionowi",
+      "acc": "skorpiona",
+      "ins": "skorpionem",
+      "loc": "skorpionie",
+      "voc": "skorpionie"
+    },
+    "plural": {
+      "nom": "skorpiony",
+      "gen": "skorpionów",
+      "dat": "skorpionom",
+      "acc": "skorpiony",
+      "ins": "skorpionami",
+      "loc": "skorpionach",
+      "voc": "skorpiony"
+    }
+  }
+}
