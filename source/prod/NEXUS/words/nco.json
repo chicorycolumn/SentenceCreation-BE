@@ -11219,5 +11219,16 @@
     },
     "papers": ["s4", "living", "concrete", "animal"],
     "topics": ["outside"]
+  },
+  {
+    "key": "nco-1095-kangaroo",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1393"],
+      "POL": ["pol-nco-1179"]
+    },
+    "papers": ["s4", "living", "concrete", "animal"],
+    "topics": ["outside"]
   }
+
 ]
