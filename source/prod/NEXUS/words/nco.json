@@ -11229,6 +11229,16 @@
     },
     "papers": ["s4", "living", "concrete", "animal"],
     "topics": ["outside"]
+  },
+  {
+    "key": "nco-1096-alligator",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1394"],
+      "POL": ["pol-nco-1180"]
+    },
+    "papers": ["s4", "living", "concrete", "animal"],
+    "topics": ["outside"]
   }
 
 ]
