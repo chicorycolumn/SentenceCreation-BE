@@ -11239,6 +11239,17 @@
     },
     "papers": ["s4", "living", "concrete", "animal"],
     "topics": ["outside"]
+  },
+  {
+    "key": "nco-1097-koala",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1395"],
+      "POL": ["pol-nco-1181"]
+    },
+    "papers": ["s3", "living", "concrete", "animal"],
+    "topics": ["outside"]
   }
+
 
 ]
