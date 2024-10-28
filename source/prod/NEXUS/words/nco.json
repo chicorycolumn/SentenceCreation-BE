@@ -11249,6 +11249,16 @@
     },
     "papers": ["s3", "living", "concrete", "animal"],
     "topics": ["outside"]
+  },
+  {
+    "key": "nco-1098-hippopotamus",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1396"],
+      "POL": ["pol-nco-1182"]
+    },
+    "papers": ["s4", "living", "concrete", "animal"],
+    "topics": ["outside"]
   }
 
 
