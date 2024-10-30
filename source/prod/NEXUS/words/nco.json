@@ -11259,7 +11259,18 @@
     },
     "papers": ["s4", "living", "concrete", "animal"],
     "topics": ["outside"]
+  },
+  {
+    "key": "nco-1099-leopard",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1397"],
+      "POL": ["pol-nco-1183"]
+    },
+    "papers": ["s4", "living", "concrete", "animal"],
+    "topics": ["outside"]
   }
+
 
 
 ]
