@@ -3927,7 +3927,7 @@
       "ENG": ["eng-nco-0486-weapon"],
       "POL": ["pol-nco-0388-broń(weapon)"]
     },
-    "papers": ["s1", "concrete", "abstract", "weapon", "weapon hypernym"],
+    "papers": ["s2", "concrete", "abstract", "weapon", "weapon hypernym"],
     "topics": ["violence"]
   },
   {
@@ -11187,7 +11187,7 @@
       "ENG": ["eng-nco-1389-mole(animal)"],
       "POL": ["pol-nco-1175-kret"]
     },
-    "papers": ["s1", "living", "concrete", "animal"],
+    "papers": ["s2", "living", "concrete", "animal"],
     "topics": ["outside"]
   },
   {
