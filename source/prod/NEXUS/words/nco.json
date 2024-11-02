@@ -8983,7 +8983,7 @@
       "ENG": ["eng-nco-1120-mould"],
       "POL": ["pol-nco-0905-pleśń"]
     },
-    "papers": ["s1", "concrete"],
+    "papers": ["concrete"],
     "topics": ["restaurant", "inside", "disease", "medicine", "kitchen"]
   },
   {
@@ -9577,7 +9577,7 @@
       "ENG": ["eng-nco-1203-knot"],
       "POL": ["pol-nco-0973-węzeł"]
     },
-    "papers": ["s1", "concrete"],
+    "papers": ["concrete"],
     "topics": ["hobbies"]
   },
   {
