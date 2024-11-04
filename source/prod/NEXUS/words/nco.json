@@ -11274,12 +11274,12 @@
     "key": "nco-1100-termite",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-nco-1397"],
+      "ENG": ["eng-nco-1398"],
       "POL": ["pol-nco-1184"]
     },
     "papers": ["s1", "living", "concrete", "animal"],
     "topics": ["outside"]
-  },
+  }
 
 
 
