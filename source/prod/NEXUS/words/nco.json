@@ -56,7 +56,7 @@
       "ENG": ["eng-nco-0008-tea"],
       "POL": ["pol-nco-0006-herbata"]
     },
-    "papers": ["s2", "drink", "concrete"],
+    "papers": ["liquid", "drink", "concrete"],
     "topics": ["kitchen", "inside", "restaurant"]
   },
   {
@@ -133,7 +133,7 @@
       "ENG": ["eng-nco-0017-vodka"],
       "POL": ["pol-nco-0013-wódka"]
     },
-    "papers": ["s2", "alcoholic", "drink", "concrete"],
+    "papers": ["liquid", "alcoholic", "drink", "concrete"],
     "topics": ["kitchen", "inside", "restaurant", "nightclub"]
   },
   {
@@ -742,7 +742,7 @@
       "ENG": ["eng-nco-0088-water"],
       "POL": ["pol-nco-0072-woda"]
     },
-    "papers": ["s2", "material", "natural", "uncountable", "concrete", "drink"],
+    "papers": ["liquid", "material", "natural", "uncountable", "concrete", "drink"],
     "topics": [
       "restaurant",
       "inside",
@@ -1366,7 +1366,7 @@
       "ENG": ["eng-nco-0166-juice"],
       "POL": ["pol-nco-0133-sok"]
     },
-    "papers": ["s2", "food", "concrete", "drink", "sweet"],
+    "papers": ["liquid", "food", "concrete", "drink", "sweet"],
     "topics": ["kitchen", "inside", "restaurant"]
   },
   {
@@ -1480,7 +1480,7 @@
       "ENG": ["eng-nco-0176-wine"],
       "POL": ["pol-nco-0144-wino"]
     },
-    "papers": ["s2", "alcoholic", "drink", "concrete"],
+    "papers": ["liquid", "alcoholic", "drink", "concrete"],
     "topics": ["kitchen", "inside", "restaurant", "nightclub"]
   },
   {
@@ -1555,7 +1555,7 @@
       "ENG": ["eng-nco-0186-coffee"],
       "POL": ["pol-nco-0151-kawa"]
     },
-    "papers": ["s2", "drink", "concrete"],
+    "papers": ["liquid", "drink", "concrete"],
     "topics": ["kitchen", "inside", "restaurant"]
   },
   {
@@ -2015,7 +2015,7 @@
       "ENG": ["eng-nco-0244-milk"],
       "POL": ["pol-nco-0194-mleko"]
     },
-    "papers": ["s2", "drink", "concrete"],
+    "papers": ["liquid", "drink", "concrete"],
     "topics": ["kitchen", "inside", "restaurant"]
   },
   {
@@ -3147,7 +3147,7 @@
       "ENG": ["eng-nco-0392-beer"],
       "POL": ["pol-nco-0307-piwo"]
     },
-    "papers": ["s2", "alcoholic", "drink", "concrete"],
+    "papers": ["liquid", "alcoholic", "drink", "concrete"],
     "topics": ["kitchen", "inside", "restaurant", "nightclub"]
   },
   {
@@ -3666,7 +3666,7 @@
       "ENG": ["eng-nco-0456-alcohol"],
       "POL": ["pol-nco-0359-alkohol"]
     },
-    "papers": ["s2", "alcoholic", "alcoholic hypernym", "concrete", "drink"],
+    "papers": ["liquid", "alcoholic", "alcoholic hypernym", "concrete", "drink"],
     "topics": [
       "restaurant",
       "inside",
