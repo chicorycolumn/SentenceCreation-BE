@@ -123,7 +123,7 @@
       "ENG": ["eng-nco-0014-lamp", "eng-nco-0015-light(lamp)"],
       "POL": ["pol-nco-0012-lampa"]
     },
-    "papers": ["s2", "device", "concrete", "furniture"],
+    "papers": ["s3", "device", "concrete", "furniture"],
     "topics": ["tech", "bedroom", "home", "inside"]
   },
   {
@@ -283,7 +283,7 @@
       "ENG": ["eng-nco-0036-rubber(material)"],
       "POL": ["pol-nco-0030-guma(rubber)"]
     },
-    "papers": ["s2", "material", "uncountable", "concrete"],
+    "papers": ["material", "uncountable", "concrete"],
     "topics": ["engineering"]
   },
   {
@@ -959,7 +959,7 @@
       "ENG": ["eng-nco-0114-spark"],
       "POL": ["pol-nco-0094-iskra"]
     },
-    "papers": ["s2", "concrete", "abstract"],
+    "papers": ["concrete", "abstract"],
     "topics": ["engineering"]
   },
   {
