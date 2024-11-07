@@ -2763,7 +2763,7 @@
       "ENG": ["eng-nco-0347-bin", "eng-nco-0348-trashcan"],
       "POL": ["pol-nco-0269-kosz(bin)"]
     },
-    "papers": ["s2", "concrete", "household object"],
+    "papers": ["s3", "concrete", "household object"],
     "topics": ["home", "inside"]
   },
   {
@@ -3307,7 +3307,7 @@
       "ENG": ["eng-nco-0412-wood"],
       "POL": ["pol-nco-0323-drewno"]
     },
-    "papers": ["s2", "material", "uncountable", "concrete"],
+    "papers": ["material", "uncountable", "concrete"],
     "topics": ["engineering"]
   },
   {
@@ -3472,7 +3472,7 @@
       "ENG": ["eng-nco-0432-bucket"],
       "POL": ["pol-nco-0339-wiadro"]
     },
-    "papers": ["s2", "container", "concrete", "tool"],
+    "papers": ["s3", "container", "concrete", "tool"],
     "topics": ["agriculture"]
   },
   {
