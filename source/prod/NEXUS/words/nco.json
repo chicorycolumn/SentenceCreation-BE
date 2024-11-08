@@ -3522,7 +3522,7 @@
       "ENG": ["eng-nco-0436-honey(bees)"],
       "POL": ["pol-nco-0344-miód"]
     },
-    "papers": ["s2", "food", "concrete", "sweet"],
+    "papers": ["s1", "food", "concrete", "sweet"],
     "topics": ["kitchen", "inside", "restaurant"]
   },
   {
@@ -3566,7 +3566,7 @@
       "ENG": ["eng-nco-0441-acid"],
       "POL": ["pol-nco-0348-kwas"]
     },
-    "papers": ["s2", "concrete", "weapon"],
+    "papers": ["concrete", "weapon"],
     "topics": ["violence", "science", "chemistry"]
   },
   {
@@ -3646,7 +3646,7 @@
       "ENG": ["eng-nco-0454-tail"],
       "POL": ["pol-nco-0357-ogon"]
     },
-    "papers": ["s2", "concrete", "bodypart animal"],
+    "papers": ["concrete", "bodypart animal"],
     "topics": ["biology"]
   },
   {
