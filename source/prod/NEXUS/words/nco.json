@@ -4151,7 +4151,7 @@
       "ENG": ["eng-nco-0513-oil"],
       "POL": ["pol-nco-0412-olej"]
     },
-    "papers": ["s2", "material", "uncountable", "concrete"],
+    "papers": ["material", "uncountable", "concrete"],
     "topics": ["restaurant", "kitchen", "inside", "engineering"]
   },
   {
@@ -4620,7 +4620,7 @@
       "ENG": ["eng-nco-0570-wing"],
       "POL": ["pol-nco-0461-skrzydło"]
     },
-    "papers": ["s2", "concrete", "bodypart animal"],
+    "papers": ["concrete", "bodypart animal"],
     "topics": ["biology"]
   },
   {
@@ -5063,7 +5063,7 @@
       "ENG": ["eng-nco-0606-blood"],
       "POL": ["pol-nco-0487-krew"]
     },
-    "papers": ["s2", "concrete"],
+    "papers": ["concrete"],
     "topics": ["biology", "medicine", "violence", "science"]
   },
   {
