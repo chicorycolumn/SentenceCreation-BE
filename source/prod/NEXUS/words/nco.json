@@ -989,7 +989,7 @@
       "ENG": ["eng-nco-0117-silver"],
       "POL": ["pol-nco-0097-srebro"]
     },
-    "papers": ["s1", "material", "uncountable", "concrete"],
+    "papers": ["material", "uncountable", "concrete"],
     "topics": ["engineering"]
   },
   {
@@ -1049,7 +1049,7 @@
       "ENG": ["eng-nco-0123-helium"],
       "POL": ["pol-nco-0103-hel"]
     },
-    "papers": ["material", "uncountable", "chemical", "concrete"],
+    "papers": ["gas", "material", "uncountable", "chemical", "concrete"],
     "topics": ["chemistry"]
   },
   {
@@ -1839,7 +1839,7 @@
       "ENG": ["eng-nco-0219-uranium"],
       "POL": ["pol-nco-0177-uran"]
     },
-    "papers": ["s2", "material", "uncountable", "chemical", "concrete"],
+    "papers": ["material", "uncountable", "chemical", "concrete"],
     "topics": ["chemistry"]
   },
   {
@@ -2055,7 +2055,7 @@
       "ENG": ["eng-nco-0248-gold"],
       "POL": ["pol-nco-0198-złoto"]
     },
-    "papers": ["s1", "material", "uncountable", "chemical", "concrete"],
+    "papers": ["material", "uncountable", "chemical", "concrete"],
     "topics": ["engineering", "chemistry"]
   },
   {
@@ -2302,7 +2302,7 @@
       "ENG": ["eng-nco-0280-concrete"],
       "POL": ["pol-nco-0223-beton"]
     },
-    "papers": ["s3", "material", "uncountable", "concrete"],
+    "papers": ["material", "uncountable", "concrete"],
     "topics": ["engineering"]
   },
   {
@@ -3227,7 +3227,7 @@
       "ENG": ["eng-nco-0400-lead(metal)"],
       "POL": ["pol-nco-0315-ołów"]
     },
-    "papers": ["s1", "material", "uncountable", "chemical", "concrete"],
+    "papers": ["material", "uncountable", "chemical", "concrete"],
     "topics": ["chemistry"]
   },
   {
