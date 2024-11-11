@@ -4151,7 +4151,7 @@
       "ENG": ["eng-nco-0513-oil"],
       "POL": ["pol-nco-0412-olej"]
     },
-    "papers": ["material", "uncountable", "concrete"],
+    "papers": ["liquid", "material", "uncountable", "concrete"],
     "topics": ["restaurant", "kitchen", "inside", "engineering"]
   },
   {
@@ -4650,7 +4650,7 @@
       "ENG": ["eng-nco-0004-glass(material)"],
       "POL": ["pol-nco-0464-szkło"]
     },
-    "papers": ["s3", "material", "uncountable", "concrete"],
+    "papers": ["material", "uncountable", "concrete"],
     "topics": ["engineering"]
   },
   {
@@ -5133,7 +5133,7 @@
       "ENG": ["eng-nco-0615-leather"],
       "POL": ["pol-nco-0497-skóra(leather)"]
     },
-    "papers": ["s2", "material", "uncountable", "concrete"],
+    "papers": ["material", "uncountable", "concrete"],
     "topics": ["engineering", "fashion"]
   },
   {
@@ -5239,7 +5239,7 @@
       "ENG": ["eng-nco-0631-bronze"],
       "POL": ["pol-nco-0510-brąz"]
     },
-    "papers": ["s2", "material", "uncountable", "concrete"],
+    "papers": ["material", "uncountable", "concrete"],
     "topics": ["engineering"]
   },
   {
@@ -5289,7 +5289,7 @@
       "ENG": ["eng-nco-0639-ash"],
       "POL": ["pol-nco-0516-popiół"]
     },
-    "papers": ["s1", "material", "uncountable", "concrete"],
+    "papers": ["material", "uncountable", "concrete"],
     "topics": ["engineering"]
   },
   {
@@ -5349,7 +5349,7 @@
       "ENG": ["eng-nco-0645-sand"],
       "POL": ["pol-nco-0521-piasek"]
     },
-    "papers": ["s1", "material", "uncountable", "concrete"],
+    "papers": ["material", "uncountable", "concrete"],
     "topics": ["holiday", "geography", "engineering"]
   },
   {
