@@ -5369,7 +5369,7 @@
       "ENG": ["eng-nco-0650-iron"],
       "POL": ["pol-nco-0525-żelazo"]
     },
-    "papers": ["s2", "material", "uncountable", "chemical", "concrete"],
+    "papers": ["material", "uncountable", "chemical", "concrete"],
     "topics": ["engineering", "chemistry"]
   },
   {
@@ -5379,7 +5379,7 @@
       "ENG": ["eng-nco-0651-copper"],
       "POL": ["pol-nco-0526-miedź"]
     },
-    "papers": ["s2", "material", "uncountable", "chemical", "concrete"],
+    "papers": ["material", "uncountable", "chemical", "concrete"],
     "topics": ["engineering", "chemistry"]
   },
   {
@@ -6030,7 +6030,7 @@
       "ENG": ["eng-nco-0745-glue"],
       "POL": ["pol-nco-0597-klej"]
     },
-    "papers": ["s1", "material", "uncountable", "concrete"],
+    "papers": ["liquid", "material", "uncountable", "concrete"],
     "topics": ["hobbies", "school", "engineering"]
   },
   {
@@ -6738,7 +6738,7 @@
       "ENG": ["eng-nco-0840-calcium"],
       "POL": ["pol-nco-0669-wapń"]
     },
-    "papers": ["s2", "material", "uncountable", "chemical", "concrete"],
+    "papers": ["material", "uncountable", "chemical", "concrete"],
     "topics": ["nutrition", "chemistry"]
   },
   {
