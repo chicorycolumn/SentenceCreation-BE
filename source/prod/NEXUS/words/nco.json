@@ -6828,7 +6828,7 @@
       "ENG": ["eng-nco-0852-mercury"],
       "POL": ["pol-nco-0681-rtęć"]
     },
-    "papers": ["s2", "material", "uncountable", "chemical", "concrete"],
+    "papers": ["liquid", "material", "uncountable", "chemical", "concrete"],
     "topics": ["chemistry"]
   },
   {
@@ -6908,7 +6908,7 @@
       "ENG": ["eng-nco-0864-sulphur"],
       "POL": ["pol-nco-0689-siarka"]
     },
-    "papers": ["s2", "material", "uncountable", "chemical", "concrete"],
+    "papers": ["material", "uncountable", "chemical", "concrete"],
     "topics": ["chemistry"]
   },
   {
@@ -7496,7 +7496,7 @@
       "ENG": ["eng-nco-0933-carbon"],
       "POL": ["pol-nco-0746-węgiel(carbon)"]
     },
-    "papers": ["s2", "material", "uncountable", "chemical", "concrete"],
+    "papers": ["material", "uncountable", "chemical", "concrete"],
     "topics": ["chemistry"]
   },
   {
@@ -7646,7 +7646,7 @@
       "ENG": ["eng-nco-0949-chlorine"],
       "POL": ["pol-nco-0762-chlor"]
     },
-    "papers": ["s2", "material", "uncountable", "chemical", "concrete"],
+    "papers": ["gas", "material", "uncountable", "chemical", "concrete"],
     "topics": ["chemistry"]
   },
   {
@@ -7656,7 +7656,7 @@
       "ENG": ["eng-nco-0950-silicon"],
       "POL": ["pol-nco-0763-krzem"]
     },
-    "papers": ["s2", "material", "uncountable", "chemical", "concrete"],
+    "papers": ["material", "uncountable", "chemical", "concrete"],
     "topics": ["chemistry"]
   },
   {
@@ -8576,7 +8576,7 @@
       "ENG": ["eng-nco-1073-protein"],
       "POL": ["pol-nco-0862-białko"]
     },
-    "papers": ["s2", "material", "uncountable", "concrete"],
+    "papers": ["material", "uncountable", "concrete"],
     "topics": [
       "biology",
       "restaurant",
