@@ -9073,7 +9073,7 @@
       "ENG": ["eng-nco-1133-brass"],
       "POL": ["pol-nco-0917-mosiądz"]
     },
-    "papers": ["s2", "material", "uncountable", "concrete"],
+    "papers": ["material", "uncountable", "concrete"],
     "topics": ["engineering"]
   },
   {
@@ -9818,7 +9818,6 @@
       "POL": ["pol-nco-0998-materiał"]
     },
     "papers": [
-      "s2",
       "material",
       "uncountable",
       "material hypernym",
@@ -10317,7 +10316,7 @@
       "ENG": ["eng-nco-1304-fluid", "eng-nco-1305-liquid"],
       "POL": ["pol-nco-1052-płyn"]
     },
-    "papers": ["material", "uncountable", "concrete"],
+    "papers": ["material", "liquid hypernym", "uncountable", "concrete"],
     "topics": ["science", "engineering", "physics"]
   },
   {
