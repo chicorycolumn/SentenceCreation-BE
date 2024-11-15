@@ -3297,7 +3297,7 @@
       "ENG": ["eng-nco-0411-smoke"],
       "POL": ["pol-nco-0322-dym"]
     },
-    "papers": ["concrete"],
+    "papers": ["concrete", "gas"],
     "topics": ["science", "chemistry"]
   },
   {
@@ -11278,8 +11278,17 @@
     },
     "papers": ["s1", "living", "concrete", "animal"],
     "topics": ["outside"]
+  },
+  {
+    "key": "nco-1103-steam",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1401-steam"],
+      "POL": ["pol-nco-1187-para"]
+    },
+    "papers": ["concrete", "gas"],
+    "topics": ["science", "chemistry"]
   }
-
 
 
 ]
