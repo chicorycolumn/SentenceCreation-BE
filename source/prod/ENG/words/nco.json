@@ -11086,5 +11086,14 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "steam",
+    "id": "eng-nco-1401-steam",
+    "gender": "n",
+    "register": 1,
+    "frequency": 3,
+    "_lacking": true,
+    "tantumSingulare": true
   }
 ]
