@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "para",
+      "gen": "pary",
+      "dat": "parze",
+      "acc": "parę",
+      "ins": "parą",
+      "loc": "parze",
+      "voc": "paro"
+    }
+  }
+}

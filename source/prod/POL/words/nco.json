@@ -18433,5 +18433,14 @@
     "frequency": 4,
     "register": 1,
     "gender": "m2"
+  },
+  {
+    "lemma": "para",
+    "id": "pol-nco-1187-para",
+    "frequency": 3,
+    "register": 1,
+    "gender": "f",
+    "_lacking": true,
+    "tantumSingulare": true
   }
 ]
