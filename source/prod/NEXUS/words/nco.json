@@ -11280,6 +11280,16 @@
     "topics": ["outside"]
   },
   {
+    "key": "nco-1101-louse",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1399"],
+      "POL": ["pol-nco-1185"]
+    },
+    "papers": ["s1", "living", "concrete", "animal"],
+    "topics": ["outside"]
+  },
+  {
     "key": "nco-1103-steam",
     "traductions": {
       "SPA": [],
