@@ -11290,6 +11290,16 @@
     "topics": ["outside"]
   },
   {
+    "key": "nco-1102-skorpion",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1400"],
+      "POL": ["pol-nco-1186"]
+    },
+    "papers": ["s2", "living", "concrete", "animal"],
+    "topics": ["outside"]
+  },
+  {
     "key": "nco-1103-steam",
     "traductions": {
       "SPA": [],
