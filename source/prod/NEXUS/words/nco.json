@@ -7646,7 +7646,7 @@
       "ENG": ["eng-nco-0949-chlorine"],
       "POL": ["pol-nco-0762-chlor"]
     },
-    "papers": ["gas", "material", "uncountable", "chemical", "concrete"],
+    "papers": ["gas", "uncountable", "chemical", "concrete"],
     "topics": ["chemistry"]
   },
   {
@@ -7712,7 +7712,7 @@
       "ENG": ["eng-nco-0955-hydrogen"],
       "POL": ["pol-nco-0768-wodór"]
     },
-    "papers": ["material", "gas", "uncountable", "chemical", "concrete"],
+    "papers": ["gas", "uncountable", "chemical", "concrete"],
     "topics": ["chemistry"]
   },
   {
@@ -8576,7 +8576,7 @@
       "ENG": ["eng-nco-1073-protein"],
       "POL": ["pol-nco-0862-białko"]
     },
-    "papers": ["material", "uncountable", "concrete"],
+    "papers": ["material", "uncountable", "concrete", "molecule"],
     "topics": [
       "biology",
       "restaurant",
@@ -10316,7 +10316,7 @@
       "ENG": ["eng-nco-1304-fluid", "eng-nco-1305-liquid"],
       "POL": ["pol-nco-1052-płyn"]
     },
-    "papers": ["material", "liquid hypernym", "uncountable", "concrete"],
+    "papers": ["liquid hypernym", "uncountable", "concrete"],
     "topics": ["science", "engineering", "physics"]
   },
   {
