@@ -2075,7 +2075,7 @@
       "ENG": ["eng-nco-0250-nitrogen"],
       "POL": ["pol-nco-0200-azot"]
     },
-    "papers": ["material", "gas", "uncountable", "chemical", "concrete"],
+    "papers": ["gas", "uncountable", "chemical", "concrete"],
     "topics": ["chemistry"]
   },
   {
@@ -4151,7 +4151,7 @@
       "ENG": ["eng-nco-0513-oil"],
       "POL": ["pol-nco-0412-olej"]
     },
-    "papers": ["liquid", "material", "uncountable", "concrete"],
+    "papers": ["liquid", "uncountable", "concrete"],
     "topics": ["restaurant", "kitchen", "inside", "engineering"]
   },
   {
@@ -6828,7 +6828,7 @@
       "ENG": ["eng-nco-0852-mercury"],
       "POL": ["pol-nco-0681-rtęć"]
     },
-    "papers": ["liquid", "material", "uncountable", "chemical", "concrete"],
+    "papers": ["liquid", "uncountable", "chemical", "concrete"],
     "topics": ["chemistry"]
   },
   {
