@@ -2604,7 +2604,7 @@
       "ENG": ["eng-nco-0325-ice"],
       "POL": ["pol-nco-0254-lód"]
     },
-    "papers": ["s1", "concrete", "weather"],
+    "papers": ["s1", "concrete", "weather", "material"],
     "topics": ["outdoor", "geography"]
   },
   {
@@ -3522,7 +3522,7 @@
       "ENG": ["eng-nco-0436-honey(bees)"],
       "POL": ["pol-nco-0344-miód"]
     },
-    "papers": ["s1", "food", "concrete", "sweet"],
+    "papers": ["s1", "food", "concrete", "sweet", "liquid"],
     "topics": ["kitchen", "inside", "restaurant"]
   },
   {
@@ -4610,7 +4610,7 @@
       "ENG": ["eng-nco-0569-soap"],
       "POL": ["pol-nco-0460-mydło"]
     },
-    "papers": ["s1", "concrete"],
+    "papers": ["s1", "concrete", "material"],
     "topics": ["daily routine"]
   },
   {
