@@ -969,7 +969,7 @@
       "ENG": ["eng-nco-0115-paint"],
       "POL": ["pol-nco-0095-farba"]
     },
-    "papers": ["s2", "concrete", "household object"],
+    "papers": ["s2", "concrete", "household object", "liquid"],
     "topics": ["art", "home", "inside"]
   },
   {
@@ -8733,7 +8733,7 @@
       "ENG": ["eng-nco-1091-maize", "eng-nco-1092-corn"],
       "POL": ["pol-nco-0879-kukurydza"]
     },
-    "papers": ["s1", "food", "concrete", "vegetable"],
+    "papers": ["s1", "food", "concrete", "vegetable", "uncountable"],
     "topics": ["kitchen", "inside", "restaurant"]
   },
   {
