@@ -11308,7 +11308,16 @@
     },
     "papers": ["concrete", "gas"],
     "topics": ["science", "chemistry"]
+  },
+  {
+    "key": "nco-1104-dye",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1402-dye"],
+      "POL": ["pol-nco-1188-barwnik"]
+    },
+    "papers": ["s2", "concrete", "household object", "liquid"],
+    "topics": ["art", "home", "inside"]
   }
-
 
 ]
