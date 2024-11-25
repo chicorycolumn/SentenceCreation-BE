@@ -11095,5 +11095,12 @@
     "frequency": 3,
     "_lacking": true,
     "tantumSingulare": true
+  },
+  {
+    "lemma": "dye",
+    "id": "eng-nco-1402-dye",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
   }
 ]
