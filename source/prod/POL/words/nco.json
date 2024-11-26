@@ -18442,5 +18442,12 @@
     "gender": "f",
     "_lacking": true,
     "tantumSingulare": true
+  },
+  {
+    "lemma": "barwnik",
+    "id": "pol-nco-1188-barwnik",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
   }
 ]

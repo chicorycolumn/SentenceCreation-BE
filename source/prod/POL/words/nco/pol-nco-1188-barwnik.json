@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "barwnik",
+      "gen": "barwnika",
+      "dat": "barwnikowi",
+      "acc": "barwnik",
+      "ins": "barwnikiem",
+      "loc": "barwniku",
+      "voc": "barwniku"
+    },
+    "plural": {
+      "nom": "barwniki",
+      "gen": "barwników",
+      "dat": "barwnikom",
+      "acc": "barwniki",
+      "ins": "barwnikami",
+      "loc": "barwnikach",
+      "voc": "barwniki"
+    }
+  }
+}
