@@ -10526,7 +10526,7 @@
       "ENG": ["eng-nco-1326-shampoo"],
       "POL": ["pol-nco-1074-szampon"]
     },
-    "papers": ["s2", "concrete", "household object"],
+    "papers": ["s2", "concrete", "liquid", "household object"],
     "topics": ["daily routine", "home", "inside", "washroom"]
   },
   {
@@ -11318,6 +11318,15 @@
     },
     "papers": ["s2", "concrete", "household object", "liquid"],
     "topics": ["art", "home", "inside"]
-  }
-
+  },
+  {
+    "key": "nco-1105-conditioner",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1403-conditioner"],
+      "POL": ["pol-nco-1189-odżywka"]
+    },
+    "papers": ["s2", "concrete", "liquid", "household object"],
+    "topics": ["daily routine", "home", "inside", "washroom"]
+  },
 ]
