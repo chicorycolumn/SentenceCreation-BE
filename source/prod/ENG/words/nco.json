@@ -11102,5 +11102,12 @@
     "gender": "n",
     "frequency": 4,
     "register": 1
+  },
+  {
+    "lemma": "conditioner",
+    "id": "eng-nco-1403-conditioner",
+    "gender": "n",
+    "frequency": 2,
+    "register": 1
   }
 ]
