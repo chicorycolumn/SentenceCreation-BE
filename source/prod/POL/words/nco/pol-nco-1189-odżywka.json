@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "odżywka",
+      "gen": "odżywki",
+      "dat": "odżywce",
+      "acc": "odżywkę",
+      "ins": "odżywką",
+      "loc": "odżywce",
+      "voc": "odżywko"
+    },
+    "plural": {
+      "nom": "odżywki",
+      "gen": "odżywek",
+      "dat": "odżywkom",
+      "acc": "odżywki",
+      "ins": "odżywkami",
+      "loc": "odżywkach",
+      "voc": "odżywki"
+    }
+  }
+}

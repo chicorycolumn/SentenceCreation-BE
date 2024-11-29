@@ -18449,5 +18449,12 @@
     "frequency": 4,
     "register": 1,
     "gender": "m3"
-  }
+  },
+  {
+    "lemma": "odżywka",
+    "id": "pol-nco-1189-odżywka",
+    "frequency": 2,
+    "register": 1,
+    "gender": "f"
+  },
 ]
