@@ -1079,7 +1079,7 @@
       "ENG": ["eng-nco-0126-guitar"],
       "POL": ["pol-nco-0106-gitara"]
     },
-    "papers": ["s3", "concrete"],
+    "papers": ["s3", "concrete", "musical instrument"],
     "topics": ["music"]
   },
   {
@@ -11329,4 +11329,14 @@
     "papers": ["s2", "concrete", "liquid", "household object"],
     "topics": ["daily routine", "home", "inside", "washroom"]
   },
+  {
+    "key": "nco-1106-piano",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1404-piano"],
+      "POL": ["pol-nco-1190-fortepian"]
+    },
+    "papers": ["s4", "concrete", "musical instrument"],
+    "topics": ["music"]
+  }
 ]
