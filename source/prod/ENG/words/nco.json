@@ -11109,5 +11109,12 @@
     "gender": "n",
     "frequency": 2,
     "register": 1
+  },
+  {
+    "lemma": "piano",
+    "id": "eng-nco-1404-piano",
+    "gender": "n",
+    "frequency": 3,
+    "register": 1
   }
 ]
