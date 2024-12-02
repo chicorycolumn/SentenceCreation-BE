@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "fortepian",
+      "gen": "fortepianu",
+      "dat": "fortepianowi",
+      "acc": "fortepian",
+      "ins": "fortepianem",
+      "loc": "fortepianie",
+      "voc": "fortepianie"
+    },
+    "plural": {
+      "nom": "fortepiany",
+      "gen": "fortepianów",
+      "dat": "fortepianom",
+      "acc": "fortepiany",
+      "ins": "fortepianami",
+      "loc": "fortepianach",
+      "voc": "fortepiany"
+    }
+  }
+}

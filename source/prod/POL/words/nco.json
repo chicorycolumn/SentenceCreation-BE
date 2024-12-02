@@ -18457,4 +18457,11 @@
     "register": 1,
     "gender": "f"
   },
+  {
+    "lemma": "fortepian",
+    "id": "pol-nco-1190-fortepian",
+    "frequency": 3,
+    "register": 1,
+    "gender": "m3"
+  }
 ]
