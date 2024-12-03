@@ -6030,7 +6030,7 @@
       "ENG": ["eng-nco-0745-glue"],
       "POL": ["pol-nco-0597-klej"]
     },
-    "papers": ["liquid", "material", "uncountable", "concrete"],
+    "papers": ["semiliquid", "material", "uncountable", "concrete"],
     "topics": ["hobbies", "school", "engineering"]
   },
   {
@@ -11338,5 +11338,35 @@
     },
     "papers": ["s4", "concrete", "musical instrument"],
     "topics": ["music"]
+  },
+  {
+    "key": "nco-1107-jelly(jello)",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1405-jelly(jello)"],
+      "POL": ["pol-nco-1191-galaretka"]
+    },
+    "papers": ["s2", "food", "concrete", "sweet"],
+    "topics": ["kitchen", "inside", "restaurant"]
+  },
+  {
+    "key": "nco-1108-jam(food)",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1406-jam(food)"],
+      "POL": ["pol-nco-1192-dżem"]
+    },
+    "papers": ["s2", "semiliquid", "food", "concrete", "sweet"],
+    "topics": ["kitchen", "inside", "restaurant"]
+  },
+  {
+    "key": "nco-1109-honey(food)",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1407-honey(food)"],
+      "POL": ["pol-nco-1193-miód"]
+    },
+    "papers": ["s2", "semiliquid", "food", "concrete", "sweet"],
+    "topics": ["kitchen", "inside", "restaurant"]
   }
 ]
