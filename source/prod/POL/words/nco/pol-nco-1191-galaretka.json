@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "galaretka",
+      "gen": "galaretki",
+      "dat": "galaretce",
+      "acc": "galaretkę",
+      "ins": "galaretką",
+      "loc": "galaretce",
+      "voc": "galaretko"
+    },
+    "plural": {
+      "nom": "galaretki",
+      "gen": "galaretek",
+      "dat": "galaretkom",
+      "acc": "galaretki",
+      "ins": "galaretkami",
+      "loc": "galaretkach",
+      "voc": "galaretki"
+    }
+  }
+}
