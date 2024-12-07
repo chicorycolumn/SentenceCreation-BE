@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dżem",
+      "gen": "dżemu",
+      "dat": "dżemowi",
+      "acc": "dżem",
+      "ins": "dżemem",
+      "loc": "dżemie",
+      "voc": "dżemie"
+    },
+    "plural": {
+      "nom": "dżemy",
+      "gen": "dżemów",
+      "dat": "dżemom",
+      "acc": "dżemy",
+      "ins": "dżemami",
+      "loc": "dżemach",
+      "voc": "dżemy"
+    }
+  }
+}
