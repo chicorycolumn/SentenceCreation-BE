@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "miód",
+      "gen": "miodu",
+      "dat": "miodowi",
+      "acc": "miód",
+      "ins": "miodem",
+      "loc": "miodzie",
+      "voc": "miodzie"
+    },
+    "plural": {
+      "nom": "miody",
+      "gen": "miodów",
+      "dat": "miodom",
+      "acc": "miody",
+      "ins": "miodami",
+      "loc": "miodach",
+      "voc": "miody"
+    }
+  }
+}
