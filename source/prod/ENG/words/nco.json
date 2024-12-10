@@ -11116,5 +11116,36 @@
     "gender": "n",
     "frequency": 3,
     "register": 1
+  },
+  {
+    "lemma": "jelly",
+    "id": "eng-nco-1405-jelly(jello)",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1
+  },
+  {
+    "lemma": "jam",
+    "id": "eng-nco-1406-jam(food)",
+    "gender": "n",
+    "frequency": 4,
+    "register": 1,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "food",
+      "emoji": "🍲"
+    }
+  },
+  {
+    "lemma": "honey",
+    "id": "eng-nco-1407-honey(food)",
+    "gender": "n",
+    "frequency": 1,
+    "register": 1,
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "food",
+      "emoji": "🍲"
+    }
   }
 ]
