@@ -18463,5 +18463,26 @@
     "frequency": 3,
     "register": 1,
     "gender": "m3"
+  },
+  {
+    "lemma": "galaretka",
+    "id": "pol-nco-1191-galaretka",
+    "frequency": 4,
+    "register": 1,
+    "gender": "f"
+  },
+  {
+    "lemma": "dżem",
+    "id": "pol-nco-1192-dżem",
+    "frequency": 4,
+    "register": 1,
+    "gender": "m3"
+  },
+  {
+    "lemma": "miód",
+    "id": "pol-nco-1193-miód",
+    "frequency": 1,
+    "register": 1,
+    "gender": "m3"
   }
 ]

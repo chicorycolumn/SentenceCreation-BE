@@ -11368,5 +11368,15 @@
     },
     "papers": ["s2", "semiliquid", "food", "concrete", "sweet"],
     "topics": ["kitchen", "inside", "restaurant"]
+  },
+  {
+    "key": "nco-1110-sugar",
+    "traductions": {
+      "SPA": [],
+      "ENG": ["eng-nco-1408-sugar"],
+      "POL": ["pol-nco-1194-cukier"]
+    },
+    "papers": ["s2", "food", "concrete", "ingredient", "sweet"],
+    "topics": ["kitchen", "inside", "restaurant"]
   }
 ]
