@@ -18484,5 +18484,14 @@
     "frequency": 1,
     "register": 1,
     "gender": "m3"
+  },
+  {
+    "lemma": "cukier",
+    "id": "pol-nco-1194-cukier",
+    "frequency": 1,
+    "register": 1,
+    "gender": "m3",
+    "_lacking": true,
+    "tantumSingulare": true
   }
 ]

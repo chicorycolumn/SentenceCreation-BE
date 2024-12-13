@@ -1,0 +1,13 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cukier",
+      "gen": "cukru",
+      "dat": "cukrowi",
+      "acc": "cukier",
+      "ins": "cukrem",
+      "loc": "cukrze",
+      "voc": "cukrze"
+    }
+  }
+}
