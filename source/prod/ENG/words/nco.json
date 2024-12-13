@@ -11147,5 +11147,14 @@
       "text": "food",
       "emoji": "🍲"
     }
+  },
+  {
+    "lemma": "sugar",
+    "id": "eng-nco-1408-sugar",
+    "gender": "n",
+    "frequency": 1,
+    "register": 1,
+    "_lacking": true,
+    "tantumSingulare": true
   }
 ]
