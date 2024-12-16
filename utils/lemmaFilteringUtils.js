@@ -1354,7 +1354,7 @@ exports.filterBySelector_inner = (
       requirementArray
     );
 
-    return lemmaObjectArr.filter((lObj) => {
+    let filteredLemmaObjectArr = lemmaObjectArr.filter((lObj) => {
       if (
         answerMode &&
         questionSelectedLemmaObject &&
@@ -1463,6 +1463,53 @@ exports.filterBySelector_inner = (
 
       return bool;
     });
+
+    // // Kurzon solution
+    // if (
+    //   answerMode &&
+    //   questionChunk &&
+    //   questionSelectedLemmaObject &&
+    //   idUtils.stChIsNounPerson(questionChunk) &&
+    //   requirementArray.length === 1
+    // ) {
+    //   if (lfUtils.checkHyper(questionSelectedLemmaObject, [HY.HY])) {
+    //     let _filteredLemmaObjectArr = filteredLemmaObjectArr.filter((l) =>
+    //       lfUtils.checkHyper(l, [HY.VY, HY.HY])
+    //     );
+    //     if (_filteredLemmaObjectArr.length) {
+    //       return _filteredLemmaObjectArr;
+    //     }
+    //   }
+    //   if (lfUtils.checkHyper(questionSelectedLemmaObject, [HY.VY])) {
+    //     let _filteredLemmaObjectArr = filteredLemmaObjectArr.filter((l) =>
+    //       lfUtils.checkHyper(l, [HY.VY, HY.HY])
+    //     );
+    //     if (_filteredLemmaObjectArr.length) {
+    //       return _filteredLemmaObjectArr;
+    //     }
+    //   }
+
+    //   if (!lfUtils.checkHyper(questionSelectedLemmaObject, [HY.VY])) {
+    //     if (["f", "nonvirile"].includes(requirementArray[0])) {
+    //       let _filteredLemmaObjectArr = filteredLemmaObjectArr.filter((l) =>
+    //         ["f", "nonvirile"].includes(l.gender)
+    //       );
+    //       if (_filteredLemmaObjectArr.length) {
+    //         return _filteredLemmaObjectArr;
+    //       }
+    //     }
+    //     if (["m", "m1"].includes(requirementArray[0])) {
+    //       let _filteredLemmaObjectArr = filteredLemmaObjectArr.filter((l) =>
+    //         ["m", "m1"].includes(l.gender)
+    //       );
+    //       if (_filteredLemmaObjectArr.length) {
+    //         return _filteredLemmaObjectArr;
+    //       }
+    //     }
+    //   }
+    // }
+
+    return filteredLemmaObjectArr;
   } else {
     return lemmaObjectArr;
   }
