@@ -389,7 +389,7 @@ exports.frontendifyFormula = (lang, formula) => {
 
       data.body.returnDirectly = true;
 
-      let fetchedSentence = fetchPalette(data);
+      let fetchedSentence = fetchPalette(data)[0];
 
       let newGuideword = fetchedSentence.questionSentenceArr.length
         ? fetchedSentence.questionSentenceArr[0].selectedWord

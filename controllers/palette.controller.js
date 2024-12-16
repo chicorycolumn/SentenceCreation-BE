@@ -22,12 +22,8 @@ exports.getPalette = (req, res, next) => {
   }
 
   fetchPalette(req)
-    .then((responseObj) => {
-      if (responseObj.questionSentence) {
-        res.status(200).send(responseObj);
-      } else {
-        res.status(200).send(responseObj);
-      }
+    .then((responseObjArr) => {
+      res.status(200).send(responseObjArr);
     })
     .catch((err) => next(err));
 };

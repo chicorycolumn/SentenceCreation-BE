@@ -17,6 +17,30 @@ const allLangUtils = require("../utils/allLangUtils.js");
 const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 
 exports.fetchPalette = (req) => {
+  let iterations = Number(req.body.iterations);
+  if (!iterations || iterations === 1) {
+    return exports.fetchPaletteInner(req);
+  }
+  req.body.returnDirectly = true;
+
+  if (iterations > 2) {
+    iterations = 2;
+  }
+
+  let resArray = [];
+
+  for (let i = 0; i < iterations; i++) {
+    let res = exports.fetchPaletteInner(req);
+    resArray.push(res);
+  }
+
+  return Promise.all(resArray).then((resArray) => {
+    console.log("resArray.length", resArray.length);
+    return resArray;
+  });
+};
+
+exports.fetchPaletteInner = (req) => {
   let {
     sentenceFormulaId,
     useDummy,
