@@ -18,13 +18,13 @@ const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 
 exports.fetchPalette = (req) => {
   let iterations = Number(req.body.iterations);
-  if (!iterations || iterations === 1) {
+  if (!iterations) {
     return exports.fetchPaletteInner(req);
   }
   req.body.returnDirectly = true;
 
-  if (iterations > 2) {
-    iterations = 2;
+  if (iterations > 5) {
+    iterations = 5;
   }
 
   let resArray = [];
