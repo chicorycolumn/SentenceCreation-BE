@@ -957,7 +957,7 @@
     "key": "npe-0096-counsellor",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0103"],
+      "ENG": ["eng-npe-0103-counsellor", "eng-npe-0139-adviser"],
       "POL": ["pol-npe-0202-doradca"]
     },
     "papers": ["concrete", "profession", "person", "living"],

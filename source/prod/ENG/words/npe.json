@@ -1361,6 +1361,13 @@
     "register": 1,
     "frequency": 4
   },
+  {
+    "lemma": "counsellor",
+    "id": "eng-npe-0139-adviser",
+    "gender": "_PersonalGenders",
+    "register": 1,
+    "frequency": 3
+  },
 
   {
     "lemma": "mate",
