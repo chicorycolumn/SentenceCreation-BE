@@ -19,7 +19,7 @@
       "chunkId": "nco-2",
       "andTags": ["food"],
       "number": ["plural"],
-      "gcase": ["acc"]
+      "gcase": ["nom"]
     }
   ],
   "orders": {

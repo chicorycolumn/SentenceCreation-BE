@@ -403,7 +403,7 @@
     "key": "npe-0041-translator",
     "traductions": {
       "SPA": [],
-      "ENG": ["eng-npe-0041-translator", "eng-npe-0041-interpreter"],
+      "ENG": ["eng-npe-0041-translator", "eng-npe-0068-interpreter"],
       "POL": ["pol-npe-0041"]
     },
     "papers": ["concrete", "profession", "person", "living"],
