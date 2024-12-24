@@ -6,6 +6,7 @@ const gdUtils = require("./grabDataUtils.js");
 const idUtils = require("./identityUtils.js");
 const ivUtils = require("./secondOrder/inputValidationUtils.js");
 const nexusUtils = require("./secondOrder/nexusUtils.js");
+const allLangUtils = require("./allLangUtils.js");
 
 exports.grabLObjById = (lObjId) => {
   let split = lObjId.split("-");
@@ -50,10 +51,21 @@ exports.grabLObjsByWordtype = (
   }
 
   if (!includeUntranslatedLObjs) {
-    wordsBank = wordsBank.filter((lObj) => !idUtils.isUntranslated(lObj));
+    wordsBank = wordsBank.filter(
+      (lObj) => !exports.skipThisLObj(lObj, includeUntranslatedLObjs)
+    );
   }
 
   return wordsBank;
+};
+
+exports.skipThisLObj = (lObj, includeUntranslatedLObjs) => {
+  if (!includeUntranslatedLObjs && idUtils.isUntranslated(lObj)) {
+    return true;
+  }
+  if (allLangUtils.getLObjIdNumber(lObj.id) === "PENDING") {
+    return true;
+  }
 };
 
 exports.readAllLObjs = (lang, useDummy, res, lObjCallback, wordsetCallback) => {
@@ -68,7 +80,7 @@ exports.readAllLObjs = (lang, useDummy, res, lObjCallback, wordsetCallback) => {
       let wordtype = filename.split(".")[0];
       let wordsBank = gdUtils.grabLObjsByWordtype(lang, wordtype, useDummy);
 
-      wordsBank = wordsBank.filter((lObj) => !idUtils.isUntranslated(lObj));
+      wordsBank = wordsBank.filter((lObj) => !exports.skipThisLObj(lObj));
 
       if (wordsetCallback) {
         wordsetCallback(wordsBank, res, wordtype);

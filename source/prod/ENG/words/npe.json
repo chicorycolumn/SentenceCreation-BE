@@ -1371,35 +1371,35 @@
 
   {
     "lemma": "mate",
-    "id": "eng-npe-8888-mate",
+    "id": "eng-npe-PENDING-mate",
     "gender": "_PersonalGenders",
     "register": 6,
     "frequency": 3
   },
   {
     "lemma": "angel",
-    "id": "eng-npe-8888-angel",
+    "id": "eng-npe-PENDING-angel",
     "gender": "_Genders",
     "register": 1,
     "frequency": 4
   },
   {
     "lemma": "leader",
-    "id": "eng-npe-8888-leader",
+    "id": "eng-npe-PENDING-leader",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
   },
   {
     "lemma": "manager",
-    "id": "eng-npe-8888-manager",
+    "id": "eng-npe-PENDING-manager",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 3
   },
   {
     "lemma": "head",
-    "id": "eng-npe-8888-head",
+    "id": "eng-npe-PENDING-head",
     "gender": "_PersonalGenders",
     "register": 1,
     "frequency": 4
@@ -1407,28 +1407,28 @@
 
   {
     "lemma": "asshole",
-    "id": "eng-npe-8888-asshole",
+    "id": "eng-npe-PENDING-asshole",
     "gender": "_PersonalGenders",
     "register": 7,
     "frequency": 3
   },
   {
     "lemma": "jerk",
-    "id": "eng-npe-8888-jerk",
+    "id": "eng-npe-PENDING-jerk",
     "gender": "_PersonalGenders",
     "register": 7,
     "frequency": 3
   },
   {
     "lemma": "fucker",
-    "id": "eng-npe-8888-fucker",
+    "id": "eng-npe-PENDING-fucker",
     "gender": "_PersonalGenders",
     "register": 7,
     "frequency": 3
   },
   {
     "lemma": "motherfucker",
-    "id": "eng-npe-8888-motherfucker",
+    "id": "eng-npe-PENDING-motherfucker",
     "gender": "_PersonalGenders",
     "register": 7,
     "frequency": 3

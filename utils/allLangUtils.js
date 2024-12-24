@@ -126,6 +126,11 @@ exports.removeMarkersFromLObjId = (lObjId) => {
   return lObjId;
 };
 
+exports.getLObjIdNumber = (id) => {
+  id = allLangUtils.removeMarkersFromLObjId(id);
+  return id.split("-")[2];
+};
+
 exports.getLObjIdStem = (id) => {
   id = allLangUtils.removeMarkersFromLObjId(id);
   return id.split("-").slice(0, 3).join("-");

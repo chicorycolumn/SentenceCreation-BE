@@ -629,7 +629,7 @@ exports.getRegisterAndFrequencyOfLObj = (lang, id) => {
   let matches = wordsBank.filter((l) => l.id === id);
 
   if (!matches.length) {
-    if (idUtils.isUntranslated({ id })) {
+    if (gdUtils.skipThisLObj({ id })) {
       return { register: 0, frequency: 0 };
     }
     console.log(`lpma No matches found for lObjId "${id}"`);
