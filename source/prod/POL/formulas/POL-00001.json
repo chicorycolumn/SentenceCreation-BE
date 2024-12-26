@@ -1,58 +1,28 @@
 {
-  "id": "POL-00001",
   "sentenceStructure": [
     {
-      "gcase": [
-        "nom"
-      ],
-      "specificIds": [
-        "pol-npe-0005-kobieta"
-      ],
+      "gcase": ["nom"],
+      "specificIds": ["pol-npe-0005-kobieta"],
       "chunkId": "npe-050001-kobieta"
     },
     {
-      "form": [
-        "verbal"
-      ],
-      "tenseDescription": [
-        "present im"
-      ],
-      "person": [
-        "3per"
-      ],
-      "number": [
-        "singular"
-      ],
-      "specificIds": [
-        "pol-ver-0003-mieć"
-      ],
+      "form": ["verbal"],
+      "tenseDescription": ["present im"],
+      "person": ["3per"],
+      "number": ["singular"],
+      "specificIds": ["pol-ver-0003-mieć"],
       "chunkId": "ver-030007-ma",
       "agreeWith": "npe-050001-kobieta"
     },
     {
-      "number": [
-        "singular"
-      ],
-      "gcase": [
-        "acc"
-      ],
-      "andTags": [
-        "s1",
-        "concrete",
-        "eating utensil",
-        "household object"
-      ],
+      "number": ["singular"],
+      "gcase": ["acc"],
+      "andTags": ["s1", "concrete", "eating utensil", "household object"],
       "chunkId": "nco-102101-widelec"
     }
   ],
   "orders": {
-    "primary": [
-      [
-        "npe-050001-kobieta",
-        "ver-030007-ma",
-        "nco-102101-widelec"
-      ]
-    ],
+    "primary": [["npe-050001-kobieta", "ver-030007-ma", "nco-102101-widelec"]],
     "additional": []
   }
 }

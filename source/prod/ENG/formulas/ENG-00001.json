@@ -1,62 +1,34 @@
 {
-  "id": "ENG-00001",
   "sentenceStructure": [
     {
-      "form": [
-        "definite"
-      ],
-      "number": [
-        "plural"
-      ],
+      "form": ["definite"],
+      "number": ["plural"],
       "chunkId": "art-01001-the",
       "agreeWith": "npe-050001-kobieta"
     },
     {
-      "number": [
-        "singular"
-      ],
-      "gcase": [
-        "nom"
-      ],
-      "specificIds": [
-        "eng-npe-0017-woman"
-      ],
+      "number": ["singular"],
+      "gcase": ["nom"],
+      "specificIds": ["eng-npe-0017-woman"],
       "chunkId": "npe-050001-kobieta"
     },
     {
       "stativeOverrideTrue": true,
-      "form": [
-        "verbal"
-      ],
-      "tenseDescription": [
-        "present"
-      ],
-      "specificIds": [
-        "eng-ver-0002-have"
-      ],
+      "form": ["verbal"],
+      "tenseDescription": ["present"],
+      "specificIds": ["eng-ver-0002-have"],
       "chunkId": "ver-030007-ma",
       "agreeWith": "npe-050001-kobieta"
     },
     {
-      "form": [
-        "indefinite"
-      ],
+      "form": ["indefinite"],
       "chunkId": "art-31007-a",
       "agreeWith": "nco-102101-widelec"
     },
     {
-      "number": [
-        "singular"
-      ],
-      "gcase": [
-        "nom"
-      ],
-      "andTags": [
-        "s1",
-        "concrete",
-        "eating utensil",
-        "household object"
-      ],
+      "number": ["singular"],
+      "gcase": ["nom"],
+      "andTags": ["s1", "concrete", "eating utensil", "household object"],
       "chunkId": "nco-102101-widelec"
     }
   ],

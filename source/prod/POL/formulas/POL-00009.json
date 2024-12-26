@@ -1,10 +1,6 @@
 {
-  "guide": "1 eats 2.",
+  "guide": "1 je 2.",
   "sentenceStructure": [
-    {
-      "chunkId": "fix-0",
-      "chunkValue": "the"
-    },
     {
       "chunkId": "npe-1",
       "andTags": ["person"],
@@ -12,17 +8,17 @@
     },
     {
       "chunkId": "fix-1",
-      "chunkValue": "eats"
+      "chunkValue": "nie je"
     },
     {
       "chunkId": "nco-2",
-      "andTags": ["food"],
+      "andTags": ["s2"],
       "number": ["plural"],
-      "gcase": ["nom"]
+      "gcase": ["gen"]
     }
   ],
   "orders": {
-    "primary": [["fix-0", "npe-1", "fix-1", "nco-2"]],
+    "primary": [["npe-1", "fix-1", "nco-2"]],
     "additional": []
   }
 }

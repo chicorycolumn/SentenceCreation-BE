@@ -12,17 +12,24 @@
     },
     {
       "chunkId": "fix-1",
-      "chunkValue": "eats"
+      "chunkValue": "doesn't eat"
+    },
+    {
+      "chunkId": "fix-2",
+      "chunkValue": "does not eat"
     },
     {
       "chunkId": "nco-2",
-      "andTags": ["food"],
+      "andTags": ["animal"],
       "number": ["plural"],
       "gcase": ["nom"]
     }
   ],
   "orders": {
-    "primary": [["fix-0", "npe-1", "fix-1", "nco-2"]],
+    "primary": [
+      ["fix-0", "npe-1", "fix-1", "nco-2"],
+      ["fix-0", "npe-1", "fix-2", "nco-2"]
+    ],
     "additional": []
   }
 }

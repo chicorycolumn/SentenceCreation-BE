@@ -16,7 +16,7 @@
     },
     {
       "chunkId": "nco-2",
-      "andTags": ["food"],
+      "andTags": ["s2"],
       "number": ["plural"],
       "gcase": ["nom"]
     }
