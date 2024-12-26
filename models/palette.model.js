@@ -43,6 +43,7 @@ exports.fetchPalette = (req) => {
 exports.fetchPaletteInner = (req) => {
   let {
     sentenceFormulaId,
+    sentenceFormulaEquivalents,
     useDummy,
     useDummyWords,
     questionLanguage,
@@ -316,6 +317,8 @@ exports.fetchPaletteInner = (req) => {
         questionSentenceData.sentenceFormula.equivalentsFormulas[
           answerLanguage
         ];
+    } else if (sentenceFormulaEquivalents) {
+      equivalents = sentenceFormulaEquivalents;
     } else {
       equivalents = nexusUtils.getEquivalents(
         questionSentenceData.sentenceFormula.id,

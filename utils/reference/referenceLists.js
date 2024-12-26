@@ -1214,11 +1214,8 @@ exports.selectedWordMarkers = {
 };
 
 exports.formulaTopics = [
-  "basics",
-  "science",
-  "school",
-  "entertainment",
-  "religion",
-  "sports",
-  "love",
+  "cuisine/Cuisine",
+  "zoology/Zoology",
+  "small objects/Objects you can put in your pocket",
+  "large objects/Objects you hold in two hands",
 ];

@@ -142,7 +142,45 @@ exports.grabFormula = (
     );
   }
 
-  return uUtils.copyWithoutReference(sentenceFormula);
+  let res = uUtils.copyWithoutReference(sentenceFormula);
+
+  if (!res.id) {
+    res.id = sentenceFormulaId;
+  }
+
+  return res;
+};
+
+exports.grabFormulaIdFromSpecifications = (
+  lang1,
+  lang2,
+  topicsStr,
+  difficulty
+) => {
+  let topics = topicsStr.split(",");
+
+  const envir = apiUtils.getEnvirForFormulaBank("grabSkeletonFormulas");
+  lang1 = lang1.toUpperCase();
+  lang2 = lang2.toUpperCase();
+
+  const nexusObjs = require(`../source/${envir}/NEXUS/sentenceFormulas.js`)
+    .sentenceFormulas.filter(
+      (nex) => nex.equivalents[lang1].length && nex.equivalents[lang2].length
+    )
+    .filter(
+      (nex) =>
+        !topics.length || topics.some((topic) => nex.topics.includes(topic))
+    );
+
+  if (nexusObjs.length) {
+    let selectedNex = uUtils.selectRandom(nexusObjs);
+    return [
+      uUtils.selectRandom(selectedNex.equivalents[lang1]),
+      selectedNex.equivalents[lang2],
+    ];
+  }
+
+  return [];
 };
 
 exports.grabSkeletonFormulas = (lang) => {

@@ -1,10 +1,12 @@
 const { fetchPalette } = require("../models/palette.model");
-const apiUtils = require("../utils/secondOrder/apiUtils");
+const apiUtils = require("../utils/secondOrder/apiUtils.js");
+const gdUtils = require("../utils/grabDataUtils.js");
 
 exports.getPalette = (req, res, next) => {
   apiUtils.setEnvir(req, "getPalette");
 
-  req.body.startTime = Date.now();
+  const startTime = Date.now();
+  req.body.startTime = startTime;
 
   Object.keys(req.query).forEach((queryKey) => {
     let queryValue = req.query[queryKey];
@@ -12,17 +14,25 @@ exports.getPalette = (req, res, next) => {
   });
 
   if (!req.body.sentenceFormulaId) {
-    let sentenceFormulaId = apiUtils.getFormulaIdFromSpecifications(
-      req.body.difficulty,
-      req.body.topics
-    );
+    let [sentenceFormulaId, sentenceFormulaEquivalents] =
+      gdUtils.grabFormulaIdFromSpecifications(
+        req.body.questionLanguage,
+        req.body.answerLanguage,
+        req.body.topics,
+        req.body.difficulty
+      );
+
     req.body.sentenceFormulaId = sentenceFormulaId;
+    req.body.sentenceFormulaEquivalents = sentenceFormulaEquivalents;
     delete req.body.difficulty;
     delete req.body.topics;
   }
 
   fetchPalette(req)
     .then((responseObjArr) => {
+      responseObjArr.forEach((x) => {
+        x.startTime = startTime;
+      });
       res.status(200).send(responseObjArr);
     })
     .catch((err) => next(err));

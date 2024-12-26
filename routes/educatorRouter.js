@@ -6,6 +6,7 @@ const {
   getFormulas,
   getFormulaIds,
   getTopics,
+  getFormulaTopics,
   getAvailableNexusId,
 } = require("../controllers/info.controller");
 const {
@@ -14,7 +15,8 @@ const {
 const { handle405s } = require("../errors/errors");
 
 educatorRouter.route("/tags*").get(getTags).all(handle405s);
-educatorRouter.route("/formulatopics").get(getTopics).all(handle405s);
+educatorRouter.route("/topics").get(getTopics).all(handle405s);
+educatorRouter.route("/formulatopics").get(getFormulaTopics).all(handle405s);
 educatorRouter.route("/chunks*").get(getChunks).all(handle405s);
 educatorRouter.route("/nexusid").get(getAvailableNexusId).all(handle405s);
 educatorRouter.route("/formulas*").get(getFormulas).all(handle405s);

@@ -25,6 +25,14 @@ exports.fetchTopics = (req) => {
   });
 };
 
+exports.fetchFormulaTopics = () => {
+  let response = refObj.formulaTopics;
+
+  return Promise.all([response]).then((array) => {
+    return array[0];
+  });
+};
+
 exports.fetchTags = (req) => {
   let { lang } = req.query;
 

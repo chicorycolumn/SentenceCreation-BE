@@ -2,6 +2,7 @@ const {
   fetchTags,
   fetchWordsByCriteria,
   fetchTopics,
+  fetchFormulaTopics,
 } = require("../models/tags.model");
 const { fetchAvailableNexusId } = require("../models/info.model");
 const { fetchChunks } = require("../models/chunks.model");
@@ -51,6 +52,14 @@ exports.getTopics = (req, res, next) => {
       } else {
         //Beta else what?
       }
+    })
+    .catch((err) => next(err));
+};
+
+exports.getFormulaTopics = (req, res, next) => {
+  fetchFormulaTopics()
+    .then((response) => {
+      res.status(200).send(response);
     })
     .catch((err) => next(err));
 };
