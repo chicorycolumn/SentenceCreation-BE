@@ -1214,6 +1214,7 @@ exports.selectedWordMarkers = {
 };
 
 exports.formulaTopics = [
+  "random/Random",
   "cuisine/Cuisine",
   "zoology/Zoology",
   "small objects/Objects you can put in your pocket",

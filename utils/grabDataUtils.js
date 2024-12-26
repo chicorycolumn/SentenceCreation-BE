@@ -157,7 +157,7 @@ exports.grabFormulaIdFromSpecifications = (
   topicsStr,
   difficulty
 ) => {
-  let topics = topicsStr.split(",");
+  let topics = topicsStr === "random" ? [] : topicsStr.split(",");
 
   const envir = apiUtils.getEnvirForFormulaBank("grabSkeletonFormulas");
   lang1 = lang1.toUpperCase();
