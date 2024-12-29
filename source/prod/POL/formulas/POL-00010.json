@@ -1,0 +1,48 @@
+{
+  "id": "POL-00010",
+  "sentenceStructure": [
+    {
+      "gcase": [
+        "nom"
+      ],
+      "orTags": [
+        "relative"
+      ],
+      "chunkId": "npe-010006-matka"
+    },
+    {
+      "tenseDescription": [
+        "present im"
+      ],
+      "specificIds": [
+        "pol-ver-0088-myśleć"
+      ],
+      "chunkId": "ver-188002-myśli",
+      "agreeWith": "npe-010006-matka"
+    },
+    {
+      "chunkId": "fix-21556-o",
+      "chunkValue": "o"
+    },
+    {
+      "gcase": [
+        "loc"
+      ],
+      "orTags": [
+        "animal"
+      ],
+      "chunkId": "nco-392105-krowie"
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "npe-010006-matka",
+        "ver-188002-myśli",
+        "fix-21556-o",
+        "nco-392105-krowie"
+      ]
+    ],
+    "additional": []
+  }
+}
