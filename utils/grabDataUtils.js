@@ -113,6 +113,10 @@ exports.grabFormulaById = (formulaId, useDummy, lang) => {
     );
   }
 
+  if (!data.id) {
+    data["id"] = formulaId;
+  }
+
   return data;
 };
 

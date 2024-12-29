@@ -81,9 +81,8 @@ exports.getSentencesForEducator = (req, res, next) => {
     );
 
     fetchPalette(data)
-      .then((responseObjArr) => {
+      .then((responseObj) => {
         let status = 200;
-        let responseObj = responseObjArr[0];
         let errors = exports.getErrors(responseObj);
 
         let respo = {
@@ -111,8 +110,7 @@ exports.getSentencesForEducator = (req, res, next) => {
     );
 
     fetchPalette(data)
-      .then((responseObjArr) => {
-        let responseObj = responseObjArr[0];
+      .then((responseObj) => {
         let status = 200;
         let errors = exports.getErrors(responseObj);
         let respo = { payload: responseObj.questionSentenceArr };
