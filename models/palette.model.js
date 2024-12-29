@@ -76,7 +76,7 @@ exports.fetchPaletteInner = (req) => {
   }
   let timeOutCheck;
   if (!timeLimit) {
-    timeLimit = 20000;
+    timeLimit = 60000;
   }
 
   const finishAndSendErrorMessages = (errorMessage, sentenceData, isAnswer) => {
@@ -229,7 +229,8 @@ exports.fetchPaletteInner = (req) => {
           maqModes,
           questionLanguage,
           answerLanguage,
-          formattingOptions
+          formattingOptions,
+          "forceMultipleAndQuestionOnly"
         );
 
         return sentence;

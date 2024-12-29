@@ -782,7 +782,8 @@ exports.giveFinalSentences = (
       maqModes,
       questionLanguage,
       answerLanguage,
-      formattingOptions
+      formattingOptions,
+      "!multipleMode"
     );
 
     finalSentences.forEach((finalSentence) => {
@@ -796,7 +797,8 @@ exports.giveFinalSentences = (
         maqModes,
         currentLanguage,
         null,
-        formattingOptions
+        formattingOptions,
+        "multipleMode"
       );
 
       let additionalFyipLabels = eaUtils.evaluateFYIPs(
@@ -829,9 +831,10 @@ exports.buildSentenceString = (
   maqModes,
   currentLanguage,
   answerLanguage,
-  formattingOptions
+  formattingOptions,
+  label
 ) => {
-  consol.log("[1;35m " + "cghk buildSentenceString" + "[0m");
+  consol.log("[1;35m " + `cghk-${label} buildSentenceString` + "[0m");
   consol.log(
     "cghk buildSentenceString unorderedArr",
     unorderedArr.map((outputUnit) => outputUnit.selectedWord)
