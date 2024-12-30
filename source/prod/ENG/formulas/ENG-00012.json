@@ -1,0 +1,49 @@
+{
+  "id": "ENG-00011",
+  "sentenceStructure": [
+    {
+      "chunkId": "art-010002-the",
+      "agreeWith": "nco-090110-pies"
+    },
+    {
+      "gcase": ["nom"],
+      "andTags": ["animal"],
+      "chunkId": "nco-090110-pies"
+    },
+    {
+      "stativeOverrideTrue": true,
+      "form": ["verbal"],
+      "tenseDescription": ["present simple"],
+      "specificIds": ["eng-ver-0001-be"],
+      "chunkId": "ver-110008-jest",
+      "agreeWith": "nco-090110-pies"
+    },
+    {
+      "chunkId": "fix-32310-in",
+      "chunkValue": "in"
+    },
+    {
+      "chunkId": "art-410008-the",
+      "agreeWith": "nco-315003-szpitalu"
+    },
+    {
+      "number": ["singular"],
+      "gcase": ["nom"],
+      "andTags": ["building"],
+      "chunkId": "nco-315003-szpitalu"
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "art-010002-the",
+        "nco-090110-pies",
+        "ver-110008-jest",
+        "fix-32310-in",
+        "art-410008-the",
+        "nco-315003-szpitalu"
+      ]
+    ],
+    "additional": []
+  }
+}

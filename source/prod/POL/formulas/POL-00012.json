@@ -1,0 +1,54 @@
+{
+  "id": "POL-00011",
+  "sentenceStructure": [
+    {
+      "number": [
+        "singular"
+      ],
+      "gcase": [
+        "nom"
+      ],
+      "andTags": [
+        "animal"
+      ],
+      "chunkId": "nco-090110-pies"
+    },
+    {
+      "tenseDescription": [
+        "present im"
+      ],
+      "specificIds": [
+        "pol-ver-0001-być"
+      ],
+      "chunkId": "ver-110008-jest",
+      "agreeWith": "nco-090110-pies"
+    },
+    {
+      "chunkId": "fix-24682-w",
+      "chunkValue": "w"
+    },
+    {
+      "number": [
+        "singular"
+      ],
+      "gcase": [
+        "loc"
+      ],
+      "andTags": [
+        "building"
+      ],
+      "chunkId": "nco-315003-szpitalu"
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "nco-090110-pies",
+        "ver-110008-jest",
+        "fix-24682-w",
+        "nco-315003-szpitalu"
+      ]
+    ],
+    "additional": []
+  }
+}

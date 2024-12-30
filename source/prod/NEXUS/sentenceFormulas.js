@@ -105,4 +105,14 @@ exports.sentenceFormulas = [
     topics: ["locative"],
     difficulty: 1,
   },
+  {
+    key: "SF-00012",
+    equivalents: {
+      ENG: ["ENG-00012"],
+      POL: ["POL-00012"],
+      SPA: [],
+    },
+    topics: ["locative"],
+    difficulty: 1,
+  },
 ];
