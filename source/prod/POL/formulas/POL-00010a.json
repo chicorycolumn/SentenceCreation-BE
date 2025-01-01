@@ -1,0 +1,48 @@
+{
+  "id": "POL-00010a",
+  "sentenceStructure": [
+    {
+      "gcase": ["nom"],
+      "orTags": ["relative"],
+      "chunkId": "npe-010006-matka"
+    },
+    {
+      "tenseDescription": ["present im"],
+      "specificIds": ["pol-ver-0088-myśleć"],
+      "chunkId": "ver-188002-myśli",
+      "agreeWith": "npe-010006-matka"
+    },
+    {
+      "chunkId": "fix-21556-o",
+      "chunkValue": "o"
+    },
+    {
+      "form": ["simple"],
+      "specificIds": [
+        "pol-adj-0048-duży",
+        "pol-adj-0178-mały(concrete)",
+        "pol-adj-0034-czarny",
+        "pol-adj-0035-biały"
+      ],
+      "chunkId": "adj-184004-dużej",
+      "agreeWith": "nco-392105-krowie"
+    },
+    {
+      "gcase": ["loc"],
+      "orTags": ["animal"],
+      "chunkId": "nco-392105-krowie"
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "npe-010006-matka",
+        "ver-188002-myśli",
+        "fix-21556-o",
+        "adj-184004-dużej",
+        "nco-392105-krowie"
+      ]
+    ],
+    "additional": []
+  }
+}

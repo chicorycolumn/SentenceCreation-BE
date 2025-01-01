@@ -1,0 +1,59 @@
+{
+  "id": "ENG-00010a",
+  "sentenceStructure": [
+    {
+      "chunkId": "art-010008-the",
+      "agreeWith": "npe-010006-matka"
+    },
+    {
+      "gcase": ["nom"],
+      "orTags": ["relative"],
+      "chunkId": "npe-010006-matka"
+    },
+    {
+      "form": ["verbal"],
+      "tenseDescription": ["present simple", "present continuous"],
+      "specificIds": ["eng-ver-0079-think"],
+      "chunkId": "ver-188002-myśli",
+      "agreeWith": "npe-010006-matka"
+    },
+    {
+      "chunkId": "fix-39222-about",
+      "chunkValue": "about"
+    },
+    {
+      "chunkId": "art-410002-a",
+      "agreeWith": "nco-392105-krowie"
+    },
+    {
+      "form": ["simple"],
+      "specificIds": [
+        "eng-adj-0085-big",
+        "eng-adj-0086-large",
+        "eng-adj-0299-small(concrete)",
+        "eng-adj-0926-little"
+      ],
+      "chunkId": "adj-184004-dużej",
+      "agreeWith": "nco-392105-krowie"
+    },
+    {
+      "gcase": ["nom"],
+      "orTags": ["animal"],
+      "chunkId": "nco-392105-krowie"
+    }
+  ],
+  "orders": {
+    "primary": [
+      [
+        "art-010008-the",
+        "npe-010006-matka",
+        "ver-188002-myśli",
+        "fix-39222-about",
+        "art-410002-a",
+        "adj-184004-dużej",
+        "nco-392105-krowie"
+      ]
+    ],
+    "additional": []
+  }
+}
